@@ -28,19 +28,19 @@ Not consciousness transfer. **Behavioral equivalence**: the AI doesn't need to *
 
 ## Quick Start (5 minutes)
 
-### Option A: With Claude Code
+### Option A: With Claude Code (recommended)
 
 ```bash
-# Clone
-git clone https://github.com/l12203685/digital-immortality.git
-cd digital-immortality
-
-# Copy the skill to Claude Code
-cp SKILL.md ~/.claude/commands/digital-immortality.md
+# One-line install (5 skills + templates + auto-updater)
+curl -sL https://raw.githubusercontent.com/l12203685/digital-immortality/main/install.sh | bash
 
 # Start Claude Code and run
 /digital-immortality
 ```
+
+Skills installed: `/digital-immortality` `/boot-test` `/dna-calibrate` `/organism-interact` `/recursive-engine`
+
+Auto-updates on every session start — you always have the latest version.
 
 ### Option B: With any LLM (ChatGPT, Claude, etc.)
 
@@ -67,15 +67,25 @@ Note: The deterministic engine uses keyword matching. For real decision-making, 
 
 ```
 digital-immortality/
-  SKILL.md                  — Claude Code skill (copy to ~/.claude/commands/)
+  SKILL.md                  — Main skill (individual layer)
+  SKILL_zh-TW.md            — 繁體中文版
+  install.sh                — One-line installer + auto-updater
+  VERSION                   — Version file (bump triggers auto-update for all users)
   organism_interact.py      — CLI: compare two DNA files across 10 scenarios
-  consistency_test.py       — Measure cross-session decision consistency
+  cross_instance_test.py    — Claude API cross-session consistency test
+  consistency_test.py       — Deterministic consistency baseline
   templates/
-    example_dna.md          — Starter DNA template (fill this out)
-    example_dna_b.md        — Second organism for comparison testing
+    example_dna.md          — Starter DNA template
+    example_boot_tests.md   — Starter boot tests
+  skills/
+    boot-test.md            — /boot-test: behavioral verification
+    dna-calibrate.md        — /dna-calibrate: interactive gap-filling
+    organism-interact.md    — /organism-interact: social collision
+    recursive-engine.md     — /recursive-engine: continuous thinking loop
   specs/
-    organism_protocol.md    — How organisms communicate (v0.1)
-  skills/                   — Sub-skills for Claude Code
+    organism_protocol.md    — How organisms communicate
+    platform_architecture.md — 個體→社交圈 platform vision
+  platform/                 — Discord server auto-setup
   results/                  — Test outputs and scorecards
 ```
 
