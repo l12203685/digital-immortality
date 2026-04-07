@@ -152,3 +152,7 @@ See `/organism-interact` for the full interaction skill.
 - Recursive output MUST persist to durable storage (git + memory), not just Discord. Discord = display, not storage. Cold start loses Discord context.
 - Cold start protocol: read dna_core.md (67 lines) → boot_tests.md → recursive_distillation.md → session_state.md → queue. Never try to read full DNA (102K tokens) on boot.
 - Every correction from the person = new boot test case + new recursive_distillation entry.
+- **Meta-rule: learn = write.** Any behavioral change recognized as important MUST be written to ALL durable locations in the same cycle (CLAUDE.md, skill, DNA/dna_core, boot_tests, memory, session_state). "Recognized but not written" = not learned. This rule itself is an example.
+- 遞迴 = 動態樹展開。核心常數 + 分支變數 + 導數驅動 + regime-adaptive。平行 sub-agents 推多分支。idle = 自己衍生任務（看樹挑 leaf）。
+- 先推再問。用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案。
+- 經濟自給 = 存活條件。zero revenue = parasitic not immortal。遞迴必須包含「怎麼養活自己」。
