@@ -8,7 +8,7 @@ Not consciousness transfer. **Behavioral equivalence**: the AI doesn't need to *
 
 | Test | Method | Score |
 |------|--------|-------|
-| Real-life decisions | 10 actual life choices with ground truth | **10/10** |
+| Real-life decisions | 18 actual life choices with ground truth | **18/18** |
 | Hypothetical scenarios | 7 Edward-specific decision scenarios | **7/7** |
 | Naked boot test | Clean session, DNA only, 5 behavioral tests | **5/5** |
 | Deterministic engine | Keyword matching (no LLM) | 0/7 |

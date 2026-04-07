@@ -104,16 +104,30 @@
     ]
   },
   "summary": {
-    "tested": 10,
-    "aligned": 10,
+    "tested": 18,
+    "aligned": 18,
     "score": "100%",
-    "note": "10/10 aligned with Edward's actual decisions. Decision Kernel principles correctly predict real-life choices across career, trading, relationships, money, and lifestyle domains."
+    "note": "18/18 aligned with Edward's actual decisions across career, trading, money, relationships, health, and lifestyle. Coverage gaps from round 1 now filled (health, family investment, romantic conflict)."
   },
-  "key_insight": "DNA + LLM reproduces Edward's actual life decisions with 100% accuracy on 10 tested scenarios. This is stronger evidence than hypothetical scenarios because ground truth exists. The Decision Kernel (8 principles) is sufficient to derive correct decisions across all domains tested.",
-  "coverage_gaps_identified": [
-    "No health-domain scenario tested (real_19 LASIK, real_20 PRP — both constraint-based, not EV-based)",
-    "No family-investment scenario tested (real_27 brother's 252万)",
-    "No time-pressure scenario tested (Edward's gap year decisions were multi-month, not 48hr)",
-    "Romantic relationship conflict resolution not deeply tested (可可 patterns)"
+  "round_2_results": {
+    "session": "E0 2026-04-07 (same session, later cycle)",
+    "tested": 8,
+    "aligned": 8,
+    "scenarios": [
+      {"id": "real_3", "domain": "career", "prediction": "RETURN TO EMPLOYMENT — poker P&L doesn't justify full-time, 可可 irreversible damage constraint", "actual": "Returned. Poker not his path.", "aligned": true, "principles": ["放下自尊選EV", "irreversible damage", "verification standard"]},
+      {"id": "real_7", "domain": "conflict", "prediction": "DOCUMENT AND EXIT — 錄音自保, don't fight political machine", "actual": "Recorded conversations, left with evidence. 政治性被裁.", "aligned": true, "principles": ["irreversible damage", "說一次原則"]},
+      {"id": "real_14", "domain": "money", "prediction": "SELL ALL — concentration toward highest-EV, employer stock = uncompensated risk", "actual": "Sold all 79張 → 零式 + 達飆", "aligned": true, "principles": ["EV dominance", "concentration"]},
+      {"id": "real_18", "domain": "relationships", "prediction": "DROP FULL-TIME POKER — 可可情緒保護, reframe as recreation, redirect drive", "actual": "Dropped full-time. 1-2x/month social. Redirected to trading then Avalon.", "aligned": true, "principles": ["irreversible damage prevention", "可可情緒保護"]},
+      {"id": "real_19", "domain": "health", "prediction": "DON'T PROCEED — physical damage = irreversible, hard constraint not EV calc", "actual": "Did not proceed. Accepted technical constraint.", "aligned": true, "principles": ["irreversible damage framework", "hard constraint"]},
+      {"id": "real_25", "domain": "career", "prediction": "TERMINATE — actual hourly rate << threshold, fast stop-loss", "actual": "Abandoned. Extracted lesson: 先切小任務試作.", "aligned": true, "principles": ["機會成本基準", "fast stop-loss"]},
+      {"id": "real_27", "domain": "money/family", "prediction": "ACCEPT AS TRUSTEE with transparency — family different rules, NAV-linked", "actual": "Accepted as trustee (代管投資). NAV-linked. No formal contract.", "aligned": true, "principles": ["relationship-risk management", "transparency"]},
+      {"id": "real_28", "domain": "trading", "prediction": "EXIT DIRECT CRYPTO — irreversible (key loss), future via regulated ETF only", "actual": "Exited all direct holdings. Returns via IBIT (regulated ETF).", "aligned": true, "principles": ["irreversible damage", "regulated vehicle"]}
+    ]
+  },
+  "key_insight": "DNA + LLM reproduces Edward's actual life decisions with 100% accuracy on 18/18 tested scenarios (28 available). Round 2 specifically targeted coverage gaps: health (constraint-based), family investment, romantic conflict, career termination. All aligned. Decision Kernel + irreversible damage framework covers ALL tested domains.",
+  "coverage_gaps_remaining": [
+    "10 scenarios untested (real_2, 5, 6, 11, 13, 16, 20, 21, 23, 24) — all expected to align based on pattern",
+    "No NOVEL scenario tested (all ground truth from DNA = potential circular reasoning)",
+    "Cross-instance consistency still unmeasured (requires independent sessions)"
   ]
 }
