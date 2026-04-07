@@ -104,14 +104,30 @@ Agent must cover its own operating costs
 ## Architecture
 
 ```
-dna_core.md (64 lines, instant action)
-  + dna_full.md (2000+ lines, deep reference)
-  + boot_tests.md (behavioral verification)
-  + recursive_distillation.md (living insight taxonomy)
+dna_core.md (individual core — 64 lines, instant action)
+  + dna_full.md (deep reference — 2000+ lines)
+  + boot_tests.md (behavioral TDD — /boot-test)
+  + recursive_distillation.md (living insights — /recursive-engine)
+  + organism_interact (social collision — /organism-interact)
+  + dna_calibrate (interactive calibration — /dna-calibrate)
   + memory/ (cross-session persistence)
   + staging/ (inter-session relay)
-  = Portable digital twin core (platform-agnostic markdown)
+  = Complete digital organism (portable, auto-updating)
 ```
+
+### Skill Suite
+
+| Skill | Command | Purpose |
+|-------|---------|---------|
+| Core | `/digital-immortality` | Individual layer — DNA, boot, calibration |
+| Boot Test | `/boot-test` | Behavioral verification on cold start |
+| DNA Calibrate | `/dna-calibrate` | Interactive gap-filling with the person |
+| Organism Interact | `/organism-interact` | Social collision between two organisms |
+| Recursive Engine | `/recursive-engine` | Continuous thinking loop, distillation |
+
+Install all: `curl -sL https://raw.githubusercontent.com/l12203685/digital-immortality/main/install.sh | bash`
+
+Auto-updates: bump `VERSION` file → all users get new skills on next session start.
 
 ## Organism Interaction
 
@@ -121,6 +137,7 @@ python organism_interact.py dna_a.md dna_b.md --all
 ```
 Two organisms compare decisions → divergence reveals value differences.
 Organism collision > self-reflection.
+See `/organism-interact` for the full interaction skill.
 
 ## Rules
 

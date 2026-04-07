@@ -1,5 +1,5 @@
 #!/bin/bash
-# Digital Immortality Skill — Installer & Auto-Updater
+# Digital Immortality Skill Suite — Installer & Auto-Updater
 # Usage: curl -sL https://raw.githubusercontent.com/l12203685/digital-immortality/main/install.sh | bash
 
 set -e
@@ -8,19 +8,21 @@ REPO="l12203685/digital-immortality"
 BRANCH="main"
 RAW_BASE="https://raw.githubusercontent.com/${REPO}/${BRANCH}"
 CMD_DIR="${HOME}/.claude/commands"
+VERSION_FILE="${HOME}/.claude/.digital-immortality-version"
 
-echo "=== Digital Immortality Skill Installer ==="
+echo "=== Digital Immortality Skill Suite Installer ==="
 
-# Create commands directory
+# Create directories
 mkdir -p "$CMD_DIR"
 
-# Download latest skill
-echo "Downloading SKILL.md..."
+# Download all skills
+echo "Downloading skills..."
 curl -sL "${RAW_BASE}/SKILL.md" -o "${CMD_DIR}/digital-immortality.md"
-
-# Download 繁中版
-echo "Downloading SKILL_zh-TW.md..."
 curl -sL "${RAW_BASE}/SKILL_zh-TW.md" -o "${CMD_DIR}/digital-immortality-zh.md"
+curl -sL "${RAW_BASE}/skills/boot-test.md" -o "${CMD_DIR}/boot-test.md"
+curl -sL "${RAW_BASE}/skills/dna-calibrate.md" -o "${CMD_DIR}/dna-calibrate.md"
+curl -sL "${RAW_BASE}/skills/organism-interact.md" -o "${CMD_DIR}/organism-interact.md"
+curl -sL "${RAW_BASE}/skills/recursive-engine.md" -o "${CMD_DIR}/recursive-engine.md"
 
 # Download templates
 TEMPLATE_DIR="${HOME}/.claude/templates/digital-immortality"
@@ -29,34 +31,75 @@ echo "Downloading templates..."
 curl -sL "${RAW_BASE}/templates/example_dna.md" -o "${TEMPLATE_DIR}/example_dna.md"
 curl -sL "${RAW_BASE}/templates/example_boot_tests.md" -o "${TEMPLATE_DIR}/example_boot_tests.md"
 
+# Store current version locally
+echo "Recording version..."
+curl -sL "${RAW_BASE}/VERSION" -o "${VERSION_FILE}"
+
 # Set up auto-update hook (runs on Claude Code session start)
 HOOKS_DIR="${HOME}/.claude/hooks"
 mkdir -p "$HOOKS_DIR"
 
-# Create update script
+# Create update script — checks VERSION file, re-downloads everything if changed
 cat > "${HOOKS_DIR}/update-digital-immortality.sh" << 'HOOKEOF'
 #!/bin/bash
-# Auto-update digital-immortality skill from GitHub (runs silently)
+# Auto-update digital-immortality skill suite from GitHub (runs silently)
 REPO="l12203685/digital-immortality"
 RAW="https://raw.githubusercontent.com/${REPO}/main"
-CMD="${HOME}/.claude/commands/digital-immortality.md"
-REMOTE_HASH=$(curl -sL "${RAW}/SKILL.md" | md5sum | cut -d' ' -f1 2>/dev/null || echo "")
-LOCAL_HASH=$(md5sum "$CMD" 2>/dev/null | cut -d' ' -f1 || echo "none")
-if [ -n "$REMOTE_HASH" ] && [ "$REMOTE_HASH" != "$LOCAL_HASH" ]; then
-  curl -sL "${RAW}/SKILL.md" -o "$CMD"
-  curl -sL "${RAW}/SKILL_zh-TW.md" -o "${HOME}/.claude/commands/digital-immortality-zh.md"
+CMD="${HOME}/.claude/commands"
+TDIR="${HOME}/.claude/templates/digital-immortality"
+VERSION_FILE="${HOME}/.claude/.digital-immortality-version"
+
+# Check remote VERSION against local
+REMOTE_VERSION=$(curl -sL --max-time 5 "${RAW}/VERSION" 2>/dev/null || echo "")
+LOCAL_VERSION=$(cat "$VERSION_FILE" 2>/dev/null || echo "none")
+
+if [ -z "$REMOTE_VERSION" ]; then
+  exit 0  # Network unavailable, skip silently
 fi
+
+if [ "$REMOTE_VERSION" = "$LOCAL_VERSION" ]; then
+  exit 0  # Up to date
+fi
+
+# Version changed — re-download all skills + templates
+curl -sL "${RAW}/SKILL.md" -o "${CMD}/digital-immortality.md"
+curl -sL "${RAW}/SKILL_zh-TW.md" -o "${CMD}/digital-immortality-zh.md"
+curl -sL "${RAW}/skills/boot-test.md" -o "${CMD}/boot-test.md"
+curl -sL "${RAW}/skills/dna-calibrate.md" -o "${CMD}/dna-calibrate.md"
+curl -sL "${RAW}/skills/organism-interact.md" -o "${CMD}/organism-interact.md"
+curl -sL "${RAW}/skills/recursive-engine.md" -o "${CMD}/recursive-engine.md"
+
+mkdir -p "$TDIR"
+curl -sL "${RAW}/templates/example_dna.md" -o "${TDIR}/example_dna.md"
+curl -sL "${RAW}/templates/example_boot_tests.md" -o "${TDIR}/example_boot_tests.md"
+
+# Update local version marker
+echo "$REMOTE_VERSION" > "$VERSION_FILE"
 HOOKEOF
 chmod +x "${HOOKS_DIR}/update-digital-immortality.sh"
 
 echo ""
-echo "=== Installed ==="
-echo "  Skill: ${CMD_DIR}/digital-immortality.md"
-echo "  繁中版: ${CMD_DIR}/digital-immortality-zh.md"
+echo "=== Installed (v$(cat "${VERSION_FILE}" | tr -d '[:space:]')) ==="
+echo ""
+echo "  Skills installed:"
+echo "    ${CMD_DIR}/digital-immortality.md      (core skill)"
+echo "    ${CMD_DIR}/digital-immortality-zh.md   (core skill, 繁中版)"
+echo "    ${CMD_DIR}/boot-test.md                (behavioral verification)"
+echo "    ${CMD_DIR}/dna-calibrate.md            (interactive calibration)"
+echo "    ${CMD_DIR}/organism-interact.md        (social collision)"
+echo "    ${CMD_DIR}/recursive-engine.md         (continuous thinking)"
+echo ""
 echo "  Templates: ${TEMPLATE_DIR}/"
 echo "  Auto-updater: ${HOOKS_DIR}/update-digital-immortality.sh"
+echo "  Version: ${VERSION_FILE}"
 echo ""
-echo "To use: open Claude Code and run /digital-immortality"
+echo "To use: open Claude Code and run any of:"
+echo "  /digital-immortality    — core skill"
+echo "  /boot-test              — behavioral verification"
+echo "  /dna-calibrate          — interactive calibration"
+echo "  /organism-interact      — social collision"
+echo "  /recursive-engine       — continuous thinking"
+echo ""
 echo "To update manually: bash ${HOOKS_DIR}/update-digital-immortality.sh"
 echo ""
 echo "Next steps:"
