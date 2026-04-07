@@ -88,8 +88,9 @@ def try_git_commit(cycle: int) -> None:
         print(f"[daemon] Git commit skipped: {e}")
 
 
-def run_cycle(client: anthropic.Anthropic, system: str, model: str, cycle: int) -> str:
-    print(f"[daemon] Cycle {cycle} starting...")
+def run_cycle_api(client, system: str, model: str, cycle: int) -> str:
+    """Run via Anthropic API (requires ANTHROPIC_API_KEY with credit)."""
+    print(f"[daemon] Cycle {cycle} starting (API)...")
     response = client.messages.create(
         model=model,
         max_tokens=512,
@@ -97,6 +98,22 @@ def run_cycle(client: anthropic.Anthropic, system: str, model: str, cycle: int) 
         messages=[{"role": "user", "content": RECURSIVE_PROMPT}],
     )
     text = response.content[0].text
+    print(f"[daemon] Cycle {cycle} done — {len(text)} chars")
+    return text
+
+
+def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
+    """Run via claude CLI (uses Max subscription, no API credit needed)."""
+    print(f"[daemon] Cycle {cycle} starting (CLI)...")
+    full_prompt = f"{prompt}\n\n{RECURSIVE_PROMPT}"
+    result = subprocess.run(
+        ["claude", "-p", full_prompt, "--model", model],
+        capture_output=True, text=True, timeout=300,
+        cwd=str(REPO_ROOT),
+    )
+    text = result.stdout.strip()
+    if result.returncode != 0 and not text:
+        text = f"CLI error: {result.stderr.strip()}"
     print(f"[daemon] Cycle {cycle} done — {len(text)} chars")
     return text
 
@@ -115,21 +132,28 @@ def main():
                         help="Stop after N cycles (0 = infinite)")
     parser.add_argument("--no-commit", action="store_true",
                         help="Disable auto git commit")
+    parser.add_argument("--cli", action="store_true",
+                        help="Use claude CLI instead of API (uses Max subscription, no API credit)")
     args = parser.parse_args()
 
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        print("[daemon] ERROR: ANTHROPIC_API_KEY not set")
-        sys.exit(1)
-
-    client = anthropic.Anthropic(api_key=api_key)
     dna = load_dna()
     system = build_system_prompt(dna)
     interval = max(args.interval, MIN_INTERVAL)
     cycle = 0
+    client = None
+    use_cli = args.cli
 
+    if not use_cli:
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        if not api_key:
+            print("[daemon] No ANTHROPIC_API_KEY, falling back to CLI mode")
+            use_cli = True
+        else:
+            client = anthropic.Anthropic(api_key=api_key)
+
+    mode = "CLI (Max subscription)" if use_cli else "API"
     print(f"[daemon] Starting recursive engine")
-    print(f"[daemon] Model: {args.model} | Interval: {interval}s | DNA: {DNA_PATH}")
+    print(f"[daemon] Mode: {mode} | Model: {args.model} | Interval: {interval}s")
     print(f"[daemon] Log: {LOG_PATH}")
     print(f"[daemon] Ctrl+C to stop\n")
 
@@ -139,21 +163,16 @@ def main():
             print(f"[daemon] Reached max cycles ({args.max_cycles}), stopping.")
             break
         try:
-            text = run_cycle(client, system, args.model, cycle)
+            if use_cli:
+                text = run_cycle_cli(system, args.model, cycle)
+            else:
+                text = run_cycle_api(client, system, args.model, cycle)
             append_log(cycle, text)
             if not args.no_commit:
                 try_git_commit(cycle)
-        except anthropic.RateLimitError:
-            print("[daemon] Rate limited, backing off 60s...")
-            time.sleep(60)
-            continue
-        except anthropic.APIError as e:
-            print(f"[daemon] API error: {e}, retrying in 30s...")
-            time.sleep(30)
-            continue
         except Exception as e:
-            print(f"[daemon] Unexpected error: {e}")
-            time.sleep(10)
+            print(f"[daemon] Error: {e}, retrying in 30s...")
+            time.sleep(30)
             continue
 
         if running and interval > 0:
