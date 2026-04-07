@@ -9,14 +9,18 @@ and saves results as JSON in the results/ directory.
 
 Usage:
     python organism_interact.py <dna_file_a> <dna_file_b> [--scenario N] [--all]
+    python organism_interact.py <dna_file_a> <dna_file_b> --report
 
 Examples:
     python organism_interact.py templates/example_dna.md path/to/other_dna.md --all
     python organism_interact.py dna_a.md dna_b.md --scenario 3
     python organism_interact.py dna_a.md dna_b.md           # runs all 10
+    python organism_interact.py dna_a.md dna_b.md --report   # structured collision report
 
 Output:
     results/<organism_a>_vs_<organism_b>_<timestamp>.json
+    results/collision_<name1>_vs_<name2>_<timestamp>.md   (with --report)
+    results/collision_<name1>_vs_<name2>_<timestamp>.json  (with --report)
 
 Protocol format follows specs/organism_protocol.md v0.1
 """
@@ -934,6 +938,363 @@ def print_record(record: dict, index: int, total: int) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Collision report generation
+# ---------------------------------------------------------------------------
+
+def _classify_record(record: dict) -> str:
+    """
+    Classify a scenario comparison as 'agreement' or 'divergence'.
+
+    Compares the extracted decision verdicts from both organisms' responses.
+    Two organisms agree when they reach the same verdict (e.g. both TAKE,
+    both PASS), and diverge when the verdicts differ.
+    """
+    decision_a = _extract_decision_line(record["organism_a"]["response"])
+    decision_b = _extract_decision_line(record["organism_b"]["response"])
+
+    # Extract the verdict keyword (first ALL-CAPS word/phrase before ' — ')
+    def _verdict(text: str) -> str:
+        m = re.match(r"^([A-Z][A-Z_\s]{2,30}?)\s*[—–-]{1,2}\s*", text)
+        if m:
+            return m.group(1).strip()
+        tokens = re.findall(r"\b[A-Z]{3,}\b", text)
+        return tokens[0] if tokens else ""
+
+    verdict_a = _verdict(decision_a)
+    verdict_b = _verdict(decision_b)
+
+    if verdict_a and verdict_b and verdict_a == verdict_b:
+        return "agreement"
+    return "divergence"
+
+
+def _extract_decision_line(response_text: str) -> str:
+    """
+    Pull the short decision verdict from a generated response.
+
+    The response format ends with a line like:
+        TAKE -- EV = ...
+    or  PASS -- ...
+    Returns the first ALL-CAPS-prefixed decision line, or the last
+    non-empty line as fallback.
+    """
+    lines = [ln.strip() for ln in response_text.strip().splitlines() if ln.strip()]
+    for line in lines:
+        # Lines that start with an ALL-CAPS word followed by " — " or " -- "
+        m = re.match(r"^([A-Z][A-Z_\s]{2,30}?)\s*[—–-]{1,2}\s*(.+)", line)
+        if m:
+            return line
+    return lines[-1] if lines else "(no decision)"
+
+
+def _build_domain_heatmap(records: list) -> dict:
+    """
+    Count agreements and divergences per domain.
+
+    Returns: {domain: {"agreements": int, "divergences": int}}
+    """
+    heatmap = {}
+    for rec in records:
+        domain = rec["domain"]
+        classification = _classify_record(rec)
+        if domain not in heatmap:
+            heatmap[domain] = {"agreements": 0, "divergences": 0}
+        if classification == "agreement":
+            heatmap[domain]["agreements"] += 1
+        else:
+            heatmap[domain]["divergences"] += 1
+    return heatmap
+
+
+def _build_learning_synthesis(records: list, organism_a: dict, organism_b: dict) -> dict:
+    """
+    Analyze collision records to determine what each twin could learn from
+    the other, based on domains where one diverges from the other's stance.
+
+    Returns: {name_a: [lessons], name_b: [lessons]}
+    """
+    name_a = organism_a["name"]
+    name_b = organism_b["name"]
+    lessons_for_a = []
+    lessons_for_b = []
+
+    for rec in records:
+        classification = _classify_record(rec)
+        if classification != "divergence":
+            continue
+
+        domain = rec["domain"]
+        synth = rec.get("synthesis", "")
+
+        # Extract distinctive signals from synthesis text
+        # Pattern: "Name's distinctive signal: 'principle...' — drives their specific stance."
+        sig_a_match = re.search(
+            rf"{re.escape(name_a)}'s distinctive signal: '(.+?)'", synth
+        )
+        sig_b_match = re.search(
+            rf"{re.escape(name_b)}'s distinctive signal: '(.+?)'", synth
+        )
+
+        if sig_b_match:
+            lessons_for_a.append(
+                f"In {domain}: consider {name_b}'s principle — \"{sig_b_match.group(1)}\""
+            )
+        else:
+            # Generic lesson from the domain divergence
+            decision_b = _extract_decision_line(rec["organism_b"]["response"])
+            lessons_for_a.append(
+                f"In {domain}: {name_b} reaches a different conclusion — review whether your framework accounts for their reasoning"
+            )
+
+        if sig_a_match:
+            lessons_for_b.append(
+                f"In {domain}: consider {name_a}'s principle — \"{sig_a_match.group(1)}\""
+            )
+        else:
+            decision_a = _extract_decision_line(rec["organism_a"]["response"])
+            lessons_for_b.append(
+                f"In {domain}: {name_a} reaches a different conclusion — review whether your framework accounts for their reasoning"
+            )
+
+    return {name_a: lessons_for_a, name_b: lessons_for_b}
+
+
+def generate_collision_report_md(
+    records: list, organism_a: dict, organism_b: dict
+) -> str:
+    """
+    Build a structured markdown collision report.
+
+    Sections:
+    1. Header with both DNA names and date
+    2. Summary: total scenarios, agreements, divergences
+    3. Per-scenario breakdown
+    4. Synthesis: what each twin could learn from the other
+    5. Divergence heatmap by life domain
+    """
+    name_a = organism_a["name"]
+    name_b = organism_b["name"]
+    now = datetime.now()
+
+    total = len(records)
+    classifications = [_classify_record(r) for r in records]
+    agreements = classifications.count("agreement")
+    divergences = classifications.count("divergence")
+
+    lines = []
+
+    # --- Header ---
+    lines.append(f"# Collision Report: {name_a} vs {name_b}")
+    lines.append("")
+    lines.append(f"**Date**: {now.strftime('%Y-%m-%d %H:%M:%S')}")
+    lines.append(f"**Organism A**: {name_a} ({organism_a['filepath']})")
+    lines.append(f"**Organism B**: {name_b} ({organism_b['filepath']})")
+    lines.append(f"**Principles extracted**: A={len(organism_a['principles'])}, B={len(organism_b['principles'])}")
+    lines.append("")
+
+    # --- Summary ---
+    lines.append("## Summary")
+    lines.append("")
+    lines.append(f"| Metric | Value |")
+    lines.append(f"|--------|-------|")
+    lines.append(f"| Total scenarios | {total} |")
+    lines.append(f"| Agreements | {agreements} |")
+    lines.append(f"| Divergences | {divergences} |")
+    agreement_pct = (agreements / total * 100) if total > 0 else 0
+    lines.append(f"| Agreement rate | {agreement_pct:.0f}% |")
+    lines.append("")
+
+    # --- Per-Scenario Breakdown ---
+    lines.append("## Per-Scenario Breakdown")
+    lines.append("")
+
+    for i, (rec, cls) in enumerate(zip(records, classifications)):
+        tag = "AGREE" if cls == "agreement" else "DIVERGE"
+        lines.append(f"### Scenario {rec.get('domain', '').upper()} [{tag}]")
+        lines.append("")
+        lines.append(f"> {rec['scenario']}")
+        lines.append("")
+
+        # Each twin's decision
+        decision_a = _extract_decision_line(rec["organism_a"]["response"])
+        decision_b = _extract_decision_line(rec["organism_b"]["response"])
+
+        lines.append(f"**{name_a}**: {decision_a}")
+        lines.append("")
+        lines.append(f"**{name_b}**: {decision_b}")
+        lines.append("")
+
+        # Principles used
+        p_a = rec["organism_a"].get("dna_principles_used", [])
+        p_b = rec["organism_b"].get("dna_principles_used", [])
+        if p_a:
+            lines.append(f"*{name_a}'s principles*:")
+            for p in p_a:
+                lines.append(f"- {p[:120]}")
+        if p_b:
+            lines.append(f"*{name_b}'s principles*:")
+            for p in p_b:
+                lines.append(f"- {p[:120]}")
+        lines.append("")
+
+        # Synthesis for this scenario
+        lines.append(f"**Synthesis**: {rec.get('synthesis', 'N/A')}")
+        lines.append("")
+        lines.append("---")
+        lines.append("")
+
+    # --- Divergence Heatmap ---
+    lines.append("## Divergence Heatmap")
+    lines.append("")
+    lines.append("Which life domains show the most disagreement between the two twins.")
+    lines.append("")
+
+    heatmap = _build_domain_heatmap(records)
+    # Sort by divergences descending
+    sorted_domains = sorted(
+        heatmap.items(), key=lambda x: x[1]["divergences"], reverse=True
+    )
+
+    lines.append("| Domain | Agreements | Divergences | Status |")
+    lines.append("|--------|------------|-------------|--------|")
+    for domain, counts in sorted_domains:
+        if counts["divergences"] > 0:
+            status = "DIVERGENT"
+        else:
+            status = "ALIGNED"
+        lines.append(
+            f"| {domain} | {counts['agreements']} | {counts['divergences']} | {status} |"
+        )
+    lines.append("")
+
+    # --- Synthesis: Mutual Learning ---
+    lines.append("## Synthesis: What Each Twin Could Learn")
+    lines.append("")
+
+    learning = _build_learning_synthesis(records, organism_a, organism_b)
+
+    for name, lessons in learning.items():
+        lines.append(f"### {name}")
+        lines.append("")
+        if lessons:
+            for lesson in lessons:
+                lines.append(f"- {lesson}")
+        else:
+            lines.append("- No divergent scenarios — twins are fully aligned on tested domains.")
+        lines.append("")
+
+    # --- Footer ---
+    lines.append("---")
+    lines.append("")
+    lines.append(f"*Generated by organism_interact.py collision report | {now.isoformat()}*")
+
+    return "\n".join(lines)
+
+
+def generate_collision_report_json(
+    records: list, organism_a: dict, organism_b: dict
+) -> dict:
+    """
+    Build a machine-readable collision report as a dict (for JSON serialization).
+
+    Includes everything in the markdown report in structured form.
+    """
+    name_a = organism_a["name"]
+    name_b = organism_b["name"]
+    now = datetime.now()
+
+    total = len(records)
+    classifications = [_classify_record(r) for r in records]
+    agreements = classifications.count("agreement")
+    divergences = classifications.count("divergence")
+
+    heatmap = _build_domain_heatmap(records)
+    learning = _build_learning_synthesis(records, organism_a, organism_b)
+
+    scenario_details = []
+    for rec, cls in zip(records, classifications):
+        scenario_details.append({
+            "domain": rec["domain"],
+            "scenario": rec["scenario"],
+            "classification": cls,
+            "organism_a": {
+                "name": name_a,
+                "decision": _extract_decision_line(rec["organism_a"]["response"]),
+                "full_response": rec["organism_a"]["response"],
+                "principles_used": rec["organism_a"].get("dna_principles_used", []),
+            },
+            "organism_b": {
+                "name": name_b,
+                "decision": _extract_decision_line(rec["organism_b"]["response"]),
+                "full_response": rec["organism_b"]["response"],
+                "principles_used": rec["organism_b"].get("dna_principles_used", []),
+            },
+            "synthesis": rec.get("synthesis", ""),
+        })
+
+    return {
+        "meta": {
+            "report_type": "collision",
+            "generated_at": now.isoformat(),
+            "organism_a_file": organism_a["filepath"],
+            "organism_b_file": organism_b["filepath"],
+            "protocol_version": "v0.1",
+        },
+        "summary": {
+            "total_scenarios": total,
+            "agreements": agreements,
+            "divergences": divergences,
+            "agreement_rate": round(agreements / total * 100, 1) if total > 0 else 0,
+        },
+        "organisms": {
+            "a": {
+                "name": name_a,
+                "principles_extracted": len(organism_a["principles"]),
+                "identity": organism_a["identity"],
+            },
+            "b": {
+                "name": name_b,
+                "principles_extracted": len(organism_b["principles"]),
+                "identity": organism_b["identity"],
+            },
+        },
+        "scenarios": scenario_details,
+        "divergence_heatmap": heatmap,
+        "learning_synthesis": learning,
+    }
+
+
+def save_collision_report(
+    records: list, organism_a: dict, organism_b: dict, output_dir: str
+) -> tuple:
+    """
+    Save both markdown and JSON collision reports.
+
+    Returns: (md_path, json_path)
+    """
+    os.makedirs(output_dir, exist_ok=True)
+
+    name_a = re.sub(r"[^\w]", "_", organism_a["name"])[:20]
+    name_b = re.sub(r"[^\w]", "_", organism_b["name"])[:20]
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    base = f"collision_{name_a}_vs_{name_b}_{timestamp}"
+
+    # Markdown report
+    md_content = generate_collision_report_md(records, organism_a, organism_b)
+    md_path = os.path.join(output_dir, f"{base}.md")
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write(md_content)
+
+    # JSON report
+    json_data = generate_collision_report_json(records, organism_a, organism_b)
+    json_path = os.path.join(output_dir, f"{base}.json")
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(json_data, f, ensure_ascii=False, indent=2)
+
+    return md_path, json_path
+
+
+# ---------------------------------------------------------------------------
 # CLI entrypoint
 # ---------------------------------------------------------------------------
 
@@ -960,6 +1321,10 @@ def main() -> None:
     parser.add_argument(
         "--quiet", action="store_true",
         help="Suppress terminal output; only write JSON file.",
+    )
+    parser.add_argument(
+        "--report", action="store_true",
+        help="Generate structured collision report (markdown + JSON) in results/.",
     )
     parser.add_argument(
         "--list-scenarios", action="store_true",
@@ -1063,6 +1428,14 @@ def main() -> None:
     # Save
     output_path = save_results(records, organism_a, organism_b, output_dir)
     print(f"\nResults saved to: {output_path}")
+
+    # Collision report
+    if args.report:
+        md_path, json_path = save_collision_report(
+            records, organism_a, organism_b, output_dir
+        )
+        print(f"\nCollision report (markdown): {md_path}")
+        print(f"Collision report (JSON):     {json_path}")
 
 
 if __name__ == "__main__":

@@ -48,6 +48,7 @@ def _load(category: str) -> dict:
 
 def _save(category: str, data: dict) -> None:
     """Atomic write: write to temp file then rename, so a crash never corrupts the file."""
+    MEMORY_DIR.mkdir(exist_ok=True)
     path = _memory_path(category)
     # Write to a temp file in the same directory (same filesystem) for atomic rename
     fd, tmp_path = tempfile.mkstemp(dir=MEMORY_DIR, suffix=".tmp", prefix=f".{category}_")
@@ -77,6 +78,7 @@ def store(category: str, key: str, content: str, source: str = "manual",
         print(f"Error: unknown category '{category}'. Must be one of: {', '.join(CATEGORIES)}", file=sys.stderr)
         sys.exit(1)
 
+    MEMORY_DIR.mkdir(exist_ok=True)
     data = _load(category)
 
     entry = {

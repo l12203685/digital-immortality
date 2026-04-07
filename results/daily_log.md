@@ -228,3 +228,55 @@ Recursive engine cycle history.
 3. **Add**: Recursive engine auto-scheduling — self-triggering loop without external cron
 4. **Improve**: Add strategy performance tracking across paper trading sessions
 5. **Add**: Export validation — automated test that verifies exported prompts produce aligned decisions
+
+
+## Cycle 6 — 2026-04-07T23:12Z
+
+**Branches pushed**: 4/6 (economic, platform, social-circle, survival)
+
+### Branch 1: Economic Self-Sufficiency
+- Added `--performance` flag to `trading_system.py` — aggregates metrics from all backtest/paper results
+- Reads `results/backtest_*.json` and `results/paper_*.jsonl`, computes per-strategy stats (win rate, Sharpe, MDD, profit factor)
+- Displays formatted summary table with combined strategy ranking
+- Saves to `results/strategy_performance.json`
+- Added `--track` flag — appends timestamped snapshots to `results/performance_log.jsonl`
+- Deferred trading imports so performance/track work without trading package
+- **Impact**: Can now track strategy performance across sessions. Path to paper→live requires knowing which strategies actually work.
+
+### Branch 5: Platform Distribution
+- Created `validate_exports.py` — validates exported platform prompts against source DNA
+- 9-10 checks per export: core principles, principle descriptions, BOOT_CRITICAL rules, DNA sections, boot test scenarios, reasoning hints, recursive loop, well-formedness, DNA completeness, (OpenAI: JSON structure)
+- Tested: **3/3 exports PASS** (gemini, generic, openai — all 9-10/9-10 checks pass)
+- Supports `--verbose`, `--json`, custom `--dna` and `--exports-dir` paths
+- **Impact**: Export fidelity is now verified. Cross-platform portability has a test suite.
+
+### Branch 4: Social Circle
+- Added `--report` flag to `organism_interact.py` — structured collision reporting
+- Generates markdown report: header, summary stats, per-scenario breakdown with decisions/principles, synthesis section, divergence heatmap by domain
+- Saves machine-readable JSON alongside markdown
+- Output: `results/collision_<name1>_vs_<name2>_<timestamp>.{md,json}`
+- **Impact**: Organism collisions now produce actionable, shareable reports.
+
+### Branch 6: Survival Redundancy
+- Added `--loop` flag to `recursive_engine.py` — continuous cycling with configurable `--interval` (default 3600s)
+- Added `--loop-count N` for bounded execution (testing)
+- Added `--daemon` flag — double-fork background process with PID file (`staging/engine.pid`)
+- Added `--stop` flag — reads PID, sends SIGTERM, waits for graceful completion
+- Graceful shutdown: SIGTERM handler lets current cycle finish before exit
+- Daemon redirects stdout/stderr to `results/daemon_log.md`
+- Updated `--status` to show daemon state
+- **Impact**: Recursive engine is now self-scheduling. No external cron required.
+
+### Meta
+- Boot test: 8/8 aligned (maintained)
+- Export validation: 3/3 PASS (new)
+- Recursive engine: self-scheduling operational (tested --loop --loop-count 1)
+- Collision reporting: tested with self-collision (same DNA both sides)
+- Strategy tracking: handles empty results gracefully
+
+### Next cycle priorities
+1. **Add**: CI/CD pipeline — run boot tests + export validation on every push
+2. **Improve**: DNA calibration from real person input — example DNA is still generic
+3. **Add**: Strategy backtesting on real historical data (not just synthetic noise)
+4. **Improve**: Multi-DNA collision — support >2 organisms in a single collision session
+5. **Add**: Memory search integration into boot test — use past corrections to improve alignment

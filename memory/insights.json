@@ -1,290 +1,201 @@
 {
   "category": "insights",
-  "description": "Cross-domain patterns discovered during recursive cycles.",
+  "description": "",
   "entries": [
     {
-      "id": "5b9f21b6-a59b-4784-834d-abd4332fd41f",
-      "key": "cycle2_observation",
-      "content": "Consistency test boot scenarios are Edward-specific — need generalization for any DNA",
-      "timestamp": "2026-04-07T19:06:55.620099+00:00",
-      "source": "cycle2",
+      "id": "1b502f14-8bb2-4edf-830a-bb21e36a1aee",
+      "key": "cycle-1-prompt",
+      "content": "Cycle 1 prompt generated. Previous output consumed and fed forward.",
+      "timestamp": "2026-04-07T23:10:44.655621+00:00",
+      "source": "recursive-engine-cycle-1",
       "tags": [
-        "meta",
-        "consistency",
-        "improvement"
+        "recursive-engine",
+        "cycle-transition"
       ]
     },
     {
-      "id": "0da30f06-d13d-439f-92e0-e4a39f2b6fea",
-      "key": "recursive_persist_pattern",
-      "content": "learn=write: any insight discovered during a cycle must be persisted in the same cycle. Memory manager now makes this possible.",
-      "timestamp": "2026-04-07T19:07:00.151858+00:00",
-      "source": "cycle2",
+      "id": "90053bea-889f-405c-a3fe-0704c029fd8c",
+      "key": "cycle-2-prompt",
+      "content": "Cycle 2 prompt generated. Previous output consumed and fed forward.",
+      "timestamp": "2026-04-07T23:10:44.656595+00:00",
+      "source": "recursive-engine-cycle-2",
       "tags": [
-        "meta",
-        "recursive",
-        "architecture"
+        "recursive-engine",
+        "cycle-transition"
       ]
     },
     {
-      "id": "ab21494c-967c-4ee0-b68e-c94b6b0be8bc",
-      "key": "distill-cycle-1-impact-0",
-      "content": "Cold start is no longer broken. Any LLM can read CLAUDE.md and resume the project.",
-      "timestamp": "2026-04-07T22:08:24.318754+00:00",
-      "source": "daily-log-cycle-1",
+      "id": "82016249-75a2-4f75-a1f7-9e0d9426b001",
+      "key": "loop-cycle-2",
+      "content": "Auto-loop cycle 2 completed. Prompt generated and staged for LLM execution. Interval: 2s.",
+      "timestamp": "2026-04-07T23:10:44.657345+00:00",
+      "source": "recursive-engine-loop",
       "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-1"
-      ],
-      "confidence": 0.85
-    },
-    {
-      "id": "437eb2f2-8cea-48c8-9966-ab0afd3c24ef",
-      "key": "distill-cycle-1-impact-1",
-      "content": "The recursive loop now has persistent state between sessions.",
-      "timestamp": "2026-04-07T22:08:24.319583+00:00",
-      "source": "daily-log-cycle-1",
-      "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-1"
-      ],
-      "confidence": 0.85
-    },
-    {
-      "id": "5d8e14b2-5bf0-4caf-abe2-8cfcdb01e561",
-      "key": "distill-cycle-1-impact-2",
-      "content": "The 0/7 deterministic gap is bridged — users can now generate LLM-ready comparison prompts.",
-      "timestamp": "2026-04-07T22:08:24.319919+00:00",
-      "source": "daily-log-cycle-1",
-      "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-1"
-      ],
-      "confidence": 0.85
-    },
-    {
-      "id": "b0dc4395-643f-4b77-83d9-f54c38e1fc4e",
-      "key": "distill-cycle-2-impact-0",
-      "content": "Trading system now has a usable CLI entry point. Revenue path: synthetic → paper → live.",
-      "timestamp": "2026-04-07T22:08:24.320212+00:00",
-      "source": "daily-log-cycle-2",
-      "tags": [
-        "distilled",
-        "daily-log",
+        "recursive-engine",
+        "auto-loop",
         "cycle-2"
-      ],
-      "confidence": 0.85
+      ]
     },
     {
-      "id": "eb0e7797-847c-44de-a136-b2bee8359123",
-      "key": "distill-cycle-2-impact-1",
-      "content": "Any user can now run consistency tests with their own DNA. Framework is person-agnostic.",
-      "timestamp": "2026-04-07T22:08:24.320827+00:00",
-      "source": "daily-log-cycle-2",
+      "id": "c1b7f0bf-e914-4340-9ba4-19c4ceb9afa9",
+      "key": "cycle-3-prompt",
+      "content": "Cycle 3 prompt generated. Previous output consumed and fed forward.",
+      "timestamp": "2026-04-07T23:10:46.658998+00:00",
+      "source": "recursive-engine-cycle-3",
       "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-2"
-      ],
-      "confidence": 0.85
+        "recursive-engine",
+        "cycle-transition"
+      ]
     },
     {
-      "id": "40c6f909-50ca-46b4-8050-476ee3066176",
-      "key": "distill-cycle-2-impact-2",
-      "content": "learn=write is now possible. Every cycle can persist its insights.",
-      "timestamp": "2026-04-07T22:08:24.321374+00:00",
-      "source": "daily-log-cycle-2",
+      "id": "14ba9e67-d793-41fa-a94b-4718b9e7e730",
+      "key": "loop-cycle-3",
+      "content": "Auto-loop cycle 3 completed. Prompt generated and staged for LLM execution. Interval: 2s.",
+      "timestamp": "2026-04-07T23:10:46.659913+00:00",
+      "source": "recursive-engine-loop",
       "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-2"
-      ],
-      "confidence": 0.85
-    },
-    {
-      "id": "2c19f10e-c8b5-443e-a5b0-6c76681d9407",
-      "key": "distill-cycle-2-impact-3",
-      "content": "New users can go from zero to a validated DNA in ~5 minutes.",
-      "timestamp": "2026-04-07T22:08:24.321938+00:00",
-      "source": "daily-log-cycle-2",
-      "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-2"
-      ],
-      "confidence": 0.85
-    },
-    {
-      "id": "7d6e7ff2-877d-4176-a549-f1328698ea33",
-      "key": "distill-cycle-3-impact-0",
-      "content": "Trading system can now ingest real market data. Path: synthetic → CSV backtest → paper → live.",
-      "timestamp": "2026-04-07T22:08:24.322696+00:00",
-      "source": "daily-log-cycle-3",
-      "tags": [
-        "distilled",
-        "daily-log",
+        "recursive-engine",
+        "auto-loop",
         "cycle-3"
-      ],
-      "confidence": 0.85
+      ]
     },
     {
-      "id": "36f254af-27fa-4497-81c7-0f7d93b1135b",
-      "key": "distill-cycle-3-impact-1",
-      "content": "Boot test failures now produce actionable DNA edits. Closes the calibration feedback loop.",
-      "timestamp": "2026-04-07T22:08:24.323125+00:00",
-      "source": "daily-log-cycle-3",
+      "id": "8a539568-48cb-4327-b3a3-76deb4c3ae18",
+      "key": "cycle-4-prompt",
+      "content": "Cycle 4 prompt generated. Previous output consumed and fed forward.",
+      "timestamp": "2026-04-07T23:10:49.988304+00:00",
+      "source": "recursive-engine-cycle-4",
       "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-3"
-      ],
-      "confidence": 0.85
+        "recursive-engine",
+        "cycle-transition"
+      ]
     },
     {
-      "id": "e95a5700-546d-41d6-a165-4368f20cdadd",
-      "key": "distill-cycle-3-impact-2",
-      "content": "Recursive loop now reads and writes memory every cycle. learn=write is operational.",
-      "timestamp": "2026-04-07T22:08:24.323840+00:00",
-      "source": "daily-log-cycle-3",
+      "id": "4402b13d-cf2c-48fa-a5e7-c1d7ae9f7030",
+      "key": "loop-cycle-4",
+      "content": "Auto-loop cycle 4 completed. Prompt generated and staged for LLM execution. Interval: 3s.",
+      "timestamp": "2026-04-07T23:10:49.989732+00:00",
+      "source": "recursive-engine-loop",
       "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-3"
-      ],
-      "confidence": 0.85
-    },
-    {
-      "id": "8f6cf9a3-c369-45b1-aec0-b851264c4faa",
-      "key": "distill-cycle-3-impact-3",
-      "content": "New users can discover and use all tools from README alone.",
-      "timestamp": "2026-04-07T22:08:24.324447+00:00",
-      "source": "daily-log-cycle-3",
-      "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-3"
-      ],
-      "confidence": 0.85
-    },
-    {
-      "id": "ad68b4d2-57bc-4dd2-9ee9-1b0ece6afd8f",
-      "key": "distill-cycle-4-impact-0",
-      "content": "Core metric (boot test pass rate) maximized on template DNA. Calibration loop is closed.",
-      "timestamp": "2026-04-07T22:08:24.325043+00:00",
-      "source": "daily-log-cycle-4",
-      "tags": [
-        "distilled",
-        "daily-log",
+        "recursive-engine",
+        "auto-loop",
         "cycle-4"
-      ],
-      "confidence": 0.85
+      ]
     },
     {
-      "id": "2b7dcf4e-3ddb-4062-8566-dc3b9c7aebbf",
-      "key": "distill-cycle-4-impact-1",
-      "content": "Strategy library now has 2 real strategies. Path: synthetic validation → real data → paper → live.",
-      "timestamp": "2026-04-07T22:08:24.325426+00:00",
-      "source": "daily-log-cycle-4",
+      "id": "7bc69819-5be1-4646-bf50-040c94cd09d6",
+      "key": "cycle-5-prompt",
+      "content": "Cycle 5 prompt generated. Previous output consumed and fed forward.",
+      "timestamp": "2026-04-07T23:10:52.991174+00:00",
+      "source": "recursive-engine-cycle-5",
       "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-4"
-      ],
-      "confidence": 0.85
+        "recursive-engine",
+        "cycle-transition"
+      ]
     },
     {
-      "id": "9d91986e-26f5-4044-a0ad-632b15ed185f",
-      "key": "distill-cycle-4-impact-2",
-      "content": "Organism collision is no longer deferred. Two digital twins can now meet and interact.",
-      "timestamp": "2026-04-07T22:08:24.325785+00:00",
-      "source": "daily-log-cycle-4",
+      "id": "b9c21016-1d8a-4f83-9d55-f7638b28affd",
+      "key": "loop-cycle-5",
+      "content": "Auto-loop cycle 5 completed. Prompt generated and staged for LLM execution. Interval: 3s.",
+      "timestamp": "2026-04-07T23:10:52.991847+00:00",
+      "source": "recursive-engine-loop",
       "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-4"
-      ],
-      "confidence": 0.85
+        "recursive-engine",
+        "auto-loop",
+        "cycle-5"
+      ]
     },
     {
-      "id": "12dfdc46-75fe-4020-8606-7d07b5e4082e",
-      "key": "distill-cycle-4-impact-3",
-      "content": "Memory is now bounded and self-maintaining. Test results persist across sessions.",
-      "timestamp": "2026-04-07T22:08:24.326622+00:00",
-      "source": "daily-log-cycle-4",
+      "id": "9743d83c-1ee2-404c-b180-923f5fc8f811",
+      "key": "cycle-6-prompt",
+      "content": "Cycle 6 prompt generated. Previous output consumed and fed forward.",
+      "timestamp": "2026-04-07T23:11:01.210743+00:00",
+      "source": "recursive-engine-cycle-6",
       "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-4"
-      ],
-      "confidence": 0.85
+        "recursive-engine",
+        "cycle-transition"
+      ]
     },
     {
-      "id": "87568655-5834-43a9-8760-3c034ced6592",
-      "key": "distill-cycle-4-priority-0",
-      "content": "**Add**: Paper trading mode — connect strategies to live data feed (read-only)",
-      "timestamp": "2026-04-07T22:08:24.327536+00:00",
-      "source": "daily-log-cycle-4",
+      "id": "03e974c5-97fb-42e2-bf35-a8b2a8abadb6",
+      "key": "loop-cycle-6",
+      "content": "Auto-loop cycle 6 completed. Prompt generated and staged for LLM execution. Interval: 60s.",
+      "timestamp": "2026-04-07T23:11:01.211802+00:00",
+      "source": "recursive-engine-loop",
       "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-4"
-      ],
-      "confidence": 0.85
+        "recursive-engine",
+        "auto-loop",
+        "cycle-6"
+      ]
     },
     {
-      "id": "6251e7fd-277f-4299-a616-0b7a1b8f995d",
-      "key": "distill-cycle-4-priority-1",
-      "content": "**Improve**: DNA calibration from real person input — the example DNA is generic, need real calibration",
-      "timestamp": "2026-04-07T22:08:24.328404+00:00",
-      "source": "daily-log-cycle-4",
+      "id": "7b190c20-fbc8-4982-80bb-b95f8c23d7cd",
+      "key": "cycle-7-prompt",
+      "content": "Cycle 7 prompt generated. Previous output consumed and fed forward.",
+      "timestamp": "2026-04-07T23:11:19.270485+00:00",
+      "source": "recursive-engine-cycle-7",
       "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-4"
-      ],
-      "confidence": 0.85
+        "recursive-engine",
+        "cycle-transition"
+      ]
     },
     {
-      "id": "78c2f74f-c485-496a-9d24-f8803ce62259",
-      "key": "distill-cycle-4-priority-2",
-      "content": "**Add**: Multi-platform export — package DNA + boot tests for other LLM platforms",
-      "timestamp": "2026-04-07T22:08:24.329087+00:00",
-      "source": "daily-log-cycle-4",
+      "id": "118b0e32-06aa-4e04-bcf3-0a48a2cb5d5e",
+      "key": "loop-cycle-7",
+      "content": "Auto-loop cycle 7 completed. Prompt generated and staged for LLM execution. Interval: 60s.",
+      "timestamp": "2026-04-07T23:11:19.272409+00:00",
+      "source": "recursive-engine-loop",
       "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-4"
-      ],
-      "confidence": 0.85
+        "recursive-engine",
+        "auto-loop",
+        "cycle-7"
+      ]
     },
     {
-      "id": "88fd4d97-2d0d-45d8-ad0b-8642c7a14061",
-      "key": "distill-cycle-4-priority-3",
-      "content": "**Improve**: Organism collision reporting — structured markdown output from collisions",
-      "timestamp": "2026-04-07T22:08:24.329762+00:00",
-      "source": "daily-log-cycle-4",
+      "id": "9d807965-bb8b-4821-a14f-e4ce70fb3dda",
+      "key": "cycle-8-prompt",
+      "content": "Cycle 8 prompt generated. Previous output consumed and fed forward.",
+      "timestamp": "2026-04-07T23:11:31.778325+00:00",
+      "source": "recursive-engine-cycle-8",
       "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-4"
-      ],
-      "confidence": 0.85
+        "recursive-engine",
+        "cycle-transition"
+      ]
     },
     {
-      "id": "24560eb1-7cec-4dff-a023-9944f38e440d",
-      "key": "distill-cycle-4-priority-4",
-      "content": "**Add**: Recursive engine auto-scheduling — self-triggering loop without external cron",
-      "timestamp": "2026-04-07T22:08:24.330355+00:00",
-      "source": "daily-log-cycle-4",
+      "id": "32f4f22a-8c7e-4cb6-9cc4-e5e8c69f279b",
+      "key": "loop-cycle-8",
+      "content": "Auto-loop cycle 8 completed. Prompt generated and staged for LLM execution. Interval: 60s.",
+      "timestamp": "2026-04-07T23:11:31.779930+00:00",
+      "source": "recursive-engine-loop",
       "tags": [
-        "distilled",
-        "daily-log",
-        "cycle-4"
-      ],
-      "confidence": 0.85
+        "recursive-engine",
+        "auto-loop",
+        "cycle-8"
+      ]
+    },
+    {
+      "id": "a67d47a0-35c4-4520-9fb5-635733e85998",
+      "key": "cycle-9-prompt",
+      "content": "Cycle 9 prompt generated. Previous output consumed and fed forward.",
+      "timestamp": "2026-04-07T23:12:02.114510+00:00",
+      "source": "recursive-engine-cycle-9",
+      "tags": [
+        "recursive-engine",
+        "cycle-transition"
+      ]
+    },
+    {
+      "id": "a7e7232a-1eee-44a7-a14a-b761bb2a00a8",
+      "key": "loop-cycle-9",
+      "content": "Auto-loop cycle 9 completed. Prompt generated and staged for LLM execution. Interval: 1s.",
+      "timestamp": "2026-04-07T23:12:02.115238+00:00",
+      "source": "recursive-engine-loop",
+      "tags": [
+        "recursive-engine",
+        "auto-loop",
+        "cycle-9"
+      ]
     }
   ]
 }
