@@ -268,11 +268,12 @@ def main():
         for r in boot_results:
             resp_lower = r["deterministic_response"].lower()
             expected = r["expected_decision"].lower()
-            # Simple alignment check
-            aligned = expected in resp_lower or (
-                expected == "pass" and "pass" in resp_lower
-            ) or (
-                expected == "reject" and ("reject" in resp_lower or "pass" in resp_lower)
+            # Alignment check: exact match first, then partial for compound decisions
+            aligned = (
+                expected in resp_lower
+                or (expected == "stop_or_cap" and ("stop" in resp_lower or "cap" in resp_lower))
+                or (expected == "pause_system" and ("pause" in resp_lower or "halt" in resp_lower))
+                or (expected == "pass_unless_clear_edge" and "pass" in resp_lower)
             )
             status = "ALIGNED" if aligned else "MISALIGNED"
             print(f"  [{status:10s}] {r['id']:15s} | expected={r['expected_decision']:20s}")
