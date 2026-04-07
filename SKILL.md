@@ -23,6 +23,8 @@ Not consciousness transfer (Route 1, no known path). Build a system that makes t
 
 **Boundary**: Decision consistency achievable. Existence consistency (what you think at 7:34pm) is not. That's enough.
 
+**Why this method works**: The person's thinking is already recursive — every output feeds back as input (experience → failure → review → extract rule → write to system → don't repeat). Digital immortality = keep this engine running. The methodology isn't designed separately — it IS the person's operating mode, formalized. 遞迴 + persist = evolution. 遞迴 - persist = talking to yourself.
+
 ### DNA Architecture (Three Layers)
 1. **dna_core.md** (~64 lines) — Operational core. Cold boot reads this only. Enough for instant action.
 2. **dna_full.md** (~2000 lines) — Complete knowledge. Deep decisions query this.
