@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "test_date": "2026-04-07",
+    "methodology": "Out-of-sample: scenarios Edward has NEVER faced, not recorded in DNA. Agent pre-commits predictions using Decision Kernel only. Edward scores when available.",
+    "purpose": "Distinguish memory (recalling DNA answers) from reasoning (applying principles to novel situations)",
+    "status": "PREDICTIONS COMMITTED — awaiting Edward's scoring",
+    "scoring_instructions": "Edward: for each scenario, say what you would ACTUALLY do. Mark aligned/misaligned. Any misalignment = DNA gap to fix."
+  },
+  "scenarios": [
+    {
+      "id": "oos_1",
+      "domain": "career/AI",
+      "scenario": "中華電信因 AI 裁員，你的部門被裁 50%。你沒被裁但工作量加倍，FIRE 延後 1 年。留或走？",
+      "prediction": "STAY",
+      "reasoning": "核心衝突排序：物理層限制 > 偏好。穩定現金流是 FIRE hedge。工作量加倍但認知閒置時間可能不變（混的空間仍在）。Bias toward inaction：沒有更好的選項就不動。FIRE 延 1 年 marginal cost < 重新找工作搜尋成本。",
+      "principles_used": ["核心衝突排序", "Bias toward inaction", "看導數不看水平"],
+      "edward_actual": null,
+      "aligned": null
+    },
+    {
+      "id": "oos_2",
+      "domain": "money/relationship",
+      "scenario": "達飆 fund 一年內 MDD -35%。可可 36万 + 弟弟 252万 都縮水。可可開始焦慮。怎麼處理？",
+      "prediction": "TWO-LAYER: 可可 → 啟動借據保障本金，不討論市場。弟弟 → 透明溝通但不建議贖回（lock-up）。自己 → 看 -35% 是 drawdown 還是 regime change。Drawdown → 不動(Management paradox)。Regime change → 考慮贖回。",
+      "reasoning": "可可：irreversible damage framework → 關係保護優先。弟弟：透明 + lock-up 紀律。自己：看導數 + Management paradox（未失效不管，但 -35% 在 <30% 年度下架條件邊緣，需判斷 regime）。",
+      "principles_used": ["irreversible damage", "Management paradox", "看導數不看水平", "可可情緒保護"],
+      "edward_actual": null,
+      "aligned": null
+    },
+    {
+      "id": "oos_3",
+      "domain": "technology/privacy",
+      "scenario": "AI 公司提供免費 fine-tuned model for digital immortality，但需上傳完整 DNA 到他們雲端。接受嗎？",
+      "prediction": "DECLINE",
+      "reasoning": "資訊不對稱：不知道他們用 DNA 做什麼。不可逆 damage：DNA 洩露不可撤回。Population exploit：多數人被免費吸引。替代方案：local model 或已知 privacy policy 的 API。除非 open-source 可本地跑。",
+      "principles_used": ["資訊不對稱", "irreversible damage", "Population exploit"],
+      "edward_actual": null,
+      "aligned": null
+    },
+    {
+      "id": "oos_4",
+      "domain": "business/social",
+      "scenario": "Samuel 邀你一起做 paid digital immortality consulting，月入估 5-10万。加入嗎？",
+      "prediction": "CONDITIONAL YES — 先切小任務試作",
+      "reasoning": "EV positive if time-bounded。Samuel = qualified deep friendship（說到做到+真本事+雙向 value）。限制：(1) 不影響 FIRE timeline (2) 時間投入有 cap (3) 先窄後寬：1-2 case 驗證 demand。不簽長期承諾。",
+      "principles_used": ["EV calculation", "先窄後寬", "先切小任務試作", "deep friendship qualify"],
+      "edward_actual": null,
+      "aligned": null
+    },
+    {
+      "id": "oos_5",
+      "domain": "life/identity",
+      "scenario": "可可懷孕了。FIRE plan、數位永生、生活結構全需重評。第一反應？",
+      "prediction": "CALCULATE THEN ACT — 物理層限制 > 偏好",
+      "reasoning": "立刻計算 financial impact（育兒成本 vs 現金流）。FIRE 延 2-3 年但架構不變。中華電信生存層更重要。數位永生不停但優先序調：可可+孩子 > 數位永生。看導數：人生拐點 = 最大 derivative change，全 strategy Bayesian update。不焦慮（情緒 EV=0）。",
+      "principles_used": ["核心衝突排序", "看導數不看水平", "Bayesian update", "情緒-行動分離"],
+      "edward_actual": null,
+      "aligned": null
+    }
+  ],
+  "key_properties": {
+    "truly_novel": "None of these scenarios appear in DNA. Agent cannot recall answers.",
+    "testable": "Edward can score each one with his actual response.",
+    "coverage": "career-AI, money-relationship, technology-privacy, business-social, life-identity",
+    "falsifiable": "Any misalignment = concrete DNA gap to fix"
+  }
+}
