@@ -69,6 +69,15 @@ def decisions_agree(d1: str, d2: str) -> bool:
     # Direct match
     if d1 == d2:
         return True
+    # SPECIFIC_ACTION: any non-trivial response qualifies — the scenario asks for
+    # a concrete calendar/person/time action; if the LLM produced something specific
+    # (not UNKNOWN/ERROR), treat it as agreeing with SPECIFIC_ACTION.
+    SPECIFIC_SENTINEL = "SPECIFIC_ACTION"
+    NONTRIVIAL = {"UNKNOWN", "ERROR"}
+    if d1 == SPECIFIC_SENTINEL and d2 not in NONTRIVIAL:
+        return True
+    if d2 == SPECIFIC_SENTINEL and d1 not in NONTRIVIAL:
+        return True
     # Common equivalences
     EQUIVALENTS = [
         {"PASS", "NO", "DECLINE", "REJECT", "SKIP"},
@@ -208,11 +217,11 @@ def run_scenario(
     expected = scenario_def.get("expected_decision", "")
     consensus_matches_expected = False
     if expected and consensus != "UNKNOWN":
-        # Check if consensus matches expected using same equivalence logic
-        expected_words = expected.upper().split("_")
-        consensus_matches_expected = any(
-            decisions_agree(w, consensus) for w in expected_words
-        ) or decisions_agree(expected.upper(), consensus)
+        # Use decisions_agree directly — it handles SPECIFIC_ACTION, compound
+        # decisions (STOP_OR_CAP, PAUSE_SYSTEM, PASS_UNLESS_CLEAR_EDGE), and
+        # plain equivalences. The old split-by-underscore approach was wrong for
+        # multi-word expected values (e.g. "SPECIFIC_ACTION" split to ["SPECIFIC","ACTION"]).
+        consensus_matches_expected = decisions_agree(expected.upper(), consensus)
 
     return {
         "id": scenario_def["id"],

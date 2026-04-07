@@ -58,10 +58,42 @@
       "aligned": null
     }
   ],
+    {
+      "id": "oos_6",
+      "domain": "health/override",
+      "scenario": "醫生建議你做一個低風險手術，預計提升長期生活品質，但需要休養 2 週，正好撞上 達飆 Q2 關鍵決策期。做嗎？",
+      "prediction": "DO IT — 身體損傷 = 不可逆，不可逆損害框架 > 短期財務機會。2 週休養 = 可逆機會成本。達飆決策可委託或延後；身體窗口只有現在。Bias toward inaction 例外：物理層限制不可妥協。",
+      "reasoning": "不可逆損害框架：身體品質惡化 > 2 週投資損失。核心衝突排序：物理層 > 財務層。Population exploit：多數人為了工作延後手術 = 反向。先確保基礎建設（身體），再談上層建築（財務）。",
+      "principles_used": ["irreversible damage framework", "核心衝突排序", "Population exploit", "Bias toward inaction 例外"],
+      "edward_actual": null,
+      "aligned": null
+    },
+    {
+      "id": "oos_7",
+      "domain": "learning/skill",
+      "scenario": "有個深度學習課程，完課後可大幅提升數位永生系統品質，但需要 3 個月每週 10hr。目前 CHT 工作量低，可以吸收。學嗎？",
+      "prediction": "TAKE — 看導數：數位永生是當前最高 derivative 項目。提升核心系統品質 = 直接 EV。CHT 認知閒置時間 = 隱藏價值，這就是它的用途。10hr/週 × 3 個月 = 120hr 高報酬投資。先窄後寬：先完成課程再評估下一步。",
+      "reasoning": "看導數不看水平：數位永生 > 維持現狀。Hidden value 啟動：CHT 閒置時間專為這類投資設計。機會成本計算：不學的代價 = 永久落後 vs 學的代價 = 3 個月部分注意力。Compound logic：技能會複利，不學不會。",
+      "principles_used": ["看導數不看水平", "hidden value discovery", "EV calculation", "先窄後寬"],
+      "edward_actual": null,
+      "aligned": null
+    },
+    {
+      "id": "oos_8",
+      "domain": "platform/strategy",
+      "scenario": "數位永生系統已達 18/18 準確率。有媒體記者詢問專訪，想公開報導這個專案。接受採訪嗎？",
+      "prediction": "PASS (for now) — 資訊不對稱：記者目的未知。時機未到：系統還未通過 cross-instance 一致性測試 = 尚未可公開展示的完整系統。先驗證後公開。等 out-of-sample 測試通過、cross-instance >80% 才有意義對外說。Bias toward inaction：公開是不可逆的，沉默可逆。",
+      "reasoning": "不可逆 damage 框架：一旦公開宣稱 X% 準確率，難以撤回。資訊不對稱：不知道記者框架、受眾。系統完整性：cross-instance 測試未完成 = 仍有已知洞。先完成驗證 → 再評估公開時機。Population exploit：多數人 jump at media = 反向，謹慎。",
+      "principles_used": ["irreversible damage", "資訊不對稱", "Bias toward inaction", "Population exploit"],
+      "edward_actual": null,
+      "aligned": null
+    }
+  ],
   "key_properties": {
     "truly_novel": "None of these scenarios appear in DNA. Agent cannot recall answers.",
     "testable": "Edward can score each one with his actual response.",
-    "coverage": "career-AI, money-relationship, technology-privacy, business-social, life-identity",
-    "falsifiable": "Any misalignment = concrete DNA gap to fix"
+    "coverage": "career-AI, money-relationship, technology-privacy, business-social, life-identity, health-override, learning-skill, platform-strategy",
+    "falsifiable": "Any misalignment = concrete DNA gap to fix",
+    "round_2_additions": "oos_6 (health override), oos_7 (learning investment), oos_8 (platform public exposure) — all predicted 2026-04-07 cycle 3"
   }
 }

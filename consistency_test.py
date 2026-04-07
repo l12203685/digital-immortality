@@ -207,12 +207,14 @@ def generate_template(dna: dict, results: list, output_dir: str) -> str:
     ]
 
     for i, r in enumerate(results, 1):
+        baseline_text = r['deterministic_response']
+        baseline_display = (baseline_text[:200] + "...") if len(baseline_text) > 200 else baseline_text
         template.extend([
             f"## Scenario {i}: {r['domain'].upper()} ({r['id']})",
             "",
             f"**Question**: {r['scenario']}",
             "",
-            f"**Deterministic baseline**: {r['deterministic_response'][:200]}...",
+            f"**Deterministic baseline**: {baseline_display}",
             "",
         ])
         if r.get("expected_decision"):

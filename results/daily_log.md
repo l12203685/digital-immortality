@@ -2,6 +2,32 @@
 
 ---
 
+## 2026-04-07 (cycle 3)
+
+### Highest Derivative Action
+**Gap**: `cross_instance_test.py` had two measurement bugs that would corrupt results when the test is run with a real API key. Fixing these now ensures the next major validation step (cross-instance consistency) produces correct data.
+
+### Bugs Fixed
+
+**1. `SPECIFIC_ACTION` in `decisions_agree()` — `cross_instance_test.py`**
+- **Bug**: `boot_8` expects `SPECIFIC_ACTION` (any calendar/person/time response). Old code split by `_` → `["SPECIFIC", "ACTION"]`, then checked `decisions_agree("SPECIFIC", consensus)` — never matched anything. `consensus_matches_expected` was always `False` for this scenario regardless of response quality.
+- **Fix**: Added `SPECIFIC_ACTION` sentinel handling in `decisions_agree()`: any non-UNKNOWN/ERROR response agrees with `SPECIFIC_ACTION`. Also simplified `consensus_matches_expected` to call `decisions_agree(expected, consensus)` directly — eliminates the broken underscore-split path for all compound expected values (`STOP_OR_CAP`, `PAUSE_SYSTEM`, `PASS_UNLESS_CLEAR_EDGE`).
+
+**2. Template truncation cosmetic bug — `consistency_test.py`**
+- **Bug**: `generate_template()` always appended `...` even when response was < 200 chars.
+- **Fix**: Conditional truncation.
+
+### Coverage Expanded
+
+Added 3 new out-of-sample scenarios to `results/out_of_sample_test.json` (round 2):
+- `oos_6` — health/override: low-risk surgery vs 達飆 Q2 timing → **DO IT** (irreversible damage > reversible opportunity cost)
+- `oos_7` — learning/skill: deep learning course for digital immortality → **TAKE** (CHT idle time = hidden value, highest derivative)
+- `oos_8` — platform/strategy: media interview on 18/18 accuracy → **PASS** (cross-instance not yet validated = system incomplete; irreversible public claim)
+
+Coverage now: 8 novel out-of-sample scenarios across 8 domains. All await Edward's scoring.
+
+---
+
 ## 2026-04-07 (cycle 2)
 
 ### Highest Derivative Action
