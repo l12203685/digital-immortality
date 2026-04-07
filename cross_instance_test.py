@@ -23,6 +23,8 @@ Output:
 """
 
 import argparse
+import json
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -31,6 +33,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from organism_interact import parse_dna, SCENARIOS
 from consistency_test import BOOT_TEST_SCENARIOS
+import memory_manager
 
 
 def _read_raw_dna(filepath: str) -> str:
@@ -198,6 +201,70 @@ def generate_cross_instance_template(
     return "\n".join(parts)
 
 
+def store_cross_instance_results(
+    template_path: str,
+    dna_name: str,
+    total_scenarios: int,
+) -> dict | None:
+    """
+    Parse a filled-in cross-instance template and store results as calibration memory.
+
+    Looks for the Summary Scorecard table and counts agreement rates.
+    Returns the stored memory entry, or None if parsing fails.
+    """
+    content = Path(template_path).read_text(encoding="utf-8", errors="replace")
+
+    # Parse the total agreement line: "**Total agreement rate**: X / Y ..."
+    total_match = re.search(r"\*\*Total agreement rate\*\*:\s*(\d+)\s*/\s*(\d+)", content)
+
+    if total_match:
+        agreed = int(total_match.group(1))
+        total = int(total_match.group(2))
+    else:
+        # Try to count filled rows in the scorecard (rows with non-empty session columns)
+        agreed = 0
+        total = total_scenarios
+
+    # Look for individual scenario failures by scanning scorecard rows
+    failures = []
+    # Match rows like: | 1 | scenario_id | domain | ... | X/Y | expected |
+    row_pattern = re.compile(
+        r"\|\s*(\d+)\s*\|\s*(\S+)\s*\|\s*(\S+)\s*\|.*?\|\s*(\d+)\s*/\s*(\d+)\s*\|"
+    )
+    for m in row_pattern.finditer(content):
+        scenario_id = m.group(2)
+        domain = m.group(3)
+        row_agreed = int(m.group(4))
+        row_total = int(m.group(5))
+        if row_agreed < row_total:
+            failures.append(f"{scenario_id} ({domain}): {row_agreed}/{row_total}")
+
+    test_date = datetime.now().strftime("%Y-%m-%d")
+    pass_count = agreed
+    fail_count = total - agreed if total_match else len(failures)
+
+    summary = (
+        f"Cross-instance test on {test_date} for '{dna_name}': "
+        f"{pass_count}/{total} scenarios with full agreement. "
+    )
+    if failures:
+        summary += f"Failures: {'; '.join(failures[:5])}"
+        if len(failures) > 5:
+            summary += f" (+{len(failures) - 5} more)"
+    else:
+        summary += "No failures detected (or template not yet filled in)."
+
+    entry = memory_manager.store(
+        category="calibration",
+        key=f"cross-instance-{test_date}",
+        content=summary,
+        source="cross_instance_test",
+        tags=["cross-instance", "calibration", "consistency"],
+    )
+
+    return entry
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Generate cross-instance LLM consistency test template",
@@ -211,6 +278,10 @@ def main():
         "--output-dir", default=None,
         help="Output directory (default: results/)",
     )
+    parser.add_argument(
+        "--store-results", default=None, metavar="TEMPLATE",
+        help="Parse a filled-in template and store results in memory (path to filled template)",
+    )
     args = parser.parse_args()
 
     script_dir = Path(__file__).parent
@@ -223,6 +294,21 @@ def main():
         print(f"ERROR: {e}", file=sys.stderr)
         sys.exit(1)
     print(f"  -> {dna['name']} | {len(dna['principles'])} principles")
+
+    # If --store-results, parse and store, then exit
+    if args.store_results:
+        scenarios = build_all_scenarios(dna)
+        entry = store_cross_instance_results(
+            args.store_results, dna["name"], len(scenarios),
+        )
+        if entry:
+            print(f"Stored cross-instance results to memory (calibration):")
+            print(f"  key: {entry['key']}")
+            print(f"  content: {entry['content']}")
+        else:
+            print("Failed to parse results from template.", file=sys.stderr)
+            sys.exit(1)
+        return
 
     scenarios = build_all_scenarios(dna)
     print(f"Scenarios: {len(scenarios)} ({len(SCENARIOS)} organism + {len(BOOT_TEST_SCENARIOS)} boot)")

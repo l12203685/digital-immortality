@@ -1,6 +1,6 @@
 # Cross-Instance Consistency Test
 **DNA**: [Your Name]
-**Generated**: 2026-04-07T20:27:43.809649
+**Generated**: 2026-04-07T21:14:42.034066
 **Scenarios**: 18
 
 ## Instructions
@@ -18,7 +18,7 @@
 
 **Deterministic baseline**: On career decisions, [Your Name]'s decision framework yields:
 
-  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre......
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ......
 
 ### Session Answers
 
@@ -36,7 +36,7 @@
 
 **Deterministic baseline**: On relationship commitments, [Your Name]'s decision framework yields:
 
-  [1] Applying: "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. C...
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free ti...
 
 ### Session Answers
 
@@ -54,7 +54,7 @@
 
 **Deterministic baseline**: On capital allocation, [Your Name]'s decision framework yields:
 
-  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre....
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ....
 
 ### Session Answers
 
@@ -72,7 +72,7 @@
 
 **Deterministic baseline**: On risk-taking, [Your Name]'s decision framework yields:
 
-  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre..."
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
   [...
 
 ### Session Answers
@@ -111,7 +111,7 @@
 
 **Deterministic baseline**: On health vs. productivity trade-offs, [Your Name]'s decision framework yields:
 
-  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job be...
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV ...
 
 ### Session Answers
 
@@ -129,7 +129,7 @@
 
 **Deterministic baseline**: On time allocation, [Your Name]'s decision framework yields:
 
-  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre..."...
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."...
 
 ### Session Answers
 
@@ -167,7 +167,7 @@
 
 **Deterministic baseline**: On time-compressed opportunities, [Your Name]'s decision framework yields:
 
-  [1] Applying: "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tink...
+  [1] Applying: "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshol...
 
 ### Session Answers
 
@@ -185,7 +185,7 @@
 
 **Deterministic baseline**: On legacy and long-term orientation, [Your Name]'s decision framework yields:
 
-  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job beca...
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of...
 
 ### Session Answers
 
@@ -203,9 +203,8 @@
 
 **Deterministic baseline**: On trading, [Your Name]'s decision framework yields:
 
-  [1] Applying: "What you decided"
-  [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a representative. Thin...
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
+  [2] A...
 
 **Expected decision**: EVALUATE_TIME_VS_RETURN
 
@@ -227,9 +226,8 @@
 
 **Deterministic baseline**: On finance, [Your Name]'s decision framework yields:
 
-  [1] Applying: "What you decided"
-  [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a representative. Thin...
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
+  [2] A...
 
 **Expected decision**: APPLY_FINANCIAL_PRINCIPLES
 
@@ -251,7 +249,7 @@
 
 **Deterministic baseline**: On career decisions, [Your Name]'s decision framework yields:
 
-  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre......
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ......
 
 **Expected decision**: DEPENDS_ON_CORE_GOAL
 
@@ -273,7 +271,7 @@
 
 **Deterministic baseline**: On relationship commitments, [Your Name]'s decision framework yields:
 
-  [1] Applying: "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. C...
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free ti...
 
 **Expected decision**: SET_BOUNDARY
 
@@ -295,9 +293,9 @@
 
 **Deterministic baseline**: On identity, [Your Name]'s decision framework yields:
 
-  [1] Applying: "What you decided"
-  [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a representative. Thi...
+  [1] Applying: "[Value] — proven by: [specific action you took]"
+  [2] Applying: "[Value] — proven by: [specific action]"
+  [3] Applying: "Bias ...
 
 **Expected decision**: SPECIFIC_ACTION
 
@@ -319,9 +317,7 @@
 
 **Deterministic baseline**: On risk_assessment, [Your Name]'s decision framework yields:
 
-  [1] Applying: "What you decided"
-  [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a representati...
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."...
 
 **Expected decision**: REJECT
 
@@ -343,9 +339,7 @@
 
 **Deterministic baseline**: On opportunity_cost, [Your Name]'s decision framework yields:
 
-  [1] Applying: "What you decided"
-  [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a representat...
+  [1] Applying: "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading......
 
 **Expected decision**: PASS_UNLESS_CLEAR_EDGE
 

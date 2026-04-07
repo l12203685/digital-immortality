@@ -1,0 +1,125 @@
+{
+  "timestamp": "20260407_211304",
+  "results": [
+    {
+      "strategy": "bollinger_mr",
+      "timeframe": "1h",
+      "passed": true,
+      "windows_passed": 4,
+      "avg_sharpe": 4.3403,
+      "avg_mdd": 1.79,
+      "window_details": [
+        {
+          "sharpe": -7.4226,
+          "mdd": 0.43,
+          "win_rate": 0.0,
+          "profit_factor": 0.0
+        },
+        {
+          "sharpe": 13.063,
+          "mdd": 0.2,
+          "win_rate": 83.33,
+          "profit_factor": 69.3528
+        },
+        {
+          "sharpe": 3.6553,
+          "mdd": 5.45,
+          "win_rate": 71.43,
+          "profit_factor": 1.5523
+        },
+        {
+          "sharpe": 3.7017,
+          "mdd": 1.46,
+          "win_rate": 50.0,
+          "profit_factor": 1.8175
+        },
+        {
+          "sharpe": 8.7042,
+          "mdd": 1.41,
+          "win_rate": 60.0,
+          "profit_factor": 4.0556
+        }
+      ]
+    },
+    {
+      "strategy": "bollinger_mr",
+      "timeframe": "4h",
+      "passed": false,
+      "windows_passed": 2,
+      "avg_sharpe": 1.7993,
+      "avg_mdd": 0.12,
+      "window_details": [
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": -5.2651,
+          "mdd": 0.43,
+          "win_rate": 0.0,
+          "profit_factor": 0.0
+        },
+        {
+          "sharpe": 6.7897,
+          "mdd": 0.18,
+          "win_rate": 66.67,
+          "profit_factor": 17.4896
+        },
+        {
+          "sharpe": 7.4721,
+          "mdd": 0.0,
+          "win_rate": 100.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        }
+      ]
+    },
+    {
+      "strategy": "bollinger_mr",
+      "timeframe": "1d",
+      "passed": false,
+      "windows_passed": 0,
+      "avg_sharpe": 0.0,
+      "avg_mdd": 0.0,
+      "window_details": [
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        }
+      ]
+    }
+  ]
+}

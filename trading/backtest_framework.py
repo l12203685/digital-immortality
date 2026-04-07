@@ -135,6 +135,21 @@ STRATEGIES: Dict[str, StrategyFn] = {
     "volatility_regime": volatility_regime,
 }
 
+# ---------------------------------------------------------------------------
+# Register external strategies from strategies/ directory
+# ---------------------------------------------------------------------------
+try:
+    from strategies.momentum import momentum_crossover
+    STRATEGIES["momentum_crossover"] = momentum_crossover
+except ImportError:
+    pass
+
+try:
+    from strategies.mean_reversion import bollinger_mean_reversion
+    STRATEGIES["bollinger_mr"] = bollinger_mean_reversion
+except ImportError:
+    pass
+
 
 # ---------------------------------------------------------------------------
 # Backtest engine

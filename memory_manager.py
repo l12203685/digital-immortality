@@ -64,8 +64,14 @@ def _save(category: str, data: dict) -> None:
         raise
 
 
-def store(category: str, key: str, content: str, source: str = "manual", tags: list[str] | None = None) -> dict:
-    """Store a new memory entry. Returns the created entry."""
+def store(category: str, key: str, content: str, source: str = "manual",
+          tags: list[str] | None = None, confidence: float | None = None) -> dict:
+    """Store a new memory entry. Returns the created entry.
+
+    Args:
+        confidence: Optional float 0.0-1.0. Entries with confidence >= 0.8 are
+                    protected from cap-based pruning in auto_prune().
+    """
     if category not in CATEGORIES:
         print(f"Error: unknown category '{category}'. Must be one of: {', '.join(CATEGORIES)}", file=sys.stderr)
         sys.exit(1)
@@ -80,6 +86,8 @@ def store(category: str, key: str, content: str, source: str = "manual", tags: l
         "source": source,
         "tags": tags or [],
     }
+    if confidence is not None:
+        entry["confidence"] = max(0.0, min(1.0, confidence))
 
     data["entries"].append(entry)
     _save(category, data)
@@ -132,6 +140,78 @@ def list_categories() -> dict[str, int]:
 def prune(days: int, category: str | None = None) -> int:
     """Remove entries older than `days` days. Returns count of pruned entries."""
     cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+    cats = [category] if category and category in CATEGORIES else list(CATEGORIES)
+    total_pruned = 0
+
+    for cat in cats:
+        data = _load(cat)
+        original_count = len(data.get("entries", []))
+        data["entries"] = [
+            e for e in data.get("entries", [])
+            if datetime.fromisoformat(e["timestamp"]) >= cutoff
+        ]
+        pruned = original_count - len(data["entries"])
+        if pruned > 0:
+            _save(cat, data)
+            total_pruned += pruned
+
+    return total_pruned
+
+
+DEFAULT_MAX_ENTRIES = 100
+
+
+def auto_prune(max_entries: int = DEFAULT_MAX_ENTRIES, max_age_days: int = 30) -> dict[str, int]:
+    """
+    Enforce bounded memory: for each category, remove old entries and cap total count.
+
+    Strategy:
+    1. Remove entries older than max_age_days (via prune_old).
+    2. If still over max_entries, keep the most recent entries up to the limit.
+       Entries with a 'confidence' field >= 0.8 are protected and kept preferentially.
+
+    Returns a dict of category -> number of entries removed.
+    """
+    removed = {}
+
+    # Phase 1: age-based pruning
+    prune_old(max_age_days=max_age_days)
+
+    # Phase 2: cap-based pruning
+    for cat in CATEGORIES:
+        data = _load(cat)
+        entries = data.get("entries", [])
+        original_count = len(entries)
+
+        if original_count <= max_entries:
+            removed[cat] = 0
+            continue
+
+        # Split into high-confidence (protected) and normal
+        high_conf = [e for e in entries if e.get("confidence", 0) >= 0.8]
+        normal = [e for e in entries if e.get("confidence", 0) < 0.8]
+
+        # If high-confidence entries alone exceed the limit, keep most recent of those
+        if len(high_conf) >= max_entries:
+            high_conf.sort(key=lambda e: e.get("timestamp", ""), reverse=True)
+            data["entries"] = high_conf[:max_entries]
+        else:
+            # Keep all high-confidence, fill remaining slots with most recent normal
+            remaining_slots = max_entries - len(high_conf)
+            normal.sort(key=lambda e: e.get("timestamp", ""), reverse=True)
+            data["entries"] = high_conf + normal[:remaining_slots]
+
+        pruned = original_count - len(data["entries"])
+        if pruned > 0:
+            _save(cat, data)
+        removed[cat] = pruned
+
+    return removed
+
+
+def prune_old(max_age_days: int = 30, category: str | None = None) -> int:
+    """Remove entries older than max_age_days. Returns count of pruned entries."""
+    cutoff = datetime.now(timezone.utc) - timedelta(days=max_age_days)
     cats = [category] if category and category in CATEGORIES else list(CATEGORIES)
     total_pruned = 0
 
@@ -207,18 +287,29 @@ def main():
         "--export", action="store_true",
         help="Export all memory to JSON (stdout)",
     )
+    group.add_argument(
+        "--auto-prune", action="store_true",
+        help="Enforce max entries per category and remove stale entries",
+    )
+    group.add_argument(
+        "--prune-old", action="store_true",
+        help="Remove entries older than --max-age-days (default: 30)",
+    )
 
     parser.add_argument("--source", default="manual", help="Source label for --store (e.g. 'cycle-5', 'boot-test')")
     parser.add_argument("--tags", default="", help="Comma-separated tags for --store or --search")
     parser.add_argument("--days", type=int, default=180, help="Days threshold for --prune (default: 180)")
     parser.add_argument("--category", default=None, help="Filter --search or --prune to a specific category")
+    parser.add_argument("--max-entries", type=int, default=DEFAULT_MAX_ENTRIES, help=f"Max entries per category for --auto-prune (default: {DEFAULT_MAX_ENTRIES})")
+    parser.add_argument("--max-age-days", type=int, default=30, help="Max age in days for --auto-prune (default: 30)")
+    parser.add_argument("--confidence", type=float, default=None, help="Confidence score 0.0-1.0 for --store (entries >= 0.8 are protected from pruning)")
 
     args = parser.parse_args()
 
     if args.store:
         cat, key, value = args.store
         tags = [t.strip() for t in args.tags.split(",") if t.strip()] if args.tags else []
-        entry = store(cat, key, value, source=args.source, tags=tags)
+        entry = store(cat, key, value, source=args.source, tags=tags, confidence=args.confidence)
         print(f"Stored in {cat}:")
         print(_format_entry(entry))
 
@@ -266,6 +357,14 @@ def main():
     elif args.export:
         data = export_all()
         print(json.dumps(data, indent=2, ensure_ascii=False))
+
+    elif args.auto_prune:
+        removed = auto_prune(max_entries=args.max_entries, max_age_days=args.max_age_days)
+        total = sum(removed.values())
+        print(f"Auto-prune complete (max_entries={args.max_entries}, max_age_days={args.max_age_days}):")
+        for cat, count in removed.items():
+            print(f"  {cat:15s} {count:4d} removed")
+        print(f"  {'total':15s} {total:4d} removed")
 
 
 if __name__ == "__main__":

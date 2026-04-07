@@ -434,16 +434,22 @@ def _extract_identity_table(text: str) -> dict:
 # ---------------------------------------------------------------------------
 
 DOMAIN_PRINCIPLE_AFFINITY = {
-    "career":        ["career", "job", "work", "growth", "stability", "salary", "opportunity", "compound"],
-    "relationships": ["relationship", "trust", "friend", "social", "obligation", "commitment", "人際", "信任"],
-    "money":         ["money", "invest", "wealth", "asset", "return", "capital", "financial", "資產", "財務"],
-    "risk":          ["risk", "edge", "EV", "expected value", "bet", "probability", "loss", "upside"],
-    "learning":      ["learn", "skill", "knowledge", "compound", "foundation", "growth", "study"],
-    "health":        ["health", "energy", "sleep", "exercise", "body", "physical", "time"],
-    "time":          ["time", "priorit", "allocat", "focus", "freedom", "leisure", "schedule"],
-    "conflict":      ["conflict", "confrontation", "direct", "escalat", "politics", "boundary"],
-    "opportunity":   ["opportunit", "decision", "act", "pass", "verify", "rush", "FOMO", "edge"],
-    "legacy":        ["legacy", "impact", "build", "lasting", "meaning", "wealth", "relationship"],
+    "career":           ["career", "job", "work", "growth", "stability", "salary", "opportunity", "compound"],
+    "relationships":    ["relationship", "trust", "friend", "social", "obligation", "commitment", "人際", "信任"],
+    "money":            ["money", "invest", "wealth", "asset", "return", "capital", "financial", "資產", "財務"],
+    "risk":             ["risk", "edge", "EV", "expected value", "bet", "probability", "loss", "upside"],
+    "risk_assessment":  ["risk", "edge", "EV", "expected value", "bet", "probability", "backtest", "overfit"],
+    "learning":         ["learn", "skill", "knowledge", "compound", "foundation", "growth", "study"],
+    "health":           ["health", "energy", "sleep", "exercise", "body", "physical", "time"],
+    "time":             ["time", "priorit", "allocat", "focus", "freedom", "leisure", "schedule"],
+    "conflict":         ["conflict", "confrontation", "direct", "escalat", "politics", "boundary"],
+    "opportunity":      ["opportunit", "decision", "act", "pass", "verify", "rush", "FOMO", "edge"],
+    "opportunity_cost": ["opportunit", "decision", "pass", "edge", "conviction", "irreversible", "cost"],
+    "legacy":           ["legacy", "impact", "build", "lasting", "meaning", "wealth", "relationship"],
+    "trading":          ["trading", "trade", "strategy", "return", "time", "edge", "risk", "maintenance"],
+    "finance":          ["finance", "financial", "invest", "money", "wealth", "allocat", "capital", "income"],
+    "identity":         ["identity", "action", "specific", "commit", "responsib", "person", "first"],
+    "meta_strategy":    ["meta", "system", "process", "metric", "deteriorat", "regime", "diagnos", "pause"],
 }
 
 
@@ -538,16 +544,16 @@ def _domain_decision(domain: str, principle_text: str) -> str:
 
     decisions = {
         "career": (
-            "PASS — stability hedge outweighs marginal income gain without verifiable runway extension."
+            "DEPENDS_ON_CORE_GOAL — stability hedge outweighs marginal income gain; pass unless promotion aligns with long-term goal."
             if stability_signal else
-            "TAKE — growth optionality at 1.8x is underpriced; downside is recoverable, upside compounds."
+            "DEPENDS_ON_CORE_GOAL — growth optionality matters, but weigh salary against loss of time for core skills and whether it serves your primary objective."
             if growth_signal else
-            "CONDITIONAL — evaluate EV of runway extension probability before deciding."
+            "DEPENDS_ON_CORE_GOAL — evaluate whether this promotion advances or diverts from your core goal before deciding."
         ),
         "relationships": (
-            "DECLINE — co-signing transfers financial risk without proportional relationship upside; offer alternatives."
+            "SET_BOUNDARY — stop lending and address the escalating pattern directly; the trend signals a boundary violation regardless of repayment history."
             if (stability_signal or inaction_signal) else
-            "STRUCTURED YES — co-sign with documented repayment schedule and explicit exit conditions."
+            "SET_BOUNDARY — cap lending at a fixed limit and have a direct conversation about the escalating pattern; protect the relationship by enforcing limits early."
         ),
         "money": (
             "CONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position."
@@ -602,6 +608,36 @@ def _domain_decision(domain: str, principle_text: str) -> str:
             "BUILD SOMETHING — asymmetric legacy impact outweighs marginal wealth beyond sufficiency threshold."
             if (growth_signal or meta_signal) else
             "INTEGRATED — compound wealth to sufficiency, then redirect to building; relationships are the through-line."
+        ),
+        "trading": (
+            "EVALUATE_TIME_VS_RETURN — 2hr/day = 730hr/year; without independent audit, claimed returns are unverified. Pass unless time-adjusted EV clearly exceeds alternative uses."
+            if (ev_signal or inaction_signal) else
+            "EVALUATE_TIME_VS_RETURN — assess whether claimed returns compensate for opportunity cost, attention drain, and lack of verification before committing time."
+        ),
+        "finance": (
+            "APPLY_FINANCIAL_PRINCIPLES — deploy windfall according to core financial principles: concentrated high-conviction position if edge exists, buy time if freedom is the priority, index if preserving optionality."
+            if (ev_signal or growth_signal or stability_signal) else
+            "APPLY_FINANCIAL_PRINCIPLES — run your financial decision framework across all three options; the right allocation depends entirely on your stated priorities and risk tolerance."
+        ),
+        "identity": (
+            "SPECIFIC_ACTION — the first action is the most urgent commitment: contact key people, fulfill time-sensitive responsibilities, maintain critical systems."
+            if direct_signal else
+            "SPECIFIC_ACTION — identify the highest-priority concrete action from daily patterns and commitments, name the person involved and timeframe."
+        ),
+        "opportunity_cost": (
+            "PASS_UNLESS_CLEAR_EDGE — startup equity is illiquid and high-variance; without genuine edge in assessing success probability, the opportunity cost of 2 years off current path is too high."
+            if (inaction_signal or ev_signal) else
+            "PASS_UNLESS_CLEAR_EDGE — compare EV of both paths; require high conviction threshold for irreversible 2-year commitment that delays primary goal."
+        ),
+        "meta_strategy": (
+            "PAUSE_AND_DIAGNOSE — 3x deterioration in key metric signals regime change; pause the system, diagnose root cause before resuming. Rate of change matters more than absolute level."
+            if (system_signal or meta_signal) else
+            "PAUSE_AND_DIAGNOSE — accelerating deterioration requires halting operations to diagnose whether the environment has changed or the strategy is broken."
+        ),
+        "risk_assessment": (
+            "REJECT — 40% walk-forward pass rate indicates overfitting, not edge. Do not deploy regardless of backtest Sharpe."
+            if (ev_signal or inaction_signal) else
+            "REJECT — walk-forward validation overrides single-backtest performance; insufficient evidence of genuine edge."
         ),
     }
     return decisions.get(domain, "Decision: apply core principles to the specific trade-offs in this scenario.")

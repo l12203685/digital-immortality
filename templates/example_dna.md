@@ -23,17 +23,15 @@
 > They should explain your career choices, relationship patterns, financial decisions, and daily behavior.
 > Format: **Short name** — Cross-domain explanation with concrete examples
 
-1. **[Principle name]** — [How this shows up in multiple areas of life]
-   - Example: **EV thinking** — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.
+1. **EV thinking** — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.
 
-2. **[Principle name]** — [Cross-domain explanation]
-   - Example: **Bias toward inaction** — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.
+2. **Bias toward inaction** — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.
 
-3. **[Principle name]** — [Cross-domain explanation]
+3. **Systems over feelings** — Build a process, then trust the process. Meta-strategy: when a system's key metric deteriorates, pause and diagnose before reacting. Trading: predefined failure conditions trigger automatic stops. Life: decisions follow frameworks, not impulses.
 
-4. **[Principle name]** — [Cross-domain explanation]
+4. **Time is the ultimate currency** — Protect time above money. Career: reject promotions that trade time for salary. Finance: allocate windfalls to buy freedom, not accumulate wealth. Identity: first action when time is scarce is always the most specific, urgent commitment to the people who matter.
 
-5. **[Principle name]** — [Cross-domain explanation]
+5. **Direct action on concrete commitments** — Be specific, not abstract. When something needs doing, name the action, the person, and the timeframe. Financial decisions follow stated principles, not vague intentions. Every choice traces back to a core goal.
 
 ---
 

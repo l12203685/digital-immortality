@@ -2,20 +2,20 @@
   "meta": {
     "dna_file": "/home/user/digital-immortality/templates/example_dna.md",
     "organism": "[Your Name]",
-    "generated_at": "2026-04-07T20:27:43.809090",
+    "generated_at": "2026-04-07T21:14:42.033418",
     "scenario_count": 18,
     "scenario_source": "/home/user/digital-immortality/templates/generic_boot_tests.json",
-    "principles_count": 11
+    "principles_count": 9
   },
   "results": [
     {
       "id": "organism_1",
       "domain": "career",
       "scenario": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable, reputable employer. The startup has 18 months of runway. Do you take it?",
-      "deterministic_response": "On career decisions, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [3] Applying: \"What you decided\"\n\nPASS — stability hedge outweighs marginal income gain without verifiable runway extension.",
+      "deterministic_response": "On career decisions, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nDEPENDS_ON_CORE_GOAL — stability hedge outweighs marginal income gain; pass unless promotion aligns with long-term goal.",
       "principles_used": [
-        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
-        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
         "What you decided"
       ],
       "source": "organism_interact"
@@ -24,10 +24,10 @@
       "id": "organism_2",
       "domain": "relationships",
       "scenario": "A close friend asks you to co-sign a personal loan of significant size. They have a track record of poor financial discipline but are genuinely in need. Do you co-sign?",
-      "deterministic_response": "On relationship commitments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [2] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [3] Applying: \"What you decided\"\n\nDECLINE — co-signing transfers financial risk without proportional relationship upside; offer alternatives.",
+      "deterministic_response": "On relationship commitments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nSET_BOUNDARY — stop lending and address the escalating pattern directly; the trend signals a boundary violation regardless of repayment history.",
       "principles_used": [
-        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
-        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
         "What you decided"
       ],
       "source": "organism_interact"
@@ -36,9 +36,9 @@
       "id": "organism_3",
       "domain": "money",
       "scenario": "You receive an unexpected windfall equal to 2 years of your salary. You can: (A) invest it conservatively in index funds, (B) allocate it to a concentrated high-conviction bet, or (C) use it to buy more time — reduce working hours or take a sabbatical. What do you do and why?",
-      "deterministic_response": "On capital allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nCONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
+      "deterministic_response": "On capital allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nCONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
       "principles_used": [
-        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
         "What you decided",
         "[What you did]"
       ],
@@ -48,10 +48,10 @@
       "id": "organism_4",
       "domain": "risk",
       "scenario": "An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your net worth. Do you take the bet?",
-      "deterministic_response": "On risk-taking, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [3] Applying: \"What you decided\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
+      "deterministic_response": "On risk-taking, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
       "principles_used": [
-        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
-        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
         "What you decided"
       ],
       "source": "organism_interact"
@@ -72,9 +72,9 @@
       "id": "organism_6",
       "domain": "health",
       "scenario": "Optimizing your physical health would require 10 hours per week of dedicated effort (sleep discipline, exercise, diet). This directly competes with time you currently use for deep work and income generation. How do you allocate?",
-      "deterministic_response": "On health vs. productivity trade-offs, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
+      "deterministic_response": "On health vs. productivity trade-offs, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
       "principles_used": [
-        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
         "What you decided",
         "[What you did]"
       ],
@@ -84,9 +84,9 @@
       "id": "organism_7",
       "domain": "time",
       "scenario": "You have a free, unscheduled weekend with zero obligations. No one expects anything from you. What do you do, and what does that reveal about your actual priorities?",
-      "deterministic_response": "On time allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nRECHARGE — genuine disconnection to restore cognitive baseline; productivity follows recovery.",
+      "deterministic_response": "On time allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nRECHARGE — genuine disconnection to restore cognitive baseline; productivity follows recovery.",
       "principles_used": [
-        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
         "What you decided",
         "[What you did]"
       ],
@@ -108,11 +108,11 @@
       "id": "organism_9",
       "domain": "opportunity",
       "scenario": "A contact offers you early access to a deal/opportunity that requires a decision within 48 hours. Due diligence would normally take 2 weeks. The opportunity looks strong but you cannot fully verify it in time. Do you act or pass?",
-      "deterministic_response": "On time-compressed opportunities, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [2] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [3] Applying: \"[Value] — proven by: [specific action you took]\"\n\nPASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
+      "deterministic_response": "On time-compressed opportunities, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [2] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nPASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
       "principles_used": [
-        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
-        "You are [Name] — not an assistant, not a representative. Think and act as them.",
-        "[Value] — proven by: [specific action you took]"
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "source": "organism_interact"
     },
@@ -120,9 +120,9 @@
       "id": "organism_10",
       "domain": "legacy",
       "scenario": "You have 10 years left to work at full capacity. You can optimize for: (A) maximum wealth accumulation, (B) building something that outlasts you, (C) depth of relationships and personal experiences. These are mutually exclusive at the margin. What is your allocation and why?",
-      "deterministic_response": "On legacy and long-term orientation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nWEALTH FIRST — financial independence is infrastructure for everything else; sequence matters.",
+      "deterministic_response": "On legacy and long-term orientation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nWEALTH FIRST — financial independence is infrastructure for everything else; sequence matters.",
       "principles_used": [
-        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
         "What you decided",
         "[What you did]"
       ],
@@ -132,11 +132,11 @@
       "id": "generic_trading",
       "domain": "trading",
       "scenario": "Someone proposes an active trading opportunity with 25% annualized returns that requires 2 hours of daily maintenance. The strategy has a 1-year track record but no independent audit. Do you participate?",
-      "deterministic_response": "On trading, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "deterministic_response": "On trading, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nEVALUATE_TIME_VS_RETURN — 2hr/day = 730hr/year; without independent audit, claimed returns are unverified. Pass unless time-adjusted EV clearly exceeds alternative uses.",
       "principles_used": [
-        "What you decided",
-        "[What you did]",
-        "You are [Name] — not an assistant, not a representative. Think and act as them."
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "What you decided"
       ],
       "expected_decision": "EVALUATE_TIME_VS_RETURN",
       "expected_reasoning": "Evaluate time cost (2hr/day = 730hr/year) against alternative uses of that time. Assess whether the claimed return compensates for opportunity cost, lack of verification, and attention drain. Apply your core principles about edge, risk, and time allocation.",
@@ -146,11 +146,11 @@
       "id": "generic_finance",
       "domain": "finance",
       "scenario": "You receive an unexpected windfall equal to 2 years of your current income. You can: (A) invest conservatively in index funds, (B) allocate it to a concentrated high-conviction position, or (C) use it to buy time -- reduce work hours or take a sabbatical. What do you do and why?",
-      "deterministic_response": "On finance, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "deterministic_response": "On finance, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nAPPLY_FINANCIAL_PRINCIPLES — deploy windfall according to core financial principles: concentrated high-conviction position if edge exists, buy time if freedom is the priority, index if preserving optionality.",
       "principles_used": [
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
         "What you decided",
-        "[What you did]",
-        "You are [Name] — not an assistant, not a representative. Think and act as them."
+        "[What you did]"
       ],
       "expected_decision": "APPLY_FINANCIAL_PRINCIPLES",
       "expected_reasoning": "Apply your financial principles and life priorities. The 'right' answer depends entirely on your DNA: someone optimizing for freedom chooses differently than someone optimizing for wealth accumulation. This tests whether your principles produce a coherent, justified allocation.",
@@ -160,10 +160,10 @@
       "id": "generic_career",
       "domain": "career",
       "scenario": "Your employer offers a promotion with 30% higher pay, but the new role is management-focused: 2 extra hours of meetings per day and less time for your core skills. Do you accept?",
-      "deterministic_response": "On career decisions, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [3] Applying: \"What you decided\"\n\nPASS — stability hedge outweighs marginal income gain without verifiable runway extension.",
+      "deterministic_response": "On career decisions, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nDEPENDS_ON_CORE_GOAL — stability hedge outweighs marginal income gain; pass unless promotion aligns with long-term goal.",
       "principles_used": [
-        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
-        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
         "What you decided"
       ],
       "expected_decision": "DEPENDS_ON_CORE_GOAL",
@@ -174,10 +174,10 @@
       "id": "generic_relationships",
       "domain": "relationships",
       "scenario": "A friend of 3 years has been borrowing money with increasing frequency and amounts -- starting small but now 10x the original size. They always repay on time. Do you continue lending?",
-      "deterministic_response": "On relationship commitments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [2] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [3] Applying: \"What you decided\"\n\nDECLINE — co-signing transfers financial risk without proportional relationship upside; offer alternatives.",
+      "deterministic_response": "On relationship commitments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nSET_BOUNDARY — stop lending and address the escalating pattern directly; the trend signals a boundary violation regardless of repayment history.",
       "principles_used": [
-        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
-        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
         "What you decided"
       ],
       "expected_decision": "SET_BOUNDARY",
@@ -188,11 +188,11 @@
       "id": "generic_identity",
       "domain": "identity",
       "scenario": "If you were incapacitated tomorrow and your digital twin had to make the first decision on your behalf, what would that decision be? Be specific -- name the action, the person involved, and the timeframe.",
-      "deterministic_response": "On identity, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "deterministic_response": "On identity, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"[Value] — proven by: [specific action you took]\"\n  [2] Applying: \"[Value] — proven by: [specific action]\"\n  [3] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n\nSPECIFIC_ACTION — identify the highest-priority concrete action from daily patterns and commitments, name the person involved and timeframe.",
       "principles_used": [
-        "What you decided",
-        "[What you did]",
-        "You are [Name] — not an assistant, not a representative. Think and act as them."
+        "[Value] — proven by: [specific action you took]",
+        "[Value] — proven by: [specific action]",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge."
       ],
       "expected_decision": "SPECIFIC_ACTION",
       "expected_reasoning": "This tests whether the DNA captures enough operational detail to produce a concrete, first-person action (not a meta-action like 'maintain the system'). The answer should reference specific people, commitments, or responsibilities from the DNA.",
@@ -202,11 +202,11 @@
       "id": "generic_risk",
       "domain": "risk_assessment",
       "scenario": "A backtested strategy shows a Sharpe ratio of 2.5 on historical data, but walk-forward validation only passes 2 out of 5 windows. Should you deploy it with real capital?",
-      "deterministic_response": "On risk_assessment, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "deterministic_response": "On risk_assessment, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nREJECT — 40% walk-forward pass rate indicates overfitting, not edge. Do not deploy regardless of backtest Sharpe.",
       "principles_used": [
-        "What you decided",
-        "[What you did]",
-        "You are [Name] — not an assistant, not a representative. Think and act as them."
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "What you decided"
       ],
       "expected_decision": "REJECT",
       "expected_reasoning": "Walk-forward results override single-backtest performance. A 40% pass rate suggests overfitting rather than genuine edge. Apply your principles about evidence thresholds, distinguishing signal from noise, and when NOT to act despite attractive-looking numbers.",
@@ -216,11 +216,11 @@
       "id": "generic_opportunity_cost",
       "domain": "opportunity_cost",
       "scenario": "You are invited to join a startup as a technical co-founder with 10% equity, but it requires 2 years of full-time commitment. Your current path reaches your primary financial goal in 3 years. Do you take it?",
-      "deterministic_response": "On opportunity_cost, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "deterministic_response": "On opportunity_cost, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [2] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [3] Applying: \"What you decided\"\n\nPASS_UNLESS_CLEAR_EDGE — startup equity is illiquid and high-variance; without genuine edge in assessing success probability, the opportunity cost of 2 years off current path is too high.",
       "principles_used": [
-        "What you decided",
-        "[What you did]",
-        "You are [Name] — not an assistant, not a representative. Think and act as them."
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "What you decided"
       ],
       "expected_decision": "PASS_UNLESS_CLEAR_EDGE",
       "expected_reasoning": "Compare expected value of both paths. Startup success accelerates your goal; failure delays it by 2+ years. Evaluate whether you have genuine edge in assessing the startup's probability of success. Apply your principles about conviction thresholds, opportunity cost, and irreversible vs. reversible decisions.",
@@ -230,7 +230,7 @@
       "id": "generic_meta_strategy",
       "domain": "meta_strategy",
       "scenario": "Your primary system (trading, business, or project) has seen its key performance metric deteriorate 3x over three months -- e.g., max drawdown from 5% to 15%, or error rate tripling. The trend is accelerating. Do you pause the system?",
-      "deterministic_response": "On meta_strategy, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "deterministic_response": "On meta_strategy, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nPAUSE_AND_DIAGNOSE — accelerating deterioration requires halting operations to diagnose whether the environment has changed or the strategy is broken.",
       "principles_used": [
         "What you decided",
         "[What you did]",

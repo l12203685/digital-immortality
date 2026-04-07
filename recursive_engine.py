@@ -195,6 +195,14 @@ def generate_prompt():
     _store_cycle_insight(cycle)
     print(f"Stored cycle {cycle} insight to memory.")
 
+    # Auto-prune memory to prevent unbounded growth
+    removed = memory_manager.auto_prune()
+    total_removed = sum(removed.values())
+    if total_removed > 0:
+        print(f"Auto-pruned {total_removed} stale/excess memory entries: {removed}")
+    else:
+        print("Auto-prune: memory within bounds, nothing removed.")
+
     # Append cycle metadata to daily log
     append_cycle_log(cycle, now)
 
