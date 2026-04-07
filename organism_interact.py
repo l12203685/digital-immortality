@@ -204,36 +204,130 @@ PRINCIPLE_SECTION_KEYWORDS = re.compile(
     re.IGNORECASE,
 )
 
+# High-priority: sections about actual decision-making, not agent operations
+PRIORITY_SECTION_KEYWORDS = re.compile(
+    r"(kernel|決策|跨域|decision.*(core|kernel)|公設|axiom|heuristic|thinking|思維)",
+    re.IGNORECASE,
+)
+
+# Lines that look like decision principles (positive signal)
+DECISION_PRINCIPLE_SIGNAL = re.compile(
+    r"(EV|expected value|導數|derivative|meta.?strategy|population|inaction|"
+    r"不對稱|asymmetr|first.?principle|第一原理|二階|second.?order|"
+    r"management.?paradox|bias|edge|compound|複利|risk|風險|"
+    r"invest|capital|equity|freedom|自由|FIRE|trade|交易|strategy|策略|"
+    r"probability|機率|bet|position.?siz|kelly|sharpe|MDD|drawdown|"
+    r"information|資訊|signal|噪音|noise|regime|trend|momentum|reversion)",
+    re.IGNORECASE,
+)
+
+# Lines that look like agent operating instructions (negative signal)
+AGENT_INSTRUCTION_SIGNAL = re.compile(
+    r"(代理人|agent|session|Claude|boot|compact|context|sub.?agent|"
+    r"Discord|GDrive|staging|commit|push|git|cron|trigger|"
+    r"window\s?\d|token|確認.*要做嗎|emoji|修辭|alignment.?theater|"
+    r"你就是我|你代表我|退回確認|冷啟動|校準|checkpoint|dashboard|"
+    r"readback|predicate|assertion|patch.?classif|BLOCKER.*POLICY|"
+    r"meta.?work|taxonomy|indexing|pipeline.?tooling|E2.?as.?gate|"
+    r"structural.?clarity|artifact|proposals?.*draft|batch.*(操作|驗證)|"
+    r"observation.*action.*轉換|round.?trip)",
+    re.IGNORECASE,
+)
+
+
+def _score_principle_priority(text: str) -> int:
+    """Score how much a line looks like a decision principle vs agent instruction."""
+    score = 0
+    if DECISION_PRINCIPLE_SIGNAL.search(text):
+        score += 2
+    if AGENT_INSTRUCTION_SIGNAL.search(text):
+        score -= 3
+    # Bonus for universal/abstract principles with cross-domain markers
+    if any(w in text for w in ["不看", "管理", "決定", "exploit", "toward", "跨域", "/"]):
+        score += 1
+    return score
+
+
+# Pattern: "N. **Bold Title** — cross-domain explanation" (Decision Kernel format)
+DECISION_KERNEL_RE = re.compile(r"^\d+[\.\)]\s+\*\*(.+?)\*\*\s*[—–-]\s*(.+)")
+
+
+def _extract_decision_kernel(lines: list) -> list:
+    """
+    Extract high-priority decision kernel items. These follow the format:
+    N. **Principle Name** — cross-domain explanation with / separators
+    Filters out agent operating instructions by content analysis.
+    """
+    kernel = []
+    for line in lines:
+        stripped = line.strip()
+        m = DECISION_KERNEL_RE.match(stripped)
+        if m:
+            title = m.group(1).strip()
+            detail = m.group(2).strip()
+            combined = f"{title} — {detail}"
+            # Skip agent operating instructions
+            if AGENT_INSTRUCTION_SIGNAL.search(combined):
+                continue
+            kernel.append(combined)
+    return kernel
+
 
 def _extract_principles(lines: list, sections: dict) -> list:
     """
-    Collect bullet and numbered list items from principle-relevant sections.
-    Also collects any bold (**text**) standalone lines as principles.
+    Collect principles in priority order:
+    1. Decision Kernel items (N. **Bold** — detail format) — always first
+    2. Bold standalone principles (**Title** — detail)
+    3. Items from principle-relevant sections, scored by decision vs agent signal
     Deduplicated, stripped, max 30 items.
     """
-    relevant_line_indices = set()
+    seen = set()
+    result = []
 
+    # Tier 1: Decision Kernel (highest priority)
+    for p in _extract_decision_kernel(lines):
+        if p not in seen:
+            seen.add(p)
+            result.append(p)
+
+    # Tier 2: Bold standalone principle lines (** — **)
+    for line in lines:
+        stripped = line.strip()
+        m = BOLD_LINE_RE.match(stripped)
+        if m:
+            label = m.group(1).strip()
+            detail = m.group(2).strip()
+            combined = f"{label} — {detail}" if detail else label
+            if len(combined) > 10 and combined not in seen:
+                # Skip if looks like agent instruction
+                if not AGENT_INSTRUCTION_SIGNAL.search(combined):
+                    seen.add(combined)
+                    result.append(combined)
+
+    # Tier 3: Bullet/numbered items from principle sections, priority-scored
+    general_indices = set()
     for heading, indices in sections.items():
         if PRINCIPLE_SECTION_KEYWORDS.search(heading):
-            relevant_line_indices.update(indices)
+            general_indices.update(indices)
 
-    # If nothing matched, fall back to ALL lines
-    if not relevant_line_indices:
-        relevant_line_indices = set(range(len(lines)))
+    if not general_indices and not result:
+        general_indices = set(range(len(lines)))
 
-    principles = []
-    seen = set()
-
-    for i in sorted(relevant_line_indices):
+    candidates = []
+    for i in sorted(general_indices):
         line = lines[i].strip()
         extracted = _line_to_principle(line)
         if extracted and extracted not in seen:
             seen.add(extracted)
-            principles.append(extracted)
-        if len(principles) >= 30:
-            break
+            priority = _score_principle_priority(extracted)
+            candidates.append((priority, extracted))
 
-    return principles
+    # Filter out likely agent instructions (negative score) and sort by priority
+    candidates = [(s, t) for s, t in candidates if s >= 0]
+    candidates.sort(key=lambda x: x[0], reverse=True)
+    result.extend(text for _, text in candidates)
+
+    return result[:30]
 
 
 BULLET_RE = re.compile(r"^[-*+•]\s+(.+)")
