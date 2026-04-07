@@ -1,0 +1,45 @@
+{
+  "timestamp": "20260407_220915",
+  "results": [
+    {
+      "strategy": "momentum",
+      "timeframe": "1d",
+      "passed": false,
+      "windows_passed": 2,
+      "avg_sharpe": 0.7538,
+      "avg_mdd": 14.2,
+      "window_details": [
+        {
+          "sharpe": -4.2962,
+          "mdd": 27.42,
+          "win_rate": 48.72,
+          "profit_factor": 0.5457
+        },
+        {
+          "sharpe": 0.0356,
+          "mdd": 14.06,
+          "win_rate": 48.72,
+          "profit_factor": 1.0048
+        },
+        {
+          "sharpe": 4.258,
+          "mdd": 8.08,
+          "win_rate": 64.1,
+          "profit_factor": 1.7212
+        },
+        {
+          "sharpe": 0.1261,
+          "mdd": 11.98,
+          "win_rate": 43.59,
+          "profit_factor": 1.0173
+        },
+        {
+          "sharpe": 3.6456,
+          "mdd": 9.47,
+          "win_rate": 51.28,
+          "profit_factor": 1.6874
+        }
+      ]
+    }
+  ]
+}

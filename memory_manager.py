@@ -19,6 +19,7 @@ Usage:
 import argparse
 import json
 import os
+import re
 import sys
 import tempfile
 import uuid
@@ -242,6 +243,105 @@ def export_all() -> dict:
     return result
 
 
+DAILY_LOG = ROOT / "results" / "daily_log.md"
+
+
+def distill_daily_log() -> dict:
+    """Extract key learnings from results/daily_log.md and store as memory entries.
+
+    Parses cycle entries, extracts Impact lines from all cycles and
+    Next-cycle-priorities from the last cycle. Deduplicates via recall().
+
+    Returns dict with 'stored' and 'skipped' lists of key strings.
+    """
+    if not DAILY_LOG.exists():
+        print(f"No daily log found at {DAILY_LOG}")
+        return {"stored": [], "skipped": []}
+
+    text = DAILY_LOG.read_text(encoding="utf-8")
+
+    # Split into cycle blocks on "## Cycle N" headings
+    cycle_pattern = re.compile(r"^## Cycle (\d+) — (.+)$", re.MULTILINE)
+    cycle_matches = list(cycle_pattern.finditer(text))
+
+    if not cycle_matches:
+        print("No cycle entries found in daily log.")
+        return {"stored": [], "skipped": []}
+
+    stored = []
+    skipped = []
+
+    # --- Extract Impact lines from ALL cycles ---
+    for idx, match in enumerate(cycle_matches):
+        cycle_num = match.group(1)
+        start = match.end()
+        end = cycle_matches[idx + 1].start() if idx + 1 < len(cycle_matches) else len(text)
+        block = text[start:end]
+
+        impact_pattern = re.compile(r"-\s+\*\*Impact\*\*:\s*(.+)")
+        impacts = impact_pattern.findall(block)
+
+        for i, impact in enumerate(impacts):
+            key = f"distill-cycle-{cycle_num}-impact-{i}"
+            existing = recall("insights", key)
+            if existing:
+                skipped.append(key)
+                continue
+            store(
+                category="insights",
+                key=key,
+                content=impact.strip(),
+                source=f"daily-log-cycle-{cycle_num}",
+                tags=["distilled", "daily-log", f"cycle-{cycle_num}"],
+                confidence=0.85,
+            )
+            stored.append(key)
+
+    # --- Extract priorities from the LAST cycle ---
+    last_match = cycle_matches[-1]
+    last_cycle_num = last_match.group(1)
+    last_start = last_match.end()
+    last_block = text[last_start:]
+
+    prio_header = re.search(r"^### Next cycle priorities\s*$", last_block, re.MULTILINE)
+    if prio_header:
+        prio_text = last_block[prio_header.end():]
+        # Stop at the next heading or end of text
+        next_heading = re.search(r"^##", prio_text, re.MULTILINE)
+        if next_heading:
+            prio_text = prio_text[:next_heading.start()]
+        prio_lines = re.findall(r"^\d+\.\s+(.+)$", prio_text, re.MULTILINE)
+
+        for i, prio in enumerate(prio_lines):
+            key = f"distill-cycle-{last_cycle_num}-priority-{i}"
+            existing = recall("insights", key)
+            if existing:
+                skipped.append(key)
+                continue
+            store(
+                category="insights",
+                key=key,
+                content=prio.strip(),
+                source=f"daily-log-cycle-{last_cycle_num}",
+                tags=["distilled", "daily-log", f"cycle-{last_cycle_num}"],
+                confidence=0.85,
+            )
+            stored.append(key)
+
+    # Print summary
+    print(f"Distill complete: {len(stored)} stored, {len(skipped)} skipped (duplicates).")
+    if stored:
+        print("  Stored:")
+        for k in stored:
+            print(f"    {k}")
+    if skipped:
+        print("  Skipped (already exist):")
+        for k in skipped:
+            print(f"    {k}")
+
+    return {"stored": stored, "skipped": skipped}
+
+
 def _format_entry(entry: dict, show_category: bool = False) -> str:
     """Format a single entry for display."""
     lines = []
@@ -296,6 +396,10 @@ def main():
     group.add_argument(
         "--prune-old", action="store_true",
         help="Remove entries older than --max-age-days (default: 30)",
+    )
+    group.add_argument(
+        "--distill", action="store_true",
+        help="Extract key learnings from results/daily_log.md and store as memory entries",
     )
 
     parser.add_argument("--source", default="manual", help="Source label for --store (e.g. 'cycle-5', 'boot-test')")
@@ -372,6 +476,9 @@ def main():
         pruned = prune_old(max_age_days=args.max_age_days, category=args.category)
         scope = args.category if args.category else "all categories"
         print(f"Pruned {pruned} entries older than {args.max_age_days} days from {scope}.")
+
+    elif args.distill:
+        distill_daily_log()
 
 
 if __name__ == "__main__":

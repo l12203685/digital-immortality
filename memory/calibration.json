@@ -1,5 +1,19 @@
 {
   "category": "calibration",
   "description": "DNA calibration notes and adjustments.",
-  "entries": []
+  "entries": [
+    {
+      "id": "9c971675-7f39-4de4-a99a-4c34ffd931b8",
+      "key": "cross-instance-initiated-2026-04-07",
+      "content": "Cross-instance test initiated for '[Your Name]' with 18 scenarios, 3 sessions. Template: results/cross_instance_template.md",
+      "timestamp": "2026-04-07T22:07:46.751669+00:00",
+      "source": "cross_instance_test",
+      "tags": [
+        "cross-instance",
+        "calibration",
+        "initiated"
+      ],
+      "confidence": 0.5
+    }
+  ]
 }

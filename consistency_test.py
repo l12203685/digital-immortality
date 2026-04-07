@@ -201,6 +201,10 @@ def load_scenarios(filepath: str | Path | None = None) -> list:
         )
 
 
+# Module-level export for consumers that import BOOT_TEST_SCENARIOS
+BOOT_TEST_SCENARIOS = load_scenarios()
+
+
 # ---------------------------------------------------------------------------
 # Scenario generation from DNA
 # ---------------------------------------------------------------------------

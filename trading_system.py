@@ -5,12 +5,13 @@ Trading System CLI — Economic Self-Sufficiency Layer
 Top-level entry point that ties together the trading subsystem:
   - Backtest strategies with walk-forward validation
   - Evaluate strategy health via equity curve analysis
-  - Run paper trading simulations
+  - Run paper trading simulations (live data from Binance, no auth)
   - Check kill conditions
 
 Usage:
     python trading_system.py --backtest [--strategy NAME] [--timeframe TF]
     python trading_system.py --validate [--strategy NAME]
+    python trading_system.py --paper [--strategy NAME] [--timeframe TF] [--ticks N]
     python trading_system.py --status
     python trading_system.py --kill-check [--strategy NAME]
 
@@ -23,6 +24,7 @@ All strategies are filtered by DNA rules:
 import argparse
 import csv
 import json
+import logging
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -42,6 +44,12 @@ from trading.backtest_framework import (
     _mean,
     _timeframe_label,
 )
+from trading.paper_trader import PaperTrader
+from trading.strategies import NAMED_STRATEGIES
+
+# Merge both strategy dicts so --strategy can reference either set.
+# NAMED_STRATEGIES keys (e.g. "DualMA_10_30") take precedence on collision.
+ALL_STRATEGIES = {**STRATEGIES, **NAMED_STRATEGIES}
 
 RESULTS_DIR = ROOT / "results"
 STRATEGIES_DIR = ROOT / "strategies"
@@ -163,7 +171,7 @@ def load_market_data(path: str, data_format: str = "ohlcv"):
 
 def cmd_backtest(args):
     """Run walk-forward backtest for one or all strategies."""
-    strategies = {args.strategy: STRATEGIES[args.strategy]} if args.strategy else STRATEGIES
+    strategies = {args.strategy: ALL_STRATEGIES[args.strategy]} if args.strategy else STRATEGIES
     timeframes = [args.timeframe] if args.timeframe else list(TIMEFRAMES)
 
     # Load real data if provided
@@ -234,7 +242,7 @@ def cmd_backtest(args):
 
 def cmd_validate(args):
     """Validate a strategy with stricter walk-forward (more windows)."""
-    strategies = {args.strategy: STRATEGIES[args.strategy]} if args.strategy else STRATEGIES
+    strategies = {args.strategy: ALL_STRATEGIES[args.strategy]} if args.strategy else STRATEGIES
 
     real_bars = None
     if args.data:
@@ -296,9 +304,107 @@ def cmd_status(args):
     print("Next step: Connect real market data via trading/paper_trader.py")
 
 
+def cmd_paper(args):
+    """Run paper trading on live Binance data (no auth needed)."""
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(message)s",
+    )
+
+    # Determine which strategies to run
+    if args.strategy:
+        if args.strategy in ALL_STRATEGIES:
+            strats = {args.strategy: ALL_STRATEGIES[args.strategy]}
+        else:
+            print(f"ERROR: unknown strategy {args.strategy!r}")
+            print(f"Available: {sorted(ALL_STRATEGIES.keys())}")
+            sys.exit(1)
+    else:
+        # Default: run the named (paper-ready) strategies
+        strats = dict(NAMED_STRATEGIES)
+
+    interval = args.timeframe or "1d"
+    ticks = args.ticks
+
+    print("=" * 64)
+    print("PAPER TRADING — live data from Binance (no auth)")
+    print("=" * 64)
+    print(f"Strategies : {list(strats.keys())}")
+    print(f"Interval   : {interval}")
+    print(f"Ticks      : {ticks}")
+    print()
+
+    RESULTS_DIR.mkdir(exist_ok=True)
+    ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+
+    all_entries = {}  # strategy_name -> list of tick entries
+
+    for name, fn in strats.items():
+        log_path = RESULTS_DIR / f"paper_{name}_{ts}.jsonl"
+        pt = PaperTrader(
+            strategy=fn,
+            name=name,
+            symbol="BTCUSDT",
+            interval=interval,
+            log_path=str(log_path),
+        )
+
+        print(f"--- {name} ---")
+        entries = []
+        for tick_num in range(1, ticks + 1):
+            try:
+                entry = pt.run_once()
+            except Exception as exc:
+                # Catch network / connection errors gracefully
+                exc_name = type(exc).__name__
+                print(f"  [tick {tick_num}] OFFLINE — could not reach Binance: {exc_name}: {exc}")
+                print("  Paper trader is structurally ready; it needs network access to fetch live klines.")
+                print(f"  Hint: ensure api.binance.com is reachable and not blocked by a firewall.")
+                break
+            else:
+                if not entry:
+                    print(f"  [tick {tick_num}] No bars returned — skipping.")
+                    continue
+                entries.append(entry)
+                signal_str = {1: "LONG", -1: "SHORT", 0: "FLAT"}.get(entry.get("signal"), "?")
+                action = entry.get("action", "?")
+                price = entry.get("price", 0)
+                pnl = entry.get("pnl")
+                capital = entry.get("capital")
+                pnl_str = f"  pnl={pnl:+.4f}%" if pnl is not None else ""
+                cap_str = f"  capital={capital}" if capital is not None else ""
+                print(f"  [tick {tick_num}] price={price:.2f}  signal={signal_str}  "
+                      f"action={action}{pnl_str}{cap_str}")
+        else:
+            # Only reached if the loop completed without break
+            print(f"  Log: {log_path}")
+
+        all_entries[name] = entries
+        print()
+
+    # Print summary
+    print("=" * 64)
+    print("SUMMARY")
+    print("=" * 64)
+    for name, entries in all_entries.items():
+        if not entries:
+            print(f"  {name}: no data (offline or no bars)")
+            continue
+        actions = [e.get("action", "?") for e in entries]
+        signals = [e.get("signal", 0) for e in entries]
+        pnl_vals = [e.get("pnl", 0) for e in entries if "pnl" in e]
+        n_trades = sum(1 for a in actions if a not in ("HOLD", "?"))
+        last_signal = {1: "LONG", -1: "SHORT", 0: "FLAT"}.get(signals[-1], "?")
+        total_pnl = sum(pnl_vals) if pnl_vals else 0.0
+        last_capital = entries[-1].get("capital")
+        cap_str = f"  capital={last_capital}" if last_capital is not None else ""
+        print(f"  {name}: {len(entries)} tick(s) | {n_trades} signal change(s) | "
+              f"last_signal={last_signal} | total_pnl={total_pnl:+.4f}%{cap_str}")
+
+
 def cmd_kill_check(args):
     """Check if any strategy should be paused based on kill conditions."""
-    strategies = {args.strategy: STRATEGIES[args.strategy]} if args.strategy else STRATEGIES
+    strategies = {args.strategy: ALL_STRATEGIES[args.strategy]} if args.strategy else STRATEGIES
     kill = DEFAULT_KILL_CONDITIONS
 
     print("=" * 64)
@@ -354,11 +460,13 @@ def main():
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--backtest", action="store_true", help="Run walk-forward backtest")
     group.add_argument("--validate", action="store_true", help="Strict validation (7 windows)")
+    group.add_argument("--paper", action="store_true", help="Paper trade on live Binance data (no auth)")
     group.add_argument("--status", action="store_true", help="Show system status")
     group.add_argument("--kill-check", action="store_true", help="Check kill conditions")
 
-    parser.add_argument("--strategy", choices=list(STRATEGIES.keys()), help="Specific strategy")
+    parser.add_argument("--strategy", choices=sorted(ALL_STRATEGIES.keys()), help="Specific strategy")
     parser.add_argument("--timeframe", choices=list(TIMEFRAMES), help="Specific timeframe")
+    parser.add_argument("--ticks", type=int, default=1, help="Number of paper trading ticks (default: 1)")
     parser.add_argument("--windows", type=int, default=5, help="Walk-forward windows (default: 5)")
     parser.add_argument("--min-pass", type=int, default=3, help="Min passing windows (default: 3)")
     parser.add_argument("--data", metavar="PATH", help="Path to CSV file with market data (replaces synthetic data)")
@@ -371,6 +479,8 @@ def main():
         cmd_backtest(args)
     elif args.validate:
         cmd_validate(args)
+    elif args.paper:
+        cmd_paper(args)
     elif args.status:
         cmd_status(args)
     elif args.kill_check:
