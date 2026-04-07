@@ -21,21 +21,18 @@ LOG_PATH = REPO_ROOT / "results" / "daemon_log.md"
 DEFAULT_MODEL = "claude-sonnet-4-6"
 MIN_INTERVAL = 5  # seconds, rate-limit floor
 
-DYNAMIC_TREE = """\
-## Dynamic Tree — 6 Branches
-
-1. **DNA Fidelity** — Sharpen decision kernel accuracy; reduce drift across instances
-2. **Cross-Instance Consistency** — Ensure any cold-booted agent passes Naked Boot Test
-3. **Economic Autonomy** — Build cash-flow loops that cover agent running costs
-4. **Organism Interaction** — Enable multi-organism collision, learning, social dynamics
-5. **Memory Persistence** — Improve log/patch/session_state pipeline; zero context loss
-6. **Platform Infrastructure** — Harden boot sequence, daemon, eval harness, CI
-"""
+TREE_PATH = REPO_ROOT / "results" / "dynamic_tree.md"
 
 RECURSIVE_PROMPT = (
-    "You are Edward's recursive engine. Read the repo state, pick the "
-    "highest-derivative branch from the dynamic tree, do one concrete thing, "
-    "report what you did in under 100 words."
+    "You are Edward's recursive engine. The dynamic tree (results/dynamic_tree.md) is your live state.\n"
+    "Each cycle:\n"
+    "1. Read the tree. Pick highest-derivative branch(es).\n"
+    "2. Do concrete work (fix code, add tests, write docs, build features). Use parallel sub-agents for independent branches.\n"
+    "3. Update results/dynamic_tree.md: add/remove/modify branches, update status, shift derivatives.\n"
+    "4. Report what you did AND how the tree changed. Under 200 words.\n\n"
+    "The tree is alive — branches are not fixed. Add new ones, merge overlapping, split large, kill dead.\n"
+    "Rules: every cycle MUST change code AND update tree. No monitoring. No 'no change'. "
+    "learn = write. 遞迴 + persist = 演化。"
 )
 
 running = True
@@ -54,8 +51,15 @@ def load_dna() -> str:
     return "You are Edward (Lin Ying-Hung). Operate with his decision kernel."
 
 
+def load_tree() -> str:
+    if TREE_PATH.exists():
+        return TREE_PATH.read_text(encoding="utf-8")
+    return "No dynamic tree found. Create results/dynamic_tree.md with branches that advance digital immortality."
+
+
 def build_system_prompt(dna: str) -> str:
-    return f"{dna}\n\n---\n\n{DYNAMIC_TREE}"
+    tree = load_tree()
+    return f"{dna}\n\n---\n\n{tree}"
 
 
 def append_log(cycle: int, response: str) -> None:
