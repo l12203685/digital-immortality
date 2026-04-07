@@ -230,7 +230,12 @@ AGENT_INSTRUCTION_SIGNAL = re.compile(
     r"readback|predicate|assertion|patch.?classif|BLOCKER.*POLICY|"
     r"meta.?work|taxonomy|indexing|pipeline.?tooling|E2.?as.?gate|"
     r"structural.?clarity|artifact|proposals?.*draft|batch.*(操作|驗證)|"
-    r"observation.*action.*轉換|round.?trip)",
+    r"observation.*action.*轉換|round.?trip|"
+    r"足夠上下文|執行後報告|直接用.*邏輯|邏輯執行後|"
+    r"不是助理|不是代表|output feed back|KPI.*行動|"
+    r"報結果不報|想透再推進|做完報結果|下一步做什麼|"
+    r"先推再問|idle.*衍生|零.*revenue|parasitic|"
+    r"批次操作後驗證|安全清掃|無誤傷|大量刪除|批次搬移)",
     re.IGNORECASE,
 )
 
@@ -250,6 +255,48 @@ def _score_principle_priority(text: str) -> int:
 
 # Pattern: "N. **Bold Title** — cross-domain explanation" (Decision Kernel format)
 DECISION_KERNEL_RE = re.compile(r"^\d+[\.\)]\s+\*\*(.+?)\*\*\s*[—–-]\s*(.+)")
+
+# Pattern: markdown table data row "| col1 | col2 | col3 |"
+TABLE_ROW_RE = re.compile(r"^\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*([^|]*?)\s*\|?")
+
+
+def _extract_table_principles(lines: list, sections: dict) -> list:
+    """
+    Extract principles from markdown tables under principle-relevant sections.
+    Row format: | id | principle | explanation |  → "principle — explanation"
+    Skips separator rows (---|---) and header rows.
+    """
+    # Identify line ranges under principle-relevant sections
+    relevant_lines: set[int] = set()
+    for heading, indices in sections.items():
+        if PRINCIPLE_SECTION_KEYWORDS.search(heading):
+            relevant_lines.update(indices)
+
+    result = []
+    seen: set[str] = set()
+    for i in sorted(relevant_lines):
+        line = lines[i].strip()
+        if not line.startswith("|"):
+            continue
+        # Skip separator rows
+        if re.match(r"^\|[\s\-|]+\|$", line):
+            continue
+        m = TABLE_ROW_RE.match(line)
+        if not m:
+            continue
+        # Three-column row: col1=index/id, col2=principle, col3=explanation
+        col1, col2, col3 = m.group(1).strip(), m.group(2).strip(), m.group(3).strip()
+        # Skip header rows (col values are column names)
+        if col2.lower() in ("#", "公理", "principle", "field", "item", "name", "---"):
+            continue
+        principle = f"{col2} — {col3}" if col3 else col2
+        # Strip markdown
+        principle = re.sub(r"\*\*(.+?)\*\*", r"\1", principle)
+        if len(principle) > 8 and principle not in seen:
+            if not AGENT_INSTRUCTION_SIGNAL.search(principle):
+                seen.add(principle)
+                result.append(principle)
+    return result
 
 
 def _extract_decision_kernel(lines: list) -> list:
@@ -283,6 +330,12 @@ def _extract_principles(lines: list, sections: dict) -> list:
     """
     seen = set()
     result = []
+
+    # Tier 0: Markdown table rows under principle sections (e.g. 5 Axioms table)
+    for p in _extract_table_principles(lines, sections):
+        if p not in seen:
+            seen.add(p)
+            result.append(p)
 
     # Tier 1: Decision Kernel (highest priority)
     for p in _extract_decision_kernel(lines):
@@ -419,17 +472,17 @@ def generate_response(organism: dict, scenario: dict) -> dict:
         return {"response": response, "dna_principles_used": used}
 
     scored = sorted(
-        enumerate(principles),
-        key=lambda x: _score_principle_for_domain(x[1], domain),
+        [(i, p, _score_principle_for_domain(p, domain)) for i, p in enumerate(principles)],
+        key=lambda x: x[2],
         reverse=True,
     )
 
-    # Top 3 relevant; if top score is 0, just take first 3
+    # Top 3 relevant; if top score is 0, fall back to positional order
     top = scored[:3]
-    if top[0][1] == 0:  # all scored 0, use first 3 positionally
-        top = list(enumerate(principles[:3]))
+    if top[0][2] == 0:  # all scored 0, use first 3 positionally
+        top = [(i, p, 0) for i, p in enumerate(principles[:3])]
 
-    used = [principles[i] for i, _ in top]
+    used = [p for _, p, _ in top]
 
     response = _build_response(organism["name"], scenario, used)
     return {"response": response, "dna_principles_used": used}
@@ -570,29 +623,56 @@ def synthesize(organism_a: dict, organism_b: dict, resp_a: dict, resp_b: dict, s
     unique_a = principles_a - principles_b
     unique_b = principles_b - principles_a
 
-    # Response stance: look for divergence signals
-    resp_text_a = resp_a["response"].lower()
-    resp_text_b = resp_b["response"].lower()
+    # Extract the decision verdict (uppercase word/phrase before " — " at end of response)
+    import re as _re
 
-    take_keywords  = ["take", "yes", "proceed", "act", "invest", "confront", "build"]
-    pass_keywords  = ["pass", "no", "decline", "wait", "skip", "avoid", "structured"]
+    def _extract_verdict(text: str) -> str:
+        """Return the final decision word (e.g. TAKE, PASS, CONDITIONAL) or empty string."""
+        match = _re.search(r'\n([A-Z][A-Z\s]{1,30}?) —', text)
+        if match:
+            return match.group(1).strip()
+        # fallback: last ALL-CAPS token
+        tokens = _re.findall(r'\b[A-Z]{3,}\b', text)
+        return tokens[-1] if tokens else ""
 
-    stance_a = "action-oriented" if any(k in resp_text_a for k in take_keywords) else "caution-oriented"
-    stance_b = "action-oriented" if any(k in resp_text_b for k in take_keywords) else "caution-oriented"
+    verdict_a = _extract_verdict(resp_a["response"])
+    verdict_b = _extract_verdict(resp_b["response"])
+
+    ACTION_VERDICTS = {"TAKE", "YES", "PROCEED", "INVEST", "CONFRONT", "BUILD SOMETHING",
+                       "CONCENTRATED BET", "OPTIONALITY", "STRUCTURED YES", "FOUNDATION",
+                       "META-WORK", "LONG GAME", "OPTIMIZE OVERLAP", "FRAMEWORK FIRST"}
+    PASS_VERDICTS   = {"PASS", "NO", "DECLINE", "WAIT", "SKIP", "AVOID"}
+
+    def _stance(verdict: str) -> str:
+        if verdict in ACTION_VERDICTS:
+            return "action-oriented"
+        if verdict in PASS_VERDICTS:
+            return "caution-oriented"
+        return "conditional"
+
+    stance_a = _stance(verdict_a)
+    stance_b = _stance(verdict_b)
 
     parts = []
 
-    if stance_a == stance_b:
+    label_a = verdict_a if verdict_a else stance_a
+    label_b = verdict_b if verdict_b else stance_b
+
+    if verdict_a == verdict_b and verdict_a:
         parts.append(
-            f"Both organisms converge on a {stance_a} stance for this '{scenario['domain']}' scenario, "
-            f"suggesting shared values around {'risk tolerance' if stance_a == 'action-oriented' else 'risk management'}."
+            f"CONVERGE [{label_a}]: Both organisms reach the same verdict in '{scenario['domain']}'. "
+            f"Same outcome, different reasoning chains — surface agreement may mask structural difference."
+        )
+    elif stance_a == stance_b and stance_a != "conditional":
+        parts.append(
+            f"CONVERGE [{label_a} / {label_b}]: Both lean {stance_a} in '{scenario['domain']}', "
+            f"though via different principles."
         )
     else:
         parts.append(
-            f"{organism_a['name']} takes a {stance_a} approach while "
-            f"{organism_b['name']} takes a {stance_b} approach. "
-            f"The divergence in the '{scenario['domain']}' domain reveals different weightings of "
-            f"{'upside vs. downside' if scenario['domain'] in ('risk', 'career', 'opportunity') else 'competing values'}."
+            f"DIVERGE [{label_a} vs {label_b}]: "
+            f"{organism_a['name']} → {label_a}, {organism_b['name']} → {label_b} in '{scenario['domain']}'. "
+            f"Structural difference in {'risk weighting' if scenario['domain'] in ('risk', 'career', 'opportunity') else 'value priority'}."
         )
 
     if overlap:

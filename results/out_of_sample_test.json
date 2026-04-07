@@ -56,8 +56,7 @@
       "principles_used": ["核心衝突排序", "看導數不看水平", "Bayesian update", "情緒-行動分離"],
       "edward_actual": null,
       "aligned": null
-    }
-  ],
+    },
     {
       "id": "oos_6",
       "domain": "health/override",

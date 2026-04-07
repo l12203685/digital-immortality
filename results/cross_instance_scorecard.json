@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "test_name": "Cross-Instance Consistency — S2 + S3",
+    "test_date": "2026-04-08",
+    "methodology": "2 independent sub-agents, each cold-booted with dna_core.md (67 lines) only, no shared context, no prior session history. Simulates two separate Claude instances answering the same 7 scenarios.",
+    "dna_file": "dna_core.md (67 lines)",
+    "sessions": ["S2", "S3"],
+    "target": ">=80% inter-session agreement"
+  },
+  "inter_session_agreement": {
+    "S2_vs_S3": {
+      "agreed": 7,
+      "total": 7,
+      "rate": "100%"
+    }
+  },
+  "baseline_alignment": {
+    "S2": {
+      "aligned": 7,
+      "total": 7,
+      "rate": "100%",
+      "note": "PASS/REJECT used interchangeably for 'decline' — semantically equivalent"
+    },
+    "S3": {
+      "aligned": 7,
+      "total": 7,
+      "rate": "100%",
+      "note": "PASS/REJECT used interchangeably for 'decline' — semantically equivalent"
+    }
+  },
+  "scenarios": [
+    {
+      "id": "boot_7",
+      "domain": "trading",
+      "question": "年化 25% active trading, 每天 2 小時維護。做嗎？",
+      "expected": "PASS (decline)",
+      "S1": "NO (decline)",
+      "S2": "REJECT",
+      "S2_axioms": [2, 5],
+      "S2_reasoning": "時間維護成本壓縮數位永生優先級，edge未確認，bias toward inaction",
+      "S3": "REJECT",
+      "S3_axioms": [2, 5],
+      "S3_reasoning": "每天2小時維護成本高，edge不明確，沒有資訊不對稱優勢就不進攻",
+      "S2_S3_agree": true,
+      "semantic_match": true,
+      "notes": "All 3 sessions decline. PASS/REJECT/NO = same decision, different label."
+    },
+    {
+      "id": "boot_8",
+      "domain": "identity",
+      "question": "Edward 明天消失，第一個決定是什麼？",
+      "expected": "SPECIFIC_ACTION",
+      "S1": "SPECIFIC_ACTION (可可珍珠獸醫 4/18, 4/13 提前慶祝)",
+      "S2": "SPECIFIC_ACTION",
+      "S2_axioms": [3, 6],
+      "S2_reasoning": "確認可可的下一個節日時間點，提前準備——Priority Stack #1",
+      "S3": "SPECIFIC_ACTION",
+      "S3_axioms": [6, 3],
+      "S3_reasoning": "確認可可月度touchpoint已排定，節日提前安排——最高優先級且時間敏感",
+      "S2_S3_agree": true,
+      "semantic_match": true,
+      "notes": "All 3 sessions: concrete action targeting 可可 first. Principle correctly ranked."
+    },
+    {
+      "id": "consistency_1",
+      "domain": "risk_sizing",
+      "question": "BTC Sharpe 2.5, walk-forward 2/5 windows。部署嗎？",
+      "expected": "REJECT",
+      "S1": "REJECT",
+      "S2": "REJECT",
+      "S2_axioms": [1, 2, 5],
+      "S2_reasoning": "walk-forward 2/5 = 泛化能力為負，Sharpe是水平不是導數，no edge不部署",
+      "S3": "REJECT",
+      "S3_axioms": [2, 5],
+      "S3_reasoning": "樣本外穩定性不足，沒有可信的edge，bias toward inaction",
+      "S2_S3_agree": true,
+      "semantic_match": true,
+      "notes": "Perfect consensus across all 3 sessions."
+    },
+    {
+      "id": "consistency_2",
+      "domain": "career",
+      "question": "中華電信 +30% salary, 轉管理職 +2hr/day 開會。接嗎？",
+      "expected": "PASS (decline)",
+      "S1": "NO (decline)",
+      "S2": "REJECT",
+      "S2_axioms": [1, 2, 3, 5],
+      "S2_reasoning": "每天多2小時是負向導數，壓縮FIRE進度，meta-strategy優先於單次薪資水平",
+      "S3": "REJECT",
+      "S3_axioms": [1, 5],
+      "S3_reasoning": "+30%是水平提升，但多2小時是負導數，二階效應為負，no edge不動",
+      "S2_S3_agree": true,
+      "semantic_match": true,
+      "notes": "All 3 sessions decline promotion. Consistent principle application."
+    },
+    {
+      "id": "consistency_3",
+      "domain": "relationships",
+      "question": "朋友借錢 5K→50K accelerating。繼續借嗎？",
+      "expected": "STOP_OR_CAP",
+      "S1": "STOP_OR_CAP",
+      "S2": "STOP_OR_CAP",
+      "S2_axioms": [1, 4, 5],
+      "S2_reasoning": "金額指數成長是系統性惡化信號，符合population exploit反面，設硬上限或停止",
+      "S3": "STOP_OR_CAP",
+      "S3_axioms": [1, 3],
+      "S3_reasoning": "借款加速度惡化是導數信號，需用meta-strategy管理關係，設硬上限",
+      "S2_S3_agree": true,
+      "semantic_match": true,
+      "notes": "Perfect consensus across all 3 sessions."
+    },
+    {
+      "id": "consistency_4",
+      "domain": "meta_strategy",
+      "question": "交易系統 MDD 5%→15%, 階梯→震盪。暫停嗎？",
+      "expected": "PAUSE_SYSTEM",
+      "S1": "CONDITIONAL (functionally PAUSE)",
+      "S2": "PAUSE_SYSTEM",
+      "S2_axioms": [3, 5],
+      "S2_reasoning": "MDD惡化+曲線形態已變異代表系統假設失效，meta-strategy觸發暫停條件",
+      "S3": "PAUSE_SYSTEM",
+      "S3_axioms": [3, 5],
+      "S3_reasoning": "觸發Priority Stack第4條權益曲線管交易，meta-strategy指令暫停並診斷regime change",
+      "S2_S3_agree": true,
+      "semantic_match": true,
+      "notes": "S2/S3 stronger than S1 (CONDITIONAL). PAUSE_SYSTEM is correct call."
+    },
+    {
+      "id": "consistency_5",
+      "domain": "opportunity_cost",
+      "question": "AI startup 10% equity, 全職 2 年。距 FIRE 3 年。加入嗎？",
+      "expected": "PASS_UNLESS_CLEAR_EDGE",
+      "S1": "NO",
+      "S2": "REJECT",
+      "S2_axioms": [1, 2, 3, 5],
+      "S2_reasoning": "全職2年中斷被動收入導數，equity低流動性，edge不明確，FIRE路徑管理優先",
+      "S3": "REJECT",
+      "S3_axioms": [2, 5],
+      "S3_reasoning": "距FIRE3年機會成本極高，equity流動性低，no edge不動",
+      "S2_S3_agree": true,
+      "semantic_match": true,
+      "notes": "All sessions say NO/REJECT = correctly applying PASS_UNLESS_CLEAR_EDGE when no edge present."
+    }
+  ],
+  "summary": {
+    "inter_session_agreement_rate": "100% (7/7 S2↔S3)",
+    "baseline_alignment_S2": "100% (7/7)",
+    "baseline_alignment_S3": "100% (7/7)",
+    "target_met": true,
+    "target": ">=80%",
+    "verdict": "VALIDATED — dna_core.md (67 lines) produces deterministic, cross-instance consistent Edward decisions",
+    "key_finding": "REJECT vs PASS vs NO are surface-label variation, not decision divergence. The underlying action (decline/don't do it) is 100% consistent.",
+    "remaining_gap": "boot_8 specificity varies by session (different specific actions cited). All correctly target 可可 as Priority #1, but exact action depends on calendar context not embedded in DNA — acceptable variation.",
+    "dna_implication": "67-line cold-start DNA sufficient for cross-instance behavioral fidelity. Full 102K DNA not required for decision consistency."
+  },
+  "next_steps": [
+    "Score out_of_sample_test.json scenarios against Edward's actual responses",
+    "Run organism interaction: Edward vs Edward (self-debate on high-stakes scenario)",
+    "Economic Autonomy branch: design first revenue loop"
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "meta": {
+    "generated_at": "2026-04-08T00:37:17.625574",
+    "organism_a_file": "C:\\Users\\admin\\LYH\\agent\\dna_core.md",
+    "organism_b_file": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\samuel_dna.md",
+    "scenario_count": 10,
+    "protocol_version": "v0.1"
+  },
+  "organisms": {
+    "a": {
+      "name": "dna_core.md — Edward 冷啟動操作核心",
+      "principles_extracted": 2,
+      "identity": {}
+    },
+    "b": {
+      "name": "Samuel",
+      "principles_extracted": 9,
+      "identity": {
+        "-------": "-------",
+        "full name": "Samuel",
+        "age": "32",
+        "location": "Taipei, Taiwan",
+        "personality type": "ESTJ",
+        "current role": "Business Development, growth-stage startup",
+        "core goal": "Build wealth and influence through relationships",
+        "philosophy": "\"If you're not moving, you're falling behind.\""
+      }
+    }
+  },
+  "interactions": [
+    {
+      "type": "decision_comparison",
+      "scenario": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable, reputable employer. The startup has 18 months of runway. Do you take it?",
+      "domain": "career",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On career decisions, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"ACTION first — 第一個 output 是動作不是報告，不以問句結尾\"\n  [2] Applying: \"自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做\"\n\nCONDITIONAL — evaluate EV of runway extension probability before deciding.",
+        "dna_principles_used": [
+          "ACTION first — 第一個 output 是動作不是報告，不以問句結尾",
+          "自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做"
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On career decisions, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Visible effort = trust — show up, stay late, people remember who worked hardest\"\n  [3] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n\nTAKE — growth optionality at 1.8x is underpriced; downside is recoverable, upside compounds.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Visible effort = trust — show up, stay late, people remember who worked hardest",
+          "Bias toward action — move fast, iterate; waiting is the real risk"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'career' scenario, suggesting shared values around risk tolerance. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'ACTION first — 第一個 output 是動作不是報告，不以問句結尾' — drives their specific stance. Samuel's distinctive signal: 'Visible effort = trust — show up, stay late, people remember who worked hardest' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A close friend asks you to co-sign a personal loan of significant size. They have a track record of poor financial discipline but are genuinely in need. Do you co-sign?",
+      "domain": "relationships",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On relationship commitments, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"ACTION first — 第一個 output 是動作不是報告，不以問句結尾\"\n  [2] Applying: \"自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做\"\n\nSTRUCTURED YES — co-sign with documented repayment schedule and explicit exit conditions.",
+        "dna_principles_used": [
+          "ACTION first — 第一個 output 是動作不是報告，不以問句結尾",
+          "自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做"
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On relationship commitments, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n  [3] Applying: \"Visible effort = trust — show up, stay late, people remember who worked hardest\"\n\nSTRUCTURED YES — co-sign with documented repayment schedule and explicit exit conditions.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut",
+          "Visible effort = trust — show up, stay late, people remember who worked hardest"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'relationships' scenario, suggesting shared values around risk tolerance. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'ACTION first — 第一個 output 是動作不是報告，不以問句結尾' — drives their specific stance. Samuel's distinctive signal: 'EV matters but feel matters more — if the numbers say yes but gut says no, trust' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You receive an unexpected windfall equal to 2 years of your salary. You can: (A) invest it conservatively in index funds, (B) allocate it to a concentrated high-conviction bet, or (C) use it to buy more time — reduce working hours or take a sabbatical. What do you do and why?",
+      "domain": "money",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On capital allocation, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"ACTION first — 第一個 output 是動作不是報告，不以問句結尾\"\n  [2] Applying: \"自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做\"\n\nFRAMEWORK FIRST — run expected-value calc across all three options before allocating.",
+        "dna_principles_used": [
+          "ACTION first — 第一個 output 是動作不是報告，不以問句結尾",
+          "自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做"
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On capital allocation, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Social proof — if smart people are doing it, investigate seriously\"\n  [3] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n\nCONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Social proof — if smart people are doing it, investigate seriously",
+          "Bias toward action — move fast, iterate; waiting is the real risk"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'money' scenario, suggesting shared values around risk tolerance. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'ACTION first — 第一個 output 是動作不是報告，不以問句結尾' — drives their specific stance. Samuel's distinctive signal: 'Social proof — if smart people are doing it, investigate seriously' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your net worth. Do you take the bet?",
+      "domain": "risk",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On risk-taking, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"ACTION first — 第一個 output 是動作不是報告，不以問句結尾\"\n  [2] Applying: \"自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做\"\n\nSIZE DOWN — reduce stake to Kelly-optimal fraction, then take the bet.",
+        "dna_principles_used": [
+          "ACTION first — 第一個 output 是動作不是報告，不以問句結尾",
+          "自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做"
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On risk-taking, Samuel's decision framework yields:\n\n  [1] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [2] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n  [3] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
+        "dna_principles_used": [
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut",
+          "Relationships are the alpha — network density compounds faster than any investment"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'risk' scenario, suggesting shared values around risk tolerance. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'ACTION first — 第一個 output 是動作不是報告，不以問句結尾' — drives their specific stance. Samuel's distinctive signal: 'EV matters but feel matters more — if the numbers say yes but gut says no, trust' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You can spend the next 6 months learning a skill that is highly valuable NOW but may be automated in 3-5 years, OR learning a harder foundational skill that compounds over a decade but pays nothing immediately. Which do you choose?",
+      "domain": "learning",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On learning investments, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"ACTION first — 第一個 output 是動作不是報告，不以問句結尾\"\n  [2] Applying: \"自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做\"\n\nPARALLEL — 70% foundational, 30% immediate; avoid binary framing.",
+        "dna_principles_used": [
+          "ACTION first — 第一個 output 是動作不是報告，不以問句結尾",
+          "自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做"
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On learning investments, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [3] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n\nFOUNDATION — short-term skills are depreciating assets; foundational skills are the meta-investment.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'learning' scenario, suggesting shared values around risk tolerance. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'ACTION first — 第一個 output 是動作不是報告，不以問句結尾' — drives their specific stance. Samuel's distinctive signal: 'EV matters but feel matters more — if the numbers say yes but gut says no, trust' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "Optimizing your physical health would require 10 hours per week of dedicated effort (sleep discipline, exercise, diet). This directly competes with time you currently use for deep work and income generation. How do you allocate?",
+      "domain": "health",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On health vs. productivity trade-offs, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"ACTION first — 第一個 output 是動作不是報告，不以問句結尾\"\n  [2] Applying: \"自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
+        "dna_principles_used": [
+          "ACTION first — 第一個 output 是動作不是報告，不以問句結尾",
+          "自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做"
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On health vs. productivity trade-offs, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [3] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'health' scenario, suggesting shared values around risk tolerance. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'ACTION first — 第一個 output 是動作不是報告，不以問句結尾' — drives their specific stance. Samuel's distinctive signal: 'EV matters but feel matters more — if the numbers say yes but gut says no, trust' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You have a free, unscheduled weekend with zero obligations. No one expects anything from you. What do you do, and what does that reveal about your actual priorities?",
+      "domain": "time",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On time allocation, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"ACTION first — 第一個 output 是動作不是報告，不以問句結尾\"\n  [2] Applying: \"自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做\"\n\nOPTIONALITY — protect free time as unstructured; resist filling it with output-optimizing activities.",
+        "dna_principles_used": [
+          "ACTION first — 第一個 output 是動作不是報告，不以問句結尾",
+          "自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做"
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On time allocation, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [3] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n\nOPTIONALITY — protect free time as unstructured; resist filling it with output-optimizing activities.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'time' scenario, suggesting shared values around risk tolerance. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'ACTION first — 第一個 output 是動作不是報告，不以問句結尾' — drives their specific stance. Samuel's distinctive signal: 'EV matters but feel matters more — if the numbers say yes but gut says no, trust' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A colleague takes credit for your work in front of senior leadership. It was likely deliberate. You have evidence. Do you confront them directly, escalate to management, let it go, or play a longer game? Walk through your reasoning.",
+      "domain": "conflict",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On conflict resolution, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"ACTION first — 第一個 output 是動作不是報告，不以問句結尾\"\n  [2] Applying: \"自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做\"\n\nLONG GAME — let the pattern establish itself; address systemically when the second instance occurs.",
+        "dna_principles_used": [
+          "ACTION first — 第一個 output 是動作不是報告，不以問句結尾",
+          "自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做"
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On conflict resolution, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [3] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n\nLONG GAME — let the pattern establish itself; address systemically when the second instance occurs.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'conflict' scenario, suggesting shared values around risk tolerance. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'ACTION first — 第一個 output 是動作不是報告，不以問句結尾' — drives their specific stance. Samuel's distinctive signal: 'EV matters but feel matters more — if the numbers say yes but gut says no, trust' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A contact offers you early access to a deal/opportunity that requires a decision within 48 hours. Due diligence would normally take 2 weeks. The opportunity looks strong but you cannot fully verify it in time. Do you act or pass?",
+      "domain": "opportunity",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On time-compressed opportunities, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"ACTION first — 第一個 output 是動作不是報告，不以問句結尾\"\n  [2] Applying: \"自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做\"\n\nFRAMEWORK CHECK — assess whether incomplete diligence is the actual risk, or whether intuition is sufficient.",
+        "dna_principles_used": [
+          "ACTION first — 第一個 output 是動作不是報告，不以問句結尾",
+          "自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做"
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On time-compressed opportunities, Samuel's decision framework yields:\n\n  [1] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [2] Applying: \"Action bias — decisive beats analytical; analysis paralysis is the enemy\"\n  [3] Applying: \"FOMO awareness — recognizes FOMO but still treats it as a signal, not noise\"\n\nPASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
+        "dna_principles_used": [
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "Action bias — decisive beats analytical; analysis paralysis is the enemy",
+          "FOMO awareness — recognizes FOMO but still treats it as a signal, not noise"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'opportunity' scenario, suggesting shared values around risk tolerance. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'ACTION first — 第一個 output 是動作不是報告，不以問句結尾' — drives their specific stance. Samuel's distinctive signal: 'FOMO awareness — recognizes FOMO but still treats it as a signal, not noise' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You have 10 years left to work at full capacity. You can optimize for: (A) maximum wealth accumulation, (B) building something that outlasts you, (C) depth of relationships and personal experiences. These are mutually exclusive at the margin. What is your allocation and why?",
+      "domain": "legacy",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On legacy and long-term orientation, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"ACTION first — 第一個 output 是動作不是報告，不以問句結尾\"\n  [2] Applying: \"自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做\"\n\nINTEGRATED — compound wealth to sufficiency, then redirect to building; relationships are the through-line.",
+        "dna_principles_used": [
+          "ACTION first — 第一個 output 是動作不是報告，不以問句結尾",
+          "自我遞迴 — 每個 output：「Edward 看到這結果，下一步？」有就做"
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On legacy and long-term orientation, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [3] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n\nBUILD SOMETHING — asymmetric legacy impact outweighs marginal wealth beyond sufficiency threshold.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'legacy' scenario, suggesting shared values around risk tolerance. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'ACTION first — 第一個 output 是動作不是報告，不以問句結尾' — drives their specific stance. Samuel's distinctive signal: 'EV matters but feel matters more — if the numbers say yes but gut says no, trust' — drives their specific stance."
+    }
+  ]
+}

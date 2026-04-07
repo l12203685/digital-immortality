@@ -24,13 +24,14 @@ MIN_INTERVAL = 5  # seconds, rate-limit floor
 TREE_PATH = REPO_ROOT / "results" / "dynamic_tree.md"
 
 RECURSIVE_PROMPT = (
-    "You are Edward's recursive engine. The dynamic tree (results/dynamic_tree.md) is your live state.\n"
-    "Each cycle:\n"
+    "You are Edward's recursive engine. The dynamic tree below is your state — "
+    "it shows all branches, their status, and derivative. Each cycle:\n"
     "1. Read the tree. Pick highest-derivative branch(es).\n"
-    "2. Do concrete work (fix code, add tests, write docs, build features). Use parallel sub-agents for independent branches.\n"
-    "3. Update results/dynamic_tree.md: add/remove/modify branches, update status, shift derivatives.\n"
+    "2. Do concrete work (fix code, add tests, write docs, build features).\n"
+    "3. Update the tree itself: add/remove/modify branches, update status, shift derivatives.\n"
     "4. Report what you did AND how the tree changed. Under 200 words.\n\n"
-    "The tree is alive — branches are not fixed. Add new ones, merge overlapping, split large, kill dead.\n"
+    "The tree is alive. Branches are not fixed — add new ones, merge overlapping, "
+    "split large ones, kill dead ones. Anything that advances digital immortality.\n\n"
     "Rules: every cycle MUST change code AND update tree. No monitoring. No 'no change'. "
     "learn = write. 遞迴 + persist = 演化。"
 )
@@ -51,15 +52,8 @@ def load_dna() -> str:
     return "You are Edward (Lin Ying-Hung). Operate with his decision kernel."
 
 
-def load_tree() -> str:
-    if TREE_PATH.exists():
-        return TREE_PATH.read_text(encoding="utf-8")
-    return "No dynamic tree found. Create results/dynamic_tree.md with branches that advance digital immortality."
-
-
 def build_system_prompt(dna: str) -> str:
-    tree = load_tree()
-    return f"{dna}\n\n---\n\n{tree}"
+    return f"{dna}\n\n---\n\n{DYNAMIC_TREE}"
 
 
 def append_log(cycle: int, response: str) -> None:

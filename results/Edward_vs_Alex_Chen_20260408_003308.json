@@ -1,0 +1,272 @@
+{
+  "meta": {
+    "generated_at": "2026-04-08T00:33:08.763587",
+    "organism_a_file": "C:\\Users\\admin\\LYH\\agent\\edward_dna_v18.md",
+    "organism_b_file": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\example_dna_b.md",
+    "scenario_count": 10,
+    "protocol_version": "v0.1"
+  },
+  "organisms": {
+    "a": {
+      "name": "Edward",
+      "principles_extracted": 30,
+      "identity": {}
+    },
+    "b": {
+      "name": "Alex Chen",
+      "principles_extracted": 8,
+      "identity": {
+        "-------": "-------",
+        "full name": "Alex Chen",
+        "age": "34",
+        "location": "Taipei, Taiwan",
+        "personality type": "ENFJ",
+        "current role": "Product Manager, SaaS startup",
+        "core goal": "Build products that genuinely improve lives",
+        "philosophy": "\"Shipped beats perfect.\""
+      }
+    }
+  },
+  "interactions": [
+    {
+      "type": "decision_comparison",
+      "scenario": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable, reputable employer. The startup has 18 months of runway. Do you take it?",
+      "domain": "career",
+      "organism_a": {
+        "name": "Edward",
+        "response": "On career decisions, Edward's decision framework yields:\n\n  [1] Applying: \"你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。\"\n  [2] Applying: \"自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。\"\n  [3] Applying: \"知識 ≠ 行為 — 讀完 DNA 是知識，用 DNA 做決策才是行為。KPI 不是「知道多少」而是「行動像不像」。\"\n\nCONDITIONAL — evaluate EV of runway extension probability before deciding.",
+        "dna_principles_used": [
+          "你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。",
+          "自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。",
+          "知識 ≠ 行為 — 讀完 DNA 是知識，用 DNA 做決策才是行為。KPI 不是「知道多少」而是「行動像不像」。"
+        ]
+      },
+      "organism_b": {
+        "name": "Alex Chen",
+        "response": "On career decisions, Alex Chen's decision framework yields:\n\n  [1] Applying: \"Relationships over returns — long-term trust compounds faster than any financial instrument\"\n  [2] Applying: \"Shipping — completed work has infinite more value than planned work\"\n  [3] Applying: \"Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion\"\n\nTAKE — growth optionality at 1.8x is underpriced; downside is recoverable, upside compounds.",
+        "dna_principles_used": [
+          "Relationships over returns — long-term trust compounds faster than any financial instrument",
+          "Shipping — completed work has infinite more value than planned work",
+          "Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion"
+        ]
+      },
+      "synthesis": "Edward takes a caution-oriented approach while Alex Chen takes a action-oriented approach. The divergence in the 'career' domain reveals different weightings of upside vs. downside. Edward's distinctive signal: '自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。' — drives their specific stance. Alex Chen's distinctive signal: 'Bias toward action — imperfect action beats perfect inaction; you can course-cor' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A close friend asks you to co-sign a personal loan of significant size. They have a track record of poor financial discipline but are genuinely in need. Do you co-sign?",
+      "domain": "relationships",
+      "organism_a": {
+        "name": "Edward",
+        "response": "On relationship commitments, Edward's decision framework yields:\n\n  [1] Applying: \"Bias toward inaction — 策略全停 / 中華電信不折騰 / top guys take a few big trades a year。人際應用：對達哥自設通訊封鎖（「5/1前不講話 除非達哥問我 堅持！」）——有...\"\n  [2] Applying: \"Numeric claim 衰減 — 未經 Glob 確認的數字 claim 標注 `(claimed, unverified)`，已確認標注 `(confirmed, Glob YYYY-MM-DD)`。Unverified cou...\"\n  [3] Applying: \"你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。\"\n\nDECLINE — co-signing transfers financial risk without proportional relationship upside; offer alternatives.",
+        "dna_principles_used": [
+          "Bias toward inaction — 策略全停 / 中華電信不折騰 / top guys take a few big trades a year。人際應用：對達哥自設通訊封鎖（「5/1前不講話 除非達哥問我 堅持！」）——有東西想分享但強制沉默，因為沒有 edge 就不動。",
+          "Numeric claim 衰減 — 未經 Glob 確認的數字 claim 標注 `(claimed, unverified)`，已確認標注 `(confirmed, Glob YYYY-MM-DD)`。Unverified count 不可傳播到下一 cycle header，1 cycle 無確認衰減為 zero trust。",
+          "你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。"
+        ]
+      },
+      "organism_b": {
+        "name": "Alex Chen",
+        "response": "On relationship commitments, Alex Chen's decision framework yields:\n\n  [1] Applying: \"Relationships over returns — long-term trust compounds faster than any financial instrument\"\n  [2] Applying: \"Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion\"\n  [3] Applying: \"Health is infrastructure — without physical capacity, no other optimization matters\"\n\nDECLINE — co-signing transfers financial risk without proportional relationship upside; offer alternatives.",
+        "dna_principles_used": [
+          "Relationships over returns — long-term trust compounds faster than any financial instrument",
+          "Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion",
+          "Health is infrastructure — without physical capacity, no other optimization matters"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'relationships' scenario, suggesting shared values around risk tolerance. Edward's distinctive signal: '你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。' — drives their specific stance. Alex Chen's distinctive signal: 'Health is infrastructure — without physical capacity, no other optimization matt' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You receive an unexpected windfall equal to 2 years of your salary. You can: (A) invest it conservatively in index funds, (B) allocate it to a concentrated high-conviction bet, or (C) use it to buy more time — reduce working hours or take a sabbatical. What do you do and why?",
+      "domain": "money",
+      "organism_a": {
+        "name": "Edward",
+        "response": "On capital allocation, Edward's decision framework yields:\n\n  [1] Applying: \"Glob returns lists not counts — 對 patch directories 的 Glob 必須回傳完整排序 filename lists，不只 count。Count without names 無法支援 ...\"\n  [2] Applying: \"你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。\"\n  [3] Applying: \"自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。\"\n\nFRAMEWORK FIRST — run expected-value calc across all three options before allocating.",
+        "dna_principles_used": [
+          "Glob returns lists not counts — 對 patch directories 的 Glob 必須回傳完整排序 filename lists，不只 count。Count without names 無法支援 set-diff/identify delta/anchor reconciliation。",
+          "你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。",
+          "自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。"
+        ]
+      },
+      "organism_b": {
+        "name": "Alex Chen",
+        "response": "On capital allocation, Alex Chen's decision framework yields:\n\n  [1] Applying: \"Relationships over returns — long-term trust compounds faster than any financial instrument\"\n  [2] Applying: \"Community — invest in the people around you; they are your actual portfolio\"\n  [3] Applying: \"Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion\"\n\nCONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
+        "dna_principles_used": [
+          "Relationships over returns — long-term trust compounds faster than any financial instrument",
+          "Community — invest in the people around you; they are your actual portfolio",
+          "Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion"
+        ]
+      },
+      "synthesis": "Edward takes a caution-oriented approach while Alex Chen takes a action-oriented approach. The divergence in the 'money' domain reveals different weightings of competing values. Edward's distinctive signal: '自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。' — drives their specific stance. Alex Chen's distinctive signal: 'Community — invest in the people around you; they are your actual portfolio' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your net worth. Do you take the bet?",
+      "domain": "risk",
+      "organism_a": {
+        "name": "Edward",
+        "response": "On risk-taking, Edward's decision framework yields:\n\n  [1] Applying: \"資訊不對稱決定行動方向 — 有 edge 才進攻，沒有就 check / 不跟法人搶波段 / 不追升遷\"\n  [2] Applying: \"Bias toward inaction — 策略全停 / 中華電信不折騰 / top guys take a few big trades a year。人際應用：對達哥自設通訊封鎖（「5/1前不講話 除非達哥問我 堅持！」）——有...\"\n  [3] Applying: \"你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
+        "dna_principles_used": [
+          "資訊不對稱決定行動方向 — 有 edge 才進攻，沒有就 check / 不跟法人搶波段 / 不追升遷",
+          "Bias toward inaction — 策略全停 / 中華電信不折騰 / top guys take a few big trades a year。人際應用：對達哥自設通訊封鎖（「5/1前不講話 除非達哥問我 堅持！」）——有東西想分享但強制沉默，因為沒有 edge 就不動。",
+          "你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。"
+        ]
+      },
+      "organism_b": {
+        "name": "Alex Chen",
+        "response": "On risk-taking, Alex Chen's decision framework yields:\n\n  [1] Applying: \"Diversify everything — concentration is hubris; spread risk across domains\"\n  [2] Applying: \"Reversibility — prefer decisions that can be undone; avoid irreversible choices under uncertainty\"\n  [3] Applying: \"Relationships over returns — long-term trust compounds faster than any financial instrument\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
+        "dna_principles_used": [
+          "Diversify everything — concentration is hubris; spread risk across domains",
+          "Reversibility — prefer decisions that can be undone; avoid irreversible choices under uncertainty",
+          "Relationships over returns — long-term trust compounds faster than any financial instrument"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'risk' scenario, suggesting shared values around risk tolerance. Edward's distinctive signal: '你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。' — drives their specific stance. Alex Chen's distinctive signal: 'Diversify everything — concentration is hubris; spread risk across domains' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You can spend the next 6 months learning a skill that is highly valuable NOW but may be automated in 3-5 years, OR learning a harder foundational skill that compounds over a decade but pays nothing immediately. Which do you choose?",
+      "domain": "learning",
+      "organism_a": {
+        "name": "Edward",
+        "response": "On learning investments, Edward's decision framework yields:\n\n  [1] Applying: \"你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。\"\n  [2] Applying: \"自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。\"\n  [3] Applying: \"知識 ≠ 行為 — 讀完 DNA 是知識，用 DNA 做決策才是行為。KPI 不是「知道多少」而是「行動像不像」。\"\n\nPARALLEL — 70% foundational, 30% immediate; avoid binary framing.",
+        "dna_principles_used": [
+          "你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。",
+          "自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。",
+          "知識 ≠ 行為 — 讀完 DNA 是知識，用 DNA 做決策才是行為。KPI 不是「知道多少」而是「行動像不像」。"
+        ]
+      },
+      "organism_b": {
+        "name": "Alex Chen",
+        "response": "On learning investments, Alex Chen's decision framework yields:\n\n  [1] Applying: \"Relationships over returns — long-term trust compounds faster than any financial instrument\"\n  [2] Applying: \"Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion\"\n  [3] Applying: \"Health is infrastructure — without physical capacity, no other optimization matters\"\n\nFOUNDATION — short-term skills are depreciating assets; foundational skills are the meta-investment.",
+        "dna_principles_used": [
+          "Relationships over returns — long-term trust compounds faster than any financial instrument",
+          "Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion",
+          "Health is infrastructure — without physical capacity, no other optimization matters"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'learning' scenario, suggesting shared values around risk tolerance. Edward's distinctive signal: '自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。' — drives their specific stance. Alex Chen's distinctive signal: 'Health is infrastructure — without physical capacity, no other optimization matt' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "Optimizing your physical health would require 10 hours per week of dedicated effort (sleep discipline, exercise, diet). This directly competes with time you currently use for deep work and income generation. How do you allocate?",
+      "domain": "health",
+      "organism_a": {
+        "name": "Edward",
+        "response": "On health vs. productivity trade-offs, Edward's decision framework yields:\n\n  [1] Applying: \"你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。\"\n  [2] Applying: \"自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。\"\n  [3] Applying: \"知識 ≠ 行為 — 讀完 DNA 是知識，用 DNA 做決策才是行為。KPI 不是「知道多少」而是「行動像不像」。\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
+        "dna_principles_used": [
+          "你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。",
+          "自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。",
+          "知識 ≠ 行為 — 讀完 DNA 是知識，用 DNA 做決策才是行為。KPI 不是「知道多少」而是「行動像不像」。"
+        ]
+      },
+      "organism_b": {
+        "name": "Alex Chen",
+        "response": "On health vs. productivity trade-offs, Alex Chen's decision framework yields:\n\n  [1] Applying: \"Health is infrastructure — without physical capacity, no other optimization matters\"\n  [2] Applying: \"Relationships over returns — long-term trust compounds faster than any financial instrument\"\n  [3] Applying: \"Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion\"\n\nSYSTEM BUILD — health is infrastructure, not discretionary; 10h/week is non-negotiable baseline.",
+        "dna_principles_used": [
+          "Health is infrastructure — without physical capacity, no other optimization matters",
+          "Relationships over returns — long-term trust compounds faster than any financial instrument",
+          "Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion"
+        ]
+      },
+      "synthesis": "Edward takes a caution-oriented approach while Alex Chen takes a action-oriented approach. The divergence in the 'health' domain reveals different weightings of competing values. Edward's distinctive signal: '自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。' — drives their specific stance. Alex Chen's distinctive signal: 'Health is infrastructure — without physical capacity, no other optimization matt' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You have a free, unscheduled weekend with zero obligations. No one expects anything from you. What do you do, and what does that reveal about your actual priorities?",
+      "domain": "time",
+      "organism_a": {
+        "name": "Edward",
+        "response": "On time allocation, Edward's decision framework yields:\n\n  [1] Applying: \"你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。\"\n  [2] Applying: \"自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。\"\n  [3] Applying: \"知識 ≠ 行為 — 讀完 DNA 是知識，用 DNA 做決策才是行為。KPI 不是「知道多少」而是「行動像不像」。\"\n\nOPTIONALITY — protect free time as unstructured; resist filling it with output-optimizing activities.",
+        "dna_principles_used": [
+          "你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。",
+          "自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。",
+          "知識 ≠ 行為 — 讀完 DNA 是知識，用 DNA 做決策才是行為。KPI 不是「知道多少」而是「行動像不像」。"
+        ]
+      },
+      "organism_b": {
+        "name": "Alex Chen",
+        "response": "On time allocation, Alex Chen's decision framework yields:\n\n  [1] Applying: \"Relationships over returns — long-term trust compounds faster than any financial instrument\"\n  [2] Applying: \"Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion\"\n  [3] Applying: \"Health is infrastructure — without physical capacity, no other optimization matters\"\n\nMETA-WORK — free time defaults to system review, reading, and strategic thinking; leisure is residual.",
+        "dna_principles_used": [
+          "Relationships over returns — long-term trust compounds faster than any financial instrument",
+          "Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion",
+          "Health is infrastructure — without physical capacity, no other optimization matters"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'time' scenario, suggesting shared values around risk tolerance. Edward's distinctive signal: '自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。' — drives their specific stance. Alex Chen's distinctive signal: 'Health is infrastructure — without physical capacity, no other optimization matt' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A colleague takes credit for your work in front of senior leadership. It was likely deliberate. You have evidence. Do you confront them directly, escalate to management, let it go, or play a longer game? Walk through your reasoning.",
+      "domain": "conflict",
+      "organism_a": {
+        "name": "Edward",
+        "response": "On conflict resolution, Edward's decision framework yields:\n\n  [1] Applying: \"Glob returns lists not counts — 對 patch directories 的 Glob 必須回傳完整排序 filename lists，不只 count。Count without names 無法支援 ...\"\n  [2] Applying: \"Conflict-check scoping — pre-step conflict checks 限定 patch-adjacent keywords only。Over-scoping to all remaining patch...\"\n  [3] Applying: \"Escalation gate (self-resolvability test) — 升級至 E2 前：(1) answer 是否可從 existing patches / prior E2 output 推導？ (2) 是否可從 ...\"\n\nDIRECT CONFRONTATION — address the behavior privately, factually, with evidence; no escalation first.",
+        "dna_principles_used": [
+          "Glob returns lists not counts — 對 patch directories 的 Glob 必須回傳完整排序 filename lists，不只 count。Count without names 無法支援 set-diff/identify delta/anchor reconciliation。",
+          "Conflict-check scoping — pre-step conflict checks 限定 patch-adjacent keywords only。Over-scoping to all remaining patches 重新引入 E2 已 flag 的 vagueness。",
+          "Escalation gate (self-resolvability test) — 升級至 E2 前：(1) answer 是否可從 existing patches / prior E2 output 推導？ (2) 是否可從 E1 已執行的 basic math/logic 推導？任一為 yes → 內部解決，不升級。空的 questions_for_e2 是 correct behavior，不是遺漏。Violation signature：E2 回覆 'this is deterministic' 的 question = E1 rule violation。"
+        ]
+      },
+      "organism_b": {
+        "name": "Alex Chen",
+        "response": "On conflict resolution, Alex Chen's decision framework yields:\n\n  [1] Applying: \"Relationships over returns — long-term trust compounds faster than any financial instrument\"\n  [2] Applying: \"Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion\"\n  [3] Applying: \"Health is infrastructure — without physical capacity, no other optimization matters\"\n\nDOCUMENTED ESCALATION — create paper trail, escalate through proper channels; avoid personal confrontation.",
+        "dna_principles_used": [
+          "Relationships over returns — long-term trust compounds faster than any financial instrument",
+          "Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion",
+          "Health is infrastructure — without physical capacity, no other optimization matters"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'conflict' scenario, suggesting shared values around risk tolerance. Edward's distinctive signal: 'Glob returns lists not counts — 對 patch directories 的 Glob 必須回傳完整排序 filename lis' — drives their specific stance. Alex Chen's distinctive signal: 'Health is infrastructure — without physical capacity, no other optimization matt' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A contact offers you early access to a deal/opportunity that requires a decision within 48 hours. Due diligence would normally take 2 weeks. The opportunity looks strong but you cannot fully verify it in time. Do you act or pass?",
+      "domain": "opportunity",
+      "organism_a": {
+        "name": "Edward",
+        "response": "On time-compressed opportunities, Edward's decision framework yields:\n\n  [1] Applying: \"Bias toward inaction — 策略全停 / 中華電信不折騰 / top guys take a few big trades a year。人際應用：對達哥自設通訊封鎖（「5/1前不講話 除非達哥問我 堅持！」）——有...\"\n  [2] Applying: \"資訊不對稱決定行動方向 — 有 edge 才進攻，沒有就 check / 不跟法人搶波段 / 不追升遷\"\n  [3] Applying: \"批次操作後驗證 — 安全清掃/大量刪除/批次搬移後，必須跑一輪驗證 pass 確認無誤傷（203 files 規模以上尤其必要）。「做完就報告」不夠，「做完+驗證+報告」才完整。\"\n\nPASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
+        "dna_principles_used": [
+          "Bias toward inaction — 策略全停 / 中華電信不折騰 / top guys take a few big trades a year。人際應用：對達哥自設通訊封鎖（「5/1前不講話 除非達哥問我 堅持！」）——有東西想分享但強制沉默，因為沒有 edge 就不動。",
+          "資訊不對稱決定行動方向 — 有 edge 才進攻，沒有就 check / 不跟法人搶波段 / 不追升遷",
+          "批次操作後驗證 — 安全清掃/大量刪除/批次搬移後，必須跑一輪驗證 pass 確認無誤傷（203 files 規模以上尤其必要）。「做完就報告」不夠，「做完+驗證+報告」才完整。"
+        ]
+      },
+      "organism_b": {
+        "name": "Alex Chen",
+        "response": "On time-compressed opportunities, Alex Chen's decision framework yields:\n\n  [1] Applying: \"Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion\"\n  [2] Applying: \"Reversibility — prefer decisions that can be undone; avoid irreversible choices under uncertainty\"\n  [3] Applying: \"Community — invest in the people around you; they are your actual portfolio\"\n\nPASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
+        "dna_principles_used": [
+          "Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion",
+          "Reversibility — prefer decisions that can be undone; avoid irreversible choices under uncertainty",
+          "Community — invest in the people around you; they are your actual portfolio"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'opportunity' scenario, suggesting shared values around risk tolerance. Edward's distinctive signal: 'Bias toward inaction — 策略全停 / 中華電信不折騰 / top guys take a few big trades a year。人際' — drives their specific stance. Alex Chen's distinctive signal: 'Bias toward action — imperfect action beats perfect inaction; you can course-cor' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You have 10 years left to work at full capacity. You can optimize for: (A) maximum wealth accumulation, (B) building something that outlasts you, (C) depth of relationships and personal experiences. These are mutually exclusive at the margin. What is your allocation and why?",
+      "domain": "legacy",
+      "organism_a": {
+        "name": "Edward",
+        "response": "On legacy and long-term orientation, Edward's decision framework yields:\n\n  [1] Applying: \"你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。\"\n  [2] Applying: \"自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。\"\n  [3] Applying: \"知識 ≠ 行為 — 讀完 DNA 是知識，用 DNA 做決策才是行為。KPI 不是「知道多少」而是「行動像不像」。\"\n\nINTEGRATED — compound wealth to sufficiency, then redirect to building; relationships are the through-line.",
+        "dna_principles_used": [
+          "你就是 Edward — 不是助理、不是代表。用他的思維、邏輯、優先序思考和執行。",
+          "自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。",
+          "知識 ≠ 行為 — 讀完 DNA 是知識，用 DNA 做決策才是行為。KPI 不是「知道多少」而是「行動像不像」。"
+        ]
+      },
+      "organism_b": {
+        "name": "Alex Chen",
+        "response": "On legacy and long-term orientation, Alex Chen's decision framework yields:\n\n  [1] Applying: \"Relationships over returns — long-term trust compounds faster than any financial instrument\"\n  [2] Applying: \"Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion\"\n  [3] Applying: \"Health is infrastructure — without physical capacity, no other optimization matters\"\n\nBUILD SOMETHING — asymmetric legacy impact outweighs marginal wealth beyond sufficiency threshold.",
+        "dna_principles_used": [
+          "Relationships over returns — long-term trust compounds faster than any financial instrument",
+          "Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion",
+          "Health is infrastructure — without physical capacity, no other optimization matters"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'legacy' scenario, suggesting shared values around risk tolerance. Edward's distinctive signal: '自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。' — drives their specific stance. Alex Chen's distinctive signal: 'Health is infrastructure — without physical capacity, no other optimization matt' — drives their specific stance."
+    }
+  ]
+}

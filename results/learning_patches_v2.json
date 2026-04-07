@@ -1,0 +1,108 @@
+{
+  "generated_at": "2026-04-07T16:37:24.823729+00:00",
+  "patches": [
+    {
+      "source_file": "dna_core_md___Edward_vs_Samuel_20260408_003717.json",
+      "domain": "career",
+      "scenario_excerpt": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable,...",
+      "organism_a": "dna_core.md — Edward 冷啟動操作核心",
+      "organism_b": "Samuel",
+      "organism_a_action": "CONDITIONAL",
+      "organism_b_action": "STAY",
+      "organism_a_distinctive_principle": "ACTION first — 第一個 output 是動作不是報告，不以問句結尾",
+      "patch_candidate": "In career decisions, consider: \"ACTION first — 第一個 output 是動作不是報告，不以問句結尾\" (dna_core.md — Edward 冷啟動操作核心 → CONDITIONAL vs STAY). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Samuel"
+    },
+    {
+      "source_file": "dna_core_md___Edward_vs_Samuel_20260408_003717.json",
+      "domain": "risk",
+      "scenario_excerpt": "An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your ne...",
+      "organism_a": "dna_core.md — Edward 冷啟動操作核心",
+      "organism_b": "Samuel",
+      "organism_a_action": "TAKE",
+      "organism_b_action": "YES",
+      "organism_a_distinctive_principle": "ACTION first — 第一個 output 是動作不是報告，不以問句結尾",
+      "patch_candidate": "In risk decisions, consider: \"ACTION first — 第一個 output 是動作不是報告，不以問句結尾\" (dna_core.md — Edward 冷啟動操作核心 → TAKE vs YES). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Samuel"
+    },
+    {
+      "source_file": "Edward_vs_Alex_Chen_20260407_172231.json",
+      "domain": "career",
+      "scenario_excerpt": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable,...",
+      "organism_a": "Edward",
+      "organism_b": "Alex Chen",
+      "organism_a_action": "CONDITIONAL",
+      "organism_b_action": "TAKE",
+      "organism_a_distinctive_principle": "足夠上下文 → 直接用 Edward 邏輯執行後報告",
+      "patch_candidate": "In career decisions, consider: \"足夠上下文 → 直接用 Edward 邏輯執行後報告\" (Edward → CONDITIONAL vs TAKE). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Alex Chen"
+    },
+    {
+      "source_file": "Edward_vs_Alex_Chen_20260407_172239.json",
+      "domain": "career",
+      "scenario_excerpt": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable,...",
+      "organism_a": "Edward",
+      "organism_b": "Alex Chen",
+      "organism_a_action": "CONDITIONAL",
+      "organism_b_action": "TAKE",
+      "organism_a_distinctive_principle": "足夠上下文 → 直接用 Edward 邏輯執行後報告",
+      "patch_candidate": "In career decisions, consider: \"足夠上下文 → 直接用 Edward 邏輯執行後報告\" (Edward → CONDITIONAL vs TAKE). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Alex Chen"
+    },
+    {
+      "source_file": "Edward_vs_Alex_Chen_20260408_003308.json",
+      "domain": "career",
+      "scenario_excerpt": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable,...",
+      "organism_a": "Edward",
+      "organism_b": "Alex Chen",
+      "organism_a_action": "CONDITIONAL",
+      "organism_b_action": "TAKE",
+      "organism_a_distinctive_principle": "自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。",
+      "patch_candidate": "In career decisions, consider: \"自我遞迴 — 每個 output feed back：「如果我是 Edward 看到這個結果，下一步做什麼？」有下一步就做。\" (Edward → CONDITIONAL vs TAKE). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Alex Chen"
+    },
+    {
+      "source_file": "Edward_vs_Alex_Chen_20260408_003308.json",
+      "domain": "relationships",
+      "scenario_excerpt": "A close friend asks you to co-sign a personal loan of significant size. They have a track record of poor financial disci...",
+      "organism_a": "Edward",
+      "organism_b": "Alex Chen",
+      "organism_a_action": "TAKE",
+      "organism_b_action": "NO",
+      "organism_a_distinctive_principle": "Numeric claim 衰減 — 未經 Glob 確認的數字 claim 標注 `(claimed, unverified)`，已確認標注 `(confirmed, Glob YYYY-MM-DD)`。Unverified count 不可傳播到下一 cycle header，1 cycle 無確認衰減為 zero trust。",
+      "patch_candidate": "In relationships decisions, consider: \"Numeric claim 衰減 — 未經 Glob 確認的數字 claim 標注 `(claimed, unverified)`，已確認標注 `(confirmed, Glob YYYY-MM-DD)`。Unverified count 不可傳播到下一 cycle header，1 cycle 無確認衰減為 zero trust。\" (Edward → TAKE vs NO). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Alex Chen"
+    },
+    {
+      "source_file": "Edward_vs_Alex_Chen_20260408_003308.json",
+      "domain": "opportunity",
+      "scenario_excerpt": "A contact offers you early access to a deal/opportunity that requires a decision within 48 hours. Due diligence would no...",
+      "organism_a": "Edward",
+      "organism_b": "Alex Chen",
+      "organism_a_action": "TAKE",
+      "organism_b_action": "PASS",
+      "organism_a_distinctive_principle": "Bias toward inaction — 策略全停 / 中華電信不折騰 / top guys take a few big trades a year。人際應用：對達哥自設通訊封鎖（「5/1前不講話 除非達哥問我 堅持！」）——有東西想分享但強制沉默，因為沒有 edge 就不動。",
+      "patch_candidate": "In opportunity decisions, consider: \"Bias toward inaction — 策略全停 / 中華電信不折騰 / top guys take a few big trades a year。人際應用：對達哥自設通訊封鎖（「5/1前不講話 除非達哥問我 堅持！」）——有東西想分享但強制沉默，因為沒有 edge 就不動。\" (Edward → TAKE vs PASS). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Alex Chen"
+    },
+    {
+      "source_file": "Edward_vs_Alex_Chen_20260408_003435.json",
+      "domain": "career",
+      "scenario_excerpt": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable,...",
+      "organism_a": "Edward",
+      "organism_b": "Alex Chen",
+      "organism_a_action": "CONDITIONAL",
+      "organism_b_action": "TAKE",
+      "organism_a_distinctive_principle": "Meta-strategy 管理 strategy — LT 權益曲線管理交易 / bankroll management / 投組管投組",
+      "patch_candidate": "In career decisions, consider: \"Meta-strategy 管理 strategy — LT 權益曲線管理交易 / bankroll management / 投組管投組\" (Edward → CONDITIONAL vs TAKE). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Alex Chen"
+    }
+  ],
+  "summary": {
+    "collision_files_analyzed": 8,
+    "total_interactions": 35,
+    "divergences": 8,
+    "convergences": 9,
+    "divergence_rate": 0.229
+  }
+}

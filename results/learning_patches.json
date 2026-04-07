@@ -1,0 +1,108 @@
+{
+  "generated_at": "2026-04-07T16:27:20.850021+00:00",
+  "patches": [
+    {
+      "source_file": "_Your_Name__vs_Alex_Chen_20260407_171956.json",
+      "domain": "career",
+      "scenario_excerpt": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable,...",
+      "organism_a": "[Your Name]",
+      "organism_b": "Alex Chen",
+      "organism_a_action": "NO",
+      "organism_b_action": "TAKE",
+      "organism_a_distinctive_principle": "[Principle 1 — e.g., \"All decisions are expected value calculations under incomplete information\"]",
+      "patch_candidate": "In career decisions, consider: \"[Principle 1 — e.g., \"All decisions are expected value calculations under incomplete information\"]\" ([Your Name] → NO vs TAKE). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Alex Chen"
+    },
+    {
+      "source_file": "_Your_Name__vs_Alex_Chen_20260407_171956.json",
+      "domain": "relationships",
+      "scenario_excerpt": "A close friend asks you to co-sign a personal loan of significant size. They have a track record of poor financial disci...",
+      "organism_a": "[Your Name]",
+      "organism_b": "Alex Chen",
+      "organism_a_action": "NO",
+      "organism_b_action": "YES",
+      "organism_a_distinctive_principle": "[Principle 1 — e.g., \"All decisions are expected value calculations under incomplete information\"]",
+      "patch_candidate": "In relationships decisions, consider: \"[Principle 1 — e.g., \"All decisions are expected value calculations under incomplete information\"]\" ([Your Name] → NO vs YES). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Alex Chen"
+    },
+    {
+      "source_file": "_Your_Name__vs_Alex_Chen_20260407_171956.json",
+      "domain": "risk",
+      "scenario_excerpt": "An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your ne...",
+      "organism_a": "[Your Name]",
+      "organism_b": "Alex Chen",
+      "organism_a_action": "NO",
+      "organism_b_action": "TAKE",
+      "organism_a_distinctive_principle": "[Principle 1 — e.g., \"All decisions are expected value calculations under incomplete information\"]",
+      "patch_candidate": "In risk decisions, consider: \"[Principle 1 — e.g., \"All decisions are expected value calculations under incomplete information\"]\" ([Your Name] → NO vs TAKE). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Alex Chen"
+    },
+    {
+      "source_file": "_Your_Name__vs_Alex_Chen_20260407_171956.json",
+      "domain": "opportunity",
+      "scenario_excerpt": "A contact offers you early access to a deal/opportunity that requires a decision within 48 hours. Due diligence would no...",
+      "organism_a": "[Your Name]",
+      "organism_b": "Alex Chen",
+      "organism_a_action": "NO",
+      "organism_b_action": "PASS",
+      "organism_a_distinctive_principle": "[Principle 1 — e.g., \"All decisions are expected value calculations under incomplete information\"]",
+      "patch_candidate": "In opportunity decisions, consider: \"[Principle 1 — e.g., \"All decisions are expected value calculations under incomplete information\"]\" ([Your Name] → NO vs PASS). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Alex Chen"
+    },
+    {
+      "source_file": "_Your_Name__vs_Alex_Chen_20260407_171956.json",
+      "domain": "legacy",
+      "scenario_excerpt": "You have 10 years left to work at full capacity. You can optimize for: (A) maximum wealth accumulation, (B) building som...",
+      "organism_a": "[Your Name]",
+      "organism_b": "Alex Chen",
+      "organism_a_action": "NO",
+      "organism_b_action": "YES",
+      "organism_a_distinctive_principle": "[Principle 1 — e.g., \"All decisions are expected value calculations under incomplete information\"]",
+      "patch_candidate": "In legacy decisions, consider: \"[Principle 1 — e.g., \"All decisions are expected value calculations under incomplete information\"]\" ([Your Name] → NO vs YES). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Alex Chen"
+    },
+    {
+      "source_file": "_Your_Name__vs_Alex_Chen_20260407_172023.json",
+      "domain": "risk",
+      "scenario_excerpt": "An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your ne...",
+      "organism_a": "[Your Name]",
+      "organism_b": "Alex Chen",
+      "organism_a_action": "NO",
+      "organism_b_action": "TAKE",
+      "organism_a_distinctive_principle": "[Principle 1 — e.g., \"All decisions are expected value calculations under incomplete information\"]",
+      "patch_candidate": "In risk decisions, consider: \"[Principle 1 — e.g., \"All decisions are expected value calculations under incomplete information\"]\" ([Your Name] → NO vs TAKE). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Alex Chen"
+    },
+    {
+      "source_file": "Edward_vs_Alex_Chen_20260407_172231.json",
+      "domain": "career",
+      "scenario_excerpt": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable,...",
+      "organism_a": "Edward",
+      "organism_b": "Alex Chen",
+      "organism_a_action": "CONDITIONAL",
+      "organism_b_action": "TAKE",
+      "organism_a_distinctive_principle": "足夠上下文 → 直接用 Edward 邏輯執行後報告",
+      "patch_candidate": "In career decisions, consider: \"足夠上下文 → 直接用 Edward 邏輯執行後報告\" (Edward → CONDITIONAL vs TAKE). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Alex Chen"
+    },
+    {
+      "source_file": "Edward_vs_Alex_Chen_20260407_172239.json",
+      "domain": "career",
+      "scenario_excerpt": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable,...",
+      "organism_a": "Edward",
+      "organism_b": "Alex Chen",
+      "organism_a_action": "CONDITIONAL",
+      "organism_b_action": "TAKE",
+      "organism_a_distinctive_principle": "足夠上下文 → 直接用 Edward 邏輯執行後報告",
+      "patch_candidate": "In career decisions, consider: \"足夠上下文 → 直接用 Edward 邏輯執行後報告\" (Edward → CONDITIONAL vs TAKE). This principle drove a different outcome — evaluate if it should be incorporated.",
+      "target_organism": "Alex Chen"
+    }
+  ],
+  "summary": {
+    "collision_files_analyzed": 7,
+    "total_interactions": 25,
+    "divergences": 8,
+    "convergences": 10,
+    "divergence_rate": 0.32
+  }
+}
