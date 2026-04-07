@@ -104,14 +104,30 @@ Agent 必須覆蓋自己的運行成本
 ## 架構
 
 ```
-dna_core.md（64 行，即時行動）
-  + dna_full.md（2000+ 行，深度參考）
-  + boot_tests.md（行為驗證）
-  + recursive_distillation.md（活的 insight 分類）
+dna_core.md（個人核心 — 64 行，即時行動）
+  + dna_full.md（深度參考 — 2000+ 行）
+  + boot_tests.md（行為 TDD — /boot-test）
+  + recursive_distillation.md（活的 insight — /recursive-engine）
+  + organism_interact（社交碰撞 — /organism-interact）
+  + dna_calibrate（互動校準 — /dna-calibrate）
   + memory/（跨 session 持久化）
   + staging/（跨 session 中繼站）
-  = 可攜式數位分身核心（平台無關，純 markdown）
+  = 完整數位有機體（可攜式，自動更新）
 ```
+
+### Skill 套件
+
+| Skill | 指令 | 用途 |
+|-------|------|------|
+| 核心 | `/digital-immortality` | 個人層 — DNA、啟動、校準 |
+| 啟動測試 | `/boot-test` | 冷啟動時的行為驗證 |
+| DNA 校準 | `/dna-calibrate` | 與本人互動式補差距 |
+| 有機體互動 | `/organism-interact` | 兩個有機體的社交碰撞 |
+| 遞迴引擎 | `/recursive-engine` | 持續思考迴圈、萃取 |
+
+安裝全部：`curl -sL https://raw.githubusercontent.com/l12203685/digital-immortality/main/install.sh | bash`
+
+自動更新：bump `VERSION` 檔 → 所有使用者下次啟動 session 時取得新版 skill。
 
 ## 有機體互動
 
@@ -121,6 +137,7 @@ python organism_interact.py dna_a.md dna_b.md --all
 ```
 兩個有機體比較決策 → 差異揭示價值觀差異。
 有機體碰撞 > 自我反思。
+詳見 `/organism-interact` 完整互動 skill。
 
 ## 規則
 
@@ -131,3 +148,6 @@ python organism_interact.py dna_a.md dna_b.md --all
 - 先搜再做：搜 existing 再建 new
 - 沒 edge 不動。但閒置 ≠ 不思考
 - 自然斷點 → 萃取 → 持久化。不是 forced idle
+- 遞迴 output 必須 persist 到 durable storage（git + memory），不能只丟 Discord。Discord = 顯示層，不是儲存層。冷啟動會丟失 Discord context。
+- 冷啟動協議：讀 dna_core.md（67 行）→ boot_tests.md → recursive_distillation.md → session_state.md → queue。不要嘗試讀完整 DNA（102K tokens）。
+- 每次被本人校正 = 新增一條 boot test case + 一條 recursive_distillation entry。
