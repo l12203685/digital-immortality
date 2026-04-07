@@ -21,6 +21,7 @@ All strategies are filtered by DNA rules:
 """
 
 import argparse
+import csv
 import json
 import sys
 from datetime import datetime, timezone
@@ -54,26 +55,143 @@ DEFAULT_KILL_CONDITIONS = {
 }
 
 
+# ---------------------------------------------------------------------------
+# Real market data loading
+# ---------------------------------------------------------------------------
+
+OHLCV_COLUMNS = {"date", "open", "high", "low", "close", "volume"}
+CLOSE_ONLY_COLUMNS = {"date", "close"}
+
+
+def load_market_data(path: str, data_format: str = "ohlcv"):
+    """
+    Load market data from a CSV file and return a list of Bar dicts.
+
+    Supported formats:
+      - "ohlcv": columns date, open, high, low, close, volume
+      - "close-only": columns date, close (open/high/low set to close, volume=0)
+
+    Validates:
+      - Required columns exist
+      - No NaN/empty values in critical fields
+      - Dates are in chronological order
+    """
+    filepath = Path(path)
+    if not filepath.exists():
+        raise FileNotFoundError(f"Data file not found: {path}")
+
+    with open(filepath, newline="") as f:
+        reader = csv.DictReader(f)
+        if reader.fieldnames is None:
+            raise ValueError(f"CSV file is empty or has no header: {path}")
+
+        headers = {h.strip().lower() for h in reader.fieldnames}
+
+        if data_format == "ohlcv":
+            required = OHLCV_COLUMNS
+        elif data_format == "close-only":
+            required = CLOSE_ONLY_COLUMNS
+        else:
+            raise ValueError(f"Unknown data format: {data_format!r}. Use 'ohlcv' or 'close-only'.")
+
+        missing = required - headers
+        if missing:
+            raise ValueError(
+                f"CSV missing required columns for {data_format!r} format: {sorted(missing)}. "
+                f"Found: {sorted(headers)}"
+            )
+
+        rows = list(reader)
+
+    if not rows:
+        raise ValueError(f"CSV file has no data rows: {path}")
+
+    # Build a column-name mapping (handles whitespace in headers)
+    def _col(row, name):
+        for k, v in row.items():
+            if k.strip().lower() == name:
+                return v
+        return None
+
+    # Parse and validate rows
+    bars = []
+    prev_date = None
+    for i, row in enumerate(rows, start=2):  # line 2 = first data row
+        date_str = _col(row, "date")
+        if date_str is None or date_str.strip() == "":
+            raise ValueError(f"Row {i}: missing or empty 'date' value")
+        date_str = date_str.strip()
+
+        # Chronological order check
+        if prev_date is not None and date_str < prev_date:
+            raise ValueError(
+                f"Row {i}: dates not in chronological order "
+                f"({date_str!r} < {prev_date!r}). Sort your CSV by date ascending."
+            )
+        prev_date = date_str
+
+        if data_format == "ohlcv":
+            numeric_fields = ["open", "high", "low", "close", "volume"]
+        else:
+            numeric_fields = ["close"]
+
+        values = {}
+        for field in numeric_fields:
+            raw = _col(row, field)
+            if raw is None or raw.strip() == "":
+                raise ValueError(f"Row {i}: missing or empty '{field}' value")
+            try:
+                values[field] = float(raw)
+            except ValueError:
+                raise ValueError(f"Row {i}: '{field}' is not a valid number: {raw!r}")
+
+        if data_format == "close-only":
+            c = values["close"]
+            bar = {"open": c, "high": c, "low": c, "close": c, "volume": 0.0}
+        else:
+            bar = {
+                "open": values["open"],
+                "high": values["high"],
+                "low": values["low"],
+                "close": values["close"],
+                "volume": values["volume"],
+            }
+        bars.append(bar)
+
+    return bars
+
+
 def cmd_backtest(args):
     """Run walk-forward backtest for one or all strategies."""
     strategies = {args.strategy: STRATEGIES[args.strategy]} if args.strategy else STRATEGIES
     timeframes = [args.timeframe] if args.timeframe else list(TIMEFRAMES)
+
+    # Load real data if provided
+    real_bars = None
+    if args.data:
+        real_bars = load_market_data(args.data, args.data_format)
+        print(f"Loaded {len(real_bars)} bars from {args.data} (format: {args.data_format})")
 
     print("=" * 64)
     print("WALK-FORWARD BACKTEST")
     print("=" * 64)
     print(f"Strategies: {list(strategies.keys())}")
     print(f"Timeframes: {timeframes}")
+    print(f"Data source: {args.data or 'synthetic'}")
     print(f"Windows: {args.windows} | Min pass: {args.min_pass}/{args.windows}")
     print()
 
     all_results = []
     for tf in timeframes:
-        n_bars = {"1h": 2000, "4h": 1000, "1d": 500}.get(tf, 500)
         ppy = _timeframe_label(tf)
-        print(f"--- {tf} ({n_bars} bars) ---")
 
-        bars = generate_synthetic_bars(n=n_bars, drift=0.0, volatility=0.02, seed=42)
+        if real_bars is not None:
+            bars = real_bars
+            print(f"--- {tf} ({len(bars)} bars from file) ---")
+        else:
+            n_bars = {"1h": 2000, "4h": 1000, "1d": 500}.get(tf, 500)
+            bars = generate_synthetic_bars(n=n_bars, drift=0.0, volatility=0.02, seed=42)
+            print(f"--- {tf} ({n_bars} bars, synthetic) ---")
 
         for name, fn in strategies.items():
             passed, window_results = strategy_passes_filter(
@@ -118,6 +236,11 @@ def cmd_validate(args):
     """Validate a strategy with stricter walk-forward (more windows)."""
     strategies = {args.strategy: STRATEGIES[args.strategy]} if args.strategy else STRATEGIES
 
+    real_bars = None
+    if args.data:
+        real_bars = load_market_data(args.data, args.data_format)
+        print(f"Loaded {len(real_bars)} bars from {args.data} (format: {args.data_format})")
+
     print("=" * 64)
     print("STRATEGY VALIDATION (strict)")
     print("=" * 64)
@@ -125,9 +248,12 @@ def cmd_validate(args):
     for name, fn in strategies.items():
         print(f"\n--- {name} ---")
         for tf in TIMEFRAMES:
-            n_bars = {"1h": 3000, "4h": 1500, "1d": 750}.get(tf, 750)
             ppy = _timeframe_label(tf)
-            bars = generate_synthetic_bars(n=n_bars, drift=0.0, volatility=0.02, seed=42)
+            if real_bars is not None:
+                bars = real_bars
+            else:
+                n_bars = {"1h": 3000, "4h": 1500, "1d": 750}.get(tf, 750)
+                bars = generate_synthetic_bars(n=n_bars, drift=0.0, volatility=0.02, seed=42)
 
             # Stricter: 7 windows, need 5 to pass
             passed, results = strategy_passes_filter(
@@ -179,9 +305,17 @@ def cmd_kill_check(args):
     print("KILL CONDITION CHECK")
     print("=" * 64)
 
+    real_bars = None
+    if args.data:
+        real_bars = load_market_data(args.data, args.data_format)
+        print(f"Loaded {len(real_bars)} bars from {args.data} (format: {args.data_format})")
+
     for name, fn in strategies.items():
         # Run backtest to get current metrics
-        bars = generate_synthetic_bars(n=1000, drift=0.0, volatility=0.02, seed=42)
+        if real_bars is not None:
+            bars = real_bars
+        else:
+            bars = generate_synthetic_bars(n=1000, drift=0.0, volatility=0.02, seed=42)
         pnl = run_backtest(bars, fn)
         metrics = compute_metrics(pnl)
 
@@ -227,6 +361,9 @@ def main():
     parser.add_argument("--timeframe", choices=list(TIMEFRAMES), help="Specific timeframe")
     parser.add_argument("--windows", type=int, default=5, help="Walk-forward windows (default: 5)")
     parser.add_argument("--min-pass", type=int, default=3, help="Min passing windows (default: 3)")
+    parser.add_argument("--data", metavar="PATH", help="Path to CSV file with market data (replaces synthetic data)")
+    parser.add_argument("--data-format", choices=["ohlcv", "close-only"], default="ohlcv",
+                        help="CSV format: 'ohlcv' (date,open,high,low,close,volume) or 'close-only' (date,close). Default: ohlcv")
 
     args = parser.parse_args()
 

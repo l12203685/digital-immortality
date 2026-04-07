@@ -92,3 +92,47 @@ Recursive engine cycle history.
 3. **Add**: Boot test auto-correction — when a test fails, auto-suggest DNA edits
 4. **Add**: Organism collision flow — guided multi-DNA comparison session
 5. **Improve**: Platform docs — README needs updating to reflect new CLI tools
+
+
+## Cycle 3 — 2026-04-07T20:30Z
+
+**Branches pushed**: 4/6 (economic, behavioral, continuous-learning, platform)
+
+### Branch 1: Economic Self-Sufficiency
+- Added `--data <path>` and `--data-format` flags to `trading_system.py` — real CSV market data support
+- Validates columns, NaN, chronological order; supports OHLCV and close-only formats
+- Created `templates/example_market_data.csv` — 20-row example BTC OHLCV data
+- Kill check correctly rejects all strategies on 20-bar sample (insufficient data)
+- **Impact**: Trading system can now ingest real market data. Path: synthetic → CSV backtest → paper → live.
+
+### Branch 2: Behavioral Equivalence
+- Added `--auto-suggest` flag to `consistency_test.py`
+- On MISALIGNED scenarios: identifies relevant DNA section, finds related existing principles, suggests ADD or MODIFY action
+- Generates draft decision kernels ready to paste into DNA
+- Saves structured suggestions to `results/auto_suggestions.json`
+- **Impact**: Boot test failures now produce actionable DNA edits. Closes the calibration feedback loop.
+
+### Branch 3: Continuous Learning
+- Wired `memory_manager.py` into `recursive_engine.py` (Python API, no shell-out)
+- `--prompt`: recalls recent memories at cycle start, stores cycle-transition insight at cycle end
+- `--status`: shows memory entry counts per category (corrections/insights/decisions/calibration)
+- `--init`: confirms memory system is connected
+- **Impact**: Recursive loop now reads and writes memory every cycle. learn=write is operational.
+
+### Branch 5: Platform Distribution
+- Rewrote README.md Quick Start: 3-step path (create DNA → boot test → recursive engine)
+- Added CLI Tools section: all 7 tools with one-liner-per-command format
+- Updated Project Structure to reflect full repo state after 3 cycles
+- **Impact**: New users can discover and use all tools from README alone.
+
+### Meta
+- All 4 Cycle 2 "next priorities" addressed (items 1-3 done, item 5 done, item 4 deferred)
+- Boot test: 2/8 aligned on template DNA (expected), auto-suggest now generates fixes for 6 misaligned
+- Memory: 3 entries (2 insights, 1 decision) — will grow each cycle now that integration is live
+
+### Next cycle priorities
+1. **Add**: Organism collision flow — guided multi-DNA comparison session (deferred from Cycle 2)
+2. **Improve**: Apply auto-suggestions to example DNA, re-run boot test, aim for >5/8 alignment
+3. **Add**: Strategy library for trading — at least 1 real strategy beyond random-walk baseline
+4. **Add**: Memory auto-prune — prevent unbounded growth, keep most relevant entries
+5. **Improve**: Cross-instance test integration with memory system — store test results as calibration entries

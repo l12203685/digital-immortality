@@ -32,7 +32,135 @@ from pathlib import Path
 
 # Import organism_interact for deterministic baseline
 sys.path.insert(0, str(Path(__file__).parent))
-from organism_interact import parse_dna, generate_response, SCENARIOS
+from organism_interact import parse_dna, generate_response, SCENARIOS, DOMAIN_PRINCIPLE_AFFINITY
+
+
+# ---------------------------------------------------------------------------
+# Auto-suggest: map domains to DNA sections, generate fix suggestions
+# ---------------------------------------------------------------------------
+
+# Maps scenario domains to DNA section keywords.  When a scenario is
+# MISALIGNED we search the DNA section headers for these keywords to
+# locate the most relevant section.
+_DOMAIN_TO_SECTION_KEYWORDS: dict[str, list[str]] = {
+    "trading":          ["trading", "trade", "strategy", "system", "交易", "策略"],
+    "finance":          ["finance", "career & finance", "money", "invest", "wealth", "financial", "財務"],
+    "career":           ["career", "work", "job", "occupation", "職業"],
+    "relationships":    ["relationship", "friend", "social", "people", "人際"],
+    "identity":         ["identity", "who i am", "boot_critical", "core", "身份"],
+    "risk_assessment":  ["risk", "decision", "framework", "principle", "風險"],
+    "risk":             ["risk", "decision", "framework", "principle", "風險"],
+    "opportunity_cost": ["decision", "framework", "principle", "opportunity", "core"],
+    "meta_strategy":    ["decision", "framework", "principle", "core", "meta", "strategy"],
+    "money":            ["finance", "money", "invest", "wealth", "financial"],
+    "learning":         ["learning", "skill", "growth", "career"],
+    "health":           ["health", "daily", "pattern", "routine"],
+    "time":             ["time", "daily", "pattern", "priority"],
+    "conflict":         ["conflict", "communication", "relationship", "style"],
+    "opportunity":      ["decision", "framework", "opportunity", "risk"],
+    "legacy":           ["legacy", "value", "identity", "core"],
+}
+
+
+def _find_relevant_section(dna: dict, domain: str) -> str | None:
+    """Find the DNA section header most relevant to a scenario domain."""
+    keywords = _DOMAIN_TO_SECTION_KEYWORDS.get(domain, [domain])
+    section_headers: list[str] = dna.get("sections", [])
+
+    # Score each section header against the domain keywords
+    best_header = None
+    best_score = 0
+    for header in section_headers:
+        h_lower = header.lower()
+        score = sum(1 for kw in keywords if kw.lower() in h_lower)
+        if score > best_score:
+            best_score = score
+            best_header = header
+    return best_header
+
+
+def _find_relevant_principles(dna: dict, domain: str, top_n: int = 3) -> list[str]:
+    """Return the principles most relevant to a domain (reuses organism_interact scoring)."""
+    from organism_interact import _score_principle_for_domain
+
+    principles = dna.get("principles", [])
+    scored = sorted(
+        [(p, _score_principle_for_domain(p, domain)) for p in principles],
+        key=lambda x: x[1],
+        reverse=True,
+    )
+    return [p for p, s in scored[:top_n]]
+
+
+def generate_suggestion(dna: dict, result: dict) -> dict:
+    """Generate a structured suggestion for fixing a MISALIGNED scenario.
+
+    Returns a dict with:
+      - scenario_id: the failing scenario id
+      - domain: scenario domain
+      - relevant_section: which DNA section header to edit (or create)
+      - existing_principles: the principles currently most related
+      - suggestion_type: "add" or "modify"
+      - suggested_edit: text describing what to add/change
+      - suggested_principle: a draft principle/decision-kernel entry
+    """
+    domain = result.get("domain", "general")
+    expected = result.get("expected_decision", "")
+    expected_reasoning = result.get("expected_reasoning", "")
+    actual_response = result.get("deterministic_response", "")
+
+    relevant_section = _find_relevant_section(dna, domain)
+    existing = _find_relevant_principles(dna, domain)
+
+    # Determine if we should add a new principle or modify an existing one
+    if not existing or all(len(p) < 15 for p in existing):
+        suggestion_type = "add"
+    else:
+        # Check if any existing principle mentions the expected decision concept
+        expected_lower = expected.lower().replace("_", " ")
+        has_related = any(
+            any(word in p.lower() for word in expected_lower.split() if len(word) > 3)
+            for p in existing
+        )
+        suggestion_type = "modify" if has_related else "add"
+
+    # Build a readable suggestion and draft principle
+    target_section = relevant_section or f"New section for '{domain}'"
+    if suggestion_type == "add":
+        suggested_edit = (
+            f"Add a decision kernel or principle to section \"{target_section}\" "
+            f"that addresses {domain} scenarios where the expected outcome is "
+            f"\"{expected}\". The DNA currently lacks a principle that would "
+            f"produce this decision."
+        )
+        draft_principle = (
+            f"**{expected.replace('_', ' ').title()}** — "
+            f"{expected_reasoning}"
+        )
+    else:
+        # Identify the closest existing principle to recommend modifying
+        closest = existing[0] if existing else "(none)"
+        suggested_edit = (
+            f"Modify the principle closest to this domain in section "
+            f"\"{target_section}\": \"{closest}\". "
+            f"It should also cover the case where the expected decision is "
+            f"\"{expected}\". Currently the deterministic engine produces: "
+            f"\"{actual_response[:150]}\"."
+        )
+        draft_principle = (
+            f"**{expected.replace('_', ' ').title()}** — "
+            f"{expected_reasoning}"
+        )
+
+    return {
+        "scenario_id": result.get("id", "unknown"),
+        "domain": domain,
+        "relevant_section": target_section,
+        "existing_principles": existing,
+        "suggestion_type": suggestion_type,
+        "suggested_edit": suggested_edit,
+        "suggested_principle": draft_principle,
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -429,6 +557,15 @@ def main():
             "Output is saved next to the DNA file as <dna_stem>_boot_tests.json."
         ),
     )
+    parser.add_argument(
+        "--auto-suggest",
+        action="store_true",
+        help=(
+            "When a scenario is MISALIGNED, print a suggested DNA edit that "
+            "identifies the relevant section, recommends a principle to "
+            "add or modify, and outputs the suggestion as structured JSON."
+        ),
+    )
     args = parser.parse_args()
 
     script_dir = Path(__file__).parent
@@ -458,6 +595,7 @@ def main():
 
     # Count alignment with expected decisions
     boot_results = [r for r in results if r.get("expected_decision")]
+    suggestions = []
     if boot_results:
         print(f"\n{'='*60}")
         print("  EXPECTED DECISION ALIGNMENT")
@@ -479,6 +617,42 @@ def main():
             )
             status = "ALIGNED" if aligned else "MISALIGNED"
             print(f"  [{status:10s}] {r['id']:25s} | expected={r['expected_decision']:30s}")
+
+            if not aligned and args.auto_suggest:
+                suggestions.append(generate_suggestion(dna, r))
+
+    # Print auto-suggest output for misaligned scenarios
+    if suggestions:
+        print(f"\n{'='*60}")
+        print("  AUTO-SUGGEST: DNA EDITS FOR MISALIGNED SCENARIOS")
+        print(f"{'='*60}")
+        for s in suggestions:
+            print(f"\n  --- {s['scenario_id']} ({s['domain']}) ---")
+            print(f"  Section:    {s['relevant_section']}")
+            print(f"  Action:     {s['suggestion_type'].upper()}")
+            print(f"  Edit:       {s['suggested_edit']}")
+            print(f"  Draft:      {s['suggested_principle']}")
+            if s['existing_principles']:
+                print(f"  Related principles already in DNA:")
+                for p in s['existing_principles']:
+                    print(f"    - {p[:100]}")
+
+        # Save suggestions as JSON
+        suggestions_path = Path(output_dir) / "auto_suggestions.json"
+        suggestions_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(suggestions_path, "w", encoding="utf-8") as f:
+            json.dump({
+                "meta": {
+                    "dna_file": dna["filepath"],
+                    "organism": dna["name"],
+                    "generated_at": datetime.now().isoformat(),
+                    "misaligned_count": len(suggestions),
+                },
+                "suggestions": suggestions,
+            }, f, ensure_ascii=False, indent=2)
+        print(f"\nSuggestions saved: {suggestions_path}")
+    elif args.auto_suggest and boot_results:
+        print(f"\n  All scenarios aligned — no suggestions needed.")
 
     # Save baseline
     baseline_path = Path(output_dir) / "consistency_baseline.json"

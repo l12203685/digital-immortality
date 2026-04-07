@@ -15,6 +15,20 @@ Not consciousness transfer. **Behavioral equivalence**: the AI doesn't need to *
 
 **Key finding**: DNA + LLM = 100% reproduction of real life decisions. Without LLM (deterministic keyword matching) = 0%. The DNA quality is sufficient; the bottleneck is having an LLM to reason with it.
 
+## Quick Start
+
+```bash
+# 1. Create your DNA file (interactive, ~5 min)
+python onboard.py --new
+
+# 2. Run boot tests
+python consistency_test.py your_dna.md --output-dir results
+
+# 3. Start the recursive engine
+python recursive_engine.py --init
+python recursive_engine.py --prompt
+```
+
 ## How It Works
 
 ```
@@ -26,55 +40,75 @@ Not consciousness transfer. **Behavioral equivalence**: the AI doesn't need to *
 6. DNA and boot tests evolve as you do
 ```
 
-## Quick Start (5 minutes)
+## CLI Tools
 
-### Option A: With Claude Code
-
-```bash
-# Clone
-git clone https://github.com/l12203685/digital-immortality.git
-cd digital-immortality
-
-# Copy the skill to Claude Code
-cp SKILL.md ~/.claude/commands/digital-immortality.md
-
-# Start Claude Code and run
-/digital-immortality
-```
-
-### Option B: With any LLM (ChatGPT, Claude, etc.)
-
-1. Copy `templates/example_dna.md` → `my_dna.md`
-2. Fill in sections 0-2 (Core Principles, Identity, Decision Framework)
-3. Open any LLM chat
-4. Paste: "Read this DNA file and become this person. Answer the following scenario as they would: [scenario]"
-5. Compare the answer with what you'd actually do
-6. If wrong → add a correction to your DNA
-
-### Option C: Compare two organisms
+### onboard.py -- DNA creation and validation
 
 ```bash
-# Deterministic comparison (keyword matching — baseline only)
-python organism_interact.py my_dna.md friend_dna.md --all
-
-# LLM-powered comparison (generates prompts for any LLM)
-python organism_interact.py my_dna.md friend_dna.md --llm-prompt --scenario 1
-
-# Batch all scenarios into one file
-python organism_interact.py my_dna.md friend_dna.md --llm-prompt-batch --output results/comparison.md
+python onboard.py --new                      # Guided interactive DNA creation
+python onboard.py --new --output my.md       # Create DNA, write to specific file
+python onboard.py --validate my_dna.md       # Validate DNA structure and completeness
+python onboard.py --quickstart               # Print getting-started guide
 ```
 
-### Option D: Cross-instance consistency test
+### consistency_test.py -- Boot tests and consistency baseline
 
 ```bash
-# Generate LLM test template (run same scenarios across 3+ independent sessions)
-python cross_instance_test.py my_dna.md --sessions 3
-
-# Manage recursive engine state
-python recursive_engine.py --init    # first time setup
-python recursive_engine.py --prompt  # generate next cycle prompt
-python recursive_engine.py --status  # show current state
+python consistency_test.py <dna> --output-dir results                # Run all scenarios, save baseline + template
+python consistency_test.py <dna> --scenarios tests.json              # Use custom scenario file
+python consistency_test.py <dna> --generate-scenarios                # Auto-generate scenarios from DNA domains
 ```
+
+### recursive_engine.py -- Recursive self-prompt loop
+
+```bash
+python recursive_engine.py --init            # Create seed files for first cycle
+python recursive_engine.py --init --force    # Overwrite existing seed files
+python recursive_engine.py --prompt          # Generate next cycle prompt from previous output
+python recursive_engine.py --status          # Show current engine state and cycle number
+```
+
+### organism_interact.py -- Compare two DNA files
+
+```bash
+python organism_interact.py dna_a.md dna_b.md                       # Deterministic comparison (all 10 scenarios)
+python organism_interact.py dna_a.md dna_b.md --scenario 3           # Run a single scenario
+python organism_interact.py dna_a.md dna_b.md --list-scenarios       # Print the 10 built-in scenarios
+python organism_interact.py dna_a.md dna_b.md --llm-prompt           # Generate LLM prompt instead of deterministic
+python organism_interact.py dna_a.md dna_b.md --llm-prompt-batch     # Batch all scenarios into one markdown file
+python organism_interact.py dna_a.md dna_b.md --quiet                # JSON only, no terminal output
+```
+
+### cross_instance_test.py -- Multi-session LLM consistency
+
+```bash
+python cross_instance_test.py <dna> --sessions 3                    # Generate template for 3 independent LLM sessions
+python cross_instance_test.py <dna> --sessions 5 --output-dir out   # Custom session count and output dir
+```
+
+### trading_system.py -- Economic self-sufficiency
+
+```bash
+python trading_system.py --backtest                                  # Walk-forward backtest all strategies
+python trading_system.py --backtest --strategy NAME --timeframe 1h   # Specific strategy and timeframe
+python trading_system.py --validate                                  # Strict validation (7 windows, need 5)
+python trading_system.py --status                                    # Show system status and latest results
+python trading_system.py --kill-check                                # Check kill conditions on all strategies
+```
+
+### memory_manager.py -- Cross-session persistence
+
+```bash
+python memory_manager.py --store corrections key-1 "content" --source cycle-3 --tags boot-test,fix
+python memory_manager.py --recall corrections                        # All entries in category
+python memory_manager.py --recall corrections key-1                  # Single entry by key
+python memory_manager.py --search --tags anti-pattern                # Search across all categories by tag
+python memory_manager.py --list                                      # Show all categories and entry counts
+python memory_manager.py --prune --days 90                           # Remove entries older than 90 days
+python memory_manager.py --export                                    # Export all memory to JSON (stdout)
+```
+
+Categories: `corrections`, `insights`, `decisions`, `calibration`.
 
 ## Project Structure
 
@@ -82,14 +116,18 @@ python recursive_engine.py --status  # show current state
 digital-immortality/
   CLAUDE.md                 — Boot protocol (read this on cold start)
   SKILL.md                  — Master skill definition
-  organism_interact.py      — Compare two DNA files (deterministic + LLM prompt modes)
+  onboard.py                — Interactive DNA creation + validation
   consistency_test.py       — Cross-session decision consistency
   cross_instance_test.py    — LLM multi-session consistency template generator
+  organism_interact.py      — Compare two DNA files (deterministic + LLM prompt modes)
   recursive_engine.py       — Recursive loop state management
+  trading_system.py         — Walk-forward backtesting + kill conditions
+  memory_manager.py         — Cross-session memory persistence (JSON store)
   templates/
     example_dna.md          — Starter DNA template (fill this out)
     example_dna_b.md        — Second organism for comparison testing
     example_boot_tests.md   — Boot test template
+    generic_boot_tests.json — Default scenario set for consistency tests
   specs/
     organism_protocol.md    — How organisms communicate (v0.1)
   skills/                   — 7 sub-skills for Claude Code
@@ -100,6 +138,7 @@ digital-immortality/
     recursive-engine.md     — Recursive self-prompt loop
     organism-interact.md    — Organism comparison protocol
     consistency-test.md     — Cross-instance consistency testing
+  trading/                  — Trading subsystem (backtest framework, strategies)
   staging/                  — Inter-session relay (Output(t-1) → Input(t))
   memory/                   — Cross-session persistence
   results/                  — Test outputs, scorecards, cycle logs
@@ -148,32 +187,11 @@ Run boot tests on every new session. If the AI fails any test, recalibrate befor
 
 ## Organism Interaction
 
-Two organisms (DNA files) can be compared across decision scenarios to reveal value differences:
-
-```bash
-python organism_interact.py alice_dna.md bob_dna.md --all
-```
-
-Output follows the protocol in `specs/organism_protocol.md`:
-- Each organism answers the scenario using their principles
-- Synthesis reveals where values diverge
-- Results saved as JSON in `results/`
-
-10 built-in scenarios: career, relationships, money, risk, learning, health, time, conflict, opportunity, legacy.
+Two DNA files can be compared across 10 built-in scenarios (career, relationships, money, risk, learning, health, time, conflict, opportunity, legacy). Output follows `specs/organism_protocol.md` and saves JSON to `results/`. See `organism_interact.py` in CLI Tools above.
 
 ## Consistency Testing
 
-Measure whether the DNA produces consistent decisions across different sessions:
-
-```bash
-python consistency_test.py my_dna.md
-```
-
-This generates:
-- `consistency_baseline.json` — deterministic engine answers
-- `consistency_template.md` — template for manual LLM testing across sessions
-
-To run the real test: open 3+ independent LLM sessions, load only the DNA, answer the same scenarios, compare results. Target: >80% agreement.
+Measures whether a DNA file produces consistent decisions across independent LLM sessions. Target: >80% agreement. Use `consistency_test.py` for deterministic baselines and `cross_instance_test.py` for multi-session LLM templates. See CLI Tools above.
 
 ## Philosophy
 
