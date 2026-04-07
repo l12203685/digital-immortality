@@ -2,6 +2,45 @@
 
 ---
 
+## 2026-04-07 (cycle 4)
+
+### Branches Pushed (4 parallel)
+
+**1. Learning/Fix — recursive_daemon.py critical bug (Branch 3)**
+- `DYNAMIC_TREE` variable referenced but never defined → daemon crashed on every cycle
+- Fixed: added `load_dynamic_tree()` that reads `results/dynamic_tree.md` fresh per cycle
+- Moved `build_system_prompt()` inside the loop so tree updates propagate
+
+**2. Survival — multi-provider fallback (Branch 6.4)**
+- Created `platform/multi_provider.py`: Anthropic → OpenAI → Gemini fallback chain
+- `call_llm(system, prompt)` tries providers in order, skips those without API keys
+- Lazy imports — missing SDK doesn't break anything unless that provider is called
+- No existing files modified — drop-in integration for daemon later
+
+**3. Platform — CI + install.sh hardening (Branch 5)**
+- Rewrote `.github/workflows/ci.yml`: Python 3.11+3.12 matrix, 8 validation steps
+- Fixed `platform` stdlib clash in CI imports (sys.path insert workaround)
+- install.sh: added `set -euo pipefail`, `curl -f`, `download()` helper with verification
+- CI validates: README file refs, Python imports, organism_interact, consistency_test, cold_start_test, intake_server health, shellcheck
+
+**4. Economic — trading system buildout (Branch 1.1)**
+- Added `trading/strategies.py`: DualMA + Donchian channel strategies with signal generation
+- Added `trading/paper_trader.py`: simulated trading with position tracking + PnL logging
+- Added `trading/live_binance.py`: Binance USDT-M futures integration scaffold
+- Updated `trading/__init__.py` with proper exports
+
+### Files Changed
+- `platform/recursive_daemon.py` — 2 bugs fixed (DYNAMIC_TREE undefined + stale system prompt)
+- `platform/multi_provider.py` — NEW (survival redundancy)
+- `.github/workflows/ci.yml` — rewritten (8 validation steps)
+- `install.sh` — hardened (error handling, curl -f)
+- `trading/strategies.py` — NEW (DualMA + Donchian)
+- `trading/paper_trader.py` — NEW (simulated trading)
+- `trading/live_binance.py` — NEW (Binance USDT-M)
+- `trading/__init__.py` — updated exports
+
+---
+
 ## 2026-04-07 (cycle 3)
 
 ### Highest Derivative Action

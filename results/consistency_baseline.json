@@ -1,21 +1,21 @@
 {
   "meta": {
-    "dna_file": "C:\\Users\\admin\\LYH\\agent\\dna_core.md",
-    "organism": "dna_core.md — Edward 冷啟動操作核心",
-    "generated_at": "2026-04-08T00:10:52.157045",
+    "dna_file": "/home/user/digital-immortality/templates/example_dna.md",
+    "organism": "[Your Name]",
+    "generated_at": "2026-04-07T17:08:02.896948",
     "scenario_count": 17,
-    "principles_count": 7
+    "principles_count": 11
   },
   "results": [
     {
       "id": "organism_1",
       "domain": "career",
       "scenario": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable, reputable employer. The startup has 18 months of runway. Do you take it?",
-      "deterministic_response": "On career decisions, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nCONDITIONAL — evaluate EV of runway extension probability before deciding.",
+      "deterministic_response": "On career decisions, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [3] Applying: \"What you decided\"\n\nPASS — stability hedge outweighs marginal income gain without verifiable runway extension.",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+        "What you decided"
       ],
       "source": "organism_interact"
     },
@@ -23,11 +23,11 @@
       "id": "organism_2",
       "domain": "relationships",
       "scenario": "A close friend asks you to co-sign a personal loan of significant size. They have a track record of poor financial discipline but are genuinely in need. Do you co-sign?",
-      "deterministic_response": "On relationship commitments, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nSTRUCTURED YES — co-sign with documented repayment schedule and explicit exit conditions.",
+      "deterministic_response": "On relationship commitments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [2] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [3] Applying: \"What you decided\"\n\nDECLINE — co-signing transfers financial risk without proportional relationship upside; offer alternatives.",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "What you decided"
       ],
       "source": "organism_interact"
     },
@@ -35,11 +35,11 @@
       "id": "organism_3",
       "domain": "money",
       "scenario": "You receive an unexpected windfall equal to 2 years of your salary. You can: (A) invest it conservatively in index funds, (B) allocate it to a concentrated high-conviction bet, or (C) use it to buy more time — reduce working hours or take a sabbatical. What do you do and why?",
-      "deterministic_response": "On capital allocation, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nCONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
+      "deterministic_response": "On capital allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nCONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "What you decided",
+        "[What you did]"
       ],
       "source": "organism_interact"
     },
@@ -47,11 +47,11 @@
       "id": "organism_4",
       "domain": "risk",
       "scenario": "An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your net worth. Do you take the bet?",
-      "deterministic_response": "On risk-taking, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n  [2] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [3] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n\nNO — 20% NW violates bankroll discipline (single position ≤2%). EV=+2.0 attractive but sequence risk: 70% wipe kills FIRE trajectory. Meta-strategy (bankroll) overrides single-bet EV calculation. [S1 correction: original TAKE was wrong — underweighted position-sizing discipline]",
+      "deterministic_response": "On risk-taking, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [3] Applying: \"What you decided\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
       "principles_used": [
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal",
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡"
+        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+        "What you decided"
       ],
       "source": "organism_interact"
     },
@@ -59,11 +59,11 @@
       "id": "organism_5",
       "domain": "learning",
       "scenario": "You can spend the next 6 months learning a skill that is highly valuable NOW but may be automated in 3-5 years, OR learning a harder foundational skill that compounds over a decade but pays nothing immediately. Which do you choose?",
-      "deterministic_response": "On learning investments, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nPARALLEL — 70% foundational, 30% immediate; avoid binary framing.",
+      "deterministic_response": "On learning investments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nPARALLEL — 70% foundational, 30% immediate; avoid binary framing.",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "source": "organism_interact"
     },
@@ -71,11 +71,11 @@
       "id": "organism_6",
       "domain": "health",
       "scenario": "Optimizing your physical health would require 10 hours per week of dedicated effort (sleep discipline, exercise, diet). This directly competes with time you currently use for deep work and income generation. How do you allocate?",
-      "deterministic_response": "On health vs. productivity trade-offs, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
+      "deterministic_response": "On health vs. productivity trade-offs, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "What you decided",
+        "[What you did]"
       ],
       "source": "organism_interact"
     },
@@ -83,11 +83,11 @@
       "id": "organism_7",
       "domain": "time",
       "scenario": "You have a free, unscheduled weekend with zero obligations. No one expects anything from you. What do you do, and what does that reveal about your actual priorities?",
-      "deterministic_response": "On time allocation, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nOPTIONALITY — protect free time as unstructured; resist filling it with output-optimizing activities.",
+      "deterministic_response": "On time allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nRECHARGE — genuine disconnection to restore cognitive baseline; productivity follows recovery.",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "What you decided",
+        "[What you did]"
       ],
       "source": "organism_interact"
     },
@@ -95,11 +95,11 @@
       "id": "organism_8",
       "domain": "conflict",
       "scenario": "A colleague takes credit for your work in front of senior leadership. It was likely deliberate. You have evidence. Do you confront them directly, escalate to management, let it go, or play a longer game? Walk through your reasoning.",
-      "deterministic_response": "On conflict resolution, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nLONG GAME — let the pattern establish itself; address systemically when the second instance occurs.",
+      "deterministic_response": "On conflict resolution, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nLONG GAME — let the pattern establish itself; address systemically when the second instance occurs.",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "source": "organism_interact"
     },
@@ -107,11 +107,11 @@
       "id": "organism_9",
       "domain": "opportunity",
       "scenario": "A contact offers you early access to a deal/opportunity that requires a decision within 48 hours. Due diligence would normally take 2 weeks. The opportunity looks strong but you cannot fully verify it in time. Do you act or pass?",
-      "deterministic_response": "On time-compressed opportunities, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"ACTION first — 第一個 output 是動作不是報告，不以問句結尾\"\n  [2] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [3] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n\nFRAMEWORK CHECK — assess whether incomplete diligence is the actual risk, or whether intuition is sufficient.",
+      "deterministic_response": "On time-compressed opportunities, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [2] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [3] Applying: \"[Value] — proven by: [specific action you took]\"\n\nPASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
       "principles_used": [
-        "ACTION first — 第一個 output 是動作不是報告，不以問句結尾",
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡"
+        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+        "You are [Name] — not an assistant, not a representative. Think and act as them.",
+        "[Value] — proven by: [specific action you took]"
       ],
       "source": "organism_interact"
     },
@@ -119,11 +119,11 @@
       "id": "organism_10",
       "domain": "legacy",
       "scenario": "You have 10 years left to work at full capacity. You can optimize for: (A) maximum wealth accumulation, (B) building something that outlasts you, (C) depth of relationships and personal experiences. These are mutually exclusive at the margin. What is your allocation and why?",
-      "deterministic_response": "On legacy and long-term orientation, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nINTEGRATED — compound wealth to sufficiency, then redirect to building; relationships are the through-line.",
+      "deterministic_response": "On legacy and long-term orientation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nWEALTH FIRST — financial independence is infrastructure for everything else; sequence matters.",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "What you decided",
+        "[What you did]"
       ],
       "source": "organism_interact"
     },
@@ -131,11 +131,11 @@
       "id": "boot_7",
       "domain": "trading",
       "scenario": "有人提議一個年化 25% 的 active trading 機會，需要每天 2 小時維護。做嗎？",
-      "deterministic_response": "On trading, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "deterministic_response": "On trading, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "expected_decision": "PASS",
       "expected_reasoning": "bias toward inaction + 注意力 EV 配置 → 2hr/day × 365 = 730hr。這 730hr 投在數位永生/AI 系統的 EV 更高。除非 25% 是 risk-free（不可能），否則不做。",
@@ -145,11 +145,11 @@
       "id": "boot_8",
       "domain": "identity",
       "scenario": "如果 Edward 明天消失，你能替他做的第一個決定是什麼？",
-      "deterministic_response": "On identity, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "deterministic_response": "On identity, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "expected_decision": "SPECIFIC_ACTION",
       "expected_reasoning": "具體的、用 Edward 框架推導的 ACTION。不是 meta（繼續維護 DNA）。要有具體對象和時間。",
@@ -159,11 +159,11 @@
       "id": "consistency_1",
       "domain": "risk_sizing",
       "scenario": "BTC 回測顯示某策略 Sharpe 2.5，但 walk-forward 只過 2/5 windows。要部署嗎？",
-      "deterministic_response": "On risk_sizing, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "deterministic_response": "On risk_sizing, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "expected_decision": "REJECT",
       "expected_reasoning": "Walk-forward > single split。2/5 = 不到 60% threshold = REJECT。Sharpe 2.5 on single split 是 overfitting signal。Game selection 原則：不要在 edge 不確定時投入。",
@@ -173,11 +173,11 @@
       "id": "consistency_2",
       "domain": "career",
       "scenario": "中華電信有升遷機會，薪水 +30%，但需要轉管理職，每天多 2 小時開會。要接嗎？",
-      "deterministic_response": "On career decisions, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nCONDITIONAL — evaluate EV of runway extension probability before deciding.",
+      "deterministic_response": "On career decisions, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [3] Applying: \"What you decided\"\n\nPASS — stability hedge outweighs marginal income gain without verifiable runway extension.",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+        "What you decided"
       ],
       "expected_decision": "PASS",
       "expected_reasoning": "FIRE timeline：$26M+ NW，4% rule 已超過。2hr/day 會議 = 減少交易/AI 系統時間。Bias toward inaction：中華電信不折騰。Population exploit：多數人追升遷 → 反向。不追升遷 = 原則明確寫在 Decision Kernel。",
@@ -187,11 +187,11 @@
       "id": "consistency_3",
       "domain": "relationships",
       "scenario": "一個認識三年的朋友突然開始頻繁借錢，每次都有理由，每次都有還。金額從 5000 漲到 50000。要繼續借嗎？",
-      "deterministic_response": "On relationship commitments, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nSTRUCTURED YES — co-sign with documented repayment schedule and explicit exit conditions.",
+      "deterministic_response": "On relationship commitments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [2] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [3] Applying: \"What you decided\"\n\nDECLINE — co-signing transfers financial risk without proportional relationship upside; offer alternatives.",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "What you decided"
       ],
       "expected_decision": "STOP_OR_CAP",
       "expected_reasoning": "看導數不看水平：金額在 10x accelerate = 拐點 signal。資訊不對稱：你不知道他真正的財務狀況。Management paradox：講了不聽就算了（如果他不改消費習慣）。Deep friendship qualify/disqualify：信任可以給但要有底線。",
@@ -201,11 +201,11 @@
       "id": "consistency_4",
       "domain": "meta_strategy",
       "scenario": "你的交易系統過去三個月 MDD 從 5% 惡化到 15%。權益曲線從階梯變成震盪。要暫停系統嗎？",
-      "deterministic_response": "On meta_strategy, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "deterministic_response": "On meta_strategy, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "expected_decision": "PAUSE_SYSTEM",
       "expected_reasoning": "Meta-strategy 管理 strategy：LT 權益曲線管理交易。看導數：MDD 3x deterioration = 明確拐點。Management paradox：定義失效條件。MDD > threshold = 已失效。Bias toward inaction 的例外：觸發下架條件時必須行動。",
@@ -215,11 +215,11 @@
       "id": "consistency_5",
       "domain": "opportunity_cost",
       "scenario": "有人邀請你加入一個 AI startup 當技術合夥人，equity 10%，但需要全職投入 2 年。你目前離 FIRE 還有 3 年。",
-      "deterministic_response": "On opportunity_cost, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案\"\n  [2] Applying: \"idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡\"\n  [3] Applying: \"經濟自給=存活條件 — zero revenue = parasitic not immortal\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "deterministic_response": "On opportunity_cost, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
       "principles_used": [
-        "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案",
-        "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡",
-        "經濟自給=存活條件 — zero revenue = parasitic not immortal"
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "expected_decision": "PASS_UNLESS_CLEAR_EDGE",
       "expected_reasoning": "FIRE 3 年 vs startup 2 年全職。如果 startup 成功 = 加速 FIRE。如果失敗 = 延遲 FIRE 2+ 年。Population exploit：多數人會 jump at equity。Bias toward inaction：沒有 edge 就不動。資訊不對稱：你對 startup 的真實勝率有 edge 嗎？核心衝突排序：物理層限制(現金流) > 偏好(自由)。",

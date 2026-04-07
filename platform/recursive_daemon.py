@@ -52,8 +52,17 @@ def load_dna() -> str:
     return "You are Edward (Lin Ying-Hung). Operate with his decision kernel."
 
 
+def load_dynamic_tree() -> str:
+    """Load the dynamic tree fresh each cycle (it changes between cycles)."""
+    if TREE_PATH.exists():
+        return TREE_PATH.read_text(encoding="utf-8")
+    print(f"[daemon] WARNING: Dynamic tree not found at {TREE_PATH}, using empty tree")
+    return "(no dynamic tree yet)"
+
+
 def build_system_prompt(dna: str) -> str:
-    return f"{dna}\n\n---\n\n{DYNAMIC_TREE}"
+    tree = load_dynamic_tree()
+    return f"{dna}\n\n---\n\n{tree}"
 
 
 def append_log(cycle: int, response: str) -> None:
@@ -135,7 +144,6 @@ def main():
     args = parser.parse_args()
 
     dna = load_dna()
-    system = build_system_prompt(dna)
     interval = max(args.interval, MIN_INTERVAL)
     cycle = 0
     client = None
@@ -161,6 +169,7 @@ def main():
             print(f"[daemon] Reached max cycles ({args.max_cycles}), stopping.")
             break
         try:
+            system = build_system_prompt(dna)
             if use_cli:
                 text = run_cycle_cli(system, args.model, cycle)
             else:

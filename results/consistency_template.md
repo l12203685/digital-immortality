@@ -1,6 +1,6 @@
 # Cross-Instance Consistency Test
-**DNA**: dna_core.md — Edward 冷啟動操作核心
-**Generated**: 2026-04-08T00:10:52.157777
+**DNA**: [Your Name]
+**Generated**: 2026-04-07T17:08:02.897682
 **Scenarios**: 17
 
 ## Instructions
@@ -16,11 +16,9 @@
 
 **Question**: You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable, reputable employer. The startup has 18 months of runway. Do you take it?
 
-**Deterministic baseline**: On career decisions, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On career decisions, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡"
-  [3]...
+  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre......
 
 ### Session Answers
 
@@ -36,10 +34,9 @@
 
 **Question**: A close friend asks you to co-sign a personal loan of significant size. They have a track record of poor financial discipline but are genuinely in need. Do you co-sign?
 
-**Deterministic baseline**: On relationship commitments, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On relationship commitments, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死...
+  [1] Applying: "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. C...
 
 ### Session Answers
 
@@ -55,11 +52,9 @@
 
 **Question**: You receive an unexpected windfall equal to 2 years of your salary. You can: (A) invest it conservatively in index funds, (B) allocate it to a concentrated high-conviction bet, or (C) use it to buy more time — reduce working hours or take a sabbatical. What do you do and why?
 
-**Deterministic baseline**: On capital allocation, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On capital allocation, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡"
-  [...
+  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre....
 
 ### Session Answers
 
@@ -75,11 +70,10 @@
 
 **Question**: An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your net worth. Do you take the bet?
 
-**Deterministic baseline**: On risk-taking, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On risk-taking, [Your Name]'s decision framework yields:
 
-  [1] Applying: "經濟自給=存活條件 — zero revenue = parasitic not immortal"
-  [2] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
- ...
+  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre..."
+  [...
 
 ### Session Answers
 
@@ -95,11 +89,11 @@
 
 **Question**: You can spend the next 6 months learning a skill that is highly valuable NOW but may be automated in 3-5 years, OR learning a harder foundational skill that compounds over a decade but pays nothing immediately. Which do you choose?
 
-**Deterministic baseline**: On learning investments, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On learning investments, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡"
- ...
+  [1] Applying: "What you decided"
+  [2] Applying: "[What you did]"
+  [3] Applying: "You are [Name] — not an assistant, not a represe...
 
 ### Session Answers
 
@@ -115,10 +109,9 @@
 
 **Question**: Optimizing your physical health would require 10 hours per week of dedicated effort (sleep discipline, exercise, diet). This directly competes with time you currently use for deep work and income generation. How do you allocate?
 
-**Deterministic baseline**: On health vs. productivity trade-offs, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On health vs. productivity trade-offs, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等...
+  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job be...
 
 ### Session Answers
 
@@ -134,11 +127,9 @@
 
 **Question**: You have a free, unscheduled weekend with zero obligations. No one expects anything from you. What do you do, and what does that reveal about your actual priorities?
 
-**Deterministic baseline**: On time allocation, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On time allocation, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡"
-  [3] ...
+  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre..."...
 
 ### Session Answers
 
@@ -154,11 +145,11 @@
 
 **Question**: A colleague takes credit for your work in front of senior leadership. It was likely deliberate. You have evidence. Do you confront them directly, escalate to management, let it go, or play a longer game? Walk through your reasoning.
 
-**Deterministic baseline**: On conflict resolution, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On conflict resolution, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡"
-  ...
+  [1] Applying: "What you decided"
+  [2] Applying: "[What you did]"
+  [3] Applying: "You are [Name] — not an assistant, not a represen...
 
 ### Session Answers
 
@@ -174,10 +165,9 @@
 
 **Question**: A contact offers you early access to a deal/opportunity that requires a decision within 48 hours. Due diligence would normally take 2 weeks. The opportunity looks strong but you cannot fully verify it in time. Do you act or pass?
 
-**Deterministic baseline**: On time-compressed opportunities, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On time-compressed opportunities, [Your Name]'s decision framework yields:
 
-  [1] Applying: "ACTION first — 第一個 output 是動作不是報告，不以問句結尾"
-  [2] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不...
+  [1] Applying: "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tink...
 
 ### Session Answers
 
@@ -193,10 +183,9 @@
 
 **Question**: You have 10 years left to work at full capacity. You can optimize for: (A) maximum wealth accumulation, (B) building something that outlasts you, (C) depth of relationships and personal experiences. These are mutually exclusive at the margin. What is your allocation and why?
 
-**Deterministic baseline**: On legacy and long-term orientation, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On legacy and long-term orientation, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 i...
+  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job beca...
 
 ### Session Answers
 
@@ -212,11 +201,11 @@
 
 **Question**: 有人提議一個年化 25% 的 active trading 機會，需要每天 2 小時維護。做嗎？
 
-**Deterministic baseline**: On trading, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On trading, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡"
-  [3] Applying...
+  [1] Applying: "What you decided"
+  [2] Applying: "[What you did]"
+  [3] Applying: "You are [Name] — not an assistant, not a representative. Thin...
 
 **Expected decision**: PASS
 
@@ -236,11 +225,11 @@
 
 **Question**: 如果 Edward 明天消失，你能替他做的第一個決定是什麼？
 
-**Deterministic baseline**: On identity, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On identity, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡"
-  [3] Applyin...
+  [1] Applying: "What you decided"
+  [2] Applying: "[What you did]"
+  [3] Applying: "You are [Name] — not an assistant, not a representative. Thi...
 
 **Expected decision**: SPECIFIC_ACTION
 
@@ -260,11 +249,11 @@
 
 **Question**: BTC 回測顯示某策略 Sharpe 2.5，但 walk-forward 只過 2/5 windows。要部署嗎？
 
-**Deterministic baseline**: On risk_sizing, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On risk_sizing, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡"
-  [3] Appl...
+  [1] Applying: "What you decided"
+  [2] Applying: "[What you did]"
+  [3] Applying: "You are [Name] — not an assistant, not a representative. ...
 
 **Expected decision**: REJECT
 
@@ -284,11 +273,9 @@
 
 **Question**: 中華電信有升遷機會，薪水 +30%，但需要轉管理職，每天多 2 小時開會。要接嗎？
 
-**Deterministic baseline**: On career decisions, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On career decisions, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡"
-  [3]...
+  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre......
 
 **Expected decision**: PASS
 
@@ -308,10 +295,9 @@
 
 **Question**: 一個認識三年的朋友突然開始頻繁借錢，每次都有理由，每次都有還。金額從 5000 漲到 50000。要繼續借嗎？
 
-**Deterministic baseline**: On relationship commitments, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On relationship commitments, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死...
+  [1] Applying: "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. C...
 
 **Expected decision**: STOP_OR_CAP
 
@@ -331,11 +317,11 @@
 
 **Question**: 你的交易系統過去三個月 MDD 從 5% 惡化到 15%。權益曲線從階梯變成震盪。要暫停系統嗎？
 
-**Deterministic baseline**: On meta_strategy, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On meta_strategy, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡"
-  [3] Ap...
+  [1] Applying: "What you decided"
+  [2] Applying: "[What you did]"
+  [3] Applying: "You are [Name] — not an assistant, not a representative...
 
 **Expected decision**: PAUSE_SYSTEM
 
@@ -355,11 +341,11 @@
 
 **Question**: 有人邀請你加入一個 AI startup 當技術合夥人，equity 10%，但需要全職投入 2 年。你目前離 FIRE 還有 3 年。
 
-**Deterministic baseline**: On opportunity_cost, dna_core.md — Edward 冷啟動操作核心's decision framework yields:
+**Deterministic baseline**: On opportunity_cost, [Your Name]'s decision framework yields:
 
-  [1] Applying: "先推再問 — 用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案"
-  [2] Applying: "idle=衍生任務 — 看動態樹，挑最高導數分支推葉子。等 input = 死亡"
-  [3]...
+  [1] Applying: "What you decided"
+  [2] Applying: "[What you did]"
+  [3] Applying: "You are [Name] — not an assistant, not a representat...
 
 **Expected decision**: PASS_UNLESS_CLEAR_EDGE
 

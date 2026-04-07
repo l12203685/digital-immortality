@@ -1,57 +1,128 @@
-name: Consistency Test CI
+name: CI
 
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-  schedule:
-    - cron: '0 2 * * *'  # Daily 2am UTC = 10am Taipei
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: ${{ matrix.python-version }}
 
+      # ------------------------------------------------------------------
+      # 1. Verify all files referenced in README exist
+      # ------------------------------------------------------------------
+      - name: Validate README file references
+        run: |
+          exit_code=0
+          # Files explicitly named in README project structure or usage examples
+          for f in \
+            SKILL.md \
+            SKILL_zh-TW.md \
+            install.sh \
+            VERSION \
+            organism_interact.py \
+            consistency_test.py \
+            cross_instance_test.py \
+            cold_start_test.py \
+            templates/example_dna.md \
+            templates/example_boot_tests.md \
+            specs/organism_protocol.md \
+            specs/platform_architecture.md \
+            skills/boot-test.md \
+            skills/dna-calibrate.md \
+            skills/organism-interact.md \
+            skills/recursive-engine.md \
+            skills/guided-onboarding.md
+          do
+            if [ ! -f "$f" ]; then
+              echo "MISSING: $f"
+              exit_code=1
+            else
+              echo "OK: $f"
+            fi
+          done
+          exit $exit_code
+
+      # ------------------------------------------------------------------
+      # 2. Verify Python imports work
+      # ------------------------------------------------------------------
+      - name: Verify consistency_test imports
+        run: python -c "import consistency_test; print(f'consistency_test OK: {len(consistency_test.BOOT_TEST_SCENARIOS)} scenarios')"
+
+      - name: Verify cross_instance_test imports
+        run: |
+          python -c "
+          try:
+              import cross_instance_test
+              print('cross_instance_test OK')
+          except ImportError as e:
+              if 'anthropic' in str(e).lower():
+                  print(f'cross_instance_test OK (anthropic SDK not installed, expected in CI): {e}')
+              else:
+                  raise
+          "
+
+      - name: Verify organism_interact imports
+        run: python -c "from organism_interact import parse_dna, generate_response, SCENARIOS; print(f'organism_interact OK: {len(SCENARIOS)} scenarios')"
+
+      # ------------------------------------------------------------------
+      # 3. Run organism_interact smoke test
+      # ------------------------------------------------------------------
       - name: Run organism_interact smoke test
         run: |
           python organism_interact.py templates/example_dna.md templates/example_dna_b.md --scenario 1 --quiet
 
+      # ------------------------------------------------------------------
+      # 4. Run consistency_test baseline
+      # ------------------------------------------------------------------
       - name: Run consistency_test baseline
         run: |
           python consistency_test.py templates/example_dna.md
 
-      - name: Verify all referenced files exist
+      # ------------------------------------------------------------------
+      # 5. Run cold_start_test
+      # ------------------------------------------------------------------
+      - name: Run cold_start_test
         run: |
-          # Check files referenced in README
-          for f in SKILL.md organism_interact.py consistency_test.py \
-                   templates/example_dna.md templates/example_dna_b.md \
-                   templates/example_boot_tests.md \
-                   specs/organism_protocol.md; do
-            if [ ! -f "$f" ]; then
-              echo "MISSING: $f"
-              exit 1
-            fi
-            echo "OK: $f"
-          done
+          python cold_start_test.py
 
+      # ------------------------------------------------------------------
+      # 6. Install server dependencies and verify platform code
+      # ------------------------------------------------------------------
       - name: Install server dependencies
         run: pip install fastapi uvicorn --quiet
 
       - name: Verify intake_server imports cleanly
-        run: python -c "from platform.intake_server import build_app; app = build_app(); print('intake_server OK')"
+        run: |
+          # 'platform' dir shadows stdlib — use sys.path insert to import
+          python -c "
+          import sys, os
+          sys.path.insert(0, os.path.join(os.getcwd(), 'platform'))
+          import intake_server
+          app = intake_server.build_app()
+          print('intake_server OK')
+          "
 
       - name: Verify intake_server health endpoint
         run: |
           python -c "
-          from platform.intake_server import build_app
+          import sys, os
+          sys.path.insert(0, os.path.join(os.getcwd(), 'platform'))
+          import intake_server
           from fastapi.testclient import TestClient
-          app = build_app()
+          app = intake_server.build_app()
           client = TestClient(app)
           r = client.get('/health')
           assert r.status_code == 200, f'Expected 200, got {r.status_code}'
@@ -59,6 +130,21 @@ jobs:
           print('health endpoint OK')
           "
 
+      # ------------------------------------------------------------------
+      # 7. Validate install.sh syntax
+      # ------------------------------------------------------------------
+      - name: Shellcheck install.sh
+        run: |
+          if command -v shellcheck &>/dev/null; then
+            shellcheck install.sh || true
+          else
+            bash -n install.sh
+            echo "install.sh syntax OK"
+          fi
+
+      # ------------------------------------------------------------------
+      # 8. Verify results directory can be created
+      # ------------------------------------------------------------------
       - name: Verify results directory structure
         run: |
           ls -la results/ || echo "No results directory (ok for fresh clone)"

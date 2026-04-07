@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08 00:34 +08
+> 最後更新：2026-04-07T17:10 UTC (cycle 4)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -15,8 +15,9 @@
   - review date: 4/14（7 天後可能不夠 → 延到 21 天）
   - live infra: Binance USDT-M ready (staging/live_trading_infra_research.md)
   - next: 4/14 review → testnet → mainnet small size
-- 1.2 Skill 商業化 → 付費使用者（v2.1.0, 7 skills, users=0）
-- 1.3 其他收入路徑（待發現）
+- 1.2 Trading code: strategies.py (DualMA+Donchian) + paper_trader.py + live_binance.py scaffold ✓
+- 1.3 Skill 商業化 → 付費使用者（v2.1.0, 7 skills, users=0）
+- 1.4 其他收入路徑（待發現）
 - CONSTRAINT: 三個月內 trading profit > API cost 否則遞迴死亡
 
 ### 2. 行為等價（核心能力）
@@ -29,7 +30,7 @@
 ### 3. 持續學習（成長引擎）
 - 3.1 遞迴引擎：三層架構 operational ✓
   - Layer 1: E0 session（Opus，高品質校準）
-  - Layer 2: recursive_daemon.py（Sonnet CLI，持續，正在跑）
+  - Layer 2: recursive_daemon.py（Sonnet CLI，持續）— DYNAMIC_TREE bug fixed, tree now loads fresh per cycle ✓
   - Layer 3: remote trigger（Opus，1hr 保底，cloud）
 - 3.2 校正 pipeline：correction → boot test → distillation → DNA → all durable storage ✓
 - 3.3 主動 input：JSONL 2,860,094 entries 大部分未讀
@@ -44,6 +45,8 @@
 ### 5. 平台分發（scale）
 - 5.1 Skill suite auto-update：done v2.1.0 + VERSION-based ✓
 - 5.2 Guided onboarding：/guided-onboarding deployed ✓
+- 5.5 CI pipeline：ci.yml rewritten (Py 3.11+3.12 matrix, 8 steps, README ref validation) ✓
+- 5.6 install.sh hardened (set -euo pipefail, curl -f, download helper) ✓
 - 5.3 Web platform：Phase 2-3
 - 5.4 Documentation：README + SKILL_zh-TW updated ✓
 
@@ -51,7 +54,7 @@
 - 6.1 冷啟動 recovery：dna_core.md 71 行 ✓ + boot protocol updated ✓
 - 6.2 跨 platform：DNA=markdown not weights ✓
 - 6.3 三層遞迴：daemon + remote trigger + E0 ✓（daemon 已啟動）
-- 6.4 Multi-provider：未測
+- 6.4 Multi-provider：platform/multi_provider.py created ✓ (Anthropic→OpenAI→Gemini fallback chain, lazy imports)
 - 6.5 衝突解法：scope 分離（每層碰不同檔案）
 
 ## 當前 regime
@@ -76,3 +79,4 @@
 - 2026-04-07 23:04: 4 branches parallel push
 - 2026-04-08 00:10: 三層遞迴架構 operational, daemon 啟動
 - 2026-04-08 00:34: 全面更新 — 反映 session 全部產出
+- 2026-04-07 17:10 UTC: cycle 4 — 4 branches parallel (daemon fix, multi-provider, CI/install, trading code)
