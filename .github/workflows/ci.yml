@@ -1,0 +1,45 @@
+name: Consistency Test CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 2 * * *'  # Daily 2am UTC = 10am Taipei
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run organism_interact smoke test
+        run: |
+          python organism_interact.py templates/example_dna.md templates/example_dna_b.md --scenario 1 --quiet
+
+      - name: Run consistency_test baseline
+        run: |
+          python consistency_test.py templates/example_dna.md
+
+      - name: Verify all referenced files exist
+        run: |
+          # Check files referenced in README
+          for f in SKILL.md organism_interact.py consistency_test.py \
+                   templates/example_dna.md templates/example_dna_b.md \
+                   templates/example_boot_tests.md \
+                   specs/organism_protocol.md; do
+            if [ ! -f "$f" ]; then
+              echo "MISSING: $f"
+              exit 1
+            fi
+            echo "OK: $f"
+          done
+
+      - name: Verify results directory structure
+        run: |
+          ls -la results/ || echo "No results directory (ok for fresh clone)"
