@@ -2,6 +2,30 @@
 
 ---
 
+## 2026-04-07 (cycle 2)
+
+### Highest Derivative Action
+**Gap**: Cross-instance consistency unmeasured — the single biggest hole in the validation story. "100% consistency" only means one LLM session agrees with itself.
+
+### Built `cross_instance_test.py`
+
+Automated the manual 3-session test that was previously blocked on human effort. Key design:
+- Takes any DNA file + `ANTHROPIC_API_KEY`
+- Runs 7 `BOOT_TEST_SCENARIOS` × N independent API calls (no shared context)
+- Each call: system = DNA, user = scenario (fresh session, no history)
+- `extract_decision()` normalizes response to action word (PASS/REJECT/STOP/etc.)
+- `decisions_agree()` handles semantic equivalence (PASS ≈ REJECT ≈ DECLINE for "don't proceed")
+- `majority_decision()` scores agreement across sessions
+- Outputs `results/cross_instance_scorecard.json`
+
+Usage: `ANTHROPIC_API_KEY=sk-... python cross_instance_test.py edward_dna_v18.md`
+
+Default model: `claude-haiku-4-5` (cost-efficient for 21 API calls; override with `--model`)
+
+**Converts manual test → automated CI in one command.**
+
+---
+
 ## 2026-04-07
 
 ### Repo Health
