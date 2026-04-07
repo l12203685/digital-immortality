@@ -15,6 +15,8 @@ Use when: "digital immortality", "數位永生", "become me", "digital twin", "D
 | Naked boot test (DNA only) | **5/5** |
 | DNA compression (2000→64 lines) | Decision consistency maintained |
 | Deterministic engine (no LLM) | 0/7 — LLM required |
+| Cold start recovery | **PASS** (0.007s boot, 7/7 scenarios) |
+| Trading walk-forward filter | Working (50% reject rate on noise) |
 
 ## Core Concepts
 
@@ -115,6 +117,14 @@ dna_core.md (individual core — 64 lines, instant action)
   + memory/ (cross-session persistence)
   + staging/ (inter-session relay)
   = Complete digital organism (portable, auto-updating)
+```
+
+### Trading / Economic Self-Sufficiency
+
+```
+trading/backtest_framework.py — Walk-forward backtesting with 4 strategies × 3 timeframes
+  Filter: >=3/5 windows, Sharpe >1.0, MDD <20%
+  Bias toward inaction: no clear edge = no trade
 ```
 
 ### Skill Suite

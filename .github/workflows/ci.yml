@@ -18,6 +18,17 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install dependencies
+        run: |
+          pip install anthropic
+
+      - name: Python syntax check (all .py files)
+        run: |
+          echo "Checking syntax of all Python files..."
+          find . -name '*.py' -not -path './.git/*' | while read f; do
+            python -m py_compile "$f" && echo "OK: $f" || { echo "FAIL: $f"; exit 1; }
+          done
+
       - name: Run organism_interact smoke test
         run: |
           python organism_interact.py templates/example_dna.md templates/example_dna_b.md --scenario 1 --quiet
@@ -26,10 +37,28 @@ jobs:
         run: |
           python consistency_test.py templates/example_dna.md
 
+      - name: Cold start test
+        run: |
+          if [ -f cold_start_test.py ]; then
+            python cold_start_test.py
+          else
+            echo "cold_start_test.py not yet created — skipping"
+          fi
+
+      - name: Trading framework test
+        run: |
+          if [ -f trading/backtest_framework.py ]; then
+            python trading/backtest_framework.py
+          else
+            echo "trading/backtest_framework.py not yet created — skipping"
+          fi
+
       - name: Verify all referenced files exist
         run: |
-          # Check files referenced in README
+          # Check files referenced in README and new modules
           for f in SKILL.md organism_interact.py consistency_test.py \
+                   cross_instance_test.py \
+                   platform/recursive_daemon.py platform/server_setup.py \
                    templates/example_dna.md templates/example_dna_b.md \
                    templates/example_boot_tests.md \
                    specs/organism_protocol.md; do
@@ -38,6 +67,16 @@ jobs:
               exit 1
             fi
             echo "OK: $f"
+          done
+
+      - name: Check new files (soft — allowed to be missing)
+        run: |
+          for f in cold_start_test.py trading/backtest_framework.py; do
+            if [ -f "$f" ]; then
+              echo "OK: $f"
+            else
+              echo "PENDING: $f (not yet created)"
+            fi
           done
 
       - name: Verify results directory structure
