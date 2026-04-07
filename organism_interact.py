@@ -757,6 +757,121 @@ def save_results(records: list, organism_a: dict, organism_b: dict, output_dir: 
     return filepath
 
 
+# ---------------------------------------------------------------------------
+# LLM prompt generation
+# ---------------------------------------------------------------------------
+
+def _read_raw_dna(filepath: str) -> str:
+    """Read raw DNA file content for inclusion in LLM prompts."""
+    return Path(filepath).read_text(encoding="utf-8", errors="replace")
+
+
+def generate_llm_prompt(dna_path_a: str, dna_path_b: str, scenario: dict) -> str:
+    """
+    Generate a structured prompt that can be pasted into any LLM.
+
+    The prompt follows the protocol format from specs/organism_protocol.md:
+    - Loads both DNA files' content
+    - Presents the scenario
+    - Asks the LLM to answer as each organism separately
+    - Requests output in the protocol JSON format
+    """
+    raw_a = _read_raw_dna(dna_path_a)
+    raw_b = _read_raw_dna(dna_path_b)
+
+    prompt = f"""You are comparing two digital organisms across a decision scenario.
+Read both DNA files below, then answer the scenario AS EACH ORGANISM INDEPENDENTLY.
+
+=== ORGANISM A DNA ===
+{raw_a}
+=== END ORGANISM A DNA ===
+
+=== ORGANISM B DNA ===
+{raw_b}
+=== END ORGANISM B DNA ===
+
+=== SCENARIO ({scenario['domain'].upper()}) ===
+{scenario['scenario']}
+
+=== INSTRUCTIONS ===
+1. Answer as Organism A: State the decision and reasoning based ONLY on Organism A's DNA.
+   Cite the specific principles from the DNA that drive the decision.
+2. Answer as Organism B: State the decision and reasoning based ONLY on Organism B's DNA.
+   Cite the specific principles from the DNA that drive the decision.
+3. Synthesis: What does the difference (or agreement) reveal about each organism's values?
+
+Format your response as:
+
+## Organism A: [name]
+**Decision**: [concrete decision]
+**Reasoning**: [reasoning citing DNA principles]
+**Principles used**: [list the specific principles]
+
+## Organism B: [name]
+**Decision**: [concrete decision]
+**Reasoning**: [reasoning citing DNA principles]
+**Principles used**: [list the specific principles]
+
+## Synthesis
+[What the comparison reveals about each organism's value structure]
+
+Respond in the same language as each organism's DNA file.
+Do NOT invent principles that are not in the DNA. If the DNA is insufficient, say so.
+"""
+    return prompt
+
+
+def generate_llm_prompt_batch(dna_path_a: str, dna_path_b: str, scenarios: list) -> str:
+    """
+    Generate a batch markdown file with prompts for ALL scenarios.
+
+    Each scenario gets its own section with a self-contained prompt.
+    """
+    name_a = Path(dna_path_a).stem
+    name_b = Path(dna_path_b).stem
+    raw_a = _read_raw_dna(dna_path_a)
+    raw_b = _read_raw_dna(dna_path_b)
+
+    parts = [
+        f"# LLM Prompt Batch: {name_a} vs {name_b}",
+        f"**Generated**: {datetime.now().isoformat()}",
+        f"**Scenarios**: {len(scenarios)}",
+        "",
+        "## How to use",
+        "",
+        "Each scenario below is a self-contained prompt. Copy-paste into any LLM session.",
+        "For best results, use a CLEAN session for each scenario (no prior context).",
+        "",
+        "---",
+        "",
+    ]
+
+    for scenario in scenarios:
+        prompt = generate_llm_prompt(dna_path_a, dna_path_b, scenario)
+        parts.extend([
+            f"## Scenario {scenario['id']}: {scenario['domain'].upper()}",
+            "",
+            f"**Question**: {scenario['scenario']}",
+            "",
+            "### Prompt (copy below this line)",
+            "",
+            "````",
+            prompt,
+            "````",
+            "",
+            "### LLM Response (paste here)",
+            "",
+            "```",
+            "[paste LLM output here]",
+            "```",
+            "",
+            "---",
+            "",
+        ])
+
+    return "\n".join(parts)
+
+
 def print_record(record: dict, index: int, total: int) -> None:
     sep = "-" * 72
     print(f"\n{'='*72}")
@@ -814,6 +929,19 @@ def main() -> None:
         "--list-scenarios", action="store_true",
         help="Print the 10 built-in scenarios and exit.",
     )
+    parser.add_argument(
+        "--llm-prompt", action="store_true",
+        help="Generate a structured LLM prompt instead of running the deterministic engine. "
+             "Outputs to stdout (or to file with --output).",
+    )
+    parser.add_argument(
+        "--llm-prompt-batch", action="store_true",
+        help="Generate LLM prompts for ALL scenarios as a markdown file in results/.",
+    )
+    parser.add_argument(
+        "--output", default=None, metavar="FILE",
+        help="Save LLM prompt output to this file instead of stdout.",
+    )
     args = parser.parse_args()
 
     if args.list_scenarios:
@@ -846,6 +974,43 @@ def main() -> None:
         scenarios_to_run = [SCENARIOS[args.scenario - 1]]
     else:
         scenarios_to_run = SCENARIOS
+
+    # --- LLM prompt modes ---
+    if args.llm_prompt_batch:
+        batch_md = generate_llm_prompt_batch(args.dna_a, args.dna_b, scenarios_to_run)
+        if args.output:
+            out_path = args.output
+        else:
+            name_a = re.sub(r"[^\w]", "_", organism_a["name"])[:20]
+            name_b = re.sub(r"[^\w]", "_", organism_b["name"])[:20]
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            os.makedirs(output_dir, exist_ok=True)
+            out_path = os.path.join(output_dir, f"llm_prompts_{name_a}_vs_{name_b}_{timestamp}.md")
+        Path(out_path).parent.mkdir(parents=True, exist_ok=True)
+        Path(out_path).write_text(batch_md, encoding="utf-8")
+        print(f"Batch prompts saved to: {out_path}")
+        sys.exit(0)
+
+    if args.llm_prompt:
+        if len(scenarios_to_run) == 1:
+            prompt = generate_llm_prompt(args.dna_a, args.dna_b, scenarios_to_run[0])
+        else:
+            # Multiple scenarios: concatenate with separators
+            parts = []
+            for s in scenarios_to_run:
+                parts.append(f"{'='*60}")
+                parts.append(f"SCENARIO {s['id']}: {s['domain'].upper()}")
+                parts.append(f"{'='*60}\n")
+                parts.append(generate_llm_prompt(args.dna_a, args.dna_b, s))
+            prompt = "\n".join(parts)
+
+        if args.output:
+            Path(args.output).parent.mkdir(parents=True, exist_ok=True)
+            Path(args.output).write_text(prompt, encoding="utf-8")
+            print(f"Prompt saved to: {args.output}")
+        else:
+            print(prompt)
+        sys.exit(0)
 
     print(f"\nRunning {len(scenarios_to_run)} scenario(s)...\n")
 

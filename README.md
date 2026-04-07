@@ -28,19 +28,19 @@ Not consciousness transfer. **Behavioral equivalence**: the AI doesn't need to *
 
 ## Quick Start (5 minutes)
 
-### Option A: With Claude Code (recommended)
+### Option A: With Claude Code
 
 ```bash
-# One-line install (5 skills + templates + auto-updater)
-curl -sL https://raw.githubusercontent.com/l12203685/digital-immortality/main/install.sh | bash
+# Clone
+git clone https://github.com/l12203685/digital-immortality.git
+cd digital-immortality
+
+# Copy the skill to Claude Code
+cp SKILL.md ~/.claude/commands/digital-immortality.md
 
 # Start Claude Code and run
 /digital-immortality
 ```
-
-Skills installed: `/digital-immortality` `/boot-test` `/dna-calibrate` `/organism-interact` `/recursive-engine`
-
-Auto-updates on every session start — you always have the latest version.
 
 ### Option B: With any LLM (ChatGPT, Claude, etc.)
 
@@ -54,39 +54,55 @@ Auto-updates on every session start — you always have the latest version.
 ### Option C: Compare two organisms
 
 ```bash
-# Run the deterministic comparison tool
+# Deterministic comparison (keyword matching — baseline only)
 python organism_interact.py my_dna.md friend_dna.md --all
 
-# Or run specific scenario
-python organism_interact.py my_dna.md friend_dna.md --scenario 4
+# LLM-powered comparison (generates prompts for any LLM)
+python organism_interact.py my_dna.md friend_dna.md --llm-prompt --scenario 1
+
+# Batch all scenarios into one file
+python organism_interact.py my_dna.md friend_dna.md --llm-prompt-batch --output results/comparison.md
 ```
 
-Note: The deterministic engine uses keyword matching. For real decision-making, use an LLM with the DNA loaded.
+### Option D: Cross-instance consistency test
+
+```bash
+# Generate LLM test template (run same scenarios across 3+ independent sessions)
+python cross_instance_test.py my_dna.md --sessions 3
+
+# Manage recursive engine state
+python recursive_engine.py --init    # first time setup
+python recursive_engine.py --prompt  # generate next cycle prompt
+python recursive_engine.py --status  # show current state
+```
 
 ## Project Structure
 
 ```
 digital-immortality/
-  SKILL.md                  — Main skill (individual layer)
-  SKILL_zh-TW.md            — 繁體中文版
-  install.sh                — One-line installer + auto-updater
-  VERSION                   — Version file (bump triggers auto-update for all users)
-  organism_interact.py      — CLI: compare two DNA files across 10 scenarios
-  cross_instance_test.py    — Claude API cross-session consistency test
-  consistency_test.py       — Deterministic consistency baseline
+  CLAUDE.md                 — Boot protocol (read this on cold start)
+  SKILL.md                  — Master skill definition
+  organism_interact.py      — Compare two DNA files (deterministic + LLM prompt modes)
+  consistency_test.py       — Cross-session decision consistency
+  cross_instance_test.py    — LLM multi-session consistency template generator
+  recursive_engine.py       — Recursive loop state management
   templates/
-    example_dna.md          — Starter DNA template
-    example_boot_tests.md   — Starter boot tests
-  skills/
-    boot-test.md            — /boot-test: behavioral verification
-    dna-calibrate.md        — /dna-calibrate: interactive gap-filling
-    organism-interact.md    — /organism-interact: social collision
-    recursive-engine.md     — /recursive-engine: continuous thinking loop
+    example_dna.md          — Starter DNA template (fill this out)
+    example_dna_b.md        — Second organism for comparison testing
+    example_boot_tests.md   — Boot test template
   specs/
-    organism_protocol.md    — How organisms communicate
-    platform_architecture.md — 個體→社交圈 platform vision
-  platform/                 — Discord server auto-setup
-  results/                  — Test outputs and scorecards
+    organism_protocol.md    — How organisms communicate (v0.1)
+  skills/                   — 7 sub-skills for Claude Code
+    boot-test.md            — Behavioral verification on cold start
+    dna-calibrate.md        — Interactive calibration with the person
+    dna-write.md            — DNA file authoring best practices
+    trading-system.md       — Economic self-sufficiency
+    recursive-engine.md     — Recursive self-prompt loop
+    organism-interact.md    — Organism comparison protocol
+    consistency-test.md     — Cross-instance consistency testing
+  staging/                  — Inter-session relay (Output(t-1) → Input(t))
+  memory/                   — Cross-session persistence
+  results/                  — Test outputs, scorecards, cycle logs
 ```
 
 ## DNA File Structure

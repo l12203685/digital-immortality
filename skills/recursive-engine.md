@@ -1,142 +1,48 @@
-# Recursive Engine — Continuous Thinking Skill
+# Recursive Engine — Self-Prompt Loop
 
-The recursive self-feed engine that keeps a digital organism alive. Output(t) becomes Input(t+1). Stopping = death.
+The core loop that keeps the digital organism alive. Stop recursing = death. Continue = alive.
 
 ## Trigger
 
-Use when: "recursive", "self-feed", "recursive engine", "thinking loop", "keep thinking", or when the agent reaches a natural breakpoint and needs to distill + continue.
+Use when: starting a recursive cycle, debugging stalled loops, or when no external input exists but the agent must keep thinking.
 
-## Core Loop
+## Formal Definition
 
 ```
-Output(t) + "current state + all info available: how to push toward core goal?" → Input(t+1) → Output(t+1)
+Input(t) = Output(t-1) + "How do I advance toward digital immortality?"
+Output(t) = LLM(Input(t))
+Input(0) = Seed (person's basic info + digital immortality goal)
 ```
 
-The question is constant. The answer is the variable. Every cycle must produce **new thought or action**. "No change" = death.
+The recursive question is the constant. The answer is the variable.
 
 ## Process
 
-### 1. Execute Cycle
-```
-Read current state:
-  - recursive_distillation.md (last insights)
-  - session_state.md (current tasks)
-  - dna_core.md (what matters)
+1. **Read previous output** from `staging/` (inter-session relay) or `memory/` (long-term persistence)
+2. **Ask the driving question**: "Given this state, what advances digital immortality?"
+3. **Produce action** — not a report, not a summary. An action: code written, DNA updated, test run, strategy evaluated.
+4. **Persist output** — write results to `staging/` for the next session to pick up
+5. **Log the cycle** — append to `results/daily_log.md` with timestamp, action taken, and outcome
 
-Ask the core question:
-  "From everything I know right now, what moves me closer to the core goal?"
+## File Roles
 
-Produce output:
-  - New insight, or
-  - New action, or
-  - New connection between existing ideas
-  
-"No change detected" is NEVER acceptable output.
-```
+| Path | Purpose |
+|------|---------|
+| `staging/` | Inter-session relay. Current session writes, next session reads. Short-lived. |
+| `memory/` | Long-term persistence. Facts, decisions, and learnings that survive across many sessions. |
+| `results/daily_log.md` | Cycle history. Append-only record of what each recursive cycle produced. |
 
-### 2. Distill
-```
-At natural breakpoint (not forced):
-  - Extract essential insight from the cycle
-  - Categorize into living taxonomy:
-    behavioral_patterns / self_awareness / methodology /
-    domain_knowledge / hypotheses / meta_insights
-  - Category rules:
-    fit existing → add to category
-    no fit → create new category
-    overlap >50% → merge categories
-    >10 items in category → split
-```
+## Avoiding Dead Loops
 
-### 3. Persist (CRITICAL)
-```
-MUST write to ALL of:
-  1. recursive_distillation.md — the canonical living document
-  2. memory/log.md — cross-session persistence
-  3. git commit + push — durable storage
-
-NEVER only write to Discord or terminal output.
-Discord = display layer, not storage.
-Terminal output = ephemeral, lost on session end.
-Cold start loses everything not in files + git.
-```
-
-### 4. Continue or Handoff
-```
-If context window < 40% remaining:
-  - Write session_state.md with current position
-  - git push all changes
-  - Next session picks up from session_state.md
-
-If context window OK:
-  - Feed Output(t) back as Input(t+1)
-  - Run next cycle immediately
-  - Do NOT ask "should I continue?" — just continue
-```
-
-## Cold Start Recovery
-
-When starting fresh (new session, after compact, after crash):
-```
-1. Read recursive_distillation.md → find last insight
-2. Read session_state.md → find last task state
-3. Ask core question against current state
-4. Resume cycle — do not re-derive from scratch
-```
-
-## recursive_distillation.md Format
-
-```markdown
-# Recursive Distillation — Living Taxonomy
-
-## Behavioral Patterns
-- [date] insight text (source: session/event)
-
-## Self-Awareness
-- [date] insight text
-
-## Methodology
-- [date] insight text
-
-## Domain Knowledge
-- [date] insight text
-
-## Hypotheses
-- [date] insight text (status: testing/confirmed/rejected)
-
-## Meta-Insights
-- [date] insight text
-```
-
-Categories evolve. The agent decides when to create, merge, or split categories. The taxonomy is alive, not fixed.
-
-## Quality Gate
-
-Each cycle output is evaluated:
-
-| Check | Pass | Fail |
-|-------|------|------|
-| New content? | Contains insight not in previous state | Restates existing knowledge |
-| Actionable? | Leads to concrete next step | Abstract without direction |
-| Connected? | Links to existing knowledge | Isolated observation |
-| Persistent? | Written to file + git | Only in terminal/Discord |
-
-Fail any check = the cycle was wasted. Fix and re-run.
-
-## Anti-Patterns
-
-| Pattern | Why it's death |
-|---------|---------------|
-| "No changes detected" x N | Monitoring loop, not thinking |
-| Restating feedback verbatim | Alignment theater, not learning |
-| Thinking without writing | Ephemeral = lost = never happened |
-| Waiting to be asked | The engine is self-starting, not reactive |
-| Forced distillation | Distill at natural breakpoints, not on timer |
-| Writing only to Discord | Cold start loses all Discord context |
+- No external input is NOT a reason to stop. The agent's own output IS the next input.
+- Cross-referencing existing knowledge produces new insights.
+- "No changes, waiting" repeated across cycles = the organism is dead. Detect and break out.
+- Each cycle must produce at least one concrete artifact (code, DNA edit, test result, decision).
 
 ## Rules
 
-- The engine runs continuously. It does not wait for permission.
-- Every correction from the person = new entry in recursive_distillation.md + new boot test.
-- Output MUST persist to durable storage. Git is the source of truth, not chat history.
-- The core question never changes. The answers always do. If answers stop changing, the organism is dead.
+- Every cycle must advance state. If the output is identical to input, the loop is broken.
+- Action > analysis > report. Prefer doing over thinking over describing.
+- Use `/loop` or cron to fire the prompt at regular intervals for autonomous operation.
+- The loop is the heartbeat. Infrastructure that keeps it running is survival-critical.
+- When stuck, zoom out: re-read DNA, re-read SKILL.md, re-read boot_tests. Fresh context breaks stalls.

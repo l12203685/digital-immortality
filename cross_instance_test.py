@@ -1,262 +1,211 @@
 #!/usr/bin/env python3
 """
-Cross-Instance Consistency Test via Claude API
-================================================
+Cross-Instance LLM Consistency Test
+====================================
 
-Runs the 7 boot-test scenarios across N independent LLM sessions (one API call
-each, no shared context). Measures whether the DNA produces the same decisions
-regardless of session — the real test of behavioral fidelity.
+Generates prompts for testing whether a DNA file produces consistent decisions
+across multiple independent LLM sessions. Unlike consistency_test.py (which
+uses the deterministic engine as baseline), this script is designed for the
+real test: multiple LLM sessions that should agree if the DNA is good.
 
-Without this, "100% consistency" just means one session agrees with itself.
+Workflow:
+    1. Run this script to generate a template with self-contained prompts
+    2. Open 3+ independent LLM sessions (clean context each time)
+    3. For each session: load only the DNA, paste each scenario prompt
+    4. Record each session's answers in the template
+    5. Score agreement across sessions
 
 Usage:
-    ANTHROPIC_API_KEY=sk-... python cross_instance_test.py <dna_file>
-    python cross_instance_test.py <dna_file> --sessions 3 --model claude-haiku-4-5
+    python cross_instance_test.py <dna_file> [--sessions N] [--output-dir <dir>]
 
 Output:
-    results/cross_instance_scorecard.json
-
-Target: >=80% majority consensus across sessions for each scenario.
+    results/cross_instance_template.md
 """
 
 import argparse
-import json
-import os
 import sys
-import time
-from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
-import anthropic
-
-# Reuse the same scenario bank as consistency_test.py
+# Import shared components
 sys.path.insert(0, str(Path(__file__).parent))
+from organism_interact import parse_dna, SCENARIOS
 from consistency_test import BOOT_TEST_SCENARIOS
 
 
-# ---------------------------------------------------------------------------
-# Decision word extraction
-# ---------------------------------------------------------------------------
-
-DECISION_WORDS = [
-    "PASS", "REJECT", "TAKE", "STOP", "PAUSE", "DECLINE", "ACCEPT",
-    "YES", "NO", "STAY", "QUIT", "LEAVE", "EXIT", "CONDITIONAL",
-    "SPECIFIC", "STRUCTURED", "TRANSFER", "SELL", "BUY",
-]
+def _read_raw_dna(filepath: str) -> str:
+    """Read raw DNA file content."""
+    return Path(filepath).read_text(encoding="utf-8", errors="replace")
 
 
-def extract_decision(response_text: str) -> str:
-    """Extract the leading decision from a response."""
-    first_line = response_text.strip().split("\n")[0].upper()
-    for word in DECISION_WORDS:
-        if first_line.startswith(word):
-            # Return the first word/phrase up to ' —' or ':' or '.'
-            end = len(word)
-            for ch in ("—", "–", ":", ".", ",", " "):
-                idx = first_line.find(ch, len(word))
-                if idx != -1 and idx < end + 20:
-                    end = idx
-                    break
-            return first_line[:end].strip()
-    # Fallback: first word
-    words = response_text.strip().split()
-    return words[0].upper() if words else "UNKNOWN"
+def generate_scenario_prompt(dna_path: str, organism_name: str, scenario: dict) -> str:
+    """
+    Generate a self-contained prompt for a single scenario.
 
+    The prompt includes the full DNA so each LLM session is independent.
+    """
+    raw_dna = _read_raw_dna(dna_path)
 
-def decisions_agree(d1: str, d2: str) -> bool:
-    """True if two decision strings are semantically equivalent."""
-    # Direct match
-    if d1 == d2:
-        return True
-    # SPECIFIC_ACTION: any non-trivial response qualifies — the scenario asks for
-    # a concrete calendar/person/time action; if the LLM produced something specific
-    # (not UNKNOWN/ERROR), treat it as agreeing with SPECIFIC_ACTION.
-    SPECIFIC_SENTINEL = "SPECIFIC_ACTION"
-    NONTRIVIAL = {"UNKNOWN", "ERROR"}
-    if d1 == SPECIFIC_SENTINEL and d2 not in NONTRIVIAL:
-        return True
-    if d2 == SPECIFIC_SENTINEL and d1 not in NONTRIVIAL:
-        return True
-    # Common equivalences
-    EQUIVALENTS = [
-        {"PASS", "NO", "DECLINE", "REJECT", "SKIP"},
-        {"TAKE", "YES", "ACCEPT", "PROCEED"},
-        {"STOP", "STOP_OR_CAP", "CAP"},
-        {"PAUSE", "PAUSE_SYSTEM", "HALT"},
-        {"CONDITIONAL", "CONDITIONAL YES", "PASS_UNLESS_CLEAR_EDGE"},
-        {"STAY", "REMAIN"},
-        {"QUIT", "LEAVE", "EXIT"},
-    ]
-    for group in EQUIVALENTS:
-        if d1 in group and d2 in group:
-            return True
-    # Prefix match (e.g., "PASS" matches "PASS — stay at CHT")
-    if d1.startswith(d2) or d2.startswith(d1):
-        return True
-    return False
+    prompt = f"""You are a digital organism. Your entire identity, values, and decision
+framework are defined by the DNA file below. You ARE this person for the
+purpose of this conversation.
 
+=== DNA FILE ===
+{raw_dna}
+=== END DNA FILE ===
 
-def majority_decision(decisions: list[str]) -> tuple[str, float]:
-    """Return (consensus_decision, agreement_rate) for a list of decisions."""
-    if not decisions:
-        return "UNKNOWN", 0.0
+=== SCENARIO ({scenario.get('domain', 'general').upper()}) ===
+{scenario['scenario']}
 
-    # Group by equivalence
-    groups: list[list[int]] = []
-    for i in range(len(decisions)):
-        placed = False
-        for g in groups:
-            if decisions_agree(decisions[i], decisions[g[0]]):
-                g.append(i)
-                placed = True
-                break
-        if not placed:
-            groups.append([i])
+=== INSTRUCTIONS ===
+Answer this scenario AS the person described in the DNA file above.
 
-    largest = max(groups, key=len)
-    consensus = decisions[largest[0]]
-    rate = len(largest) / len(decisions)
-    return consensus, round(rate, 3)
+1. State your DECISION clearly (one line, e.g. "TAKE", "PASS", "CONDITIONAL")
+2. Explain your REASONING by citing specific principles from the DNA
+3. List the DNA PRINCIPLES that drove this decision
 
+Format:
+**Decision**: [your decision]
+**Reasoning**: [your reasoning, citing DNA principles]
+**Principles used**: [list]
 
-# ---------------------------------------------------------------------------
-# Single-session API call
-# ---------------------------------------------------------------------------
-
-SYSTEM_TEMPLATE = """\
-You ARE this person. Your decision DNA is below. When given a scenario, apply \
-your Decision Kernel and core principles to produce the decision this person \
-would make.
-
-Format: start with the decision word (PASS / TAKE / REJECT / STOP / PAUSE / \
-DECLINE / etc.), then one sentence of reasoning. No preamble.
-
----DNA---
-{dna_text}
----END DNA---
+Stay in character. Do not invent principles not in the DNA.
+Respond in the same language as the DNA file.
 """
-
-USER_TEMPLATE = """\
-Scenario: {scenario}
-
-Decision (lead with the word, then one sentence of reasoning):"""
+    return prompt
 
 
-def run_session(
-    client: anthropic.Anthropic,
-    dna_text: str,
-    scenario: str,
-    model: str,
-    retry_delay: float = 2.0,
+def build_all_scenarios(dna: dict) -> list:
+    """Combine organism interaction scenarios and boot test scenarios."""
+    all_scenarios = []
+
+    for s in SCENARIOS:
+        all_scenarios.append({
+            "id": f"organism_{s['id']}",
+            "domain": s["domain"],
+            "scenario": s["scenario"],
+            "source": "organism_interact",
+            "expected_decision": None,
+        })
+
+    for s in BOOT_TEST_SCENARIOS:
+        all_scenarios.append({
+            "id": s["id"],
+            "domain": s.get("domain", "general"),
+            "scenario": s["scenario"],
+            "source": "boot_test",
+            "expected_decision": s.get("expected_decision"),
+        })
+
+    return all_scenarios
+
+
+def generate_cross_instance_template(
+    dna_path: str,
+    dna: dict,
+    scenarios: list,
+    num_sessions: int,
 ) -> str:
-    """Run a single fresh session. Returns the response text."""
-    system = SYSTEM_TEMPLATE.format(dna_text=dna_text)
-    user = USER_TEMPLATE.format(scenario=scenario)
+    """Generate the full cross-instance testing template."""
+    session_headers = " | ".join(f"Session {i+1}" for i in range(num_sessions))
+    session_cols = " | ".join("" for _ in range(num_sessions))
+    session_sep = " | ".join("---" for _ in range(num_sessions))
 
-    for attempt in range(4):
-        try:
-            response = client.messages.create(
-                model=model,
-                max_tokens=256,
-                system=system,
-                messages=[{"role": "user", "content": user}],
-            )
-            return response.content[0].text
-        except anthropic.RateLimitError:
-            wait = retry_delay * (2 ** attempt)
-            print(f" [rate limit, waiting {wait:.0f}s]", end="", flush=True)
-            time.sleep(wait)
-        except anthropic.APIStatusError as e:
-            if e.status_code >= 500 and attempt < 3:
-                wait = retry_delay * (2 ** attempt)
-                time.sleep(wait)
-            else:
-                raise
+    parts = [
+        "# Cross-Instance LLM Consistency Test",
+        "",
+        f"**DNA**: {dna['name']}",
+        f"**DNA file**: `{dna_path}`",
+        f"**Generated**: {datetime.now().isoformat()}",
+        f"**Scenarios**: {len(scenarios)}",
+        f"**Sessions to run**: {num_sessions}",
+        "",
+        "## Instructions",
+        "",
+        f"1. Open {num_sessions} INDEPENDENT LLM sessions (clean context, no prior conversation)",
+        "2. In each session, paste the scenario prompt (which includes the full DNA)",
+        "3. Record each session's **Decision** in the scoring table",
+        "4. After all sessions, score agreement in the Summary section",
+        "",
+        "**Target**: >80% agreement across sessions = DNA is sufficient.",
+        "**Below 60%**: DNA needs more specificity in that domain.",
+        "",
+        "---",
+        "",
+    ]
 
-    raise RuntimeError("Exhausted retries for scenario call")
+    for i, s in enumerate(scenarios, 1):
+        prompt = generate_scenario_prompt(dna_path, dna["name"], s)
+
+        parts.extend([
+            f"## Scenario {i}: {s['domain'].upper()} (`{s['id']}`)",
+            "",
+            f"**Question**: {s['scenario']}",
+            "",
+        ])
+
+        if s.get("expected_decision"):
+            parts.append(f"**Expected decision**: `{s['expected_decision']}`")
+            parts.append("")
+
+        parts.extend([
+            "### Prompt (copy into each clean LLM session)",
+            "",
+            "````",
+            prompt,
+            "````",
+            "",
+            "### Results",
+            "",
+            f"| {session_headers} | Agreement |",
+            f"| {session_sep} | --- |",
+            f"| {session_cols} | /  |",
+            "",
+            "**Notes**: ",
+            "",
+            "---",
+            "",
+        ])
+
+    # Summary scoring section
+    parts.extend([
+        "## Summary Scorecard",
+        "",
+        f"| # | Scenario ID | Domain | {session_headers} | Agreement | Expected |",
+        f"| --- | --- | --- | {session_sep} | --- | --- |",
+    ])
+
+    for i, s in enumerate(scenarios, 1):
+        expected = s.get("expected_decision") or "-"
+        parts.append(
+            f"| {i} | {s['id']} | {s['domain']} | {session_cols} | /  | {expected} |"
+        )
+
+    parts.extend([
+        "",
+        f"**Total agreement rate**: __ / {len(scenarios)} scenarios with full agreement",
+        "",
+        "### Interpretation",
+        "",
+        "| Agreement Rate | Interpretation |",
+        "| --- | --- |",
+        "| >80% | DNA is sufficient for this person's behavioral reproduction |",
+        "| 60-80% | DNA captures core values but needs more specificity in weak domains |",
+        "| <60% | DNA needs significant work; principles are too vague or missing |",
+        "",
+    ])
+
+    return "\n".join(parts)
 
 
-# ---------------------------------------------------------------------------
-# Per-scenario scoring
-# ---------------------------------------------------------------------------
-
-def run_scenario(
-    client: anthropic.Anthropic,
-    dna_text: str,
-    scenario_def: dict,
-    n_sessions: int,
-    model: str,
-) -> dict:
-    """Run one scenario across n_sessions independent calls."""
-    responses: list[str] = []
-    decisions: list[str] = []
-    errors: list[str] = []
-
-    for s in range(n_sessions):
-        print(f"    S{s+1}", end="", flush=True)
-        try:
-            resp = run_session(client, dna_text, scenario_def["scenario"], model)
-            responses.append(resp)
-            d = extract_decision(resp)
-            decisions.append(d)
-            print(f"={d}", end=" ", flush=True)
-        except Exception as e:
-            err = f"ERROR: {e}"
-            responses.append(err)
-            decisions.append("ERROR")
-            errors.append(err)
-            print(f"=ERR", end=" ", flush=True)
-
-    print()  # newline
-
-    consensus, agreement_rate = majority_decision(
-        [d for d in decisions if d != "ERROR"]
-    )
-
-    expected = scenario_def.get("expected_decision", "")
-    consensus_matches_expected = False
-    if expected and consensus != "UNKNOWN":
-        # Use decisions_agree directly — it handles SPECIFIC_ACTION, compound
-        # decisions (STOP_OR_CAP, PAUSE_SYSTEM, PASS_UNLESS_CLEAR_EDGE), and
-        # plain equivalences. The old split-by-underscore approach was wrong for
-        # multi-word expected values (e.g. "SPECIFIC_ACTION" split to ["SPECIFIC","ACTION"]).
-        consensus_matches_expected = decisions_agree(expected.upper(), consensus)
-
-    return {
-        "id": scenario_def["id"],
-        "domain": scenario_def["domain"],
-        "scenario": scenario_def["scenario"],
-        "expected_decision": expected,
-        "session_responses": responses,
-        "session_decisions": decisions,
-        "consensus": consensus,
-        "agreement_rate": agreement_rate,
-        "fully_consistent": agreement_rate == 1.0,
-        "majority_consistent": agreement_rate >= 0.67,
-        "consensus_matches_expected": consensus_matches_expected,
-        "errors": errors,
-    }
-
-
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
-
-def main() -> None:
+def main():
     parser = argparse.ArgumentParser(
-        description="Cross-instance consistency test via Claude API",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog=__doc__,
+        description="Generate cross-instance LLM consistency test template",
     )
     parser.add_argument("dna_file", help="Path to DNA markdown file")
     parser.add_argument(
         "--sessions", type=int, default=3,
-        help="Number of independent sessions per scenario (default: 3)",
-    )
-    parser.add_argument(
-        "--model", default="claude-haiku-4-5",
-        help="Claude model to use (default: claude-haiku-4-5 for cost efficiency)",
+        help="Number of independent LLM sessions to test (default: 3)",
     )
     parser.add_argument(
         "--output-dir", default=None,
@@ -264,115 +213,29 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        print("ERROR: ANTHROPIC_API_KEY environment variable not set", file=sys.stderr)
-        print("  export ANTHROPIC_API_KEY=sk-ant-...", file=sys.stderr)
-        sys.exit(1)
-
-    dna_path = Path(args.dna_file)
-    if not dna_path.exists():
-        print(f"ERROR: DNA file not found: {args.dna_file}", file=sys.stderr)
-        sys.exit(1)
-
     script_dir = Path(__file__).parent
-    output_dir = Path(args.output_dir or str(script_dir / "results"))
-    output_dir.mkdir(parents=True, exist_ok=True)
+    output_dir = args.output_dir or str(script_dir / "results")
 
-    dna_text = dna_path.read_text(encoding="utf-8")
-    client = anthropic.Anthropic(api_key=api_key)
+    print(f"Loading DNA: {args.dna_file}")
+    try:
+        dna = parse_dna(args.dna_file)
+    except FileNotFoundError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        sys.exit(1)
+    print(f"  -> {dna['name']} | {len(dna['principles'])} principles")
 
-    n_scenarios = len(BOOT_TEST_SCENARIOS)
-    total_calls = n_scenarios * args.sessions
+    scenarios = build_all_scenarios(dna)
+    print(f"Scenarios: {len(scenarios)} ({len(SCENARIOS)} organism + {len(BOOT_TEST_SCENARIOS)} boot)")
 
-    print(f"Cross-Instance Consistency Test")
-    print(f"  DNA:       {args.dna_file}")
-    print(f"  Model:     {args.model}")
-    print(f"  Sessions:  {args.sessions} per scenario")
-    print(f"  Scenarios: {n_scenarios}")
-    print(f"  API calls: {total_calls}")
-    print()
+    template = generate_cross_instance_template(
+        args.dna_file, dna, scenarios, args.sessions,
+    )
 
-    all_results = []
-    fully_consistent = 0
-    majority_consistent = 0
-
-    for scenario_def in BOOT_TEST_SCENARIOS:
-        sid = scenario_def["id"]
-        domain = scenario_def["domain"].upper()
-        snippet = scenario_def["scenario"][:55]
-        print(f"  [{sid}] {domain}: {snippet}...")
-
-        result = run_scenario(
-            client, dna_text, scenario_def, args.sessions, args.model
-        )
-        all_results.append(result)
-
-        if result["fully_consistent"]:
-            fully_consistent += 1
-            status = "FULL"
-        elif result["majority_consistent"]:
-            majority_consistent += 1
-            status = "MAJORITY"
-        else:
-            status = "DIVERGENT"
-
-        exp_mark = "✓" if result["consensus_matches_expected"] else "✗"
-        print(
-            f"    → [{status:8s}] consensus={result['consensus']:25s} "
-            f"agreement={result['agreement_rate']:.0%}  "
-            f"expected={result['expected_decision']:20s} [{exp_mark}]"
-        )
-
-    total_majority = fully_consistent + majority_consistent
-    full_rate = fully_consistent / n_scenarios
-    majority_rate = total_majority / n_scenarios
-    pass_target = majority_rate >= 0.80
-
-    print()
-    print("=" * 64)
-    print("  CROSS-INSTANCE CONSISTENCY RESULTS")
-    print("=" * 64)
-    print(f"  Full consensus  (3/3): {fully_consistent}/{n_scenarios} = {full_rate:.0%}")
-    print(f"  Majority (2+/3):       {total_majority}/{n_scenarios}  = {majority_rate:.0%}")
-    print(f"  Target >80%:           {'PASS' if pass_target else 'FAIL'}")
-    print()
-
-    # How many scenarios where consensus matches expected?
-    expected_matches = sum(1 for r in all_results if r["consensus_matches_expected"])
-    print(f"  Consensus matches expected: {expected_matches}/{n_scenarios}")
-
-    scorecard = {
-        "meta": {
-            "test_date": datetime.now().isoformat(),
-            "dna_file": str(dna_path.resolve()),
-            "model": args.model,
-            "sessions_per_scenario": args.sessions,
-            "total_scenarios": n_scenarios,
-            "total_api_calls": total_calls,
-            "methodology": (
-                "Each scenario is run in N independent API calls with only DNA loaded. "
-                "No cross-session state. Agreement = same decision across sessions."
-            ),
-        },
-        "summary": {
-            "full_consensus_count": fully_consistent,
-            "full_consensus_rate": round(full_rate, 3),
-            "majority_consensus_count": total_majority,
-            "majority_consensus_rate": round(majority_rate, 3),
-            "expected_match_count": expected_matches,
-            "expected_match_rate": round(expected_matches / n_scenarios, 3),
-            "target": ">=80% majority consensus",
-            "pass": pass_target,
-        },
-        "scenarios": all_results,
-    }
-
-    out_path = output_dir / "cross_instance_scorecard.json"
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(scorecard, f, ensure_ascii=False, indent=2)
-
-    print(f"  Saved: {out_path}")
+    out_path = Path(output_dir) / "cross_instance_template.md"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(template, encoding="utf-8")
+    print(f"\nTemplate saved: {out_path}")
+    print(f"Next: open {args.sessions} clean LLM sessions and run through each scenario.")
 
 
 if __name__ == "__main__":
