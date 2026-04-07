@@ -99,8 +99,8 @@ Platform-agnostic: all markdown, works on any LLM that can read files.
 ## Calibration Questions (Effective Patterns)
 
 Ask specific instances, not abstract:
-- ✅ "上次跟可可意見不同是什麼事？"
-- ❌ "你怎麼處理衝突？"
+- ✅ "Last time you disagreed with your partner, what happened?"
+- ❌ "How do you handle conflict?"
 
 Ask reasoning, not facts:
 - ✅ "為什麼選擇集中投資而不是分散？"
