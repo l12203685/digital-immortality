@@ -252,6 +252,8 @@ def _format_entry(entry: dict, show_category: bool = False) -> str:
     lines.append(f"    source:    {entry['source']}")
     if entry.get("tags"):
         lines.append(f"    tags:      {', '.join(entry['tags'])}")
+    if "confidence" in entry:
+        lines.append(f"    confidence: {entry['confidence']:.2f}")
     lines.append(f"    id:        {entry['id']}")
     return "\n".join(lines)
 
@@ -365,6 +367,11 @@ def main():
         for cat, count in removed.items():
             print(f"  {cat:15s} {count:4d} removed")
         print(f"  {'total':15s} {total:4d} removed")
+
+    elif args.prune_old:
+        pruned = prune_old(max_age_days=args.max_age_days, category=args.category)
+        scope = args.category if args.category else "all categories"
+        print(f"Pruned {pruned} entries older than {args.max_age_days} days from {scope}.")
 
 
 if __name__ == "__main__":

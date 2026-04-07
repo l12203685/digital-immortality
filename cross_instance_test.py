@@ -254,12 +254,16 @@ def store_cross_instance_results(
     else:
         summary += "No failures detected (or template not yet filled in)."
 
+    # High confidence if we have real parsed data, low if template not filled in
+    confidence = 0.9 if total_match and agreed > 0 else 0.3
+
     entry = memory_manager.store(
         category="calibration",
         key=f"cross-instance-{test_date}",
         content=summary,
         source="cross_instance_test",
         tags=["cross-instance", "calibration", "consistency"],
+        confidence=confidence,
     )
 
     return entry
@@ -322,6 +326,22 @@ def main():
     out_path.write_text(template, encoding="utf-8")
     print(f"\nTemplate saved: {out_path}")
     print(f"Next: open {args.sessions} clean LLM sessions and run through each scenario.")
+
+    # Store test initiation in memory as calibration entry
+    test_date = datetime.now().strftime("%Y-%m-%d")
+    memory_manager.store(
+        category="calibration",
+        key=f"cross-instance-initiated-{test_date}",
+        content=(
+            f"Cross-instance test initiated for '{dna['name']}' with "
+            f"{len(scenarios)} scenarios, {args.sessions} sessions. "
+            f"Template: {out_path}"
+        ),
+        source="cross_instance_test",
+        tags=["cross-instance", "calibration", "initiated"],
+        confidence=0.5,
+    )
+    print(f"Stored test initiation to memory (calibration).")
 
 
 if __name__ == "__main__":
