@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "generated_at": "2026-04-07T17:22:31.611049",
+    "organism_a_file": "C:\\Users\\admin\\LYH\\agent\\edward_dna_v18.md",
+    "organism_b_file": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\example_dna_b.md",
+    "scenario_count": 1,
+    "protocol_version": "v0.1"
+  },
+  "organisms": {
+    "a": {
+      "name": "Edward",
+      "principles_extracted": 30,
+      "identity": {}
+    },
+    "b": {
+      "name": "Alex Chen",
+      "principles_extracted": 9,
+      "identity": {
+        "-------": "-------",
+        "full name": "Alex Chen",
+        "age": "34",
+        "location": "Taipei, Taiwan",
+        "personality type": "ENFJ",
+        "current role": "Product Manager, SaaS startup",
+        "core goal": "Build products that genuinely improve lives",
+        "philosophy": "\"Shipped beats perfect.\""
+      }
+    }
+  },
+  "interactions": [
+    {
+      "type": "decision_comparison",
+      "scenario": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable, reputable employer. The startup has 18 months of runway. Do you take it?",
+      "domain": "career",
+      "organism_a": {
+        "name": "Edward",
+        "response": "On career decisions, Edward's decision framework yields:\n\n  [1] Applying: \"「你就是我」不是「你代表我」\"\n  [2] Applying: \"足夠上下文 → 直接用 Edward 邏輯執行後報告\"\n  [3] Applying: \"退回確認 = 代理人尚未到位\"\n\nCONDITIONAL — evaluate EV of runway extension probability before deciding.",
+        "dna_principles_used": [
+          "「你就是我」不是「你代表我」",
+          "足夠上下文 → 直接用 Edward 邏輯執行後報告",
+          "退回確認 = 代理人尚未到位"
+        ]
+      },
+      "organism_b": {
+        "name": "Alex Chen",
+        "response": "On career decisions, Alex Chen's decision framework yields:\n\n  [1] Applying: \"Relationships over returns — long-term trust compounds faster than any financial instrument\"\n  [2] Applying: \"Shipping — completed work has infinite more value than planned work\"\n  [3] Applying: \"Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion\"\n\nTAKE — growth optionality at 1.8x is underpriced; downside is recoverable, upside compounds.",
+        "dna_principles_used": [
+          "Relationships over returns — long-term trust compounds faster than any financial instrument",
+          "Shipping — completed work has infinite more value than planned work",
+          "Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion"
+        ]
+      },
+      "synthesis": "Edward takes a caution-oriented approach while Alex Chen takes a action-oriented approach. The divergence in the 'career' domain reveals different weightings of upside vs. downside. Edward's distinctive signal: '「你就是我」不是「你代表我」' — drives their specific stance. Alex Chen's distinctive signal: 'Shipping — completed work has infinite more value than planned work' — drives their specific stance."
+    }
+  ]
+}
