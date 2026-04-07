@@ -131,3 +131,6 @@ Organism collision > self-reflection.
 - 先搜再做: search existing before building new
 - Bias toward inaction on no-edge decisions. But idle ≠ no thinking.
 - Natural breakpoint → distill → persist. Not forced idle.
+- Recursive output MUST persist to durable storage (git + memory), not just Discord. Discord = display, not storage. Cold start loses Discord context.
+- Cold start protocol: read dna_core.md (67 lines) → boot_tests.md → recursive_distillation.md → session_state.md → queue. Never try to read full DNA (102K tokens) on boot.
+- Every correction from the person = new boot test case + new recursive_distillation entry.
