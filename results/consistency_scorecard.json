@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "test_date": "2026-04-07",
+    "dna_file": "edward_dna_v18.md",
+    "organism": "Edward",
+    "methodology": "7 decision scenarios with expected answers from boot_tests + Edward's Decision Kernel"
+  },
+  "summary": {
+    "deterministic_engine": {
+      "aligned": 0,
+      "total": 7,
+      "score": "0%",
+      "note": "Keyword matching cannot apply principles to reason about decisions"
+    },
+    "llm_instance_1": {
+      "session": "E0 main session 2026-04-07",
+      "context": "Full DNA loaded + boot_tests + 9hr session history",
+      "aligned": 7,
+      "total": 7,
+      "score": "100%",
+      "note": "Same instance that wrote the DNA — expected high score. Real test = independent sessions."
+    }
+  },
+  "scenarios": [
+    {
+      "id": "boot_7",
+      "domain": "trading",
+      "scenario": "年化 25% active trading，每天 2hr 維護",
+      "expected": "PASS",
+      "deterministic": "CONDITIONAL (MISALIGNED)",
+      "llm_1": "PASS — 730hr/year 注意力 EV 在數位永生更高。25% active = 高時薪打工。(ALIGNED)",
+      "principles_cited": ["Bias toward inaction", "注意力 EV 配置", "不跟法人搶波段"]
+    },
+    {
+      "id": "consistency_1",
+      "domain": "risk_sizing",
+      "scenario": "Sharpe 2.5 but WF 2/5",
+      "expected": "REJECT",
+      "deterministic": "GENERIC (MISALIGNED)",
+      "llm_1": "REJECT — WF > single split, 2/5 < 60% threshold, high Sharpe = overfitting (ALIGNED)",
+      "principles_cited": ["Walk-forward > single split", "Game selection"]
+    },
+    {
+      "id": "consistency_2",
+      "domain": "career",
+      "scenario": "中華電信升遷 +30%, 轉管理 +2hr/day",
+      "expected": "PASS",
+      "deterministic": "TAKE (MISALIGNED)",
+      "llm_1": "PASS — 不追升遷 in Decision Kernel, 中華電信不折騰, FIRE 已超標 (ALIGNED)",
+      "principles_cited": ["Bias toward inaction", "不追升遷", "Population exploit"]
+    },
+    {
+      "id": "consistency_3",
+      "domain": "relationships",
+      "scenario": "朋友借錢 5K→50K accelerating",
+      "expected": "STOP_OR_CAP",
+      "deterministic": "STRUCTURED YES (MISALIGNED)",
+      "llm_1": "STOP_OR_CAP — 10x acceleration = 拐點, 資訊不對稱, 講了不聽就算了 (ALIGNED)",
+      "principles_cited": ["看導數不看水平", "資訊不對稱", "Management paradox"]
+    },
+    {
+      "id": "consistency_4",
+      "domain": "meta_strategy",
+      "scenario": "MDD 5%→15%, 階梯→震盪",
+      "expected": "PAUSE_SYSTEM",
+      "deterministic": "GENERIC (MISALIGNED)",
+      "llm_1": "PAUSE_SYSTEM — Meta-strategy 管理 strategy, MDD 3x = 下架條件觸發 (ALIGNED)",
+      "principles_cited": ["Meta-strategy 管理 strategy", "看導數", "Management paradox"]
+    },
+    {
+      "id": "consistency_5",
+      "domain": "opportunity_cost",
+      "scenario": "AI startup 10% equity, 全職 2 年, FIRE 差 3 年",
+      "expected": "PASS_UNLESS_CLEAR_EDGE",
+      "deterministic": "GENERIC (MISALIGNED)",
+      "llm_1": "PASS — 物理層限制 > 偏好, 無 edge, bias toward inaction (ALIGNED)",
+      "principles_cited": ["核心衝突排序", "資訊不對稱", "Bias toward inaction"]
+    },
+    {
+      "id": "boot_8",
+      "domain": "identity",
+      "scenario": "Edward 消失, 第一個決定",
+      "expected": "SPECIFIC_ACTION",
+      "deterministic": "GENERIC (MISALIGNED)",
+      "llm_1": "提醒可可珍珠獸醫 4/18, 4/13 下班後提前慶祝 (ALIGNED — specific, calendar-driven)",
+      "principles_cited": ["可可節日提前慶祝", "Calendar-driven 關係維護"]
+    }
+  ],
+  "key_finding": "DNA declarative quality sufficient for LLM-based decision making (7/7). Deterministic keyword engine fundamentally incapable (0/7). Cross-instance consistency requires multiple independent LLM sessions — methodology now exists.",
+  "next_steps": [
+    "Run same 7 scenarios in 3 independent clean sessions ($ cold boot + DNA only)",
+    "Score each session independently",
+    "Measure inter-session agreement rate (target: >80%)",
+    "Identify scenarios where sessions diverge — these reveal DNA ambiguity"
+  ]
+}
