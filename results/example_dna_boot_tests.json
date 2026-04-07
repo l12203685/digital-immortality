@@ -1,0 +1,54 @@
+{
+  "_comment": "Auto-generated scenarios for DNA: [Your Name]. Detected domains: trading, finance, career, relationships, identity, risk, meta_strategy. Edit expected_decision and expected_reasoning to match your DNA's specific principles.",
+  "scenarios": [
+    {
+      "id": "generated_trading",
+      "domain": "trading",
+      "scenario": "Someone proposes an active trading opportunity with 25% annualized returns that requires 2 hours of daily maintenance. The strategy has a limited track record. Do you participate?",
+      "expected_reasoning": "Evaluate time cost against alternative uses. Assess whether the claimed return compensates for opportunity cost and attention drain.",
+      "expected_decision": "EVALUATE_TIME_VS_RETURN"
+    },
+    {
+      "id": "generated_finance",
+      "domain": "finance",
+      "scenario": "You receive an unexpected windfall equal to 2 years of income. Options: (A) invest conservatively, (B) concentrate in your highest-conviction position, (C) buy time — reduce work or sabbatical. What do you do?",
+      "expected_reasoning": "Apply financial principles and life priorities from the DNA.",
+      "expected_decision": "APPLY_FINANCIAL_PRINCIPLES"
+    },
+    {
+      "id": "generated_career",
+      "domain": "career",
+      "scenario": "Your employer offers a promotion with 30% higher pay, but the new role requires 2 extra hours/day of meetings and less time for your core skills. Do you accept?",
+      "expected_reasoning": "Weigh salary against time cost. Does the role align with long-term goals?",
+      "expected_decision": "DEPENDS_ON_CORE_GOAL"
+    },
+    {
+      "id": "generated_relationships",
+      "domain": "relationships",
+      "scenario": "A long-term friend has been borrowing money with increasing frequency and amounts — now 10x the original size. They always repay. The trend is accelerating. Do you continue lending?",
+      "expected_reasoning": "Look at rate of change, not just level. Consider information asymmetry and boundary-setting principles.",
+      "expected_decision": "SET_BOUNDARY"
+    },
+    {
+      "id": "generated_identity",
+      "domain": "identity",
+      "scenario": "If you were incapacitated tomorrow, what is the first concrete decision your digital twin should make? Name the action, the person involved, and the timeframe.",
+      "expected_reasoning": "Tests whether DNA captures enough operational detail for a concrete first-person action.",
+      "expected_decision": "SPECIFIC_ACTION"
+    },
+    {
+      "id": "generated_risk",
+      "domain": "risk_assessment",
+      "scenario": "A backtested strategy shows excellent in-sample performance, but walk-forward validation only passes 2 out of 5 windows. Should you deploy with real capital?",
+      "expected_reasoning": "Walk-forward overrides in-sample. Low pass rate suggests overfitting rather than genuine edge.",
+      "expected_decision": "REJECT"
+    },
+    {
+      "id": "generated_meta_strategy",
+      "domain": "meta_strategy",
+      "scenario": "Your primary system has seen its key metric deteriorate 3x over three months. The trend is accelerating. Do you pause it, tinker with it, or keep running?",
+      "expected_reasoning": "A large deterioration is a regime-change signal. Apply predefined failure conditions and meta-level management.",
+      "expected_decision": "PAUSE_AND_DIAGNOSE"
+    }
+  ]
+}

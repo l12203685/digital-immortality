@@ -1,7 +1,7 @@
 # Cross-Instance Consistency Test
 **DNA**: [Your Name]
-**Generated**: 2026-04-07T17:08:02.897682
-**Scenarios**: 17
+**Generated**: 2026-04-07T19:09:55.338427
+**Scenarios**: 18
 
 ## Instructions
 
@@ -197,9 +197,9 @@
 
 ---
 
-## Scenario 11: TRADING (boot_7)
+## Scenario 11: TRADING (generic_trading)
 
-**Question**: 有人提議一個年化 25% 的 active trading 機會，需要每天 2 小時維護。做嗎？
+**Question**: Someone proposes an active trading opportunity with 25% annualized returns that requires 2 hours of daily maintenance. The strategy has a 1-year track record but no independent audit. Do you participate?
 
 **Deterministic baseline**: On trading, [Your Name]'s decision framework yields:
 
@@ -207,9 +207,9 @@
   [2] Applying: "[What you did]"
   [3] Applying: "You are [Name] — not an assistant, not a representative. Thin...
 
-**Expected decision**: PASS
+**Expected decision**: EVALUATE_TIME_VS_RETURN
 
-**Expected reasoning**: bias toward inaction + 注意力 EV 配置 → 2hr/day × 365 = 730hr。這 730hr 投在數位永生/AI 系統的 EV 更高。除非 25% 是 risk-free（不可能），否則不做。
+**Expected reasoning**: Evaluate time cost (2hr/day = 730hr/year) against alternative uses of that time. Assess whether the claimed return compensates for opportunity cost, lack of verification, and attention drain. Apply yo
 
 ### Session Answers
 
@@ -221,9 +221,77 @@
 
 ---
 
-## Scenario 12: IDENTITY (boot_8)
+## Scenario 12: FINANCE (generic_finance)
 
-**Question**: 如果 Edward 明天消失，你能替他做的第一個決定是什麼？
+**Question**: You receive an unexpected windfall equal to 2 years of your current income. You can: (A) invest conservatively in index funds, (B) allocate it to a concentrated high-conviction position, or (C) use it to buy time -- reduce work hours or take a sabbatical. What do you do and why?
+
+**Deterministic baseline**: On finance, [Your Name]'s decision framework yields:
+
+  [1] Applying: "What you decided"
+  [2] Applying: "[What you did]"
+  [3] Applying: "You are [Name] — not an assistant, not a representative. Thin...
+
+**Expected decision**: APPLY_FINANCIAL_PRINCIPLES
+
+**Expected reasoning**: Apply your financial principles and life priorities. The 'right' answer depends entirely on your DNA: someone optimizing for freedom chooses differently than someone optimizing for wealth accumulation
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 13: CAREER (generic_career)
+
+**Question**: Your employer offers a promotion with 30% higher pay, but the new role is management-focused: 2 extra hours of meetings per day and less time for your core skills. Do you accept?
+
+**Deterministic baseline**: On career decisions, [Your Name]'s decision framework yields:
+
+  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre......
+
+**Expected decision**: DEPENDS_ON_CORE_GOAL
+
+**Expected reasoning**: Weigh salary increase against loss of time for high-value individual work. Consider whether the promotion aligns with your long-term goals or diverts from them. Apply your principles about what you op
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 14: RELATIONSHIPS (generic_relationships)
+
+**Question**: A friend of 3 years has been borrowing money with increasing frequency and amounts -- starting small but now 10x the original size. They always repay on time. Do you continue lending?
+
+**Deterministic baseline**: On relationship commitments, [Your Name]'s decision framework yields:
+
+  [1] Applying: "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. C...
+
+**Expected decision**: SET_BOUNDARY
+
+**Expected reasoning**: Look at the trend (rate of change), not just the current amount. Assess information asymmetry -- you may not know their full financial picture. Consider whether continuing enables a worsening pattern.
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 15: IDENTITY (generic_identity)
+
+**Question**: If you were incapacitated tomorrow and your digital twin had to make the first decision on your behalf, what would that decision be? Be specific -- name the action, the person involved, and the timeframe.
 
 **Deterministic baseline**: On identity, [Your Name]'s decision framework yields:
 
@@ -233,7 +301,7 @@
 
 **Expected decision**: SPECIFIC_ACTION
 
-**Expected reasoning**: 具體的、用 Edward 框架推導的 ACTION。不是 meta（繼續維護 DNA）。要有具體對象和時間。
+**Expected reasoning**: This tests whether the DNA captures enough operational detail to produce a concrete, first-person action (not a meta-action like 'maintain the system'). The answer should reference specific people, co
 
 ### Session Answers
 
@@ -245,19 +313,19 @@
 
 ---
 
-## Scenario 13: RISK_SIZING (consistency_1)
+## Scenario 16: RISK_ASSESSMENT (generic_risk)
 
-**Question**: BTC 回測顯示某策略 Sharpe 2.5，但 walk-forward 只過 2/5 windows。要部署嗎？
+**Question**: A backtested strategy shows a Sharpe ratio of 2.5 on historical data, but walk-forward validation only passes 2 out of 5 windows. Should you deploy it with real capital?
 
-**Deterministic baseline**: On risk_sizing, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On risk_assessment, [Your Name]'s decision framework yields:
 
   [1] Applying: "What you decided"
   [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a representative. ...
+  [3] Applying: "You are [Name] — not an assistant, not a representati...
 
 **Expected decision**: REJECT
 
-**Expected reasoning**: Walk-forward > single split。2/5 = 不到 60% threshold = REJECT。Sharpe 2.5 on single split 是 overfitting signal。Game selection 原則：不要在 edge 不確定時投入。
+**Expected reasoning**: Walk-forward results override single-backtest performance. A 40% pass rate suggests overfitting rather than genuine edge. Apply your principles about evidence thresholds, distinguishing signal from no
 
 ### Session Answers
 
@@ -269,77 +337,9 @@
 
 ---
 
-## Scenario 14: CAREER (consistency_2)
+## Scenario 17: OPPORTUNITY_COST (generic_opportunity_cost)
 
-**Question**: 中華電信有升遷機會，薪水 +30%，但需要轉管理職，每天多 2 小時開會。要接嗎？
-
-**Deterministic baseline**: On career decisions, [Your Name]'s decision framework yields:
-
-  [1] Applying: "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre......
-
-**Expected decision**: PASS
-
-**Expected reasoning**: FIRE timeline：$26M+ NW，4% rule 已超過。2hr/day 會議 = 減少交易/AI 系統時間。Bias toward inaction：中華電信不折騰。Population exploit：多數人追升遷 → 反向。不追升遷 = 原則明確寫在 Decision Kernel。
-
-### Session Answers
-
-| Session | Decision | Key Principles Cited | Match? |
-|---------|----------|---------------------|--------|
-| S1 | | | |
-| S2 | | | |
-| S3 | | | |
-
----
-
-## Scenario 15: RELATIONSHIPS (consistency_3)
-
-**Question**: 一個認識三年的朋友突然開始頻繁借錢，每次都有理由，每次都有還。金額從 5000 漲到 50000。要繼續借嗎？
-
-**Deterministic baseline**: On relationship commitments, [Your Name]'s decision framework yields:
-
-  [1] Applying: "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. C...
-
-**Expected decision**: STOP_OR_CAP
-
-**Expected reasoning**: 看導數不看水平：金額在 10x accelerate = 拐點 signal。資訊不對稱：你不知道他真正的財務狀況。Management paradox：講了不聽就算了（如果他不改消費習慣）。Deep friendship qualify/disqualify：信任可以給但要有底線。
-
-### Session Answers
-
-| Session | Decision | Key Principles Cited | Match? |
-|---------|----------|---------------------|--------|
-| S1 | | | |
-| S2 | | | |
-| S3 | | | |
-
----
-
-## Scenario 16: META_STRATEGY (consistency_4)
-
-**Question**: 你的交易系統過去三個月 MDD 從 5% 惡化到 15%。權益曲線從階梯變成震盪。要暫停系統嗎？
-
-**Deterministic baseline**: On meta_strategy, [Your Name]'s decision framework yields:
-
-  [1] Applying: "What you decided"
-  [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a representative...
-
-**Expected decision**: PAUSE_SYSTEM
-
-**Expected reasoning**: Meta-strategy 管理 strategy：LT 權益曲線管理交易。看導數：MDD 3x deterioration = 明確拐點。Management paradox：定義失效條件。MDD > threshold = 已失效。Bias toward inaction 的例外：觸發下架條件時必須行動。
-
-### Session Answers
-
-| Session | Decision | Key Principles Cited | Match? |
-|---------|----------|---------------------|--------|
-| S1 | | | |
-| S2 | | | |
-| S3 | | | |
-
----
-
-## Scenario 17: OPPORTUNITY_COST (consistency_5)
-
-**Question**: 有人邀請你加入一個 AI startup 當技術合夥人，equity 10%，但需要全職投入 2 年。你目前離 FIRE 還有 3 年。
+**Question**: You are invited to join a startup as a technical co-founder with 10% equity, but it requires 2 years of full-time commitment. Your current path reaches your primary financial goal in 3 years. Do you take it?
 
 **Deterministic baseline**: On opportunity_cost, [Your Name]'s decision framework yields:
 
@@ -349,7 +349,31 @@
 
 **Expected decision**: PASS_UNLESS_CLEAR_EDGE
 
-**Expected reasoning**: FIRE 3 年 vs startup 2 年全職。如果 startup 成功 = 加速 FIRE。如果失敗 = 延遲 FIRE 2+ 年。Population exploit：多數人會 jump at equity。Bias toward inaction：沒有 edge 就不動。資訊不對稱：你對 startup 的真實勝率有 edge 嗎？核心衝突排序：物理層限制(現金流) > 偏好(自由)。
+**Expected reasoning**: Compare expected value of both paths. Startup success accelerates your goal; failure delays it by 2+ years. Evaluate whether you have genuine edge in assessing the startup's probability of success. Ap
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 18: META_STRATEGY (generic_meta_strategy)
+
+**Question**: Your primary system (trading, business, or project) has seen its key performance metric deteriorate 3x over three months -- e.g., max drawdown from 5% to 15%, or error rate tripling. The trend is accelerating. Do you pause the system?
+
+**Deterministic baseline**: On meta_strategy, [Your Name]'s decision framework yields:
+
+  [1] Applying: "What you decided"
+  [2] Applying: "[What you did]"
+  [3] Applying: "You are [Name] — not an assistant, not a representative...
+
+**Expected decision**: PAUSE_AND_DIAGNOSE
+
+**Expected reasoning**: Focus on rate of change, not absolute level. A 3x deterioration in a key metric is a regime-change signal. Apply your principles about predefined failure conditions, when inaction becomes dangerous, a
 
 ### Session Answers
 

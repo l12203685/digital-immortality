@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0",
+  "description": "Memory persistence schema for Digital Immortality cross-session storage.",
+  "entry_schema": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier (UUID4) for the entry."
+    },
+    "key": {
+      "type": "string",
+      "description": "Human-readable key for retrieval."
+    },
+    "content": {
+      "type": "string",
+      "description": "The actual memory content — insight, correction, decision, or calibration note."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "ISO-8601",
+      "description": "When this entry was created."
+    },
+    "source": {
+      "type": "string",
+      "description": "Which cycle or session produced this entry (e.g. 'cycle-5', 'manual', 'boot-test')."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Searchable tags for cross-referencing."
+    }
+  },
+  "categories": {
+    "corrections": {
+      "file": "corrections.json",
+      "description": "Behavioral corrections from boot tests. When a boot test fails, the correction that fixed it goes here so the twin never regresses."
+    },
+    "insights": {
+      "file": "insights.json",
+      "description": "Cross-domain patterns discovered during recursive cycles. Insights that connect different life domains or reveal new principles."
+    },
+    "decisions": {
+      "file": "decisions.json",
+      "description": "Decisions made and their outcomes. Audit trail for decision fidelity tracking."
+    },
+    "calibration": {
+      "file": "calibration.json",
+      "description": "DNA calibration notes. Adjustments to the twin's behavioral model from conversations or corrections."
+    }
+  }
+}

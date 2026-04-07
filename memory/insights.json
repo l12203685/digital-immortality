@@ -1,0 +1,30 @@
+{
+  "category": "insights",
+  "description": "Cross-domain patterns discovered during recursive cycles.",
+  "entries": [
+    {
+      "id": "5b9f21b6-a59b-4784-834d-abd4332fd41f",
+      "key": "cycle2_observation",
+      "content": "Consistency test boot scenarios are Edward-specific — need generalization for any DNA",
+      "timestamp": "2026-04-07T19:06:55.620099+00:00",
+      "source": "cycle2",
+      "tags": [
+        "meta",
+        "consistency",
+        "improvement"
+      ]
+    },
+    {
+      "id": "0da30f06-d13d-439f-92e0-e4a39f2b6fea",
+      "key": "recursive_persist_pattern",
+      "content": "learn=write: any insight discovered during a cycle must be persisted in the same cycle. Memory manager now makes this possible.",
+      "timestamp": "2026-04-07T19:07:00.151858+00:00",
+      "source": "cycle2",
+      "tags": [
+        "meta",
+        "recursive",
+        "architecture"
+      ]
+    }
+  ]
+}

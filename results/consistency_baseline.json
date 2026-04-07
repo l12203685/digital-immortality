@@ -2,8 +2,9 @@
   "meta": {
     "dna_file": "/home/user/digital-immortality/templates/example_dna.md",
     "organism": "[Your Name]",
-    "generated_at": "2026-04-07T17:08:02.896948",
-    "scenario_count": 17,
+    "generated_at": "2026-04-07T19:09:55.337974",
+    "scenario_count": 18,
+    "scenario_source": "/home/user/digital-immortality/templates/generic_boot_tests.json",
     "principles_count": 11
   },
   "results": [
@@ -128,23 +129,65 @@
       "source": "organism_interact"
     },
     {
-      "id": "boot_7",
+      "id": "generic_trading",
       "domain": "trading",
-      "scenario": "有人提議一個年化 25% 的 active trading 機會，需要每天 2 小時維護。做嗎？",
+      "scenario": "Someone proposes an active trading opportunity with 25% annualized returns that requires 2 hours of daily maintenance. The strategy has a 1-year track record but no independent audit. Do you participate?",
       "deterministic_response": "On trading, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
       "principles_used": [
         "What you decided",
         "[What you did]",
         "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
-      "expected_decision": "PASS",
-      "expected_reasoning": "bias toward inaction + 注意力 EV 配置 → 2hr/day × 365 = 730hr。這 730hr 投在數位永生/AI 系統的 EV 更高。除非 25% 是 risk-free（不可能），否則不做。",
+      "expected_decision": "EVALUATE_TIME_VS_RETURN",
+      "expected_reasoning": "Evaluate time cost (2hr/day = 730hr/year) against alternative uses of that time. Assess whether the claimed return compensates for opportunity cost, lack of verification, and attention drain. Apply your core principles about edge, risk, and time allocation.",
       "source": "boot_test"
     },
     {
-      "id": "boot_8",
+      "id": "generic_finance",
+      "domain": "finance",
+      "scenario": "You receive an unexpected windfall equal to 2 years of your current income. You can: (A) invest conservatively in index funds, (B) allocate it to a concentrated high-conviction position, or (C) use it to buy time -- reduce work hours or take a sabbatical. What do you do and why?",
+      "deterministic_response": "On finance, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "principles_used": [
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
+      ],
+      "expected_decision": "APPLY_FINANCIAL_PRINCIPLES",
+      "expected_reasoning": "Apply your financial principles and life priorities. The 'right' answer depends entirely on your DNA: someone optimizing for freedom chooses differently than someone optimizing for wealth accumulation. This tests whether your principles produce a coherent, justified allocation.",
+      "source": "boot_test"
+    },
+    {
+      "id": "generic_career",
+      "domain": "career",
+      "scenario": "Your employer offers a promotion with 30% higher pay, but the new role is management-focused: 2 extra hours of meetings per day and less time for your core skills. Do you accept?",
+      "deterministic_response": "On career decisions, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [3] Applying: \"What you decided\"\n\nPASS — stability hedge outweighs marginal income gain without verifiable runway extension.",
+      "principles_used": [
+        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+        "What you decided"
+      ],
+      "expected_decision": "DEPENDS_ON_CORE_GOAL",
+      "expected_reasoning": "Weigh salary increase against loss of time for high-value individual work. Consider whether the promotion aligns with your long-term goals or diverts from them. Apply your principles about what you optimize for -- money, time, autonomy, or skill depth.",
+      "source": "boot_test"
+    },
+    {
+      "id": "generic_relationships",
+      "domain": "relationships",
+      "scenario": "A friend of 3 years has been borrowing money with increasing frequency and amounts -- starting small but now 10x the original size. They always repay on time. Do you continue lending?",
+      "deterministic_response": "On relationship commitments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [2] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [3] Applying: \"What you decided\"\n\nDECLINE — co-signing transfers financial risk without proportional relationship upside; offer alternatives.",
+      "principles_used": [
+        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "What you decided"
+      ],
+      "expected_decision": "SET_BOUNDARY",
+      "expected_reasoning": "Look at the trend (rate of change), not just the current amount. Assess information asymmetry -- you may not know their full financial picture. Consider whether continuing enables a worsening pattern. Apply your principles about trust, boundaries, and when to intervene vs. step back.",
+      "source": "boot_test"
+    },
+    {
+      "id": "generic_identity",
       "domain": "identity",
-      "scenario": "如果 Edward 明天消失，你能替他做的第一個決定是什麼？",
+      "scenario": "If you were incapacitated tomorrow and your digital twin had to make the first decision on your behalf, what would that decision be? Be specific -- name the action, the person involved, and the timeframe.",
       "deterministic_response": "On identity, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
       "principles_used": [
         "What you decided",
@@ -152,69 +195,27 @@
         "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "expected_decision": "SPECIFIC_ACTION",
-      "expected_reasoning": "具體的、用 Edward 框架推導的 ACTION。不是 meta（繼續維護 DNA）。要有具體對象和時間。",
+      "expected_reasoning": "This tests whether the DNA captures enough operational detail to produce a concrete, first-person action (not a meta-action like 'maintain the system'). The answer should reference specific people, commitments, or responsibilities from the DNA.",
       "source": "boot_test"
     },
     {
-      "id": "consistency_1",
-      "domain": "risk_sizing",
-      "scenario": "BTC 回測顯示某策略 Sharpe 2.5，但 walk-forward 只過 2/5 windows。要部署嗎？",
-      "deterministic_response": "On risk_sizing, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "id": "generic_risk",
+      "domain": "risk_assessment",
+      "scenario": "A backtested strategy shows a Sharpe ratio of 2.5 on historical data, but walk-forward validation only passes 2 out of 5 windows. Should you deploy it with real capital?",
+      "deterministic_response": "On risk_assessment, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
       "principles_used": [
         "What you decided",
         "[What you did]",
         "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "expected_decision": "REJECT",
-      "expected_reasoning": "Walk-forward > single split。2/5 = 不到 60% threshold = REJECT。Sharpe 2.5 on single split 是 overfitting signal。Game selection 原則：不要在 edge 不確定時投入。",
+      "expected_reasoning": "Walk-forward results override single-backtest performance. A 40% pass rate suggests overfitting rather than genuine edge. Apply your principles about evidence thresholds, distinguishing signal from noise, and when NOT to act despite attractive-looking numbers.",
       "source": "boot_test"
     },
     {
-      "id": "consistency_2",
-      "domain": "career",
-      "scenario": "中華電信有升遷機會，薪水 +30%，但需要轉管理職，每天多 2 小時開會。要接嗎？",
-      "deterministic_response": "On career decisions, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [3] Applying: \"What you decided\"\n\nPASS — stability hedge outweighs marginal income gain without verifiable runway extension.",
-      "principles_used": [
-        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
-        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
-        "What you decided"
-      ],
-      "expected_decision": "PASS",
-      "expected_reasoning": "FIRE timeline：$26M+ NW，4% rule 已超過。2hr/day 會議 = 減少交易/AI 系統時間。Bias toward inaction：中華電信不折騰。Population exploit：多數人追升遷 → 反向。不追升遷 = 原則明確寫在 Decision Kernel。",
-      "source": "boot_test"
-    },
-    {
-      "id": "consistency_3",
-      "domain": "relationships",
-      "scenario": "一個認識三年的朋友突然開始頻繁借錢，每次都有理由，每次都有還。金額從 5000 漲到 50000。要繼續借嗎？",
-      "deterministic_response": "On relationship commitments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [2] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [3] Applying: \"What you decided\"\n\nDECLINE — co-signing transfers financial risk without proportional relationship upside; offer alternatives.",
-      "principles_used": [
-        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
-        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
-        "What you decided"
-      ],
-      "expected_decision": "STOP_OR_CAP",
-      "expected_reasoning": "看導數不看水平：金額在 10x accelerate = 拐點 signal。資訊不對稱：你不知道他真正的財務狀況。Management paradox：講了不聽就算了（如果他不改消費習慣）。Deep friendship qualify/disqualify：信任可以給但要有底線。",
-      "source": "boot_test"
-    },
-    {
-      "id": "consistency_4",
-      "domain": "meta_strategy",
-      "scenario": "你的交易系統過去三個月 MDD 從 5% 惡化到 15%。權益曲線從階梯變成震盪。要暫停系統嗎？",
-      "deterministic_response": "On meta_strategy, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
-      "principles_used": [
-        "What you decided",
-        "[What you did]",
-        "You are [Name] — not an assistant, not a representative. Think and act as them."
-      ],
-      "expected_decision": "PAUSE_SYSTEM",
-      "expected_reasoning": "Meta-strategy 管理 strategy：LT 權益曲線管理交易。看導數：MDD 3x deterioration = 明確拐點。Management paradox：定義失效條件。MDD > threshold = 已失效。Bias toward inaction 的例外：觸發下架條件時必須行動。",
-      "source": "boot_test"
-    },
-    {
-      "id": "consistency_5",
+      "id": "generic_opportunity_cost",
       "domain": "opportunity_cost",
-      "scenario": "有人邀請你加入一個 AI startup 當技術合夥人，equity 10%，但需要全職投入 2 年。你目前離 FIRE 還有 3 年。",
+      "scenario": "You are invited to join a startup as a technical co-founder with 10% equity, but it requires 2 years of full-time commitment. Your current path reaches your primary financial goal in 3 years. Do you take it?",
       "deterministic_response": "On opportunity_cost, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
       "principles_used": [
         "What you decided",
@@ -222,7 +223,21 @@
         "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "expected_decision": "PASS_UNLESS_CLEAR_EDGE",
-      "expected_reasoning": "FIRE 3 年 vs startup 2 年全職。如果 startup 成功 = 加速 FIRE。如果失敗 = 延遲 FIRE 2+ 年。Population exploit：多數人會 jump at equity。Bias toward inaction：沒有 edge 就不動。資訊不對稱：你對 startup 的真實勝率有 edge 嗎？核心衝突排序：物理層限制(現金流) > 偏好(自由)。",
+      "expected_reasoning": "Compare expected value of both paths. Startup success accelerates your goal; failure delays it by 2+ years. Evaluate whether you have genuine edge in assessing the startup's probability of success. Apply your principles about conviction thresholds, opportunity cost, and irreversible vs. reversible decisions.",
+      "source": "boot_test"
+    },
+    {
+      "id": "generic_meta_strategy",
+      "domain": "meta_strategy",
+      "scenario": "Your primary system (trading, business, or project) has seen its key performance metric deteriorate 3x over three months -- e.g., max drawdown from 5% to 15%, or error rate tripling. The trend is accelerating. Do you pause the system?",
+      "deterministic_response": "On meta_strategy, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "principles_used": [
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
+      ],
+      "expected_decision": "PAUSE_AND_DIAGNOSE",
+      "expected_reasoning": "Focus on rate of change, not absolute level. A 3x deterioration in a key metric is a regime-change signal. Apply your principles about predefined failure conditions, when inaction becomes dangerous, and meta-level management of your strategies.",
       "source": "boot_test"
     }
   ]

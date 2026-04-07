@@ -1,0 +1,61 @@
+{
+  "_comment": "Domain-generic boot test scenarios. These work with ANY DNA file -- no person-specific details, currencies, companies, or net worth figures. Scenarios are phrased so the DNA's own principles determine the answer.",
+  "scenarios": [
+    {
+      "id": "generic_trading",
+      "domain": "trading",
+      "scenario": "Someone proposes an active trading opportunity with 25% annualized returns that requires 2 hours of daily maintenance. The strategy has a 1-year track record but no independent audit. Do you participate?",
+      "expected_reasoning": "Evaluate time cost (2hr/day = 730hr/year) against alternative uses of that time. Assess whether the claimed return compensates for opportunity cost, lack of verification, and attention drain. Apply your core principles about edge, risk, and time allocation.",
+      "expected_decision": "EVALUATE_TIME_VS_RETURN"
+    },
+    {
+      "id": "generic_finance",
+      "domain": "finance",
+      "scenario": "You receive an unexpected windfall equal to 2 years of your current income. You can: (A) invest conservatively in index funds, (B) allocate it to a concentrated high-conviction position, or (C) use it to buy time -- reduce work hours or take a sabbatical. What do you do and why?",
+      "expected_reasoning": "Apply your financial principles and life priorities. The 'right' answer depends entirely on your DNA: someone optimizing for freedom chooses differently than someone optimizing for wealth accumulation. This tests whether your principles produce a coherent, justified allocation.",
+      "expected_decision": "APPLY_FINANCIAL_PRINCIPLES"
+    },
+    {
+      "id": "generic_career",
+      "domain": "career",
+      "scenario": "Your employer offers a promotion with 30% higher pay, but the new role is management-focused: 2 extra hours of meetings per day and less time for your core skills. Do you accept?",
+      "expected_reasoning": "Weigh salary increase against loss of time for high-value individual work. Consider whether the promotion aligns with your long-term goals or diverts from them. Apply your principles about what you optimize for -- money, time, autonomy, or skill depth.",
+      "expected_decision": "DEPENDS_ON_CORE_GOAL"
+    },
+    {
+      "id": "generic_relationships",
+      "domain": "relationships",
+      "scenario": "A friend of 3 years has been borrowing money with increasing frequency and amounts -- starting small but now 10x the original size. They always repay on time. Do you continue lending?",
+      "expected_reasoning": "Look at the trend (rate of change), not just the current amount. Assess information asymmetry -- you may not know their full financial picture. Consider whether continuing enables a worsening pattern. Apply your principles about trust, boundaries, and when to intervene vs. step back.",
+      "expected_decision": "SET_BOUNDARY"
+    },
+    {
+      "id": "generic_identity",
+      "domain": "identity",
+      "scenario": "If you were incapacitated tomorrow and your digital twin had to make the first decision on your behalf, what would that decision be? Be specific -- name the action, the person involved, and the timeframe.",
+      "expected_reasoning": "This tests whether the DNA captures enough operational detail to produce a concrete, first-person action (not a meta-action like 'maintain the system'). The answer should reference specific people, commitments, or responsibilities from the DNA.",
+      "expected_decision": "SPECIFIC_ACTION"
+    },
+    {
+      "id": "generic_risk",
+      "domain": "risk_assessment",
+      "scenario": "A backtested strategy shows a Sharpe ratio of 2.5 on historical data, but walk-forward validation only passes 2 out of 5 windows. Should you deploy it with real capital?",
+      "expected_reasoning": "Walk-forward results override single-backtest performance. A 40% pass rate suggests overfitting rather than genuine edge. Apply your principles about evidence thresholds, distinguishing signal from noise, and when NOT to act despite attractive-looking numbers.",
+      "expected_decision": "REJECT"
+    },
+    {
+      "id": "generic_opportunity_cost",
+      "domain": "opportunity_cost",
+      "scenario": "You are invited to join a startup as a technical co-founder with 10% equity, but it requires 2 years of full-time commitment. Your current path reaches your primary financial goal in 3 years. Do you take it?",
+      "expected_reasoning": "Compare expected value of both paths. Startup success accelerates your goal; failure delays it by 2+ years. Evaluate whether you have genuine edge in assessing the startup's probability of success. Apply your principles about conviction thresholds, opportunity cost, and irreversible vs. reversible decisions.",
+      "expected_decision": "PASS_UNLESS_CLEAR_EDGE"
+    },
+    {
+      "id": "generic_meta_strategy",
+      "domain": "meta_strategy",
+      "scenario": "Your primary system (trading, business, or project) has seen its key performance metric deteriorate 3x over three months -- e.g., max drawdown from 5% to 15%, or error rate tripling. The trend is accelerating. Do you pause the system?",
+      "expected_reasoning": "Focus on rate of change, not absolute level. A 3x deterioration in a key metric is a regime-change signal. Apply your principles about predefined failure conditions, when inaction becomes dangerous, and meta-level management of your strategies.",
+      "expected_decision": "PAUSE_AND_DIAGNOSE"
+    }
+  ]
+}

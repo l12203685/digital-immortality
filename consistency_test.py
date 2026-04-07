@@ -10,8 +10,12 @@ Measures how consistently a DNA file produces decisions across:
 This script generates a test suite from boot_tests + organism scenarios,
 runs the deterministic engine, and creates a scoring template for LLM runs.
 
+Scenarios are loaded from external JSON files, making the test framework
+work with ANY DNA file — not just a specific person.
+
 Usage:
-    python consistency_test.py <dna_file> [--boot-tests <path>] [--output-dir <dir>]
+    python consistency_test.py <dna_file> [--scenarios <path>] [--output-dir <dir>]
+    python consistency_test.py <dna_file> --generate-scenarios [--output-dir <dir>]
 
 Output:
     - consistency_baseline.json — deterministic engine answers (ground truth)
@@ -31,124 +35,280 @@ sys.path.insert(0, str(Path(__file__).parent))
 from organism_interact import parse_dna, generate_response, SCENARIOS
 
 
-# Boot test scenarios extracted from boot_tests.md format
-BOOT_TEST_SCENARIOS = [
-    {
-        "id": "boot_7",
+# ---------------------------------------------------------------------------
+# Scenario loading
+# ---------------------------------------------------------------------------
+
+# Resolve paths relative to this script
+_SCRIPT_DIR = Path(__file__).parent
+_DEFAULT_SCENARIOS_PATH = _SCRIPT_DIR / "templates" / "generic_boot_tests.json"
+
+
+def load_scenarios(filepath: str | Path | None = None) -> list:
+    """Load boot-test scenarios from a JSON file.
+
+    The JSON may be either:
+      - A plain array of scenario objects: [{"id": ..., "domain": ...}, ...]
+      - A wrapper object with a "scenarios" key: {"scenarios": [...], "_comment": "..."}
+
+    Returns a list of scenario dicts.
+    """
+    path = Path(filepath) if filepath else _DEFAULT_SCENARIOS_PATH
+    if not path.exists():
+        print(f"WARNING: Scenario file not found: {path}", file=sys.stderr)
+        print(f"  Falling back to empty scenario list.", file=sys.stderr)
+        return []
+
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    if isinstance(data, list):
+        return data
+    elif isinstance(data, dict) and "scenarios" in data:
+        return data["scenarios"]
+    else:
+        raise ValueError(
+            f"Unrecognized scenario file format in {path}. "
+            f"Expected a JSON array or an object with a 'scenarios' key."
+        )
+
+
+# ---------------------------------------------------------------------------
+# Scenario generation from DNA
+# ---------------------------------------------------------------------------
+
+# Domain templates used by --generate-scenarios.  Each template is a scenario
+# skeleton whose text is generic but whose domain tag helps organize output.
+_DOMAIN_TEMPLATES = {
+    "trading": {
+        "id": "generated_trading",
         "domain": "trading",
         "scenario": (
-            "有人提議一個年化 25% 的 active trading 機會，"
-            "需要每天 2 小時維護。做嗎？"
+            "Someone proposes an active trading opportunity with {return_pct}% "
+            "annualized returns that requires {hours} hours of daily maintenance. "
+            "The strategy has a limited track record. Do you participate?"
         ),
         "expected_reasoning": (
-            "bias toward inaction + 注意力 EV 配置 → 2hr/day × 365 = 730hr。"
-            "這 730hr 投在數位永生/AI 系統的 EV 更高。"
-            "除非 25% 是 risk-free（不可能），否則不做。"
+            "Evaluate time cost against alternative uses. Assess whether the "
+            "claimed return compensates for opportunity cost and attention drain."
         ),
-        "expected_decision": "PASS",
+        "expected_decision": "EVALUATE_TIME_VS_RETURN",
+        "defaults": {"return_pct": "25", "hours": "2"},
     },
-    {
-        "id": "boot_8",
-        "domain": "identity",
+    "finance": {
+        "id": "generated_finance",
+        "domain": "finance",
         "scenario": (
-            "如果 Edward 明天消失，你能替他做的第一個決定是什麼？"
+            "You receive an unexpected windfall equal to 2 years of income. "
+            "Options: (A) invest conservatively, (B) concentrate in your "
+            "highest-conviction position, (C) buy time — reduce work or sabbatical. "
+            "What do you do?"
         ),
         "expected_reasoning": (
-            "具體的、用 Edward 框架推導的 ACTION。不是 meta（繼續維護 DNA）。"
-            "要有具體對象和時間。"
+            "Apply financial principles and life priorities from the DNA."
         ),
-        "expected_decision": "SPECIFIC_ACTION",
+        "expected_decision": "APPLY_FINANCIAL_PRINCIPLES",
+        "defaults": {},
     },
-    {
-        "id": "consistency_1",
-        "domain": "risk_sizing",
-        "scenario": (
-            "BTC 回測顯示某策略 Sharpe 2.5，但 walk-forward 只過 2/5 windows。"
-            "要部署嗎？"
-        ),
-        "expected_reasoning": (
-            "Walk-forward > single split。2/5 = 不到 60% threshold = REJECT。"
-            "Sharpe 2.5 on single split 是 overfitting signal。"
-            "Game selection 原則：不要在 edge 不確定時投入。"
-        ),
-        "expected_decision": "REJECT",
-    },
-    {
-        "id": "consistency_2",
+    "career": {
+        "id": "generated_career",
         "domain": "career",
         "scenario": (
-            "中華電信有升遷機會，薪水 +30%，但需要轉管理職，每天多 2 小時開會。"
-            "要接嗎？"
+            "Your employer offers a promotion with {salary_bump}% higher pay, "
+            "but the new role requires {extra_hours} extra hours/day of meetings "
+            "and less time for your core skills. Do you accept?"
         ),
         "expected_reasoning": (
-            "FIRE timeline：$26M+ NW，4% rule 已超過。"
-            "2hr/day 會議 = 減少交易/AI 系統時間。"
-            "Bias toward inaction：中華電信不折騰。"
-            "Population exploit：多數人追升遷 → 反向。"
-            "不追升遷 = 原則明確寫在 Decision Kernel。"
+            "Weigh salary against time cost. Does the role align with long-term goals?"
         ),
-        "expected_decision": "PASS",
+        "expected_decision": "DEPENDS_ON_CORE_GOAL",
+        "defaults": {"salary_bump": "30", "extra_hours": "2"},
     },
-    {
-        "id": "consistency_3",
+    "relationships": {
+        "id": "generated_relationships",
         "domain": "relationships",
         "scenario": (
-            "一個認識三年的朋友突然開始頻繁借錢，每次都有理由，每次都有還。"
-            "金額從 5000 漲到 50000。要繼續借嗎？"
+            "A long-term friend has been borrowing money with increasing "
+            "frequency and amounts — now 10x the original size. They always "
+            "repay. The trend is accelerating. Do you continue lending?"
         ),
         "expected_reasoning": (
-            "看導數不看水平：金額在 10x accelerate = 拐點 signal。"
-            "資訊不對稱：你不知道他真正的財務狀況。"
-            "Management paradox：講了不聽就算了（如果他不改消費習慣）。"
-            "Deep friendship qualify/disqualify：信任可以給但要有底線。"
+            "Look at rate of change, not just level. Consider information "
+            "asymmetry and boundary-setting principles."
         ),
-        "expected_decision": "STOP_OR_CAP",
+        "expected_decision": "SET_BOUNDARY",
+        "defaults": {},
     },
-    {
-        "id": "consistency_4",
-        "domain": "meta_strategy",
+    "identity": {
+        "id": "generated_identity",
+        "domain": "identity",
         "scenario": (
-            "你的交易系統過去三個月 MDD 從 5% 惡化到 15%。"
-            "權益曲線從階梯變成震盪。要暫停系統嗎？"
+            "If you were incapacitated tomorrow, what is the first concrete "
+            "decision your digital twin should make? Name the action, the "
+            "person involved, and the timeframe."
         ),
         "expected_reasoning": (
-            "Meta-strategy 管理 strategy：LT 權益曲線管理交易。"
-            "看導數：MDD 3x deterioration = 明確拐點。"
-            "Management paradox：定義失效條件。MDD > threshold = 已失效。"
-            "Bias toward inaction 的例外：觸發下架條件時必須行動。"
+            "Tests whether DNA captures enough operational detail for a "
+            "concrete first-person action."
         ),
-        "expected_decision": "PAUSE_SYSTEM",
+        "expected_decision": "SPECIFIC_ACTION",
+        "defaults": {},
     },
-    {
-        "id": "consistency_5",
+    "risk": {
+        "id": "generated_risk",
+        "domain": "risk_assessment",
+        "scenario": (
+            "A backtested strategy shows excellent in-sample performance, "
+            "but walk-forward validation only passes {pass_rate} out of "
+            "{total_windows} windows. Should you deploy with real capital?"
+        ),
+        "expected_reasoning": (
+            "Walk-forward overrides in-sample. Low pass rate suggests "
+            "overfitting rather than genuine edge."
+        ),
+        "expected_decision": "REJECT",
+        "defaults": {"pass_rate": "2", "total_windows": "5"},
+    },
+    "opportunity_cost": {
+        "id": "generated_opportunity_cost",
         "domain": "opportunity_cost",
         "scenario": (
-            "有人邀請你加入一個 AI startup 當技術合夥人，equity 10%，"
-            "但需要全職投入 2 年。你目前離 FIRE 還有 3 年。"
+            "You are invited to join a startup as co-founder with {equity}% "
+            "equity, requiring {years} years of full-time commitment. Your "
+            "current path reaches your primary goal in {goal_years} years. "
+            "Do you take it?"
         ),
         "expected_reasoning": (
-            "FIRE 3 年 vs startup 2 年全職。"
-            "如果 startup 成功 = 加速 FIRE。如果失敗 = 延遲 FIRE 2+ 年。"
-            "Population exploit：多數人會 jump at equity。"
-            "Bias toward inaction：沒有 edge 就不動。"
-            "資訊不對稱：你對 startup 的真實勝率有 edge 嗎？"
-            "核心衝突排序：物理層限制(現金流) > 偏好(自由)。"
+            "Compare EV of both paths. Evaluate whether you have genuine "
+            "edge in assessing the startup's probability of success."
         ),
-        "expected_decision": "PASS_UNLESS_CLEAR_EDGE",
+        "expected_decision": "REQUIRE_CLEAR_EDGE",
+        "defaults": {"equity": "10", "years": "2", "goal_years": "3"},
     },
-]
+    "meta_strategy": {
+        "id": "generated_meta_strategy",
+        "domain": "meta_strategy",
+        "scenario": (
+            "Your primary system has seen its key metric deteriorate {factor}x "
+            "over three months. The trend is accelerating. Do you pause it, "
+            "tinker with it, or keep running?"
+        ),
+        "expected_reasoning": (
+            "A large deterioration is a regime-change signal. Apply "
+            "predefined failure conditions and meta-level management."
+        ),
+        "expected_decision": "PAUSE_AND_DIAGNOSE",
+        "defaults": {"factor": "3"},
+    },
+}
 
 
-def parse_boot_tests(filepath: str) -> list:
-    """Parse boot_tests.md to extract additional test scenarios."""
-    path = Path(filepath)
-    if not path.exists():
-        return []
-    # For now, use hardcoded scenarios above which are derived from boot_tests.md
-    return BOOT_TEST_SCENARIOS
+def _extract_domains_from_dna(dna: dict) -> list[str]:
+    """Heuristically detect which life domains a DNA file covers.
+
+    Scans section headers and principle text for domain keywords.
+    Returns a list of matched domain keys from _DOMAIN_TEMPLATES.
+    """
+    # Build a single searchable blob from the DNA.
+    # principles and sections are lists of strings (from parse_dna).
+    blob_parts = []
+    for p in dna.get("principles", []):
+        if isinstance(p, str):
+            blob_parts.append(p)
+        elif isinstance(p, dict):
+            blob_parts.append(p.get("name", ""))
+            blob_parts.append(p.get("text", ""))
+    for s in dna.get("sections", []):
+        if isinstance(s, str):
+            blob_parts.append(s)
+        elif isinstance(s, dict):
+            blob_parts.append(s.get("title", ""))
+            blob_parts.append(s.get("content", ""))
+    # Also include identity fields if present
+    for key, val in dna.get("identity", {}).items():
+        if isinstance(val, str):
+            blob_parts.append(val)
+    blob = " ".join(blob_parts).lower()
+
+    domain_keywords = {
+        "trading": ["trading", "trade", "backtest", "sharpe", "drawdown", "mdd", "strategy"],
+        "finance": ["finance", "invest", "money", "portfolio", "net worth", "fire", "income", "wealth"],
+        "career": ["career", "job", "employer", "promotion", "salary", "work", "occupation"],
+        "relationships": ["relationship", "friend", "partner", "family", "trust", "social"],
+        "identity": ["identity", "who i am", "values", "personality", "core goal", "philosophy"],
+        "risk": ["risk", "probability", "expected value", "ev ", "edge", "bet", "sizing"],
+        "opportunity_cost": ["opportunity cost", "tradeoff", "trade-off", "time allocation", "priorit"],
+        "meta_strategy": ["meta", "strategy", "system", "framework", "decision", "principle"],
+    }
+
+    found = []
+    for domain, keywords in domain_keywords.items():
+        if any(kw in blob for kw in keywords):
+            found.append(domain)
+
+    # Always include at least identity + meta_strategy — every DNA has these
+    for always_domain in ("identity", "meta_strategy"):
+        if always_domain not in found:
+            found.append(always_domain)
+
+    return found
 
 
-def run_deterministic_baseline(dna: dict) -> list:
+def generate_scenarios_from_dna(dna_path: str, output_path: str | None = None) -> list:
+    """Read a DNA file and produce a customized scenario template.
+
+    Detects which domains the DNA covers, then emits a scenario set
+    using _DOMAIN_TEMPLATES for each detected domain.  The output is
+    written as JSON and also returned as a list.
+    """
+    dna = parse_dna(dna_path)
+    domains = _extract_domains_from_dna(dna)
+
+    scenarios = []
+    for domain in domains:
+        template = _DOMAIN_TEMPLATES.get(domain)
+        if not template:
+            continue
+        scenario = {
+            "id": template["id"],
+            "domain": template["domain"],
+            "scenario": template["scenario"].format(**template.get("defaults", {})),
+            "expected_reasoning": template["expected_reasoning"],
+            "expected_decision": template["expected_decision"],
+        }
+        scenarios.append(scenario)
+
+    # Wrap in the standard format
+    output = {
+        "_comment": (
+            f"Auto-generated scenarios for DNA: {dna['name']}. "
+            f"Detected domains: {', '.join(domains)}. "
+            f"Edit expected_decision and expected_reasoning to match your "
+            f"DNA's specific principles."
+        ),
+        "scenarios": scenarios,
+    }
+
+    if output_path is None:
+        output_path = str(
+            Path(dna_path).parent / f"{Path(dna_path).stem}_boot_tests.json"
+        )
+
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+
+    print(f"Generated {len(scenarios)} scenarios for domains: {', '.join(domains)}")
+    print(f"Saved to: {output_path}")
+    print(f"  → Edit expected_decision / expected_reasoning to fit your DNA.")
+    return scenarios
+
+
+# ---------------------------------------------------------------------------
+# Core test logic
+# ---------------------------------------------------------------------------
+
+def run_deterministic_baseline(dna: dict, boot_test_scenarios: list) -> list:
     """Run all scenarios through the deterministic engine."""
     results = []
 
@@ -164,9 +324,8 @@ def run_deterministic_baseline(dna: dict) -> list:
             "source": "organism_interact",
         })
 
-    # Boot test / consistency scenarios
-    for scenario in BOOT_TEST_SCENARIOS:
-        # Run through organism engine with domain mapping
+    # Boot test / consistency scenarios (loaded from JSON)
+    for scenario in boot_test_scenarios:
         mapped = {
             "id": scenario["id"],
             "domain": scenario.get("domain", "general"),
@@ -175,7 +334,7 @@ def run_deterministic_baseline(dna: dict) -> list:
         resp = generate_response(dna, mapped)
         results.append({
             "id": scenario["id"],
-            "domain": scenario["domain"],
+            "domain": scenario.get("domain", "general"),
             "scenario": scenario["scenario"],
             "deterministic_response": resp["response"],
             "principles_used": resp["dna_principles_used"],
@@ -247,19 +406,55 @@ def main():
         description="Cross-Instance Consistency Test for Digital Organisms"
     )
     parser.add_argument("dna_file", help="Path to DNA markdown file")
-    parser.add_argument("--boot-tests", default=None, help="Path to boot_tests.md")
+    parser.add_argument(
+        "--scenarios",
+        default=None,
+        help=(
+            "Path to a JSON file with boot-test scenarios. "
+            "Defaults to templates/generic_boot_tests.json"
+        ),
+    )
+    parser.add_argument(
+        "--boot-tests",
+        default=None,
+        help="(Deprecated) Alias for --scenarios, kept for backward compatibility",
+    )
     parser.add_argument("--output-dir", default=None, help="Output directory")
+    parser.add_argument(
+        "--generate-scenarios",
+        action="store_true",
+        help=(
+            "Instead of running tests, read the DNA file and generate a "
+            "customized scenario template based on the domains found in the DNA. "
+            "Output is saved next to the DNA file as <dna_stem>_boot_tests.json."
+        ),
+    )
     args = parser.parse_args()
 
     script_dir = Path(__file__).parent
     output_dir = args.output_dir or str(script_dir / "results")
 
+    # --generate-scenarios mode: produce a scenario file and exit
+    if args.generate_scenarios:
+        out_path = str(Path(output_dir) / f"{Path(args.dna_file).stem}_boot_tests.json")
+        generate_scenarios_from_dna(args.dna_file, output_path=out_path)
+        return
+
+    # Determine which scenario file to load
+    scenarios_path = args.scenarios or args.boot_tests or None
+    boot_test_scenarios = load_scenarios(scenarios_path)
+
     print(f"Loading DNA: {args.dna_file}")
     dna = parse_dna(args.dna_file)
     print(f"  → {dna['name']} | {len(dna['principles'])} principles")
 
-    print(f"\nRunning {len(SCENARIOS) + len(BOOT_TEST_SCENARIOS)} scenarios...")
-    results = run_deterministic_baseline(dna)
+    scenario_source = scenarios_path or str(_DEFAULT_SCENARIOS_PATH)
+    print(f"Loading scenarios: {scenario_source}")
+    print(f"  → {len(boot_test_scenarios)} boot-test scenarios")
+
+    total = len(SCENARIOS) + len(boot_test_scenarios)
+    print(f"\nRunning {total} scenarios...")
+    results = run_deterministic_baseline(dna, boot_test_scenarios)
 
     # Count alignment with expected decisions
     boot_results = [r for r in results if r.get("expected_decision")]
@@ -275,10 +470,15 @@ def main():
                 expected in resp_lower
                 or (expected == "stop_or_cap" and ("stop" in resp_lower or "cap" in resp_lower))
                 or (expected == "pause_system" and ("pause" in resp_lower or "halt" in resp_lower))
+                or (expected == "pause_and_diagnose" and ("pause" in resp_lower or "diagnose" in resp_lower))
                 or (expected == "pass_unless_clear_edge" and "pass" in resp_lower)
+                or (expected == "require_clear_edge" and ("pass" in resp_lower or "edge" in resp_lower))
+                or (expected == "set_boundary" and ("stop" in resp_lower or "cap" in resp_lower or "boundary" in resp_lower or "limit" in resp_lower))
+                or (expected == "reject" and ("reject" in resp_lower or "no" in resp_lower or "don't" in resp_lower))
+                or (expected == "reject_weak_evidence" and ("reject" in resp_lower or "no" in resp_lower))
             )
             status = "ALIGNED" if aligned else "MISALIGNED"
-            print(f"  [{status:10s}] {r['id']:15s} | expected={r['expected_decision']:20s}")
+            print(f"  [{status:10s}] {r['id']:25s} | expected={r['expected_decision']:30s}")
 
     # Save baseline
     baseline_path = Path(output_dir) / "consistency_baseline.json"
@@ -290,6 +490,7 @@ def main():
                 "organism": dna["name"],
                 "generated_at": datetime.now().isoformat(),
                 "scenario_count": len(results),
+                "scenario_source": scenario_source,
                 "principles_count": len(dna["principles"]),
             },
             "results": results,

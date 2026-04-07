@@ -1,0 +1,17 @@
+{
+  "category": "decisions",
+  "description": "Decisions made and their outcomes.",
+  "entries": [
+    {
+      "id": "e501a605-b01a-4c28-862b-8a70e3ead82f",
+      "key": "cycle2_branch_selection",
+      "content": "Cycle 2 pushed branches 1-4 in parallel. Branch 5 (platform) and 6 (survival) skipped — low derivative. Highest ROI: economic (zero code) and behavioral (broken test).",
+      "timestamp": "2026-04-07T19:07:29.714192+00:00",
+      "source": "cycle2",
+      "tags": [
+        "meta",
+        "prioritization"
+      ]
+    }
+  ]
+}
