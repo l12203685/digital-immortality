@@ -16,9 +16,9 @@ from pathlib import Path
 import anthropic
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DNA_PATH = REPO_ROOT.parent.parent / "LYH" / "agent" / "edward_dna_v18.md"
+DNA_PATH = REPO_ROOT.parent.parent / "LYH" / "agent" / "dna_core.md"
 LOG_PATH = REPO_ROOT / "results" / "daemon_log.md"
-DEFAULT_MODEL = "claude-haiku-4-5"
+DEFAULT_MODEL = "claude-sonnet-4-6"
 MIN_INTERVAL = 5  # seconds, rate-limit floor
 
 DYNAMIC_TREE = """\
