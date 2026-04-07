@@ -124,6 +124,7 @@ dna_core.md (individual core — 64 lines, instant action)
 | DNA Calibrate | `/dna-calibrate` | Interactive gap-filling with the person |
 | Organism Interact | `/organism-interact` | Social collision between two organisms |
 | Recursive Engine | `/recursive-engine` | Continuous thinking loop, distillation |
+| Guided Onboarding | `/guided-onboarding` | New user DNA creation from scratch |
 
 Install all: `curl -sL https://raw.githubusercontent.com/l12203685/digital-immortality/main/install.sh | bash`
 
