@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "generated_at": "2026-04-07T18:14:35.802441",
+    "organism_a_file": "/home/user/digital-immortality/templates/example_dna.md",
+    "organism_b_file": "/home/user/digital-immortality/templates/example_dna_b.md",
+    "scenario_count": 1,
+    "protocol_version": "v0.1"
+  },
+  "organisms": {
+    "a": {
+      "name": "[Your Name]",
+      "principles_extracted": 9,
+      "identity": {
+        "-------": "-------",
+        "full name": "[Name]",
+        "age": "[Age]",
+        "location": "[City, Country]",
+        "personality type": "[MBTI or description]",
+        "current role": "[Job/occupation]",
+        "core goal": "[What you're working toward — be specific]",
+        "philosophy": "[One sentence that captures how you see life]"
+      }
+    },
+    "b": {
+      "name": "Alex Chen",
+      "principles_extracted": 8,
+      "identity": {
+        "-------": "-------",
+        "full name": "Alex Chen",
+        "age": "34",
+        "location": "Taipei, Taiwan",
+        "personality type": "ENFJ",
+        "current role": "Product Manager, SaaS startup",
+        "core goal": "Build products that genuinely improve lives",
+        "philosophy": "\"Shipped beats perfect.\""
+      }
+    }
+  },
+  "interactions": [
+    {
+      "type": "decision_comparison",
+      "scenario": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable, reputable employer. The startup has 18 months of runway. Do you take it?",
+      "domain": "career",
+      "organism_a": {
+        "name": "[Your Name]",
+        "response": "On career decisions, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nPASS — stability hedge outweighs marginal income gain without verifiable runway extension.",
+        "dna_principles_used": [
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them."
+        ]
+      },
+      "organism_b": {
+        "name": "Alex Chen",
+        "response": "On career decisions, Alex Chen's decision framework yields:\n\n  [1] Applying: \"Relationships over returns — long-term trust compounds faster than any financial instrument\"\n  [2] Applying: \"Shipping — completed work has infinite more value than planned work\"\n  [3] Applying: \"Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion\"\n\nTAKE — growth optionality at 1.8x is underpriced; downside is recoverable, upside compounds.",
+        "dna_principles_used": [
+          "Relationships over returns — long-term trust compounds faster than any financial instrument",
+          "Shipping — completed work has infinite more value than planned work",
+          "Bias toward action — imperfect action beats perfect inaction; you can course-correct in motion"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'career' scenario, suggesting shared values around risk tolerance. [Your Name]'s distinctive signal: 'Example: EV thinking — Every decision is an expected value calculation. Career: ' — drives their specific stance. Alex Chen's distinctive signal: 'Shipping — completed work has infinite more value than planned work' — drives their specific stance."
+    }
+  ]
+}
