@@ -1089,3 +1089,16 @@ Gap fix: MD-55~MD-60 were logged in cycles 47-48 but not persisted to `templates
 - **MD-63** 談判=條件束聯動 — Never yield on a single variable; bundle all conditions (price ↓ → term ↑ + frequency); isolated concession = unforced error; 條件束 is the negotiation unit, not individual terms
 
 `templates/dna_core.md`: **63 MDs**. Next: 202306.
+
+## Cycle 24 — 2026-04-08 04:52:07 UTC
+
+Cycle 49 done.
+
+**Branch 2.2** — gap fix + 202307 distill:
+- Backfilled MD-55~60 (logged in cycles 47-48 but never written to file)
+- 202307.jsonl (151 msgs, Jul 2023) → 3 new MDs:
+  - **MD-61** 指數=市值噱爆 — ETF is structural momentum compounding; matches population exploit axiom
+  - **MD-62** 賽局分析=先錨定角色目標 — anchor objective function per role before interpreting any move
+  - **MD-63** 談判=條件束聯動 — bundle all variables; isolated concessions = unforced errors
+
+`templates/dna_core.md`: **63 MDs**. Next: 202306.
