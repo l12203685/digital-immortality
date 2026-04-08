@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T01:43 UTC (cycle 14)
+> 最後更新：2026-04-08T02:10 UTC (cycle 16)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -33,7 +33,7 @@
 
 ### 2. 行為等價（核心能力）
 - 2.1 DNA 品質：10 micro-decision patterns from JSONL integrated ✓
-- 2.2 微決策學習：202603-04 JSONL read ✓, 2016-2026 歷史 JSONL 待讀（long-term）
+- 2.2 微決策學習：202604 JSONL distilled ✓ (+3 patterns: 爆發式訊息/即時成本計算/珍珠=家庭成員); 2016-2026 歷史 JSONL 待讀（long-term）
 - 2.3 Validation：OOS 5/5 self-scored ✓, cross-instance prepped but blocked on API credit
   - consistency_test.py: --use-memory + --auto-suggest now combined — memory context flows into suggestions ✓
 - 2.4 Response latency：三秒 vs 三段推理，差距仍在
@@ -111,3 +111,4 @@
 - 2026-04-08 01:41 UTC: cycle 13 — --paper-live added to mainnet_runner; fetches real Binance prices (no creds); tick 1: BTC=71509.90 SHORT
 - 2026-04-08 01:43 UTC: cycle 14 — paper-live tick 2: BTC=71484.80 SHORT; signal consistent × 2
 - 2026-04-08 01:45 UTC: cycle 15 — paper-live tick 3: BTC=71443.20 SHORT; declining price trend confirmed × 3
+- 2026-04-08T02:10 UTC: cycle 16 — Branch 2.2: 202604 JSONL read (239 msgs), 3 micro-patterns distilled → dna_core.md

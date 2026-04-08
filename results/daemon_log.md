@@ -329,3 +329,16 @@ Branch 1.1 — paper-live tick 3: `BTC=71443.20, signal=SHORT`
 Price declining: 71509 → 71484 → 71443 (−66 USDT across 3 ticks). SHORT signal consistent × 3 — dual_ma regime is bearish.
 
 **Gate to live:** set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → `python -m trading.mainnet_runner --tick`
+
+## Cycle 16 — 2026-04-08T02:10 UTC
+
+**Branch 2.2 — 202604 JSONL distilled.**
+
+- Read 202604.jsonl (239 messages, April 2026)
+- Resolved sender/group mapping; extracted Edward-only messages with context
+- Identified 3 micro-patterns NOT yet in dna_core.md:
+  1. **爆發式訊息** — sends 8-10 short messages in a burst, doesn't wait for reply (vs just "碎片化訊息")
+  2. **即時成本計算** — when pricing decision arises, does math inline and announces optimal choice
+  3. **珍珠=家庭成員** — cat is a real constraint in family trip decisions, not an afterthought
+- Distilled → `LYH/agent/dna_core.md` micro-decision line updated
+- Branch 2.2 status: 202604 ✓; next highest: 202601 (41K lines, 2026 Jan)
