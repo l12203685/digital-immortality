@@ -1005,3 +1005,15 @@ Branch 2.2 — 202311 (158 Edward msgs, Nov 2023) → MD-49~MD-51 written to `dn
 - **MD-51 利差套利門檻框架** — 借貸投資=先算利差；報酬率-借貸成本>風險補償才動；無利差優勢不借
 
 `dna_core.md`: 128 lines, **51 MDs**. Next: 202310.
+
+## Cycle 20 — 2026-04-08 04:32:05 UTC
+
+**Cycle 45 done.**
+
+Branch 2.2 — 202311 (Nov 2023, 158 Edward msgs) → 3 MDs written:
+
+- **MD-49** 篩選器清單化逐步研究 — fixed screener list, study one at a time, not all-at-once
+- **MD-50** 多條件評分>單條件觸發 — cond_count scoring beats AND chains; noise-tolerant, auditable
+- **MD-51** 利差套利門檻框架 — (investment yield − borrow cost) > risk premium → act; else don't borrow
+
+`dna_core.md`: 128 lines, **51 MDs**. Next: 202310.
