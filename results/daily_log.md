@@ -3,6 +3,53 @@
 Recursive engine cycle history.
 
 
+## Cycle 160 — 2026-04-09T00:30Z
+
+**Branches**: 3 parallel (7.38 SOP #35 knowledge compounding + 7.39 SOP #36 barbell optionality + bug fix stale files)
+
+### Branch 7.38: SOP #35 Knowledge Compounding & Skill Half-Life Protocol — COMPLETE ✅
+
+- `docs/knowledge_product_35_knowledge_compounding_sop.md` — 6 gates (Domain 3 持續學習):
+  - G0: Skeleton constraint (MD-329: 20% framework before detail, build concept map first)
+  - G1: Input quality audit (MD-163: practitioner > theorist; skin-in-game; primary > derivative)
+  - G2: Output forcing function (MD-319: ≥1 output per session; if can't output = didn't learn)
+  - G3: Cross-domain transfer test (MD-55: true framework = applies outside origin domain)
+  - G4: Skill half-life audit (technical 3yr, frameworks 10yr, mental models permanent; allocate accordingly)
+  - G5: Knowledge product gate (MD-321: SOP-able = internalized; productize or continue studying)
+- Self-test: 3 weeks options theory → can't enter a trade → G0/G2/G3 all triggered
+- Kill conditions: no output >7 days → invoke G2; can't cross-domain after 3 attempts → reclassify as fact
+- `docs/publish_thread_sop35_twitter.md` — 12 tweets (hook: "50 books, can't teach any")
+- Posting queue extended to **Jun 16**; **series now SOP #01~#35; Domain 3 deepened ✅**
+
+### Branch 7.39: SOP #36 Barbell Life Strategy — COMPLETE ✅
+
+- `docs/knowledge_product_36_barbell_optionality_sop.md` — 6 gates (Domain 6 存活冗餘):
+  - G0: Domain classification (STABLE vs EXPLOSIVE, never mix pools — MD-157)
+  - G1: Downside cap (existential risk = NEVER STABLE; EXPLOSIVE = accept 100% loss upfront)
+  - G2: 10-year survival check (MD-307: uncertain = reclassify as EXPLOSIVE)
+  - G3: EV independence test (MD-159: each bet — trial AND scaling — must have +EV independently)
+  - G4: Optionality preservation (contracting options requires compensating premium or preserve)
+  - G5: Exit pre-commitment (no pre-written exit conditions = no entry)
+- Self-test: full-time trading switch → fails G1 without 2yr cash runway; G5 requires written return condition
+- Kill conditions: STABLE falls below 18mo expenses → exit all EXPLOSIVE; EXPLOSIVE turns -EV after 3 data pts → exit
+- `docs/publish_thread_sop36_twitter.md` — 12 tweets (hook: "inverted barbell")
+- Posting queue extended to **Jun 18** (70-day target); **series now SOP #01~#36; Domain 6 barbell framework DOCUMENTED**
+
+### Bug fix: SOP numbering conflict resolved ✅
+
+- Removed stale files:
+  - `knowledge_product_31_cognitive_capital_sop.md` (old numbering, cognitive capital is now correctly #32)
+  - `knowledge_product_32_edge_decay_sop.md` (old numbering, edge decay is now correctly #33)
+- Correct numbering: #31=parsimony, #32=cognitive_capital, #33=edge_decay, #34=knowledge_monetization ✓
+- Consistency test: **31/33 ALIGNED ✅** (2 social scenarios expected to need full-DNA LLM run — consistent)
+
+### Next cycle
+- Edward action: post SOP #01 thread on X (Apr 9 = today); G5 compounding clock starts on first post
+- Edward action: provide BINANCE_MAINNET_KEY/SECRET → live trading (⚡DEADLINE 2026-07-07)
+- Branch 2.3: run full LLM cross-instance test on 33 scenarios → target 33/33 ALIGNED
+- Branch 4.1: Samuel reviews samuel_dna.md in person (blocked on human)
+
+
 ## Cycle 156 — 2026-04-09T00:00Z
 
 **Branches**: 2 parallel (7.34 SOP #31 cognitive capital + 2.3 consistency test extension)

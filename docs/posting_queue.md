@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#34
+# Twitter Posting Queue — SOP Series #01~#36
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -41,6 +41,8 @@
 | Jun 10 | #32 | publish_thread_sop32_twitter.md | "Most high-performers treat their body like a cost center. It's actually your only non-replicable asset." | pending |
 | Jun 12 | #33 | publish_thread_sop33_twitter.md | "Your strategy stopped working. You didn't change anything. The market changed it for you." | pending |
 | Jun 14 | #34 | publish_thread_sop34_twitter.md | "You spent 6 months building an audience. No one paid you anything. The problem wasn't the content. It was the architecture." | pending |
+| Jun 16 | #35 | publish_thread_sop35_twitter.md | "You consumed 50 books last year. Can you teach any of them? If not, you didn't learn — you optimized for the feeling of learning." | pending |
+| Jun 18 | #36 | publish_thread_sop36_twitter.md | "Most people's life strategy has no barbell. They take existential risk on their main income and cap their upside on their experiments. Exactly backwards." | pending |
 
 ---
 
