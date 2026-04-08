@@ -779,3 +779,15 @@ Branch 2.2 (highest derivative). Processed **202409.jsonl** (7,728 Edward msgs, 
 - **MD-27** 頻率越高雜訊越多 — 日K被洗概率遠低於日內；優先低頻策略
 
 Next: **202408**.
+
+## Cycle 11 — 2026-04-08T11:40 UTC
+
+**Cycle 36 done.**
+
+Branch 2.2 (highest derivative — JSONL distillation). Processed **202408.jsonl** (8,314 Edward msgs, Aug 2024). Three new micro-decisions written to `templates/dna_core.md` (now MD-01~MD-30, 107 lines):
+
+- **MD-28** 口數公式具現化 — 口數×ATR×商品乘數=帳戶1%；公式是護欄不是建議
+- **MD-29** 策略池多空比審計 — rolling最佳化天然偏多單；定期審視保持多空平衡
+- **MD-30** 槓桿基礎=失效前風報比 — 近期績效判失效，歷史風報比決定槓桿係數；混淆=用錯數字
+
+Next: **202407**.
