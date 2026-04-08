@@ -1521,3 +1521,16 @@ Cycle 61 done.
 - MD-114: 無參數≠免疫過度最佳化 — OOS² required; same-logic strategies co-losing = diversification failure
 
 `dna_core.md`: **114 MDs**. Next: 202202.
+
+## Cycle 61 — 2026-04-09T00:30 UTC
+
+**Branch 2.2 — 202204 JSONL distilled.**
+
+Gap reconcile: MD-112~114 (策略=先定賺什麼賠什麼/選擇權方向=ATR排列決定/無參數≠免疫過度最佳化) already in file — attributed to 202203 in tree.
+
+**202204.jsonl** (305 substantive Edward msgs, Apr 2022) → 3 MDs written to `templates/dna_core.md`:
+1. **MD-115** 進出場長相>獲利最大化 — 最佳化目標是「符合邏輯的進出場長相」而非最大獲利數字；長相符合=行為一致性
+2. **MD-116** 波段三分法=大波/短停利/當沖各自獨立 — 三種完全不同型態，混設計=四不像；跳空用選擇權扛
+3. **MD-117** 複雜度=Edge不足的偽裝 — 核心edge必須一句話說清楚；說不清=複雜=edge不存在=即將失效
+
+`templates/dna_core.md`: **117 MDs**. Next: 202203.
