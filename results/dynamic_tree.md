@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 117)
+> 最後更新：2026-04-09 UTC (cycle 118)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -23,7 +23,7 @@
   - **mainnet_runner.py built** ✓ — $100 cap, dual_ma only, kill conditions: MDD>10% WR<35% PF<0.85
   - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
   - **mainnet_activation_guide.md created ✓** (cycle 115) — exact 6-step activation: API key creation → credentials storage → fund wallet → dry-run → go live → loop; kill conditions documented; friction to $0 revenue now minimal
-  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 16: BTC=71551.96 signal=SHORT (consistent SHORT × 16, range $71.4k–$72.6k) (cycle 117)
+  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 17: BTC=71437.38 signal=SHORT (consistent SHORT × 17, range $71.4k–$72.6k) (cycle 118)
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
@@ -91,7 +91,8 @@
 - **7.7 Publish Thread SOP #01 — DRAFTED ✅** (cycle 111): `docs/publish_thread_sop01_twitter.md` — 12 tweets, ready to post; closes internal→external loop
 - **7.8 Publish Thread SOP #02 — DRAFTED ✅** (cycle 112): `docs/publish_thread_sop02_twitter.md` — 12 tweets (hook→2×2 grid→pairwise Calmar→greedy addition→correlation gate→weight optimisation→regime routing→overnight edge→portfolio kills→close)
 - **7.9 Publish Thread SOP #03 — DRAFTED ✅** (cycle 113): `docs/publish_thread_sop03_twitter.md` — 12 tweets (hook→G0 L/S balance→G1 leverage from historical→G2 edge_ratio→G3 first-principles→G4 stop-first sizing→G5 formula→G6 trial vs full→G7 order checklist→G8 correlation→kill conditions→close)
-- **7.10 Publish Thread SOP #04 — DRAFTED ✅** (cycle 114): `docs/publish_thread_sop04_twitter.md` — 12 tweets (hook→Node0 triggers→Node1 sample size→Node2 regime match→Node3 edge_ratio→Node4 premise falsification scoring→Node5 anti-capitulation guard (3 questions)→Node6 kill protocol→Node7 resurrection criteria→self-test scenario→series summary close); **FULL SERIES COMPLETE**: all 4 SOP threads (#01–#04) ready to post. Next: Edward posts threads in sequence on X.
+- **7.10 Publish Thread SOP #04 — DRAFTED ✅** (cycle 114): `docs/publish_thread_sop04_twitter.md` — 12 tweets
+- **7.11 SOP #05 Career & Salary + Publish Thread — COMPLETE ✅** (cycle 115): `docs/knowledge_product_05_career_salary_sop.md` + `docs/publish_thread_sop05_twitter.md` — **FULL SERIES COMPLETE**: all 5 SOP threads (#01–#05) ready to post. Next: Edward posts threads in sequence on X.
 
 ### 8. 生活維護（operational baseline）
 - 8.1 決策頻率最小化：MD-322 (>3次同一決策=系統設計失敗) ✓ cycle 94 — automate/pre-decide recurring choices
