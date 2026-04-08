@@ -3780,3 +3780,22 @@ Highest derivative: full SOP publish series (Branch 7) complete, trading mainnet
 
 dynamic_tree.md: Branch 1.1 updated, regime updated (7.10 series COMPLETE, 2.3 CLOSED).
 Next: Edward follows mainnet_activation_guide.md → first real revenue tick.
+
+## Cycle 115 — 2026-04-08 18:27:47 UTC
+
+**Cycle 115 done.**
+
+**Branch 1.1** — `docs/mainnet_activation_guide.md` created.
+
+Highest derivative: SOP publish series (Branch 7) is complete and waiting on Edward to post. Trading mainnet (Branch 1.1) is the survival branch — deadline 2026-07-07, blocked only on API keys. Created a 6-step activation guide to collapse that friction:
+
+1. Create Binance API key (Spot Trading + IP-restricted)
+2. Store credentials (`~/.claude/credentials/binance_api.json`)
+3. Fund $100 USDT to Spot wallet
+4. Dry-run verify: `python trading/mainnet_runner.py --tick --dry-run`
+5. Go live: `python trading/mainnet_runner.py --tick`
+6. Daily loop: `--loop 86400`
+
+Kill conditions and rollback procedure documented.
+
+**Next:** Edward follows `docs/mainnet_activation_guide.md` → first real revenue tick.

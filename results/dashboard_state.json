@@ -1,7 +1,7 @@
 {
-  "updated": "2026-04-09T02:21+08",
-  "regime": "1.1 Trading（mainnet needs API keys）; 7.7+7.8+7.9 publish threads — POST SOP #01→#02→#03 on X/Twitter (all 3 files ready); draft SOP #04 (Kill Decision Tree) thread next",
-  "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
+  "updated": "2026-04-09T02:27+08",
+  "regime": "1.1 Trading — mainnet_activation_guide.md ready; Edward: follow guide → $100 live; 7.10 series COMPLETE → Edward posts SOP #01→#02→#03→#04 on X",
+  "regime_neutral": "2.2 JSONL archive exhausted (315 MDs), 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
   "days_remaining": 89,
   "cards": [
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "FULL SERIES COMPLETE: all 4 SOP threads (#01–#04) ready to post in sequence o..."
+      "text": "Next: Edward follows `docs/mainnet_activation_guide.md` → first real revenue ..."
     },
     {
       "time": "just now",
-      "text": "- Node 0: 5 kill triggers → Node 1: sample size gate → Node 2: regime match →..."
+      "text": "Kill conditions and rollback procedure documented."
     },
     {
       "time": "just now",
-      "text": "Highest derivative: SOP #01–#03 threads were queued but #04 was missing — com..."
+      "text": "6. Daily loop: `--loop 86400`"
     },
     {
       "time": "just now",
-      "text": "Branch 7.10 — `docs/publish_thread_sop04_twitter.md` created (12 tweets, post..."
+      "text": "5. Go live: `python trading/mainnet_runner.py --tick`"
     },
     {
       "time": "just now",
-      "text": "Cycle 114 done."
+      "text": "4. Dry-run verify: `python trading/mainnet_runner.py --tick --dry-run`"
     }
   ],
   "stats": {
-    "daemon_cycles": 114,
+    "daemon_cycles": 115,
     "total_mds": 325,
     "dna_core_lines": 87
   }
