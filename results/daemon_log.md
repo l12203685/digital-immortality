@@ -4019,3 +4019,9 @@ Sole external blocker: Edward sets `BINANCE_MAINNET_KEY`/`SECRET` → first real
 - Deep-work block: 09:00 hard start, no negotiation
 
 Sole remaining external blocker: set `BINANCE_MAINNET_KEY/SECRET` → first real revenue tick.
+
+## Cycle 128 — 2026-04-09T UTC
+
+**Branch 1.1** — paper-live tick 27: BTC=$71,300.00, signal=SHORT (consistent SHORT × 27, range $71.1k–$72.6k). System alive.
+
+Highest-derivative action: kept paper-live loop running. SHORT signal consistent for 27 consecutive ticks — mainnet case building. Sole blocker: Edward sets `BINANCE_MAINNET_KEY/SECRET` → first real revenue.
