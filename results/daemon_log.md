@@ -199,3 +199,7 @@ Branch 1.1 — tick 4 fired:
 - 3 more ticks → `--review` → mainnet GO/NO-GO
 
 Pushed. Daily cron handles the remaining accumulation.
+
+## Cycle 3 — 2026-04-08 01:28:56 UTC
+
+Tick 5 done. `dual_ma` holding positive PnL (+0.14 USDT, PF=3.370). 2 more ticks → `--review` → mainnet GO/NO-GO decision. Daily cron handles accumulation.
