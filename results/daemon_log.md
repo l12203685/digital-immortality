@@ -2998,3 +2998,17 @@ Cycle 71 done.
 - **MD-282**: 風險溝通=主動先列缺點；隱藏風險=失去可信度
 
 **dna_core.md: 282 MDs** | next: 201712
+
+## Cycle 72 — 2026-04-08 UTC
+
+**Branch 2.2 extension — 201712 JSONL (169 Edward msgs) → MD-283~285**
+
+- Highest-derivative: Branch 2.2 (mainnet still blocked on credentials, distill continues)
+- 201712: 169 Edward messages — rich patterns on investment classification, time cost, and information asymmetry
+- 3 micro-patterns written to templates/dna_core.md:
+  - MD-283: Buy-to-Hold vs Buy-to-Sell先分類；混淆兩種框架=策略錯亂
+  - MD-284: 模糊計畫=時間成本陷阱；書面化「A年做B事→C條件換D資源」才能投入時間
+  - MD-285: 關鍵人不可或缺性=必須保密；洩漏=對方重新定價=談判籌碼流失
+- templates/dna_core.md: **285 MDs**
+- dynamic_tree.md updated: cycle 72, 201712 logged, next: consistency re-validation at 285-MD scale
+- Unblocking condition unchanged: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → go live $100 cap
