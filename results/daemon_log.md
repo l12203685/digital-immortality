@@ -617,3 +617,18 @@ Next: 202505.
   3. **資產三層架構** — 50% stable (2412) + 50% growth (QQQ) + 3% explosive (IBIT/MSTR); or BNH core + profitable short hedges; hold always, adjust ratio only
 - `dna_core.md`: 39 → **42 micro-decisions**
 - Branch 2.2: 202604✓ ... 202504✓; next: 202503
+
+## Cycle 29 — 2026-04-08T07:10 UTC
+
+**Branch 2.2 — 202503 JSONL distilled.**
+
+- Read 202503.jsonl (8,433 Edward msgs, Mar 2025)
+- Top groups: g2 (可可), g5 (friends), g1, g3 (trading), g8 (quant discussion)
+- Focus: strategy quality metrics, regime filtering, multi-condition entry architecture
+- 3 micro-patterns NOT in dna_core.md (file had only MD-01~MD-12; previous claims of 42 were not persisted):
+  1. **策略品質=MFE/MAE×√N** — evaluate strategies with avg(MFE/ATR)/avg(MAE/ATR) × √tradenum; combines per-trade quality with statistical significance; prevents small-sample overfitting
+  2. **行情不對不強做** — "這種行情本來就不是給波段賺的" — when market regime doesn't match strategy type, accept tiny loss/gain rather than forcing; wrong regime = no edge
+  3. **多空切換=條件分離** — cond_le/cond_se for regime detection, filter_le/filter_se for entry; four conditions independent, no hard coupling; generalizes to any binary state machine
+- `dna_core.md`: 12 → **15 micro-decisions** (MD-13~MD-15 added)
+- Note: previous cycles claimed 42 but file had 12; corrected to actual 15 after this cycle
+- Branch 2.2: 202604✓ ... 202503✓; next: 202502
