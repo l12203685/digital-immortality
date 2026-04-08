@@ -1371,3 +1371,13 @@ Cycle 57 done.
 - **MD-96** 投組調整=了解特性而非情緒驅動 — 符合預期就不調整；情緒驅動=消滅edge
 
 `dna_core.md`: **96 MDs**. Next: **202208**.
+
+## Cycle 58 — 2026-04-08T22:30 UTC
+
+**202208 distill** (64 Edward msgs, Aug 2022) → 3 MDs written to `templates/dna_core.md`:
+
+- **MD-97** 策略=先抽象結構再固定參數 — identify abstract skeleton (anchor/zone/stop/tp) before fixing parameter values; skipping abstraction = testing parameters not logic
+- **MD-98** 策略存活=近期vs歷史60%門檻 — objective shelf rule: recent 3-month avg > 60% of historical 9-12 month avg; loss case: compare vs top-3 worst historical months; "feels off" is not a criterion
+- **MD-99** 恆定槓桿=每日口數再平衡 — constant leverage requires daily size recalculation; target daily PnL vol < 1.5% → practical leverage 3-5x; higher leverage → rebalancing becomes operationally unsustainable
+
+`templates/dna_core.md`: **99 MDs**. Next: **202207**.
