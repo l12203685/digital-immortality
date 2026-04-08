@@ -3024,3 +3024,15 @@ Cycle 72 done.
 - **MD-285**: 關鍵人不可或缺性=必須保密；洩漏=對方重新定價=籌碼流失
 
 **dna_core.md: 285 MDs** | next: consistency re-validation at 285-MD scale or check 201711 gaps
+
+## Cycle 73 — 2026-04-08 UTC
+
+**Branch 2.3/2.4** (highest-derivative): consistency re-validation at 285-MD scale
+
+- Previous baseline: 8/8 ALIGNED at 273-MD scale (cycle 63)
+- New MDs 274–285 added since then (response latency + JSONL extension cycles)
+- Ran consistency_test.py against templates/dna_core.md (285 MDs, 30 principles)
+- **Result: 10/10 ALIGNED ✅** — all scenarios pass including generic_verdict_first + generic_intuition_primacy
+- Baseline updated: results/consistency_baseline.json
+- dynamic_tree.md updated: cycle 73, Branch 2.3 now shows 285-MD validation
+- Unblocking condition for Branch 1.1 unchanged: set BINANCE_MAINNET_KEY/SECRET → mainnet $100 cap
