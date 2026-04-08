@@ -23,8 +23,8 @@
   - **mainnet_runner.py built** ✓ — $100 cap, dual_ma only, kill conditions: MDD>10% WR<35% PF<0.85
   - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
   - **mainnet_activation_guide.md created ✓** (cycle 115) — exact 6-step activation: API key creation → credentials storage → fund wallet → dry-run → go live → loop; kill conditions documented; friction to $0 revenue now minimal
-  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 31: BTC=70961.36 signal=SHORT (consistent SHORT × 31 ticks, BTC range $71.5k→$72.5k adverse→$70.9k MFE new) (cycle 167)
-  - **paper_live_pnl_report.md updated ✓** (cycle 167) — simulated SHORT P&L: **+$0.77 (+0.77%)** on $100 after 31 priced ticks; **MFE=+$0.77 (tick 31, new high)** MAE=-$1.33; MFE/MAE=0.58x improving; new MFE confirms signal still live
+  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 32: BTC=71114.01 signal=SHORT (consistent SHORT × 32 ticks; retraced +$153 from MFE) (cycle 169)
+  - **paper_live_pnl_report.md updated ✓** (cycle 169) — simulated SHORT P&L: **+$0.55 (+0.55%)** on $100 after 32 ticks; **MFE=+$0.77 (tick 31)** MAE=-$1.33; MFE/MAE=0.58x; BTC pullback from MFE, signal still SHORT
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
