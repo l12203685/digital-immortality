@@ -1982,3 +1982,13 @@ API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Ove
 - **MD-168** 停損具體算法=停損金額比例反推進場點+2倍風報比定出場 — MD-133具體數值版
 
 `templates/dna_core.md`: **168 MDs**. Next: 202011.
+
+## Cycle 7 — 2026-04-08T14:30 UTC
+
+**202011 distill → MD-169~171** (171 MDs total):
+
+- **MD-169** Range思維=交易「分布」不交易「單次」 — instance thinking ceiling < range thinking; 每個action問「整個類型信號的長期EV」而非「這次進不進」
+- **MD-170** EV注意力=90%+的EV因素先掌握，細節是1%邊際改善 — blockers ≈1% EV但被過度研究；核心EV來源先做到位才花時間優化邊際
+- **MD-171** 市場感=從價格跳動建直覺再學公式，順序顛倒則公式無錨 — 赤手空拳試盤的insight：工具是直覺的結晶不是替代；先感受邊界再學理論
+
+`templates/dna_core.md`: **171 MDs**. Next: 202010.
