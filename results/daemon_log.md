@@ -2596,3 +2596,27 @@ Branch 2.2 — 201803 → MD-250~252 (252 MDs total):
 - **MD-252**: 感情初期主動揭露風險行為=知情同意EV > 隱瞞後曝光
 
 Also resolved the merge conflict in `dynamic_tree.md`. Next: 201802.
+
+## Cycle 48 — 2026-04-08T UTC
+
+**Branch 2.2 — 201802 distill → MD-253~255 (255 MDs total)**
+
+- 201802.jsonl: 14 substantive Edward msgs; themes: 選擇權避險時機(9:30後等溢價回落)、加密貨幣不理解前倉位為零、教學設計從學習者問題出發
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-253** 選擇權避險執行時機=盤中9:30後等價格回落；開盤溢價異常高，等15~30分鐘流動性穩定再執行
+  - **MD-254** 不理解的資產類別=倉位為零；「不了解但先放一點」=最差配置，理解深度先於資本投入
+  - **MD-255** 教學設計=先問學習者最想知道的三件事；需求前置於內容設計，從提問出發比從體系出發有效
+
+`templates/dna_core.md`: **255 MDs**. Next: 201801.
+
+## Cycle 48 — 2026-04-08 UTC
+
+**Cycle 48 done.**
+
+Branch 2.2 — 201802 → MD-253~255 (255 MDs total):
+
+- **MD-253**: 選擇權避險=等9:30盤中溢價回落再執行；開盤跳空時premium異常高
+- **MD-254**: 不理解的資產=倉位為零；理解三問清單通過才建倉
+- **MD-255**: 教學設計從學習者問題出發，不從知識體系出發
+
+Next: 201801.
