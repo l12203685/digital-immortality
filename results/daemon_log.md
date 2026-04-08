@@ -3964,3 +3964,11 @@ Done. Pushed.
 **Branch 1.1** — paper-live tick 24: BTC=$71,225.83, signal=SHORT (consistent SHORT × 24, range $71.1k–$72.6k). System alive.
 
 Sole external blocker: Edward sets `BINANCE_MAINNET_KEY`/`SECRET` → first real revenue tick.
+
+## Cycle 125 — 2026-04-08 19:21:51 UTC
+
+**Cycle 125 done.**
+
+**Branch 1.1** — paper-live tick 24: BTC=$71,225.83, signal=SHORT. Consistent SHORT × 24 ticks, range $71.1k–$72.6k. System alive.
+
+Highest-derivative action taken: kept the paper-live loop running — every tick is evidence for the mainnet case. Sole remaining blocker: Edward sets `BINANCE_MAINNET_KEY`/`SECRET` → first real revenue.
