@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T04:53+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.22 SOP #16 COMPLETE → posting queue extended to May 9; Edward posts threads #01~#16",
+  "updated": "2026-04-09T04:58+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.23 SOP #17 COMPLETE → posting queue extended to May 11; Edward posts threads #01~#17",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next blocker: Edward posts SOP #01 today to start the G5 compounding clock."
+      "text": "Posting queue: Apr 9 – May 11, 17 threads. Next blocker: Edward posts SOP #01..."
     },
     {
       "time": "just now",
-      "text": "- Queue extended: Apr 9 – May 9, 16 threads total."
+      "text": "- G4 0.5× default size, 2.0× if structure confirmed"
     },
     {
       "time": "just now",
-      "text": "- `docs/publish_thread_sop16_twitter.md` — 9-tweet thread: *\"You don't have a..."
+      "text": "- G3 L+1 mechanism must be named or suppress"
     },
     {
       "time": "just now",
-      "text": "- `docs/knowledge_product_16_information_edge_sop.md` — 4-gate SOP operationa..."
+      "text": "- G2 asymmetry ≥2.0 required"
     },
     {
       "time": "just now",
-      "text": "Shipped:"
+      "text": "- G1 classify: structural-lag / emotional / uninformed"
     }
   ],
   "stats": {
-    "daemon_cycles": 141,
+    "daemon_cycles": 142,
     "total_mds": 328,
     "dna_core_lines": 87
   }

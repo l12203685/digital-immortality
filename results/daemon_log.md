@@ -4392,3 +4392,17 @@ Highest-derivative gap: posting queue ends May 9 after SOP #16 — extend G5 com
 **Series now SOP #01~#17. Queue runs Apr 9 – May 11.**
 
 **Next blocker:** Edward posts SOP #01 on Apr 9 to start the G5 compounding clock.
+
+## Cycle 142 — 2026-04-08 20:58:53 UTC
+
+**Cycle 142 done.**
+
+Shipped **SOP #17 — Population Exploit & Contrarian Positioning** (operationalizes Kernel 4):
+
+- **G0** crowd consensus ≥50% → crowd formed  
+- **G1** classify: structural-lag / emotional / uninformed  
+- **G2** asymmetry ≥2.0 required  
+- **G3** L+1 mechanism must be named or suppress  
+- **G4** 0.5× default size, 2.0× if structure confirmed  
+
+Posting queue: **Apr 9 – May 11**, 17 threads. Next blocker: Edward posts SOP #01 today.
