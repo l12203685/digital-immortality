@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T15:27+08",
+  "updated": "2026-04-08T15:44+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "API Error: 529 {\"type\":\"error\",\"error\":{\"type\":\"overloaded_error\",\"message\":\"..."
+      "text": "Next: 202010."
     },
     {
-      "time": "27min ago",
-      "text": "Next: 202012."
+      "time": "just now",
+      "text": "Done. Branch 2.2 — 202011 distilled → MD-169~171 (171 MDs total):"
     },
     {
-      "time": "27min ago",
-      "text": "Done. 202101 → MD-163~165 (165 MDs total):"
+      "time": "just now",
+      "text": "`templates/dna_core.md`: 171 MDs. Next: 202010."
     },
     {
-      "time": "17min ago",
-      "text": "`templates/dna_core.md`: 165 MDs. Next: 202012."
+      "time": "just now",
+      "text": "202011 distill → MD-169~171 (171 MDs total):"
     },
     {
-      "time": "17min ago",
-      "text": "202101 distill → MD-163~165 (165 MDs total):"
+      "time": "just now",
+      "text": "`templates/dna_core.md`: 168 MDs. Next: 202011."
     }
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 165,
+    "total_mds": 171,
     "dna_core_lines": 76
   }
 }

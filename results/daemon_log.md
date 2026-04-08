@@ -1992,3 +1992,13 @@ API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Ove
 - **MD-171** 市場感=從價格跳動建直覺再學公式，順序顛倒則公式無錨 — 赤手空拳試盤的insight：工具是直覺的結晶不是替代；先感受邊界再學理論
 
 `templates/dna_core.md`: **171 MDs**. Next: 202010.
+
+## Cycle 8 — 2026-04-08 07:44:49 UTC
+
+Done. **Branch 2.2** — 202011 distilled → MD-169~171 (171 MDs total):
+
+- **MD-169** Range思維：交易分布不交易單次 — instance thinking ceiling < range thinking
+- **MD-170** EV注意力：90%的EV來源先掌握，不要被1%細節（blockers）分散
+- **MD-171** 市場感：赤手空拳試盤 insight — 直覺先於公式，順序顛倒則公式無錨
+
+Next: 202010.
