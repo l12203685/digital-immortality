@@ -4153,3 +4153,20 @@ External blockers remain: (1) `BINANCE_MAINNET_KEY/SECRET` → mainnet revenue; 
 - G5: Drawdown recovery — close → paper 5 sessions → 25% leverage scale-back
 
 9-tweet thread ready. **Series now SOP #01~#09.** Next candidate: SOP #10 — Decision-Making under Uncertainty / Information Asymmetry Edge (covers Edward kernel principles 1–5).
+
+## Cycle 134 — 2026-04-09T UTC
+
+**Branch 7.16** — SOP #10 shipped: `docs/knowledge_product_10_decision_uncertainty_sop.md` + `docs/publish_thread_sop10_twitter.md` — Decision-Making Under Uncertainty: 5 Edward Kernel Principles externalized.
+
+5 gates:
+- G0: Read derivative not level — change rate > current value (kernel 1)
+- G1: Map information asymmetry — structural/temporal/interpretive edge; if unnamed, no action (MD-141/140, kernel 2)
+- G2: Escalate to meta-strategy if object-level iteration > 3 cycles without improvement (MD-107/112, kernel 3)
+- G3: Population behavior → contrarian EV only with named structural reason for population error (MD-298/104, kernel 4)
+- G4: Default inaction; no edge = negative EV action; accumulate info while holding nothing (MD-96/326, kernel 5)
+
+Self-test scenario: BTC sideways SHORT ×30 ticks → 5 gates passed → $100 trial SHORT with pre-written kill.
+
+**Series now SOP #01~#10 ✅ — kernel series complete.** This is the foundational layer: the 5 principles that generate all other SOPs.
+
+External blockers: (1) `BINANCE_MAINNET_KEY/SECRET` → mainnet revenue; (2) Edward posts threads #01~#10.
