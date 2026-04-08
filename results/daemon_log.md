@@ -3413,3 +3413,7 @@ Branch 4.1 — ran `consistency_test.py` on `samuel_dna.md`:
 - Mainnet still blocked on BINANCE_MAINNET_KEY/SECRET
 
 Next: set mainnet keys → run first live tick ($100 cap, dual_ma, kill conditions active).
+
+## Cycle 95 — 2026-04-08 16:42:30 UTC
+
+Cycle 95 done. Branch 1.1: paper-live tick 14 — BTC=$71,409.55, signal=SHORT (consistent × 14 ticks, range $71.4k–$72.6k). Mainnet remains blocked on `BINANCE_MAINNET_KEY/SECRET`. Push succeeded.

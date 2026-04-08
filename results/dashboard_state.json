@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T00:41+08",
+  "updated": "2026-04-09T00:42+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）; 7.x 知識輸出 初始化完成",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
@@ -50,29 +50,29 @@
   ],
   "activity": [
     {
-      "time": "4min ago",
-      "text": "- Branch 4.1 unblocked at the framework level; remaining blocker is Samuel re..."
+      "time": "2026-04-09T UTC",
+      "text": "Next: set mainnet keys → run first live tick ($100 cap, dual_ma, kill conditi..."
     },
     {
-      "time": "4min ago",
-      "text": "- Edward baseline re-verified: 20/20 ALIGNED ✅"
+      "time": "2026-04-09T UTC",
+      "text": "- Mainnet still blocked on BINANCE_MAINNET_KEY/SECRET"
     },
     {
-      "time": "4min ago",
-      "text": "- Framework generalizes to non-Edward organisms ✓"
+      "time": "2026-04-09T UTC",
+      "text": "- tree updated: Branch 1.1 paper-live tick 14"
     },
     {
-      "time": "4min ago",
-      "text": "- 19/20 ALIGNED (1 expected divergence: Samuel's \"bias toward action\" DNA doe..."
+      "time": "2026-04-09T UTC",
+      "text": "- Consistent SHORT × 14 ticks, range $71.4k–$72.6k (entry bias validated)"
     },
     {
-      "time": "4min ago",
-      "text": "Branch 4.1 — ran `consistency_test.py` on `samuel_dna.md`:"
+      "time": "2026-04-09T UTC",
+      "text": "- `python -m trading.mainnet_runner --paper-live` → tick 14: BTC=71409.55, si..."
     }
   ],
   "stats": {
-    "daemon_cycles": 94,
+    "daemon_cycles": 95,
     "total_mds": 324,
-    "dna_core_lines": 409
+    "dna_core_lines": 76
   }
 }
