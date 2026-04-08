@@ -511,3 +511,17 @@ Done. Branch 2.2 advanced:
   3. **薪資談判先緩** — never give salary number on the spot; buy time, anchor later
 - `dna_core.md`: 24 → **27 micro-decisions**
 - Next: 202508
+
+## Cycle 24 — 2026-04-08T05:20 UTC
+
+**Branch 2.2 — 202508 JSONL distilled.**
+
+- Read 202508.jsonl (662 Edward substantive msgs, Aug 2025)
+- Top groups: g4 (Avalon/投資討論), g1 (廣播群), g2 (可可), g44 (ChatGPT), g5 (friends)
+- Focus: salary comparison math, knowledge-as-social-capital, investment framework independence
+- 3 micro-patterns NOT yet in dna_core.md:
+  1. **薪資精算=底線先確認** — "蝦皮8.5%調薪=115萬+，15%外跳底線=9.8萬/月"；offer比較前先自算留守成本，不靠感覺判大小
+  2. **知識=社交資本即時兌現** — 主動打包結構化知識輸出（BigQuery指南/颱風假分析/貓砂整理）；不等累積再給，即時轉換知識為關係資產
+  3. **13F=靈感不是跟單** — "從錄音檔剪出值得追問的那段，融合自己框架，生成獨立判斷"；跟單=edge不可移植；information asymmetry自己建
+- `dna_core.md`: 27 → **30 micro-decisions**
+- Branch 2.2: 202604✓ 202601✓ 202602✓ 202603✓ 202512✓ 202511✓ 202510✓ 202509✓ 202508✓; next: 202507
