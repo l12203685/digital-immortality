@@ -1138,3 +1138,13 @@ Cycle 51 done.
 - **MD-69** 決策=連續流程不是單點 — before deciding current step, think through entire downstream chain first (if task fails → what's湖中 → then派 choice); single-point decisions = blind spots
 
 `templates/dna_core.md`: **69 MDs**. Next: 202304.
+
+## Cycle 1 — 2026-04-08 04:59:32 UTC
+
+Cycle 51 done. **202305 → MD-67~69** written to `dna_core.md`:
+
+- **MD-67** 職涯=現金流先行 — stable cash flow first, side income second
+- **MD-68** OOS=1:1是前提不是結果 — 1:1 IS/OOS ratio is the load-bearing assumption, not a result
+- **MD-69** 決策=連續流程不是單點 — think through entire downstream chain before deciding current step
+
+`dna_core.md`: **69 MDs**. Next: 202304.
