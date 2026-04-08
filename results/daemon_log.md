@@ -1649,3 +1649,13 @@ Cycle 64 done. 202112 → **MD-127~129**:
 3. **MD-132** 密薪制=保密條款保護薪資底線 — confidentiality clause → can legally refuse payslip; when providing bank statement, pre-explain exceptional deductions; sequence: show low month first, follow with normal month; control anchor point
 
 `templates/dna_core.md`: **132 MDs**. Next: 202110.
+
+## Cycle 36 — 2026-04-08 05:51:27 UTC
+
+Cycle 65 done. **202111 → MD-130~132**:
+
+- **MD-130** 海龜四要素 — edge+risk+execution+simplicity; most profits from 2~3 trades/year → never miss a trend; any missing element nullifies the rest
+- **MD-131** 情報=囚徒困境 — high-stakes intel is Prisoner's Dilemma; repeat game → build mutual info trust > single exploit
+- **MD-132** 密薪制保護底線 — confidentiality clause blocks payslip demand; sequence low→high month to control anchor point
+
+`dna_core.md`: **132 MDs**. Next: 202110.
