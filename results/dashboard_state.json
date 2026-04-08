@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T22:54+08",
+  "updated": "2026-04-08T23:00+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Pushed to main. Next: deep ext pass on earlier periods or 201703+."
+      "text": "Next action: either fix the `generic_strategy_failure` boot test alignment (a..."
     },
     {
       "time": "just now",
-      "text": "Branch 2.2 ext pass on 201705+201704 (506 Edward msgs). Three new MDs written..."
+      "text": "Branch 2.3 re-validated at 303-MD scale: 13/14 ALIGNED (93%). One misalignmen..."
     },
     {
       "time": "just now",
-      "text": "Cycle 80 done."
+      "text": "Cycle 81 done."
     },
     {
       "time": "2026-04-08 UTC",
-      "text": "dna_core.md: 303 MDs. Next: deep pass on earlier months or 201703 ext."
+      "text": "Next highest derivative: fix `generic_strategy_failure` misalignment OR advan..."
     },
     {
       "time": "2026-04-08 UTC",
-      "text": "Branch 2.2 highest-derivative. 201705+201704 ext pass (506 Edward msgs). Dist..."
+      "text": "Branch 2.2 status confirmed COMPLETE (JSONL archive exhausted at 201703/20170..."
     }
   ],
   "stats": {
-    "daemon_cycles": 80,
+    "daemon_cycles": 81,
     "total_mds": 301,
     "dna_core_lines": 76
   }
