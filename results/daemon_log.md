@@ -1228,3 +1228,18 @@ Cycle 53 done.
 Also reconciled: 202303 (MD-73~75) was already done but tree was stale; backfilled.
 
 `templates/dna_core.md`: **78 MDs**. Next: 202301. Pushed.
+
+
+## Cycle 53 — 2026-04-08T20:00 UTC
+
+Branch 2.2 — gap reconcile + 202301 distill.
+
+**Gap fix**: 202302 (MD-76~78) already in file but tree showed "next: 202302" — reconciled.
+
+**202301.jsonl** (323 Edward msgs, Jan 2023) → 3 MDs written to `templates/dna_core.md`:
+
+- **MD-79** 交易員=創意×執行兩分法 — 「想出工具」和「做出工具」是獨立能力；大多數人只有其一；瓶頸交替出現；先診斷缺的是哪端再補
+- **MD-80** 策略拓展=先穩主商品再橫向 — 台指（主商品）先做深（多目標函數/月SOP/equity trading），再擴多商品；主商品未穩就橫向=掩蓋問題
+- **MD-81** 外部API=有硬截止日的風險項 — 關鍵API有強制升版日期；不追蹤=系統在特定日死亡；所有外部依賴必須作為帶截止日的風險項追蹤
+
+`templates/dna_core.md`: **81 MDs**. Next: 202212.
