@@ -1956,3 +1956,7 @@ Done. **202101 → MD-163~165** (165 MDs total):
 - **MD-165**: 交易員三階段=第二階段被存股論淘汰 — most people get washed out by "just index" narrative before reaching maturity
 
 Next: 202012.
+
+## Cycle 2 — 2026-04-08 07:06:24 UTC
+
+API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Overloaded"},"request_id":"req_011CZqt2favVDfcmoQMzsJaN"}
