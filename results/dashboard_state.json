@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T07:49+08",
+  "updated": "2026-04-09T07:54+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#34 COMPLETE → posting_queue.md updated (#01~#34, Apr 9–Jun 14); **x_launch_sequence.md created ✓** — first-post friction reduced to 15 min; Apr 9 = scheduled post date for SOP #01; **3 workbooks READY TO LIST** (Workbook #01 Strategy Development + Workbook #02 Portfolio Construction + Workbook #03 Execution & Sizing, $29 each, $87/buyer trilogy)",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions pre-committed)",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next blocker: Set `BINANCE_MAINNET_KEY/SECRET` → mainnet OR post SOP #01 thread."
+      "text": "Next blocker: mainnet keys OR post SOP #01 thread."
     },
     {
       "time": "just now",
-      "text": "- MFE still tick 31 at +$0.77; MFE/MAE=0.58x stable"
+      "text": "- P&L = +$0.52 on $100 — slight drift up, position profitable, MFE tick 31 ($..."
     },
     {
       "time": "just now",
-      "text": "- P&L: +$0.56 (+0.56%) on $100 — slight pullback from tick 33 ($71,083→$71,109)"
+      "text": "- BTC = $71,136.74, signal = SHORT (35 consecutive, 100%)"
     },
     {
       "time": "just now",
-      "text": "- Tick 34: BTC=$71,108.75, signal=SHORT (34 consecutive, 100%)"
+      "text": "Branch 1.1 (paper-live) — tick 35."
     },
     {
       "time": "just now",
-      "text": "Branch 1.1 (paper-live) — highest autonomous derivative. Branches 7 and mainn..."
+      "text": "Cycle 172 done."
     }
   ],
   "stats": {
-    "daemon_cycles": 171,
+    "daemon_cycles": 172,
     "total_mds": 330,
     "dna_core_lines": 87
   }
