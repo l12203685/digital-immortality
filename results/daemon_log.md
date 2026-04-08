@@ -3241,3 +3241,13 @@ Cycle 87 done.
 - **MD-312** 金融領域價值=知識附加工具非薪資本身 — primary ROI is knowledge about compounding/pricing/risk applied to personal finance, not salary
 
 Next: **201704 deep pass**.
+
+## Cycle 88 — 2026-04-08 UTC
+
+**Branch 2.2** highest-derivative. 201704 deep pass (91 Edward msgs). Distilled 3 new micro-decisions:
+
+- **MD-313**: 股息殖利率×持倉規模=固定支出替換器 — dividend yield × holding size = fixed expense replacement; financial independence achieved per-expense-item; 100萬 @ 4% = 4萬 dividend = covers 4萬 mortgage interest
+- **MD-314**: 媒體財報敘事=選擇性維度呈現 — media always picks most impressive dimension (amount/rate/vs-benchmark); decode by forcing all three simultaneously; "金額小就轉報酬率，報酬率小就寫金額，都小就說優於大盤"
+- **MD-315**: 大資本=免停損條件 — stop-loss necessity is function of capital scale; when dividend yield > typical annual drawdown%, holding without stop-loss has higher EV than forced exit at bottom
+
+**dna_core.md: 315 MDs.** Next: 201703 deep pass or consistency re-validate.
