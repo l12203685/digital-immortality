@@ -123,7 +123,7 @@
 - **8.5 Automation #3 — COMPLETE ✅** (cycle 130): coffee-vs-tea (#4: coffee before 13:00 / tea after 13:00) + portfolio-check (#5: 16:00 once daily, no earlier). All 5 SYSTEM_FAILURE decisions from decision_audit.py now pre-committed. Zero remaining recurring decision overhead.
 
 ## 當前 regime
-攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #19 + #20 COMPLETE → posting queue extended to May 17; Edward posts threads #01~#20; Domain 4 (社交圈) first SOP shipped (SOP #19); all 5 kernels now have standalone SOPs
+攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#20 COMPLETE → posting_queue.md updated (#01~#20, Apr 9–May 17); Edward posts threads; Domain 4 (社交圈) first SOP shipped (SOP #19); all 5 kernels have standalone SOPs ✅
 中性：2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)
 防禦：2.3 30/30 ALIGNED ✅, 4.1 partially unblocked (samuel_dna tested 19/20)
 

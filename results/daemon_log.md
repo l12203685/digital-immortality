@@ -4456,3 +4456,17 @@ Highest-derivative gap: queue ends May 13 after SOP #18 — Kernel 1 (看導數�
 - Kernel 5: SOP #18 (Inaction Bias)
 
 **Next blocker:** Edward posts SOP #01 on Apr 9 to start G5 compounding clock.
+
+## Cycle 145 — 2026-04-09T UTC
+
+**Cycle 145 done.**
+
+Highest-derivative gap: `posting_queue.md` stale (only #01~#16); `publish_thread_sop20_twitter.md` already existed but queue didn't reflect it.
+
+**What shipped:**
+- `docs/posting_queue.md` updated: title #01~#16 → **#01~#20**; rows #17~#20 added (May 11–May 17); 30-day target → 40-day; all 5 Kernel SOPs listed in completion criteria
+- `results/dynamic_tree.md` regime line updated: queue now correctly reflects #01~#20 Apr 9–May 17
+
+**Series: SOP #01~#20 COMPLETE. Queue: Apr 9 – May 17. All 5 Kernels covered.**
+
+**Next blocker:** Edward posts SOP #01 on Apr 9 to start G5 compounding clock.

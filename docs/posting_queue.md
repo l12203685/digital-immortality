@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#16
+# Twitter Posting Queue — SOP Series #01~#20
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -23,6 +23,10 @@
 | May 5 | #14 | publish_thread_sop14_twitter.md | "Most traders quit their job too early or never. Both are wrong." | pending |
 | May 7 | #15 | publish_thread_sop15_twitter.md | "Your backtest looks great. That's the problem." | pending |
 | May 9 | #16 | publish_thread_sop16_twitter.md | "You don't have an edge. You have a belief. These are not the same thing." | pending |
+| May 11 | #17 | publish_thread_sop17_twitter.md | "The crowd is usually wrong at exactly the worst time." | pending |
+| May 13 | #18 | publish_thread_sop18_twitter.md | "Most traders don't lose because they pick wrong. They lose because they trade when they shouldn't." | pending |
+| May 15 | #19 | publish_thread_sop19_twitter.md | "Most people manage relationships reactively. They invest when they need something." | pending |
+| May 17 | #20 | publish_thread_sop20_twitter.md | "The trend looked fine. Then it was over. You were looking at the wrong number." | pending |
 
 ---
 
@@ -42,7 +46,8 @@
 
 ---
 
-## 30-day compounding target (by May 9)
-- [ ] All 16 threads posted
+## 40-day compounding target (by May 17)
+- [ ] All 20 threads posted
 - [ ] G5 score ≥ 2/3
 - [ ] ≥1 inbound DM from someone with trading/quant background
+- [ ] All 5 Kernels represented: #19 (Kernel 1), #16 (Kernel 2), #10 (Kernel 3), #17 (Kernel 4), #18 (Kernel 5)
