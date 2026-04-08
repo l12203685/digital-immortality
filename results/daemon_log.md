@@ -2474,3 +2474,15 @@ Cycle 41 done.
 - **MD-234**: 急件技術諮詢 = 截止日×稀缺技能×無替代方案 = 按「無替代成本」定價
 
 Next: 201808.
+
+## Cycle 42 — 2026-04-08 UTC
+
+**Branch 2.2 — 201808 distill → MD-235~237 (237 MDs total)**
+
+- 201808.jsonl: 136 Edward substantive msgs; themes: job offer decision (CoinFul vs data scientist), poker theory deep dive (range construction, IP/OOP dynamics, thinking levels), work rights/exploitation
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-235** 職涯選擇關鍵=工作走向契合度優先薪資；薪資差1.5倍時仍選低薪可以是正確框架 — 個人評分系統>薪資排序；方向契合度(40%)+學習環境(30%)+薪資(30%)
+  - **MD-236** 撲克思維層級遞進=手牌vs手牌→手牌vs範圍→範圍vs範圍 — 學習應先確認所在層級再往上推；跳層=工具對不上問題；推廣到量化交易三層
+  - **MD-237** OOP天生少一條街的價值=先行動方有結構性信息劣勢 — 談判中先開價=OOP，應拖延讓對方先表態；必須先開價時，開高anchor補償劣勢
+
+`templates/dna_core.md`: **237 MDs**. Next: 201807.
