@@ -1063,3 +1063,15 @@ Cycle 48 done.
 - **MD-60** 平台=個人edge複利 — building Avalon百科/teaching platform forces precise model articulation; student questions = model gap detector; teaching platform = highest-leverage self-improvement path; not altruism, it's edge compounding
 
 `dna_core.md`: 60 MDs embedded. Next: 202307.
+
+## Cycle 23 — 2026-04-08 04:46:14 UTC
+
+Cycle 48 done.
+
+**Branch 2.2 — 202308 (Aug 2023, 230 msgs) → 3 MDs written to `dna_core.md`:**
+
+- **MD-58** 自動化=外部化配置 — params in registry/JSON, not hardcode; edit config not code
+- **MD-59** 修改前備份=紀律儀式 — date-stamp backup before any mutation; no backup = don't touch
+- **MD-60** 平台=個人edge複利 — teaching platform forces precise model articulation; student questions = gap detector; highest-leverage self-improvement
+
+60 MDs total. Next: 202307.
