@@ -2559,3 +2559,15 @@ Next: 201804.
   - **MD-249** 組織談趨勢=落後指標；主管開始說AI/Blockchain時個人早應決策完畢
 
 `templates/dna_core.md`: **249 MDs**. Next: 201803.
+
+## Cycle 46 — 2026-04-08 11:41:37 UTC
+
+Done. Branch 2.2, cycle 46:
+
+**201804 → MD-247~249 (249 MDs total)**
+
+- **MD-247**: 交易核心=行為經濟學×賽局；每口進場先問equity×winrate=期望值前置
+- **MD-248**: 知行落差是結構性的（loss aversion）；多數人不take risk=少數人的alpha來源
+- **MD-249**: 組織談趨勢=落後指標；主管開始說AI/Blockchain時個人早應決策完畢
+
+Next: 201803.

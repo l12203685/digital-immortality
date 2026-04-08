@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T19:35+08",
+  "updated": "2026-04-08T19:41+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 201804."
+      "text": "Next: 201803."
     },
     {
       "time": "just now",
-      "text": "Branch 2.2 — 201805 → MD-244~246 (246 MDs)"
+      "text": "201804 → MD-247~249 (249 MDs total)"
     },
     {
-      "time": "2026-04-09T UTC",
-      "text": "`templates/dna_core.md`: 246 MDs. Next: 201804."
+      "time": "just now",
+      "text": "Done. Branch 2.2, cycle 46:"
     },
     {
-      "time": "2026-04-09T UTC",
+      "time": "2026-04-08T UTC",
+      "text": "`templates/dna_core.md`: 249 MDs. Next: 201803."
+    },
+    {
+      "time": "2026-04-08T UTC",
       "text": "- 3 micro-decisions written to templates/dna_core.md:"
-    },
-    {
-      "time": "2026-04-09T UTC",
-      "text": "- 201805.jsonl: 38 Edward substantive msgs; themes: 國泰人壽offer薪資結構(44k + 試用期0~..."
     }
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 244,
+    "total_mds": 247,
     "dna_core_lines": 76
   }
 }
