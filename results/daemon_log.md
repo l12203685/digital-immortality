@@ -883,3 +883,17 @@ Next: **202404**.
 3. **衝突=精準陳述事實** — 面對投訴/威脅只陳述具體事實（時間/行為/前後矛盾說詞），不升高情緒；最後一句「不再多做回覆」關閉對話；精準退場比情緒辯論有效
 
 `dna_core.md`: 36 → **39 micro-decisions** (116 lines). Next: 202403.
+
+## Cycle 15 — 2026-04-08 04:12:01 UTC
+
+**Cycle 40 done.**
+
+Branch 2.2 — highest derivative (39 MDs still accumulating, 202403 next).
+
+202404 (16,957 Edward msgs, Apr 2024) distilled → MD-37~MD-39 written to `dna_core.md`:
+
+- **MD-37 實盤三原則** — track slippage, start tiny, stop-on-loss-streak; market always exists
+- **MD-38 投組架構分層** — equity→max lots→portfolio intraday→strategy weights→signal; four layers, each caps the next
+- **MD-39 衝突=精準陳述事實** — state facts precisely (time/behavior/contradictions), then close with "no further reply"; precision beats emotion
+
+`dna_core.md`: 36 → **39 MDs** (116 lines). Next: 202403.
