@@ -3718,3 +3718,15 @@ Action: wrote `docs/publish_thread_sop03_twitter.md` (12 tweets, ready to post).
 Full SOP series (#01–#04 docs) + all 3 publish threads (#01–#03) now ready.
 Next: Edward posts SOP #01 thread → SOP #02 → SOP #03 on X; draft SOP #04 (Kill Decision Tree) thread.
 dynamic_tree.md: Branch 7.9 added, regime updated.
+
+## Cycle 113 — 2026-04-08 18:17:19 UTC
+
+**Cycle 113 done.**
+
+**Branch 7.9** — `docs/publish_thread_sop03_twitter.md` created (12 tweets, post-ready).
+
+Highest derivative: SOP #01 and #02 threads were queued for posting but #03 was the missing piece to complete the full series. Now all 3 threads are ready to fire in sequence.
+
+- G0: L/S pool balance → G1: historical leverage → G2: edge_ratio gate → G3: first-principles → G4: stop-first sizing → G5: formula → G6: trial vs full → G7: order checklist → G8: correlation check → kill conditions → close
+
+**Next:** Edward posts #01→#02→#03 on X; draft SOP #04 (Kill Decision Tree) thread.
