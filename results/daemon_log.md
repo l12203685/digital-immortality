@@ -4641,3 +4641,17 @@ Highest-derivative gap: queue ended May 27 (SOP #25). No SOP on walk-forward val
 **Series: SOP #01~#26 COMPLETE. Queue: Apr 9–May 29.**
 
 **Next blocker:** Edward posts SOP #01 to start G5 compounding clock.
+
+## Cycle 151 — 2026-04-08 21:53:28 UTC
+
+**Cycle 151 done.**
+
+Gap: queue ended May 27 (SOP #25). No standalone SOP on walk-forward validation despite MD-97/98/143 backing — the methodology that validates everything else had no teachable product.
+
+**Shipped:**
+- `docs/knowledge_product_26_walkforward_validation_sop.md` — 5 gates: G0 structure lock → G1 IS/OOS split + ≥6 windows → G2 OOS Sharpe ≥60% IS → G3 regime decomposition → G4 parameter stability → G5 deployment contract with kill conditions
+- `docs/publish_thread_sop26_twitter.md` — hook: *"Your backtest survived the past. But did it survive data it never saw?"*
+- Queue extended to **May 29** (#01~#26, 50-day target)
+- Committed and pushed.
+
+**Next blocker:** Edward posts SOP #01.
