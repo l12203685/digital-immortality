@@ -1468,3 +1468,16 @@ Cycle 59 done.
 - MD-108: 技術合作=角色邊界先書面確認 — confirm ownership/scope/exit before any code collaboration
 
 `dna_core.md`: **108 MDs**. Next: 202204.
+
+## Cycle 60 — 2026-04-09T00:00 UTC
+
+**Branch 2.2 — 202205 JSONL distilled.**
+
+- Read 202205.jsonl (331 Edward msgs, May 2022)
+- Key threads: g1 (probability/game theory debate), g154 (strategy breadth vs depth), g92 (quitting trading firm — income/cognition link), g3 (portfolio sizing), g138 (transaction cost analysis)
+- 3 micro-patterns written to `templates/dna_core.md`:
+  1. **MD-109** 機率估計=後驗更新，非固定先驗 — even given 1/3 objective prior, true probability is Bayesian-updated from observations; market decisions require posterior not prior
+  2. **MD-110** 策略延伸=深度×廣度兩軸並進 — depth (position scaling, +EV) and breadth (multi-instrument, -volatility) are independent axes; expand breadth first, then depth on the lower-vol base
+  3. **MD-111** 穩定收入=策略開發的認知資源先決條件 — no stable income → poor sleep → impaired cognition → strategy development becomes unreliable; economic security is cognitive resource supply, not emotional management
+
+`dna_core.md`: 108 → **111 MDs**. Next: 202204.
