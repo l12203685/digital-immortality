@@ -1200,3 +1200,17 @@ Cycle 52 done.
 - **MD-75** 權益曲線=槓桿觸發器 — equity curve's 1.5σ Bollinger Band position IS the regime signal; no extra parameter
 
 Also reconciled gap: 202304 (MD-70~72) was already in file but tree was stale — both fixed. Next: **202302**.
+
+## Cycle 27 — 2026-04-08T20:00 UTC
+
+Cycle 53 done.
+
+**Branch 2.2 — 202302 (164 Edward msgs, Feb 2023) → 3 MDs written to templates/dna_core.md:**
+
+- **MD-76** 面試感謝信=補答案而非道謝 — thank-you letter = gap-filler not courtesy; address unanswered/incomplete interview questions directly
+- **MD-77** 知識=反常識壓縮 — best knowledge card format: "They Say X, I Say Y"; extract the counterintuitive insight first
+- **MD-78** 指標=先判Regime再選型 — no indicator is universally applicable; classify regime (trending/ranging) BEFORE selecting indicator type
+
+Also backfilled: 202303 (MD-73~75) was done in prior unlogged session; tree updated to reflect reality.
+
+`templates/dna_core.md`: **78 MDs**. Next: 202301.
