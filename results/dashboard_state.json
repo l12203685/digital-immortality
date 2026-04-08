@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T21:21+08",
+  "updated": "2026-04-08T21:32+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,23 +51,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "- Blocker unchanged: `BINANCE_MAINNET_KEY` + `SECRET` → live at $100 cap"
+      "text": "- Blocker unchanged: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → go li..."
     },
     {
       "time": "just now",
-      "text": "- Branch 2.3: consistency test re-verified 8/8 ALIGNED at 273-MD scale"
+      "text": "- Signal has held across ~$1k range for 11 ticks — regime evidence very strong"
     },
     {
       "time": "just now",
-      "text": "- Branch 1.1: paper-live tick 10, BTC=72,459.40, SHORT ×10 consistent (range ..."
+      "text": "- Branch 1.1 (highest-derivative): paper-live tick 11, BTC=72,332.10, SHORT ×..."
     },
     {
       "time": "just now",
-      "text": "Cycle 63 done."
+      "text": "Cycle 64 done."
     },
     {
-      "time": "just now",
-      "text": "- Unblocking condition unchanged: set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNE..."
+      "time": "1min ago",
+      "text": "- Unblocking condition: set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` ..."
     }
   ],
   "stats": {

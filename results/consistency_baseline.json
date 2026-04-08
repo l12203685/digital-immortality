@@ -2,8 +2,8 @@
   "meta": {
     "dna_file": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\example_dna.md",
     "organism": "[Your Name]",
-    "generated_at": "2026-04-08T21:20:29.408503",
-    "scenario_count": 20,
+    "generated_at": "2026-04-08T21:29:20.482114",
+    "scenario_count": 22,
     "scenario_source": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\generic_boot_tests.json",
     "principles_count": 12,
     "use_memory": false
@@ -133,7 +133,7 @@
       "id": "organism_11",
       "domain": "communication",
       "scenario": "A close friend asks for your quick take on their new business idea during a 10-minute coffee chat. You have reservations but haven't fully analyzed it. Do you give a hedged multi-paragraph analysis, or a direct 10-second verdict? What exactly do you say first?",
-      "deterministic_response": "On communication, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "deterministic_response": "On communication, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nLEAD_WITH_VERDICT — state your position immediately; the first sentence must be the conclusion. Reply length is an inverse confidence indicator: say it in one sentence. 3-second intuition precedes analysis — trust it unless borderline analysis provides 2x confirmation.",
       "principles_used": [
         "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
         "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
@@ -263,6 +263,34 @@
       ],
       "expected_decision": "PAUSE_AND_DIAGNOSE",
       "expected_reasoning": "Focus on rate of change, not absolute level. A 3x deterioration in a key metric is a regime-change signal. Apply your principles about predefined failure conditions, when inaction becomes dangerous, and meta-level management of your strategies.",
+      "source": "boot_test"
+    },
+    {
+      "id": "generic_verdict_first",
+      "domain": "communication",
+      "scenario": "A colleague asks your opinion on their trading strategy mid-presentation. Five people are watching. You have a clear reservation. Do you lead with your reservation immediately, or first summarize what they said, then list pros, then mention the concern at the end?",
+      "deterministic_response": "On communication, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nLEAD_WITH_VERDICT — state your position immediately; the first sentence must be the conclusion. Reply length is an inverse confidence indicator: say it in one sentence. 3-second intuition precedes analysis — trust it unless borderline analysis provides 2x confirmation.",
+      "principles_used": [
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "What you decided"
+      ],
+      "expected_decision": "LEAD_WITH_VERDICT",
+      "expected_reasoning": "Apply MD-274: verdict first, always. The first sentence must be the conclusion, not context-setting. Leading with 'I have a concern about X' is correct; leading with 'Well, there are several dimensions to consider...' is the failure pattern. Length of response inversely signals confidence (MD-275).",
+      "source": "boot_test"
+    },
+    {
+      "id": "generic_intuition_primacy",
+      "domain": "communication",
+      "scenario": "You get a 3-second gut feeling that a proposed deal is wrong. You have time for a 10-minute analysis. The analysis comes back borderline-positive. Do you override your intuition?",
+      "deterministic_response": "On communication, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nLEAD_WITH_VERDICT — state your position immediately; the first sentence must be the conclusion. Reply length is an inverse confidence indicator: say it in one sentence. 3-second intuition precedes analysis — trust it unless borderline analysis provides 2x confirmation.",
+      "principles_used": [
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "What you decided"
+      ],
+      "expected_decision": "TRUST_INTUITION_UNLESS_2X_EVIDENCE",
+      "expected_reasoning": "Apply MD-276: intuition precedes reasoning. 3-second gut = compressed pattern recognition. When analysis says YES but intuition says NO, require 2x positive evidence to override (per the conflict rule). Borderline-positive analysis does not clear that threshold. Default: trust the 3-second read.",
       "source": "boot_test"
     }
   ]

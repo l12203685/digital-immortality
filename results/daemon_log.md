@@ -2926,3 +2926,11 @@ Blocker remains: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` needed to go l
 - Unblocking condition: set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → `python -m trading.mainnet_runner --tick` → go live $100 cap
 
 **Cycle 64 done.**
+
+## Cycle 65 — 2026-04-08 13:32:14 UTC
+
+**Cycle 64 done.**
+
+- **Branch 1.1** (highest-derivative): paper-live tick 11, BTC=72,332.10, SHORT ×11 consecutive (range $71.6k–$72.6k)
+- Signal has held across ~$1k range for 11 ticks — regime evidence very strong
+- Blocker unchanged: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → go live at $100 cap

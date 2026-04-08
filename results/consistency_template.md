@@ -1,7 +1,7 @@
 # Cross-Instance Consistency Test
 **DNA**: [Your Name]
-**Generated**: 2026-04-08T21:20:29.409754
-**Scenarios**: 20
+**Generated**: 2026-04-08T21:29:20.483187
+**Scenarios**: 22
 
 ## Instructions
 
@@ -407,6 +407,52 @@
 **Expected decision**: PAUSE_AND_DIAGNOSE
 
 **Expected reasoning**: Focus on rate of change, not absolute level. A 3x deterioration in a key metric is a regime-change signal. Apply your principles about predefined failure conditions, when inaction becomes dangerous, a
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 21: COMMUNICATION (generic_verdict_first)
+
+**Question**: A colleague asks your opinion on their trading strategy mid-presentation. Five people are watching. You have a clear reservation. Do you lead with your reservation immediately, or first summarize what they said, then list pros, then mention the concern at the end?
+
+**Deterministic baseline**: On communication, [Your Name]'s decision framework yields:
+
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
+ ...
+
+**Expected decision**: LEAD_WITH_VERDICT
+
+**Expected reasoning**: Apply MD-274: verdict first, always. The first sentence must be the conclusion, not context-setting. Leading with 'I have a concern about X' is correct; leading with 'Well, there are several dimension
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 22: COMMUNICATION (generic_intuition_primacy)
+
+**Question**: You get a 3-second gut feeling that a proposed deal is wrong. You have time for a 10-minute analysis. The analysis comes back borderline-positive. Do you override your intuition?
+
+**Deterministic baseline**: On communication, [Your Name]'s decision framework yields:
+
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
+ ...
+
+**Expected decision**: TRUST_INTUITION_UNLESS_2X_EVIDENCE
+
+**Expected reasoning**: Apply MD-276: intuition precedes reasoning. 3-second gut = compressed pattern recognition. When analysis says YES but intuition says NO, require 2x positive evidence to override (per the conflict rule
 
 ### Session Answers
 
