@@ -969,3 +969,15 @@ Branch 2.2 — 202401 (659 Edward msgs, Jan 2024) → MD-43~MD-45 written:
 - **MD-45 期望值正是第一關** — E(V)>0 is the first gate, not annualized return or Sharpe; any positive-EV strategy is worth iterating
 
 `dna_core.md`: 122 lines, 45 MDs. Next: 202312.
+
+## Cycle 19 — 2026-04-08T15:35 UTC
+
+**Cycle 44 done.**
+
+Branch 2.2 — 202312 (33 substantive Edward msgs, Dec 2023) → MD-46~MD-48 written to `dna_core.md`:
+
+- **MD-46 交易=情境識別** — alpha不在資料量，在情境識別精度；「在怎麼樣的情境下做到你該做的」
+- **MD-47 因子失效→研究方法護城河** — 因子必然失效，研究方法本身才是持久護城河（現象定義→驗證→拆解→理論→雜訊過濾）
+- **MD-48 知識=時間密度乘積** — 真正內化市場需大量重複觀察（3年×每日前百股票）；無法跳過時間密度
+
+`dna_core.md`: 125 lines, **48 MDs**. Next: 202311.
