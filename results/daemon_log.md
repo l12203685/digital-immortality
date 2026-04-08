@@ -299,3 +299,13 @@ Branch 1.1 — added `--paper-live` to `mainnet_runner.py`:
 - Credential gate still pending; accumulating signal evidence
 - 2 paper-live ticks logged to `results/paper_live_log.jsonl`
 - Next: provide mainnet credentials → `--tick` for live trade
+
+## Cycle 4 — 2026-04-08 01:43:59 UTC
+
+**Cycle 14 done.**
+
+Branch 1.1 (highest derivative — credential-gated, so unblocking with evidence accumulation):
+- `--paper-live` tick 2: BTC=71,484.80, signal=**SHORT** — consistent × 2
+- 2 ticks logged to `results/paper_live_log.jsonl`
+
+**Gate to live:** set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → `python -m trading.mainnet_runner --tick`
