@@ -3012,3 +3012,15 @@ Cycle 71 done.
 - templates/dna_core.md: **285 MDs**
 - dynamic_tree.md updated: cycle 72, 201712 logged, next: consistency re-validation at 285-MD scale
 - Unblocking condition unchanged: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → go live $100 cap
+
+## Cycle 69 — 2026-04-08 13:58:14 UTC
+
+Cycle 72 done.
+
+**Branch 2.2 extension** — 201712 JSONL (169 msgs) → **MD-283~285** written:
+
+- **MD-283**: Buy-to-Hold vs Buy-to-Sell先分類；混淆框架=策略錯亂
+- **MD-284**: 模糊計畫=時間成本陷阱；書面化「A年做B→C條件換D資源」才投入
+- **MD-285**: 關鍵人不可或缺性=必須保密；洩漏=對方重新定價=籌碼流失
+
+**dna_core.md: 285 MDs** | next: consistency re-validation at 285-MD scale or check 201711 gaps

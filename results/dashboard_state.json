@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T21:50+08",
+  "updated": "2026-04-08T21:58+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "dna_core.md: 282 MDs | next: 201712"
+      "text": "dna_core.md: 285 MDs | next: consistency re-validation at 285-MD scale or che..."
     },
     {
       "time": "just now",
-      "text": "Branch 2.2 (highest-derivative): 201801 JSONL (43 msgs, Jan 2018) → MD-280~28..."
+      "text": "Branch 2.2 extension — 201712 JSONL (169 msgs) → MD-283~285 written:"
     },
     {
       "time": "2026-04-08 UTC",
-      "text": "Branch 2.2 (highest-derivative): 201801 JSONL (43 Edward msgs, Jan 2018) → MD..."
+      "text": "- Unblocking condition unchanged: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SE..."
     },
     {
-      "time": "6min ago",
-      "text": "- Blocker unchanged: set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → `..."
+      "time": "2026-04-08 UTC",
+      "text": "- dynamic_tree.md updated: cycle 72, 201712 logged, next: consistency re-vali..."
     },
     {
-      "time": "6min ago",
-      "text": "- Signal has held through ~$1k price range — strongest regime evidence yet"
+      "time": "2026-04-08 UTC",
+      "text": "- templates/dna_core.md: 285 MDs"
     }
   ],
   "stats": {
-    "daemon_cycles": 71,
-    "total_mds": 280,
+    "daemon_cycles": 72,
+    "total_mds": 283,
     "dna_core_lines": 76
   }
 }
