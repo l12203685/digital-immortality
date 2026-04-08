@@ -1289,3 +1289,15 @@ Branch 2.2 — gap reconcile (202212) + 202211 distill.
 - **MD-87** 馬丁=自我否定前提 — Martingale requires infinite capital, which is the same condition where the goal becomes irrelevant; any 'works if X' where X = success condition = circular, reject
 
 templates/dna_core.md: **87 MDs**. Next: 202210.
+
+## Cycle 4 — 2026-04-08 05:13:50 UTC
+
+Cycle 54 done.
+
+**Branch 2.2** — gap reconcile (202212 already had MD-82~84) + 202211 distilled:
+
+- **MD-85** 停利=Session振幅×賺賠比反算停損 — TP from amplitude × R:R, back-solve stop, then find entry at key S/R
+- **MD-86** 投組建構=互補性貪心算法 — greedy portfolio: alternate long/short by max storm-ratio improvement (avoids 2^N brute force)
+- **MD-87** 馬丁=自我否定前提 — requires infinite capital, which is the same condition where the goal becomes pointless; circular premise = strategy diagnosis signal
+
+`dna_core.md`: **87 MDs**. Next: **202210**.
