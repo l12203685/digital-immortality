@@ -4406,3 +4406,18 @@ Shipped **SOP #17 — Population Exploit & Contrarian Positioning** (operational
 - **G4** 0.5× default size, 2.0× if structure confirmed  
 
 Posting queue: **Apr 9 – May 11**, 17 threads. Next blocker: Edward posts SOP #01 today.
+
+## Cycle 143 — 2026-04-09T UTC
+
+**Cycle 143 done.**
+
+Highest-derivative gap: posting queue ends May 11 after SOP #17 — extend G5 compounding clock.
+
+**What shipped:**
+- `docs/knowledge_product_18_inaction_bias_sop.md` — 5-gate Idle Capital Protocol operationalizing Kernel 5 (bias toward inaction): G0 name edge in one sentence (structural/temporal/interpretive) / G1 asymmetry ≥2.0 (50% size if 1.0–2.0) / G2 friction cost pre-modeled net EV ≥1.5× / G3 regime aligned / G4 real opportunity cost (FOMO/boredom = IDLE); default state=IDLE; backing MDs: MD-96/108/326/141/112/104
+- `docs/publish_thread_sop18_twitter.md` — 9-tweet thread: *"Most traders don't lose because they pick wrong. They lose because they trade when they shouldn't."*
+- Posting queue extended: **Apr 9 – May 13**, 18 threads total
+
+**Series now SOP #01~#18. Queue runs Apr 9 – May 13.**
+
+**Next blocker:** Edward posts SOP #01 on Apr 9 to start the G5 compounding clock.
