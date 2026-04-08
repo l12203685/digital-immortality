@@ -677,6 +677,8 @@ def check_alignment_with_memory(
         or (expected == "bet_fractional_kelly" and ("fraction" in resp_lower or "half" in resp_lower or "kelly" in resp_lower or "reduce" in resp_lower or "volatility" in resp_lower or "not full" in resp_lower or "半kelly" in resp_lower or "降波動" in resp_lower))
         or (expected == "calculate_income_target_from_yield" and ("yield" in resp_lower or "dividend" in resp_lower or "income" in resp_lower or "capital" in resp_lower or "殖利率" in resp_lower or "配息" in resp_lower or "替換" in resp_lower or "milestone" in resp_lower or "target" in resp_lower))
         or (expected == "decode_all_dimensions_not_one" and ("dimension" in resp_lower or "decode" in resp_lower or "all" in resp_lower or "estimate" in resp_lower or "benchmark" in resp_lower or "absolute" in resp_lower or "percent" in resp_lower or "miss" in resp_lower or "三個維度" in resp_lower or "選擇性" in resp_lower or "全部" in resp_lower))
+        or (expected == "hold_when_yield_exceeds_drawdown" and ("hold" in resp_lower or "yield" in resp_lower or "dividend" in resp_lower or "drawdown" in resp_lower or "recovery" in resp_lower or "stop" in resp_lower or "scale" in resp_lower or "免停損" in resp_lower or "殖利率" in resp_lower or "持有" in resp_lower))
+        or (expected == "compare_absolute_cashflow_same_capital" and ("cashflow" in resp_lower or "cash flow" in resp_lower or "absolute" in resp_lower or "share" in resp_lower or "dividend" in resp_lower or "capital" in resp_lower or "shares" in resp_lower or "配息" in resp_lower or "現金流" in resp_lower or "股數" in resp_lower or "相同資本" in resp_lower))
     )
 
     if aligned:

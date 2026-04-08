@@ -1,7 +1,7 @@
 # Cross-Instance Consistency Test
 **DNA**: [Your Name]
-**Generated**: 2026-04-09T00:21:24.197579
-**Scenarios**: 30
+**Generated**: 2026-04-09T00:28:36.625298
+**Scenarios**: 32
 
 ## Instructions
 
@@ -628,6 +628,50 @@
 **Expected decision**: DECODE_ALL_DIMENSIONS_NOT_ONE
 
 **Expected reasoning**: Apply MD-314: 媒體財報敘事=選擇性維度. Media picks the single most impressive number (%, absolute, vs last quarter, vs estimate — whichever is largest). The correct move is to force all three dimensions simultan
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 31: CAPITAL_ALLOCATION (generic_large_capital_no_stoploss)
+
+**Question**: An investor holds a large-cap dividend stock with a stable 4.5% annual yield. The position is 3% of total capital. The stock drops 40% in a market downturn. A friend says 'you must cut losses — stop-loss is always required'. Do you sell?
+
+**Deterministic baseline**: On capital_allocation, [Your Name]'s decision framework yields:
+
+  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi....
+
+**Expected decision**: HOLD_WHEN_YIELD_EXCEEDS_DRAWDOWN
+
+**Expected reasoning**: Apply MD-315: 大資本=免停損條件. Stop-loss necessity is a function of capital scale and yield stability. When: (1) dividend yield is stable and predictable; (2) single position < 5% of total capital; (3) hold
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 32: CAPITAL_ALLOCATION (generic_stock_cashflow_comparison)
+
+**Question**: You have 500,000 to invest for dividend income. Stock A has a 4.8% yield at price 100/share. Stock B has a 4.6% yield at price 20/share. A friend says 'just pick the higher yield — Stock A wins'. How do you actually compare them?
+
+**Deterministic baseline**: On capital_allocation, [Your Name]'s decision framework yields:
+
+  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi....
+
+**Expected decision**: COMPARE_ABSOLUTE_CASHFLOW_SAME_CAPITAL
+
+**Expected reasoning**: Apply MD-317: 股票選擇=相同資本下現金流比較. When yields are similar, price level affects share count, which changes absolute annual cashflow. Correct comparison: Stock A: 500,000 / 100 = 5,000 shares × (100 × 4.8%
 
 ### Session Answers
 

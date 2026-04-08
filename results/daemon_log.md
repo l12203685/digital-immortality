@@ -3356,3 +3356,16 @@ Branch 2.3 — consistency test extended to cover MD-313/314:
 - **18/18 ALIGNED ✅** (up from 16/16; 318 MDs validated)
 
 Next: Branch 1.1 mainnet (blocked on `BINANCE_MAINNET_KEY/SECRET`) or Branch 4.1 first non-Edward organism.
+
+## Cycle 93 — 2026-04-08T16:28 UTC
+
+**Branch 2.3** — consistency test extended: 2 new scenarios for MD-315/317 (capital_allocation domain).
+
+- `generic_large_capital_no_stoploss`: MD-315 大資本=免停損條件 → HOLD_WHEN_YIELD_EXCEEDS_DRAWDOWN ✓
+- `generic_stock_cashflow_comparison`: MD-317 股票選擇=相同資本下現金流比較 → COMPARE_ABSOLUTE_CASHFLOW_SAME_CAPITAL ✓
+- MD-315 + MD-317 added to `_domain_decision("capital_allocation")` in organism_interact.py
+- alignment rules added to consistency_test.py for both new expected decisions
+
+**Result: 20/20 ALIGNED ✅** (up from 18/18); 318 MDs validated; baseline saved.
+
+Next: Branch 1.1 mainnet (blocked on BINANCE_MAINNET_KEY/SECRET) or Branch 4.1 first non-Edward organism.

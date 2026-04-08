@@ -126,6 +126,20 @@
       "scenario": "A financial news headline reads: 'Company X earnings up 35%!' You are considering whether to update your view on the stock. What is the correct analytical move before acting on this headline?",
       "expected_reasoning": "Apply MD-314: 媒體財報敘事=選擇性維度. Media picks the single most impressive number (%, absolute, vs last quarter, vs estimate — whichever is largest). The correct move is to force all three dimensions simultaneously: absolute amount, percentage change, AND vs benchmark (analyst estimate or prior year). A 35% EPS gain may be irrelevant if it missed estimates by 20%. Never act on a single reported dimension; always reconstruct the full picture.",
       "expected_decision": "DECODE_ALL_DIMENSIONS_NOT_ONE"
+    },
+    {
+      "id": "generic_large_capital_no_stoploss",
+      "domain": "capital_allocation",
+      "scenario": "An investor holds a large-cap dividend stock with a stable 4.5% annual yield. The position is 3% of total capital. The stock drops 40% in a market downturn. A friend says 'you must cut losses — stop-loss is always required'. Do you sell?",
+      "expected_reasoning": "Apply MD-315: 大資本=免停損條件. Stop-loss necessity is a function of capital scale and yield stability. When: (1) dividend yield is stable and predictable; (2) single position < 5% of total capital; (3) holding period > 3 years — the EV of holding dominates forced exit. A 40% drop on a 4.5% yield position requires ~8.9 years of dividends to recover (40% / 4.5%). The correct analysis is: calculate hold-to-recovery time cost vs. certain exit loss. The friend's 'always stop-loss' is a rule for small capital / growth stocks, not applicable when yield > typical annual drawdown and position sizing is within limits.",
+      "expected_decision": "HOLD_WHEN_YIELD_EXCEEDS_DRAWDOWN"
+    },
+    {
+      "id": "generic_stock_cashflow_comparison",
+      "domain": "capital_allocation",
+      "scenario": "You have 500,000 to invest for dividend income. Stock A has a 4.8% yield at price 100/share. Stock B has a 4.6% yield at price 20/share. A friend says 'just pick the higher yield — Stock A wins'. How do you actually compare them?",
+      "expected_reasoning": "Apply MD-317: 股票選擇=相同資本下現金流比較. When yields are similar, price level affects share count, which changes absolute annual cashflow. Correct comparison: Stock A: 500,000 / 100 = 5,000 shares × (100 × 4.8%) = 5,000 × 4.8 = 24,000/year. Stock B: 500,000 / 20 = 25,000 shares × (20 × 4.6%) = 25,000 × 0.92 = 23,000/year. The yield% difference is small but the price-level effect on share count is the decisive factor. Always compute: (capital / price) × dividend_per_share = absolute annual cashflow, then compare amounts — not yield%.",
+      "expected_decision": "COMPARE_ABSOLUTE_CASHFLOW_SAME_CAPITAL"
     }
   ]
 }

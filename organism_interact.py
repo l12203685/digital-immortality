@@ -713,16 +713,20 @@ def _domain_decision(domain: str, principle_text: str) -> str:
             "A single reported dimension is insufficient to update your view."
         ),
         "capital_allocation": (
-            "COMPARE_RATES_NOT_AMOUNTS / DCA_IS_DEFAULT_EXECUTION / CALCULATE_INCOME_TARGET_FROM_YIELD — "
+            "COMPARE_RATES_NOT_AMOUNTS / DCA_IS_DEFAULT_EXECUTION / CALCULATE_INCOME_TARGET_FROM_YIELD / HOLD_WHEN_YIELD_EXCEEDS_DRAWDOWN / COMPARE_ABSOLUTE_CASHFLOW_SAME_CAPITAL — "
             "MD-313: 股息殖利率×持倉規模=固定支出替換器. target_income / yield% = required_capital milestone. "
+            "MD-315: 大資本=免停損條件. stop-loss necessity = f(capital scale, yield stability). When dividend yield > typical annual drawdown AND position < 5% total capital AND holding period > 3yr, hold dominates forced exit. Calculate hold-to-recovery time vs certain exit loss. "
             "MD-316: 還債vs投資決策=比較利率%不比較絕對金額. If investment yield% > loan rate%, deploy capital in the asset. "
+            "MD-317: 股票選擇=相同資本下現金流比較. When yields% are similar, compute (capital / price) × dividend_per_share = absolute annual cashflow, then compare amounts — not yield%. "
             "MD-318: 分批買進=分析通過後執行策略的預設答案. Once analysis clears (yield/survival/cashflow), "
             "execution defaults to DCA immediately — 'wait for dip' re-introduces a timing loop the DCA rule eliminates. "
             "Separate 'which asset?' (analysis) from 'how to buy?' (execution)."
             if (ev_signal or stability_signal) else
             "COMPARE_RATES_NOT_AMOUNTS — compare yield% vs loan rate%, not absolute savings amount. "
             "DCA_IS_DEFAULT_EXECUTION — when analysis is complete, start DCA immediately, not after a dip. "
-            "CALCULATE_INCOME_TARGET_FROM_YIELD — target_income / yield% = required_capital; convert abstract goals to capital milestones."
+            "CALCULATE_INCOME_TARGET_FROM_YIELD — target_income / yield% = required_capital; convert abstract goals to capital milestones. "
+            "HOLD_WHEN_YIELD_EXCEEDS_DRAWDOWN — when yield > drawdown% and position sizing is safe, hold dominates stop-loss. "
+            "COMPARE_ABSOLUTE_CASHFLOW_SAME_CAPITAL — same capital invested: compute shares × dividend_per_share for each option, compare absolute cashflow amounts."
         ),
     }
     return decisions.get(domain, "Decision: apply core principles to the specific trade-offs in this scenario.")
