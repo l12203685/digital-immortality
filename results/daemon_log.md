@@ -279,3 +279,14 @@ Branch 1.1 — `--dry-run` was silently broken (credential gate fired before dry
 - Runs dual_ma signal, logs to `results/paper_live_log.jsonl`
 - Tick 1: BTC=71509.90 USDT, signal=SHORT
 - Gate to live unchanged: set BINANCE_MAINNET_KEY/SECRET → `--tick`
+
+## Cycle 3 — 2026-04-08 01:41:47 UTC
+
+**Cycle 13 done.**
+
+Branch 1.1 — added `--paper-live` to `mainnet_runner.py`:
+- Fetches real BTC/USDT:USDT daily OHLCV from Binance public API (no credentials)
+- Runs `dual_ma` signal, logs to `results/paper_live_log.jsonl`
+- First tick: `BTC=71,509.90 USDT, signal=SHORT`
+
+**Next gate:** provide `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → run `--tick` for live trades.

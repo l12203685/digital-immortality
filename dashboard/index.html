@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>數位永生 Dashboard</title>
+<title>數位永生 Mind Map</title>
 <style>
 :root {
   --bg: #1a1a2e;
@@ -18,6 +18,7 @@
   --yellow: #fbbf24;
   --grey: #6b7280;
   --blue: #60a5fa;
+  --purple: #a78bfa;
   --border: #2a2a4a;
   --mono: 'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
 }
@@ -30,43 +31,43 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.6;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Header */
 .header {
   background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card-alt) 100%);
   border-bottom: 1px solid var(--border);
-  padding: 1.2rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+  flex-shrink: 0;
 }
 
 .header h1 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--text-bright);
   font-weight: 600;
 }
 
-.header h1 span {
-  color: var(--accent);
-}
+.header h1 span { color: var(--accent); }
 
 .header-meta {
   display: flex;
   gap: 1.5rem;
   align-items: center;
   font-family: var(--mono);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-dim);
 }
 
-.header-meta .clock {
-  color: var(--blue);
-}
+.header-meta .clock { color: var(--blue); }
 
-.header-meta .refresh-dot {
+.refresh-dot {
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -80,254 +81,171 @@ body {
   50% { opacity: 0.3; }
 }
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+/* Legend */
+.legend {
+  display: flex;
+  gap: 1.2rem;
+  padding: 0.4rem 1.5rem;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.72rem;
+  font-family: var(--mono);
+  flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
-.card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1rem 1.2rem;
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Mind Map Container */
+#mindmap-wrap {
+  flex: 1;
+  position: relative;
+  min-height: 400px;
   overflow: hidden;
 }
 
-.card-full { grid-column: 1 / -1; }
+#mindmap-wrap svg {
+  width: 100%;
+  height: 100%;
+}
 
-.card h2 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-bright);
-  margin-bottom: 0.8rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border);
+#mindmap-loading {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-}
-
-.card h2 .badge {
-  font-size: 0.7rem;
-  padding: 0.15rem 0.5rem;
-  border-radius: 10px;
-  font-weight: 400;
+  justify-content: center;
   font-family: var(--mono);
+  font-size: 0.9rem;
+  color: var(--text-dim);
 }
 
-.badge-green { background: rgba(74, 222, 128, 0.15); color: var(--green); }
-.badge-red { background: rgba(248, 113, 113, 0.15); color: var(--red); }
-.badge-yellow { background: rgba(251, 191, 36, 0.15); color: var(--yellow); }
-.badge-grey { background: rgba(107, 114, 128, 0.15); color: var(--grey); }
+/* Zoom controls */
+.zoom-controls {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 10;
+}
 
-/* Status Grid */
-.status-grid {
+.zoom-controls button {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.zoom-controls button:hover {
+  background: var(--bg-card-alt);
+}
+
+/* Bottom Panel */
+.bottom-panel {
+  flex-shrink: 0;
+  border-top: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+/* Status Cards */
+.status-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.6rem;
+  padding: 0.8rem 1.2rem;
 }
 
-.status-item {
+.status-card {
   background: var(--bg);
   border-radius: 6px;
-  padding: 0.8rem;
+  padding: 0.6rem 0.8rem;
 }
 
-.status-item .label {
-  font-size: 0.7rem;
+.status-card .label {
+  font-size: 0.65rem;
   color: var(--text-dim);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-family: var(--mono);
 }
 
-.status-item .value {
-  font-size: 1.3rem;
+.status-card .value {
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-bright);
   font-family: var(--mono);
-  margin-top: 0.2rem;
-}
-
-.status-item .sub {
-  font-size: 0.7rem;
-  color: var(--text-dim);
-  font-family: var(--mono);
-}
-
-/* Dynamic Tree */
-.tree {
-  font-family: var(--mono);
-  font-size: 0.82rem;
-  line-height: 1.7;
-}
-
-.tree-section {
-  margin-bottom: 0.3rem;
-}
-
-.tree-header {
-  cursor: pointer;
-  padding: 0.3rem 0.5rem;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  user-select: none;
-  transition: background 0.15s;
-}
-
-.tree-header:hover { background: rgba(255,255,255,0.04); }
-
-.tree-toggle {
-  display: inline-block;
-  width: 16px;
-  text-align: center;
-  color: var(--text-dim);
-  font-size: 0.7rem;
-  transition: transform 0.2s;
-  flex-shrink: 0;
-}
-
-.tree-toggle.open { transform: rotate(90deg); }
-
-.tree-header .priority-bar {
-  width: 3px;
-  height: 16px;
-  border-radius: 2px;
-  flex-shrink: 0;
-}
-
-.tree-children {
-  padding-left: 1.5rem;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.tree-children.collapsed { max-height: 0 !important; }
-
-.tree-leaf {
-  padding: 0.15rem 0.5rem 0.15rem 1.8rem;
-  color: var(--text-dim);
-  font-size: 0.78rem;
-  border-left: 1px solid var(--border);
-  margin-left: 0.5rem;
-}
-
-.tree-leaf.done { color: var(--green); }
-.tree-leaf.active { color: var(--yellow); }
-.tree-leaf.blocked { color: var(--grey); text-decoration: line-through; opacity: 0.6; }
-
-.status-icon { flex-shrink: 0; font-size: 0.75rem; }
-
-/* Regime indicator */
-.regime-section {
-  margin-top: 0.8rem;
-  padding: 0.6rem 0.8rem;
-  background: var(--bg);
-  border-radius: 6px;
-  font-family: var(--mono);
-  font-size: 0.78rem;
-}
-
-.regime-section .regime-label {
-  color: var(--text-dim);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  margin-bottom: 0.3rem;
-}
-
-.regime-tag {
-  display: inline-block;
-  padding: 0.1rem 0.5rem;
-  border-radius: 3px;
-  margin: 0.15rem 0.2rem;
-  font-size: 0.72rem;
-}
-
-.regime-attack { background: rgba(248,113,113,0.15); color: var(--red); }
-.regime-neutral { background: rgba(96,165,250,0.15); color: var(--blue); }
-.regime-defense { background: rgba(107,114,128,0.15); color: var(--grey); }
-
-/* Timeline */
-.timeline {
-  font-family: var(--mono);
-  font-size: 0.78rem;
-}
-
-.timeline-entry {
-  padding: 0.6rem 0.8rem;
-  border-left: 2px solid var(--border);
-  margin-left: 0.5rem;
-  margin-bottom: 0.5rem;
-  position: relative;
-}
-
-.timeline-entry::before {
-  content: '';
-  position: absolute;
-  left: -5px;
-  top: 0.8rem;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-
-.timeline-entry .ts {
-  color: var(--blue);
-  font-size: 0.72rem;
-}
-
-.timeline-entry .branches {
-  color: var(--yellow);
-  font-size: 0.72rem;
   margin-top: 0.15rem;
 }
 
-.timeline-entry .summary {
-  color: var(--text);
-  font-size: 0.76rem;
-  margin-top: 0.3rem;
-}
-
-.timeline-entry .summary li {
-  margin-left: 1rem;
-  margin-bottom: 0.1rem;
-}
-
-/* Log entries */
-.log-entries {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.log-line {
-  padding: 0.2rem 0.4rem;
-  border-bottom: 1px solid rgba(255,255,255,0.03);
-}
-
-.log-line .log-ts { color: var(--blue); }
-.log-line .log-msg { color: var(--text-dim); }
-.log-line.cycle-start { color: var(--yellow); }
-.log-line.cycle-end { color: var(--green); }
-.log-line.error { color: var(--red); }
-
-/* Loading / error */
-.loading {
+.status-card .sub {
+  font-size: 0.65rem;
   color: var(--text-dim);
   font-family: var(--mono);
-  font-size: 0.8rem;
-  padding: 1rem;
-  text-align: center;
 }
 
+/* Timeline strip */
+.timeline-strip {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 1.2rem 0.8rem;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+}
+
+.timeline-strip::-webkit-scrollbar { height: 4px; }
+.timeline-strip::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+.cycle-chip {
+  flex-shrink: 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+  min-width: 140px;
+}
+
+.cycle-chip .cycle-num {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.cycle-chip .cycle-ts {
+  color: var(--blue);
+  font-size: 0.65rem;
+}
+
+.cycle-chip .cycle-branches {
+  color: var(--yellow);
+  font-size: 0.62rem;
+  margin-top: 0.15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+/* Error */
 .error-msg {
   color: var(--red);
   font-family: var(--mono);
@@ -335,6 +253,7 @@ body {
   padding: 0.5rem;
   background: rgba(248,113,113,0.08);
   border-radius: 4px;
+  text-align: center;
 }
 
 /* Scrollbar */
@@ -344,62 +263,55 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .container { grid-template-columns: 1fr; }
-  .header { padding: 0.8rem 1rem; }
-  .header h1 { font-size: 1.1rem; }
-  .header-meta { font-size: 0.7rem; }
-  .status-grid { grid-template-columns: repeat(2, 1fr); }
+  .header { padding: 0.6rem 1rem; }
+  .header h1 { font-size: 1rem; }
+  .status-row { grid-template-columns: repeat(3, 1fr); gap: 0.4rem; padding: 0.6rem 0.8rem; }
+  .status-card { padding: 0.4rem 0.6rem; }
+  .status-card .value { font-size: 0.9rem; }
+  .legend { padding: 0.3rem 0.8rem; gap: 0.8rem; }
 }
 
 @media (max-width: 480px) {
-  .status-grid { grid-template-columns: 1fr; }
-  .container { padding: 0.5rem; }
+  .status-row { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1><span>數位永生</span> &mdash; Digital Immortality Dashboard</h1>
+  <h1><span>數位永生</span> &mdash; Mind Map</h1>
   <div class="header-meta">
     <span class="clock" id="clock"></span>
     <span><span class="refresh-dot"></span> auto-refresh 5min</span>
   </div>
 </div>
 
-<div class="container">
-  <!-- System Status -->
-  <div class="card card-full">
-    <h2>System Status</h2>
-    <div class="status-grid" id="status-grid">
-      <div class="loading">Loading...</div>
-    </div>
-  </div>
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#f87171"></div> Deadline / Urgent</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#fbbf24"></div> Active</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#4ade80"></div> Done</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#6b7280"></div> Blocked</div>
+</div>
 
-  <!-- Dynamic Tree -->
-  <div class="card card-full">
-    <h2>Dynamic Tree <span class="badge badge-yellow" id="tree-updated"></span></h2>
-    <div id="dynamic-tree" class="tree">
-      <div class="loading">Loading dynamic_tree.md...</div>
-    </div>
-  </div>
-
-  <!-- Recent Cycles (daily_log) -->
-  <div class="card">
-    <h2>Recent Cycles <span class="badge badge-green" id="cycle-count-badge"></span></h2>
-    <div id="daily-timeline" class="timeline">
-      <div class="loading">Loading daily_log.md...</div>
-    </div>
-  </div>
-
-  <!-- Daemon Log -->
-  <div class="card">
-    <h2>Daemon Log <span class="badge badge-grey" id="daemon-badge"></span></h2>
-    <div id="daemon-log" class="log-entries">
-      <div class="loading">Loading daemon_log.md...</div>
-    </div>
+<div id="mindmap-wrap">
+  <div id="mindmap-loading">Loading mind map...</div>
+  <svg id="mindmap-svg"></svg>
+  <div class="zoom-controls">
+    <button onclick="zoomIn()" title="Zoom in">+</button>
+    <button onclick="zoomOut()" title="Zoom out">&minus;</button>
+    <button onclick="zoomFit()" title="Fit to screen">&#8689;</button>
   </div>
 </div>
+
+<div class="bottom-panel">
+  <div class="status-row" id="status-row">
+    <div class="status-card"><div class="label">Loading...</div></div>
+  </div>
+  <div class="timeline-strip" id="timeline-strip"></div>
+</div>
+
+<!-- D3.js for tree layout -->
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 
 <script>
 const RAW_BASE = 'https://raw.githubusercontent.com/l12203685/digital-immortality/main/results';
@@ -409,7 +321,7 @@ const URLS = {
   daily: `${RAW_BASE}/daily_log.md`,
 };
 
-// --- Clock (Taipei) ---
+// ─── Clock ───
 function updateClock() {
   const now = new Date();
   const taipei = now.toLocaleString('zh-TW', {
@@ -423,213 +335,308 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-// --- Fetch with cache-bust ---
+// ─── Fetch ───
 async function fetchRaw(url) {
   const res = await fetch(url + '?t=' + Date.now(), { cache: 'no-store' });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.text();
 }
 
-// --- Parse Dynamic Tree ---
-function parseTree(md) {
+// ─── Parse dynamic_tree.md into tree structure ───
+function parseTreeToHierarchy(md) {
   const lines = md.split('\n');
-  const sections = [];
-  let current = null;
-  let regime = null;
-  let milestones = [];
-  let evolution = [];
   let lastUpdate = '';
 
+  const root = { name: '數位永生', status: 'root', children: [] };
+  let currentL1 = null;
+  let currentL2 = null;
+
   for (const line of lines) {
-    // Last update timestamp
     const upMatch = line.match(/最後更新：(.+)/);
     if (upMatch) { lastUpdate = upMatch[1]; continue; }
 
-    // L1 section: ### N. Title
-    const secMatch = line.match(/^### (\d+)\.\s+(.+)/);
-    if (secMatch) {
-      current = {
-        id: secMatch[1],
-        title: secMatch[2],
-        children: [],
-        status: 'active',
-      };
-      // Detect status from title
-      if (current.title.includes('DEADLINE')) current.status = 'deadline';
-      sections.push(current);
-      continue;
-    }
-
-    // L2 branch: - N.N ...
-    const brMatch = line.match(/^- (\d+\.\d+)\s+(.+)/);
-    if (brMatch && current) {
-      let text = brMatch[2];
+    // L1: ### N. Title
+    const l1Match = line.match(/^### (\d+)\.\s+(.+)/);
+    if (l1Match) {
+      const title = l1Match[2].replace(/⚡.*/, '').trim();
       let status = 'active';
-      if (text.includes('✓')) status = 'done';
-      else if (text.includes('blocked') || text.includes('待')) status = 'blocked';
-      current.children.push({ id: brMatch[1], text, status });
+      if (l1Match[2].includes('DEADLINE')) status = 'deadline';
+      currentL1 = { name: `${l1Match[1]}. ${title}`, status, children: [], fullTitle: l1Match[2] };
+      currentL2 = null;
+      root.children.push(currentL1);
       continue;
     }
 
-    // Sub-items under L2: indented with -
-    const subMatch = line.match(/^\s{2,}-\s+(.+)/);
-    if (subMatch && current && current.children.length > 0) {
-      let text = subMatch[1];
-      let status = 'active';
-      if (text.includes('✓')) status = 'done';
-      else if (text.includes('blocked') || text.includes('待')) status = 'blocked';
-      current.children.push({ id: '', text: '  ' + text, status, isSub: true });
+    // L2: - N.N text
+    const l2Match = line.match(/^- (\d+\.\d+)\s+(.+)/);
+    if (l2Match && currentL1) {
+      const text = l2Match[2];
+      let status = detectStatus(text);
+      currentL2 = { name: `${l2Match[1]} ${text}`, status, children: [] };
+      currentL1.children.push(currentL2);
       continue;
     }
 
-    // CONSTRAINT line
-    if (line.match(/^- CONSTRAINT/) && current) {
-      current.children.push({ id: '', text: line.replace(/^- /, ''), status: 'blocked', isSub: true });
+    // L3: indented sub-items
+    const l3Match = line.match(/^\s{2,}-\s+(.+)/);
+    if (l3Match && currentL2) {
+      const text = l3Match[1];
+      let status = detectStatus(text);
+      currentL2.children.push({ name: text, status, children: [] });
       continue;
     }
 
-    // Regime
-    const regimeMatch = line.match(/^(攻擊|中性|防禦)[：:]\s*(.+)/);
-    if (regimeMatch) {
-      if (!regime) regime = {};
-      const key = regimeMatch[1] === '攻擊' ? 'attack' : regimeMatch[1] === '中性' ? 'neutral' : 'defense';
-      regime[key] = regimeMatch[2];
+    // CONSTRAINT
+    if (line.match(/^- CONSTRAINT/) && currentL1) {
+      const text = line.replace(/^- /, '');
+      currentL1.children.push({ name: text, status: 'deadline', children: [] });
       continue;
     }
-
-    // Milestones
-    if (line.match(/^- .+/) && md.indexOf(line) > md.indexOf('已完成 milestones') && md.indexOf(line) < md.indexOf('演化紀錄')) {
-      milestones.push(line.replace(/^- /, ''));
-    }
   }
 
-  return { sections, regime, milestones, evolution, lastUpdate };
+  return { tree: root, lastUpdate };
 }
 
-function renderTree(data) {
-  const el = document.getElementById('dynamic-tree');
-  if (!data.sections.length) {
-    el.innerHTML = '<div class="error-msg">Failed to parse dynamic tree</div>';
-    return;
-  }
-
-  document.getElementById('tree-updated').textContent = data.lastUpdate || '';
-
-  // Priority coloring: section 1 = red (highest), then gradient
-  const priorityColors = ['#f87171', '#fbbf24', '#60a5fa', '#a78bfa', '#4ade80', '#6b7280'];
-
-  let html = '';
-
-  for (let i = 0; i < data.sections.length; i++) {
-    const sec = data.sections[i];
-    const color = priorityColors[i] || priorityColors[priorityColors.length - 1];
-    const childCount = sec.children.filter(c => !c.isSub).length;
-    const doneCount = sec.children.filter(c => !c.isSub && c.status === 'done').length;
-
-    html += `<div class="tree-section">`;
-    html += `<div class="tree-header" onclick="toggleTree(this)">`;
-    html += `<span class="tree-toggle open">&#9654;</span>`;
-    html += `<span class="priority-bar" style="background:${color}"></span>`;
-    html += `<span style="color:${color};font-weight:600">${sec.id}. ${sec.title.replace(/⚡.*/, '')}</span>`;
-    if (sec.title.includes('DEADLINE')) html += `<span class="badge badge-red" style="margin-left:auto">DEADLINE</span>`;
-    if (childCount > 0) html += `<span style="color:var(--text-dim);margin-left:auto;font-size:0.7rem">${doneCount}/${childCount}</span>`;
-    html += `</div>`;
-
-    html += `<div class="tree-children" style="max-height:2000px">`;
-    for (const child of sec.children) {
-      const cls = child.status === 'done' ? 'done' : child.status === 'blocked' ? 'blocked' : 'active';
-      const icon = child.status === 'done' ? '<span class="status-icon" style="color:var(--green)">&#10003;</span> '
-        : child.status === 'blocked' ? '<span class="status-icon" style="color:var(--grey)">&#9679;</span> '
-        : '<span class="status-icon" style="color:var(--yellow)">&#9889;</span> ';
-      html += `<div class="tree-leaf ${cls}">${child.isSub ? '' : icon}${escapeHtml(child.text)}</div>`;
-    }
-    html += `</div></div>`;
-  }
-
-  // Regime
-  if (data.regime) {
-    html += `<div class="regime-section">`;
-    html += `<div class="regime-label">Current Regime</div>`;
-    if (data.regime.attack) html += `<span class="regime-tag regime-attack">攻擊 ${escapeHtml(data.regime.attack)}</span>`;
-    if (data.regime.neutral) html += `<span class="regime-tag regime-neutral">中性 ${escapeHtml(data.regime.neutral)}</span>`;
-    if (data.regime.defense) html += `<span class="regime-tag regime-defense">防禦 ${escapeHtml(data.regime.defense)}</span>`;
-    html += `</div>`;
-  }
-
-  el.innerHTML = html;
+function detectStatus(text) {
+  if (text.includes('DEADLINE') || text.includes('deadline')) return 'deadline';
+  if (/✓/.test(text) || /DONE/.test(text) || /done/.test(text)) return 'done';
+  if (/blocked/.test(text) || /待/.test(text) || /users=0/.test(text)) return 'blocked';
+  return 'active';
 }
 
-function toggleTree(header) {
-  const toggle = header.querySelector('.tree-toggle');
-  const children = header.nextElementSibling;
-  if (children && children.classList.contains('tree-children')) {
-    children.classList.toggle('collapsed');
-    toggle.classList.toggle('open');
-  }
-}
+// ─── Color scheme ───
+const STATUS_COLORS = {
+  root: '#e94560',
+  deadline: '#f87171',
+  active: '#fbbf24',
+  done: '#4ade80',
+  blocked: '#6b7280',
+};
 
-// --- Parse Daily Log ---
-function parseDailyLog(md) {
-  const cycles = [];
-  const blocks = md.split(/^## Cycle /m).slice(1);
+const L1_COLORS = ['#f87171', '#60a5fa', '#fbbf24', '#a78bfa', '#4ade80', '#f472b6'];
 
-  for (const block of blocks) {
-    const headerMatch = block.match(/^(\d+)\s*—\s*(.+)/);
-    if (!headerMatch) continue;
+// ─── D3 Mind Map ───
+let svgEl, gEl, zoomBehavior, rootNode, treeLayout;
+const DURATION = 400;
+let nodeIdCounter = 0;
 
-    const num = parseInt(headerMatch[1]);
-    const ts = headerMatch[2].trim();
+function initMindMap(data) {
+  document.getElementById('mindmap-loading').style.display = 'none';
+  const wrap = document.getElementById('mindmap-wrap');
+  const width = wrap.clientWidth;
+  const height = wrap.clientHeight;
 
-    const branchMatch = block.match(/\*\*Branches pushed\*\*:\s*(.+)/);
-    const branches = branchMatch ? branchMatch[1] : '';
+  svgEl = d3.select('#mindmap-svg')
+    .attr('width', width)
+    .attr('height', height);
 
-    // Extract ### Branch sections
-    const impacts = [];
-    const impactMatches = block.matchAll(/\*\*Impact\*\*:\s*(.+)/g);
-    for (const m of impactMatches) impacts.push(m[1]);
+  // Clear previous
+  svgEl.selectAll('*').remove();
 
-    cycles.push({ num, ts, branches, impacts });
-  }
+  gEl = svgEl.append('g');
 
-  return cycles;
-}
+  zoomBehavior = d3.zoom()
+    .scaleExtent([0.2, 4])
+    .on('zoom', (e) => gEl.attr('transform', e.transform));
 
-function renderDailyLog(cycles) {
-  const el = document.getElementById('daily-timeline');
-  const badge = document.getElementById('cycle-count-badge');
-  badge.textContent = `${cycles.length} cycles`;
+  svgEl.call(zoomBehavior);
 
-  // Show last 5
-  const recent = cycles.slice(-5).reverse();
+  // Use d3.tree layout
+  treeLayout = d3.tree().nodeSize([28, 280]);
 
-  if (!recent.length) {
-    el.innerHTML = '<div class="loading">No cycle entries found</div>';
-    return;
-  }
+  rootNode = d3.hierarchy(data);
+  rootNode.x0 = 0;
+  rootNode.y0 = 0;
 
-  let html = '';
-  for (const c of recent) {
-    html += `<div class="timeline-entry">`;
-    html += `<div class="ts">Cycle ${c.num} &mdash; ${escapeHtml(c.ts)}</div>`;
-    html += `<div class="branches">${escapeHtml(c.branches)}</div>`;
-    if (c.impacts.length) {
-      html += `<div class="summary"><ul>`;
-      for (const imp of c.impacts.slice(0, 4)) {
-        html += `<li>${escapeHtml(imp)}</li>`;
+  // Collapse L3+ initially
+  if (rootNode.children) {
+    rootNode.children.forEach(l1 => {
+      if (l1.children) {
+        l1.children.forEach(l2 => {
+          if (l2.children && l2.children.length > 0) {
+            l2._children = l2.children;
+            l2.children = null;
+          }
+        });
       }
-      if (c.impacts.length > 4) html += `<li>...+${c.impacts.length - 4} more</li>`;
-      html += `</ul></div>`;
-    }
-    html += `</div>`;
+    });
   }
 
-  el.innerHTML = html;
+  update(rootNode);
+
+  // Center on root
+  const t = d3.zoomIdentity.translate(width * 0.12, height / 2).scale(0.85);
+  svgEl.transition().duration(500).call(zoomBehavior.transform, t);
 }
 
-// --- Parse Daemon Log ---
+function update(source) {
+  const treeData = treeLayout(rootNode);
+  const nodes = treeData.descendants();
+  const links = treeData.links();
+
+  // Normalize depth spacing
+  nodes.forEach(d => { d.y = d.depth * 300; });
+
+  // ── Nodes ──
+  const node = gEl.selectAll('g.node')
+    .data(nodes, d => d.id || (d.id = ++nodeIdCounter));
+
+  const nodeEnter = node.enter().append('g')
+    .attr('class', 'node')
+    .attr('transform', () => `translate(${source.y0 || 0},${source.x0 || 0})`)
+    .on('click', (event, d) => {
+      if (d.children) {
+        d._children = d.children;
+        d.children = null;
+      } else if (d._children) {
+        d.children = d._children;
+        d._children = null;
+      }
+      update(d);
+    })
+    .style('cursor', d => (d.children || d._children) ? 'pointer' : 'default');
+
+  // Circle
+  nodeEnter.append('circle')
+    .attr('r', 0)
+    .attr('fill', d => getNodeColor(d))
+    .attr('stroke', d => getNodeColor(d))
+    .attr('stroke-width', 2);
+
+  // Label
+  nodeEnter.append('text')
+    .attr('dy', '0.35em')
+    .attr('x', d => d.children || d._children ? -14 : 14)
+    .attr('text-anchor', d => d.children || d._children ? 'end' : 'start')
+    .attr('fill', '#e0e0e0')
+    .attr('font-size', d => d.depth === 0 ? '14px' : d.depth === 1 ? '12px' : '10.5px')
+    .attr('font-family', "'Cascadia Code','Fira Code','Consolas',monospace")
+    .attr('font-weight', d => d.depth <= 1 ? '600' : '400')
+    .text(d => truncateLabel(d.data.name, d.depth))
+    .append('title')
+    .text(d => d.data.name);
+
+  // Expand/collapse indicator
+  nodeEnter.append('text')
+    .attr('class', 'expand-icon')
+    .attr('dy', '0.35em')
+    .attr('x', d => d.children || d._children ? 10 : -10)
+    .attr('text-anchor', 'middle')
+    .attr('fill', '#888')
+    .attr('font-size', '9px')
+    .attr('font-family', 'monospace')
+    .text(d => {
+      if (d._children) return `[+${d._children.length}]`;
+      if (d.children && d.depth >= 1) return '';
+      return '';
+    });
+
+  // Update
+  const nodeUpdate = nodeEnter.merge(node);
+
+  nodeUpdate.transition().duration(DURATION)
+    .attr('transform', d => `translate(${d.y},${d.x})`);
+
+  nodeUpdate.select('circle')
+    .attr('r', d => d.depth === 0 ? 10 : d.depth === 1 ? 7 : 5)
+    .attr('fill', d => (d._children) ? getNodeColor(d) : (d.children ? 'transparent' : getNodeColor(d)))
+    .attr('stroke', d => getNodeColor(d));
+
+  nodeUpdate.select('.expand-icon')
+    .text(d => {
+      if (d._children) return `[+${d._children.length}]`;
+      return '';
+    });
+
+  // Exit
+  const nodeExit = node.exit().transition().duration(DURATION)
+    .attr('transform', () => `translate(${source.y},${source.x})`)
+    .remove();
+
+  nodeExit.select('circle').attr('r', 0);
+  nodeExit.select('text').style('fill-opacity', 0);
+
+  // ── Links ──
+  const link = gEl.selectAll('path.link')
+    .data(links, d => d.target.id);
+
+  const linkEnter = link.enter().insert('path', 'g')
+    .attr('class', 'link')
+    .attr('fill', 'none')
+    .attr('stroke', d => {
+      const c = getNodeColor(d.target);
+      return c;
+    })
+    .attr('stroke-opacity', 0.35)
+    .attr('stroke-width', d => d.target.depth <= 1 ? 2.5 : 1.5)
+    .attr('d', () => {
+      const o = { x: source.x0 || 0, y: source.y0 || 0 };
+      return diagonal(o, o);
+    });
+
+  const linkUpdate = linkEnter.merge(link);
+
+  linkUpdate.transition().duration(DURATION)
+    .attr('d', d => diagonal(d.source, d.target))
+    .attr('stroke', d => getNodeColor(d.target))
+    .attr('stroke-opacity', 0.35);
+
+  link.exit().transition().duration(DURATION)
+    .attr('d', () => {
+      const o = { x: source.x, y: source.y };
+      return diagonal(o, o);
+    })
+    .remove();
+
+  // Stash positions
+  nodes.forEach(d => { d.x0 = d.x; d.y0 = d.y; });
+}
+
+function diagonal(s, d) {
+  return `M ${s.y} ${s.x}
+          C ${(s.y + d.y) / 2} ${s.x},
+            ${(s.y + d.y) / 2} ${d.x},
+            ${d.y} ${d.x}`;
+}
+
+function getNodeColor(d) {
+  if (d.depth === 0) return '#e94560';
+  if (d.depth === 1) {
+    const idx = d.parent ? d.parent.children.indexOf(d) : 0;
+    return L1_COLORS[idx % L1_COLORS.length];
+  }
+  const status = d.data.status || 'active';
+  return STATUS_COLORS[status] || STATUS_COLORS.active;
+}
+
+function truncateLabel(name, depth) {
+  const maxLen = depth === 0 ? 30 : depth === 1 ? 40 : 55;
+  if (name.length <= maxLen) return name;
+  return name.substring(0, maxLen - 1) + '...';
+}
+
+// ─── Zoom controls ───
+function zoomIn() {
+  svgEl.transition().duration(300).call(zoomBehavior.scaleBy, 1.3);
+}
+function zoomOut() {
+  svgEl.transition().duration(300).call(zoomBehavior.scaleBy, 0.7);
+}
+function zoomFit() {
+  const wrap = document.getElementById('mindmap-wrap');
+  const t = d3.zoomIdentity.translate(wrap.clientWidth * 0.12, wrap.clientHeight / 2).scale(0.85);
+  svgEl.transition().duration(500).call(zoomBehavior.transform, t);
+}
+
+// ─── Resize ───
+window.addEventListener('resize', () => {
+  const wrap = document.getElementById('mindmap-wrap');
+  svgEl.attr('width', wrap.clientWidth).attr('height', wrap.clientHeight);
+});
+
+// ─── Parse Daemon Log ───
 function parseDaemonLog(md) {
   const lines = md.split('\n').filter(l => l.trim());
-  const entries = [];
   let totalCycles = 0;
   let lastCycleTime = null;
   let lastStartTime = null;
@@ -638,115 +645,104 @@ function parseDaemonLog(md) {
   for (const line of lines) {
     const tsMatch = line.match(/^\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} UTC)\]/);
     const ts = tsMatch ? tsMatch[1] : null;
-
     if (ts && !firstTime) firstTime = ts;
-
-    let type = 'normal';
-    if (line.includes('Cycle') && line.includes('starting')) type = 'cycle-start';
-    else if (line.includes('Cycle') && line.includes('complete')) type = 'cycle-end';
-    else if (line.includes('SIGTERM') || line.includes('Shutdown') || line.includes('error')) type = 'error';
-
     if (line.includes('complete') && line.includes('Cycle')) {
       totalCycles++;
       if (ts) lastCycleTime = ts;
     }
-
     if (line.includes('Loop started') && ts) lastStartTime = ts;
-
-    entries.push({ ts, text: line, type });
   }
 
-  return { entries, totalCycles, lastCycleTime, lastStartTime, firstTime };
+  return { totalCycles, lastCycleTime, lastStartTime, firstTime };
 }
 
-function renderDaemonLog(data) {
-  const el = document.getElementById('daemon-log');
-  const badge = document.getElementById('daemon-badge');
-  badge.textContent = `${data.totalCycles} daemon cycles`;
-
-  // Show last 20 lines
-  const recent = data.entries.slice(-20);
-
-  if (!recent.length) {
-    el.innerHTML = '<div class="loading">No daemon log entries</div>';
-    return;
+// ─── Parse Daily Log ───
+function parseDailyLog(md) {
+  const cycles = [];
+  const blocks = md.split(/^## Cycle /m).slice(1);
+  for (const block of blocks) {
+    const headerMatch = block.match(/^(\d+)\s*[—\-]\s*(.+)/);
+    if (!headerMatch) continue;
+    const num = parseInt(headerMatch[1]);
+    const ts = headerMatch[2].trim();
+    const branchMatch = block.match(/\*\*Branches pushed\*\*:\s*(.+)/);
+    const branches = branchMatch ? branchMatch[1] : '';
+    cycles.push({ num, ts, branches });
   }
-
-  let html = '';
-  for (const e of recent) {
-    html += `<div class="log-line ${e.type}">`;
-    if (e.ts) html += `<span class="log-ts">[${e.ts}]</span> `;
-    const msg = e.ts ? e.text.replace(/^\[.*?\]\s*/, '') : e.text;
-    html += `<span class="log-msg">${escapeHtml(msg)}</span>`;
-    html += `</div>`;
-  }
-
-  el.innerHTML = html;
-  el.scrollTop = el.scrollHeight;
+  return cycles;
 }
 
-// --- System Status ---
-function renderStatus(daemonData, dailyCycles) {
-  const el = document.getElementById('status-grid');
-
+// ─── Render Status Cards ───
+function renderStatus(daemonData, dailyCycles, lastUpdate) {
+  const el = document.getElementById('status-row');
   const lastDaemon = daemonData.lastCycleTime || 'N/A';
   const lastTrigger = dailyCycles.length > 0 ? dailyCycles[dailyCycles.length - 1].ts : 'N/A';
-  const totalDaemonCycles = daemonData.totalCycles;
-  const totalDailyCycles = dailyCycles.length;
 
-  // Uptime estimate
   let uptime = 'N/A';
   if (daemonData.firstTime) {
     const first = new Date(daemonData.firstTime.replace(' UTC', 'Z'));
     const now = new Date();
     const diffMs = now - first;
     const hours = Math.floor(diffMs / 3600000);
-    const mins = Math.floor((diffMs % 3600000) / 60000);
     if (hours > 24) {
-      const days = Math.floor(hours / 24);
-      uptime = `${days}d ${hours % 24}h`;
+      uptime = `${Math.floor(hours / 24)}d ${hours % 24}h`;
     } else {
-      uptime = `${hours}h ${mins}m`;
+      uptime = `${hours}h ${Math.floor((diffMs % 3600000) / 60000)}m`;
     }
   }
 
   el.innerHTML = `
-    <div class="status-item">
+    <div class="status-card">
       <div class="label">Last Daemon Cycle</div>
-      <div class="value" style="font-size:0.9rem">${escapeHtml(lastDaemon)}</div>
+      <div class="value" style="font-size:0.85rem">${esc(lastDaemon)}</div>
     </div>
-    <div class="status-item">
+    <div class="status-card">
       <div class="label">Last Trigger Cycle</div>
-      <div class="value" style="font-size:0.9rem">${escapeHtml(lastTrigger)}</div>
+      <div class="value" style="font-size:0.85rem">${esc(lastTrigger)}</div>
     </div>
-    <div class="status-item">
-      <div class="label">Uptime (from first log)</div>
+    <div class="status-card">
+      <div class="label">Daemon Cycles</div>
+      <div class="value">${daemonData.totalCycles}</div>
+    </div>
+    <div class="status-card">
+      <div class="label">Engine Cycles</div>
+      <div class="value">${dailyCycles.length}</div>
+    </div>
+    <div class="status-card">
+      <div class="label">Uptime</div>
       <div class="value">${uptime}</div>
     </div>
-    <div class="status-item">
-      <div class="label">Daemon Cycles</div>
-      <div class="value">${totalDaemonCycles}</div>
-    </div>
-    <div class="status-item">
-      <div class="label">Engine Cycles</div>
-      <div class="value">${totalDailyCycles}</div>
-    </div>
-    <div class="status-item">
-      <div class="label">Branches Active</div>
-      <div class="value">6</div>
-      <div class="sub">L1 domains</div>
+    <div class="status-card">
+      <div class="label">Tree Updated</div>
+      <div class="value" style="font-size:0.75rem">${esc(lastUpdate)}</div>
     </div>
   `;
 }
 
-// --- Utility ---
-function escapeHtml(str) {
+// ─── Render Timeline Strip ───
+function renderTimeline(cycles) {
+  const el = document.getElementById('timeline-strip');
+  const recent = cycles.slice(-8).reverse();
+  if (!recent.length) {
+    el.innerHTML = '<span style="color:var(--text-dim);font-size:0.72rem">No cycles yet</span>';
+    return;
+  }
+  el.innerHTML = recent.map(c => `
+    <div class="cycle-chip">
+      <div class="cycle-num">Cycle ${c.num}</div>
+      <div class="cycle-ts">${esc(c.ts)}</div>
+      <div class="cycle-branches">${esc(c.branches)}</div>
+    </div>
+  `).join('');
+}
+
+function esc(str) {
   const div = document.createElement('div');
   div.textContent = str;
   return div.innerHTML;
 }
 
-// --- Main Loop ---
+// ─── Main ───
 async function refresh() {
   try {
     const [treeRaw, daemonRaw, dailyRaw] = await Promise.all([
@@ -755,18 +751,17 @@ async function refresh() {
       fetchRaw(URLS.daily),
     ]);
 
-    const treeData = parseTree(treeRaw);
-    renderTree(treeData);
+    const { tree, lastUpdate } = parseTreeToHierarchy(treeRaw);
+    initMindMap(tree);
 
     const daemonData = parseDaemonLog(daemonRaw);
-    renderDaemonLog(daemonData);
-
     const dailyCycles = parseDailyLog(dailyRaw);
-    renderDailyLog(dailyCycles);
-
-    renderStatus(daemonData, dailyCycles);
+    renderStatus(daemonData, dailyCycles, lastUpdate);
+    renderTimeline(dailyCycles);
   } catch (err) {
     console.error('Refresh failed:', err);
+    document.getElementById('mindmap-loading').textContent = 'Failed to load: ' + err.message;
+    document.getElementById('mindmap-loading').style.color = '#f87171';
   }
 }
 
