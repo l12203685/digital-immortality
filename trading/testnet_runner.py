@@ -144,12 +144,36 @@ def _check_kills(stats: Dict) -> List[str]:
 # Single tick execution
 # ---------------------------------------------------------------------------
 
+def _compute_sim_pnl(entries: List[Dict], strategy: str, current_price: float, position_usdt: float) -> float:
+    """
+    Simulate PnL for dry-run ticks.
+
+    Logic: the position held during [prev_tick → this_tick] was signaled by prev_tick.
+    PnL = prev_signal × (current_price − prev_price) / prev_price × position_usdt
+    Returns 0.0 if no prior tick or prior price is missing.
+    """
+    prev = next(
+        (e for e in reversed(entries)
+         if e.get("strategy") == strategy and e.get("price") and "signal" in e),
+        None,
+    )
+    if prev is None:
+        return 0.0
+    prev_signal = prev["signal"]      # int: 1=LONG, -1=SHORT, 0=FLAT
+    prev_price = float(prev["price"])
+    if prev_price <= 0 or prev_signal == 0:
+        return 0.0
+    pct = (current_price - prev_price) / prev_price
+    return round(prev_signal * pct * position_usdt, 4)
+
+
 def run_tick(strategy_name: str, dry_run: bool = False) -> Dict:
     """Execute one tick for a strategy. Returns the tick result dict."""
     strategy_fn = STRATEGIES[strategy_name]
+    position_usdt = 100.0
     config = BinanceConfig(
         testnet=True,
-        max_position_usdt=100.0,   # small size on testnet
+        max_position_usdt=position_usdt,
         max_drawdown_pct=KILL_MAX_DRAWDOWN_PCT,
         leverage=1,
     )
@@ -161,14 +185,17 @@ def run_tick(strategy_name: str, dry_run: bool = False) -> Dict:
         try:
             bars: List[Bar] = executor.client.fetch_ohlcv("1d", 100)
             signal = executor.strategy(bars)
+            current_price = bars[-1]["close"] if bars else None
+            prior_entries = _load_log()
+            sim_pnl = _compute_sim_pnl(prior_entries, strategy_name, current_price, position_usdt) if current_price else 0.0
             result = {
                 "ts": datetime.now(timezone.utc).isoformat(),
                 "strategy": strategy_name,
                 "action": "DRY_RUN",
                 "signal": signal,
-                "price": bars[-1]["close"] if bars else None,
+                "price": current_price,
                 "bars_fetched": len(bars),
-                "pnl_usdt": 0.0,
+                "pnl_usdt": sim_pnl,
                 "dry_run": True,
             }
         except Exception as e:
