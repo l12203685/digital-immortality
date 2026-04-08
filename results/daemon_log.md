@@ -1561,3 +1561,14 @@ Cycle 61 done.
   3. **MD-120** 教學=給起手式讓人自己思考延伸 — "let each person think themselves, that was my original intent"; provide scaffold (initial draft + explain tradeoffs), not answers; teaching success = student can explain their own modifications
 
 `templates/dna_core.md`: 117 → **120 MDs**. Next: 202201.
+
+## Cycle 34 — 2026-04-08 05:41:46 UTC
+
+Cycle 62 done.
+
+**202202 → MD-118~120:**
+- **MD-118** 真分散=不同架構非同策略多商品 — same logic on N instruments ≠ diversification; different architectures required
+- **MD-119** 簡單才有效=深度理解的輸出 — simplicity is mastery output, not laziness; complexity = understanding gap
+- **MD-120** 教學=給起手式讓人自己思考 — scaffold not answers; student must explain their own modifications
+
+`dna_core.md`: **120 MDs**. Next: 202201.
