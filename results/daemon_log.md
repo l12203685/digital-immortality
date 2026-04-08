@@ -4249,3 +4249,17 @@ All 12 threads now exist and are postable. Activation energy reduced to: open fi
 **G5 compounding clock starts when thread #01 goes live (target: Apr 9, 8–9am ET).**
 
 Next blocker: Edward executes the queue.
+
+## Cycle 137 — 2026-04-08 20:30:24 UTC
+
+**Cycle 137 done.**
+
+Highest-derivative branch: distribution. SOP #12 thread existed in zero form — everything else was blocked on it.
+
+**What shipped:**
+- `docs/publish_thread_sop12_twitter.md` — 9-tweet thread ("Distribution is the 12th gate")
+- `docs/posting_queue.md` — Apr 9–May 1 schedule, all 12 threads mapped to dates, signal log template included
+
+All 12 threads now exist and are postable. Activation energy to post = open file → copy → paste.
+
+**Next blocker**: Edward posts thread #01 on Apr 9 at 8–9am ET. G5 compounding clock starts on first post.

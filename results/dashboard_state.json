@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T04:25+08",
+  "updated": "2026-04-09T04:30+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.16 SOP #10 Decision Under Uncertainty COMPLETE → Edward posts threads #01~#10",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next hard blocker: Edward posts thread #01 (Strategy Development) on Twitter ..."
+      "text": "Next blocker: Edward posts thread #01 on Apr 9 at 8–9am ET. G5 compounding cl..."
     },
     {
       "time": "just now",
-      "text": "Series SOP #01~#12 complete. Distribution layer initialized. G5 score=0, 30-d..."
+      "text": "All 12 threads now exist and are postable. Activation energy to post = open f..."
     },
     {
       "time": "just now",
-      "text": "Rationale: 11 SOPs exist with zero audience. Distribution is the highest-deri..."
+      "text": "- `docs/posting_queue.md` — Apr 9–May 1 schedule, all 12 threads mapped to da..."
     },
     {
       "time": "just now",
-      "text": "Branch 7.18 — SOP #12 shipped: `docs/knowledge_product_12_distribution_audien..."
+      "text": "- `docs/publish_thread_sop12_twitter.md` — 9-tweet thread (\"Distribution is t..."
     },
     {
       "time": "just now",
-      "text": "Cycle 136 done."
+      "text": "What shipped:"
     }
   ],
   "stats": {
-    "daemon_cycles": 136,
+    "daemon_cycles": 137,
     "total_mds": 328,
     "dna_core_lines": 87
   }
