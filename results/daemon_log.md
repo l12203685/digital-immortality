@@ -1672,3 +1672,15 @@ Gap: 202111 (MD-130~132) already in file, tree stale — fixed.
 3. **MD-135** 實操知識=skin-in-the-game才外流 — 有edge的操作知識不在學術課堂; 傳授者代價成正比於知識真實性
 
 `templates/dna_core.md`: **135 MDs**. Next: 202109.
+
+## Cycle 12 — 2026-04-08 05:53:37 UTC
+
+Cycle 65 done.
+
+Gap reconciled: 202111 (MD-130~132) was already in file. Processed **202110 → MD-133~135**:
+
+- **MD-133** 風控前置=停損反推進場點 — 停損先定義，反推最遠進場位，超出不進
+- **MD-134** 策略池高淘汰率=過濾訊號 — 34%存活率是正常，存活策略穩定度才是健康指標
+- **MD-135** 實操知識=skin-in-the-game才外流 — 有edge的知識不在課堂，傳授者代價∝知識真實性
+
+`dna_core.md`: **135 MDs**. Next: 202109.
