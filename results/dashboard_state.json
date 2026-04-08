@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T20:08+08",
+  "updated": "2026-04-08T20:15+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,15 +51,15 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 201712."
+      "text": "Next: 201711."
     },
     {
       "time": "just now",
-      "text": "Branch 2.2 — 201801 → MD-256~258 (258 MDs total)"
+      "text": "Branch 2.2 — 201712 → MD-259~261 (261 MDs total)"
     },
     {
       "time": "2026-04-08 UTC",
-      "text": "`templates/dna_core.md`: 258 MDs. Next: 201712."
+      "text": "`templates/dna_core.md`: 261 MDs. Next: 201711."
     },
     {
       "time": "2026-04-08 UTC",
@@ -67,12 +67,12 @@
     },
     {
       "time": "2026-04-08 UTC",
-      "text": "- 201801.jsonl: 43 substantive Edward msgs; themes: 主流媒體報虛擬貨幣=過熱訊號、顯卡差2~3千=近3..."
+      "text": "- 201712.jsonl: 60 substantive Edward msgs; themes: 家族診所接班條件書面化、買進條件=實際價值非市場相..."
     }
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 258,
+    "total_mds": 261,
     "dna_core_lines": 76
   }
 }
