@@ -3154,3 +3154,13 @@ Cycle 79 done.
 - **MD-300** 短碼30~50bb=獨立preflop策略區間 — transitional stack depth where 100bb and push/fold both fail; requires separate range map
 
 Next: 201705+201704 ext.
+
+## Cycle 80 — 2026-04-08 UTC
+
+**Branch 2.2** highest-derivative. 201705+201704 ext pass (506 Edward msgs). Distilled 3 new micro-decisions:
+
+- **MD-301**: 薪資目標逆推=從稅後實領出發 — work backwards from real take-home target → gross-up for tax/deductions → check if path's salary ceiling can reach that gross; if ceiling < requirement, path eliminated before execution
+- **MD-302**: 投資ROI評估=先換算年化%再比對基準 — convert all return claims to annualized %; compare against simple benchmark (中華電 4%, ETF 5-6%); if replicable by any basic strategy with sufficient capital, it's scale effect not skill
+- **MD-303**: 生產力在順從型組織=邊際回報100%歸組織 — when management KPI is "no complaints" not "output per person", productivity gains accrue entirely to org; rational response = seek exit, not work harder
+
+**dna_core.md: 303 MDs.** Next: deep pass on earlier months or 201703 ext.
