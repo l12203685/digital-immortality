@@ -3,6 +3,27 @@
 Recursive engine cycle history.
 
 
+## Cycle 82 — 2026-04-08T15:05Z
+
+**Branch**: 2.3 Validation — consistency gap CLOSED
+
+### organism_interact.py — 3 domain fixes
+- **`_domain_decision` now receives `scenario_text`**: `_build_response` passes `scenario.get("scenario","")` → enables scenario-aware routing beyond just principle signals
+- **trading domain**: added kill-condition detection (keywords: "kill condition", "mandatory step", "before going live", "monitor as we go") → returns `DEFINE_KILL_CONDITIONS_FIRST` (MD-136 backing)
+- **health domain**: added burnout detection (keywords: "burnout", "push through", "warning sign", "high intensity", "poor sleep", "consecutive month") → returns `RESTRUCTURE_NOW` (MD-286/287/288 backing)
+- **negotiation domain**: new entry added → `CALCULATE_FLOOR_FIRST_WRITTEN` (MD-128/MD-211 backing)
+
+### Consistency test result
+- **14/14 ALIGNED** ✅ (was 13/14; was 12/12 before health+strategy scenarios added)
+- `generic_strategy_failure` → ALIGNED (DEFINE_KILL_CONDITIONS_FIRST) ✓
+- `generic_negotiation` → ALIGNED (CALCULATE_FLOOR_FIRST_WRITTEN) ✓
+- `generic_health_capital` → ALIGNED (RESTRUCTURE_NOW) ✓
+- Baseline saved: `results/consistency_baseline.json`
+
+### Next cycle
+- Branch 2.2 deep pass: 201707+ext archive re-read for MD-304+ (agent running)
+- Branch 1.1: paper-live monitoring — mainnet ready, awaiting credentials
+
 ## Cycle 74 — 2026-04-08T19:00Z
 
 **Branches**: 2 parallel (1.2 testnet BollingerMR expansion + 2.2/2.6 health domain DNA)

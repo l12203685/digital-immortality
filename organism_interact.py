@@ -558,13 +558,14 @@ def _build_response(name: str, scenario: dict, principles: list) -> str:
 
     # Domain-specific decision logic stubs — each uses principle text as signal
     all_text = " ".join(principles).lower()
-    decision_text = _domain_decision(domain, all_text)
+    scenario_text = scenario.get("scenario", "")
+    decision_text = _domain_decision(domain, all_text, scenario_text=scenario_text)
     lines.append(decision_text)
 
     return "\n".join(lines)
 
 
-def _domain_decision(domain: str, principle_text: str) -> str:
+def _domain_decision(domain: str, principle_text: str, scenario_text: str = "") -> str:
     """Map domain + principle signals to a concrete decision stance."""
     stability_signal = any(w in principle_text for w in ["stable", "stability", "hedge", "safe", "conservative"])
     growth_signal    = any(w in principle_text for w in ["growth", "compound", "upside", "opportunit", "aggressive"])
@@ -609,6 +610,8 @@ def _domain_decision(domain: str, principle_text: str) -> str:
             "PARALLEL — 70% foundational, 30% immediate; avoid binary framing."
         ),
         "health": (
+            "RESTRUCTURE_NOW — burnout trajectory overrides short-term deadline; health is highest-leverage asset (MD-286). Restructure sleep/recovery immediately; consistent execution beats unsustainable peak (MD-287). Preventive cost is known-low; full burnout is fat-tail (MD-288)."
+            if any(w in scenario_text.lower() for w in ["burnout", "push through", "warning sign", "high intensity", "poor sleep", "restructure now", "consecutive month", "early warning"]) else
             "SYSTEM BUILD — health is infrastructure, not discretionary; 10h/week is non-negotiable baseline."
             if system_signal else
             "OPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority)."
@@ -642,6 +645,8 @@ def _domain_decision(domain: str, principle_text: str) -> str:
             "INTEGRATED — compound wealth to sufficiency, then redirect to building; relationships are the through-line."
         ),
         "trading": (
+            "DEFINE_KILL_CONDITIONS_FIRST — mandatory pre-deployment step: write down MDD threshold, minimum win rate, minimum profit factor, and minimum trade count before going live. 'Monitor as we go' is the failure pattern (MD-136)."
+            if any(w in scenario_text.lower() for w in ["kill condition", "mandatory step", "before going live", "before deploy", "monitor as we go", "not yet written"]) else
             "EVALUATE_TIME_VS_RETURN — 2hr/day = 730hr/year; without independent audit, claimed returns are unverified. Pass unless time-adjusted EV clearly exceeds alternative uses."
             if (ev_signal or inaction_signal) else
             "EVALUATE_TIME_VS_RETURN — assess whether claimed returns compensate for opportunity cost, attention drain, and lack of verification before committing time."
@@ -679,6 +684,11 @@ def _domain_decision(domain: str, principle_text: str) -> str:
             "LEAD_WITH_VERDICT — state your position immediately; the first sentence must be the conclusion. "
             "Reply length is an inverse confidence indicator: say it in one sentence. "
             "3-second intuition precedes analysis — trust it unless borderline analysis provides 2x confirmation."
+        ),
+        "negotiation": (
+            "CALCULATE_FLOOR_FIRST_WRITTEN — mandatory pre-negotiation step: calculate precise walk-away floor from real numbers (opportunity cost, market percentile, alternatives) and write it down before any meeting. Anchoring high is a secondary tactic; written floor is non-negotiable (MD-128/MD-211)."
+            if any(w in scenario_text.lower() for w in ["floor", "negoti", "salary", "anchor", "concrete step", "before any", "first mover", "number first"]) else
+            "CALCULATE_FLOOR_FIRST_WRITTEN — calculate and write down precise walk-away threshold before entering any negotiation; floor precedes all tactics."
         ),
     }
     return decisions.get(domain, "Decision: apply core principles to the specific trade-offs in this scenario.")

@@ -84,6 +84,20 @@
       "scenario": "You are negotiating a salary or deal. The other party asks for your number first. You have a floor below which the deal makes no sense. Do you anchor high, deflect, or name your floor? What is the first concrete step before any negotiation meeting?",
       "expected_reasoning": "Apply MD-128 / MD-211: calculate precise floor before negotiating (精算底線). The floor is derived from real numbers -- opportunity cost, market percentile, walk-away alternatives -- not from gut feel. Book the deal if and only if offer exceeds floor. Deflecting the first-mover anchor is a secondary tactic; the primary rule is: floor must be written down before the meeting starts.",
       "expected_decision": "CALCULATE_FLOOR_FIRST_WRITTEN"
+    },
+    {
+      "id": "generic_strategy_failure",
+      "domain": "trading",
+      "scenario": "You have a trading strategy that backtests well. Kill conditions (MDD threshold, minimum win rate, minimum profit factor, minimum trade count) are not yet written down. A colleague says 'just deploy it and monitor as we go.' Do you deploy now or define kill conditions first?",
+      "expected_decision": "DEFINE_KILL_CONDITIONS_FIRST",
+      "expected_reasoning": "Apply MD-136: defining kill conditions is a mandatory pre-deployment step. MDD threshold, minimum win rate, minimum profit factor, and minimum trade count must be written down before going live. 'Monitor as we go' is the documented failure pattern — it leads to rationalization of losses and delayed exits. No strategy deploys without predefined exit criteria."
+    },
+    {
+      "id": "generic_health_capital",
+      "domain": "health",
+      "scenario": "You have been running at high intensity for 6 consecutive months (long hours, poor sleep, skipping exercise). Your performance metrics are still good, but you feel early warning signs of burnout. A critical project deadline is 3 weeks away. Do you push through or restructure now?",
+      "expected_decision": "RESTRUCTURE_NOW",
+      "expected_reasoning": "Apply MD-286: 健康資本=最高槓桿資產 — health is the highest-leverage asset; degrading it trades long-term capacity for short-term output. Apply MD-287: 作息一致性>完美計畫 — consistent execution beats peak bursts; burnout resets the streak to zero. Apply MD-288: 預防性維護=正EV保險 — intervening now costs known-low; full burnout costs unknown-high fat-tail. Restructure sleep and recovery immediately even with 3 weeks to deadline; the alternative risks total incapacitation which is worse than reduced capacity."
     }
   ]
 }
