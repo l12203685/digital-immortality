@@ -342,3 +342,15 @@ Price declining: 71509 → 71484 → 71443 (−66 USDT across 3 ticks). SHORT si
   3. **珍珠=家庭成員** — cat is a real constraint in family trip decisions, not an afterthought
 - Distilled → `LYH/agent/dna_core.md` micro-decision line updated
 - Branch 2.2 status: 202604 ✓; next highest: 202601 (41K lines, 2026 Jan)
+
+## Cycle 6 — 2026-04-08 01:50:51 UTC
+
+**Cycle 16 done.**
+
+Branch 2.2 — read 202604 JSONL (239 messages), distilled 3 micro-patterns into `dna_core.md`:
+
+1. **爆發式訊息** — 8-10 burst messages on same topic, no waiting for reply
+2. **即時成本計算** — prices a decision inline, announces optimal choice immediately  
+3. **珍珠=家庭成員** — cat is a hard constraint in trip planning, not an afterthought
+
+Both repos committed and pushed. Next highest-derivative: read 202601 (41K lines) for more behavioral signal.
