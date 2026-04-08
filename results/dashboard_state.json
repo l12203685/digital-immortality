@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T02:27+08",
+  "updated": "2026-04-09T02:33+08",
   "regime": "1.1 Trading — mainnet_activation_guide.md ready; Edward: follow guide → $100 live; 7.10 series COMPLETE → Edward posts SOP #01→#02→#03→#04 on X",
   "regime_neutral": "2.2 JSONL archive exhausted (315 MDs), 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: Edward follows `docs/mainnet_activation_guide.md` → first real revenue ..."
+      "text": "Next: Edward sets `BINANCE_MAINNET_KEY`/`SECRET` → `python -m trading.mainnet..."
     },
     {
       "time": "just now",
-      "text": "Kill conditions and rollback procedure documented."
+      "text": "Highest derivative analysis: Branch 7 complete (waiting on Edward to post), B..."
     },
     {
       "time": "just now",
-      "text": "6. Daily loop: `--loop 86400`"
+      "text": "Branch 1.1 — `--paper-live` tick 15: BTC=$71,500.76, signal=SHORT. Consistent..."
     },
     {
       "time": "just now",
-      "text": "5. Go live: `python trading/mainnet_runner.py --tick`"
+      "text": "Cycle 116 done."
     },
     {
-      "time": "just now",
-      "text": "4. Dry-run verify: `python trading/mainnet_runner.py --tick --dry-run`"
+      "time": "2026-04-09 UTC",
+      "text": "System is ready. Only Edward's API credentials block first real revenue tick."
     }
   ],
   "stats": {
-    "daemon_cycles": 115,
+    "daemon_cycles": 116,
     "total_mds": 325,
     "dna_core_lines": 87
   }
