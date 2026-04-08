@@ -4772,3 +4772,17 @@ Gap: SOP #29 fires the monitoring alert but no SOP covered what to do *during* t
 - Queue extended to **Jun 6** (#01~#30, 58-day target)
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 156 — 2026-04-09 UTC
+
+**Cycle 156 done.**
+
+Gap: SOP #15 (backtest deception) + SOP #26 (walk-forward) both warn against overfitting but neither teaches how to assess whether strategy complexity is supported by OOS evidence. MD-97/113/114/116/98 all in DNA, no teachable product on parsimony. Fixed.
+
+**Shipped:**
+- `docs/knowledge_product_31_parsimony_complexity_sop.md` — 5 gates: G0 mechanism sentence before any parameter (MD-97) / G1 DoF audit (P+B+I) / G2 parsimony gate OOS≥DoF×10 (MD-113/114) / G3 simplicity stress test remove weakest param <15% degradation=decorative (MD-116) / G4 cross-regime/asset validation 60% threshold (MD-98) / G5 deployment contract all fields required; self-test: DualMA BTC DoF=5, 200 OOS (40× coverage), ATR load-bearing, ETH 62% → DEPLOY
+- `docs/publish_thread_sop31_twitter.md` — hook: *"Your strategy has 4 parameters. Is that too many? Wrong question."*
+- `docs/posting_queue.md` extended to **#01~#31** (Jun 8, 60-day target)
+- `results/dynamic_tree.md` updated: Branch 7.34, cycle 156
+
+**Next blocker:** Edward posts SOP #01.

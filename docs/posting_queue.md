@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#30
+# Twitter Posting Queue — SOP Series #01~#31
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -37,6 +37,7 @@
 | Jun 2 | #28 | publish_thread_sop28_twitter.md | "Your backtest made $50/trade. Your live account makes $30. You're paying 40% to execution." | pending |
 | Jun 4 | #29 | publish_thread_sop29_twitter.md | "Your strategy is live. Now what do you watch? Not P&L. P&L is noise." | pending |
 | Jun 6 | #30 | publish_thread_sop30_twitter.md | "You know how to enter a trade. Do you know what to do when you're 12% underwater and the next signal fires?" | pending |
+| Jun 8 | #31 | publish_thread_sop31_twitter.md | "Your strategy has 4 parameters. Is that too many? Wrong question." | pending |
 
 ---
 
