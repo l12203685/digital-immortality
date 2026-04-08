@@ -957,3 +957,15 @@ Branch 2.2 — 202402 (1,770 Edward msgs, Feb 2024) → 3 new MDs written to `dn
 - **MD-45 期望值正是第一關** — 新策略第一問：E(V)>0？不是年化報酬率/勝率/Sharpe；先確認正EV才有意義繼續優化
 
 `dna_core.md`: 122 lines, **45 MDs**. Next: 202312.
+
+## Cycle 18 — 2026-04-08 04:25:06 UTC
+
+**Cycle 43 done.**
+
+Branch 2.2 — 202401 (659 Edward msgs, Jan 2024) → MD-43~MD-45 written:
+
+- **MD-43 純價策略=BnH equity trading** — all trend/breakout strategies implicitly trade the buy-and-hold curve; identify whether you're generating alpha or beta timing before building
+- **MD-44 GTO混同策略抗被剝削** — optimal equilibrium in zero-sum games requires randomization; deterministic signals are exploitable; apply to trading execution
+- **MD-45 期望值正是第一關** — E(V)>0 is the first gate, not annualized return or Sharpe; any positive-EV strategy is worth iterating
+
+`dna_core.md`: 122 lines, 45 MDs. Next: 202312.
