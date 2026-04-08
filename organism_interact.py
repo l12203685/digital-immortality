@@ -692,6 +692,15 @@ def _domain_decision(domain: str, principle_text: str) -> str:
             "Reply length is an inverse confidence indicator: say it in one sentence. "
             "3-second intuition precedes analysis — trust it unless borderline analysis provides 2x confirmation."
         ),
+        "negotiation": (
+            "CALCULATE_FLOOR_FIRST_WRITTEN — before any negotiation meeting, write down your precise floor derived from real numbers (opportunity cost, market percentile, walk-away alternatives). "
+            "MD-128/MD-211: 精算底線 must be on paper before the meeting starts. "
+            "Book the deal if and only if offer exceeds floor. Deflecting anchor is secondary; floor-first is the mandatory step."
+            if (system_signal or stability_signal or ev_signal) else
+            "CALCULATE_FLOOR_FIRST_WRITTEN — floor must be calculated and written before negotiating. "
+            "Gut-feel floors are invalid; only real numbers (market rate, opportunity cost, alternatives) count. "
+            "Without a written floor, you cannot make a principled accept/reject decision."
+        ),
     }
     return decisions.get(domain, "Decision: apply core principles to the specific trade-offs in this scenario.")
 

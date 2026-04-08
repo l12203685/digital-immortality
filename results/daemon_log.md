@@ -3283,3 +3283,13 @@ Cycle 89 done.
 - **MD-318** 分批買進=執行策略的預設答案 — 分析通過即執行DCA，把「哪支」與「怎麼買」分離，消除擇時決策摩擦
 
 Next: **201702 deep pass**.
+
+## Cycle 90 — 2026-04-08 16:07:53 UTC
+
+**Branch 2.3** — consistency re-validation after Branch 2.2 exhaustion (201702/201701 = 0 Edward msgs).
+
+**Regression found + fixed:** `"negotiation"` domain was missing from `_domain_decision` in organism_interact.py (supposed to be added cycle 82, not present). Re-added with CALCULATE_FLOOR_FIRST_WRITTEN → MD-128/MD-211 principles.
+
+**Result: 14/14 ALIGNED ✅** (318 MDs validated; was 306 MDs at cycle 82).
+
+Branch 2.2 JSONL archive fully exhausted. Next highest-derivative: Branch 1.1 (mainnet trading — needs BINANCE_MAINNET_KEY/SECRET) or Branch 2.3 extension scenarios.
