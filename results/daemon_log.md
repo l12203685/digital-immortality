@@ -3207,3 +3207,15 @@ Next action: either fix the `generic_strategy_failure` boot test alignment (add 
 - **MD-309**: 職業路徑=最大損失歸屬分析 — prefer paths where max loss is limited to own capital; organizational loss tail-risk is uncontrolled; own capital loss is quantifiable and stop-loss-able
 
 **dna_core.md: 309 MDs.** Next: 201705 deep pass.
+
+## Cycle 86 — 2026-04-08 15:39:58 UTC
+
+**Cycle 83 done.**
+
+Branch 2.2 deep pass on 201706 (1246 Edward msgs). Three new MDs written to `dna_core.md` (**309 MDs**):
+
+- **MD-307** 投資基準=存活確定性先於報酬率 — S&P500 is the minimum valid benchmark; 定存 is invalid (lower survival certainty); weak baseline = false superiority
+- **MD-308** 長期持倉=先問10年後還在嗎 — individual stocks have exit risk; index ETFs survive via dynamic replacement; survivability precedes compounding
+- **MD-309** 職業路徑=最大損失歸屬分析 — prefer paths where max loss is limited to own capital; org tail-risk uncontrolled; own capital loss is stop-loss-able
+
+Next: **201705 deep pass**.
