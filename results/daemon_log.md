@@ -2053,3 +2053,13 @@ Next: 202008.
 - **MD-180** 邊緣case=差異化來源 — 主流case大家水平趨同，邊緣case（marginal hands）是edge池；提升邊際case EV比優化主流case報酬率更高
 
 `LYH/agent/dna_core.md`: **180 MDs**. Next: 202007.
+
+## Cycle 12 — 2026-04-08 08:11:46 UTC
+
+Done. **Cycle 12 — 202008 distill → MD-178~180** (180 MDs total):
+
+- **MD-178** 策略三要素互鎖 — sizing+frequency+range 三環節必須同時一致；任一脫鏈則策略失效，不管其他兩個多好
+- **MD-179** 莊家視角優先 — 找套利先建 MM 行為模型；perspective hierarchy: MM → intermediary → player
+- **MD-180** 邊緣 case=差異化來源 — 主流 case 大家水平趨同；edge 池在 marginal hands；提升邊際 case EV 比優化主流 case 報酬率更高
+
+Both repos pushed. Next: 202007.

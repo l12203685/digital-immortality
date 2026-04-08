@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T16:04+08",
+  "updated": "2026-04-08T16:11+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
+      "text": "Both repos pushed. Next: 202007."
+    },
+    {
+      "time": "just now",
+      "text": "Done. Cycle 12 — 202008 distill → MD-178~180 (180 MDs total):"
+    },
+    {
+      "time": "just now",
+      "text": "`LYH/agent/dna_core.md`: 180 MDs. Next: 202007."
+    },
+    {
+      "time": "just now",
+      "text": "202008 distill → MD-178~MD-180 (180 MDs total):"
+    },
+    {
+      "time": "7min ago",
       "text": "Next: 202008."
-    },
-    {
-      "time": "just now",
-      "text": "202009 → MD-175~177 written to `dna_core.md`:"
-    },
-    {
-      "time": "just now",
-      "text": "`LYH/agent/dna_core.md`: 177 MDs. Next: 202008."
-    },
-    {
-      "time": "just now",
-      "text": "202009 distill → MD-175~MD-177 (177 MDs total):"
-    },
-    {
-      "time": "6min ago",
-      "text": "API Error: 529 {\"type\":\"error\",\"error\":{\"type\":\"overloaded_error\",\"message\":\"..."
     }
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 177,
+    "total_mds": 180,
     "dna_core_lines": 76
   }
 }
