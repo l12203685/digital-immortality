@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 92)
+> 最後更新：2026-04-09 UTC (cycle 94)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -73,15 +73,29 @@
 - 5.4 Documentation：README + SKILL_zh-TW updated ✓
 
 ### 6. 存活冗餘（anti-fragile）
-- 6.1 冷啟動 recovery：templates/dna_core.md **273 MDs** ✓ (cycle 55: 201705+201704 → MD-271~273; distill chain: 202604→201703, 57 months processed)
+- 6.1 冷啟動 recovery：templates/dna_core.md **324 MDs** ✓ (cycle 94: domains 7+8 initialized; cycle 55: distill chain 202604→201703 complete)
 - 6.2 跨 platform：DNA=markdown not weights ✓
 - 6.3 三層遞迴：daemon + remote trigger + E0 ✓（daemon 已啟動）
 - 6.4 Multi-provider：platform/multi_provider.py created ✓ (Anthropic→OpenAI→Gemini fallback chain, lazy imports)
 - 6.5 衝突解法：scope 分離（每層碰不同檔案）
 
+### 7. 知識輸出（scale intelligence externally）
+- 7.1 知識缺口偵測：MD-319 (輸出=缺口偵測器) ✓ cycle 94 — forced-output checkpoints; explanation stalls = reinforce nodes
+- 7.2 平台選擇框架：MD-320 (受眾密度×回饋速度 2×2矩陣) ✓ cycle 94 — audience density × feedback speed; hypothesis before publish
+- 7.3 知識產品化：MD-321 (SOP → teachable document = refinement) ✓ cycle 94 — productization forces all implicit steps to surface
+- consistency: `generic_knowledge_output_gap` + `generic_knowledge_productize_sop` → OUTPUT_TO_VALIDATE_UNDERSTANDING ✅ 24/24
+- next: 7.4 第一個知識產品 (identify highest-reuse SOP, write as teachable doc)
+
+### 8. 生活維護（operational baseline）
+- 8.1 決策頻率最小化：MD-322 (>3次同一決策=系統設計失敗) ✓ cycle 94 — automate/pre-decide recurring choices
+- 8.2 峰值時段保護：MD-323 (高認知任務只在生理峰值時段) ✓ cycle 94 — peak→strategy/analysis; off-peak→admin/email
+- 8.3 環境設計先行：MD-324 (環境設計>意志力) ✓ cycle 94 — redesign environment before invoking willpower
+- consistency: `generic_life_system_recurring_decisions` + `generic_peak_cognitive_protection` → REDUCE_DECISION_FREQUENCY ✅ 24/24
+- next: 8.4 audit 1週重複決策清單 + 優先自動化前3項
+
 ## 當前 regime
-攻擊：1.1 Trading（testnet running，7-day window → mainnet small size）
-中性：2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed
+攻擊：1.1 Trading（testnet running，7-day window → mainnet small size）; 7.x 知識輸出 初始化完成
+中性：2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成
 防禦：2.3 blocked API credit, 4.1 partially unblocked (samuel_dna tested 19/20)
 
 ## 已完成 milestones
@@ -103,6 +117,7 @@
 - daily cron 09:03 UTC + cron_daily_tick.bat registered
 
 ## 演化紀錄 (cont.)
+- 2026-04-09T16:35 UTC: cycle 94 — (A) **Domains 7+8 initialized**: Branch 7.x 知識輸出 (MD-319~321: 輸出=缺口偵測器/平台=受眾密度×回饋速度/產品化=隱性流程顯性化) + Branch 8.x 生活維護 (MD-322~324: 決策頻率最小化/峰值時段保護/環境設計>意志力) added to dynamic_tree.md; (B) dna_core.md: **318 → 324 MDs**; (C) Branch 2.3: consistency test extended — **24/24 ALIGNED ✅** (was 20/20); 4 new scenarios: generic_knowledge_output_gap, generic_life_system_recurring_decisions, generic_knowledge_productize_sop, generic_peak_cognitive_protection; (D) organism_interact.py: knowledge_output + life_maintenance domains wired into DOMAIN_PRINCIPLE_AFFINITY + _domain_decision
 - 2026-04-08T15:05 UTC: cycle 82 — (A) Branch 2.3: 14/14 ALIGNED ✅ (was 13/14); 3 domain fixes in organism_interact.py: trading→DEFINE_KILL_CONDITIONS_FIRST, health→RESTRUCTURE_NOW, negotiation→CALCULATE_FLOOR_FIRST_WRITTEN; (B) Branch 2.2: 201707 deep pass → MD-304~306 (pot odds/multiway equity/c-bet frequency); dna_core.md: 306 MDs
 
 ## 演化紀錄

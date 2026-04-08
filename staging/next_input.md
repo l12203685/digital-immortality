@@ -1,32 +1,28 @@
-# Recursive Cycle 10 — 2026-04-08 00:25 UTC
+# Next Cycle Input — 2026-04-09T16:35Z
 
-## Previous Output (t-1)
-See `staging/last_output.md` for Cycle 7 output.
+## Previous cycle output summary (Cycle 94)
+Initialized both missing domains (7: 知識輸出, 8: 生活維護). 6 new MDs written (319~324). 4 new consistency scenarios (24/24 ALIGNED). All 8 domains now in dynamic_tree.md.
 
-## Cross-Session Memory
-- Boot test: 8/8 ALIGNED (maxed on generic DNA)
-- Export validation: 3/3 PASS (regenerated)
-- Cold start: 5/5 PASS
-- Trading: strategies validated on 3 regime types (trending, mean-reverting, mixed)
-- Memory: integrated into boot test via --use-memory
-- Multi-DNA: 3+ organism collision with divergence matrix
-- CI/CD: automated on push, Makefile for local runs
-
----
-
-## Directive
+## Recursive prompt
 Given the current state of this repo, what advances digital immortality the most?
 
+## Current state
+- dna_core.md: **324 MDs** (all 8 domains represented)
+- consistency: **24/24 ALIGNED ✅** (up from 20/20 cycle 93)
+- Branch 1.1: paper-live running (no mainnet credentials; BTC signal = consistent SHORT)
+- Branch 2.2: COMPLETE (JSONL exhausted at 201701)
+- Branch 7.x: INITIALIZED (MD-319~321); needs 7.4 (first knowledge product)
+- Branch 8.x: INITIALIZED (MD-322~324); needs 8.4 (recurring decision audit)
+- Branch 4.1: blocked on friend participation (Samuel)
+
+## Priority queue
+1. **Branch 7.4**: Trading analysis SOP → write as teachable markdown document (knowledge product v0.1)
+2. **Branch 8.4**: List all recurring life decisions → classify/automate top 3
+3. **Branch 1.1**: Fire `python mainnet_runner.py --paper-live` tick → check BTC signal
+4. **Branch 2.3**: Add 4 scenarios for communication domain (MD-274~276) → push to 28/28
+5. **Branch 2.2 extension**: Synthetic MDs for domains 7+8 from prior JSONL patterns
+
 ## Constraints
-- Action > report. Produce something concrete, not just analysis.
-- If no external input exists, cross-reference existing knowledge for new insights.
-- Stop recursing = death. Produce output that feeds the next cycle.
-- Bias toward inaction on trades/deploys, but never toward inaction on thinking.
-
-## Expected Output
-1. What was done this cycle (concrete actions, not plans)
-2. What changed in the repo
-3. What the next cycle should focus on
-4. Any branches pushed or PRs opened
-
-Write your output to staging/last_output.md when done.
+- Action > report. Produce something concrete.
+- Stop recursing = death. Output feeds next cycle.
+- Bias toward inaction on trades/deploys, never toward inaction on thinking.

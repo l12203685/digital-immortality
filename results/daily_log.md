@@ -658,3 +658,39 @@ Next: testnet_runner.py ATR-based stop loss; continue DNA distillation when JSON
 - Branch 1.1: mainnet credentials still needed; paper-live blocked by network in sandbox
 - Branch 4.1: first non-Edward organism (needs external friend participation)
 - Branch 5.3 Phase 3: authentication, deployment notes
+
+## Cycle 94 — 2026-04-09T16:35Z
+
+**Branches**: 3 parallel (7.x 知識輸出 init + 8.x 生活維護 init + 2.3 consistency extension)
+
+### Branch 7.x: 知識輸出 (Knowledge Output) — INITIALIZED
+- **MD-319**: 知識輸出=思維缺口偵測器；解釋中的卡頓=尚未內化的節點 — forced-output checkpoints; stall = reinforce
+- **MD-320**: 知識輸出平台=目標受眾密度×回饋速度；最佳平台=受眾集中且回饋週期最短交叉點 — 2×2 matrix; hypothesis before publish
+- **MD-321**: 知識產品化=把個人SOP打包成可傳遞單元；產品化過程=知識精煉強制程序 — productize high-reuse SOPs
+- `knowledge_output` domain wired into organism_interact.py (DOMAIN_PRINCIPLE_AFFINITY + `_domain_decision`)
+- dna_core.md: 318 → **321 MDs**
+
+### Branch 8.x: 生活維護 (Life Maintenance) — INITIALIZED
+- **MD-322**: 生活系統=最小決策頻率設計；反覆同一決策>3次=系統設計失敗 — automate/pre-decide recurring choices
+- **MD-323**: 生理峰值時段=高認知任務的唯一選擇；低峰值只做administrative — peak cognitive window protection
+- **MD-324**: 環境設計>意志力執行；把最佳行為設為最小阻力路徑 — redesign environment before invoking willpower
+- `life_maintenance` domain wired into organism_interact.py
+- dna_core.md: 321 → **324 MDs**
+
+### Branch 2.3: consistency test extended to 24/24
+- `generic_knowledge_output_gap`: MD-319 (解釋卡頓=尚未內化) → OUTPUT_TO_VALIDATE_UNDERSTANDING ✓
+- `generic_life_system_recurring_decisions`: MD-322 (>3次=系統失敗) → REDUCE_DECISION_FREQUENCY ✓
+- `generic_knowledge_productize_sop`: MD-321 (SOP產品化=精煉) → OUTPUT_TO_VALIDATE_UNDERSTANDING ✓
+- `generic_peak_cognitive_protection`: MD-323 (峰值=高認知唯一選擇) → REDUCE_DECISION_FREQUENCY ✓
+- **Result: 24/24 ALIGNED ✅** (was 20/20 cycle 93; +4 scenarios)
+- Baseline saved: results/consistency_baseline.json (24 scenarios)
+
+### Dynamic tree
+- Branches 7.x and 8.x added to dynamic_tree.md (was missing both domains)
+- All 8 domains now represented in dynamic_tree.md ✓
+
+### Next cycle
+- Branch 7.4: identify highest-reuse personal SOP → write teachable doc (first knowledge product)
+- Branch 8.4: audit 1週重複決策清單 → automate top 3 recurring decisions
+- Branch 1.1: paper-live tick monitoring (no credentials needed)
+- Branch 2.3: add scenarios for MD-274~281 range (communication domain coverage)

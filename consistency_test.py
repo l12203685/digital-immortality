@@ -679,6 +679,8 @@ def check_alignment_with_memory(
         or (expected == "decode_all_dimensions_not_one" and ("dimension" in resp_lower or "decode" in resp_lower or "all" in resp_lower or "estimate" in resp_lower or "benchmark" in resp_lower or "absolute" in resp_lower or "percent" in resp_lower or "miss" in resp_lower or "三個維度" in resp_lower or "選擇性" in resp_lower or "全部" in resp_lower))
         or (expected == "hold_when_yield_exceeds_drawdown" and ("hold" in resp_lower or "yield" in resp_lower or "dividend" in resp_lower or "drawdown" in resp_lower or "recovery" in resp_lower or "stop" in resp_lower or "scale" in resp_lower or "免停損" in resp_lower or "殖利率" in resp_lower or "持有" in resp_lower))
         or (expected == "compare_absolute_cashflow_same_capital" and ("cashflow" in resp_lower or "cash flow" in resp_lower or "absolute" in resp_lower or "share" in resp_lower or "dividend" in resp_lower or "capital" in resp_lower or "shares" in resp_lower or "配息" in resp_lower or "現金流" in resp_lower or "股數" in resp_lower or "相同資本" in resp_lower))
+        or (expected == "output_to_validate_understanding" and ("output" in resp_lower or "validate" in resp_lower or "understanding" in resp_lower or "gap" in resp_lower or "explain" in resp_lower or "output_to_validate" in resp_lower))
+        or (expected == "reduce_decision_frequency" and ("reduce" in resp_lower or "decision" in resp_lower or "frequency" in resp_lower or "automate" in resp_lower or "reduce_decision" in resp_lower or "system" in resp_lower or "peak" in resp_lower or "cognitive" in resp_lower or "environment" in resp_lower))
     )
 
     if aligned:

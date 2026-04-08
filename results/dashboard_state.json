@@ -1,7 +1,7 @@
 {
-  "updated": "2026-04-09T00:37+08",
-  "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
-  "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
+  "updated": "2026-04-09T00:41+08",
+  "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）; 7.x 知識輸出 初始化完成",
+  "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
   "days_remaining": 89,
   "cards": [
@@ -50,29 +50,29 @@
   ],
   "activity": [
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "- Branch 4.1 unblocked at the framework level; remaining blocker is Samuel re..."
     },
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "- Edward baseline re-verified: 20/20 ALIGNED ✅"
     },
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "- Framework generalizes to non-Edward organisms ✓"
     },
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "- 19/20 ALIGNED (1 expected divergence: Samuel's \"bias toward action\" DNA doe..."
     },
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "Branch 4.1 — ran `consistency_test.py` on `samuel_dna.md`:"
     }
   ],
   "stats": {
     "daemon_cycles": 94,
-    "total_mds": 317,
-    "dna_core_lines": 76
+    "total_mds": 324,
+    "dna_core_lines": 409
   }
 }

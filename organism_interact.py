@@ -487,6 +487,8 @@ DOMAIN_PRINCIPLE_AFFINITY = {
     "information_asymmetry": ["information", "asymmetry", "edge", "research", "知識", "資訊", "不對稱", "優勢"],
     "information":      ["media", "headline", "narrative", "earnings", "dimension", "decode", "news", "報導", "媒體", "財報", "選擇性", "維度"],
     "negotiation":      ["negotiation", "salary", "floor", "anchor", "deal", "談判", "底線", "薪資", "精算"],
+    "knowledge_output": ["knowledge", "output", "teach", "explain", "write", "publish", "content", "platform", "SOP", "product", "知識", "輸出", "教學", "解釋", "寫作", "平台"],
+    "life_maintenance": ["life", "routine", "habit", "environment", "default", "automate", "schedule", "peak", "cognitive", "sleep", "生活", "習慣", "環境設計", "預設", "自動化", "峰值"],
 }
 
 
@@ -727,6 +729,24 @@ def _domain_decision(domain: str, principle_text: str) -> str:
             "CALCULATE_INCOME_TARGET_FROM_YIELD — target_income / yield% = required_capital; convert abstract goals to capital milestones. "
             "HOLD_WHEN_YIELD_EXCEEDS_DRAWDOWN — when yield > drawdown% and position sizing is safe, hold dominates stop-loss. "
             "COMPARE_ABSOLUTE_CASHFLOW_SAME_CAPITAL — same capital invested: compute shares × dividend_per_share for each option, compare absolute cashflow amounts."
+        ),
+        "knowledge_output": (
+            "OUTPUT_TO_VALIDATE_UNDERSTANDING — "
+            "MD-319: 知識輸出=思維缺口偵測器. If you cannot explain it clearly to an unfamiliar listener, "
+            "the gap is in your understanding, not the topic's complexity. "
+            "Schedule forced-output checkpoints: 2-min oral summary after each learning unit. "
+            "Where explanation stalls = where to reinforce. "
+            "MD-321: PRODUCTIZE_SOP — high-reuse personal procedures are knowledge product candidates; "
+            "productization forces all implicit assumptions to surface."
+        ),
+        "life_maintenance": (
+            "REDUCE_DECISION_FREQUENCY — "
+            "MD-322: 生活系統=最小決策頻率設計. Any decision appearing more than 3 times = system design failure. "
+            "Automate or pre-decide; preserve decision capacity for non-recurring high-stakes problems. "
+            "MD-323: PROTECT_PEAK_COGNITIVE_WINDOW — schedule high-cognitive tasks (strategy/analysis/decisions) "
+            "exclusively in biological peak hours; defer admin/email/mechanical tasks to off-peak. "
+            "MD-324: DESIGN_ENVIRONMENT_FIRST — before invoking willpower, redesign the environment so the "
+            "optimal behavior is the lowest-friction path. Environment is a constant; willpower is a depletable resource."
         ),
     }
     return decisions.get(domain, "Decision: apply core principles to the specific trade-offs in this scenario.")

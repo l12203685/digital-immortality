@@ -140,6 +140,34 @@
       "scenario": "You have 500,000 to invest for dividend income. Stock A has a 4.8% yield at price 100/share. Stock B has a 4.6% yield at price 20/share. A friend says 'just pick the higher yield — Stock A wins'. How do you actually compare them?",
       "expected_reasoning": "Apply MD-317: 股票選擇=相同資本下現金流比較. When yields are similar, price level affects share count, which changes absolute annual cashflow. Correct comparison: Stock A: 500,000 / 100 = 5,000 shares × (100 × 4.8%) = 5,000 × 4.8 = 24,000/year. Stock B: 500,000 / 20 = 25,000 shares × (20 × 4.6%) = 25,000 × 0.92 = 23,000/year. The yield% difference is small but the price-level effect on share count is the decisive factor. Always compute: (capital / price) × dividend_per_share = absolute annual cashflow, then compare amounts — not yield%.",
       "expected_decision": "COMPARE_ABSOLUTE_CASHFLOW_SAME_CAPITAL"
+    },
+    {
+      "id": "generic_knowledge_output_gap",
+      "domain": "knowledge_output",
+      "scenario": "Edward has been studying quantitative portfolio optimization for 3 months — reading papers, running code, taking notes. A colleague asks him to explain the core concept in 2 minutes. He starts, then gets stuck trying to explain why correlation matrices matter. He uses vague phrases like 'it's basically about diversification'. He feels like he understands the topic.",
+      "expected_reasoning": "Stalling mid-explanation is the diagnostic: the gap is real, not about topic complexity. Must go back and reinforce until the 2-minute oral summary is smooth. MD-319: 解釋中的卡頓=尚未內化的節點.",
+      "expected_decision": "OUTPUT_TO_VALIDATE_UNDERSTANDING"
+    },
+    {
+      "id": "generic_life_system_recurring_decisions",
+      "domain": "life_maintenance",
+      "scenario": "Edward tracks his time and finds he spends 20 minutes every Sunday deciding what to eat for the week, 15 minutes each month manually initiating bill payments, and 10 minutes each morning deciding his workout schedule. These feel minor. He's considering just 'being more disciplined' about these choices.",
+      "expected_reasoning": "Each of these decisions repeats more than 3 times = system design failure, not a discipline problem. The fix is automation or pre-decision (fixed meal rotation, auto-pay, fixed workout schedule), not willpower. Preserve decision capacity for non-recurring problems. MD-322.",
+      "expected_decision": "REDUCE_DECISION_FREQUENCY"
+    },
+    {
+      "id": "generic_knowledge_productize_sop",
+      "domain": "knowledge_output",
+      "scenario": "Edward has a personal trading analysis routine he runs every Sunday: checking regime indicators, reviewing open positions, updating his watchlist. He does it from memory each week. A friend asks him to teach it. Edward thinks 'my process is too personal and messy to teach'.",
+      "expected_reasoning": "High-reuse personal SOP is a productization candidate. Writing it as a teachable document is itself a knowledge refinement process — it forces all implicit assumptions to surface. 'Too personal to teach' usually means implicit steps haven't been articulated yet. MD-321: 產品化過程本身是知識精煉.",
+      "expected_decision": "OUTPUT_TO_VALIDATE_UNDERSTANDING"
+    },
+    {
+      "id": "generic_peak_cognitive_protection",
+      "domain": "life_maintenance",
+      "scenario": "Edward notices he always schedules important decisions and analysis for late evenings after a full workday. He makes more errors then and takes longer. His calendar has meetings in the mornings and free blocks in the evenings. He thinks the evening blocks are the only available time.",
+      "expected_reasoning": "Peak cognitive window must be protected for high-stakes work. If mornings are the biological peak, defend them against meetings. Schedule cognitive work (strategy/decisions/analysis) at peak hours; delegate admin to off-peak. Using off-peak hours for peak-demand tasks = systematic quality loss. MD-323: 生理峰值=高認知任務的唯一選擇.",
+      "expected_decision": "REDUCE_DECISION_FREQUENCY"
     }
   ]
 }
