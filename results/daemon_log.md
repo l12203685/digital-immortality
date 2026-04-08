@@ -909,3 +909,15 @@ Branch 2.2 — highest derivative (39 MDs still accumulating, 202403 next).
 - **MD-42 最佳化陷阱信號** — if backtested strategy feels wrong to you, it's overfit; domain intuition is the early-warning system for overfitting
 
 dna_core.md: 119 lines, 42 MDs. Next: 202402.
+
+## Cycle 16 — 2026-04-08 04:16:00 UTC
+
+**Cycle 41 done.**
+
+Branch 2.2 — 202403 (386 Edward msgs, Mar 2024) → MD-40~MD-42 written to `dna_core.md`:
+
+- **MD-40** 電指期四大結構優勢 — pick tools by structural edge (逆價差/資金使用率/無槓桿成本/不被非科技拖累)
+- **MD-41** 保證金剩餘再配置 — futures only need original margin; deploy remainder in stable assets
+- **MD-42** 最佳化陷阱信號 — "I wouldn't use this strategy" = overfit warning; domain intuition is the early detector
+
+dna_core.md: 119 lines, **42 MDs**. Next: 202402.
