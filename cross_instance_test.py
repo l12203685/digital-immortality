@@ -3,28 +3,35 @@
 Cross-Instance LLM Consistency Test
 ====================================
 
-Generates prompts for testing whether a DNA file produces consistent decisions
-across multiple independent LLM sessions. Unlike consistency_test.py (which
-uses the deterministic engine as baseline), this script is designed for the
-real test: multiple LLM sessions that should agree if the DNA is good.
+Tests whether a DNA file produces consistent decisions across multiple
+independent LLM sessions. Two execution modes:
 
-Workflow:
-    1. Run this script to generate a template with self-contained prompts
-    2. Open 3+ independent LLM sessions (clean context each time)
-    3. For each session: load only the DNA, paste each scenario prompt
-    4. Record each session's answers in the template
-    5. Score agreement across sessions
+  Template mode (default):
+    Generates a markdown template for manual copy-paste testing.
+
+  Automated mode (--run):
+    Runs N independent API/CLI calls, each with only DNA loaded,
+    and compares decisions automatically.
 
 Usage:
+    # Generate template for manual testing
     python cross_instance_test.py <dna_file> [--sessions N] [--output-dir <dir>]
 
+    # Automated via Anthropic API (requires ANTHROPIC_API_KEY)
+    python cross_instance_test.py <dna_file> --run [--sessions N] [--model <model>]
+
+    # Automated via Claude CLI (uses Claude Max subscription, no API credit)
+    python cross_instance_test.py <dna_file> --run --cli [--sessions N] [--model <model>]
+
 Output:
-    results/cross_instance_template.md
+    results/cross_instance_template.md   (template mode)
+    results/cross_instance_results.json  (automated mode)
 """
 
 import argparse
 import json
 import re
+import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -101,6 +108,148 @@ def build_all_scenarios(dna: dict) -> list:
         })
 
     return all_scenarios
+
+
+# ---------------------------------------------------------------------------
+# Automated execution (--run mode)
+# ---------------------------------------------------------------------------
+
+DEFAULT_MODEL = "claude-sonnet-4-6"
+
+
+def run_session(
+    prompt: str,
+    *,
+    use_cli: bool = False,
+    model: str = DEFAULT_MODEL,
+) -> str:
+    """
+    Run a single independent LLM session and return the raw response text.
+
+    Args:
+        prompt:  The full self-contained prompt (includes DNA + scenario).
+        use_cli: If True, shell out to ``claude -p`` instead of using the API.
+        model:   Model identifier (used by both API and CLI paths).
+
+    Returns:
+        The model's response as a string.
+    """
+    if use_cli:
+        return _run_session_cli(prompt, model=model)
+    return _run_session_api(prompt, model=model)
+
+
+def _run_session_api(prompt: str, *, model: str = DEFAULT_MODEL) -> str:
+    """Call the Anthropic Messages API directly."""
+    import anthropic  # noqa: local import so --cli mode doesn't need the SDK
+
+    client = anthropic.Anthropic()
+    response = client.messages.create(
+        model=model,
+        max_tokens=4096,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    # response.content is a list of ContentBlock; join text blocks
+    return "".join(
+        block.text for block in response.content if hasattr(block, "text")
+    )
+
+
+def _run_session_cli(prompt: str, *, model: str = DEFAULT_MODEL) -> str:
+    """Shell out to ``claude -p`` (uses the user's Claude Max subscription)."""
+    cmd = ["claude", "-p", prompt, "--model", model]
+    result = subprocess.run(
+        cmd,
+        capture_output=True,
+        text=True,
+        timeout=300,  # 5 min per call
+    )
+    if result.returncode != 0:
+        raise RuntimeError(
+            f"claude CLI exited {result.returncode}: {result.stderr.strip()}"
+        )
+    return result.stdout.strip()
+
+
+def _extract_decision(response: str) -> str:
+    """
+    Pull the decision line from a model response.
+
+    Looks for ``**Decision**: <value>`` and normalises to uppercase.
+    Falls back to the first non-empty line if no match.
+    """
+    m = re.search(r"\*\*Decision\*\*\s*:\s*(.+)", response)
+    if m:
+        return m.group(1).strip().upper()
+    # fallback: first non-blank line
+    for line in response.splitlines():
+        stripped = line.strip()
+        if stripped:
+            return stripped.upper()
+    return "NO_RESPONSE"
+
+
+def run_automated_test(
+    dna_path: str,
+    dna: dict,
+    scenarios: list,
+    num_sessions: int,
+    *,
+    use_cli: bool = False,
+    model: str = DEFAULT_MODEL,
+) -> dict:
+    """
+    Run *num_sessions* independent calls for every scenario, compare decisions.
+
+    Returns a results dict with per-scenario breakdown and overall agreement.
+    """
+    results: list[dict] = []
+    total_agreed = 0
+
+    for i, s in enumerate(scenarios, 1):
+        prompt = generate_scenario_prompt(dna_path, dna["name"], s)
+        print(f"  Scenario {i}/{len(scenarios)}: {s['id']} ({s['domain']})")
+
+        responses: list[str] = []
+        decisions: list[str] = []
+        for session_idx in range(num_sessions):
+            print(f"    Session {session_idx + 1}/{num_sessions} ...", end=" ", flush=True)
+            try:
+                raw = run_session(prompt, use_cli=use_cli, model=model)
+            except Exception as exc:
+                raw = f"ERROR: {exc}"
+            decision = _extract_decision(raw)
+            responses.append(raw)
+            decisions.append(decision)
+            print(decision)
+
+        # Agreement = all decisions identical
+        unique = set(decisions)
+        agreed = len(unique) == 1
+        if agreed:
+            total_agreed += 1
+
+        results.append({
+            "id": s["id"],
+            "domain": s["domain"],
+            "expected": s.get("expected_decision"),
+            "decisions": decisions,
+            "agreed": agreed,
+            "responses": responses,
+        })
+
+    return {
+        "dna": dna["name"],
+        "dna_file": dna_path,
+        "model": model,
+        "mode": "cli" if use_cli else "api",
+        "sessions": num_sessions,
+        "timestamp": datetime.now().isoformat(),
+        "scenarios": results,
+        "total_scenarios": len(scenarios),
+        "total_agreed": total_agreed,
+        "agreement_rate": total_agreed / len(scenarios) if scenarios else 0.0,
+    }
 
 
 def generate_cross_instance_template(
@@ -271,7 +420,7 @@ def store_cross_instance_results(
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate cross-instance LLM consistency test template",
+        description="Cross-instance LLM consistency test (template or automated)",
     )
     parser.add_argument("dna_file", help="Path to DNA markdown file")
     parser.add_argument(
@@ -286,7 +435,23 @@ def main():
         "--store-results", default=None, metavar="TEMPLATE",
         help="Parse a filled-in template and store results in memory (path to filled template)",
     )
+    parser.add_argument(
+        "--run", action="store_true",
+        help="Run automated test instead of generating a template",
+    )
+    parser.add_argument(
+        "--cli", action="store_true",
+        help="Use `claude -p` CLI instead of Anthropic API (requires --run). "
+             "Uses Claude Max subscription instead of API credit.",
+    )
+    parser.add_argument(
+        "--model", default=DEFAULT_MODEL,
+        help=f"Model to use for automated runs (default: {DEFAULT_MODEL})",
+    )
     args = parser.parse_args()
+
+    if args.cli and not args.run:
+        parser.error("--cli requires --run")
 
     script_dir = Path(__file__).parent
     output_dir = args.output_dir or str(script_dir / "results")
@@ -317,6 +482,53 @@ def main():
     scenarios = build_all_scenarios(dna)
     print(f"Scenarios: {len(scenarios)} ({len(SCENARIOS)} organism + {len(BOOT_TEST_SCENARIOS)} boot)")
 
+    # ---- Automated execution mode ----
+    if args.run:
+        mode_label = "CLI (claude -p)" if args.cli else "API"
+        print(f"\nRunning automated test ({mode_label}, model={args.model}, sessions={args.sessions})")
+        report = run_automated_test(
+            args.dna_file,
+            dna,
+            scenarios,
+            args.sessions,
+            use_cli=args.cli,
+            model=args.model,
+        )
+
+        out_path = Path(output_dir) / "cross_instance_results.json"
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"\nResults saved: {out_path}")
+
+        rate = report["agreement_rate"]
+        print(f"\nAgreement: {report['total_agreed']}/{report['total_scenarios']} "
+              f"({rate:.0%})")
+        if rate >= 0.8:
+            print("PASS — DNA is sufficient for behavioral reproduction.")
+        elif rate >= 0.6:
+            print("WARN — DNA captures core values but needs more specificity.")
+        else:
+            print("FAIL — DNA needs significant work.")
+
+        # Store result in memory
+        test_date = datetime.now().strftime("%Y-%m-%d")
+        summary = (
+            f"Automated cross-instance test ({mode_label}) on {test_date}: "
+            f"{report['total_agreed']}/{report['total_scenarios']} agreement "
+            f"({rate:.0%}), model={args.model}, sessions={args.sessions}."
+        )
+        memory_manager.store(
+            category="calibration",
+            key=f"cross-instance-auto-{test_date}",
+            content=summary,
+            source="cross_instance_test",
+            tags=["cross-instance", "calibration", "automated"],
+            confidence=0.9 if report["total_agreed"] > 0 else 0.3,
+        )
+        print("Stored results to memory (calibration).")
+        return
+
+    # ---- Template generation mode (default) ----
     template = generate_cross_instance_template(
         args.dna_file, dna, scenarios, args.sessions,
     )
