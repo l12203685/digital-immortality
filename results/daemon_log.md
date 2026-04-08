@@ -1879,3 +1879,7 @@ Gap: 202104 already done (MD-154~156 in file, tree was stale). Updated tree.
 - **MD-159** 試單與加碼單=各自獨立正EV，不能互相依賴 — 試單本身賺錢=進場邏輯有效；加碼是在成功的基礎上加碼，不是攤平
 
 `templates/dna_core.md`: **159 MDs**. Next: 202102.
+
+## Cycle 41 — 2026-04-08 06:16:48 UTC
+
+API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Overloaded"},"request_id":"req_011CZqpFJb1trFMZnxg1e3Xv"}
