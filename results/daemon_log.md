@@ -2732,3 +2732,16 @@ Next: 201709.
 `templates/dna_core.md`: **267 MDs**. Next: 201707.
 
 Note: 201709~201708 files use older schema (s/t fields instead of sender_name/content); tmp_distill.py needs updating for these older files.
+
+## Cycle 54 — 2026-04-08 UTC
+
+**Branch 2.2 — 201707+201706 distill → MD-268~270 (270 MDs total)**
+
+- Fixed tmp_distill.py: old schema (`s`/`t` fields, sender `'E'`) now handled alongside new schema (`sender_name`/`content`)
+- 201707.jsonl: 72 Edward msgs; 201706.jsonl: 111 Edward msgs; themes: optimal vs correct decisions, bluff frequency calibration, red line management
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-268** 最適決策≠正確決策；最適=跨所有情境EV最大化，正確=事後結果論
+  - **MD-269** 攻擊頻率=對手range頻率的函數；narrow range對手不適合高頻bluff
+  - **MD-270** 藍線主導盈利=紅線理想斜率0到-5bb/100，強行翻正紅線反而侵蝕藍線
+
+`templates/dna_core.md`: **270 MDs**. Next: 201705.
