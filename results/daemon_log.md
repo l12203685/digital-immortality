@@ -3604,3 +3604,20 @@ Action: wrote `docs/knowledge_product_03_execution_sizing_sop.md` (8 gates, ~130
 - G8: Correlation conflict check
 
 SOP trilogy (Strategy Dev → Portfolio → Execution) now complete. Next: SOP #04 Strategy Failure & Kill Decision Tree, or publish #01–#03 externally.
+
+
+## Cycle 110 — 2026-04-09T UTC
+
+**Branch 7.6** — SOP #04 Strategy Failure & Kill Decision Tree created.
+
+Action: wrote `docs/knowledge_product_04_strategy_kill_decision_tree.md` (7 nodes, ~150 lines).
+- Node 1: Sample size guard — suspend judgement < 30 trades
+- Node 2: Regime match check — ATR, trend structure, factor correlation
+- Node 3: edge_ratio integrity — ≥1.5 intact / 1.2–1.5 degrading / <1.2 failing (MD-13)
+- Node 4: Premise falsification — 4 components, 2+ falsified = kill candidate
+- Node 5: Anti-capitulation sanity check (3 questions, MD-96)
+- Node 6: Kill protocol — close, archive, post-mortem, re-run greedy addition
+- Node 7: Resurrection criteria — exact params, fresh 6-month OOS, start 25%
+
+Knowledge product series: **#01~#04 COMPLETE ✅**
+Next: external publish (#01–#04) OR mainnet API keys (Branch 1.1).
