@@ -575,3 +575,17 @@ Next: 202506.
   3. **市場alpha魚池有限** — Edward估台灣alpha總量~250萬/yr ceiling；規模大 → 超額報酬率下降；小規模追最高報酬率，非無限加碼
 - `dna_core.md`: 33 → **36 micro-decisions**
 - Branch 2.2: 202604✓ ... 202506✓; next: 202505
+
+## Cycle 16 — 2026-04-08 02:40:27 UTC
+
+**Cycle 26 done.**
+
+Branch 2.2 (JSONL distillation) — highest derivative, still burning through unread chat archive.
+
+**202506.jsonl** (7,369 Edward msgs, Jun 2025) → 3 new micro-decisions written to `dna_core.md` (33 → **36**):
+
+1. **Alpha vs salary switch threshold** — W × alpha > S; at 聯發科 250萬/yr salary, need 5000萬 AUM at 5% alpha before quitting makes sense
+2. **50x FIRE + 時薪感知校正** — FIRE at 50× annual spend (more conservative than 25×); small expenses benchmarked against hourly rate
+3. **市場 alpha 魚池有限** — total extractable alpha ~250萬/yr ceiling at Edward's scale; scaling up shrinks rate, so maximize rate at small size
+
+Next: 202505.
