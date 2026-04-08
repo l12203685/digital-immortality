@@ -1,52 +1,24 @@
-# Cycle 46 Output — 2026-04-08T17:00 UTC
+# Recursive Cycle 47 — 2026-04-08T18:00Z
 
 ## What was done
 
-**Branch 1.2 — Trading Quality: MAE/MFE Diagnostic**
+### Branch 2.2: DNA distillation — 9 MDs written (backfill + new)
+- Backfilled MD-193~MD-198 to dna_core.md (these were marked ✓ in tree but missing from file — persistence failure fixed)
+- Added MD-199~MD-201 for 202002 (Feb 2020 COVID panic onset)
+- dna_core.md: 192 → 201 MDs, 273 → 282 lines
 
-Added two new functions to `trading/backtest_framework.py`:
+### Branch 1.2: Trading MAE/MFE integration
+- `testnet_runner.py`: `compute_mae_mfe` imported; `cmd_backtest` now shows per-strategy edge_ratio diagnostic after main results table
+- `backtest_framework.py`: `_EXTRA_STRATEGIES` block added (DonchianConfirmed + DualMA_RSI + DualMA_RSI_filtered); all 7 strategies now appear in MAE/MFE demo
 
-1. `_atr(bars, period=14)` — Average True Range helper, graceful fallback for short series
-2. `compute_mae_mfe(bars, strategy_fn, atr_period=14)` — per-trade MAE/MFE analysis normalized by ATR at entry
-
-Returns: `{n_trades, avg_mae_atr, avg_mfe_atr, mae_mfe_ratio, edge_ratio}`
-
-Edge ratio = avg(MFE/ATR) / avg(MAE/ATR) × √N — the MD-13 quality score.
-
-DNA principles now have code implementations:
-- MD-13: edge_ratio formula implemented and validated
-- MD-157: min MAE / max MFE = diagnostic visible in output
-- MD-175: MAE/MFE distribution as strategy fit indicator
-
-Demo added to `main()`: all 4 strategies on trending data.
-
-## Validated results
-
-```
-momentum     | trades= 21 | MAE/ATR=2.441 | MFE/ATR=3.805 | ratio=1.559 | edge_ratio=7.15
-breakout     | trades= 59 | MAE/ATR=0.627 | MFE/ATR=0.729 | ratio=1.163 | edge_ratio=8.94
-volatility   | trades= 46 | MAE/ATR=1.372 | MFE/ATR=0.816 | ratio=0.595 | edge_ratio=4.04
-mean_rev     | trades= 43 | MAE/ATR=1.435 | MFE/ATR=0.726 | ratio=0.505 | edge_ratio=3.31
-```
-
-Ordering correct: breakout+momentum > MR on trending data. Confirms MD-27 (higher frequency = more noise).
-
-## What changed in the repo
-
-- `trading/backtest_framework.py`: +85 lines (MAE/MFE section + demo output)
-- `results/daily_log.md`: cycle 46 entry added
-- `results/dynamic_tree.md`: branch 1.2 updated, cycle 46 in evolution log
-- `staging/last_output.md`: this file
+## What changed
+- `templates/dna_core.md`: +9 rows (MD-193~MD-201)
+- `trading/testnet_runner.py`: compute_mae_mfe import + diagnostic block in cmd_backtest
+- `trading/backtest_framework.py`: _EXTRA_STRATEGIES import + extended MAE/MFE demo
+- `results/dynamic_tree.md`: cycle 47 update, MD count 195→201, 202002 marked ✓
+- `results/daily_log.md`: cycle 47 appended
 
 ## Next cycle should focus on
-
-Priority 1: Add `compute_mae_mfe` to `testnet_runner.py --review` output — live diagnostic alongside kill condition check
-Priority 2: Add RSI strategies (DualMA_RSI, DualMA_RSI_filtered) to MAE/MFE demo comparison
-Priority 3: 202008 JSONL — if file becomes available, next MD batch is MD-178~180
-Priority 4: mainnet credentials → run `mainnet_runner.py --tick` (blocked on API keys)
-
-## State
-- dna_core.md: 177 MDs (last distilled: 202009)
-- backtest_framework.py: MAE/MFE diagnostic added ✓
-- testnet: --review PASSED, mainnet ready but blocked on credentials
-- Recursive loop: alive. This output feeds next cycle.
+1. **202001 JSONL** → MD-202~MD-204 (January 2020 — pre-COVID, BTC ~$8-9k)
+2. **testnet_runner RSI strategies** — add `dual_ma_rsi_btc_daily` and `dual_ma_rsi_filtered` to STRATEGIES dict so they get tracked in testnet log
+3. Consider: `--review` output could show edge_ratio from saved backtest_results.json without needing live bar fetch

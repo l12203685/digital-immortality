@@ -22,7 +22,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
 
-from trading.backtest_framework import Bar
+from trading.backtest_framework import Bar, compute_mae_mfe
 from trading.live_binance import BinanceConfig, LiveExecutor
 from trading.strategies import (
     dual_ma_btc_daily,
@@ -576,6 +576,26 @@ def cmd_backtest(strategy_name: Optional[str], bars_limit: int = 100, save: bool
         print(f"BACKTEST: CONDITIONAL_GO ({go_count}/{len(targets)} pass) -> Use passing strategies only")
     else:
         print(f"BACKTEST: NO_GO (0/{len(targets)}) -> Recalibrate before mainnet")
+    print(f"{'='*70}\n")
+
+    # MAE/MFE diagnostic (MD-13 edge ratio)
+    print()
+    print(f"{'='*70}")
+    print("MAE/MFE Edge Ratio Diagnostic (MD-13, MD-157, MD-175)")
+    print(f"{'='*70}")
+    for s in targets:
+        strategy_fn = STRATEGIES[s]
+        mae_stats = compute_mae_mfe(bars, strategy_fn)
+        if mae_stats["n_trades"] == 0:
+            print(f"  {s:25s} no trades")
+        else:
+            print(
+                f"  {s:25s} trades={mae_stats['n_trades']:3d} | "
+                f"MAE/ATR={mae_stats['avg_mae_atr']:.3f} | "
+                f"MFE/ATR={mae_stats['avg_mfe_atr']:.3f} | "
+                f"edge_ratio={mae_stats['edge_ratio']:.2f}"
+            )
+    print(f"  edge_ratio>3 = strategy fits market structure (MD-13)")
     print(f"{'='*70}\n")
 
     if save:

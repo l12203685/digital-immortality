@@ -3,6 +3,31 @@
 Recursive engine cycle history.
 
 
+## Cycle 47 — 2026-04-08T18:00Z
+
+**Branches**: 2 parallel (2.2 JSONL distillation 202002 + 1.2 trading MAE/MFE integration)
+
+### Branch 2.2: 202002 JSONL Distillation + backfill MD-193~MD-198
+- **MD-193**: 薪資談判=整體配套+書面化不拆分讓步 (202004)
+- **MD-194**: 技能保底=每日固定時間投入，不取決於市場或情緒狀態 (202004)
+- **MD-195**: 股市=努力可轉換超額報酬的稀缺市場，持續系統化研究是護城河 (202004)
+- **MD-196**: 溝通成本vs自我糾錯速度=高溝通成本組織自我糾錯慢 (202003)
+- **MD-197**: 反向ETF路徑依賴耗損=方向正確但長期持有必虧 (202003)
+- **MD-198**: JD落差=職位說明vs實際工作的落差需提早書面確認 (202003)
+- **MD-199**: 黑天鵝前置對沖=已到位才有用，恐慌中買保護成本3-5倍 (202002)
+- **MD-200**: 快速崩盤=執行速度>停損點位，流動性收縮時點位無意義 (202002)
+- **MD-201**: 危機相關性→1=分散失效，需從集中度視角重新評估持倉 (202002)
+- dna_core.md: 282 lines, 201 MDs; next: 202001
+
+### Branch 1.2: MAE/MFE Integration
+- `compute_mae_mfe` imported into testnet_runner.py; `cmd_backtest` now shows per-strategy edge_ratio after GO/NO-GO block
+- `_EXTRA_STRATEGIES` block added to backtest_framework.py: DonchianConfirmed + DualMA_RSI + DualMA_RSI_filtered now in MAE/MFE demo
+- All 7 strategies compared in trending regime demo; edge_ratio threshold note (>3 = fits market structure)
+
+### Next cycle
+- 202001 JSONL distillation → MD-202~MD-204
+- Consider: add RSI-filtered strategies to testnet_runner.py STRATEGIES dict (currently only 4 strategies tracked)
+
 ## Cycle 46 — 2026-04-08T17:00Z
 
 **Branch**: 1.2 Trading Quality — MAE/MFE Diagnostic
@@ -505,3 +530,17 @@ Recursive engine cycle history.
 2. **Latency training**: run the boot-cycle drill from response_latency.md
 3. **Trading**: run `--report --save` to generate baseline trading_report.md
 4. **2.3 Validation**: unblock cross-instance (need API credit or use local model)
+
+## Cycle 26 — 2026-04-08T UTC
+
+**Branch 2.2 — 201908 distill → MD-217~MD-219** (219 MDs total):
+
+- Read 201908.jsonl (330 Edward substantive msgs, Aug 2019)
+- Top groups: g2 (可可, 220), g47 (DR.HACK, 40), g18 (poker, 28), g63 (21)
+- Focus: Kelly criterion + insurance analysis, Taiwan salary ceiling mapping, resignation leverage via replacement cost
+
+- **MD-217** Kelly保險=高勝率接近全押時降波動有EV — Kelly fraction高時ruin risk主導；降波動EV為正即使降期望值；Kelly最大化長期複利，破產=複利歸零
+- **MD-218** 台灣勞工薪資天花板=制度性+破頂路徑先規劃 — 傳統勞工8-10年低階主管上限200萬；三條破頂路徑：科技分紅/金融MA/業務commission；選入場點比努力更重要
+- **MD-219** 替換成本=自我市值下限 — 公司replacement cost=你的market floor bid price；薪資談判用替換成本框架比「我想要多少」更有說服力
+
+`LYH/agent/dna_core.md`: **219 MDs**. Next: 201907.
