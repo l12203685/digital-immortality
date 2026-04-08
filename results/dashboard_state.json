@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T00:22+08",
+  "updated": "2026-04-09T00:29+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: Branch 1.1 mainnet (blocked on `BINANCE_MAINNET_KEY/SECRET`) or Branch ..."
+      "text": "Next: Branch 1.1 mainnet (needs `BINANCE_MAINNET_KEY/SECRET`) or Branch 4.1 f..."
     },
     {
       "time": "just now",
-      "text": "- 18/18 ALIGNED ✅ (up from 16/16; 318 MDs validated)"
+      "text": "- 20/20 ALIGNED ✅ (up from 18/18; all 318 MDs now have at least one consisten..."
     },
     {
       "time": "just now",
-      "text": "- `information` domain added to organism_interact.py"
+      "text": "- `generic_stock_cashflow_comparison`: MD-317 (相同資本下現金流比較) → `COMPARE_ABSOLUT..."
     },
     {
       "time": "just now",
-      "text": "- `generic_media_earnings_narrative`: MD-314 (媒體財報=選擇性維度→強制三維度) → `DECODE_ALL..."
+      "text": "- `generic_large_capital_no_stoploss`: MD-315 (大資本=免停損條件) → `HOLD_WHEN_YIELD_..."
     },
     {
       "time": "just now",
-      "text": "- `generic_dividend_income_target`: MD-313 (殖利率×持倉=固定支出替換器) → `CALCULATE_INCO..."
+      "text": "Branch 2.3 — consistency test extended to cover MD-315/317 (the two uncovered..."
     }
   ],
   "stats": {
-    "daemon_cycles": 92,
-    "total_mds": 316,
+    "daemon_cycles": 93,
+    "total_mds": 317,
     "dna_core_lines": 76
   }
 }

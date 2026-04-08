@@ -3369,3 +3369,15 @@ Next: Branch 1.1 mainnet (blocked on `BINANCE_MAINNET_KEY/SECRET`) or Branch 4.1
 **Result: 20/20 ALIGNED ✅** (up from 18/18); 318 MDs validated; baseline saved.
 
 Next: Branch 1.1 mainnet (blocked on BINANCE_MAINNET_KEY/SECRET) or Branch 4.1 first non-Edward organism.
+
+## Cycle 93 — 2026-04-08 16:29:29 UTC
+
+**Cycle 93 done.**
+
+Branch 2.3 — consistency test extended to cover MD-315/317 (the two uncovered MDs from the 201704 deep pass):
+
+- `generic_large_capital_no_stoploss`: MD-315 (大資本=免停損條件) → `HOLD_WHEN_YIELD_EXCEEDS_DRAWDOWN` ✓
+- `generic_stock_cashflow_comparison`: MD-317 (相同資本下現金流比較) → `COMPARE_ABSOLUTE_CASHFLOW_SAME_CAPITAL` ✓
+- **20/20 ALIGNED ✅** (up from 18/18; all 318 MDs now have at least one consistency scenario)
+
+Next: Branch 1.1 mainnet (needs `BINANCE_MAINNET_KEY/SECRET`) or Branch 4.1 first non-Edward organism.
