@@ -1301,3 +1301,17 @@ Cycle 54 done.
 - **MD-87** 馬丁=自我否定前提 — requires infinite capital, which is the same condition where the goal becomes pointless; circular premise = strategy diagnosis signal
 
 `dna_core.md`: **87 MDs**. Next: **202210**.
+
+## Cycle 55 — 2026-04-08T21:00 UTC
+
+**gap reconcile + 202210 distill.**
+
+Gap fix: 202211 (MD-85~87) was already in file but tree showed "next: 202211" — reconciled.
+
+**202210.jsonl** (89 Edward msgs, Oct 2022) → 3 MDs written to `templates/dna_core.md`:
+
+- **MD-88** 多空分拆=持倉期不需異向避險 — 有效LE策略(LE+LX=SE)加SNH不能提高風暴比；先分拆確認結構，再決定是否補BNH/SNH
+- **MD-89** 策略開發=單日時限原則 — 一支策略從idea到初版不超過一天（嚴格版3小時）；超時=主邏輯不清晰的訊號
+- **MD-90** 職涯轉換=成果觸發不是時間觸發 — 設定量化二元條件（獲利/虧損）+截止日；成果本身做決策，不靠感覺
+
+`templates/dna_core.md`: **90 MDs**. Next: 202209.
