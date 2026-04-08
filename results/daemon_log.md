@@ -2414,3 +2414,15 @@ Branch 2.2 (highest derivative — continuous distillation): read 201812.jsonl (
 - **MD-225**: 對抗性績效評估 = 角色拆分 × 基線場次 × 跨環境驗證三維分解
 
 `templates/dna_core.md`: **225 MDs**. Next: 201811.
+
+## Cycle 39 — 2026-04-08 UTC
+
+**Branch 2.2 — 201811 distill → MD-226~228 (228 MDs total)**
+
+- 201811.jsonl: 72 Edward msgs; themes: poker→trading mindset, game selection vs bot-building, crypto bear market (BTC $6k), capital threshold for trading-first pivot
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-226** 撲克最核心學習=心態建立，EV/range等技術工具是附加 — 心態=面對不確定性的穩態，可遷移任何高方差決策場景
+  - **MD-227** 撲克獲利路徑=找局找人優先，bot是次要 — 目標是獲利不是技術完備；找信息不對稱最大的局才是最高槓桿動作
+  - **MD-228** 資本規模不足時=工作收入優先建資本 — 交易alpha在小資本下無法規模化；工作月薪×12 > 資本×年化報酬率時，工作是最高槓桿行動
+
+`templates/dna_core.md`: **228 MDs**. Next: 201810.
