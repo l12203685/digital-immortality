@@ -1627,3 +1627,13 @@ Key threads: strategy optimization objective functions, symmetric strategy hidde
 3. **MD-129** 參數數量=功能性指標非絕對最小化 — "自由度是假議題：10個參數OOS重現90%比1個參數60%好"; parameter count is not the objective; OOS reproducibility is; add parameter only if IS/OOS distribution gap shrinks
 
 `templates/dna_core.md`: **129 MDs**. Next: 202111.
+
+## Cycle 11 — 2026-04-08 05:48:10 UTC
+
+Cycle 64 done. 202112 → **MD-127~129**:
+
+- **MD-127** 對稱策略=多空隱藏相依陷阱 — "symmetric" long/short strategies have hidden cross-dependencies; mark out long entries and check if short PnL changes
+- **MD-128** 薪資談判=精算底線再給精確數字 — 100萬/15months formula → control the anchor point; precision beats vague requests
+- **MD-129** 參數數量=功能性指標非絕對最小化 — OOS reproducibility is the goal, not parameter count; add a parameter only if IS/OOS distribution gap shrinks
+
+`dna_core.md`: **129 MDs**. Next: 202111.
