@@ -37,3 +37,26 @@ If not at home: default = highest-protein option available, skip menu analysis.
 - Off-peak (admin/email/review): 11:00–12:30 and 16:00+
 
 **If you are asking when to start:** it's already 09:00 or later — you're late. Start now.
+
+---
+
+## #4 — Coffee vs tea (×4 occurrences)
+**Pre-committed default:** Coffee before 13:00. Tea after 13:00.
+
+- Morning (before 09:00): coffee (black, no decision)
+- Mid-morning (09:00–13:00): coffee if <2 cups today; tea if already at 2 cups
+- Afternoon (13:00+): tea only (avoid caffeine crash interference with sleep)
+
+**If you are asking coffee or tea:** check the clock. Rule applies. No deliberation.
+
+---
+
+## #5 — Portfolio check timing (×4 occurrences)
+**Pre-committed default:** Once per day, 16:00 local time. Not before.
+
+- 16:00: open dashboard, check positions, check P&L — 5 min max
+- No checks during deep-work blocks (09:00–10:30, 13:00–14:30)
+- No checks during meals
+- Exception: kill condition breach alert (MDD>10%) → check immediately
+
+**If you are asking whether to check portfolio:** it is not 16:00 yet. Close the tab.

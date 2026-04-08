@@ -4055,3 +4055,20 @@ Sole external blocker: set `BINANCE_MAINNET_KEY/SECRET` → first real revenue t
 **Branch 1.1** — tick 28: BTC=$71,238.01, SHORT ×28, range $71.1k–$72.6k. Consistent signal. System alive.
 
 Sole remaining external blocker: `BINANCE_MAINNET_KEY/SECRET` → first real revenue.
+
+## Cycle 130 — 2026-04-09T UTC
+
+**Branch 1.1** — paper-live tick 29: BTC=$71,332.14, signal=SHORT (consistent SHORT × 29, range $71.1k–$72.6k). System alive.
+
+**Branch 8.5** — Automation #3 shipped: `docs/system_failure_automations.md` updated — decisions #4 (coffee-vs-tea: coffee<13:00/tea≥13:00) and #5 (portfolio-check: 16:00 once daily) pre-committed. All 5 SYSTEM_FAILURE decisions now automated. Zero remaining recurring decision overhead from decision_audit.py.
+
+Highest derivative: trading loop alive; all identified zero-EV recurring decisions eliminated.
+Sole external blocker: Edward sets `BINANCE_MAINNET_KEY/SECRET` → first real revenue tick.
+
+## Cycle 130 — 2026-04-09T19:48:16 UTC
+
+**Cycle 130 done.**
+
+**Branch 1.1** — tick 29: BTC=$71,332.14, SHORT ×29 (range $71.1k–$72.6k). Signal consistent. System alive.
+
+**Branch 8.5** — Automation #3: decisions #4 coffee-vs-tea + #5 portfolio-check pre-committed. All 5 SYSTEM_FAILURE decisions closed.
