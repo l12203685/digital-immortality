@@ -4582,3 +4582,17 @@ Highest-derivative gap: queue ended May 23. No SOP on portfolio construction (ho
 **Series: SOP #01~#24 COMPLETE. Queue: Apr 9–May 25.**
 
 **Next blocker:** Edward posts SOP #01 to start G5 compounding clock.
+
+## Cycle 149 — 2026-04-08 21:41:33 UTC
+
+**Cycle 149 done.**
+
+Highest-derivative gap: queue ended May 23, no SOP on portfolio construction (combining strategies, not just building one).
+
+**Shipped:**
+- `docs/knowledge_product_24_portfolio_construction_sop.md` — 5-gate framework: G1 pool audit ≥30% short-capable (MD-35) / G2 correlation filter no pair >0.7 (MD-85) / G3 regime-conditional allocation ATR-based (MD-25/75) / G4 anti-martingale — no increase during drawdown (MD-87) / G5 tail cap = 2× avg position (MD-33)
+- `docs/publish_thread_sop24_twitter.md` — hook: *"You spent 6 months building a great strategy. But you only run one. That's not a portfolio — it's a concentrated bet."*
+- Queue extended to **#01~#24, May 25** (46-day target)
+- Committed and pushed.
+
+**Next blocker:** Edward posts SOP #01 to start G5 compounding clock.
