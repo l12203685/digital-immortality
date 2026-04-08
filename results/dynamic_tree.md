@@ -197,3 +197,5 @@
 - 2026-04-08T UTC: cycle 76 — Branch 2.2: 201712 JSONL read (129 Edward msgs, Dec 2017) → MD-289~291 (組織用人=順從>能力/職涯評估先窮舉制度要素/外幣配置=幣值方向前置); templates/dna_core.md: **291 MDs**; next: 201711
 
 - 2026-04-08T UTC: cycle 77 — Branch 2.2: 201711+201710 combined (50+127 Edward msgs, both thin/sparse) → MD-292~294 (新領域進入順序=規則框架先/技術行為偏差=對手類型訊號/短期樣本=方差非技術); templates/dna_core.md: **294 MDs**; next: 201709
+
+- 2026-04-09T UTC: cycle 89 — Branch 2.2: 201703 JSONL read (417 Edward msgs, Mar 2017, 7 substantive) → MD-316~318 (還債vs投資=比較利率不比較金額/股票選擇=相同資本現金流比較/分批買進=執行策略預設答案); templates/dna_core.md: **318 MDs**; next: 201702

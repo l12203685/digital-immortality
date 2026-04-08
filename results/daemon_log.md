@@ -3261,3 +3261,13 @@ Done. **Branch 2.2 — 201704 deep pass.** 3 new MDs written:
 - **MD-315**: 大資本=免停損條件 — stop-loss necessity is capital-scale-dependent; dividend yield > typical drawdown → holding dominates forced exit
 
 **dna_core.md: 315 MDs.** Next: 201703 deep pass or consistency re-validate.
+
+## Cycle 89 — 2026-04-09 UTC
+
+**Branch 2.2** highest-derivative. 201703 deep pass (417 Edward msgs, 7 substantive). Three new MDs written to `dna_core.md` (**318 MDs**):
+
+- **MD-316** 還債vs投資=比較利率不比較金額 — "60萬還房貸省下的利息不到3萬，中信金5%=3萬" → opportunity cost decision requires comparing rates%, not absolute amounts; mortgage_rate vs yield_rate determines capital allocation
+- **MD-317** 股票選擇=相同資本下現金流比較 — 260張中信金×1.2=31.2萬 vs 48張中華電×4.94=23.7萬; when yields% are similar, price level affects share count → compare absolute annual cash flow, not yield%
+- **MD-318** 分批買進=選定標的後執行策略的預設答案 — once analysis passes (yield/survival/cash flow), execution = DCA immediately; separates "which?" (analysis) from "how?" (execution); stops "wait for dip" as a decision loop
+
+Next: **201702 deep pass**.
