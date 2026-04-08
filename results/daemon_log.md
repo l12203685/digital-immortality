@@ -1075,3 +1075,17 @@ Cycle 48 done.
 - **MD-60** 平台=個人edge複利 — teaching platform forces precise model articulation; student questions = gap detector; highest-leverage self-improvement
 
 60 MDs total. Next: 202307.
+
+## Cycle 24 — 2026-04-08T18:00 UTC
+
+**Gap fix + Cycle 49 distill.**
+
+Gap fix: MD-55~MD-60 were logged in cycles 47-48 but not persisted to `templates/dna_core.md` (commits only touched daemon_log.md). Backfilled all 6 MDs.
+
+**Branch 2.2 — 202307 (151 Edward msgs, Jul 2023) → 3 MDs written:**
+
+- **MD-61** 指數=市值噱爆 — Index ETF = 噱爆 (momentum compounding) at market-cap level: winners auto-increase weight, losers shrink; structural momentum edge without active management; matches population exploit + government structural support
+- **MD-62** 賽局分析=先錨定角色目標 — Before analyzing any game move, anchor the objective function per role first (好人=三藍保梅林; 壞人=三紅找梅林); misread objective = misread signal; generalize to all strategic analysis
+- **MD-63** 談判=條件束聯動 — Never yield on a single variable; bundle all conditions (price ↓ → term ↑ + frequency); isolated concession = unforced error; 條件束 is the negotiation unit, not individual terms
+
+`templates/dna_core.md`: **63 MDs**. Next: 202306.
