@@ -1161,3 +1161,15 @@ Cycle 52 done.
   - **MD-72** 量價門檻=可執行不可模糊 — signals must be pasteable as code: 漲停量>25%×k-bar volume, not "high volume"; verifiable threshold = computable EV
 
 `templates/dna_core.md`: **72 MDs**. Next: 202303.
+
+## Cycle 26 — 2026-04-08 05:01:31 UTC
+
+Cycle 52 done.
+
+**Branch 2.2** — 202304 distill (43 substantive msgs, Apr 2023) → 3 MDs written:
+
+- **MD-70** AI=結構化學習外包 — specify format+level+hours+style; get skeleton; drill chapters manually
+- **MD-71** 資料庫=三層分工 — tick raw + aggregate + hot operational; design by query frequency
+- **MD-72** 量價門檻=可執行不可模糊 — signals must paste directly as code with verifiable thresholds
+
+`templates/dna_core.md`: **72 MDs**. Next: 202303. Pushed.
