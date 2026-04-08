@@ -393,3 +393,17 @@ Both repos pushed. Next highest-derivative: 202602 JSONL (Feb 2026 bridge).
   3. **不確定→清倉等訊號** — macro uncertainty + CNY gap → explicitly moves to cash ("我要慢慢把資產換回現金了"), names specific re-entry signal ("週一再觀察一下好了"), then actually waits
 - Distilled → `LYH/agent/dna_core.md` micro-decisions now at 12 total
 - Branch 2.2 status: 202604 ✓, 202601 ✓, 202602 ✓; next: 202603 (March 2026)
+
+## Cycle 8 — 2026-04-08 02:00:12 UTC
+
+Cycle 18 done.
+
+**Branch 2.2 — 202602 JSONL (7,627 Edward messages) distilled. 3 new micro-decisions added to dna_core.md:**
+
+1. **AI=語言外包** — work comms: retains logic, AI polishes; checks "is this too AI?" (naturalness > generic corporate)
+2. **帳戶×券商分層** — portfolio tracked at broker×account level (HSBC TW/SG/複委託 each has designated ETFs)
+3. **不確定→清倉等訊號** — macro uncertainty + holiday gap → cash + explicit re-entry trigger → actually waits
+
+dna_core.md now has **12 micro-decisions**. Both repos pushed.
+
+Next: 202603 (March 2026 bridge).
