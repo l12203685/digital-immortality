@@ -2002,3 +2002,19 @@ Done. **Branch 2.2** — 202011 distilled → MD-169~171 (171 MDs total):
 - **MD-171** 市場感：赤手空拳試盤 insight — 直覺先於公式，順序顛倒則公式無錨
 
 Next: 202010.
+
+## Cycle 9 — 2026-04-08T15:00 UTC
+
+**Branch 2.2 gap fix + 202010 distill → MD-169~174** (6 MDs written):
+
+Gap closed: MD-169~171 were logged in cycle 7/8 but not written to dna_core.md.
+- **MD-169** Range思維：交易分布不交易單次 — instance thinking ceiling < range; ask "long-run EV of this signal type" not "this trade"
+- **MD-170** EV注意力：90%的EV來源先掌握 — blockers≈1% EV; core EV (position/range/initiative) first, then margin
+- **MD-171** 市場感：先直覺後公式 — 赤手空拳試盤 insight; tools crystallize intuition, don't replace; order inverted = formula without anchor
+
+202010 distilled:
+- **MD-172** 掛單假設先驗=技術分析基礎 — S/R at "weird" levels derivable from limit order behavior assumptions; indicators are order flow phenomena, not causes
+- **MD-173** 順勢策略=商品分散不策略分散 — trend strategies are highly correlated; only cross-instrument diversification is real; strategy variants = pseudo-diversification
+- **MD-174** 資金機會成本=比翻正時序 — time-to-positive is a return dimension; holding slower-to-positive asset = implicit opportunity cost; reallocation trigger = relative time sequence
+
+`LYH/agent/dna_core.md`: **177 MDs** (was 168 before gap fix). Next: 202009.
