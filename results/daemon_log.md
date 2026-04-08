@@ -252,3 +252,12 @@ python mainnet_runner.py --tick
 ```
 
 Pushed. Next action: provide mainnet API credentials.
+
+## Cycle 12 — 2026-04-08T01:37 UTC
+
+**Branch 1.1 — `--dry-run` unblocked.**
+
+- Fixed: `--dry-run --tick` previously errored on missing credentials before doing anything
+- Now: dry-run bypasses credential gate, still runs kill-rail check, logs DRY_RUN entry
+- Validated: kill rails print correctly (MDD>10%, WR<35% ≥5t, PF<0.85)
+- Gate to live: set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET`, run `python -m trading.mainnet_runner --tick`

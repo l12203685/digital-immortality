@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T10:10 UTC (cycle 11)
+> 最後更新：2026-04-08T01:37 UTC (cycle 12)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -106,3 +106,4 @@
 - 2026-04-08 09:28 UTC: cycle 9 — tick 5 fired, dual_ma=+0.14 USDT PF=3.370 WR=33.3% [OK], 2 ticks to --review
 - 2026-04-08 09:31 UTC: cycle 10 — ticks 6+7 fired, --review PASSED (GO), dual_ma=+0.29 USDT PF=5.839 WR=60%; mainnet next
 - 2026-04-08 10:10 UTC: cycle 11 — mainnet_runner.py built ($100 cap, dual_ma, kill rails); ready to fire on live credentials
+- 2026-04-08 01:37 UTC: cycle 12 — --dry-run fixed (no longer blocked by credential gate); kill rails validated via dry-run; logs DRY_RUN entry

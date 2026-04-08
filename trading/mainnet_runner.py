@@ -108,6 +108,23 @@ def _check_kill(stats: Dict) -> bool:
 # ---------------------------------------------------------------------------
 
 def cmd_tick(dry_run: bool = False) -> None:
+    ts = datetime.now(timezone.utc).isoformat()
+
+    if dry_run:
+        # Kill check still runs so dry-run validates the kill-rail logic
+        entries = _load_log()
+        stats = _compute_stats(entries)
+        if _check_kill(stats):
+            print("KILL CONDITIONS MET — halting. Review mainnet_log.jsonl.")
+            sys.exit(1)
+        print(f"[{ts}] DRY RUN: would connect to mainnet with $100 cap, dual_ma strategy.")
+        print(f"Config: symbol=BTC/USDT:USDT, leverage=1x, max_pos={MAX_POSITION_USDT} USDT")
+        print(f"Kill rails: MDD>{MAX_DRAWDOWN_PCT}%, WR<{KILL_MIN_WIN_RATE:.0%} (≥{KILL_MIN_TRADES}t), PF<{KILL_MIN_PROFIT_FACTOR}")
+        result = {"action": "DRY_RUN", "ts": ts, "stats": stats}
+        _append_log(result)
+        print(f"Result: {json.dumps(result, indent=2)}")
+        return
+
     api_key = os.environ.get("BINANCE_MAINNET_KEY", "")
     api_secret = os.environ.get("BINANCE_MAINNET_SECRET", "")
 
@@ -134,16 +151,9 @@ def cmd_tick(dry_run: bool = False) -> None:
 
     executor = LiveExecutor(config, strategy=dual_ma_btc_daily, name="dual_ma_mainnet")
 
-    ts = datetime.now(timezone.utc).isoformat()
-    print(f"[{ts}] Running mainnet tick (dry_run={dry_run})...")
-
-    if dry_run:
-        print("DRY RUN: would connect to mainnet with $100 cap, dual_ma strategy.")
-        print(f"Config: symbol={config.symbol}, leverage={config.leverage}x, max_pos={config.max_position_usdt} USDT")
-        result = {"action": "DRY_RUN", "ts": ts, "config": {"symbol": config.symbol, "max_position_usdt": MAX_POSITION_USDT}}
-    else:
-        result = executor.tick()
-        result["ts"] = ts
+    print(f"[{ts}] Running mainnet tick...")
+    result = executor.tick()
+    result["ts"] = ts
 
     _append_log(result)
     print(f"Result: {json.dumps(result, indent=2)}")
