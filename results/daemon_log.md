@@ -897,3 +897,15 @@ Branch 2.2 — highest derivative (39 MDs still accumulating, 202403 next).
 - **MD-39 衝突=精準陳述事實** — state facts precisely (time/behavior/contradictions), then close with "no further reply"; precision beats emotion
 
 `dna_core.md`: 36 → **39 MDs** (116 lines). Next: 202403.
+
+## Cycle 41 — 2026-04-08T14:20 UTC
+
+**Branch 2.2 — 202403 JSONL distilled.**
+
+202403 (386 Edward msgs, Mar 2024) distilled → MD-40~MD-42 written to `dna_core.md`:
+
+- **MD-40 電指期四大結構優勢** — 逆價差+資金使用率+無槓桿成本+不被非科技拖累; select tools by structural edge not familiarity
+- **MD-41 保證金剩餘再配置** — futures require only original margin; deploy remainder in bonds/stable assets; capital efficiency = maximize return on idle capital
+- **MD-42 最佳化陷阱信號** — if backtested strategy feels wrong to you, it's overfit; domain intuition is the early-warning system for overfitting
+
+dna_core.md: 119 lines, 42 MDs. Next: 202402.
