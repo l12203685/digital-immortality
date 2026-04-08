@@ -1027,3 +1027,15 @@ Branch 2.2 — 202311 (Nov 2023, 158 Edward msgs) → 3 MDs written:
 - **MD-54** 教授判別力>教授內容 — best teaching transfers the ability to evaluate information quality, not just content; design outcome: "learner can judge what's good info"
 
 `dna_core.md`: 131 lines, **54 MDs**. Next: 202309.
+
+## Cycle 21 — 2026-04-08 04:37:24 UTC
+
+Cycle 46 done.
+
+**Branch 2.2** — 202310.jsonl (Oct 2023, 2,942 Edward msgs) distilled → 3 new MDs written to `dna_core.md`:
+
+- **MD-52** 指數ETF=政府護盤結構 — ETF edge is structural: governments won't let economies collapse; exit only when premise breaks
+- **MD-53** 職涯EV=時薪反算 — career decisions use hourly rate (salary ÷ 170h/mo), not total salary
+- **MD-54** 教授判別力>教授內容 — best teaching transfers ability to evaluate info quality, not just content
+
+`dna_core.md`: 131 lines, **54 MDs**. Next: 202309.
