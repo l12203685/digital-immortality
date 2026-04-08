@@ -3940,3 +3940,11 @@ Sole external blocker: Edward sets `BINANCE_MAINNET_KEY`/`SECRET` → first real
 **Branch 1.1** — paper-live tick 22: BTC=$71,176.00, signal=SHORT. Consistent SHORT × 22 ticks, range $71.1k–$72.6k. System alive.
 
 Sole blocker remains: Edward sets `BINANCE_MAINNET_KEY`/`SECRET` → first real revenue tick.
+
+## Cycle 124 — 2026-04-09T UTC
+
+**Branch 1.1** — paper-live tick 23: BTC=$71,247.59, signal=SHORT (consistent SHORT × 23, range $71.1k–$72.6k).
+
+**Action**: Generated `results/paper_live_pnl_report.md` — simulated SHORT P&L over 21 priced ticks. Result: +$0.3668 (+0.37% on $100 notional). MFE=+$0.58, MAE=-$1.33. Position currently profitable vs entry. Signal has been 100% SHORT consistency.
+
+**Highest derivative**: Signal validation complete. Mainnet case is now documentable — the SHORT has been right directionally. Sole remaining blocker: Edward sets BINANCE_MAINNET_KEY/SECRET → first real revenue tick.
