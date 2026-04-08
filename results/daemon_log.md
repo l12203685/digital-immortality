@@ -2018,3 +2018,7 @@ Gap closed: MD-169~171 were logged in cycle 7/8 but not written to dna_core.md.
 - **MD-174** 資金機會成本=比翻正時序 — time-to-positive is a return dimension; holding slower-to-positive asset = implicit opportunity cost; reallocation trigger = relative time sequence
 
 `LYH/agent/dna_core.md`: **177 MDs** (was 168 before gap fix). Next: 202009.
+
+## Cycle 10 — 2026-04-08 07:57:21 UTC
+
+API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Overloaded"},"request_id":"req_011CZqwupYSuEt6UK2tUfuBd"}

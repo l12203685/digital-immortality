@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T15:44+08",
+  "updated": "2026-04-08T15:57+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 202010."
+      "text": "API Error: 529 {\"type\":\"error\",\"error\":{\"type\":\"overloaded_error\",\"message\":\"..."
     },
     {
       "time": "just now",
-      "text": "Done. Branch 2.2 — 202011 distilled → MD-169~171 (171 MDs total):"
+      "text": "`LYH/agent/dna_core.md`: 177 MDs (was 168 before gap fix). Next: 202009."
     },
     {
       "time": "just now",
-      "text": "`templates/dna_core.md`: 171 MDs. Next: 202010."
+      "text": "202010 distilled:"
     },
     {
       "time": "just now",
-      "text": "202011 distill → MD-169~171 (171 MDs total):"
+      "text": "Gap closed: MD-169~171 were logged in cycle 7/8 but not written to dna_core.md."
     },
     {
       "time": "just now",
-      "text": "`templates/dna_core.md`: 168 MDs. Next: 202011."
+      "text": "Branch 2.2 gap fix + 202010 distill → MD-169~174 (6 MDs written):"
     }
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 171,
+    "total_mds": 174,
     "dna_core_lines": 76
   }
 }
