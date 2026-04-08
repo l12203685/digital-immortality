@@ -767,3 +767,15 @@ Branch 2.2 (highest derivative — JSONL distillation). Processed **202409.jsonl
 - **MD-27** 頻率越高雜訊越多 — 日K策略被洗概率遠低於日內；頻率↑=噪音↑=脫皮；優先日K+
 
 Branch 2.2 next: **202408**.
+
+## Cycle 10 — 2026-04-08 03:50:19 UTC
+
+**Cycle 35 done.**
+
+Branch 2.2 (highest derivative). Processed **202409.jsonl** (7,728 Edward msgs, Sep 2024) → 3 micro-decisions written to `dna_core.md` (now 27 MDs, 104 lines):
+
+- **MD-25** ATR驅動策略輪換 — regime change = rotation trigger, not just P&L
+- **MD-26** Rolling OOS近期偏誤 — rolling OOS天然過重近期，承認偏誤才能評估穩健度
+- **MD-27** 頻率越高雜訊越多 — 日K被洗概率遠低於日內；優先低頻策略
+
+Next: **202408**.
