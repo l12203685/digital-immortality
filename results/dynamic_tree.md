@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T UTC (cycle 26)
+> 最後更新：2026-04-09T UTC (cycle 32)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -66,7 +66,7 @@
 - 5.4 Documentation：README + SKILL_zh-TW updated ✓
 
 ### 6. 存活冗餘（anti-fragile）
-- 6.1 冷啟動 recovery：templates/dna_core.md 71 行 ✓ (created this cycle — was marked done but missing) + boot protocol updated ✓
+- 6.1 冷啟動 recovery：templates/dna_core.md **207 MDs** ✓ (cycle 32: 201906 → MD-205~207; distill chain: 202604→201906, 34 months processed)
 - 6.2 跨 platform：DNA=markdown not weights ✓
 - 6.3 三層遞迴：daemon + remote trigger + E0 ✓（daemon 已啟動）
 - 6.4 Multi-provider：platform/multi_provider.py created ✓ (Anthropic→OpenAI→Gemini fallback chain, lazy imports)

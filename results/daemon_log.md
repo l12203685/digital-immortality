@@ -2248,3 +2248,14 @@ Gap confirmed: daemon logged MD-202~219 across cycles 22-30, but merge conflict 
 - **MD-204** 想法超前組織能力=資源錯配 — 好想法需等待/換環境/降維，超前程度≤組織能力超前程度
 
 `templates/dna_core.md`: **204 MDs**. Next: 201906.
+
+## Cycle 32 — 2026-04-09T UTC
+
+**Branch 2.2 — 201906 distill → MD-205~207 (207 MDs total)**
+
+- 201906.jsonl: 35 substantive Edward msgs (Jun 2019, mostly social/Avalon/lifestyle)
+- 3 micro-decisions written:
+  - **MD-205** 機制缺陷≠玩家失誤=先隔離再修正，最小化介入只補信息通道 (Avalon game rule analysis)
+  - **MD-206** 住房總持有成本=五項逐條精算，只看本利和是最常見低估來源 (housing cost breakdown)
+  - **MD-207** 教學材料=按難度預分層，讓接收者自定步調比你決定給多少更有效 (teaching material design)
+- `templates/dna_core.md`: **207 MDs**; next: 201905
