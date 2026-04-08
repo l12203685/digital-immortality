@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>數位永生 Mind Map</title>
+<title>數位永生 — Radial Mind Map</title>
 <style>
 :root {
   --bg: #1a1a2e;
@@ -33,13 +33,14 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
-/* Header */
-.header {
+/* ── Regime Banner (TOP) ── */
+.regime-banner {
   background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card-alt) 100%);
   border-bottom: 1px solid var(--border);
-  padding: 0.8rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,15 +49,19 @@ body {
   flex-shrink: 0;
 }
 
-.header h1 {
-  font-size: 1.2rem;
+.regime-text {
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--text-bright);
-  font-weight: 600;
+  font-family: var(--mono);
+  letter-spacing: 0.02em;
 }
 
-.header h1 span { color: var(--accent); }
+.regime-text .regime-label {
+  color: var(--accent);
+}
 
-.header-meta {
+.regime-meta {
   display: flex;
   gap: 1.5rem;
   align-items: center;
@@ -65,7 +70,7 @@ body {
   color: var(--text-dim);
 }
 
-.header-meta .clock { color: var(--blue); }
+.regime-meta .clock { color: var(--blue); }
 
 .refresh-dot {
   display: inline-block;
@@ -81,11 +86,11 @@ body {
   50% { opacity: 0.3; }
 }
 
-/* Legend */
+/* ── Legend ── */
 .legend {
   display: flex;
   gap: 1.2rem;
-  padding: 0.4rem 1.5rem;
+  padding: 0.35rem 1.5rem;
   background: var(--bg-card);
   border-bottom: 1px solid var(--border);
   font-size: 0.72rem;
@@ -106,11 +111,11 @@ body {
   border-radius: 50%;
 }
 
-/* Mind Map Container */
+/* ── Mind Map ── */
 #mindmap-wrap {
   flex: 1;
   position: relative;
-  min-height: 400px;
+  min-height: 300px;
   overflow: hidden;
 }
 
@@ -130,7 +135,6 @@ body {
   color: var(--text-dim);
 }
 
-/* Zoom controls */
 .zoom-controls {
   position: absolute;
   bottom: 12px;
@@ -160,29 +164,46 @@ body {
   background: var(--bg-card-alt);
 }
 
-/* Bottom Panel */
+/* ── Tooltip ── */
+.node-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text);
+  max-width: 350px;
+  word-wrap: break-word;
+  z-index: 100;
+  display: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* ── Bottom Panel ── */
 .bottom-panel {
   flex-shrink: 0;
   border-top: 1px solid var(--border);
   background: var(--bg-card);
 }
 
-/* Status Cards */
 .status-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 0.6rem;
-  padding: 0.8rem 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
 }
 
 .status-card {
   background: var(--bg);
   border-radius: 6px;
-  padding: 0.6rem 0.8rem;
+  padding: 0.5rem 0.7rem;
 }
 
 .status-card .label {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   color: var(--text-dim);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -190,27 +211,27 @@ body {
 }
 
 .status-card .value {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--text-bright);
   font-family: var(--mono);
-  margin-top: 0.15rem;
+  margin-top: 0.1rem;
 }
 
 .status-card .sub {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   color: var(--text-dim);
   font-family: var(--mono);
 }
 
-/* Timeline strip */
+/* ── Timeline Strip ── */
 .timeline-strip {
   display: flex;
   gap: 0.5rem;
-  padding: 0.5rem 1.2rem 0.8rem;
+  padding: 0.4rem 1.2rem 0.6rem;
   overflow-x: auto;
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
 }
 
 .timeline-strip::-webkit-scrollbar { height: 4px; }
@@ -221,81 +242,69 @@ body {
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 6px;
-  padding: 0.4rem 0.7rem;
-  min-width: 140px;
+  padding: 0.35rem 0.6rem;
+  min-width: 130px;
 }
 
-.cycle-chip .cycle-num {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.cycle-chip .cycle-ts {
-  color: var(--blue);
-  font-size: 0.65rem;
-}
-
-.cycle-chip .cycle-branches {
+.cycle-chip .cycle-num { color: var(--accent); font-weight: 600; }
+.cycle-chip .cycle-ts { color: var(--blue); font-size: 0.62rem; }
+.cycle-chip .cycle-desc {
   color: var(--yellow);
-  font-size: 0.62rem;
-  margin-top: 0.15rem;
+  font-size: 0.6rem;
+  margin-top: 0.1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 200px;
 }
 
-/* Error */
-.error-msg {
-  color: var(--red);
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  padding: 0.5rem;
-  background: rgba(248,113,113,0.08);
-  border-radius: 4px;
-  text-align: center;
-}
-
-/* Scrollbar */
+/* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 
-/* Responsive */
+/* ── Responsive ── */
 @media (max-width: 768px) {
-  .header { padding: 0.6rem 1rem; }
-  .header h1 { font-size: 1rem; }
-  .status-row { grid-template-columns: repeat(3, 1fr); gap: 0.4rem; padding: 0.6rem 0.8rem; }
-  .status-card { padding: 0.4rem 0.6rem; }
-  .status-card .value { font-size: 0.9rem; }
-  .legend { padding: 0.3rem 0.8rem; gap: 0.8rem; }
+  .regime-banner { padding: 0.5rem 0.8rem; }
+  .regime-text { font-size: 1rem; }
+  .status-row { grid-template-columns: repeat(3, 1fr); gap: 0.4rem; padding: 0.5rem 0.8rem; }
+  .status-card { padding: 0.4rem 0.5rem; }
+  .status-card .value { font-size: 0.85rem; }
+  .legend { padding: 0.3rem 0.8rem; gap: 0.6rem; }
 }
 
 @media (max-width: 480px) {
   .status-row { grid-template-columns: repeat(2, 1fr); }
+  .regime-text { font-size: 0.85rem; }
 }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <h1><span>數位永生</span> &mdash; Mind Map</h1>
-  <div class="header-meta">
+<!-- TOP: Current Regime -->
+<div class="regime-banner">
+  <div class="regime-text" id="regime-display">
+    <span class="regime-label">Loading...</span>
+  </div>
+  <div class="regime-meta">
     <span class="clock" id="clock"></span>
     <span><span class="refresh-dot"></span> auto-refresh 5min</span>
   </div>
 </div>
 
 <div class="legend">
-  <div class="legend-item"><div class="legend-dot" style="background:#f87171"></div> Deadline / Urgent</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#fbbf24"></div> Active</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#4ade80"></div> Done</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#6b7280"></div> Blocked</div>
+  <div class="legend-item"><span style="font-size:1rem">&#9889;</span> Urgent / Deadline</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f87171"></div> Urgent</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#fbbf24"></div><span>&#9679;</span> Active</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#4ade80"></div><span>&#10003;</span> Done</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#6b7280"></div><span>&#9675;</span> Blocked</div>
 </div>
 
+<!-- Radial Mind Map -->
 <div id="mindmap-wrap">
-  <div id="mindmap-loading">Loading mind map...</div>
+  <div id="mindmap-loading">Loading radial mind map...</div>
   <svg id="mindmap-svg"></svg>
+  <div class="node-tooltip" id="tooltip"></div>
   <div class="zoom-controls">
     <button onclick="zoomIn()" title="Zoom in">+</button>
     <button onclick="zoomOut()" title="Zoom out">&minus;</button>
@@ -303,6 +312,7 @@ body {
   </div>
 </div>
 
+<!-- BOTTOM: Status + Timeline -->
 <div class="bottom-panel">
   <div class="status-row" id="status-row">
     <div class="status-card"><div class="label">Loading...</div></div>
@@ -310,21 +320,44 @@ body {
   <div class="timeline-strip" id="timeline-strip"></div>
 </div>
 
-<!-- D3.js for tree layout -->
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 
 <script>
 const RAW_BASE = 'https://raw.githubusercontent.com/l12203685/digital-immortality/main/results';
 const URLS = {
-  tree: `${RAW_BASE}/dynamic_tree.md`,
-  daemon: `${RAW_BASE}/daemon_log.md`,
-  daily: `${RAW_BASE}/daily_log.md`,
+  tree: RAW_BASE + '/dynamic_tree.md',
+  daemon: RAW_BASE + '/daemon_log.md',
 };
 
-// ─── Clock ───
+// ── Status badges ──
+const STATUS_BADGE = {
+  urgent: '\u26A1',
+  active: '\u25CF',
+  done: '\u2713',
+  blocked: '\u25CB',
+};
+
+const STATUS_COLORS = {
+  root: '#e94560',
+  urgent: '#f87171',
+  active: '#fbbf24',
+  done: '#4ade80',
+  blocked: '#6b7280',
+};
+
+const L1_SHORT_LABELS = {
+  1: '\u7D93\u6FDF\u81EA\u7D66',
+  2: '\u884C\u70BA\u7B49\u50F9',
+  3: '\u6301\u7E8C\u5B78\u7FD2',
+  4: '\u793E\u4EA4\u5708',
+  5: '\u5E73\u53F0\u5206\u767C',
+  6: '\u5B58\u6D3B\u5197\u9918',
+};
+
+// ── Clock ──
 function updateClock() {
-  const now = new Date();
-  const taipei = now.toLocaleString('zh-TW', {
+  var now = new Date();
+  var taipei = now.toLocaleString('zh-TW', {
     timeZone: 'Asia/Taipei',
     year: 'numeric', month: '2-digit', day: '2-digit',
     hour: '2-digit', minute: '2-digit', second: '2-digit',
@@ -335,156 +368,212 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-// ─── Fetch ───
+// ── Fetch ──
 async function fetchRaw(url) {
-  const res = await fetch(url + '?t=' + Date.now(), { cache: 'no-store' });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  var res = await fetch(url + '?t=' + Date.now(), { cache: 'no-store' });
+  if (!res.ok) throw new Error('HTTP ' + res.status);
   return res.text();
 }
 
-// ─── Parse dynamic_tree.md into tree structure ───
-function parseTreeToHierarchy(md) {
-  const lines = md.split('\n');
-  let lastUpdate = '';
+// ── Parse dynamic_tree.md ──
+function parseTreeMd(md) {
+  var lines = md.split('\n');
+  var lastUpdate = '';
+  var regime = '';
 
-  const root = { name: '數位永生', status: 'root', children: [] };
-  let currentL1 = null;
-  let currentL2 = null;
+  var root = { name: '\u6578\u4F4D\u6C38\u751F', status: 'root', children: [], shortLabel: '\u6578\u4F4D\u6C38\u751F' };
+  var currentL1 = null;
+  var currentL2 = null;
 
-  for (const line of lines) {
-    const upMatch = line.match(/最後更新：(.+)/);
-    if (upMatch) { lastUpdate = upMatch[1]; continue; }
+  for (var i = 0; i < lines.length; i++) {
+    var line = lines[i];
+
+    var upMatch = line.match(/\u6700\u5F8C\u66F4\u65B0\uFF1A(.+)/);
+    if (upMatch) { lastUpdate = upMatch[1].trim(); continue; }
+
+    // Regime
+    var regMatch = line.match(/^\u653B\u64CA\uFF1A(.+)/);
+    if (regMatch) { regime = '\u653B\u64CA\uFF1A' + regMatch[1].trim(); continue; }
+    var regMatch2 = line.match(/^\u4E2D\u6027\uFF1A(.+)/);
+    if (regMatch2 && !regime) { regime = '\u4E2D\u6027\uFF1A' + regMatch2[1].trim(); continue; }
 
     // L1: ### N. Title
-    const l1Match = line.match(/^### (\d+)\.\s+(.+)/);
+    var l1Match = line.match(/^### (\d+)\.\s+(.+)/);
     if (l1Match) {
-      const title = l1Match[2].replace(/⚡.*/, '').trim();
-      let status = 'active';
-      if (l1Match[2].includes('DEADLINE')) status = 'deadline';
-      currentL1 = { name: `${l1Match[1]}. ${title}`, status, children: [], fullTitle: l1Match[2] };
+      var num = parseInt(l1Match[1]);
+      var fullTitle = l1Match[2];
+      var status = 'active';
+      if (fullTitle.includes('DEADLINE') || fullTitle.includes('\u26A1')) status = 'urgent';
+      var shortLabel = L1_SHORT_LABELS[num] || fullTitle.replace(/\u26A1.*/, '').replace(/\uFF08.*/, '').trim();
+      currentL1 = { name: fullTitle, shortLabel: shortLabel, status: status, children: [], num: num };
       currentL2 = null;
       root.children.push(currentL1);
       continue;
     }
 
     // L2: - N.N text
-    const l2Match = line.match(/^- (\d+\.\d+)\s+(.+)/);
+    var l2Match = line.match(/^- (\d+\.\d+)\s+(.+)/);
     if (l2Match && currentL1) {
-      const text = l2Match[2];
-      let status = detectStatus(text);
-      currentL2 = { name: `${l2Match[1]} ${text}`, status, children: [] };
+      var text = l2Match[2];
+      var st = detectStatus(text);
+      currentL2 = { name: l2Match[1] + ' ' + text, shortLabel: text.substring(0, 30), status: st, children: [] };
       currentL1.children.push(currentL2);
       continue;
     }
 
     // L3: indented sub-items
-    const l3Match = line.match(/^\s{2,}-\s+(.+)/);
+    var l3Match = line.match(/^\s{2,}-\s+(.+)/);
     if (l3Match && currentL2) {
-      const text = l3Match[1];
-      let status = detectStatus(text);
-      currentL2.children.push({ name: text, status, children: [] });
+      var t3 = l3Match[1];
+      var st3 = detectStatus(t3);
+      currentL2.children.push({ name: t3, shortLabel: t3.substring(0, 25), status: st3, children: [] });
       continue;
     }
 
     // CONSTRAINT
     if (line.match(/^- CONSTRAINT/) && currentL1) {
-      const text = line.replace(/^- /, '');
-      currentL1.children.push({ name: text, status: 'deadline', children: [] });
-      continue;
+      currentL1.children.push({ name: line.replace(/^- /, ''), shortLabel: 'CONSTRAINT', status: 'urgent', children: [] });
     }
   }
 
-  return { tree: root, lastUpdate };
+  return { tree: root, lastUpdate: lastUpdate, regime: regime };
 }
 
 function detectStatus(text) {
-  if (text.includes('DEADLINE') || text.includes('deadline')) return 'deadline';
-  if (/✓/.test(text) || /DONE/.test(text) || /done/.test(text)) return 'done';
-  if (/blocked/.test(text) || /待/.test(text) || /users=0/.test(text)) return 'blocked';
+  if (text.includes('DEADLINE') || text.includes('deadline') || text.includes('\u26A1')) return 'urgent';
+  if (/\u2713/.test(text) || /DONE/.test(text) || /done/.test(text) || /\u2714/.test(text)) return 'done';
+  if (/blocked/.test(text) || /\u5F85/.test(text) || /users=0/.test(text)) return 'blocked';
   return 'active';
 }
 
-// ─── Color scheme ───
-const STATUS_COLORS = {
-  root: '#e94560',
-  deadline: '#f87171',
-  active: '#fbbf24',
-  done: '#4ade80',
-  blocked: '#6b7280',
-};
+// ── D3 Radial Mind Map ──
+var svgEl, gEl, zoomBehavior, rootNode;
+var nodeIdCounter = 0;
+var DURATION = 400;
+var tooltip = null;
 
-const L1_COLORS = ['#f87171', '#60a5fa', '#fbbf24', '#a78bfa', '#4ade80', '#f472b6'];
-
-// ─── D3 Mind Map ───
-let svgEl, gEl, zoomBehavior, rootNode, treeLayout;
-const DURATION = 400;
-let nodeIdCounter = 0;
-
-function initMindMap(data) {
+function initRadialMap(data) {
   document.getElementById('mindmap-loading').style.display = 'none';
-  const wrap = document.getElementById('mindmap-wrap');
-  const width = wrap.clientWidth;
-  const height = wrap.clientHeight;
+  tooltip = document.getElementById('tooltip');
+
+  var wrap = document.getElementById('mindmap-wrap');
+  var width = wrap.clientWidth;
+  var height = wrap.clientHeight;
 
   svgEl = d3.select('#mindmap-svg')
     .attr('width', width)
     .attr('height', height);
 
-  // Clear previous
   svgEl.selectAll('*').remove();
 
   gEl = svgEl.append('g');
 
   zoomBehavior = d3.zoom()
-    .scaleExtent([0.2, 4])
-    .on('zoom', (e) => gEl.attr('transform', e.transform));
+    .scaleExtent([0.2, 5])
+    .on('zoom', function(e) { gEl.attr('transform', e.transform); });
 
   svgEl.call(zoomBehavior);
-
-  // Use d3.tree layout
-  treeLayout = d3.tree().nodeSize([28, 280]);
 
   rootNode = d3.hierarchy(data);
   rootNode.x0 = 0;
   rootNode.y0 = 0;
 
-  // Collapse L3+ initially
+  // Collapse L2+ children initially (L2/L3 collapsed)
   if (rootNode.children) {
-    rootNode.children.forEach(l1 => {
+    rootNode.children.forEach(function(l1) {
       if (l1.children) {
-        l1.children.forEach(l2 => {
+        l1.children.forEach(function(l2) {
           if (l2.children && l2.children.length > 0) {
             l2._children = l2.children;
             l2.children = null;
           }
         });
+        // Also collapse L2 by default
+        l1._children = l1.children;
+        l1.children = null;
       }
     });
   }
 
-  update(rootNode);
+  updateRadial(rootNode);
 
-  // Center on root
-  const t = d3.zoomIdentity.translate(width * 0.12, height / 2).scale(0.85);
-  svgEl.transition().duration(500).call(zoomBehavior.transform, t);
+  // Center
+  var t = d3.zoomIdentity.translate(width / 2, height / 2).scale(0.9);
+  svgEl.transition().duration(600).call(zoomBehavior.transform, t);
 }
 
-function update(source) {
-  const treeData = treeLayout(rootNode);
-  const nodes = treeData.descendants();
-  const links = treeData.links();
+function radialPoint(x, y) {
+  // x = angle in radians, y = radius
+  return [y * Math.cos(x - Math.PI / 2), y * Math.sin(x - Math.PI / 2)];
+}
 
-  // Normalize depth spacing
-  nodes.forEach(d => { d.y = d.depth * 300; });
+function updateRadial(source) {
+  // Use d3.tree with radial projection
+  var treeLayout = d3.tree()
+    .size([2 * Math.PI, 280])
+    .separation(function(a, b) {
+      return (a.parent === b.parent ? 1 : 2) / a.depth || 1;
+    });
+
+  var treeData = treeLayout(rootNode);
+  var nodes = treeData.descendants();
+  var links = treeData.links();
+
+  // Adjust radius by depth
+  nodes.forEach(function(d) {
+    if (d.depth === 0) d.y = 0;
+    else if (d.depth === 1) d.y = 140;
+    else if (d.depth === 2) d.y = 300;
+    else d.y = 300 + (d.depth - 2) * 140;
+  });
+
+  // ── Links ──
+  var link = gEl.selectAll('path.link')
+    .data(links, function(d) { return d.target.id || (d.target.id = ++nodeIdCounter); });
+
+  var linkEnter = link.enter().insert('path', 'g')
+    .attr('class', 'link')
+    .attr('fill', 'none')
+    .attr('stroke-opacity', 0.3)
+    .attr('stroke-width', function(d) { return d.target.depth <= 1 ? 2.5 : 1.5; })
+    .attr('stroke', function(d) { return getNodeColor(d.target); })
+    .attr('d', function() {
+      var o = radialPoint(source.x0 || 0, source.y0 || 0);
+      return 'M' + o[0] + ',' + o[1] + 'L' + o[0] + ',' + o[1];
+    });
+
+  var linkUpdate = linkEnter.merge(link);
+
+  linkUpdate.transition().duration(DURATION)
+    .attr('d', function(d) {
+      var s = radialPoint(d.source.x, d.source.y);
+      var t = radialPoint(d.target.x, d.target.y);
+      return 'M' + s[0] + ',' + s[1]
+        + 'C' + s[0] + ',' + (s[1] + t[1]) / 2
+        + ' ' + t[0] + ',' + (s[1] + t[1]) / 2
+        + ' ' + t[0] + ',' + t[1];
+    })
+    .attr('stroke', function(d) { return getNodeColor(d.target); })
+    .attr('stroke-opacity', 0.3);
+
+  link.exit().transition().duration(DURATION)
+    .attr('d', function() {
+      var o = radialPoint(source.x, source.y);
+      return 'M' + o[0] + ',' + o[1] + 'L' + o[0] + ',' + o[1];
+    })
+    .remove();
 
   // ── Nodes ──
-  const node = gEl.selectAll('g.node')
-    .data(nodes, d => d.id || (d.id = ++nodeIdCounter));
+  var node = gEl.selectAll('g.node')
+    .data(nodes, function(d) { return d.id || (d.id = ++nodeIdCounter); });
 
-  const nodeEnter = node.enter().append('g')
+  var nodeEnter = node.enter().append('g')
     .attr('class', 'node')
-    .attr('transform', () => `translate(${source.y0 || 0},${source.x0 || 0})`)
-    .on('click', (event, d) => {
+    .attr('transform', function() {
+      var p = radialPoint(source.x0 || 0, source.y0 || 0);
+      return 'translate(' + p[0] + ',' + p[1] + ')';
+    })
+    .on('click', function(event, d) {
       if (d.children) {
         d._children = d.children;
         d.children = null;
@@ -492,130 +581,157 @@ function update(source) {
         d.children = d._children;
         d._children = null;
       }
-      update(d);
+      updateRadial(d);
     })
-    .style('cursor', d => (d.children || d._children) ? 'pointer' : 'default');
+    .on('mouseenter', function(event, d) {
+      if (d.depth === 0) return;
+      tooltip.style.display = 'block';
+      tooltip.textContent = d.data.name;
+      var rect = document.getElementById('mindmap-wrap').getBoundingClientRect();
+      tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
+      tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
+    })
+    .on('mousemove', function(event) {
+      var rect = document.getElementById('mindmap-wrap').getBoundingClientRect();
+      tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
+      tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
+    })
+    .on('mouseleave', function() {
+      tooltip.style.display = 'none';
+    })
+    .style('cursor', function(d) { return (d.children || d._children) ? 'pointer' : 'default'; });
 
   // Circle
   nodeEnter.append('circle')
     .attr('r', 0)
-    .attr('fill', d => getNodeColor(d))
-    .attr('stroke', d => getNodeColor(d))
+    .attr('fill', function(d) { return getNodeColor(d); })
+    .attr('stroke', function(d) { return getNodeColor(d); })
     .attr('stroke-width', 2);
+
+  // Status badge for L1
+  nodeEnter.filter(function(d) { return d.depth === 1; })
+    .append('text')
+    .attr('class', 'status-badge')
+    .attr('text-anchor', 'middle')
+    .attr('dy', '-1.2em')
+    .attr('font-size', '12px')
+    .text(function(d) {
+      var st = d.data.status || 'active';
+      return STATUS_BADGE[st] || STATUS_BADGE.active;
+    });
 
   // Label
   nodeEnter.append('text')
+    .attr('class', 'node-label')
     .attr('dy', '0.35em')
-    .attr('x', d => d.children || d._children ? -14 : 14)
-    .attr('text-anchor', d => d.children || d._children ? 'end' : 'start')
     .attr('fill', '#e0e0e0')
-    .attr('font-size', d => d.depth === 0 ? '14px' : d.depth === 1 ? '12px' : '10.5px')
     .attr('font-family', "'Cascadia Code','Fira Code','Consolas',monospace")
-    .attr('font-weight', d => d.depth <= 1 ? '600' : '400')
-    .text(d => truncateLabel(d.data.name, d.depth))
-    .append('title')
-    .text(d => d.data.name);
+    .attr('font-weight', function(d) { return d.depth <= 1 ? '700' : '400'; })
+    .attr('font-size', function(d) {
+      if (d.depth === 0) return '16px';
+      if (d.depth === 1) return '12px';
+      return '10px';
+    });
 
-  // Expand/collapse indicator
+  // Expand indicator
   nodeEnter.append('text')
     .attr('class', 'expand-icon')
-    .attr('dy', '0.35em')
-    .attr('x', d => d.children || d._children ? 10 : -10)
     .attr('text-anchor', 'middle')
+    .attr('dy', '1.6em')
     .attr('fill', '#888')
-    .attr('font-size', '9px')
-    .attr('font-family', 'monospace')
-    .text(d => {
-      if (d._children) return `[+${d._children.length}]`;
-      if (d.children && d.depth >= 1) return '';
-      return '';
-    });
+    .attr('font-size', '8px')
+    .attr('font-family', 'monospace');
 
-  // Update
-  const nodeUpdate = nodeEnter.merge(node);
+  // ── Update ──
+  var nodeUpdate = nodeEnter.merge(node);
 
   nodeUpdate.transition().duration(DURATION)
-    .attr('transform', d => `translate(${d.y},${d.x})`);
+    .attr('transform', function(d) {
+      var p = radialPoint(d.x, d.y);
+      return 'translate(' + p[0] + ',' + p[1] + ')';
+    });
 
   nodeUpdate.select('circle')
-    .attr('r', d => d.depth === 0 ? 10 : d.depth === 1 ? 7 : 5)
-    .attr('fill', d => (d._children) ? getNodeColor(d) : (d.children ? 'transparent' : getNodeColor(d)))
-    .attr('stroke', d => getNodeColor(d));
+    .attr('r', function(d) {
+      if (d.depth === 0) return 28;
+      if (d.depth === 1) return 18;
+      if (d.depth === 2) return 8;
+      return 5;
+    })
+    .attr('fill', function(d) {
+      if (d._children) return getNodeColor(d);
+      if (d.children) return 'rgba(26,26,46,0.7)';
+      return getNodeColor(d);
+    })
+    .attr('stroke', function(d) { return getNodeColor(d); })
+    .attr('stroke-width', function(d) { return d.depth <= 1 ? 3 : 1.5; });
+
+  // Update labels: position radially
+  nodeUpdate.select('.node-label')
+    .attr('text-anchor', function(d) {
+      if (d.depth === 0) return 'middle';
+      if (d.depth === 1) return 'middle';
+      // For deeper nodes, orient based on angle
+      var angle = d.x;
+      return (angle > Math.PI) ? 'end' : 'start';
+    })
+    .attr('dx', function(d) {
+      if (d.depth <= 1) return 0;
+      var angle = d.x;
+      return (angle > Math.PI) ? '-12' : '12';
+    })
+    .attr('dy', function(d) {
+      if (d.depth === 0) return '0.35em';
+      if (d.depth === 1) return '2.8em';
+      return '0.35em';
+    })
+    .attr('transform', function(d) {
+      if (d.depth <= 1) return '';
+      // Rotate text to follow radial direction
+      var angle = (d.x * 180 / Math.PI) - 90;
+      if (d.x > Math.PI) angle += 180;
+      return 'rotate(' + angle + ')';
+    })
+    .text(function(d) {
+      if (d.depth === 0) return d.data.shortLabel || d.data.name;
+      if (d.depth === 1) return d.data.shortLabel || d.data.name;
+      var label = d.data.shortLabel || d.data.name;
+      return label.length > 35 ? label.substring(0, 34) + '...' : label;
+    });
 
   nodeUpdate.select('.expand-icon')
-    .text(d => {
-      if (d._children) return `[+${d._children.length}]`;
+    .text(function(d) {
+      if (d._children) return '[+' + d._children.length + ']';
       return '';
     });
 
-  // Exit
-  const nodeExit = node.exit().transition().duration(DURATION)
-    .attr('transform', () => `translate(${source.y},${source.x})`)
+  // ── Exit ──
+  var nodeExit = node.exit().transition().duration(DURATION)
+    .attr('transform', function() {
+      var p = radialPoint(source.x, source.y);
+      return 'translate(' + p[0] + ',' + p[1] + ')';
+    })
     .remove();
 
   nodeExit.select('circle').attr('r', 0);
   nodeExit.select('text').style('fill-opacity', 0);
 
-  // ── Links ──
-  const link = gEl.selectAll('path.link')
-    .data(links, d => d.target.id);
-
-  const linkEnter = link.enter().insert('path', 'g')
-    .attr('class', 'link')
-    .attr('fill', 'none')
-    .attr('stroke', d => {
-      const c = getNodeColor(d.target);
-      return c;
-    })
-    .attr('stroke-opacity', 0.35)
-    .attr('stroke-width', d => d.target.depth <= 1 ? 2.5 : 1.5)
-    .attr('d', () => {
-      const o = { x: source.x0 || 0, y: source.y0 || 0 };
-      return diagonal(o, o);
-    });
-
-  const linkUpdate = linkEnter.merge(link);
-
-  linkUpdate.transition().duration(DURATION)
-    .attr('d', d => diagonal(d.source, d.target))
-    .attr('stroke', d => getNodeColor(d.target))
-    .attr('stroke-opacity', 0.35);
-
-  link.exit().transition().duration(DURATION)
-    .attr('d', () => {
-      const o = { x: source.x, y: source.y };
-      return diagonal(o, o);
-    })
-    .remove();
-
   // Stash positions
-  nodes.forEach(d => { d.x0 = d.x; d.y0 = d.y; });
-}
-
-function diagonal(s, d) {
-  return `M ${s.y} ${s.x}
-          C ${(s.y + d.y) / 2} ${s.x},
-            ${(s.y + d.y) / 2} ${d.x},
-            ${d.y} ${d.x}`;
+  nodes.forEach(function(d) { d.x0 = d.x; d.y0 = d.y; });
 }
 
 function getNodeColor(d) {
   if (d.depth === 0) return '#e94560';
   if (d.depth === 1) {
-    const idx = d.parent ? d.parent.children.indexOf(d) : 0;
-    return L1_COLORS[idx % L1_COLORS.length];
+    var st = d.data.status || 'active';
+    if (st === 'urgent') return STATUS_COLORS.urgent;
+    return STATUS_COLORS.active;
   }
-  const status = d.data.status || 'active';
+  var status = d.data.status || 'active';
   return STATUS_COLORS[status] || STATUS_COLORS.active;
 }
 
-function truncateLabel(name, depth) {
-  const maxLen = depth === 0 ? 30 : depth === 1 ? 40 : 55;
-  if (name.length <= maxLen) return name;
-  return name.substring(0, maxLen - 1) + '...';
-}
-
-// ─── Zoom controls ───
+// ── Zoom ──
 function zoomIn() {
   svgEl.transition().duration(300).call(zoomBehavior.scaleBy, 1.3);
 }
@@ -623,145 +739,118 @@ function zoomOut() {
   svgEl.transition().duration(300).call(zoomBehavior.scaleBy, 0.7);
 }
 function zoomFit() {
-  const wrap = document.getElementById('mindmap-wrap');
-  const t = d3.zoomIdentity.translate(wrap.clientWidth * 0.12, wrap.clientHeight / 2).scale(0.85);
+  var wrap = document.getElementById('mindmap-wrap');
+  var t = d3.zoomIdentity.translate(wrap.clientWidth / 2, wrap.clientHeight / 2).scale(0.9);
   svgEl.transition().duration(500).call(zoomBehavior.transform, t);
 }
 
-// ─── Resize ───
-window.addEventListener('resize', () => {
-  const wrap = document.getElementById('mindmap-wrap');
+// ── Resize ──
+window.addEventListener('resize', function() {
+  var wrap = document.getElementById('mindmap-wrap');
   svgEl.attr('width', wrap.clientWidth).attr('height', wrap.clientHeight);
 });
 
-// ─── Parse Daemon Log ───
+// ── Parse daemon_log.md ──
 function parseDaemonLog(md) {
-  const lines = md.split('\n').filter(l => l.trim());
-  let totalCycles = 0;
-  let lastCycleTime = null;
-  let lastStartTime = null;
-  let firstTime = null;
+  var cycles = [];
+  var blocks = md.split(/^## Cycle /m).slice(1);
+  var totalCycles = blocks.length;
+  var lastCycleTime = '';
 
-  for (const line of lines) {
-    const tsMatch = line.match(/^\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} UTC)\]/);
-    const ts = tsMatch ? tsMatch[1] : null;
-    if (ts && !firstTime) firstTime = ts;
-    if (line.includes('complete') && line.includes('Cycle')) {
-      totalCycles++;
-      if (ts) lastCycleTime = ts;
-    }
-    if (line.includes('Loop started') && ts) lastStartTime = ts;
-  }
-
-  return { totalCycles, lastCycleTime, lastStartTime, firstTime };
-}
-
-// ─── Parse Daily Log ───
-function parseDailyLog(md) {
-  const cycles = [];
-  const blocks = md.split(/^## Cycle /m).slice(1);
-  for (const block of blocks) {
-    const headerMatch = block.match(/^(\d+)\s*[—\-]\s*(.+)/);
+  for (var i = 0; i < blocks.length; i++) {
+    var headerMatch = blocks[i].match(/^(\d+)\s*[—\-]\s*(.+)/);
     if (!headerMatch) continue;
-    const num = parseInt(headerMatch[1]);
-    const ts = headerMatch[2].trim();
-    const branchMatch = block.match(/\*\*Branches pushed\*\*:\s*(.+)/);
-    const branches = branchMatch ? branchMatch[1] : '';
-    cycles.push({ num, ts, branches });
-  }
-  return cycles;
-}
-
-// ─── Render Status Cards ───
-function renderStatus(daemonData, dailyCycles, lastUpdate) {
-  const el = document.getElementById('status-row');
-  const lastDaemon = daemonData.lastCycleTime || 'N/A';
-  const lastTrigger = dailyCycles.length > 0 ? dailyCycles[dailyCycles.length - 1].ts : 'N/A';
-
-  let uptime = 'N/A';
-  if (daemonData.firstTime) {
-    const first = new Date(daemonData.firstTime.replace(' UTC', 'Z'));
-    const now = new Date();
-    const diffMs = now - first;
-    const hours = Math.floor(diffMs / 3600000);
-    if (hours > 24) {
-      uptime = `${Math.floor(hours / 24)}d ${hours % 24}h`;
-    } else {
-      uptime = `${hours}h ${Math.floor((diffMs % 3600000) / 60000)}m`;
-    }
+    var num = parseInt(headerMatch[1]);
+    var ts = headerMatch[2].trim();
+    // Get first line of content as description
+    var contentLines = blocks[i].split('\n').slice(1).filter(function(l) { return l.trim(); });
+    var desc = contentLines.length > 0 ? contentLines[0].substring(0, 60) : '';
+    cycles.push({ num: num, ts: ts, desc: desc });
+    lastCycleTime = ts;
   }
 
-  el.innerHTML = `
-    <div class="status-card">
-      <div class="label">Last Daemon Cycle</div>
-      <div class="value" style="font-size:0.85rem">${esc(lastDaemon)}</div>
-    </div>
-    <div class="status-card">
-      <div class="label">Last Trigger Cycle</div>
-      <div class="value" style="font-size:0.85rem">${esc(lastTrigger)}</div>
-    </div>
-    <div class="status-card">
-      <div class="label">Daemon Cycles</div>
-      <div class="value">${daemonData.totalCycles}</div>
-    </div>
-    <div class="status-card">
-      <div class="label">Engine Cycles</div>
-      <div class="value">${dailyCycles.length}</div>
-    </div>
-    <div class="status-card">
-      <div class="label">Uptime</div>
-      <div class="value">${uptime}</div>
-    </div>
-    <div class="status-card">
-      <div class="label">Tree Updated</div>
-      <div class="value" style="font-size:0.75rem">${esc(lastUpdate)}</div>
-    </div>
-  `;
+  return { totalCycles: totalCycles, lastCycleTime: lastCycleTime, cycles: cycles };
 }
 
-// ─── Render Timeline Strip ───
+// ── Render Status Cards ──
+function renderStatus(daemonData, lastUpdate) {
+  var el = document.getElementById('status-row');
+  var lastDaemon = daemonData.lastCycleTime || 'N/A';
+
+  el.innerHTML =
+    '<div class="status-card">' +
+      '<div class="label">Last Cycle</div>' +
+      '<div class="value" style="font-size:0.8rem">' + esc(lastDaemon) + '</div>' +
+    '</div>' +
+    '<div class="status-card">' +
+      '<div class="label">Total Cycles</div>' +
+      '<div class="value">' + daemonData.totalCycles + '</div>' +
+    '</div>' +
+    '<div class="status-card">' +
+      '<div class="label">Tree Updated</div>' +
+      '<div class="value" style="font-size:0.72rem">' + esc(lastUpdate) + '</div>' +
+    '</div>' +
+    '<div class="status-card">' +
+      '<div class="label">Source</div>' +
+      '<div class="value" style="font-size:0.72rem">GitHub raw</div>' +
+      '<div class="sub">5 min refresh</div>' +
+    '</div>';
+}
+
+// ── Render Timeline ──
 function renderTimeline(cycles) {
-  const el = document.getElementById('timeline-strip');
-  const recent = cycles.slice(-8).reverse();
+  var el = document.getElementById('timeline-strip');
+  var recent = cycles.slice(-10).reverse();
   if (!recent.length) {
     el.innerHTML = '<span style="color:var(--text-dim);font-size:0.72rem">No cycles yet</span>';
     return;
   }
-  el.innerHTML = recent.map(c => `
-    <div class="cycle-chip">
-      <div class="cycle-num">Cycle ${c.num}</div>
-      <div class="cycle-ts">${esc(c.ts)}</div>
-      <div class="cycle-branches">${esc(c.branches)}</div>
-    </div>
-  `).join('');
+  el.innerHTML = recent.map(function(c) {
+    return '<div class="cycle-chip">' +
+      '<div class="cycle-num">Cycle ' + c.num + '</div>' +
+      '<div class="cycle-ts">' + esc(c.ts) + '</div>' +
+      '<div class="cycle-desc">' + esc(c.desc) + '</div>' +
+    '</div>';
+  }).join('');
 }
 
 function esc(str) {
-  const div = document.createElement('div');
-  div.textContent = str;
+  var div = document.createElement('div');
+  div.textContent = str || '';
   return div.innerHTML;
 }
 
-// ─── Main ───
+// ── Main Refresh ──
 async function refresh() {
   try {
-    const [treeRaw, daemonRaw, dailyRaw] = await Promise.all([
+    var results = await Promise.all([
       fetchRaw(URLS.tree),
       fetchRaw(URLS.daemon),
-      fetchRaw(URLS.daily),
     ]);
 
-    const { tree, lastUpdate } = parseTreeToHierarchy(treeRaw);
-    initMindMap(tree);
+    var treeRaw = results[0];
+    var daemonRaw = results[1];
 
-    const daemonData = parseDaemonLog(daemonRaw);
-    const dailyCycles = parseDailyLog(dailyRaw);
-    renderStatus(daemonData, dailyCycles, lastUpdate);
-    renderTimeline(dailyCycles);
+    var parsed = parseTreeMd(treeRaw);
+    initRadialMap(parsed.tree);
+
+    // Regime banner
+    var regimeEl = document.getElementById('regime-display');
+    if (parsed.regime) {
+      regimeEl.innerHTML = '<span class="regime-label">' + esc(parsed.regime) + '</span>';
+    } else {
+      regimeEl.innerHTML = '<span class="regime-label">\u6578\u4F4D\u6C38\u751F</span>';
+    }
+
+    var daemonData = parseDaemonLog(daemonRaw);
+    renderStatus(daemonData, parsed.lastUpdate);
+    renderTimeline(daemonData.cycles);
   } catch (err) {
     console.error('Refresh failed:', err);
-    document.getElementById('mindmap-loading').textContent = 'Failed to load: ' + err.message;
-    document.getElementById('mindmap-loading').style.color = '#f87171';
+    var loadEl = document.getElementById('mindmap-loading');
+    loadEl.textContent = 'Failed to load: ' + err.message;
+    loadEl.style.color = '#f87171';
+    loadEl.style.display = 'flex';
   }
 }
 

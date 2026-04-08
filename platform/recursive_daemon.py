@@ -96,7 +96,7 @@ def try_git_commit(cycle: int) -> None:
         )
         if status.stdout.strip():
             subprocess.run(
-                ["git", "add", "-A"],
+                ["git", "add", "results/"],
                 cwd=REPO_ROOT, capture_output=True, timeout=10,
             )
             msg = f"daemon: cycle {cycle}"
