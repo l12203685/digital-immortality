@@ -193,6 +193,22 @@ Two DNA files can be compared across 10 built-in scenarios (career, relationship
 
 Measures whether a DNA file produces consistent decisions across independent LLM sessions. Target: >80% agreement. Use `consistency_test.py` for deterministic baselines and `cross_instance_test.py` for multi-session LLM templates. See CLI Tools above.
 
+## Dashboard
+
+Live status dashboard showing the dynamic tree, recursive engine cycles, and daemon log.
+
+```bash
+# Deploy to Vercel (from dashboard/ directory)
+cd dashboard
+vercel
+
+# Or link repo and set Root Directory to "dashboard" in Vercel project settings
+vercel link
+vercel --prod
+```
+
+The dashboard auto-refreshes every 60 seconds, fetching latest data from GitHub raw files.
+
 ## Philosophy
 
 > "If I disappear tomorrow, can this system continue making the decisions I would make?"
