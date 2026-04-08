@@ -2547,3 +2547,15 @@ Cycle 45 done.
 - **MD-246**: 選edge最大化的池，不選獎金最大的池；大型比賽稀釋edge
 
 Next: 201804.
+
+## Cycle 46 — 2026-04-08T UTC
+
+**Branch 2.2 — 201804 distill → MD-247~249 (249 MDs total)**
+
+- 201804.jsonl: 31 Edward substantive msgs; themes: 交易≈行為經濟學×賽局/no risk no reward知行落差/主管在離職前開始談AI BigData
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-247** 交易核心=行為經濟學×賽局；每口進場先問equity多少×winrate多少=期望值
+  - **MD-248** 知行落差是結構性的（loss aversion），多數人不take risk=少數人的alpha來源
+  - **MD-249** 組織談趨勢=落後指標；主管開始說AI/Blockchain時個人早應決策完畢
+
+`templates/dna_core.md`: **249 MDs**. Next: 201803.

@@ -193,3 +193,4 @@
 - 2026-04-08T UTC: cycle 44 — **merge conflict resolved** (HEAD vs 544bca3); 201806 JSONL read (600 Edward msgs, Jun 2018) → MD-241~243 (薪資計算基數≠headline/入職前設離場條件/競爭edge=思維層級差); templates/dna_core.md: **243 MDs**; next: 201805
 - 2026-04-09T UTC: cycle 37 — Branch 2.2: 201901 JSONL read (144 Edward msgs, Jan 2019) → MD-220~222 (工作Offer=精算年化EV三情境/升息=債券避開利率是固定收益第一驅動/選擇權分析=先算breakeven區間再評進場); templates/dna_core.md: **222 MDs**; next: 201812
 - 2026-04-09T UTC: cycle 45 — Branch 2.2: 201805 JSONL read (38 Edward msgs, May 2018) → MD-244~246 (試用期加薪0~10%=期望值以0算/賽局策略錯位診斷/選edge最大化的池不選獎金最大的池); templates/dna_core.md: **246 MDs**; next: 201804
+- 2026-04-08T UTC: cycle 46 — Branch 2.2: 201804 JSONL read (31 Edward msgs, Apr 2018) → MD-247~249 (交易=行為經濟學×賽局equity前置/知行落差是結構性alpha來源/組織談趨勢=落後指標); templates/dna_core.md: **249 MDs**; next: 201803
