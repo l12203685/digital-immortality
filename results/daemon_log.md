@@ -4121,3 +4121,19 @@ Highest derivative: knowledge output series extended to #08; capital structure i
 12-tweet thread drafted. **Series now SOP #01~#08.**
 
 External blockers remain: (1) `BINANCE_MAINNET_KEY/SECRET` → mainnet revenue; (2) post threads #01~#08.
+
+## Cycle 133 — 2026-04-09T UTC
+
+**Branch 7.15** — SOP #09 shipped: `docs/knowledge_product_09_risk_drawdown_sop.md` + `docs/publish_thread_sop09_twitter.md` — Risk Management & Drawdown Response.
+
+5 gates:
+- G0: Write kill condition before entry — strategy management = failure definition (MD-96)
+- G1: Daily loss limit = account × 1% ÷ leverage — stop for the day when hit (MD-50)
+- G2: Event risk (FOMC/elections/expiry) → reduce leverage 50% before event (MD-27)
+- G3: Equity curve as leverage trigger — Normal/Warning/Stop states based on ATR vs 20-day MA (MD-75)
+- G4: Adding to losers requires OOS Sharpe>0.5 + within historical max DD + pre-written scale-in + no daily limit violation (MD-91)
+- G5: Drawdown recovery — close → paper 5 sessions → diagnose → resume at 25% leverage, scale over 4 weeks
+
+9-tweet thread drafted. **Series now SOP #01~#09.**
+
+External blockers remain: (1) `BINANCE_MAINNET_KEY/SECRET` → mainnet revenue; (2) post threads #01~#09.
