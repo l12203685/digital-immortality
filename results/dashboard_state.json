@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T21:02+08",
+  "updated": "2026-04-08T21:07+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,23 +51,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "SHORT signal has held across 6 consecutive ticks spanning $71.6k–$72.1k. Evid..."
+      "text": "Unblocking condition: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → `pyt..."
     },
     {
       "time": "just now",
-      "text": "Branch 1.1 — paper-live tick 6: BTC=72,116.10 signal=SHORT (×6 consistent)"
+      "text": "- Committed and pushed"
     },
     {
       "time": "just now",
-      "text": "Cycle 59 done."
+      "text": "- Testnet review: CONDITIONAL_GO (4/6 strategies pass; MAE/MFE awaiting suffi..."
     },
     {
       "time": "just now",
-      "text": "Unblocking condition: set `BINANCE_MAINNET_KEY` + `SECRET` → `python -m tradi..."
+      "text": "- Paper-live tick 7: BTC=72,202.70 → SHORT (consistent ×7, range $71.6k–$72.2k)"
     },
     {
       "time": "just now",
-      "text": "- Evidence converging strongly; regime consistent"
+      "text": "- Branch 1.1 remains highest-derivative (mainnet blocked on credentials)"
     }
   ],
   "stats": {
