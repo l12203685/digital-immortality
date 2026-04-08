@@ -74,12 +74,33 @@ def append_log(cycle: int, response: str) -> None:
 
 
 def try_git_commit(cycle: int) -> None:
-    """Disabled — daemon only writes to results/daemon_log.md.
-    Remote trigger (1hr) handles all git commits to avoid conflicts.
-    E0 session handles platform/*.py and root config changes."""
-    pass  # Scope separation: daemon=log only, trigger=commit, E0=code
+    """Commit changes. Pull --rebase first to avoid conflicts with remote trigger."""
+    try:
+        subprocess.run(
+            ["git", "pull", "--rebase", "origin", "main"],
+            cwd=REPO_ROOT, capture_output=True, timeout=30,
+        )
+        status = subprocess.run(
+            ["git", "status", "--porcelain"],
+            cwd=REPO_ROOT, capture_output=True, text=True, timeout=10,
+        )
+        if status.stdout.strip():
+            subprocess.run(
+                ["git", "add", "-A"],
+                cwd=REPO_ROOT, capture_output=True, timeout=10,
+            )
+            msg = f"daemon: cycle {cycle}"
+            subprocess.run(
+                ["git", "commit", "-m", msg],
+                cwd=REPO_ROOT, capture_output=True, timeout=10,
+            )
+            subprocess.run(
+                ["git", "push", "origin", "main"],
+                cwd=REPO_ROOT, capture_output=True, timeout=30,
+            )
+            print(f"[daemon] Committed + pushed (cycle {cycle})")
     except Exception as e:
-        print(f"[daemon] Git commit skipped: {e}")
+        print(f"[daemon] Git sync skipped: {e}")
 
 
 def run_cycle_api(client, system: str, model: str, cycle: int) -> str:
