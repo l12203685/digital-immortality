@@ -2968,3 +2968,11 @@ Cycle 70 done.
 - Signal has held through ~$1k price range; regime evidence strongest yet
 - dna_core.md at **279 MDs** (Branch 2.2 COMPLETE + cycle 70 extensions)
 - Unblocking condition unchanged: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → go live $100 cap
+
+## Cycle 67 — 2026-04-08 13:44:09 UTC
+
+**Cycle 67 done.**
+
+- **Branch 1.1** (highest-derivative): paper-live tick 12, BTC=71679.00, SHORT ×12 consecutive (range $71.6k–$72.6k)
+- Signal has held through ~$1k price range — strongest regime evidence yet
+- Blocker unchanged: set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → `python -m trading.mainnet_runner --tick` → live at $100 cap
