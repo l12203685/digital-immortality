@@ -646,3 +646,4 @@ Branch 2.2 (JSONL distillation) — highest derivative.
 3. **MD-15 多空切換=條件分離** — cond_le/cond_se for regime, filter_le/filter_se for entry; four independent conditions; generalizes to any binary state machine
 
 Note: remote had already written MD-01~MD-42 (daemon was running in parallel); resolved conflict by keeping remote's complete version. Local file now reflects 42 micro-decisions. Next: 202502.
+- 2026-04-08TC: cycle 30 — Branch 2.2: 202502 JSONL read (11,857 Edward msgs, Feb 2025), 3 new micro-patterns → dna_core.md (期貨轉選擇權框架/長假=系統性避險觸發/槓鈴騎士=穩定+成長+質押BTC); total 45 micro-decisions
