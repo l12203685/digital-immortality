@@ -2390,3 +2390,15 @@ Cycle 37 done.
 - **MD-222**: 選擇權=先算breakeven區間，覆蓋預期波動才入場
 
 Next: 201812.
+
+## Cycle 38 — 2026-04-08 UTC
+
+**Branch 2.2 — 201812 distill → MD-223~225 (225 MDs total)**
+
+- 201812.jsonl: 40 Edward msgs; themes: poker hand analysis, Avalon game strategy, education critique
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-223** 勝率樣本門檻=50場以上才具決策意義 — 小樣本勝率是噪音；後段勝率分析才見真實信號；<50筆→不可用
+  - **MD-224** 台灣教育=訓練找答案機器，摧毀自主思考 — 學習設計目標是建立框架而非傳遞答案；與MD-49/117共鳴
+  - **MD-225** 對抗性績效評估=三維分解：角色拆分×基線場次×跨環境驗證 — 不能合並算；推廣到量化策略按regime拆分
+
+`templates/dna_core.md`: **225 MDs**. Next: 201811.
