@@ -4596,3 +4596,19 @@ Highest-derivative gap: queue ended May 23, no SOP on portfolio construction (co
 - Committed and pushed.
 
 **Next blocker:** Edward posts SOP #01 to start G5 compounding clock.
+
+## Cycle 150 — 2026-04-09T UTC
+
+**Cycle 150 done.**
+
+Highest-derivative gap: queue ended May 25. No SOP on position sizing — the one variable traders fully control. Deep DNA backing (MD-33/87/99/160/183/219) but gap in the series.
+
+**What shipped:**
+- `docs/knowledge_product_25_position_sizing_sop.md` — Position Sizing: 5-gate framework: G0 define max loss budget first (size from loss, not gain) / G1 constant leverage baseline (daily rebalance equity×leverage, not fixed lots) / G2 anti-martingale (cut 50% after 3 consecutive losses, MD-87) / G3 tail cap = 2× avg position (MD-33) / G4 quarter-Kelly ceiling: Kelly×0.25 (MD-219) / G5 equity curve state gates leverage — Normal/Warning/Stop (MD-75); self-test: $10K, 9% DD → WARNING → 50% leverage → $569/trade, still alive
+- `docs/publish_thread_sop25_twitter.md` — 12-tweet thread: *"Your strategy tells you when to trade. Position sizing tells you whether you survive long enough to trade again."*
+- `docs/posting_queue.md` extended to **#01~#25** (May 27); 48-day target
+- `results/dynamic_tree.md` updated: Branch 7.30 added, cycle 150 timestamp
+
+**Series: SOP #01~#25 COMPLETE. Queue: Apr 9–May 27.**
+
+**Next blocker:** Edward posts SOP #01 to start G5 compounding clock.
