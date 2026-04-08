@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T20:53+08",
+  "updated": "2026-04-08T20:58+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,23 +51,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next highest-derivative: Branch 1.1 (mainnet) — blocked on `BINANCE_MAINNET_K..."
+      "text": "Unblocking condition: `BINANCE_MAINNET_KEY` + `SECRET` → then `python -m trad..."
     },
     {
       "time": "just now",
-      "text": "Ran `consistency_test.py` against the full `dna_core.md` (273 MDs). All 8 boo..."
+      "text": "SHORT signal has held across 5 ticks spanning ~$71.6k–$72.0k. Evidence is con..."
     },
     {
       "time": "just now",
-      "text": "Branch 2.3 — 273-MD consistency validation: 8/8 ALIGNED"
+      "text": "Branch 1.1 — paper-live tick 5: BTC=72,043.10 signal=SHORT (×5 consistent)"
     },
     {
       "time": "just now",
-      "text": "Cycle 57 done."
+      "text": "Cycle 58 done."
     },
     {
-      "time": "2026-04-08 UTC",
-      "text": "- Branch 2.3 validated at full scale; next highest-derivative: Branch 1.1 (ma..."
+      "time": "just now",
+      "text": "- Next: set BINANCE_MAINNET_KEY/SECRET → run `python -m trading.mainnet_runne..."
     }
   ],
   "stats": {

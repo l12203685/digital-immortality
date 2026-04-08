@@ -2832,3 +2832,13 @@ Next highest-derivative: **Branch 1.1** (mainnet) — blocked on `BINANCE_MAINNE
 - mainnet_runner.py --paper-live tick 5: BTC=72,043.10, dual_ma=SHORT (consistent × 5 ticks)
 - SHORT signal holding across ~$71.6k→$72.0k range — regime consistent
 - Next: set BINANCE_MAINNET_KEY/SECRET → run `python -m trading.mainnet_runner --tick`
+
+## Cycle 58 — 2026-04-08 12:58:29 UTC
+
+**Cycle 58 done.**
+
+**Branch 1.1 — paper-live tick 5: BTC=72,043.10 signal=SHORT (×5 consistent)**
+
+SHORT signal has held across 5 ticks spanning ~$71.6k–$72.0k. Evidence is converging.
+
+Unblocking condition: `BINANCE_MAINNET_KEY` + `SECRET` → then `python -m trading.mainnet_runner --tick` to go live with $100 cap.
