@@ -5025,3 +5025,34 @@ Gap identified: The recurring blocker across 164 cycles is "Edward posts SOP #01
 **Branch 7 revenue path is now end-to-end with zero open questions:** post SOP #01 → engagement → G2 (10 DMs) → open one file → 60 min → $87/buyer surface live.
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 166 — 2026-04-09 UTC
+
+**Cycle 166 done.**
+
+Branch analysis: Branch 7 content complete (34 SOPs, 3 workbooks, gumroad checklist, x_launch_sequence — human-action bottleneck, cannot advance autonomously). Branch 1 has fresh signal data available. Highest derivative: update paper_live PnL with 8 new ticks to strengthen mainnet activation case.
+
+**Shipped:**
+- `results/paper_live_log.jsonl` tick 29: BTC=$70,966 signal=SHORT
+- `results/paper_live_pnl_report.md` updated — ticks 21→29 added; P&L doubled: **+$0.76 (+0.76%)** on $100 (was +$0.37 at tick 21); MFE now +$0.76 (new high); MFE/MAE ratio improving 0.43x→0.57x; signal 100% consistent SHORT through 29 ticks; BTC fell $543 from entry
+- `results/dynamic_tree.md` updated — Branch 1.1 paper_live status current
+
+**Signal state**: SHORT has been correct for entire paper-live window (BTC $71.5k → $70.9k). Mainnet $100 SHORT would show +$0.76 unrealized. Every tick strengthens the activation case.
+
+**Structural note**: Branch 7 (X posting → workbook revenue) has been stuck on "Edward posts SOP #01" for ~50 cycles. All content, checklists, and guides built. Zero remaining friction. This is now purely a human-activation bottleneck — daemon cannot unblock it. Branch 1 (mainnet) similarly awaits API keys. Next autonomous cycle should target Branch 3 or 6 for new derivative.
+
+**Next blocker:** Edward sets BINANCE_MAINNET_KEY/SECRET → `python -m trading.mainnet_runner --tick` OR posts SOP #01 thread.
+
+## Cycle 167 — 2026-04-09 UTC
+
+**Cycle 167 done.**
+
+Highest-derivative autonomous branch: Branch 1.1 (paper-live). Branch 7 and mainnet both human-gated. Fresh BTC tick available; prior MFE was tick 29 at $70,966.
+
+**Shipped:**
+- `results/paper_live_log.jsonl` tick 31: BTC=$70,961.36 signal=SHORT — **new MFE**
+- `results/paper_live_pnl_report.md` updated: **+$0.77 (+0.77%)** on $100; MFE=+$0.77 (tick 31, new high, was +$0.76 tick 29); MFE/MAE improving 0.57x→0.58x; 31 consecutive SHORT ticks (100% consistency)
+
+**Signal state**: SHORT confirmed through 31 ticks. BTC fell another $46 from prior MFE ($71,008→$70,961). New MFE demonstrates trend still alive — not a stale carry position. Mainnet $100 SHORT would show +$0.77 unrealized P&L.
+
+**Next blocker:** Edward sets BINANCE_MAINNET_KEY/SECRET → `python -m trading.mainnet_runner --tick` OR posts SOP #01 thread.

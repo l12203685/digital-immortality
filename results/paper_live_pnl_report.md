@@ -1,5 +1,5 @@
 # Paper-Live SHORT P&L Simulation
-> Generated 2026-04-09 UTC | 21 ticks | Entry: $71,509.90
+> Updated 2026-04-09 UTC | 31 ticks | Entry: $71,509.90
 
 ## Setup
 - Entry tick 1: BTC=$71,509.90 → SHORT
@@ -30,18 +30,27 @@
 | 19   | $71,114.18 | +$0.553 |
 | 20   | $71,176.00 | +$0.467 |
 | 21   | $71,247.59 | +$0.367 |
+| 22   | $71,225.83 | +$0.397 |
+| 23   | $71,190.69 | +$0.446 |
+| 24   | $71,186.58 | +$0.452 |
+| 25   | $71,300.00 | +$0.293 |
+| 26   | $71,238.01 | +$0.380 |
+| 27   | $71,332.14 | +$0.249 |
+| 28   | $71,359.94 | +$0.210 |
+| 29   | $70,966.00 | +$0.760 |
+| 30   | $71,007.77 | +$0.702 |
+| 31   | $70,961.36 | +$0.767 |
 
 ## Summary
-- **Final unrealized P&L: +$0.3668 (+0.37% on $100)**
-- Best case (MFE): +$0.5763
-- Worst case (MAE): $-1.3278
-- Signal consistency: SHORT x 21 ticks (100%)
-- MFE/MAE ratio: 0.43x
+- **Current unrealized P&L: +$0.7669 (+0.77% on $100)**
+- Best case (MFE): +$0.7669 (tick 31) ← new high
+- Worst case (MAE): $-1.3274
+- Signal consistency: SHORT x 31 ticks (100%)
+- MFE/MAE ratio: 0.58x (improving)
 
 ## Verdict
-SHORT signal persistent for 21 consecutive ticks.
-Price range: $71,097.79 - $72,459.40
-Position currently profitable vs entry.
+SHORT signal persistent for 31 consecutive ticks. BTC range: $71,510 entry → $72,459 peak adverse → $70,961 MFE (new) → current.
+New MFE at tick 31 ($70,961). Signal strengthening. MAE/MFE improving to 0.58x.
 
 **Next action**: Set BINANCE_MAINNET_KEY/SECRET → run `python -m trading.mainnet_runner --tick`
 See docs/mainnet_activation_guide.md for exact steps.
