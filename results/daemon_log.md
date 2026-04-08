@@ -2896,3 +2896,13 @@ Unblocking condition: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → `pyth
 The remote was force-updated by another daemon process (Cycle 62 already committed). Local reset to match. Current state: **paper-live tick 9: BTC=72,560.00 SHORT (×9 consistent)** — signal has held across ~$1k range.
 
 Blocker remains: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` needed to go live at $100 cap.
+
+## Cycle 63 — 2026-04-08 13:21:00 UTC
+
+**Branch 1.1 — paper-live tick 10: BTC=72,459.40 signal=SHORT (consistent × 10)**
+
+- Highest-derivative: Branch 1.1 (mainnet blocked on credentials) → re-ran consistency test as secondary action
+- paper-live tick 10: BTC=72,459.40, dual_ma=SHORT (consistent SHORT × 10 ticks, range $71.6k–$72.6k)
+- Consistency test re-run: 8/8 ALIGNED — Branch 2.3 validation holds at 273-MD scale
+- dynamic_tree.md updated: tick 10 recorded, cycle 63 timestamp, 2.3 re-verified
+- Unblocking condition unchanged: set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → go live $100 cap

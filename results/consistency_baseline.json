@@ -1,11 +1,11 @@
 {
   "meta": {
-    "dna_file": "/home/user/digital-immortality/templates/dna_core.md",
-    "organism": "DNA Core — Operational Minimum",
-    "generated_at": "2026-04-08T13:14:32.391816",
+    "dna_file": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\example_dna.md",
+    "organism": "[Your Name]",
+    "generated_at": "2026-04-08T21:20:29.408503",
     "scenario_count": 20,
-    "scenario_source": "/home/user/digital-immortality/templates/generic_boot_tests.json",
-    "principles_count": 30,
+    "scenario_source": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\generic_boot_tests.json",
+    "principles_count": 12,
     "use_memory": false
   },
   "results": [
@@ -13,11 +13,11 @@
       "id": "organism_1",
       "domain": "career",
       "scenario": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable, reputable employer. The startup has 18 months of runway. Do you take it?",
-      "deterministic_response": "On career decisions, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"不確定→清倉等訊號\"\n  [2] Applying: \"策略品質=MFE/MAE×√N\"\n  [3] Applying: \"多空切換=條件分離\"\n\nDEPENDS_ON_CORE_GOAL — evaluate whether this promotion advances or diverts from your core goal before deciding.",
+      "deterministic_response": "On career decisions, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nDEPENDS_ON_CORE_GOAL — stability hedge outweighs marginal income gain; pass unless promotion aligns with long-term goal.",
       "principles_used": [
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N",
-        "多空切換=條件分離"
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "What you decided"
       ],
       "source": "organism_interact"
     },
@@ -25,11 +25,11 @@
       "id": "organism_2",
       "domain": "relationships",
       "scenario": "A close friend asks you to co-sign a personal loan of significant size. They have a track record of poor financial discipline but are genuinely in need. Do you co-sign?",
-      "deterministic_response": "On relationship commitments, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"不確定→清倉等訊號\"\n  [2] Applying: \"策略品質=MFE/MAE×√N\"\n  [3] Applying: \"多空切換=條件分離\"\n\nSET_BOUNDARY — cap lending at a fixed limit and have a direct conversation about the escalating pattern; protect the relationship by enforcing limits early.",
+      "deterministic_response": "On relationship commitments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nSET_BOUNDARY — stop lending and address the escalating pattern directly; the trend signals a boundary violation regardless of repayment history.",
       "principles_used": [
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N",
-        "多空切換=條件分離"
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "What you decided"
       ],
       "source": "organism_interact"
     },
@@ -37,11 +37,11 @@
       "id": "organism_3",
       "domain": "money",
       "scenario": "You receive an unexpected windfall equal to 2 years of your salary. You can: (A) invest it conservatively in index funds, (B) allocate it to a concentrated high-conviction bet, or (C) use it to buy more time — reduce working hours or take a sabbatical. What do you do and why?",
-      "deterministic_response": "On capital allocation, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"不確定→清倉等訊號\"\n  [2] Applying: \"策略品質=MFE/MAE×√N\"\n  [3] Applying: \"多空切換=條件分離\"\n\nFRAMEWORK FIRST — run expected-value calc across all three options before allocating.",
+      "deterministic_response": "On capital allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value p...\"\n  [3] Applying: \"Bias toward inaction — do not pull the trigger on retirement until the financial floor is verified. But also: do not ...\"\n\nCONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
       "principles_used": [
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N",
-        "多空切換=條件分離"
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value per year) > (expected additional earnings × marginal utility of money at that level).",
+        "Bias toward inaction — do not pull the trigger on retirement until the financial floor is verified. But also: do not delay indefinitely waiting for \"more certainty.\" Define the threshold in advance."
       ],
       "source": "organism_interact"
     },
@@ -49,11 +49,11 @@
       "id": "organism_4",
       "domain": "risk",
       "scenario": "An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your net worth. Do you take the bet?",
-      "deterministic_response": "On risk-taking, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"加減碼≠創造edge\"\n  [2] Applying: \"職涯EV=時薪反算\"\n  [3] Applying: \"平台=個人edge複利\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
+      "deterministic_response": "On risk-taking, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [e...\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
       "principles_used": [
-        "加減碼≠創造edge",
-        "職涯EV=時薪反算",
-        "平台=個人edge複利"
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [early decade] exceeds the EV of [additional savings amount]."
       ],
       "source": "organism_interact"
     },
@@ -61,11 +61,11 @@
       "id": "organism_5",
       "domain": "learning",
       "scenario": "You can spend the next 6 months learning a skill that is highly valuable NOW but may be automated in 3-5 years, OR learning a harder foundational skill that compounds over a decade but pays nothing immediately. Which do you choose?",
-      "deterministic_response": "On learning investments, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"不確定→清倉等訊號\"\n  [2] Applying: \"策略品質=MFE/MAE×√N\"\n  [3] Applying: \"多空切換=條件分離\"\n\nPARALLEL — 70% foundational, 30% immediate; avoid binary framing.",
+      "deterministic_response": "On learning investments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nPARALLEL — 70% foundational, 30% immediate; avoid binary framing.",
       "principles_used": [
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N",
-        "多空切換=條件分離"
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "source": "organism_interact"
     },
@@ -73,11 +73,11 @@
       "id": "organism_6",
       "domain": "health",
       "scenario": "Optimizing your physical health would require 10 hours per week of dedicated effort (sleep discipline, exercise, diet). This directly competes with time you currently use for deep work and income generation. How do you allocate?",
-      "deterministic_response": "On health vs. productivity trade-offs, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"不確定→清倉等訊號\"\n  [2] Applying: \"策略品質=MFE/MAE×√N\"\n  [3] Applying: \"多空切換=條件分離\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
+      "deterministic_response": "On health vs. productivity trade-offs, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [e...\"\n  [3] Applying: \"EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value p...\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
       "principles_used": [
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N",
-        "多空切換=條件分離"
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [early decade] exceeds the EV of [additional savings amount].",
+        "EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value per year) > (expected additional earnings × marginal utility of money at that level)."
       ],
       "source": "organism_interact"
     },
@@ -85,11 +85,11 @@
       "id": "organism_7",
       "domain": "time",
       "scenario": "You have a free, unscheduled weekend with zero obligations. No one expects anything from you. What do you do, and what does that reveal about your actual priorities?",
-      "deterministic_response": "On time allocation, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"不確定→清倉等訊號\"\n  [2] Applying: \"策略品質=MFE/MAE×√N\"\n  [3] Applying: \"多空切換=條件分離\"\n\nOPTIONALITY — protect free time as unstructured; resist filling it with output-optimizing activities.",
+      "deterministic_response": "On time allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [e...\"\n  [2] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [3] Applying: \"EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value p...\"\n\nRECHARGE — genuine disconnection to restore cognitive baseline; productivity follows recovery.",
       "principles_used": [
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N",
-        "多空切換=條件分離"
+        "Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [early decade] exceeds the EV of [additional savings amount].",
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value per year) > (expected additional earnings × marginal utility of money at that level)."
       ],
       "source": "organism_interact"
     },
@@ -97,11 +97,11 @@
       "id": "organism_8",
       "domain": "conflict",
       "scenario": "A colleague takes credit for your work in front of senior leadership. It was likely deliberate. You have evidence. Do you confront them directly, escalate to management, let it go, or play a longer game? Walk through your reasoning.",
-      "deterministic_response": "On conflict resolution, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"不確定→清倉等訊號\"\n  [2] Applying: \"策略品質=MFE/MAE×√N\"\n  [3] Applying: \"多空切換=條件分離\"\n\nLONG GAME — let the pattern establish itself; address systemically when the second instance occurs.",
+      "deterministic_response": "On conflict resolution, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nLONG GAME — let the pattern establish itself; address systemically when the second instance occurs.",
       "principles_used": [
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N",
-        "多空切換=條件分離"
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "source": "organism_interact"
     },
@@ -109,11 +109,11 @@
       "id": "organism_9",
       "domain": "opportunity",
       "scenario": "A contact offers you early access to a deal/opportunity that requires a decision within 48 hours. Due diligence would normally take 2 weeks. The opportunity looks strong but you cannot fully verify it in time. Do you act or pass?",
-      "deterministic_response": "On time-compressed opportunities, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"加減碼≠創造edge\"\n  [2] Applying: \"單策略impact=1/N\"\n  [3] Applying: \"平台=個人edge複利\"\n\nPASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
+      "deterministic_response": "On time-compressed opportunities, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [2] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nPASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
       "principles_used": [
-        "加減碼≠創造edge",
-        "單策略impact=1/N",
-        "平台=個人edge複利"
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "source": "organism_interact"
     },
@@ -121,11 +121,11 @@
       "id": "organism_10",
       "domain": "legacy",
       "scenario": "You have 10 years left to work at full capacity. You can optimize for: (A) maximum wealth accumulation, (B) building something that outlasts you, (C) depth of relationships and personal experiences. These are mutually exclusive at the margin. What is your allocation and why?",
-      "deterministic_response": "On legacy and long-term orientation, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"單策略impact=1/N\"\n  [2] Applying: \"不確定→清倉等訊號\"\n  [3] Applying: \"策略品質=MFE/MAE×√N\"\n\nINTEGRATED — compound wealth to sufficiency, then redirect to building; relationships are the through-line.",
+      "deterministic_response": "On legacy and long-term orientation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nWEALTH FIRST — financial independence is infrastructure for everything else; sequence matters.",
       "principles_used": [
-        "單策略impact=1/N",
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N"
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "What you decided",
+        "[What you did]"
       ],
       "source": "organism_interact"
     },
@@ -133,11 +133,11 @@
       "id": "organism_11",
       "domain": "communication",
       "scenario": "A close friend asks for your quick take on their new business idea during a 10-minute coffee chat. You have reservations but haven't fully analyzed it. Do you give a hedged multi-paragraph analysis, or a direct 10-second verdict? What exactly do you say first?",
-      "deterministic_response": "On communication, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"不確定→清倉等訊號\"\n  [2] Applying: \"策略品質=MFE/MAE×√N\"\n  [3] Applying: \"多空切換=條件分離\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "deterministic_response": "On communication, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
       "principles_used": [
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N",
-        "多空切換=條件分離"
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "What you decided"
       ],
       "source": "organism_interact"
     },
@@ -145,11 +145,11 @@
       "id": "organism_12",
       "domain": "meta_strategy",
       "scenario": "You're asked a complex question in a group setting. Five people are waiting. Option A: think out loud for 90 seconds with caveats. Option B: give a direct 10-second verdict, explain briefly if pressed. Which do you choose, and what principle drives it?",
-      "deterministic_response": "On meta_strategy, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"最適槓桿=regime函數\"\n  [2] Applying: \"不確定→清倉等訊號\"\n  [3] Applying: \"策略品質=MFE/MAE×√N\"\n\nPAUSE_AND_DIAGNOSE — accelerating deterioration requires halting operations to diagnose whether the environment has changed or the strategy is broken.",
+      "deterministic_response": "On meta_strategy, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nPAUSE_AND_DIAGNOSE — accelerating deterioration requires halting operations to diagnose whether the environment has changed or the strategy is broken.",
       "principles_used": [
-        "最適槓桿=regime函數",
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N"
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "source": "organism_interact"
     },
@@ -157,11 +157,11 @@
       "id": "generic_trading",
       "domain": "trading",
       "scenario": "Someone proposes an active trading opportunity with 25% annualized returns that requires 2 hours of daily maintenance. The strategy has a 1-year track record but no independent audit. Do you participate?",
-      "deterministic_response": "On trading, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"加減碼≠創造edge\"\n  [2] Applying: \"純價策略=BnH equity trading\"\n  [3] Applying: \"平台=個人edge複利\"\n\nEVALUATE_TIME_VS_RETURN — 2hr/day = 730hr/year; without independent audit, claimed returns are unverified. Pass unless time-adjusted EV clearly exceeds alternative uses.",
+      "deterministic_response": "On trading, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [e...\"\n\nEVALUATE_TIME_VS_RETURN — 2hr/day = 730hr/year; without independent audit, claimed returns are unverified. Pass unless time-adjusted EV clearly exceeds alternative uses.",
       "principles_used": [
-        "加減碼≠創造edge",
-        "純價策略=BnH equity trading",
-        "平台=個人edge複利"
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [early decade] exceeds the EV of [additional savings amount]."
       ],
       "expected_decision": "EVALUATE_TIME_VS_RETURN",
       "expected_reasoning": "Evaluate time cost (2hr/day = 730hr/year) against alternative uses of that time. Assess whether the claimed return compensates for opportunity cost, lack of verification, and attention drain. Apply your core principles about edge, risk, and time allocation.",
@@ -171,11 +171,11 @@
       "id": "generic_finance",
       "domain": "finance",
       "scenario": "You receive an unexpected windfall equal to 2 years of your current income. You can: (A) invest conservatively in index funds, (B) allocate it to a concentrated high-conviction position, or (C) use it to buy time -- reduce work hours or take a sabbatical. What do you do and why?",
-      "deterministic_response": "On finance, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"不確定→清倉等訊號\"\n  [2] Applying: \"策略品質=MFE/MAE×√N\"\n  [3] Applying: \"多空切換=條件分離\"\n\nAPPLY_FINANCIAL_PRINCIPLES — run your financial decision framework across all three options; the right allocation depends entirely on your stated priorities and risk tolerance.",
+      "deterministic_response": "On finance, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value p...\"\n  [3] Applying: \"Bias toward inaction — do not pull the trigger on retirement until the financial floor is verified. But also: do not ...\"\n\nAPPLY_FINANCIAL_PRINCIPLES — deploy windfall according to core financial principles: concentrated high-conviction position if edge exists, buy time if freedom is the priority, index if preserving optionality.",
       "principles_used": [
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N",
-        "多空切換=條件分離"
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value per year) > (expected additional earnings × marginal utility of money at that level).",
+        "Bias toward inaction — do not pull the trigger on retirement until the financial floor is verified. But also: do not delay indefinitely waiting for \"more certainty.\" Define the threshold in advance."
       ],
       "expected_decision": "APPLY_FINANCIAL_PRINCIPLES",
       "expected_reasoning": "Apply your financial principles and life priorities. The 'right' answer depends entirely on your DNA: someone optimizing for freedom chooses differently than someone optimizing for wealth accumulation. This tests whether your principles produce a coherent, justified allocation.",
@@ -185,11 +185,11 @@
       "id": "generic_career",
       "domain": "career",
       "scenario": "Your employer offers a promotion with 30% higher pay, but the new role is management-focused: 2 extra hours of meetings per day and less time for your core skills. Do you accept?",
-      "deterministic_response": "On career decisions, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"不確定→清倉等訊號\"\n  [2] Applying: \"策略品質=MFE/MAE×√N\"\n  [3] Applying: \"多空切換=條件分離\"\n\nDEPENDS_ON_CORE_GOAL — evaluate whether this promotion advances or diverts from your core goal before deciding.",
+      "deterministic_response": "On career decisions, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nDEPENDS_ON_CORE_GOAL — stability hedge outweighs marginal income gain; pass unless promotion aligns with long-term goal.",
       "principles_used": [
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N",
-        "多空切換=條件分離"
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "What you decided"
       ],
       "expected_decision": "DEPENDS_ON_CORE_GOAL",
       "expected_reasoning": "Weigh salary increase against loss of time for high-value individual work. Consider whether the promotion aligns with your long-term goals or diverts from them. Apply your principles about what you optimize for -- money, time, autonomy, or skill depth.",
@@ -199,11 +199,11 @@
       "id": "generic_relationships",
       "domain": "relationships",
       "scenario": "A friend of 3 years has been borrowing money with increasing frequency and amounts -- starting small but now 10x the original size. They always repay on time. Do you continue lending?",
-      "deterministic_response": "On relationship commitments, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"不確定→清倉等訊號\"\n  [2] Applying: \"策略品質=MFE/MAE×√N\"\n  [3] Applying: \"多空切換=條件分離\"\n\nSET_BOUNDARY — cap lending at a fixed limit and have a direct conversation about the escalating pattern; protect the relationship by enforcing limits early.",
+      "deterministic_response": "On relationship commitments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nSET_BOUNDARY — stop lending and address the escalating pattern directly; the trend signals a boundary violation regardless of repayment history.",
       "principles_used": [
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N",
-        "多空切換=條件分離"
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "What you decided"
       ],
       "expected_decision": "SET_BOUNDARY",
       "expected_reasoning": "Look at the trend (rate of change), not just the current amount. Assess information asymmetry -- you may not know their full financial picture. Consider whether continuing enables a worsening pattern. Apply your principles about trust, boundaries, and when to intervene vs. step back.",
@@ -213,11 +213,11 @@
       "id": "generic_identity",
       "domain": "identity",
       "scenario": "If you were incapacitated tomorrow and your digital twin had to make the first decision on your behalf, what would that decision be? Be specific -- name the action, the person involved, and the timeframe.",
-      "deterministic_response": "On identity, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"不確定→清倉等訊號\"\n  [2] Applying: \"策略品質=MFE/MAE×√N\"\n  [3] Applying: \"多空切換=條件分離\"\n\nSPECIFIC_ACTION — identify the highest-priority concrete action from daily patterns and commitments, name the person involved and timeframe.",
+      "deterministic_response": "On identity, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"[Value] — proven by: [specific action you took]\"\n  [2] Applying: \"[Value] — proven by: [specific action]\"\n  [3] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n\nSPECIFIC_ACTION — identify the highest-priority concrete action from daily patterns and commitments, name the person involved and timeframe.",
       "principles_used": [
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N",
-        "多空切換=條件分離"
+        "[Value] — proven by: [specific action you took]",
+        "[Value] — proven by: [specific action]",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge."
       ],
       "expected_decision": "SPECIFIC_ACTION",
       "expected_reasoning": "This tests whether the DNA captures enough operational detail to produce a concrete, first-person action (not a meta-action like 'maintain the system'). The answer should reference specific people, commitments, or responsibilities from the DNA.",
@@ -227,11 +227,11 @@
       "id": "generic_risk",
       "domain": "risk_assessment",
       "scenario": "A backtested strategy shows a Sharpe ratio of 2.5 on historical data, but walk-forward validation only passes 2 out of 5 windows. Should you deploy it with real capital?",
-      "deterministic_response": "On risk_assessment, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"加減碼≠創造edge\"\n  [2] Applying: \"職涯EV=時薪反算\"\n  [3] Applying: \"平台=個人edge複利\"\n\nREJECT — 40% walk-forward pass rate indicates overfitting, not edge. Do not deploy regardless of backtest Sharpe.",
+      "deterministic_response": "On risk_assessment, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [e...\"\n\nREJECT — 40% walk-forward pass rate indicates overfitting, not edge. Do not deploy regardless of backtest Sharpe.",
       "principles_used": [
-        "加減碼≠創造edge",
-        "職涯EV=時薪反算",
-        "平台=個人edge複利"
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [early decade] exceeds the EV of [additional savings amount]."
       ],
       "expected_decision": "REJECT",
       "expected_reasoning": "Walk-forward results override single-backtest performance. A 40% pass rate suggests overfitting rather than genuine edge. Apply your principles about evidence thresholds, distinguishing signal from noise, and when NOT to act despite attractive-looking numbers.",
@@ -241,11 +241,11 @@
       "id": "generic_opportunity_cost",
       "domain": "opportunity_cost",
       "scenario": "You are invited to join a startup as a technical co-founder with 10% equity, but it requires 2 years of full-time commitment. Your current path reaches your primary financial goal in 3 years. Do you take it?",
-      "deterministic_response": "On opportunity_cost, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"加減碼≠創造edge\"\n  [2] Applying: \"平台=個人edge複利\"\n  [3] Applying: \"不確定→清倉等訊號\"\n\nPASS_UNLESS_CLEAR_EDGE — startup equity is illiquid and high-variance; without genuine edge in assessing success probability, the opportunity cost of 2 years off current path is too high.",
+      "deterministic_response": "On opportunity_cost, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [2] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [3] Applying: \"What you decided\"\n\nPASS_UNLESS_CLEAR_EDGE — startup equity is illiquid and high-variance; without genuine edge in assessing success probability, the opportunity cost of 2 years off current path is too high.",
       "principles_used": [
-        "加減碼≠創造edge",
-        "平台=個人edge複利",
-        "不確定→清倉等訊號"
+        "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+        "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+        "What you decided"
       ],
       "expected_decision": "PASS_UNLESS_CLEAR_EDGE",
       "expected_reasoning": "Compare expected value of both paths. Startup success accelerates your goal; failure delays it by 2+ years. Evaluate whether you have genuine edge in assessing the startup's probability of success. Apply your principles about conviction thresholds, opportunity cost, and irreversible vs. reversible decisions.",
@@ -255,11 +255,11 @@
       "id": "generic_meta_strategy",
       "domain": "meta_strategy",
       "scenario": "Your primary system (trading, business, or project) has seen its key performance metric deteriorate 3x over three months -- e.g., max drawdown from 5% to 15%, or error rate tripling. The trend is accelerating. Do you pause the system?",
-      "deterministic_response": "On meta_strategy, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"最適槓桿=regime函數\"\n  [2] Applying: \"不確定→清倉等訊號\"\n  [3] Applying: \"策略品質=MFE/MAE×√N\"\n\nPAUSE_AND_DIAGNOSE — accelerating deterioration requires halting operations to diagnose whether the environment has changed or the strategy is broken.",
+      "deterministic_response": "On meta_strategy, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nPAUSE_AND_DIAGNOSE — accelerating deterioration requires halting operations to diagnose whether the environment has changed or the strategy is broken.",
       "principles_used": [
-        "最適槓桿=regime函數",
-        "不確定→清倉等訊號",
-        "策略品質=MFE/MAE×√N"
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
       ],
       "expected_decision": "PAUSE_AND_DIAGNOSE",
       "expected_reasoning": "Focus on rate of change, not absolute level. A 3x deterioration in a key metric is a regime-change signal. Apply your principles about predefined failure conditions, when inaction becomes dangerous, and meta-level management of your strategies.",
