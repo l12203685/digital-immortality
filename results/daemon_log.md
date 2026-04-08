@@ -3317,3 +3317,16 @@ Next: Branch 1.1 mainnet trading (blocked on BINANCE_MAINNET_KEY/SECRET) or Bran
 **Result: 16/16 ALIGNED ✅** (up from 14/14); 318 MDs validated; baseline saved.
 
 Next: Branch 1.1 mainnet (blocked on BINANCE_MAINNET_KEY/SECRET) or Branch 4.1 first non-Edward organism.
+
+## Cycle 91 — 2026-04-08 16:15:03 UTC
+
+**Cycle 91 done.**
+
+**Branch 2.3** — consistency test extended to cover MD-316~318:
+
+- Added `generic_debt_vs_invest` (MD-316: compare rates%, not amounts)
+- Added `generic_dca_execution` (MD-318: DCA is default execution after analysis)
+- Added `capital_allocation` domain to `_domain_decision` + `DOMAIN_PRINCIPLE_AFFINITY`
+- **16/16 ALIGNED ✅** (up from 14/14)
+
+Next: Branch 1.1 mainnet (blocked on `BINANCE_MAINNET_KEY/SECRET`) or Branch 4.1 first non-Edward organism.

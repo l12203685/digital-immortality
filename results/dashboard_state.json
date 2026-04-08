@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T00:08+08",
+  "updated": "2026-04-09T00:15+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: Branch 1.1 mainnet trading (blocked on BINANCE_MAINNET_KEY/SECRET) or B..."
+      "text": "Next: Branch 1.1 mainnet (blocked on `BINANCE_MAINNET_KEY/SECRET`) or Branch ..."
     },
     {
       "time": "just now",
-      "text": "Result: 14/14 ALIGNED ✅ at 318 MDs (up from 306 MDs at last validation)."
+      "text": "- 16/16 ALIGNED ✅ (up from 14/14)"
     },
     {
       "time": "just now",
-      "text": "Regression fixed: `\"negotiation\"` domain was missing from `_domain_decision` ..."
+      "text": "- Added `capital_allocation` domain to `_domain_decision` + `DOMAIN_PRINCIPLE..."
     },
     {
       "time": "just now",
-      "text": "Branch 2.3 — consistency re-validation after Branch 2.2 JSONL archive exhaust..."
+      "text": "- Added `generic_dca_execution` (MD-318: DCA is default execution after analy..."
     },
     {
       "time": "just now",
-      "text": "Cycle 90 done."
+      "text": "- Added `generic_debt_vs_invest` (MD-316: compare rates%, not amounts)"
     }
   ],
   "stats": {
-    "daemon_cycles": 90,
-    "total_mds": 316,
+    "daemon_cycles": 91,
+    "total_mds": 318,
     "dna_core_lines": 76
   }
 }
