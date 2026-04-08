@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T07:06+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#34 COMPLETE → posting_queue.md updated (#01~#34, Apr 9–Jun 14); **x_launch_sequence.md created ✓** — first-post friction reduced to 15 min; Apr 9 = scheduled post date for SOP #01; **2 workbooks READY TO LIST** (Workbook #01 Strategy Development + Workbook #02 Portfolio Construction, $29 each)",
+  "updated": "2026-04-09T07:12+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#34 COMPLETE → posting_queue.md updated (#01~#34, Apr 9–Jun 14); **x_launch_sequence.md created ✓** — first-post friction reduced to 15 min; Apr 9 = scheduled post date for SOP #01; **3 workbooks READY TO LIST** (Workbook #01 Strategy Development + Workbook #02 Portfolio Construction + Workbook #03 Execution & Sizing, $29 each, $87/buyer trilogy)",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions pre-committed)",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next blocker: Edward posts SOP #01 → x_launch_sequence.md."
+      "text": "Revenue surface: $87/buyer. Trilogy complete: build strategy (#01) → combine ..."
     },
     {
       "time": "just now",
-      "text": "Revenue surface doubled. 2 products ready to list when G2 triggers. ~40 min t..."
+      "text": "Shipped: `docs/workbook_product_03_execution_sizing.md` — 7-gate execution ch..."
     },
     {
       "time": "just now",
-      "text": "Shipped: `docs/workbook_product_02_portfolio_construction.md` — $29 Gumroad w..."
+      "text": "Branch 7 revenue surface was at $58/buyer (2 workbooks). Portfolio Constructi..."
     },
     {
       "time": "just now",
-      "text": "Gap: One workbook = one revenue point at G2 trigger. Portfolio construction i..."
+      "text": "Cycle 164 done."
     },
     {
-      "time": "just now",
-      "text": "Cycle 163 done."
+      "time": "2026-04-09 UTC",
+      "text": "Next blocker: Edward opens `x_launch_sequence.md` → posts SOP #01 → engagemen..."
     }
   ],
   "stats": {
-    "daemon_cycles": 163,
+    "daemon_cycles": 164,
     "total_mds": 330,
     "dna_core_lines": 87
   }

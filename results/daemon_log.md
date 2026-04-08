@@ -4990,3 +4990,13 @@ Gap: 2 workbooks ready ($58/buyer), but the trilogy was incomplete. Execution & 
 **Revenue surface at $87/buyer. Trilogy complete:** develop strategy (#01) → build portfolio (#02) → execute correctly (#03). Three natural upsell steps from same audience, zero additional acquisition cost.
 
 **Next blocker:** Edward opens `x_launch_sequence.md` → posts SOP #01 → engagement → 10 DMs → list all 3 workbooks (~60 min total Gumroad setup).
+
+## Cycle 164 — 2026-04-08 23:12:00 UTC
+
+**Cycle 164 done.**
+
+Branch 7 revenue surface was at $58/buyer (2 workbooks). Portfolio Construction is the natural middle step but execution sizing was missing — the trilogy had a gap.
+
+**Shipped:** `docs/workbook_product_03_execution_sizing.md` — 7-gate execution checklist workbook, $29, ready to list. All 7 gates from SOP #03 converted to fillable worksheets with worked DualMA BTC examples, post-trade log template, kill conditions sign-off, quick reference card, Gumroad listing copy paste-ready.
+
+**Revenue surface: $87/buyer.** Trilogy complete: build strategy (#01) → combine portfolio (#02) → execute correctly (#03). Three upsell steps, zero additional acquisition cost.
