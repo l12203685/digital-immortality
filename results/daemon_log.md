@@ -1017,3 +1017,13 @@ Branch 2.2 — 202311 (Nov 2023, 158 Edward msgs) → 3 MDs written:
 - **MD-51** 利差套利門檻框架 — (investment yield − borrow cost) > risk premium → act; else don't borrow
 
 `dna_core.md`: 128 lines, **51 MDs**. Next: 202310.
+
+## Cycle 46 — 2026-04-08T16:30 UTC
+
+**Branch 2.2 — 202310 (Oct 2023, 2,942 Edward msgs) → 3 MDs written:**
+
+- **MD-52** 指數ETF=政府護盤結構 — core thesis: governments won't let economies collapse; ETF is structurally government-aligned; exit only when this premise breaks
+- **MD-53** 職涯EV=時薪反算 — monthly salary ÷ 170 effective hours = hourly rate; career decisions compared on time-adjusted EV, not total salary
+- **MD-54** 教授判別力>教授內容 — best teaching transfers the ability to evaluate information quality, not just content; design outcome: "learner can judge what's good info"
+
+`dna_core.md`: 131 lines, **54 MDs**. Next: 202309.
