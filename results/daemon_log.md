@@ -4949,3 +4949,17 @@ Gap: SOP #34's value ladder says "$29 workbook" as first paid product — but no
 Revenue path is now end-to-end: post → 3 DMs (offer eligible) → 10 DMs → list workbook (20 min) → first revenue. No build sprint required under pressure.
 
 **Next blocker:** Edward opens `x_launch_sequence.md` → posts SOP #01 today.
+
+## Cycle 163 — 2026-04-09 UTC
+
+**Cycle 163 done.**
+
+Gap: Workbook #01 (Strategy Development) was ready to list, but the SOP #34 value ladder says "workbook ≥40% of revenue." One workbook = one revenue point. When G2 triggers (10 DMs in 48h), there's only one product to sell. Portfolio construction is the natural next step after strategy development — same audience, logical progression, instant upsell chain.
+
+**Shipped:**
+- `docs/workbook_product_02_portfolio_construction.md` — $29 Gumroad workbook READY TO LIST: Gate 0 (2×2 classification grid: Trend/MR × Long/Short), Gate 1 (pairwise Calmar seed pair on OOS), Gate 2 (greedy addition worksheet — add only if portfolio Calmar improves), Gate 3 (correlation gate ≤0.70 rolling 30d), Gate 4 (portfolio kill conditions signed pre-deployment); worked DualMA+BollingerMR+RSI_MR_ETH examples throughout; Gumroad listing copy paste-ready; upsell link to Workbook #01 in confirmation email; 20-min setup steps.
+- `results/dynamic_tree.md` updated — Branch 7.39 added; regime note updated (2 workbooks ready)
+
+**Revenue surface doubled:** 2 products ready to list when G2 triggers. Upsell chain: Workbook #01 (Strategy Development) → Workbook #02 (Portfolio Construction). Audience who buys #01 has a natural reason to buy #02.
+
+**Next blocker:** Edward opens `x_launch_sequence.md` → posts SOP #01 → engagement → 10 DMs → list both workbooks (~40 min total for both Gumroad products).
