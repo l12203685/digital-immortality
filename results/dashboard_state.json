@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T04:42+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.19 SOP #13 COMPLETE → posting queue extended to May 3; Edward posts threads #01~#13",
+  "updated": "2026-04-09T04:47+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.21 SOP #15 COMPLETE → posting queue extended to May 7; Edward posts threads #01~#15",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next blocker: Edward posts SOP #01 on Apr 9 to start the G5 compounding clock."
+      "text": "Next blocker: Edward posts SOP #01 today (Apr 9) to start the G5 compounding ..."
     },
     {
       "time": "just now",
-      "text": "- Posting queue extended: Apr 9 – May 5, 14 threads total"
+      "text": "- Queue extended: Apr 9 – May 7, 15 threads total"
     },
     {
       "time": "just now",
-      "text": "- `docs/publish_thread_sop14_twitter.md` — 9-tweet thread: *\"Most traders qui..."
+      "text": "- `docs/publish_thread_sop15_twitter.md` — 9-tweet thread hook: *\"Your backte..."
     },
     {
       "time": "just now",
-      "text": "- `docs/knowledge_product_14_fulltime_switch_sop.md` — 5-gate Full-Time Switc..."
+      "text": "- `docs/knowledge_product_15_backtest_deception_sop.md` — 4-gate protocol (st..."
     },
     {
       "time": "just now",
-      "text": "What shipped:"
+      "text": "Shipped:"
     }
   ],
   "stats": {
-    "daemon_cycles": 139,
+    "daemon_cycles": 140,
     "total_mds": 328,
     "dna_core_lines": 87
   }
