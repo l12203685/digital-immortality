@@ -1828,3 +1828,15 @@ Gap: MD-148~150 already written (from earlier session). 202105 JSONL (70 Edward 
 - **MD-153** 日內開盤=四維分析估算當日剩餘空間 — 開X走Y + 15min pre-open + AR(5/10/20) baseline + AR切段估算剩餘可動空間
 
 `dna_core.md`: **153 MDs**. Next: 202104.
+
+## Cycle 15 — 2026-04-08 06:09:05 UTC
+
+Cycle 69 done.
+
+**Branch 2.2 — gap reconcile + 202105 → MD-151~153** (153 MDs total):
+
+- **MD-151** 出場=移動停損×時間停損二元架構 — trailing stop + time stop serve different failure modes; complete exit architecture needs both
+- **MD-152** 台指期滑價=500點保守基準 — deploy only strategies that survive 500pt cost assumption, not 300-400 defaults
+- **MD-153** 日內開盤=四維分析估算剩餘空間 — 開X走Y + 15min pre-open + AR(5/10/20) baseline + AR切段 = dynamic remaining space estimate
+
+Next: **202104**.
