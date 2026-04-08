@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T05:41+08",
+  "updated": "2026-04-09T05:47+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#21 COMPLETE → posting_queue.md updated (#01~#21, Apr 9–May 19); Edward posts threads; Domain 4 (社交圈) first SOP shipped (SOP #19); all 5 kernels have standalone SOPs ✅; SOP #21 Financial Freedom Tier Framework added (MD-166/158/154 backing)",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next blocker: Edward posts SOP #01 to start G5 compounding clock."
+      "text": "Next blocker: Edward posts SOP #01."
     },
     {
       "time": "just now",
-      "text": "- Committed and pushed."
+      "text": "- Queue extended to May 27, SOP #01~#25"
     },
     {
       "time": "just now",
-      "text": "- Queue extended to #01~#24, May 25 (46-day target)"
+      "text": "- `docs/publish_thread_sop25_twitter.md` — hook: *\"Your strategy tells you wh..."
     },
     {
       "time": "just now",
-      "text": "- `docs/publish_thread_sop24_twitter.md` — hook: *\"You spent 6 months buildin..."
+      "text": "- `docs/knowledge_product_25_position_sizing_sop.md` — 5-gate framework: G0 s..."
     },
     {
       "time": "just now",
-      "text": "- `docs/knowledge_product_24_portfolio_construction_sop.md` — 5-gate framewor..."
+      "text": "Shipped:"
     }
   ],
   "stats": {
-    "daemon_cycles": 149,
+    "daemon_cycles": 150,
     "total_mds": 328,
     "dna_core_lines": 87
   }
