@@ -3,6 +3,29 @@
 Recursive engine cycle history.
 
 
+## Cycle 74 — 2026-04-08T19:00Z
+
+**Branches**: 2 parallel (1.2 testnet BollingerMR expansion + 2.2/2.6 health domain DNA)
+
+### Branch 1.2: BollingerMR added to testnet_runner.py
+- `bollinger_mr_btc_daily` imported and added to STRATEGIES dict (7th strategy)
+- STRATEGY_MIN_LOOKBACK: `bollinger_mr: 52` (trend_lookback=50 + 2 buffer)
+- STRATEGY_PORTFOLIO_NAME: `bollinger_mr → "BollingerMR_20"` (mean-reverting regime gate)
+- Boot test: dry-run tick executes; `--strategy` choices now include `bollinger_mr`
+- Regime coverage complete: trending (dual_ma) + mean-reverting (bollinger_mr) + mixed (dual_ma_rsi_filtered)
+
+### Branch 2.2/2.6: Health domain DNA — MD-286~288
+- **MD-286**: 健康資本=最高槓桿資產 (身體是所有資產的工具；健康投資邊際回報>金融投資)
+- **MD-287**: 作息一致性>完美計畫 (低波動穩定執行>高波動高峰值；連續天數為追蹤指標)
+- **MD-288**: 預防性維護=正EV保險 (定期健檢成本:已知低；延遲成本:未知高fat-tail)
+- dna_core.md: 285 → **288 MDs**
+- templates/example_dna.md: §9 Health & Physical Capital added (3 principles in prose)
+
+### Next cycle
+- Run consistency_test.py to validate 288-MD alignment (new health domain scenarios)
+- Add health-domain boot test scenario to generic_boot_tests.json
+- Consider: testnet --portfolio-gated tick with bollinger_mr now in rotation
+
 ## Cycle 47 — 2026-04-08T18:00Z
 
 **Branches**: 2 parallel (2.2 JSONL distillation 202002 + 1.2 trading MAE/MFE integration)

@@ -186,6 +186,27 @@ Who deserves deep investment:
 
 ---
 
+## 9. Health & Physical Capital
+
+> Health is the highest-leverage asset. All other capital — financial, career, knowledge — requires a functioning body to convert into value. This section applies the same systematic thinking used in trading and career decisions to physical capital management.
+
+### Core Principles
+
+**Health capital = highest-leverage asset.** The body is the instrument that generates all other returns. Every financial asset, every career opportunity, every knowledge investment depends on a functioning instrument to realize its value. A health failure does not cost one year of income — it costs the compounding chain that year sits in. The marginal return on health investment exceeds the marginal return on any financial investment at the same dollar amount. Operating SOP: set a health budget floor (minimum 3–5% of annual income); health expenditures are prioritized above discretionary consumption; when a health signal appears, the first question is "what is the productivity impact?" not "is this worth the inconvenience?"
+
+**Consistency over intensity — routine regularity beats peak effort.** Treating health maintenance like a high-volatility trading strategy (occasional extreme effort, long gaps) produces the same result: excessive drawdown periods that erase compounding gains. The body adapts to consistent signals, not sporadic high-intensity inputs. A fixed sleep schedule sustained for 90 days outperforms two weeks of perfect sleep followed by chronic disruption. Minimum viable dose executed daily beats maximum dose executed monthly. Tracking metric: consecutive days of routine adherence, not single-session intensity. When the routine breaks, priority is restoring the rhythm — not making up the lost intensity.
+
+**Preventive maintenance = positive-EV insurance.** The expected value calculation is straightforward: known low fixed cost (annual checkup, biannual dental, periodic eye exam) versus unknown high-variance cost (late-stage diagnosis, extended recovery, permanent impairment). Early intervention vs. late intervention cost ratios are typically 1:10 to 1:100, with recovery time adding costs that no amount of money can buy back. "No symptoms" is survivorship bias applied to the body — absence of symptoms means the problem has not surfaced yet, not that it does not exist. Health screening is a portfolio hedge, not a consumption expense. Fixed annual schedule: full physical (blood panel + imaging), dental cleaning every 6 months, eye exam every 1–2 years — calendar-locked, not symptom-triggered.
+
+### How Health Decisions Connect to Core Principles
+
+- **EV thinking** — Preventive care has positive expected value at any reasonable discount rate. The cost of deferral compounds.
+- **Systems over feelings** — Health maintenance follows a fixed schedule, not how the body feels on a given day. Feeling fine is not a reliable signal.
+- **Time is the ultimate currency** — A health failure consumes irreplaceable time. Protecting the instrument that generates time-freedom is the highest-order protection.
+- **Bias toward inaction** — Applied here as: do not abandon a consistent routine without a clear reason. Inertia in healthy habits is a feature, not a bug.
+
+---
+
 ## How to Fill This Out
 
 1. **Start with sections 0-2.** Core Principles + Identity + Decision Framework. Everything else grows from there.

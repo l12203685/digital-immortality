@@ -31,6 +31,7 @@ from trading.strategies import (
     donchian_filtered,
     dual_ma_rsi_btc_daily,
     dual_ma_rsi_filtered,
+    bollinger_mr_btc_daily,
 )
 
 try:
@@ -57,6 +58,7 @@ STRATEGIES = {
     "donchian_filtered": donchian_filtered,
     "dual_ma_rsi": dual_ma_rsi_btc_daily,
     "dual_ma_rsi_filtered": dual_ma_rsi_filtered,
+    "bollinger_mr": bollinger_mr_btc_daily,
 }
 
 STRATEGY_MIN_LOOKBACK = {
@@ -66,6 +68,7 @@ STRATEGY_MIN_LOOKBACK = {
     "donchian_filtered": 56,
     "dual_ma_rsi": 56,       # RSI(14) + MA slow(30) + buffer
     "dual_ma_rsi_filtered": 56,
+    "bollinger_mr": 52,      # trend_lookback=50 + 2 buffer
 }
 
 # Maps STRATEGIES keys → portfolio strategy names returned by PortfolioSelector.select()
@@ -76,6 +79,7 @@ STRATEGY_PORTFOLIO_NAME = {
     "donchian_filtered": None,   # no direct portfolio equivalent
     "dual_ma_rsi": "DualMA_RSI",
     "dual_ma_rsi_filtered": "DualMA_RSI_filtered",
+    "bollinger_mr": "BollingerMR_20",
 }
 
 # Kill conditions (mirror paper_trader_review thresholds)
