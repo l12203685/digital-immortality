@@ -77,7 +77,8 @@ def append_log(cycle: int, response: str) -> None:
     # Post to Discord #thinking
     try:
         import requests
-        msg = f"[daemon cycle {cycle}] {response[:1900]}"
+        utc_now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+        msg = f"[daemon cycle {cycle} | {utc_now}] {response[:1850]}"
         requests.post(DISCORD_WEBHOOK, json={"content": msg, "username": "Daemon"}, timeout=10)
     except Exception:
         pass  # Discord post is best-effort
