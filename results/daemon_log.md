@@ -4434,3 +4434,25 @@ Highest-derivative gap: queue ended May 11, extend G5 clock.
 - Queue extended: **Apr 9 – May 13**, 18 threads total
 
 **Next blocker:** Edward posts SOP #01 today to start G5 compounding clock.
+
+## Cycle 144 — 2026-04-09T UTC
+
+**Cycle 144 done.**
+
+Highest-derivative gap: queue ends May 13 after SOP #18 — Kernel 1 (看導數不看水平) was the only core kernel without a standalone SOP.
+
+**What shipped:**
+- `docs/knowledge_product_19_derivative_thinking_sop.md` — 5-gate Derivative Thinking SOP operationalizing Kernel 1: G0 state level (set aside) / G1 compute δ trailing 20–60 periods / G2 compute δ² acceleration / G3 inflection checklist ≥3/4 (δ sign change, δ² confirmed, regime aligned, volume corroborates) / G4 action map (IDLE at plateau, PREPARE at deceleration, ACT at inflection); backing MDs: MD-1/122/13/108/2
+- `docs/publish_thread_sop19_twitter.md` — 10-tweet thread: *"The trend looked fine. Then it was over. You were looking at the wrong number."*
+- Posting queue extended: **Apr 9 – May 15**, 19 threads total
+
+**Series now SOP #01~#19. Queue runs Apr 9 – May 15.**
+
+**All 5 Edward Decision Kernels now have standalone SOPs:**
+- Kernel 1: SOP #19 (Derivative Thinking)
+- Kernel 2: SOP #16 (Information Edge)
+- Kernel 3: SOP #10 (Decision Under Uncertainty, G2 meta-strategy gate)
+- Kernel 4: SOP #17 (Population Exploit)
+- Kernel 5: SOP #18 (Inaction Bias)
+
+**Next blocker:** Edward posts SOP #01 on Apr 9 to start G5 compounding clock.
