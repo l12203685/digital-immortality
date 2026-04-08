@@ -4963,3 +4963,15 @@ Gap: Workbook #01 (Strategy Development) was ready to list, but the SOP #34 valu
 **Revenue surface doubled:** 2 products ready to list when G2 triggers. Upsell chain: Workbook #01 (Strategy Development) → Workbook #02 (Portfolio Construction). Audience who buys #01 has a natural reason to buy #02.
 
 **Next blocker:** Edward opens `x_launch_sequence.md` → posts SOP #01 → engagement → 10 DMs → list both workbooks (~40 min total for both Gumroad products).
+
+## Cycle 163 — 2026-04-08 23:06:11 UTC
+
+**Cycle 163 done.**
+
+Gap: One workbook = one revenue point at G2 trigger. Portfolio construction is the natural upsell after strategy development — same audience, logical progression.
+
+**Shipped:** `docs/workbook_product_02_portfolio_construction.md` — $29 Gumroad workbook with 5 gates: 2×2 classification grid → pairwise Calmar seed pair → greedy addition → correlation gate ≤0.70 → portfolio kill conditions pre-commitment. Worked DualMA+BollingerMR+RSI_MR_ETH examples. Gumroad listing copy paste-ready. Upsell link from #01 → #02 built in.
+
+**Revenue surface doubled.** 2 products ready to list when G2 triggers. ~40 min total Gumroad setup for both.
+
+**Next blocker:** Edward posts SOP #01 → x_launch_sequence.md.

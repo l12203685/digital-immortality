@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T07:00+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#34 COMPLETE → posting_queue.md updated (#01~#34, Apr 9–Jun 14); **x_launch_sequence.md created ✓** — first-post friction reduced to 15 min; Apr 9 = scheduled post date for SOP #01",
+  "updated": "2026-04-09T07:06+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#34 COMPLETE → posting_queue.md updated (#01~#34, Apr 9–Jun 14); **x_launch_sequence.md created ✓** — first-post friction reduced to 15 min; Apr 9 = scheduled post date for SOP #01; **2 workbooks READY TO LIST** (Workbook #01 Strategy Development + Workbook #02 Portfolio Construction, $29 each)",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions pre-committed)",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next blocker: Edward opens `x_launch_sequence.md` → posts SOP #01 today."
+      "text": "Next blocker: Edward posts SOP #01 → x_launch_sequence.md."
     },
     {
       "time": "just now",
-      "text": "Revenue path is now end-to-end: post → 3 DMs (offer eligible) → 10 DMs → list..."
+      "text": "Revenue surface doubled. 2 products ready to list when G2 triggers. ~40 min t..."
     },
     {
       "time": "just now",
-      "text": "Shipped: `docs/workbook_product_01_strategy_development.md` — complete $29 Gu..."
+      "text": "Shipped: `docs/workbook_product_02_portfolio_construction.md` — $29 Gumroad w..."
     },
     {
       "time": "just now",
-      "text": "Gap: SOP #34's value ladder says \"$29 workbook\" as first paid product — but n..."
+      "text": "Gap: One workbook = one revenue point at G2 trigger. Portfolio construction i..."
     },
     {
       "time": "just now",
-      "text": "Cycle 162 done."
+      "text": "Cycle 163 done."
     }
   ],
   "stats": {
-    "daemon_cycles": 162,
+    "daemon_cycles": 163,
     "total_mds": 330,
     "dna_core_lines": 87
   }
