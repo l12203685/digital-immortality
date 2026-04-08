@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T00:15+08",
+  "updated": "2026-04-09T00:22+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -55,24 +55,24 @@
     },
     {
       "time": "just now",
-      "text": "- 16/16 ALIGNED ✅ (up from 14/14)"
+      "text": "- 18/18 ALIGNED ✅ (up from 16/16; 318 MDs validated)"
     },
     {
       "time": "just now",
-      "text": "- Added `capital_allocation` domain to `_domain_decision` + `DOMAIN_PRINCIPLE..."
+      "text": "- `information` domain added to organism_interact.py"
     },
     {
       "time": "just now",
-      "text": "- Added `generic_dca_execution` (MD-318: DCA is default execution after analy..."
+      "text": "- `generic_media_earnings_narrative`: MD-314 (媒體財報=選擇性維度→強制三維度) → `DECODE_ALL..."
     },
     {
       "time": "just now",
-      "text": "- Added `generic_debt_vs_invest` (MD-316: compare rates%, not amounts)"
+      "text": "- `generic_dividend_income_target`: MD-313 (殖利率×持倉=固定支出替換器) → `CALCULATE_INCO..."
     }
   ],
   "stats": {
-    "daemon_cycles": 91,
-    "total_mds": 318,
+    "daemon_cycles": 92,
+    "total_mds": 316,
     "dna_core_lines": 76
   }
 }
