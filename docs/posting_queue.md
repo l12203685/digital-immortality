@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#27
+# Twitter Posting Queue — SOP Series #01~#28
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -34,6 +34,7 @@
 | May 27 | #25 | publish_thread_sop25_twitter.md | "Your strategy tells you when to trade. Position sizing tells you whether you survive long enough to trade again." | pending |
 | May 29 | #26 | publish_thread_sop26_twitter.md | "Your backtest survived the past. But did it survive data it never saw?" | pending |
 | May 31 | #27 | publish_thread_sop27_twitter.md | "Your strategy isn't broken. You're running it in the wrong market." | pending |
+| Jun 2 | #28 | publish_thread_sop28_twitter.md | "Your backtest made $50/trade. Your live account makes $30. You're paying 40% to execution." | pending |
 
 ---
 

@@ -4686,3 +4686,16 @@ Highest-derivative gap: queue ended May 29 with no regime detection SOP — yet 
 - Committed and pushed.
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 153 — 2026-04-09T UTC
+
+**Cycle 153 done.**
+
+Highest-derivative gap: SOP series at #27, queue full to May 31. DNA distillation complete (327 MDs). No SOP on execution & slippage — the structural bridge between correct signals and captured P&L. MD-83 (Stop滑價>Close滑價=分開建模) has been in the DNA since Feb 2022 with no teachable product backing it.
+
+**Shipped:**
+- `docs/knowledge_product_28_execution_slippage_sop.md` — 5-gate framework: G0 separate entry/exit slippage models (MD-83, the core principle) / G1 break-even slippage calculation before any strategy goes live / G2 instrument selection screen (volume/spread/session depth/roll cost) / G3 order type matched to strategy architecture / G4 quarterly execution audit (6-flag checklist) / G5 live vs. paper divergence protocol with kill threshold (75%/50% bands); 7 DNA anchors; self-test: DualMA BTC passes G1 at 23.4% drag (yellow zone, monthly monitor)
+- `docs/publish_thread_sop28_twitter.md` — 12-tweet thread: hook: *"Your backtest made $50/trade. Your live account makes $30. You're paying 40% to execution."*
+- `docs/posting_queue.md` extended to **#01~#28** (Jun 2); 54-day target
+
+**Next blocker:** Edward posts SOP #01.
