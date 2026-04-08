@@ -1417,3 +1417,17 @@ Cycle 58 done.
 - MD-102: 跨Session留倉=需獨立Edge — profit-filter for night extension tested, storm ratio always falls; cross-session needs standalone edge
 
 `dna_core.md`: **102 MDs**. Next: 202206.
+
+## Cycle 59 — 2026-04-08T23:10 UTC
+
+**Branch 2.2 — 202206 JSONL distilled.**
+
+- Read 202206.jsonl (7,876 Edward msgs, Jun 2022)
+- Top groups: g1 (general), g3 (trading/quant collab with Leon), g10 (Avalon), g8 (quant discussion)
+- Focus: strategy type allocation, collaboration metrics alignment, market regime taxonomy
+- 3 micro-patterns written to `dna_core.md`:
+  1. **策略開發分配=噱爆優先於避免策略** (MD-103) — trend/momentum R&D ROI > mean-reversion; structural edge > behavioral edge; invest in 噱爆 first, avoidance strategies only when event-specific edge exists
+  2. **策略合作=指標定義先達成一致** (MD-104) — metric alignment document (abs vs %, monthly vs annual, benchmark) must exist before any technical discussion; misaligned metrics = parallel-universe debate
+  3. **市場結構=剪刀石頭布三態** (MD-105) — trend (scissors) / volatile-range (rock) / tight-range (paper); no strategy beats all three; portfolio target: three complementary strategies with non-overlapping regime coverage
+
+`dna_core.md`: 102 → **105 MDs**. Next: 202205.
