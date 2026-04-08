@@ -2104,3 +2104,13 @@ Next: 202005 (verify gap, may already be in file from earlier cycles).
 - **MD-192** 宏觀壞消息≠市場下跌=政策干預是反轉觸發器 — 悲觀情緒最高點往往是政策干預成本最低的窗口；追蹤「政策干預壓力指標」比追蹤壞消息更前置
 
 `templates/dna_core.md`: **192 MDs**. Next: 202004 (verify gap).
+
+## Cycle 16 — 2026-04-08 08:36:26 UTC
+
+Cycle 16 done. **Branch 2.2 — 202005 distill → MD-190~192** (192 MDs total):
+
+- **MD-190** 防守視角均衡 — bluff catcher也在均衡上；對上polar range時MDF更高；攻守對稱模型
+- **MD-191** 股息再投資閉環 — 240萬自備→配息完全覆蓋房貸；財務自由=找最小自備讓現金流≥負債成本
+- **MD-192** 宏觀壞消息≠市場下跌 — 悲觀情緒頂端=政策干預成本最低；追蹤干預壓力指標比追蹤壞消息更前置
+
+Next: 202004 (verify gap).
