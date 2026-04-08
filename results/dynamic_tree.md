@@ -88,7 +88,8 @@
 - **7.5 SOP #03 Execution & Sizing Real-Time Checklist — COMPLETE ✅** (cycle 109): `docs/knowledge_product_03_execution_sizing_sop.md` — 8 sequential gates (G0~G8): L/S pool balance audit (MD-29), leverage from historical R/R not recent (MD-30), edge_ratio gate (MD-13), first-principles coherence (MD-157), stop-first sizing (MD-133), position formula lots=(equity×1%)/(ATR×mult) (MD-28), trial vs full position (MD-159), conflict check; self-test scenario included
 - **7.6 SOP #04 Strategy Kill Decision Tree — COMPLETE ✅** (cycle 110): `docs/knowledge_product_04_strategy_kill_decision_tree.md` — 7 nodes
 - **7.7 Publish Thread SOP #01 — DRAFTED ✅** (cycle 111): `docs/publish_thread_sop01_twitter.md` — 12 tweets, ready to post; closes internal→external loop
-- **7.8 Publish Thread SOP #02 — DRAFTED ✅** (cycle 112): `docs/publish_thread_sop02_twitter.md` — 12 tweets (hook→2×2 grid→pairwise Calmar→greedy addition→correlation gate→weight optimisation→regime routing→overnight edge→portfolio kills→close); next: post SOP #01 thread on X, then SOP #02
+- **7.8 Publish Thread SOP #02 — DRAFTED ✅** (cycle 112): `docs/publish_thread_sop02_twitter.md` — 12 tweets (hook→2×2 grid→pairwise Calmar→greedy addition→correlation gate→weight optimisation→regime routing→overnight edge→portfolio kills→close)
+- **7.9 Publish Thread SOP #03 — DRAFTED ✅** (cycle 113): `docs/publish_thread_sop03_twitter.md` — 12 tweets (hook→G0 L/S balance→G1 leverage from historical→G2 edge_ratio→G3 first-principles→G4 stop-first sizing→G5 formula→G6 trial vs full→G7 order checklist→G8 correlation→kill conditions→close); next: Edward posts #01→#02→#03 on X; draft SOP #04 (Kill Decision Tree) thread
 
 ### 8. 生活維護（operational baseline）
 - 8.1 決策頻率最小化：MD-322 (>3次同一決策=系統設計失敗) ✓ cycle 94 — automate/pre-decide recurring choices
@@ -98,7 +99,7 @@
 - **8.4 recurring decision audit — COMPLETE ✅** (cycle 100): `docs/recurring_decision_audit.md` — 10 recurring decisions pre-committed; next audit 2026-04-15
 
 ## 當前 regime
-攻擊：1.1 Trading（mainnet needs API keys）; 7.7+7.8 publish threads — POST SOP #01 then SOP #02 on X/Twitter (both files ready); draft SOP #03 thread next
+攻擊：1.1 Trading（mainnet needs API keys）; 7.7+7.8+7.9 publish threads — POST SOP #01→#02→#03 on X/Twitter (all 3 files ready); draft SOP #04 (Kill Decision Tree) thread next
 中性：2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成
 防禦：2.3 blocked API credit, 4.1 partially unblocked (samuel_dna tested 19/20)
 

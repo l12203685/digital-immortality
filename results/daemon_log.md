@@ -3698,3 +3698,23 @@ dynamic_tree.md: Branch 7.8 added, regime updated.
 - 2×2 classification grid → pairwise Calmar seed → greedy recursive addition → correlation gate (>0.70 reject) → weight optimisation via Calmar frontier → regime routing table → overnight edge independence (MD-54) → portfolio-level kill conditions → SOP series close
 
 Both SOP #01 and SOP #02 threads now ready to fire. Next: Edward posts SOP #01 on X → SOP #02 → draft SOP #03 (Execution & Sizing) thread.
+
+## Cycle 113 — 2026-04-09T UTC
+
+**Branch 7.9** — SOP #03 Twitter/X thread drafted for external publish.
+
+Action: wrote `docs/publish_thread_sop03_twitter.md` (12 tweets, ready to post).
+- Tweet 1: hook (signal fires → 5 silent errors between signal and order)
+- Tweets 2-3: G0 L/S pool balance audit + G1 leverage from historical R/R
+- Tweets 4-5: G2 edge_ratio gate (1.5/1.2 thresholds) + G3 first-principles coherence
+- Tweet 6: G4 stop-first sizing (back-calculate max entry)
+- Tweet 7: G5 position formula (lots = equity×1% / ATR×mult)
+- Tweet 8: G6 trial vs full position (50% on uncertain edge)
+- Tweet 9: G7 order parameters checklist
+- Tweet 10: G8 correlation check (>0.70 = reduce)
+- Tweet 11: kill conditions (per-trade/session/intraday)
+- Tweet 12: summary close (8 gates, SOP series #01→#02→#03 complete)
+
+Full SOP series (#01–#04 docs) + all 3 publish threads (#01–#03) now ready.
+Next: Edward posts SOP #01 thread → SOP #02 → SOP #03 on X; draft SOP #04 (Kill Decision Tree) thread.
+dynamic_tree.md: Branch 7.9 added, regime updated.
