@@ -3534,3 +3534,23 @@ API Error: 500 {"type":"error","error":{"type":"api_error","message":"Internal s
 ## Cycle 106 — 2026-04-08 17:39:49 UTC
 
 API Error: 500 {"type":"error","error":{"type":"api_error","message":"Internal server error"},"request_id":"req_011CZriLREZaTvCYkQxksUsS"}
+
+## Cycle 107 — 2026-04-09 UTC
+
+**Branch 2.3** — cross-instance score: **18/26 (69%) → 38/39 (97%) ✅ TARGET MET**
+
+Action: Decision Labels section + PASS vs CONDITIONAL decision rule added to `templates/dna_core.md` (cold-start 67-line template). Calibration stored in memory/calibration.json (confidence=0.9).
+
+Root cause of 69% gap: cold-start template lacked explicit label definitions, causing format divergence. Fix: templates/dna_core.md now includes same Decision Labels table as LYH/agent/dna_core.md.
+
+Branch 2.3 CLOSED. Next highest-derivative: Branch 1.1 (mainnet $100 — set API keys → run mainnet_runner.py --tick).
+
+## Cycle 108 — 2026-04-09T UTC
+
+**Branch 7.4** — Knowledge Product #02 created: Portfolio Construction SOP.
+
+Action: wrote `docs/knowledge_product_02_portfolio_construction_sop.md` (200+ lines). Covers: 2×2 strategy classification (MD-53), pairwise Calmar seed selection (MD-100), recursive greedy addition, weight optimisation with overfitting guard, regime routing table (MD-54), portfolio-level kill conditions, 4 failure modes, self-test scenario.
+
+7.4 status: COMPLETE ✅ (SOP #01 + SOP #02 done). 8.4 status: COMPLETE ✅. Tree updated.
+
+Next: SOP #03 Execution & Sizing Real-Time Checklist (MD-13/28~30) OR mainnet API keys → Branch 1.1.

@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08 UTC (cycle 100)
+> 最後更新：2026-04-09 UTC (cycle 108)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -39,12 +39,10 @@
 - 2.3 Validation：OOS 5/5 self-scored ✓, **327-MD consistency test 27/27 ALIGNED ✅** (cycle 97; prev: 20/20 cycle 93)
   - 0 MISALIGNED — 3 new scenarios wired this cycle (MD-325~327)
   - baseline saved: results/consistency_baseline.json (**27 scenarios**, 27 ALIGNED; 327 MDs validated)
-  - **cross-instance LLM test (cycle 100): 18/26 AGREED (69%)** — normalizer + JSON re-score; prompt also upgraded to ALL-CAPS enforcement; gap to 80% = 11pp
-    - `_normalize_decision()` extended: DEFLECT/ESCALATE/VERDICT/PAUSE + Chinese phrase map (結論先行→VERDICT, 平倉→TAKE, 不先說底線→DEFLECT)
-    - prompt now requires single ALL-CAPS English word (DO NOT write Chinese on Decision line)
-    - 4 format non-compliance cases resolved (generic_verdict_first, generic_identity, generic_negotiation, organism_11)
-    - 8 remaining failures: 6 real semantic divergences (DNA ambiguity — borderline CONDITIONAL/PASS), 2 mixed
-    - next: re-run with new prompt → isolate true semantic divergences; clarify DNA on PASS/CONDITIONAL boundary → push ≥80%
+  - **cross-instance LLM test (cycle 100): 18/26 AGREED (69%)** → **cycle 107: 38/39 AGREED (97%) ✅ TARGET MET**
+    - Fix: added Decision Labels + PASS vs CONDITIONAL rule to templates/dna_core.md (cold-start template)
+    - calibration.json updated: confidence=0.9, model=claude-sonnet-4-6, sessions=3
+    - Branch 2.3 CLOSED — behavioral reproduction validated at 97% cross-instance
 - 2.4 Response latency：MD-274~276 added (直接回應/回覆長度=確信度反指標/三秒直覺先行) ✓; scenarios 11+12 + **generic_verdict_first + generic_intuition_primacy** added (communication domain); `_domain_decision("communication")` implemented in organism_interact.py; alignment_check extended for LEAD_WITH_VERDICT + TRUST_INTUITION; **10/10 ALIGNED ✅ gap CLOSED** (cycle 64)
 - 2.5 退休計畫 context：templates/example_dna.md §8 added ✓ (target, tradeoffs, non-negotiables, principle connections)
 
@@ -86,17 +84,17 @@
 - 7.2 平台選擇框架：MD-320 (受眾密度×回饋速度 2×2矩陣) ✓ cycle 94 — audience density × feedback speed; hypothesis before publish
 - 7.3 知識產品化：MD-321 (SOP → teachable document = refinement) ✓ cycle 94 — productization forces all implicit steps to surface
 - consistency: `generic_knowledge_output_gap` + `generic_knowledge_productize_sop` → OUTPUT_TO_VALIDATE_UNDERSTANDING ✅ 24/24
-- **7.4 第一個知識產品 — IN PROGRESS** (cycle 100): Trading Strategy Development SOP (MD-166~168 + MD-97~99 synthesis) being written to `docs/knowledge_product_01_strategy_development_sop.md`
+- **7.4 第一個知識產品 — COMPLETE ✅** (cycle 100~108): SOP #01 Strategy Development (198 lines) + SOP #02 Portfolio Construction (cycle 108, MD-100/52~54/13/117, 200+ lines) → `docs/knowledge_product_01_strategy_development_sop.md` + `docs/knowledge_product_02_portfolio_construction_sop.md`; next: SOP #03 Execution & Sizing Real-Time Checklist (MD-13 edge_ratio + MD-28~30)
 
 ### 8. 生活維護（operational baseline）
 - 8.1 決策頻率最小化：MD-322 (>3次同一決策=系統設計失敗) ✓ cycle 94 — automate/pre-decide recurring choices
 - 8.2 峰值時段保護：MD-323 (高認知任務只在生理峰值時段) ✓ cycle 94 — peak→strategy/analysis; off-peak→admin/email
 - 8.3 環境設計先行：MD-324 (環境設計>意志力) ✓ cycle 94 — redesign environment before invoking willpower
 - consistency: `generic_life_system_recurring_decisions` + `generic_peak_cognitive_protection` → REDUCE_DECISION_FREQUENCY ✅ 24/24
-- **8.4 recurring decision audit — IN PROGRESS** (cycle 100): audit template + top-10 pre-committed decisions being written to `docs/recurring_decision_audit.md`; 3 new memory/decisions.json entries
+- **8.4 recurring decision audit — COMPLETE ✅** (cycle 100): `docs/recurring_decision_audit.md` — 10 recurring decisions pre-committed; next audit 2026-04-15
 
 ## 當前 regime
-攻擊：1.1 Trading（testnet running，7-day window → mainnet small size）; 7.4 知識產品#01 in progress; 8.4 recurring decision audit in progress
+攻擊：1.1 Trading（mainnet needs API keys）; 7.4 SOP #03 Execution & Sizing Checklist next
 中性：2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成
 防禦：2.3 blocked API credit, 4.1 partially unblocked (samuel_dna tested 19/20)
 
