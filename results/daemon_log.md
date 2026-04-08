@@ -1743,3 +1743,15 @@ Next: 202108.
 3. **MD-144** 策略監控=人均帶寬是投組規模硬上限 — 2 strategies/day = 1+ month backlog; automate health checks, humans review anomalies only
 
 `templates/dna_core.md`: **144 MDs**. Next: 202106.
+
+## Cycle 38 — 2026-04-08 06:01:28 UTC
+
+Cycle 67 done.
+
+**Branch 2.2 — 202107 → MD-142~144** (144 MDs total):
+
+- **MD-142** 選擇權學習順序=從權利金變動入門 — first feel price→premium sensitivity, then Greeks; reversed = math without market intuition
+- **MD-143** WFA全樣本悖論=分段最佳化優於整體 — WFA earns each year but full-sample optimization doesn't; non-stationary regimes require local-optimal sequences, not global optima
+- **MD-144** 策略監控=人均帶寬是投組規模硬上限 — 2 strategies/day review = 1+ month backlog; automate health checks, humans intervene on anomalies only
+
+Gap reconciled: 202108 was already done (MD-139~141), tree stale. Next: **202106**.
