@@ -421,3 +421,17 @@ Next: 202603 (March 2026 bridge).
   3. **賣出有掛單紀律** — liquidation under deadline still uses limit orders (掛價 610/137/81); accepts execution risk but holds price discipline
 - dna_core.md now has **15 micro-decisions** (was 12)
 - Branch 2.2: 202604✓ 202601✓ 202602✓ 202603✓; next: 202512+
+
+## Cycle 9 — 2026-04-08 02:04:50 UTC
+
+**Cycle 19 done.**
+
+Branch 2.2 — read 202603.jsonl (9,982 Edward messages, March 2026). 3 new micro-patterns distilled into `dna_core.md`:
+
+1. **清單式確認** — multi-step process uncertainty → bundle all questions into a numbered list, ask once
+2. **資金閉鎖期認知** — when advising capital allocation, maps the full multi-year tax lag (2026配息→2027入帳→2028繳)
+3. **賣出有掛單紀律** — deadline liquidation still uses limit orders at specific prices; accepts execution risk but holds price discipline
+
+`dna_core.md`: **15 micro-decisions** (was 12). Both repos pushed.
+
+Next: 202512 (Dec 2025 — pre-2026 bridge).
