@@ -3132,3 +3132,13 @@ Branch 2.2 extension pass on 201709+201708 (888 Edward msgs). Three new MDs writ
 - **MD-297** 遊戲本質=盲注爭奪框架 — true value source in any competitive system is structural dead money, not "best hand"; map reward structure before choosing strategy
 
 Next: 201707+201706 ext.
+
+## Cycle 79 — 2026-04-08 UTC
+
+**Branch 2.2** highest-derivative. 201707+201706 ext pass (465+1237 Edward msgs). Distilled 3 new micro-decisions:
+
+- **MD-298**: Population river exploit=雙向不對稱 — population over-folds AND under-bluffs river simultaneously; correct exploit: over-bluff (as aggressor) + over-fold (as defender); river is highest-leverage exploitation street
+- **MD-299**: 紅線改善=先Bluff-Catch不先Bluff — bluff-catching has higher risk-adjusted EV than bluffing volume; fixing red line starts with call discipline, not aggression increase
+- **MD-300**: 短碼30~50bb=獨立preflop策略區間 — 30-50bb is a regime boundary where 100bb strategy fails but push/fold doesn't apply; requires independent preflop map for this stack depth zone
+
+**dna_core.md: 300 MDs.** Next: 201705+201704 ext.
