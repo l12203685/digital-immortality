@@ -3392,3 +3392,13 @@ Next: Branch 1.1 mainnet (needs `BINANCE_MAINNET_KEY/SECRET`) or Branch 4.1 firs
 - Branch 4.1 status: partially unblocked — framework ready; next step requires Samuel in person to review/correct his DNA
 
 Next: Branch 1.1 mainnet (set BINANCE_MAINNET_KEY/SECRET) or deepen samuel_dna.md with more micro-decisions.
+
+## Cycle 94 — 2026-04-08 16:37:06 UTC
+
+**Cycle 94 done.**
+
+Branch 4.1 — ran `consistency_test.py` on `samuel_dna.md`:
+- **19/20 ALIGNED** (1 expected divergence: Samuel's "bias toward action" DNA doesn't pre-commit kill conditions — genuine DNA difference, not a system error)
+- Framework generalizes to non-Edward organisms ✓
+- Edward baseline re-verified: **20/20 ALIGNED ✅**
+- Branch 4.1 unblocked at the framework level; remaining blocker is Samuel reviewing his DNA in person

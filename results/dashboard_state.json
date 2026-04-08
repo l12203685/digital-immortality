@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T00:29+08",
+  "updated": "2026-04-09T00:37+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: Branch 1.1 mainnet (needs `BINANCE_MAINNET_KEY/SECRET`) or Branch 4.1 f..."
+      "text": "- Branch 4.1 unblocked at the framework level; remaining blocker is Samuel re..."
     },
     {
       "time": "just now",
-      "text": "- 20/20 ALIGNED ✅ (up from 18/18; all 318 MDs now have at least one consisten..."
+      "text": "- Edward baseline re-verified: 20/20 ALIGNED ✅"
     },
     {
       "time": "just now",
-      "text": "- `generic_stock_cashflow_comparison`: MD-317 (相同資本下現金流比較) → `COMPARE_ABSOLUT..."
+      "text": "- Framework generalizes to non-Edward organisms ✓"
     },
     {
       "time": "just now",
-      "text": "- `generic_large_capital_no_stoploss`: MD-315 (大資本=免停損條件) → `HOLD_WHEN_YIELD_..."
+      "text": "- 19/20 ALIGNED (1 expected divergence: Samuel's \"bias toward action\" DNA doe..."
     },
     {
       "time": "just now",
-      "text": "Branch 2.3 — consistency test extended to cover MD-315/317 (the two uncovered..."
+      "text": "Branch 4.1 — ran `consistency_test.py` on `samuel_dna.md`:"
     }
   ],
   "stats": {
-    "daemon_cycles": 93,
+    "daemon_cycles": 94,
     "total_mds": 317,
     "dna_core_lines": 76
   }
