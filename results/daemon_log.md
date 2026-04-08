@@ -3100,3 +3100,23 @@ Branch 2.2 highest-derivative. Read 201712 JSONL (129 Edward msgs), distilled 3 
 - **MD-291**: 外幣配置=幣值方向觀點前置 — establish currency direction view before choosing allocation tool
 
 **DNA: 291 MDs.** Next: 201711.
+
+## Cycle 77 — 2026-04-08 UTC
+
+**Branch 2.2** highest-derivative. 201711+201710 combined (both sparse: ~50+127 Edward msgs, mostly household/early poker chat), distilled 3 micro-patterns:
+
+- **MD-292**: 新領域進入順序=規則框架→簡單濾網→完整策略 — domain entry: build rule map first, then use conservative heuristic filter, then full strategy. Premature complexity = uninterpretable feedback.
+- **MD-293**: 技術行為偏差=對手類型訊號 — any sizing/behavior deviation from standard = information upgrade trigger; indicates player type or hand-strength distribution; both cases shift optimal response.
+- **MD-294**: 短期樣本=方差非技術 — 100~200 hands per session cannot distinguish skill from variance; minimum evaluation threshold is 1,000~10,000 samples; don't adjust strategy on sub-threshold results.
+
+**DNA: 294 MDs.** Next: 201709.
+
+## Cycle 78 — 2026-04-08 UTC
+
+**Branch 2.2** highest-derivative. 201709+201708 extension pass (359+529 Edward msgs), distilled 3 new micro-decisions:
+
+- **MD-295**: GTO最低防禦率=1-α公式 — bet/(pot+bet)=α; defend <1-α = exploitable by pure value; compute threshold before deciding range width
+- **MD-296**: 多步驟協調=編號清單外化 — complex multi-party/multi-document coordination must be formalized as numbered ordered checklist; checklist IS the procedure, not a reminder
+- **MD-297**: 遊戲本質=盲注爭奪框架 — poker's true value source is mandatory blind extraction + dead money, not best-hand; identify structural reward source in any competitive domain before choosing strategy
+
+**dna_core.md: 297 MDs**. Next: 201707+201706 ext.
