@@ -31,6 +31,13 @@ from trading.strategies import (
     donchian_filtered,
 )
 
+try:
+    from trading.portfolio import PortfolioSelector
+    _PORTFOLIO_SELECTOR = PortfolioSelector()
+    _HAS_PORTFOLIO = True
+except ImportError:
+    _HAS_PORTFOLIO = False
+
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
@@ -53,6 +60,14 @@ STRATEGY_MIN_LOOKBACK = {
     "donchian": 22,          # period=20 + 2 buffer
     "dual_ma_filtered": 56,  # RegimeFilter(trend_period=50, slope_bars=5) + 1
     "donchian_filtered": 56,
+}
+
+# Maps STRATEGIES keys → portfolio strategy names returned by PortfolioSelector.select()
+STRATEGY_PORTFOLIO_NAME = {
+    "dual_ma": "DualMA_10_30",
+    "donchian": "DonchianConfirmed_20",
+    "dual_ma_filtered": "DualMA_filtered",
+    "donchian_filtered": None,   # no direct portfolio equivalent
 }
 
 # Kill conditions (mirror paper_trader_review thresholds)
@@ -85,6 +100,24 @@ def _load_log() -> List[Dict]:
                 except json.JSONDecodeError:
                     pass
     return entries
+
+
+# ---------------------------------------------------------------------------
+# Portfolio regime helpers
+# ---------------------------------------------------------------------------
+
+def _detect_regime_strategy(bars: List[Bar]):
+    """
+    Detect the current market regime and return the recommended strategy.
+
+    Returns (regime_str, strategy_name) using the module-level
+    _PORTFOLIO_SELECTOR.  Falls back to ("unknown", None) if the portfolio
+    module is unavailable.
+    """
+    if not _HAS_PORTFOLIO:
+        return "unknown", None
+    regime, strategy_name, _strategy_fn = _PORTFOLIO_SELECTOR.select(bars)
+    return regime, strategy_name
 
 
 # ---------------------------------------------------------------------------
@@ -175,7 +208,7 @@ def _compute_sim_pnl(entries: List[Dict], strategy: str, current_price: float, p
     return round(prev_signal * pct * position_usdt, 4)
 
 
-def run_tick(strategy_name: str, dry_run: bool = False) -> Dict:
+def run_tick(strategy_name: str, dry_run: bool = False, portfolio_gated: bool = False) -> Dict:
     """Execute one tick for a strategy. Returns the tick result dict."""
     strategy_fn = STRATEGIES[strategy_name]
     position_usdt = 100.0
@@ -192,6 +225,24 @@ def run_tick(strategy_name: str, dry_run: bool = False) -> Dict:
         # Dry run: fetch data, compute signal, no orders
         try:
             bars: List[Bar] = executor.client.fetch_ohlcv("1d", 100)
+
+            # Portfolio regime gate: skip if this strategy is not the regime pick
+            if portfolio_gated:
+                regime, regime_strategy = _detect_regime_strategy(bars)
+                expected_portfolio_name = STRATEGY_PORTFOLIO_NAME.get(strategy_name)
+                if regime_strategy is not None and expected_portfolio_name != regime_strategy:
+                    result = {
+                        "ts": datetime.now(timezone.utc).isoformat(),
+                        "strategy": strategy_name,
+                        "action": "SKIPPED_REGIME",
+                        "regime": regime,
+                        "regime_selected_strategy": regime_strategy,
+                        "pnl_usdt": 0.0,
+                        "dry_run": True,
+                    }
+                    _log_tick(result)
+                    return result
+
             signal = executor.strategy(bars)
             current_price = bars[-1]["close"] if bars else None
             prior_entries = _load_log()
@@ -206,6 +257,9 @@ def run_tick(strategy_name: str, dry_run: bool = False) -> Dict:
                 "pnl_usdt": sim_pnl,
                 "dry_run": True,
             }
+            if portfolio_gated:
+                result["regime"] = regime
+                result["regime_selected_strategy"] = regime_strategy
         except Exception as e:
             result = {
                 "ts": datetime.now(timezone.utc).isoformat(),
@@ -216,9 +270,35 @@ def run_tick(strategy_name: str, dry_run: bool = False) -> Dict:
                 "dry_run": True,
             }
     else:
+        # Live execution path
+        if portfolio_gated:
+            # Fetch bars early to run regime detection before executing
+            try:
+                bars_for_regime: List[Bar] = executor.client.fetch_ohlcv("1d", 100)
+                regime, regime_strategy = _detect_regime_strategy(bars_for_regime)
+                expected_portfolio_name = STRATEGY_PORTFOLIO_NAME.get(strategy_name)
+                if regime_strategy is not None and expected_portfolio_name != regime_strategy:
+                    result = {
+                        "ts": datetime.now(timezone.utc).isoformat(),
+                        "strategy": strategy_name,
+                        "action": "SKIPPED_REGIME",
+                        "regime": regime,
+                        "regime_selected_strategy": regime_strategy,
+                        "pnl_usdt": 0.0,
+                    }
+                    _log_tick(result)
+                    return result
+            except Exception as e:
+                logger.warning("portfolio_gated regime detection failed for %s: %s", strategy_name, e)
+                regime = "unknown"
+                regime_strategy = None
+
         result = executor.tick()
         result["ts"] = datetime.now(timezone.utc).isoformat()
         result.setdefault("pnl_usdt", 0.0)
+        if portfolio_gated:
+            result["regime"] = regime
+            result["regime_selected_strategy"] = regime_strategy
 
     _log_tick(result)
     return result
@@ -228,17 +308,22 @@ def run_tick(strategy_name: str, dry_run: bool = False) -> Dict:
 # CLI commands
 # ---------------------------------------------------------------------------
 
-def cmd_tick(strategy_name: Optional[str], dry_run: bool) -> None:
+def cmd_tick(strategy_name: Optional[str], dry_run: bool, portfolio_gated: bool = False) -> None:
     targets = [strategy_name] if strategy_name else list(STRATEGIES.keys())
     for s in targets:
-        result = run_tick(s, dry_run=dry_run)
+        result = run_tick(s, dry_run=dry_run, portfolio_gated=portfolio_gated)
         ts = result.get("ts", "")[:19]
         signal_map = {1: "LONG", -1: "SHORT", 0: "FLAT"}
         sig = signal_map.get(result.get("signal", 0), "?")
         action = result.get("action", "?")
         price = result.get("price")
         price_str = f"${price:,.0f}" if price else "N/A"
-        print(f"[{ts}] {s:25s} signal={sig:5s} action={action:20s} price={price_str}")
+        regime_str = ""
+        if portfolio_gated:
+            regime = result.get("regime", "")
+            regime_strat = result.get("regime_selected_strategy", "")
+            regime_str = f" regime={regime}({regime_strat})"
+        print(f"[{ts}] {s:25s} signal={sig:5s} action={action:20s} price={price_str}{regime_str}")
 
 
 def cmd_status(strategy_name: Optional[str]) -> None:
@@ -549,11 +634,13 @@ def main():
                         help="Persist --backtest results to results/backtest_results.json")
     parser.add_argument("--dry-run", action="store_true", default=False,
                         help="Compute signals without placing orders (default when no API keys)")
+    parser.add_argument("--portfolio-gated", action="store_true", default=False,
+                        help="Only run the regime-selected strategy per tick")
 
     args = parser.parse_args()
 
     if args.tick:
-        cmd_tick(args.strategy, dry_run=args.dry_run)
+        cmd_tick(args.strategy, dry_run=args.dry_run, portfolio_gated=args.portfolio_gated)
     elif args.status:
         cmd_status(args.strategy)
     elif args.review:

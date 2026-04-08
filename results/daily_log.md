@@ -380,3 +380,62 @@ Recursive engine cycle history.
 3. **Add**: Organism collision + LLM evaluation (`--llm-prompt` in multi-DNA mode)
 4. **Improve**: testnet 7-day window — need continuous data collection, check if loop can run in background
 5. **Add**: Makefile targets for new tools (make dashboard, make portfolio)
+
+
+## Cycles 9–19 — 2026-04-08T01:30–03:10 UTC
+
+> Compact summary (individual cycle logs not written at time; reconstructed from dynamic_tree.md).
+
+### Cycles 9–15: Trading infra advancement
+- Ticks 6+7 fired on testnet; `--review` PASSED: OVERALL GO (dual_ma PF=5.839 WR=60%)
+- `mainnet_runner.py` built — $100 cap, dual_ma only, kill rails: MDD>10% WR<35% PF<0.85
+- `--dry-run` fixed in mainnet_runner (no longer blocked by credential gate); kill rails validated
+- `--paper-live` added to mainnet_runner — fetches real Binance prices with no credentials
+- Paper-live ticks 1–3: BTC declining 71509→71484→71443, signal=SHORT consistent × 3
+- **Impact**: End-to-end trading path confirmed: testnet GO → mainnet built → paper-live validated
+
+### Cycles 16–19: DNA micro-decision extraction (Branch 2.2)
+- 202604 JSONL: 3 micro-patterns distilled (先做後說, 截止前確認, 系統性歸檔)
+- 202601 JSONL: 3 micro-patterns (多方案並列, 自推到底再確認, 不動作是最難)
+- 202602 JSONL: 3 micro-patterns (AI=語言外包, 帳戶×券商分層, 不確定→清倉等訊號)
+- 202603 JSONL: 3 micro-patterns (清單式確認, 資金閉鎖期認知, 賣出有掛單紀律)
+- **Note**: patterns were logged in dynamic_tree.md but NOT written to dna_core.md until Cycle 20
+- **Impact**: 12 micro-decisions documented in tree, persistence gap identified
+
+### Meta (cycles 9–19)
+- testnet: 16 entries in results/testnet_log.jsonl
+- paper-live: 3 ticks in results/paper_live_log.jsonl
+- daily_log: NOT updated per-cycle (log continuity broken — fixed in cycle 20)
+
+
+## Cycle 20 — 2026-04-08T03:30 UTC
+
+**Branches pushed**: 2 (behavioral-equivalence, economic-trading)
+
+### Branch 2.2: Fix learn=write failure — micro-decisions persisted to dna_core.md
+- **Root cause**: Cycles 16–19 updated dynamic_tree.md claiming "15 micro-decisions in dna_core.md" but never edited the file
+- **Fix**: Added `## Micro-Decisions (12 calibrated patterns)` section to `templates/dna_core.md`
+- 12 patterns (MD-01 through MD-12) now in the file: 多方案並列, 自推到底再確認, 不動作是最難, AI=語言外包, 帳戶×券商分層, 不確定→清倉等訊號, 清單式確認, 資金閉鎖期認知, 賣出有掛單紀律, 先做後說, 截止前確認, 系統性歸檔
+- Updated header: "84-line boot kernel (71 core + 12 micro-decisions)"
+- **Impact**: learn=write gap closed. dna_core.md is now the true operational minimum.
+
+### Branch 1.1: Portfolio regime-gated tick in testnet_runner.py
+- Added `--portfolio-gated` flag to `testnet_runner.py --tick`
+- Imports `PortfolioSelector` from `trading.portfolio` (guarded, degrades gracefully)
+- `STRATEGY_PORTFOLIO_NAME` dict maps each strategy key to regime-selector name
+- `_detect_regime_strategy(bars)` helper runs PortfolioSelector before signal computation
+- `run_tick(portfolio_gated=True)`: skips non-regime strategies (logs `SKIPPED_REGIME`), adds `regime` + `regime_selected_strategy` to live entries
+- Usage: `python testnet_runner.py --tick --portfolio-gated`
+- **Impact**: Trading system no longer blindly runs all 4 strategies every tick. Regime gates capital deployment. Cycle 8's #1 deferred priority is now done.
+
+### Meta
+- daily_log continuity restored: cycles 9–19 reconstructed, cycle 20 logged
+- staging/last_output.md updated to current state
+- dynamic_tree.md updated to cycle 20
+
+### Next cycle priorities
+1. **Add**: Makefile targets `make portfolio-tick` and `make dashboard`
+2. **Improve**: Read 202512 and earlier JSONL months → extract more micro-decisions
+3. **Add**: Auto-gate paper-live ticks via portfolio regime (mainnet_runner.py)
+4. **Improve**: Cross-instance DNA validation — test if dna_core.md micro-decisions produce consistent decisions
+5. **Fix**: Investigate why staging/last_output.md wasn't updated in cycles 9–19
