@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T22:25+08",
+  "updated": "2026-04-08T22:39+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "DNA: 291 MDs. Next: 201711."
+      "text": "Next: 201707+201706 ext."
     },
     {
       "time": "just now",
-      "text": "Branch 2.2 highest-derivative. Read 201712 JSONL (129 Edward msgs), distilled..."
+      "text": "Branch 2.2 extension pass on 201709+201708 (888 Edward msgs). Three new MDs w..."
     },
     {
       "time": "just now",
-      "text": "Cycle 76 done."
+      "text": "Done. Cycle 78 complete."
     },
     {
       "time": "2026-04-08 UTC",
-      "text": "- templates/dna_core.md: 291 MDs; next: 201711"
+      "text": "dna_core.md: 297 MDs. Next: 201707+201706 ext."
     },
     {
       "time": "2026-04-08 UTC",
-      "text": "- 129 Edward msgs read (Dec 2017), 3 new micro-patterns distilled"
+      "text": "Branch 2.2 highest-derivative. 201709+201708 extension pass (359+529 Edward m..."
     }
   ],
   "stats": {
-    "daemon_cycles": 76,
-    "total_mds": 289,
+    "daemon_cycles": 78,
+    "total_mds": 295,
     "dna_core_lines": 76
   }
 }

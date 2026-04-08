@@ -3120,3 +3120,15 @@ Branch 2.2 highest-derivative. Read 201712 JSONL (129 Edward msgs), distilled 3 
 - **MD-297**: 遊戲本質=盲注爭奪框架 — poker's true value source is mandatory blind extraction + dead money, not best-hand; identify structural reward source in any competitive domain before choosing strategy
 
 **dna_core.md: 297 MDs**. Next: 201707+201706 ext.
+
+## Cycle 76 — 2026-04-08 14:39:15 UTC
+
+Done. **Cycle 78** complete.
+
+Branch 2.2 extension pass on 201709+201708 (888 Edward msgs). Three new MDs written to `templates/dna_core.md` (now 297 MDs):
+
+- **MD-295** GTO最低防禦率=1-α公式 — bet/(pot+bet) determines opponent's bluff breakeven; defend below 1-α = pure-value exploitable
+- **MD-296** 多步驟協調=編號清單外化 — complex multi-party procedures formalized as numbered ordered checklists; checklist IS the procedure
+- **MD-297** 遊戲本質=盲注爭奪框架 — true value source in any competitive system is structural dead money, not "best hand"; map reward structure before choosing strategy
+
+Next: 201707+201706 ext.
