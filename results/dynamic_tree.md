@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T05:20 UTC (cycle 24)
+> 最後更新：2026-04-08T05:40 UTC (cycle 25)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -34,7 +34,7 @@
 
 ### 2. 行為等價（核心能力）
 - 2.1 DNA 品質：10 micro-decision patterns from JSONL integrated ✓
-- 2.2 微決策學習：202604 ✓ (+3); 202601 ✓ (+3); 202602 ✓ (+3); 202603 ✓ (+3); 202512 ✓ (+3: 個人品牌=多維交叉定位/遊戲=資訊不對稱沙盒/職涯=平行軌道); 202511 ✓ (+3: 周末不留空單/強弱配對抽alpha/定價錨點下移入場); **dna_core.md 實際寫入 MD-01~MD-12 ✓** (cycle 22 fix); 202510 ✓ (+3: Game selection/汰弱留強+槓桿/EV-vol取捨); 202509 ✓ (+3: 攻強守60分/求職掃射+AI複製/薪資談判先緩); next: 202508
+- 2.2 微決策學習：202604 ✓ (+3); 202601 ✓ (+3); 202602 ✓ (+3); 202603 ✓ (+3); 202512 ✓ (+3: 個人品牌=多維交叉定位/遊戲=資訊不對稱沙盒/職涯=平行軌道); 202511 ✓ (+3: 周末不留空單/強弱配對抽alpha/定價錨點下移入場); **dna_core.md 實際寫入 MD-01~MD-12 ✓** (cycle 22 fix); 202510 ✓ (+3: Game selection/汰弱留強+槓桿/EV-vol取捨); 202509 ✓ (+3: 攻強守60分/求職掃射+AI複製/薪資談判先緩); 202508 ✓ (+3: 薪資精算底線/知識=社交資本/13F=靈感不跟單); 202507 ✓ (+3: 條件枚舉參數化/阿瓦隆貝氏更新/新領域先建清單); next: 202506
 - 2.3 Validation：OOS 5/5 self-scored ✓, cross-instance prepped but blocked on API credit
   - consistency_test.py: --use-memory + --auto-suggest now combined — memory context flows into suggestions ✓
 - 2.4 Response latency：三秒 vs 三段推理，差距仍在
@@ -121,4 +121,5 @@
 - 2026-04-08T04:10 UTC: cycle 22 — **CRITICAL FIX**: dna_core.md learn=write gap closed (MD-01~MD-12 actually written); testnet_runner.py --portfolio-gated added (regime gates tick execution); daily_log continuity restored for cycles 9-21
 - 2026-04-08T05:00 UTC: cycle 23 — Branch 2.2: 202509 JSONL read (10,828 Edward msgs, Sep 2025), 3 new micro-patterns → dna_core.md (攻強守60分/求職掃射+AI複製/薪資談判先緩); total 27 micro-decisions
 - 2026-04-08T05:20 UTC: cycle 24 — Branch 2.2: 202508 JSONL read (662 Edward msgs, Aug 2025), 3 new micro-patterns → dna_core.md (薪資精算底線/知識=社交資本/13F=靈感不跟單); total 30 micro-decisions
+- 2026-04-08T05:40 UTC: cycle 25 — Branch 2.2: 202507 JSONL read (11,555 Edward msgs, Jul 2025), 3 new micro-patterns → dna_core.md (條件枚舉參數化/阿瓦隆貝氏更新/新領域先建清單); total 33 micro-decisions
 

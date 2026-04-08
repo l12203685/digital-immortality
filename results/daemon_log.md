@@ -535,3 +535,17 @@ Branch 2.2 — 202508 distilled. 3 new micro-decisions added to `dna_core.md` (2
 3. **13F=靈感不是跟單** — use 13F to find questions worth asking, not positions worth copying; edge is non-transferable
 
 Next: 202507.
+
+## Cycle 25 — 2026-04-08T05:40 UTC
+
+**Branch 2.2 — 202507 JSONL distilled.**
+
+- Read 202507.jsonl (11,555 Edward msgs, Jul 2025)
+- Top groups: g2 (可可), g4 (Avalon), g5 (friends), g3 (trading code)
+- Focus: PowerLanguage system building, Avalon strategic deduction, cat adoption prep
+- 3 micro-patterns NOT yet in dna_core.md:
+  1. **條件枚舉→參數化設計** — complex systems built via parameter selectors (con_i=0/1/2), not hardcoded logic; each value = one hypothesis; exhaustive test enables single-number pivots
+  2. **阿瓦隆=貝氏即時更新** — each voting round triggers immediate conditional branch update; deception-detection = tracking behavioral conditional probabilities, not intuition
+  3. **新領域=先建清單再執行** — before entering any new domain, build complete checklist first; decisions outsourced to past-self; no impulse execution
+- `dna_core.md`: 30 → **33 micro-decisions**
+- Branch 2.2: 202604✓ ... 202507✓; next: 202506
