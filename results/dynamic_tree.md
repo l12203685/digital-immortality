@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T17:00 UTC (cycle 46)
+> 最後更新：2026-04-08T UTC (cycle 46+14)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -78,7 +78,7 @@
 防禦：2.3 blocked API credit, 4.1 blocked on friend
 
 ## 已完成 milestones
-- dna_core.md 126 MDs operational（core + MD-01~MD-126 written ✓）
+- dna_core.md 186 MDs operational（core + MD-01~MD-186 written ✓）
 - boot_tests 13 題
 - recursive_distillation F.1-18
 - skill suite v2.1.0（7 skills + auto-update）
@@ -172,3 +172,5 @@
 - 2026-04-09T02:30 UTC: cycle 65 — gap reconcile (202111 MD-130~132 already in file); 202110 JSONL read (35 Edward msgs, Oct 2021) → MD-133~135 (風控前置=停損反推進場點/策略池高淘汰率=過濾訊號/實操知識=skin-in-the-game才外流); templates/dna_core.md: 135 MDs; next: 202109
 - 2026-04-09T04:00 UTC: cycle 69 — **gap reconcile + 202105 distill**: MD-148~150 already in file (from prior); 202105 JSONL read (70 Edward msgs, May 2021) → MD-151~153 (出場二元架構/台指期500點滑價基準/日內四維開盤分析); templates/dna_core.md: **153 MDs**; next: 202104
 - 2026-04-08T17:00 UTC: cycle 46 — **Branch 1.2 trading quality**: `compute_mae_mfe()` + `_atr()` added to trading/backtest_framework.py; DNA MD-13/157/175 now have code backing; edge_ratio=MFE/MAE×√N implemented; validated on trending synthetic data (momentum=7.15, breakout=8.94, mean_reversion=3.31)
+- 2026-04-08T UTC: cycle 13 — **gap fill + 202007 distill**: MD-172~180 backfilled (logged but missing from file); 202007 JSONL read (437 Edward msgs, Jul 2020) → MD-181~183 (順逆勢策略系統化分類/槓鈴保本+利息賭博結構/資金傳導鏈進場時序); templates/dna_core.md: **183 MDs**; next: 202006
+- 2026-04-08T UTC: cycle 14 — Branch 2.2: 202007 second-pass distill (92 Edward msgs screened, Jul 2020) → MD-184~186 (職涯=多維交叉定位不可替代/教學範圍=用途邊界切除無關複雜度/賭注賠率公式化=雙邊先算再找套利入口); templates/dna_core.md: **186 MDs**; next: 202006
