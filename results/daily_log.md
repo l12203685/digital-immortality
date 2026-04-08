@@ -3,6 +3,54 @@
 Recursive engine cycle history.
 
 
+## Cycle 122 — 2026-04-08T20:00Z
+
+**Branches**: 4 parallel (2.2 DNA extension + 2.3 consistency + 7.12 SOP #06 + 8.5 decision audit tool)
+
+### Branch 2.2: DNA 201702 synthetic pass → MD-328~330
+
+- **MD-328**: 關係投資=主動維護稀缺性原則；高品質關係需要不對等付出才能長期維持
+  - Framework: max silence period per tier; weekly scan trigger; proactive ≠ transactional
+- **MD-329**: 學習新領域=先建框架再填細節；無結構吸收=知識碎片無法檢索
+  - Correct order: 20% skeleton (TOC + survey) before 80% detail absorption
+- **MD-330**: 社交場合信號讀取=對方的行為模式比言語內容更可信；以行動驗證言語，以一致性判斷意圖
+  - 3-month observation window; commitment fulfillment rate metric
+- dna_core.md: 315 → **330 MDs** (426 lines)
+
+### Branch 2.3: Consistency test extended — 30/30 ALIGNED ✅
+
+- 3 alignment checks added: IDENTIFY_THREAT_PROFILE_FIRST, CALCULATE_FRICTION_COST_FIRST (MULTI_TRACK_BEFORE_CONVERGE already existed)
+- 3 new scenarios confirmed present: generic_game_threat_profile, generic_trading_friction_cost, generic_career_multi_track
+- **Result: 30/30 ALIGNED ✅** (was 27/27 cycle 97; 24/24 cycle 94)
+
+### Branch 7.12: SOP #06 Game Theory Decision Framework — COMPLETE ✅
+
+- `docs/knowledge_product_06_game_theory_sop.md` — 6 gates:
+  - G0: 識別賽局結構 (game type, player count, information completeness)
+  - G1: 確認角色+勝利條件 (role + quantifiable win condition)
+  - G2: 最大威脅識別 (MD-325: identify biggest threat before deciding action)
+  - G3: GTO基線建立 (MD-295: minimum call rate formula = B/(B+P))
+  - G4: 剝削偏差識別 (observe frequency deviations, exploit systematically)
+  - G5: 執行+摩擦成本 (MD-326: calculate round-trip cost before entry)
+- Self-test scenario included (dual-offer job negotiation with EV calculation)
+- `docs/publish_thread_sop06_twitter.md` — 12 tweets drafted
+- **SOP series now complete: #01~#06** (trading ×4 + career + game theory)
+
+### Branch 8.5: decision_audit.py — BUILT ✅
+
+- `tools/decision_audit.py` — log/audit/suggest CLI tool (MD-322 implementation)
+- Pre-populated with 10 realistic decisions; 5 SYSTEM_FAILURE identified:
+  - exercise (×6), lunch (×5), deep-work start time (×5), coffee-vs-tea (×4), portfolio check (×4)
+- Persistent state: memory/decision_audit.json
+- Next: implement top 3 as pre-committed defaults (automate exercise=7am fixed, lunch=3-option rotation, portfolio check=once/day 9am)
+
+### Next cycle
+- Edward action: post SOP threads #01~#06 on X
+- Edward action: provide BINANCE_MAINNET_KEY/SECRET → live trading
+- Branch 8.5: implement top 3 automated defaults from decision audit
+- Branch 2.2: continue synthetic pass with MD-331~333 (social/communication patterns)
+- Branch 2.3: validate 330-MD coverage — extend to 33/33
+
 ## Cycle 115 — 2026-04-08T19:30Z
 
 **Branches**: 3 parallel (2.3 consistency extension + 7.11 SOP #05 + 7.12 Twitter thread)

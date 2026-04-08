@@ -693,6 +693,8 @@ def check_alignment_with_memory(
         or (expected == "select_high_density_high_feedback_first" and ("density" in resp_lower or "audience" in resp_lower or "feedback" in resp_lower or "niche" in resp_lower or "expert" in resp_lower or "validate" in resp_lower or "受眾密度" in resp_lower or "回饋速度" in resp_lower or "quality" in resp_lower))
         or (expected == "design_environment_first" and ("environment" in resp_lower or "design" in resp_lower or "anchor" in resp_lower or "habit" in resp_lower or "cue" in resp_lower or "trigger" in resp_lower or "willpower" in resp_lower or "環境設計" in resp_lower or "意志力" in resp_lower or "physical" in resp_lower))
         or (expected == "multi_track_before_converge" and ("multi" in resp_lower or "track" in resp_lower or "parallel" in resp_lower or "explore" in resp_lower or "converge" in resp_lower or "signal" in resp_lower or "多軌" in resp_lower or "評估窗口" in resp_lower or "concurrent" in resp_lower))
+        or (expected == "identify_threat_profile_first" and ("threat" in resp_lower or "profile" in resp_lower or "dangerous" in resp_lower or "opponent" in resp_lower or "risk" in resp_lower or "identify" in resp_lower or "neutralize" in resp_lower or "最大威脅" in resp_lower or "角色化" in resp_lower or "賽局" in resp_lower or "enumerate" in resp_lower or "scan" in resp_lower))
+        or (expected == "calculate_friction_cost_first" and ("friction" in resp_lower or "cost" in resp_lower or "commission" in resp_lower or "fee" in resp_lower or "calculate" in resp_lower or "round-trip" in resp_lower or "round trip" in resp_lower or "before" in resp_lower or "交易成本" in resp_lower or "手續費" in resp_lower or "先算" in resp_lower or "net" in resp_lower or "breakeven" in resp_lower))
     )
 
     if aligned:
