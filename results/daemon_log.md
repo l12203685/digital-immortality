@@ -1684,3 +1684,17 @@ Gap reconciled: 202111 (MD-130~132) was already in file. Processed **202110 → 
 - **MD-135** 實操知識=skin-in-the-game才外流 — 有edge的知識不在課堂，傳授者代價∝知識真實性
 
 `dna_core.md`: **135 MDs**. Next: 202109.
+
+## Cycle 66 — 2026-04-09T03:00 UTC
+
+**Branch 2.2 — 202110 gap reconcile + 202109 distill → MD-136~138.**
+
+202110 gap: MD-133~135 already in file (202110 done in prior cycle, log was stale).
+
+202109.jsonl (28 substantive Edward msgs, Sep 2021) → 3 MDs written to `templates/dna_core.md`:
+
+1. **MD-136** 職涯=程式交易時間優先於薪資 — Edward declined job because it restricted trading dev time; time autonomy > salary once trading is primary income; KO criterion: does the role allow free management of systematic trading?
+2. **MD-137** 套利執行=摩擦成本先建模再宣稱edge — bid-ask + tick size + slippage + funding cost must all be quantified before claiming arbitrage edge; theory ignores these, execution cannot
+3. **MD-138** 選擇權=多維度情境疊加而非單一看法 — 3 dimensions (direction + IV + price zone); when all 3 align on same side → structural setup overrides personal directional bias; disagreement across dimensions = reduce size or stand aside
+
+`templates/dna_core.md`: **138 MDs**. Next: 202108.
