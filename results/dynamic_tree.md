@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-07T17:10 UTC (cycle 4)
+> 最後更新：2026-04-08T01:05 UTC (cycle 5)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -10,12 +10,14 @@
 
 ### 1. 經濟自給（存活前提）⚡DEADLINE: 2026-07-07
 - 1.1 Trading system → live profit
-  - paper traders running (DualMA + Donchian on BTC daily)
-  - review framework ready (backtest-framework/docs/paper_trader_review.md)
-  - review date: 4/14（7 天後可能不夠 → 延到 21 天）
-  - live infra: Binance USDT-M ready (staging/live_trading_infra_research.md)
-  - next: 4/14 review → testnet → mainnet small size
-- 1.2 Trading code: strategies.py (DualMA+Donchian) + paper_trader.py + live_binance.py scaffold ✓
+  - paper review DONE → decision: GO (4 strategies pass primary regimes) ✓
+  - testnet_runner.py built ✓ (tick/status/review/loop CLI, dry-run, JSONL log)
+  - ccxt installed, Binance testnet connected ✓ — real data flowing
+  - current signal: dual_ma=SHORT, donchian=FLAT, filtered=FLAT (BTC ~$71.6k)
+  - testnet log: results/testnet_log.jsonl (append-only)
+  - kill conditions: MDD>15%, WR<35% (≥5 trades), PF<0.85 (≥3 losses)
+  - next: run testnet 7 days (--loop 86400), collect real signal→PnL data → GO/NO-GO → mainnet $100
+- 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed) ✓
 - 1.3 Skill 商業化 → 付費使用者（v2.1.0, 7 skills, users=0）
 - 1.4 其他收入路徑（待發現）
 - CONSTRAINT: 三個月內 trading profit > API cost 否則遞迴死亡
@@ -58,7 +60,7 @@
 - 6.5 衝突解法：scope 分離（每層碰不同檔案）
 
 ## 當前 regime
-攻擊：1.1 Trading（deadline-driven，4/14 review → live）
+攻擊：1.1 Trading（testnet running，7-day window → mainnet small size）
 中性：2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed
 防禦：2.3 blocked API credit, 4.1 blocked on friend
 
@@ -73,6 +75,10 @@
 - paper trader review framework
 - live trading infra research
 - 動態樹本身
+- paper trader review GO decision (4 strategies, all primary regimes pass)
+- RegimeFilter + DonchianConfirmed added to strategies.py
+- testnet_runner.py (tick/status/review/loop + JSONL persistence)
+- ccxt installed, Binance testnet live data confirmed
 
 ## 演化紀錄
 - 2026-04-07 22:50: 初版骨架
@@ -80,3 +86,4 @@
 - 2026-04-08 00:10: 三層遞迴架構 operational, daemon 啟動
 - 2026-04-08 00:34: 全面更新 — 反映 session 全部產出
 - 2026-04-07 17:10 UTC: cycle 4 — 4 branches parallel (daemon fix, multi-provider, CI/install, trading code)
+- 2026-04-08 01:05 UTC: cycle 5 — paper GO, testnet_runner.py built, ccxt live, tree branch 1.1 advanced
