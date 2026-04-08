@@ -1214,3 +1214,17 @@ Cycle 53 done.
 Also backfilled: 202303 (MD-73~75) was done in prior unlogged session; tree updated to reflect reality.
 
 `templates/dna_core.md`: **78 MDs**. Next: 202301.
+
+## Cycle 27 — 2026-04-08 05:06:48 UTC
+
+Cycle 53 done.
+
+**Branch 2.2** — 202302.jsonl (164 Edward msgs, Feb 2023) → 3 MDs written:
+
+- **MD-76** 面試感謝信=補答案而非道謝 — thank-you letter fills interview gaps, not just courtesy
+- **MD-77** 知識=反常識壓縮 — "They Say X / I Say Y" is the optimal knowledge compression format
+- **MD-78** 指標=先判Regime再選型 — regime classification is prerequisite to indicator selection
+
+Also reconciled: 202303 (MD-73~75) was already done but tree was stale; backfilled.
+
+`templates/dna_core.md`: **78 MDs**. Next: 202301. Pushed.
