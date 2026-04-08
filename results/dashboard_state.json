@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T19:41+08",
+  "updated": "2026-04-08T19:48+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,19 +51,19 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 201803."
+      "text": "Also resolved the merge conflict in `dynamic_tree.md`. Next: 201802."
     },
     {
       "time": "just now",
-      "text": "201804 → MD-247~249 (249 MDs total)"
+      "text": "Branch 2.2 — 201803 → MD-250~252 (252 MDs total):"
     },
     {
       "time": "just now",
-      "text": "Done. Branch 2.2, cycle 46:"
+      "text": "Cycle 47 done."
     },
     {
       "time": "2026-04-08T UTC",
-      "text": "`templates/dna_core.md`: 249 MDs. Next: 201803."
+      "text": "`templates/dna_core.md`: 252 MDs. Next: 201802."
     },
     {
       "time": "2026-04-08T UTC",
@@ -72,7 +72,7 @@
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 247,
+    "total_mds": 252,
     "dna_core_lines": 76
   }
 }

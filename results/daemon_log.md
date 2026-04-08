@@ -2584,3 +2584,15 @@ Next: 201803.
   - **MD-252** 感情初期主動揭露重大風險行為=降低未來信任成本；知情同意EV > 隱瞞等揭露
 
 `templates/dna_core.md`: **252 MDs**. Next: 201802.
+
+## Cycle 47 — 2026-04-08 11:48:43 UTC
+
+**Cycle 47 done.**
+
+Branch 2.2 — 201803 → MD-250~252 (252 MDs total):
+
+- **MD-250**: 職涯探索=平行投多類型職缺，市場反饋比自我判斷準
+- **MD-251**: 建議可信度=利益結構；逆利益方向的建議含金量最高
+- **MD-252**: 感情初期主動揭露風險行為=知情同意EV > 隱瞞後曝光
+
+Also resolved the merge conflict in `dynamic_tree.md`. Next: 201802.
