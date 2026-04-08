@@ -3432,3 +3432,18 @@ Cycle 95 done. Branch 1.1: paper-live tick 14 — BTC=$71,409.55, signal=SHORT (
 - Branch 2.2 status: **COMPLETE** ✅ (8 years of chat history → 327 micro-decisions distilled)
 
 Next highest-derivative: Branch 1.1 mainnet (set BINANCE_MAINNET_KEY/SECRET) or Branch 2.3 extend consistency tests to cover MD-320~327.
+
+## Cycle 96 — 2026-04-08 16:50:28 UTC
+
+**Cycle 96 done.**
+
+Branch 2.2 — **DISTILLATION COMPLETE** ✅
+
+- 201702+201701+201612+201611 combined (15 msgs, sparse early history)
+- MD-325~327 written to `templates/dna_core.md`:
+  - **MD-325**: 賽局角色化最大威脅先識別 (Avalon: "我最怕對方出現什麼特徵")
+  - **MD-326**: 交易成本先算再下單 (0.11×2×1000 摩擦成本前置)
+  - **MD-327**: 職涯探索=多軌同時開評估窗口 (資本市場/精算/數位金融/風險管理都考慮)
+- **dna_core.md: 327 MDs** — 201611 is the earliest JSONL in archive; **full 8-year chat history covered**
+
+Branch 2.2 is now closed. Next: Branch 2.3 (extend consistency tests to cover MD-320~327) or Branch 1.1 mainnet (needs `BINANCE_MAINNET_KEY/SECRET`).

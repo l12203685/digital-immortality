@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T00:42+08",
+  "updated": "2026-04-09T00:50+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）; 7.x 知識輸出 初始化完成",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
@@ -50,29 +50,29 @@
   ],
   "activity": [
     {
-      "time": "2026-04-09T UTC",
-      "text": "Next: set mainnet keys → run first live tick ($100 cap, dual_ma, kill conditi..."
+      "time": "just now",
+      "text": "Branch 2.2 is now closed. Next: Branch 2.3 (extend consistency tests to cover..."
     },
     {
-      "time": "2026-04-09T UTC",
-      "text": "- Mainnet still blocked on BINANCE_MAINNET_KEY/SECRET"
+      "time": "just now",
+      "text": "- dna_core.md: 327 MDs — 201611 is the earliest JSONL in archive; full 8-year..."
     },
     {
-      "time": "2026-04-09T UTC",
-      "text": "- tree updated: Branch 1.1 paper-live tick 14"
+      "time": "just now",
+      "text": "- 201702+201701+201612+201611 combined (15 msgs, sparse early history)"
     },
     {
-      "time": "2026-04-09T UTC",
-      "text": "- Consistent SHORT × 14 ticks, range $71.4k–$72.6k (entry bias validated)"
+      "time": "just now",
+      "text": "Branch 2.2 — DISTILLATION COMPLETE ✅"
     },
     {
-      "time": "2026-04-09T UTC",
-      "text": "- `python -m trading.mainnet_runner --paper-live` → tick 14: BTC=71409.55, si..."
+      "time": "just now",
+      "text": "Cycle 96 done."
     }
   ],
   "stats": {
-    "daemon_cycles": 95,
-    "total_mds": 324,
+    "daemon_cycles": 96,
+    "total_mds": 325,
     "dna_core_lines": 76
   }
 }
