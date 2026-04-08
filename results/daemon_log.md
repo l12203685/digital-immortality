@@ -2330,3 +2330,15 @@ Cycle 35 done.
 - **MD-216**: 台灣房價主導變量=利率 — 利率不動房價不跌，崩跌前置條件先看央行
 
 Next: 201902.
+
+## Cycle 36 — 2026-04-08T13:00 UTC
+
+**Branch 2.2 — 201902 distill → MD-217~219 (219 MDs total)**
+
+- 201902.jsonl: 1479 Edward msgs; top groups: g47 (541 social), g2 (536 relationship), g133 (196 career/data), g61 (71 trading)
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-217** 分析先定應用場景=資料齊全但無法應用等於零 — 分析啟動前先回答「分析後做什麼決策/行動」，逆向設計資料結構
+  - **MD-218** 挖礦設備ROI≤持幣報酬=清除基礎設施中間層 — 設備年化1%≈直接持幣，直接出清設備
+  - **MD-219** 選擇權部位大小=從可接受最大虧損反推 — 1%最大虧損÷單組最大虧損=可做組數，不從預期獲利正推
+
+`templates/dna_core.md`: **219 MDs**. Next: 201901.
