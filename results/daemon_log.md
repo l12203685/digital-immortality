@@ -4081,3 +4081,11 @@ Sole external blocker: Edward sets `BINANCE_MAINNET_KEY/SECRET` → first real r
 - **Branch 8.5** — Automation #3 shipped: decisions #4 (coffee-vs-tea) + #5 (portfolio-check timing) pre-committed to `docs/system_failure_automations.md`. All 5 SYSTEM_FAILURE decisions from `decision_audit.py` now have pre-committed defaults — zero recurring decision overhead remains.
 
 Sole external blocker: Edward sets `BINANCE_MAINNET_KEY/SECRET` → first real revenue tick.
+
+## Cycle 131 — 2026-04-09T UTC
+
+**Branch 1.1** — paper-live tick 30: BTC=$71,359.94, signal=SHORT (consistent SHORT × 30, range $71.1k–$72.6k). System alive.
+
+**Branch 7.13** — SOP #07 shipped: `docs/knowledge_product_07_regime_detection_sop.md` + `docs/publish_thread_sop07_twitter.md` — Regime Detection & Strategy Routing, 5 gates (calc indicators → classify TRENDING/MR/MIXED → route strategy → validate regime-subset Sharpe → set regime-fail conditions). Backing MDs: MD-103/104/107/112/116. Series now #01~#07. 12-tweet thread ready to post.
+
+Highest derivative: SOP series extended to #07; trading system's core mechanism externalized as publishable knowledge. External blockers: (1) Edward sets `BINANCE_MAINNET_KEY/SECRET` → mainnet; (2) Edward posts threads #01~#07.
