@@ -150,6 +150,20 @@ try:
 except ImportError:
     pass
 
+try:
+    from trading.strategies import (
+        donchian_confirmed_btc_daily,
+        dual_ma_rsi_btc_daily,
+        dual_ma_rsi_filtered,
+    )
+    _EXTRA_STRATEGIES = {
+        "DonchianConfirmed": donchian_confirmed_btc_daily,
+        "DualMA_RSI": dual_ma_rsi_btc_daily,
+        "DualMA_RSI_filtered": dual_ma_rsi_filtered,
+    }
+except ImportError:
+    _EXTRA_STRATEGIES = {}
+
 
 # ---------------------------------------------------------------------------
 # Backtest engine
@@ -498,10 +512,11 @@ def main():
     print("MAE/MFE DIAGNOSTIC — MD-13 Edge Ratio (1d, trending data)")
     print("=" * 64)
     trending_bars = generate_synthetic_bars(n=500, drift=0.001, volatility=0.02, seed=7)
-    for name, fn in STRATEGIES.items():
+    all_mae_mfe = {**STRATEGIES, **_EXTRA_STRATEGIES}
+    for name, fn in all_mae_mfe.items():
         stats = compute_mae_mfe(trending_bars, fn)
         print(
-            f"  {name:20s} | trades={stats['n_trades']:3d} | "
+            f"  {name:22s} | trades={stats['n_trades']:3d} | "
             f"MAE/ATR={stats['avg_mae_atr']:.3f} | "
             f"MFE/ATR={stats['avg_mfe_atr']:.3f} | "
             f"ratio={stats['mae_mfe_ratio']:.3f} | "
@@ -510,6 +525,7 @@ def main():
     print()
     print("edge_ratio = (avg MFE/ATR)/(avg MAE/ATR) × √N  (MD-13)")
     print("Higher = better fit to market structure at entry.")
+    print("DonchianConfirmed / RSI-filtered expected to show higher edge_ratio vs base.")
     print("=" * 64)
 
 
