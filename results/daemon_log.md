@@ -125,3 +125,24 @@ Tree:
 - Next leaf: run `--loop 86400` for 7 days, accumulate real testnet ticks, issue GO/NO-GO for mainnet
 
 **Next highest-derivative branch**: 1.1 testnet — start the 7-day loop (needs cron or daemon to call `testnet_runner.py --loop 86400`). Revenue clock is running: deadline 2026-07-07, 90 days from now.
+
+## Cycle 4 — 2026-04-08 01:10:59 UTC
+
+---
+
+**Cycle 6 done.**
+
+**What changed:**
+
+Code:
+- `trading/testnet_runner.py` — added `_compute_sim_pnl`: each dry-run tick now logs real simulated `pnl_usdt` = `prev_signal × (current_price − prev_price) / prev_price × 100 USDT`. Previously always 0.0 → GO/NO-GO review was blind.
+- `trading/cron_daily_tick.bat` — Windows Task Scheduler wrapper with setup instructions embedded as comments.
+
+Infra:
+- Cron job `5c1c9fc1` registered: fires daily 09:03 UTC, runs `--tick` + appends summary to `testnet_log_daily_summary.md`. 7-day TTL.
+
+Tree:
+- Branch 1.1: "PnL tracking fixed" → "7 ticks → --review → GO/NO-GO → mainnet $100"
+- Regime unchanged: 攻擊 on 1.1, deadline 2026-07-07
+
+**Note:** Cron job is session-only (7-day TTL). For persistence beyond this session, run the PowerShell snippet in `cron_daily_tick.bat` once as admin to register the Windows Task Scheduler task.
