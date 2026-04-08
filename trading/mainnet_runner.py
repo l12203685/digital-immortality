@@ -34,6 +34,7 @@ logger = logging.getLogger(__name__)
 
 RESULTS_DIR = Path(__file__).parent.parent / "results"
 MAINNET_LOG = RESULTS_DIR / "mainnet_log.jsonl"
+PAPER_LIVE_LOG = RESULTS_DIR / "paper_live_log.jsonl"
 
 MAX_POSITION_USDT = 100.0   # hard cap: $100
 MAX_DRAWDOWN_PCT = 10.0     # kill above 10% drawdown
@@ -184,6 +185,42 @@ def cmd_status() -> None:
         print(f"  {e.get('ts', '?')} action={e.get('action')} signal={e.get('signal')} pnl={e.get('realized_pnl', 'n/a')}")
 
 
+def cmd_paper_live() -> None:
+    """Fetch real Binance public prices; run dual_ma signal; log paper trade. No credentials."""
+    ts = datetime.now(timezone.utc).isoformat()
+    try:
+        import ccxt  # type: ignore
+    except ImportError:
+        print("ERROR: pip install ccxt")
+        sys.exit(1)
+
+    exchange = ccxt.binanceusdm({"enableRateLimit": True})
+    ohlcv = exchange.fetch_ohlcv("BTC/USDT:USDT", "1d", limit=60)
+    bars = [{"ts": str(row[0]), "open": row[1], "high": row[2], "low": row[3], "close": row[4], "volume": row[5]} for row in ohlcv]
+
+    from trading.strategies import dual_ma_btc_daily
+    signal = dual_ma_btc_daily(bars)
+
+    price = bars[-1]["close"] if bars else 0.0
+    entry = {
+        "action": "PAPER_LIVE",
+        "ts": ts,
+        "price": price,
+        "signal": {1: "LONG", -1: "SHORT", 0: "FLAT"}.get(signal, "FLAT"),
+        "note": "paper — no real order placed",
+    }
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    with open(PAPER_LIVE_LOG, "a", encoding="utf-8") as f:
+        f.write(json.dumps(entry) + "\n")
+
+    print(f"[{ts}] PAPER_LIVE tick: price={price:.2f} signal={entry['signal']}")
+    print(f"Logged to {PAPER_LIVE_LOG}")
+
+    # Show last 5
+    lines = PAPER_LIVE_LOG.read_text().strip().splitlines() if PAPER_LIVE_LOG.exists() else []
+    print(f"Total paper-live ticks: {len(lines)}")
+
+
 def cmd_loop(interval: int) -> None:
     import time
     logger.info("Mainnet loop started: interval=%ds", interval)
@@ -205,6 +242,7 @@ def main() -> None:
     group.add_argument("--tick", action="store_true", help="Single tick")
     group.add_argument("--status", action="store_true", help="Show log stats")
     group.add_argument("--loop", type=int, metavar="SECONDS", help="Loop every N seconds")
+    group.add_argument("--paper-live", action="store_true", help="Paper trade on real prices (no credentials)")
     parser.add_argument("--dry-run", action="store_true", help="Skip actual order placement")
     args = parser.parse_args()
 
@@ -214,6 +252,8 @@ def main() -> None:
         cmd_status()
     elif args.loop:
         cmd_loop(args.loop)
+    elif args.paper_live:
+        cmd_paper_live()
 
 
 if __name__ == "__main__":

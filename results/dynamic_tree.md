@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T01:37 UTC (cycle 12)
+> 最後更新：2026-04-08T01:41 UTC (cycle 13)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -22,6 +22,7 @@
   - **--review PASSED: OVERALL GO → mainnet $100 next step** ✓
   - **mainnet_runner.py built** ✓ — $100 cap, dual_ma only, kill conditions: MDD>10% WR<35% PF<0.85
   - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
+  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 1: BTC=71509.90 signal=SHORT
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed) ✓
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA, MR→Donchian, mixed→filtered)
   - trading_system.py --portfolio: auto-detects regime, selects strategy, saves results/portfolio_decision.json ✓
@@ -107,3 +108,4 @@
 - 2026-04-08 09:31 UTC: cycle 10 — ticks 6+7 fired, --review PASSED (GO), dual_ma=+0.29 USDT PF=5.839 WR=60%; mainnet next
 - 2026-04-08 10:10 UTC: cycle 11 — mainnet_runner.py built ($100 cap, dual_ma, kill rails); ready to fire on live credentials
 - 2026-04-08 01:37 UTC: cycle 12 — --dry-run fixed (no longer blocked by credential gate); kill rails validated via dry-run; logs DRY_RUN entry
+- 2026-04-08 01:41 UTC: cycle 13 — --paper-live added to mainnet_runner; fetches real Binance prices (no creds); tick 1: BTC=71509.90 SHORT

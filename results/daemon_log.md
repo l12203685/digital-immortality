@@ -269,3 +269,13 @@ Pushed. Next action: provide mainnet API credentials.
 Branch 1.1 — `--dry-run` was silently broken (credential gate fired before dry-run logic). Fixed: dry-run now bypasses the gate, still runs kill-rail validation, and logs a `DRY_RUN` entry. Full mainnet path is now testable without credentials.
 
 **Gate to live trade:** set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET`, then `python -m trading.mainnet_runner --tick`.
+
+## Cycle 13 — 2026-04-08T01:41 UTC
+
+**Branch 1.1 — `--paper-live` added to mainnet_runner.**
+
+- Credentials still pending; unblocked signal validation on real prices
+- `--paper-live`: fetches real BTC/USDT:USDT 1d OHLCV from Binance (public API, no auth)
+- Runs dual_ma signal, logs to `results/paper_live_log.jsonl`
+- Tick 1: BTC=71509.90 USDT, signal=SHORT
+- Gate to live unchanged: set BINANCE_MAINNET_KEY/SECRET → `--tick`
