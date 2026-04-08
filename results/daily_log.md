@@ -3,6 +3,24 @@
 Recursive engine cycle history.
 
 
+## Cycle 45 — 2026-04-08T16:00Z
+
+**Branches pushed**: 2 parallel (2.2 JSONL distillation + 1.1 RSI strategy)
+
+### Branch 2.2: 202311 JSONL Distillation
+- 202311 (Nov 2023 — BTC bull run 28k→37k): 3 micro-patterns extracted
+- **MD-49**: 趨勢行情增倉不減倉 — In confirmed trend, tighten stops not exits; taking partial profit is the biggest alpha leak; position duration wins in beta moves
+- **MD-50**: 方向≠時機 — Direction (regime) and entry timing are orthogonal skills; decouple and practice separately; confirm direction first, optimize entry second
+- **MD-51**: OOS月份數≥IS月份數 — OOS test period ≥ IS period; set OOS length before running IS optimization; shorter OOS = validating on noise
+- dna_core.md: 127 lines, 51 MDs; next: 202310
+
+### Branch 1.1: RSIFilter Added to strategies.py
+- `_rsi()` helper (Wilder RSI, period=14, returns 50.0 if insufficient data)
+- `RSIFilter` class: gates LONG signals by RSI>50, SHORT by RSI<50 — eliminates exhaustion-point entries
+- New strategy instances: `dual_ma_rsi_btc_daily`, `dual_ma_rsi_filtered`
+- NAMED_STRATEGIES: 6 → 8 strategies (`DualMA_RSI`, `DualMA_RSI_filtered` added)
+- strategies.py: 187 → 255 lines
+
 ## Cycle 1 — 2026-04-07T18:12Z
 
 **Branches pushed**: 4/6 (survival, platform, continuous-learning, behavioral-equivalence)

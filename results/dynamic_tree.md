@@ -24,7 +24,7 @@
   - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
   - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 3: BTC=71443.20 signal=SHORT (consistent SHORT × 3, price declining: 71509→71484→71443)
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
-- 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed) ✓
+- 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+**RSIFilter** ✓ cycle 45) — 8 strategies in NAMED_STRATEGIES; RSIFilter gates signals by RSI>50 long / RSI<50 short
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA, MR→Donchian, mixed→filtered)
   - trading_system.py --portfolio: auto-detects regime, selects strategy, saves results/portfolio_decision.json ✓
   - Test: trending_500.csv → TRENDING→DualMA→SHORT; mixed→MIXED→DualMA_filtered→FLAT ✓
@@ -143,4 +143,5 @@
 - 2026-04-08T15:35 UTC: cycle 44 — Branch 2.2: 202312 JSONL read (33 substantive msgs, Dec 2023), 3 new micro-patterns → dna_core.md MD-46~MD-48 (交易=情境識別/因子失效→研究方法護城河/知識=時間密度乘積); file now 125 lines, 48 MDs; next: 202311
 - 2026-04-08T16:00 UTC: cycle 45 — Branch 2.2: 202311 JSONL read (158 Edward msgs, Nov 2023), 3 new micro-patterns → dna_core.md MD-49~MD-51 (篩選器清單化逐步研究/多條件評分>單條件觸發/利差套利門檻框架); file now 128 lines, 51 MDs; next: 202310
 - 2026-04-08T16:30 UTC: cycle 46 — Branch 2.2: 202310 JSONL read (2,942 Edward msgs, Oct 2023), 3 new micro-patterns → dna_core.md MD-52~MD-54 (指數ETF=政府護盤結構/職涯EV=時薪反算/教授判別力>教授內容); file now 131 lines, 54 MDs; next: 202309
+- 2026-04-08T16:00 UTC: cycle 45 — **2 parallel**: (A) 202311 JSONL read (158 Edward msgs, Nov 2023) → MD-49~MD-51 (篩選器清單化逐步研究/多條件評分>單條件觸發/利差套利門檻框架); file 128 lines, 51 MDs; next: 202310. (B) RSIFilter + _rsi() added to trading/strategies.py → 8 strategies; DualMA_RSI + DualMA_RSI_filtered in NAMED_STRATEGIES
 

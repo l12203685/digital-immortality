@@ -165,6 +165,68 @@ class DonchianConfirmed(Donchian):
 
 
 # ---------------------------------------------------------------------------
+# _rsi — Wilder RSI helper
+# ---------------------------------------------------------------------------
+
+def _rsi(closes: List[float], period: int = 14) -> float:
+    """Wilder RSI from a sequence of closes. Returns 50.0 if insufficient data."""
+    if len(closes) < period + 1:
+        return 50.0
+    deltas = [closes[i] - closes[i - 1] for i in range(1, len(closes))]
+    recent = deltas[-period:]
+    avg_gain = sum(d for d in recent if d > 0) / period
+    avg_loss = sum(abs(d) for d in recent if d < 0) / period
+    if avg_loss == 0:
+        return 100.0
+    rs = avg_gain / avg_loss
+    return 100.0 - (100.0 / (1.0 + rs))
+
+
+# ---------------------------------------------------------------------------
+# RSIFilter — suppress signals that contradict RSI momentum
+# ---------------------------------------------------------------------------
+
+class RSIFilter:
+    """
+    Suppresses signals that contradict RSI momentum.
+
+    LONG signal kept only when RSI > rsi_long_min (default 50) — momentum up.
+    SHORT signal kept only when RSI < rsi_short_max (default 50) — momentum down.
+    Eliminates counter-trend entries at exhaustion points.
+    """
+
+    def __init__(
+        self,
+        strategy,
+        period: int = 14,
+        rsi_long_min: float = 50.0,
+        rsi_short_max: float = 50.0,
+    ):
+        self.strategy = strategy
+        self.period = period
+        self.rsi_long_min = rsi_long_min
+        self.rsi_short_max = rsi_short_max
+
+    def __call__(self, bars: List[Bar]) -> Signal:
+        signal = self.strategy(bars)
+        if signal == 0:
+            return 0
+        closes = [b["close"] for b in bars]
+        rsi = _rsi(closes, self.period)
+        if signal == 1 and rsi < self.rsi_long_min:
+            return 0
+        if signal == -1 and rsi > self.rsi_short_max:
+            return 0
+        return signal
+
+    def __repr__(self) -> str:
+        return (
+            f"RSIFilter({self.strategy}, period={self.period}, "
+            f"long_min={self.rsi_long_min}, short_max={self.rsi_short_max})"
+        )
+
+
+# ---------------------------------------------------------------------------
 # Convenience: default instances for BTC daily
 # ---------------------------------------------------------------------------
 dual_ma_btc_daily = DualMA(fast=10, slow=30)
@@ -176,6 +238,10 @@ dual_ma_filtered = RegimeFilter(DualMA(fast=10, slow=30), trend_period=50, slope
 donchian_filtered = RegimeFilter(Donchian(period=20), trend_period=50, slope_bars=5, min_slope_pct=0.10)
 donchian_confirmed_filtered = RegimeFilter(DonchianConfirmed(period=20), trend_period=50, slope_bars=5, min_slope_pct=0.10)
 
+# RSI-filtered versions
+dual_ma_rsi_btc_daily = RSIFilter(DualMA(fast=10, slow=30))
+dual_ma_rsi_filtered = RSIFilter(RegimeFilter(DualMA(fast=10, slow=30), trend_period=50, slope_bars=5, min_slope_pct=0.10))
+
 NAMED_STRATEGIES: Dict[str, object] = {
     "DualMA_10_30": dual_ma_btc_daily,
     "Donchian_20": donchian_btc_daily,
@@ -183,4 +249,6 @@ NAMED_STRATEGIES: Dict[str, object] = {
     "DualMA_filtered": dual_ma_filtered,
     "Donchian_filtered": donchian_filtered,
     "DonchianConfirmed_filtered": donchian_confirmed_filtered,
+    "DualMA_RSI": dual_ma_rsi_btc_daily,
+    "DualMA_RSI_filtered": dual_ma_rsi_filtered,
 }
