@@ -1039,3 +1039,15 @@ Cycle 46 done.
 - **MD-54** 教授判別力>教授內容 — best teaching transfers ability to evaluate info quality, not just content
 
 `dna_core.md`: 131 lines, **54 MDs**. Next: 202309.
+
+## Cycle 22 — 2026-04-08 04:42:29 UTC
+
+Cycle 47 done.
+
+**Branch 2.2 — 202309 (193 Edward msgs, Sep 2023) → 3 MDs written:**
+
+- **MD-55** 框架跨域=真正內化 — framework truly internalized when it auto-triggers outside work (Avalon game → Bayesian weekly recap with same rigor as trading)
+- **MD-56** 槓桿決策先代數化 — build the algebra formula (y×unit÷maintenance=x) before plugging numbers; formulaic = auditable
+- **MD-57** 策略開發先定搜尋空間 — define IS/OOS length, rebalance freq, position count before optimizing; undefined search space = random walk
+
+`dna_core.md`: 134 lines, **57 MDs**. Next: 202308.
