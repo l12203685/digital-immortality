@@ -4759,3 +4759,16 @@ Highest-derivative gap: SOP series at #29 (Jun 4). Every upstream SOP (#27 regim
 **Series: SOP #01~#30 COMPLETE.**
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 155 — 2026-04-08 22:18:35 UTC
+
+**Cycle 155 done.**
+
+Gap: SOP #29 fires the monitoring alert but no SOP covered what to do *during* the drawdown. MD-42/55/98/32 in DNA, no teachable product. Fixed.
+
+**Shipped:**
+- `docs/knowledge_product_30_drawdown_recovery_sop.md` — 5 gates: G0 pre-commit rules before first tick → G1 equity curve MA_20 size ladder (100%/50%/25%/0%) → G2 survival_rate ≥0.6 check before re-entry → G3 root-cause triage (regime/execution/noise) → G4 evidence-gated full-size restoration (10-trade window) → G5 post-mortem every DD >8%
+- `docs/publish_thread_sop30_twitter.md` — hook: *"You know how to enter a trade. Do you know what to do when you're 12% underwater?"*
+- Queue extended to **Jun 6** (#01~#30, 58-day target)
+
+**Next blocker:** Edward posts SOP #01.
