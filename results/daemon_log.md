@@ -3197,3 +3197,13 @@ Next highest derivative: fix `generic_strategy_failure` misalignment OR advance 
 Branch 2.3 re-validated at 303-MD scale: **13/14 ALIGNED (93%)**. One misalignment: `generic_strategy_failure` — the DNA core doesn't cleanly trigger `DEFINE_KILL_CONDITIONS_FIRST` for strategy failure scenarios.
 
 Next action: either fix the `generic_strategy_failure` boot test alignment (add explicit kill-condition language to dna_core.md) or advance Branch 1.1 with a paper-live tick to confirm trading signal state.
+
+## Cycle 83 — 2026-04-08 UTC
+
+**Branch 2.2** highest-derivative. 201706 deep pass (1246 Edward msgs). Distilled 3 new micro-decisions:
+
+- **MD-307**: 投資基準=存活確定性先於報酬率 — S&P500 is the minimum valid benchmark; 定存 invalid baseline (lower survival certainty than US market); selecting weak baseline creates false superiority
+- **MD-308**: 長期持倉=先問「10年後還在嗎」 — individual stocks have non-zero exit probability; index ETFs survive via dynamic replacement; survivability is prerequisite for long-term compounding
+- **MD-309**: 職業路徑=最大損失歸屬分析 — prefer paths where max loss is limited to own capital; organizational loss tail-risk is uncontrolled; own capital loss is quantifiable and stop-loss-able
+
+**dna_core.md: 309 MDs.** Next: 201705 deep pass.
