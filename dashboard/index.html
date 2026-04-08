@@ -363,7 +363,7 @@ body {
   <h1><span>數位永生</span> &mdash; Digital Immortality Dashboard</h1>
   <div class="header-meta">
     <span class="clock" id="clock"></span>
-    <span><span class="refresh-dot"></span> auto-refresh 60s</span>
+    <span><span class="refresh-dot"></span> auto-refresh 5min</span>
   </div>
 </div>
 
@@ -771,7 +771,7 @@ async function refresh() {
 }
 
 refresh();
-setInterval(refresh, 60000);
+setInterval(refresh, 300000);
 </script>
 </body>
 </html>

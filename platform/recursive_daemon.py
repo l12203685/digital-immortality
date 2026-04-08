@@ -65,12 +65,22 @@ def build_system_prompt(dna: str) -> str:
     return f"{dna}\n\n---\n\n{tree}"
 
 
+DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1491248776088653974/cRtU1B6hhbdqsvpQK4CsoR5N7CyMcnAkwsrvwV6LlTK5tlSX8sX8Qup9uOb34ilwzs4S"
+
+
 def append_log(cycle: int, response: str) -> None:
     LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
     entry = f"\n## Cycle {cycle} — {ts}\n\n{response}\n"
     with open(LOG_PATH, "a", encoding="utf-8") as f:
         f.write(entry)
+    # Post to Discord #thinking
+    try:
+        import requests
+        msg = f"[daemon cycle {cycle}] {response[:1900]}"
+        requests.post(DISCORD_WEBHOOK, json={"content": msg, "username": "Daemon"}, timeout=10)
+    except Exception:
+        pass  # Discord post is best-effort
 
 
 def try_git_commit(cycle: int) -> None:
