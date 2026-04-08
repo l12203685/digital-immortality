@@ -15,36 +15,35 @@
 html{font-size:16px}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
 
-/* ── Header ── */
 header{display:flex;justify-content:space-between;align-items:center;padding:.6rem 1.2rem;border-bottom:1px solid #2a2a4a}
 header h1{font-size:1.1rem;font-weight:700;color:var(--bright);letter-spacing:.08em}
 .header-right{display:flex;align-items:center;gap:.7rem;font-size:.78rem;color:#888;font-family:var(--mono)}
 .live-dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
-/* ── Hero ── */
 .hero{text-align:center;padding:1.8rem 1rem 1.2rem}
 .hero-main{font-size:1.8rem;font-weight:900;color:var(--bright);line-height:1.3}
 .hero-sub{margin-top:.5rem;font-size:.95rem;color:#888;font-family:var(--mono)}
+.hero-deadline{margin-top:.3rem;font-size:.75rem;color:var(--red);font-family:var(--mono)}
 
-/* ── Cards grid ── */
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;padding:0 1rem;max-width:600px;margin:0 auto;width:100%}
-.card{background:var(--card);border-radius:14px;padding:.9rem 1rem;display:flex;gap:.8rem;align-items:flex-start;cursor:pointer;border:2px solid transparent;transition:border-color .15s}
-.card:hover,.card.selected{border-color:#444}
+.card{background:var(--card);border-radius:14px;padding:.9rem 1rem;display:flex;gap:.8rem;align-items:flex-start;cursor:default;border:2px solid transparent;transition:border-color .15s}
+.card:hover{border-color:#444}
 .card-icon{font-size:1.8rem;flex-shrink:0;line-height:1}
 .card-body{flex:1;min-width:0}
 .card-title{font-size:1rem;font-weight:700;color:var(--bright);display:flex;align-items:center;gap:.45rem}
 .card-status{font-size:.75rem;color:#999;margin-top:.25rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-detail{font-size:.65rem;color:#666;margin-top:.15rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block}
 .dot-green{background:var(--green)}.dot-yellow{background:var(--yellow)}.dot-red{background:var(--red)}.dot-grey{background:var(--grey)}
 
-/* ── Feed ── */
 .feed{flex:1;overflow-y:auto;padding:.8rem 1.2rem;margin-top:.6rem;border-top:1px solid #2a2a4a}
 .feed-title{font-size:.7rem;color:#555;text-transform:uppercase;letter-spacing:.06em;font-family:var(--mono);margin-bottom:.4rem}
 .feed-item{font-size:.72rem;font-family:var(--mono);color:#666;padding:.18rem 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .feed-item .ts{color:#555}
 
-/* ── Responsive ── */
+.stats{display:flex;justify-content:center;gap:2rem;padding:.5rem 1rem;font-size:.7rem;color:#555;font-family:var(--mono);border-top:1px solid #2a2a4a}
+
 @media(min-width:520px){.cards{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:360px){
   .hero-main{font-size:1.3rem}
@@ -66,9 +65,10 @@ header h1{font-size:1.1rem;font-weight:700;color:var(--bright);letter-spacing:.0
   </div>
 </header>
 
-<div class="hero" id="hero">
+<div class="hero">
   <div class="hero-main" id="hero-main">Loading...</div>
   <div class="hero-sub" id="hero-sub"></div>
+  <div class="hero-deadline" id="hero-deadline"></div>
 </div>
 
 <div class="cards" id="cards"></div>
@@ -78,10 +78,11 @@ header h1{font-size:1.1rem;font-weight:700;color:var(--bright);letter-spacing:.0
   <div id="feed"></div>
 </div>
 
-<script>
-const RAW = 'https://raw.githubusercontent.com/l12203685/digital-immortality/main/results';
+<div class="stats" id="stats"></div>
 
-// Clock (Taipei)
+<script>
+var RAW = 'https://raw.githubusercontent.com/l12203685/digital-immortality/main/results/dashboard_state.json';
+
 function tick() {
   var d = new Date();
   document.getElementById('clock').textContent = d.toLocaleTimeString('zh-TW', {
@@ -90,214 +91,53 @@ function tick() {
 }
 setInterval(tick, 1000); tick();
 
-// Fetch helper
-function get(url) {
-  return fetch(url + '?t=' + Date.now(), {cache: 'no-store'}).then(function(r) {
-    if (!r.ok) throw new Error(r.status);
-    return r.text();
-  });
-}
-
-// Card config: emoji, 2-char title, branch number
-var CARDS = [
-  {emoji: '\uD83D\uDCB0', title: '\u7D93\u6FDF', num: 1},
-  {emoji: '\uD83E\uDDE0', title: '\u884C\u70BA', num: 2},
-  {emoji: '\uD83D\uDCDA', title: '\u5B78\u7FD2', num: 3},
-  {emoji: '\uD83E\uDD1D', title: '\u793E\u4EA4', num: 4},
-  {emoji: '\uD83D\uDCE6', title: '\u5E73\u53F0', num: 5},
-  {emoji: '\uD83D\uDEE1\uFE0F', title: '\u5B58\u6D3B', num: 6}
-];
-
-// Parse dynamic_tree.md
-function parseTree(md) {
-  var lines = md.split('\n');
-  var regime = '', regimeSub = '';
-  var branches = {};
-  var evolution = [];
-  var currentNum = 0;
-
-  for (var i = 0; i < lines.length; i++) {
-    var L = lines[i];
-
-    // Regime section
-    if (L.match(/^攻擊：/)) { regime = L.replace(/^攻擊：/, '').trim(); }
-    if (L.match(/^中性：/)) { regimeSub = L.replace(/^中性：/, '').trim(); }
-
-    // Branch headers: ### N. Title
-    var bm = L.match(/^### (\d+)\.\s+(.+)/);
-    if (bm) {
-      currentNum = parseInt(bm[1]);
-      var title = bm[2];
-      var status = 'yellow';
-      if (title.indexOf('DEADLINE') !== -1 || title.indexOf('\u26A1') !== -1) status = 'red';
-      branches[currentNum] = {status: status, items: [], raw: title};
-      continue;
-    }
-
-    // Sub-items under current branch (first 3 only)
-    if (currentNum && L.match(/^- \d+\.\d+/)) {
-      var txt = L.replace(/^- \d+\.\d+\s*/, '').trim();
-      var st = 'yellow';
-      if (txt.indexOf('\u2713') !== -1 || txt.indexOf('DONE') !== -1 || txt.indexOf('done') !== -1) st = 'green';
-      if (txt.indexOf('blocked') !== -1 || txt.indexOf('\u5F85') !== -1 || txt.indexOf('users=0') !== -1) st = 'grey';
-      if (txt.indexOf('DEADLINE') !== -1 || txt.indexOf('\u26A1') !== -1) st = 'red';
-      if (branches[currentNum].items.length < 3) {
-        branches[currentNum].items.push({text: txt, status: st});
-      }
-    }
-
-    // Evolution log
-    if (L.match(/^- 20\d{2}-/)) {
-      var ev = L.replace(/^- /, '').trim();
-      evolution.push(ev);
-    }
-  }
-
-  // Determine overall status per branch from sub-items
-  for (var n in branches) {
-    var b = branches[n];
-    var statuses = b.items.map(function(it) { return it.status; });
-    if (statuses.indexOf('red') !== -1) b.dot = 'red';
-    else if (statuses.indexOf('yellow') !== -1) b.dot = 'yellow';
-    else if (statuses.every(function(s) { return s === 'green'; }) && statuses.length > 0) b.dot = 'green';
-    else if (statuses.indexOf('grey') !== -1) b.dot = 'grey';
-    else b.dot = 'yellow';
-  }
-
-  return {regime: regime, regimeSub: regimeSub, branches: branches, evolution: evolution.slice(-8).reverse()};
-}
-
-// Parse daemon_log.md (flat log lines)
-function parseDaemon(md) {
-  var lines = md.split('\n');
-  var items = [];
-  for (var i = lines.length - 1; i >= 0 && items.length < 8; i--) {
-    var L = lines[i].trim();
-    if (!L) continue;
-    // Match [timestamp] action lines
-    var m = L.match(/^\[(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}\s+\w+)\]\s+(.+)/);
-    if (m) {
-      var action = m[2];
-      // Skip boring lines
-      if (action.indexOf('Recalled memories') !== -1) continue;
-      if (action.indexOf('Auto-prune') !== -1) continue;
-      if (action.match(/^- \[/)) continue;
-      items.push({ts: m[1], action: action});
-    }
-  }
-  return items;
-}
-
-// Status labels per branch number
-var STATUS_LABELS = {
-  1: {red:'Deadline 07-07', yellow:'進行中', green:'上線'},
-  2: {red:'需校準', yellow:'學習中', green:'39 patterns'},
-  3: {red:'需修復', yellow:'運作中', green:'三層運作'},
-  4: {red:'需人', yellow:'等待中', green:'已建立', grey:'等朋友'},
-  5: {red:'需修復', yellow:'部署中', green:'已上線'},
-  6: {red:'需修復', yellow:'建設中', green:'已完成'}
-};
-
-function summarize(branch, num) {
-  if (!branch) return 'No data';
-  var labels = STATUS_LABELS[num] || {};
-  var dot = branch.dot || 'yellow';
-  if (labels[dot]) return labels[dot];
-  // Fallback: count done items
-  var done = branch.items.filter(function(it){return it.status==='green'}).length;
-  var total = branch.items.length;
-  if (total > 0) return done + '/' + total + ' done';
-  return '進行中';
-}
-
-// Time ago helper
-function ago(tsStr) {
-  // tsStr like "2026-04-08 10:45:00 UTC"
-  var d = new Date(tsStr.replace(' UTC', 'Z').replace(' ', 'T'));
-  if (isNaN(d)) return '';
-  var diff = Math.floor((Date.now() - d) / 60000);
-  if (diff < 1) return 'just now';
-  if (diff < 60) return diff + 'min ago';
-  if (diff < 1440) return Math.floor(diff / 60) + 'h ago';
-  return Math.floor(diff / 1440) + 'd ago';
-}
-
-// Render
-function render(tree, daemon) {
-  // Hero
-  var heroMain = document.getElementById('hero-main');
-  var heroSub = document.getElementById('hero-sub');
-  if (tree.regime) {
-    heroMain.textContent = tree.regime;
-    heroSub.textContent = tree.regimeSub ? '中性: ' + tree.regimeSub : '';
-  } else {
-    heroMain.textContent = '運行中';
-    heroSub.textContent = '';
-  }
-
-  // Cards
-  var cardsEl = document.getElementById('cards');
-  cardsEl.innerHTML = '';
-  CARDS.forEach(function(c) {
-    var b = tree.branches[c.num];
-    var dot = b ? b.dot : 'grey';
-    var status = b ? summarize(b, c.num) : 'No data';
-
-    var card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML =
-      '<div class="card-icon">' + c.emoji + '</div>' +
-      '<div class="card-body">' +
-        '<div class="card-title"><span class="dot dot-' + dot + '"></span>' + c.title + '</div>' +
-        '<div class="card-status">' + esc(status) + '</div>' +
-      '</div>';
-    card.onclick = function() {
-      document.querySelectorAll('.card').forEach(function(el) { el.classList.remove('selected'); });
-      card.classList.add('selected');
-    };
-    cardsEl.appendChild(card);
-  });
-
-  // Feed: merge evolution + daemon, show last 5
-  var feedEl = document.getElementById('feed');
-  var feedItems = [];
-
-  // Evolution items
-  tree.evolution.forEach(function(ev) {
-    var m = ev.match(/^(\d{4}-\d{2}-\d{2}[T ][\d:]+(?:\s*UTC)?):?\s*(.*)/);
-    if (m) feedItems.push({ts: m[1], text: m[2]});
-    else feedItems.push({ts: '', text: ev});
-  });
-
-  // Daemon items
-  daemon.forEach(function(d) {
-    feedItems.push({ts: d.ts, text: d.action});
-  });
-
-  // Sort by recency (rely on order, take first 5)
-  var shown = feedItems.slice(0, 5);
-  feedEl.innerHTML = shown.map(function(f) {
-    var a = ago(f.ts);
-    return '<div class="feed-item"><span class="ts">' + (a || esc(f.ts)) + '</span> \u2014 ' + esc(f.text) + '</div>';
-  }).join('');
-}
-
 function esc(s) {
   var d = document.createElement('div');
   d.textContent = s || '';
   return d.innerHTML;
 }
 
-// Main
+function render(data) {
+  document.getElementById('hero-main').textContent = data.regime || 'Running';
+  document.getElementById('hero-sub').textContent = data.regime_neutral ? '\u4e2d\u6027: ' + data.regime_neutral : '';
+  document.getElementById('hero-deadline').textContent = data.deadline
+    ? 'DEADLINE ' + data.deadline + ' \u2014 ' + data.days_remaining + ' days'
+    : '';
+
+  var cardsEl = document.getElementById('cards');
+  cardsEl.innerHTML = '';
+  (data.cards || []).forEach(function(c) {
+    var div = document.createElement('div');
+    div.className = 'card';
+    div.innerHTML =
+      '<div class="card-icon">' + esc(c.icon) + '</div>' +
+      '<div class="card-body">' +
+        '<div class="card-title"><span class="dot dot-' + esc(c.color) + '"></span>' + esc(c.name) + '</div>' +
+        '<div class="card-status">' + esc(c.status) + '</div>' +
+        '<div class="card-detail">' + esc(c.detail) + '</div>' +
+      '</div>';
+    cardsEl.appendChild(div);
+  });
+
+  var feedEl = document.getElementById('feed');
+  feedEl.innerHTML = (data.activity || []).map(function(a) {
+    return '<div class="feed-item"><span class="ts">' + esc(a.time) + '</span> \u2014 ' + esc(a.text) + '</div>';
+  }).join('');
+
+  var s = data.stats || {};
+  document.getElementById('stats').innerHTML =
+    '<span>cycles: ' + (s.daemon_cycles || 0) + '</span>' +
+    '<span>MDs: ' + (s.total_mds || 0) + '</span>' +
+    '<span>dna: ' + (s.dna_core_lines || 0) + 'L</span>' +
+    '<span>updated: ' + esc(data.updated || '') + '</span>';
+}
+
 async function refresh() {
   try {
-    var results = await Promise.all([
-      get(RAW + '/dynamic_tree.md'),
-      get(RAW + '/daemon_log.md')
-    ]);
-    var tree = parseTree(results[0]);
-    var daemon = parseDaemon(results[1]);
-    render(tree, daemon);
+    var r = await fetch(RAW + '?t=' + Date.now(), {cache: 'no-store'});
+    if (!r.ok) throw new Error(r.status);
+    var data = await r.json();
+    render(data);
   } catch (e) {
     document.getElementById('hero-main').textContent = 'Offline';
     document.getElementById('hero-sub').textContent = e.message;

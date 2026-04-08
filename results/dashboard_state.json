@@ -1,0 +1,78 @@
+{
+  "updated": "2026-04-08T14:38+08",
+  "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
+  "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
+  "deadline": "2026-07-07",
+  "days_remaining": 89,
+  "cards": [
+    {
+      "name": "經濟",
+      "icon": "💰",
+      "status": "Trading code: strategies.py (DualMA+Donchian+RegimeFilter...",
+      "color": "red",
+      "detail": "RSIFilter gates signals by RSI>50 long / RSI<50 short"
+    },
+    {
+      "name": "行為",
+      "icon": "🧠",
+      "status": "退休計畫 context：templates/example_dna.md §8 added ✓ (target,...",
+      "color": "green",
+      "detail": "退休計畫 context：templates/example_dna.md §8 added ✓ (target, tr"
+    },
+    {
+      "name": "學習",
+      "icon": "📚",
+      "status": "DNA 演化：dna_core + 15 micro-decisions (MD-01~MD-15, 202503...",
+      "color": "green",
+      "detail": "DNA 演化：dna_core + 15 micro-decisions (MD-01~MD-15, 202503 ✓)"
+    },
+    {
+      "name": "社交",
+      "icon": "🤝",
+      "status": "Collective intelligence（Phase 3）",
+      "color": "grey",
+      "detail": "Collective intelligence（Phase 3）"
+    },
+    {
+      "name": "平台",
+      "icon": "📦",
+      "status": "Documentation：README + SKILL_zh-TW updated ✓",
+      "color": "green",
+      "detail": "Documentation：README + SKILL_zh-TW updated ✓"
+    },
+    {
+      "name": "存活",
+      "icon": "🛡️",
+      "status": "Multi-provider：platform/multi_provider.py created ✓ (Anth...",
+      "color": "green",
+      "detail": "Multi-provider：platform/multi_provider.py created ✓ (Anthrop"
+    }
+  ],
+  "activity": [
+    {
+      "time": "3min ago",
+      "text": "API Error: 529 {\"type\":\"error\",\"error\":{\"type\":\"overloaded_error\",\"message\":\"..."
+    },
+    {
+      "time": "just now",
+      "text": "`templates/dna_core.md`: 159 MDs. Next: 202102."
+    },
+    {
+      "time": "just now",
+      "text": "202103 → MD-157~159 (49 substantive Edward msgs, Mar 2021):"
+    },
+    {
+      "time": "just now",
+      "text": "Gap: 202104 already done (MD-154~156 in file, tree was stale). Updated tree."
+    },
+    {
+      "time": "just now",
+      "text": "Branch 2.2 — gap reconcile + 202103 → MD-157~159 (159 MDs total):"
+    }
+  ],
+  "stats": {
+    "daemon_cycles": 70,
+    "total_mds": 159,
+    "dna_core_lines": 75
+  }
+}

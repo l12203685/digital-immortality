@@ -199,6 +199,7 @@ def main():
             else:
                 text = run_cycle_api(client, system, args.model, cycle)
             append_log(cycle, text)
+            subprocess.run([sys.executable, str(REPO_ROOT / "platform" / "generate_dashboard_state.py")], cwd=REPO_ROOT, capture_output=True, timeout=30)
             if not args.no_commit:
                 try_git_commit(cycle)
         except Exception as e:
