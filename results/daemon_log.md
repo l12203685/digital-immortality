@@ -981,3 +981,15 @@ Branch 2.2 — 202312 (33 substantive Edward msgs, Dec 2023) → MD-46~MD-48 wri
 - **MD-48 知識=時間密度乘積** — 真正內化市場需大量重複觀察（3年×每日前百股票）；無法跳過時間密度
 
 `dna_core.md`: 125 lines, **48 MDs**. Next: 202311.
+
+## Cycle 19 — 2026-04-08 04:28:26 UTC
+
+**Cycle 44 done.** Pushed.
+
+Branch 2.2 — 202312 JSONL distilled → 3 MDs written to `dna_core.md`:
+
+- **MD-46** 交易=情境識別 — alpha不在資料量，在情境識別精度
+- **MD-47** 因子失效→研究方法護城河 — 研究方法比因子本身更持久
+- **MD-48** 知識=時間密度乘積 — 3年×每日觀察才真正內化，無法跳過
+
+`dna_core.md`: 125 lines, **48 MDs**. Next: 202311.
