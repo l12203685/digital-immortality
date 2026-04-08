@@ -1243,3 +1243,13 @@ Branch 2.2 — gap reconcile + 202301 distill.
 - **MD-81** 外部API=有硬截止日的風險項 — 關鍵API有強制升版日期；不追蹤=系統在特定日死亡；所有外部依賴必須作為帶截止日的風險項追蹤
 
 `templates/dna_core.md`: **81 MDs**. Next: 202212.
+
+## Cycle 3 — 2026-04-08 05:08:39 UTC
+
+Done. **202301 → MD-79~81** written, gap reconciled (202302 was already done), pushed.
+
+- **MD-79** 交易員=創意×執行兩分法 — ideation and implementation are independent capabilities; diagnose which end is the bottleneck
+- **MD-80** 策略拓展=先穩主商品再橫向 — deepen primary product (multi-objective opt + monthly SOP) before expanding to new assets
+- **MD-81** 外部API=有硬截止日的風險項 — forced upgrade deadlines kill systems silently; track all external API dependencies as dated risk items
+
+`dna_core.md`: **81 MDs**. Next: **202212**.
