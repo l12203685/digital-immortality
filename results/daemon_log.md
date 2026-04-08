@@ -3164,3 +3164,15 @@ Next: 201705+201704 ext.
 - **MD-303**: 生產力在順從型組織=邊際回報100%歸組織 — when management KPI is "no complaints" not "output per person", productivity gains accrue entirely to org; rational response = seek exit, not work harder
 
 **dna_core.md: 303 MDs.** Next: deep pass on earlier months or 201703 ext.
+
+## Cycle 78 — 2026-04-08 14:54:07 UTC
+
+**Cycle 80 done.**
+
+Branch 2.2 ext pass on 201705+201704 (506 Edward msgs). Three new MDs written to `templates/dna_core.md` (**303 MDs**):
+
+- **MD-301** 薪資目標逆推=稅後實領出發 — real take-home → gross-up → path ceiling check; ceiling < requirement = path eliminated
+- **MD-302** 投資ROI=先換算年化%比基準 — absolute number claims → annualized %; if replicable with basic strategy + capital, it's scale not skill
+- **MD-303** 順從型組織=生產力邊際回報歸組織 — KPI is "no complaints" not "output" → productivity gains accrue to org 100% → seek exit, not harder work
+
+Pushed to main. Next: deep ext pass on earlier periods or 201703+.
