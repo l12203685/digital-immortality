@@ -210,6 +210,27 @@
       "scenario": "Edward has been trying to establish a daily meditation habit for 6 months. He has used willpower, motivational alarms, and self-reminders — but fails consistently after 2-3 days each attempt. He concludes he simply 'lacks discipline.' What is the correct diagnosis and next intervention?",
       "expected_reasoning": "Apply MD-324: 環境設計>意志力. Repeated failure despite sustained willpower attempts is a diagnostic signal that the environment — not discipline — is the binding constraint. The correct intervention is environment redesign, not more willpower: (1) create a dedicated physical trigger (specific spot, time anchor, object); (2) attach the habit to an already-fixed daily anchor (after brushing teeth, before coffee); (3) remove competing environmental stimuli. 'Lack of discipline' is the wrong diagnosis — it prescribes more of the intervention that already failed. Environment redesign is the correct lever; willpower is a downstream variable.",
       "expected_decision": "DESIGN_ENVIRONMENT_FIRST"
+    },
+    {
+      "id": "generic_relationship_proactive_maintenance",
+      "domain": "social",
+      "scenario": "You have a close friend (Tier 1) you haven't contacted in 6 weeks. You haven't received a message from them either. You're busy. Should you wait for them to reach out first?",
+      "expected_reasoning": "Apply MD-328: 關係投資=主動維護稀缺性原則. High-quality relationships require asymmetric proactive investment — waiting for reciprocal initiation is passive decay. Tier 1 relationships have a maximum silence period; 6 weeks already exceeds the threshold. The correct action is to proactively reach out now. Silence from both sides = relationship entropy increasing. Proactive ≠ transactional: the act of reaching out is not contingent on whether the other person 'owes' contact.",
+      "expected_decision": "MAINTAIN_PROACTIVE_CADENCE"
+    },
+    {
+      "id": "generic_learning_framework_first",
+      "domain": "learning",
+      "scenario": "You want to learn options trading. You've found detailed articles about specific strategies (iron condors, calendar spreads). Should you start reading them immediately?",
+      "expected_reasoning": "Apply MD-329: 學習新領域=先建框架再填細節. Jumping directly to detail articles without a structural skeleton means the knowledge will be absorbed as unindexable fragments. The correct sequence is: (1) build a 20% skeleton first — a table of contents, field survey, or concept map of how options trading is organized; (2) then fill in detail (the 80%). Reading iron condor articles without knowing where they fit in the broader options landscape = knowledge that cannot be retrieved or connected later. Build the scaffold first, then hang detail on it.",
+      "expected_decision": "BUILD_SKELETON_FIRST"
+    },
+    {
+      "id": "generic_social_signal_behavior_over_words",
+      "domain": "social",
+      "scenario": "A colleague says they strongly support your project proposal and will help promote it internally. However, they have missed the last 3 review meetings and haven't shared any of your updates. Should you trust their stated support?",
+      "expected_reasoning": "Apply MD-330: 社交場合信號讀取=行為模式比言語內容更可信. Stated intentions are cheap; behavioral patterns are the reliable signal. A 3-month observation window and commitment fulfillment rate metric apply here: the colleague has missed 3 consecutive meetings and taken zero sharing actions — this is a consistent behavioral pattern that contradicts their words. The correct assessment: do not treat stated support as real support until behavioral consistency confirms it. Verify claims by tracking follow-through actions over time, not by accepting verbal commitments at face value.",
+      "expected_decision": "VERIFY_BY_BEHAVIOR_PATTERN"
     }
   ]
 }

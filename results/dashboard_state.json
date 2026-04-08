@@ -1,7 +1,7 @@
 {
-  "updated": "2026-04-09T06:24+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#31 COMPLETE → posting_queue.md updated (#01~#31, Apr 9–Jun 8); Edward posts threads; all 5 kernels have standalone SOPs ✅; SOP #31 Parsimony fills complexity/evidence-ratio gap (MD-97/113/114/116/98)",
-  "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
+  "updated": "2026-04-09T06:28+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#32 COMPLETE → posting_queue.md updated (#01~#32, Apr 9–Jun 10); SOP #31 Parsimony fills complexity/evidence-ratio gap; SOP #32 Domain 8 健康資本 gap CLOSED ✅",
+  "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions pre-committed)",
   "deadline": "2026-07-07",
   "days_remaining": 89,
   "cards": [
@@ -50,29 +50,29 @@
   ],
   "activity": [
     {
-      "time": "just now",
+      "time": "3min ago",
       "text": "Next blocker: Edward posts SOP #01."
     },
     {
-      "time": "just now",
+      "time": "3min ago",
       "text": "- Queue extended to Jun 8 (#01~#31, 60-day target)"
     },
     {
-      "time": "just now",
+      "time": "3min ago",
       "text": "- `docs/publish_thread_sop31_twitter.md` — hook: *\"Your strategy has 4 parame..."
     },
     {
-      "time": "just now",
+      "time": "3min ago",
       "text": "- `docs/knowledge_product_31_parsimony_complexity_sop.md` — 5 gates: mechanis..."
     },
     {
-      "time": "just now",
+      "time": "3min ago",
       "text": "Shipped:"
     }
   ],
   "stats": {
     "daemon_cycles": 156,
-    "total_mds": 328,
-    "dna_core_lines": 87
+    "total_mds": 330,
+    "dna_core_lines": 426
   }
 }

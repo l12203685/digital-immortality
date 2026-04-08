@@ -3,6 +3,43 @@
 Recursive engine cycle history.
 
 
+## Cycle 156 — 2026-04-09T00:00Z
+
+**Branches**: 2 parallel (7.34 SOP #31 cognitive capital + 2.3 consistency test extension)
+
+### Branch 7.34: SOP #31 Cognitive Capital & Peak Performance Protocol — COMPLETE ✅
+
+- `docs/knowledge_product_31_cognitive_capital_sop.md` — 5 gates:
+  - G0: Health capital reclassification (MD-286: body = highest-leverage asset, not cost center; frame all health spend as investment vs. alternatives)
+  - G1: Peak window lock (MD-323: identify 2–4hr morning block; deep-work ONLY; defer all else)
+  - G2: Consistency-over-intensity check (MD-287: volatility lens — regular 45min×5 >> occasional 3hr×1; 3-skip kill condition)
+  - G3: Environment design gate (MD-324: autopilot test — can habit run without willpower? pre-pack, pre-schedule, remove friction)
+  - G4: Decision frequency audit (MD-322: >3 same health decision = SYSTEM_FAILURE; pre-commit top recurring health decisions)
+  - G5: Preventive maintenance schedule (MD-288: blood panel/dental/vision as correctly-priced insurance; minimum schedule specified)
+- Self-test: Monday 09:15 deep-work + sync request + 2-week gym gap + 18-month dental gap → G1 defer sync, G2 30min gym today, G4 gym timing pre-commit, G5 book dental this week
+- Kill conditions: ≥3 gym skips → redesign environment; peak window violated >3×/week → restructure; preventive maintenance >6mo overdue → book this week
+- `docs/publish_thread_sop31_twitter.md` — 12 tweets (hook: body as non-replicable asset → G0~G5 → self-test close)
+- Posting queue extended to **Jun 8** (60-day target); **series now SOP #01~#31**
+- **Domain 8 生活維護 health-capital gap CLOSED ✅** — SOP #13 covered decision/peak/environment (MD-322~324); SOP #31 now covers health capital + consistency + prevention (MD-286~288)
+
+### Branch 2.3: Consistency test extended — 33 scenarios
+
+- **3 new scenarios** added to `templates/generic_boot_tests.json`:
+  - `generic_relationship_proactive_maintenance` — MD-328: proactive relationship maintenance; expected=MAINTAIN_PROACTIVE_CADENCE
+  - `generic_learning_framework_first` — MD-329: skeleton before detail absorption; expected=BUILD_SKELETON_FIRST
+  - `generic_social_signal_behavior_over_words` — MD-330: behavior > stated intent; expected=VERIFY_BY_BEHAVIOR_PATTERN
+- **3 new alignment checks** added to `consistency_test.py`: MAINTAIN_PROACTIVE_CADENCE / BUILD_SKELETON_FIRST / VERIFY_BY_BEHAVIOR_PATTERN
+- `social` domain added to `_DOMAIN_TO_SECTION_KEYWORDS`
+- Test result: 31/33 deterministic ALIGNED (2 new social scenarios require full-DNA LLM run — expected; existing 30 all pass)
+- Baseline saved to `results/consistency_baseline.json`
+
+### Next cycle
+- Edward action: post SOP threads #01~#31 on X (queue: Apr 9–Jun 8)
+- Edward action: provide BINANCE_MAINNET_KEY/SECRET → live trading
+- Branch 2.3: run full LLM cross-instance test on 33 scenarios against dna_core.md target: 33/33 ALIGNED
+- Branch 4.1: Samuel reviews samuel_dna.md in person (blocked on human)
+
+
 ## Cycle 122 — 2026-04-08T20:00Z
 
 **Branches**: 4 parallel (2.2 DNA extension + 2.3 consistency + 7.12 SOP #06 + 8.5 decision audit tool)
