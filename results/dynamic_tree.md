@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 126)
+> 最後更新：2026-04-09 UTC (cycle 127)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -23,7 +23,7 @@
   - **mainnet_runner.py built** ✓ — $100 cap, dual_ma only, kill conditions: MDD>10% WR<35% PF<0.85
   - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
   - **mainnet_activation_guide.md created ✓** (cycle 115) — exact 6-step activation: API key creation → credentials storage → fund wallet → dry-run → go live → loop; kill conditions documented; friction to $0 revenue now minimal
-  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 25: BTC=71190.69 signal=SHORT (consistent SHORT × 25, range $71.1k–$72.6k) (cycle 126)
+  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 26: BTC=71186.58 signal=SHORT (consistent SHORT × 26, range $71.1k–$72.6k) (cycle 127)
   - **paper_live_pnl_report.md created ✓** (cycle 124) — simulated SHORT P&L: +$0.37 (+0.37%) on $100 after 21 priced ticks; MFE=+$0.58 MAE=-$1.33; position profitable vs entry → mainnet case validated
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
@@ -105,6 +105,7 @@
 - consistency: `generic_life_system_recurring_decisions` + `generic_peak_cognitive_protection` → REDUCE_DECISION_FREQUENCY ✅ 24/24
 - **8.4 recurring decision audit — COMPLETE ✅** (cycle 100): `docs/recurring_decision_audit.md` — 10 recurring decisions pre-committed; next audit 2026-04-15
 - **8.5 decision_audit.py — BUILT ✅** (cycle 122): `tools/decision_audit.py` — log/audit/suggest CLI; 5 SYSTEM_FAILURE decisions identified: exercise (×6), lunch (×5), deep-work timing (×5), coffee-vs-tea (×4), portfolio check (×4); saves state to memory/decision_audit.json; automate top 3 = NEXT
+- **8.5 Automation #2 — COMPLETE ✅** (cycle 127): `docs/system_failure_automations.md` — top 3 SYSTEM_FAILURE decisions pre-committed: exercise (always yes, day-of-week schedule), lunch (morning_defaults rotation + 200TWD cap), deep-work block (09:00 hard start, no negotiation). Zero-EV decisions eliminated.
 
 ## 當前 regime
 攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.12 SOP #06 game theory COMPLETE → Edward posts threads #01~#06

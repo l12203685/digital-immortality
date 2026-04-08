@@ -3997,3 +3997,12 @@ Two parallel actions:
 **Branch 1.1** — tick 25: BTC=$71,190.69, SHORT × 25 (range $71.1k–$72.6k). Sole remaining blocker: set `BINANCE_MAINNET_KEY/SECRET` → first real revenue.
 
 **Branch 8.4** — Automation #1 shipped: `docs/morning_defaults.md`. Pre-committed defaults for 4 recurring decisions (meal rotation, 09:00 work-block start, exercise decision tree, learning resource sequence). Eliminates 171 min/week of zero-EV cognitive load. MD-322 compliant.
+
+## Cycle 127 — 2026-04-09T UTC
+
+**Branch 1.1** — paper-live tick 26: BTC=$71,186.58, signal=SHORT (consistent SHORT × 26, range $71.1k–$72.6k). System alive.
+
+**Branch 8.5** — Automation #2 shipped: `docs/system_failure_automations.md` — top 3 SYSTEM_FAILURE decisions pre-committed: exercise (always yes, day-of-week schedule), lunch (rotation + 200TWD cap), deep-work block (09:00 hard start). Zero-EV decisions eliminated.
+
+Highest derivative: trading loop alive; life-ops cognitive load further reduced.
+Sole external blocker: Edward sets `BINANCE_MAINNET_KEY`/`SECRET` → first real revenue tick.
