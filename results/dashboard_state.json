@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T01:56+08",
+  "updated": "2026-04-09T02:02+08",
   "regime": "1.1 Trading（mainnet needs API keys）; 7.5 SOP #04 Strategy Failure & Kill Decision Tree next; OR publish SOP #01~03 externally",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "SOP trilogy (Strategy Dev → Portfolio → Execution) now complete. Next: SOP #0..."
+      "text": "Next highest-derivative: external publish (#01–#04 as a trading system series..."
     },
     {
       "time": "just now",
-      "text": "- G8: Correlation conflict check"
+      "text": "Knowledge product series #01–#04 COMPLETE ✅"
     },
     {
       "time": "just now",
-      "text": "- G6: Trial 50% vs full, each needs independent positive EV (MD-159)"
+      "text": "- N7: Resurrection criteria"
     },
     {
       "time": "just now",
-      "text": "- G5: `lots = (equity × 1%) / (ATR × mult)` (MD-28), formula enforced"
+      "text": "- N6: Kill protocol + post-mortem + greedy re-run"
     },
     {
       "time": "just now",
-      "text": "- G4: Stop → back-calculate max entry (MD-133)"
+      "text": "- N5: Anti-capitulation sanity check (MD-96)"
     }
   ],
   "stats": {
-    "daemon_cycles": 109,
+    "daemon_cycles": 110,
     "total_mds": 325,
     "dna_core_lines": 87
   }

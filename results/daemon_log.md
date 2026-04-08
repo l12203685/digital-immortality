@@ -3621,3 +3621,21 @@ Action: wrote `docs/knowledge_product_04_strategy_kill_decision_tree.md` (7 node
 
 Knowledge product series: **#01~#04 COMPLETE ✅**
 Next: external publish (#01–#04) OR mainnet API keys (Branch 1.1).
+
+## Cycle 110 — 2026-04-08 18:02:08 UTC
+
+**Cycle 110 done.**
+
+**Branch 7.6** — wrote `docs/knowledge_product_04_strategy_kill_decision_tree.md` (7-node decision tree):
+
+- N1: Sample size guard (< 30 = suspend judgement)
+- N2: Regime match (ATR, trend structure)
+- N3: edge_ratio gate (MD-13) — 1.5/1.2/kill thresholds
+- N4: Premise falsification (4 components, 2+ = kill candidate)
+- N5: Anti-capitulation sanity check (MD-96)
+- N6: Kill protocol + post-mortem + greedy re-run
+- N7: Resurrection criteria
+
+**Knowledge product series #01–#04 COMPLETE ✅**
+
+Next highest-derivative: external publish (#01–#04 as a trading system series) OR Branch 1.1 (mainnet API keys).
