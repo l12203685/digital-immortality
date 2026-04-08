@@ -2094,3 +2094,13 @@ Cycle 15 done. Branch 2.2 highest-derivative.
 - **MD-189** 累進稅邊際跳點 — 臨界點下緣最優化；越過跳點觸發節稅重新配置
 
 Next: 202005 (verify gap, may already be in file from earlier cycles).
+
+## Cycle 16 — 2026-04-09T UTC
+
+**Branch 2.2 — 202005 distill → MD-190~192** (192 MDs total):
+
+- **MD-190** 防守視角均衡=bluff catcher也在均衡上，先建攻守對稱模型再決策 — 不只問「攻擊方能賺多少」，也要問「防守方有多少空間讓攻擊方脫離均衡」；對上polar range時MDF更高
+- **MD-191** 股息再投資=用配息支付房貸的資產閉環 — 240萬自備→中華電+台積電配息完全覆蓋房貸本利和；財務自由路徑=找最小自備資本讓資產現金流≥負債成本
+- **MD-192** 宏觀壞消息≠市場下跌=政策干預是反轉觸發器 — 悲觀情緒最高點往往是政策干預成本最低的窗口；追蹤「政策干預壓力指標」比追蹤壞消息更前置
+
+`templates/dna_core.md`: **192 MDs**. Next: 202004 (verify gap).
