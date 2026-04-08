@@ -435,3 +435,31 @@ Branch 2.2 — read 202603.jsonl (9,982 Edward messages, March 2026). 3 new micr
 `dna_core.md`: **15 micro-decisions** (was 12). Both repos pushed.
 
 Next: 202512 (Dec 2025 — pre-2026 bridge).
+
+## Cycle 20 — 2026-04-08T03:30 UTC
+
+**Branch 2.2 — 202512 JSONL distilled.**
+
+- Read 202512.jsonl (26,925 lines, 457 Edward msgs, Dec 2025)
+- Top groups: g44 (AI/狒狒=168 msgs), g2 (可可=24), g5 (friends=19), g3 (investment trio=6)
+- Focus: personal brand architecture, Avalon game theory study, parallel career optionality
+- Identified 3 micro-patterns NOT yet in dna_core.md:
+  1. **個人品牌=多維交叉定位** — identity = 羽球+投資+賽局+數據 intersection; cross-domain = unique asset
+  2. **遊戲=資訊不對稱沙盒** — systematic Avalon/poker study as real social dynamics training; maps to axiom 2+4
+  3. **職涯=平行軌道** — Coupang PM application + personal brand website simultaneously; no either/or
+- dna_core.md now has **18 micro-decisions** (was 15)
+- Branch 2.2 progress: 202604✓ 202601✓ 202602✓ 202603✓ 202512✓; next: 202511
+
+## Cycle 21 — 2026-04-08T04:00 UTC
+
+**Branch 2.2 — 202511 JSONL distilled.**
+
+- Read 202511.jsonl (7,126 Edward msgs, Nov 2025)
+- Top groups: g2 (可可=2628), g5 (friends=1144), g44 (AI/狒狒=1089), g3 (investment=432)
+- Focus: trading risk rules, market structure strategy, business pricing
+- 3 micro-patterns NOT yet in dna_core.md:
+  1. **周末不留空單** — backtested rule: short positions + time exit > short positions + condition exit; 空單周末平倉 unless explicit condition
+  2. **強弱配對抽 alpha** — oscillating market: long strong (0050+0051) + short weak (台指); "台指包含太多垃圾" = extract alpha from beta
+  3. **定價錨點下移入場** — sees competitor at 2萬/課 → immediately sets self at 2000/課; 10x price undercut for volume entry
+- dna_core.md: **21 micro-decisions** (was 18)
+- Branch 2.2: 202604✓ 202601✓ 202602✓ 202603✓ 202512✓ 202511✓; next: 202510

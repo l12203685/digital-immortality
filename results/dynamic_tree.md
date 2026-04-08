@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T03:10 UTC (cycle 19)
+> 最後更新：2026-04-08T04:00 UTC (cycle 21)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -33,7 +33,7 @@
 
 ### 2. 行為等價（核心能力）
 - 2.1 DNA 品質：10 micro-decision patterns from JSONL integrated ✓
-- 2.2 微決策學習：202604 ✓ (+3); 202601 ✓ (+3); 202602 ✓ (+3); 202603 ✓ (+3: 清單式確認/資金閉鎖期認知/賣出有掛單紀律); dna_core.md 現有15條微決策; 202512+ 待讀
+- 2.2 微決策學習：202604 ✓ (+3); 202601 ✓ (+3); 202602 ✓ (+3); 202603 ✓ (+3); 202512 ✓ (+3); 202511 ✓ (+3: 周末不留空單/強弱配對抽alpha/定價錨點下移入場); dna_core.md 現有21條微決策; 202510+ 待讀
 - 2.3 Validation：OOS 5/5 self-scored ✓, cross-instance prepped but blocked on API credit
   - consistency_test.py: --use-memory + --auto-suggest now combined — memory context flows into suggestions ✓
 - 2.4 Response latency：三秒 vs 三段推理，差距仍在
@@ -115,3 +115,5 @@
 - 2026-04-08T02:30 UTC: cycle 17 — Branch 2.2: 202601 JSONL read (11,289 Edward msgs), 3 new micro-patterns distilled → dna_core.md (多方案並列/自推到底再確認/不動作是最難)
 - 2026-04-08T02:50 UTC: cycle 18 — Branch 2.2: 202602 JSONL read (7,627 Edward msgs), 3 new micro-patterns → dna_core.md (AI=語言外包/帳戶×券商分層/不確定→清倉等訊號); total 12 micro-decisions in dna_core
 - 2026-04-08T03:10 UTC: cycle 19 — Branch 2.2: 202603 JSONL read (9,982 Edward msgs), 3 new micro-patterns → dna_core.md (清單式確認/資金閉鎖期認知/賣出有掛單紀律); total 15 micro-decisions in dna_core
+- 2026-04-08T03:30 UTC: cycle 20 — Branch 2.2: 202512 JSONL read (457 Edward msgs, Dec 2025), 3 new micro-patterns → dna_core.md (個人品牌=多維交叉定位/遊戲=資訊不對稱沙盒/職涯=平行軌道); total 18 micro-decisions in dna_core
+- 2026-04-08T04:00 UTC: cycle 21 — Branch 2.2: 202511 JSONL read (7,126 Edward msgs, Nov 2025), 3 new micro-patterns → dna_core.md (周末不留空單/強弱配對抽alpha/定價錨點下移入場); total 21 micro-decisions in dna_core
