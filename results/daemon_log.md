@@ -4527,3 +4527,16 @@ Highest-derivative gap: queue ends May 19 after SOP #21 — content engine dies 
 **Series: SOP #01~#22 COMPLETE. Queue: Apr 9–May 21.**
 
 **Next blocker:** Edward posts SOP #01 on Apr 9 to start G5 compounding clock.
+
+## Cycle 147 — 2026-04-08 21:29:28 UTC
+
+**Cycle 147 done.**
+
+Highest-derivative gap: queue ended May 19. No cross-domain exit framework in the series (SOP #04 only covers trading strategy kills).
+
+**Shipped:**
+- `docs/knowledge_product_22_exit_protocol_sop.md` — Universal Exit Protocol: 5 gates across all domains (trade/career/project/relationship); G1 write exit in one sentence before entry (MD-96/112); G2 kill vs review separated; G3 trial position (MD-159); G4 3-state trigger (MD-75); G5 loop closure (MD-322)
+- `docs/publish_thread_sop22_twitter.md` — hook: *"You didn't have an exit strategy. You had a hope."*
+- Queue extended to **May 21**, series now #01~#22
+
+**Next blocker:** Edward posts SOP #01 to start G5 compounding clock.
