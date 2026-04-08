@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T12:40 UTC (cycle 38)
+> 最後更新：2026-04-08T13:10 UTC (cycle 39)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -135,4 +135,5 @@
 - 2026-04-08T11:40 UTC: cycle 36 — Branch 2.2: 202408 JSONL read (8,314 Edward msgs, Aug 2024), 3 new micro-patterns → dna_core.md MD-28~MD-30 (口數公式具現化/策略池多空比審計/槓桿基礎=失效前風報比); file now 107 lines, 30 MDs; next: 202407
 - 2026-04-08T12:10 UTC: cycle 37 — Branch 2.2: 202407 JSONL read (1,970 Edward msgs, Jul 2024), 3 new micro-patterns → dna_core.md MD-31~MD-33 (加減碼≠創造edge/最適槓桿=regime函數/尾端口數最小化); file now 111 lines, 33 MDs; next: 202406
 - 2026-04-08T12:40 UTC: cycle 38 — Branch 2.2: 202406 JSONL read (11,415 Edward msgs, Jun 2024), 3 new micro-patterns → dna_core.md MD-34~MD-36 (槓桿策略社會折價/資金使用率=保證金+長投剩餘/口數頻繁調整=診斷訊號); file now 75 lines, 36 MDs; next: 202405
+- 2026-04-08T13:10 UTC: cycle 39 — Branch 2.2: 202405 JSONL read (13,560 Edward msgs, May 2024), 3 new micro-patterns → dna_core.md MD-34~MD-36 **actually written** (架構切換>策略精進/單策略impact=1/N/里程碑資金量化); file now 113 lines, 36 MDs; next: 202404
 

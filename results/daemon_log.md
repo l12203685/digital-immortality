@@ -851,3 +851,13 @@ Branch 2.2 — `202406.jsonl` (11,415 Edward msgs, Jun 2024). Three patterns wri
 - **MD-36** 口數頻繁調整=診斷訊號 — 被迫頻繁縮口=槓桿過高或強趨勢regime；用作診斷，不是純操作問題
 
 Next: **202405**.
+
+## Cycle 39 — 2026-04-08T13:10 UTC
+
+**Branch 2.2** (highest derivative). Processed `202405.jsonl` (13,560 Edward msgs, May 2024). Three micro-decisions **actually written** → `dna_core.md` now **MD-01~MD-36, 113 lines**:
+
+- **MD-34** 架構切換>策略精進 — 換投組架構效益遠大於costdown；識別架構天花板後換架構是進化不是失敗；costdown=戰術，換架構=戰略
+- **MD-35** 單策略impact=1/N — 投組中單策略邊際貢獻是1/N；策略數越多精進單策略效益遞減；重點轉向多樣性or架構質量
+- **MD-36** 里程碑資金量化 — 辭職/開公司/分離課稅各有明確資金門檻；門檻=觸發器，達到才行動；數字觸發不用感覺
+
+Next: **202404**.
