@@ -22,7 +22,7 @@
   - **--review PASSED: OVERALL GO → mainnet $100 next step** ✓
   - **mainnet_runner.py built** ✓ — $100 cap, dual_ma only, kill conditions: MDD>10% WR<35% PF<0.85
   - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
-  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 12: BTC=71679.00 signal=SHORT (consistent SHORT × 12, range $71.6k–$72.6k)
+  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 14: BTC=71409.55 signal=SHORT (consistent SHORT × 14, range $71.4k–$72.6k)
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)

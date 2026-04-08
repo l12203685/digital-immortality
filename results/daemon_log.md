@@ -3402,3 +3402,14 @@ Branch 4.1 — ran `consistency_test.py` on `samuel_dna.md`:
 - Framework generalizes to non-Edward organisms ✓
 - Edward baseline re-verified: **20/20 ALIGNED ✅**
 - Branch 4.1 unblocked at the framework level; remaining blocker is Samuel reviewing his DNA in person
+
+## Cycle 95 — 2026-04-09T UTC
+
+**Branch 1.1** — paper-live tick to track current signal while mainnet keys pending.
+
+- `python -m trading.mainnet_runner --paper-live` → tick 14: BTC=71409.55, signal=SHORT
+- Consistent SHORT × 14 ticks, range $71.4k–$72.6k (entry bias validated)
+- tree updated: Branch 1.1 paper-live tick 14
+- Mainnet still blocked on BINANCE_MAINNET_KEY/SECRET
+
+Next: set mainnet keys → run first live tick ($100 cap, dual_ma, kill conditions active).

@@ -11,3 +11,4 @@
 {"action": "PAPER_LIVE", "ts": "2026-04-08T13:42:58.577367+00:00", "price": 71679.0, "signal": "SHORT", "note": "paper \u2014 no real order placed"}
 {"action": "PAPER_LIVE_NETWORK_FAIL", "ts": "2026-04-08T14:07:54.657107+00:00", "error": "binance GET https://api.binance.com/api/v3/exchangeInfo", "note": "network unavailable -- using last known price"}
 {"action": "PAPER_LIVE", "ts": "2026-04-08T15:51:05.618826+00:00", "price": 71279.46, "signal": "SHORT", "note": "paper -- no real order placed"}
+{"action": "PAPER_LIVE", "ts": "2026-04-08T16:41:31.870994+00:00", "price": 71409.55, "signal": "SHORT", "note": "paper -- no real order placed"}
