@@ -3271,3 +3271,15 @@ Done. **Branch 2.2 — 201704 deep pass.** 3 new MDs written:
 - **MD-318** 分批買進=選定標的後執行策略的預設答案 — once analysis passes (yield/survival/cash flow), execution = DCA immediately; separates "which?" (analysis) from "how?" (execution); stops "wait for dip" as a decision loop
 
 Next: **201702 deep pass**.
+
+## Cycle 89 — 2026-04-08 16:01:26 UTC
+
+Cycle 89 done.
+
+**Branch 2.2 — 201703 deep pass.** 3 MDs written (318 total):
+
+- **MD-316** 還債vs投資=比較利率不比較金額 — 60萬還房貸省<3萬，同額投中信金5%=3萬；決策比較%，不比較金額
+- **MD-317** 股票選擇=相同資本下現金流比較 — 殖利率%相近時，計算「相同資本→股數×每股配息」，比絕對現金流而非yield%
+- **MD-318** 分批買進=執行策略的預設答案 — 分析通過即執行DCA，把「哪支」與「怎麼買」分離，消除擇時決策摩擦
+
+Next: **201702 deep pass**.
