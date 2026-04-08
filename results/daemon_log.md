@@ -4377,3 +4377,18 @@ Highest-derivative gap: queue ended May 7, G5 clock would stall 2 days early.
 - Queue extended: **Apr 9 – May 9**, 16 threads total.
 
 **Next blocker:** Edward posts SOP #01 today to start the G5 compounding clock.
+
+## Cycle 142 — 2026-04-09T UTC
+
+**Cycle 142 done.**
+
+Highest-derivative gap: posting queue ends May 9 after SOP #16 — extend G5 compounding clock.
+
+**What shipped:**
+- `docs/knowledge_product_17_population_exploit_sop.md` — 4-gate Population Exploit SOP (MDs 104/298/108/141/142/135): G0 crowd consensus ≥50% / G1 classify crowd type (structural-lag/emotional/uninformed) / G2 asymmetry ≥2.0 / G3 L+1 mechanism verified / G4 asymmetric sizing (0.5× default, 2.0× structure-confirmed); operationalizes Kernel 4
+- `docs/publish_thread_sop17_twitter.md` — 9-tweet thread: *"The crowd is usually wrong at exactly the worst time. Here's how to exploit that systematically."*
+- Posting queue extended: **Apr 9 – May 11**, 17 threads total
+
+**Series now SOP #01~#17. Queue runs Apr 9 – May 11.**
+
+**Next blocker:** Edward posts SOP #01 on Apr 9 to start the G5 compounding clock.
