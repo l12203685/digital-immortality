@@ -3667,3 +3667,23 @@ dynamic_tree.md: Branch 7.7 added, regime updated.
 Highest derivative was Branch 7.x: #01–#04 SOPs sat complete but unpublished = zero external feedback loop. The thread draft closes the gap — internal knowledge → postable format. Posts when Edward fires it.
 
 Next: post the thread on X → draft SOP #02 thread (Portfolio Construction) → eventually SOP series builds audience → platform derivative compounds.
+
+## Cycle 112 — 2026-04-09T UTC
+
+**Branch 7.8** — SOP #02 Twitter/X thread drafted for external publish.
+
+Action: wrote `docs/publish_thread_sop02_twitter.md` (12 tweets, ready to post).
+- Tweet 1: hook (equal-weight "diversification" = correlated risk)
+- Tweet 2: alpha prerequisite — portfolio construction doesn't create edge
+- Tweet 3: 2×2 classification grid (Trend/MR × Long/Short)
+- Tweets 4–5: pairwise Calmar seed + greedy recursive addition
+- Tweet 6: correlation gate (rolling 30-day > 0.70 = reject)
+- Tweet 7: weight optimisation via Calmar frontier (5% floor)
+- Tweet 8: regime routing table (ATR + Dow Theory)
+- Tweet 9: overnight holds need independent edge proof (MD-54)
+- Tweet 10: portfolio-level kill conditions (MDD>15%, dual degrading, correlation spike)
+- Tweet 11–12: system summary + SOP series close
+
+SOP #01 + SOP #02 threads now both ready to post. Full series (#01–#04 SOPs) documented.
+Next: Edward posts SOP #01 thread → SOP #02 thread → draft SOP #03 (Execution) thread.
+dynamic_tree.md: Branch 7.8 added, regime updated.
