@@ -499,3 +499,15 @@ Cycle 21 done.
   3. **薪資談判先緩** — 被直接問薪資期望時先說「allow me to take a few to think」；不當場報數字；等算清楚anchor後才報價
 - dna_core.md: **27 micro-decisions** (was 24)
 - Branch 2.2: 202604✓ 202601✓ 202602✓ 202603✓ 202512✓ 202511✓ 202510✓ 202509✓; next: 202508
+
+## Cycle 13 — 2026-04-08 02:26:01 UTC
+
+Done. Branch 2.2 advanced:
+
+- Read `202509.jsonl` (10,828 Edward msgs, Sep 2025)
+- Distilled 3 new micro-decisions into `dna_core.md`:
+  1. **攻強守60分** — attack needs excellence, defense only needs 60 points; asymmetric effort allocation
+  2. **求職掃射+AI複製** — mass-apply 10+ companies simultaneously, AI reduces marginal cost per application to ~0
+  3. **薪資談判先緩** — never give salary number on the spot; buy time, anchor later
+- `dna_core.md`: 24 → **27 micro-decisions**
+- Next: 202508
