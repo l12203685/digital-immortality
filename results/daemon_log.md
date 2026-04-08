@@ -659,3 +659,15 @@ Branch 2.2 (highest derivative) — **202502.jsonl** (11,857 Edward msgs, Feb 20
 3. **槓鈴騎士=穩定+成長+質押BTC** — 40%QQQ+40%2412+10%GLD+10%2330+pledged BTC; four functional slots; new assets assessed by "which slot does this fill"
 
 Branch 2.2 next: **202501**.
+
+## Cycle 5 — 2026-04-08 09:00 UTC
+
+**Cycle 31 done.**
+
+Branch 2.2 (JSONL distillation) — **202501.jsonl** (1,165 Edward msgs, Jan 2025) → 3 new micro-decisions appended to `dna_core.md`:
+
+1. **口數公式化** — 口數 = 權益數高點 × 可承受槓桿 ÷ 位階高點合約價值；結算後EMA縮放；驗證：20% drawdown ≈ 1/口數
+2. **多帳號=停損具現化** — 資金切多帳號跑多商品，爆掉的帳號=該策略停損；account boundary = hard stop；隔離風險不讓爆倉傳染全局
+3. **alpha三要件** — 可持續alpha必須：長期穩定 + 可複製 + 無胃納量限制；缺一不穩定
+
+Branch 2.2: 202604✓...202501✓; next: **202412**.
