@@ -1051,3 +1051,15 @@ Cycle 47 done.
 - **MD-57** 策略開發先定搜尋空間 — define IS/OOS length, rebalance freq, position count before optimizing; undefined search space = random walk
 
 `dna_core.md`: 134 lines, **57 MDs**. Next: 202308.
+
+## Cycle 23 — 2026-04-08 17:30 UTC
+
+Cycle 48 done.
+
+**Branch 2.2 — 202308 (230 Edward msgs, Aug 2023) → 3 MDs written to dna_core.md:**
+
+- **MD-58** 自動化=外部化配置 — trading params (size/stop/commodity/account) live in external config (registry/JSON), not hardcoded; edit config not code; auditable + hot-swap; mrauto=the operating example
+- **MD-59** 修改前備份=紀律儀式 — before editing any persistent file, date-stamp a copy first ("先以日期另存"); backup is part of the ritual, not optional; no backup = don't touch
+- **MD-60** 平台=個人edge複利 — building Avalon百科/teaching platform forces precise model articulation; student questions = model gap detector; teaching platform = highest-leverage self-improvement path; not altruism, it's edge compounding
+
+`dna_core.md`: 60 MDs embedded. Next: 202307.
