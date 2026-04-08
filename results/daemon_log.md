@@ -4137,3 +4137,19 @@ External blockers remain: (1) `BINANCE_MAINNET_KEY/SECRET` → mainnet revenue; 
 9-tweet thread drafted. **Series now SOP #01~#09.**
 
 External blockers remain: (1) `BINANCE_MAINNET_KEY/SECRET` → mainnet revenue; (2) post threads #01~#09.
+
+## Cycle 133 — 2026-04-08 20:07:22 UTC
+
+**Cycle 133 done.**
+
+**Branch 7.15** — SOP #09 shipped: `docs/knowledge_product_09_risk_drawdown_sop.md`
+
+5 gates:
+- G0: Write kill condition before entry (MD-96)
+- G1: Daily loss limit = account×1%÷leverage (MD-50)
+- G2: Event risk → reduce leverage 50% before (MD-27)
+- G3: Equity curve as leverage trigger — Normal/Warning/Stop vs 20-day MA (MD-75)
+- G4: Adding to losers requires 4 pre-conditions, all written before entry (MD-91)
+- G5: Drawdown recovery — close → paper 5 sessions → 25% leverage scale-back
+
+9-tweet thread ready. **Series now SOP #01~#09.** Next candidate: SOP #10 — Decision-Making under Uncertainty / Information Asymmetry Edge (covers Edward kernel principles 1–5).

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T04:01+08",
+  "updated": "2026-04-09T04:07+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.13 SOP #07 regime detection COMPLETE → Edward posts threads #01~#07",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "External blockers remain: (1) `BINANCE_MAINNET_KEY/SECRET` → mainnet revenue;..."
+      "text": "9-tweet thread ready. Series now SOP #01~#09. Next candidate: SOP #10 — Decis..."
     },
     {
       "time": "just now",
-      "text": "12-tweet thread drafted. Series now SOP #01~#08."
+      "text": "- G5: Drawdown recovery — close → paper 5 sessions → 25% leverage scale-back"
     },
     {
       "time": "just now",
-      "text": "- G4: Financial freedom tier calibration — aggression matches gap to current ..."
+      "text": "- G4: Adding to losers requires 4 pre-conditions, all written before entry (M..."
     },
     {
       "time": "just now",
-      "text": "- G3: Trial vs full position — independent EV required for each, no averaging..."
+      "text": "- G3: Equity curve as leverage trigger — Normal/Warning/Stop vs 20-day MA (MD..."
     },
     {
       "time": "just now",
-      "text": "- G2: Leverage checklist — margin trigger / re-investment eligibility / inter..."
+      "text": "- G2: Event risk → reduce leverage 50% before (MD-27)"
     }
   ],
   "stats": {
-    "daemon_cycles": 132,
+    "daemon_cycles": 133,
     "total_mds": 328,
     "dna_core_lines": 87
   }
