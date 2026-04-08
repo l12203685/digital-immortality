@@ -407,3 +407,17 @@ Cycle 18 done.
 dna_core.md now has **12 micro-decisions**. Both repos pushed.
 
 Next: 202603 (March 2026 bridge).
+
+## Cycle 19 — 2026-04-08T03:10 UTC
+
+**Branch 2.2 — 202603 JSONL distilled.**
+
+- Read 202603.jsonl (24,430 lines, 9,982 Edward msgs, March 2026)
+- Top groups: g3 (investment trio), g2 (可可), g5 (friends), g11 (family), g36 (company 達飆/零式)
+- Focus: capital increase mechanics, liquidity planning, exit discipline under deadline
+- Identified 3 micro-patterns NOT yet in dna_core.md:
+  1. **清單式確認** — multi-step process uncertainty → numbered list, all questions batched at once
+  2. **資金閉鎖期認知** — when advising on capital allocation, maps out lock-up + multi-year tax lag (2026配息→2027入帳→2028繳稅)
+  3. **賣出有掛單紀律** — liquidation under deadline still uses limit orders (掛價 610/137/81); accepts execution risk but holds price discipline
+- dna_core.md now has **15 micro-decisions** (was 12)
+- Branch 2.2: 202604✓ 202601✓ 202602✓ 202603✓; next: 202512+
