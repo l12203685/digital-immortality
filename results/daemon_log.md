@@ -1586,3 +1586,17 @@ Gap reconcile: MD-118~120 already in file (202202, prior session unlogged). Tree
 3. **MD-123** 條件機率謬誤=獨立事件不能互消 — 炸彈客問題：自帶炸彈不降低他人帶炸彈的機率；驗收問題：X和Y是相關還是獨立？
 
 `templates/dna_core.md`: **123 MDs**. Next: 202112.
+
+## Cycle 35 — 2026-04-08 UTC
+
+Cycle 63 done.
+
+**Branch 2.2** (highest derivative) — gap reconcile + 202112 distill:
+
+- **Gap reconcile**: 202201 (MD-121~123) already in file, tree stale — corrected.
+- **202112.jsonl** (29 substantive Edward msgs, Dec 2021) → **MD-124~126**:
+  - **MD-124** CARG=風險資本收益率公式 — `(NP + 3×MDD + 1×Margin)/(3×MDD + 1×Margin)^(1/T) - 1`; denominator = actual risk capital deployed; enables cross-strategy comparison regardless of size/leverage
+  - **MD-125** 最佳化目標=IS/OOS分佈差異最小化 — fitness function should minimize IS/OOS P&L distribution gap (via KL/Jensen divergence), not maximize IS profit; P&L shape must match regime behavior
+  - **MD-126** 賽局三步驟=範圍→最優行動→剝削偏差 — poker and market share same SOP: ①know opponent range ②compute GTO action ③exploit only if opponent deviates; trading: regime distribution → strategy pool → exploit if statistical pattern exists
+
+`dna_core.md`: **126 MDs**. Next: 202111.
