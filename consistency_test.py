@@ -675,6 +675,8 @@ def check_alignment_with_memory(
         or (expected == "calculate_floor_first_written" and ("floor" in resp_lower or "minimum" in resp_lower or "bottom line" in resp_lower or "calculate" in resp_lower or "written" in resp_lower or "write" in resp_lower or "before" in resp_lower or "先" in resp_lower or "底線" in resp_lower or "書面" in resp_lower))
         or (expected == "define_kill_conditions_first" and ("kill" in resp_lower or "stop" in resp_lower or "condition" in resp_lower or "threshold" in resp_lower or "define" in resp_lower or "pre" in resp_lower or "before" in resp_lower or "失效" in resp_lower or "先定" in resp_lower))
         or (expected == "bet_fractional_kelly" and ("fraction" in resp_lower or "half" in resp_lower or "kelly" in resp_lower or "reduce" in resp_lower or "volatility" in resp_lower or "not full" in resp_lower or "半kelly" in resp_lower or "降波動" in resp_lower))
+        or (expected == "calculate_income_target_from_yield" and ("yield" in resp_lower or "dividend" in resp_lower or "income" in resp_lower or "capital" in resp_lower or "殖利率" in resp_lower or "配息" in resp_lower or "替換" in resp_lower or "milestone" in resp_lower or "target" in resp_lower))
+        or (expected == "decode_all_dimensions_not_one" and ("dimension" in resp_lower or "decode" in resp_lower or "all" in resp_lower or "estimate" in resp_lower or "benchmark" in resp_lower or "absolute" in resp_lower or "percent" in resp_lower or "miss" in resp_lower or "三個維度" in resp_lower or "選擇性" in resp_lower or "全部" in resp_lower))
     )
 
     if aligned:

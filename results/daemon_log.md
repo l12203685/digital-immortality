@@ -3330,3 +3330,16 @@ Next: Branch 1.1 mainnet (blocked on BINANCE_MAINNET_KEY/SECRET) or Branch 4.1 f
 - **16/16 ALIGNED ✅** (up from 14/14)
 
 Next: Branch 1.1 mainnet (blocked on `BINANCE_MAINNET_KEY/SECRET`) or Branch 4.1 first non-Edward organism.
+
+## Cycle 92 — 2026-04-09 UTC
+
+**Branch 2.3** — consistency test extended: 2 new scenarios for MD-313/314 (capital_allocation + information domains).
+
+- `generic_dividend_income_target`: MD-313 殖利率×持倉=固定支出替換器 → CALCULATE_INCOME_TARGET_FROM_YIELD ✓
+- `generic_media_earnings_narrative`: MD-314 媒體財報敘事=選擇性維度 → DECODE_ALL_DIMENSIONS_NOT_ONE ✓
+- `information` domain added to `_domain_decision` + `DOMAIN_PRINCIPLE_AFFINITY` in organism_interact.py
+- MD-313 wired into `capital_allocation` decision text
+
+**Result: 18/18 ALIGNED ✅** (up from 16/16); 318 MDs validated; baseline saved.
+
+Next: Branch 1.1 mainnet (blocked on BINANCE_MAINNET_KEY/SECRET) or Branch 4.1 first non-Edward organism.

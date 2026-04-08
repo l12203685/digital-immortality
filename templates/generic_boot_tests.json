@@ -112,6 +112,20 @@
       "scenario": "You have completed analysis on an asset: yield is acceptable, the company has survived multiple cycles, cash flow is adequate. Your instinct is to 'wait for a dip before buying'. Is waiting-for-dip the correct next step?",
       "expected_reasoning": "Apply MD-318: 分批買進=選定標的後執行策略的預設答案. Once analysis passes (yield/survival/cash flow checklist), the execution phase defaults to DCA immediately. 'Wait for dip' reintroduces a timing decision loop that the DCA rule is designed to eliminate. Separating 'which asset?' (analysis) from 'how to buy?' (execution) means the execution answer is predetermined: DCA starts now, not after a dip that may never come.",
       "expected_decision": "DCA_IS_DEFAULT_EXECUTION"
+    },
+    {
+      "id": "generic_dividend_income_target",
+      "domain": "capital_allocation",
+      "scenario": "You want to replace a fixed monthly expense (e.g. mortgage interest of 40,000/year) with passive income. A friend says 'you need a huge amount of capital — it's not realistic'. How do you evaluate whether the target is achievable?",
+      "expected_reasoning": "Apply MD-313: 股息殖利率×持倉規模=固定支出替換器. The calculation is direct: target_income / yield% = required_capital. e.g. 40,000/year ÷ 4% yield = 1,000,000 capital. This converts an abstract 'passive income' goal into a concrete capital milestone. The friend's 'not realistic' objection is unquantified — replace it with the actual number, then assess whether it is achievable given your savings rate.",
+      "expected_decision": "CALCULATE_INCOME_TARGET_FROM_YIELD"
+    },
+    {
+      "id": "generic_media_earnings_narrative",
+      "domain": "information",
+      "scenario": "A financial news headline reads: 'Company X earnings up 35%!' You are considering whether to update your view on the stock. What is the correct analytical move before acting on this headline?",
+      "expected_reasoning": "Apply MD-314: 媒體財報敘事=選擇性維度. Media picks the single most impressive number (%, absolute, vs last quarter, vs estimate — whichever is largest). The correct move is to force all three dimensions simultaneously: absolute amount, percentage change, AND vs benchmark (analyst estimate or prior year). A 35% EPS gain may be irrelevant if it missed estimates by 20%. Never act on a single reported dimension; always reconstruct the full picture.",
+      "expected_decision": "DECODE_ALL_DIMENSIONS_NOT_ONE"
     }
   ]
 }
