@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T02:17+08",
+  "updated": "2026-04-09T02:21+08",
   "regime": "1.1 Trading（mainnet needs API keys）; 7.7+7.8+7.9 publish threads — POST SOP #01→#02→#03 on X/Twitter (all 3 files ready); draft SOP #04 (Kill Decision Tree) thread next",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: Edward posts #01→#02→#03 on X; draft SOP #04 (Kill Decision Tree) thread."
+      "text": "FULL SERIES COMPLETE: all 4 SOP threads (#01–#04) ready to post in sequence o..."
     },
     {
       "time": "just now",
-      "text": "- G0: L/S pool balance → G1: historical leverage → G2: edge_ratio gate → G3: ..."
+      "text": "- Node 0: 5 kill triggers → Node 1: sample size gate → Node 2: regime match →..."
     },
     {
       "time": "just now",
-      "text": "Highest derivative: SOP #01 and #02 threads were queued for posting but #03 w..."
+      "text": "Highest derivative: SOP #01–#03 threads were queued but #04 was missing — com..."
     },
     {
       "time": "just now",
-      "text": "Branch 7.9 — `docs/publish_thread_sop03_twitter.md` created (12 tweets, post-..."
+      "text": "Branch 7.10 — `docs/publish_thread_sop04_twitter.md` created (12 tweets, post..."
     },
     {
       "time": "just now",
-      "text": "Cycle 113 done."
+      "text": "Cycle 114 done."
     }
   ],
   "stats": {
-    "daemon_cycles": 113,
+    "daemon_cycles": 114,
     "total_mds": 325,
     "dna_core_lines": 87
   }

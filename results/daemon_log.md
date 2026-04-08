@@ -3750,3 +3750,15 @@ Action: wrote `docs/publish_thread_sop04_twitter.md` (12 tweets, ready to post).
 
 **FULL PUBLISH SERIES COMPLETE**: all 4 SOP threads ready to fire on X.
 dynamic_tree.md: Branch 7.10 added, full series marked complete.
+
+## Cycle 114 — 2026-04-08 18:21:50 UTC
+
+**Cycle 114 done.**
+
+**Branch 7.10** — `docs/publish_thread_sop04_twitter.md` created (12 tweets, post-ready).
+
+Highest derivative: SOP #01–#03 threads were queued but #04 was missing — completing the series unblocks the full publish sequence.
+
+- Node 0: 5 kill triggers → Node 1: sample size gate → Node 2: regime match → Node 3: edge_ratio → Node 4: premise falsification scoring → Node 5: 3-question anti-capitulation guard → Node 6: kill protocol → Node 7: resurrection criteria → self-test → series close
+
+**FULL SERIES COMPLETE**: all 4 SOP threads (#01–#04) ready to post in sequence on X. Next: Edward fires the threads.
