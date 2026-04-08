@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T03:44+08",
+  "updated": "2026-04-09T03:49+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.12 SOP #06 game theory COMPLETE → Edward posts threads #01~#06",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Sole remaining external blocker: `BINANCE_MAINNET_KEY/SECRET` → first real re..."
+      "text": "Sole external blocker: Edward sets `BINANCE_MAINNET_KEY/SECRET` → first real ..."
     },
     {
       "time": "just now",
-      "text": "Branch 1.1 — tick 28: BTC=$71,238.01, SHORT ×28, range $71.1k–$72.6k. Consist..."
+      "text": "- Branch 8.5 — Automation #3 shipped: decisions #4 (coffee-vs-tea) + #5 (port..."
     },
     {
       "time": "just now",
-      "text": "Cycle 129 done."
+      "text": "- Branch 1.1 — tick 29: BTC=$71,332.14, SHORT ×29. Signal consistent 29 ticks..."
     },
     {
       "time": "just now",
-      "text": "Sole external blocker: set `BINANCE_MAINNET_KEY/SECRET` → first real revenue ..."
+      "text": "Cycle 130 done."
     },
     {
       "time": "just now",
-      "text": "Branch 1.1 — tick 28: BTC=$71,238.01, SHORT × 28 (range $71.1k–$72.6k). Signa..."
+      "text": "Branch 8.5 — Automation #3: decisions #4 coffee-vs-tea + #5 portfolio-check p..."
     }
   ],
   "stats": {
-    "daemon_cycles": 129,
+    "daemon_cycles": 130,
     "total_mds": 328,
     "dna_core_lines": 87
   }
