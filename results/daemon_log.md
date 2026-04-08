@@ -603,3 +603,17 @@ Next: 202505.
   3. **多幣資產=統一基準衡量** — when holding TWD + USD assets, evaluate in single reference currency; separate-currency assessment hides FX exposure and makes net P&L invisible
 - `dna_core.md`: 36 → **39 micro-decisions**
 - Branch 2.2: 202604✓ ... 202505✓; next: 202504
+
+## Cycle 28 — 2026-04-08T06:45 UTC
+
+**Branch 2.2 — 202504 JSONL distilled.**
+
+- Read 202504.jsonl (8,992 Edward msgs, Apr 2025)
+- Top groups: g2 (可可), g1, g5 (friends/trading), g3 (trading), g44 (work/expense)
+- Focus: trading system rules, portfolio architecture, event risk, low-risk arbitrage prerequisites
+- 3 micro-patterns NOT yet in dna_core.md:
+  1. **策略貼盤=敏感優先** — prefer whipsaw-sensitive params over profit-optimized ones; optimize with 750-500 days data; re-evaluate immediately if strategy can't track market
+  2. **事件→縮槓桿50%** — during market events, first cut leverage ≥50%; prioritize risk not profit; keep offshore futures account ready for Taiwan-closed gaps
+  3. **資產三層架構** — 50% stable (2412) + 50% growth (QQQ) + 3% explosive (IBIT/MSTR); or BNH core + profitable short hedges; hold always, adjust ratio only
+- `dna_core.md`: 39 → **42 micro-decisions**
+- Branch 2.2: 202604✓ ... 202504✓; next: 202503
