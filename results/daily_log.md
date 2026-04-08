@@ -20,8 +20,14 @@ Recursive engine cycle history.
 - `generic_health_capital` → ALIGNED (RESTRUCTURE_NOW) ✓
 - Baseline saved: `results/consistency_baseline.json`
 
+### Branch 2.2: 201707 deep pass → MD-304~306
+- **MD-304**: 跟注臨界點=賠率≥出牌equity — call only when pot odds ≥ equity; equity_needed = call/(pot+call); outs×4% (flop) / outs×2% (turn) as quick estimate
+- **MD-305**: 多人底池=equity門檻倍增+bluff頻率倍縮 — multiway pot: equity threshold higher but harder to reach; bluff EV = heads-up × (fold_rate)^n_opponents
+- **MD-306**: 持續下注頻率=板面紋路函數 — dry board (A72 rainbow) → high c-bet freq; wet board (JT9 two-tone) → low c-bet freq + bet big when betting; board first, action second
+- dna_core.md: 303 → **306 MDs**
+
 ### Next cycle
-- Branch 2.2 deep pass: 201707+ext archive re-read for MD-304+ (agent running)
+- Branch 2.2: 201706 deep pass for MD-307+
 - Branch 1.1: paper-live monitoring — mainnet ready, awaiting credentials
 
 ## Cycle 74 — 2026-04-08T19:00Z
