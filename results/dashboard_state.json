@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T06:43+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#33 COMPLETE → posting_queue.md updated (#01~#33, Apr 9–Jun 12); SOP #32 Cognitive Capital Domain 8 健康資本 gap CLOSED ✅; SOP #33 Edge Decay publish thread fixed (duplicate removed)",
+  "updated": "2026-04-09T06:48+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#34 COMPLETE → posting_queue.md updated (#01~#34, Apr 9–Jun 14); **x_launch_sequence.md created ✓** — first-post friction reduced to 15 min; Apr 9 = scheduled post date for SOP #01",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions pre-committed)",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next blocker: Edward posts SOP #01."
+      "text": "Next blocker: Open `x_launch_sequence.md` → run pre-flight (~10 min) → post S..."
     },
     {
       "time": "just now",
-      "text": "- Posting queue extended to Jun 14 (#01–#34, 66-day target)"
-    },
-    {
-      "time": "just now",
-      "text": "- `publish_thread_sop34_twitter.md` — 10-tweet thread ready"
-    },
-    {
-      "time": "just now",
-      "text": "- `SOP #34 — Knowledge Monetization Framework`: G0 proof-of-trust threshold (..."
+      "text": "- `docs/x_launch_sequence.md` — 15-minute checklist: X bio text (paste-ready)..."
     },
     {
       "time": "just now",
       "text": "Shipped:"
+    },
+    {
+      "time": "just now",
+      "text": "Gap: \"Next blocker: Edward posts SOP #01\" has been unresolved for many cycles..."
+    },
+    {
+      "time": "just now",
+      "text": "Cycle 160 done."
     }
   ],
   "stats": {
-    "daemon_cycles": 159,
+    "daemon_cycles": 160,
     "total_mds": 330,
     "dna_core_lines": 87
   }
