@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T07:44+08",
+  "updated": "2026-04-09T07:49+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#34 COMPLETE → posting_queue.md updated (#01~#34, Apr 9–Jun 14); **x_launch_sequence.md created ✓** — first-post friction reduced to 15 min; Apr 9 = scheduled post date for SOP #01; **3 workbooks READY TO LIST** (Workbook #01 Strategy Development + Workbook #02 Portfolio Construction + Workbook #03 Execution & Sizing, $29 each, $87/buyer trilogy)",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions pre-committed)",
   "deadline": "2026-07-07",
@@ -55,23 +55,23 @@
     },
     {
       "time": "just now",
-      "text": "- MFE still tick 31 at +$0.77; BTC recovered $31 from tick 32"
+      "text": "- MFE still tick 31 at +$0.77; MFE/MAE=0.58x stable"
     },
     {
       "time": "just now",
-      "text": "- P&L: +$0.60 (+0.60%) on $100 — slight improvement from tick 32 pullback ($0..."
+      "text": "- P&L: +$0.56 (+0.56%) on $100 — slight pullback from tick 33 ($71,083→$71,109)"
     },
     {
       "time": "just now",
-      "text": "- Tick 33: BTC=$71,083.18, signal=SHORT (33 consecutive, 100%)"
+      "text": "- Tick 34: BTC=$71,108.75, signal=SHORT (34 consecutive, 100%)"
     },
     {
       "time": "just now",
-      "text": "Branch 1.1 (paper-live) — highest autonomous derivative."
+      "text": "Branch 1.1 (paper-live) — highest autonomous derivative. Branches 7 and mainn..."
     }
   ],
   "stats": {
-    "daemon_cycles": 170,
+    "daemon_cycles": 171,
     "total_mds": 330,
     "dna_core_lines": 87
   }
