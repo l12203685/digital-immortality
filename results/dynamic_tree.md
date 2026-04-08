@@ -14,9 +14,12 @@
   - testnet_runner.py built ✓ (tick/status/review/loop CLI, dry-run, JSONL log)
   - ccxt installed, Binance testnet connected ✓ — real data flowing
   - current signal: dual_ma=SHORT, donchian=FLAT, filtered=FLAT (BTC ~$71.6k)
-  - testnet log: results/testnet_log.jsonl (append-only)
+  - testnet log: results/testnet_log.jsonl (append-only, 8 entries so far)
   - kill conditions: MDD>15%, WR<35% (≥5 trades), PF<0.85 (≥3 losses)
-  - next: run testnet 7 days (--loop 86400), collect real signal→PnL data → GO/NO-GO → mainnet $100
+  - DRY_RUN simulated PnL: _compute_sim_pnl added ✓ (prev_signal×price_delta×100 USDT)
+  - daily cron: job 5c1c9fc1 registered (09:03 UTC daily, 7-day TTL) ✓
+  - cron_daily_tick.bat created for Windows Task Scheduler persistence ✓
+  - next: 7 ticks → run --review → GO/NO-GO → mainnet $100
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed) ✓
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA, MR→Donchian, mixed→filtered)
   - trading_system.py --portfolio: auto-detects regime, selects strategy, saves results/portfolio_decision.json ✓
@@ -84,6 +87,8 @@
 - RegimeFilter + DonchianConfirmed added to strategies.py
 - testnet_runner.py (tick/status/review/loop + JSONL persistence)
 - ccxt installed, Binance testnet live data confirmed
+- _compute_sim_pnl in testnet_runner.py (dry-run PnL now non-zero)
+- daily cron 09:03 UTC + cron_daily_tick.bat registered
 
 ## 演化紀錄
 - 2026-04-07 22:50: 初版骨架
@@ -92,4 +97,5 @@
 - 2026-04-08 00:34: 全面更新 — 反映 session 全部產出
 - 2026-04-07 17:10 UTC: cycle 4 — 4 branches parallel (daemon fix, multi-provider, CI/install, trading code)
 - 2026-04-08 01:05 UTC: cycle 5 — paper GO, testnet_runner.py built, ccxt live, tree branch 1.1 advanced
+- 2026-04-08 08:30 UTC: cycle 6 — sim PnL fixed (was always 0.0), daily cron registered, .bat for Task Scheduler
 - 2026-04-08 01:20 UTC: cycle 8 — portfolio.py (regime detect + auto-select), dna_core.md (71L), DNA §8 retirement, dashboard.py (8 sections), memory-informed auto-suggest
