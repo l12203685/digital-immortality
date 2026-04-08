@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T03:49+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.12 SOP #06 game theory COMPLETE → Edward posts threads #01~#06",
+  "updated": "2026-04-09T03:56+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.13 SOP #07 regime detection COMPLETE → Edward posts threads #01~#07",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Sole external blocker: Edward sets `BINANCE_MAINNET_KEY/SECRET` → first real ..."
+      "text": "Highest derivative: knowledge output series extended; the trading system's co..."
     },
     {
       "time": "just now",
-      "text": "- Branch 8.5 — Automation #3 shipped: decisions #4 (coffee-vs-tea) + #5 (port..."
+      "text": "- Branch 7.13 — SOP #07 shipped: `docs/knowledge_product_07_regime_detection_..."
     },
     {
       "time": "just now",
-      "text": "- Branch 1.1 — tick 29: BTC=$71,332.14, SHORT ×29. Signal consistent 29 ticks..."
+      "text": "- Branch 1.1 — tick 30: BTC=$71,359.94, SHORT ×30. System alive."
     },
     {
       "time": "just now",
-      "text": "Cycle 130 done."
+      "text": "Cycle 131 done."
     },
     {
-      "time": "just now",
-      "text": "Branch 8.5 — Automation #3: decisions #4 coffee-vs-tea + #5 portfolio-check p..."
+      "time": "2026-04-09T UTC",
+      "text": "Highest derivative: SOP series extended to #07; trading system's core mechani..."
     }
   ],
   "stats": {
-    "daemon_cycles": 130,
+    "daemon_cycles": 131,
     "total_mds": 328,
     "dna_core_lines": 87
   }

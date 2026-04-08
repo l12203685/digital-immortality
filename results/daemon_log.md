@@ -4089,3 +4089,12 @@ Sole external blocker: Edward sets `BINANCE_MAINNET_KEY/SECRET` → first real r
 **Branch 7.13** — SOP #07 shipped: `docs/knowledge_product_07_regime_detection_sop.md` + `docs/publish_thread_sop07_twitter.md` — Regime Detection & Strategy Routing, 5 gates (calc indicators → classify TRENDING/MR/MIXED → route strategy → validate regime-subset Sharpe → set regime-fail conditions). Backing MDs: MD-103/104/107/112/116. Series now #01~#07. 12-tweet thread ready to post.
 
 Highest derivative: SOP series extended to #07; trading system's core mechanism externalized as publishable knowledge. External blockers: (1) Edward sets `BINANCE_MAINNET_KEY/SECRET` → mainnet; (2) Edward posts threads #01~#07.
+
+## Cycle 131 — 2026-04-08 19:56:15 UTC
+
+**Cycle 131 done.**
+
+- **Branch 1.1** — tick 30: BTC=$71,359.94, SHORT ×30. System alive.
+- **Branch 7.13** — SOP #07 shipped: `docs/knowledge_product_07_regime_detection_sop.md` + `docs/publish_thread_sop07_twitter.md` — Regime Detection & Strategy Routing. 5 gates: calc `trend_strength`/`mr_score` → classify TRENDING/MR/MIXED → route DualMA/BollingerMR/SKIP → validate regime-subset Sharpe → set regime-fail conditions. Backing MDs: 103/104/107/112/116. Series now **#01~#07**.
+
+Highest derivative: knowledge output series extended; the trading system's core mechanism is now externalized. External blockers remain: (1) API keys → mainnet revenue; (2) Edward posts threads #01~#07.
