@@ -1,6 +1,6 @@
 # SOP #05 — Career & Salary Decision Making
 
-> **Source MDs**: MD-128, MD-209, MD-210, MD-303, MD-309, MD-311, MD-312, MD-327
+> **Source MDs**: MD-121, MD-128, MD-129, MD-163, MD-209, MD-210, MD-229, MD-303, MD-309, MD-311, MD-312, MD-327, MD-301, MD-302
 > **Domain**: Career, Salary, Professional Path
 > **Status**: COMPLETE — cycle 115 (2026-04-08T19:30Z)
 > **Applies to**: Any career-direction, job-offer, salary-negotiation, or path-switching decision
@@ -10,6 +10,8 @@
 ## Overview
 
 Career decisions have asymmetric outcomes: a bad path can cost 2–5 years; a good one compounds for decades. The failure mode is not "bad decisions" but **wrong sequencing** — anchoring on salary before mapping the path, or evaluating one offer before quantifying alternatives.
+
+**MD-121 (五維框架=完整決策系統)**: Every career decision maps to five dimensions — financial, knowledge, optionality, reputational, and time. A decision that wins on salary but loses on optionality and knowledge may have negative total EV. This SOP sequences the gates so all five dimensions are captured before any commitment.
 
 This SOP is irreversible-gate-ordered. Each gate must pass before the next opens.
 
@@ -85,9 +87,11 @@ Map the worst-case scenario for this path:
 
 **Rule** (MD-128: 薪資談判精算底線 / MD-209: 薪資底線=年薪精算+試用期機制書面化):
 
-**Step 1 — Backtrack from take-home target** (MD-301):
+**Step 1 — Backtrack from take-home target** (MD-301: 薪資目標逆推=從稅後實領出發):
 ```
 target_take_home (annual) → ÷ 0.75 (Taiwan tax+NHI estimate) = required_headline_salary
+# Conservative: ÷ 0.75. High-tax jurisdiction: ÷ 0.70. Low-tax: ÷ 0.80
+# Never start from headline salary — that number does not reach your account.
 ```
 
 **Step 2 — Verify ceiling**:
@@ -105,6 +109,9 @@ Floor = MAX(
 
 **Step 4 — Probation protection** (MD-209):
 - If offer includes probation: write minimum terms → salary during probation, conversion conditions, written confirmation of role scope.
+
+**MD-129: Written floor wins anchoring battles (對稱策略多空隱藏相依)**:
+When both sides present anchors, the side with the written floor wins — because they cannot be moved by the other side's number. Verbal floors can be rationalised downward under social pressure. Written floors cannot. This is not a negotiation tactic; it is a structural advantage from pre-commitment.
 
 **Decision rule**: Book the deal only if `offer ≥ floor`. Never negotiate without the floor written first. Anchor high as secondary tactic; written floor is primary.
 
@@ -156,6 +163,13 @@ required_annual_increase% = (target / post_promotion) ^ (1/years_remaining) - 1
 - Query: what has the org's historical annual salary increase been for this role level?
 - If `required_increase > historical_max_increase → path eliminated`. Do not wait; reroute.
 
+**MD-163: Learning environment ceiling (學習環境=輸入端品質決定天花板)**:
+- Beyond the salary arithmetic: evaluate the quality of the top 10% of peers in this org.
+- The top 10% set the effective ceiling of what you can learn, become, and eventually earn.
+- A role where top-10% peers earn at your target = ceiling is real and structural.
+- A role where top-10% peers earn 3–5× your target = ceiling is not yet binding.
+- Choose environments by peer quality; the salary compounds from that selection.
+
 **Example**:
 - Target: $1.2M take-home by age 30 (requires ~$1.5M headline)
 - Current: $700K headline; promotion adds 20% → $840K
@@ -189,6 +203,11 @@ required_annual_increase% = (target / post_promotion) ^ (1/years_remaining) - 1
 - If Offer A > all alternatives by EV margin > cost of delay → accept.
 - If alternatives close or better → negotiate A or pursue B.
 
+**MD-229: Cross-domain precedent check (職涯轉換=先找跨域成功先例)**:
+- If any option in the EV table involves a domain switch, add a column: "Cross-domain success cases verified?"
+- Before treating a domain switch as a real option, find 3+ verified cases of people who made the same switch and succeeded.
+- No verified precedents → domain switch option is EXPLORATION-grade, not EXECUTION-grade. Exclude from EV table until precedents are found or the option becomes concrete.
+
 **Fail action**: "This is the only offer I have" is an information failure, not a constraint. At minimum, estimate opportunity cost of the best alternative even if not formally in hand.
 
 ---
@@ -197,7 +216,9 @@ required_annual_increase% = (target / post_promotion) ^ (1/years_remaining) - 1
 
 **Input**: Role/path under consideration
 
-**Rule** (MD-312: 金融領域價值=知識附加工具非薪資本身 / MD-302: 投資ROI=先換算年化%比基準):
+**Rule** (MD-312: 金融領域價值=知識附加工具非薪資本身 / MD-302: 投資ROI評估=先換算年化%):
+
+**MD-302**: Convert all knowledge ROI to annualised % before comparison. Compare against a simple benchmark (S&P500, index ETF equivalent). If domain knowledge ROI < benchmark → it is not a meaningful externality. If domain knowledge ROI > benchmark → it is real additional compensation.
 
 For knowledge-intensive roles (finance, trading, law, engineering, medicine):
 
@@ -254,5 +275,6 @@ knowledge_externality_value = domain_knowledge × personal_capital × holding_ye
 ---
 
 *SOP #05 — Career & Salary Decision Making*
-*Based on MD-128/209/210/301/303/309/311/312/327 from 324 micro-decisions.*
+*Based on MD-121/128/129/163/209/210/229/301/302/303/309/311/312/327 from 327 micro-decisions.*
 *Cycle 115 — 2026-04-08T19:30Z*
+*SOP series: #01 Strategy Dev → #02 Portfolio → #03 Execution → #04 Kill Decision → #05 Career & Salary*

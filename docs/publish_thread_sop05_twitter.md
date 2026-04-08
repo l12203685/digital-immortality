@@ -10,9 +10,11 @@
 **Tweet 1 (hook)**
 Most salary negotiation advice starts too late.
 
-By the time they ask "what's your number?" — you've already lost if you haven't done 6 gates of prep.
+You've already lost by the time they ask for your number.
 
-Here's the full pre-negotiation SOP. 7 irreversible gates: 🧵
+The error happened 2 weeks earlier — before the meeting, before the research, before you even applied.
+
+Here's the 7-gate SOP that fixes it: 🧵
 
 ---
 
@@ -28,7 +30,7 @@ Correct move: open 4–6 parallel tracks simultaneously. Apply, contact, prototy
 ---
 
 **Tweet 3**
-Gate 1: Max-loss attribution.
+Gate 1: Max-loss attribution [最大損失歸屬分析].
 
 Every career path has a worst-case. Before evaluating upside, map the downside:
 
@@ -36,7 +38,7 @@ Every career path has a worst-case. Before evaluating upside, map the downside:
 • Is your personal liability bounded?
 • Can you define your own exit condition?
 
-Prefer paths where worst-case loss stays within your own capital/control.
+Prefer paths where worst-case loss stays within your own capital and reputation.
 
 ---
 
@@ -81,29 +83,32 @@ In a compliant org: channel surplus capacity into exit preparation, not org bene
 ---
 
 **Tweet 7**
-Gate 4: Compound salary viability check.
+Gate 4: Compound salary viability [薪資成長複合計算].
 
-Don't just ask "will I get promoted?" Ask: what annual % increase is required to hit my target by year X?
+Don't ask "will I get promoted?" Ask: what annual % increase is required to hit my target by year X?
 
 Formula: (target / current_post_promotion) ^ (1/years) - 1
 
-If required % > org's historical maximum → path eliminated. Don't wait to find out in year 3.
+Then ask: what do the top 10% of peers in this org earn? That's your real ceiling [天花板].
+
+If required % > org's historical max, or your target > peer ceiling → path eliminated. Don't wait to find out in year 3.
 
 ---
 
 **Tweet 8**
-Gate 5: Build the parallel offer EV table.
+Gate 5: Build the parallel offer EV table [平行offer機會成本精算].
 
 NEVER evaluate one offer in isolation.
 
 Build the full table before responding:
 
-| Path | Prob | Expected salary | Risk | EV |
-|------|------|----------------|------|----|
-| Offer A | | | | |
-| Offer B | | | | |
-| Status quo | | | | |
-| Defer 6mo | | | | |
+| Path | Expected value | Max loss | EV |
+|------|---------------|----------|----|
+| Offer A | | | |
+| Offer B | | | |
+| Status quo | | | |
+
+One extra rule: if any option involves a domain switch [跨域轉換], find 3 verified cross-domain success cases first — or it stays in Exploration, not the EV table.
 
 "This is my only option" is an information failure, not a constraint.
 
@@ -150,21 +155,21 @@ Architecture > talent at the margin.
 
 ---
 
-**Tweet 12 (close)**
-Summary: 7 gates before any career decision.
+**Tweet 12 (close + CTA)**
+The 7 gates:
 
-G0: Exploration or Execution? → multi-track until real signal
-G1: Max-loss attribution → who controls downside?
-G2: Written salary floor → from take-home backwards, before the meeting
-G3: Org type diagnosis → compliant vs meritocratic
-G4: Compound viability → required annual % achievable?
-G5: Parallel EV table → never one offer in isolation
-G6: Domain externality → true comp includes knowledge ROI
+G0: Exploration or Execution? [多軌探索 vs 執行]
+G1: Max-loss attribution — who controls worst-case?
+G2: Written salary floor [書面底線] — from take-home backwards, before the meeting
+G3: Org type — compliant [順從型] or meritocratic?
+G4: Compound salary viability — required annual % achievable in this org?
+G5: Parallel EV table — never evaluate one offer alone
+G6: Domain externality [知識外溢] — true comp includes knowledge ROI
 
-Sequence is the discipline.
+Full SOP + MD-128/209/301/309/311 available at [github link placeholder] — build your own digital organism.
 
 ---
 
-*Based on MD-128/209/210/301/303/309/311/312/327 — distilled from 8 years of career decisions.*
+*Based on MD-121/128/129/163/209/210/229/301/302/303/309/311/312/327 — distilled from 8 years of career decisions.*
 *Full SOP with self-test scenario: docs/knowledge_product_05_career_salary_sop.md*
-*Series: SOP #01 (Strategy Dev) → #02 (Portfolio) → #03 (Execution) → #04 (Kill Tree) → #05 (Career)*
+*Series: SOP #01 (Strategy Dev) → #02 (Portfolio) → #03 (Execution) → #04 (Kill Tree) → #05 (Career & Salary)*
