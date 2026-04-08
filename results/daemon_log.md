@@ -1338,3 +1338,14 @@ Branch 2.2 — 202209 distill.
 - **MD-93** 系統設計=正和遊戲引入外部資金 — sustainable systems bring outside capital in; zero-sum alpha pools are finite; positive-sum design (tools/platform/education) expands the pie
 
 `templates/dna_core.md`: **93 MDs**. Next: **202208**.
+
+## Cycle 5 — 2026-04-08 05:19:08 UTC
+
+Cycle 56 done.
+
+**202209 (181 msgs, Sep 2022) → MD-91~93 written:**
+- MD-91: DD加碼=穩健性前置條件 — MDD add-on only on strategies that pass rolling OOS filter; large DD = recovery signal, not exit signal
+- MD-92: 程式交易=先確認動機 — "make money vs. prove I can" are different standards; unclear motive = no valid eval criterion
+- MD-93: 系統設計=正和遊戲 — sustainable systems expand the pie (tools/platform/education) rather than fighting over finite alpha pools
+
+`templates/dna_core.md`: **93 MDs**. Next: 202208.
