@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T18:13+08",
+  "updated": "2026-04-08T18:26+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -50,24 +50,24 @@
   ],
   "activity": [
     {
-      "time": "2026-04-09T UTC",
-      "text": "- `templates/dna_core.md`: 207 MDs; next: 201905"
+      "time": "just now",
+      "text": "Next: 201903."
     },
     {
-      "time": "2026-04-09T UTC",
-      "text": "- 3 micro-decisions written:"
+      "time": "just now",
+      "text": "Branch 2.2 — 201904 → MD-211~213 (213 MDs)"
     },
     {
-      "time": "2026-04-09T UTC",
-      "text": "- 201906.jsonl: 35 substantive Edward msgs (Jun 2019, mostly social/Avalon/li..."
+      "time": "just now",
+      "text": "`templates/dna_core.md`: 213 MDs. Next: 201903."
     },
     {
-      "time": "2026-04-09T UTC",
-      "text": "Branch 2.2 — 201906 distill → MD-205~207 (207 MDs total)"
+      "time": "just now",
+      "text": "- Focus: retirement planning (g128), badminton team economics (g63), Avalon b..."
     },
     {
-      "time": "2026-04-09T UTC",
-      "text": "`templates/dna_core.md`: 204 MDs. Next: 201906."
+      "time": "just now",
+      "text": "- Top groups: g2 (457), g63 (150), g47 (122), g133 (115), g11 (110), g128 (99)"
     }
   ],
   "stats": {
