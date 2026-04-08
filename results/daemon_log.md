@@ -4625,3 +4625,19 @@ Highest-derivative gap: queue ended May 25 — content engine dies without exten
 - Queue extended to **May 27, SOP #01~#25**
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 151 — 2026-04-09T UTC
+
+**Cycle 151 done.**
+
+Highest-derivative gap: queue ended May 27 (SOP #25). No SOP on walk-forward validation despite heavy DNA backing (MD-97/98/143) — the IS/OOS methodology underpins the entire backtest/kill chain but had no standalone teachable SOP.
+
+**Shipped:**
+- `docs/knowledge_product_26_walkforward_validation_sop.md` — 5-gate framework: G0 structure lock before optimization (mechanism sentence required, MD-97) / G1 IS/OOS split + ≥6 walk-forward windows (MD-143) / G2 OOS Sharpe ≥60% IS in ≥60% windows (MD-98) / G3 regime decomposition target Sharpe ≥1.0 / G4 parameter stability ±30% sweep / G5 deployment contract with kill conditions before first tick (MD-96); self-test: DualMA BTC 5/6 pass → GO 75% size
+- `docs/publish_thread_sop26_twitter.md` — 12-tweet thread: *"Your backtest survived the past. But did it survive data it never saw?"*
+- `docs/posting_queue.md` extended to **#01~#26** (May 29); 50-day target
+- `results/dynamic_tree.md` updated: Branch 7.31 added, cycle 151 timestamp, regime line updated
+
+**Series: SOP #01~#26 COMPLETE. Queue: Apr 9–May 29.**
+
+**Next blocker:** Edward posts SOP #01 to start G5 compounding clock.
