@@ -4742,3 +4742,20 @@ Gap: no SOP on strategy monitoring despite MD-96/98/42/142 all in DNA. Fixed.
 - Queue extended to **Jun 4** (SOP #01~#29, 56-day target)
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 155 — 2026-04-09T UTC
+
+**Cycle 155 done.**
+
+Highest-derivative gap: SOP series at #29 (Jun 4). Every upstream SOP (#27 regime, #28 slippage, #29 monitoring) fires an alert — but no SOP covers what to do *during* the drawdown. MD-42/55/98/32 all in DNA, zero teachable product on recovery mechanics. Fixed.
+
+**Shipped:**
+- `docs/knowledge_product_30_drawdown_recovery_sop.md` — 5-gate framework: G0 pre-commit rules before drawdown (MD-96) / G1 three-level size ladder vs equity curve MA_20 (MD-42) / G2 survival_rate = rolling_30d_Sharpe ÷ historical_OOS_Sharpe ≥0.6 gate (MD-98) / G3 root-cause triage (regime/execution/noise/unknown) before restoring size / G4 return-to-full-size: 5-point evidence checklist + 10-trade window / G5 post-mortem every DD >8%; self-test: DualMA BTC 8.4% below MA_20 + survival_rate=0.59 + regime mismatch → pause, wait for regime flip; 6 DNA anchors
+- `docs/publish_thread_sop30_twitter.md` — 12-tweet thread: hook: *"You know how to enter a trade. Do you know what to do when you're 12% underwater and the next signal fires?"*
+- `docs/posting_queue.md` extended to **#01~#30** (Jun 6, 58-day target)
+- `results/dynamic_tree.md` updated: Branch 7.33, cycle 155
+- Committed and pushed.
+
+**Series: SOP #01~#30 COMPLETE.**
+
+**Next blocker:** Edward posts SOP #01.
