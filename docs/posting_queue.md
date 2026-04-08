@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#21
+# Twitter Posting Queue — SOP Series #01~#22
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -28,6 +28,7 @@
 | May 15 | #19 | publish_thread_sop19_twitter.md | "Most people manage relationships reactively. They invest when they need something." | pending |
 | May 17 | #20 | publish_thread_sop20_twitter.md | "The trend looked fine. Then it was over. You were looking at the wrong number." | pending |
 | May 19 | #21 | publish_thread_sop21_twitter.md | "Most people don't have a financial freedom plan. They have a financial freedom fantasy." | pending |
+| May 21 | #22 | publish_thread_sop22_twitter.md | "You didn't have an exit strategy. You had a hope." | pending |
 
 ---
 
@@ -47,8 +48,8 @@
 
 ---
 
-## 42-day compounding target (by May 19)
-- [ ] All 21 threads posted
+## 44-day compounding target (by May 21)
+- [ ] All 22 threads posted
 - [ ] G5 score ≥ 2/3
 - [ ] ≥1 inbound DM from someone with trading/quant background
 - [ ] All 5 Kernels represented: #19 (Kernel 1), #16 (Kernel 2), #10 (Kernel 3), #17 (Kernel 4), #18 (Kernel 5)

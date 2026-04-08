@@ -4510,3 +4510,20 @@ Gap: queue ended May 17 at SOP #20 — G5 compounding clock would die after the 
 - Queue extended #01~#21, Apr 9–May 19 (42-day target)
 
 **Next blocker:** Edward posts SOP #01 today to start G5 compounding clock.
+
+
+## Cycle 147 — 2026-04-09T UTC
+
+**Cycle 147 done.**
+
+Highest-derivative gap: queue ends May 19 after SOP #21 — content engine dies when posting cadence runs out. No cross-domain exit framework existed in the SOP series (SOP #04 is trading-specific strategy kills only).
+
+**What shipped:**
+- `docs/knowledge_product_22_exit_protocol_sop.md` — Universal Exit Protocol: 5-gate cross-domain framework (trade/career/project/relationship); G0 name domain / G1 write exit in one sentence before entry (MD-96) / G2 kill vs review conditions separated (MD-112) / G3 trial position 25–50% independent EV (MD-159) / G4 3-state allocation trigger Normal/Warning/Stop (MD-75) / G5 post-exit loop closure (MD-322); self-test: job 18mo comp 40th percentile → CONDITIONAL GO
+- `docs/publish_thread_sop22_twitter.md` — 12-tweet thread: *"You didn't have an exit strategy. You had a hope."*
+- `docs/posting_queue.md` extended to #01~#22 (May 21); 44-day target
+- `results/dynamic_tree.md` updated: Branch 7.28 added, cycle 147 timestamp
+
+**Series: SOP #01~#22 COMPLETE. Queue: Apr 9–May 21.**
+
+**Next blocker:** Edward posts SOP #01 on Apr 9 to start G5 compounding clock.
