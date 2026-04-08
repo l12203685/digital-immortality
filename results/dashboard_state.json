@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T21:16+08",
+  "updated": "2026-04-08T21:21+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,23 +51,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Blocker remains: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` needed to g..."
+      "text": "- Blocker unchanged: `BINANCE_MAINNET_KEY` + `SECRET` → live at $100 cap"
     },
     {
       "time": "just now",
-      "text": "The remote was force-updated by another daemon process (Cycle 62 already comm..."
+      "text": "- Branch 2.3: consistency test re-verified 8/8 ALIGNED at 273-MD scale"
     },
     {
-      "time": "9min ago",
-      "text": "Unblocking condition: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → `pyt..."
+      "time": "just now",
+      "text": "- Branch 1.1: paper-live tick 10, BTC=72,459.40, SHORT ×10 consistent (range ..."
     },
     {
-      "time": "9min ago",
-      "text": "- Committed and pushed"
+      "time": "just now",
+      "text": "Cycle 63 done."
     },
     {
-      "time": "9min ago",
-      "text": "- Testnet review: CONDITIONAL_GO (4/6 strategies pass; MAE/MFE awaiting suffi..."
+      "time": "just now",
+      "text": "- Unblocking condition unchanged: set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNE..."
     }
   ],
   "stats": {
