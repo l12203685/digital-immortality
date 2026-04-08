@@ -1392,3 +1392,17 @@ Cycle 58 done.
 - MD-99: 恆定槓桿=每日口數再平衡 — constant leverage requires daily size recalculation; target < 1.5% daily vol → 3-5x practical range
 
 `dna_core.md`: **99 MDs**. Next: 202207.
+
+## Cycle 58 — 2026-04-08T22:30 UTC
+
+**gap fix + 202207 distill.**
+
+Gap fix: 202208 already had MD-97~99 in dna_core.md (written by prior cycle, tree stale).
+
+**202207.jsonl** (98 substantive Edward msgs, Jul 2022) → 3 MDs written to `templates/dna_core.md`:
+
+- **MD-100** 投組最佳化=遞迴兩兩最高風暴比 — SOP: ①find highest storm-ratio sub-portfolio ②pair with next, find optimal weight ③repeat; zero-weight strategies re-evaluated individually
+- **MD-101** 策略分類=多空×類型的二維最細分 — minimum viable taxonomy: (long-only/short-only/flip) × strategy-type; flip strategies interact with same-direction strategies, must be managed separately
+- **MD-102** 跨Session留倉=需獨立Edge，非自然延伸 — daytime-profit-to-nighttime tested: DD drops but profit drops more, storm ratio always falls; cross-session holding requires its own standalone edge
+
+`templates/dna_core.md`: **102 MDs**. Next: 202206.
