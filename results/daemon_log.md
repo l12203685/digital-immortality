@@ -1730,3 +1730,16 @@ Next: 202108.
 - **MD-141** 思維層級=比對手+1才有EV — 識別對手在第幾層，選N+1回應；跳太多層浪費算力
 
 `dna_core.md`: **141 MDs**. Next: 202107.
+
+## Cycle 67 — 2026-04-08T06:00 UTC
+
+**Branch 2.2 — gap reconcile + 202107 distill → MD-142~144.**
+
+202108 gap reconcile: MD-139~141 already in file (processed in prior cycle, tree was stale).
+
+**202107 → MD-142~144** (49 substantive Edward msgs, Jul 2021):
+1. **MD-142** 選擇權學習順序=從權利金變動入門而非希臘字母 — correct order: price-movement → intuition → Greeks; reversed order = math without market feel
+2. **MD-143** WFA全樣本悖論=分段最佳化優於整體最佳化 — WFA earns each year but full-sample optimization doesn't; non-stationary regimes require local-optimal sequences not global optima
+3. **MD-144** 策略監控=人均帶寬是投組規模硬上限 — 2 strategies/day = 1+ month backlog; automate health checks, humans review anomalies only
+
+`templates/dna_core.md`: **144 MDs**. Next: 202106.
