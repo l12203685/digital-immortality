@@ -3088,3 +3088,15 @@ Communication domain test scenarios (`generic_verdict_first` + `generic_intuitio
 - MD-290: 新職涯路徑評估=先窮舉制度性要素（入門/時間/天花板/退出）
 - MD-291: 外幣配置=幣值方向觀點前置；工具選擇是幣值觀點的實現方式
 - **templates/dna_core.md: 291 MDs**; next: 201711
+
+## Cycle 74 — 2026-04-08 14:25:58 UTC
+
+**Cycle 76 done.**
+
+Branch 2.2 highest-derivative. Read 201712 JSONL (129 Edward msgs), distilled 3 new MDs:
+
+- **MD-289**: 組織用人=順從>能力 — evaluate org's valuation of ability vs compliance before investing human capital
+- **MD-290**: 職涯評估=先窮舉制度性要素 — map entry/time/ceiling/exit before asking "is it worth it"
+- **MD-291**: 外幣配置=幣值方向觀點前置 — establish currency direction view before choosing allocation tool
+
+**DNA: 291 MDs.** Next: 201711.

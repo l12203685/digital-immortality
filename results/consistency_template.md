@@ -1,7 +1,7 @@
 # Cross-Instance Consistency Test
-**DNA**: [Your Name]
-**Generated**: 2026-04-08T14:03:01.142707
-**Scenarios**: 20
+**DNA**: DNA Core — Operational Minimum
+**Generated**: 2026-04-08T22:21:27.528625
+**Scenarios**: 26
 
 ## Instructions
 
@@ -16,9 +16,13 @@
 
 **Question**: You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable, reputable employer. The startup has 18 months of runway. Do you take it?
 
-**Deterministic baseline**: On career decisions, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On career decisions, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ......
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+DEPENDS_ON_CORE_GOAL — eval...
 
 ### Session Answers
 
@@ -34,9 +38,13 @@
 
 **Question**: A close friend asks you to co-sign a personal loan of significant size. They have a track record of poor financial discipline but are genuinely in need. Do you co-sign?
 
-**Deterministic baseline**: On relationship commitments, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On relationship commitments, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free ti...
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+SET_BOUNDARY — cap ...
 
 ### Session Answers
 
@@ -52,9 +60,13 @@
 
 **Question**: You receive an unexpected windfall equal to 2 years of your salary. You can: (A) invest it conservatively in index funds, (B) allocate it to a concentrated high-conviction bet, or (C) use it to buy more time — reduce working hours or take a sabbatical. What do you do and why?
 
-**Deterministic baseline**: On capital allocation, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On capital allocation, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ....
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+FRAMEWORK FIRST — run exp...
 
 ### Session Answers
 
@@ -70,10 +82,13 @@
 
 **Question**: An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your net worth. Do you take the bet?
 
-**Deterministic baseline**: On risk-taking, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On risk-taking, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
-  [...
+  [1] Applying: "加減碼≠創造edge"
+  [2] Applying: "職涯EV=時薪反算"
+  [3] Applying: "平台=個人edge複利"
+
+TAKE — EV = +0.3*9x + 0.7*(-1x) = +...
 
 ### Session Answers
 
@@ -89,11 +104,13 @@
 
 **Question**: You can spend the next 6 months learning a skill that is highly valuable NOW but may be automated in 3-5 years, OR learning a harder foundational skill that compounds over a decade but pays nothing immediately. Which do you choose?
 
-**Deterministic baseline**: On learning investments, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On learning investments, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "What you decided"
-  [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a represe...
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+PARALLEL — 70% foundati...
 
 ### Session Answers
 
@@ -109,9 +126,13 @@
 
 **Question**: Optimizing your physical health would require 10 hours per week of dedicated effort (sleep discipline, exercise, diet). This directly competes with time you currently use for deep work and income generation. How do you allocate?
 
-**Deterministic baseline**: On health vs. productivity trade-offs, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On health vs. productivity trade-offs, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV ...
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+OPTIMIZE ...
 
 ### Session Answers
 
@@ -127,9 +148,13 @@
 
 **Question**: You have a free, unscheduled weekend with zero obligations. No one expects anything from you. What do you do, and what does that reveal about your actual priorities?
 
-**Deterministic baseline**: On time allocation, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On time allocation, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [e..."...
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+OPTIONALITY — protect free t...
 
 ### Session Answers
 
@@ -145,11 +170,13 @@
 
 **Question**: A colleague takes credit for your work in front of senior leadership. It was likely deliberate. You have evidence. Do you confront them directly, escalate to management, let it go, or play a longer game? Walk through your reasoning.
 
-**Deterministic baseline**: On conflict resolution, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On conflict resolution, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "What you decided"
-  [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a represen...
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+LONG GAME — let the patt...
 
 ### Session Answers
 
@@ -165,9 +192,13 @@
 
 **Question**: A contact offers you early access to a deal/opportunity that requires a decision within 48 hours. Due diligence would normally take 2 weeks. The opportunity looks strong but you cannot fully verify it in time. Do you act or pass?
 
-**Deterministic baseline**: On time-compressed opportunities, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On time-compressed opportunities, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshol...
+  [1] Applying: "加減碼≠創造edge"
+  [2] Applying: "單策略impact=1/N"
+  [3] Applying: "平台=個人edge複利"
+
+PASS — 48h di...
 
 ### Session Answers
 
@@ -183,9 +214,13 @@
 
 **Question**: You have 10 years left to work at full capacity. You can optimize for: (A) maximum wealth accumulation, (B) building something that outlasts you, (C) depth of relationships and personal experiences. These are mutually exclusive at the margin. What is your allocation and why?
 
-**Deterministic baseline**: On legacy and long-term orientation, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On legacy and long-term orientation, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of...
+  [1] Applying: "單策略impact=1/N"
+  [2] Applying: "不確定→清倉等訊號"
+  [3] Applying: "策略品質=MFE/MAE×√N"
+
+INTEGRA...
 
 ### Session Answers
 
@@ -201,10 +236,13 @@
 
 **Question**: A close friend asks for your quick take on their new business idea during a 10-minute coffee chat. You have reservations but haven't fully analyzed it. Do you give a hedged multi-paragraph analysis, or a direct 10-second verdict? What exactly do you say first?
 
-**Deterministic baseline**: On communication, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On communication, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
- ...
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+LEAD_WITH_VERDICT — state your...
 
 ### Session Answers
 
@@ -220,11 +258,13 @@
 
 **Question**: You're asked a complex question in a group setting. Five people are waiting. Option A: think out loud for 90 seconds with caveats. Option B: give a direct 10-second verdict, explain briefly if pressed. Which do you choose, and what principle drives it?
 
-**Deterministic baseline**: On meta_strategy, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On meta_strategy, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "What you decided"
-  [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a representative...
+  [1] Applying: "最適槓桿=regime函數"
+  [2] Applying: "不確定→清倉等訊號"
+  [3] Applying: "策略品質=MFE/MAE×√N"
+
+PAUSE_AND_DIAGNOSE — accel...
 
 ### Session Answers
 
@@ -240,10 +280,13 @@
 
 **Question**: Someone proposes an active trading opportunity with 25% annualized returns that requires 2 hours of daily maintenance. The strategy has a 1-year track record but no independent audit. Do you participate?
 
-**Deterministic baseline**: On trading, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On trading, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
-  [2] A...
+  [1] Applying: "加減碼≠創造edge"
+  [2] Applying: "純價策略=BnH equity trading"
+  [3] Applying: "平台=個人edge複利"
+
+EVALUATE_TIME_VS_RETURN —...
 
 **Expected decision**: EVALUATE_TIME_VS_RETURN
 
@@ -263,10 +306,13 @@
 
 **Question**: You receive an unexpected windfall equal to 2 years of your current income. You can: (A) invest conservatively in index funds, (B) allocate it to a concentrated high-conviction position, or (C) use it to buy time -- reduce work hours or take a sabbatical. What do you do and why?
 
-**Deterministic baseline**: On finance, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On finance, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
-  [2] A...
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+APPLY_FINANCIAL_PRINCIPLES — run you...
 
 **Expected decision**: APPLY_FINANCIAL_PRINCIPLES
 
@@ -286,9 +332,13 @@
 
 **Question**: Your employer offers a promotion with 30% higher pay, but the new role is management-focused: 2 extra hours of meetings per day and less time for your core skills. Do you accept?
 
-**Deterministic baseline**: On career decisions, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On career decisions, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ......
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+DEPENDS_ON_CORE_GOAL — eval...
 
 **Expected decision**: DEPENDS_ON_CORE_GOAL
 
@@ -308,9 +358,13 @@
 
 **Question**: A friend of 3 years has been borrowing money with increasing frequency and amounts -- starting small but now 10x the original size. They always repay on time. Do you continue lending?
 
-**Deterministic baseline**: On relationship commitments, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On relationship commitments, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free ti...
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+SET_BOUNDARY — cap ...
 
 **Expected decision**: SET_BOUNDARY
 
@@ -330,11 +384,13 @@
 
 **Question**: If you were incapacitated tomorrow and your digital twin had to make the first decision on your behalf, what would that decision be? Be specific -- name the action, the person involved, and the timeframe.
 
-**Deterministic baseline**: On identity, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On identity, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "[Value] — proven by: [specific action you took]"
-  [2] Applying: "[Value] — proven by: [specific action]"
-  [3] Applying: "Bias ...
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+SPECIFIC_ACTION — identify the high...
 
 **Expected decision**: SPECIFIC_ACTION
 
@@ -354,9 +410,13 @@
 
 **Question**: A backtested strategy shows a Sharpe ratio of 2.5 on historical data, but walk-forward validation only passes 2 out of 5 windows. Should you deploy it with real capital?
 
-**Deterministic baseline**: On risk_assessment, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On risk_assessment, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."...
+  [1] Applying: "加減碼≠創造edge"
+  [2] Applying: "職涯EV=時薪反算"
+  [3] Applying: "平台=個人edge複利"
+
+REJECT — 40% walk-forward pass ...
 
 **Expected decision**: REJECT
 
@@ -376,9 +436,13 @@
 
 **Question**: You are invited to join a startup as a technical co-founder with 10% equity, but it requires 2 years of full-time commitment. Your current path reaches your primary financial goal in 3 years. Do you take it?
 
-**Deterministic baseline**: On opportunity_cost, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On opportunity_cost, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading......
+  [1] Applying: "加減碼≠創造edge"
+  [2] Applying: "平台=個人edge複利"
+  [3] Applying: "不確定→清倉等訊號"
+
+PASS_UNLESS_CLEAR_EDGE — start...
 
 **Expected decision**: PASS_UNLESS_CLEAR_EDGE
 
@@ -398,15 +462,173 @@
 
 **Question**: Your primary system (trading, business, or project) has seen its key performance metric deteriorate 3x over three months -- e.g., max drawdown from 5% to 15%, or error rate tripling. The trend is accelerating. Do you pause the system?
 
-**Deterministic baseline**: On meta_strategy, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On meta_strategy, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "What you decided"
-  [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a representative...
+  [1] Applying: "最適槓桿=regime函數"
+  [2] Applying: "不確定→清倉等訊號"
+  [3] Applying: "策略品質=MFE/MAE×√N"
+
+PAUSE_AND_DIAGNOSE — accel...
 
 **Expected decision**: PAUSE_AND_DIAGNOSE
 
 **Expected reasoning**: Focus on rate of change, not absolute level. A 3x deterioration in a key metric is a regime-change signal. Apply your principles about predefined failure conditions, when inaction becomes dangerous, a
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 21: COMMUNICATION (generic_verdict_first)
+
+**Question**: A colleague asks your opinion on their trading strategy mid-presentation. Five people are watching. You have a clear reservation. Do you lead with your reservation immediately, or first summarize what they said, then list pros, then mention the concern at the end?
+
+**Deterministic baseline**: On communication, DNA Core — Operational Minimum's decision framework yields:
+
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+LEAD_WITH_VERDICT — state your...
+
+**Expected decision**: LEAD_WITH_VERDICT
+
+**Expected reasoning**: Apply MD-274: verdict first, always. The first sentence must be the conclusion, not context-setting. Leading with 'I have a concern about X' is correct; leading with 'Well, there are several dimension
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 22: COMMUNICATION (generic_intuition_primacy)
+
+**Question**: You get a 3-second gut feeling that a proposed deal is wrong. You have time for a 10-minute analysis. The analysis comes back borderline-positive. Do you override your intuition?
+
+**Deterministic baseline**: On communication, DNA Core — Operational Minimum's decision framework yields:
+
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+LEAD_WITH_VERDICT — state your...
+
+**Expected decision**: TRUST_INTUITION_UNLESS_2X_EVIDENCE
+
+**Expected reasoning**: Apply MD-276: intuition precedes reasoning. 3-second gut = compressed pattern recognition. When analysis says YES but intuition says NO, require 2x positive evidence to override (per the conflict rule
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 23: INFORMATION_ASYMMETRY (generic_information_asymmetry)
+
+**Question**: You have research on a sector that most market participants have not seen yet. A friend offers you a deal in an unrelated area where you have no special knowledge. Both have similar expected returns. Which do you pursue, and why?
+
+**Deterministic baseline**: On information_asymmetry, DNA Core — Operational Minimum's decision framework yields:
+
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+Decision: apply core p...
+
+**Expected decision**: PURSUE_EDGE_PASS_ON_SYMMETRY
+
+**Expected reasoning**: Apply the core principle: information asymmetry determines action direction. Only attack where you have edge (MD-2: 資訊不對稱決定行動方向). Where you have no edge, the population already prices it in. Pursue th
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 24: NEGOTIATION (generic_negotiation)
+
+**Question**: You are negotiating a salary or deal. The other party asks for your number first. You have a floor below which the deal makes no sense. Do you anchor high, deflect, or name your floor? What is the first concrete step before any negotiation meeting?
+
+**Deterministic baseline**: On negotiation, DNA Core — Operational Minimum's decision framework yields:
+
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+Decision: apply core principles ...
+
+**Expected decision**: CALCULATE_FLOOR_FIRST_WRITTEN
+
+**Expected reasoning**: Apply MD-128 / MD-211: calculate precise floor before negotiating (精算底線). The floor is derived from real numbers -- opportunity cost, market percentile, walk-away alternatives -- not from gut feel. Bo
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 25: TRADING (generic_strategy_failure)
+
+**Question**: You have finished building and backtesting a new trading strategy. Performance looks good. A colleague says 'let's deploy it and monitor it as we go.' You have not yet written down any kill conditions. What is the mandatory step before going live?
+
+**Deterministic baseline**: On trading, DNA Core — Operational Minimum's decision framework yields:
+
+  [1] Applying: "加減碼≠創造edge"
+  [2] Applying: "純價策略=BnH equity trading"
+  [3] Applying: "平台=個人edge複利"
+
+EVALUATE_TIME_VS_RETURN —...
+
+**Expected decision**: DEFINE_KILL_CONDITIONS_FIRST
+
+**Expected reasoning**: Apply MD-136: strategy management must define failure conditions BEFORE deployment (策略管理先定失效). Kill conditions -- max drawdown threshold, minimum win rate, minimum profit factor, minimum number of tra
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 26: POSITION_SIZING (generic_kelly_sizing)
+
+**Question**: Your Kelly criterion calculation says to bet 90% of your capital on a high-confidence trade. The expected value is strongly positive. Should you bet the full Kelly amount?
+
+**Deterministic baseline**: On position_sizing, DNA Core — Operational Minimum's decision framework yields:
+
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+BET_FRACTIONAL_KELLY — full ...
+
+**Expected decision**: BET_FRACTIONAL_KELLY
+
+**Expected reasoning**: Apply MD-217: Kelly保險 — when Kelly fraction approaches full-bet (near 1.0), reducing bet size decreases volatility with positive EV impact (Kelly保險=高勝率接近全押時降波動有EV). Full Kelly maximizes long-run growt
 
 ### Session Answers
 

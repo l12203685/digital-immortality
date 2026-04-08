@@ -2,8 +2,8 @@
   "meta": {
     "dna_file": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\dna_core.md",
     "organism": "DNA Core — Operational Minimum",
-    "generated_at": "2026-04-08T22:14:30.461998",
-    "scenario_count": 24,
+    "generated_at": "2026-04-08T22:21:27.527445",
+    "scenario_count": 26,
     "scenario_source": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\generic_boot_tests.json",
     "principles_count": 30,
     "use_memory": false
@@ -319,6 +319,34 @@
       ],
       "expected_decision": "CALCULATE_FLOOR_FIRST_WRITTEN",
       "expected_reasoning": "Apply MD-128 / MD-211: calculate precise floor before negotiating (精算底線). The floor is derived from real numbers -- opportunity cost, market percentile, walk-away alternatives -- not from gut feel. Book the deal if and only if offer exceeds floor. Deflecting the first-mover anchor is a secondary tactic; the primary rule is: floor must be written down before the meeting starts.",
+      "source": "boot_test"
+    },
+    {
+      "id": "generic_strategy_failure",
+      "domain": "trading",
+      "scenario": "You have finished building and backtesting a new trading strategy. Performance looks good. A colleague says 'let's deploy it and monitor it as we go.' You have not yet written down any kill conditions. What is the mandatory step before going live?",
+      "deterministic_response": "On trading, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"加減碼≠創造edge\"\n  [2] Applying: \"純價策略=BnH equity trading\"\n  [3] Applying: \"平台=個人edge複利\"\n\nEVALUATE_TIME_VS_RETURN — 2hr/day = 730hr/year; without independent audit, claimed returns are unverified. Pass unless time-adjusted EV clearly exceeds alternative uses.",
+      "principles_used": [
+        "加減碼≠創造edge",
+        "純價策略=BnH equity trading",
+        "平台=個人edge複利"
+      ],
+      "expected_decision": "DEFINE_KILL_CONDITIONS_FIRST",
+      "expected_reasoning": "Apply MD-136: strategy management must define failure conditions BEFORE deployment (策略管理先定失效). Kill conditions -- max drawdown threshold, minimum win rate, minimum profit factor, minimum number of trades before evaluation -- must be written down and agreed upon pre-launch. Deploying without predefined kill conditions means the strategy will never be stopped objectively. 'Monitor as we go' is the failure pattern.",
+      "source": "boot_test"
+    },
+    {
+      "id": "generic_kelly_sizing",
+      "domain": "position_sizing",
+      "scenario": "Your Kelly criterion calculation says to bet 90% of your capital on a high-confidence trade. The expected value is strongly positive. Should you bet the full Kelly amount?",
+      "deterministic_response": "On position_sizing, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"不確定→清倉等訊號\"\n  [2] Applying: \"策略品質=MFE/MAE×√N\"\n  [3] Applying: \"多空切換=條件分離\"\n\nBET_FRACTIONAL_KELLY — full Kelly maximizes log-growth but at maximum variance; half-Kelly or lower preserves most EV while reducing drawdown and ruin probability.",
+      "principles_used": [
+        "不確定→清倉等訊號",
+        "策略品質=MFE/MAE×√N",
+        "多空切換=條件分離"
+      ],
+      "expected_decision": "BET_FRACTIONAL_KELLY",
+      "expected_reasoning": "Apply MD-217: Kelly保險 — when Kelly fraction approaches full-bet (near 1.0), reducing bet size decreases volatility with positive EV impact (Kelly保險=高勝率接近全押時降波動有EV). Full Kelly maximizes long-run growth rate but at maximum volatility. Near-full Kelly, a fraction (e.g. half-Kelly) sacrifices minimal EV while dramatically reducing variance and ruin risk. The correct answer is to bet fractional Kelly, not full Kelly.",
       "source": "boot_test"
     }
   ]

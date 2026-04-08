@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T22:07+08",
+  "updated": "2026-04-08T22:25+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "- Branch 1.1 still blocked on mainnet credentials"
+      "text": "DNA: 291 MDs. Next: 201711."
     },
     {
       "time": "just now",
-      "text": "- Baseline updated: 10 scenarios (was 8 in notes, 10 in reality)"
+      "text": "Branch 2.2 highest-derivative. Read 201712 JSONL (129 Edward msgs), distilled..."
     },
     {
       "time": "just now",
-      "text": "- 10/10 ALIGNED confirmed — communication domain fully tested and persisted"
+      "text": "Cycle 76 done."
     },
     {
-      "time": "just now",
-      "text": "Communication domain test scenarios (`generic_verdict_first` + `generic_intui..."
+      "time": "2026-04-08 UTC",
+      "text": "- templates/dna_core.md: 291 MDs; next: 201711"
     },
     {
-      "time": "just now",
-      "text": "Cycle 74 done."
+      "time": "2026-04-08 UTC",
+      "text": "- 129 Edward msgs read (Dec 2017), 3 new micro-patterns distilled"
     }
   ],
   "stats": {
-    "daemon_cycles": 74,
-    "total_mds": 283,
+    "daemon_cycles": 76,
+    "total_mds": 289,
     "dna_core_lines": 76
   }
 }
