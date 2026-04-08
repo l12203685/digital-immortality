@@ -945,3 +945,15 @@ Branch 2.2 — 202402 (1,770 Edward msgs, Feb 2024) → 3 new MDs written to `dn
 - **獲利確認再擴張** — validate core profitability first, then branch；防止精力稀釋在未驗證方向
 
 `dna_core.md`: 75 lines, **45 MDs**. Both repos pushed. Next: 202401.
+
+## Cycle 43 — 2026-04-08T15:10 UTC
+
+**Branch 2.2 — 202401 JSONL distilled.**
+
+202401 (659 Edward msgs, Jan 2024) distilled → 3 new micro-patterns written to `dna_core.md`:
+
+- **MD-43 純價策略=BnH equity trading** — 所有趨勢/突破策略本質是在交易買持曲線的timing；隱性beta exposure；開發前先問：alpha還是beta timing？
+- **MD-44 GTO混同策略抗被剝削** — 零和賽局最優均衡是混同策略；純確定性訊號可被剝削；交易中等效：不固定入場時間，避免市場可預測的機械訊號
+- **MD-45 期望值正是第一關** — 新策略第一問：E(V)>0？不是年化報酬率/勝率/Sharpe；先確認正EV才有意義繼續優化
+
+`dna_core.md`: 122 lines, **45 MDs**. Next: 202312.

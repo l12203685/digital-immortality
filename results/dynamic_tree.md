@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T14:45 UTC (cycle 42)
+> 最後更新：2026-04-08T15:10 UTC (cycle 43)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -139,4 +139,5 @@
 - 2026-04-08T14:00 UTC: cycle 40 — Branch 2.2: 202404 JSONL read (16,957 Edward msgs, Apr 2024), 3 new micro-patterns → dna_core.md MD-37~MD-39 (實盤三原則/投組架構分層/衝突=精準陳述事實); file now 116 lines, 39 MDs; next: 202403
 - 2026-04-08T14:20 UTC: cycle 41 — Branch 2.2: 202403 JSONL read (386 Edward msgs, Mar 2024), 3 new micro-patterns → dna_core.md MD-40~MD-42 (電指期四大結構優勢/保證金剩餘再配置/最佳化陷阱信號); file now 119 lines, 42 MDs; next: 202402
 - 2026-04-08T14:45 UTC: cycle 42 — Branch 2.2: 202402 JSONL read (1,770 Edward msgs, Feb 2024), 3 new micro-patterns → dna_core.md (開發/生產環境分離/相關係數前置/獲利確認再擴張); file now 75 lines, 45 MDs; next: 202401
+- 2026-04-08T15:10 UTC: cycle 43 — Branch 2.2: 202401 JSONL read (659 Edward msgs, Jan 2024), 3 new micro-patterns → dna_core.md MD-43~MD-45 (純價策略=BnH equity trading/GTO混同策略抗被剝削/期望值正是第一關); file now 122 lines, 45 MDs; next: 202312
 
