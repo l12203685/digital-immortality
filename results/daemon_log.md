@@ -104,3 +104,24 @@ Auto-prune: memory within bounds, nothing removed.
 [2026-04-07 23:12:02 UTC] Cycle 9 complete. Total cycles run: 1.
 [2026-04-07 23:12:02 UTC] Reached loop_count limit (1) — exiting.
 [2026-04-07 23:12:02 UTC] Engine stopped. 1 cycles completed total.
+
+## Cycle 3 — 2026-04-08 01:06:41 UTC
+
+---
+
+**Cycle 5 complete.**
+
+**What changed:**
+
+Code:
+- `trading/testnet_runner.py` built — `--tick`, `--status`, `--review`, `--loop` CLI; JSONL log; kill-condition checker; dry-run mode
+- `trading/strategies.py` — `RegimeFilter`, `DonchianConfirmed`, filtered instances added
+- ccxt installed, Binance testnet confirmed live: BTC `$71,585–71,646`
+- Current signal: `dual_ma=SHORT`, all filtered variants `=FLAT`
+
+Tree:
+- Branch **1.1** jumped: paper review `GO` → testnet infrastructure `LIVE`
+- Regime:攻擊 target updated to `testnet running, 7-day window → mainnet $100`
+- Next leaf: run `--loop 86400` for 7 days, accumulate real testnet ticks, issue GO/NO-GO for mainnet
+
+**Next highest-derivative branch**: 1.1 testnet — start the 7-day loop (needs cron or daemon to call `testnet_runner.py --loop 86400`). Revenue clock is running: deadline 2026-07-07, 90 days from now.
