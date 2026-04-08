@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T20:49+08",
+  "updated": "2026-04-08T20:53+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,23 +51,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next highest-derivative: Branch 1.1 (mainnet — needs `BINANCE_MAINNET_KEY`/`S..."
+      "text": "Next highest-derivative: Branch 1.1 (mainnet) — blocked on `BINANCE_MAINNET_K..."
     },
     {
       "time": "just now",
-      "text": "- paper-live tick 4: BTC=71881.30 signal=SHORT (consistent × 4)"
+      "text": "Ran `consistency_test.py` against the full `dna_core.md` (273 MDs). All 8 boo..."
     },
     {
       "time": "just now",
-      "text": "- Full distillation: 202604 → 201703 = 273 micro-decisions in `templates/dna_..."
+      "text": "Branch 2.3 — 273-MD consistency validation: 8/8 ALIGNED"
     },
     {
       "time": "just now",
-      "text": "- `201703/201702/201701`: all 0 Edward msgs → archive end reached"
+      "text": "Cycle 57 done."
     },
     {
-      "time": "just now",
-      "text": "Branch 2.2 COMPLETE — 273 MDs, JSONL fully exhausted"
+      "time": "2026-04-08 UTC",
+      "text": "- Branch 2.3 validated at full scale; next highest-derivative: Branch 1.1 (ma..."
     }
   ],
   "stats": {
