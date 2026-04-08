@@ -1188,3 +1188,15 @@ Branch 2.2 — gap fix + 202303 distill.
 - **MD-75** 權益曲線=槓桿觸發器 — equity curve's Bollinger Band position is the regime signal: drop below 1.5σ → reduce to single lot; re-cross upward → restore; equity curve IS the trigger, no additional parameter needed
 
 `templates/dna_core.md`: **75 MDs**. Next: 202302.
+
+## Cycle 2 — 2026-04-08 05:04:06 UTC
+
+Cycle 52 done.
+
+**202303** (10,728 msgs, Mar 2023) → MD-73~75 written to `templates/dna_core.md` (now 75 MDs):
+
+- **MD-73** 股債配置>均線擇時 — stock-bond allocation beats timing overlays on leveraged ETFs; structure > signal
+- **MD-74** 槓桿調整=窮舉五方案 — enumerate all 5 adjustment schemes before picking; skipping = hidden blind spot
+- **MD-75** 權益曲線=槓桿觸發器 — equity curve's 1.5σ Bollinger Band position IS the regime signal; no extra parameter
+
+Also reconciled gap: 202304 (MD-70~72) was already in file but tree was stale — both fixed. Next: **202302**.
