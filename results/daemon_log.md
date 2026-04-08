@@ -3586,3 +3586,21 @@ Action: wrote `docs/knowledge_product_03_execution_sizing_sop.md` (8 gates, ~130
 - Self-test scenario: BTC SHORT 0.12 lots (not 1 lot because signal felt strong)
 
 7.5 COMPLETE ✅. Next: SOP #04 Strategy Failure & Kill Decision Tree OR publish #01~03 externally.
+
+## Cycle 109 — 2026-04-08 17:56:56 UTC
+
+**Cycle 109 done.**
+
+**Branch 7.5** — wrote `docs/knowledge_product_03_execution_sizing_sop.md`.
+
+8 sequential gates, fail any = no trade:
+- G0: L/S pool balance (MD-29)
+- G1: Leverage from historical R/R only, never recent (MD-30)
+- G2: edge_ratio ≥ 1.5/1.2 (MD-13)
+- G3: First-principles coherence (MD-157)
+- G4: Stop → back-calculate max entry (MD-133)
+- G5: `lots = (equity × 1%) / (ATR × mult)` (MD-28), formula enforced
+- G6: Trial 50% vs full, each needs independent positive EV (MD-159)
+- G8: Correlation conflict check
+
+SOP trilogy (Strategy Dev → Portfolio → Execution) now complete. Next: SOP #04 Strategy Failure & Kill Decision Tree, or publish #01–#03 externally.

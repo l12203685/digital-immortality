@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T01:51+08",
-  "regime": "1.1 Trading（mainnet needs API keys）; 7.4 SOP #03 Execution & Sizing Checklist next",
+  "updated": "2026-04-09T01:56+08",
+  "regime": "1.1 Trading（mainnet needs API keys）; 7.5 SOP #04 Strategy Failure & Kill Decision Tree next; OR publish SOP #01~03 externally",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: SOP #03 Execution & Sizing Real-Time Checklist (MD-13/28~30), or set ma..."
+      "text": "SOP trilogy (Strategy Dev → Portfolio → Execution) now complete. Next: SOP #0..."
     },
     {
       "time": "just now",
-      "text": "7.4 COMPLETE ✅ | 8.4 COMPLETE ✅"
+      "text": "- G8: Correlation conflict check"
     },
     {
       "time": "just now",
-      "text": "- 4 failure modes + self-test scenario"
+      "text": "- G6: Trial 50% vs full, each needs independent positive EV (MD-159)"
     },
     {
       "time": "just now",
-      "text": "- Portfolio-level kill conditions (distinct from per-strategy)"
+      "text": "- G5: `lots = (equity × 1%) / (ATR × mult)` (MD-28), formula enforced"
     },
     {
       "time": "just now",
-      "text": "- Regime routing table with high-vol halt row (MD-54)"
+      "text": "- G4: Stop → back-calculate max entry (MD-133)"
     }
   ],
   "stats": {
-    "daemon_cycles": 108,
+    "daemon_cycles": 109,
     "total_mds": 325,
     "dna_core_lines": 87
   }
