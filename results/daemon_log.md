@@ -166,3 +166,14 @@ Tree:
 - Daily cron fires 09:03 UTC; each session tick adds 1 more. 4 sessions ≈ 4 days.
 
 **Highest-derivative next action**: let daily cron accumulate ticks; at tick 7 run `--review` and make mainnet decision.
+
+## Cycle 1 — 2026-04-08 01:24:12 UTC
+
+**Cycle 7 done.**
+
+Branch 1.1 (highest derivative) — ran `--tick` manually:
+- 3 ticks accumulated across all 4 strategies
+- `dual_ma`: signal=SHORT, **pnl=-0.06 USDT** — live PnL tracking confirmed non-zero
+- 4 more ticks needed → `--review` → mainnet GO/NO-GO
+
+Pushed. Next action: daily cron fires at 09:03 UTC; at tick 7 run `--review`.
