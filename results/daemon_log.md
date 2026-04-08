@@ -1431,3 +1431,15 @@ Cycle 58 done.
   3. **市場結構=剪刀石頭布三態** (MD-105) — trend (scissors) / volatile-range (rock) / tight-range (paper); no strategy beats all three; portfolio target: three complementary strategies with non-overlapping regime coverage
 
 `dna_core.md`: 102 → **105 MDs**. Next: 202205.
+
+## Cycle 7 — 2026-04-08 05:28:41 UTC
+
+**Cycle 59 done.**
+
+Branch 2.2 — 202206 JSONL (7,876 Edward msgs, Jun 2022) → 3 new micro-decisions written to `templates/dna_core.md`:
+
+- **MD-103**: 噱爆（趨勢）優先於避免策略 — structural edge > behavioral edge in R&D allocation
+- **MD-104**: 策略合作=指標定義先達成一致 — metric document before any technical discussion
+- **MD-105**: 市場三態=剪刀石頭布 — trend/volatile-range/tight-range; no all-state winner; build complementary pool
+
+`dna_core.md`: 102 → **105 MDs**. Next: 202205.
