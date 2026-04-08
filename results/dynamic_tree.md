@@ -178,3 +178,4 @@
 - 2026-04-08T UTC: cycle 15 — Branch 2.2: 202006 JSONL read (139 Edward msgs, Jun 2020) → MD-187~189 (多維均衡>單維精通邊際報酬遞減/職涯二元決策最壞最好雙問法/累進稅率邊際跳點決策觸發器); templates/dna_core.md: **189 MDs**; next: 202005 verify
 - 2026-04-09T UTC: cycle 23 — Branch 2.2: 201911 JSONL read (268 Edward msgs, Nov 2019) → MD-193~195 (薪資談判=引用對方公開承諾/談判信疊層=第一輪收集結構第二輪施壓/企業編制人力×預算解耦); templates/dna_core.md: **195 MDs actually written**; next: 201910
 - 2026-04-09T UTC: cycle 31 — **gap reconcile + 201907 distill**: MD-202~219 found missing from file (daemon logged but merge lost them); 201907 JSONL read (77 Edward msgs, Jul 2019) → MD-202~204 actually written (薪資談判=人力倍數論述/熟悉股票=結構性買賣區間/想法超前組織=資源錯配); templates/dna_core.md: **204 MDs**; next: 201906
+- 2026-04-09T UTC: cycle 37 — Branch 2.2: 201901 JSONL read (144 Edward msgs, Jan 2019) → MD-220~222 (工作Offer=精算年化EV三情境/升息=債券避開利率是固定收益第一驅動/選擇權分析=先算breakeven區間再評進場); templates/dna_core.md: **222 MDs**; next: 201812

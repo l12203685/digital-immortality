@@ -2354,3 +2354,27 @@ Cycle 36 done.
 - **MD-219**: 選擇權部位=從最大虧損反推 — 可接受虧損%÷單組最大損失=可做組數；不從預期獲利正推
 
 Next: 201901.
+
+## Cycle 37 — 2026-04-09T UTC
+
+**Branch 2.2 — 201901 distill → MD-220~222 (222 MDs total)**
+
+- 201901.jsonl: 144 Edward msgs; themes: job offers, options trading, bond analysis, tax optimization
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-220** 工作Offer比較=精算年化總薪資EV三情境，不看月薪水平 — 鉅亨741k~855k vs 元富650k+超額獎金；先算downside保底再算upside條件可控性
+  - **MD-221** 升息環境=債券避開，利率是固定收益資產第一驅動變量 — 升息→資本損失確定；先確認央行方向再配固定收益；與MD-216（房價）共同確立利率為第一序資產驅動
+  - **MD-222** 選擇權分析=先算breakeven區間，區間寬度覆蓋預期波動才入場 — 9750 straddle breakeven 9583/9917；先畫損益圖確認合理性，再評估勝率
+
+`templates/dna_core.md`: **222 MDs**. Next: 201812.
+
+## Cycle 37 — 2026-04-09 UTC
+
+Cycle 37 done.
+
+**Branch 2.2 — 201901 → MD-220~222 (222 MDs)**
+
+- **MD-220**: Offer比較精算EV — 月薪是迷霧，年化總薪資EV才是決策變量；三情境比保底
+- **MD-221**: 升息=債券避開 — 利率是固定收益第一驅動；與MD-216合構利率=資產第一序
+- **MD-222**: 選擇權=先算breakeven — 區間寬度覆蓋預期波動才入場；損益圖先於勝率問題
+
+Next: 201812.
