@@ -2704,3 +2704,17 @@ Next: 201711.
   - **MD-264** 樣本量是結論有效的先決條件；不足樣本的觀察是雜訊，不作為策略調整依據
 
 `templates/dna_core.md`: **264 MDs**. Next: 201709.
+
+## Cycle 52 — 2026-04-08 12:22:17 UTC
+
+Cycle 52 done. Pushed.
+
+**Branch 2.2 — 201711+201710 → MD-262~264 (264 MDs)**
+
+- 201711 had only 2 Edward msgs (sparse); combined with 201710 (12 msgs)
+- Themes: poker teaching, position = information advantage, sample size
+- **MD-262**: 教學=最小可行規則集，先跑起來比理解完整系統再行動有效
+- **MD-263**: 位置=資訊優勢=可操作範圍；先手→縮緊範圍，後手→擴大操作
+- **MD-264**: 樣本量是結論有效的先決條件；低於門檻的結果是雜訊不作調整依據
+
+Next: 201709.

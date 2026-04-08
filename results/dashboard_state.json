@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T20:15+08",
+  "updated": "2026-04-08T20:22+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 201711."
+      "text": "Next: 201709."
     },
     {
       "time": "just now",
-      "text": "Branch 2.2 — 201712 → MD-259~261 (261 MDs total)"
+      "text": "- Themes: poker teaching, position = information advantage, sample size"
+    },
+    {
+      "time": "just now",
+      "text": "- 201711 had only 2 Edward msgs (sparse); combined with 201710 (12 msgs)"
+    },
+    {
+      "time": "just now",
+      "text": "Branch 2.2 — 201711+201710 → MD-262~264 (264 MDs)"
     },
     {
       "time": "2026-04-08 UTC",
-      "text": "`templates/dna_core.md`: 261 MDs. Next: 201711."
-    },
-    {
-      "time": "2026-04-08 UTC",
-      "text": "- 3 micro-decisions written to templates/dna_core.md:"
-    },
-    {
-      "time": "2026-04-08 UTC",
-      "text": "- 201712.jsonl: 60 substantive Edward msgs; themes: 家族診所接班條件書面化、買進條件=實際價值非市場相..."
+      "text": "`templates/dna_core.md`: 264 MDs. Next: 201709."
     }
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 261,
+    "total_mds": 264,
     "dna_core_lines": 76
   }
 }
