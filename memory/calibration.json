@@ -27,6 +27,45 @@
         "automated"
       ],
       "confidence": 0.3
+    },
+    {
+      "id": "b5f1ff07-c7c8-47d7-a7b1-6425f58457fd",
+      "key": "cross-instance-auto-2026-04-09",
+      "content": "Automated cross-instance test (CLI (claude -p)) on 2026-04-09: 35/39 agreement (90%), model=claude-sonnet-4-6, sessions=3.",
+      "timestamp": "2026-04-08T17:32:58.772318+00:00",
+      "source": "cross_instance_test",
+      "tags": [
+        "cross-instance",
+        "calibration",
+        "automated"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "4fbe1bf4-f65a-4a07-b653-7526d02368d0",
+      "key": "cross-instance-auto-2026-04-09",
+      "content": "Automated cross-instance test (CLI (claude -p)) on 2026-04-09: 38/39 agreement (97%), model=claude-sonnet-4-6, sessions=3.",
+      "timestamp": "2026-04-08T17:35:10.722452+00:00",
+      "source": "cross_instance_test",
+      "tags": [
+        "cross-instance",
+        "calibration",
+        "automated"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "c3b45659-755f-4ff1-b394-1171d8f69e72",
+      "key": "cross-instance-auto-2026-04-09",
+      "content": "Automated cross-instance test (API) on 2026-04-09: 39/39 agreement (100%), model=claude-sonnet-4-6, sessions=3.",
+      "timestamp": "2026-04-08T17:45:22.707619+00:00",
+      "source": "cross_instance_test",
+      "tags": [
+        "cross-instance",
+        "calibration",
+        "automated"
+      ],
+      "confidence": 0.9
     }
   ]
 }

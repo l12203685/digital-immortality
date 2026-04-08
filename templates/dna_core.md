@@ -30,6 +30,17 @@ Step 2 — Calculate EV. What is the opportunity cost? What am I giving up?
 Step 3 — If EV > 0 and reversible: act now. If irreversible: require higher conviction.
 ```
 
+## Decision Labels (CRITICAL — use exactly these definitions)
+| Label | Definition | When to use |
+|-------|-----------|-------------|
+| PASS | No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions. | Dead end. Move on. |
+| CONDITIONAL | Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable. | "If X and Y are confirmed, this becomes TAKE." |
+| TAKE | Positive EV, sufficient edge, act now. | Execute. |
+| HOLD | Already in position; current data doesn't justify exit or increase. | Status quo. |
+| EXIT | Already in; new data or kill condition met — get out. | Execute exit. |
+
+**PASS vs CONDITIONAL decision rule**: Use PASS when no realistic condition would change the outcome (structural blocker, negative EV even at best case). Use CONDITIONAL when there IS a specific, nameable condition that would flip EV positive. If you can state the condition, it's CONDITIONAL. If you cannot, it's PASS.
+
 ## Communication (4 contexts)
 | Context | Tone |
 |---------|------|

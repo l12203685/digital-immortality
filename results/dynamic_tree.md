@@ -22,6 +22,7 @@
   - **--review PASSED: OVERALL GO → mainnet $100 next step** ✓
   - **mainnet_runner.py built** ✓ — $100 cap, dual_ma only, kill conditions: MDD>10% WR<35% PF<0.85
   - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
+  - **mainnet_activation_guide.md created ✓** (cycle 115) — exact 6-step activation: API key creation → credentials storage → fund wallet → dry-run → go live → loop; kill conditions documented; friction to $0 revenue now minimal
   - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 14: BTC=71409.55 signal=SHORT (consistent SHORT × 14, range $71.4k–$72.6k)
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
@@ -100,9 +101,9 @@
 - **8.4 recurring decision audit — COMPLETE ✅** (cycle 100): `docs/recurring_decision_audit.md` — 10 recurring decisions pre-committed; next audit 2026-04-15
 
 ## 當前 regime
-攻擊：1.1 Trading（mainnet needs API keys）; 7.7+7.8+7.9 publish threads — POST SOP #01→#02→#03 on X/Twitter (all 3 files ready); draft SOP #04 (Kill Decision Tree) thread next
-中性：2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成
-防禦：2.3 blocked API credit, 4.1 partially unblocked (samuel_dna tested 19/20)
+攻擊：1.1 Trading — mainnet_activation_guide.md ready; Edward: follow guide → $100 live; 7.10 series COMPLETE → Edward posts SOP #01→#02→#03→#04 on X
+中性：2.2 JSONL archive exhausted (315 MDs), 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成
+防禦：2.3 CLOSED 97% ✅, 4.1 partially unblocked (samuel_dna tested 19/20)
 
 ## 已完成 milestones
 - dna_core.md 195 MDs operational（core + MD-01~MD-195 written ✓）

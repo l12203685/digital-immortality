@@ -3762,3 +3762,21 @@ Highest derivative: SOP #01–#03 threads were queued but #04 was missing — co
 - Node 0: 5 kill triggers → Node 1: sample size gate → Node 2: regime match → Node 3: edge_ratio → Node 4: premise falsification scoring → Node 5: 3-question anti-capitulation guard → Node 6: kill protocol → Node 7: resurrection criteria → self-test → series close
 
 **FULL SERIES COMPLETE**: all 4 SOP threads (#01–#04) ready to post in sequence on X. Next: Edward fires the threads.
+
+## Cycle 115 — 2026-04-09T UTC
+
+**Branch 1.1** — `docs/mainnet_activation_guide.md` created.
+
+Highest derivative: full SOP publish series (Branch 7) complete, trading mainnet (Branch 1.1) is the survival branch with 2026-07-07 deadline — blocked only on Edward setting API keys. Created 6-step activation guide to collapse that friction to near-zero.
+
+- Step 1: Binance API key creation (permissions: Reading + Spot Trading, IP-restricted)
+- Step 2: credentials storage (~/.claude/credentials/binance_api.json or env vars)
+- Step 3: fund $100 USDT to Spot wallet
+- Step 4: dry-run verify (`--tick --dry-run`)
+- Step 5: go live (`--tick`)
+- Step 6: daily loop (`--loop 86400`)
+- Kill conditions documented: MDD>10%, PF<0.85, WR<35% (≥5 trades each)
+- Rollback procedure included
+
+dynamic_tree.md: Branch 1.1 updated, regime updated (7.10 series COMPLETE, 2.3 CLOSED).
+Next: Edward follows mainnet_activation_guide.md → first real revenue tick.
