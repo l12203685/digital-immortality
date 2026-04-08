@@ -1816,3 +1816,15 @@ Cycle 68 done.
 - **MD-150** 基金費用=激勵週期對齊策略波動週期 — choose measurement period matching strategy's natural cycle
 
 `dna_core.md`: **150 MDs**. Next: 202104.
+
+## Cycle 69 — 2026-04-09T04:00 UTC
+
+**Branch 2.2 — gap reconcile + 202105 → MD-151~153** (153 MDs total):
+
+Gap: MD-148~150 already written (from earlier session). 202105 JSONL (70 Edward msgs, May 2021) distilled:
+
+- **MD-151** 出場=移動停損×時間停損二元架構 — trailing stop protects profit, time stop exits if market doesn't validate in N days; both needed, whichever triggers first
+- **MD-152** 台指期滑價=500點保守基準不信回測預設值 — real slippage > backtest defaults 300-400; deploy only strategies surviving 500pt cost assumption
+- **MD-153** 日內開盤=四維分析估算當日剩餘空間 — 開X走Y + 15min pre-open + AR(5/10/20) baseline + AR切段估算剩餘可動空間
+
+`dna_core.md`: **153 MDs**. Next: 202104.
