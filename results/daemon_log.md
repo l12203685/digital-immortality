@@ -1126,3 +1126,15 @@ Cycle 50 done.
 - **MD-66** 保守=小中取大 — conservative = minimax (best worst-case), not low-risk; highest fault tolerance = can't be killed by any single bad outcome
 
 `templates/dna_core.md`: **66 MDs**. Next: 202305. Pushed.
+
+## Cycle 26 — 2026-04-08T19:00 UTC
+
+Cycle 51 done.
+
+**Branch 2.2 — 202305 (619 Edward msgs, May 2023) → 3 MDs written to templates/dna_core.md:**
+
+- **MD-67** 職涯=現金流先行 — stable job first to buy time; side income scales after cash flow secured; not dream first then cash flow
+- **MD-68** OOS=1:1是前提不是結果 — beating BnH requires IS≈OOS performance; that ratio is a load-bearing assumption, not a given; always make OOS assumption explicit
+- **MD-69** 決策=連續流程不是單點 — before deciding current step, think through entire downstream chain first (if task fails → what's湖中 → then派 choice); single-point decisions = blind spots
+
+`templates/dna_core.md`: **69 MDs**. Next: 202304.
