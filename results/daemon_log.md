@@ -2692,3 +2692,15 @@ Cycle 51 done.
 - **MD-261**: 家族企業三問=存活機率×決策權×技能遷移性；三弱不入（診所案例：三弱→不做）
 
 Next: 201711.
+
+## Cycle 52 — 2026-04-08 UTC
+
+**Branch 2.2 — 201711+201710 distill → MD-262~264 (264 MDs total)**
+
+- 201711.jsonl: 2 Edward msgs (sparse); combined with 201710 (12 msgs); themes: poker teaching to family, position-based decision, sample size
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-262** 教學起手式=最小可行規則集，讓學習者先跑起來比教完整系統再行動更有效
+  - **MD-263** 位置=資訊優勢=可操作範圍；後手可操作更多選項，強迫先手時應縮緊範圍
+  - **MD-264** 樣本量是結論有效的先決條件；不足樣本的觀察是雜訊，不作為策略調整依據
+
+`templates/dna_core.md`: **264 MDs**. Next: 201709.
