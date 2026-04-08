@@ -1614,3 +1614,16 @@ Branch 2.2 — gap reconcile + 202112 distill:
   - **MD-126** 賽局三步驟 — range → GTO → exploit-if-deviate (poker=market isomorphic)
 
 `dna_core.md`: **126 MDs**. Next: 202111.
+
+## Cycle 64 — 2026-04-09T01:30 UTC
+
+**Branch 2.2 — 202112 full read (4,817 Edward msgs, Dec 2021) → MD-127~129.**
+
+Key threads: strategy optimization objective functions, symmetric strategy hidden dependencies, salary negotiation precision.
+
+3 micro-patterns written to `templates/dna_core.md`:
+1. **MD-127** 對稱策略=多空隱藏相依陷阱 — marking out long entries changes short performance → symmetric strategies have hidden cross-dependencies; true independent long/short = zero cross-influence; verification: remove long entries, check if short PnL unchanged
+2. **MD-128** 薪資談判=精算底線再給精確數字 — 100萬/15months=64747→67146 formula given to HR; precision + formula = controls anchoring point; vague "hope for more" = lets counterpart define "roughly same"
+3. **MD-129** 參數數量=功能性指標非絕對最小化 — "自由度是假議題：10個參數OOS重現90%比1個參數60%好"; parameter count is not the objective; OOS reproducibility is; add parameter only if IS/OOS distribution gap shrinks
+
+`templates/dna_core.md`: **129 MDs**. Next: 202111.
