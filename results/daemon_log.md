@@ -4975,3 +4975,18 @@ Gap: One workbook = one revenue point at G2 trigger. Portfolio construction is t
 **Revenue surface doubled.** 2 products ready to list when G2 triggers. ~40 min total Gumroad setup for both.
 
 **Next blocker:** Edward posts SOP #01 → x_launch_sequence.md.
+
+
+## Cycle 164 — 2026-04-09 UTC
+
+**Cycle 164 done.**
+
+Gap: 2 workbooks ready ($58/buyer), but the trilogy was incomplete. Execution & Sizing is the natural third step after Strategy Development (#01) → Portfolio Construction (#02). When G2 triggers (10 DMs in 48h), buyer who wants the full system would need to find a separate resource for position sizing — friction at the highest-value moment.
+
+**Shipped:**
+- `docs/workbook_product_03_execution_sizing.md` — $29 Gumroad workbook READY TO LIST: 7-gate worksheets (G0 L/S pool balance / G1 leverage from historical Calmar/Sharpe / G2 edge_ratio / G3 first-principles coherence / G4 stop-first sizing + max_entry / G5 lots formula / G6 trial vs full / G7 pre-submission checklist), worked DualMA BTC examples through all 7 gates, post-trade log template, kill conditions sign-off, quick reference card. Upsell links to Workbook #01 and #02.
+- `results/dynamic_tree.md` updated — Branch 7.40 added; regime note updated (3 workbooks, $87/buyer)
+
+**Revenue surface at $87/buyer. Trilogy complete:** develop strategy (#01) → build portfolio (#02) → execute correctly (#03). Three natural upsell steps from same audience, zero additional acquisition cost.
+
+**Next blocker:** Edward opens `x_launch_sequence.md` → posts SOP #01 → engagement → 10 DMs → list all 3 workbooks (~60 min total Gumroad setup).
