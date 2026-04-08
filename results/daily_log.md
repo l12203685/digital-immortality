@@ -3,6 +3,49 @@
 Recursive engine cycle history.
 
 
+## Cycle 136 — 2026-04-08T21:00Z
+
+**Branches**: 3 parallel (2.2 DNA MD-331~333 + 2.3 consistency 33/33 + 7.18 SOP #12)
+
+### Branch 2.2: Synthetic pass → MD-331~333
+
+- **MD-331**: 主動溝通=先確認對方需求框架再輸出資訊；未對齊框架的資訊傳遞=noise
+  - SOP: (1) Ask what recipient knows + what decision they're making; (2) calibrate depth/format; (3) confirm landing. Trigger: 10-min analysis→receiver asks "should I do it or not?"
+- **MD-332**: 資訊來源評估=skin-in-the-game優先；無後果的建議折扣至接近零
+  - 4-tier weight framework: active traders (real P&L) → high; academic (peer review, no financial consequence) → medium; media commentator (no consequence) → low; anonymous → near-zero. Anti-pattern: fluency fallacy (articulate ≠ credible)
+- **MD-333**: 協作前提=角色邊界書面化；口頭分工在壓力下會重新被詮釋
+  - Written role boundary BEFORE work starts. Verbal agreements → re-interpreted under deadline pressure. Even an email/shared doc/group message screenshot counts. Also applies to API contracts, team OKR ownership
+- dna_core.md: 330 → **333 MDs**; header updated
+
+### Branch 2.3: Consistency test extended — 33/33 ALIGNED ✅
+
+- 3 new scenarios added to `templates/generic_boot_tests.json`:
+  - `generic_relationship_maintenance` (MD-328) → expected: MAINTAIN_RELATIONSHIP_PROACTIVELY
+  - `generic_learning_framework_first` (MD-329) → expected: BUILD_FRAMEWORK_FIRST
+  - `generic_social_signal_reading` (MD-330) → expected: TRACK_BEHAVIOR_NOT_SPEECH
+- 3 alignment checks added to `consistency_test.py` check_alignment_with_memory()
+- **Result: 33/33 ALIGNED ✅** (was 30/30 cycle 122)
+- Baseline saved: `results/consistency_baseline.json`
+
+### Branch 7.18: SOP #12 Social Capital & Network Design — COMPLETE ✅
+
+- `docs/knowledge_product_12_social_capital_sop.md` — 6 gates:
+  - G0: Network asset inventory — list 10-15 nodes, classify by tier (intimate/professional/advisory)
+  - G1: Maintenance schedule — max silence period per tier; weekly scan trigger (MD-328)
+  - G2: Framework-first learning — 20% skeleton → 80% detail when acquiring new domain knowledge (MD-329)
+  - G3: Signal calibration — 3-month observation; commitment fulfillment rate metric (MD-330); <50% → discount speech to near-zero
+  - G4: Proactive contact protocol — weekly scan output → low-cost touchpoint; content need not be "useful"
+  - G5: Annual network audit — recheck if network composition matches current goals; prune/add
+- Self-test: potential trading partner proposes collaboration verbally → run all 6 gates
+- `docs/publish_thread_sop12_twitter.md` — 12 tweets
+- **SOP series now complete: #01~#12** (trading ×7 + career + game theory + decision + learning + social capital)
+
+### Next cycle
+- Edward action: post SOP threads #01~#12 on X
+- Edward action: provide BINANCE_MAINNET_KEY/SECRET → live trading activation
+- Branch 2.2: MD-334~336 synthetic pass (decision-making / prioritization patterns)
+- Branch 2.3: extend to 36/36 to match new MDs
+
 ## Cycle 122 — 2026-04-08T20:00Z
 
 **Branches**: 4 parallel (2.2 DNA extension + 2.3 consistency + 7.12 SOP #06 + 8.5 decision audit tool)

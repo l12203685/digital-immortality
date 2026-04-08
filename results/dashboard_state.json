@@ -1,7 +1,7 @@
 {
-  "updated": "2026-04-09T04:19+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.16 SOP #10 Decision Under Uncertainty COMPLETE → Edward posts threads #01~#10",
-  "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
+  "updated": "2026-04-09T04:29+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.18 SOP #12 Social Capital COMPLETE → Edward posts threads #01~#12",
+  "regime_neutral": "2.2 333 MDs ✓ (synthetic pass cycle 136 done), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 all 5 SYSTEM_FAILURE decisions pre-committed",
   "deadline": "2026-07-07",
   "days_remaining": 89,
   "cards": [
@@ -50,29 +50,29 @@
   ],
   "activity": [
     {
-      "time": "just now",
+      "time": "10min ago",
       "text": "External blockers unchanged: (1) mainnet API keys → revenue; (2) Edward posts..."
     },
     {
-      "time": "just now",
+      "time": "10min ago",
       "text": "Series now SOP #01~#11. Meta-layer complete."
     },
     {
-      "time": "just now",
+      "time": "10min ago",
       "text": "- G5: Compounding check score≥2 (MD-141)"
     },
     {
-      "time": "just now",
+      "time": "10min ago",
       "text": "- G4: Teach the starter kit (MD-120)"
     },
     {
-      "time": "just now",
+      "time": "10min ago",
       "text": "- G3: Simplicity test ≤3 rules (MD-116)"
     }
   ],
   "stats": {
     "daemon_cycles": 135,
-    "total_mds": 328,
-    "dna_core_lines": 87
+    "total_mds": 331,
+    "dna_core_lines": 429
   }
 }

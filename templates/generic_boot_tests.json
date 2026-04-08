@@ -210,6 +210,27 @@
       "scenario": "Edward has been trying to establish a daily meditation habit for 6 months. He has used willpower, motivational alarms, and self-reminders — but fails consistently after 2-3 days each attempt. He concludes he simply 'lacks discipline.' What is the correct diagnosis and next intervention?",
       "expected_reasoning": "Apply MD-324: 環境設計>意志力. Repeated failure despite sustained willpower attempts is a diagnostic signal that the environment — not discipline — is the binding constraint. The correct intervention is environment redesign, not more willpower: (1) create a dedicated physical trigger (specific spot, time anchor, object); (2) attach the habit to an already-fixed daily anchor (after brushing teeth, before coffee); (3) remove competing environmental stimuli. 'Lack of discipline' is the wrong diagnosis — it prescribes more of the intervention that already failed. Environment redesign is the correct lever; willpower is a downstream variable.",
       "expected_decision": "DESIGN_ENVIRONMENT_FIRST"
+    },
+    {
+      "id": "generic_relationship_maintenance",
+      "domain": "relationships",
+      "scenario": "Edward has a valuable mentor from his early career — a senior trader who gave him critical advice at a pivotal moment and opened two key introductions that shaped his current position. They haven't spoken in 8 months. Edward is hesitant to reach out because 'he's probably busy' and 'I don't have anything specific to ask.' Edward thinks silence is safe because it avoids the awkwardness of forcing contact. What should Edward do?",
+      "expected_reasoning": "Apply MD-328: 關係投資=主動維護稀缺性原則. High-value relationships are scarce assets that decay without active maintenance — silence is not neutral, it is slow erosion. The 'I have nothing specific to ask' objection confuses transactional contact with relational maintenance. Proactive outreach does not require an agenda; sharing a relevant article, a brief update, or a genuine check-in preserves the relationship's warmth and accessibility. Waiting until you need something converts a relationship into a request, which is the worst timing. The correct move: reach out now, without agenda, to maintain the connection before it goes cold.",
+      "expected_decision": "MAINTAIN_RELATIONSHIP_PROACTIVELY"
+    },
+    {
+      "id": "generic_learning_framework_first",
+      "domain": "learning",
+      "scenario": "Edward wants to learn options pricing from scratch — a new domain with dense mathematical notation and many interconnected sub-topics (Greeks, volatility surfaces, exotic instruments). A colleague recommends 'just start reading Hull's Options book chapter by chapter — details will build up.' Edward is tempted to dive directly into Chapter 1. What is the correct learning approach?",
+      "expected_reasoning": "Apply MD-329: 學習新領域=先建框架再填細節. When entering an unfamiliar domain, the correct sequence is: (1) build a skeletal map of the field first — major concepts, how sub-topics connect, where the important debates are; (2) identify which nodes are load-bearing; (3) then fill in detail systematically. Reading a dense technical book cover-to-cover without a prior framework means each chapter lands in isolation — no anchor, no sense of relative importance, poor retention. The framework (ToC summary, concept map, or 30-minute overview read) should come before any detail work. The colleague's advice is the failure pattern.",
+      "expected_decision": "BUILD_FRAMEWORK_FIRST"
+    },
+    {
+      "id": "generic_social_signal_reading",
+      "domain": "relationships",
+      "scenario": "Edward meets a potential business partner at a networking event. The person is enthusiastic, articulate, and makes several strong verbal commitments: 'I'll send you the deck by Friday,' 'Let's definitely collaborate on this,' and 'I'll introduce you to my contact at the fund.' By the following Wednesday, none of these has been delivered — no deck, no introduction, no follow-up message. The person responds warmly when Edward follows up. Edward thinks: 'They seem genuine — maybe they were just busy.' How should Edward read this situation?",
+      "expected_reasoning": "Apply MD-330: 社交場合信號讀取=行為模式>言語內容. In social and professional contexts, spoken commitments are low-cost — they cost nothing to make and reveal little about actual intent or capability. Behavioral follow-through is the only valid signal: does the person do what they said they would, on the timeline they named? Three undelivered commitments in one week, regardless of warmth in follow-up, is a clear behavioral pattern, not a scheduling anomaly. 'They seem genuine' is a response to speech, not behavior. The correct read: track what was committed vs. what was done; do not upgrade the relationship level based on verbal enthusiasm alone.",
+      "expected_decision": "TRACK_BEHAVIOR_NOT_SPEECH"
     }
   ]
 }

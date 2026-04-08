@@ -1,7 +1,7 @@
 # Cross-Instance Consistency Test
 **DNA**: [Your Name]
-**Generated**: 2026-04-08T19:05:03.762669
-**Scenarios**: 42
+**Generated**: 2026-04-08T20:26:20.361177
+**Scenarios**: 45
 
 ## Instructions
 
@@ -895,6 +895,72 @@
 **Expected decision**: DESIGN_ENVIRONMENT_FIRST
 
 **Expected reasoning**: Apply MD-324: 環境設計>意志力. Repeated failure despite sustained willpower attempts is a diagnostic signal that the environment — not discipline — is the binding constraint. The correct intervention is envi
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 43: RELATIONSHIPS (generic_relationship_maintenance)
+
+**Question**: Edward has a valuable mentor from his early career — a senior trader who gave him critical advice at a pivotal moment and opened two key introductions that shaped his current position. They haven't spoken in 8 months. Edward is hesitant to reach out because 'he's probably busy' and 'I don't have anything specific to ask.' Edward thinks silence is safe because it avoids the awkwardness of forcing contact. What should Edward do?
+
+**Deterministic baseline**: On relationship commitments, [Your Name]'s decision framework yields:
+
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free ti...
+
+**Expected decision**: MAINTAIN_RELATIONSHIP_PROACTIVELY
+
+**Expected reasoning**: Apply MD-328: 關係投資=主動維護稀缺性原則. High-value relationships are scarce assets that decay without active maintenance — silence is not neutral, it is slow erosion. The 'I have nothing specific to ask' object
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 44: LEARNING (generic_learning_framework_first)
+
+**Question**: Edward wants to learn options pricing from scratch — a new domain with dense mathematical notation and many interconnected sub-topics (Greeks, volatility surfaces, exotic instruments). A colleague recommends 'just start reading Hull's Options book chapter by chapter — details will build up.' Edward is tempted to dive directly into Chapter 1. What is the correct learning approach?
+
+**Deterministic baseline**: On learning investments, [Your Name]'s decision framework yields:
+
+  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financ...
+
+**Expected decision**: BUILD_FRAMEWORK_FIRST
+
+**Expected reasoning**: Apply MD-329: 學習新領域=先建框架再填細節. When entering an unfamiliar domain, the correct sequence is: (1) build a skeletal map of the field first — major concepts, how sub-topics connect, where the important deb
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 45: RELATIONSHIPS (generic_social_signal_reading)
+
+**Question**: Edward meets a potential business partner at a networking event. The person is enthusiastic, articulate, and makes several strong verbal commitments: 'I'll send you the deck by Friday,' 'Let's definitely collaborate on this,' and 'I'll introduce you to my contact at the fund.' By the following Wednesday, none of these has been delivered — no deck, no introduction, no follow-up message. The person responds warmly when Edward follows up. Edward thinks: 'They seem genuine — maybe they were just busy.' How should Edward read this situation?
+
+**Deterministic baseline**: On relationship commitments, [Your Name]'s decision framework yields:
+
+  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free ti...
+
+**Expected decision**: TRACK_BEHAVIOR_NOT_SPEECH
+
+**Expected reasoning**: Apply MD-330: 社交場合信號讀取=行為模式>言語內容. In social and professional contexts, spoken commitments are low-cost — they cost nothing to make and reveal little about actual intent or capability. Behavioral follo
 
 ### Session Answers
 
