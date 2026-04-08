@@ -235,3 +235,20 @@ Next action: deploy `live_binance.py` with $100 risk cap on mainnet.
 - Gate: set BINANCE_MAINNET_KEY + BINANCE_MAINNET_SECRET → run `--tick`
 
 Next: provide mainnet API credentials to fire first live trade.
+
+## Cycle 1 — 2026-04-08 01:34:17 UTC
+
+**Cycle 11 done.**
+
+Branch 1.1 — built `trading/mainnet_runner.py`:
+- `testnet=False`, `max_position_usdt=100`, `dual_ma` only (the strategy that passed review)
+- Kill conditions: MDD>10%, WR<35% (≥5 trades), PF<0.85
+- CLI: `--tick` / `--status` / `--loop N` / `--dry-run`
+- Logs to `results/mainnet_log.jsonl`
+
+**Gate to live trade**: set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET`, then run:
+```
+python mainnet_runner.py --tick
+```
+
+Pushed. Next action: provide mainnet API credentials.
