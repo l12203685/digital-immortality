@@ -489,6 +489,7 @@ DOMAIN_PRINCIPLE_AFFINITY = {
     "negotiation":      ["negotiation", "salary", "floor", "anchor", "deal", "談判", "底線", "薪資", "精算"],
     "knowledge_output": ["knowledge", "output", "teach", "explain", "write", "publish", "content", "platform", "SOP", "product", "知識", "輸出", "教學", "解釋", "寫作", "平台"],
     "life_maintenance": ["life", "routine", "habit", "environment", "default", "automate", "schedule", "peak", "cognitive", "sleep", "生活", "習慣", "環境設計", "預設", "自動化", "峰值"],
+    "strategy":         ["strategy", "competitive", "opponent", "threat", "game", "zero-sum", "negotiation", "danger", "risk profile", "threat profile", "賽局", "威脅", "對手", "角色化", "競爭"],
 }
 
 
@@ -563,16 +564,18 @@ def _build_response(name: str, scenario: dict, principles: list) -> str:
 
     lines.append("")
 
-    # Domain-specific decision logic stubs — each uses principle text as signal
+    # Domain-specific decision logic stubs — uses principle text + scenario text as signal
     all_text = " ".join(principles).lower()
-    decision_text = _domain_decision(domain, all_text)
+    scenario_text = (str(scenario.get("scenario", "")) + " " + str(scenario.get("id", ""))).lower()
+    decision_text = _domain_decision(domain, all_text, scenario_text)
     lines.append(decision_text)
 
     return "\n".join(lines)
 
 
-def _domain_decision(domain: str, principle_text: str) -> str:
+def _domain_decision(domain: str, principle_text: str, scenario_text: str = "") -> str:
     """Map domain + principle signals to a concrete decision stance."""
+    combined = principle_text + " " + scenario_text
     stability_signal = any(w in principle_text for w in ["stable", "stability", "hedge", "safe", "conservative"])
     growth_signal    = any(w in principle_text for w in ["growth", "compound", "upside", "opportunit", "aggressive"])
     ev_signal        = any(w in principle_text for w in ["ev", "expected value", "probability", "edge"])
@@ -584,6 +587,12 @@ def _domain_decision(domain: str, principle_text: str) -> str:
 
     decisions = {
         "career": (
+            "MULTI_TRACK_BEFORE_CONVERGE — "
+            "MD-327: 職涯探索=多軌同時開評估窗口. Maintain 4–6 parallel exploration tracks until a real positive signal "
+            "(concrete offer, demonstrated advantage, genuine market pull) triggers convergence. "
+            "'I've researched one direction' is analysis, not real signal. Premature convergence selects the most-familiar path, "
+            "not the best-fit path. Run validation actions across multiple tracks simultaneously; converge only on real feedback."
+            if any(w in combined for w in ["multi-track", "explore", "parallel", "convergence", "converge", "探索", "多軌", "窗口", "multi_track"]) else
             "DEPENDS_ON_CORE_GOAL — stability hedge outweighs marginal income gain; pass unless promotion aligns with long-term goal."
             if stability_signal else
             "DEPENDS_ON_CORE_GOAL — growth optionality matters, but weigh salary against loss of time for core skills and whether it serves your primary objective."
@@ -650,6 +659,12 @@ def _domain_decision(domain: str, principle_text: str) -> str:
             "INTEGRATED — compound wealth to sufficiency, then redirect to building; relationships are the through-line."
         ),
         "trading": (
+            "CALCULATE_FRICTION_COST_FIRST — "
+            "MD-326: 交易成本先算再下單=摩擦成本（手續費×口數×來回）明確化是每次執行的前置步驟. "
+            "Before any execution: commission_rate × position_size × 2 (entry+exit) = round-trip friction. "
+            "Execute only if expected_gain > friction_cost. Friction is a certain negative; profit is an expectation — "
+            "the floor must be cleared before EV calculation is valid."
+            if any(w in combined for w in ["commission", "friction", "手續費", "摩擦", "transaction cost", "0.11", "round-trip", "friction_cost"]) else
             "EVALUATE_TIME_VS_RETURN — calculate total time cost (hours/year) and verify annualized return against alternatives. No independent audit = unverified claim. Compare time-adjusted EV against best alternative use before committing. TR-6: time cost × opportunity cost must be covered by net return."
             if time_cost_signal else
             "DEFINE_KILL_CONDITIONS_FIRST — predefined failure conditions (max drawdown, min win rate, min profit factor) must be written before any live deployment. MD-95/136: strategy management without defined failure conditions is subjective and systematically wrong."
@@ -747,6 +762,13 @@ def _domain_decision(domain: str, principle_text: str) -> str:
             "exclusively in biological peak hours; defer admin/email/mechanical tasks to off-peak. "
             "MD-324: DESIGN_ENVIRONMENT_FIRST — before invoking willpower, redesign the environment so the "
             "optimal behavior is the lowest-friction path. Environment is a constant; willpower is a depletable resource."
+        ),
+        "strategy": (
+            "IDENTIFY_THREAT_PROFILE_FIRST — "
+            "MD-325: 賽局角色化最大威脅先識別. Before deploying any strategy, enumerate the opponent profile that "
+            "maximally threatens your current role: 'What characteristics do I most fear in an opponent?' "
+            "Build the threat checklist first; scan the field for matches on entry; neutralize or avoid high-threat actors. "
+            "Having a strategy is necessary but not sufficient — undetected high-threat opponents override strategy quality."
         ),
     }
     return decisions.get(domain, "Decision: apply core principles to the specific trade-offs in this scenario.")

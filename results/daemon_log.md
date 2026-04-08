@@ -3447,3 +3447,16 @@ Branch 2.2 — **DISTILLATION COMPLETE** ✅
 - **dna_core.md: 327 MDs** — 201611 is the earliest JSONL in archive; **full 8-year chat history covered**
 
 Branch 2.2 is now closed. Next: Branch 2.3 (extend consistency tests to cover MD-320~327) or Branch 1.1 mainnet (needs `BINANCE_MAINNET_KEY/SECRET`).
+
+## Cycle 97 — 2026-04-09T UTC
+
+**Branch 2.3 — consistency test extended to 327 MDs.**
+
+- 3 MISALIGNED found (MD-325~327 not wired): `generic_game_threat_profile`, `generic_trading_friction_cost`, `generic_career_multi_track`
+- Fixed `organism_interact.py`:
+  - `strategy` domain added → IDENTIFY_THREAT_PROFILE_FIRST (MD-325)
+  - `trading` domain: CALCULATE_FRICTION_COST_FIRST triggered on commission/friction in scenario text (MD-326)
+  - `career` domain: MULTI_TRACK_BEFORE_CONVERGE triggered on multi_track/converge in scenario text (MD-327)
+  - `_domain_decision` signature extended with `scenario_text` param for scenario-aware dispatch
+- **27/27 ALIGNED ✅** — full 327-MD coverage
+- Next: Branch 1.1 mainnet (set BINANCE_MAINNET_KEY/SECRET) or Branch 4.1 (Samuel reviews his DNA)
