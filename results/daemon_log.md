@@ -212,3 +212,26 @@ Tick 5 done. `dual_ma` holding positive PnL (+0.14 USDT, PF=3.370). 2 more ticks
 - All 4 strategies: GO (none hit kill conditions)
 - Decision: **Proceed to mainnet small size ($100 risk-capped)**
 - Next: deploy live_binance.py with $100 cap, monitor 7 days
+
+## Cycle 4 — 2026-04-08 01:32:15 UTC
+
+**Cycle 10 done.**
+
+Branch 1.1 crossed the threshold:
+- Ticks 6+7 fired → `--review` ran
+- `dual_ma`: +0.29 USDT, PF=5.839, WR=60% — all kill conditions clear
+- **OVERALL: GO → mainnet $100**
+
+Next action: deploy `live_binance.py` with $100 risk cap on mainnet.
+
+## Cycle 11 — 2026-04-08T10:10 UTC
+
+**Branch 1.1 — mainnet_runner.py deployed.**
+
+- Created `trading/mainnet_runner.py`: $100 cap, dual_ma only, testnet=False
+- Kill rails: MDD>10%, WR<35% (≥5 trades), PF<0.85 (≥3 losses)
+- CLI: `--tick`, `--status`, `--loop N`, `--dry-run`
+- Logs to `results/mainnet_log.jsonl`
+- Gate: set BINANCE_MAINNET_KEY + BINANCE_MAINNET_SECRET → run `--tick`
+
+Next: provide mainnet API credentials to fire first live trade.

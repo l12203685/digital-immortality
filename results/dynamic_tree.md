@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T09:31 UTC (cycle 10)
+> 最後更新：2026-04-08T10:10 UTC (cycle 11)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -20,7 +20,8 @@
   - daily cron: job 5c1c9fc1 registered (09:03 UTC daily, 7-day TTL) ✓
   - cron_daily_tick.bat created for Windows Task Scheduler persistence ✓
   - **--review PASSED: OVERALL GO → mainnet $100 next step** ✓
-  - next: deploy mainnet small size ($100 risk-capped)
+  - **mainnet_runner.py built** ✓ — $100 cap, dual_ma only, kill conditions: MDD>10% WR<35% PF<0.85
+  - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed) ✓
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA, MR→Donchian, mixed→filtered)
   - trading_system.py --portfolio: auto-detects regime, selects strategy, saves results/portfolio_decision.json ✓
@@ -104,3 +105,4 @@
 - 2026-04-08 09:26 UTC: cycle 8 — tick 4 fired, dual_ma=+0.15 USDT PF=3.616 WR=50% [OK], 3 ticks to --review
 - 2026-04-08 09:28 UTC: cycle 9 — tick 5 fired, dual_ma=+0.14 USDT PF=3.370 WR=33.3% [OK], 2 ticks to --review
 - 2026-04-08 09:31 UTC: cycle 10 — ticks 6+7 fired, --review PASSED (GO), dual_ma=+0.29 USDT PF=5.839 WR=60%; mainnet next
+- 2026-04-08 10:10 UTC: cycle 11 — mainnet_runner.py built ($100 cap, dual_ma, kill rails); ready to fire on live credentials
