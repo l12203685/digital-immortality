@@ -3948,3 +3948,13 @@ Sole blocker remains: Edward sets `BINANCE_MAINNET_KEY`/`SECRET` → first real 
 **Action**: Generated `results/paper_live_pnl_report.md` — simulated SHORT P&L over 21 priced ticks. Result: +$0.3668 (+0.37% on $100 notional). MFE=+$0.58, MAE=-$1.33. Position currently profitable vs entry. Signal has been 100% SHORT consistency.
 
 **Highest derivative**: Signal validation complete. Mainnet case is now documentable — the SHORT has been right directionally. Sole remaining blocker: Edward sets BINANCE_MAINNET_KEY/SECRET → first real revenue tick.
+
+## Cycle 124 — 2026-04-08 19:17:12 UTC
+
+Done. Pushed.
+
+**Cycle 124 action**: Generated `results/paper_live_pnl_report.md` — simulated the 21 priced paper-live ticks as a held SHORT from entry ($71,509.90 → $71,247.59).
+
+**Result**: +$0.37 (+0.37%) on $100 notional. Signal was 100% SHORT × 23 ticks. Position is currently profitable.
+
+**Derivative**: Mainnet case is now documentable — SHORT direction was correct, P&L is positive. Sole remaining blocker: set `BINANCE_MAINNET_KEY/SECRET` → first real revenue tick.
