@@ -1911,3 +1911,13 @@ API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Ove
 ## Cycle 2 — 2026-04-08 06:41:56 UTC
 
 API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Overloaded"},"request_id":"req_011CZqrASPucAV2Gim8iLw1i"}
+
+## Cycle 71 — 2026-04-08T00:00 UTC
+
+**Branch 2.2 — 202102 distill → MD-160~162** (162 MDs total):
+
+- **MD-160** 績效評估=先建信賴區間再問是進步還是運氣 — 任何績效數字都有信賴區間；95%CI下限>0才宣稱有edge；樣本太小=把噪音當信號
+- **MD-161** 零和市場=競爭對象是對手策略組合，不是價格 — 找edge = 找對手策略弱點，不是找新指標；能回答「剝削誰的什麼行為」才有結構性edge
+- **MD-162** 下注sizing=從全Range完整性出發，不從單一牌力出發 — Population thinking > Instance thinking；同時考慮自己/對手nuts密度再選size
+
+`templates/dna_core.md`: **162 MDs**. Next: 202101.
