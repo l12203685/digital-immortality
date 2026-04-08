@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T05:15+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#20 COMPLETE → posting_queue.md updated (#01~#20, Apr 9–May 17); Edward posts threads; Domain 4 (社交圈) first SOP shipped (SOP #19); all 5 kernels have standalone SOPs ✅",
+  "updated": "2026-04-09T05:23+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#21 COMPLETE → posting_queue.md updated (#01~#21, Apr 9–May 19); Edward posts threads; Domain 4 (社交圈) first SOP shipped (SOP #19); all 5 kernels have standalone SOPs ✅; SOP #21 Financial Freedom Tier Framework added (MD-166/158/154 backing)",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -51,19 +51,19 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next blocker: Edward posts SOP #01 to start the G5 compounding clock."
+      "text": "Next blocker: Edward posts SOP #01 today to start G5 compounding clock."
     },
     {
       "time": "just now",
-      "text": "- `results/daemon_log.md` — cycle 145 appended"
+      "text": "- Queue extended #01~#21, Apr 9–May 19 (42-day target)"
     },
     {
       "time": "just now",
-      "text": "- `results/dynamic_tree.md` — regime line corrected"
+      "text": "- `docs/publish_thread_sop21_twitter.md` — 12-tweet thread: *\"Most people don..."
     },
     {
       "time": "just now",
-      "text": "- `docs/posting_queue.md` — extended to #01~#20 (Apr 9–May 17); rows #17~#20 ..."
+      "text": "- `docs/knowledge_product_21_financial_freedom_sop.md` — Financial Freedom Ti..."
     },
     {
       "time": "just now",
@@ -71,7 +71,7 @@
     }
   ],
   "stats": {
-    "daemon_cycles": 145,
+    "daemon_cycles": 146,
     "total_mds": 328,
     "dna_core_lines": 87
   }

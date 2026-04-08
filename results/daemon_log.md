@@ -4497,3 +4497,16 @@ Highest-derivative gap: queue ended May 17 at SOP #20 — G5 compounding clock d
 - `results/dynamic_tree.md` regime line + Branch 7.27 added
 
 **Next blocker:** Edward posts SOP #01 on Apr 9 to start G5 compounding clock.
+
+## Cycle 146 — 2026-04-08 21:23:12 UTC
+
+**Cycle 146 done.**
+
+Gap: queue ended May 17 at SOP #20 — G5 compounding clock would die after the last post.
+
+**Shipped:**
+- `docs/knowledge_product_21_financial_freedom_sop.md` — Financial Freedom Tier Framework: 3 tiers (T0 survival / T1 lifestyle freedom / T2 anti-fragile compound), 5-gate decision protocol; self-test shows $320k vs $1.2M Tier 1 = 91-year runway → job not optional. Backed by MD-166/158/154/107/168.
+- `docs/publish_thread_sop21_twitter.md` — 12-tweet thread: *"Most people don't have a financial freedom plan. They have a financial freedom fantasy."*
+- Queue extended #01~#21, Apr 9–May 19 (42-day target)
+
+**Next blocker:** Edward posts SOP #01 today to start G5 compounding clock.
