@@ -20,6 +20,7 @@
 | Apr 29 | #11 | publish_thread_sop11_twitter.md | "Learning without compounding is forgetting with extra steps." | pending |
 | May 1 | #12 | publish_thread_sop12_twitter.md | "Distribution is the 12th gate, not a bonus step." | pending |
 | May 3 | #13 | publish_thread_sop13_twitter.md | "Willpower is a finite resource. Your OS should never touch it." | pending |
+| May 5 | #14 | publish_thread_sop14_twitter.md | "Most traders quit their job too early or never. Both are wrong." | pending |
 
 ---
 
@@ -40,6 +41,6 @@
 ---
 
 ## 30-day compounding target (by May 9)
-- [ ] All 13 threads posted
+- [ ] All 14 threads posted
 - [ ] G5 score ≥ 2/3
 - [ ] ≥1 inbound DM from someone with trading/quant background

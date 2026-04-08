@@ -4307,3 +4307,4 @@ Highest-derivative gap: posting queue ended May 1, content vacuum after SOP #12.
 - Posting queue extended: **Apr 9 – May 3**, 13 threads total
 
 **Next blocker:** Edward posts thread #01 on Apr 9 to start the G5 compounding clock.
+- 2026-04-09T UTC: cycle 139 — **Branch 7.20** SOP #14 shipped: `docs/knowledge_product_14_fulltime_switch_sop.md` + `docs/publish_thread_sop14_twitter.md` — Full-Time Switch Threshold (alpha-vs-salary gate). 5 gates: G0 edge verification (200 OOS, Sharpe≥1.0, edge_ratio≥2.0) / G1 crossover formula = salary×1.5×12 / G2 12 consecutive months unbroken / G3 18mo living reserve structurally isolated / G4 return-to-salary circuit breaker pre-written. Posting queue extended: Apr 9 – **May 5**, 14 threads total. Series now SOP #01~#14. Next: Edward posts SOP #01 on Apr 9.
