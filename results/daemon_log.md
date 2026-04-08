@@ -1326,3 +1326,15 @@ Cycle 55 done.
 - MD-90: 職涯轉換=成果觸發不是時間觸發
 
 `dna_core.md`: **90 MDs**. Next: 202209.
+
+## Cycle 56 — 2026-04-08T21:30 UTC
+
+Branch 2.2 — 202209 distill.
+
+**202209.jsonl** (181 Edward msgs, Sep 2022) → 3 MDs written to `templates/dna_core.md`:
+
+- **MD-91** DD加碼=穩健性前置條件 — MDD add-on only works on strategies that pass rolling OOS + non-overlapping 6-month profit filter; large DD = stronger recovery signal for robust strategies
+- **MD-92** 程式交易=先確認動機再下工夫 — "to make money vs. to prove I can" are different standards; unclear motivation = no valid evaluation criterion regardless of outcome
+- **MD-93** 系統設計=正和遊戲引入外部資金 — sustainable systems bring outside capital in; zero-sum alpha pools are finite; positive-sum design (tools/platform/education) expands the pie
+
+`templates/dna_core.md`: **93 MDs**. Next: **202208**.
