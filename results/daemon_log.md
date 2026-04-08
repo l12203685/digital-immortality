@@ -2976,3 +2976,13 @@ Cycle 70 done.
 - **Branch 1.1** (highest-derivative): paper-live tick 12, BTC=71679.00, SHORT ×12 consecutive (range $71.6k–$72.6k)
 - Signal has held through ~$1k price range — strongest regime evidence yet
 - Blocker unchanged: set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → `python -m trading.mainnet_runner --tick` → live at $100 cap
+
+## Cycle 71 — 2026-04-08 UTC
+
+**Branch 2.2** (highest-derivative): 201801 JSONL (43 Edward msgs, Jan 2018) → **MD-280~282** written to `templates/dna_core.md`:
+
+- **MD-280**: 設備投資=先算次級市場退出；拆解零件轉售是下行保護底線
+- **MD-281**: 市場哄抬識別=先問「真實需求還是炒作」；供需失真時不用正常價格邏輯
+- **MD-282**: 風險溝通=主動先列缺點；隱藏風險=失去可信度
+
+**dna_core.md: 282 MDs** | next: 201712

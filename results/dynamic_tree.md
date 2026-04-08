@@ -185,3 +185,4 @@
 - 2026-04-08T UTC: cycle 46 — Branch 2.2: 201804 JSONL read (31 Edward msgs, Apr 2018) → MD-247~249 (交易=行為經濟學×賽局equity前置/知行落差是結構性alpha來源/組織談趨勢=落後指標); templates/dna_core.md: **249 MDs**; **201803 ✓ → MD-250~MD-252** (職涯平行測試/建議可信度=利益結構/感情初期揭露風險); dna_core.md: **252 MDs**; next: 201802
 
 - 2026-04-08T UTC: cycle 70 — Branch 2.2: 201802 JSONL read (335 Edward msgs, Feb 2018) → MD-277~279 (選對標的+知道價值+明確目的=可以抱住/選擇權避險timing=9:30後買溢價消退/工具成本先回收再進攻); templates/dna_core.md: **279 MDs**; next: 201801
+- 2026-04-08T UTC: cycle 71 — Branch 2.2: 201801 JSONL read (43 Edward msgs, Jan 2018) → MD-280~282 (設備投資=次級市場退出先算/市場哄抬識別=真實需求vs炒作/風險溝通=主動先列缺點); templates/dna_core.md: **282 MDs**; next: 201712
