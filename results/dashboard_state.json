@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T21:32+08",
+  "updated": "2026-04-08T21:38+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "- Blocker unchanged: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → go li..."
+      "text": "dna_core.md: 279 MDs | next: 201801"
     },
     {
       "time": "just now",
-      "text": "- Signal has held across ~$1k range for 11 ticks — regime evidence very strong"
+      "text": "Branch 2.2 (highest-derivative while mainnet blocked): 201802 JSONL (335 msgs..."
     },
     {
-      "time": "just now",
-      "text": "- Branch 1.1 (highest-derivative): paper-live tick 11, BTC=72,332.10, SHORT ×..."
+      "time": "2026-04-08 UTC",
+      "text": "- next: 201801"
     },
     {
-      "time": "just now",
-      "text": "Cycle 64 done."
+      "time": "2026-04-08 UTC",
+      "text": "- templates/dna_core.md: 279 MDs"
     },
     {
-      "time": "1min ago",
-      "text": "- Unblocking condition: set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` ..."
+      "time": "2026-04-08 UTC",
+      "text": "- 3 micro-patterns written to templates/dna_core.md:"
     }
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 274,
+    "total_mds": 277,
     "dna_core_lines": 76
   }
 }

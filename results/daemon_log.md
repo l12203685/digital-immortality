@@ -2946,3 +2946,15 @@ Blocker remains: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` needed to go l
   - MD-279: 工具成本先回收再進攻；固定成本未清=決策偏誤系統性放大
 - templates/dna_core.md: **279 MDs**
 - next: 201801
+
+## Cycle 66 — 2026-04-08 13:38:47 UTC
+
+Cycle 70 done.
+
+**Branch 2.2** (highest-derivative while mainnet blocked): 201802 JSONL (335 msgs, Feb 2018) → **MD-277~279** written to `templates/dna_core.md`:
+
+- **MD-277**: 選對標的+知道價值+明確目的=可以抱住；抱住能力來自邏輯確信，不是意志力
+- **MD-278**: 選擇權避險timing=9:30後買；開盤恐慌溢價消退再執行
+- **MD-279**: 工具成本先回收再進攻；固定成本未清=決策偏誤系統性放大
+
+**dna_core.md: 279 MDs** | next: 201801
