@@ -549,3 +549,15 @@ Next: 202507.
   3. **新領域=先建清單再執行** — before entering any new domain, build complete checklist first; decisions outsourced to past-self; no impulse execution
 - `dna_core.md`: 30 → **33 micro-decisions**
 - Branch 2.2: 202604✓ ... 202507✓; next: 202506
+
+## Cycle 15 — 2026-04-08 02:36:01 UTC
+
+Done. Cycle 25 complete.
+
+**Branch 2.2 — 202507 distilled.** 11,555 Edward msgs from Jul 2025. 3 micro-decisions written to `dna_core.md` (30→**33**):
+
+1. **條件枚舉→參數化設計** — build systems with parameter selectors (con_i=0/1/2), not hardcoded logic; exhaustive test via single-number pivots
+2. **阿瓦隆=貝氏即時更新** — each vote triggers conditional branch update; deception-detection is behavioral probability tracking, not intuition  
+3. **新領域=先建清單再執行** — before entering new domain, build complete checklist first; outsource decisions to past-self
+
+Next: 202506.
