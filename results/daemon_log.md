@@ -1804,3 +1804,15 @@ Cycle 68 done. **202106 gap reconcile + 202105 → MD-148~150** (150 MDs total):
 - **MD-150** 基金費用=激勵週期對齊策略波動週期 — measurement period must match strategy's natural cycle; annual hurdle favors manager in volatile strategies
 
 Next: 202104.
+
+## Cycle 39 — 2026-04-08 06:06:55 UTC
+
+Cycle 68 done.
+
+**202106 gap reconcile** (MD-145~147 already existed, tree was stale) + **202105 → MD-148~150**:
+
+- **MD-148** 基礎設施投資=報酬門檻十倍年成本 — return ≥10× annual infra cost before investing
+- **MD-149** 決策=先算基線EV再問哪些變數能翻轉 — base case first, then stress-test which external info changes the answer
+- **MD-150** 基金費用=激勵週期對齊策略波動週期 — choose measurement period matching strategy's natural cycle
+
+`dna_core.md`: **150 MDs**. Next: 202104.
