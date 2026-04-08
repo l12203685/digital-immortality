@@ -1659,3 +1659,16 @@ Cycle 65 done. **202111 → MD-130~132**:
 - **MD-132** 密薪制保護底線 — confidentiality clause blocks payslip demand; sequence low→high month to control anchor point
 
 `dna_core.md`: **132 MDs**. Next: 202110.
+
+## Cycle 65 — 2026-04-09T02:30 UTC
+
+**Branch 2.2 — gap reconcile + 202110 distill.**
+
+Gap: 202111 (MD-130~132) already in file, tree stale — fixed.
+
+**202110 → MD-133~135** (35 Edward msgs, Oct 2021):
+1. **MD-133** 風控前置=停損反推進場點 — 1%資金→找停損位→反推最遠進場點→當前在範圍內才進; 停損是進場前置條件不是事後補救
+2. **MD-134** 策略池=高淘汰率是過濾訊號 — 100+支策略34%存活=正常; 存活策略穩定度下降才是失敗; 淘汰率快慢本身是過濾器健康指標
+3. **MD-135** 實操知識=skin-in-the-game才外流 — 有edge的操作知識不在學術課堂; 傳授者代價成正比於知識真實性
+
+`templates/dna_core.md`: **135 MDs**. Next: 202109.
