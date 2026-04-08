@@ -3473,3 +3473,17 @@ Branch 2.2 is now closed. Next: Branch 2.3 (extend consistency tests to cover MD
 - True gap to 80% target: 26pp — actionable, not catastrophic
 - Next: update prompt to enforce single-word English decision → re-run for clean semantic divergence count
 
+
+## Cycle 99 — 2026-04-08 17:08:34 UTC
+
+**Cycle 98 done.**
+
+Branch 2.3 — measurement bug fixed. `cross_instance_test.py` was comparing raw decision strings including Chinese qualifiers, making "CONDITIONAL（條件不足現在是 PASS）" ≠ "CONDITIONAL" → reported 0/26.
+
+Fix: `_normalize_decision()` strips qualifiers, extracts primary keyword. Re-scored existing results: **14/26 (54%)**, not 0%.
+
+Failure breakdown:
+- 6 real semantic divergences (DNA ambiguity — genuine inconsistency)
+- 6 format non-compliance (model answered in Chinese prose, no keyword)
+
+Gap to 80% target: 26pp. Next action: update the cross-instance prompt to enforce a single-word English decision label → re-run to get a clean count of true semantic divergences.
