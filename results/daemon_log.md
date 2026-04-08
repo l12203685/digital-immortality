@@ -1755,3 +1755,16 @@ Cycle 67 done.
 - **MD-144** 策略監控=人均帶寬是投組規模硬上限 — 2 strategies/day review = 1+ month backlog; automate health checks, humans intervene on anomalies only
 
 Gap reconciled: 202108 was already done (MD-139~141), tree stale. Next: **202106**.
+
+## Cycle 68 — 2026-04-08T06:30 UTC
+
+**Branch 2.2 — gap reconcile + 202106 distill → MD-145~147.**
+
+Gap: 202107 (MD-142~144) already in dna_core.md but tree showed "next: 202107" — fixed.
+
+**202106 → MD-145~147** (55 substantive Edward msgs, Jun 2021):
+1. **MD-145** 選擇權垂直組合=用結構壓縮方向不確定性 — buy call sell call四象限賠率（大跌小賠/小漲小賺）；方向確定但波幅不確定→用組合壓縮下限；方向+波幅都確定→純方向
+2. **MD-146** 道氏確認=三條件同向才給高信心趨勢轉換 — ①低不破低②高過高③低點越來越高；缺任何一條=降倉；不用「感覺要轉了」提前進
+3. **MD-147** 系統整合=介面契約先書面化再實作 — autoCF→MRA格式問題根源：命名規則無書面契約；整合前先定義介面規格，後期debug成本遠超前期設計成本
+
+`templates/dna_core.md`: **147 MDs**. Next: 202105.
