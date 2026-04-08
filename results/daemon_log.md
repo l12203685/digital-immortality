@@ -2204,3 +2204,17 @@ Done. Branch 2.2 (JSONL distillation) — highest derivative.
 - **MD-207** 固定收益評估=流動性門檻先卡 — 流動性是隱形報酬，先卡流動性門檻再比報酬率
 
 Both repos pushed. Next: 201911.
+
+## Cycle 23 — 2026-04-08T UTC
+
+**Branch 2.2 — 201911 distill → MD-208~210** (210 MDs total):
+
+- Read 201911.jsonl (268 Edward msgs, Nov 2019)
+- Top groups: g2 (可可, 237), g54 (11), g106 (9), g61 (4)
+- Focus: Porter offer negotiation, 台新MA parallel interviews, code readability discussion, DR.HACK teaching
+
+- **MD-208** 薪資底線=年薪精算+試用期機制書面化 — 38×13=494K算清楚上份年薪→設底線；試用期後調薪幅度+時點必須進合約；口頭承諾=不存在的承諾；每輪email都是書面紀錄
+- **MD-209** 平行offer=決策樹+機會成本精算 — 「台新MA直接錄取→Porter落差不大；要繼續面試→Porter至少做到明年6月→差4個月×2000=8000」；建決策樹+量化每條路徑的EV；平行面試的選項EV隨他選項狀態動態變化，持續更新
+- **MD-210** 程式碼可讀性=高槓桿隱形軟實力 — 面試不考、不影響運速，但影響整個團隊效率；連證交所也搞爛=系統性低估=差異化空間；可測量≠有價值；是文化信號
+
+`LYH/agent/dna_core.md`: **210 MDs**. Next: 201910.
