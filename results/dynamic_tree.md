@@ -77,7 +77,7 @@
 防禦：2.3 blocked API credit, 4.1 blocked on friend
 
 ## 已完成 milestones
-- dna_core.md 117 MDs operational（core + MD-01~MD-117 written ✓）
+- dna_core.md 120 MDs operational（core + MD-01~MD-120 written ✓）
 - boot_tests 13 題
 - recursive_distillation F.1-18
 - skill suite v2.1.0（7 skills + auto-update）
@@ -161,3 +161,4 @@
 - 2026-04-08T23:30 UTC: cycle 59 — Branch 2.2: **gap reconcile** (202206 MD-103~105 already in file); 202205 JSONL read (66 substantive Edward msgs, May 2022) → MD-106~108 (公開指標=邊際edge趨零/年度風暴比=跨年Regime偵測器/技術合作=角色邊界先書面確認); templates/dna_core.md: 108 MDs; next: 202204
 - 2026-04-09T00:00 UTC: cycle 60 — Branch 2.2: 202205 JSONL read (331 Edward msgs, May 2022) → MD-109~111 (機率估計=後驗更新非固定先驗/策略延伸=深度×廣度兩軸並進/穩定收入=策略開發認知資源先決); templates/dna_core.md: 111 MDs; next: 202204
 - 2026-04-09T00:30 UTC: cycle 61 — Branch 2.2: gap reconcile (MD-112~114 already in file from prior session); 202204 JSONL read (305 substantive Edward msgs, Apr 2022) → MD-115~117 (進出場長相>獲利最大化/波段三分法=大波短停利當沖各自獨立/複雜度=Edge不足偽裝); templates/dna_core.md: 117 MDs; next: 202203
+- 2026-04-09T00:50 UTC: cycle 62 — Branch 2.2: 202202 JSONL read (673 Edward msgs, Feb 2022) → MD-118~120 (真分散=不同架構非同策略多商品/簡單才有效=深度理解的輸出/教學=給起手式讓人自己思考延伸); templates/dna_core.md: 120 MDs; next: 202201

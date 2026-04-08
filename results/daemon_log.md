@@ -1548,3 +1548,16 @@ Cycle 61 done.
   - **MD-117** 複雜度=Edge不足的偽裝 — core edge must fit in one sentence; can't = no edge = expires fast
 
 `dna_core.md`: **117 MDs**. Next: 202203.
+
+## Cycle 62 — 2026-04-09T00:50 UTC
+
+**Branch 2.2 — 202202 JSONL distilled.**
+
+- Read 202202.jsonl (673 Edward msgs, Feb 2022)
+- Key threads: g1 (strategy architecture diversity, simplicity=mastery), g28 (teaching via scaffolding not answers)
+- 3 micro-patterns written to `templates/dna_core.md`:
+  1. **MD-118** 真分散=不同架構，非同策略多商品 — same logic on 2 instruments=N=2, not diversification; true diversification = different architectures (trend+MR+arb+time-value) uncorrelated by regime; same-day losses = architecture overlap
+  2. **MD-119** 簡單才有效=深度理解的輸出 — "simple is most effective, but to produce simplicity requires deep understanding of fundamentals"; complexity = insufficient understanding + parameter stacking to compensate; the person who explains why a condition is NOT needed is rarer than who adds one
+  3. **MD-120** 教學=給起手式讓人自己思考延伸 — "let each person think themselves, that was my original intent"; provide scaffold (initial draft + explain tradeoffs), not answers; teaching success = student can explain their own modifications
+
+`templates/dna_core.md`: 117 → **120 MDs**. Next: 202201.
