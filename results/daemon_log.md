@@ -3176,3 +3176,16 @@ Branch 2.2 ext pass on 201705+201704 (506 Edward msgs). Three new MDs written to
 - **MD-303** 順從型組織=生產力邊際回報歸組織 — KPI is "no complaints" not "output" → productivity gains accrue to org 100% → seek exit, not harder work
 
 Pushed to main. Next: deep ext pass on earlier periods or 201703+.
+
+## Cycle 81 — 2026-04-08 UTC
+
+**Branch 2.3** re-validation at 303-MD scale.
+
+Ran `consistency_test.py templates/dna_core.md` — 14 scenarios:
+- **13/14 ALIGNED (93%)**
+- MISALIGNED: `generic_strategy_failure` (expected=DEFINE_KILL_CONDITIONS_FIRST) — DNA core principle on strategy failure/kill conditions not triggering cleanly
+- Baseline updated: results/consistency_baseline.json
+
+Branch 2.2 status confirmed COMPLETE (JSONL archive exhausted at 201703/201702/201701 — 0 substantive Edward msgs in those months). 303 MDs total.
+
+Next highest derivative: fix `generic_strategy_failure` misalignment OR advance Branch 1.1 (paper-live tick confirmation → mainnet credentials).
