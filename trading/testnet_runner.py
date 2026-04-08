@@ -29,6 +29,8 @@ from trading.strategies import (
     donchian_btc_daily,
     dual_ma_filtered,
     donchian_filtered,
+    dual_ma_rsi_btc_daily,
+    dual_ma_rsi_filtered,
 )
 
 try:
@@ -53,6 +55,8 @@ STRATEGIES = {
     "donchian": donchian_btc_daily,
     "dual_ma_filtered": dual_ma_filtered,
     "donchian_filtered": donchian_filtered,
+    "dual_ma_rsi": dual_ma_rsi_btc_daily,
+    "dual_ma_rsi_filtered": dual_ma_rsi_filtered,
 }
 
 STRATEGY_MIN_LOOKBACK = {
@@ -60,6 +64,8 @@ STRATEGY_MIN_LOOKBACK = {
     "donchian": 22,          # period=20 + 2 buffer
     "dual_ma_filtered": 56,  # RegimeFilter(trend_period=50, slope_bars=5) + 1
     "donchian_filtered": 56,
+    "dual_ma_rsi": 56,       # RSI(14) + MA slow(30) + buffer
+    "dual_ma_rsi_filtered": 56,
 }
 
 # Maps STRATEGIES keys → portfolio strategy names returned by PortfolioSelector.select()
@@ -68,6 +74,8 @@ STRATEGY_PORTFOLIO_NAME = {
     "donchian": "DonchianConfirmed_20",
     "dual_ma_filtered": "DualMA_filtered",
     "donchian_filtered": None,   # no direct portfolio equivalent
+    "dual_ma_rsi": "DualMA_RSI",
+    "dual_ma_rsi_filtered": "DualMA_RSI_filtered",
 }
 
 # Kill conditions (mirror paper_trader_review thresholds)
@@ -364,6 +372,46 @@ def _load_backtest_results() -> Optional[Dict]:
         return None
 
 
+def _print_mae_mfe_summary(entries: List[Dict]) -> None:
+    """Print MAE/MFE diagnostics for all strategies using testnet log entries."""
+    if not entries:
+        return
+    # Convert log entries to synthetic Bar objects (price used as OHLC proxy)
+    bars: List[Bar] = []
+    for e in entries:
+        price = e.get("price")
+        if price is None:
+            continue
+        price = float(price)
+        bars.append({
+            "open": price,
+            "high": price * 1.001,
+            "low": price * 0.999,
+            "close": price,
+            "volume": 1.0,
+        })
+    print(f"\n{'='*60}")
+    print("MAE/MFE Diagnostic (testnet log bars)")
+    print(f"{'='*60}")
+    for name, strategy_fn in STRATEGIES.items():
+        try:
+            mae_stats = compute_mae_mfe(bars, strategy_fn, atr_period=14)
+            n = mae_stats["n_trades"]
+            if n < 3:
+                print(f"  [MAE/MFE] {name}: insufficient trades ({n})")
+            else:
+                print(
+                    f"  [MAE/MFE] {name}: "
+                    f"edge_ratio={mae_stats['edge_ratio']:.2f} "
+                    f"mae={mae_stats['avg_mae_atr']:.3f} "
+                    f"mfe={mae_stats['avg_mfe_atr']:.3f} "
+                    f"n={n}"
+                )
+        except Exception as exc:
+            print(f"  [MAE/MFE] {name}: error ({exc})")
+    print(f"{'='*60}\n")
+
+
 def cmd_review(strategy_name: Optional[str]) -> None:
     entries = _load_log()
     targets = [strategy_name] if strategy_name else list(STRATEGIES.keys())
@@ -436,6 +484,9 @@ def cmd_review(strategy_name: Optional[str]) -> None:
     else:
         print("OVERALL: NO_GO -> Extend testnet, recalibrate")
     print(f"{'='*60}\n")
+
+    # MAE/MFE diagnostic
+    _print_mae_mfe_summary(entries)
 
 
 def _run_backtest_strategy(strategy_name: str, bars: List[Dict]) -> Dict:

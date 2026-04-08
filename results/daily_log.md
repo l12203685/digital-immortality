@@ -568,3 +568,17 @@ Recursive engine cycle history.
 | mixed | DualMA_RSI_filtered | +1.74 | 9.9 |
 
 Next: testnet_runner.py ATR-based stop loss; continue DNA distillation when JSONL available.
+
+## Cycle 48 — 2026-04-08T19:00Z
+
+**Branches**: 2 parallel (2.2 DNA distillation 201809 + 1.2 trading RSI+MAE integration)
+
+### Branch 2.2: 201809 JSONL Distillation
+- **MD-232**: 努力轉換超額報酬=找不對稱市場，對稱競爭中努力只換平均報酬
+- **MD-233**: 部位大小先於選股，風控架構先於策略優化
+- **MD-234**: 複利理解要在早期，晚理解=已錯過最大槓桿窗口
+- dna_core.md: 234 MDs; next: 201808
+
+### Next cycle
+- 201808 JSONL distillation → MD-235~237
+- Trading: testnet RSI strategies tracking
