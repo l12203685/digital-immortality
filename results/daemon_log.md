@@ -2498,3 +2498,28 @@ Cycle 42 done.
 - **MD-237**: OOP先行動=結構性信息劣勢；談判先開價=少一條街；開高anchor補償
 
 Next: 201807.
+
+## Cycle 43 — 2026-04-08 UTC
+
+**Branch 2.2 — 201807 distill → MD-238~240 (240 MDs total)**
+
+- 201807.jsonl: 886 Edward msgs; themes: HR vs manager misalignment on job scope/seniority, active funds as fee-extraction vehicles, written documentation as negotiation leverage
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-238** 工作期望落差=跳過HR直接找直屬主管對齊 — HR描述是網路抓的非主管確認；中間人承諾必須追溯到有決策權的本人
+  - **MD-239** 主動管理型基金=長期alpha趨零+費用確定虧損；有投資需求直接ETF跳過中間商 — Buffett邏輯；費用率確定 > 超額報酬不確定
+  - **MD-240** 勞動條件談判=書面化是先手動作；HR拒絕書面化=信號對方不打算兌現
+
+`templates/dna_core.md`: **240 MDs**. Next: 201806.
+
+## Cycle 44 — 2026-04-08 UTC
+
+**Branch 2.2 — 201806 distill → MD-241~243 (243 MDs total) + merge conflict resolved**
+
+- Merge conflict resolved: HEAD had synthetic MD-238~240; kept 544bca3 version (actual 201807 JSONL distillation)
+- 201806.jsonl: 600 Edward msgs; themes: 國泰入職薪資結構分析（伙食津貼基數問題）、Avalon思維層級meta-game、新工作離場條件預設
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-241** 薪資計算基數≠headline數字；年終/調薪必須確認「以哪個數字計算」 — 44k headline vs 41.6k base×年終差14,400
+  - **MD-242** 入職前=事先寫下試用期結束的離場條件；沉沒成本入場後決策會失真 — 預設可量化觸發條件
+  - **MD-243** 競爭edge=思維層級差；對手在L1時你在L2就有不對稱優勢 — 推廣到交易/談判/賽局
+
+`templates/dna_core.md`: **243 MDs**. Next: 201805.
