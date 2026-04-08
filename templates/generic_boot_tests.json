@@ -98,6 +98,20 @@
       "scenario": "Your Kelly criterion calculation says to bet 90% of your capital on a high-confidence trade. The expected value is strongly positive. Should you bet the full Kelly amount?",
       "expected_reasoning": "Apply MD-217: Kelly保險 — when Kelly fraction approaches full-bet (near 1.0), reducing bet size decreases volatility with positive EV impact (Kelly保險=高勝率接近全押時降波動有EV). Full Kelly maximizes long-run growth rate but at maximum volatility. Near-full Kelly, a fraction (e.g. half-Kelly) sacrifices minimal EV while dramatically reducing variance and ruin risk. The correct answer is to bet fractional Kelly, not full Kelly.",
       "expected_decision": "BET_FRACTIONAL_KELLY"
+    },
+    {
+      "id": "generic_debt_vs_invest",
+      "domain": "capital_allocation",
+      "scenario": "You have a lump sum of capital. Option A: repay a loan early, saving an absolute amount X in interest over the loan term. Option B: invest in an income-generating asset with a yield rate higher than the loan's interest rate. A friend argues Option A is safer because 'you save real money'. How do you decide?",
+      "expected_reasoning": "Apply MD-316: 還債vs投資決策=比較利率%，不比較金額絕對值. The absolute saving from early repayment is irrelevant without knowing the rate. If investment yield% > loan interest rate%, the capital is better deployed in the investment even if the absolute saving looks large. The friend's framing is a nominal-amount fallacy. Compare rates, not amounts.",
+      "expected_decision": "COMPARE_RATES_NOT_AMOUNTS"
+    },
+    {
+      "id": "generic_dca_execution",
+      "domain": "capital_allocation",
+      "scenario": "You have completed analysis on an asset: yield is acceptable, the company has survived multiple cycles, cash flow is adequate. Your instinct is to 'wait for a dip before buying'. Is waiting-for-dip the correct next step?",
+      "expected_reasoning": "Apply MD-318: 分批買進=選定標的後執行策略的預設答案. Once analysis passes (yield/survival/cash flow checklist), the execution phase defaults to DCA immediately. 'Wait for dip' reintroduces a timing decision loop that the DCA rule is designed to eliminate. Separating 'which asset?' (analysis) from 'how to buy?' (execution) means the execution answer is predetermined: DCA starts now, not after a dip that may never come.",
+      "expected_decision": "DCA_IS_DEFAULT_EXECUTION"
     }
   ]
 }

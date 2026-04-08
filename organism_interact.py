@@ -482,6 +482,10 @@ DOMAIN_PRINCIPLE_AFFINITY = {
     "identity":         ["identity", "action", "specific", "commit", "responsib", "person", "first"],
     "meta_strategy":    ["meta", "system", "process", "metric", "deteriorat", "regime", "diagnos", "pause"],
     "communication":    ["direct", "verdict", "response", "reply", "concise", "short", "length", "conviction", "intuition", "直接", "結論", "回應", "簡短", "確信"],
+    "capital_allocation": ["capital", "allocat", "invest", "debt", "loan", "rate", "yield", "dividend", "DCA", "比率", "利率", "殖利率", "分批", "還債", "資產配置"],
+    "position_sizing":  ["position", "sizing", "Kelly", "fraction", "bet", "risk", "volatility", "kelly", "口數", "部位", "槓桿"],
+    "information_asymmetry": ["information", "asymmetry", "edge", "research", "知識", "資訊", "不對稱", "優勢"],
+    "negotiation":      ["negotiation", "salary", "floor", "anchor", "deal", "談判", "底線", "薪資", "精算"],
 }
 
 
@@ -700,6 +704,16 @@ def _domain_decision(domain: str, principle_text: str) -> str:
             "CALCULATE_FLOOR_FIRST_WRITTEN — floor must be calculated and written before negotiating. "
             "Gut-feel floors are invalid; only real numbers (market rate, opportunity cost, alternatives) count. "
             "Without a written floor, you cannot make a principled accept/reject decision."
+        ),
+        "capital_allocation": (
+            "COMPARE_RATES_NOT_AMOUNTS / DCA_IS_DEFAULT_EXECUTION — "
+            "MD-316: 還債vs投資決策=比較利率%不比較絕對金額. If investment yield% > loan rate%, deploy capital in the asset. "
+            "MD-318: 分批買進=分析通過後執行策略的預設答案. Once analysis clears (yield/survival/cashflow), "
+            "execution defaults to DCA immediately — 'wait for dip' re-introduces a timing loop the DCA rule eliminates. "
+            "Separate 'which asset?' (analysis) from 'how to buy?' (execution)."
+            if (ev_signal or stability_signal) else
+            "COMPARE_RATES_NOT_AMOUNTS — compare yield% vs loan rate%, not absolute savings amount. "
+            "DCA_IS_DEFAULT_EXECUTION — when analysis is complete, start DCA immediately, not after a dip."
         ),
     }
     return decisions.get(domain, "Decision: apply core principles to the specific trade-offs in this scenario.")

@@ -3305,3 +3305,15 @@ Branch 2.3 — consistency re-validation after Branch 2.2 JSONL archive exhausti
 **Result: 14/14 ALIGNED ✅** at 318 MDs (up from 306 MDs at last validation).
 
 Next: Branch 1.1 mainnet trading (blocked on BINANCE_MAINNET_KEY/SECRET) or Branch 2.3 adding new consistency scenarios for MD-313–318.
+
+## Cycle 91 — 2026-04-09T16:14 UTC
+
+**Branch 2.3** — consistency test extended: 2 new scenarios for MD-316/318 (capital_allocation domain).
+
+- `generic_debt_vs_invest`: MD-316 還債vs投資=比較利率%不比較金額 → COMPARE_RATES_NOT_AMOUNTS ✓
+- `generic_dca_execution`: MD-318 分批買進=分析通過後DCA預設執行 → DCA_IS_DEFAULT_EXECUTION ✓
+- `capital_allocation` domain added to `_domain_decision` + `DOMAIN_PRINCIPLE_AFFINITY` in organism_interact.py
+
+**Result: 16/16 ALIGNED ✅** (up from 14/14); 318 MDs validated; baseline saved.
+
+Next: Branch 1.1 mainnet (blocked on BINANCE_MAINNET_KEY/SECRET) or Branch 4.1 first non-Edward organism.
