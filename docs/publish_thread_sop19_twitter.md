@@ -1,131 +1,125 @@
-# Twitter Thread — SOP #19: Derivative Thinking
+# Twitter Thread — SOP #19: Social Capital & Network Building
 
-**Scheduled:** May 15, 2026 (extending queue to May 15)
-**Hook:** "The trend looked fine. Then it was over. You were looking at the wrong number."
+**Hook**: "Most people manage relationships reactively. They invest when they need something. Here's a 4-gate system for building social capital before you need it."
 
 ---
 
 **Tweet 1 (Hook)**
-The trend looked fine.
-Then it was over.
+Most people manage relationships reactively.
 
-You were looking at the level.
-You should've been watching the slope.
+They reach out when they need something.
+They maintain when it's convenient.
+They invest when the relationship is already warm.
 
-SOP #19: Derivative Thinking & Inflection Point Detection 🧵
-
----
-
-**Tweet 2**
-Most traders look at P&L.
-Most career people look at salary.
-Most analysts look at current numbers.
-
-All of them are looking at snapshots.
-
-The decision was already made — in the rate of change.
+Here's the 4-gate system that inverts this default:
 
 ---
 
-**Tweet 3**
-Two numbers matter more than the level:
+**Tweet 2 (Reframe)**
+Social capital isn't built by being likeable.
 
-δ = how fast it's changing
-δ² = whether that rate is accelerating or decelerating
+It's built by systematic maintenance of relationship density over time.
 
-A rising P&L with δ² < 0 is closer to a reversal
-than a falling P&L with δ² > 0.
+The formula:
+Relationship density = Contact frequency × Contact quality
 
----
+Both variables are independently controllable.
 
-**Tweet 4 (G0–G1)**
-G0: State the current level explicitly.
-Then consciously set it aside.
-
-G1: Compute δ over 20–60 periods (trading), 12–24 months (career), 4–8 weeks (content).
-
-Δ = (current − prior) / prior
-
-Flag immediately if δ is decelerating while level is still rising.
+(MD-328)
 
 ---
 
-**Tweet 5 (G2)**
-G2: Second derivative.
+**Tweet 3 (G0 — Audit)**
+Gate 0: Network audit.
 
-Is the rate of change itself accelerating or slowing?
+List 10–15 nodes that have long-term value potential.
+Classify into 3 tiers by max silence period:
 
-δ² > 0 → strengthening trend
-δ² < 0 → weakening trend, watch for inflection
-δ² ≈ 0 → cruise mode, no signal
+- Tier 1 (core): 2 weeks
+- Tier 2 (important): 1 month
+- Tier 3 (strategic): 3 months
 
-A decelerating positive trend > still-negative accelerating trend.
-
----
-
-**Tweet 6 (G3)**
-G3: Inflection point checklist.
-
-- [ ] δ sign change in trailing 2 periods?
-- [ ] δ² sign change with ≥2 confirmation bars?
-- [ ] Regime signal aligned?
-- [ ] Volume/weight corroborates?
-
-≥3 of 4 → INFLECTION CONFIRMED.
-
-Act now. Not after the level confirms.
+Any node past its max silence → trigger now.
 
 ---
 
-**Tweet 7 (G4)**
-G4: Action map.
+**Tweet 4 (G1 — Verify)**
+Gate 1: Don't invest before verifying.
 
-Rising plateau (+, ≈0) → HOLD
-Decelerating rise (+, −) → PREPARE EXIT
-Inflection down (0→−, −) → EXIT
-Decelerating fall (−, +) → PREPARE ENTRY
-Inflection up (0→+, +) → ENTER
+Run a 3-month behavior audit:
+- Did they follow through on commitments?
+- Did they initiate or only respond?
+- Did behavior match stated values under pressure?
 
-Never add at plateau.
-Never exit at trough.
-Act at inflection.
+≥3/4: HIGH_TRUST → invest.
+Below: VERIFY → one more cycle.
 
----
-
-**Tweet 8 (Self-test)**
-Scenario: Strategy P&L = +12, +14, +15, +15.2, +15.1
-
-Looks fine, right? Still positive. Near ATH.
-
-δ_recent = −0.7% (first negative)
-δ² = negative (was +1.3%)
-
-→ INFLECTION SIGNAL. Prepare exit. Set kill condition now.
-
-Don't wait for the level to fall.
+(MD-330: behavior > language)
 
 ---
 
-**Tweet 9 (Anti-patterns)**
-The traps:
+**Tweet 5 (Signal rule)**
+The key insight from MD-330:
 
-"P&L is still positive" → level bias
-"Wait for more confirmation" → chasing level
-"Year-over-year looks fine" → wrong period, hiding regime change
-"Trend is strong, don't fight it" → ignoring δ²
+Language = stated intent.
+Behavior = verified intent.
 
-Strength without acceleration = stalled trend.
+When they conflict, weight behavior.
+
+One missed commitment = data point.
+3 missed commitments = pattern.
+
+Track the ratio. Don't downgrade on a single data point.
 
 ---
 
-**Tweet 10 (Close)**
-Level = where you are.
-Derivative = where you're going.
-Second derivative = whether you'll get there.
+**Tweet 6 (G2 — Cadence)**
+Gate 2: Pre-commit the maintenance cadence. Don't decide in the moment.
 
-Make decisions on the slope.
-Default = IDLE until inflection confirmed.
+Template for each node:
+- Max silence: [X weeks]
+- Trigger action: [share article / check-in / call]
+- Last contact: [date]
+- Next scheduled: [date]
 
-SOP #19 → docs/knowledge_product_19_derivative_thinking_sop.md
+Weekly scan: any node overdue → trigger immediately.
 
-Series: #01~#19. Queue: Apr 9 – May 15.
+---
+
+**Tweet 7 (Content rule)**
+Content rule for outreach:
+
+"Saw this and thought of you" 
+> "I need your help with X"
+
+The former builds relationship density without instrumental framing.
+
+Purpose doesn't need to be stated. Connection is the purpose.
+
+---
+
+**Tweet 8 (G3 — Output)**
+Gate 3: Close the output loop.
+
+Every Tier 1/2 relationship should produce one shared output per quarter:
+- Knowledge transfer (framework, write-up)
+- Referral (connecting two nodes)
+- Signal relay (sharing something before it's public)
+- Collaboration (joint project)
+
+0 outputs in 6 months from a Tier 1 node → question the tier.
+
+---
+
+**Tweet 9 (Close)**
+4 gates. That's the system.
+
+G0: Audit your nodes.
+G1: Verify with behavior, not language.
+G2: Pre-commit cadence. Never decide in the moment.
+G3: Close the output loop each quarter.
+
+Build the relationship before you need it.
+The one you need in a crisis was built 2 years ago.
+
+SOP #19 complete.

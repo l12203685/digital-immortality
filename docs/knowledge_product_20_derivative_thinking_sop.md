@@ -124,4 +124,4 @@ Default state = IDLE (consistent with Kernel 5).
 
 ---
 
-*Series: SOP #01~#19. Operationalizes Edward Decision Kernel 1.*
+*Series: SOP #01~#20. Operationalizes Edward Decision Kernel 1.*

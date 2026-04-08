@@ -820,3 +820,32 @@ Next: testnet_runner.py ATR-based stop loss; continue DNA distillation when JSON
 - Branch 7.4: identify distribution platform for knowledge product (MD-320: audience density × feedback speed)
 - Branch 8.4: implement top automation (script or pre-commit template)
 - Branch 1.1: mainnet credentials still needed; paper-live monitoring continues
+
+---
+
+## Cycle 143 — 2026-04-09T UTC
+
+**Branch 7.24 (daemon): SOP #18 — Bias Toward Inaction / Idle Capital Protocol**
+- `docs/knowledge_product_18_inaction_bias_sop.md` — 5-gate inaction protocol; default state=IDLE; earn the right to trade; backing MDs: MD-96/108/326/141/112/104
+
+**Branch 7.25 (E0): SOP #19 — Social Capital & Network Building**
+
+First SOP for Domain 4 (社交圈). Closes the only domain with zero published SOPs.
+
+**What shipped:**
+- `docs/knowledge_product_19_social_capital_sop.md` — 4-gate Social Capital SOP
+  - G0: Network audit (tier classification: core 2w / important 1m / strategic 3m max silence)
+  - G1: Behavior verification (3-month audit; behavior > language; commitment ratio tracking; MD-330)
+  - G2: Maintenance cadence pre-commitment (weekly scan; no in-the-moment decisions; MD-322)
+  - G3: Output loop closure (≥1 shared output/quarter per Tier 1/2 node; types: knowledge/referral/signal/collaboration)
+  - G4: Professional brand alignment (quarterly audit; monthly visible output to Tier 2/3 nodes)
+  - Self-test: Samuel (Tier 2, 6-week silence → CONTACT with SOP excerpt, no ask)
+  - Backing MDs: MD-328/330/202/120/55
+- `docs/publish_thread_sop19_twitter.md` — 9-tweet thread: *"Most people manage relationships reactively. Here's a 4-gate system for building social capital before you need it."*
+- Posting queue extended: **Apr 9 – May 15**, 19 threads total
+
+**Staging relay updated:** next_input.md advanced from cycle 94 → cycle 143 context (was stale 49 cycles).
+
+**Series now SOP #01~#19. Domain 4 (社交圈) now has first SOP. Queue runs Apr 9 – May 15.**
+
+**Next blocker:** Edward posts SOP #01 today to start the G5 compounding clock.
