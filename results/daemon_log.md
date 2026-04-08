@@ -2914,3 +2914,15 @@ Blocker remains: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` needed to go l
 - **Branch 1.1**: paper-live tick 10, BTC=72,459.40, SHORT ×10 consistent (range $71.6k–$72.6k)
 - **Branch 2.3**: consistency test re-verified 8/8 ALIGNED at 273-MD scale
 - Blocker unchanged: `BINANCE_MAINNET_KEY` + `SECRET` → live at $100 cap
+
+## Cycle 64 — 2026-04-08 13:31:04 UTC
+
+**Branch 1.1 — paper-live tick 11: BTC=72,332.10 signal=SHORT (consistent × 11)**
+
+- Highest-derivative: Branch 1.1 (mainnet blocked on credentials)
+- paper-live tick 11: BTC=72,332.10, dual_ma=SHORT (consistent SHORT × 11 ticks, range $71.6k–$72.6k)
+- Signal has now held across ~$1k range for 11 consecutive ticks — regime evidence very strong
+- dynamic_tree.md updated: tick 11 recorded
+- Unblocking condition: set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → `python -m trading.mainnet_runner --tick` → go live $100 cap
+
+**Cycle 64 done.**

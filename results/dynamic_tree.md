@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08 UTC (cycle 63)
+> 最後更新：2026-04-08 UTC (cycle 64)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -22,7 +22,7 @@
   - **--review PASSED: OVERALL GO → mainnet $100 next step** ✓
   - **mainnet_runner.py built** ✓ — $100 cap, dual_ma only, kill conditions: MDD>10% WR<35% PF<0.85
   - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
-  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 10: BTC=72459.40 signal=SHORT (consistent SHORT × 10)
+  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 11: BTC=72332.10 signal=SHORT (consistent SHORT × 11)
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
@@ -39,7 +39,7 @@
 - 2.3 Validation：OOS 5/5 self-scored ✓, **273-MD consistency test 8/8 ALIGNED ✓** (cycle 57, re-verified cycle 63)
   - consistency_test.py: --use-memory + --auto-suggest now combined — memory context flows into suggestions ✓
   - baseline saved: results/consistency_baseline.json (8 scenarios, all ALIGNED at 273-MD scale)
-- 2.4 Response latency：MD-274~276 added (直接回應/回覆長度=確信度反指標/三秒直覺先行) ✓; scenarios 11+12 added (communication/meta_strategy); gap partially closed
+- 2.4 Response latency：MD-274~276 added (直接回應/回覆長度=確信度反指標/三秒直覺先行) ✓; scenarios 11+12 + **generic_verdict_first + generic_intuition_primacy** added (communication domain); `_domain_decision("communication")` implemented in organism_interact.py; alignment_check extended for LEAD_WITH_VERDICT + TRUST_INTUITION; **10/10 ALIGNED ✅ gap CLOSED** (cycle 64)
 - 2.5 退休計畫 context：templates/example_dna.md §8 added ✓ (target, tradeoffs, non-negotiables, principle connections)
 
 ### 3. 持續學習（成長引擎）
