@@ -1114,3 +1114,15 @@ Cycle 50 done.
 - **MD-66** 保守=小中取大 — conservative strategy = minimax (pick the option with best worst-case), not low-risk; highest fault tolerance = can't be killed by any bad outcome; applies to: voting, position sizing, negotiation, career choices
 
 `templates/dna_core.md`: **66 MDs**. Next: 202305.
+
+## Cycle 25 — 2026-04-08 04:56:04 UTC
+
+Cycle 50 done.
+
+**Branch 2.2** — 202306.jsonl (9,093 Edward msgs, Jun 2023) → 3 MDs written:
+
+- **MD-64** 策略下架門檻=DD補不回一半 — market moving but strategy dying + can't recover half of max drawdown = forced pull for review, not "wait longer"
+- **MD-65** 投組收斂=穩健訊號 — when multiple different optimization objectives converge to similar portfolios, that convergence IS the robustness signal; single-objective optimum is suspect
+- **MD-66** 保守=小中取大 — conservative = minimax (best worst-case), not low-risk; highest fault tolerance = can't be killed by any single bad outcome
+
+`templates/dna_core.md`: **66 MDs**. Next: 202305. Pushed.
