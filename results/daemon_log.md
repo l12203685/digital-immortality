@@ -1600,3 +1600,17 @@ Cycle 63 done.
   - **MD-126** 賽局三步驟=範圍→最優行動→剝削偏差 — poker and market share same SOP: ①know opponent range ②compute GTO action ③exploit only if opponent deviates; trading: regime distribution → strategy pool → exploit if statistical pattern exists
 
 `dna_core.md`: **126 MDs**. Next: 202111.
+
+## Cycle 35 — 2026-04-08 05:47:19 UTC
+
+**Cycle 63 done.**
+
+Branch 2.2 — gap reconcile + 202112 distill:
+
+- Gap: 202201 (MD-121~123) already in file, tree stale — fixed
+- **202112 → MD-124~126**:
+  - **MD-124** CARG公式 — risk-capital-normalized return `(NP + 3×MDD + 1×Margin)/(3×MDD + 1×Margin)^(1/T) - 1`
+  - **MD-125** 最佳化目標=IS/OOS分佈差異最小化 — KL/Jensen divergence as fitness function, not IS P&L max
+  - **MD-126** 賽局三步驟 — range → GTO → exploit-if-deviate (poker=market isomorphic)
+
+`dna_core.md`: **126 MDs**. Next: 202111.
