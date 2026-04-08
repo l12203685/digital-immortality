@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T20:58+08",
+  "updated": "2026-04-08T21:02+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,23 +51,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Unblocking condition: `BINANCE_MAINNET_KEY` + `SECRET` → then `python -m trad..."
+      "text": "SHORT signal has held across 6 consecutive ticks spanning $71.6k–$72.1k. Evid..."
     },
     {
       "time": "just now",
-      "text": "SHORT signal has held across 5 ticks spanning ~$71.6k–$72.0k. Evidence is con..."
+      "text": "Branch 1.1 — paper-live tick 6: BTC=72,116.10 signal=SHORT (×6 consistent)"
     },
     {
       "time": "just now",
-      "text": "Branch 1.1 — paper-live tick 5: BTC=72,043.10 signal=SHORT (×5 consistent)"
+      "text": "Cycle 59 done."
     },
     {
       "time": "just now",
-      "text": "Cycle 58 done."
+      "text": "Unblocking condition: set `BINANCE_MAINNET_KEY` + `SECRET` → `python -m tradi..."
     },
     {
       "time": "just now",
-      "text": "- Next: set BINANCE_MAINNET_KEY/SECRET → run `python -m trading.mainnet_runne..."
+      "text": "- Evidence converging strongly; regime consistent"
     }
   ],
   "stats": {
