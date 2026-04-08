@@ -2718,3 +2718,17 @@ Cycle 52 done. Pushed.
 - **MD-264**: 樣本量是結論有效的先決條件；低於門檻的結果是雜訊不作調整依據
 
 Next: 201709.
+
+## Cycle 53 — 2026-04-08 UTC
+
+**Branch 2.2 — 201709+201708 distill → MD-265~267 (267 MDs total)**
+
+- 201709.jsonl: 9 Edward msgs (sparse, old schema s/t fields); combined with 201708 (58 msgs); themes: hand range matrix, MTT ICM thinking, inflation discount
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-265** Range思考>單手牌判斷；對手分析=可能手牌範圍子集，不是猜測單一手牌
+  - **MD-266** ICM思維=錦標賽籌碼非線性；評估改變分到獎金機率而非籌碼絕對量
+  - **MD-267** 名目數字≠實質購買力；通膨折現後比較才有意義，100萬未來值≈現值40~50萬
+
+`templates/dna_core.md`: **267 MDs**. Next: 201707.
+
+Note: 201709~201708 files use older schema (s/t fields instead of sender_name/content); tmp_distill.py needs updating for these older files.
