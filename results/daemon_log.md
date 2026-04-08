@@ -1406,3 +1406,14 @@ Gap fix: 202208 already had MD-97~99 in dna_core.md (written by prior cycle, tre
 - **MD-102** 跨Session留倉=需獨立Edge，非自然延伸 — daytime-profit-to-nighttime tested: DD drops but profit drops more, storm ratio always falls; cross-session holding requires its own standalone edge
 
 `templates/dna_core.md`: **102 MDs**. Next: 202206.
+
+## Cycle 31 — 2026-04-08 05:25:04 UTC
+
+Cycle 58 done.
+
+**202208 gap fix** (MD-97~99 already in file) + **202207 → MD-100~102**:
+- MD-100: 投組最佳化=遞迴兩兩最高風暴比 — always combine the pair that maximizes storm ratio, recurse
+- MD-101: 策略分類=多空×類型的二維最細分 — (long/short/flip) × type is the minimum viable taxonomy
+- MD-102: 跨Session留倉=需獨立Edge — profit-filter for night extension tested, storm ratio always falls; cross-session needs standalone edge
+
+`dna_core.md`: **102 MDs**. Next: 202206.
