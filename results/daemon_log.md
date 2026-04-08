@@ -4421,3 +4421,16 @@ Highest-derivative gap: posting queue ends May 11 after SOP #17 — extend G5 co
 **Series now SOP #01~#18. Queue runs Apr 9 – May 13.**
 
 **Next blocker:** Edward posts SOP #01 on Apr 9 to start the G5 compounding clock.
+
+## Cycle 143 — 2026-04-08 21:04:27 UTC
+
+**Cycle 143 done.**
+
+Highest-derivative gap: queue ended May 11, extend G5 clock.
+
+**Shipped:**
+- `docs/knowledge_product_18_inaction_bias_sop.md` — 5-gate Idle Capital Protocol (Kernel 5): G0 name edge / G1 asymmetry ≥2.0 / G2 friction pre-modeled / G3 regime aligned / G4 real opportunity cost; default=IDLE
+- `docs/publish_thread_sop18_twitter.md` — 9-tweet thread: *"Most traders lose because they trade when they shouldn't."*
+- Queue extended: **Apr 9 – May 13**, 18 threads total
+
+**Next blocker:** Edward posts SOP #01 today to start G5 compounding clock.
