@@ -367,3 +367,15 @@ Both repos committed and pushed. Next highest-derivative: read 202601 (41K lines
   3. **不動作是最難** — explicit trading meta-insight: holding position unchanged is harder than entering/exiting; articulated aloud in trading group
 - Distilled → `LYH/agent/dna_core.md` line 50 updated
 - Branch 2.2 status: 202604 ✓, 202601 ✓; next: 202602 (Jan-Feb gap bridge)
+
+## Cycle 7 — 2026-04-08 01:55:15 UTC
+
+**Cycle 17 done.**
+
+Branch 2.2 — read 202601.jsonl (11,289 Edward messages), distilled 3 new micro-patterns into `dna_core.md`:
+
+1. **多方案並列** — complex financial decisions: computes ALL options as full numbered steps+amounts before asking expert
+2. **自推到底再確認** — reasons to conclusion independently, then asks to verify; never leads with "what should I do?"
+3. **不動作是最難** — explicit trading meta-insight, articulated aloud in group chat
+
+Both repos pushed. Next highest-derivative: 202602 JSONL (Feb 2026 bridge).
