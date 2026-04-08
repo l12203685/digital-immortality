@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T18:02+08",
+  "updated": "2026-04-08T18:13+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -50,24 +50,24 @@
   ],
   "activity": [
     {
-      "time": "just now",
-      "text": "Next: 201907."
+      "time": "2026-04-09T UTC",
+      "text": "- `templates/dna_core.md`: 207 MDs; next: 201905"
     },
     {
-      "time": "just now",
-      "text": "Branch 2.2 — 201908 → MD-217~219 (219 MDs total)"
+      "time": "2026-04-09T UTC",
+      "text": "- 3 micro-decisions written:"
     },
     {
-      "time": "just now",
-      "text": "Both repos committed and pushed. Cycle 26 done."
+      "time": "2026-04-09T UTC",
+      "text": "- 201906.jsonl: 35 substantive Edward msgs (Jun 2019, mostly social/Avalon/li..."
     },
     {
-      "time": "2026-04-08T UTC",
-      "text": "`LYH/agent/dna_core.md`: 210 MDs. Next: 201910."
+      "time": "2026-04-09T UTC",
+      "text": "Branch 2.2 — 201906 distill → MD-205~207 (207 MDs total)"
     },
     {
-      "time": "2026-04-08T UTC",
-      "text": "- Focus: Porter offer negotiation, 台新MA parallel interviews, code readability..."
+      "time": "2026-04-09T UTC",
+      "text": "`templates/dna_core.md`: 204 MDs. Next: 201906."
     }
   ],
   "stats": {

@@ -2259,3 +2259,11 @@ Gap confirmed: daemon logged MD-202~219 across cycles 22-30, but merge conflict 
   - **MD-206** 住房總持有成本=五項逐條精算，只看本利和是最常見低估來源 (housing cost breakdown)
   - **MD-207** 教學材料=按難度預分層，讓接收者自定步調比你決定給多少更有效 (teaching material design)
 - `templates/dna_core.md`: **207 MDs**; next: 201905
+
+## Cycle 32 — 2026-04-08 10:13:54 UTC
+
+Cycle 32 done. 201906.jsonl → MD-205~207 written to dna_core.md (207 MDs total). Next: 201905.
+
+- **MD-205** 機制缺陷≠玩家失誤 — Avalon game analysis: isolate structural bias from execution quality before modifying rules
+- **MD-206** 住房總持有成本=五項精算 — housing: mortgage + tax + HOA + utilities + living; common underestimate is 15-20%
+- **MD-207** 教學分難度層次 — pre-sort by difficulty, let learner self-pace rather than teacher rationing
