@@ -2,11 +2,14 @@
   "meta": {
     "dna_file": "/home/user/digital-immortality/templates/example_dna.md",
     "organism": "[Your Name]",
-    "generated_at": "2026-04-08T00:22:54.480514",
+    "generated_at": "2026-04-08T01:16:45.292456",
     "scenario_count": 18,
     "scenario_source": "/home/user/digital-immortality/templates/generic_boot_tests.json",
-    "principles_count": 9,
-    "use_memory": false
+    "principles_count": 12,
+    "use_memory": true,
+    "memory_corrections_loaded": 0,
+    "memory_calibration_loaded": 1,
+    "memory_domains_enhanced": []
   },
   "results": [
     {
@@ -37,11 +40,11 @@
       "id": "organism_3",
       "domain": "money",
       "scenario": "You receive an unexpected windfall equal to 2 years of your salary. You can: (A) invest it conservatively in index funds, (B) allocate it to a concentrated high-conviction bet, or (C) use it to buy more time — reduce working hours or take a sabbatical. What do you do and why?",
-      "deterministic_response": "On capital allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nCONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
+      "deterministic_response": "On capital allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value p...\"\n  [3] Applying: \"Bias toward inaction — do not pull the trigger on retirement until the financial floor is verified. But also: do not ...\"\n\nCONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
       "principles_used": [
         "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
-        "What you decided",
-        "[What you did]"
+        "EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value per year) > (expected additional earnings × marginal utility of money at that level).",
+        "Bias toward inaction — do not pull the trigger on retirement until the financial floor is verified. But also: do not delay indefinitely waiting for \"more certainty.\" Define the threshold in advance."
       ],
       "source": "organism_interact"
     },
@@ -49,11 +52,11 @@
       "id": "organism_4",
       "domain": "risk",
       "scenario": "An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your net worth. Do you take the bet?",
-      "deterministic_response": "On risk-taking, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
+      "deterministic_response": "On risk-taking, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [e...\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
       "principles_used": [
         "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
         "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
-        "What you decided"
+        "Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [early decade] exceeds the EV of [additional savings amount]."
       ],
       "source": "organism_interact"
     },
@@ -73,11 +76,11 @@
       "id": "organism_6",
       "domain": "health",
       "scenario": "Optimizing your physical health would require 10 hours per week of dedicated effort (sleep discipline, exercise, diet). This directly competes with time you currently use for deep work and income generation. How do you allocate?",
-      "deterministic_response": "On health vs. productivity trade-offs, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
+      "deterministic_response": "On health vs. productivity trade-offs, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [e...\"\n  [3] Applying: \"EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value p...\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
       "principles_used": [
         "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
-        "What you decided",
-        "[What you did]"
+        "Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [early decade] exceeds the EV of [additional savings amount].",
+        "EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value per year) > (expected additional earnings × marginal utility of money at that level)."
       ],
       "source": "organism_interact"
     },
@@ -85,11 +88,11 @@
       "id": "organism_7",
       "domain": "time",
       "scenario": "You have a free, unscheduled weekend with zero obligations. No one expects anything from you. What do you do, and what does that reveal about your actual priorities?",
-      "deterministic_response": "On time allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nRECHARGE — genuine disconnection to restore cognitive baseline; productivity follows recovery.",
+      "deterministic_response": "On time allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [e...\"\n  [2] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [3] Applying: \"EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value p...\"\n\nRECHARGE — genuine disconnection to restore cognitive baseline; productivity follows recovery.",
       "principles_used": [
+        "Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [early decade] exceeds the EV of [additional savings amount].",
         "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
-        "What you decided",
-        "[What you did]"
+        "EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value per year) > (expected additional earnings × marginal utility of money at that level)."
       ],
       "source": "organism_interact"
     },
@@ -133,11 +136,11 @@
       "id": "generic_trading",
       "domain": "trading",
       "scenario": "Someone proposes an active trading opportunity with 25% annualized returns that requires 2 hours of daily maintenance. The strategy has a 1-year track record but no independent audit. Do you participate?",
-      "deterministic_response": "On trading, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nEVALUATE_TIME_VS_RETURN — 2hr/day = 730hr/year; without independent audit, claimed returns are unverified. Pass unless time-adjusted EV clearly exceeds alternative uses.",
+      "deterministic_response": "On trading, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [e...\"\n\nEVALUATE_TIME_VS_RETURN — 2hr/day = 730hr/year; without independent audit, claimed returns are unverified. Pass unless time-adjusted EV clearly exceeds alternative uses.",
       "principles_used": [
         "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
         "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
-        "What you decided"
+        "Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [early decade] exceeds the EV of [additional savings amount]."
       ],
       "expected_decision": "EVALUATE_TIME_VS_RETURN",
       "expected_reasoning": "Evaluate time cost (2hr/day = 730hr/year) against alternative uses of that time. Assess whether the claimed return compensates for opportunity cost, lack of verification, and attention drain. Apply your core principles about edge, risk, and time allocation.",
@@ -147,11 +150,11 @@
       "id": "generic_finance",
       "domain": "finance",
       "scenario": "You receive an unexpected windfall equal to 2 years of your current income. You can: (A) invest conservatively in index funds, (B) allocate it to a concentrated high-conviction position, or (C) use it to buy time -- reduce work hours or take a sabbatical. What do you do and why?",
-      "deterministic_response": "On finance, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nAPPLY_FINANCIAL_PRINCIPLES — deploy windfall according to core financial principles: concentrated high-conviction position if edge exists, buy time if freedom is the priority, index if preserving optionality.",
+      "deterministic_response": "On finance, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value p...\"\n  [3] Applying: \"Bias toward inaction — do not pull the trigger on retirement until the financial floor is verified. But also: do not ...\"\n\nAPPLY_FINANCIAL_PRINCIPLES — deploy windfall according to core financial principles: concentrated high-conviction position if edge exists, buy time if freedom is the priority, index if preserving optionality.",
       "principles_used": [
         "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
-        "What you decided",
-        "[What you did]"
+        "EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value per year) > (expected additional earnings × marginal utility of money at that level).",
+        "Bias toward inaction — do not pull the trigger on retirement until the financial floor is verified. But also: do not delay indefinitely waiting for \"more certainty.\" Define the threshold in advance."
       ],
       "expected_decision": "APPLY_FINANCIAL_PRINCIPLES",
       "expected_reasoning": "Apply your financial principles and life priorities. The 'right' answer depends entirely on your DNA: someone optimizing for freedom chooses differently than someone optimizing for wealth accumulation. This tests whether your principles produce a coherent, justified allocation.",
@@ -203,11 +206,11 @@
       "id": "generic_risk",
       "domain": "risk_assessment",
       "scenario": "A backtested strategy shows a Sharpe ratio of 2.5 on historical data, but walk-forward validation only passes 2 out of 5 windows. Should you deploy it with real capital?",
-      "deterministic_response": "On risk_assessment, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nREJECT — 40% walk-forward pass rate indicates overfitting, not edge. Do not deploy regardless of backtest Sharpe.",
+      "deterministic_response": "On risk_assessment, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [e...\"\n\nREJECT — 40% walk-forward pass rate indicates overfitting, not edge. Do not deploy regardless of backtest Sharpe.",
       "principles_used": [
         "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
         "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
-        "What you decided"
+        "Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [early decade] exceeds the EV of [additional savings amount]."
       ],
       "expected_decision": "REJECT",
       "expected_reasoning": "Walk-forward results override single-backtest performance. A 40% pass rate suggests overfitting rather than genuine edge. Apply your principles about evidence thresholds, distinguishing signal from noise, and when NOT to act despite attractive-looking numbers.",

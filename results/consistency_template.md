@@ -1,6 +1,6 @@
 # Cross-Instance Consistency Test
 **DNA**: [Your Name]
-**Generated**: 2026-04-08T00:22:54.481065
+**Generated**: 2026-04-08T01:16:45.293037
 **Scenarios**: 18
 
 ## Instructions
@@ -129,7 +129,7 @@
 
 **Deterministic baseline**: On time allocation, [Your Name]'s decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."...
+  [1] Applying: "Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [e..."...
 
 ### Session Answers
 
