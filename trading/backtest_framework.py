@@ -297,6 +297,106 @@ def strategy_passes_filter(
 
 
 # ---------------------------------------------------------------------------
+# MAE/MFE analysis — MD-13, MD-157, MD-175
+# ---------------------------------------------------------------------------
+
+def _atr(bars: List[Bar], period: int = 14) -> float:
+    """Average True Range over the last `period` bars."""
+    if len(bars) < period + 1:
+        return bars[-1]["high"] - bars[-1]["low"] if bars else 1.0
+    trs = []
+    for i in range(-period, 0):
+        bar = bars[i]
+        prev_close = bars[i - 1]["close"]
+        tr = max(
+            bar["high"] - bar["low"],
+            abs(bar["high"] - prev_close),
+            abs(bar["low"] - prev_close),
+        )
+        trs.append(tr)
+    return _mean(trs) if trs else 1.0
+
+
+def compute_mae_mfe(
+    bars: List[Bar],
+    strategy_fn: StrategyFn,
+    atr_period: int = 14,
+) -> Dict[str, float]:
+    """
+    Per-trade MAE/MFE analysis normalized by ATR at entry.
+
+    MD-13:  edge_ratio = avg(MFE/ATR) / avg(MAE/ATR) × sqrt(N)
+    MD-157: true edge = minimum MAE while capturing maximum MFE.
+    MD-175: MAE/MFE distributions diagnose strategy-to-market fit.
+
+    Returns:
+        n_trades       — total closed trades analyzed
+        avg_mae_atr    — avg Max Adverse Excursion / ATR
+        avg_mfe_atr    — avg Max Favorable Excursion / ATR
+        mae_mfe_ratio  — avg_mfe_atr / avg_mae_atr  (>1 = edge)
+        edge_ratio     — mae_mfe_ratio × sqrt(N)    (MD-13 quality score)
+    """
+    trades = []
+    position = 0
+    entry_idx = 0
+    entry_price = 0.0
+
+    for i in range(1, len(bars)):
+        signal = strategy_fn(bars[: i + 1])
+
+        # Close existing trade when signal flips or goes flat
+        if position != 0 and signal != position:
+            trade_bars = bars[entry_idx : i + 1]
+            atr_at_entry = _atr(bars[: entry_idx + 1], atr_period)
+            if atr_at_entry <= 0:
+                atr_at_entry = 1.0
+
+            if position == 1:  # long: adverse = price below entry, favorable = above
+                mfe = max((b["high"] - entry_price for b in trade_bars[1:]), default=0.0)
+                mae = max((entry_price - b["low"] for b in trade_bars[1:]), default=0.0)
+            else:  # short: adverse = price above entry, favorable = below
+                mfe = max((entry_price - b["low"] for b in trade_bars[1:]), default=0.0)
+                mae = max((b["high"] - entry_price for b in trade_bars[1:]), default=0.0)
+
+            trades.append(
+                {
+                    "mfe_atr": max(mfe, 0.0) / atr_at_entry,
+                    "mae_atr": max(mae, 0.0) / atr_at_entry,
+                    "pnl": (bars[i]["close"] - entry_price) * position / entry_price,
+                }
+            )
+
+        # Open new position
+        if signal != position:
+            position = signal
+            entry_idx = i
+            entry_price = bars[i]["close"]
+
+    if not trades:
+        return {
+            "n_trades": 0,
+            "avg_mae_atr": 0.0,
+            "avg_mfe_atr": 0.0,
+            "mae_mfe_ratio": 0.0,
+            "edge_ratio": 0.0,
+        }
+
+    n = len(trades)
+    avg_mae = _mean([t["mae_atr"] for t in trades])
+    avg_mfe = _mean([t["mfe_atr"] for t in trades])
+    mae_mfe_ratio = avg_mfe / avg_mae if avg_mae > 0 else float("inf")
+    edge_ratio = mae_mfe_ratio * math.sqrt(n)
+
+    return {
+        "n_trades": n,
+        "avg_mae_atr": round(avg_mae, 4),
+        "avg_mfe_atr": round(avg_mfe, 4),
+        "mae_mfe_ratio": round(mae_mfe_ratio, 4),
+        "edge_ratio": round(edge_ratio, 4),
+    }
+
+
+# ---------------------------------------------------------------------------
 # Synthetic data generation
 # ---------------------------------------------------------------------------
 
@@ -390,6 +490,26 @@ def main():
     print("Some may pass by chance — that is expected with random data.")
     print("Real deployment requires consistent edge, not lucky windows.")
     print("Bias toward inaction: no clear edge = no trade.")
+    print("=" * 64)
+
+    # MAE/MFE diagnostic (MD-13, MD-157, MD-175)
+    print()
+    print("=" * 64)
+    print("MAE/MFE DIAGNOSTIC — MD-13 Edge Ratio (1d, trending data)")
+    print("=" * 64)
+    trending_bars = generate_synthetic_bars(n=500, drift=0.001, volatility=0.02, seed=7)
+    for name, fn in STRATEGIES.items():
+        stats = compute_mae_mfe(trending_bars, fn)
+        print(
+            f"  {name:20s} | trades={stats['n_trades']:3d} | "
+            f"MAE/ATR={stats['avg_mae_atr']:.3f} | "
+            f"MFE/ATR={stats['avg_mfe_atr']:.3f} | "
+            f"ratio={stats['mae_mfe_ratio']:.3f} | "
+            f"edge_ratio={stats['edge_ratio']:.2f}"
+        )
+    print()
+    print("edge_ratio = (avg MFE/ATR)/(avg MAE/ATR) × √N  (MD-13)")
+    print("Higher = better fit to market structure at entry.")
     print("=" * 64)
 
 

@@ -3,6 +3,24 @@
 Recursive engine cycle history.
 
 
+## Cycle 46 — 2026-04-08T17:00Z
+
+**Branch**: 1.2 Trading Quality — MAE/MFE Diagnostic
+
+### Branch 1.2: compute_mae_mfe() added to backtest_framework.py
+- `_atr()` helper: ATR(14) from high/low/prev_close, graceful fallback for short series
+- `compute_mae_mfe(bars, strategy_fn, atr_period)`: per-trade MAE/MFE normalized by ATR at entry
+- Returns: n_trades, avg_mae_atr, avg_mfe_atr, mae_mfe_ratio, edge_ratio (MD-13 quality score)
+- Demo output appended to `main()`: all 4 strategies show MAE/MFE on trending synthetic data
+- Validated: momentum edge_ratio=7.15, breakout=8.94, mean_reversion=3.31 (correct ordering for trend regime)
+- DNA principles now have code backing: MD-13 (edge_ratio = MFE/MAE × √N), MD-157 (min MAE max MFE), MD-175 (MAE/MFE as fit diagnostic)
+
+### Next cycle
+- 202008 JSONL not available → skip to improving trading quality further
+- Candidate: add `compute_mae_mfe` to testnet_runner.py --review output
+- Candidate: add Donchian + RSI strategies to MAE/MFE comparison in demo
+
+
 ## Cycle 45 — 2026-04-08T16:00Z
 
 **Branches pushed**: 2 parallel (2.2 JSONL distillation + 1.1 RSI strategy)
