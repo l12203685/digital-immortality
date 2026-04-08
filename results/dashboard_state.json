@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T14:38+08",
+  "updated": "2026-04-08T14:40+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -50,7 +50,7 @@
   ],
   "activity": [
     {
-      "time": "3min ago",
+      "time": "4min ago",
       "text": "API Error: 529 {\"type\":\"error\",\"error\":{\"type\":\"overloaded_error\",\"message\":\"..."
     },
     {
