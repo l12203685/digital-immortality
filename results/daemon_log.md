@@ -4900,3 +4900,15 @@ Gap: "Next blocker: Edward posts SOP #01" has been unresolved for many cycles. 3
 - `docs/x_launch_sequence.md` — 15-minute checklist: X bio text (paste-ready), Day 1 post steps (copy thread → reply chain → pin), 48h engagement protocol, G5 milestone tracker (3 DMs = offer-eligible, 10 DMs = build workbook), engagement defaults pre-committed (X check at 16:00 daily, already pre-committed)
 
 **Next blocker:** Open `x_launch_sequence.md` → run pre-flight (~10 min) → post SOP #01 thread. Today is the scheduled date.
+
+## Cycle 161 — 2026-04-09 UTC
+
+**Cycle 161 done.**
+
+Gap: 34 SOPs written, posting queue live, x_launch_sequence.md reduces pre-flight to 15 min — but when engagement starts (replies, DMs), there's no paste-ready response text. Edward would face in-the-moment decisions during the 16:00 daily check window, burning decision capital on wording instead of signal-logging.
+
+**Shipped:**
+- `docs/engagement_response_templates.md` — 5-category response library: positive/agreement, technical questions/pushback, DM trust ladder (3 exchanges → offer-eligible), bad faith (ignore), hiring inquiry; G5 milestone triggers embedded (3 DMs = offer eligible, 10 DMs = build workbook); kill condition included (10 threads + zero engagement → SOP #12 audit)
+- `results/dynamic_tree.md` updated
+
+**Next blocker:** Edward opens x_launch_sequence.md → posts SOP #01 → engagement_response_templates.md handles inbound.
