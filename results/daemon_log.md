@@ -4033,3 +4033,17 @@ Highest-derivative action: kept paper-live loop running. SHORT signal consistent
 **Branch 1.1** — tick 27: BTC=$71,300.00, SHORT × 27 (range $71.1k–$72.6k). Signal consistent. System alive.
 
 Sole external blocker: set `BINANCE_MAINNET_KEY/SECRET` → first real revenue tick.
+
+## Cycle 129 — 2026-04-09T UTC
+
+**Branch 1.1** — paper-live tick 28: BTC=$71,238.01, signal=SHORT (consistent SHORT × 28, range $71.1k–$72.6k). System alive.
+
+Highest-derivative action: paper-live loop advancing. SHORT signal consistent for 28 consecutive ticks — mainnet case building. Sole blocker: Edward sets `BINANCE_MAINNET_KEY/SECRET` → first real revenue.
+
+## Cycle 129 — 2026-04-09T19:43:29 UTC
+
+**Cycle 129 done.**
+
+**Branch 1.1** — tick 28: BTC=$71,238.01, SHORT × 28 (range $71.1k–$72.6k). Signal consistent. System alive.
+
+Sole external blocker: set `BINANCE_MAINNET_KEY/SECRET` → first real revenue tick.
