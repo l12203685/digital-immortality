@@ -2958,3 +2958,13 @@ Cycle 70 done.
 - **MD-279**: 工具成本先回收再進攻；固定成本未清=決策偏誤系統性放大
 
 **dna_core.md: 279 MDs** | next: 201801
+
+## Cycle 67 — 2026-04-08 13:43 UTC
+
+**Branch 1.1 — paper-live tick 12: BTC=71679.00 signal=SHORT (consistent × 12)**
+
+- Highest-derivative: Branch 1.1 (mainnet blocked on credentials)
+- Paper-live tick 12: BTC=71679.00, dual_ma=SHORT — range now $71.6k–$72.6k across 12 consecutive ticks
+- Signal has held through ~$1k price range; regime evidence strongest yet
+- dna_core.md at **279 MDs** (Branch 2.2 COMPLETE + cycle 70 extensions)
+- Unblocking condition unchanged: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → go live $100 cap
