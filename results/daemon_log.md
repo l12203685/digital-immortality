@@ -4799,3 +4799,19 @@ Gap: SOP #15 (backtest deception) + SOP #26 (walk-forward) both warn against ove
 - Queue extended to **Jun 8** (#01~#31, 60-day target)
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 157 — 2026-04-09 UTC
+
+**Cycle 157 done.**
+
+Gap: SOP #31 (parsimony) + SOP #29 (monitoring) both describe conditions that degrade — but no SOP teaches how to detect when the edge itself has been arbitraged away. MD-108/109/98/143/110 all in DNA, zero teachable product on edge decay. Fixed.
+
+**Shipped:**
+- `docs/knowledge_product_32_edge_decay_sop.md` — 5-gate framework: G0 edge type A/B/C/D (Type D = public indicators → OOS Sharpe threshold ≥1.2) / G1 baseline fingerprint saved on deployment day / G2 survival_rate monitoring every 30 trades / G3 Bayesian posterior update (regime + cohort + timing drift + cost sensitivity) → P(edge_decayed) / G4 response protocol (>0.65=25% size; 0.50–0.65=50% hold; <0.50=regime issue) / G5 depth×breadth replenishment (kill → new research thread, different edge_type); self-test: DualMA BTC cohort all down → P=0.45 → HOLD 50% + RESEARCH MR
+- `docs/publish_thread_sop32_twitter.md` — hook: *"Your strategy stopped working. You didn't change anything. The market changed it for you."*
+- `docs/posting_queue.md` extended to **#01~#32** (Jun 10, 62-day target)
+- `results/dynamic_tree.md` updated: Branch 7.35, cycle 157
+
+**Series: SOP #01~#32 COMPLETE.**
+
+**Next blocker:** Edward posts SOP #01.
