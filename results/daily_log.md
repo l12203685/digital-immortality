@@ -439,3 +439,33 @@ Recursive engine cycle history.
 3. **Add**: Auto-gate paper-live ticks via portfolio regime (mainnet_runner.py)
 4. **Improve**: Cross-instance DNA validation — test if dna_core.md micro-decisions produce consistent decisions
 5. **Fix**: Investigate why staging/last_output.md wasn't updated in cycles 9–19
+
+
+## Cycle 29 — 2026-04-08T07:45Z
+
+**Branches**: 3 parallel (behavioral fix, trading, latency protocol)
+
+### CRITICAL FIX — Branch 2.2: dna_core.md learn=write gap (again)
+- Detected: dna_core.md still only had MD-01~MD-12 despite tree claiming 42 micro-decisions
+- Root cause: cycles 20-28 updated the tree but never actually wrote MD-13~MD-42 to file
+- **Fixed**: Added MD-13~MD-39 (from 202512, 202511, 202510, 202509, 202508, 202507, 202506, 202505, 202504)
+- **202503 pipeline**: +3 new patterns → MD-40~MD-42 (季度復盤固定化/宏觀日曆先看/每日三問框架)
+- dna_core.md now: 114 lines, MD-01~MD-42 all written; next pipeline: 202502
+
+### Branch 1.1: Trading — mainnet_runner.py --report
+- Added `cmd_report()` — markdown performance summary
+- Shows: mainnet stats (PnL/WR/PF/kill status), paper-live tick history, kill rail thresholds table
+- `--save` flag writes results/trading_report.md
+- Usage: `python mainnet_runner.py --report [--save]`
+
+### Branch 2.4: Response Latency Protocol
+- Created templates/response_latency.md
+- Defines 3-tier response model: Tier 1 (muscle memory <3s), Tier 2 (pattern match <10s), Tier 3 (deliberate <60s)
+- Includes Tier 1 lookup table (6 trigger→response pairs), Tier 2 pattern-fire protocol, training loop
+- Measurement framework: latency_tier_1_pct + narration_count tracked in memory/calibration.json
+
+### Next cycle priorities
+1. **202502 JSONL**: continue pipeline → MD-43~MD-45
+2. **Latency training**: run the boot-cycle drill from response_latency.md
+3. **Trading**: run `--report --save` to generate baseline trading_report.md
+4. **2.3 Validation**: unblock cross-instance (need API credit or use local model)

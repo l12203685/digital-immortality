@@ -221,6 +221,80 @@ def cmd_paper_live() -> None:
     print(f"Total paper-live ticks: {len(lines)}")
 
 
+def cmd_report(save: bool = False) -> None:
+    """Generate a human-readable markdown performance report for both paper-live and mainnet logs."""
+    lines = ["# Trading Performance Report", f"> Generated: {datetime.now(timezone.utc).isoformat()}", ""]
+
+    # --- Mainnet ---
+    mainnet = _load_log()
+    lines.append("## Mainnet (real $)")
+    if not mainnet:
+        lines.append("No mainnet entries yet.\n")
+    else:
+        stats = _compute_stats(mainnet)
+        kill = _check_kill(stats)
+        lines += [
+            f"- Ticks: {stats['ticks']}  Trades: {stats['trades']}",
+            f"- Total PnL: **{stats['total_pnl']:+.4f} USDT**",
+            f"- Win Rate: {stats['win_rate']:.1%}  (W={stats['wins']} L={stats['losses']})",
+            f"- Profit Factor: {stats['profit_factor']}",
+            f"- Kill status: {'🔴 BREACH — HALT' if kill else '🟢 OK'}",
+            "",
+            "### Last 5 entries",
+        ]
+        for e in mainnet[-5:]:
+            lines.append(f"  - `{e.get('ts', '?')}` action={e.get('action')} "
+                         f"signal={e.get('signal', '—')} pnl={e.get('realized_pnl', 'n/a')}")
+        lines.append("")
+
+    # --- Paper Live ---
+    lines.append("## Paper Live (real prices, no real orders)")
+    paper_entries: List[Dict] = []
+    if PAPER_LIVE_LOG.exists():
+        for line in PAPER_LIVE_LOG.read_text().strip().splitlines():
+            try:
+                paper_entries.append(json.loads(line))
+            except json.JSONDecodeError:
+                pass
+
+    if not paper_entries:
+        lines.append("No paper-live entries yet.\n")
+    else:
+        prices = [e.get("price", 0) for e in paper_entries]
+        signals = [e.get("signal", "FLAT") for e in paper_entries]
+        signal_counts = {s: signals.count(s) for s in set(signals)}
+        lines += [
+            f"- Ticks: {len(paper_entries)}",
+            f"- Price range: {min(prices):.2f} – {max(prices):.2f} USDT",
+            f"- Signal distribution: {signal_counts}",
+            "",
+            "### Last 5 ticks",
+        ]
+        for e in paper_entries[-5:]:
+            lines.append(f"  - `{e.get('ts', '?')}` price={e.get('price', '?'):.2f} signal={e.get('signal')}")
+        lines.append("")
+
+    # --- Kill Rails Summary ---
+    lines += [
+        "## Kill Rail Thresholds",
+        f"| Metric | Threshold | Applies After |",
+        f"|--------|-----------|---------------|",
+        f"| Max Drawdown | >{MAX_DRAWDOWN_PCT}% | any time |",
+        f"| Win Rate | <{KILL_MIN_WIN_RATE:.0%} | ≥{KILL_MIN_TRADES} trades |",
+        f"| Profit Factor | <{KILL_MIN_PROFIT_FACTOR} | ≥{KILL_MIN_TRADES} trades |",
+        "",
+    ]
+
+    report = "\n".join(lines)
+    print(report)
+
+    if save:
+        out = RESULTS_DIR / "trading_report.md"
+        RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+        out.write_text(report, encoding="utf-8")
+        print(f"\nSaved to {out}")
+
+
 def cmd_loop(interval: int) -> None:
     import time
     logger.info("Mainnet loop started: interval=%ds", interval)
@@ -243,7 +317,9 @@ def main() -> None:
     group.add_argument("--status", action="store_true", help="Show log stats")
     group.add_argument("--loop", type=int, metavar="SECONDS", help="Loop every N seconds")
     group.add_argument("--paper-live", action="store_true", help="Paper trade on real prices (no credentials)")
+    group.add_argument("--report", action="store_true", help="Print markdown performance report")
     parser.add_argument("--dry-run", action="store_true", help="Skip actual order placement")
+    parser.add_argument("--save", action="store_true", help="Save report to results/trading_report.md (with --report)")
     args = parser.parse_args()
 
     if args.tick:
@@ -254,6 +330,8 @@ def main() -> None:
         cmd_loop(args.loop)
     elif args.paper_live:
         cmd_paper_live()
+    elif args.report:
+        cmd_report(save=args.save)
 
 
 if __name__ == "__main__":

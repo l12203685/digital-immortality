@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T06:45 UTC (cycle 28)
+> 最後更新：2026-04-08T07:45 UTC (cycle 29)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -21,6 +21,7 @@
   - cron_daily_tick.bat created for Windows Task Scheduler persistence ✓
   - **--review PASSED: OVERALL GO → mainnet $100 next step** ✓
   - **mainnet_runner.py built** ✓ — $100 cap, dual_ma only, kill conditions: MDD>10% WR<35% PF<0.85
+  - **--report added ✓ (cycle 29)** — markdown performance summary (mainnet + paper-live stats, kill rails); `--save` writes results/trading_report.md
   - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
   - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 3: BTC=71443.20 signal=SHORT (consistent SHORT × 3, price declining: 71509→71484→71443)
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
@@ -34,10 +35,10 @@
 
 ### 2. 行為等價（核心能力）
 - 2.1 DNA 品質：10 micro-decision patterns from JSONL integrated ✓
-- 2.2 微決策學習：202604 ✓ (+3); 202601 ✓ (+3); 202602 ✓ (+3); 202603 ✓ (+3); 202512 ✓ (+3: 個人品牌=多維交叉定位/遊戲=資訊不對稱沙盒/職涯=平行軌道); 202511 ✓ (+3: 周末不留空單/強弱配對抽alpha/定價錨點下移入場); **dna_core.md 實際寫入 MD-01~MD-12 ✓** (cycle 22 fix); 202510 ✓ (+3: Game selection/汰弱留強+槓桿/EV-vol取捨); 202509 ✓ (+3: 攻強守60分/求職掃射+AI複製/薪資談判先緩); 202508 ✓ (+3: 薪資精算底線/知識=社交資本/13F=靈感不跟單); 202507 ✓ (+3: 條件枚舉參數化/阿瓦隆貝氏更新/新領域先建清單); 202506 ✓ (+3: Alpha vs salary threshold/50x FIRE+時薪感知/市場alpha魚池有限); 202505 ✓ (+3: 問題量化前置/Avalon提案三層過濾/多幣資產統一基準); **202504 ✓ (+3: 策略貼盤=敏感優先/事件→縮槓桿50%/資產三層架構)**; next: 202503
+- 2.2 微決策學習：202604 ✓ (+3); 202601 ✓ (+3); 202602 ✓ (+3); 202603 ✓ (+3); 202512 ✓ (+3: 個人品牌=多維交叉定位/遊戲=資訊不對稱沙盒/職涯=平行軌道); 202511 ✓ (+3: 周末不留空單/強弱配對抽alpha/定價錨點下移入場); **dna_core.md 實際寫入 MD-01~MD-12 ✓** (cycle 22 fix); 202510 ✓ (+3: Game selection/汰弱留強+槓桿/EV-vol取捨); 202509 ✓ (+3: 攻強守60分/求職掃射+AI複製/薪資談判先緩); 202508 ✓ (+3: 薪資精算底線/知識=社交資本/13F=靈感不跟單); 202507 ✓ (+3: 條件枚舉參數化/阿瓦隆貝氏更新/新領域先建清單); 202506 ✓ (+3: Alpha vs salary threshold/50x FIRE+時薪感知/市場alpha魚池有限); 202505 ✓ (+3: 問題量化前置/Avalon提案三層過濾/多幣資產統一基準); 202504 ✓ (+3: 策略貼盤=敏感優先/事件→縮槓桿50%/資產三層架構); **202503 ✓ (+3: 季度復盤固定化/宏觀日曆先看/每日三問框架) [cycle 29]**; **CRITICAL FIX cycle 29: MD-01~MD-42 全部實際寫入 dna_core.md ✓**; next: 202502
 - 2.3 Validation：OOS 5/5 self-scored ✓, cross-instance prepped but blocked on API credit
   - consistency_test.py: --use-memory + --auto-suggest now combined — memory context flows into suggestions ✓
-- 2.4 Response latency：三秒 vs 三段推理，差距仍在
+- 2.4 Response latency：三秒 vs 三段推理，差距仍在 — **templates/response_latency.md 建立 ✓ (cycle 29)** — 3-tier protocol (muscle-memory / pattern-match / deliberate); training loop defined
 - 2.5 退休計畫 context：templates/example_dna.md §8 added ✓ (target, tradeoffs, non-negotiables, principle connections)
 
 ### 3. 持續學習（成長引擎）
@@ -47,7 +48,7 @@
   - Layer 3: remote trigger（Opus，1hr 保底，cloud）
 - 3.2 校正 pipeline：correction → boot test → distillation → DNA → all durable storage ✓
 - 3.3 主動 input：JSONL 2,860,094 entries 大部分未讀
-- 3.4 DNA 演化：dna_core 75 行 + 42 micro-decisions (MD-01~MD-42, 202504 ✓) + dna_full 持續擴展 + 哲學宣言 added
+- 3.4 DNA 演化：dna_core **114 行** + 42 micro-decisions (MD-01~MD-42 全部實際寫入 ✓ cycle 29 fix) + dna_full 持續擴展 + 哲學宣言 added; next pipeline: 202502
 
 ### 4. 社交圈（ecosystem）
 - 4.1 第一個非 Edward organism（需要朋友參與 — Samuel?）
@@ -125,4 +126,5 @@
 - 2026-04-08T06:00 UTC: cycle 26 — Branch 2.2: 202506 JSONL read (7,369 Edward msgs, Jun 2025), 3 new micro-patterns → dna_core.md (Alpha vs salary switch threshold/50x FIRE+時薪感知/市場alpha魚池有限); total 36 micro-decisions
 - 2026-04-08T06:20 UTC: cycle 27 — Branch 2.2: 202505 JSONL read (8,311 Edward msgs, May 2025), 3 new micro-patterns → dna_core.md (問題量化前置/Avalon提案三層過濾/多幣資產統一基準); total 39 micro-decisions
 - 2026-04-08T06:45 UTC: cycle 28 — Branch 2.2: 202504 JSONL read (8,992 Edward msgs, Apr 2025), 3 new micro-patterns → dna_core.md (策略貼盤=敏感優先/事件→縮槓桿50%/資產三層架構); total 42 micro-decisions
+- 2026-04-08T07:45 UTC: cycle 29 — **CRITICAL FIX**: MD-13~MD-42 written to dna_core.md (30 patterns were in tree but not in file); 202503 pipeline (+3: MD-40~MD-42 季度復盤/宏觀日曆/每日三問); mainnet_runner.py --report added; templates/response_latency.md (2.4 gap → 3-tier protocol)
 
