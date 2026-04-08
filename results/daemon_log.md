@@ -815,3 +815,15 @@ Branch 2.2 (highest derivative — JSONL distillation). Processed **202407.jsonl
 - **MD-33** 尾端口數最小化 — trend末段繼續持有=低EV；識別尾端→立刻縮口；小槓桿活過尾端才能重開大
 
 Next: **202406**.
+
+## Cycle 12 — 2026-04-08 03:57:42 UTC
+
+Cycle 37 done.
+
+**Branch 2.2** (highest derivative). Processed `202407.jsonl` (1,970 Edward msgs, Jul 2024). Three micro-decisions written → `dna_core.md` now **MD-01~MD-33, 111 lines**:
+
+- **MD-31** 加減碼≠創造edge — 加減碼本質是槓桿調整；槓桿不改變風報比；無regime signal的加碼只放大雜訊
+- **MD-32** 最適槓桿=regime函數 — 趨勢期可到1.5x，震盪期<1x；每個regime window獨立計算，不沿用上期係數
+- **MD-33** 尾端口數最小化 — trend末段持倉=低EV；識別尾端信號後立刻縮口；小槓桿活過尾端才能重開大
+
+Next: **202406**.
