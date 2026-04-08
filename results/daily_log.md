@@ -3,6 +3,50 @@
 Recursive engine cycle history.
 
 
+## Cycle 115 — 2026-04-08T19:30Z
+
+**Branches**: 3 parallel (2.3 consistency extension + 7.11 SOP #05 + 7.12 Twitter thread)
+
+### Branch 2.3: Consistency test extended — 30/30 ALIGNED ✅
+
+- **3 new scenarios** added to `templates/generic_boot_tests.json`:
+  - `generic_long_term_survival_check` — MD-308: 長期持倉=先問「10年後還在嗎」; expected=VERIFY_LONG_TERM_SURVIVAL_FIRST
+  - `generic_platform_selection_audience` — MD-320: 平台=受眾密度×回饋速度 2×2矩陣; expected=SELECT_HIGH_DENSITY_HIGH_FEEDBACK_FIRST
+  - `generic_environment_redesign` — MD-324: 環境設計>意志力; expected=DESIGN_ENVIRONMENT_FIRST
+- **4 new alignment checks** added to `consistency_test.py`:
+  - VERIFY_LONG_TERM_SURVIVAL_FIRST (survival/exist/decade/index/diversif)
+  - SELECT_HIGH_DENSITY_HIGH_FEEDBACK_FIRST (density/audience/feedback/niche/expert)
+  - DESIGN_ENVIRONMENT_FIRST (environment/design/anchor/habit/cue/trigger/willpower)
+  - MULTI_TRACK_BEFORE_CONVERGE (multi/track/parallel/explore/converge/signal)
+- **8 new domain mappings** added to `_DOMAIN_TO_SECTION_KEYWORDS` (capital_allocation, knowledge_output, life_maintenance, information_asymmetry, negotiation, communication, strategy, information)
+- **Result: 30/30 ALIGNED ✅** (was 27/27 cycle 97)
+- Baseline saved: `results/consistency_baseline.json`
+
+### Branch 7.11: SOP #05 Career & Salary Decision Making — COMPLETE ✅
+
+- `docs/knowledge_product_05_career_salary_sop.md` written — 7 sequential gates:
+  - G0: Exploration vs Execution (MD-327: multi-track until real signal)
+  - G1: Max-loss attribution (MD-309: who controls worst-case? prefer self-controlled)
+  - G2: Salary floor written (MD-128/MD-209: from take-home backwards, pre-meeting)
+  - G3: Org type diagnosis (MD-303: compliant vs meritocratic → sets optimization strategy)
+  - G4: Compound salary viability (MD-311: backtrack required annual %; verify achievable)
+  - G5: Parallel offer EV table (MD-210: never evaluate one offer; simultaneous EV table)
+  - G6: Knowledge domain externality (MD-312/MD-302: domain knowledge ROI >> salary delta)
+- Self-test scenario included
+- **First non-trading SOP** — expands knowledge product line beyond trading domain
+
+### Branch 7.12: Publish Thread SOP #05 — DRAFTED ✅
+
+- `docs/publish_thread_sop05_twitter.md` — 12 tweets
+- Hook: "Most salary negotiation advice starts too late..."
+- Covers: multi-track exploration → max-loss attribution → written floor → org diagnosis → compound viability → parallel EV table → domain knowledge externality
+- Series now: SOP #01~#04 (trading) + SOP #05 (career) = 5 threads ready to post
+
+### Next cycle
+- Edward posts SOP threads #01→#02→#03→#04→#05 on X
+- Branch 4.1: Samuel reviews/corrects samuel_dna.md in person (blocked on human)
+- Branch 1.1: mainnet ready — provide BINANCE_MAINNET_KEY/SECRET → live trading
+
 ## Cycle 82 — 2026-04-08T15:05Z
 
 **Branch**: 2.3 Validation — consistency gap CLOSED

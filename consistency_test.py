@@ -61,6 +61,14 @@ _DOMAIN_TO_SECTION_KEYWORDS: dict[str, list[str]] = {
     "opportunity":      ["decision", "framework", "opportunity", "risk"],
     "position_sizing":  ["trading", "strategy", "position", "kelly", "sizing", "risk"],
     "legacy":           ["legacy", "value", "identity", "core"],
+    "capital_allocation": ["finance", "invest", "capital", "money", "wealth", "financial", "財務", "資本"],
+    "knowledge_output": ["knowledge", "output", "teach", "publish", "學習", "知識", "輸出"],
+    "life_maintenance": ["life", "daily", "routine", "habit", "health", "生活", "習慣", "維護"],
+    "information_asymmetry": ["information", "edge", "knowledge", "asymmetry", "資訊"],
+    "negotiation":      ["negotiation", "salary", "deal", "floor", "談判", "薪資"],
+    "communication":    ["communication", "style", "response", "latency", "溝通"],
+    "strategy":         ["strategy", "game", "competitive", "threat", "賽局", "策略"],
+    "information":      ["information", "media", "narrative", "decode", "資訊", "媒體"],
 }
 
 
@@ -681,6 +689,10 @@ def check_alignment_with_memory(
         or (expected == "compare_absolute_cashflow_same_capital" and ("cashflow" in resp_lower or "cash flow" in resp_lower or "absolute" in resp_lower or "share" in resp_lower or "dividend" in resp_lower or "capital" in resp_lower or "shares" in resp_lower or "配息" in resp_lower or "現金流" in resp_lower or "股數" in resp_lower or "相同資本" in resp_lower))
         or (expected == "output_to_validate_understanding" and ("output" in resp_lower or "validate" in resp_lower or "understanding" in resp_lower or "gap" in resp_lower or "explain" in resp_lower or "output_to_validate" in resp_lower))
         or (expected == "reduce_decision_frequency" and ("reduce" in resp_lower or "decision" in resp_lower or "frequency" in resp_lower or "automate" in resp_lower or "reduce_decision" in resp_lower or "system" in resp_lower or "peak" in resp_lower or "cognitive" in resp_lower or "environment" in resp_lower))
+        or (expected == "verify_long_term_survival_first" and ("survival" in resp_lower or "exist" in resp_lower or "10 year" in resp_lower or "still exist" in resp_lower or "diversif" in resp_lower or "index" in resp_lower or "decade" in resp_lower or "存活" in resp_lower or "10年" in resp_lower or "指數" in resp_lower))
+        or (expected == "select_high_density_high_feedback_first" and ("density" in resp_lower or "audience" in resp_lower or "feedback" in resp_lower or "niche" in resp_lower or "expert" in resp_lower or "validate" in resp_lower or "受眾密度" in resp_lower or "回饋速度" in resp_lower or "quality" in resp_lower))
+        or (expected == "design_environment_first" and ("environment" in resp_lower or "design" in resp_lower or "anchor" in resp_lower or "habit" in resp_lower or "cue" in resp_lower or "trigger" in resp_lower or "willpower" in resp_lower or "環境設計" in resp_lower or "意志力" in resp_lower or "physical" in resp_lower))
+        or (expected == "multi_track_before_converge" and ("multi" in resp_lower or "track" in resp_lower or "parallel" in resp_lower or "explore" in resp_lower or "converge" in resp_lower or "signal" in resp_lower or "多軌" in resp_lower or "評估窗口" in resp_lower or "concurrent" in resp_lower))
     )
 
     if aligned:

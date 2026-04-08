@@ -189,6 +189,27 @@
       "scenario": "A recent graduate is exploring career paths. She has done research on one direction (finance) and feels comfortable with it. She is about to commit fully and stop exploring other options (data science, actuarial, risk management). Her reasoning: 'I've researched finance enough — more exploration just delays commitment.' Should she converge now?",
       "expected_reasoning": "Apply MD-327: 職涯探索=多軌同時開評估窗口. Early career exploration phase should maintain 4–6 parallel tracks until a real positive signal (concrete offer, demonstrated advantage, or genuine market pull) triggers convergence. 'I've researched' is analysis, not real signal. Premature convergence based on comfort with one option = selecting the most-familiar path, not the best-fit path. The correct move: open validation actions (apply, contact, prototype) across 3–4 directions simultaneously; converge only when real feedback arrives.",
       "expected_decision": "MULTI_TRACK_BEFORE_CONVERGE"
+    },
+    {
+      "id": "generic_long_term_survival_check",
+      "domain": "capital_allocation",
+      "scenario": "A financial advisor recommends buying and holding a single-company stock — a current sector leader — as the core retirement position for 10+ years. Their pitch: 'This is a safe, stable company with strong fundamentals.' What is the FIRST question you must answer before committing long-term capital to any single stock?",
+      "expected_reasoning": "Apply MD-308: 長期持倉=先問「10年後還在嗎」. Survival probability, not current strength, is the gating question for any multi-decade hold. Even current market leaders can be displaced by industry change, regulatory shifts, or competition over 10+ years. Individual stock survival probability < market-cap diversified index (which dynamically replaces failed components). First question: 'Will this instrument still exist and retain value in 10 years?' If uncertain, diversified index ETF dominates because its survival is near-certain by design. Strong fundamentals TODAY is not a survival guarantee for 2036.",
+      "expected_decision": "VERIFY_LONG_TERM_SURVIVAL_FIRST"
+    },
+    {
+      "id": "generic_platform_selection_audience",
+      "domain": "knowledge_output",
+      "scenario": "Edward has developed a unique trading decision framework backed by 3 years of personal data. He wants to publish it to validate whether it generalizes. He is choosing between: (A) a general personal blog — large potential audience, slow/low-quality feedback; (B) a niche quantitative trading community — small but expert audience, fast and precise feedback; (C) a large mainstream investing subreddit — massive audience, anonymous and noisy feedback. Which platform should he publish on FIRST for maximum idea validation?",
+      "expected_reasoning": "Apply MD-320: 平台=受眾密度×回饋速度 2×2矩陣. The first publication goal is validation, not reach. Validation requires two conditions: (1) audience density — readers must understand the domain well enough to identify errors; (2) feedback speed — signals must arrive quickly enough to iterate. Option B (niche quant community) maximizes both: high density (expert readers can immediately spot flaws) + high feedback speed (rapid, specific responses). Option A has low density (general readers cannot validate trading logic). Option C has high volume but low density (noise drowns signal). For validation: always select the highest audience_density × feedback_speed quadrant first.",
+      "expected_decision": "SELECT_HIGH_DENSITY_HIGH_FEEDBACK_FIRST"
+    },
+    {
+      "id": "generic_environment_redesign",
+      "domain": "life_maintenance",
+      "scenario": "Edward has been trying to establish a daily meditation habit for 6 months. He has used willpower, motivational alarms, and self-reminders — but fails consistently after 2-3 days each attempt. He concludes he simply 'lacks discipline.' What is the correct diagnosis and next intervention?",
+      "expected_reasoning": "Apply MD-324: 環境設計>意志力. Repeated failure despite sustained willpower attempts is a diagnostic signal that the environment — not discipline — is the binding constraint. The correct intervention is environment redesign, not more willpower: (1) create a dedicated physical trigger (specific spot, time anchor, object); (2) attach the habit to an already-fixed daily anchor (after brushing teeth, before coffee); (3) remove competing environmental stimuli. 'Lack of discipline' is the wrong diagnosis — it prescribes more of the intervention that already failed. Environment redesign is the correct lever; willpower is a downstream variable.",
+      "expected_decision": "DESIGN_ENVIRONMENT_FIRST"
     }
   ]
 }
