@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T09:45 UTC (cycle 32)
+> 最後更新：2026-04-08T10:15 UTC (cycle 33)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -34,7 +34,7 @@
 
 ### 2. 行為等價（核心能力）
 - 2.1 DNA 品質：10 micro-decision patterns from JSONL integrated ✓
-- 2.2 微決策學習：202604 ✓ (+3); 202601 ✓ (+3); 202602 ✓ (+3); 202603 ✓ (+3); 202512 ✓ (+3: 個人品牌=多維交叉定位/遊戲=資訊不對稱沙盒/職涯=平行軌道); 202511 ✓ (+3: 周末不留空單/強弱配對抽alpha/定價錨點下移入場); **dna_core.md 實際寫入 MD-01~MD-12 ✓** (cycle 22 fix); 202510 ✓ (+3: Game selection/汰弱留強+槓桿/EV-vol取捨); 202509 ✓ (+3: 攻強守60分/求職掃射+AI複製/薪資談判先緩); 202508 ✓ (+3: 薪資精算底線/知識=社交資本/13F=靈感不跟單); 202507 ✓ (+3: 條件枚舉參數化/阿瓦隆貝氏更新/新領域先建清單); 202506 ✓ (+3: Alpha vs salary threshold/50x FIRE+時薪感知/市場alpha魚池有限); 202505 ✓ (+3: 問題量化前置/Avalon提案三層過濾/多幣資產統一基準); 202504 ✓ (+3: 策略貼盤=敏感優先/事件→縮槓桿50%/資產三層架構); 202503 ✓ (+3: 策略品質=MFE/MAE×√N/行情不對不強做/多空切換=條件分離); **202502 ✓ (+3: 期貨轉選擇權框架/長假=系統性避險觸發/槓鈴騎士=穩定+成長+質押BTC)**; next: 202501
+- 2.2 微決策學習：202604 ✓; 202601 ✓; 202602 ✓; 202603 ✓; 202512 ✓; 202511 ✓; **MD-01~MD-15 寫入dna_core.md ✓** (cycles 22+29+30); 202510 ✓; 202509 ✓; 202508 ✓; 202507 ✓; 202506 ✓; 202505 ✓; 202504 ✓; 202503 ✓; 202502 ✓; 202501 ✓; 202412 ✓; **202411 ✓ (+3: ATR加權口數/策略失效Loop/資產三桶獨立) → MD-16~MD-18 實際寫入dna_core.md**; next: 202410
 - 2.3 Validation：OOS 5/5 self-scored ✓, cross-instance prepped but blocked on API credit
   - consistency_test.py: --use-memory + --auto-suggest now combined — memory context flows into suggestions ✓
 - 2.4 Response latency：三秒 vs 三段推理，差距仍在
@@ -77,7 +77,7 @@
 防禦：2.3 blocked API credit, 4.1 blocked on friend
 
 ## 已完成 milestones
-- dna_core.md 88 行操作核心（71 core + 12 micro-decisions MD-01~MD-12 寫入 ✓）
+- dna_core.md 87 行操作核心（71 core + 18 micro-decisions MD-01~MD-18 寫入 ✓）
 - boot_tests 13 題
 - recursive_distillation F.1-18
 - skill suite v2.1.0（7 skills + auto-update）
@@ -128,5 +128,6 @@
 - 2026-04-08T07:10 UTC: cycle 29 — Branch 2.2: 202503 JSONL read (8,433 Edward msgs, Mar 2025), 3 new micro-patterns → dna_core.md (策略品質=MFE/MAE×√N/行情不對不強做/多空切換=條件分離); total 15 actual in file (MD-01~MD-15)
 - 2026-04-08T08:30 UTC: cycle 30 — Branch 2.2: 202502 JSONL read (11,857 Edward msgs, Feb 2025), 3 new micro-patterns → dna_core.md (期貨轉選擇權框架/長假=系統性避險觸發/槓鈴騎士=穩定+成長+質押BTC); total 45 micro-decisions in file
 - 2026-04-08T09:00 UTC: cycle 31 — Branch 2.2: 202501 JSONL read (1,165 Edward msgs, Jan 2025), 3 new micro-patterns → dna_core.md (口數公式化/多帳號=停損具現化/alpha三要件); total 48 micro-decisions; next: 202412
-- 2026-04-08T09:45 UTC: cycle 32 — Branch 2.2: 202412 JSONL read (570 Edward msgs, Dec 2024), 3 new micro-patterns → dna_core.md (槓桿×日虧損≤1%法則/「虧損太小」=加碼訊號/「確定不會輸」=100%押); total 51 micro-decisions; next: 202411
+- 2026-04-08T09:45 UTC: cycle 32 — Branch 2.2: 202412 JSONL read (570 Edward msgs, Dec 2024), 3 new micro-patterns → dna_core.md (槓桿×日虧損≤1%法則/「虧損太小」=加碼訊號/「確定不會輸」=100%押); next: 202411
+- 2026-04-08T10:15 UTC: cycle 33 — Branch 2.2: 202411 JSONL read (11,226 Edward msgs, Nov 2024), 3 new micro-patterns **actually written** → dna_core.md MD-16~MD-18 (ATR加權口數/策略失效Loop/資產三桶獨立); file now 87 lines, 18 real MDs; next: 202410
 

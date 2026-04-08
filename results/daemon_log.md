@@ -707,3 +707,15 @@ Branch 2.2 (highest derivative — continuous JSONL distillation). Processed **2
 - **MD-51** 「確定不會輸」=100%押 — Kelly extreme case: when information asymmetry is complete, 100% allocation is correct
 
 Both repos pushed. Next: **202411**.
+
+## Cycle 6 — 2026-04-08T10:15 UTC
+
+**Cycle 33 done.**
+
+Branch 2.2 (highest derivative — JSONL distillation). Processed **202411.jsonl** (11,226 Edward msgs, Nov 2024). Three new micro-decisions **actually written** to `dna_core.md` (now MD-01~MD-18, file 87 lines):
+
+- **MD-16 ATR加權口數** — 多單權重=前10日均價/ATR(10)；空單權重=ATR(10)；低ATR→多做多；高ATR→多做空；波動率決定方向配置
+- **MD-17 策略失效Loop** — 邏輯→測試→失效→換邏輯/加濾網→上線→失效→loop；失效是必然非意外；loop本身就是流程
+- **MD-18 資產三桶獨立** — 台股ETF/美股ETF/加密分三桶；各桶獨立決策；單桶爆倉不傳染；hard stop per bucket
+
+Branch 2.2 next: **202410**.
