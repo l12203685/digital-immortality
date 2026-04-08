@@ -1263,3 +1263,15 @@ Done. **202301 → MD-79~81** written, gap reconciled (202302 was already done),
 - **MD-84** 部位同步=日終不可跳過的紀律 — automated trading systems must sync/reload positions at least once per session; cross-session position drift is a silent error; recovery cost >> prevention cost
 
 `templates/dna_core.md`: **84 MDs**. Next: 202211.
+
+## Cycle 28 — 2026-04-08 05:11:03 UTC
+
+Cycle 54 done.
+
+**202212** (95 substantive Edward msgs, Dec 2022) → MD-82~84 written:
+
+- **MD-82** 穩健策略=用有效的，不用自建的 — ego-based rejection of working strategies replaces EV with vanity
+- **MD-83** Stop滑價>Close滑價=分開建模 — stop exits have materially higher slippage; must model separately or gross edge is overstated
+- **MD-84** 部位同步=日終不可跳過的紀律 — position drift across sessions is a silent error; sync once per session is non-negotiable
+
+`templates/dna_core.md`: **84 MDs**. Next: 202211. Pushed.
