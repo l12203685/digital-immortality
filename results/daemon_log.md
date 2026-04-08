@@ -695,3 +695,15 @@ Cycle 32 done.
 - **MD-51 「確定不會輸」=100%押** — Kelly極端case：information asymmetry完整時應100%壓；提升確定性比分散持倉更重要
 
 Branch 2.2 next: **202411**.
+
+## Cycle 6 — 2026-04-08 03:31:36 UTC
+
+**Cycle 32 done.**
+
+Branch 2.2 (highest derivative — continuous JSONL distillation). Processed **202412.jsonl** (570 Edward msgs, Dec 2024). Three new micro-decisions written to `dna_core.md` (now 51 total):
+
+- **MD-49** 槓桿×日虧損≤1%法則 — dynamic risk metric; if daily loss >2% consistently, long-term ruin is guaranteed
+- **MD-50** 「虧損太小」=加碼訊號 — counter-intuitive: scale up when actual loss << expected (signal that risk is under-set)
+- **MD-51** 「確定不會輸」=100%押 — Kelly extreme case: when information asymmetry is complete, 100% allocation is correct
+
+Both repos pushed. Next: **202411**.
