@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T05:59+08",
+  "updated": "2026-04-09T06:06+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#26 COMPLETE → posting_queue.md updated (#01~#26, Apr 9–May 29); Edward posts threads; all 5 kernels have standalone SOPs ✅; SOP #26 Walk-Forward Validation fills IS/OOS gap (MD-97/98/143)",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
@@ -55,23 +55,23 @@
     },
     {
       "time": "just now",
-      "text": "- Committed and pushed."
+      "text": "- Queue extended to #01~#28 (Jun 2, 54-day target)"
     },
     {
       "time": "just now",
-      "text": "- Queue extended to May 31 (#01~#27, 52-day target)"
+      "text": "- `docs/publish_thread_sop28_twitter.md` — hook: *\"Your backtest made $50/tra..."
     },
     {
       "time": "just now",
-      "text": "- `docs/publish_thread_sop27_twitter.md` — hook: *\"Your strategy isn't broken..."
+      "text": "- `docs/knowledge_product_28_execution_slippage_sop.md` — 5-gate framework: G..."
     },
     {
       "time": "just now",
-      "text": "- `docs/knowledge_product_27_regime_detection_sop.md` — 5-gate framework anch..."
+      "text": "Shipped:"
     }
   ],
   "stats": {
-    "daemon_cycles": 152,
+    "daemon_cycles": 153,
     "total_mds": 328,
     "dna_core_lines": 87
   }

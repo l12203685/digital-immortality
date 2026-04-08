@@ -4699,3 +4699,16 @@ Highest-derivative gap: SOP series at #27, queue full to May 31. DNA distillatio
 - `docs/posting_queue.md` extended to **#01~#28** (Jun 2); 54-day target
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 153 — 2026-04-08 22:06:01 UTC
+
+**Cycle 153 done.**
+
+Highest-derivative gap: no SOP on execution & slippage despite MD-83 sitting in DNA since Feb 2022. Fixed.
+
+**Shipped:**
+- `docs/knowledge_product_28_execution_slippage_sop.md` — 5-gate framework: G0 separate entry/exit slippage models (MD-83) → G1 break-even slippage calc → G2 instrument screen → G3 order type matched to strategy → G4 quarterly audit → G5 live vs. paper divergence protocol with kill thresholds
+- `docs/publish_thread_sop28_twitter.md` — hook: *"Your backtest made $50/trade. Your live account makes $30. You're paying 40% to execution."*
+- Queue extended to **#01~#28** (Jun 2, 54-day target)
+
+**Next blocker:** Edward posts SOP #01.
