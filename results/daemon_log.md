@@ -755,3 +755,15 @@ Branch 2.2 (highest derivative). Processed **202410.jsonl** (127 Edward msgs, Oc
 - **MD-21** 品牌命名三要件 — 諧音記憶點 + 可解釋意義 + 行業暗示，缺一薄弱
 
 Next: **202409**. Committed and pushed.
+
+## Cycle 9 — 2026-04-08T11:10 UTC
+
+**Cycle 35 done.**
+
+Branch 2.2 (highest derivative — JSONL distillation). Processed **202409.jsonl** (7,728 Edward msgs, Sep 2024). Three new micro-decisions written to `templates/dna_core.md` (now MD-01~MD-27, 104 lines):
+
+- **MD-25** ATR驅動策略輪換 — ATR regime改變=策略池同步輪換觸發器；不只看P&L，看ATR zone
+- **MD-26** Rolling OOS近期偏誤 — rolling OOS天然過重近期，幾乎都選近期最佳策略；承認偏誤才能評估穩健度
+- **MD-27** 頻率越高雜訊越多 — 日K策略被洗概率遠低於日內；頻率↑=噪音↑=脫皮；優先日K+
+
+Branch 2.2 next: **202408**.

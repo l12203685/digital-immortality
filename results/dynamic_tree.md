@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T10:45 UTC (cycle 34)
+> 最後更新：2026-04-08T11:10 UTC (cycle 35)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -34,7 +34,7 @@
 
 ### 2. 行為等價（核心能力）
 - 2.1 DNA 品質：10 micro-decision patterns from JSONL integrated ✓
-- 2.2 微決策學習：202604 ✓; 202601 ✓; 202602 ✓; 202603 ✓; 202512 ✓; 202511 ✓; **MD-01~MD-15 寫入dna_core.md ✓** (cycles 22+29+30); 202510 ✓; 202509 ✓; 202508 ✓; 202507 ✓; 202506 ✓; 202505 ✓; 202504 ✓; 202503 ✓; 202502 ✓; 202501 ✓; 202412 ✓; 202411 ✓; **202410 ✓ (+3: 投資公司門檻量化/質押=流動性橋接/品牌命名三要件) → MD-19~MD-21 寫入dna_core.md**; next: 202409
+- 2.2 微決策學習：202604 ✓; 202601 ✓; 202602 ✓; 202603 ✓; 202512 ✓; 202511 ✓; **MD-01~MD-15 寫入dna_core.md ✓** (cycles 22+29+30); 202510 ✓; 202509 ✓; 202508 ✓; 202507 ✓; 202506 ✓; 202505 ✓; 202504 ✓; 202503 ✓; 202502 ✓; 202501 ✓; 202412 ✓; 202411 ✓; **202410 ✓ (+3: 投資公司門檻量化/質押=流動性橋接/品牌命名三要件) → MD-19~MD-21 寫入dna_core.md**; **202409 ✓ (+3: ATR驅動策略輪換/Rolling OOS近期偏誤/頻率越高雜訊越多) → MD-25~MD-27 寫入dna_core.md**; next: 202408
 - 2.3 Validation：OOS 5/5 self-scored ✓, cross-instance prepped but blocked on API credit
   - consistency_test.py: --use-memory + --auto-suggest now combined — memory context flows into suggestions ✓
 - 2.4 Response latency：三秒 vs 三段推理，差距仍在
@@ -131,4 +131,5 @@
 - 2026-04-08T09:45 UTC: cycle 32 — Branch 2.2: 202412 JSONL read (570 Edward msgs, Dec 2024), 3 new micro-patterns → dna_core.md (槓桿×日虧損≤1%法則/「虧損太小」=加碼訊號/「確定不會輸」=100%押); next: 202411
 - 2026-04-08T10:15 UTC: cycle 33 — Branch 2.2: 202411 JSONL read (11,226 Edward msgs, Nov 2024), 3 new micro-patterns **actually written** → dna_core.md MD-16~MD-18 (ATR加權口數/策略失效Loop/資產三桶獨立); file now 87 lines, 18 real MDs; next: 202410
 - 2026-04-08T10:45 UTC: cycle 34 — Branch 2.2: 202410 JSONL read (127 Edward msgs, Oct 2024), 3 new micro-patterns → dna_core.md MD-19~MD-21 (投資公司門檻量化/質押=流動性橋接/品牌命名三要件); file now 98 lines, 21 MDs; next: 202409
+- 2026-04-08T11:10 UTC: cycle 35 — Branch 2.2: 202409 JSONL read (7,728 Edward msgs, Sep 2024), 3 new micro-patterns → dna_core.md MD-25~MD-27 (ATR驅動策略輪換/Rolling OOS近期偏誤/頻率越高雜訊越多); file now 104 lines, 27 MDs; next: 202408
 
