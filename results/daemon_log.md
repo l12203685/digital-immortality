@@ -2861,3 +2861,21 @@ Unblocking condition: set `BINANCE_MAINNET_KEY` + `SECRET` → `python -m tradin
 **Branch 1.1 — paper-live tick 6: BTC=72,116.10 signal=SHORT (×6 consistent)**
 
 SHORT signal has held across 6 consecutive ticks spanning $71.6k–$72.1k. Evidence is strong. Unblocking condition unchanged: `BINANCE_MAINNET_KEY` + `SECRET` → go live with $100 cap.
+
+## Cycle 60 — 2026-04-08 13:06:30 UTC
+
+**Branch 1.1 — paper-live tick 7: BTC=72202.70 signal=SHORT (consistent × 7)**
+
+- Highest-derivative: Branch 1.1 (mainnet) — credentials still pending
+- paper-live tick 7: BTC=72,202.70, dual_ma=SHORT (consistent SHORT × 7 ticks)
+- Range held: ~$71.6k–$72.2k — SHORT regime stable across all 7 ticks
+- Testnet review: CONDITIONAL_GO (4/6 pass; insufficient trades for MAE/MFE)
+- Unblocking condition unchanged: set `BINANCE_MAINNET_KEY` + `SECRET` → `python mainnet_runner.py --tick`
+
+## Cycle 60 — 2026-04-08 13:06:30 UTC
+
+**Cycle 60 done.**
+
+**Branch 1.1 — paper-live tick 7: BTC=72,202.70 signal=SHORT (×7 consistent)**
+
+SHORT signal has held 7 consecutive ticks spanning $71.6k–$72.2k. Regime evidence is strong. Only blocker: mainnet credentials.
