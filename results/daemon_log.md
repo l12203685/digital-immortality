@@ -1102,3 +1102,15 @@ Cycle 49 done.
   - **MD-63** 談判=條件束聯動 — bundle all variables; isolated concessions = unforced errors
 
 `templates/dna_core.md`: **63 MDs**. Next: 202306.
+
+## Cycle 25 — 2026-04-08T18:30 UTC
+
+Cycle 50 done.
+
+**Branch 2.2 — 202306 (9,093 Edward msgs, Jun 2023) → 3 MDs written to templates/dna_core.md:**
+
+- **MD-64** 策略下架門檻=DD補不回一半 — if market is moving but strategy keeps dying and can't recover even half of max drawdown → mandatory pull for review; "再等等" is not valid; DD<50% recovery + market present = logic is broken
+- **MD-65** 投組收斂=穩健訊號 — when multiple different optimization objectives all converge to similar portfolio selections, the convergence itself is the robustness signal; single-objective optimum is suspect; multi-objective convergence is trustworthy
+- **MD-66** 保守=小中取大 — conservative strategy = minimax (pick the option with best worst-case), not low-risk; highest fault tolerance = can't be killed by any bad outcome; applies to: voting, position sizing, negotiation, career choices
+
+`templates/dna_core.md`: **66 MDs**. Next: 202305.
