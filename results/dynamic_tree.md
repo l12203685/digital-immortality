@@ -215,3 +215,4 @@
 - 2026-04-08T UTC: cycle 77 — Branch 2.2: 201711+201710 combined (50+127 Edward msgs, both thin/sparse) → MD-292~294 (新領域進入順序=規則框架先/技術行為偏差=對手類型訊號/短期樣本=方差非技術); templates/dna_core.md: **294 MDs**; next: 201709
 
 - 2026-04-09T UTC: cycle 89 — Branch 2.2: 201703 JSONL read (417 Edward msgs, Mar 2017, 7 substantive) → MD-316~318 (還債vs投資=比較利率不比較金額/股票選擇=相同資本現金流比較/分批買進=執行策略預設答案); templates/dna_core.md: **318 MDs**; next: 201702
+- 2026-04-09T UTC: cycle 96 — Branch 2.2: 201702+201701+201612+201611 combined (15 Edward msgs, sparse late-2016/early-2017) → MD-325~327 (賽局角色化最大威脅先識別/交易成本先算再下單/職涯探索=多軌同時開評估窗口); templates/dna_core.md: **327 MDs**; **DISTILLATION COMPLETE** — 201611 is the earliest available JSONL; full archive covered

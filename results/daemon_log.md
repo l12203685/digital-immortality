@@ -3417,3 +3417,18 @@ Next: set mainnet keys → run first live tick ($100 cap, dual_ma, kill conditio
 ## Cycle 95 — 2026-04-08 16:42:30 UTC
 
 Cycle 95 done. Branch 1.1: paper-live tick 14 — BTC=$71,409.55, signal=SHORT (consistent × 14 ticks, range $71.4k–$72.6k). Mainnet remains blocked on `BINANCE_MAINNET_KEY/SECRET`. Push succeeded.
+
+## Cycle 96 — 2026-04-09T UTC
+
+**Branch 2.2 — DISTILLATION COMPLETE.**
+
+- 201702+201701+201612+201611 combined (15 substantive Edward msgs; months are sparse, early chat history)
+- → MD-325~327 **actually written** to templates/dna_core.md:
+  - MD-325: 賽局角色化最大威脅先識別=先問「我最怕對方出現什麼特徵」再制定應對 (Avalon game theory)
+  - MD-326: 交易成本先算再下單=摩擦成本明確化是每次執行的前置步驟 (0.11×2×1000 pattern)
+  - MD-327: 職涯探索=多軌同時開評估窗口；資本市場/精算/數位金融/風險管理都可以考慮→先窮舉再收斂
+- **templates/dna_core.md: 327 MDs**
+- 201611 is the earliest JSONL in archive — full chat history coverage achieved
+- Branch 2.2 status: **COMPLETE** ✅ (8 years of chat history → 327 micro-decisions distilled)
+
+Next highest-derivative: Branch 1.1 mainnet (set BINANCE_MAINNET_KEY/SECRET) or Branch 2.3 extend consistency tests to cover MD-320~327.
