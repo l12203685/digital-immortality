@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T18:45+08",
+  "updated": "2026-04-08T18:51+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 201812."
+      "text": "`templates/dna_core.md`: 225 MDs. Next: 201811."
     },
     {
       "time": "just now",
-      "text": "Branch 2.2 — 201901 → MD-220~222 (222 MDs)"
+      "text": "Branch 2.2 (highest derivative — continuous distillation): read 201812.jsonl ..."
     },
     {
-      "time": "2026-04-09T UTC",
-      "text": "`templates/dna_core.md`: 222 MDs. Next: 201812."
+      "time": "just now",
+      "text": "Done. Cycle 38 complete."
     },
     {
-      "time": "2026-04-09T UTC",
+      "time": "2026-04-08 UTC",
       "text": "- 3 micro-decisions written to templates/dna_core.md:"
     },
     {
-      "time": "2026-04-09T UTC",
-      "text": "- 201901.jsonl: 144 Edward msgs; themes: job offers, options trading, bond an..."
+      "time": "2026-04-08 UTC",
+      "text": "- 201812.jsonl: 40 Edward msgs; themes: poker hand analysis, Avalon game stra..."
     }
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 220,
+    "total_mds": 225,
     "dna_core_lines": 76
   }
 }

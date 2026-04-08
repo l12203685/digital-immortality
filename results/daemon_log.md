@@ -2402,3 +2402,15 @@ Next: 201812.
   - **MD-225** 對抗性績效評估=三維分解：角色拆分×基線場次×跨環境驗證 — 不能合並算；推廣到量化策略按regime拆分
 
 `templates/dna_core.md`: **225 MDs**. Next: 201811.
+
+## Cycle 38 — 2026-04-08 10:51:45 UTC
+
+Done. **Cycle 38 complete.**
+
+Branch 2.2 (highest derivative — continuous distillation): read 201812.jsonl (40 Edward msgs), extracted 3 micro-decisions:
+
+- **MD-223**: 勝率樣本門檻 = 50場以上才具決策意義
+- **MD-224**: 台灣教育 = 訓練找答案機器，學習設計目標是框架而非答案
+- **MD-225**: 對抗性績效評估 = 角色拆分 × 基線場次 × 跨環境驗證三維分解
+
+`templates/dna_core.md`: **225 MDs**. Next: 201811.
