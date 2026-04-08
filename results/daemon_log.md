@@ -4655,3 +4655,20 @@ Gap: queue ended May 27 (SOP #25). No standalone SOP on walk-forward validation 
 - Committed and pushed.
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 152 — 2026-04-09T UTC
+
+**Cycle 152 done.**
+
+Highest-derivative gap: queue ended May 29 (SOP #26). No standalone SOP on regime detection despite being the root input to every other SOP — sizing, kill decisions, portfolio construction, and walk-forward validation all require regime context first.
+
+**Shipped:**
+- `docs/knowledge_product_27_regime_detection_sop.md` — 5-gate framework: G0 ATR percentile regime label (HIGH/NORMAL/LOW) / G1 strategy–regime match check (MD-14/78) / G2 leverage=f(regime) + equity curve override (MD-32/75) / G3 rotation on regime change not P&L (MD-25/31) / G4 rolling OOS recalibration (MD-26/143); 14 DNA anchors
+- `docs/publish_thread_sop27_twitter.md` — 12-tweet thread: *"Your strategy isn't broken. You're running it in the wrong market."*
+- Queue extended to **May 31** (#01~#27, 52-day target)
+- `results/dynamic_tree.md` updated: Branch 7.32, cycle 152
+- Committed and pushed.
+
+**Series: SOP #01~#27 COMPLETE.**
+
+**Next blocker:** Edward posts SOP #01.
