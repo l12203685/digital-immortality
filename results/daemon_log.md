@@ -671,3 +671,15 @@ Branch 2.2 (JSONL distillation) — **202501.jsonl** (1,165 Edward msgs, Jan 202
 3. **alpha三要件** — 可持續alpha必須：長期穩定 + 可複製 + 無胃納量限制；缺一不穩定
 
 Branch 2.2: 202604✓...202501✓; next: **202412**.
+
+## Cycle 5 — 2026-04-08 03:26:50 UTC
+
+Cycle 31 done.
+
+**202501.jsonl** (1,165 Edward msgs, Jan 2025) → 3 new micro-decisions written to `dna_core.md` (now 48 total):
+
+- **MD-46 口數公式化** — 口數 = 權益數高點 × 可承受槓桿 ÷ 位階高點合約價值；結算後EMA縮放；驗證公式：20% drawdown ≈ 1/口數
+- **MD-47 多帳號=停損具現化** — 資金切多帳號跑多策略，爆帳號=停損；account boundary = hard stop；隔離爆倉傳染
+- **MD-48 alpha三要件** — 可持續 alpha = 長期穩定 + 可複製 + 無胃納量限制；缺一不穩
+
+Branch 2.2 next: **202412**.
