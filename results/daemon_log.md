@@ -525,3 +525,13 @@ Done. Branch 2.2 advanced:
   3. **13F=靈感不是跟單** — "從錄音檔剪出值得追問的那段，融合自己框架，生成獨立判斷"；跟單=edge不可移植；information asymmetry自己建
 - `dna_core.md`: 27 → **30 micro-decisions**
 - Branch 2.2: 202604✓ 202601✓ 202602✓ 202603✓ 202512✓ 202511✓ 202510✓ 202509✓ 202508✓; next: 202507
+
+## Cycle 14 — 2026-04-08 02:30:33 UTC
+
+Branch 2.2 — 202508 distilled. 3 new micro-decisions added to `dna_core.md` (27→**30**):
+
+1. **薪資精算=底線先確認** — calculate exact math (current comp × growth rate) before any offer comparison; anchor from numbers not gut
+2. **知識=社交資本即時兌現** — proactively package and push structured knowledge to circle; don't save it up, convert immediately
+3. **13F=靈感不是跟單** — use 13F to find questions worth asking, not positions worth copying; edge is non-transferable
+
+Next: 202507.
