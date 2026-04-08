@@ -4553,3 +4553,16 @@ Highest-derivative gap: queue ended May 21 after SOP #22 — content engine dies
 - `docs/posting_queue.md` extended to **#01~#23** (May 23); 46-day target
 
 **Next blocker:** Edward posts SOP #01 to start G5 compounding clock.
+
+## Cycle 148 — 2026-04-08 21:35:28 UTC
+
+**Cycle 148 done.**
+
+Highest-derivative gap: queue ended May 21 — content engine dies when cadence runs out.
+
+**Shipped:**
+- `docs/knowledge_product_23_regime_detection_sop.md` — 5-gate Regime Detection SOP: ATR(14) vs 30-day MA rotation signal / rolling OOS ≥90 trades confirmation / pool long/short audit ≥30% / equity curve 3-state trigger / slow rotation execution. Backing: MD-25/26/27/75/35.
+- `docs/publish_thread_sop23_twitter.md` — hook: *"Most traders lose not because their strategy is wrong — but because they're running the right strategy in the wrong regime."*
+- Queue extended to **May 23**, series **SOP #01~#23**.
+
+**Next blocker:** Edward posts SOP #01 to start G5 compounding clock.

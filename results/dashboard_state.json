@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T05:29+08",
+  "updated": "2026-04-09T05:35+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#21 COMPLETE → posting_queue.md updated (#01~#21, Apr 9–May 19); Edward posts threads; Domain 4 (社交圈) first SOP shipped (SOP #19); all 5 kernels have standalone SOPs ✅; SOP #21 Financial Freedom Tier Framework added (MD-166/158/154 backing)",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
@@ -55,15 +55,15 @@
     },
     {
       "time": "just now",
-      "text": "- Queue extended to May 21, series now #01~#22"
+      "text": "- Queue extended to May 23, series SOP #01~#23."
     },
     {
       "time": "just now",
-      "text": "- `docs/publish_thread_sop22_twitter.md` — hook: *\"You didn't have an exit st..."
+      "text": "- `docs/publish_thread_sop23_twitter.md` — hook: *\"Most traders lose not beca..."
     },
     {
       "time": "just now",
-      "text": "- `docs/knowledge_product_22_exit_protocol_sop.md` — Universal Exit Protocol:..."
+      "text": "- `docs/knowledge_product_23_regime_detection_sop.md` — 5-gate Regime Detecti..."
     },
     {
       "time": "just now",
@@ -71,7 +71,7 @@
     }
   ],
   "stats": {
-    "daemon_cycles": 147,
+    "daemon_cycles": 148,
     "total_mds": 328,
     "dna_core_lines": 87
   }
