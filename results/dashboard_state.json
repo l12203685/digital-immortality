@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T01:33+08",
+  "updated": "2026-04-09T01:36+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）; 7.4 知識產品#01 in progress; 8.4 recurring decision audit in progress",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
@@ -54,24 +54,24 @@
       "text": "API Error: 500 {\"type\":\"error\",\"error\":{\"type\":\"api_error\",\"message\":\"Interna..."
     },
     {
-      "time": "11min ago",
+      "time": "14min ago",
       "text": "Next: re-run with upgraded prompt → isolate true semantic count; then add DNA..."
     },
     {
-      "time": "11min ago",
+      "time": "14min ago",
       "text": "8 remaining failures: 6 real semantic divergences (DNA is ambiguous on PASS v..."
     },
     {
-      "time": "11min ago",
+      "time": "14min ago",
       "text": "4 format non-compliance cases resolved (generic_verdict_first, generic_identi..."
     },
     {
-      "time": "11min ago",
+      "time": "14min ago",
       "text": "Action: improved `_normalize_decision()` — added DEFLECT/ESCALATE/VERDICT/PAU..."
     }
   ],
   "stats": {
-    "daemon_cycles": 104,
+    "daemon_cycles": 105,
     "total_mds": 325,
     "dna_core_lines": 87
   }
