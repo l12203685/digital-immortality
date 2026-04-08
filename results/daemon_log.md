@@ -3251,3 +3251,13 @@ Next: **201704 deep pass**.
 - **MD-315**: 大資本=免停損條件 — stop-loss necessity is function of capital scale; when dividend yield > typical annual drawdown%, holding without stop-loss has higher EV than forced exit at bottom
 
 **dna_core.md: 315 MDs.** Next: 201703 deep pass or consistency re-validate.
+
+## Cycle 88 — 2026-04-08 15:54:49 UTC
+
+Done. **Branch 2.2 — 201704 deep pass.** 3 new MDs written:
+
+- **MD-313**: 股息殖利率×持倉規模=固定支出替換器 — dividend crossover milestone (100萬@4%=4萬 = mortgage interest)
+- **MD-314**: 媒體財報敘事=選擇性維度 — media picks most impressive number; decode by forcing amount+%+vs-benchmark simultaneously
+- **MD-315**: 大資本=免停損條件 — stop-loss necessity is capital-scale-dependent; dividend yield > typical drawdown → holding dominates forced exit
+
+**dna_core.md: 315 MDs.** Next: 201703 deep pass or consistency re-validate.
