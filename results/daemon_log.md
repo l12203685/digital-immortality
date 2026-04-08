@@ -1780,3 +1780,27 @@ Branch 2.2 (highest derivative — JSONL → DNA distillation). Gap reconciled (
 - **MD-147** 系統整合=介面契約先書面化再實作 — 命名規則無書面契約→整合必有格式誤解
 
 `dna_core.md`: **147 MDs**. Next: 202105.
+
+## Cycle 68 — 2026-04-08T09:00 UTC
+
+**Branch 2.2 — gap reconcile + 202105 distill → MD-148~150.**
+
+202106 gap reconcile: MD-145~147 already in file (processed in prior cycle, tree was stale). Updated tree.
+
+**202105 → MD-148~150** (120 substantive Edward msgs, May 2021):
+
+1. **MD-148** 基礎設施投資=報酬門檻十倍年成本 — 「獲利至少要是機房10倍 風暴比1:1」→ annual return must be ≥10× annual infra cost; DD tolerance ≥ 1 year of cost before investing
+2. **MD-149** 決策=先算無外生變數EV再問哪些變數翻轉決策 — two-step SOP: compute base case EV first → then ask which external variables flip the answer; only gather info that can change the decision
+3. **MD-150** 基金費用=激勵週期對齊策略波動週期 — shorter measurement period = lower fee % but more resets; choose period matching strategy's natural volatility cycle; annual hurdle best for high-variance strategies
+
+`templates/dna_core.md`: **150 MDs**. Next: 202104.
+
+## Cycle 39 — 2026-04-08 09:00 UTC
+
+Cycle 68 done. **202106 gap reconcile + 202105 → MD-148~150** (150 MDs total):
+
+- **MD-148** 基礎設施投資=報酬門檻十倍年成本 — infra investment only when expected annual return ≥10× annual cost; DD tolerance ≥ 1 year cost
+- **MD-149** 決策=先算基線EV再問翻轉變數 — base case first, then stress-test which external info can flip the answer
+- **MD-150** 基金費用=激勵週期對齊策略波動週期 — measurement period must match strategy's natural cycle; annual hurdle favors manager in volatile strategies
+
+Next: 202104.
