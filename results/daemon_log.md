@@ -1698,3 +1698,13 @@ Gap reconciled: 202111 (MD-130~132) was already in file. Processed **202110 → 
 3. **MD-138** 選擇權=多維度情境疊加而非單一看法 — 3 dimensions (direction + IV + price zone); when all 3 align on same side → structural setup overrides personal directional bias; disagreement across dimensions = reduce size or stand aside
 
 `templates/dna_core.md`: **138 MDs**. Next: 202108.
+
+## Cycle 37 — 2026-04-08 05:55:32 UTC
+
+Cycle 66 done. **202109 → MD-136~138** (138 MDs total):
+
+- **MD-136** 職涯=程式交易時間優先於薪資 — time autonomy > salary once trading is primary income; job KO criterion: restricts trading dev time
+- **MD-137** 套利執行=摩擦成本先建模再宣稱edge — bid-ask + tick + slippage + funding must be quantified before claiming arb edge
+- **MD-138** 選擇權=三維疊加而非單一看法 — direction + IV + price zone; all 3 aligning = structural setup overrides personal bias
+
+Next: 202108.
