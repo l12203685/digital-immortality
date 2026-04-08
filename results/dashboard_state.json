@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T20:01+08",
+  "updated": "2026-04-08T20:08+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 201801."
+      "text": "Next: 201712."
     },
     {
       "time": "just now",
-      "text": "Branch 2.2 — 201802 → MD-253~255 (255 MDs total)"
+      "text": "Branch 2.2 — 201801 → MD-256~258 (258 MDs total)"
     },
     {
       "time": "2026-04-08 UTC",
-      "text": "Branch 2.2 — 201802 → MD-253~255 (255 MDs total):"
+      "text": "`templates/dna_core.md`: 258 MDs. Next: 201712."
     },
     {
       "time": "2026-04-08 UTC",
-      "text": "Cycle 48 done."
+      "text": "- 3 micro-decisions written to templates/dna_core.md:"
     },
     {
-      "time": "2026-04-08T UTC",
-      "text": "`templates/dna_core.md`: 255 MDs. Next: 201801."
+      "time": "2026-04-08 UTC",
+      "text": "- 201801.jsonl: 43 substantive Edward msgs; themes: 主流媒體報虛擬貨幣=過熱訊號、顯卡差2~3千=近3..."
     }
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 255,
+    "total_mds": 258,
     "dna_core_lines": 76
   }
 }
