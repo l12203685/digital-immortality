@@ -2280,3 +2280,17 @@ Cycle 32 done. 201906.jsonl → MD-205~207 written to dna_core.md (207 MDs total
 - **MD-210** 交易帳號安全邊界≠雇主邊界，1.2 BTC被盜教訓 — 離職前/同時必須切斷帳號與前雇主安全鏈
 
 `templates/dna_core.md`: **210 MDs**. Next: 201904.
+
+## Cycle 34 — 2026-04-08T11:00 UTC
+
+**Branch 2.2 — 201904 distill → MD-211~213 (213 MDs total)**
+
+- 201904.jsonl (1211 Edward msgs, Apr 2019)
+- Top groups: g2 (457), g63 (150), g47 (122), g133 (115), g11 (110), g128 (99)
+- Focus: retirement planning (g128), badminton team economics (g63), Avalon bot prototype (g47)
+
+- **MD-211** 退休資本=月支出×12÷股息率，兩槓桿：地理套利降分子、半退休降分母 — 3萬/月→40萬/年→1000萬@3%; 嘉義<台北; 半退休cover一部分
+- **MD-212** 社群活動收入天花板=平台定價×人次，先算清楚再建商業模式 — 25元/人×40人次=4-5千/月天花板; 慈善事業認知
+- **MD-213** 閉環原型測試=先在可控環境自我對弈，再引入真實外部變量 — 阿瓦隆機器人跟9個自己玩; 隔離邏輯問題再暴露真實摩擦
+
+`templates/dna_core.md`: **213 MDs**. Next: 201903.
