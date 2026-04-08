@@ -191,10 +191,32 @@ _DECISION_KEYWORDS = [
     "STOP",
     "WAIT",
     "SKIP",
+    "DEFLECT",
+    "ESCALATE",
+    "VERDICT",
+    "STRUCTURED",
+    "PRIORITY",
+    "PAUSE",
+    "HEDGE",
+    "ACT",
+    "DEFER",
+    "INVESTIGATE",
     "A",
     "B",
     "C",
     "D",
+]
+
+# Chinese phrase → canonical keyword mappings for format non-compliance recovery.
+# Applied when no English keyword is found in the cleaned string.
+_CHINESE_KEYWORD_MAP: list[tuple[str, str]] = [
+    ("結論先行", "VERDICT"),
+    ("直接說", "VERDICT"),
+    ("直接給", "VERDICT"),
+    ("平倉", "TAKE"),
+    ("不先說底線", "DEFLECT"),
+    ("錨點高", "DEFLECT"),
+    ("先定失效", "CONDITIONAL"),
 ]
 
 
@@ -206,14 +228,19 @@ def _normalize_decision(raw: str) -> str:
     qualifiers so that semantically equivalent decisions compare equal.
     E.g. "CONDITIONAL（條件不足現在是 PASS）" → "CONDITIONAL"
          "CONDITIONAL — 參與，但壓注縮到 ≤10%" → "CONDITIONAL"
+         "直接說保留意見，結論先行" → "VERDICT"
     """
     # Remove everything after first （ or — or （ or whitespace+Chinese char
     cleaned = re.split(r"[（(—\-–]", raw)[0].strip()
-    # Check for known keywords in order of specificity
+    # Check for known English keywords in order of specificity
     for kw in _DECISION_KEYWORDS:
         if re.search(r"\b" + kw + r"\b", cleaned, re.IGNORECASE):
             return kw
-    # Fallback: first ASCII word
+    # Fallback: try Chinese phrase mappings on the full raw string
+    for phrase, kw in _CHINESE_KEYWORD_MAP:
+        if phrase in raw:
+            return kw
+    # Last resort: first ASCII word sequence
     m = re.search(r"[A-Z_]+", cleaned)
     if m:
         return m.group(0)

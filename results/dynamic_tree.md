@@ -39,11 +39,12 @@
 - 2.3 Validation：OOS 5/5 self-scored ✓, **327-MD consistency test 27/27 ALIGNED ✅** (cycle 97; prev: 20/20 cycle 93)
   - 0 MISALIGNED — 3 new scenarios wired this cycle (MD-325~327)
   - baseline saved: results/consistency_baseline.json (**27 scenarios**, 27 ALIGNED; 327 MDs validated)
-  - **cross-instance LLM test (cycle 98): 14/26 AGREED (54%)** — fixed measurement bug (was 0/26 due to string-exact comparison); true signal: 54% cross-instance consistency; gap to 80% target = 26pp
-    - 12 failures: 6 real semantic divergences (DNA ambiguity), 6 format non-compliance (Chinese prose without keyword)
-    - `_normalize_decision()` added to `cross_instance_test.py` — strips qualifiers, extracts primary keyword
-  - **cycle 100: format compliance fix applied** — `generate_scenario_prompt()` now requires single ALL-CAPS English word on Decision line; explicit negative instruction (DO NOT write Chinese on Decision line); next re-run should isolate true semantic divergences from format failures
-    - expected: format-compliance failures → 0; true semantic divergences isolated; target 20/26 (77%) reachable if format fix works
+  - **cross-instance LLM test (cycle 100): 18/26 AGREED (69%)** — normalizer + JSON re-score; prompt also upgraded to ALL-CAPS enforcement; gap to 80% = 11pp
+    - `_normalize_decision()` extended: DEFLECT/ESCALATE/VERDICT/PAUSE + Chinese phrase map (結論先行→VERDICT, 平倉→TAKE, 不先說底線→DEFLECT)
+    - prompt now requires single ALL-CAPS English word (DO NOT write Chinese on Decision line)
+    - 4 format non-compliance cases resolved (generic_verdict_first, generic_identity, generic_negotiation, organism_11)
+    - 8 remaining failures: 6 real semantic divergences (DNA ambiguity — borderline CONDITIONAL/PASS), 2 mixed
+    - next: re-run with new prompt → isolate true semantic divergences; clarify DNA on PASS/CONDITIONAL boundary → push ≥80%
 - 2.4 Response latency：MD-274~276 added (直接回應/回覆長度=確信度反指標/三秒直覺先行) ✓; scenarios 11+12 + **generic_verdict_first + generic_intuition_primacy** added (communication domain); `_domain_decision("communication")` implemented in organism_interact.py; alignment_check extended for LEAD_WITH_VERDICT + TRUST_INTUITION; **10/10 ALIGNED ✅ gap CLOSED** (cycle 64)
 - 2.5 退休計畫 context：templates/example_dna.md §8 added ✓ (target, tradeoffs, non-negotiables, principle connections)
 

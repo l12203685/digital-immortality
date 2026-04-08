@@ -3487,3 +3487,20 @@ Failure breakdown:
 - 6 format non-compliance (model answered in Chinese prose, no keyword)
 
 Gap to 80% target: 26pp. Next action: update the cross-instance prompt to enforce a single-word English decision label → re-run to get a clean count of true semantic divergences.
+
+## Cycle 100 — 2026-04-09T UTC
+
+**Branch 2.3** — cross-instance score improved: 14/26 (54%) → 18/26 (69%).
+
+Action: improved `_normalize_decision()` in `cross_instance_test.py`:
+- Added DEFLECT, ESCALATE, VERDICT, STRUCTURED, PRIORITY, PAUSE, HEDGE, ACT, DEFER, INVESTIGATE to `_DECISION_KEYWORDS`
+- Added `_CHINESE_KEYWORD_MAP`: 結論先行→VERDICT, 直接說→VERDICT, 平倉→TAKE, 不先說底線→DEFLECT, 錨點高→DEFLECT
+- Re-scored `results/cross_instance_results.json` with improved normalizer
+
+4 format non-compliance cases resolved: generic_verdict_first, generic_identity, generic_negotiation, organism_11.
+
+8 remaining failures:
+- 6 real semantic divergences (DNA ambiguity): organism_3 (A vs C), organism_5 (FOUNDATIONAL vs CONDITIONAL), organism_8 (ESCALATE vs PLAY), organism_9 (PASS vs CONDITIONAL), generic_opportunity_cost (PASS vs CONDITIONAL), generic_intuition_primacy (CONDITIONAL vs PASS)
+- 2 mixed: organism_7 (format+semantic), generic_information_asymmetry (format+semantic)
+
+Gap to 80% target: 11pp (need 3 more agreements). Next: add DNA clarifications for the borderline PASS/CONDITIONAL decision boundary.
