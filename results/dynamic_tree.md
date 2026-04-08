@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T09:22 UTC (cycle 7)
+> 最後更新：2026-04-08T09:31 UTC (cycle 10)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -16,10 +16,11 @@
   - current signal: dual_ma=SHORT(-0.06 USDT), donchian=FLAT, filtered=FLAT (BTC ~$71.6k)
   - testnet log: results/testnet_log.jsonl (append-only, 16 entries, 4 ticks each strategy)
   - kill conditions: MDD>15%, WR<35% (≥5 trades), PF<0.85 (≥3 losses)
-  - tick 5 status: dual_ma=+0.14 USDT PF=3.370 WR=33.3% [OK]; others FLAT [OK]
+  - tick 7 status: dual_ma=+0.29 USDT PF=5.839 WR=60.0% [OK]; others FLAT [OK]
   - daily cron: job 5c1c9fc1 registered (09:03 UTC daily, 7-day TTL) ✓
   - cron_daily_tick.bat created for Windows Task Scheduler persistence ✓
-  - next: 2 more ticks → run --review → GO/NO-GO → mainnet $100
+  - **--review PASSED: OVERALL GO → mainnet $100 next step** ✓
+  - next: deploy mainnet small size ($100 risk-capped)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed) ✓
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA, MR→Donchian, mixed→filtered)
   - trading_system.py --portfolio: auto-detects regime, selects strategy, saves results/portfolio_decision.json ✓
@@ -102,3 +103,4 @@
 - 2026-04-08 09:22 UTC: cycle 7 — manual tick fired, 3 ticks accumulated, dual_ma=-0.06 USDT live PnL confirmed
 - 2026-04-08 09:26 UTC: cycle 8 — tick 4 fired, dual_ma=+0.15 USDT PF=3.616 WR=50% [OK], 3 ticks to --review
 - 2026-04-08 09:28 UTC: cycle 9 — tick 5 fired, dual_ma=+0.14 USDT PF=3.370 WR=33.3% [OK], 2 ticks to --review
+- 2026-04-08 09:31 UTC: cycle 10 — ticks 6+7 fired, --review PASSED (GO), dual_ma=+0.29 USDT PF=5.839 WR=60%; mainnet next

@@ -18,3 +18,11 @@
 {"ts": "2026-04-08T01:28:10.290090+00:00", "strategy": "donchian", "action": "DRY_RUN", "signal": 0, "price": 71544.0, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
 {"ts": "2026-04-08T01:28:11.662639+00:00", "strategy": "dual_ma_filtered", "action": "DRY_RUN", "signal": 0, "price": 71544.0, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
 {"ts": "2026-04-08T01:28:12.872717+00:00", "strategy": "donchian_filtered", "action": "DRY_RUN", "signal": 0, "price": 71544.0, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:31:00.176113+00:00", "strategy": "dual_ma", "action": "DRY_RUN", "signal": -1, "price": 71500.0, "bars_fetched": 100, "pnl_usdt": 0.0611, "dry_run": true}
+{"ts": "2026-04-08T01:31:01.268449+00:00", "strategy": "donchian", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:31:02.343505+00:00", "strategy": "dual_ma_filtered", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:31:03.741287+00:00", "strategy": "donchian_filtered", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:31:21.912099+00:00", "strategy": "dual_ma", "action": "DRY_RUN", "signal": -1, "price": 71437.2, "bars_fetched": 100, "pnl_usdt": 0.0878, "dry_run": true}
+{"ts": "2026-04-08T01:31:22.935292+00:00", "strategy": "donchian", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:31:23.985471+00:00", "strategy": "dual_ma_filtered", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:31:26.140780+00:00", "strategy": "donchian_filtered", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
