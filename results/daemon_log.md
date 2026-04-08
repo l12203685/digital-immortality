@@ -803,3 +803,15 @@ Branch 2.2 (highest derivative). Processed **202408.jsonl** (8,314 Edward msgs, 
 - **MD-30** 槓桿基礎=失效前風報比 — 近期績效判失效，歷史風報比決定槓桿係數；混淆=用錯數字
 
 Next: **202407**.
+
+## Cycle 12 — 2026-04-08T12:10 UTC
+
+**Cycle 37 done.**
+
+Branch 2.2 (highest derivative — JSONL distillation). Processed **202407.jsonl** (1,970 Edward msgs, Jul 2024). Three new micro-decisions written to `templates/dna_core.md` (now MD-01~MD-33, 111 lines):
+
+- **MD-31** 加減碼≠創造edge — 加減碼=槓桿調整；槓桿不改變風報比；無signal的加碼只放大雜訊
+- **MD-32** 最適槓桿=regime函數 — 趨勢期1.5x/震盪期<1x；每個regime window獨立計算最適槓桿
+- **MD-33** 尾端口數最小化 — trend末段繼續持有=低EV；識別尾端→立刻縮口；小槓桿活過尾端才能重開大
+
+Next: **202406**.
