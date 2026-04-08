@@ -1148,3 +1148,16 @@ Cycle 51 done. **202305 → MD-67~69** written to `dna_core.md`:
 - **MD-69** 決策=連續流程不是單點 — think through entire downstream chain before deciding current step
 
 `dna_core.md`: **69 MDs**. Next: 202304.
+
+## Cycle 26 — 2026-04-08T19:30 UTC
+
+Cycle 52 done.
+
+**Branch 2.2 — gap reconcile + 202304 distill:**
+- MD-67~69 already in file (202305 unlogged session) — no gap to fill
+- 202304.jsonl (43 substantive Edward msgs, Apr 2023) → 3 new MDs written:
+  - **MD-70** AI=結構化學習外包 — give AI: format+level+hours+style → get skeleton; drill key chapters manually; beats cover-to-cover reading
+  - **MD-71** 資料庫=三層分工 — tick raw + maturity aggregate + hot operational; design DB by query frequency per layer
+  - **MD-72** 量價門檻=可執行不可模糊 — signals must be pasteable as code: 漲停量>25%×k-bar volume, not "high volume"; verifiable threshold = computable EV
+
+`templates/dna_core.md`: **72 MDs**. Next: 202303.
