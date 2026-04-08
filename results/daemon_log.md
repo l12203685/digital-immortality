@@ -2571,3 +2571,16 @@ Done. Branch 2.2, cycle 46:
 - **MD-249**: 組織談趨勢=落後指標；主管開始說AI/Blockchain時個人早應決策完畢
 
 Next: 201803.
+
+## Cycle 47 — 2026-04-08T UTC
+
+**Branch 2.2 — 201803 distill → MD-250~252 (252 MDs total) + merge conflict resolved**
+
+- Merge conflict in dynamic_tree.md resolved (HEAD version kept)
+- 201803.jsonl: 10 substantive Edward msgs; themes: 職涯多線投遞測試(國泰GMA/CIM/資料科學家)、教授說台灣博士班價值不高、感情初期主動揭露打牌習慣
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-250** 職涯探索=同時投多類型職缺平行測試；市場回饋比自我判斷準，單線押注成本高
+  - **MD-251** 建議可信度=看利益結構；鼓勵你做某事對建議方有利時，他說「不建議」才是真信息
+  - **MD-252** 感情初期主動揭露重大風險行為=降低未來信任成本；知情同意EV > 隱瞞等揭露
+
+`templates/dna_core.md`: **252 MDs**. Next: 201802.
