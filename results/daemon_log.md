@@ -3504,3 +3504,17 @@ Action: improved `_normalize_decision()` in `cross_instance_test.py`:
 - 2 mixed: organism_7 (format+semantic), generic_information_asymmetry (format+semantic)
 
 Gap to 80% target: 11pp (need 3 more agreements). Next: add DNA clarifications for the borderline PASS/CONDITIONAL decision boundary.
+
+## Cycle 101 — 2026-04-08 17:21:53 UTC
+
+**Cycle 100 done.**
+
+Branch 2.3 — cross-instance score: **14/26 (54%) → 18/26 (69%)**.
+
+Action: improved `_normalize_decision()` — added DEFLECT/ESCALATE/VERDICT/PAUSE to keyword list + Chinese phrase mappings (結論先行→VERDICT, 平倉→TAKE, 不先說底線→DEFLECT). Also merged remote's stronger prompt format (ALL-CAPS enforcement, explicit "DO NOT write Chinese on Decision line").
+
+4 format non-compliance cases resolved (generic_verdict_first, generic_identity, generic_negotiation, organism_11).
+
+8 remaining failures: 6 real semantic divergences (DNA is ambiguous on PASS vs CONDITIONAL boundary) + 2 mixed. Gap to 80% = 11pp.
+
+Next: re-run with upgraded prompt → isolate true semantic count; then add DNA clarifications for the PASS/CONDITIONAL decision boundary.

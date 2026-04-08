@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T01:18+08",
+  "updated": "2026-04-09T01:21+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）; 7.4 知識產品#01 in progress; 8.4 recurring decision audit in progress",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
@@ -50,29 +50,29 @@
   ],
   "activity": [
     {
-      "time": "9min ago",
-      "text": "Gap to 80% target: 26pp. Next action: update the cross-instance prompt to enf..."
+      "time": "just now",
+      "text": "Next: re-run with upgraded prompt → isolate true semantic count; then add DNA..."
     },
     {
-      "time": "9min ago",
-      "text": "- 6 format non-compliance (model answered in Chinese prose, no keyword)"
+      "time": "just now",
+      "text": "8 remaining failures: 6 real semantic divergences (DNA is ambiguous on PASS v..."
     },
     {
-      "time": "9min ago",
-      "text": "- 6 real semantic divergences (DNA ambiguity — genuine inconsistency)"
+      "time": "just now",
+      "text": "4 format non-compliance cases resolved (generic_verdict_first, generic_identi..."
     },
     {
-      "time": "9min ago",
-      "text": "Failure breakdown:"
+      "time": "just now",
+      "text": "Action: improved `_normalize_decision()` — added DEFLECT/ESCALATE/VERDICT/PAU..."
     },
     {
-      "time": "9min ago",
-      "text": "Fix: `_normalize_decision()` strips qualifiers, extracts primary keyword. Re-..."
+      "time": "just now",
+      "text": "Branch 2.3 — cross-instance score: 14/26 (54%) → 18/26 (69%)."
     }
   ],
   "stats": {
-    "daemon_cycles": 99,
+    "daemon_cycles": 101,
     "total_mds": 325,
-    "dna_core_lines": 412
+    "dna_core_lines": 76
   }
 }
