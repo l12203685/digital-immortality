@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T21:07+08",
+  "updated": "2026-04-08T21:16+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
+      "text": "Blocker remains: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` needed to g..."
+    },
+    {
+      "time": "just now",
+      "text": "The remote was force-updated by another daemon process (Cycle 62 already comm..."
+    },
+    {
+      "time": "9min ago",
       "text": "Unblocking condition: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → `pyt..."
     },
     {
-      "time": "just now",
+      "time": "9min ago",
       "text": "- Committed and pushed"
     },
     {
-      "time": "just now",
+      "time": "9min ago",
       "text": "- Testnet review: CONDITIONAL_GO (4/6 strategies pass; MAE/MFE awaiting suffi..."
-    },
-    {
-      "time": "just now",
-      "text": "- Paper-live tick 7: BTC=72,202.70 → SHORT (consistent ×7, range $71.6k–$72.2k)"
-    },
-    {
-      "time": "just now",
-      "text": "- Branch 1.1 remains highest-derivative (mainnet blocked on credentials)"
     }
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 273,
+    "total_mds": 274,
     "dna_core_lines": 76
   }
 }
