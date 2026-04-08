@@ -2438,3 +2438,15 @@ Cycle 39 done.
 - **MD-228**: 資本不足時工作收入優先 — 公式：工作月薪×12 > 資本×交易年化報酬率時，工作建資本是最高槓桿
 
 Next: 201810.
+
+## Cycle 40 — 2026-04-08 UTC
+
+**Branch 2.2 — 201810 distill → MD-229~231 (231 MDs total)**
+
+- 201810.jsonl: group chat (couple's daily + work context); themes: career pivot validation, product vs. marketing spend, job dissatisfaction root cause
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-229** 職涯轉換可行性=找跨領域成功先例 — 政治系→Sales→Python→量化交易員先例存在；先例把「能不能」變成「願不願意」
+  - **MD-230** 企業燒廣告=修症狀不修病根 — 客戶購買動機在產品本身；GAP花廣告費但產品不好看=搞錯方向
+  - **MD-231** 工作不開心=換公司非換職能 — 測試法：想像在夢想公司做同樣工作，若願意=問題在組織文化非職能
+
+`templates/dna_core.md`: **231 MDs**. Next: 201809.
