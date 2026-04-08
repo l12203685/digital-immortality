@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T04:30+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.16 SOP #10 Decision Under Uncertainty COMPLETE → Edward posts threads #01~#10",
+  "updated": "2026-04-09T04:36+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.19 SOP #13 COMPLETE → posting queue extended to May 3; Edward posts threads #01~#13",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -51,19 +51,19 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next blocker: Edward posts thread #01 on Apr 9 at 8–9am ET. G5 compounding cl..."
+      "text": "Next blocker: Edward posts thread #01 on Apr 9 to start the G5 compounding cl..."
     },
     {
       "time": "just now",
-      "text": "All 12 threads now exist and are postable. Activation energy to post = open f..."
+      "text": "- Posting queue extended: Apr 9 – May 3, 13 threads total"
     },
     {
       "time": "just now",
-      "text": "- `docs/posting_queue.md` — Apr 9–May 1 schedule, all 12 threads mapped to da..."
+      "text": "- `docs/publish_thread_sop13_twitter.md` — 9-tweet thread hook: *\"Willpower i..."
     },
     {
       "time": "just now",
-      "text": "- `docs/publish_thread_sop12_twitter.md` — 9-tweet thread (\"Distribution is t..."
+      "text": "- `docs/knowledge_product_13_personal_os_sop.md` — 5-gate Personal OS SOP (MD..."
     },
     {
       "time": "just now",
@@ -71,7 +71,7 @@
     }
   ],
   "stats": {
-    "daemon_cycles": 137,
+    "daemon_cycles": 138,
     "total_mds": 328,
     "dna_core_lines": 87
   }
