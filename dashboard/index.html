@@ -188,14 +188,26 @@ function parseDaemon(md) {
   return items;
 }
 
-// Make one-line status from branch items
-function summarize(branch) {
-  if (!branch || !branch.items.length) return 'No data';
-  var first = branch.items[0];
-  var t = first.text;
-  // Trim to readable length
-  if (t.length > 40) t = t.substring(0, 38) + '...';
-  return t;
+// Status labels per branch number
+var STATUS_LABELS = {
+  1: {red:'Deadline 07-07', yellow:'進行中', green:'上線'},
+  2: {red:'需校準', yellow:'學習中', green:'39 patterns'},
+  3: {red:'需修復', yellow:'運作中', green:'三層運作'},
+  4: {red:'需人', yellow:'等待中', green:'已建立', grey:'等朋友'},
+  5: {red:'需修復', yellow:'部署中', green:'已上線'},
+  6: {red:'需修復', yellow:'建設中', green:'已完成'}
+};
+
+function summarize(branch, num) {
+  if (!branch) return 'No data';
+  var labels = STATUS_LABELS[num] || {};
+  var dot = branch.dot || 'yellow';
+  if (labels[dot]) return labels[dot];
+  // Fallback: count done items
+  var done = branch.items.filter(function(it){return it.status==='green'}).length;
+  var total = branch.items.length;
+  if (total > 0) return done + '/' + total + ' done';
+  return '進行中';
 }
 
 // Time ago helper
@@ -216,11 +228,10 @@ function render(tree, daemon) {
   var heroMain = document.getElementById('hero-main');
   var heroSub = document.getElementById('hero-sub');
   if (tree.regime) {
-    // e.g. "1.1 Trading（testnet running，7-day window → mainnet small size）"
-    heroMain.textContent = 'Trading System \u2192 ' + tree.regime.replace(/^1\.1\s*/, '').replace(/Trading\s*/, '').replace(/[（(].+/, '').trim();
-    heroSub.textContent = tree.regimeSub ? '\u4E2D\u6027: ' + tree.regimeSub : '';
+    heroMain.textContent = tree.regime;
+    heroSub.textContent = tree.regimeSub ? '中性: ' + tree.regimeSub : '';
   } else {
-    heroMain.textContent = '\u904B\u884C\u4E2D';
+    heroMain.textContent = '運行中';
     heroSub.textContent = '';
   }
 
@@ -230,7 +241,7 @@ function render(tree, daemon) {
   CARDS.forEach(function(c) {
     var b = tree.branches[c.num];
     var dot = b ? b.dot : 'grey';
-    var status = b ? summarize(b) : 'No data';
+    var status = b ? summarize(b, c.num) : 'No data';
 
     var card = document.createElement('div');
     card.className = 'card';
