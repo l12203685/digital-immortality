@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-04-08T01:16:37.446584+00:00",
+  "data_source": "data/trending_500.csv (500 bars)",
+  "regime": "trending",
+  "strategy_name": "DualMA_10_30",
+  "signal": -1,
+  "signal_label": "SHORT",
+  "bars_analyzed": 500,
+  "scores": {
+    "trend_strength": 0.05481221309139343,
+    "mr_score": 0.05,
+    "pct_slope_per_bar": 0.4593195899568265,
+    "ma_crossings": 2
+  },
+  "rationale": "Regime: TRENDING | trend_strength=0.0548 > threshold; slope=0.4593%/bar \u2014 directional drift detected | Signal: SHORT"
+}

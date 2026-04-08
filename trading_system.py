@@ -7,6 +7,7 @@ Top-level entry point that ties together the trading subsystem:
   - Evaluate strategy health via equity curve analysis
   - Run paper trading simulations (live data from Binance, no auth)
   - Check kill conditions
+  - Portfolio regime detection + auto-strategy selection
 
 Usage:
     python trading_system.py --backtest [--strategy NAME] [--timeframe TF]
@@ -16,6 +17,7 @@ Usage:
     python trading_system.py --kill-check [--strategy NAME]
     python trading_system.py --performance
     python trading_system.py --track
+    python trading_system.py --portfolio [--data PATH]
 
 All strategies are filtered by DNA rules:
   - Walk-forward >= 3/5 windows
@@ -822,6 +824,63 @@ def cmd_kill_check(args):
                   f"win_rate={metrics['win_rate']:.1f}%")
 
 
+def cmd_portfolio(args):
+    """
+    Detect current market regime and select the best-fit strategy automatically.
+
+    Loads bar data from --data CSV if provided, otherwise generates 200 synthetic
+    bars. Runs RegimeDetector + PortfolioSelector, then prints regime, selected
+    strategy, signal, and a brief rationale. Saves full result to
+    results/portfolio_decision.json.
+    """
+    _ensure_trading_imports()
+    from trading.portfolio import run_portfolio_decision
+
+    # --- Load or generate bars ---
+    if args.data:
+        bars = load_market_data(args.data, args.data_format)
+        data_source = f"{args.data} ({len(bars)} bars)"
+    else:
+        bars = generate_synthetic_bars(n=200, drift=0.0001, volatility=0.02, seed=42)
+        data_source = "synthetic (200 bars)"
+
+    print("=" * 64)
+    print("PORTFOLIO REGIME DETECTION & STRATEGY SELECTION")
+    print("=" * 64)
+    print(f"Data source : {data_source}")
+    print()
+
+    result = run_portfolio_decision(bars)
+
+    # --- Display ---
+    print(f"  Regime            : {result.regime.upper()}")
+    print(f"  Selected strategy : {result.strategy_name}")
+    print(f"  Signal            : {result.signal_label}  ({result.signal:+d})")
+    print()
+    print(f"  Rationale:")
+    print(f"    {result.rationale()}")
+    print()
+    print(f"  Scores:")
+    print(f"    trend_strength    = {result.trend_strength:.6f}  (slope/std_dev)")
+    print(f"    pct_slope_per_bar = {result.pct_slope_per_bar:.4f}%/bar")
+    print(f"    mr_score          = {result.mr_score:.4f}  (MA crossing rate)")
+    print(f"    ma_crossings      = {result.ma_crossings}  crossings in lookback window")
+    print(f"  Bars analyzed     : {result.bars_analyzed}")
+
+    # --- Save result ---
+    RESULTS_DIR.mkdir(exist_ok=True)
+    out_path = RESULTS_DIR / "portfolio_decision.json"
+    payload = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "data_source": data_source,
+        **result.to_dict(),
+    }
+    with open(out_path, "w") as f:
+        json.dump(payload, f, indent=2)
+    print()
+    print(f"Result saved: {out_path}")
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Trading System CLI — Economic Self-Sufficiency Layer",
@@ -836,6 +895,8 @@ def main():
                        help="Show aggregated performance across all backtest/paper sessions")
     group.add_argument("--track", action="store_true",
                        help="Append current metrics snapshot to performance log")
+    group.add_argument("--portfolio", action="store_true",
+                       help="Detect market regime and auto-select best strategy; save to results/portfolio_decision.json")
 
     parser.add_argument("--strategy", help="Specific strategy name")
     parser.add_argument("--timeframe", choices=["1h", "4h", "1d"], help="Specific timeframe")
@@ -862,6 +923,8 @@ def main():
         cmd_performance(args)
     elif args.track:
         cmd_track(args)
+    elif args.portfolio:
+        cmd_portfolio(args)
 
 
 if __name__ == "__main__":

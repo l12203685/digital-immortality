@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T01:05 UTC (cycle 5)
+> 最後更新：2026-04-08T01:20 UTC (cycle 8)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -18,6 +18,9 @@
   - kill conditions: MDD>15%, WR<35% (≥5 trades), PF<0.85 (≥3 losses)
   - next: run testnet 7 days (--loop 86400), collect real signal→PnL data → GO/NO-GO → mainnet $100
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed) ✓
+  - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA, MR→Donchian, mixed→filtered)
+  - trading_system.py --portfolio: auto-detects regime, selects strategy, saves results/portfolio_decision.json ✓
+  - Test: trending_500.csv → TRENDING→DualMA→SHORT; mixed→MIXED→DualMA_filtered→FLAT ✓
 - 1.3 Skill 商業化 → 付費使用者（v2.1.0, 7 skills, users=0）
 - 1.4 其他收入路徑（待發現）
 - CONSTRAINT: 三個月內 trading profit > API cost 否則遞迴死亡
@@ -26,8 +29,9 @@
 - 2.1 DNA 品質：10 micro-decision patterns from JSONL integrated ✓
 - 2.2 微決策學習：202603-04 JSONL read ✓, 2016-2026 歷史 JSONL 待讀（long-term）
 - 2.3 Validation：OOS 5/5 self-scored ✓, cross-instance prepped but blocked on API credit
+  - consistency_test.py: --use-memory + --auto-suggest now combined — memory context flows into suggestions ✓
 - 2.4 Response latency：三秒 vs 三段推理，差距仍在
-- 2.5 退休計畫 context：Edward + 可可在討論，DNA 缺這塊
+- 2.5 退休計畫 context：templates/example_dna.md §8 added ✓ (target, tradeoffs, non-negotiables, principle connections)
 
 ### 3. 持續學習（成長引擎）
 - 3.1 遞迴引擎：三層架構 operational ✓
@@ -49,11 +53,12 @@
 - 5.2 Guided onboarding：/guided-onboarding deployed ✓
 - 5.5 CI pipeline：ci.yml rewritten (Py 3.11+3.12 matrix, 8 steps, README ref validation) ✓
 - 5.6 install.sh hardened (set -euo pipefail, curl -f, download helper) ✓
+- 5.7 Health dashboard：dashboard.py ✓ (8 sections: boot/exports/cold-start/memory/daemon/trading/tree/staging, --json/--watch)
 - 5.3 Web platform：Phase 2-3
 - 5.4 Documentation：README + SKILL_zh-TW updated ✓
 
 ### 6. 存活冗餘（anti-fragile）
-- 6.1 冷啟動 recovery：dna_core.md 71 行 ✓ + boot protocol updated ✓
+- 6.1 冷啟動 recovery：templates/dna_core.md 71 行 ✓ (created this cycle — was marked done but missing) + boot protocol updated ✓
 - 6.2 跨 platform：DNA=markdown not weights ✓
 - 6.3 三層遞迴：daemon + remote trigger + E0 ✓（daemon 已啟動）
 - 6.4 Multi-provider：platform/multi_provider.py created ✓ (Anthropic→OpenAI→Gemini fallback chain, lazy imports)
@@ -87,3 +92,4 @@
 - 2026-04-08 00:34: 全面更新 — 反映 session 全部產出
 - 2026-04-07 17:10 UTC: cycle 4 — 4 branches parallel (daemon fix, multi-provider, CI/install, trading code)
 - 2026-04-08 01:05 UTC: cycle 5 — paper GO, testnet_runner.py built, ccxt live, tree branch 1.1 advanced
+- 2026-04-08 01:20 UTC: cycle 8 — portfolio.py (regime detect + auto-select), dna_core.md (71L), DNA §8 retirement, dashboard.py (8 sections), memory-informed auto-suggest

@@ -93,8 +93,11 @@ def _find_relevant_principles(dna: dict, domain: str, top_n: int = 3) -> list[st
     return [p for p, s in scored[:top_n]]
 
 
-def generate_suggestion(dna: dict, result: dict) -> dict:
+def generate_suggestion(dna: dict, result: dict, memory_ctx: dict | None = None) -> dict:
     """Generate a structured suggestion for fixing a MISALIGNED scenario.
+
+    When memory_ctx is provided, past corrections and calibration for this
+    domain are included in the suggestion, making it more targeted.
 
     Returns a dict with:
       - scenario_id: the failing scenario id
@@ -153,6 +156,23 @@ def generate_suggestion(dna: dict, result: dict) -> dict:
             f"{expected_reasoning}"
         )
 
+    # --- Memory-enhanced suggestion ---
+    memory_context_notes: list[str] = []
+    if memory_ctx:
+        for entry in memory_ctx.get("corrections", []) + memory_ctx.get("calibration", []):
+            entry_content = entry.get("content", "")
+            entry_domain = domain in entry_content.lower() or domain in entry.get("tags", [])
+            entry_expected = expected.lower() in entry_content.lower()
+            if entry_domain or entry_expected:
+                note = entry_content[:200]
+                if note not in memory_context_notes:
+                    memory_context_notes.append(note)
+        if memory_context_notes:
+            suggested_edit += (
+                f" Memory context: {len(memory_context_notes)} past correction(s) reference "
+                f"this domain — see memory_context field for details."
+            )
+
     return {
         "scenario_id": result.get("id", "unknown"),
         "domain": domain,
@@ -161,6 +181,7 @@ def generate_suggestion(dna: dict, result: dict) -> dict:
         "suggestion_type": suggestion_type,
         "suggested_edit": suggested_edit,
         "suggested_principle": draft_principle,
+        "memory_context": memory_context_notes,
     }
 
 
@@ -864,7 +885,7 @@ def main():
             if not aligned:
                 misaligned_results.append(r)
                 if args.auto_suggest:
-                    suggestions.append(generate_suggestion(dna, r))
+                    suggestions.append(generate_suggestion(dna, r, memory_ctx=memory_ctx))
 
     # Print auto-suggest output for misaligned scenarios
     if suggestions:
@@ -881,6 +902,10 @@ def main():
                 print(f"  Related principles already in DNA:")
                 for p in s['existing_principles']:
                     print(f"    - {p[:100]}")
+            if s.get('memory_context'):
+                print(f"  Memory context ({len(s['memory_context'])} entry/entries):")
+                for note in s['memory_context'][:3]:
+                    print(f"    [mem] {note[:120]}")
 
         # Save suggestions as JSON
         suggestions_path = Path(output_dir) / "auto_suggestions.json"

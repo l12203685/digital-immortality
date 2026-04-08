@@ -335,3 +335,48 @@ Recursive engine cycle history.
 3. **Add**: Organism collision with LLM evaluation — use `--llm-prompt` in multi-DNA mode
 4. **Improve**: Memory-informed auto-suggestions — combine `--use-memory` + `--auto-suggest`
 5. **Add**: Health dashboard — single CLI command showing all system metrics (boot, exports, strategies, memory)
+
+
+## Cycle 8 — 2026-04-08T01:20Z
+
+**Branches pushed**: 4/6 (economic, behavioral, platform, survival-redundancy)
+
+### Branch 1.2: Trading Portfolio Optimizer
+- Created `trading/portfolio.py` — `RegimeDetector` + `PortfolioSelector` + `PortfolioResult`
+  - `RegimeDetector.detect(bars)`: linear regression slope/std_dev for trend strength + MA crossing rate for mean-reversion score → TRENDING / MEAN_REVERTING / MIXED
+  - `PortfolioSelector.select(bars)`: auto-maps regime to best strategy (trending→DualMA, MR→Donchian_confirmed, mixed→DualMA_filtered)
+- Added `--portfolio` mode to `trading_system.py` — reads bars, runs detector, prints regime/strategy/signal/rationale, saves `results/portfolio_decision.json`
+- Tested: trending_500.csv → TRENDING→DualMA_10_30→SHORT ✓; mean_reverting_500.csv → MIXED→DualMA_filtered→FLAT ✓
+- **Impact**: System no longer blindly runs all strategies. Regime-aware selection is live. Next: integrate with testnet_runner.py loop.
+
+### Branch 2.5 + 6.1: DNA Coverage + Cold Start Core
+- Created `templates/dna_core.md` — exactly 71 lines (boot kernel: BOOT_CRITICAL, identity, 5 principles, decision engine, communication, relationships, financial philosophy, trading rules, retirement context, cold start prompt)
+  - **Critical gap closed**: was marked "done" in dynamic_tree but file didn't exist. Now exists.
+- Added `## 8. Retirement Planning` to `templates/example_dna.md` — target table, tradeoffs matrix (freedom/security/timing), non-negotiables, principle connections (EV thinking, time-as-currency), 6-item progress checklist
+- **Impact**: Behavioral coverage expanded to retirement domain. Cold start kernel is now a real file.
+
+### Branch 2.3: Memory-Informed Auto-Suggestions
+- Enhanced `generate_suggestion()` in `consistency_test.py` with optional `memory_ctx` parameter
+- When `--use-memory --auto-suggest` both active: suggestions now include `memory_context` field with relevant past corrections/calibration entries
+- Display shows memory context notes inline (up to 3 entries per suggestion)
+- **Impact**: Feedback loop is closed — past misalignments inform future suggestion quality. Memory + suggest → targeted DNA edits.
+
+### Branch 5.7: Health Dashboard
+- Created `dashboard.py` — 8-section CLI health dashboard
+  - Boot test alignment rate | Export validation count | Cold start agreement | Memory category counts | Daemon PID status + last log | Trading ticks + last signal + portfolio regime | Dynamic tree last update | Staging cycle numbers
+  - `--json` flag for machine-readable output | `--watch` for auto-refresh every 30s
+- Dashboard output: [OK] boot 18/18 (100%), [OK] 3 exports, [OK] memory 20 entries, [WARN] daemon stopped, [OK] testnet 8 ticks
+- **Impact**: Single command shows full system health. No more reading 8 files manually.
+
+### Meta
+- All 4 Cycle 7 "next priorities" addressed: portfolio optimization (✓), memory-informed suggestions (✓), health dashboard (✓); item 1 (real DNA calibration) deferred again
+- Boot test: 8/8 aligned (maintained, now with memory-enhanced mode confirmed)
+- Files created this cycle: trading/portfolio.py, templates/dna_core.md, dashboard.py
+- Files modified: trading_system.py (--portfolio), templates/example_dna.md (§8), consistency_test.py (memory_ctx in suggestions)
+
+### Next cycle priorities
+1. **Integrate**: Portfolio optimizer into testnet_runner.py — use regime to gate which strategy runs each tick
+2. **Improve**: DNA real-person calibration — still deferred; add at least one concrete Edward-specific decision
+3. **Add**: Organism collision + LLM evaluation (`--llm-prompt` in multi-DNA mode)
+4. **Improve**: testnet 7-day window — need continuous data collection, check if loop can run in background
+5. **Add**: Makefile targets for new tools (make dashboard, make portfolio)

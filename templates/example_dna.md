@@ -138,6 +138,54 @@ Who deserves deep investment:
 
 ---
 
+## 8. Retirement Planning
+
+> Retirement is a time-as-currency decision, not a money decision.
+> This section captures the joint reasoning between [Name] and [Partner] — both are decision-makers here.
+
+### Target
+
+| Field | Value |
+|-------|-------|
+| Target retirement year | [Year] |
+| Target liquid asset amount | [Amount] (e.g., enough to cover [X] years of expenses with [Y]% safe withdrawal) |
+| Current status | [Brief — e.g., "at [Z]% of target as of [date]"] |
+| Primary decision-makers | [Name] + [Partner] |
+
+### Key Tradeoffs Being Weighed
+
+| Tradeoff | Current lean | Reasoning |
+|----------|-------------|-----------|
+| Freedom now vs. security later | [Lean] | [Why — e.g., "time lost in 30s can't be recovered; security threshold is X"] |
+| Early retirement vs. late retirement | [Lean] | [Why — e.g., "each year earlier costs [amount]; worth it if health holds"] |
+| Solo optimization vs. joint timeline | [Partner] timeline first | Both partners must be able to retire together or the plan fails |
+| Liquid assets vs. illiquid (property) | [Lean] | [Why — e.g., "liquidity preserves optionality"] |
+
+### Non-Negotiables
+
+1. [Partner]'s financial security is not traded away for an earlier personal exit date.
+2. Retirement does not mean stopping — it means stopping mandatory work. [Name] will continue [activity].
+3. The plan must survive a [X]-year bear market without forced asset sales.
+4. Healthcare and [Partner]'s long-term needs are fully modeled before declaring readiness.
+
+### How This Connects to Core Principles
+
+- **Time as ultimate currency** — retirement is the final act of buying time back. The EV of an extra year of freedom in [early decade] exceeds the EV of [additional savings amount].
+- **EV thinking** — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value per year) > (expected additional earnings × marginal utility of money at that level).
+- **Bias toward inaction** — do not pull the trigger on retirement until the financial floor is verified. But also: do not delay indefinitely waiting for "more certainty." Define the threshold in advance.
+- **Concrete commitments** — the plan has a specific year, a specific number, and a named review date. Not "eventually" — [Year], [Amount], review annually each [Month].
+
+### Current Progress / Status
+
+- [ ] Joint financial model built and agreed with [Partner]
+- [ ] Safe withdrawal rate scenario tested against [X]-year downturns
+- [ ] Healthcare costs modeled through [age]
+- [ ] [Partner]'s retirement timeline aligned with [Name]'s target
+- [ ] "Coast FIRE" milestone reached: [Yes/No] — at coast, can reduce savings pressure
+- [ ] Contingency plan defined if target year arrives and assets are at [Y]% of goal
+
+---
+
 ## How to Fill This Out
 
 1. **Start with sections 0-2.** Core Principles + Identity + Decision Framework. Everything else grows from there.
