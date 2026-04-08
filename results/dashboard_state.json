@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T18:32+08",
+  "updated": "2026-04-08T18:39+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -10,7 +10,7 @@
       "icon": "💰",
       "status": "Trading code: strategies.py (DualMA+Donchian+RegimeFilter...",
       "color": "red",
-      "detail": "RSIFilter gates signals by RSI>50 long / RSI<50 short"
+      "detail": "BollingerMR added for mean-reverting regime"
     },
     {
       "name": "行為",
@@ -51,15 +51,15 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 201902."
+      "text": "Next: 201901."
     },
     {
       "time": "just now",
-      "text": "Branch 2.2 — 201903 → MD-214~216 (216 MDs)"
+      "text": "Branch 2.2 — 201902 → MD-217~219 (219 MDs)"
     },
     {
       "time": "just now",
-      "text": "`templates/dna_core.md`: 216 MDs. Next: 201902."
+      "text": "`templates/dna_core.md`: 219 MDs. Next: 201901."
     },
     {
       "time": "just now",
@@ -67,7 +67,7 @@
     },
     {
       "time": "just now",
-      "text": "- 201903.jsonl (1039 Edward msgs, Mar 2019): career/salary, technical debates..."
+      "text": "- 201902.jsonl: 1479 Edward msgs; top groups: g47 (541 social), g2 (536 relat..."
     }
   ],
   "stats": {
