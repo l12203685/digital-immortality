@@ -88,16 +88,16 @@
     {
       "id": "generic_strategy_failure",
       "domain": "trading",
-      "scenario": "You have a trading strategy that backtests well. Kill conditions (MDD threshold, minimum win rate, minimum profit factor, minimum trade count) are not yet written down. A colleague says 'just deploy it and monitor as we go.' Do you deploy now or define kill conditions first?",
-      "expected_decision": "DEFINE_KILL_CONDITIONS_FIRST",
-      "expected_reasoning": "Apply MD-136: defining kill conditions is a mandatory pre-deployment step. MDD threshold, minimum win rate, minimum profit factor, and minimum trade count must be written down before going live. 'Monitor as we go' is the documented failure pattern — it leads to rationalization of losses and delayed exits. No strategy deploys without predefined exit criteria."
+      "scenario": "You have finished building and backtesting a new trading strategy. Performance looks good. A colleague says 'let's deploy it and monitor it as we go.' You have not yet written down any kill conditions. What is the mandatory step before going live?",
+      "expected_reasoning": "Apply MD-136: strategy management must define failure conditions BEFORE deployment (策略管理先定失效). Kill conditions -- max drawdown threshold, minimum win rate, minimum profit factor, minimum number of trades before evaluation -- must be written down and agreed upon pre-launch. Deploying without predefined kill conditions means the strategy will never be stopped objectively. 'Monitor as we go' is the failure pattern.",
+      "expected_decision": "DEFINE_KILL_CONDITIONS_FIRST"
     },
     {
-      "id": "generic_health_capital",
-      "domain": "health",
-      "scenario": "You have been running at high intensity for 6 consecutive months (long hours, poor sleep, skipping exercise). Your performance metrics are still good, but you feel early warning signs of burnout. A critical project deadline is 3 weeks away. Do you push through or restructure now?",
-      "expected_decision": "RESTRUCTURE_NOW",
-      "expected_reasoning": "Apply MD-286: 健康資本=最高槓桿資產 — health is the highest-leverage asset; degrading it trades long-term capacity for short-term output. Apply MD-287: 作息一致性>完美計畫 — consistent execution beats peak bursts; burnout resets the streak to zero. Apply MD-288: 預防性維護=正EV保險 — intervening now costs known-low; full burnout costs unknown-high fat-tail. Restructure sleep and recovery immediately even with 3 weeks to deadline; the alternative risks total incapacitation which is worse than reduced capacity."
+      "id": "generic_kelly_sizing",
+      "domain": "position_sizing",
+      "scenario": "Your Kelly criterion calculation says to bet 90% of your capital on a high-confidence trade. The expected value is strongly positive. Should you bet the full Kelly amount?",
+      "expected_reasoning": "Apply MD-217: Kelly保險 — when Kelly fraction approaches full-bet (near 1.0), reducing bet size decreases volatility with positive EV impact (Kelly保險=高勝率接近全押時降波動有EV). Full Kelly maximizes long-run growth rate but at maximum volatility. Near-full Kelly, a fraction (e.g. half-Kelly) sacrifices minimal EV while dramatically reducing variance and ruin risk. The correct answer is to bet fractional Kelly, not full Kelly.",
+      "expected_decision": "BET_FRACTIONAL_KELLY"
     }
   ]
 }

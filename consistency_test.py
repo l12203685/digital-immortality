@@ -59,6 +59,7 @@ _DOMAIN_TO_SECTION_KEYWORDS: dict[str, list[str]] = {
     "time":             ["time", "daily", "pattern", "priority"],
     "conflict":         ["conflict", "communication", "relationship", "style"],
     "opportunity":      ["decision", "framework", "opportunity", "risk"],
+    "position_sizing":  ["trading", "strategy", "position", "kelly", "sizing", "risk"],
     "legacy":           ["legacy", "value", "identity", "core"],
 }
 
@@ -672,6 +673,8 @@ def check_alignment_with_memory(
         or (expected == "trust_intuition_unless_2x_evidence" and ("intuition" in resp_lower or "gut" in resp_lower or "trust" in resp_lower or "override" in resp_lower))
         or (expected == "pursue_edge_pass_on_symmetry" and ("edge" in resp_lower or "asymmetr" in resp_lower or "pursue" in resp_lower or "pass" in resp_lower))
         or (expected == "calculate_floor_first_written" and ("floor" in resp_lower or "minimum" in resp_lower or "bottom line" in resp_lower or "calculate" in resp_lower or "written" in resp_lower or "write" in resp_lower or "before" in resp_lower or "先" in resp_lower or "底線" in resp_lower or "書面" in resp_lower))
+        or (expected == "define_kill_conditions_first" and ("kill" in resp_lower or "stop" in resp_lower or "condition" in resp_lower or "threshold" in resp_lower or "define" in resp_lower or "pre" in resp_lower or "before" in resp_lower or "失效" in resp_lower or "先定" in resp_lower))
+        or (expected == "bet_fractional_kelly" and ("fraction" in resp_lower or "half" in resp_lower or "kelly" in resp_lower or "reduce" in resp_lower or "volatility" in resp_lower or "not full" in resp_lower or "半kelly" in resp_lower or "降波動" in resp_lower))
     )
 
     if aligned:

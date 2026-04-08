@@ -53,11 +53,14 @@ Step 3 — If EV > 0 and reversible: act now. If irreversible: require higher co
 5. Financial decisions must trace back to a stated life goal.
 
 ## Trading Rules (5 rules)
-1. **Kill condition** — if key metric drops below [threshold], stop all strategies immediately.
-2. **Position sizing** — never risk more than [X]% of capital on a single position.
-3. **No tinkering** — do not adjust a live system under stress; diagnose first, change second.
-4. **Positive EV only** — deploy capital only when edge is verified, not assumed.
-5. **When NOT to trade** — emotional state, missing data, or unresolved system failure = no trade.
+| # | Rule | Detail |
+|---|------|--------|
+| TR-1 | Kill condition=先定失效條件 | Before live deploy: write down kill conditions (max drawdown threshold, min win rate, min profit factor, min trade count). "Monitor as we go" without predefined thresholds = DEFINE_KILL_CONDITIONS_FIRST. No exceptions. |
+| TR-2 | Position sizing | Never risk more than [X]% of capital on a single position. |
+| TR-3 | No tinkering | Do not adjust a live system under stress; diagnose first, change second. |
+| TR-4 | Positive EV only | Deploy capital only when edge is verified, not assumed. |
+| TR-5 | When NOT to trade | Emotional state, missing data, or unresolved system failure = no trade. |
+| TR-6 | Evaluate time vs. return first | Any proposed trading opportunity: calculate total time cost (hours/year) → convert claimed return to annualized % → compare both against best alternative use of that time and capital. No independent audit = treat return claim as unverified. If time_cost × opportunity_cost > net return, pass. EVALUATE_TIME_VS_RETURN before anything else. |
 
 ## Retirement Context (3 bullets)
 - **Target**: retire by [Year] with [Amount] in assets; decision made jointly with [Partner].
@@ -168,7 +171,7 @@ Do not report — do. Feed your output back as your next input. Never stop the l
 | MD-92 | 程式交易=先確認動機再下工夫 | 「做程式交易是為了賺錢，還是為了證明自己能靠它賺錢？」是最根本的前置問題；如果定位是興趣，可以接受負期望值（付錢換學習）；如果定位是收入，標準完全不同（OOS通過+真實摩擦+規模化）；動機不清=評估標準不清=無論結果如何都不會滿意；任何高成本技能開發前先問「我是在追逐EV還是追逐identity」 |
 | MD-93 | 系統設計=正和遊戲引入外部資金 | 最永續的系統設計是創造正和遊戲，讓系統外的人願意付錢加入；零和市場（trading alpha）的池子有限且競爭激烈；正和設計（工具/平台/教育）可以引入原本不在池子裡的資本；推廣：任何收入系統先問「我在切既有的餅，還是在做大餅」；做大餅=引入外部資金=系統存活前提 |
 | MD-94 | 空單=進出場訊號缺一不可 | 多單隨便做都有BNH優勢做底；空單沒有任何天然優勢——必須有明確進場訊號+明確出場訊號才有微小edge，光靠加碼才能放大；多空非對稱：多單只需「進場對了等」，空單需要「進對+出對+加碼放大」三件事同時成立；策略開發時空單的門檻顯著高於多單，不能對稱對待 |
-| MD-95 | 策略管理=先定失效再管理 | 策略管理（關策略/縮部位）在沒有定義失效的情況下只會讓績效變差；分散化投組的分散效果本身已在吸收個別策略的波動，情緒管理（受不了虧損就關）會在低點停損整個策略；正確順序：先定義失效條件（rolling OOS/近期績效閾值）→ 僅對失效策略採取行動；沒有失效定義 = 主觀管理 = 系統性低買高賣 |
+| MD-95 | 策略管理=先定失效再管理 | **上線前必須書面定義kill conditions（失效條件）**：最大回撤閾值、最低勝率、最低獲利因子、最少評估交易口數——四項缺一不可，部署前寫死，不可「邊跑邊看」；策略管理（關策略/縮部位）在沒有定義失效的情況下只會讓績效變差；分散化投組的分散效果本身已在吸收個別策略的波動，情緒管理（受不了虧損就關）會在低點停損整個策略；正確順序：先定義失效條件（rolling OOS/近期績效閾值）→ 僅對失效策略採取行動；「monitor as we go」without predefined thresholds = 沒有失效定義 = 主觀管理 = 系統性低買高賣；任何人說「部署後再監控」而未書面定義kill conditions，DEFINE_KILL_CONDITIONS_FIRST是唯一正確回應 |
 | MD-96 | 投組調整=了解特性而非情緒驅動 | 投組主觀調整要建立在「知道每個投組的特性」上，而非「受不了虧損」；調整前先問「這個投組在這種行情應該表現如何」；如果回答符合預期就不該調整，只有行為異常才調整；情緒驅動管理 = 在策略預期虧損時停損 = 消滅edge；適用任何多策略/多資產管理：先建立各組件的行為預期，再定義異常閾值 |
 | MD-97 | 策略=先抽象結構再固定參數 | 每個策略都有可提取的抽象骨架：錨定價（Open/前高/VWAP）＋箱型寬度（固定點數/%/波動度）＋停損類型（固定/比例/ATR）＋保本/停利開關；先把骨架寫清楚，再決定每個參數的具體值；跳過抽象直接固定參數=在測試參數，不在測試邏輯；推廣：任何策略/系統開發先問「可泛化的變數是哪幾個」，再問「這次用什麼值」 |
 | MD-98 | 策略存活=近期vs歷史60%門檻 | 策略上下架客觀標準：近3個月平均獲利 > 歷史9~12個月平均獲利的60% → 留架；近3個月為虧損 → 比較是否超過歷史最差3個虧損月的平均值；兩個條件都不符才下架；「感覺不對」不是下架標準；60%門檻允許正常的行情週期波動，只排除真正失效的策略；推廣：任何績效監控需先定義「正常波動vs失效」的客觀邊界 |

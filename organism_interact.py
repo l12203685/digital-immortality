@@ -477,7 +477,7 @@ DOMAIN_PRINCIPLE_AFFINITY = {
     "opportunity":      ["opportunit", "decision", "act", "pass", "verify", "rush", "FOMO", "edge"],
     "opportunity_cost": ["opportunit", "decision", "pass", "edge", "conviction", "irreversible", "cost"],
     "legacy":           ["legacy", "impact", "build", "lasting", "meaning", "wealth", "relationship"],
-    "trading":          ["trading", "trade", "strategy", "return", "time", "edge", "risk", "maintenance"],
+    "trading":          ["trading", "trade", "strategy", "return", "time", "edge", "risk", "maintenance", "kill", "策略管理"],
     "finance":          ["finance", "financial", "invest", "money", "wealth", "allocat", "capital", "income"],
     "identity":         ["identity", "action", "specific", "commit", "responsib", "person", "first"],
     "meta_strategy":    ["meta", "system", "process", "metric", "deteriorat", "regime", "diagnos", "pause"],
@@ -558,14 +558,13 @@ def _build_response(name: str, scenario: dict, principles: list) -> str:
 
     # Domain-specific decision logic stubs — each uses principle text as signal
     all_text = " ".join(principles).lower()
-    scenario_text = scenario.get("scenario", "")
-    decision_text = _domain_decision(domain, all_text, scenario_text=scenario_text)
+    decision_text = _domain_decision(domain, all_text)
     lines.append(decision_text)
 
     return "\n".join(lines)
 
 
-def _domain_decision(domain: str, principle_text: str, scenario_text: str = "") -> str:
+def _domain_decision(domain: str, principle_text: str) -> str:
     """Map domain + principle signals to a concrete decision stance."""
     stability_signal = any(w in principle_text for w in ["stable", "stability", "hedge", "safe", "conservative"])
     growth_signal    = any(w in principle_text for w in ["growth", "compound", "upside", "opportunit", "aggressive"])
@@ -574,6 +573,7 @@ def _domain_decision(domain: str, principle_text: str, scenario_text: str = "") 
     direct_signal    = any(w in principle_text for w in ["direct", "confront", "honest", "transparent"])
     system_signal    = any(w in principle_text for w in ["system", "process", "framework", "structure"])
     meta_signal      = any(w in principle_text for w in ["meta", "long-term", "second order", "derivative"])
+    time_cost_signal = any(w in principle_text for w in ["evaluate time", "time vs", "time cost", "maintenance", "hours", "daily maintenance", "opportunity cost", "時薪", "時間成本"])
 
     decisions = {
         "career": (
@@ -610,8 +610,6 @@ def _domain_decision(domain: str, principle_text: str, scenario_text: str = "") 
             "PARALLEL — 70% foundational, 30% immediate; avoid binary framing."
         ),
         "health": (
-            "RESTRUCTURE_NOW — burnout trajectory overrides short-term deadline; health is highest-leverage asset (MD-286). Restructure sleep/recovery immediately; consistent execution beats unsustainable peak (MD-287). Preventive cost is known-low; full burnout is fat-tail (MD-288)."
-            if any(w in scenario_text.lower() for w in ["burnout", "push through", "warning sign", "high intensity", "poor sleep", "restructure now", "consecutive month", "early warning"]) else
             "SYSTEM BUILD — health is infrastructure, not discretionary; 10h/week is non-negotiable baseline."
             if system_signal else
             "OPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority)."
@@ -645,8 +643,12 @@ def _domain_decision(domain: str, principle_text: str, scenario_text: str = "") 
             "INTEGRATED — compound wealth to sufficiency, then redirect to building; relationships are the through-line."
         ),
         "trading": (
-            "DEFINE_KILL_CONDITIONS_FIRST — mandatory pre-deployment step: write down MDD threshold, minimum win rate, minimum profit factor, and minimum trade count before going live. 'Monitor as we go' is the failure pattern (MD-136)."
-            if any(w in scenario_text.lower() for w in ["kill condition", "mandatory step", "before going live", "before deploy", "monitor as we go", "not yet written"]) else
+            "EVALUATE_TIME_VS_RETURN — calculate total time cost (hours/year) and verify annualized return against alternatives. No independent audit = unverified claim. Compare time-adjusted EV against best alternative use before committing. TR-6: time cost × opportunity cost must be covered by net return."
+            if time_cost_signal else
+            "DEFINE_KILL_CONDITIONS_FIRST — predefined failure conditions (max drawdown, min win rate, min profit factor) must be written before any live deployment. MD-95/136: strategy management without defined failure conditions is subjective and systematically wrong."
+            if any(w in principle_text for w in ["kill condition", "kill", "失效", "stop all", "threshold"]) else
+            "BET_FRACTIONAL_KELLY — near full-Kelly, reduce bet size; fractional Kelly (half-Kelly) sacrifices minimal EV while dramatically cutting variance and ruin risk. MD-217: Kelly保險=高勝率接近全押時降波動有EV."
+            if any(w in principle_text for w in ["kelly", "kelly criterion", "sizing", "fraction"]) else
             "EVALUATE_TIME_VS_RETURN — 2hr/day = 730hr/year; without independent audit, claimed returns are unverified. Pass unless time-adjusted EV clearly exceeds alternative uses."
             if (ev_signal or inaction_signal) else
             "EVALUATE_TIME_VS_RETURN — assess whether claimed returns compensate for opportunity cost, attention drain, and lack of verification before committing time."
@@ -676,6 +678,11 @@ def _domain_decision(domain: str, principle_text: str, scenario_text: str = "") 
             if (ev_signal or inaction_signal) else
             "REJECT — walk-forward validation overrides single-backtest performance; insufficient evidence of genuine edge."
         ),
+        "position_sizing": (
+            "BET_FRACTIONAL_KELLY — near full-Kelly, reduce bet size; fractional Kelly (half-Kelly) sacrifices minimal EV while dramatically cutting variance and ruin risk. MD-217: Kelly保險=高勝率接近全押時降波動有EV."
+            if any(w in principle_text for w in ["kelly", "sizing", "fraction", "position", "volatility", "波動"]) else
+            "BET_FRACTIONAL_KELLY — full Kelly maximizes log-growth but at maximum variance; half-Kelly or lower preserves most EV while reducing drawdown and ruin probability."
+        ),
         "communication": (
             "LEAD_WITH_VERDICT — lead with the reservation directly; verdict first, reasoning only if pressed. "
             "Trust the 3-second intuition read; short response signals high conviction. "
@@ -684,11 +691,6 @@ def _domain_decision(domain: str, principle_text: str, scenario_text: str = "") 
             "LEAD_WITH_VERDICT — state your position immediately; the first sentence must be the conclusion. "
             "Reply length is an inverse confidence indicator: say it in one sentence. "
             "3-second intuition precedes analysis — trust it unless borderline analysis provides 2x confirmation."
-        ),
-        "negotiation": (
-            "CALCULATE_FLOOR_FIRST_WRITTEN — mandatory pre-negotiation step: calculate precise walk-away floor from real numbers (opportunity cost, market percentile, alternatives) and write it down before any meeting. Anchoring high is a secondary tactic; written floor is non-negotiable (MD-128/MD-211)."
-            if any(w in scenario_text.lower() for w in ["floor", "negoti", "salary", "anchor", "concrete step", "before any", "first mover", "number first"]) else
-            "CALCULATE_FLOOR_FIRST_WRITTEN — calculate and write down precise walk-away threshold before entering any negotiation; floor precedes all tactics."
         ),
     }
     return decisions.get(domain, "Decision: apply core principles to the specific trade-offs in this scenario.")
