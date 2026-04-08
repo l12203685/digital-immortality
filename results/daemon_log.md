@@ -3958,3 +3958,9 @@ Done. Pushed.
 **Result**: +$0.37 (+0.37%) on $100 notional. Signal was 100% SHORT × 23 ticks. Position is currently profitable.
 
 **Derivative**: Mainnet case is now documentable — SHORT direction was correct, P&L is positive. Sole remaining blocker: set `BINANCE_MAINNET_KEY/SECRET` → first real revenue tick.
+
+## Cycle 125 — 2026-04-09T UTC
+
+**Branch 1.1** — paper-live tick 24: BTC=$71,225.83, signal=SHORT (consistent SHORT × 24, range $71.1k–$72.6k). System alive.
+
+Sole external blocker: Edward sets `BINANCE_MAINNET_KEY`/`SECRET` → first real revenue tick.
