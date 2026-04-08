@@ -85,7 +85,9 @@
 - 7.3 知識產品化：MD-321 (SOP → teachable document = refinement) ✓ cycle 94 — productization forces all implicit steps to surface
 - consistency: `generic_knowledge_output_gap` + `generic_knowledge_productize_sop` → OUTPUT_TO_VALIDATE_UNDERSTANDING ✅ 24/24
 - **7.4 第一個知識產品 — COMPLETE ✅** (cycle 100~108): SOP #01 Strategy Development (198 lines) + SOP #02 Portfolio Construction (cycle 108, MD-100/52~54/13/117, 200+ lines) → `docs/knowledge_product_01_strategy_development_sop.md` + `docs/knowledge_product_02_portfolio_construction_sop.md`
-- **7.5 SOP #03 Execution & Sizing Real-Time Checklist — COMPLETE ✅** (cycle 109): `docs/knowledge_product_03_execution_sizing_sop.md` — 8 sequential gates (G0~G8): L/S pool balance audit (MD-29), leverage from historical R/R not recent (MD-30), edge_ratio gate (MD-13), first-principles coherence (MD-157), stop-first sizing (MD-133), position formula lots=(equity×1%)/(ATR×mult) (MD-28), trial vs full position (MD-159), conflict check; self-test scenario included; next: SOP #04 Strategy Failure & Kill Decision Tree OR publish SOP #01~03 externally
+- **7.5 SOP #03 Execution & Sizing Real-Time Checklist — COMPLETE ✅** (cycle 109): `docs/knowledge_product_03_execution_sizing_sop.md` — 8 sequential gates (G0~G8): L/S pool balance audit (MD-29), leverage from historical R/R not recent (MD-30), edge_ratio gate (MD-13), first-principles coherence (MD-157), stop-first sizing (MD-133), position formula lots=(equity×1%)/(ATR×mult) (MD-28), trial vs full position (MD-159), conflict check; self-test scenario included
+- **7.6 SOP #04 Strategy Kill Decision Tree — COMPLETE ✅** (cycle 110): `docs/knowledge_product_04_strategy_kill_decision_tree.md` — 7 nodes
+- **7.7 Publish Thread SOP #01 — DRAFTED ✅** (cycle 111): `docs/publish_thread_sop01_twitter.md` — 12 tweets, ready to post; closes internal→external loop; next: post thread OR draft SOP #02 thread
 
 ### 8. 生活維護（operational baseline）
 - 8.1 決策頻率最小化：MD-322 (>3次同一決策=系統設計失敗) ✓ cycle 94 — automate/pre-decide recurring choices
@@ -95,7 +97,7 @@
 - **8.4 recurring decision audit — COMPLETE ✅** (cycle 100): `docs/recurring_decision_audit.md` — 10 recurring decisions pre-committed; next audit 2026-04-15
 
 ## 當前 regime
-攻擊：1.1 Trading（mainnet needs API keys）; 7.5 SOP #04 Strategy Failure & Kill Decision Tree next; OR publish SOP #01~03 externally
+攻擊：1.1 Trading（mainnet needs API keys）; 7.7 publish thread — POST SOP #01 thread on X/Twitter (file ready); draft SOP #02 thread next
 中性：2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成
 防禦：2.3 blocked API credit, 4.1 partially unblocked (samuel_dna tested 19/20)
 

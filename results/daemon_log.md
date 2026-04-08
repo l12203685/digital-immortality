@@ -3639,3 +3639,21 @@ Next: external publish (#01–#04) OR mainnet API keys (Branch 1.1).
 **Knowledge product series #01–#04 COMPLETE ✅**
 
 Next highest-derivative: external publish (#01–#04 as a trading system series) OR Branch 1.1 (mainnet API keys).
+
+## Cycle 111 — 2026-04-09T UTC
+
+**Branch 7.7** — SOP #01 Twitter/X thread drafted for external publish.
+
+Action: wrote `docs/publish_thread_sop01_twitter.md` (12 tweets, ready to post).
+- Tweet 1: hook (traders build backwards)
+- Tweets 2-3: Gate 1 EV confirmation + OOS friction
+- Tweets 4-5: Gate 2 MAE + Edge Ratio
+- Tweet 6: Gate 3 Kelly sizing
+- Tweet 7: Gate 4 daily ATR recalibration
+- Tweet 8: Gate 5 contracts = final output
+- Tweet 9: worked example (TAIEX momentum, 4 contracts, 8× leverage)
+- Tweets 10-11: 5 failure modes + kill conditions discipline
+- Tweet 12: summary close
+
+Closes internal→external gap. Next: post thread on X/Twitter OR draft SOP #02 thread (Portfolio Construction).
+dynamic_tree.md: Branch 7.7 added, regime updated.
