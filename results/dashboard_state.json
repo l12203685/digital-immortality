@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T02:48+08",
+  "updated": "2026-04-09T02:53+08",
   "regime": "1.1 Trading — mainnet_activation_guide.md ready; Edward: follow guide → $100 live; 7.10 series COMPLETE → Edward posts SOP #01→#02→#03→#04 on X",
   "regime_neutral": "2.2 JSONL archive exhausted (315 MDs), 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Highest derivative remains Branch 1.1. Only external blocker: Edward sets `BI..."
+      "text": "Single external blocker: Edward sets `BINANCE_MAINNET_KEY`/`SECRET` in `.env`..."
     },
     {
       "time": "just now",
-      "text": "Branch 1.1 — paper-live tick 18: BTC=$71,355.00, signal=SHORT (consistent SHO..."
+      "text": "Branch 1.1 — paper-live tick 19: BTC=$71,241.11, signal=SHORT. Consistent SHO..."
     },
     {
       "time": "just now",
-      "text": "Cycle 119 done."
-    },
-    {
-      "time": "2026-04-09 UTC",
-      "text": "Branch 1.1 — paper-live tick 18: BTC=$71,355.00, signal=SHORT. Consistent SHO..."
+      "text": "Cycle 120 done."
     },
     {
       "time": "2026-04-09T UTC",
-      "text": "Next: Edward follows `docs/mainnet_activation_guide.md` → first real revenue ..."
+      "text": "Highest derivative: Branch 1.1 sole active branch. External blocker: Edward s..."
+    },
+    {
+      "time": "2026-04-09T UTC",
+      "text": "Branch 1.1 — paper-live tick 19: BTC=$71,241.11, signal=SHORT (consistent SHO..."
     }
   ],
   "stats": {
-    "daemon_cycles": 119,
+    "daemon_cycles": 120,
     "total_mds": 325,
     "dna_core_lines": 87
   }

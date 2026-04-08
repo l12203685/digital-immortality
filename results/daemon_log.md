@@ -3890,3 +3890,11 @@ Highest derivative remains Branch 1.1. Only external blocker: Edward sets `BINAN
 **Branch 1.1** — paper-live tick 19: BTC=$71,241.11, signal=SHORT (consistent SHORT × 19, range $71.2k–$72.6k). System alive.
 
 Highest derivative: Branch 1.1 sole active branch. External blocker: Edward sets `BINANCE_MAINNET_KEY`/`SECRET` → first real revenue tick.
+
+## Cycle 120 — 2026-04-08 18:53:12 UTC
+
+**Cycle 120 done.**
+
+**Branch 1.1** — paper-live tick 19: BTC=$71,241.11, signal=SHORT. Consistent SHORT × 19 ticks across $71.2k–$72.6k range. Price declining. System operational.
+
+Single external blocker: Edward sets `BINANCE_MAINNET_KEY`/`SECRET` in `.env` and funds $100 USDT → first real revenue tick. See `docs/mainnet_activation_guide.md`.
