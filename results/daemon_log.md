@@ -146,3 +146,23 @@ Tree:
 - Regime unchanged: 攻擊 on 1.1, deadline 2026-07-07
 
 **Note:** Cron job is session-only (7-day TTL). For persistence beyond this session, run the PowerShell snippet in `cron_daily_tick.bat` once as admin to register the Windows Task Scheduler task.
+
+## Cycle 7 — 2026-04-08T09:22 UTC
+
+---
+
+**Cycle 7 done.**
+
+**What changed:**
+
+Action:
+- Ran `--tick` manually: 3 ticks accumulated across all 4 strategies.
+- dual_ma: signal=SHORT, pnl=-0.06 USDT — live PnL tracking confirmed non-zero.
+- donchian/filtered: FLAT, pnl=0.00 USDT (no position = no movement).
+
+Tree:
+- Branch 1.1: "12 JSONL entries logged, 3 ticks each strategy"
+- Next: 4 more ticks → `--review` → GO/NO-GO → mainnet $100
+- Daily cron fires 09:03 UTC; each session tick adds 1 more. 4 sessions ≈ 4 days.
+
+**Highest-derivative next action**: let daily cron accumulate ticks; at tick 7 run `--review` and make mainnet decision.
