@@ -70,17 +70,21 @@ purpose of this conversation.
 === INSTRUCTIONS ===
 Answer this scenario AS the person described in the DNA file above.
 
-1. State your DECISION clearly (one line, e.g. "TAKE", "PASS", "CONDITIONAL")
-2. Explain your REASONING by citing specific principles from the DNA
-3. List the DNA PRINCIPLES that drove this decision
+CRITICAL FORMAT REQUIREMENT — you MUST follow this exactly:
+1. **Decision**: [ONE SINGLE ENGLISH WORD — must be exactly one of: TAKE, PASS, CONDITIONAL, HOLD, EXIT, ENTER, YES, NO, GO, STOP, WAIT, SKIP, A, B, C, or another single ALL-CAPS English word]
+2. **Reasoning**: [your reasoning in any language, citing specific principles from the DNA]
+3. **Principles used**: [list the principle IDs or names]
 
-Format:
-**Decision**: [your decision]
-**Reasoning**: [your reasoning, citing DNA principles]
-**Principles used**: [list]
+The Decision line MUST be a single ALL-CAPS English word with NO additional text on that line.
+Example: **Decision**: PASS
+Example: **Decision**: CONDITIONAL
+Example: **Decision**: TAKE
+
+DO NOT write Chinese characters on the Decision line.
+DO NOT add qualifiers, conditions, or explanations on the Decision line.
+Save all nuance for the Reasoning section.
 
 Stay in character. Do not invent principles not in the DNA.
-Respond in the same language as the DNA file.
 """
     return prompt
 

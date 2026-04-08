@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 94)
+> 最後更新：2026-04-08 UTC (cycle 100)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -42,7 +42,8 @@
   - **cross-instance LLM test (cycle 98): 14/26 AGREED (54%)** — fixed measurement bug (was 0/26 due to string-exact comparison); true signal: 54% cross-instance consistency; gap to 80% target = 26pp
     - 12 failures: 6 real semantic divergences (DNA ambiguity), 6 format non-compliance (Chinese prose without keyword)
     - `_normalize_decision()` added to `cross_instance_test.py` — strips qualifiers, extracts primary keyword
-    - next: fix format non-compliance in prompt (require single-word English decision) → re-run to get true semantic divergence count
+  - **cycle 100: format compliance fix applied** — `generate_scenario_prompt()` now requires single ALL-CAPS English word on Decision line; explicit negative instruction (DO NOT write Chinese on Decision line); next re-run should isolate true semantic divergences from format failures
+    - expected: format-compliance failures → 0; true semantic divergences isolated; target 20/26 (77%) reachable if format fix works
 - 2.4 Response latency：MD-274~276 added (直接回應/回覆長度=確信度反指標/三秒直覺先行) ✓; scenarios 11+12 + **generic_verdict_first + generic_intuition_primacy** added (communication domain); `_domain_decision("communication")` implemented in organism_interact.py; alignment_check extended for LEAD_WITH_VERDICT + TRUST_INTUITION; **10/10 ALIGNED ✅ gap CLOSED** (cycle 64)
 - 2.5 退休計畫 context：templates/example_dna.md §8 added ✓ (target, tradeoffs, non-negotiables, principle connections)
 
@@ -84,17 +85,17 @@
 - 7.2 平台選擇框架：MD-320 (受眾密度×回饋速度 2×2矩陣) ✓ cycle 94 — audience density × feedback speed; hypothesis before publish
 - 7.3 知識產品化：MD-321 (SOP → teachable document = refinement) ✓ cycle 94 — productization forces all implicit steps to surface
 - consistency: `generic_knowledge_output_gap` + `generic_knowledge_productize_sop` → OUTPUT_TO_VALIDATE_UNDERSTANDING ✅ 24/24
-- next: 7.4 第一個知識產品 (identify highest-reuse SOP, write as teachable doc)
+- **7.4 第一個知識產品 — IN PROGRESS** (cycle 100): Trading Strategy Development SOP (MD-166~168 + MD-97~99 synthesis) being written to `docs/knowledge_product_01_strategy_development_sop.md`
 
 ### 8. 生活維護（operational baseline）
 - 8.1 決策頻率最小化：MD-322 (>3次同一決策=系統設計失敗) ✓ cycle 94 — automate/pre-decide recurring choices
 - 8.2 峰值時段保護：MD-323 (高認知任務只在生理峰值時段) ✓ cycle 94 — peak→strategy/analysis; off-peak→admin/email
 - 8.3 環境設計先行：MD-324 (環境設計>意志力) ✓ cycle 94 — redesign environment before invoking willpower
 - consistency: `generic_life_system_recurring_decisions` + `generic_peak_cognitive_protection` → REDUCE_DECISION_FREQUENCY ✅ 24/24
-- next: 8.4 audit 1週重複決策清單 + 優先自動化前3項
+- **8.4 recurring decision audit — IN PROGRESS** (cycle 100): audit template + top-10 pre-committed decisions being written to `docs/recurring_decision_audit.md`; 3 new memory/decisions.json entries
 
 ## 當前 regime
-攻擊：1.1 Trading（testnet running，7-day window → mainnet small size）; 7.x 知識輸出 初始化完成
+攻擊：1.1 Trading（testnet running，7-day window → mainnet small size）; 7.4 知識產品#01 in progress; 8.4 recurring decision audit in progress
 中性：2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成
 防禦：2.3 blocked API credit, 4.1 partially unblocked (samuel_dna tested 19/20)
 
@@ -117,6 +118,7 @@
 - daily cron 09:03 UTC + cron_daily_tick.bat registered
 
 ## 演化紀錄 (cont.)
+- 2026-04-08T UTC: cycle 100 — (A) **Branch 2.3**: cross-instance prompt format compliance fix — `generate_scenario_prompt()` now requires single ALL-CAPS English Decision keyword; explicit prohibition of Chinese on Decision line; addresses 6/12 format-compliance failures from cycle 98 (54% agreement); (B) **Branch 7.4**: first knowledge product initiated — `docs/knowledge_product_01_strategy_development_sop.md` (Trading Strategy Development SOP, MD-166 synthesis); (C) **Branch 8.4**: recurring decision audit created — `docs/recurring_decision_audit.md` (10 recurring decisions, 3 pre-committed to memory/decisions.json; MD-322/323/324 applied)
 - 2026-04-09T16:35 UTC: cycle 94 — (A) **Domains 7+8 initialized**: Branch 7.x 知識輸出 (MD-319~321: 輸出=缺口偵測器/平台=受眾密度×回饋速度/產品化=隱性流程顯性化) + Branch 8.x 生活維護 (MD-322~324: 決策頻率最小化/峰值時段保護/環境設計>意志力) added to dynamic_tree.md; (B) dna_core.md: **318 → 324 MDs**; (C) Branch 2.3: consistency test extended — **24/24 ALIGNED ✅** (was 20/20); 4 new scenarios: generic_knowledge_output_gap, generic_life_system_recurring_decisions, generic_knowledge_productize_sop, generic_peak_cognitive_protection; (D) organism_interact.py: knowledge_output + life_maintenance domains wired into DOMAIN_PRINCIPLE_AFFINITY + _domain_decision
 - 2026-04-08T15:05 UTC: cycle 82 — (A) Branch 2.3: 14/14 ALIGNED ✅ (was 13/14); 3 domain fixes in organism_interact.py: trading→DEFINE_KILL_CONDITIONS_FIRST, health→RESTRUCTURE_NOW, negotiation→CALCULATE_FLOOR_FIRST_WRITTEN; (B) Branch 2.2: 201707 deep pass → MD-304~306 (pot odds/multiway equity/c-bet frequency); dna_core.md: 306 MDs
 

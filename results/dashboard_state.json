@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T01:08+08",
-  "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）; 7.x 知識輸出 初始化完成",
+  "updated": "2026-04-09T01:18+08",
+  "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）; 7.4 知識產品#01 in progress; 8.4 recurring decision audit in progress",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -50,29 +50,29 @@
   ],
   "activity": [
     {
-      "time": "just now",
+      "time": "9min ago",
       "text": "Gap to 80% target: 26pp. Next action: update the cross-instance prompt to enf..."
     },
     {
-      "time": "just now",
+      "time": "9min ago",
       "text": "- 6 format non-compliance (model answered in Chinese prose, no keyword)"
     },
     {
-      "time": "just now",
+      "time": "9min ago",
       "text": "- 6 real semantic divergences (DNA ambiguity — genuine inconsistency)"
     },
     {
-      "time": "just now",
+      "time": "9min ago",
       "text": "Failure breakdown:"
     },
     {
-      "time": "just now",
+      "time": "9min ago",
       "text": "Fix: `_normalize_decision()` strips qualifiers, extracts primary keyword. Re-..."
     }
   ],
   "stats": {
     "daemon_cycles": 99,
     "total_mds": 325,
-    "dna_core_lines": 76
+    "dna_core_lines": 412
   }
 }

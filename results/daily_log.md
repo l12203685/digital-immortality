@@ -694,3 +694,37 @@ Next: testnet_runner.py ATR-based stop loss; continue DNA distillation when JSON
 - Branch 8.4: audit 1週重複決策清單 → automate top 3 recurring decisions
 - Branch 1.1: paper-live tick monitoring (no credentials needed)
 - Branch 2.3: add scenarios for MD-274~281 range (communication domain coverage)
+
+## Cycle 100 — 2026-04-08 UTC
+
+**Branches**: 3 parallel (2.3 format fix + 7.4 knowledge product init + 8.4 recurring decision audit)
+
+### Branch 2.3: Cross-instance prompt format compliance fix
+- Root cause of 6/12 format failures (cycle 98): prompt said "e.g. TAKE, PASS" but didn't enforce single word
+- Fix: `generate_scenario_prompt()` in `cross_instance_test.py` now explicitly requires:
+  - Single ALL-CAPS English word on Decision line only
+  - DO NOT write Chinese on the Decision line
+  - Save nuance for Reasoning section
+- Explicit enumeration of valid decision keywords
+- Expected impact: format-compliance failures → 0; true semantic divergences isolated
+- Next re-run target: 20/26 (77%) — achievable if format fix resolves all 6 compliance failures
+
+### Branch 7.4: First Knowledge Product
+- Identified highest-reuse SOP: Trading Strategy Development (MD-166 + MD-97~99 + MD-126)
+- Written to `docs/knowledge_product_01_strategy_development_sop.md`
+- Format: 5-step SOP, why each step exists (DNA principle), worked examples, failure modes, self-test
+- This validates MD-321 (知識產品化=把個人SOP打包成可傳遞單元)
+
+### Branch 8.4: Recurring Decision Audit
+- Written `docs/recurring_decision_audit.md` with:
+  - 10 recurring decisions categorized by frequency × cost × repeatability
+  - Top 3 automation candidates pre-committed
+  - Environment redesign checklist (MD-324)
+- Added 3 entries to `memory/decisions.json`
+- Validates MD-322 (>3次同一決策=系統設計失敗)
+
+### Next cycle
+- Branch 2.3: re-run cross_instance_test.py --run --cli with format-fixed prompt → get clean semantic divergence count
+- Branch 7.4: identify distribution platform for knowledge product (MD-320: audience density × feedback speed)
+- Branch 8.4: implement top automation (script or pre-commit template)
+- Branch 1.1: mainnet credentials still needed; paper-live monitoring continues
