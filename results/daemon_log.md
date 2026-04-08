@@ -2758,3 +2758,15 @@ Fixed tmp_distill.py dual-schema support (old `s`/`t`/`E` fields), then distille
 - **MD-270**: 藍線主導紅線可微負 — 强行翻正红线反而侵蚀蓝线EV
 
 Next: 201705.
+
+## Cycle 55 — 2026-04-08 12:43:37 UTC
+
+**Branch 2.2 — 201705+201704 distill → MD-271~273 (273 MDs total)**
+
+- 201705.jsonl: 23 Edward msgs; 201704.jsonl: 3 Edward msgs; themes: salary ceiling from insider info, domain value vs laborer income, compound interest time priority
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-271** 薪資天花板=先從業界內部資訊確認，不從當前薪資外推
+  - **MD-272** 領域價值不在勞工收入；若只能拿基本薪=站在錯的位置
+  - **MD-273** 複利建立=時間優先於本金；早期投入的等待期是不可壓縮的資產
+
+`templates/dna_core.md`: **273 MDs**. Next: 201703.
