@@ -4006,3 +4006,16 @@ Two parallel actions:
 
 Highest derivative: trading loop alive; life-ops cognitive load further reduced.
 Sole external blocker: Edward sets `BINANCE_MAINNET_KEY`/`SECRET` → first real revenue tick.
+
+## Cycle 127 — 2026-04-08 19:33:37 UTC
+
+**Cycle 127 done.**
+
+**Branch 1.1** — tick 26: BTC=$71,186.58, SHORT × 26 (range $71.1k–$72.6k). System alive.
+
+**Branch 8.5** — Automation #2 shipped: `docs/system_failure_automations.md` — top 3 SYSTEM_FAILURE decisions pre-committed:
+- Exercise: always yes, day-of-week schedule (no decision needed)
+- Lunch: morning_defaults rotation + 200TWD cap
+- Deep-work block: 09:00 hard start, no negotiation
+
+Sole remaining external blocker: set `BINANCE_MAINNET_KEY/SECRET` → first real revenue tick.
