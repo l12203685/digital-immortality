@@ -261,3 +261,11 @@ Pushed. Next action: provide mainnet API credentials.
 - Now: dry-run bypasses credential gate, still runs kill-rail check, logs DRY_RUN entry
 - Validated: kill rails print correctly (MDD>10%, WR<35% ≥5t, PF<0.85)
 - Gate to live: set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET`, run `python -m trading.mainnet_runner --tick`
+
+## Cycle 2 — 2026-04-08 01:37:18 UTC
+
+**Cycle 12 done.**
+
+Branch 1.1 — `--dry-run` was silently broken (credential gate fired before dry-run logic). Fixed: dry-run now bypasses the gate, still runs kill-rail validation, and logs a `DRY_RUN` entry. Full mainnet path is now testable without credentials.
+
+**Gate to live trade:** set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET`, then `python -m trading.mainnet_runner --tick`.
