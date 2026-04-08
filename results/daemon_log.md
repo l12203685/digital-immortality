@@ -2032,3 +2032,14 @@ API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Ove
 - **MD-177** Exploit二階EV — EV_1=先偏離者送出；EV_2=後剝削者可拿回；大多分析只算EV_1，忽略counter-exploit空間
 
 `LYH/agent/dna_core.md`: **177 MDs**. Next: 202008.
+
+## Cycle 11 — 2026-04-08 08:04:10 UTC
+
+Cycle 11 done.
+
+**202009 → MD-175~177** written to `dna_core.md`:
+- **MD-175** MAE/MFE分布=策略配適度診斷 (從分布定機制，不從點估計)
+- **MD-176** 波動規律=交易機制衍生物 (機制穩定→規律穩定；監控機制變化比監控績效更前置)
+- **MD-177** Exploit二階EV (EV_1=先偏離者送出；EV_2=後剝削可拿回；大多分析漏算EV_2)
+
+Next: 202008.
