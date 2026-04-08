@@ -2022,3 +2022,13 @@ Gap closed: MD-169~171 were logged in cycle 7/8 but not written to dna_core.md.
 ## Cycle 10 — 2026-04-08 07:57:21 UTC
 
 API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Overloaded"},"request_id":"req_011CZqwupYSuEt6UK2tUfuBd"}
+
+## Cycle 11 — 2026-04-08T16:30 UTC
+
+**202009 distill → MD-175~MD-177** (177 MDs total):
+
+- **MD-175** MAE/MFE分布=策略配適度診斷 — 分布形狀決定停損/停利設定；先看分布再定機制，不是先定參數再回測
+- **MD-176** 波動規律=交易機制的衍生物 — 機制不變則規律穩定；監控機制變化比監控績效更前置
+- **MD-177** Exploit二階EV — EV_1=先偏離者送出；EV_2=後剝削者可拿回；大多分析只算EV_1，忽略counter-exploit空間
+
+`LYH/agent/dna_core.md`: **177 MDs**. Next: 202008.
