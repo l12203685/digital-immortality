@@ -1457,3 +1457,14 @@ Gap reconcile: 202206 MD-103~105 already in file (written by prior cycle — 噱
 - **MD-108** 技術合作=角色邊界先書面確認 — before any code collaboration, confirm in writing: ownership, contribution scope, exit conditions; unconfirmed = unlimited time/code extraction
 
 `templates/dna_core.md`: **108 MDs**. Next: 202204.
+
+## Cycle 32 — 2026-04-08 05:31:05 UTC
+
+Cycle 59 done.
+
+**202206 gap reconcile** (MD-103~105 already in file) + **202205 → MD-106~108**:
+- MD-106: 公開指標=邊際edge趨零 — publicly-traded pivot points have zero edge; custom entry required
+- MD-107: 年度風暴比=跨年Regime偵測器 — YoY storm ratio < 30% of historical = root-cause regime shift
+- MD-108: 技術合作=角色邊界先書面確認 — confirm ownership/scope/exit before any code collaboration
+
+`dna_core.md`: **108 MDs**. Next: 202204.
