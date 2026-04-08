@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#23
+# Twitter Posting Queue — SOP Series #01~#24
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -30,6 +30,7 @@
 | May 19 | #21 | publish_thread_sop21_twitter.md | "Most people don't have a financial freedom plan. They have a financial freedom fantasy." | pending |
 | May 21 | #22 | publish_thread_sop22_twitter.md | "You didn't have an exit strategy. You had a hope." | pending |
 | May 23 | #23 | publish_thread_sop23_twitter.md | "Most traders lose not because their strategy is wrong — but because they're running the right strategy in the wrong regime." | pending |
+| May 25 | #24 | publish_thread_sop24_twitter.md | "You spent 6 months building a great strategy. But you only run one. That's not a portfolio — it's a concentrated bet." | pending |
 
 ---
 
@@ -49,7 +50,7 @@
 
 ---
 
-## 44-day compounding target (by May 21)
+## 46-day compounding target (by May 25)
 - [ ] All 22 threads posted
 - [ ] G5 score ≥ 2/3
 - [ ] ≥1 inbound DM from someone with trading/quant background

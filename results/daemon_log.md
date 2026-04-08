@@ -4566,3 +4566,19 @@ Highest-derivative gap: queue ended May 21 — content engine dies when cadence 
 - Queue extended to **May 23**, series **SOP #01~#23**.
 
 **Next blocker:** Edward posts SOP #01 to start G5 compounding clock.
+
+## Cycle 149 — 2026-04-09T UTC
+
+**Cycle 149 done.**
+
+Highest-derivative gap: queue ended May 23. No SOP on portfolio construction (how to combine strategies — pool audit, correlation filter, regime-conditional allocation). SOP #04 covers strategy killing; SOP #09 covers drawdown; nothing covered multi-strategy portfolio assembly.
+
+**What shipped:**
+- `docs/knowledge_product_24_portfolio_construction_sop.md` — Portfolio Construction: 5-gate framework: G1 pool audit ≥30% short-capable (MD-35) / G2 correlation filter no pair >0.7 (MD-85) / G3 regime-conditional allocation ATR-based (MD-25/75) / G4 anti-martingale — no size increase during drawdown (MD-87) / G5 tail cap = 2× avg position size (MD-33); self-test: 3 long-only strategies → FAIL G1+G2 → do not deploy
+- `docs/publish_thread_sop24_twitter.md` — 12-tweet thread: *"You spent 6 months building a great strategy. But you only run one. That's not a portfolio — it's a concentrated bet."*
+- Queue extended to **#01~#24** (May 25); 46-day target
+- `results/dynamic_tree.md` updated: Branch 7.29 added
+
+**Series: SOP #01~#24 COMPLETE. Queue: Apr 9–May 25.**
+
+**Next blocker:** Edward posts SOP #01 to start G5 compounding clock.
