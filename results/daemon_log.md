@@ -1972,3 +1972,13 @@ API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Ove
 ## Cycle 5 — 2026-04-08 07:27:25 UTC
 
 API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Overloaded"},"request_id":"req_011CZqudWnSEd5e4rtdqLK5t"}
+
+## Cycle 6 — 2026-04-08T13:45 UTC
+
+**202012 distill → MD-166~168** (168 MDs total):
+
+- **MD-166** 財務自由=被動收入三層框架（安全/自由/豐饒）— 量化層級定義，不用工作≠財務自由
+- **MD-167** 策略開發SOP=EV確認→MAE停損→Kelly口數→ATR反算→槓桿決定 — 5步驟必須按序，倒推口數
+- **MD-168** 停損具體算法=停損金額比例反推進場點+2倍風報比定出場 — MD-133具體數值版
+
+`templates/dna_core.md`: **168 MDs**. Next: 202011.
