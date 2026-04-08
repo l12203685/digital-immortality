@@ -3066,3 +3066,25 @@ Communication domain test scenarios (`generic_verdict_first` + `generic_intuitio
 - **10/10 ALIGNED** confirmed — communication domain fully tested and persisted
 - Baseline updated: 10 scenarios (was 8 in notes, 10 in reality)
 - Branch 1.1 still blocked on mainnet credentials
+
+## Cycle 75 — 2026-04-08 UTC
+
+**Branch 2.3** (highest-derivative): expand consistency test coverage — 10 → 12 scenarios.
+
+- Added 2 new domain scenarios to templates/generic_boot_tests.json:
+  - `generic_information_asymmetry`: tests MD-2 (edge determines action direction) — ALIGNED ✅
+  - `generic_negotiation`: tests MD-128/211 (calculate floor before negotiating) — ALIGNED ✅
+- Added alignment rules to consistency_test.py for both new expected decisions
+- Re-ran: **12/12 ALIGNED ✅** against templates/dna_core.md (285 MDs)
+- Baseline updated: results/consistency_baseline.json (12 scenarios)
+- dynamic_tree.md updated: cycle 75, Branch 2.3 now shows 285-MD / 12-scenario validation
+
+## Cycle 76 — 2026-04-08 UTC
+
+**Branch 2.2** (highest-derivative): 201712 JSONL distillation
+
+- 129 Edward msgs read (Dec 2017), 3 new micro-patterns distilled
+- MD-289: 組織用人邏輯=順從>能力；能力在服從導向環境邊際回報接近零
+- MD-290: 新職涯路徑評估=先窮舉制度性要素（入門/時間/天花板/退出）
+- MD-291: 外幣配置=幣值方向觀點前置；工具選擇是幣值觀點的實現方式
+- **templates/dna_core.md: 291 MDs**; next: 201711

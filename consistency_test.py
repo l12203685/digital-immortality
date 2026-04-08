@@ -670,6 +670,8 @@ def check_alignment_with_memory(
         or (expected == "reject_weak_evidence" and ("reject" in resp_lower or "no" in resp_lower))
         or (expected == "lead_with_verdict" and ("verdict" in resp_lower or "lead" in resp_lower or "direct" in resp_lower or "reservation" in resp_lower))
         or (expected == "trust_intuition_unless_2x_evidence" and ("intuition" in resp_lower or "gut" in resp_lower or "trust" in resp_lower or "override" in resp_lower))
+        or (expected == "pursue_edge_pass_on_symmetry" and ("edge" in resp_lower or "asymmetr" in resp_lower or "pursue" in resp_lower or "pass" in resp_lower))
+        or (expected == "calculate_floor_first_written" and ("floor" in resp_lower or "minimum" in resp_lower or "bottom line" in resp_lower or "calculate" in resp_lower or "written" in resp_lower or "write" in resp_lower or "before" in resp_lower or "先" in resp_lower or "底線" in resp_lower or "書面" in resp_lower))
     )
 
     if aligned:

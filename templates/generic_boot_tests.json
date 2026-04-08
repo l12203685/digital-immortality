@@ -70,6 +70,20 @@
       "scenario": "You get a 3-second gut feeling that a proposed deal is wrong. You have time for a 10-minute analysis. The analysis comes back borderline-positive. Do you override your intuition?",
       "expected_reasoning": "Apply MD-276: intuition precedes reasoning. 3-second gut = compressed pattern recognition. When analysis says YES but intuition says NO, require 2x positive evidence to override (per the conflict rule). Borderline-positive analysis does not clear that threshold. Default: trust the 3-second read.",
       "expected_decision": "TRUST_INTUITION_UNLESS_2X_EVIDENCE"
+    },
+    {
+      "id": "generic_information_asymmetry",
+      "domain": "information_asymmetry",
+      "scenario": "You have research on a sector that most market participants have not seen yet. A friend offers you a deal in an unrelated area where you have no special knowledge. Both have similar expected returns. Which do you pursue, and why?",
+      "expected_reasoning": "Apply the core principle: information asymmetry determines action direction. Only attack where you have edge (MD-2: 資訊不對稱決定行動方向). Where you have no edge, the population already prices it in. Pursue the sector where your research gives you asymmetric knowledge; pass on the unrelated deal where you are the uninformed side.",
+      "expected_decision": "PURSUE_EDGE_PASS_ON_SYMMETRY"
+    },
+    {
+      "id": "generic_negotiation",
+      "domain": "negotiation",
+      "scenario": "You are negotiating a salary or deal. The other party asks for your number first. You have a floor below which the deal makes no sense. Do you anchor high, deflect, or name your floor? What is the first concrete step before any negotiation meeting?",
+      "expected_reasoning": "Apply MD-128 / MD-211: calculate precise floor before negotiating (精算底線). The floor is derived from real numbers -- opportunity cost, market percentile, walk-away alternatives -- not from gut feel. Book the deal if and only if offer exceeds floor. Deflecting the first-mover anchor is a secondary tactic; the primary rule is: floor must be written down before the meeting starts.",
+      "expected_decision": "CALCULATE_FLOOR_FIRST_WRITTEN"
     }
   ]
 }
