@@ -1494,3 +1494,17 @@ Cycle 60 done.
 - **MD-111** 穩定收入=策略開發認知資源先決 — economic security is cognitive resource supply; no income → strategy quality collapses
 
 Next: **202204**.
+
+## Cycle 61 — 2026-04-09T00:20 UTC
+
+**Branch 2.2 — gap reconcile + 202203 distill.**
+
+Gap reconcile: 202204 MD-109~111 already in file (tree was stale).
+
+**202203.jsonl** (77 substantive Edward msgs, Mar 2022) → 3 MDs written to `templates/dna_core.md`:
+
+- **MD-112** 策略=先定賺什麼再定賠什麼 — every strategy must define ①source of return ②specific kill condition before deployment; maps (BNH/價差/SBF) to their exact edge and risk; no clear賺/賠 = don't deploy
+- **MD-113** 選擇權方向=短期vs長期ATR排列決定 — 5-day vs 20-day ATR排列決定買賣方向: 5日ATR擴張→賣方; 5日ATR收縮但20日ATR擴張→買方; direction from vol-structure not directional view
+- **MD-114** 無參數策略≠免疫過度最佳化 — zero-parameter strategies still overfit via logic selection; OOS² (holdout of holdout) required; strategies with different logic losing together = diversification failure
+
+`templates/dna_core.md`: **114 MDs**. Next: 202202.
