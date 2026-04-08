@@ -1508,3 +1508,16 @@ Gap reconcile: 202204 MD-109~111 already in file (tree was stale).
 - **MD-114** 無參數策略≠免疫過度最佳化 — zero-parameter strategies still overfit via logic selection; OOS² (holdout of holdout) required; strategies with different logic losing together = diversification failure
 
 `templates/dna_core.md`: **114 MDs**. Next: 202202.
+
+## Cycle 33 — 2026-04-08 05:36:33 UTC
+
+Cycle 61 done.
+
+**Gap reconcile**: 202204 (MD-109~111) already in file.
+
+**202203 → MD-112~114:**
+- MD-112: 策略=先定賺什麼再定賠什麼 — no deploy without mapping ①return source ②kill condition
+- MD-113: 選擇權方向=5日vs20日ATR排列決定買賣方 — structural vol signal, not directional view
+- MD-114: 無參數≠免疫過度最佳化 — OOS² required; same-logic strategies co-losing = diversification failure
+
+`dna_core.md`: **114 MDs**. Next: 202202.
