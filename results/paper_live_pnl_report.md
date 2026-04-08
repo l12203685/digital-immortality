@@ -1,5 +1,5 @@
 # Paper-Live SHORT P&L Simulation
-> Updated 2026-04-09 UTC | 34 ticks | Entry: $71,509.90
+> Updated 2026-04-09 UTC | 35 ticks | Entry: $71,509.90
 
 ## Setup
 - Entry tick 1: BTC=$71,509.90 → SHORT
@@ -43,16 +43,17 @@
 | 32   | $71,114.01 | +$0.554 |
 | 33   | $71,083.18 | +$0.596 |
 | 34   | $71,108.75 | +$0.561 |
+| 35   | $71,136.74 | +$0.522 |
 
 ## Summary
-- **Current unrealized P&L: +$0.5612 (+0.56% on $100)**
+- **Current unrealized P&L: +$0.5218 (+0.52% on $100)**
 - Best case (MFE): +$0.7669 (tick 31, BTC=$70,961)
 - Worst case (MAE): $-1.3274
-- Signal consistency: SHORT x 34 ticks (100%)
-- MFE/MAE ratio: 0.58x
+- Signal consistency: SHORT x 35 ticks (100%)
+- MFE/MAE ratio: 0.39x
 
 ## Verdict
-SHORT signal persistent for 34 consecutive ticks. BTC drifted up slightly from tick 33 ($71,083→$71,109) — minor pullback. Position remains profitable. MFE still tick 31.
+SHORT signal persistent for 35 consecutive ticks. BTC continues slight drift up ($71,109→$71,137) — minor drawdown from MFE. Position profitable but fading; watching for regime flip.
 
 **Next action**: Set BINANCE_MAINNET_KEY/SECRET → run `python -m trading.mainnet_runner --tick`
 See docs/mainnet_activation_guide.md for exact steps.
