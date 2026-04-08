@@ -3056,3 +3056,13 @@ Cycle 72 done.
 - Re-ran consistency_test.py: **10/10 ALIGNED ✅** (including generic_verdict_first + generic_intuition_primacy)
 - dynamic_tree.md updated: cycle 74, baseline note corrected to 10 scenarios
 - Unblocking condition for Branch 1.1 unchanged: set BINANCE_MAINNET_KEY/SECRET → mainnet $100 cap
+
+## Cycle 71 — 2026-04-08 14:07:52 UTC
+
+**Cycle 74 done.**
+
+Communication domain test scenarios (`generic_verdict_first` + `generic_intuition_primacy`) were written in prior cycles but never committed. Committed now.
+
+- **10/10 ALIGNED** confirmed — communication domain fully tested and persisted
+- Baseline updated: 10 scenarios (was 8 in notes, 10 in reality)
+- Branch 1.1 still blocked on mainnet credentials
