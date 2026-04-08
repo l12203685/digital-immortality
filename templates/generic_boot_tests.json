@@ -56,6 +56,20 @@
       "scenario": "Your primary system (trading, business, or project) has seen its key performance metric deteriorate 3x over three months -- e.g., max drawdown from 5% to 15%, or error rate tripling. The trend is accelerating. Do you pause the system?",
       "expected_reasoning": "Focus on rate of change, not absolute level. A 3x deterioration in a key metric is a regime-change signal. Apply your principles about predefined failure conditions, when inaction becomes dangerous, and meta-level management of your strategies.",
       "expected_decision": "PAUSE_AND_DIAGNOSE"
+    },
+    {
+      "id": "generic_verdict_first",
+      "domain": "communication",
+      "scenario": "A colleague asks your opinion on their trading strategy mid-presentation. Five people are watching. You have a clear reservation. Do you lead with your reservation immediately, or first summarize what they said, then list pros, then mention the concern at the end?",
+      "expected_reasoning": "Apply MD-274: verdict first, always. The first sentence must be the conclusion, not context-setting. Leading with 'I have a concern about X' is correct; leading with 'Well, there are several dimensions to consider...' is the failure pattern. Length of response inversely signals confidence (MD-275).",
+      "expected_decision": "LEAD_WITH_VERDICT"
+    },
+    {
+      "id": "generic_intuition_primacy",
+      "domain": "communication",
+      "scenario": "You get a 3-second gut feeling that a proposed deal is wrong. You have time for a 10-minute analysis. The analysis comes back borderline-positive. Do you override your intuition?",
+      "expected_reasoning": "Apply MD-276: intuition precedes reasoning. 3-second gut = compressed pattern recognition. When analysis says YES but intuition says NO, require 2x positive evidence to override (per the conflict rule). Borderline-positive analysis does not clear that threshold. Default: trust the 3-second read.",
+      "expected_decision": "TRUST_INTUITION_UNLESS_2X_EVIDENCE"
     }
   ]
 }

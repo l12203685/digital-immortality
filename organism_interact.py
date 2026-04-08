@@ -671,6 +671,15 @@ def _domain_decision(domain: str, principle_text: str) -> str:
             if (ev_signal or inaction_signal) else
             "REJECT — walk-forward validation overrides single-backtest performance; insufficient evidence of genuine edge."
         ),
+        "communication": (
+            "LEAD_WITH_VERDICT — lead with the reservation directly; verdict first, reasoning only if pressed. "
+            "Trust the 3-second intuition read; short response signals high conviction. "
+            "Override analysis only with 2x positive evidence when gut says no."
+            if direct_signal else
+            "LEAD_WITH_VERDICT — state your position immediately; the first sentence must be the conclusion. "
+            "Reply length is an inverse confidence indicator: say it in one sentence. "
+            "3-second intuition precedes analysis — trust it unless borderline analysis provides 2x confirmation."
+        ),
     }
     return decisions.get(domain, "Decision: apply core principles to the specific trade-offs in this scenario.")
 

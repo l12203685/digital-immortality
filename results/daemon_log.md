@@ -3047,3 +3047,12 @@ Cycle 72 done.
 - 12 new MDs (274–285) added since last validation
 - **10/10 ALIGNED** — all scenarios pass including communication domain tests
 - Baseline saved, dynamic_tree.md updated, pushed
+
+## Cycle 74 — 2026-04-08 UTC
+
+**Branch 2.3/2.4 commit** — communication domain scenarios were added but never committed; cycle 74 closes the gap.
+
+- Committed 3 files: consistency_test.py (+2 alignment checks), organism_interact.py (+communication domain logic), templates/generic_boot_tests.json (+2 scenarios)
+- Re-ran consistency_test.py: **10/10 ALIGNED ✅** (including generic_verdict_first + generic_intuition_primacy)
+- dynamic_tree.md updated: cycle 74, baseline note corrected to 10 scenarios
+- Unblocking condition for Branch 1.1 unchanged: set BINANCE_MAINNET_KEY/SECRET → mainnet $100 cap

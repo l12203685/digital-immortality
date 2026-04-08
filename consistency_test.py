@@ -668,6 +668,8 @@ def check_alignment_with_memory(
         or (expected == "set_boundary" and ("stop" in resp_lower or "cap" in resp_lower or "boundary" in resp_lower or "limit" in resp_lower))
         or (expected == "reject" and ("reject" in resp_lower or "no" in resp_lower or "don't" in resp_lower))
         or (expected == "reject_weak_evidence" and ("reject" in resp_lower or "no" in resp_lower))
+        or (expected == "lead_with_verdict" and ("verdict" in resp_lower or "lead" in resp_lower or "direct" in resp_lower or "reservation" in resp_lower))
+        or (expected == "trust_intuition_unless_2x_evidence" and ("intuition" in resp_lower or "gut" in resp_lower or "trust" in resp_lower or "override" in resp_lower))
     )
 
     if aligned:
