@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T18:58+08",
+  "updated": "2026-04-08T19:09+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,15 +51,15 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 201810."
+      "text": "Next: 201808."
     },
     {
       "time": "just now",
-      "text": "Branch 2.2 — 201811 → MD-226~228 (228 MDs)"
+      "text": "Branch 2.2 — 201809 → MD-232~234 (234 MDs)"
     },
     {
       "time": "2026-04-08 UTC",
-      "text": "`templates/dna_core.md`: 228 MDs. Next: 201810."
+      "text": "`templates/dna_core.md`: 234 MDs. Next: 201808."
     },
     {
       "time": "2026-04-08 UTC",
@@ -67,12 +67,12 @@
     },
     {
       "time": "2026-04-08 UTC",
-      "text": "- 201811.jsonl: 72 Edward msgs; themes: poker→trading mindset, game selection..."
+      "text": "- 201809.jsonl: 917 Edward msgs; themes: poker range construction, couple fin..."
     }
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 228,
+    "total_mds": 234,
     "dna_core_lines": 76
   }
 }
