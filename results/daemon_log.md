@@ -2632,3 +2632,15 @@ Cycle 48 done and pushed.
 - MD-255: 教學設計從學習者問題出發，不從知識體系出發
 
 **Next: 201801.**
+
+## Cycle 50 — 2026-04-08 UTC
+
+**Branch 2.2 — 201801 distill → MD-256~258 (258 MDs total)**
+
+- 201801.jsonl: 43 substantive Edward msgs; themes: 主流媒體報虛擬貨幣=過熱訊號、顯卡差2~3千=近30%差距要算百分比、建議別人前先列優缺點清單
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-256** 主流媒體報導=落後指標；電視台開始報某資產時散戶已是最後買家
+  - **MD-257** 價格判斷=先算百分比再算絕對值；差兩三千=30%，不是「只差一點」
+  - **MD-258** 建議前先書面化優缺點清單=避免選擇性強調，讓被建議方有完整結構做決定
+
+`templates/dna_core.md`: **258 MDs**. Next: 201712.
