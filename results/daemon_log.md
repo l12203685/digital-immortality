@@ -4540,3 +4540,16 @@ Highest-derivative gap: queue ended May 19. No cross-domain exit framework in th
 - Queue extended to **May 21**, series now #01~#22
 
 **Next blocker:** Edward posts SOP #01 to start G5 compounding clock.
+
+## Cycle 148 — 2026-04-09T UTC
+
+**Cycle 148 done.**
+
+Highest-derivative gap: queue ended May 21 after SOP #22 — content engine dies when cadence runs out. SOP #07 covered regime routing at strategy level; no SOP covered regime detection as a *measurement discipline* with ATR mechanics, OOS confirmation, pool audit, and equity curve states.
+
+**What shipped:**
+- `docs/knowledge_product_23_regime_detection_sop.md` — Regime Detection & Strategy Rotation: 5-gate framework; G1 ATR(14) vs 30-day MA rotation signal / G2 rolling OOS ≥90 trades before confirming shift (MD-26) / G3 pool long/short audit ≥30% short-capable (MD-35) / G4 equity curve 3-state Normal/Warning/Stop (MD-75) / G5 slow rotation (no panic close); self-test: ATR below MA + 8% DD + FOMC in 3 days → RANGING + WARNING + 50% leverage cut; backing MDs: MD-25/26/27/75/35
+- `docs/publish_thread_sop23_twitter.md` — 12-tweet thread: *"Most traders lose not because their strategy is wrong — but because they're running the right strategy in the wrong regime."*
+- `docs/posting_queue.md` extended to **#01~#23** (May 23); 46-day target
+
+**Next blocker:** Edward posts SOP #01 to start G5 compounding clock.

@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#22
+# Twitter Posting Queue — SOP Series #01~#23
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -29,6 +29,7 @@
 | May 17 | #20 | publish_thread_sop20_twitter.md | "The trend looked fine. Then it was over. You were looking at the wrong number." | pending |
 | May 19 | #21 | publish_thread_sop21_twitter.md | "Most people don't have a financial freedom plan. They have a financial freedom fantasy." | pending |
 | May 21 | #22 | publish_thread_sop22_twitter.md | "You didn't have an exit strategy. You had a hope." | pending |
+| May 23 | #23 | publish_thread_sop23_twitter.md | "Most traders lose not because their strategy is wrong — but because they're running the right strategy in the wrong regime." | pending |
 
 ---
 
