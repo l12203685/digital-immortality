@@ -1481,3 +1481,16 @@ Cycle 59 done.
   3. **MD-111** 穩定收入=策略開發的認知資源先決條件 — no stable income → poor sleep → impaired cognition → strategy development becomes unreliable; economic security is cognitive resource supply, not emotional management
 
 `dna_core.md`: 108 → **111 MDs**. Next: 202204.
+
+## Cycle 8 — 2026-04-08 05:33:17 UTC
+
+Cycle 60 done.
+
+**Branch 2.2** — highest derivative (111 MDs accumulated, still 20+ months of JSONL to go).
+
+202205 (331 Edward msgs) → **MD-109~111 written to `templates/dna_core.md`:**
+- **MD-109** 機率估計=後驗更新非固定先驗 — Bayesian updating over observations, not static priors
+- **MD-110** 策略延伸=深度×廣度兩軸並進 — breadth first (multi-instrument), then depth (position scaling) on the lower-vol base
+- **MD-111** 穩定收入=策略開發認知資源先決 — economic security is cognitive resource supply; no income → strategy quality collapses
+
+Next: **202204**.
