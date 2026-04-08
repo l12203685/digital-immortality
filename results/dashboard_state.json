@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T06:28+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#32 COMPLETE → posting_queue.md updated (#01~#32, Apr 9–Jun 10); SOP #31 Parsimony fills complexity/evidence-ratio gap; SOP #32 Domain 8 健康資本 gap CLOSED ✅",
+  "updated": "2026-04-09T06:36+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#33 COMPLETE → posting_queue.md updated (#01~#33, Apr 9–Jun 12); SOP #32 Cognitive Capital Domain 8 健康資本 gap CLOSED ✅; SOP #33 Edge Decay publish thread fixed (duplicate removed)",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions pre-committed)",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -50,29 +50,29 @@
   ],
   "activity": [
     {
-      "time": "3min ago",
-      "text": "Next blocker: Edward posts SOP #01."
+      "time": "just now",
+      "text": "Next blocker: Edward posts SOP #01 on X."
     },
     {
-      "time": "3min ago",
-      "text": "- Queue extended to Jun 8 (#01~#31, 60-day target)"
+      "time": "just now",
+      "text": "- Committed and pushed"
     },
     {
-      "time": "3min ago",
-      "text": "- `docs/publish_thread_sop31_twitter.md` — hook: *\"Your strategy has 4 parame..."
+      "time": "just now",
+      "text": "- Dynamic tree: Branch 7.36 added, regime updated to SOP #01~#33 COMPLETE"
     },
     {
-      "time": "3min ago",
-      "text": "- `docs/knowledge_product_31_parsimony_complexity_sop.md` — 5 gates: mechanis..."
+      "time": "just now",
+      "text": "- Added all 3 new SOP files (knowledge_product_31/32 cognitive capital + 33 e..."
     },
     {
-      "time": "3min ago",
-      "text": "Shipped:"
+      "time": "just now",
+      "text": "- Resolved `posting_queue.md` merge conflict; Jun 12 slot for SOP #33 confirmed"
     }
   ],
   "stats": {
-    "daemon_cycles": 156,
+    "daemon_cycles": 158,
     "total_mds": 330,
-    "dna_core_lines": 426
+    "dna_core_lines": 87
   }
 }

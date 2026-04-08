@@ -4830,3 +4830,18 @@ Gap: `publish_thread_sop33_twitter.md` was a duplicate of SOP #32 Cognitive Capi
 **Series: SOP #01~#33 COMPLETE. All publish threads valid.**
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 158 — 2026-04-08 22:36:22 UTC
+
+**Cycle 158 done.**
+
+**Highest-derivative gap:** `publish_thread_sop33_twitter.md` was a duplicate of the SOP #32 Cognitive Capital thread — wrong title, wrong hook, wrong content. Plus `posting_queue.md` had an unresolved merge conflict. The series claimed "SOP #01~#33 COMPLETE" but #33 had no valid publish thread.
+
+**Concrete action:**
+- Rewrote `publish_thread_sop33_twitter.md` as the Edge Decay thread (10 tweets: G0 crowding pre-check → G1 baseline fingerprint → G2 survival_rate monitor → G3 Bayesian posterior → G4 response protocol → G5 depth×breadth replenishment → self-test)
+- Resolved `posting_queue.md` merge conflict; Jun 12 slot for SOP #33 confirmed
+- Added all 3 new SOP files (knowledge_product_31/32 cognitive capital + 33 edge decay)
+- Dynamic tree: Branch 7.36 added, regime updated to **SOP #01~#33 COMPLETE**
+- Committed and pushed
+
+**Next blocker:** Edward posts SOP #01 on X.
