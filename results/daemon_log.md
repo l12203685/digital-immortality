@@ -3381,3 +3381,14 @@ Branch 2.3 — consistency test extended to cover MD-315/317 (the two uncovered 
 - **20/20 ALIGNED ✅** (up from 18/18; all 318 MDs now have at least one consistency scenario)
 
 Next: Branch 1.1 mainnet (needs `BINANCE_MAINNET_KEY/SECRET`) or Branch 4.1 first non-Edward organism.
+
+## Cycle 94 — 2026-04-09T UTC
+
+**Branch 4.1** — first non-Edward organism validation.
+
+- `consistency_test.py templates/samuel_dna.md`: **19/20 ALIGNED** (1 DIVERGE: `generic_strategy_failure` → Samuel's action-bias DNA overrides pre-commit kill conditions — expected divergence, not system error)
+- Framework generalizes to non-Edward DNA ✓ — same test harness works, divergences surface real DNA differences
+- Edward baseline re-run: **20/20 ALIGNED ✅** (restored after Samuel run overwrote baseline.json)
+- Branch 4.1 status: partially unblocked — framework ready; next step requires Samuel in person to review/correct his DNA
+
+Next: Branch 1.1 mainnet (set BINANCE_MAINNET_KEY/SECRET) or deepen samuel_dna.md with more micro-decisions.

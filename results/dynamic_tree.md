@@ -57,6 +57,8 @@
 
 ### 4. 社交圈（ecosystem）
 - 4.1 第一個非 Edward organism（需要朋友參與 — Samuel?）
+  - samuel_dna.md exists ✓; consistency test run: **19/20 ALIGNED** (1 diverge: `generic_strategy_failure` → Samuel's action-bias overrides pre-commit kill conditions — expected divergence, not error)
+  - framework generalizes to non-Edward DNA ✓; next: Samuel reviews/corrects his DNA in person
 - 4.2 Organism collision protocol（specs ready）
 - 4.3 Discord Digital Organisms Server（channels ready, users=0）
 - 4.4 Collective intelligence（Phase 3）
@@ -80,7 +82,7 @@
 ## 當前 regime
 攻擊：1.1 Trading（testnet running，7-day window → mainnet small size）
 中性：2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed
-防禦：2.3 blocked API credit, 4.1 blocked on friend
+防禦：2.3 blocked API credit, 4.1 partially unblocked (samuel_dna tested 19/20)
 
 ## 已完成 milestones
 - dna_core.md 195 MDs operational（core + MD-01~MD-195 written ✓）
