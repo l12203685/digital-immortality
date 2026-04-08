@@ -921,3 +921,15 @@ Branch 2.2 — 202403 (386 Edward msgs, Mar 2024) → MD-40~MD-42 written to `dn
 - **MD-42** 最佳化陷阱信號 — "I wouldn't use this strategy" = overfit warning; domain intuition is the early detector
 
 dna_core.md: 119 lines, **42 MDs**. Next: 202402.
+
+## Cycle 42 — 2026-04-08T14:45 UTC
+
+**Branch 2.2 — 202402 JSONL distilled.**
+
+202402 (1,770 Edward msgs, Feb 2024) distilled → 3 new micro-patterns written to `dna_core.md`:
+
+- **開發/生產環境分離** — 交易排程系統需與開發環境物理隔離；混用=人為干預風險+環境污染；生產環境是神聖的
+- **相關係數前置** — 策略想法第一步=先量化核心假設的相關係數；data-first順序：量化假設→確認相關→設計機制→建系統
+- **獲利確認再擴張** — 先讓交易穩定獲利再考慮其他方向；validate core first → then branch；防止精力稀釋
+
+dna_core.md: 75 lines, **45 MDs**. Next: 202401.
