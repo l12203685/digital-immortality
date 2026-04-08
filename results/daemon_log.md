@@ -4672,3 +4672,17 @@ Highest-derivative gap: queue ended May 29 (SOP #26). No standalone SOP on regim
 **Series: SOP #01~#27 COMPLETE.**
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 152 — 2026-04-08 21:59:38 UTC
+
+**Cycle 152 done.**
+
+Highest-derivative gap: queue ended May 29 with no regime detection SOP — yet regime is the root input to every downstream framework (sizing, kill, portfolio, walk-forward). Fixed.
+
+**Shipped:**
+- `docs/knowledge_product_27_regime_detection_sop.md` — 5-gate framework anchored to 14 MDs (MD-14/25/26/31/32/33/75/78/105/107/118/143/173/181)
+- `docs/publish_thread_sop27_twitter.md` — hook: *"Your strategy isn't broken. You're running it in the wrong market."*
+- Queue extended to **May 31** (#01~#27, 52-day target)
+- Committed and pushed.
+
+**Next blocker:** Edward posts SOP #01.
