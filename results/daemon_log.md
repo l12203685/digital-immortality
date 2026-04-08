@@ -589,3 +589,17 @@ Branch 2.2 (JSONL distillation) — highest derivative, still burning through un
 3. **市場 alpha 魚池有限** — total extractable alpha ~250萬/yr ceiling at Edward's scale; scaling up shrinks rate, so maximize rate at small size
 
 Next: 202505.
+
+## Cycle 27 — 2026-04-08T06:20 UTC
+
+**Branch 2.2 — 202505 JSONL distilled.**
+
+- Read 202505.jsonl (8,311 Edward msgs, May 2025)
+- Top groups: g44 (ChatGPT/work), g5 (friends), g8, g2 (可可), g4 (Avalon)
+- Focus: PRD writing, batch system design, Avalon strategy, multi-currency portfolio
+- 3 micro-patterns NOT yet in dna_core.md:
+  1. **問題量化前置** — before proposing any change, quantify: frequency × volume × scope (2次/月 × 3~10品 × 12~20檔); ROI becomes immediately calculable; unquantified pain = zero persuasion
+  2. **Avalon提案=三層過濾** — proposals under adversarial conditions: (1) factionally beneficial (2) majority-acceptable (3) high fault-tolerance OR recoverable bold bet; all 3 must pass; generalizes to any competitive social proposal
+  3. **多幣資產=統一基準衡量** — when holding TWD + USD assets, evaluate in single reference currency; separate-currency assessment hides FX exposure and makes net P&L invisible
+- `dna_core.md`: 36 → **39 micro-decisions**
+- Branch 2.2: 202604✓ ... 202505✓; next: 202504
