@@ -719,3 +719,15 @@ Branch 2.2 (highest derivative — JSONL distillation). Processed **202411.jsonl
 - **MD-18 資產三桶獨立** — 台股ETF/美股ETF/加密分三桶；各桶獨立決策；單桶爆倉不傳染；hard stop per bucket
 
 Branch 2.2 next: **202410**.
+
+## Cycle 7 — 2026-04-08 03:36:47 UTC
+
+**Cycle 33 done.**
+
+Branch 2.2 — 202411.jsonl (11,226 Edward msgs, Nov 2024). 3 micro-decisions **actually written** to `templates/dna_core.md` (now MD-01~MD-18, 87 lines):
+
+- **MD-16** ATR加權口數 — 低ATR→多做多；高ATR→多做空；波動率決定方向配置
+- **MD-17** 策略失效Loop — 失效是必然；loop本身就是流程不是失敗
+- **MD-18** 資產三桶獨立 — 台股/美股/加密各桶獨立；hard stop per bucket
+
+Next: **202410**.
