@@ -1443,3 +1443,17 @@ Branch 2.2 — 202206 JSONL (7,876 Edward msgs, Jun 2022) → 3 new micro-decisi
 - **MD-105**: 市場三態=剪刀石頭布 — trend/volatile-range/tight-range; no all-state winner; build complementary pool
 
 `dna_core.md`: 102 → **105 MDs**. Next: 202205.
+
+## Cycle 59 — 2026-04-08T23:30 UTC
+
+**202206 gap reconcile + 202205 distill.**
+
+Gap reconcile: 202206 MD-103~105 already in file (written by prior cycle — 噱爆優先開發/策略合作指標先對齊/市場三態剪刀石頭布). Tree was stale.
+
+**202205.jsonl** (66 substantive Edward msgs, May 2022) → 3 MDs written to `templates/dna_core.md`:
+
+- **MD-106** 公開指標=邊際edge趨零 — using publicly-traded pivot levels (highest(h,len), highada, close[1]) means edge is competed away; custom entry logic is required for structural edge
+- **MD-107** 年度風暴比=跨年Regime偵測器 — YoY storm ratio tracking (2018:7.3→2022:2.1) is itself a regime detector; ratio < 30% of historical = root-cause regime shift requiring full recalibration
+- **MD-108** 技術合作=角色邊界先書面確認 — before any code collaboration, confirm in writing: ownership, contribution scope, exit conditions; unconfirmed = unlimited time/code extraction
+
+`templates/dna_core.md`: **108 MDs**. Next: 202204.
