@@ -2450,3 +2450,15 @@ Next: 201810.
   - **MD-231** 工作不開心=換公司非換職能 — 測試法：想像在夢想公司做同樣工作，若願意=問題在組織文化非職能
 
 `templates/dna_core.md`: **231 MDs**. Next: 201809.
+
+## Cycle 41 — 2026-04-08 UTC
+
+**Branch 2.2 — 201809 distill → MD-232~234 (234 MDs total)**
+
+- 201809.jsonl: 917 Edward msgs; themes: poker range construction, couple financial design, technical consulting pricing
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-232** 撲克x/r range = 強弱混合原則，純強牌線路可被無限利用 — bluff候選：turn有多攻擊牌 OR 8+outs draw；推廣到策略多樣性
+  - **MD-233** 伴侶財務 = 共帳支持生活費 + 各自被動收入雙層設計 — 財務共同體≠財務合併；各自ETF/股息積累
+  - **MD-234** 急件技術諮詢定價 = 截止日緊 × 稀缺技能 × 無替代方案 = 溢價正當性最高 — 應按「無替代方案成本」定價，非投入時間成本
+
+`templates/dna_core.md`: **234 MDs**. Next: 201808.
