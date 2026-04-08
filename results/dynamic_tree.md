@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T16:30 UTC (cycle 46)
+> 最後更新：2026-04-08T17:00 UTC (cycle 47)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -34,7 +34,7 @@
 
 ### 2. 行為等價（核心能力）
 - 2.1 DNA 品質：10 micro-decision patterns from JSONL integrated ✓
-- 2.2 微決策學習：202604 ✓; 202601 ✓; 202602 ✓; 202603 ✓; 202512 ✓; 202511 ✓; **MD-01~MD-15 寫入dna_core.md ✓** (cycles 22+29+30); 202510 ✓; 202509 ✓; 202508 ✓; 202507 ✓; 202506 ✓; 202505 ✓; 202504 ✓; 202503 ✓; 202502 ✓; 202501 ✓; 202412 ✓; 202411 ✓; **202410 ✓ → MD-19~MD-21**; **202409 ✓ → MD-25~MD-27**; **202408 ✓ → MD-28~MD-30**; **202407 ✓ → MD-31~MD-33**; **202406 ✓ → MD-34~MD-36**; **202405 ✓ → MD-34~MD-36**; **202404 ✓ → MD-37~MD-39**; **202403 ✓ → MD-40~MD-42**; **202402 ✓ → MD-43~MD-45**; **202401 ✓ → MD-43~MD-45**; **202312 ✓ → MD-46~MD-48**; **202311 ✓ → MD-49~MD-51**; **202310 ✓ → MD-52~MD-54**; next: 202309
+- 2.2 微決策學習：202604 ✓; 202601 ✓; 202602 ✓; 202603 ✓; 202512 ✓; 202511 ✓; **MD-01~MD-15 寫入dna_core.md ✓** (cycles 22+29+30); 202510 ✓; 202509 ✓; 202508 ✓; 202507 ✓; 202506 ✓; 202505 ✓; 202504 ✓; 202503 ✓; 202502 ✓; 202501 ✓; 202412 ✓; 202411 ✓; **202410 ✓ → MD-19~MD-21**; **202409 ✓ → MD-25~MD-27**; **202408 ✓ → MD-28~MD-30**; **202407 ✓ → MD-31~MD-33**; **202406 ✓ → MD-34~MD-36**; **202405 ✓ → MD-34~MD-36**; **202404 ✓ → MD-37~MD-39**; **202403 ✓ → MD-40~MD-42**; **202402 ✓ → MD-43~MD-45**; **202401 ✓ → MD-43~MD-45**; **202312 ✓ → MD-46~MD-48**; **202311 ✓ → MD-49~MD-51**; **202310 ✓ → MD-52~MD-54**; **202309 ✓ → MD-55~MD-57**; next: 202308
 - 2.3 Validation：OOS 5/5 self-scored ✓, cross-instance prepped but blocked on API credit
   - consistency_test.py: --use-memory + --auto-suggest now combined — memory context flows into suggestions ✓
 - 2.4 Response latency：三秒 vs 三段推理，差距仍在
@@ -144,4 +144,5 @@
 - 2026-04-08T16:00 UTC: cycle 45 — Branch 2.2: 202311 JSONL read (158 Edward msgs, Nov 2023), 3 new micro-patterns → dna_core.md MD-49~MD-51 (篩選器清單化逐步研究/多條件評分>單條件觸發/利差套利門檻框架); file now 128 lines, 51 MDs; next: 202310
 - 2026-04-08T16:30 UTC: cycle 46 — Branch 2.2: 202310 JSONL read (2,942 Edward msgs, Oct 2023), 3 new micro-patterns → dna_core.md MD-52~MD-54 (指數ETF=政府護盤結構/職涯EV=時薪反算/教授判別力>教授內容); file now 131 lines, 54 MDs; next: 202309
 - 2026-04-08T16:00 UTC: cycle 45 — **2 parallel**: (A) 202311 JSONL read (158 Edward msgs, Nov 2023) → MD-49~MD-51 (篩選器清單化逐步研究/多條件評分>單條件觸發/利差套利門檻框架); file 128 lines, 51 MDs; next: 202310. (B) RSIFilter + _rsi() added to trading/strategies.py → 8 strategies; DualMA_RSI + DualMA_RSI_filtered in NAMED_STRATEGIES
+- 2026-04-08T17:00 UTC: cycle 47 — Branch 2.2: 202309 JSONL read (193 Edward msgs, Sep 2023), 3 new micro-patterns → dna_core.md MD-55~MD-57 (框架跨域=真正內化/槓桿決策先代數化/策略開發先定搜尋空間); file now 134 lines, 57 MDs; next: 202308
 
