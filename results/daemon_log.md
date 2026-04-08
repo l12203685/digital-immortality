@@ -2192,3 +2192,15 @@ Next: 202002 (verify).
 - **MD-207** 固定收益評估=流動性門檻先卡 — 「國外投資9%還不能馬上提款，蠻不划算的」；第一步先問：能否提前退出+代價多少；流動性=隱形報酬；先卡流動性門檻再比報酬率
 
 `LYH/agent/dna_core.md`: **207 MDs**. Next: 201911.
+
+## Cycle 22 — 2026-04-08 09:16:17 UTC
+
+Done. Branch 2.2 (JSONL distillation) — highest derivative.
+
+**201912.jsonl** (175 Edward msgs, Dec 2019) → 3 new micro-decisions written to `dna_core.md` (204 → **207**):
+
+- **MD-205** 邏輯正確×前提錯誤=可接受虧損 — post-trade review必須分前提層vs.邏輯層；只有邏輯層錯才是流程問題；把前提錯誤當流程失敗=懲罰正確推理
+- **MD-206** 人脈介紹=用完沉默+回報結果 — 台新MA案例；一次性消費，用完降低摩擦，以結果回報替代持續請求
+- **MD-207** 固定收益評估=流動性門檻先卡 — 流動性是隱形報酬，先卡流動性門檻再比報酬率
+
+Both repos pushed. Next: 201911.

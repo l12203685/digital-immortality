@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T16:51+08",
+  "updated": "2026-04-08T17:16+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 202002 (verify)."
+      "text": "Both repos pushed. Next: 201911."
     },
     {
-      "time": "2026-04-08T UTC",
-      "text": "`LYH/agent/dna_core.md`: 198 MDs. Next: 202002 (verify)."
+      "time": "just now",
+      "text": "201912.jsonl (175 Edward msgs, Dec 2019) → 3 new micro-decisions written to `..."
     },
     {
-      "time": "2026-04-08T UTC",
-      "text": "Branch 2.2 — 202003 distill → MD-196~198 (198 MDs total):"
-    },
-    {
-      "time": "7min ago",
-      "text": "Next: 202003 (verify gap)."
+      "time": "just now",
+      "text": "Done. Branch 2.2 (JSONL distillation) — highest derivative."
     },
     {
       "time": "2026-04-09T UTC",
-      "text": "`LYH/agent/dna_core.md`: 195 MDs. Next: 202003 (verify)."
+      "text": "`LYH/agent/dna_core.md`: 207 MDs. Next: 201911."
+    },
+    {
+      "time": "2026-04-09T UTC",
+      "text": "- Focus: 台新MA面試末段、選舉討論、投資操作(升息判斷/外資抬轎)、另類投資評估"
     }
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 198,
+    "total_mds": 207,
     "dna_core_lines": 76
   }
 }
