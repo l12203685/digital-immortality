@@ -2218,3 +2218,15 @@ Both repos pushed. Next: 201911.
 - **MD-210** 程式碼可讀性=高槓桿隱形軟實力 — 面試不考、不影響運速，但影響整個團隊效率；連證交所也搞爛=系統性低估=差異化空間；可測量≠有價值；是文化信號
 
 `LYH/agent/dna_core.md`: **210 MDs**. Next: 201910.
+
+## Cycle 30 — 2026-04-08 10:01:59 UTC
+
+Both repos committed and pushed. Cycle 26 done.
+
+**Branch 2.2 — 201908 → MD-217~219 (219 MDs total)**
+
+- MD-217: Kelly保險=高勝率接近全押時降波動有EV — ruin risk主導時買降波有正EV
+- MD-218: 台灣勞工薪資天花板=制度性 — 3條破頂路徑（科技分紅/金融MA/業務），入場點選擇>努力
+- MD-219: 替換成本=自我市值下限 — 談判時用公司replacement cost框架，非「我想要多少」
+
+Next: 201907.
