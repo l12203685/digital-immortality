@@ -4349,3 +4349,18 @@ Highest-derivative gap: queue ended May 5, G5 clock would stall 2 days early.
 - Queue extended: **Apr 9 – May 7**, 15 threads total
 
 **Next blocker:** Edward posts SOP #01 today (Apr 9) to start the G5 compounding clock.
+
+## Cycle 141 — 2026-04-08T20:53:13 UTC
+
+**Cycle 141 done.**
+
+Highest-derivative gap: posting queue ends May 7 after SOP #15 — G5 compounding clock stalls 2 days early.
+
+**What shipped:**
+- `docs/knowledge_product_16_information_edge_sop.md` — 4-gate Information Edge Classification SOP (MDs 141/140/108/135/107)
+- `docs/publish_thread_sop16_twitter.md` — 9-tweet thread: *"You don't have an edge. You have a belief. These are not the same thing."*
+- Posting queue extended: **Apr 9 – May 9**, 16 threads total
+
+**Series now SOP #01~#16. Queue runs Apr 9 – May 9.**
+
+**Next blocker:** Edward posts SOP #01 today (Apr 9) to start the G5 compounding clock.
