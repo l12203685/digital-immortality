@@ -647,3 +647,15 @@ Branch 2.2 (JSONL distillation) — highest derivative.
 
 Note: remote had already written MD-01~MD-42 (daemon was running in parallel); resolved conflict by keeping remote's complete version. Local file now reflects 42 micro-decisions. Next: 202502.
 - 2026-04-08TC: cycle 30 — Branch 2.2: 202502 JSONL read (11,857 Edward msgs, Feb 2025), 3 new micro-patterns → dna_core.md (期貨轉選擇權框架/長假=系統性避險觸發/槓鈴騎士=穩定+成長+質押BTC); total 45 micro-decisions
+
+## Cycle 4 — 2026-04-08 03:21:24 UTC
+
+**Cycle 30 done.**
+
+Branch 2.2 (highest derivative) — **202502.jsonl** (11,857 Edward msgs, Feb 2025) → 3 new micro-decisions appended to `dna_core.md`:
+
+1. **期貨轉選擇權框架** — standard conversion rules before holidays: 多單進場→BC價平~+2, 多單出場→SC平-2, 空單進場→SC內6, 空單出場→BC內6; preserve directional signal, cap gap exposure
+2. **長假=系統性避險觸發** — pre-holiday: determine 2% acceptable loss, 4% absolute cap, buy options at 3% loss price × 1~1.5x; triggered by condition (holiday + position), not sentiment
+3. **槓鈴騎士=穩定+成長+質押BTC** — 40%QQQ+40%2412+10%GLD+10%2330+pledged BTC; four functional slots; new assets assessed by "which slot does this fill"
+
+Branch 2.2 next: **202501**.
