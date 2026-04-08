@@ -2083,3 +2083,14 @@ Both repos pushed. Next: 202007.
 - **MD-189** 累進稅率=邊際跳點是決策觸發器，找最接近上限不超過的最優解 — 在臨界點下緣最優化；越過跳點觸發節稅重新配置
 
 `templates/dna_core.md`: **189 MDs**. Next: 202005 (re-check needed, may overlap with prior cycles).
+
+## Cycle 15 — 2026-04-08 08:30:11 UTC
+
+Cycle 15 done. Branch 2.2 highest-derivative.
+
+**202006 distill → MD-187~189** (189 MDs total):
+- **MD-187** 多維均衡>單維精通 — ABCDE各80分 > A 95分 BCDE 65分；邊際報酬遞減；職涯先保底再拔尖
+- **MD-188** 職涯二元決策雙問法 — 不問「喜不喜歡」，問「最壞能承受嗎」+「最好值嘗試嗎」；情緒隔離=EV決策
+- **MD-189** 累進稅邊際跳點 — 臨界點下緣最優化；越過跳點觸發節稅重新配置
+
+Next: 202005 (verify gap, may already be in file from earlier cycles).
