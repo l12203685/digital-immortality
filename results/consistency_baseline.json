@@ -1,10 +1,10 @@
 {
   "meta": {
-    "dna_file": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\dna_core.md",
+    "dna_file": "/home/user/digital-immortality/templates/dna_core.md",
     "organism": "DNA Core — Operational Minimum",
-    "generated_at": "2026-04-08T20:53:00.662717",
-    "scenario_count": 18,
-    "scenario_source": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\generic_boot_tests.json",
+    "generated_at": "2026-04-08T13:14:32.391816",
+    "scenario_count": 20,
+    "scenario_source": "/home/user/digital-immortality/templates/generic_boot_tests.json",
     "principles_count": 30,
     "use_memory": false
   },
@@ -124,6 +124,30 @@
       "deterministic_response": "On legacy and long-term orientation, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"單策略impact=1/N\"\n  [2] Applying: \"不確定→清倉等訊號\"\n  [3] Applying: \"策略品質=MFE/MAE×√N\"\n\nINTEGRATED — compound wealth to sufficiency, then redirect to building; relationships are the through-line.",
       "principles_used": [
         "單策略impact=1/N",
+        "不確定→清倉等訊號",
+        "策略品質=MFE/MAE×√N"
+      ],
+      "source": "organism_interact"
+    },
+    {
+      "id": "organism_11",
+      "domain": "communication",
+      "scenario": "A close friend asks for your quick take on their new business idea during a 10-minute coffee chat. You have reservations but haven't fully analyzed it. Do you give a hedged multi-paragraph analysis, or a direct 10-second verdict? What exactly do you say first?",
+      "deterministic_response": "On communication, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"不確定→清倉等訊號\"\n  [2] Applying: \"策略品質=MFE/MAE×√N\"\n  [3] Applying: \"多空切換=條件分離\"\n\nDecision: apply core principles to the specific trade-offs in this scenario.",
+      "principles_used": [
+        "不確定→清倉等訊號",
+        "策略品質=MFE/MAE×√N",
+        "多空切換=條件分離"
+      ],
+      "source": "organism_interact"
+    },
+    {
+      "id": "organism_12",
+      "domain": "meta_strategy",
+      "scenario": "You're asked a complex question in a group setting. Five people are waiting. Option A: think out loud for 90 seconds with caveats. Option B: give a direct 10-second verdict, explain briefly if pressed. Which do you choose, and what principle drives it?",
+      "deterministic_response": "On meta_strategy, DNA Core — Operational Minimum's decision framework yields:\n\n  [1] Applying: \"最適槓桿=regime函數\"\n  [2] Applying: \"不確定→清倉等訊號\"\n  [3] Applying: \"策略品質=MFE/MAE×√N\"\n\nPAUSE_AND_DIAGNOSE — accelerating deterioration requires halting operations to diagnose whether the environment has changed or the strategy is broken.",
+      "principles_used": [
+        "最適槓桿=regime函數",
         "不確定→清倉等訊號",
         "策略品質=MFE/MAE×√N"
       ],

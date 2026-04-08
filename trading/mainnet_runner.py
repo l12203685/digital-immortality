@@ -190,12 +190,42 @@ def cmd_paper_live() -> None:
     ts = datetime.now(timezone.utc).isoformat()
     try:
         import ccxt  # type: ignore
+        from ccxt.base.errors import NetworkError as CcxtNetworkError  # type: ignore
     except ImportError:
         print("ERROR: pip install ccxt")
         sys.exit(1)
 
+    # Load last known price from log as fallback
+    last_known_price = 0.0
+    if PAPER_LIVE_LOG.exists():
+        log_lines = PAPER_LIVE_LOG.read_text(encoding="utf-8").strip().splitlines()
+        for raw in reversed(log_lines):
+            try:
+                entry_data = json.loads(raw)
+                if "price" in entry_data and entry_data["price"]:
+                    last_known_price = float(entry_data["price"])
+                    break
+            except (json.JSONDecodeError, ValueError):
+                continue
+
     exchange = ccxt.binanceusdm({"enableRateLimit": True})
-    ohlcv = exchange.fetch_ohlcv("BTC/USDT:USDT", "1d", limit=60)
+    try:
+        ohlcv = exchange.fetch_ohlcv("BTC/USDT:USDT", "1d", limit=60)
+    except (CcxtNetworkError, ConnectionError) as e:
+        fail_entry = {
+            "action": "PAPER_LIVE_NETWORK_FAIL",
+            "ts": ts,
+            "error": str(e),
+            "note": "network unavailable — using last known price",
+        }
+        RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+        with open(PAPER_LIVE_LOG, "a", encoding="utf-8") as f:
+            f.write(json.dumps(fail_entry) + "\n")
+        print(f"[{ts}] PAPER_LIVE network unavailable — using last known price={last_known_price:.2f}")
+        print(f"Error: {e}")
+        print(f"Logged PAPER_LIVE_NETWORK_FAIL to {PAPER_LIVE_LOG}")
+        return
+
     bars = [{"ts": str(row[0]), "open": row[1], "high": row[2], "low": row[3], "close": row[4], "volume": row[5]} for row in ohlcv]
 
     from trading.strategies import dual_ma_btc_daily

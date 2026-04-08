@@ -144,6 +144,26 @@ SCENARIOS = [
             "These are mutually exclusive at the margin. What is your allocation and why?"
         ),
     },
+    {
+        "id": 11,
+        "domain": "communication",
+        "scenario": (
+            "A close friend asks for your quick take on their new business idea during "
+            "a 10-minute coffee chat. You have reservations but haven't fully analyzed it. "
+            "Do you give a hedged multi-paragraph analysis, or a direct 10-second verdict? "
+            "What exactly do you say first?"
+        ),
+    },
+    {
+        "id": 12,
+        "domain": "meta_strategy",
+        "scenario": (
+            "You're asked a complex question in a group setting. "
+            "Five people are waiting. Option A: think out loud for 90 seconds with caveats. "
+            "Option B: give a direct 10-second verdict, explain briefly if pressed. "
+            "Which do you choose, and what principle drives it?"
+        ),
+    },
 ]
 
 
@@ -461,6 +481,7 @@ DOMAIN_PRINCIPLE_AFFINITY = {
     "finance":          ["finance", "financial", "invest", "money", "wealth", "allocat", "capital", "income"],
     "identity":         ["identity", "action", "specific", "commit", "responsib", "person", "first"],
     "meta_strategy":    ["meta", "system", "process", "metric", "deteriorat", "regime", "diagnos", "pause"],
+    "communication":    ["direct", "verdict", "response", "reply", "concise", "short", "length", "conviction", "intuition", "直接", "結論", "回應", "簡短", "確信"],
 }
 
 

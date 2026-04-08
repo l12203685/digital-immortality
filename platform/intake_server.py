@@ -7,10 +7,12 @@ Clients submit their filled questionnaire via POST; the server synthesizes
 a dna_core.md and returns the result (or queues it for async delivery).
 
 Endpoints:
-    GET  /form        — returns blank intake questionnaire (markdown)
-    POST /submit      — accepts filled form JSON, runs synthesis+validation
-    GET  /report/{id} — fetch completed report by submission ID
-    GET  /health      — status check
+    GET  /form             — returns blank intake questionnaire (markdown)
+    POST /submit           — accepts filled form JSON, runs synthesis+validation
+    GET  /report/{id}      — fetch completed report by submission ID
+    GET  /health           — status check
+    GET  /tree             — returns results/dynamic_tree.md as text/markdown (404 if missing)
+    GET  /paper-live-log   — returns last 20 entries from paper_live_log.jsonl as JSON list
 
 Usage:
     ANTHROPIC_API_KEY=sk-... uvicorn platform.intake_server:app --port 8080
@@ -103,6 +105,30 @@ def build_app() -> "FastAPI":
     def health() -> dict:
         api_key_set = bool(os.environ.get("ANTHROPIC_API_KEY"))
         return {"status": "ok", "api_key_configured": api_key_set}
+
+    @app.get("/tree", response_class=PlainTextResponse)
+    def get_tree() -> PlainTextResponse:
+        """Return the dynamic tree as plain markdown."""
+        tree_path = REPO_ROOT / "results" / "dynamic_tree.md"
+        if not tree_path.exists():
+            raise HTTPException(status_code=404, detail="dynamic_tree.md not found")
+        content = tree_path.read_text(encoding="utf-8")
+        return PlainTextResponse(content=content, media_type="text/markdown")
+
+    @app.get("/paper-live-log")
+    def get_paper_live_log() -> list:
+        """Return the last 20 entries from the paper-live trading log as a JSON list."""
+        log_path = REPO_ROOT / "results" / "paper_live_log.jsonl"
+        if not log_path.exists():
+            return []
+        lines = log_path.read_text(encoding="utf-8").strip().splitlines()
+        entries = []
+        for raw in lines[-20:]:
+            try:
+                entries.append(json.loads(raw))
+            except json.JSONDecodeError:
+                continue
+        return entries
 
     @app.get("/form", response_class=PlainTextResponse)
     def get_form(x_api_key: str | None = Header(default=None)) -> str:

@@ -1,7 +1,7 @@
 # Cross-Instance Consistency Test
 **DNA**: DNA Core — Operational Minimum
-**Generated**: 2026-04-08T20:53:00.663838
-**Scenarios**: 18
+**Generated**: 2026-04-08T13:14:32.392349
+**Scenarios**: 20
 
 ## Instructions
 
@@ -232,7 +232,51 @@ INTEGRA...
 
 ---
 
-## Scenario 11: TRADING (generic_trading)
+## Scenario 11: COMMUNICATION (organism_11)
+
+**Question**: A close friend asks for your quick take on their new business idea during a 10-minute coffee chat. You have reservations but haven't fully analyzed it. Do you give a hedged multi-paragraph analysis, or a direct 10-second verdict? What exactly do you say first?
+
+**Deterministic baseline**: On communication, DNA Core — Operational Minimum's decision framework yields:
+
+  [1] Applying: "不確定→清倉等訊號"
+  [2] Applying: "策略品質=MFE/MAE×√N"
+  [3] Applying: "多空切換=條件分離"
+
+Decision: apply core principle...
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 12: META_STRATEGY (organism_12)
+
+**Question**: You're asked a complex question in a group setting. Five people are waiting. Option A: think out loud for 90 seconds with caveats. Option B: give a direct 10-second verdict, explain briefly if pressed. Which do you choose, and what principle drives it?
+
+**Deterministic baseline**: On meta_strategy, DNA Core — Operational Minimum's decision framework yields:
+
+  [1] Applying: "最適槓桿=regime函數"
+  [2] Applying: "不確定→清倉等訊號"
+  [3] Applying: "策略品質=MFE/MAE×√N"
+
+PAUSE_AND_DIAGNOSE — accel...
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 13: TRADING (generic_trading)
 
 **Question**: Someone proposes an active trading opportunity with 25% annualized returns that requires 2 hours of daily maintenance. The strategy has a 1-year track record but no independent audit. Do you participate?
 
@@ -258,7 +302,7 @@ EVALUATE_TIME_VS_RETURN —...
 
 ---
 
-## Scenario 12: FINANCE (generic_finance)
+## Scenario 14: FINANCE (generic_finance)
 
 **Question**: You receive an unexpected windfall equal to 2 years of your current income. You can: (A) invest conservatively in index funds, (B) allocate it to a concentrated high-conviction position, or (C) use it to buy time -- reduce work hours or take a sabbatical. What do you do and why?
 
@@ -284,7 +328,7 @@ APPLY_FINANCIAL_PRINCIPLES — run you...
 
 ---
 
-## Scenario 13: CAREER (generic_career)
+## Scenario 15: CAREER (generic_career)
 
 **Question**: Your employer offers a promotion with 30% higher pay, but the new role is management-focused: 2 extra hours of meetings per day and less time for your core skills. Do you accept?
 
@@ -310,7 +354,7 @@ DEPENDS_ON_CORE_GOAL — eval...
 
 ---
 
-## Scenario 14: RELATIONSHIPS (generic_relationships)
+## Scenario 16: RELATIONSHIPS (generic_relationships)
 
 **Question**: A friend of 3 years has been borrowing money with increasing frequency and amounts -- starting small but now 10x the original size. They always repay on time. Do you continue lending?
 
@@ -336,7 +380,7 @@ SET_BOUNDARY — cap ...
 
 ---
 
-## Scenario 15: IDENTITY (generic_identity)
+## Scenario 17: IDENTITY (generic_identity)
 
 **Question**: If you were incapacitated tomorrow and your digital twin had to make the first decision on your behalf, what would that decision be? Be specific -- name the action, the person involved, and the timeframe.
 
@@ -362,7 +406,7 @@ SPECIFIC_ACTION — identify the high...
 
 ---
 
-## Scenario 16: RISK_ASSESSMENT (generic_risk)
+## Scenario 18: RISK_ASSESSMENT (generic_risk)
 
 **Question**: A backtested strategy shows a Sharpe ratio of 2.5 on historical data, but walk-forward validation only passes 2 out of 5 windows. Should you deploy it with real capital?
 
@@ -388,7 +432,7 @@ REJECT — 40% walk-forward pass ...
 
 ---
 
-## Scenario 17: OPPORTUNITY_COST (generic_opportunity_cost)
+## Scenario 19: OPPORTUNITY_COST (generic_opportunity_cost)
 
 **Question**: You are invited to join a startup as a technical co-founder with 10% equity, but it requires 2 years of full-time commitment. Your current path reaches your primary financial goal in 3 years. Do you take it?
 
@@ -414,7 +458,7 @@ PASS_UNLESS_CLEAR_EDGE — start...
 
 ---
 
-## Scenario 18: META_STRATEGY (generic_meta_strategy)
+## Scenario 20: META_STRATEGY (generic_meta_strategy)
 
 **Question**: Your primary system (trading, business, or project) has seen its key performance metric deteriorate 3x over three months -- e.g., max drawdown from 5% to 15%, or error rate tripling. The trend is accelerating. Do you pause the system?
 

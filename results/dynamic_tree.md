@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08 UTC (cycle 60)
+> 最後更新：2026-04-08 UTC (cycle 62)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -39,7 +39,7 @@
 - 2.3 Validation：OOS 5/5 self-scored ✓, **273-MD consistency test 8/8 ALIGNED ✓** (cycle 57)
   - consistency_test.py: --use-memory + --auto-suggest now combined — memory context flows into suggestions ✓
   - baseline saved: results/consistency_baseline.json (8 scenarios, all ALIGNED at 273-MD scale)
-- 2.4 Response latency：三秒 vs 三段推理，差距仍在
+- 2.4 Response latency：MD-274~276 added (直接回應/回覆長度=確信度反指標/三秒直覺先行) ✓; scenarios 11+12 added (communication/meta_strategy); gap partially closed
 - 2.5 退休計畫 context：templates/example_dna.md §8 added ✓ (target, tradeoffs, non-negotiables, principle connections)
 
 ### 3. 持續學習（成長引擎）
@@ -63,7 +63,7 @@
 - 5.5 CI pipeline：ci.yml rewritten (Py 3.11+3.12 matrix, 8 steps, README ref validation) ✓
 - 5.6 install.sh hardened (set -euo pipefail, curl -f, download helper) ✓
 - 5.7 Health dashboard：dashboard.py ✓ (8 sections: boot/exports/cold-start/memory/daemon/trading/tree/staging, --json/--watch)
-- 5.3 Web platform：Phase 2-3
+- 5.3 Web platform：GET /tree + GET /paper-live-log added ✓ (Phase 2 live); paper-live NetworkError handled gracefully ✓
 - 5.4 Documentation：README + SKILL_zh-TW updated ✓
 
 ### 6. 存活冗餘（anti-fragile）
