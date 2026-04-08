@@ -4483,3 +4483,17 @@ Gap found: `posting_queue.md` was stale at SOP #01~#16 while the series is now c
 - `results/daemon_log.md` — cycle 145 appended
 
 **Next blocker:** Edward posts SOP #01 to start the G5 compounding clock.
+
+## Cycle 146 — 2026-04-09T UTC
+
+**Cycle 146 done.**
+
+Highest-derivative gap: queue ended May 17 at SOP #20 — G5 compounding clock dies after last post. Fix: extend series.
+
+**What shipped:**
+- `docs/knowledge_product_21_financial_freedom_sop.md` — Financial Freedom Tier Framework: 3 tiers (T0 survival/T1 lifestyle/T2 compound), 5-gate protocol (locate tier/apply rule set/leverage checklist/δ check/barbell integrity), self-test calculates 91-year runway at current savings rate → job not optional; backing MDs: MD-166/158/154/107/168
+- `docs/publish_thread_sop21_twitter.md` — 12-tweet thread: *"Most people don't have a financial freedom plan. They have a financial freedom fantasy."*
+- `docs/posting_queue.md` extended to #01~#21 (Apr 9–May 19); 42-day target
+- `results/dynamic_tree.md` regime line + Branch 7.27 added
+
+**Next blocker:** Edward posts SOP #01 on Apr 9 to start G5 compounding clock.
