@@ -354,3 +354,16 @@ Branch 2.2 — read 202604 JSONL (239 messages), distilled 3 micro-patterns into
 3. **珍珠=家庭成員** — cat is a hard constraint in trip planning, not an afterthought
 
 Both repos committed and pushed. Next highest-derivative: read 202601 (41K lines) for more behavioral signal.
+
+## Cycle 17 — 2026-04-08T02:30 UTC
+
+**Branch 2.2 — 202601 JSONL distilled.**
+
+- Read 202601.jsonl (41,420 lines, 11,289 Edward messages, Jan 2026)
+- Focused on trading/investment group messages (零式資本×創嶼, 通勝十趟)
+- Identified 3 micro-patterns NOT yet in dna_core.md:
+  1. **多方案並列** — complex financial decisions: self-computes ALL options as numbered sequential steps + amounts BEFORE asking expert (e.g., two restructuring plans for 零式資本 each spelled out fully)
+  2. **自推到底再確認** — reasons to conclusion independently, THEN asks expert to verify; never leads with "what should I do?"
+  3. **不動作是最難** — explicit trading meta-insight: holding position unchanged is harder than entering/exiting; articulated aloud in trading group
+- Distilled → `LYH/agent/dna_core.md` line 50 updated
+- Branch 2.2 status: 202604 ✓, 202601 ✓; next: 202602 (Jan-Feb gap bridge)

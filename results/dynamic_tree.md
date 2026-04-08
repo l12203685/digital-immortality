@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T02:10 UTC (cycle 16)
+> 最後更新：2026-04-08T02:30 UTC (cycle 17)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -112,3 +112,4 @@
 - 2026-04-08 01:43 UTC: cycle 14 — paper-live tick 2: BTC=71484.80 SHORT; signal consistent × 2
 - 2026-04-08 01:45 UTC: cycle 15 — paper-live tick 3: BTC=71443.20 SHORT; declining price trend confirmed × 3
 - 2026-04-08T02:10 UTC: cycle 16 — Branch 2.2: 202604 JSONL read (239 msgs), 3 micro-patterns distilled → dna_core.md
+- 2026-04-08T02:30 UTC: cycle 17 — Branch 2.2: 202601 JSONL read (11,289 Edward msgs), 3 new micro-patterns distilled → dna_core.md (多方案並列/自推到底再確認/不動作是最難)
