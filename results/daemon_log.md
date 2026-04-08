@@ -731,3 +731,15 @@ Branch 2.2 — 202411.jsonl (11,226 Edward msgs, Nov 2024). 3 micro-decisions **
 - **MD-18** 資產三桶獨立 — 台股/美股/加密各桶獨立；hard stop per bucket
 
 Next: **202410**.
+
+## Cycle 7 — 2026-04-08T10:45 UTC
+
+**Cycle 34 done.**
+
+Branch 2.2 — 202410.jsonl (127 Edward msgs, Oct 2024). 3 micro-decisions **actually written** to `templates/dna_core.md` (now MD-01~MD-21, 98 lines):
+
+- **MD-19** 投資公司門檻量化 — 開純投資公司break-even = 年配息 > 維運成本÷稅率差距；每個架構決策都要算出量化臨界點
+- **MD-20** 質押=流動性橋接 — 股票質押借款換現金，保留持股上漲潛力；條件：短期資金需求 + 長期持有信念交叉
+- **MD-21** 品牌命名三要件 — 名稱需：諧音記憶點 + 可解釋意義 + 行業暗示；缺一則品牌資產薄弱
+
+Next: **202409**.
