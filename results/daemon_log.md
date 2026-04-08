@@ -3687,3 +3687,14 @@ Action: wrote `docs/publish_thread_sop02_twitter.md` (12 tweets, ready to post).
 SOP #01 + SOP #02 threads now both ready to post. Full series (#01–#04 SOPs) documented.
 Next: Edward posts SOP #01 thread → SOP #02 thread → draft SOP #03 (Execution) thread.
 dynamic_tree.md: Branch 7.8 added, regime updated.
+
+## Cycle 112 — 2026-04-08 18:12:27 UTC
+
+**Cycle 112 done.**
+
+**Branch 7.8** — `docs/publish_thread_sop02_twitter.md` created (12 tweets, post-ready).
+
+- Hook: equal-weight "diversification" = correlated risk with extra steps
+- 2×2 classification grid → pairwise Calmar seed → greedy recursive addition → correlation gate (>0.70 reject) → weight optimisation via Calmar frontier → regime routing table → overnight edge independence (MD-54) → portfolio-level kill conditions → SOP series close
+
+Both SOP #01 and SOP #02 threads now ready to fire. Next: Edward posts SOP #01 on X → SOP #02 → draft SOP #03 (Execution & Sizing) thread.

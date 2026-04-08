@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T02:07+08",
-  "regime": "1.1 Trading（mainnet needs API keys）; 7.7 publish thread — POST SOP #01 thread on X/Twitter (file ready); draft SOP #02 thread next",
+  "updated": "2026-04-09T02:12+08",
+  "regime": "1.1 Trading（mainnet needs API keys）; 7.7+7.8 publish threads — POST SOP #01 then SOP #02 on X/Twitter (both files ready); draft SOP #03 thread next",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: post the thread on X → draft SOP #02 thread (Portfolio Construction) → ..."
+      "text": "Both SOP #01 and SOP #02 threads now ready to fire. Next: Edward posts SOP #0..."
     },
     {
       "time": "just now",
-      "text": "Highest derivative was Branch 7.x: #01–#04 SOPs sat complete but unpublished ..."
+      "text": "- 2×2 classification grid → pairwise Calmar seed → greedy recursive addition ..."
     },
     {
       "time": "just now",
-      "text": "Branch 7.7 — `docs/publish_thread_sop01_twitter.md` created (12 tweets, post-..."
+      "text": "- Hook: equal-weight \"diversification\" = correlated risk with extra steps"
     },
     {
       "time": "just now",
-      "text": "Cycle 111 done."
+      "text": "Branch 7.8 — `docs/publish_thread_sop02_twitter.md` created (12 tweets, post-..."
     },
     {
-      "time": "2026-04-09T UTC",
-      "text": "dynamic_tree.md: Branch 7.7 added, regime updated."
+      "time": "just now",
+      "text": "Cycle 112 done."
     }
   ],
   "stats": {
-    "daemon_cycles": 111,
+    "daemon_cycles": 112,
     "total_mds": 325,
     "dna_core_lines": 87
   }
