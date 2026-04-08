@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T05:40 UTC (cycle 25)
+> 最後更新：2026-04-08T06:00 UTC (cycle 26)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -47,7 +47,7 @@
   - Layer 3: remote trigger（Opus，1hr 保底，cloud）
 - 3.2 校正 pipeline：correction → boot test → distillation → DNA → all durable storage ✓
 - 3.3 主動 input：JSONL 2,860,094 entries 大部分未讀
-- 3.4 DNA 演化：dna_core 75 行 + 27 micro-decisions (MD-01~MD-27, 202509 ✓) + dna_full 持續擴展 + 哲學宣言 added
+- 3.4 DNA 演化：dna_core 75 行 + 36 micro-decisions (MD-01~MD-36, 202506 ✓) + dna_full 持續擴展 + 哲學宣言 added
 
 ### 4. 社交圈（ecosystem）
 - 4.1 第一個非 Edward organism（需要朋友參與 — Samuel?）
@@ -122,4 +122,5 @@
 - 2026-04-08T05:00 UTC: cycle 23 — Branch 2.2: 202509 JSONL read (10,828 Edward msgs, Sep 2025), 3 new micro-patterns → dna_core.md (攻強守60分/求職掃射+AI複製/薪資談判先緩); total 27 micro-decisions
 - 2026-04-08T05:20 UTC: cycle 24 — Branch 2.2: 202508 JSONL read (662 Edward msgs, Aug 2025), 3 new micro-patterns → dna_core.md (薪資精算底線/知識=社交資本/13F=靈感不跟單); total 30 micro-decisions
 - 2026-04-08T05:40 UTC: cycle 25 — Branch 2.2: 202507 JSONL read (11,555 Edward msgs, Jul 2025), 3 new micro-patterns → dna_core.md (條件枚舉參數化/阿瓦隆貝氏更新/新領域先建清單); total 33 micro-decisions
+- 2026-04-08T06:00 UTC: cycle 26 — Branch 2.2: 202506 JSONL read (7,369 Edward msgs, Jun 2025), 3 new micro-patterns → dna_core.md (Alpha vs salary switch threshold/50x FIRE+時薪感知/市場alpha魚池有限); total 36 micro-decisions
 

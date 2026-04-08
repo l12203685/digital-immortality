@@ -561,3 +561,17 @@ Done. Cycle 25 complete.
 3. **新領域=先建清單再執行** — before entering new domain, build complete checklist first; outsource decisions to past-self
 
 Next: 202506.
+
+## Cycle 26 — 2026-04-08T06:00 UTC
+
+**Branch 2.2 — 202506 JSONL distilled.**
+
+- Read 202506.jsonl (7,369 Edward msgs, Jun 2025)
+- Top groups: g2 (可可), g5 (投資/trading/finance), g4 (Avalon/poker), g44 (帳務)
+- Focus: trading philosophy, FIRE math, career switch thresholds, alpha pool size
+- 3 micro-patterns NOT yet in dna_core.md:
+  1. **Alpha vs salary switch threshold** — W × alpha > S 才有意義換職涯；以聯發科250萬/年為例，5%超額 → 需資產5000萬才合理全職交易
+  2. **50x FIRE + 時薪感知校正** — FIRE門檻=年支出×50；費用決策對照時薪，時薪高則小額費用心理重量縮小
+  3. **市場alpha魚池有限** — Edward估台灣alpha總量~250萬/yr ceiling；規模大 → 超額報酬率下降；小規模追最高報酬率，非無限加碼
+- `dna_core.md`: 33 → **36 micro-decisions**
+- Branch 2.2: 202604✓ ... 202506✓; next: 202505
