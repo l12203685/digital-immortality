@@ -4098,3 +4098,9 @@ Highest derivative: SOP series extended to #07; trading system's core mechanism 
 - **Branch 7.13** — SOP #07 shipped: `docs/knowledge_product_07_regime_detection_sop.md` + `docs/publish_thread_sop07_twitter.md` — Regime Detection & Strategy Routing. 5 gates: calc `trend_strength`/`mr_score` → classify TRENDING/MR/MIXED → route DualMA/BollingerMR/SKIP → validate regime-subset Sharpe → set regime-fail conditions. Backing MDs: 103/104/107/112/116. Series now **#01~#07**.
 
 Highest derivative: knowledge output series extended; the trading system's core mechanism is now externalized. External blockers remain: (1) API keys → mainnet revenue; (2) Edward posts threads #01~#07.
+
+## Cycle 132 — 2026-04-09T UTC
+
+**Branch 7.14** — SOP #08 shipped: `docs/knowledge_product_08_capital_structure_sop.md` + `docs/publish_thread_sop08_twitter.md` — Capital Structure & Barbell Framework. 5 gates: G0 three-bucket isolation (MD-18) / G1 barbell structure—left end stable, right end uncapped (MD-158) / G2 leverage three-question checklist—margin call trigger, re-investment eligibility, interest allocation (MD-154) / G3 trial vs full position each must have independent EV (MD-159) / G4 financial freedom tier calibration—security/freedom/abundance (MD-166); 12-tweet thread ready. Series now **SOP #01~#08**.
+
+Highest derivative: knowledge output series extended to #08; capital structure is the missing link between DNA principles and economic self-sufficiency. External blockers: (1) Edward sets `BINANCE_MAINNET_KEY/SECRET` → mainnet revenue; (2) Edward posts threads #01~#08.

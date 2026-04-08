@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 131)
+> 最後更新：2026-04-09 UTC (cycle 132)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -97,6 +97,7 @@
 - **7.10 Publish Thread SOP #04 — DRAFTED ✅** (cycle 114): `docs/publish_thread_sop04_twitter.md` — 12 tweets
 - **7.11 SOP #05 Career & Salary + Publish Thread — COMPLETE ✅** (cycle 115): `docs/knowledge_product_05_career_salary_sop.md` + `docs/publish_thread_sop05_twitter.md` — **FULL SERIES COMPLETE**: all 5 SOP threads (#01–#05) ready to post. Next: Edward posts threads in sequence on X.
 - **7.12 SOP #06 Game Theory Decision Framework — COMPLETE ✅** (cycle 122): `docs/knowledge_product_06_game_theory_sop.md` + `docs/publish_thread_sop06_twitter.md` — 6 gates: G0 identify game structure / G1 confirm role+win conditions / G2 identify biggest threat first (MD-325) / G3 GTO baseline (MD-295) / G4 exploit deviations / G5 execute+friction cost (MD-326); self-test scenario (job offer dual-company); 12-tweet thread drafted; series now SOP #01~#06
+- **7.14 SOP #08 Capital Structure & Barbell Framework — COMPLETE ✅** (cycle 132): `docs/knowledge_product_08_capital_structure_sop.md` + `docs/publish_thread_sop08_twitter.md` — 5 gates: G0 three-bucket isolation (MD-18) / G1 barbell structure (MD-158) / G2 leverage borrowing checklist (MD-154) / G3 trial vs full position independent EV (MD-159) / G4 financial freedom tier calibration (MD-166); 12-tweet thread drafted; series now SOP #01~#08
 - **7.13 SOP #07 Regime Detection & Strategy Routing — COMPLETE ✅** (cycle 131): `docs/knowledge_product_07_regime_detection_sop.md` + `docs/publish_thread_sop07_twitter.md` — 5 gates: G0 calc trend_strength+mr_score / G1 classify TRENDING/MR/MIXED / G2 route DualMA/BollingerMR/SKIP / G3 validate regime-subset Sharpe (MD-107) / G4 set regime-fail conditions (MD-112); backing MDs: MD-103/104/107/112/116; 12-tweet thread drafted; series now SOP #01~#07
 
 ### 8. 生活維護（operational baseline）
