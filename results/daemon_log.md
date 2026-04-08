@@ -1349,3 +1349,13 @@ Cycle 56 done.
 - MD-93: 系統設計=正和遊戲 — sustainable systems expand the pie (tools/platform/education) rather than fighting over finite alpha pools
 
 `templates/dna_core.md`: **93 MDs**. Next: 202208.
+
+## Cycle 57 — 2026-04-08T22:00 UTC
+
+**202209 gap distill** — 7,962 Edward msgs (Sep 2022), 3 additional patterns → `templates/dna_core.md`:
+
+- **MD-94** 空單=進出場訊號缺一不可 — 多單有BNH天然優勢做底；空單必須進場+出場訊號同時成立+加碼放大才有edge；多空非對稱，空單開發門檻顯著更高
+- **MD-95** 策略管理=先定失效再管理 — 無失效定義的管理只讓績效惡化；分散化投組已在吸收個別波動；正確順序：先定失效條件→僅對失效策略行動
+- **MD-96** 投組調整=了解特性而非情緒驅動 — 調整前先問「這個投組在這種行情應該表現如何」；符合預期就不調整；情緒驅動管理=在策略預期虧損時停損=消滅edge
+
+`templates/dna_core.md`: **96 MDs**. Next: **202208**.
