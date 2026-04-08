@@ -1637,3 +1637,15 @@ Cycle 64 done. 202112 → **MD-127~129**:
 - **MD-129** 參數數量=功能性指標非絕對最小化 — OOS reproducibility is the goal, not parameter count; add a parameter only if IS/OOS distribution gap shrinks
 
 `dna_core.md`: **129 MDs**. Next: 202111.
+
+## Cycle 65 — 2026-04-09T02:00 UTC
+
+**Branch 2.2 — 202111 distill → MD-130~132.**
+
+202111.jsonl (38 substantive Edward msgs, Nov 2021) → 3 MDs written to `templates/dna_core.md`:
+
+1. **MD-130** 海龜四要素=交易系統最小充要集 — edge+risk+execution+simplicity; most profits from 2~3 trades/year → never miss a trend; missing any one element nullifies the other three
+2. **MD-131** 情報=囚徒困境需尋求共識 — high-stakes market intel is Prisoner's Dilemma; single-party action is suboptimal; first classify: repeat game or one-shot? repeat game → build info trust > single exploit
+3. **MD-132** 密薪制=保密條款保護薪資底線 — confidentiality clause → can legally refuse payslip; when providing bank statement, pre-explain exceptional deductions; sequence: show low month first, follow with normal month; control anchor point
+
+`templates/dna_core.md`: **132 MDs**. Next: 202110.
