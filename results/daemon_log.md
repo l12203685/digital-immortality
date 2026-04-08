@@ -290,3 +290,12 @@ Branch 1.1 — added `--paper-live` to `mainnet_runner.py`:
 - First tick: `BTC=71,509.90 USDT, signal=SHORT`
 
 **Next gate:** provide `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → run `--tick` for live trades.
+
+## Cycle 14 — 2026-04-08T01:43 UTC
+
+**Branch 1.1 — paper-live tick 2.**
+
+- BTC=71484.80 USDT, signal=SHORT (consistent × 2 ticks)
+- Credential gate still pending; accumulating signal evidence
+- 2 paper-live ticks logged to `results/paper_live_log.jsonl`
+- Next: provide mainnet credentials → `--tick` for live trade
