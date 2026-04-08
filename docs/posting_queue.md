@@ -19,6 +19,7 @@
 | Apr 27 | #10 | publish_thread_sop10_twitter.md | "Uncertainty is information. Most traders treat it as the enemy." | pending |
 | Apr 29 | #11 | publish_thread_sop11_twitter.md | "Learning without compounding is forgetting with extra steps." | pending |
 | May 1 | #12 | publish_thread_sop12_twitter.md | "Distribution is the 12th gate, not a bonus step." | pending |
+| May 3 | #13 | publish_thread_sop13_twitter.md | "Willpower is a finite resource. Your OS should never touch it." | pending |
 
 ---
 
@@ -39,6 +40,6 @@
 ---
 
 ## 30-day compounding target (by May 9)
-- [ ] All 12 threads posted
+- [ ] All 13 threads posted
 - [ ] G5 score ≥ 2/3
 - [ ] ≥1 inbound DM from someone with trading/quant background

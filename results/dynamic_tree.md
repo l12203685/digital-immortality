@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 132)
+> 最後更新：2026-04-09 UTC (cycle 138)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -102,6 +102,7 @@
 - **7.16 SOP #10 Decision-Making Under Uncertainty — COMPLETE ✅** (cycle 134): `docs/knowledge_product_10_decision_uncertainty_sop.md` + `docs/publish_thread_sop10_twitter.md` — 5 gates = 5 Edward kernel principles: G0 read derivative not level (kernel 1) / G1 map information asymmetry structural/temporal/interpretive (MD-141/140, kernel 2) / G2 escalate to meta-strategy if object-level stuck ×3 cycles (MD-107/112, kernel 3) / G3 check population behavior for contrarian EV (MD-298/104, kernel 4) / G4 default inaction without named edge (MD-96/326, kernel 5); self-test scenario (BTC sideways SHORT signal); 10-tweet thread drafted; **series now SOP #01~#10 ✅ kernel series complete**
 - **7.18 SOP #12 Content Distribution & Audience Architecture — COMPLETE ✅** (cycle 136): `docs/knowledge_product_12_distribution_audience_sop.md` — 5 gates: G0 platform-audience fit (density×speed, MD-319) / G1 gap detection before content (MD-319) / G2 hook=information asymmetry (MD-141, kernel 2) / G3 one SOP=one thread=one claim (MD-116) / G4 feedback loop closure 48h review / G5 compounding check score≥2 (MD-141); self-test: Twitter=HIGH×FAST approved, G5=0→start clock; **distribution layer initialized: series now SOP #01~#12**
 - **7.17 SOP #11 Learning System Design — COMPLETE ✅** (cycle 135): `docs/knowledge_product_11_learning_system_sop.md` + `docs/publish_thread_sop11_twitter.md` — 5 gates: G0 input quality (skin-in-the-game, MD-135) / G1 search space before content (MD-57) / G2 structural analog cross-domain transfer (MD-55) / G3 simplicity test ≤3 rules (MD-116) / G4 teach the starter kit (MD-120) / G5 compounding check score≥2 (MD-141); self-test: macro economics → G5=3 approved; 9-tweet thread drafted; **meta-SOP layer complete: series now SOP #01~#11**
+- **7.19 SOP #13 Personal Operating System — COMPLETE ✅** (cycle 138): `docs/knowledge_product_13_personal_os_sop.md` + `docs/publish_thread_sop13_twitter.md` — 5 gates: G0 decision audit ≥3× = SYSTEM_FAILURE (MD-322) / G1 peak cognitive protection (MD-323) / G2 environment design before willpower (MD-324) / G3 pre-commit top-5 SYSTEM_FAILURES / G4 morning defaults routing / G5 quarterly re-audit score≥0.8; self-test: gym decision appearing at 09:30 = SYSTEM_FAILURE, execute default; posting queue extended to May 3; **series now SOP #01~#13**
 - **7.13 SOP #07 Regime Detection & Strategy Routing — COMPLETE ✅** (cycle 131): `docs/knowledge_product_07_regime_detection_sop.md` + `docs/publish_thread_sop07_twitter.md` — 5 gates: G0 calc trend_strength+mr_score / G1 classify TRENDING/MR/MIXED / G2 route DualMA/BollingerMR/SKIP / G3 validate regime-subset Sharpe (MD-107) / G4 set regime-fail conditions (MD-112); backing MDs: MD-103/104/107/112/116; 12-tweet thread drafted; series now SOP #01~#07
 
 ### 8. 生活維護（operational baseline）
@@ -115,7 +116,7 @@
 - **8.5 Automation #3 — COMPLETE ✅** (cycle 130): coffee-vs-tea (#4: coffee before 13:00 / tea after 13:00) + portfolio-check (#5: 16:00 once daily, no earlier). All 5 SYSTEM_FAILURE decisions from decision_audit.py now pre-committed. Zero remaining recurring decision overhead.
 
 ## 當前 regime
-攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.16 SOP #10 Decision Under Uncertainty COMPLETE → Edward posts threads #01~#10
+攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.19 SOP #13 COMPLETE → posting queue extended to May 3; Edward posts threads #01~#13
 中性：2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)
 防禦：2.3 30/30 ALIGNED ✅, 4.1 partially unblocked (samuel_dna tested 19/20)
 
