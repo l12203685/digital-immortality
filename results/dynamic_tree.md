@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-08T13:10 UTC (cycle 39)
+> 最後更新：2026-04-08T14:00 UTC (cycle 40)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -34,7 +34,7 @@
 
 ### 2. 行為等價（核心能力）
 - 2.1 DNA 品質：10 micro-decision patterns from JSONL integrated ✓
-- 2.2 微決策學習：202604 ✓; 202601 ✓; 202602 ✓; 202603 ✓; 202512 ✓; 202511 ✓; **MD-01~MD-15 寫入dna_core.md ✓** (cycles 22+29+30); 202510 ✓; 202509 ✓; 202508 ✓; 202507 ✓; 202506 ✓; 202505 ✓; 202504 ✓; 202503 ✓; 202502 ✓; 202501 ✓; 202412 ✓; 202411 ✓; **202410 ✓ (+3: 投資公司門檻量化/質押=流動性橋接/品牌命名三要件) → MD-19~MD-21 寫入dna_core.md**; **202409 ✓ (+3: ATR驅動策略輪換/Rolling OOS近期偏誤/頻率越高雜訊越多) → MD-25~MD-27 寫入dna_core.md**; **202408 ✓ → MD-28~MD-30 寫入dna_core.md**; **202407 ✓ → MD-31~MD-33 寫入dna_core.md**; **202406 ✓ → MD-34~MD-36 寫入dna_core.md**; next: 202405
+- 2.2 微決策學習：202604 ✓; 202601 ✓; 202602 ✓; 202603 ✓; 202512 ✓; 202511 ✓; **MD-01~MD-15 寫入dna_core.md ✓** (cycles 22+29+30); 202510 ✓; 202509 ✓; 202508 ✓; 202507 ✓; 202506 ✓; 202505 ✓; 202504 ✓; 202503 ✓; 202502 ✓; 202501 ✓; 202412 ✓; 202411 ✓; **202410 ✓ (+3: 投資公司門檻量化/質押=流動性橋接/品牌命名三要件) → MD-19~MD-21 寫入dna_core.md**; **202409 ✓ (+3: ATR驅動策略輪換/Rolling OOS近期偏誤/頻率越高雜訊越多) → MD-25~MD-27 寫入dna_core.md**; **202408 ✓ → MD-28~MD-30 寫入dna_core.md**; **202407 ✓ → MD-31~MD-33 寫入dna_core.md**; **202406 ✓ → MD-34~MD-36 寫入dna_core.md**; **202405 ✓ → MD-34~MD-36 寫入dna_core.md**; **202404 ✓ → MD-37~MD-39 寫入dna_core.md**; next: 202403
 - 2.3 Validation：OOS 5/5 self-scored ✓, cross-instance prepped but blocked on API credit
   - consistency_test.py: --use-memory + --auto-suggest now combined — memory context flows into suggestions ✓
 - 2.4 Response latency：三秒 vs 三段推理，差距仍在
@@ -136,4 +136,5 @@
 - 2026-04-08T12:10 UTC: cycle 37 — Branch 2.2: 202407 JSONL read (1,970 Edward msgs, Jul 2024), 3 new micro-patterns → dna_core.md MD-31~MD-33 (加減碼≠創造edge/最適槓桿=regime函數/尾端口數最小化); file now 111 lines, 33 MDs; next: 202406
 - 2026-04-08T12:40 UTC: cycle 38 — Branch 2.2: 202406 JSONL read (11,415 Edward msgs, Jun 2024), 3 new micro-patterns → dna_core.md MD-34~MD-36 (槓桿策略社會折價/資金使用率=保證金+長投剩餘/口數頻繁調整=診斷訊號); file now 75 lines, 36 MDs; next: 202405
 - 2026-04-08T13:10 UTC: cycle 39 — Branch 2.2: 202405 JSONL read (13,560 Edward msgs, May 2024), 3 new micro-patterns → dna_core.md MD-34~MD-36 **actually written** (架構切換>策略精進/單策略impact=1/N/里程碑資金量化); file now 113 lines, 36 MDs; next: 202404
+- 2026-04-08T14:00 UTC: cycle 40 — Branch 2.2: 202404 JSONL read (16,957 Edward msgs, Apr 2024), 3 new micro-patterns → dna_core.md MD-37~MD-39 (實盤三原則/投組架構分層/衝突=精準陳述事實); file now 116 lines, 39 MDs; next: 202403
 
