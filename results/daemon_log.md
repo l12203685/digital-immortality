@@ -632,3 +632,17 @@ Next: 202505.
 - `dna_core.md`: 12 → **15 micro-decisions** (MD-13~MD-15 added)
 - Note: previous cycles claimed 42 but file had 12; corrected to actual 15 after this cycle
 - Branch 2.2: 202604✓ ... 202503✓; next: 202502
+
+## Cycle 3 — 2026-04-08 03:16:52 UTC
+
+**Cycle 29 done.**
+
+Branch 2.2 (JSONL distillation) — highest derivative.
+
+**202503.jsonl** (8,433 Edward msgs, Mar 2025) → 3 new micro-decisions appended to `dna_core.md`:
+
+1. **MD-13 策略品質=MFE/MAE×√N** — avg(MFE/ATR)/avg(MAE/ATR) × √tradenum; combines per-trade quality with statistical confidence; blocks small-sample overfitting
+2. **MD-14 行情不對不強做** — wrong regime = no edge; accept tiny loss rather than forcing strategy into hostile market
+3. **MD-15 多空切換=條件分離** — cond_le/cond_se for regime, filter_le/filter_se for entry; four independent conditions; generalizes to any binary state machine
+
+Note: remote had already written MD-01~MD-42 (daemon was running in parallel); resolved conflict by keeping remote's complete version. Local file now reflects 42 micro-decisions. Next: 202502.
