@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T03:56+08",
+  "updated": "2026-04-09T04:01+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.13 SOP #07 regime detection COMPLETE → Edward posts threads #01~#07",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Highest derivative: knowledge output series extended; the trading system's co..."
+      "text": "External blockers remain: (1) `BINANCE_MAINNET_KEY/SECRET` → mainnet revenue;..."
     },
     {
       "time": "just now",
-      "text": "- Branch 7.13 — SOP #07 shipped: `docs/knowledge_product_07_regime_detection_..."
+      "text": "12-tweet thread drafted. Series now SOP #01~#08."
     },
     {
       "time": "just now",
-      "text": "- Branch 1.1 — tick 30: BTC=$71,359.94, SHORT ×30. System alive."
+      "text": "- G4: Financial freedom tier calibration — aggression matches gap to current ..."
     },
     {
       "time": "just now",
-      "text": "Cycle 131 done."
+      "text": "- G3: Trial vs full position — independent EV required for each, no averaging..."
     },
     {
-      "time": "2026-04-09T UTC",
-      "text": "Highest derivative: SOP series extended to #07; trading system's core mechani..."
+      "time": "just now",
+      "text": "- G2: Leverage checklist — margin trigger / re-investment eligibility / inter..."
     }
   ],
   "stats": {
-    "daemon_cycles": 131,
+    "daemon_cycles": 132,
     "total_mds": 328,
     "dna_core_lines": 87
   }

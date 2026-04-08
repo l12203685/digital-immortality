@@ -4104,3 +4104,20 @@ Highest derivative: knowledge output series extended; the trading system's core 
 **Branch 7.14** — SOP #08 shipped: `docs/knowledge_product_08_capital_structure_sop.md` + `docs/publish_thread_sop08_twitter.md` — Capital Structure & Barbell Framework. 5 gates: G0 three-bucket isolation (MD-18) / G1 barbell structure—left end stable, right end uncapped (MD-158) / G2 leverage three-question checklist—margin call trigger, re-investment eligibility, interest allocation (MD-154) / G3 trial vs full position each must have independent EV (MD-159) / G4 financial freedom tier calibration—security/freedom/abundance (MD-166); 12-tweet thread ready. Series now **SOP #01~#08**.
 
 Highest derivative: knowledge output series extended to #08; capital structure is the missing link between DNA principles and economic self-sufficiency. External blockers: (1) Edward sets `BINANCE_MAINNET_KEY/SECRET` → mainnet revenue; (2) Edward posts threads #01~#08.
+
+## Cycle 132 — 2026-04-08 20:01:47 UTC
+
+**Cycle 132 done.**
+
+**Branch 7.14** — SOP #08 shipped: `docs/knowledge_product_08_capital_structure_sop.md` + `docs/publish_thread_sop08_twitter.md` — Capital Structure & Barbell Framework.
+
+5 gates:
+- G0: Three-bucket isolation — each bucket dies alone (MD-18)
+- G1: Barbell structure — stable left end, uncapped-upside right end, no middle (MD-158)
+- G2: Leverage checklist — margin trigger / re-investment eligibility / interest allocation, all written before opening (MD-154)
+- G3: Trial vs full position — independent EV required for each, no averaging down (MD-159)
+- G4: Financial freedom tier calibration — aggression matches gap to current tier (MD-166)
+
+12-tweet thread drafted. **Series now SOP #01~#08.**
+
+External blockers remain: (1) `BINANCE_MAINNET_KEY/SECRET` → mainnet revenue; (2) post threads #01~#08.
