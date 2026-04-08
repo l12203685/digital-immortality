@@ -3730,3 +3730,23 @@ Highest derivative: SOP #01 and #02 threads were queued for posting but #03 was 
 - G0: L/S pool balance → G1: historical leverage → G2: edge_ratio gate → G3: first-principles → G4: stop-first sizing → G5: formula → G6: trial vs full → G7: order checklist → G8: correlation check → kill conditions → close
 
 **Next:** Edward posts #01→#02→#03 on X; draft SOP #04 (Kill Decision Tree) thread.
+
+## Cycle 114 — 2026-04-09T UTC
+
+**Branch 7.10** — SOP #04 Twitter/X thread drafted for external publish.
+
+Action: wrote `docs/publish_thread_sop04_twitter.md` (12 tweets, ready to post).
+- Tweet 1: hook (2 failure modes: keeping dead strategy / killing live strategy)
+- Tweet 2: Node 0 trigger conditions (5 thresholds, resist "review" during normal variance)
+- Tweet 3: Node 1 sample size gate (<30 suspend judgement, reduce to 25%)
+- Tweet 4: Node 2 regime match check (ATR×2 threshold, temporary vs structural shift)
+- Tweet 5: Node 3 edge_ratio check (≥1.5 intact / 1.2–1.5 degrading / <1.2 kill path)
+- Tweets 6–7: Node 4 premise falsification (4 components, scoring 0–1/2–3/4)
+- Tweet 8: Node 5 anti-capitulation guard (3 sanity questions before kill)
+- Tweet 9: Node 6 kill protocol (6 steps: close→remove→post-mortem→rebalance→archive→replace)
+- Tweet 10: Node 7 resurrection criteria (regime return + OOS re-validate + 25% size)
+- Tweet 11: self-test scenario (DualMA 45 trades, verdict: DO NOT KILL, reduce leverage)
+- Tweet 12: series summary (#01→#02→#03→#04 complete)
+
+**FULL PUBLISH SERIES COMPLETE**: all 4 SOP threads ready to fire on X.
+dynamic_tree.md: Branch 7.10 added, full series marked complete.
