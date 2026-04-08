@@ -2043,3 +2043,13 @@ Cycle 11 done.
 - **MD-177** Exploit二階EV (EV_1=先偏離者送出；EV_2=後剝削可拿回；大多分析漏算EV_2)
 
 Next: 202008.
+
+## Cycle 12 — 2026-04-08T17:00 UTC
+
+**202008 distill → MD-178~MD-180** (180 MDs total):
+
+- **MD-178** 策略三要素互鎖 — sizing+frequency+range三要素同時對才奏效；任一脫鏈整個策略失效；診斷失效時先查哪個環節不一致
+- **MD-179** 莊家視角優先 — 找套利先建MM行為模型，從莊家定價邏輯找偏離；perspective hierarchy: MM→intermediary→player
+- **MD-180** 邊緣case=差異化來源 — 主流case大家水平趨同，邊緣case（marginal hands）是edge池；提升邊際case EV比優化主流case報酬率更高
+
+`LYH/agent/dna_core.md`: **180 MDs**. Next: 202007.
