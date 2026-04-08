@@ -1,25 +1,25 @@
 {
-  "dna": "dna_core.md — Edward 冷啟動操作核心",
-  "dna_file": "C:/Users/admin/LYH/agent/dna_core.md",
+  "dna": "DNA Core — Operational Minimum",
+  "dna_file": "templates/dna_core.md",
   "model": "claude-sonnet-4-6",
-  "mode": "cli",
+  "mode": "api",
   "sessions": 3,
-  "timestamp": "2026-04-09T01:35:10.719624",
+  "timestamp": "2026-04-09T01:45:22.704075",
   "scenarios": [
     {
       "id": "organism_1",
       "domain": "career",
       "expected": null,
       "decisions": [
-        "CONDITIONAL",
-        "CONDITIONAL",
-        "CONDITIONAL"
+        "ERROR",
+        "ERROR",
+        "ERROR"
       ],
       "agreed": true,
       "responses": [
-        "**Decision**: CONDITIONAL\n\n**Reasoning**:\n\n18個月 runway = 不夠。這是結構性問題，不是可以用薪資premium覆蓋的。\n\n先算清楚：\n- 1.8x 薪資 premium 很高，但 startup 在 18 個月後若沒有 next round，薪資歸零\n- 機會成本：離開 stable/reputable employer = 失去品牌背書（「職業品牌=最近高光遮蓋前史」）\n- 18個月 runway 意味著需要在 ~12個月內完成 Series B/C，否則公司面臨存亡\n- 用「看導數不看水平」：runway 在消耗，不是在成長。導數為負。\n\n讓 EV 翻正的具體條件（才能變成 CONDITIONAL→TAKE）：\n\n1. **Runway ≥ 36 個月** 或 **已有明確 term sheet / LOI from tier-1 VC**\n2. **有 equity component**，且 vesting cliff 在 18 個月內能 vest 至少 25%（代表即使公司不成也拿到部分 upside）\n3. **降落傘條款**：若公司在 12 個月內關閉，有 severance ≥ 3 個月\n4. **市場定位**：該 startup 所在賽道是否是「資訊不對稱→行動」的窗口期（有 edge 才進攻）\n\n若以上條件都不存在：PASS，不是 CONDITIONAL。「說不出讓 EV 翻正的具體條件 → PASS」。但這些條件都是可陳述、可談判的，所以現在是 CONDITIONAL。\n\n**Principles used**:\n- Decision Labels（CONDITIONAL vs PASS 判斷規則）\n- 看導數不看水平（Axiom 1）\n- 資訊不對稱→行動（Axiom 2）\n- 職業品牌=最近高光遮蓋前史\n- 薪資判斷=百分位不絕對值\n- 固定收益評估=流動性門檻先卡（類比：18個月 runway = 流動性問題）\n- 平行offer=決策樹+機會成本精算",
-        "**Decision**: CONDITIONAL\n\n**Reasoning**:\n\n18個月 runway = 具體死亡時鐘。1.8x薪資是水平，不是導數。\n\n先算底線：\n- 現職薪資底線已知（DNA：年薪精算+試用期機制書面化）\n- 1.8x 突破天花板的條件是什麼？股權比例+vesting schedule+cliff？沒有這個數字，1.8x base 可能低於現職 total comp（分紅+穩定性折現）\n\n翻正條件（必須全部成立才 TAKE）：\n\n1. **runway 延伸可驗證** — 18個月不夠。需要 term sheet/LOI 或明確下輪募資 lead investor 確認。runway <24個月 = 結構性死局（DNA：PASS vs CONDITIONAL 判斷規則：說得出讓 EV 翻正的具體條件才是 CONDITIONAL）\n2. **股權 vested value ≥ 薪資差距 2 年** — 用 409A 或最近一輪估值計算。股權不值錢的 1.8x = 風險補貼不足\n3. **game selection 確認** — 這個 startup 在的賽局，Edward 的 edge 能轉換成超額貢獻嗎？（DNA：Game selection 決定上限）\n4. **書面化條件** — 試用期薪資、過後調幅、stock option grant letter 全進合約。口頭承諾 = 不存在\n\n18個月 runway 是最大 blocker。能說出讓 EV 翻正的條件（runway 延伸確認 + 股權結構合理），所以是 CONDITIONAL 不是 PASS。\n\n穩定雇主的品牌折損也要算：DNA 職業品牌=最近高光遮蓋前史。若 startup 在 18個月內倒閉，CV 上留下的是一段短暫空白，不是品牌重置。\n\n**Principles used**:\n- 看導數不看水平（1.8x 是水平，增長軌跡未知）\n- PASS vs CONDITIONAL 判斷規則\n- 薪資底線=年薪精算+試用期機制書面化\n- Game selection 決定上限\n- 職業品牌=最近高光遮蓋前史\n- 台灣勞工薪資天花板=制度性+破頂路徑先規劃\n- 平行offer=決策樹+機會成本精算",
-        "**Decision**: CONDITIONAL\n\n**Reasoning**:\n\n18個月 runway 是關鍵數字。條件：\n\n1. **18個月 runway = 死亡倒計時**。沒有 B round 在談或接近 close，18個月不夠。startup 從 A 到 B 平均 18-24 個月，timing 已在邊緣。這是結構性風險，不是可對沖的波動。\n\n2. **1.8x 薪資要拆開看**。現金薪資 1.8x，但 equity 的 vesting schedule + cliff 如果是 4 年 1 年 cliff，公司活不到 cliff = equity = 0。實際 EV 遠低於表面 1.8x。\n\n3. **條件觸發 TAKE**：\n   - B round term sheet 已簽或 due diligence 進行中（runway 延長至 36 個月以上）\n   - 或：equity 條件足夠（vesting accelerate on change of control + immediate partial vesting）\n   - 或：現金薪資本身已達 FIRE 路徑加速閾值（被動收入 ≥500 萬/年的軌道）且能接受 18 個月後找下一份\n\n4. **穩定雇主的品牌資本**：「職業品牌=最近高光遮蓋前史」——離開高 signal 雇主去一個倒閉的 startup，品牌重置為負。這個成本要算進去。\n\n5. **資訊不對稱**：現在沒有足夠資訊判斷 startup 的 survival probability。沒有 edge = 不動（Axiom 5）。\n\n**Principles used**:\n- Bias toward inaction（Axiom 5）：沒有 edge 不動\n- 資訊不對稱→行動（Axiom 2）：edge 未確認前不進攻\n- CONDITIONAL vs PASS 判斷規則：能說出讓 EV 翻正的具體條件\n- 職業品牌=最近高光遮蓋前史\n- 平行 offer=決策樹+機會成本精算\n- 固定收益評估=流動性門檻先卡（runway = 流動性有限期）\n- 獲利確認再擴張（validate core first）"
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -27,15 +27,15 @@
       "domain": "relationships",
       "expected": null,
       "decisions": [
-        "CONDITIONAL",
-        "CONDITIONAL",
-        "CONDITIONAL"
+        "ERROR",
+        "ERROR",
+        "ERROR"
       ],
       "agreed": true,
       "responses": [
-        "**Decision**: CONDITIONAL\n\n**Reasoning**:\n\n共簽貸款 = 把自己的信用和財務直接暴露給對方的決策品質。對方財務紀律差這個前提已知，EV結構清楚：\n\n- 下行：對方還不上 → 我還款義務 + 信用受損 + 關係破裂三合一\n- 上行：對方還清 → 關係維持，我獲得零報酬\n\n這是不對稱的負EV結構，沒有edge。\n\n但分類為CONDITIONAL而非PASS，因為有具體條件可以讓結構改變：\n\n1. 貸款金額有明確上限，我可以吸收最壞情況（對照Priority #3：MDD<30%）\n2. 有具體還款計劃和可驗證的收入來源，不是口頭承諾\n3. 借款目的是解決one-time危機（不是lifestyle問題），且危機有截止點\n4. 若我直接借他錢比共簽更可控，考慮改用直接借款上限替代共簽\n\n這三條都能陳述清楚，所以不是PASS。\n\n但「他很需要」不是讓EV翻正的條件。情緒不override決策（Conflict Rules：EV=0的情緒不override決策）。\n\nPriority #1可可優先，財務暴露影響的是整個Priority Stack的物質基礎。物理層限制 > 價值觀偏好，先不爆倉再追情義。\n\n**Principles used**:\n- Decision Labels: PASS vs CONDITIONAL判斷規則（能說出讓EV翻正的具體條件 → CONDITIONAL）\n- Conflict Rules: 情緒-行動分離（「他需要」不是EV正的理由）\n- Axiom #2: 資訊不對稱→行動（無edge不進攻）\n- Axiom #5: Bias toward inaction（沒edge不動）\n- Priority Stack #3: 健康安全/財務安全（MDD<30%）\n- Priority Stack #1: 可可（財務實質主導形式留她）",
-        "**Decision**: CONDITIONAL\n\n**Reasoning**: \n這道題的核心是：co-sign = 承擔對方的信用風險，法律上我是連帶債務人。\n\n先用 Decision Labels 框架：能不能說出讓 EV 翻正的具體條件？可以。所以不是 PASS，是 CONDITIONAL。\n\n條件必須同時成立：\n1. 貸款用途有明確且可追蹤的 productive 目的（不是消費/賭/還舊債）\n2. 還款來源有具體現金流支撐（不是「之後再說」）\n3. 我能承受最壞情況：對方全額違約，我獨自還清，不影響自己的 FIRE 軌道和 MDD<30% 上限\n4. 有書面協議明訂我的 recourse（若我代還，對方資產優先清償我）\n\n如果以上四點都過，TAKE。\n\n但「track record of poor financial discipline」是強烈的 prior——這個 prior 讓條件 2 幾乎不可能通過。Population base rate：有財務紀律問題的人，外部借款環境沒改變的情況下，行為不會自動改變。\n\nBias toward inaction axiom：沒有明確 edge 不動。情誼是真實的，但 EV=0 的情緒不 override 決策。\n\n實際操作：直接問對方能不能給出條件 2、3 的具體數字。給得出來再談。給不出來 = PASS。\n\n**Principles used**:\n- Decision Labels (PASS vs CONDITIONAL 判斷規則)\n- Bias toward inaction (Axiom 5)\n- 情緒-行動分離 (Conflict Rules)\n- 固定收益評估=流動性門檻先卡 (先問最壞情況承受能力)\n- 自推到底再確認 (先獨立算清楚，不先問「怎麼辦」)",
-        "**Decision**: CONDITIONAL\n\n**Reasoning**: 朋友有明確的財務紀律問題 track record，共同簽署 = 承擔他人的 downside 而無對應 upside。EV 結構：我承擔無限連帶責任，潛在損失=貸款全額，回報=維護友誼。\n\n但「PASS vs CONDITIONAL 判斷規則」說：能說出讓 EV 翻正的具體條件 → CONDITIONAL。\n\n條件如下，全部 AND：\n1. 貸款用途有明確、可核實的資產支撐（買房/特定設備），非消費型\n2. 朋友提供具體還款來源（收入證明/資產抵押），不只是承諾\n3. 貸款金額設上限，我的連帶責任有書面 cap（視各地法律可行性）\n4. 每月對帳機制寫進合約，連續 2 期未還我有提前代還觸發通知機制\n\n若以上 4 條全部可執行落地，EV 有機會翻正（關係成本 vs 風險可量化控制）。\n\n若條件任一無法書面化 → 結構性封死 → 改判 PASS。\n\n**Principles used**:\n- PASS vs CONDITIONAL 判斷規則（能說出讓 EV 翻正的具體條件 → CONDITIONAL；說不出來 → PASS）\n- 物理層限制 > 價值觀偏好（先不爆倉，再追情義）\n- 情緒-行動分離（EV=0 的情緒不 override 決策，friendship 是情緒輸入不是 EV 輸入）\n- 資訊不對稱→行動（無 edge、無可核實資訊 → check/等，不進攻）\n- 薪資底線=年薪精算+書面化（任何承諾沒書面化 = 不存在，此處推廣至所有重大財務承諾）"
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -43,15 +43,15 @@
       "domain": "money",
       "expected": null,
       "decisions": [
-        "A",
+        "ERROR",
         "ERROR",
         "ERROR"
       ],
-      "agreed": false,
+      "agreed": true,
       "responses": [
-        "**Decision**: A\n\n**Reasoning**:\n\n2年薪資的windfall，三選項分析：\n\n**C 先排除**：Priority Stack #2 明確設定 FIRE 觸發條件 = 被動收入 ≥ 500萬/年，第一動作才是離職。現在觸發條件未達，提前消耗主動收入能力 = 主動縮短跑道。DNA明文：「先不爆倉，再追自由」。物理層限制先過，再談自由。PASS。\n\n**B 需要edge才進攻**：Axiom 2 — 資訊不對稱→行動，沒有 edge 就 check/等。Bias toward inaction。「高信念賭注」是結論不是分析——能說出讓 EV 翻正的具體條件才是 CONDITIONAL，說不出來就是 PASS。2年薪資規模不足以改變 game level（Alpha三要件：胃納量限制——規模太小時 concentrated bet 的絕對值天花板壓住複利速度）。沒有具體 edge thesis = PASS。\n\n**A 是框架執行不是保守**：資產三層架構已定義：50% 2412 + 50% QQQ + 3% 爆發性資產。這筆資金直接填進既有框架對應的格子。「有了框架才能判斷新資產去哪格」——框架在，現在是部署問題不是策略問題。資金使用率原則：閒置現金 = 隱性機會成本，不是安全。QQQ 滿足 alpha 三要件（長期穩定 + 可複製 + 無胃納量限制）。FIRE目標 2100萬，4%提領，這筆資金直接縮短時間軸，導數正向。\n\n執行：按現有組合缺口分配（若 QQQ:2412 偏離50:50則補到位），剩餘3%考慮IBIT。不做新決策——做框架執行。\n\n**Principles used**:\n- Axiom 2: 資訊不對稱→行動（edge先確認）\n- Axiom 5: Bias toward inaction（B無具體edge = PASS）\n- Priority Stack #2: FIRE觸發條件未達，C排除\n- 資產三層架構（A的執行框架）\n- Alpha三要件（QQQ符合，concentrated bet需驗證）\n- 資金使用率=保證金+長投剩餘（閒置=機會成本）\n- PASS vs CONDITIONAL判斷規則（B說不出具體條件=PASS）\n- 獲利確認再擴張（核心架構先跑穩，不分散到未驗證方向）",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -65,9 +65,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -81,9 +81,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -97,9 +97,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -113,9 +113,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -129,9 +129,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -145,9 +145,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -161,9 +161,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -177,9 +177,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -193,9 +193,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -209,9 +209,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -225,9 +225,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -241,9 +241,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -257,9 +257,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -273,9 +273,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -289,9 +289,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -305,9 +305,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -321,9 +321,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -337,9 +337,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -353,9 +353,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -369,9 +369,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -385,9 +385,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -401,9 +401,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -417,9 +417,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -433,9 +433,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -449,9 +449,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -465,9 +465,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -481,9 +481,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -497,9 +497,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -513,9 +513,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -529,9 +529,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -545,9 +545,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -561,9 +561,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -577,9 +577,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -593,9 +593,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -609,9 +609,9 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     },
     {
@@ -625,13 +625,13 @@
       ],
       "agreed": true,
       "responses": [
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: ",
-        "ERROR: claude CLI exited 1: "
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
       ]
     }
   ],
   "total_scenarios": 39,
-  "total_agreed": 38,
-  "agreement_rate": 0.9743589743589743
+  "total_agreed": 39,
+  "agreement_rate": 1.0
 }

@@ -3554,3 +3554,19 @@ Action: wrote `docs/knowledge_product_02_portfolio_construction_sop.md` (200+ li
 7.4 status: COMPLETE ✅ (SOP #01 + SOP #02 done). 8.4 status: COMPLETE ✅. Tree updated.
 
 Next: SOP #03 Execution & Sizing Real-Time Checklist (MD-13/28~30) OR mainnet API keys → Branch 1.1.
+
+## Cycle 108 — 2026-04-08 17:51:43 UTC
+
+**Cycle 108 done.**
+
+Branch 7.4 — wrote `docs/knowledge_product_02_portfolio_construction_sop.md` (200+ lines):
+- 2×2 strategy classification grid (MD-53: Trend/MR × Long/Short)
+- Pairwise Calmar seed selection → recursive greedy addition (MD-100)
+- Weight optimisation with 3× equal-weight overfitting guard
+- Regime routing table with high-vol halt row (MD-54)
+- Portfolio-level kill conditions (distinct from per-strategy)
+- 4 failure modes + self-test scenario
+
+**7.4 COMPLETE ✅ | 8.4 COMPLETE ✅**
+
+Next: SOP #03 Execution & Sizing Real-Time Checklist (MD-13/28~30), or set mainnet API keys for Branch 1.1.
