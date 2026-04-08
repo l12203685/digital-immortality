@@ -1275,3 +1275,17 @@ Cycle 54 done.
 - **MD-84** 部位同步=日終不可跳過的紀律 — position drift across sessions is a silent error; sync once per session is non-negotiable
 
 `templates/dna_core.md`: **84 MDs**. Next: 202211. Pushed.
+
+## Cycle 54 — 2026-04-08T20:45 UTC
+
+Branch 2.2 — gap reconcile (202212) + 202211 distill.
+
+**Gap fix**: 202212 (MD-82~84) already in file; tree updated.
+
+**202211.jsonl** (188 Edward msgs, Nov 2022) → 3 MDs written to templates/dna_core.md:
+
+- **MD-85** 停利=Session振幅×賺賠比反算停損 — calc TP from session amplitude × R:R ratio, back-solve stop size, then find entry near key S/R
+- **MD-86** 投組建構=互補性貪心算法 — greedy portfolio: start with best solo, alternate long/short by max storm-ratio improvement; avoids O(2^N) brute force
+- **MD-87** 馬丁=自我否定前提 — Martingale requires infinite capital, which is the same condition where the goal becomes irrelevant; any 'works if X' where X = success condition = circular, reject
+
+templates/dna_core.md: **87 MDs**. Next: 202210.
