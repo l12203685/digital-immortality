@@ -1253,3 +1253,13 @@ Done. **202301 → MD-79~81** written, gap reconciled (202302 was already done),
 - **MD-81** 外部API=有硬截止日的風險項 — forced upgrade deadlines kill systems silently; track all external API dependencies as dated risk items
 
 `dna_core.md`: **81 MDs**. Next: **202212**.
+
+## Cycle 54 — 2026-04-08T20:30 UTC
+
+**202212** (95 substantive Edward msgs, Dec 2022) → 3 MDs written to `templates/dna_core.md`:
+
+- **MD-82** 穩健策略=用有效的，不用自建的 — abandoning a working strategy because you didn't build it = substituting ego for expected value; strategy value is in OOS performance, not authorship
+- **MD-83** Stop滑價>Close滑價=分開建模 — stop orders have materially higher slippage than close/limit exits; cost models must separate by exit type; strategies using stops need higher gross edge to clear real friction
+- **MD-84** 部位同步=日終不可跳過的紀律 — automated trading systems must sync/reload positions at least once per session; cross-session position drift is a silent error; recovery cost >> prevention cost
+
+`templates/dna_core.md`: **84 MDs**. Next: 202211.
