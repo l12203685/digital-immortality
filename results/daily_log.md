@@ -582,3 +582,30 @@ Next: testnet_runner.py ATR-based stop loss; continue DNA distillation when JSON
 ### Next cycle
 - 201808 JSONL distillation → MD-235~237
 - Trading: testnet RSI strategies tracking
+
+## Cycle 54 — 2026-04-08 UTC
+
+**Branches**: 1.1 trading kill-rail fix + 2.2 distill tooling fix
+
+### Branch 1.1 — mainnet_runner.py kill-rail bug fixed
+
+**Bug**: `MAX_DRAWDOWN_PCT=10.0` was defined but `_check_kill()` never checked it. MDD could blow past 10% with no halt. Also `_compute_stats` included DRY_RUN entries in PnL/WR/PF calculation (they have `realized_pnl=0.0` by default), diluting metrics. `_check_kill` used `ticks` count (all log entries) instead of `trades` count for the min-trades gate.
+
+**Fix**:
+- `pnl_list` now filters to `action == "EXECUTED"` only
+- MDD walk (peak-to-trough % of $100 cap) computed in `_compute_stats`, returned as `mdd_pct`
+- `_check_kill` checks MDD first (no minimum-trades guard), then uses `stats["trades"]` for WR/PF gates
+- `cmd_status` + `cmd_report` now display `mdd_pct`
+
+### Branch 2.2 — tmp_distill.py schema + CLI fix
+
+**Bug**: hardcoded Windows path; only handled new schema (`sender_name`/`content`). Pre-2018 JSONL files use `s`/`t` fields — broke silently (0 messages extracted).
+
+**Fix**:
+- Positional `jsonl_file` arg (no hardcoded path)
+- `sender = obj.get('sender_name') or obj.get('s', '')` — handles both schemas
+- `--sender` (default 林盈宏), `--limit` (default 15) optional args
+
+### Next cycle
+- Continue distillation: 201707 → MD-268~270 (needs Windows JSONL access)
+- Mainnet: set credentials → run `python mainnet_runner.py --tick`

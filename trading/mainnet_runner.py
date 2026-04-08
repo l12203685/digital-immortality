@@ -70,7 +70,7 @@ def _load_log() -> List[Dict]:
 
 def _compute_stats(entries: List[Dict]) -> Dict:
     trades = [e for e in entries if e.get("action") == "EXECUTED"]
-    pnl_list = [e.get("realized_pnl", 0.0) for e in entries]
+    pnl_list = [e.get("realized_pnl", 0.0) for e in entries if e.get("action") == "EXECUTED"]
     total_pnl = sum(pnl_list)
     wins = sum(1 for p in pnl_list if p > 0)
     losses = sum(1 for p in pnl_list if p < 0)
@@ -79,6 +79,14 @@ def _compute_stats(entries: List[Dict]) -> Dict:
     gross_profit = sum(p for p in pnl_list if p > 0)
     gross_loss = abs(sum(p for p in pnl_list if p < 0))
     profit_factor = gross_profit / gross_loss if gross_loss > 0 else float("inf")
+    # MDD as % of $100 initial capital
+    cum = 0.0; peak = 0.0; max_dd = 0.0
+    for p in pnl_list:
+        cum += p
+        if cum > peak: peak = cum
+        dd = peak - cum
+        if dd > max_dd: max_dd = dd
+    mdd_pct = (max_dd / 100.0) * 100.0  # % of $100 cap
     return {
         "ticks": len(entries),
         "trades": len(trades),
@@ -87,12 +95,16 @@ def _compute_stats(entries: List[Dict]) -> Dict:
         "profit_factor": round(profit_factor, 4) if profit_factor != float("inf") else "inf",
         "wins": wins,
         "losses": losses,
+        "mdd_pct": round(mdd_pct, 2),
     }
 
 
 def _check_kill(stats: Dict) -> bool:
     """Return True if kill conditions breached."""
-    n = stats["ticks"]
+    if stats.get("mdd_pct", 0) > MAX_DRAWDOWN_PCT:
+        logger.critical("KILL: mdd_pct=%.2f%% > %.2f%%", stats["mdd_pct"], MAX_DRAWDOWN_PCT)
+        return True
+    n = stats["trades"]
     if n >= KILL_MIN_TRADES:
         if stats["win_rate"] < KILL_MIN_WIN_RATE:
             logger.critical("KILL: win_rate=%.2f < %.2f", stats["win_rate"], KILL_MIN_WIN_RATE)
@@ -174,6 +186,7 @@ def cmd_status() -> None:
     print(f"Entries:     {stats['ticks']}")
     print(f"Trades:      {stats['trades']}")
     print(f"Total PnL:   {stats['total_pnl']} USDT")
+    print(f"MDD:         {stats['mdd_pct']:.2f}%")
     print(f"Win rate:    {stats['win_rate']:.1%}")
     print(f"PF:          {stats['profit_factor']}")
     print()
@@ -236,6 +249,7 @@ def cmd_report(save: bool = False) -> None:
         lines += [
             f"- Ticks: {stats['ticks']}  Trades: {stats['trades']}",
             f"- Total PnL: **{stats['total_pnl']:+.4f} USDT**",
+            f"- MDD: {stats['mdd_pct']:.2f}%",
             f"- Win Rate: {stats['win_rate']:.1%}  (W={stats['wins']} L={stats['losses']})",
             f"- Profit Factor: {stats['profit_factor']}",
             f"- Kill status: {'🔴 BREACH — HALT' if kill else '🟢 OK'}",
