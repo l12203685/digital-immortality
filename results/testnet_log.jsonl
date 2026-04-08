@@ -26,3 +26,4 @@
 {"ts": "2026-04-08T01:31:22.935292+00:00", "strategy": "donchian", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
 {"ts": "2026-04-08T01:31:23.985471+00:00", "strategy": "dual_ma_filtered", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
 {"ts": "2026-04-08T01:31:26.140780+00:00", "strategy": "donchian_filtered", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T14:07:30.657362+00:00", "strategy": "bollinger_mr", "action": "ERROR", "error": "ccxt is required for live trading. Install with: pip install ccxt", "pnl_usdt": 0.0, "dry_run": true}
