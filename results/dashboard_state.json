@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T02:02+08",
-  "regime": "1.1 Trading（mainnet needs API keys）; 7.5 SOP #04 Strategy Failure & Kill Decision Tree next; OR publish SOP #01~03 externally",
+  "updated": "2026-04-09T02:07+08",
+  "regime": "1.1 Trading（mainnet needs API keys）; 7.7 publish thread — POST SOP #01 thread on X/Twitter (file ready); draft SOP #02 thread next",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next highest-derivative: external publish (#01–#04 as a trading system series..."
+      "text": "Next: post the thread on X → draft SOP #02 thread (Portfolio Construction) → ..."
     },
     {
       "time": "just now",
-      "text": "Knowledge product series #01–#04 COMPLETE ✅"
+      "text": "Highest derivative was Branch 7.x: #01–#04 SOPs sat complete but unpublished ..."
     },
     {
       "time": "just now",
-      "text": "- N7: Resurrection criteria"
+      "text": "Branch 7.7 — `docs/publish_thread_sop01_twitter.md` created (12 tweets, post-..."
     },
     {
       "time": "just now",
-      "text": "- N6: Kill protocol + post-mortem + greedy re-run"
+      "text": "Cycle 111 done."
     },
     {
-      "time": "just now",
-      "text": "- N5: Anti-capitulation sanity check (MD-96)"
+      "time": "2026-04-09T UTC",
+      "text": "dynamic_tree.md: Branch 7.7 added, regime updated."
     }
   ],
   "stats": {
-    "daemon_cycles": 110,
+    "daemon_cycles": 111,
     "total_mds": 325,
     "dna_core_lines": 87
   }
