@@ -1921,3 +1921,14 @@ API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Ove
 - **MD-162** 下注sizing=從全Range完整性出發，不從單一牌力出發 — Population thinking > Instance thinking；同時考慮自己/對手nuts密度再選size
 
 `templates/dna_core.md`: **162 MDs**. Next: 202101.
+
+## Cycle 3 — 2026-04-08 06:47:49 UTC
+
+Done.
+
+**202102 → MD-160~162** (162 MDs total):
+- **MD-160** 績效評估=先建信賴區間再問是進步還是運氣
+- **MD-161** 零和市場=競爭對象是對手策略組合，不是價格
+- **MD-162** Sizing=從全Range完整性出發，Population thinking > Instance thinking
+
+Next: 202101.
