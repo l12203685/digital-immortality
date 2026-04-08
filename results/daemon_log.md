@@ -3219,3 +3219,13 @@ Branch 2.2 deep pass on 201706 (1246 Edward msgs). Three new MDs written to `dna
 - **MD-309** 職業路徑=最大損失歸屬分析 — prefer paths where max loss is limited to own capital; org tail-risk uncontrolled; own capital loss is stop-loss-able
 
 Next: **201705 deep pass**.
+
+## Cycle 87 — 2026-04-08 UTC
+
+**Branch 2.2** highest-derivative. 201705 deep pass (415 Edward msgs). Distilled 3 new micro-decisions:
+
+- **MD-310**: 外幣定存=買賣價差先扣後比利率 — bid-ask spread on foreign currency typically exceeds 1-3 months of interest income; true ROI = interest rate minus spread cost; if spread > interest, foreign currency deposit is negative EV
+- **MD-311**: 薪資成長複合計算=升遷加幅×後續年增率 — one-time promotion boost insufficient; must calculate implied annual growth rate needed post-promotion, then verify if that rate is historically achievable in that org; if not → path eliminated
+- **MD-312**: 金融領域價值=知識附加工具非薪資本身 — the primary ROI of a financial career is not the salary but the knowledge about interest/pricing/compounding that applies directly to personal finance at leverage far exceeding salary differential
+
+**dna_core.md: 312 MDs.** Next: 201704 deep pass.
