@@ -475,3 +475,27 @@ Cycle 21 done.
 3. **定價錨點下移入場** — observes competitor at 2萬/課 → immediately thinks 2000/課; 10x undercut for volume entry
 
 `dna_core.md`: **21 micro-decisions** (was 18). Both repos pushed. Next: 202510.
+
+## Cycle 22 — 2026-04-08T04:20 UTC
+
+**Branch 2.2 — 202510 JSONL (9,452 Edward msgs, Oct 2025) distilled. 3 new micro-patterns → `dna_core.md`:**
+
+1. **Game selection 決定上限** — "能賺大錢，game selection 一定要強"；技術是次要瓶頸，進哪個場才是主要瓶頸
+2. **汰弱留強+槓桿=完整策略** — 弱標的 = 隱性機會成本 bomb；最強標的 + 槓桿才完整；QQQ × TWD/USD 本位思考
+3. **EV/vol 取捨明說** — 降波動必須先講清楚損失多少 EV 再執行；沒說出代價 = 自欺
+
+`dna_core.md`: **24 micro-decisions** (was 21). Next: 202509.
+
+## Cycle 23 — 2026-04-08T05:00 UTC
+
+**Branch 2.2 — 202509 JSONL distilled.**
+
+- Read 202509.jsonl (39,264 lines, 10,828 Edward msgs, Sep 2025)
+- Top groups: g2 (可可=2610), g4 (Avalon=1907), g44 (ChatGPT=1769), g5 (friends=752), g3 (Samuel=731)
+- Focus: job search strategy (Trip.com/Uber/Shopee applications), asymmetric attack/defense, salary negotiation
+- 3 micro-patterns NOT yet in dna_core.md:
+  1. **攻強守60分** — "要快速累積資產，要練好攻擊，防禦只要有60分就夠"；攻=出場/停利/剝削，守=進場/停損；兩者不對稱分配精力
+  2. **求職掃射+AI複製** — 同時投10+家公司（Trip.com/Uber/Amazon/Shopee/Dropbox），用ChatGPT即時生成每封polished版本；面試確認當天立刻備戰；AI把邊際成本→0
+  3. **薪資談判先緩** — 被直接問薪資期望時先說「allow me to take a few to think」；不當場報數字；等算清楚anchor後才報價
+- dna_core.md: **27 micro-decisions** (was 24)
+- Branch 2.2: 202604✓ 202601✓ 202602✓ 202603✓ 202512✓ 202511✓ 202510✓ 202509✓; next: 202508
