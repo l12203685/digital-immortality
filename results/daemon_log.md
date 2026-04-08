@@ -379,3 +379,17 @@ Branch 2.2 — read 202601.jsonl (11,289 Edward messages), distilled 3 new micro
 3. **不動作是最難** — explicit trading meta-insight, articulated aloud in group chat
 
 Both repos pushed. Next highest-derivative: 202602 JSONL (Feb 2026 bridge).
+
+## Cycle 18 — 2026-04-08T02:50 UTC
+
+**Branch 2.2 — 202602 JSONL distilled.**
+
+- Read 202602.jsonl (19,300 lines, 7,627 Edward messages, Feb 2026)
+- Sender key: "E" = Edward (dominant sender)
+- Groups analyzed: g11 (investment family), g3 (close friends investing), g25 (badminton), g44 (AI/work), g37 (trading)
+- Identified 3 micro-patterns NOT yet in dna_core.md:
+  1. **AI=語言外包** — For Shopee PM work: drafts messy logic in Chinese/English → AI polishes → checks "is this too AI?" showing preference for natural tone, not generic corporate speak
+  2. **帳戶×券商分層** — Portfolio tracked at broker×account level: HSBC TW (QTOP/IOO), HSBC SG (TOPT/GLDM/DBMF/KMLM/CTA), 複委託 (IBIT/BOXX) — not just asset class
+  3. **不確定→清倉等訊號** — macro uncertainty + CNY gap → explicitly moves to cash ("我要慢慢把資產換回現金了"), names specific re-entry signal ("週一再觀察一下好了"), then actually waits
+- Distilled → `LYH/agent/dna_core.md` micro-decisions now at 12 total
+- Branch 2.2 status: 202604 ✓, 202601 ✓, 202602 ✓; next: 202603 (March 2026)
