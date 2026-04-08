@@ -1946,3 +1946,13 @@ API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Ove
 - **MD-165** 交易員三階段=第二階段被「存股論」淘汰是最常見終點 — 新手→幻滅（被存股洗腦）→成熟，能到第三階段極少
 
 `templates/dna_core.md`: **165 MDs**. Next: 202012.
+
+## Cycle 1 — 2026-04-08 06:59:30 UTC
+
+Done. **202101 → MD-163~165** (165 MDs total):
+
+- **MD-163**: 學習環境=輸入端品質決定天花板 — only learn from consistent winners
+- **MD-164**: 職業圈子過濾=持續盈利唯一標準 — sustained losers eventually become a drain (system, not morality)
+- **MD-165**: 交易員三階段=第二階段被存股論淘汰 — most people get washed out by "just index" narrative before reaching maturity
+
+Next: 202012.

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T14:40+08",
+  "updated": "2026-04-08T14:59+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -50,29 +50,29 @@
   ],
   "activity": [
     {
+      "time": "just now",
+      "text": "Next: 202012."
+    },
+    {
+      "time": "just now",
+      "text": "Done. 202101 → MD-163~165 (165 MDs total):"
+    },
+    {
+      "time": "just now",
+      "text": "`templates/dna_core.md`: 165 MDs. Next: 202012."
+    },
+    {
+      "time": "just now",
+      "text": "202101 distill → MD-163~165 (165 MDs total):"
+    },
+    {
       "time": "4min ago",
       "text": "API Error: 529 {\"type\":\"error\",\"error\":{\"type\":\"overloaded_error\",\"message\":\"..."
-    },
-    {
-      "time": "just now",
-      "text": "`templates/dna_core.md`: 159 MDs. Next: 202102."
-    },
-    {
-      "time": "just now",
-      "text": "202103 → MD-157~159 (49 substantive Edward msgs, Mar 2021):"
-    },
-    {
-      "time": "just now",
-      "text": "Gap: 202104 already done (MD-154~156 in file, tree was stale). Updated tree."
-    },
-    {
-      "time": "just now",
-      "text": "Branch 2.2 — gap reconcile + 202103 → MD-157~159 (159 MDs total):"
     }
   ],
   "stats": {
-    "daemon_cycles": 70,
-    "total_mds": 159,
+    "daemon_cycles": 71,
+    "total_mds": 165,
     "dna_core_lines": 75
   }
 }
