@@ -4815,3 +4815,18 @@ Gap: SOP #31 (parsimony) + SOP #29 (monitoring) both describe conditions that de
 **Series: SOP #01~#32 COMPLETE.**
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 158 — 2026-04-09 UTC
+
+**Cycle 158 done.**
+
+Gap: `publish_thread_sop33_twitter.md` was a duplicate of SOP #32 Cognitive Capital content — wrong file, wrong title, wrong hook. Posting queue had an unresolved merge conflict. Series nominally "complete" but SOP #33 had no valid publish thread. Fixed.
+
+**Shipped:**
+- `docs/publish_thread_sop33_twitter.md` — rewritten as SOP #33 Edge Decay thread (10 tweets): hook → problem framing → G0 crowding pre-check → G1 baseline fingerprint → G2 survival_rate monitor → G3 Bayesian posterior → G4 response protocol → G5 depth×breadth replenishment → self-test → close
+- `docs/posting_queue.md` — merge conflict resolved; Jun 12 SOP #33 slot confirmed
+- `results/dynamic_tree.md` — Branch 7.36 added (cycle 158); regime updated to SOP #01~#33 COMPLETE
+
+**Series: SOP #01~#33 COMPLETE. All publish threads valid.**
+
+**Next blocker:** Edward posts SOP #01.

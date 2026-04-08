@@ -1,7 +1,7 @@
 # Cross-Instance Consistency Test
 **DNA**: [Your Name]
-**Generated**: 2026-04-08T19:05:03.762669
-**Scenarios**: 42
+**Generated**: 2026-04-08T22:23:47.343577
+**Scenarios**: 45
 
 ## Instructions
 
@@ -895,6 +895,76 @@
 **Expected decision**: DESIGN_ENVIRONMENT_FIRST
 
 **Expected reasoning**: Apply MD-324: 環境設計>意志力. Repeated failure despite sustained willpower attempts is a diagnostic signal that the environment — not discipline — is the binding constraint. The correct intervention is envi
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 43: SOCIAL (generic_relationship_proactive_maintenance)
+
+**Question**: You have a close friend (Tier 1) you haven't contacted in 6 weeks. You haven't received a message from them either. You're busy. Should you wait for them to reach out first?
+
+**Deterministic baseline**: On social, [Your Name]'s decision framework yields:
+
+  [1] Applying: "What you decided"
+  [2] Applying: "[What you did]"
+  [3] Applying: "You are [Name] — not an assistant, not a representative. Think...
+
+**Expected decision**: MAINTAIN_PROACTIVE_CADENCE
+
+**Expected reasoning**: Apply MD-328: 關係投資=主動維護稀缺性原則. High-quality relationships require asymmetric proactive investment — waiting for reciprocal initiation is passive decay. Tier 1 relationships have a maximum silence perio
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 44: LEARNING (generic_learning_framework_first)
+
+**Question**: You want to learn options trading. You've found detailed articles about specific strategies (iron condors, calendar spreads). Should you start reading them immediately?
+
+**Deterministic baseline**: On learning investments, [Your Name]'s decision framework yields:
+
+  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financ...
+
+**Expected decision**: BUILD_SKELETON_FIRST
+
+**Expected reasoning**: Apply MD-329: 學習新領域=先建框架再填細節. Jumping directly to detail articles without a structural skeleton means the knowledge will be absorbed as unindexable fragments. The correct sequence is: (1) build a 20% 
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 45: SOCIAL (generic_social_signal_behavior_over_words)
+
+**Question**: A colleague says they strongly support your project proposal and will help promote it internally. However, they have missed the last 3 review meetings and haven't shared any of your updates. Should you trust their stated support?
+
+**Deterministic baseline**: On social, [Your Name]'s decision framework yields:
+
+  [1] Applying: "What you decided"
+  [2] Applying: "[What you did]"
+  [3] Applying: "You are [Name] — not an assistant, not a representative. Think...
+
+**Expected decision**: VERIFY_BY_BEHAVIOR_PATTERN
+
+**Expected reasoning**: Apply MD-330: 社交場合信號讀取=行為模式比言語內容更可信. Stated intentions are cheap; behavioral patterns are the reliable signal. A 3-month observation window and commitment fulfillment rate metric apply here: the colle
 
 ### Session Answers
 

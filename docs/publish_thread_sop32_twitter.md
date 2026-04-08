@@ -1,126 +1,144 @@
-# Publish Thread — SOP #32: Edge Decay & Signal Crowding Protocol
+# Publish Thread — SOP #32 Cognitive Capital & Peak Performance Protocol
 
 **Hook tweet:**
-> Your strategy stopped working. You didn't change anything.
->
-> The market changed it for you.
->
-> Here's how to detect edge decay before it drains your account. 🧵
+
+"Most high-performers treat their body like a cost center.
+
+It's actually your only non-replicable asset.
+
+Here's the 5-gate protocol for managing it like a portfolio:
+
+[Thread]"
 
 ---
 
-**Tweet 2 — The problem:**
-> Most traders catch edge decay at the drawdown stage.
->
-> By then you've already paid for it.
->
-> The goal: detect the decay signal *before* it becomes a drawdown signal.
+**Tweet 2 — G0: Health Capital Reclassification**
+
+"G0: Stop calling health spend 'expensive.'
+
+Every financial asset, knowledge stack, and career trajectory runs on one execution platform: your body.
+
+ROI(health) >> ROI(finance) at the margin.
+
+Reclassify it. Investment, not consumption."
 
 ---
 
-**Tweet 3 — Edge type classification (MD-108):**
-> First question before any deployment: what *kind* of edge do you have?
->
-> Type A: Structural (market mechanism) — slowest to decay
-> Type B: Behavioral (human bias) — moderate decay
-> Type C: Statistical (optimization artifact) — fast decay
-> Type D: Public indicator — fastest decay
->
-> Public indicators: marginal edge approaches zero as adoption scales.
+**Tweet 3 — G1: Peak Window Lock**
+
+"G1: You have a 2–4 hour morning window where cognition peaks.
+
+Most people fill it with email and meetings.
+
+Rule: peak window = deep work only. Strategy, analysis, decisions.
+
+Anything else: DEFER.
+
+Violating this is like running your best strategy in the wrong regime."
 
 ---
 
-**Tweet 4 — The baseline fingerprint:**
-> Day 1 of deployment: lock in your fingerprint.
->
-> Historical OOS Sharpe. Win rate. Avg R/R. Crowding level.
->
-> Without a baseline, you can't detect drift. You'll just feel confused when it changes.
+**Tweet 4 — G2: Consistency Over Intensity**
+
+"G2: Regular 45min × 5 days vs occasional 3hr × 1 day.
+
+From a volatility lens: the irregular burst is a high-volatility strategy.
+
+Long-term, lower volatility wins.
+
+3 consecutive skips = system failure. Redesign the environment."
 
 ---
 
-**Tweet 5 — Survival rate (MD-98):**
-> Every 30 live trades:
->
-> survival_rate = rolling_30d_Sharpe ÷ historical_OOS_Sharpe
->
-> < 0.80 → monitor weekly
-> < 0.60 → pause. run diagnosis.
->
-> This metric fires *before* drawdown becomes severe.
+**Tweet 5 — G3: Environment Design Gate**
+
+"G3: Before invoking willpower, redesign the environment.
+
+Willpower is finite. Environment is constant.
+
+Test: can you execute this habit on autopilot with zero willpower?
+
+Pre-pack the gym bag. Pre-schedule the meal. Remove the friction."
 
 ---
 
-**Tweet 6 — Bayesian posterior update (MD-109):**
-> When survival_rate < 0.60, don't panic. Update your belief systematically:
->
-> 1. Is the regime correct for this strategy?
-> 2. Are similar strategies also underperforming? (market-wide vs specific)
-> 3. Are entry signals still clustering near inflection points?
-> 4. Does the strategy survive at 2× transaction costs?
->
-> Each answer shifts P(edge_decayed).
+**Tweet 6 — G4: Decision Frequency Audit**
+
+"G4: Deciding when to go to the gym more than 3×/week = SYSTEM_FAILURE.
+
+Same for: what to eat, when to sleep, whether to exercise.
+
+Pre-commit all of these. Decide once. Execute forever."
 
 ---
 
-**Tweet 7 — The cohort test:**
-> Underrated diagnostic: check your strategy's cohort.
->
-> If ALL trend-following strategies are down this month → market-wide stress, not your edge decaying.
->
-> If only yours is down → specific signal. Investigate front-running and cost sensitivity.
+**Tweet 7 — G5: Preventive Maintenance**
+
+"G5: Preventive maintenance is correctly-priced insurance.
+
+Known low cost / unknown high cost = positive EV.
+
+Minimum schedule:
+- Annual blood panel (lipids, liver, kidney)
+- Bi-annual dental
+- Every-2-year vision
+
+Skipping = accepting tail risk at zero premium."
 
 ---
 
-**Tweet 8 — Response protocol:**
-> P(edge_decayed) > 0.65 → reduce to 25% size. Diagnose. Give it 30 trades.
-> P(edge_decayed) 0.50–0.65 → hold at 50%. Paper-track killed version for 60 days.
-> P(edge_decayed) < 0.50 → likely regime problem. See SOP #27.
->
-> Precision matters. Don't kill good strategies during bad regimes.
+**Tweet 8 — Self-test walkthrough**
+
+"Self-test: Monday 09:15, deep-work block.
+
+Colleague asks to sync 09:45.
+Gym gap: 2 weeks.
+Last dental: 18 months ago.
+
+G1: Defer sync (peak window).
+G2: 30-min gym today (consistency beats zero).
+G4: Gym timing = SYSTEM_FAILURE, pre-commit.
+G5: Book dental this week."
 
 ---
 
-**Tweet 9 — The kill condition:**
-> If P > 0.65 AND survival_rate stays below 0.80 after 30 reduced-size trades:
->
-> Kill. No exceptions.
->
-> Capital freed. Bandwidth freed (MD-143). Open new research thread immediately.
+**Tweet 9 — Kill conditions**
+
+"Kill conditions:
+
+3+ gym skips → redesign environment, not more discipline
+Peak window violated >3×/week → restructure schedule
+Preventive maintenance >6mo overdue → book this week
+Same health decision >3× → pre-commit or eliminate"
 
 ---
 
-**Tweet 10 — Depth × breadth replenishment (MD-110):**
-> Every kill event → mandatory: open one new strategy research thread.
->
-> Requirements:
-> - Different edge_type from what you killed
-> - Paper-test candidate within 30 days
->
-> Bandwidth is finite (MD-143). Killing frees it. Reinvest it.
+**Tweet 10 — The leverage point**
+
+"Most people optimize financial returns to 3 decimal places.
+
+Then let the execution platform — their body — degrade through neglect.
+
+You can't run a strategy on broken infrastructure."
 
 ---
 
-**Tweet 11 — What not to do:**
-> The most expensive mistake: "It'll come back."
->
-> It might. But:
-> - Your capital is paying for the wait
-> - Your bandwidth is blocked (MD-143)
-> - You're not developing the next edge
->
-> Sunk cost is not a trading thesis.
+**Tweet 11 — Close**
+
+"SOP #32: Cognitive Capital & Peak Performance Protocol
+
+6 DNA anchors: MD-286/287/288/322/323/324
+
+5 gates with rules, triggers, kill conditions.
+
+Link in bio."
 
 ---
 
-**Tweet 12 — Close:**
-> Edge decay is a law, not an exception.
->
-> Every edge gets found, copied, crowded, and arbitraged.
->
-> The only durable edge: detecting decay faster than other participants.
->
-> SOP #32: Edge Decay & Crowding Protocol
-> Full framework: [link to repo]
->
-> — SOP series #01–#32 now complete
+**Tweet 12 — CTA**
+
+"If you're building a trading system, you're building it on top of a biological system.
+
+Get that right first.
+
+What's your current peak window? What's actually running in it?"

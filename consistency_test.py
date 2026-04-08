@@ -48,6 +48,7 @@ _DOMAIN_TO_SECTION_KEYWORDS: dict[str, list[str]] = {
     "finance":          ["finance", "career & finance", "money", "invest", "wealth", "financial", "財務"],
     "career":           ["career", "work", "job", "occupation", "職業"],
     "relationships":    ["relationship", "friend", "social", "people", "人際"],
+    "social":           ["relationship", "friend", "social", "people", "人際", "communication"],
     "identity":         ["identity", "who i am", "boot_critical", "core", "身份"],
     "risk_assessment":  ["risk", "decision", "framework", "principle", "風險"],
     "risk":             ["risk", "decision", "framework", "principle", "風險"],
@@ -695,6 +696,9 @@ def check_alignment_with_memory(
         or (expected == "multi_track_before_converge" and ("multi" in resp_lower or "track" in resp_lower or "parallel" in resp_lower or "explore" in resp_lower or "converge" in resp_lower or "signal" in resp_lower or "多軌" in resp_lower or "評估窗口" in resp_lower or "concurrent" in resp_lower))
         or (expected == "identify_threat_profile_first" and ("threat" in resp_lower or "profile" in resp_lower or "dangerous" in resp_lower or "opponent" in resp_lower or "risk" in resp_lower or "identify" in resp_lower or "neutralize" in resp_lower or "最大威脅" in resp_lower or "角色化" in resp_lower or "賽局" in resp_lower or "enumerate" in resp_lower or "scan" in resp_lower))
         or (expected == "calculate_friction_cost_first" and ("friction" in resp_lower or "cost" in resp_lower or "commission" in resp_lower or "fee" in resp_lower or "calculate" in resp_lower or "round-trip" in resp_lower or "round trip" in resp_lower or "before" in resp_lower or "交易成本" in resp_lower or "手續費" in resp_lower or "先算" in resp_lower or "net" in resp_lower or "breakeven" in resp_lower))
+        or (expected == "maintain_proactive_cadence" and ("proactive" in resp_lower or "reach out" in resp_lower or "initiate" in resp_lower or "maintain" in resp_lower or "contact" in resp_lower or "silence" in resp_lower or "cadence" in resp_lower or "tier" in resp_lower or "主動" in resp_lower or "聯繫" in resp_lower or "維護" in resp_lower))
+        or (expected == "build_skeleton_first" and ("framework" in resp_lower or "skeleton" in resp_lower or "structure" in resp_lower or "survey" in resp_lower or "toc" in resp_lower or "overview" in resp_lower or "outline" in resp_lower or "scaffold" in resp_lower or "map" in resp_lower or "框架" in resp_lower or "架構" in resp_lower or "目錄" in resp_lower or "骨架" in resp_lower))
+        or (expected == "verify_by_behavior_pattern" and ("behavior" in resp_lower or "pattern" in resp_lower or "action" in resp_lower or "verify" in resp_lower or "consistent" in resp_lower or "track" in resp_lower or "observe" in resp_lower or "commitment" in resp_lower or "follow-through" in resp_lower or "行為" in resp_lower or "模式" in resp_lower or "驗證" in resp_lower or "一致性" in resp_lower))
     )
 
     if aligned:

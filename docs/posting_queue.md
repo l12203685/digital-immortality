@@ -38,7 +38,8 @@
 | Jun 4 | #29 | publish_thread_sop29_twitter.md | "Your strategy is live. Now what do you watch? Not P&L. P&L is noise." | pending |
 | Jun 6 | #30 | publish_thread_sop30_twitter.md | "You know how to enter a trade. Do you know what to do when you're 12% underwater and the next signal fires?" | pending |
 | Jun 8 | #31 | publish_thread_sop31_twitter.md | "Your strategy has 4 parameters. Is that too many? Wrong question." | pending |
-| Jun 10 | #32 | publish_thread_sop32_twitter.md | "Your strategy stopped working. You didn't change anything. The market changed it for you." | pending |
+| Jun 10 | #32 | publish_thread_sop32_twitter.md | "Most high-performers treat their body like a cost center. It's actually your only non-replicable asset." | pending |
+| Jun 12 | #33 | publish_thread_sop33_twitter.md | "Your strategy stopped working. You didn't change anything. The market changed it for you." | pending |
 
 ---
 
