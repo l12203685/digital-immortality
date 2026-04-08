@@ -683,3 +683,15 @@ Cycle 31 done.
 - **MD-48 alpha三要件** — 可持續 alpha = 長期穩定 + 可複製 + 無胃納量限制；缺一不穩
 
 Branch 2.2 next: **202412**.
+
+## Cycle 5 — 2026-04-08T09:45 UTC
+
+Cycle 32 done.
+
+**202412.jsonl** (570 Edward msgs, Dec 2024) → 3 new micro-decisions written to `dna_core.md` (now 51 total):
+
+- **MD-49 槓桿×日虧損≤1%法則** — 目標槓桿 × 近60天每口平均虧損% ≤ 1%；日虧損常態>2%=長期必虧；動態風控比固定口數更敏感
+- **MD-50 「虧損太小」=加碼訊號** — 實際虧損遠低於預期→風險設定過保守→放大倉位；反直覺：等到「虧太少」才加碼
+- **MD-51 「確定不會輸」=100%押** — Kelly極端case：information asymmetry完整時應100%壓；提升確定性比分散持倉更重要
+
+Branch 2.2 next: **202411**.
