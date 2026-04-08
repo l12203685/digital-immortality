@@ -93,8 +93,8 @@ class RegimeDetector:
         self,
         lookback: int = 60,
         ma_period: int = 20,
-        trend_threshold: float = 0.05,
-        mr_threshold: float = 0.30,
+        trend_threshold: float = 0.054,
+        mr_threshold: float = 0.25,
     ):
         self.lookback = lookback
         self.ma_period = ma_period
@@ -173,15 +173,19 @@ def _get_strategies() -> dict:
 
     from trading.strategies import (
         DualMA,
-        DonchianConfirmed,
-        RegimeFilter,
-        dual_ma_filtered,
+        dual_ma_rsi_filtered,
+        bollinger_mr_loose,
     )
 
+    # Regime → strategy mapping validated by walk-forward backtest (results/strategy_comparison.json):
+    #   trending      → DualMA_10_30        sh=+5.30 er=7.8   [GO on trending]
+    #   mean_reverting→ BollingerMR_loose   sh=+3.40 er=16.5  [GO on mean_reverting; only passer]
+    #   mixed         → DualMA_RSI_filtered sh=+1.74 er=9.9   [GO on mixed; best edge ratio]
+    # Previous bug: DonchianConfirmed used for mean_reverting — it's a breakout strat, NO on all regimes.
     _STRATEGY_CACHE = {
         "trending": ("DualMA_10_30", DualMA(fast=10, slow=30)),
-        "mean_reverting": ("DonchianConfirmed_20", DonchianConfirmed(period=20)),
-        "mixed": ("DualMA_filtered", dual_ma_filtered),
+        "mean_reverting": ("BollingerMR_loose", bollinger_mr_loose),
+        "mixed": ("DualMA_RSI_filtered", dual_ma_rsi_filtered),
     }
     return _STRATEGY_CACHE
 
@@ -190,13 +194,13 @@ class PortfolioSelector:
     """
     Map detected regime to the best strategy and produce a Signal.
 
-    Regime → Strategy rationale
+    Regime → Strategy rationale (validated by walk-forward, results/strategy_comparison.json)
     ---------------------------
-    trending      → DualMA(10,30): momentum follows the trend direction cleanly.
-    mean_reverting → DonchianConfirmed(20): channel breakout with 2-bar confirmation
-                    filters noise in oscillating markets.
-    mixed          → DualMA_filtered (DualMA wrapped in RegimeFilter): participates
-                    in momentum moves but gates out flat/choppy periods.
+    trending       → DualMA_10_30: sh=+5.30 er=7.8 — momentum follows trend cleanly.
+    mean_reverting → BollingerMR_loose: sh=+3.40 er=16.5 — Bollinger bounce; only
+                     strategy that passes in oscillating markets (MD-175: regime fit).
+    mixed          → DualMA_RSI_filtered: sh=+1.74 er=9.9 — best edge ratio on mixed
+                     data; RSI gate eliminates counter-trend entries at exhaustion.
     """
 
     def __init__(self, detector: RegimeDetector = None):

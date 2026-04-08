@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-04-08T01:16:37.446584+00:00",
-  "data_source": "data/trending_500.csv (500 bars)",
-  "regime": "trending",
-  "strategy_name": "DualMA_10_30",
-  "signal": -1,
-  "signal_label": "SHORT",
-  "bars_analyzed": 500,
+  "timestamp": "2026-04-08T10:34:09.808220+00:00",
+  "data_source": "synthetic (200 bars)",
+  "regime": "mixed",
+  "strategy_name": "DualMA_RSI_filtered",
+  "signal": 1,
+  "signal_label": "LONG",
+  "bars_analyzed": 200,
   "scores": {
-    "trend_strength": 0.05481221309139343,
-    "mr_score": 0.05,
-    "pct_slope_per_bar": 0.4593195899568265,
-    "ma_crossings": 2
+    "trend_strength": 0.03409668707773024,
+    "mr_score": 0.15,
+    "pct_slope_per_bar": 0.11789460628085259,
+    "ma_crossings": 6
   },
-  "rationale": "Regime: TRENDING | trend_strength=0.0548 > threshold; slope=0.4593%/bar \u2014 directional drift detected | Signal: SHORT"
+  "rationale": "Regime: MIXED | neither strong trend nor clear oscillation (trend=0.0341, mr=0.15) \u2014 regime-filtered momentum used | Signal: LONG"
 }

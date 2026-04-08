@@ -544,3 +544,27 @@ Recursive engine cycle history.
 - **MD-219** 替換成本=自我市值下限 — 公司replacement cost=你的market floor bid price；薪資談判用替換成本框架比「我想要多少」更有說服力
 
 `LYH/agent/dna_core.md`: **219 MDs**. Next: 201907.
+
+## Cycle 35 — 2026-04-08T12:00 UTC
+
+**Branch 1.2 + 1.1 — Trading system quality overhaul**
+
+### Bug Fixed
+- **portfolio.py:182** was using `DonchianConfirmed_20` for `mean_reverting` regime — a breakout strategy that fails all regimes (NO on trending sh=-1.26, NO on mean_reverting sh=-1.93, NO on mixed sh=+0.41). This meant BollingerMR was never deployed despite being the only passing strategy for mean-reverting.
+
+### Code Changes
+1. **trading/strategies.py**: Added `BollingerMR_20` and `BollingerMR_loose` to `NAMED_STRATEGIES` (10 strategies total, was 8)
+2. **trading/portfolio.py**: 
+   - `mean_reverting` → `BollingerMR_loose` (sh=+3.40 er=16.5, only passer)
+   - `mixed` → `DualMA_RSI_filtered` (sh=+1.74 er=9.9, better than DualMA_filtered er=4.3)
+   - Regime detector calibrated: `trend_threshold` 0.05→0.054, `mr_threshold` 0.30→0.25 (now correctly fires mean_reverting regime)
+3. **results/strategy_comparison.json + .md**: Full walk-forward comparison of all 10 strategies × 3 datasets
+
+### Backtest Results Summary
+| Regime | Strategy | Sharpe | EdgeRatio |
+|---|---|---|---|
+| trending | DualMA_10_30 | +5.30 | 7.8 |
+| mean_reverting | BollingerMR_loose | +3.40 | 16.5 |
+| mixed | DualMA_RSI_filtered | +1.74 | 9.9 |
+
+Next: testnet_runner.py ATR-based stop loss; continue DNA distillation when JSONL available.

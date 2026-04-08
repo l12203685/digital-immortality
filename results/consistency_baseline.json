@@ -2,14 +2,11 @@
   "meta": {
     "dna_file": "/home/user/digital-immortality/templates/example_dna.md",
     "organism": "[Your Name]",
-    "generated_at": "2026-04-08T01:16:45.292456",
+    "generated_at": "2026-04-08T10:36:46.892581",
     "scenario_count": 18,
     "scenario_source": "/home/user/digital-immortality/templates/generic_boot_tests.json",
     "principles_count": 12,
-    "use_memory": true,
-    "memory_corrections_loaded": 0,
-    "memory_calibration_loaded": 1,
-    "memory_domains_enhanced": []
+    "use_memory": false
   },
   "results": [
     {

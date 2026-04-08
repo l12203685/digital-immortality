@@ -12,6 +12,9 @@ from typing import List, Dict
 # Re-use helpers from the backtest framework
 from trading.backtest_framework import Bar, Signal, _mean
 
+# Re-use BollingerMeanReversion from strategies/
+from strategies.mean_reversion import BollingerMeanReversion
+
 # ---------------------------------------------------------------------------
 # DualMA — Dual Moving Average Crossover
 # ---------------------------------------------------------------------------
@@ -242,6 +245,10 @@ donchian_confirmed_filtered = RegimeFilter(DonchianConfirmed(period=20), trend_p
 dual_ma_rsi_btc_daily = RSIFilter(DualMA(fast=10, slow=30))
 dual_ma_rsi_filtered = RSIFilter(RegimeFilter(DualMA(fast=10, slow=30), trend_period=50, slope_bars=5, min_slope_pct=0.10))
 
+# Bollinger Band mean reversion (MD-175: MAE/MFE fit — MR fits range regimes)
+bollinger_mr_btc_daily = BollingerMeanReversion(lookback=20, num_std=2.0, trend_lookback=50, trend_threshold=0.001)
+bollinger_mr_loose = BollingerMeanReversion(lookback=20, num_std=2.0, trend_lookback=50, trend_threshold=0.005)
+
 NAMED_STRATEGIES: Dict[str, object] = {
     "DualMA_10_30": dual_ma_btc_daily,
     "Donchian_20": donchian_btc_daily,
@@ -251,4 +258,6 @@ NAMED_STRATEGIES: Dict[str, object] = {
     "DonchianConfirmed_filtered": donchian_confirmed_filtered,
     "DualMA_RSI": dual_ma_rsi_btc_daily,
     "DualMA_RSI_filtered": dual_ma_rsi_filtered,
+    "BollingerMR_20": bollinger_mr_btc_daily,
+    "BollingerMR_loose": bollinger_mr_loose,
 }

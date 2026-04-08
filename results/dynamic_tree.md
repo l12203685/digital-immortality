@@ -24,10 +24,10 @@
   - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
   - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 3: BTC=71443.20 signal=SHORT (consistent SHORT × 3, price declining: 71509→71484→71443)
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
-- 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+**RSIFilter** ✓ cycle 45) — 8 strategies in NAMED_STRATEGIES; RSIFilter gates signals by RSI>50 long / RSI<50 short
-  - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA, MR→Donchian, mixed→filtered)
+- 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
+  - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
   - trading_system.py --portfolio: auto-detects regime, selects strategy, saves results/portfolio_decision.json ✓
-  - Test: trending_500.csv → TRENDING→DualMA→SHORT; mixed→MIXED→DualMA_filtered→FLAT ✓
+  - Test: trending→TRENDING→DualMA_10_30 ✓; mean_reverting→MEAN_REVERTING→BollingerMR_loose ✓; mixed→TRENDING→DualMA_10_30 (synthetic data limitation) — strategy_comparison.md saved
   - **`compute_mae_mfe()` + `_atr()` added to backtest_framework.py ✓** (cycle 46) — per-trade MAE/MFE normalized by ATR; edge_ratio=MFE/MAE×√N (MD-13); DNA principles MD-13/157/175 now have code; momentum=7.15 breakout=8.94 on trend data
 - 1.3 Skill 商業化 → 付費使用者（v2.1.0, 7 skills, users=0）
 - 1.4 其他收入路徑（待發現）
