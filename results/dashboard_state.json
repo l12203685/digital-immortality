@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T01:21+08",
+  "updated": "2026-04-09T01:30+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）; 7.4 知識產品#01 in progress; 8.4 recurring decision audit in progress",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
+      "text": "API Error: 500 {\"type\":\"error\",\"error\":{\"type\":\"api_error\",\"message\":\"Interna..."
+    },
+    {
+      "time": "8min ago",
       "text": "Next: re-run with upgraded prompt → isolate true semantic count; then add DNA..."
     },
     {
-      "time": "just now",
+      "time": "8min ago",
       "text": "8 remaining failures: 6 real semantic divergences (DNA is ambiguous on PASS v..."
     },
     {
-      "time": "just now",
+      "time": "8min ago",
       "text": "4 format non-compliance cases resolved (generic_verdict_first, generic_identi..."
     },
     {
-      "time": "just now",
+      "time": "8min ago",
       "text": "Action: improved `_normalize_decision()` — added DEFLECT/ESCALATE/VERDICT/PAU..."
-    },
-    {
-      "time": "just now",
-      "text": "Branch 2.3 — cross-instance score: 14/26 (54%) → 18/26 (69%)."
     }
   ],
   "stats": {
-    "daemon_cycles": 101,
+    "daemon_cycles": 103,
     "total_mds": 325,
-    "dna_core_lines": 76
+    "dna_core_lines": 87
   }
 }
