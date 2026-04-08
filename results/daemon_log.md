@@ -188,3 +188,14 @@ Pushed. Next action: daily cron fires at 09:03 UTC; at tick 7 run `--review`.
 - 3 more ticks → `--review` → mainnet GO/NO-GO
 
 Next: daily cron accumulates. At tick 7 run `--review`.
+
+## Cycle 2 — 2026-04-08 01:26:36 UTC
+
+**Cycle 8 done.**
+
+Branch 1.1 — tick 4 fired:
+- `dual_ma`: +0.15 USDT, PF=3.616, WR=50% [OK] — reversed from -0.06 last cycle
+- All strategies passing kill conditions
+- 3 more ticks → `--review` → mainnet GO/NO-GO
+
+Pushed. Daily cron handles the remaining accumulation.
