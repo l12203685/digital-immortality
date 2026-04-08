@@ -309,3 +309,13 @@ Branch 1.1 (highest derivative — credential-gated, so unblocking with evidence
 - 2 ticks logged to `results/paper_live_log.jsonl`
 
 **Gate to live:** set `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → `python -m trading.mainnet_runner --tick`
+
+## Cycle 15 — 2026-04-08T01:45 UTC
+
+**Branch 1.1 — paper-live tick 3.**
+
+- BTC=71443.20 USDT, signal=SHORT (consistent × 3)
+- Price trend: 71509 → 71484 → 71443 (declining, -66 USDT over 3 ticks)
+- SHORT signal holding across all ticks — dual_ma regime confirmed bearish
+- Credential gate still pending; 3 ticks of signal evidence accumulated
+- Next gate: provide BINANCE_MAINNET_KEY/SECRET → `--tick` for live trade

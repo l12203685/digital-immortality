@@ -22,7 +22,7 @@
   - **--review PASSED: OVERALL GO → mainnet $100 next step** ✓
   - **mainnet_runner.py built** ✓ — $100 cap, dual_ma only, kill conditions: MDD>10% WR<35% PF<0.85
   - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
-  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 1: BTC=71509.90 signal=SHORT, tick 2: BTC=71484.80 signal=SHORT (consistent SHORT × 2)
+  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 3: BTC=71443.20 signal=SHORT (consistent SHORT × 3, price declining: 71509→71484→71443)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed) ✓
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA, MR→Donchian, mixed→filtered)
   - trading_system.py --portfolio: auto-detects regime, selects strategy, saves results/portfolio_decision.json ✓
@@ -110,3 +110,4 @@
 - 2026-04-08 01:37 UTC: cycle 12 — --dry-run fixed (no longer blocked by credential gate); kill rails validated via dry-run; logs DRY_RUN entry
 - 2026-04-08 01:41 UTC: cycle 13 — --paper-live added to mainnet_runner; fetches real Binance prices (no creds); tick 1: BTC=71509.90 SHORT
 - 2026-04-08 01:43 UTC: cycle 14 — paper-live tick 2: BTC=71484.80 SHORT; signal consistent × 2
+- 2026-04-08 01:45 UTC: cycle 15 — paper-live tick 3: BTC=71443.20 SHORT; declining price trend confirmed × 3
