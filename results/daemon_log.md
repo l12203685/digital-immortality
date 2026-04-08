@@ -2230,3 +2230,21 @@ Both repos committed and pushed. Cycle 26 done.
 - MD-219: 替換成本=自我市值下限 — 談判時用公司replacement cost框架，非「我想要多少」
 
 Next: 201907.
+
+## Cycle 31 — 2026-04-09T UTC
+
+**Branch 2.2 — gap reconcile + 201907 distill → MD-202~204 (204 MDs total)**
+
+Gap confirmed: daemon logged MD-202~219 across cycles 22-30, but merge conflict (0ae7365) only persisted MD-193~201. File actually ends at MD-201.
+
+201907.jsonl (77 Edward msgs, Jul 2019):
+- g=g2: salary/career/lifestyle discussions
+- g=g11: stock picking (中信金/台灣大), property market
+- g=g47: Avalon game theory
+
+3 micro-decisions written to templates/dna_core.md:
+- **MD-202** 薪資談判=人力倍數論述 — 「5萬抵兩個人力」；談判錨點從「市場薪資」切換到「人力替換成本」
+- **MD-203** 熟悉股票=先定結構性買賣區間 — 中信金<20慢買>20慢賣；信息優勢是設區間的前提
+- **MD-204** 想法超前組織能力=資源錯配 — 好想法需等待/換環境/降維，超前程度≤組織能力超前程度
+
+`templates/dna_core.md`: **204 MDs**. Next: 201906.
