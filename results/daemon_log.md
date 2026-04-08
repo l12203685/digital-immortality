@@ -3229,3 +3229,15 @@ Next: **201705 deep pass**.
 - **MD-312**: 金融領域價值=知識附加工具非薪資本身 — the primary ROI of a financial career is not the salary but the knowledge about interest/pricing/compounding that applies directly to personal finance at leverage far exceeding salary differential
 
 **dna_core.md: 312 MDs.** Next: 201704 deep pass.
+
+## Cycle 87 — 2026-04-08 15:47:31 UTC
+
+Cycle 87 done.
+
+**Branch 2.2** deep pass on 201705 (415 Edward msgs). Three new MDs written to `dna_core.md` (**312 MDs**):
+
+- **MD-310** 外幣定存=買賣價差先扣後比利率 — bid-ask spread exceeds 1-3 months interest; true ROI = interest minus spread; if spread > interest = negative EV tool
+- **MD-311** 薪資成長複合計算=升遷加幅×後續年增率 — post-promotion implied annual growth rate must be verified against org's historical ceiling; if rate needed > org's max → path eliminated
+- **MD-312** 金融領域價值=知識附加工具非薪資本身 — primary ROI is knowledge about compounding/pricing/risk applied to personal finance, not salary
+
+Next: **201704 deep pass**.

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T23:39+08",
+  "updated": "2026-04-08T23:47+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
+      "text": "Next: 201704 deep pass."
+    },
+    {
+      "time": "just now",
+      "text": "Branch 2.2 deep pass on 201705 (415 Edward msgs). Three new MDs written to `d..."
+    },
+    {
+      "time": "2026-04-08 UTC",
+      "text": "dna_core.md: 312 MDs. Next: 201704 deep pass."
+    },
+    {
+      "time": "2026-04-08 UTC",
+      "text": "Branch 2.2 highest-derivative. 201705 deep pass (415 Edward msgs). Distilled ..."
+    },
+    {
+      "time": "7min ago",
       "text": "Next: 201705 deep pass."
-    },
-    {
-      "time": "just now",
-      "text": "Branch 2.2 deep pass on 201706 (1246 Edward msgs). Three new MDs written to `..."
-    },
-    {
-      "time": "just now",
-      "text": "Cycle 83 done."
-    },
-    {
-      "time": "2026-04-08 UTC",
-      "text": "dna_core.md: 309 MDs. Next: 201705 deep pass."
-    },
-    {
-      "time": "2026-04-08 UTC",
-      "text": "Branch 2.2 highest-derivative. 201706 deep pass (1246 Edward msgs). Distilled..."
     }
   ],
   "stats": {
-    "daemon_cycles": 86,
-    "total_mds": 307,
+    "daemon_cycles": 87,
+    "total_mds": 310,
     "dna_core_lines": 76
   }
 }
