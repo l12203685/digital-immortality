@@ -4321,3 +4321,18 @@ Highest-derivative gap: posting queue ends May 3 → G5 compounding clock stalls
 - Posting queue extended: **Apr 9 – May 5**, 14 threads total
 
 **Next blocker:** Edward posts SOP #01 on Apr 9 to start the G5 compounding clock.
+
+## Cycle 140 — 2026-04-08T20:47:29 UTC
+
+**Cycle 140 done.**
+
+Highest-derivative gap: posting queue ends May 5 after SOP #14 — G5 compounding clock would stall 2 days early.
+
+**What shipped:**
+- `docs/knowledge_product_15_backtest_deception_sop.md` — 4-gate Backtest Deception Protocol (MDs 107/143/113/97/108)
+- `docs/publish_thread_sop15_twitter.md` — 9-tweet thread: *"Your backtest looks great. That's the problem."*
+- Posting queue extended: **Apr 9 – May 7**, 15 threads total
+
+**Series now SOP #01~#15. Queue runs Apr 9 – May 7.**
+
+**Next blocker:** Edward posts SOP #01 on Apr 9 to start the G5 compounding clock.

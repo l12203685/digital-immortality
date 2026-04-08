@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#12
+# Twitter Posting Queue — SOP Series #01~#15
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -21,6 +21,7 @@
 | May 1 | #12 | publish_thread_sop12_twitter.md | "Distribution is the 12th gate, not a bonus step." | pending |
 | May 3 | #13 | publish_thread_sop13_twitter.md | "Willpower is a finite resource. Your OS should never touch it." | pending |
 | May 5 | #14 | publish_thread_sop14_twitter.md | "Most traders quit their job too early or never. Both are wrong." | pending |
+| May 7 | #15 | publish_thread_sop15_twitter.md | "Your backtest looks great. That's the problem." | pending |
 
 ---
 
@@ -41,6 +42,6 @@
 ---
 
 ## 30-day compounding target (by May 9)
-- [ ] All 14 threads posted
+- [ ] All 15 threads posted
 - [ ] G5 score ≥ 2/3
 - [ ] ≥1 inbound DM from someone with trading/quant background
