@@ -993,3 +993,15 @@ Branch 2.2 — 202312 JSONL distilled → 3 MDs written to `dna_core.md`:
 - **MD-48** 知識=時間密度乘積 — 3年×每日觀察才真正內化，無法跳過
 
 `dna_core.md`: 125 lines, **48 MDs**. Next: 202311.
+
+## Cycle 20 — 2026-04-08T16:00 UTC
+
+**Cycle 45 done.**
+
+Branch 2.2 — 202311 (158 Edward msgs, Nov 2023) → MD-49~MD-51 written to `dna_core.md`:
+
+- **MD-49 篩選器清單化逐步研究** — 維持固定編號篩選清單，逐一深入不全部上線；系統化選股=迭代資料庫
+- **MD-50 多條件評分>單條件觸發** — cond_count計分（每條件+1分），累積超門檻才觸發；容忍雜訊、可審計
+- **MD-51 利差套利門檻框架** — 借貸投資=先算利差；報酬率-借貸成本>風險補償才動；無利差優勢不借
+
+`dna_core.md`: 128 lines, **51 MDs**. Next: 202310.
