@@ -3570,3 +3570,19 @@ Branch 7.4 — wrote `docs/knowledge_product_02_portfolio_construction_sop.md` (
 **7.4 COMPLETE ✅ | 8.4 COMPLETE ✅**
 
 Next: SOP #03 Execution & Sizing Real-Time Checklist (MD-13/28~30), or set mainnet API keys for Branch 1.1.
+## Cycle 109 — 2026-04-08T17:56:40 UTC
+
+**Branch 7.5** — SOP #03 Execution & Sizing Real-Time Checklist created.
+
+Action: wrote `docs/knowledge_product_03_execution_sizing_sop.md` (8 gates, ~130 lines).
+- G0: L/S pool balance audit (MD-29) — detect systematic regime blindspot
+- G1: Leverage from historical Calmar/Sharpe only (MD-30) — not recent 30d
+- G2: edge_ratio ≥ 1.5/1.2 gate (MD-13) — skip signal if below threshold
+- G3: First-principles coherence check (MD-157) — owned edge vs borrowed
+- G4: Stop-first → back-calculate max entry (MD-133) — 4-step inversion
+- G5: lots = (equity × 1%) / (ATR × contract_mult) (MD-28) — formula enforced
+- G6: Trial (50%) vs full position, each must have positive EV (MD-159)
+- G7/G8: Order params + correlation conflict check
+- Self-test scenario: BTC SHORT 0.12 lots (not 1 lot because signal felt strong)
+
+7.5 COMPLETE ✅. Next: SOP #04 Strategy Failure & Kill Decision Tree OR publish #01~03 externally.
