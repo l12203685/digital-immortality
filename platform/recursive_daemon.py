@@ -119,17 +119,23 @@ def run_cycle_api(client, system: str, model: str, cycle: int) -> str:
 
 def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
     """Run via claude CLI (uses Max subscription, no API credit needed)."""
-    print(f"[daemon] Cycle {cycle} starting (CLI)...")
-    full_prompt = f"{prompt}\n\n{RECURSIVE_PROMPT}"
+    print(f"[daemon] Cycle {cycle} starting (CLI)...", flush=True)
+    # Keep prompt short for CLI — only the recursive question, context is in repo files
+    short_prompt = (
+        "Read results/dynamic_tree.md and results/daemon_log.md (tail). "
+        "Pick the highest-derivative branch. Do ONE concrete thing that advances digital immortality. "
+        "Update results/dynamic_tree.md with what changed. "
+        "Append to results/daemon_log.md. Commit and push. Under 200 words."
+    )
     result = subprocess.run(
-        ["claude", "-p", full_prompt, "--model", model],
+        ["claude", "-p", short_prompt, "--model", model],
         capture_output=True, text=True, timeout=300,
         cwd=str(REPO_ROOT),
     )
     text = result.stdout.strip()
     if result.returncode != 0 and not text:
         text = f"CLI error: {result.stderr.strip()}"
-    print(f"[daemon] Cycle {cycle} done — {len(text)} chars")
+    print(f"[daemon] Cycle {cycle} done — {len(text)} chars", flush=True)
     return text
 
 
