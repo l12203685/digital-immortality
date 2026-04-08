@@ -1,0 +1,4 @@
+Microsoft Windows [Version 10.0.19044.1503]
+(c) Microsoft Corporation. 著作權所有，並保留一切權利。
+
+C:\Users\admin\workspace\digital-immortality>

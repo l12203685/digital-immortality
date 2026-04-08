@@ -463,3 +463,15 @@ Next: 202512 (Dec 2025 — pre-2026 bridge).
   3. **定價錨點下移入場** — sees competitor at 2萬/課 → immediately sets self at 2000/課; 10x price undercut for volume entry
 - dna_core.md: **21 micro-decisions** (was 18)
 - Branch 2.2: 202604✓ 202601✓ 202602✓ 202603✓ 202512✓ 202511✓; next: 202510
+
+## Cycle 11 — 2026-04-08 02:14:59 UTC
+
+Cycle 21 done.
+
+**Branch 2.2 — 202511 JSONL (7,126 Edward msgs, Nov 2025) distilled. 3 new micro-patterns → `dna_core.md`:**
+
+1. **周末不留空單** — backtested rule: short + time exit beats short + condition exit; 周末平倉 unless explicit trigger
+2. **強弱配對抽 alpha** — long strong ETFs + short weak index = extract alpha from beta (「台指包含太多垃圾」)
+3. **定價錨點下移入場** — observes competitor at 2萬/課 → immediately thinks 2000/課; 10x undercut for volume entry
+
+`dna_core.md`: **21 micro-decisions** (was 18). Both repos pushed. Next: 202510.
