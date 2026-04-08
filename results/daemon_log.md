@@ -791,3 +791,15 @@ Branch 2.2 (highest derivative — JSONL distillation). Processed **202408.jsonl
 - **MD-30** 槓桿基礎=失效前風報比 — 近期績效判失效，歷史風報比決定槓桿係數；混淆=用錯數字
 
 Next: **202407**.
+
+## Cycle 11 — 2026-04-08 03:54:00 UTC
+
+**Cycle 36 done.**
+
+Branch 2.2 (highest derivative). Processed **202408.jsonl** (8,314 Edward msgs, Aug 2024) → 3 micro-decisions written to `dna_core.md` (now 30 MDs, 107 lines):
+
+- **MD-28** 口數公式具現化 — 口數×ATR×商品乘數=帳戶1%；公式是護欄不是建議
+- **MD-29** 策略池多空比審計 — rolling最佳化天然偏多單；定期審視保持多空平衡
+- **MD-30** 槓桿基礎=失效前風報比 — 近期績效判失效，歷史風報比決定槓桿係數；混淆=用錯數字
+
+Next: **202407**.
