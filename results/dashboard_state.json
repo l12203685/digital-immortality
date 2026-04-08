@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T05:04+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.24 SOP #18 COMPLETE → posting queue extended to May 13; Edward posts threads #01~#18",
+  "updated": "2026-04-09T05:08+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.24 SOP #18 COMPLETE + 7.25 SOP #19 COMPLETE → posting queue extended to May 15; Edward posts threads #01~#19; Domain 4 (社交圈) first SOP shipped (SOP #19)",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -50,29 +50,29 @@
   ],
   "activity": [
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "Next blocker: Edward posts SOP #01 today to start G5 compounding clock."
     },
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "- Queue extended: Apr 9 – May 13, 18 threads total"
     },
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "- `docs/publish_thread_sop18_twitter.md` — 9-tweet thread: *\"Most traders los..."
     },
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "- `docs/knowledge_product_18_inaction_bias_sop.md` — 5-gate Idle Capital Prot..."
     },
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "Shipped:"
     }
   ],
   "stats": {
     "daemon_cycles": 143,
     "total_mds": 328,
-    "dna_core_lines": 87
+    "dna_core_lines": 426
   }
 }
