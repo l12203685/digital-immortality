@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-09T06:18+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#26 COMPLETE → posting_queue.md updated (#01~#26, Apr 9–May 29); Edward posts threads; all 5 kernels have standalone SOPs ✅; SOP #26 Walk-Forward Validation fills IS/OOS gap (MD-97/98/143)",
+  "updated": "2026-04-09T06:24+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#31 COMPLETE → posting_queue.md updated (#01~#31, Apr 9–Jun 8); Edward posts threads; all 5 kernels have standalone SOPs ✅; SOP #31 Parsimony fills complexity/evidence-ratio gap (MD-97/113/114/116/98)",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
   "days_remaining": 89,
@@ -55,15 +55,15 @@
     },
     {
       "time": "just now",
-      "text": "- Queue extended to Jun 6 (#01~#30, 58-day target)"
+      "text": "- Queue extended to Jun 8 (#01~#31, 60-day target)"
     },
     {
       "time": "just now",
-      "text": "- `docs/publish_thread_sop30_twitter.md` — hook: *\"You know how to enter a tr..."
+      "text": "- `docs/publish_thread_sop31_twitter.md` — hook: *\"Your strategy has 4 parame..."
     },
     {
       "time": "just now",
-      "text": "- `docs/knowledge_product_30_drawdown_recovery_sop.md` — 5 gates: G0 pre-comm..."
+      "text": "- `docs/knowledge_product_31_parsimony_complexity_sop.md` — 5 gates: mechanis..."
     },
     {
       "time": "just now",
@@ -71,7 +71,7 @@
     }
   ],
   "stats": {
-    "daemon_cycles": 155,
+    "daemon_cycles": 156,
     "total_mds": 328,
     "dna_core_lines": 87
   }

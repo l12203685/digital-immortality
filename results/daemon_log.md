@@ -4786,3 +4786,16 @@ Gap: SOP #15 (backtest deception) + SOP #26 (walk-forward) both warn against ove
 - `results/dynamic_tree.md` updated: Branch 7.34, cycle 156
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 156 — 2026-04-08 22:24:34 UTC
+
+**Cycle 156 done.**
+
+Gap: SOP #15 (backtest deception) + SOP #26 (walk-forward) both warn against overfitting, but neither teaches the evidence-ratio principle — *how many OOS trades does your complexity level require?* MD-97/113/114/116/98 all in DNA, no teachable product. Fixed.
+
+**Shipped:**
+- `docs/knowledge_product_31_parsimony_complexity_sop.md` — 5 gates: mechanism sentence → DoF audit (P+B+I) → parsimony gate (OOS ≥ DoF×10) → simplicity stress test → cross-regime validation → deployment contract
+- `docs/publish_thread_sop31_twitter.md` — hook: *"Your strategy has 4 parameters. Is that too many? Wrong question."*
+- Queue extended to **Jun 8** (#01~#31, 60-day target)
+
+**Next blocker:** Edward posts SOP #01.
