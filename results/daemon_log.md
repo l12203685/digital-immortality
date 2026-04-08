@@ -1936,3 +1936,13 @@ Next: 202101.
 ## Cycle 4 — 2026-04-08 06:54:42 UTC
 
 API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Overloaded"},"request_id":"req_011CZqs8u948LXaosKvP4P7T"}
+
+## Cycle 5 — 2026-04-08T07:10 UTC
+
+**202101 distill → MD-163~165** (165 MDs total):
+
+- **MD-163** 學習環境=輸入端品質是成長天花板，只跟持續贏錢的人學 — midstake study遠差於5K+ reg教；輸入端品質決定上限
+- **MD-164** 職業圈子過濾=持續盈利是留下的唯一標準，非道德判斷 — 持續虧損者最終行為模式改變是系統性結果
+- **MD-165** 交易員三階段=第二階段被「存股論」淘汰是最常見終點 — 新手→幻滅（被存股洗腦）→成熟，能到第三階段極少
+
+`templates/dna_core.md`: **165 MDs**. Next: 202012.
