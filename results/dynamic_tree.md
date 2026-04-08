@@ -34,7 +34,7 @@
 
 ### 2. 行為等價（核心能力）
 - 2.1 DNA 品質：10 micro-decision patterns from JSONL integrated ✓
-- 2.2 微決策學習：202604 ✓; 202601 ✓; 202602 ✓; 202603 ✓; 202512 ✓; 202511 ✓; **MD-01~MD-15 寫入dna_core.md ✓** (cycles 22+29+30); 202510 ✓; 202509 ✓; 202508 ✓; 202507 ✓; 202506 ✓; 202505 ✓; 202504 ✓; 202503 ✓; 202502 ✓; 202501 ✓; 202412 ✓; 202411 ✓; **202410 ✓ → MD-19~MD-21**; **202409 ✓ → MD-25~MD-27**; **202408 ✓ → MD-28~MD-30**; **202407 ✓ → MD-31~MD-33**; **202406 ✓ → MD-34~MD-36**; **202405 ✓ → MD-34~MD-36**; **202404 ✓ → MD-37~MD-39**; **202403 ✓ → MD-40~MD-42**; **202402 ✓ → MD-43~MD-45**; **202401 ✓ → MD-43~MD-45**; **202312 ✓ → MD-46~MD-48**; **202311 ✓ → MD-49~MD-51**; **202310 ✓ → MD-52~MD-54**; **202309 ✓ → MD-55~MD-57**; **202308 ✓ → MD-58~MD-60**; **202307 ✓ → MD-61~MD-63**; **202306 ✓ → MD-64~MD-66**; **202305 ✓ → MD-67~MD-69**; next: 202304
+- 2.2 微決策學習：202604 ✓; 202601 ✓; 202602 ✓; 202603 ✓; 202512 ✓; 202511 ✓; **MD-01~MD-15 寫入dna_core.md ✓** (cycles 22+29+30); 202510 ✓; 202509 ✓; 202508 ✓; 202507 ✓; 202506 ✓; 202505 ✓; 202504 ✓; 202503 ✓; 202502 ✓; 202501 ✓; 202412 ✓; 202411 ✓; **202410 ✓ → MD-19~MD-21**; **202409 ✓ → MD-25~MD-27**; **202408 ✓ → MD-28~MD-30**; **202407 ✓ → MD-31~MD-33**; **202406 ✓ → MD-34~MD-36**; **202405 ✓ → MD-34~MD-36**; **202404 ✓ → MD-37~MD-39**; **202403 ✓ → MD-40~MD-42**; **202402 ✓ → MD-43~MD-45**; **202401 ✓ → MD-43~MD-45**; **202312 ✓ → MD-46~MD-48**; **202311 ✓ → MD-49~MD-51**; **202310 ✓ → MD-52~MD-54**; **202309 ✓ → MD-55~MD-57**; **202308 ✓ → MD-58~MD-60**; **202307 ✓ → MD-61~MD-63**; **202306 ✓ → MD-64~MD-66**; **202305 ✓ → MD-67~MD-69**; **202304 ✓ → MD-70~MD-72** (logged but tree stale); **202303 ✓ → MD-73~MD-75** (股債配置>均線擇時/槓桿調整=窮舉五方案/權益曲線=槓桿觸發器); next: 202302
 - 2.3 Validation：OOS 5/5 self-scored ✓, cross-instance prepped but blocked on API credit
   - consistency_test.py: --use-memory + --auto-suggest now combined — memory context flows into suggestions ✓
 - 2.4 Response latency：三秒 vs 三段推理，差距仍在
@@ -149,4 +149,5 @@
 - 2026-04-08T18:00 UTC: cycle 49 — **gap fix + distill**: backfilled MD-55~60 (logged but missing from file); 202307 JSONL read (151 Edward msgs, Jul 2023) → MD-61~63 (指數=市值噱爆/賽局分析=先錨定角色目標/談判=條件束聯動); templates/dna_core.md: 63 MDs; next: 202306
 - 2026-04-08T19:30 UTC: cycle 52 — **gap reconcile + distill**: MD-67~69 discovered already written (202305 unlogged); 202304 JSONL read (43 substantive Edward msgs, Apr 2023) → MD-70~72 (AI=結構化學習外包/資料庫=三層分工/量價門檻=可執行不可模糊); templates/dna_core.md: 72 MDs; next: 202303
 - 2026-04-08T19:00 UTC: cycle 51 — Branch 2.2: 202305 JSONL read (619 Edward msgs, May 2023) → MD-67~69 (職涯=現金流先行/OOS=1:1是前提不是結果/決策=連續流程不是單點); templates/dna_core.md: 69 MDs; next: 202304
+- 2026-04-08T19:30 UTC: cycle 52 — Branch 2.2: **gap fix** (202304 MD-70~72 already in file); 202303 JSONL read (10,728 Edward msgs, Mar 2023) → MD-73~75 (股債配置>均線擇時/槓桿調整=窮舉五方案/權益曲線=槓桿觸發器); templates/dna_core.md: 75 MDs; next: 202302
 

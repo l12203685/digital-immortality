@@ -1173,3 +1173,18 @@ Cycle 52 done.
 - **MD-72** 量價門檻=可執行不可模糊 — signals must paste directly as code with verifiable thresholds
 
 `templates/dna_core.md`: **72 MDs**. Next: 202303. Pushed.
+
+
+## Cycle 52 — 2026-04-08T19:30 UTC
+
+Branch 2.2 — gap fix + 202303 distill.
+
+**Gap fix**: 202304 was already processed (MD-70~72 in dna_core.md) but dynamic_tree showed "next: 202304" — reconciled.
+
+**202303.jsonl** (10,728 Edward msgs, Mar 2023) → 3 MDs written to `templates/dna_core.md`:
+
+- **MD-73** 股債配置>均線擇時 — stock-bond allocation beats market timing on leveraged ETFs (absolute + Sortino); structure wins over signals; baseline against allocation before developing any timing overlay
+- **MD-74** 槓桿調整=窮舉五方案 — enumerate all 5 adjustment schemes (daily +/-, daily +only, settlement +/-, settlement +only, single lot) then compare quantitatively; skip enumeration = hidden blind spot
+- **MD-75** 權益曲線=槓桿觸發器 — equity curve's Bollinger Band position is the regime signal: drop below 1.5σ → reduce to single lot; re-cross upward → restore; equity curve IS the trigger, no additional parameter needed
+
+`templates/dna_core.md`: **75 MDs**. Next: 202302.
