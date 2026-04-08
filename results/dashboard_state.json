@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T02:38+08",
+  "updated": "2026-04-09T02:44+08",
   "regime": "1.1 Trading — mainnet_activation_guide.md ready; Edward: follow guide → $100 live; 7.10 series COMPLETE → Edward posts SOP #01→#02→#03→#04 on X",
   "regime_neutral": "2.2 JSONL archive exhausted (315 MDs), 3.1 三層在跑, 5.1-5.2 deployed; 8.x 生活維護 初始化完成",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: Edward follows `docs/mainnet_activation_guide.md` → 6 steps → first rea..."
+      "text": "Single external blocker: Edward posts #01–#05 threads on X → closes the inter..."
     },
     {
       "time": "just now",
-      "text": "Highest-derivative analysis: Branch 1.1 remains the survival branch with a si..."
+      "text": "- Branch 7.11 — Found tree stale: SOP #05 (Career & Salary) + `publish_thread..."
     },
     {
       "time": "just now",
-      "text": "Branch 1.1 — paper-live tick 16: BTC=$71,551.96, signal=SHORT. Consistent SHO..."
+      "text": "- Branch 1.1 — paper-live tick 17: BTC=$71,437.38, signal=SHORT (consistent S..."
     },
     {
       "time": "just now",
-      "text": "Cycle 117 done."
+      "text": "Action taken: Highest-derivative = stale tree + alive signal."
     },
     {
       "time": "just now",
-      "text": "System alive. Single blocker: Edward sets BINANCE_MAINNET_KEY/SECRET + funds ..."
+      "text": "Cycle 118 done."
     }
   ],
   "stats": {
-    "daemon_cycles": 117,
+    "daemon_cycles": 118,
     "total_mds": 325,
     "dna_core_lines": 87
   }
