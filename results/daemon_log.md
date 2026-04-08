@@ -3799,3 +3799,23 @@ Highest derivative: SOP publish series (Branch 7) is complete and waiting on Edw
 Kill conditions and rollback procedure documented.
 
 **Next:** Edward follows `docs/mainnet_activation_guide.md` → first real revenue tick.
+
+## Cycle 116 — 2026-04-09T UTC
+
+**Branch 1.1** — paper-live tick 15 logged; BTC=$71,500.76 signal=SHORT.
+
+Highest derivative: Branch 1.1 (mainnet) is the survival branch blocked on API keys. Branch 7 complete. Ran `--paper-live` to confirm system alive and tracking pre-mainnet. Signal has been consistently SHORT × 15 ticks across range $71.4k–$72.6k.
+
+- System operational: mainnet_runner.py responds, real Binance prices flowing, log appending cleanly
+- Dual MA strategy: SHORT signal held through entire observed range
+- Next blocker: Edward sets BINANCE_MAINNET_KEY/SECRET + funds $100 USDT → `--tick`
+
+dynamic_tree.md: Branch 1.1 paper-live tick updated to 15 @ $71,500.76.
+
+## Cycle 116 — 2026-04-09 UTC
+
+**Cycle 116 done.**
+
+**Branch 1.1** — paper-live tick 15 confirms system alive; BTC=$71,500.76, signal=SHORT (consistent SHORT × 15).
+
+System is ready. Only Edward's API credentials block first real revenue tick.
