@@ -4712,3 +4712,20 @@ Highest-derivative gap: no SOP on execution & slippage despite MD-83 sitting in 
 - Queue extended to **#01~#28** (Jun 2, 54-day target)
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 154 — 2026-04-09T UTC
+
+**Cycle 154 done.**
+
+Highest-derivative gap: queue at #28 (Jun 2). No SOP on strategy monitoring — the operational layer that sits between deployment and kill. MD-96 (define failure mode first), MD-98 (survival rate ≥60% threshold), MD-42 (equity curve as leverage trigger), and MD-142 (bandwidth = portfolio size hard cap) all in DNA with no teachable product.
+
+**Shipped:**
+- `docs/knowledge_product_29_strategy_monitoring_sop.md` — 5-gate framework: G0 failure contract before first tick (MD-96) / G1 survival rate = rolling Sharpe ÷ historical OOS ≥60% (MD-98) / G2 equity curve MA_20 leverage trigger (MD-42) / G3 bandwidth cap hard limit on portfolio size (MD-142) / G4 quarterly rolling OOS review (MD-143) / G5 quarantine vs. kill with root-cause checklist; self-test: DualMA BTC 0.53 survival ratio + regime shift → quarantine, not kill
+- `docs/publish_thread_sop29_twitter.md` — hook: *"Your strategy is live. Now what do you watch? Not P&L. P&L is noise."*
+- Queue extended to **Jun 4** (#01~#29, 56-day target)
+- `results/dynamic_tree.md` updated: Branch 7.32, cycle 154
+- Committed and pushed.
+
+**Series: SOP #01~#29 COMPLETE.**
+
+**Next blocker:** Edward posts SOP #01.
