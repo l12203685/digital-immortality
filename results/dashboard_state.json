@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T20:22+08",
+  "updated": "2026-04-08T20:36+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 201709."
+      "text": "Next: 201705."
     },
     {
       "time": "just now",
-      "text": "- Themes: poker teaching, position = information advantage, sample size"
+      "text": "Fixed tmp_distill.py dual-schema support (old `s`/`t`/`E` fields), then disti..."
     },
     {
       "time": "just now",
-      "text": "- 201711 had only 2 Edward msgs (sparse); combined with 201710 (12 msgs)"
+      "text": "Branch 2.2 — 201707+201706 → MD-268~270 (270 MDs)"
     },
     {
       "time": "just now",
-      "text": "Branch 2.2 — 201711+201710 → MD-262~264 (264 MDs)"
+      "text": "Cycle 54 done."
     },
     {
       "time": "2026-04-08 UTC",
-      "text": "`templates/dna_core.md`: 264 MDs. Next: 201709."
+      "text": "`templates/dna_core.md`: 270 MDs. Next: 201705."
     }
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 264,
+    "total_mds": 270,
     "dna_core_lines": 76
   }
 }

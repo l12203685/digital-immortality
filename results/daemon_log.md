@@ -2745,3 +2745,16 @@ Note: 201709~201708 files use older schema (s/t fields instead of sender_name/co
   - **MD-270** 藍線主導盈利=紅線理想斜率0到-5bb/100，強行翻正紅線反而侵蝕藍線
 
 `templates/dna_core.md`: **270 MDs**. Next: 201705.
+
+## Cycle 54 — 2026-04-08 12:36:22 UTC
+
+**Cycle 54 done.**
+
+**Branch 2.2 — 201707+201706 → MD-268~270 (270 MDs)**
+
+Fixed tmp_distill.py dual-schema support (old `s`/`t`/`E` fields), then distilled:
+- **MD-268**: 最適決策≠正確決策 — process-based EV评估 vs 结果论谬误
+- **MD-269**: 攻擊頻率=對手range函数 — narrow range对手降低bluff频率
+- **MD-270**: 藍線主導紅線可微負 — 强行翻正红线反而侵蚀蓝线EV
+
+Next: 201705.
