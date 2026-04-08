@@ -2306,3 +2306,15 @@ Cycle 34 done.
 - **MD-213**: 閉環原型測試=先自我對弈，再引入真實外部變量
 
 Next: 201903.
+
+## Cycle 35 — 2026-04-08T12:00 UTC
+
+**Branch 2.2 — 201903 distill → MD-214~216 (216 MDs total)**
+
+- 201903.jsonl (1039 Edward msgs, Mar 2019): career/salary, technical debates, housing market, Avalon
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-214** 主管口頭認可≠薪資認可，評價矛盾=談判訊號 — 「我沒把你當第一年工作的人」卻強調「新鮮人薪資」；矛盾話術=策略性信息，引用讚美逼對方選擇框架
+  - **MD-215** 技術爭議=先確認公認標準，有標準不自創算法 — 績效衡量吵兩小時但業界有公認算法；第一問「有公認標準嗎？」有就直接引用
+  - **MD-216** 台灣房價主導變量=利率非供需，利率不動房價不跌 — 崩跌前置條件=利率上升or台幣大貶；房市分析先看央行利率
+
+`templates/dna_core.md`: **216 MDs**. Next: 201902.
