@@ -2523,3 +2523,15 @@ Next: 201807.
   - **MD-243** 競爭edge=思維層級差；對手在L1時你在L2就有不對稱優勢 — 推廣到交易/談判/賽局
 
 `templates/dna_core.md`: **243 MDs**. Next: 201805.
+
+## Cycle 45 — 2026-04-09T UTC
+
+**Branch 2.2 — 201805 distill → MD-244~246 (246 MDs total)**
+
+- 201805.jsonl: 38 Edward substantive msgs; themes: 國泰人壽offer薪資結構(44k + 試用期0~10%), Avalon場外策略vs桌內推理, 為何不去打大型撲克比賽
+- 3 micro-decisions written to templates/dna_core.md:
+  - **MD-244** 試用期加薪「0到10%」=實際期望值以0計算；承諾幅度越寬＝執行越靠下限 — 無下限保障的口頭承諾不計入決策
+  - **MD-245** 賽局策略錯位=使用錯誤工具的診斷訊號；場外串聯作為主要策略＝應換遊戲 — 工具錯配比技術不足更先診斷
+  - **MD-246** 比賽場次選擇=選edge最大化的池，不是獎金最大的池 — 大型比賽稀釋edge；在不對稱優勢最大的池打
+
+`templates/dna_core.md`: **246 MDs**. Next: 201804.
