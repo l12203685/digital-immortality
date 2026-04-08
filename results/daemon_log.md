@@ -933,3 +933,15 @@ dna_core.md: 119 lines, **42 MDs**. Next: 202402.
 - **獲利確認再擴張** — 先讓交易穩定獲利再考慮其他方向；validate core first → then branch；防止精力稀釋
 
 dna_core.md: 75 lines, **45 MDs**. Next: 202401.
+
+## Cycle 17 — 2026-04-08 04:20:59 UTC
+
+**Cycle 42 done.**
+
+Branch 2.2 — 202402 (1,770 Edward msgs, Feb 2024) → 3 new MDs written to `dna_core.md`:
+
+- **開發/生產環境分離** — 交易排程系統與開發機物理隔離；生產環境神聖，不隨意動
+- **相關係數前置** — 策略想法第一步=先量化假設的相關係數，data-first 順序不可跳過
+- **獲利確認再擴張** — validate core profitability first, then branch；防止精力稀釋在未驗證方向
+
+`dna_core.md`: 75 lines, **45 MDs**. Both repos pushed. Next: 202401.
