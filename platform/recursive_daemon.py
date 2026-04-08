@@ -74,23 +74,10 @@ def append_log(cycle: int, response: str) -> None:
 
 
 def try_git_commit(cycle: int) -> None:
-    """If there are uncommitted changes in the repo, commit them."""
-    try:
-        status = subprocess.run(
-            ["git", "status", "--porcelain"],
-            cwd=REPO_ROOT, capture_output=True, text=True, timeout=10,
-        )
-        if status.stdout.strip():
-            subprocess.run(
-                ["git", "add", "-A"],
-                cwd=REPO_ROOT, capture_output=True, timeout=10,
-            )
-            msg = f"daemon: cycle {cycle} auto-commit"
-            subprocess.run(
-                ["git", "commit", "-m", msg],
-                cwd=REPO_ROOT, capture_output=True, timeout=10,
-            )
-            print(f"[daemon] Committed changes (cycle {cycle})")
+    """Disabled — daemon only writes to results/daemon_log.md.
+    Remote trigger (1hr) handles all git commits to avoid conflicts.
+    E0 session handles platform/*.py and root config changes."""
+    pass  # Scope separation: daemon=log only, trigger=commit, E0=code
     except Exception as e:
         print(f"[daemon] Git commit skipped: {e}")
 
