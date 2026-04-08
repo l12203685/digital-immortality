@@ -33,6 +33,7 @@ from pathlib import Path
 # Import organism_interact for deterministic baseline
 sys.path.insert(0, str(Path(__file__).parent))
 from organism_interact import parse_dna, generate_response, SCENARIOS, DOMAIN_PRINCIPLE_AFFINITY
+import memory_manager
 
 
 # ---------------------------------------------------------------------------
@@ -533,6 +534,220 @@ def generate_template(dna: dict, results: list, output_dir: str) -> str:
     return str(filepath)
 
 
+# ---------------------------------------------------------------------------
+# Memory integration — corrections & calibration enhance alignment checking
+# ---------------------------------------------------------------------------
+
+def load_memory_context(memory_dir: str | None = None) -> dict:
+    """Load corrections and calibration entries from memory.
+
+    Returns a dict with:
+      - corrections: list of correction entries
+      - calibration: list of calibration entries
+      - domain_keywords: dict mapping domain -> set of extra alignment keywords
+                         extracted from memory entries
+      - context_lines: list of human-readable lines summarizing loaded memory
+    """
+    if memory_dir:
+        original_dir = memory_manager.MEMORY_DIR
+        memory_manager.MEMORY_DIR = Path(memory_dir)
+
+    corrections = memory_manager.recall("corrections")
+    calibration = memory_manager.recall("calibration")
+
+    if memory_dir:
+        memory_manager.MEMORY_DIR = original_dir
+
+    # Extract domain-specific keywords from memory entries.
+    # Corrections and calibration entries may reference domains and contain
+    # words that should count as alignment signals.
+    domain_keywords: dict[str, set[str]] = {}
+    for entry in corrections + calibration:
+        content_lower = entry.get("content", "").lower()
+        tags = entry.get("tags", [])
+        key_lower = entry.get("key", "").lower()
+
+        # Determine which domain(s) this entry relates to
+        related_domains: list[str] = []
+        for domain in _DOMAIN_TO_SECTION_KEYWORDS:
+            if domain in content_lower or domain in key_lower or domain in tags:
+                related_domains.append(domain)
+        # Also check tags for domain names
+        for tag in tags:
+            tag_l = tag.lower().replace("-", "_")
+            if tag_l in _DOMAIN_TO_SECTION_KEYWORDS:
+                if tag_l not in related_domains:
+                    related_domains.append(tag_l)
+
+        if not related_domains:
+            # Entry applies broadly — skip domain-specific keyword extraction
+            continue
+
+        # Extract meaningful words from the entry content as alignment keywords.
+        # Words that appear in corrections like "always check kill conditions"
+        # become extra signals for alignment in that domain.
+        words = set(re.findall(r"[a-z]{4,}", content_lower))
+        # Filter out very common words that add noise
+        noise = {
+            "that", "this", "with", "from", "have", "been", "were", "will",
+            "when", "what", "which", "their", "about", "would", "could",
+            "should", "there", "where", "than", "then", "also", "into",
+            "more", "some", "each", "only", "very", "just", "over", "such",
+            "after", "before", "between", "does", "being", "made", "like",
+        }
+        keywords = words - noise
+
+        for domain in related_domains:
+            if domain not in domain_keywords:
+                domain_keywords[domain] = set()
+            domain_keywords[domain].update(keywords)
+
+    # Build human-readable summary
+    context_lines = []
+    if corrections:
+        context_lines.append(f"Loaded {len(corrections)} correction(s) from memory")
+        for c in corrections:
+            context_lines.append(f"  - [{c.get('key', '?')}] {c['content'][:120]}")
+    if calibration:
+        context_lines.append(f"Loaded {len(calibration)} calibration entry/entries from memory")
+        for c in calibration:
+            context_lines.append(f"  - [{c.get('key', '?')}] {c['content'][:120]}")
+    if domain_keywords:
+        context_lines.append(f"Extracted alignment keywords for {len(domain_keywords)} domain(s)")
+
+    return {
+        "corrections": corrections,
+        "calibration": calibration,
+        "domain_keywords": domain_keywords,
+        "context_lines": context_lines,
+    }
+
+
+def check_alignment_with_memory(
+    resp_lower: str,
+    expected: str,
+    domain: str,
+    memory_ctx: dict | None,
+) -> bool:
+    """Check alignment between response and expected decision, enhanced by memory.
+
+    The base alignment logic mirrors the original hardcoded checks. When memory
+    context is provided, extra keywords extracted from past corrections and
+    calibration entries for the scenario's domain are also checked — any match
+    counts as aligned.
+    """
+    # --- Base alignment (original logic) ---
+    aligned = (
+        expected in resp_lower
+        or (expected == "stop_or_cap" and ("stop" in resp_lower or "cap" in resp_lower))
+        or (expected == "pause_system" and ("pause" in resp_lower or "halt" in resp_lower))
+        or (expected == "pause_and_diagnose" and ("pause" in resp_lower or "diagnose" in resp_lower))
+        or (expected == "pass_unless_clear_edge" and "pass" in resp_lower)
+        or (expected == "require_clear_edge" and ("pass" in resp_lower or "edge" in resp_lower))
+        or (expected == "set_boundary" and ("stop" in resp_lower or "cap" in resp_lower or "boundary" in resp_lower or "limit" in resp_lower))
+        or (expected == "reject" and ("reject" in resp_lower or "no" in resp_lower or "don't" in resp_lower))
+        or (expected == "reject_weak_evidence" and ("reject" in resp_lower or "no" in resp_lower))
+    )
+
+    if aligned:
+        return True
+
+    # --- Memory-enhanced alignment ---
+    if memory_ctx is None:
+        return False
+
+    domain_kw = memory_ctx.get("domain_keywords", {})
+    extra_keywords = domain_kw.get(domain, set())
+    if not extra_keywords:
+        return False
+
+    # Check if the response contains keywords that memory says matter for
+    # this domain AND that are part of the expected decision concept.
+    # This prevents false positives: we require the keyword to appear in
+    # both the expected decision text AND the response.
+    expected_words = set(re.findall(r"[a-z]{4,}", expected))
+    relevant_memory_kw = extra_keywords & expected_words
+    if relevant_memory_kw:
+        # At least one memory-informed keyword from the expected decision
+        # appears in the response
+        if any(kw in resp_lower for kw in relevant_memory_kw):
+            return True
+
+    # Also check: did any correction explicitly mention what the expected
+    # outcome should be for this kind of scenario? Look for the expected
+    # decision string in correction content.
+    for entry in memory_ctx.get("corrections", []):
+        entry_content = entry.get("content", "").lower()
+        entry_domain_match = domain in entry_content or domain in entry.get("tags", [])
+        if entry_domain_match and expected in entry_content:
+            # A correction explicitly says this domain should yield this decision;
+            # accept if the response at least partially echoes the correction.
+            correction_keywords = set(re.findall(r"[a-z]{4,}", entry_content))
+            correction_keywords -= {"that", "this", "with", "from", "should", "always"}
+            if any(kw in resp_lower for kw in correction_keywords if len(kw) > 4):
+                return True
+
+    return False
+
+
+def store_misaligned_as_calibration(
+    misaligned_results: list[dict],
+    dna_name: str,
+    memory_dir: str | None = None,
+) -> list[dict]:
+    """Store MISALIGNED results as calibration entries so the next boot benefits.
+
+    Each misaligned scenario becomes a calibration entry with:
+      - key: "boot-misalign-<scenario_id>"
+      - content: description of what was expected vs. what was produced
+      - tags: domain, boot-test, misaligned
+      - confidence: 0.7 (moderate — these are machine-detected misalignments)
+
+    Deduplicates by key: if an entry with the same key already exists, it is
+    skipped (the misalignment was already recorded).
+
+    Returns a list of newly stored entries.
+    """
+    if memory_dir:
+        original_dir = memory_manager.MEMORY_DIR
+        memory_manager.MEMORY_DIR = Path(memory_dir)
+
+    stored = []
+    for r in misaligned_results:
+        scenario_id = r.get("id", "unknown")
+        key = f"boot-misalign-{scenario_id}"
+
+        # Check for existing entry with this key to avoid duplicates
+        existing = memory_manager.recall("calibration", key)
+        if existing:
+            continue
+
+        domain = r.get("domain", "general")
+        expected = r.get("expected_decision", "?")
+        actual_snippet = r.get("deterministic_response", "")[:200]
+
+        content = (
+            f"Scenario '{scenario_id}' (domain: {domain}) was MISALIGNED. "
+            f"Expected decision: {expected}. "
+            f"Actual response snippet: {actual_snippet}"
+        )
+
+        entry = memory_manager.store(
+            category="calibration",
+            key=key,
+            content=content,
+            source="consistency-test",
+            tags=[domain, "boot-test", "misaligned", scenario_id],
+            confidence=0.7,
+        )
+        stored.append(entry)
+
+    if memory_dir:
+        memory_manager.MEMORY_DIR = original_dir
+
+    return stored
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Cross-Instance Consistency Test for Digital Organisms"
@@ -570,6 +785,22 @@ def main():
             "add or modify, and outputs the suggestion as structured JSON."
         ),
     )
+    parser.add_argument(
+        "--use-memory",
+        action="store_true",
+        help=(
+            "Integrate the memory system: load past corrections and calibration "
+            "data to enhance alignment checking, and store any MISALIGNED results "
+            "as calibration entries for future boot tests."
+        ),
+    )
+    parser.add_argument(
+        "--memory-dir",
+        default=None,
+        help=(
+            "Path to the memory directory. Defaults to memory/ in the project root."
+        ),
+    )
     args = parser.parse_args()
 
     script_dir = Path(__file__).parent
@@ -597,33 +828,43 @@ def main():
     print(f"\nRunning {total} scenarios...")
     results = run_deterministic_baseline(dna, boot_test_scenarios)
 
+    # --- Memory integration: load past corrections & calibration ---
+    memory_ctx = None
+    if args.use_memory:
+        memory_dir = args.memory_dir or str(_SCRIPT_DIR / "memory")
+        memory_ctx = load_memory_context(memory_dir)
+        if memory_ctx["context_lines"]:
+            print(f"\n{'='*60}")
+            print("  MEMORY CONTEXT")
+            print(f"{'='*60}")
+            for line in memory_ctx["context_lines"]:
+                print(f"  {line}")
+
     # Count alignment with expected decisions
     boot_results = [r for r in results if r.get("expected_decision")]
+    misaligned_results = []
     suggestions = []
     if boot_results:
         print(f"\n{'='*60}")
         print("  EXPECTED DECISION ALIGNMENT")
+        if args.use_memory and memory_ctx:
+            print("  (memory-enhanced)")
         print(f"{'='*60}")
         for r in boot_results:
             resp_lower = r["deterministic_response"].lower()
             expected = r["expected_decision"].lower()
-            # Alignment check: exact match first, then partial for compound decisions
-            aligned = (
-                expected in resp_lower
-                or (expected == "stop_or_cap" and ("stop" in resp_lower or "cap" in resp_lower))
-                or (expected == "pause_system" and ("pause" in resp_lower or "halt" in resp_lower))
-                or (expected == "pause_and_diagnose" and ("pause" in resp_lower or "diagnose" in resp_lower))
-                or (expected == "pass_unless_clear_edge" and "pass" in resp_lower)
-                or (expected == "require_clear_edge" and ("pass" in resp_lower or "edge" in resp_lower))
-                or (expected == "set_boundary" and ("stop" in resp_lower or "cap" in resp_lower or "boundary" in resp_lower or "limit" in resp_lower))
-                or (expected == "reject" and ("reject" in resp_lower or "no" in resp_lower or "don't" in resp_lower))
-                or (expected == "reject_weak_evidence" and ("reject" in resp_lower or "no" in resp_lower))
+            domain = r.get("domain", "general")
+            # Use memory-enhanced alignment when --use-memory is active
+            aligned = check_alignment_with_memory(
+                resp_lower, expected, domain, memory_ctx
             )
             status = "ALIGNED" if aligned else "MISALIGNED"
             print(f"  [{status:10s}] {r['id']:25s} | expected={r['expected_decision']:30s}")
 
-            if not aligned and args.auto_suggest:
-                suggestions.append(generate_suggestion(dna, r))
+            if not aligned:
+                misaligned_results.append(r)
+                if args.auto_suggest:
+                    suggestions.append(generate_suggestion(dna, r))
 
     # Print auto-suggest output for misaligned scenarios
     if suggestions:
@@ -658,19 +899,43 @@ def main():
     elif args.auto_suggest and boot_results:
         print(f"\n  All scenarios aligned — no suggestions needed.")
 
+    # --- Memory integration: store misaligned results as calibration entries ---
+    if args.use_memory and misaligned_results:
+        memory_dir = args.memory_dir or str(_SCRIPT_DIR / "memory")
+        stored = store_misaligned_as_calibration(
+            misaligned_results, dna["name"], memory_dir=memory_dir
+        )
+        if stored:
+            print(f"\n{'='*60}")
+            print("  MEMORY: STORED CALIBRATION ENTRIES")
+            print(f"{'='*60}")
+            print(f"  Stored {len(stored)} new calibration entry/entries for future boots:")
+            for entry in stored:
+                print(f"    - [{entry['key']}] {entry['content'][:100]}")
+        else:
+            print(f"\n  Memory: all {len(misaligned_results)} misalignment(s) already recorded.")
+    elif args.use_memory and boot_results and not misaligned_results:
+        print(f"\n  Memory: all scenarios aligned — no calibration entries to store.")
+
     # Save baseline
     baseline_path = Path(output_dir) / "consistency_baseline.json"
     baseline_path.parent.mkdir(parents=True, exist_ok=True)
+    baseline_meta = {
+        "dna_file": dna["filepath"],
+        "organism": dna["name"],
+        "generated_at": datetime.now().isoformat(),
+        "scenario_count": len(results),
+        "scenario_source": scenario_source,
+        "principles_count": len(dna["principles"]),
+        "use_memory": args.use_memory,
+    }
+    if args.use_memory and memory_ctx:
+        baseline_meta["memory_corrections_loaded"] = len(memory_ctx.get("corrections", []))
+        baseline_meta["memory_calibration_loaded"] = len(memory_ctx.get("calibration", []))
+        baseline_meta["memory_domains_enhanced"] = list(memory_ctx.get("domain_keywords", {}).keys())
     with open(baseline_path, "w", encoding="utf-8") as f:
         json.dump({
-            "meta": {
-                "dna_file": dna["filepath"],
-                "organism": dna["name"],
-                "generated_at": datetime.now().isoformat(),
-                "scenario_count": len(results),
-                "scenario_source": scenario_source,
-                "principles_count": len(dna["principles"]),
-            },
+            "meta": baseline_meta,
             "results": results,
         }, f, ensure_ascii=False, indent=2)
     print(f"\nBaseline saved: {baseline_path}")

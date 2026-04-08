@@ -1,0 +1,45 @@
+{
+  "timestamp": "20260408_002026",
+  "results": [
+    {
+      "strategy": "bollinger_mr",
+      "timeframe": "1d",
+      "passed": false,
+      "windows_passed": 2,
+      "avg_sharpe": 0.5018,
+      "avg_mdd": 1.51,
+      "window_details": [
+        {
+          "sharpe": 3.3144,
+          "mdd": 0.89,
+          "win_rate": 75.0,
+          "profit_factor": 5.1357
+        },
+        {
+          "sharpe": 2.5812,
+          "mdd": 2.32,
+          "win_rate": 75.0,
+          "profit_factor": 2.5269
+        },
+        {
+          "sharpe": -3.0592,
+          "mdd": 2.42,
+          "win_rate": 0.0,
+          "profit_factor": 0.0
+        },
+        {
+          "sharpe": -0.3274,
+          "mdd": 1.94,
+          "win_rate": 33.33,
+          "profit_factor": 0.9018
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        }
+      ]
+    }
+  ]
+}

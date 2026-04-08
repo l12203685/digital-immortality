@@ -1,0 +1,725 @@
+{
+  "timestamp": "20260408_002028",
+  "results": [
+    {
+      "strategy": "mean_reversion",
+      "timeframe": "1h",
+      "passed": true,
+      "windows_passed": 4,
+      "avg_sharpe": 5.9791,
+      "avg_mdd": 3.18,
+      "window_details": [
+        {
+          "sharpe": 6.4665,
+          "mdd": 0.97,
+          "win_rate": 50.0,
+          "profit_factor": 1.4323
+        },
+        {
+          "sharpe": 8.6201,
+          "mdd": 2.57,
+          "win_rate": 50.0,
+          "profit_factor": 1.6436
+        },
+        {
+          "sharpe": 24.5501,
+          "mdd": 0.0,
+          "win_rate": 100.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": -10.8111,
+          "mdd": 8.29,
+          "win_rate": 47.06,
+          "profit_factor": 0.6614
+        },
+        {
+          "sharpe": 1.07,
+          "mdd": 4.09,
+          "win_rate": 44.44,
+          "profit_factor": 1.0438
+        }
+      ]
+    },
+    {
+      "strategy": "momentum",
+      "timeframe": "1h",
+      "passed": true,
+      "windows_passed": 3,
+      "avg_sharpe": 4.4393,
+      "avg_mdd": 8.9,
+      "window_details": [
+        {
+          "sharpe": -28.1077,
+          "mdd": 20.02,
+          "win_rate": 38.46,
+          "profit_factor": 0.4549
+        },
+        {
+          "sharpe": 5.0925,
+          "mdd": 7.75,
+          "win_rate": 53.85,
+          "profit_factor": 1.1469
+        },
+        {
+          "sharpe": 0.4478,
+          "mdd": 7.79,
+          "win_rate": 43.59,
+          "profit_factor": 1.0122
+        },
+        {
+          "sharpe": 22.5178,
+          "mdd": 5.65,
+          "win_rate": 64.1,
+          "profit_factor": 1.7818
+        },
+        {
+          "sharpe": 22.2459,
+          "mdd": 3.31,
+          "win_rate": 58.97,
+          "profit_factor": 1.8228
+        }
+      ]
+    },
+    {
+      "strategy": "breakout",
+      "timeframe": "1h",
+      "passed": false,
+      "windows_passed": 2,
+      "avg_sharpe": 0.0274,
+      "avg_mdd": 1.28,
+      "window_details": [
+        {
+          "sharpe": -14.9872,
+          "mdd": 0.73,
+          "win_rate": 0.0,
+          "profit_factor": 0.0
+        },
+        {
+          "sharpe": 1.8776,
+          "mdd": 2.23,
+          "win_rate": 50.0,
+          "profit_factor": 1.151
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": 13.8326,
+          "mdd": 1.3,
+          "win_rate": 57.14,
+          "profit_factor": 2.2536
+        },
+        {
+          "sharpe": -0.586,
+          "mdd": 2.13,
+          "win_rate": 33.33,
+          "profit_factor": 0.9503
+        }
+      ]
+    },
+    {
+      "strategy": "volatility_regime",
+      "timeframe": "1h",
+      "passed": true,
+      "windows_passed": 4,
+      "avg_sharpe": 9.5005,
+      "avg_mdd": 3.18,
+      "window_details": [
+        {
+          "sharpe": 6.4665,
+          "mdd": 0.97,
+          "win_rate": 50.0,
+          "profit_factor": 1.4323
+        },
+        {
+          "sharpe": 8.6201,
+          "mdd": 2.57,
+          "win_rate": 50.0,
+          "profit_factor": 1.6436
+        },
+        {
+          "sharpe": 33.5303,
+          "mdd": 0.0,
+          "win_rate": 100.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": -10.8111,
+          "mdd": 8.29,
+          "win_rate": 47.06,
+          "profit_factor": 0.6614
+        },
+        {
+          "sharpe": 9.6965,
+          "mdd": 4.09,
+          "win_rate": 47.62,
+          "profit_factor": 1.417
+        }
+      ]
+    },
+    {
+      "strategy": "momentum_crossover",
+      "timeframe": "1h",
+      "passed": true,
+      "windows_passed": 3,
+      "avg_sharpe": 3.574,
+      "avg_mdd": 7.1,
+      "window_details": [
+        {
+          "sharpe": -29.5033,
+          "mdd": 15.39,
+          "win_rate": 25.0,
+          "profit_factor": 0.2075
+        },
+        {
+          "sharpe": -11.7212,
+          "mdd": 8.43,
+          "win_rate": 51.85,
+          "profit_factor": 0.6856
+        },
+        {
+          "sharpe": 4.2076,
+          "mdd": 4.91,
+          "win_rate": 41.94,
+          "profit_factor": 1.1369
+        },
+        {
+          "sharpe": 32.6412,
+          "mdd": 3.48,
+          "win_rate": 73.08,
+          "profit_factor": 2.8361
+        },
+        {
+          "sharpe": 22.2459,
+          "mdd": 3.31,
+          "win_rate": 58.97,
+          "profit_factor": 1.8228
+        }
+      ]
+    },
+    {
+      "strategy": "bollinger_mr",
+      "timeframe": "1h",
+      "passed": false,
+      "windows_passed": 0,
+      "avg_sharpe": -5.6539,
+      "avg_mdd": 0.66,
+      "window_details": [
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": -13.2825,
+          "mdd": 2.57,
+          "win_rate": 33.33,
+          "profit_factor": 0.2586
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": -14.9872,
+          "mdd": 0.71,
+          "win_rate": 0.0,
+          "profit_factor": 0.0
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        }
+      ]
+    },
+    {
+      "strategy": "mean_reversion",
+      "timeframe": "4h",
+      "passed": true,
+      "windows_passed": 3,
+      "avg_sharpe": 2.9895,
+      "avg_mdd": 3.18,
+      "window_details": [
+        {
+          "sharpe": 3.2333,
+          "mdd": 0.97,
+          "win_rate": 50.0,
+          "profit_factor": 1.4323
+        },
+        {
+          "sharpe": 4.31,
+          "mdd": 2.57,
+          "win_rate": 50.0,
+          "profit_factor": 1.6436
+        },
+        {
+          "sharpe": 12.275,
+          "mdd": 0.0,
+          "win_rate": 100.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": -5.4056,
+          "mdd": 8.29,
+          "win_rate": 47.06,
+          "profit_factor": 0.6614
+        },
+        {
+          "sharpe": 0.535,
+          "mdd": 4.09,
+          "win_rate": 44.44,
+          "profit_factor": 1.0438
+        }
+      ]
+    },
+    {
+      "strategy": "momentum",
+      "timeframe": "4h",
+      "passed": true,
+      "windows_passed": 3,
+      "avg_sharpe": 2.2196,
+      "avg_mdd": 8.9,
+      "window_details": [
+        {
+          "sharpe": -14.0539,
+          "mdd": 20.02,
+          "win_rate": 38.46,
+          "profit_factor": 0.4549
+        },
+        {
+          "sharpe": 2.5462,
+          "mdd": 7.75,
+          "win_rate": 53.85,
+          "profit_factor": 1.1469
+        },
+        {
+          "sharpe": 0.2239,
+          "mdd": 7.79,
+          "win_rate": 43.59,
+          "profit_factor": 1.0122
+        },
+        {
+          "sharpe": 11.2589,
+          "mdd": 5.65,
+          "win_rate": 64.1,
+          "profit_factor": 1.7818
+        },
+        {
+          "sharpe": 11.123,
+          "mdd": 3.31,
+          "win_rate": 58.97,
+          "profit_factor": 1.8228
+        }
+      ]
+    },
+    {
+      "strategy": "breakout",
+      "timeframe": "4h",
+      "passed": false,
+      "windows_passed": 1,
+      "avg_sharpe": 0.0137,
+      "avg_mdd": 1.28,
+      "window_details": [
+        {
+          "sharpe": -7.4936,
+          "mdd": 0.73,
+          "win_rate": 0.0,
+          "profit_factor": 0.0
+        },
+        {
+          "sharpe": 0.9388,
+          "mdd": 2.23,
+          "win_rate": 50.0,
+          "profit_factor": 1.151
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": 6.9163,
+          "mdd": 1.3,
+          "win_rate": 57.14,
+          "profit_factor": 2.2536
+        },
+        {
+          "sharpe": -0.293,
+          "mdd": 2.13,
+          "win_rate": 33.33,
+          "profit_factor": 0.9503
+        }
+      ]
+    },
+    {
+      "strategy": "volatility_regime",
+      "timeframe": "4h",
+      "passed": true,
+      "windows_passed": 4,
+      "avg_sharpe": 4.7502,
+      "avg_mdd": 3.18,
+      "window_details": [
+        {
+          "sharpe": 3.2333,
+          "mdd": 0.97,
+          "win_rate": 50.0,
+          "profit_factor": 1.4323
+        },
+        {
+          "sharpe": 4.31,
+          "mdd": 2.57,
+          "win_rate": 50.0,
+          "profit_factor": 1.6436
+        },
+        {
+          "sharpe": 16.7651,
+          "mdd": 0.0,
+          "win_rate": 100.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": -5.4056,
+          "mdd": 8.29,
+          "win_rate": 47.06,
+          "profit_factor": 0.6614
+        },
+        {
+          "sharpe": 4.8482,
+          "mdd": 4.09,
+          "win_rate": 47.62,
+          "profit_factor": 1.417
+        }
+      ]
+    },
+    {
+      "strategy": "momentum_crossover",
+      "timeframe": "4h",
+      "passed": true,
+      "windows_passed": 3,
+      "avg_sharpe": 1.787,
+      "avg_mdd": 7.1,
+      "window_details": [
+        {
+          "sharpe": -14.7516,
+          "mdd": 15.39,
+          "win_rate": 25.0,
+          "profit_factor": 0.2075
+        },
+        {
+          "sharpe": -5.8606,
+          "mdd": 8.43,
+          "win_rate": 51.85,
+          "profit_factor": 0.6856
+        },
+        {
+          "sharpe": 2.1038,
+          "mdd": 4.91,
+          "win_rate": 41.94,
+          "profit_factor": 1.1369
+        },
+        {
+          "sharpe": 16.3206,
+          "mdd": 3.48,
+          "win_rate": 73.08,
+          "profit_factor": 2.8361
+        },
+        {
+          "sharpe": 11.123,
+          "mdd": 3.31,
+          "win_rate": 58.97,
+          "profit_factor": 1.8228
+        }
+      ]
+    },
+    {
+      "strategy": "bollinger_mr",
+      "timeframe": "4h",
+      "passed": false,
+      "windows_passed": 0,
+      "avg_sharpe": -2.827,
+      "avg_mdd": 0.66,
+      "window_details": [
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": -6.6413,
+          "mdd": 2.57,
+          "win_rate": 33.33,
+          "profit_factor": 0.2586
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": -7.4936,
+          "mdd": 0.71,
+          "win_rate": 0.0,
+          "profit_factor": 0.0
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        }
+      ]
+    },
+    {
+      "strategy": "mean_reversion",
+      "timeframe": "1d",
+      "passed": true,
+      "windows_passed": 3,
+      "avg_sharpe": 1.2205,
+      "avg_mdd": 3.18,
+      "window_details": [
+        {
+          "sharpe": 1.32,
+          "mdd": 0.97,
+          "win_rate": 50.0,
+          "profit_factor": 1.4323
+        },
+        {
+          "sharpe": 1.7596,
+          "mdd": 2.57,
+          "win_rate": 50.0,
+          "profit_factor": 1.6436
+        },
+        {
+          "sharpe": 5.0113,
+          "mdd": 0.0,
+          "win_rate": 100.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": -2.2068,
+          "mdd": 8.29,
+          "win_rate": 47.06,
+          "profit_factor": 0.6614
+        },
+        {
+          "sharpe": 0.2184,
+          "mdd": 4.09,
+          "win_rate": 44.44,
+          "profit_factor": 1.0438
+        }
+      ]
+    },
+    {
+      "strategy": "momentum",
+      "timeframe": "1d",
+      "passed": true,
+      "windows_passed": 3,
+      "avg_sharpe": 0.9061,
+      "avg_mdd": 8.9,
+      "window_details": [
+        {
+          "sharpe": -5.7375,
+          "mdd": 20.02,
+          "win_rate": 38.46,
+          "profit_factor": 0.4549
+        },
+        {
+          "sharpe": 1.0395,
+          "mdd": 7.75,
+          "win_rate": 53.85,
+          "profit_factor": 1.1469
+        },
+        {
+          "sharpe": 0.0914,
+          "mdd": 7.79,
+          "win_rate": 43.59,
+          "profit_factor": 1.0122
+        },
+        {
+          "sharpe": 4.5964,
+          "mdd": 5.65,
+          "win_rate": 64.1,
+          "profit_factor": 1.7818
+        },
+        {
+          "sharpe": 4.5409,
+          "mdd": 3.31,
+          "win_rate": 58.97,
+          "profit_factor": 1.8228
+        }
+      ]
+    },
+    {
+      "strategy": "breakout",
+      "timeframe": "1d",
+      "passed": false,
+      "windows_passed": 1,
+      "avg_sharpe": 0.0056,
+      "avg_mdd": 1.28,
+      "window_details": [
+        {
+          "sharpe": -3.0592,
+          "mdd": 0.73,
+          "win_rate": 0.0,
+          "profit_factor": 0.0
+        },
+        {
+          "sharpe": 0.3833,
+          "mdd": 2.23,
+          "win_rate": 50.0,
+          "profit_factor": 1.151
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": 2.8236,
+          "mdd": 1.3,
+          "win_rate": 57.14,
+          "profit_factor": 2.2536
+        },
+        {
+          "sharpe": -0.1196,
+          "mdd": 2.13,
+          "win_rate": 33.33,
+          "profit_factor": 0.9503
+        }
+      ]
+    },
+    {
+      "strategy": "volatility_regime",
+      "timeframe": "1d",
+      "passed": true,
+      "windows_passed": 4,
+      "avg_sharpe": 1.9393,
+      "avg_mdd": 3.18,
+      "window_details": [
+        {
+          "sharpe": 1.32,
+          "mdd": 0.97,
+          "win_rate": 50.0,
+          "profit_factor": 1.4323
+        },
+        {
+          "sharpe": 1.7596,
+          "mdd": 2.57,
+          "win_rate": 50.0,
+          "profit_factor": 1.6436
+        },
+        {
+          "sharpe": 6.8443,
+          "mdd": 0.0,
+          "win_rate": 100.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": -2.2068,
+          "mdd": 8.29,
+          "win_rate": 47.06,
+          "profit_factor": 0.6614
+        },
+        {
+          "sharpe": 1.9793,
+          "mdd": 4.09,
+          "win_rate": 47.62,
+          "profit_factor": 1.417
+        }
+      ]
+    },
+    {
+      "strategy": "momentum_crossover",
+      "timeframe": "1d",
+      "passed": false,
+      "windows_passed": 2,
+      "avg_sharpe": 0.7296,
+      "avg_mdd": 7.1,
+      "window_details": [
+        {
+          "sharpe": -6.0223,
+          "mdd": 15.39,
+          "win_rate": 25.0,
+          "profit_factor": 0.2075
+        },
+        {
+          "sharpe": -2.3926,
+          "mdd": 8.43,
+          "win_rate": 51.85,
+          "profit_factor": 0.6856
+        },
+        {
+          "sharpe": 0.8589,
+          "mdd": 4.91,
+          "win_rate": 41.94,
+          "profit_factor": 1.1369
+        },
+        {
+          "sharpe": 6.6629,
+          "mdd": 3.48,
+          "win_rate": 73.08,
+          "profit_factor": 2.8361
+        },
+        {
+          "sharpe": 4.5409,
+          "mdd": 3.31,
+          "win_rate": 58.97,
+          "profit_factor": 1.8228
+        }
+      ]
+    },
+    {
+      "strategy": "bollinger_mr",
+      "timeframe": "1d",
+      "passed": false,
+      "windows_passed": 0,
+      "avg_sharpe": -1.1541,
+      "avg_mdd": 0.66,
+      "window_details": [
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": -2.7113,
+          "mdd": 2.57,
+          "win_rate": 33.33,
+          "profit_factor": 0.2586
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        },
+        {
+          "sharpe": -3.0592,
+          "mdd": 0.71,
+          "win_rate": 0.0,
+          "profit_factor": 0.0
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        }
+      ]
+    }
+  ]
+}

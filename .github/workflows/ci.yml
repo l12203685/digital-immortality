@@ -85,21 +85,28 @@ jobs:
           python organism_interact.py templates/example_dna.md templates/example_dna_b.md --scenario 1 --quiet
 
       # ------------------------------------------------------------------
-      # 4. Run consistency_test baseline
+      # 4. Run boot test (consistency_test baseline)
       # ------------------------------------------------------------------
-      - name: Run consistency_test baseline
+      - name: Run boot test (consistency_test)
         run: |
-          python consistency_test.py templates/example_dna.md
+          python consistency_test.py templates/example_dna.md --output-dir results
 
       # ------------------------------------------------------------------
-      # 5. Run cold_start_test
+      # 5. Run export validation
       # ------------------------------------------------------------------
-      - name: Run cold_start_test
+      - name: Run export validation
+        run: |
+          python validate_exports.py --verbose
+
+      # ------------------------------------------------------------------
+      # 6. Run cold start test
+      # ------------------------------------------------------------------
+      - name: Run cold start test
         run: |
           python cold_start_test.py
 
       # ------------------------------------------------------------------
-      # 6. Install server dependencies and verify platform code
+      # 7. Install server dependencies and verify platform code
       # ------------------------------------------------------------------
       - name: Install server dependencies
         run: pip install fastapi uvicorn --quiet
@@ -131,7 +138,7 @@ jobs:
           "
 
       # ------------------------------------------------------------------
-      # 7. Validate install.sh syntax
+      # 8. Validate install.sh syntax
       # ------------------------------------------------------------------
       - name: Shellcheck install.sh
         run: |
@@ -143,7 +150,7 @@ jobs:
           fi
 
       # ------------------------------------------------------------------
-      # 8. Verify results directory can be created
+      # 9. Verify results directory structure
       # ------------------------------------------------------------------
       - name: Verify results directory structure
         run: |

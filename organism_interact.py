@@ -10,22 +10,29 @@ and saves results as JSON in the results/ directory.
 Usage:
     python organism_interact.py <dna_file_a> <dna_file_b> [--scenario N] [--all]
     python organism_interact.py <dna_file_a> <dna_file_b> --report
+    python organism_interact.py --multi dna1.md dna2.md dna3.md [dna4.md ...]
+    python organism_interact.py --multi dna1.md dna2.md dna3.md --report
 
 Examples:
     python organism_interact.py templates/example_dna.md path/to/other_dna.md --all
     python organism_interact.py dna_a.md dna_b.md --scenario 3
     python organism_interact.py dna_a.md dna_b.md           # runs all 10
     python organism_interact.py dna_a.md dna_b.md --report   # structured collision report
+    python organism_interact.py --multi a.md b.md c.md       # 3+ organism collision
+    python organism_interact.py --multi a.md b.md c.md --report  # with report
 
 Output:
     results/<organism_a>_vs_<organism_b>_<timestamp>.json
     results/collision_<name1>_vs_<name2>_<timestamp>.md   (with --report)
     results/collision_<name1>_vs_<name2>_<timestamp>.json  (with --report)
+    results/multi_collision_<names>_<timestamp>.md          (with --multi --report)
+    results/multi_collision_<names>_<timestamp>.json         (with --multi --report)
 
 Protocol format follows specs/organism_protocol.md v0.1
 """
 
 import argparse
+import itertools
 import json
 import os
 import re
@@ -1295,6 +1302,626 @@ def save_collision_report(
 
 
 # ---------------------------------------------------------------------------
+# Multi-DNA collision (3+ organisms)
+# ---------------------------------------------------------------------------
+
+def _extract_verdict_from_response(response_text: str) -> str:
+    """Extract the decision verdict from a generated response (reusable helper)."""
+    lines = [ln.strip() for ln in response_text.strip().splitlines() if ln.strip()]
+    for line in lines:
+        m = re.match(r"^([A-Z][A-Z_\s]{2,30}?)\s*[—–-]{1,2}\s*(.+)", line)
+        if m:
+            return m.group(1).strip()
+    tokens = re.findall(r"\b[A-Z]{3,}\b", response_text)
+    return tokens[-1] if tokens else ""
+
+
+def run_multi_collision(organisms: list, scenarios: list) -> dict:
+    """
+    Run all organisms against all scenarios and collect structured results.
+
+    Returns:
+        {
+            "organisms": [organism_dict, ...],
+            "scenarios": [scenario_dict, ...],
+            "responses": {(org_idx, scenario_idx): response_dict, ...},
+        }
+    """
+    responses = {}
+    for oi, org in enumerate(organisms):
+        for si, scenario in enumerate(scenarios):
+            resp = generate_response(org, scenario)
+            responses[(oi, si)] = resp
+    return {
+        "organisms": organisms,
+        "scenarios": scenarios,
+        "responses": responses,
+    }
+
+
+def build_divergence_matrix(collision_data: dict) -> dict:
+    """
+    Build an NxN divergence matrix across all organism pairs.
+
+    For each pair (i, j), count how many scenarios they diverge on
+    (different verdict) vs agree on.
+
+    Returns:
+        {
+            "names": [name0, name1, ...],
+            "matrix": [[{agree, diverge}, ...], ...],  # matrix[i][j]
+        }
+    """
+    organisms = collision_data["organisms"]
+    scenarios = collision_data["scenarios"]
+    responses = collision_data["responses"]
+    n = len(organisms)
+
+    names = [org["name"] for org in organisms]
+    matrix = [[None for _ in range(n)] for _ in range(n)]
+
+    for i in range(n):
+        for j in range(n):
+            if i == j:
+                matrix[i][j] = {"agreements": len(scenarios), "divergences": 0}
+                continue
+            agree = 0
+            diverge = 0
+            for si in range(len(scenarios)):
+                verdict_i = _extract_verdict_from_response(responses[(i, si)]["response"])
+                verdict_j = _extract_verdict_from_response(responses[(j, si)]["response"])
+                if verdict_i and verdict_j and verdict_i == verdict_j:
+                    agree += 1
+                else:
+                    diverge += 1
+            matrix[i][j] = {"agreements": agree, "divergences": diverge}
+
+    return {"names": names, "matrix": matrix}
+
+
+def identify_consensus_and_outliers(collision_data: dict) -> dict:
+    """
+    For each scenario, identify:
+    - consensus: all organisms reach the same verdict
+    - outliers: one organism disagrees with the majority
+
+    Returns:
+        {
+            "by_scenario": [
+                {
+                    "scenario_id": int,
+                    "domain": str,
+                    "verdicts": {name: verdict, ...},
+                    "type": "consensus" | "outlier" | "split",
+                    "consensus_verdict": str | None,
+                    "outlier_name": str | None,
+                    "outlier_verdict": str | None,
+                    "majority_verdict": str | None,
+                },
+                ...
+            ]
+        }
+    """
+    organisms = collision_data["organisms"]
+    scenarios = collision_data["scenarios"]
+    responses = collision_data["responses"]
+    n = len(organisms)
+
+    results = []
+    for si, scenario in enumerate(scenarios):
+        verdicts = {}
+        for oi, org in enumerate(organisms):
+            v = _extract_verdict_from_response(responses[(oi, si)]["response"])
+            verdicts[org["name"]] = v if v else "(unclear)"
+
+        # Count verdict frequencies
+        verdict_counts = {}
+        for name, v in verdicts.items():
+            verdict_counts.setdefault(v, []).append(name)
+
+        entry = {
+            "scenario_id": scenario["id"],
+            "domain": scenario["domain"],
+            "verdicts": verdicts,
+        }
+
+        if len(verdict_counts) == 1:
+            # All agree
+            entry["type"] = "consensus"
+            entry["consensus_verdict"] = list(verdict_counts.keys())[0]
+            entry["outlier_name"] = None
+            entry["outlier_verdict"] = None
+            entry["majority_verdict"] = entry["consensus_verdict"]
+        elif len(verdict_counts) == 2:
+            # Check for outlier: one group has exactly 1 member
+            sorted_groups = sorted(verdict_counts.items(), key=lambda x: len(x[1]))
+            if len(sorted_groups[0][1]) == 1:
+                entry["type"] = "outlier"
+                entry["outlier_name"] = sorted_groups[0][1][0]
+                entry["outlier_verdict"] = sorted_groups[0][0]
+                entry["majority_verdict"] = sorted_groups[1][0]
+                entry["consensus_verdict"] = None
+            else:
+                # Even split (e.g., 2v2) — classify as split
+                entry["type"] = "split"
+                entry["consensus_verdict"] = None
+                entry["outlier_name"] = None
+                entry["outlier_verdict"] = None
+                entry["majority_verdict"] = sorted_groups[1][0]  # larger group
+        else:
+            # 3+ distinct verdicts — full split
+            entry["type"] = "split"
+            entry["consensus_verdict"] = None
+            entry["outlier_name"] = None
+            entry["outlier_verdict"] = None
+            # Majority is the most common verdict
+            most_common = max(verdict_counts.items(), key=lambda x: len(x[1]))
+            entry["majority_verdict"] = most_common[0]
+
+        results.append(entry)
+
+    return {"by_scenario": results}
+
+
+def _build_multi_cross_pollination(collision_data: dict, consensus_outliers: dict) -> dict:
+    """
+    For each organism, suggest what it could learn from the group based on
+    scenarios where it is an outlier or in the minority.
+
+    Returns: {organism_name: [suggestion_str, ...], ...}
+    """
+    organisms = collision_data["organisms"]
+    responses = collision_data["responses"]
+    suggestions = {org["name"]: [] for org in organisms}
+
+    for entry in consensus_outliers["by_scenario"]:
+        domain = entry["domain"]
+
+        if entry["type"] == "outlier" and entry["outlier_name"]:
+            outlier = entry["outlier_name"]
+            majority_v = entry["majority_verdict"]
+            outlier_v = entry["outlier_verdict"]
+            suggestions[outlier].append(
+                f"In {domain}: you chose {outlier_v} while the group consensus was "
+                f"{majority_v}. Consider whether the majority perspective reveals a "
+                f"blind spot in your framework."
+            )
+        elif entry["type"] == "split":
+            # In a split, each organism in the minority can learn from the majority
+            verdicts = entry["verdicts"]
+            verdict_counts = {}
+            for name, v in verdicts.items():
+                verdict_counts.setdefault(v, []).append(name)
+            if not verdict_counts:
+                continue
+            most_common_v, most_common_names = max(
+                verdict_counts.items(), key=lambda x: len(x[1])
+            )
+            for v, names in verdict_counts.items():
+                if v != most_common_v:
+                    for name in names:
+                        suggestions[name].append(
+                            f"In {domain}: you chose {v} while the plurality "
+                            f"({', '.join(most_common_names)}) chose {most_common_v}. "
+                            f"Review their reasoning for potential insights."
+                        )
+
+    return suggestions
+
+
+def generate_multi_collision_report_md(
+    collision_data: dict,
+    divergence_matrix: dict,
+    consensus_outliers: dict,
+    cross_pollination: dict,
+) -> str:
+    """
+    Build a structured markdown report for a multi-organism collision.
+
+    Sections:
+    1. Header with all organism names
+    2. Summary: total scenarios, consensus count, outlier count, split count
+    3. NxN Divergence Matrix
+    4. Per-scenario breakdown with all organisms' verdicts
+    5. Consensus analysis
+    6. Outlier identification
+    7. Cross-pollination suggestions
+    """
+    organisms = collision_data["organisms"]
+    scenarios = collision_data["scenarios"]
+    responses = collision_data["responses"]
+    now = datetime.now()
+    names = [org["name"] for org in organisms]
+    n = len(organisms)
+
+    by_scenario = consensus_outliers["by_scenario"]
+    consensus_count = sum(1 for e in by_scenario if e["type"] == "consensus")
+    outlier_count = sum(1 for e in by_scenario if e["type"] == "outlier")
+    split_count = sum(1 for e in by_scenario if e["type"] == "split")
+
+    lines = []
+
+    # --- Header ---
+    names_str = " vs ".join(names)
+    lines.append(f"# Multi-Organism Collision Report: {names_str}")
+    lines.append("")
+    lines.append(f"**Date**: {now.strftime('%Y-%m-%d %H:%M:%S')}")
+    lines.append(f"**Organisms**: {n}")
+    for i, org in enumerate(organisms):
+        lines.append(
+            f"**Organism {i+1}**: {org['name']} ({org['filepath']}) "
+            f"— {len(org['principles'])} principles"
+        )
+    lines.append("")
+
+    # --- Summary ---
+    lines.append("## Summary")
+    lines.append("")
+    lines.append("| Metric | Value |")
+    lines.append("|--------|-------|")
+    lines.append(f"| Organisms | {n} |")
+    lines.append(f"| Total scenarios | {len(scenarios)} |")
+    lines.append(f"| Full consensus | {consensus_count} |")
+    lines.append(f"| Outlier (1 vs rest) | {outlier_count} |")
+    lines.append(f"| Split (no majority) | {split_count} |")
+    consensus_pct = (consensus_count / len(scenarios) * 100) if scenarios else 0
+    lines.append(f"| Consensus rate | {consensus_pct:.0f}% |")
+    lines.append("")
+
+    # --- NxN Divergence Matrix ---
+    lines.append("## Divergence Matrix (NxN)")
+    lines.append("")
+    lines.append(
+        "Each cell shows agreements/divergences between the pair across all scenarios."
+    )
+    lines.append("")
+
+    # Header row
+    header = "| | " + " | ".join(names) + " |"
+    sep = "|---|" + "|".join(["---"] * n) + "|"
+    lines.append(header)
+    lines.append(sep)
+    matrix = divergence_matrix["matrix"]
+    for i, name in enumerate(names):
+        row_cells = []
+        for j in range(n):
+            cell = matrix[i][j]
+            if i == j:
+                row_cells.append("--")
+            else:
+                row_cells.append(f"{cell['agreements']}A / {cell['divergences']}D")
+        lines.append(f"| {name} | " + " | ".join(row_cells) + " |")
+    lines.append("")
+
+    # --- Per-Scenario Breakdown ---
+    lines.append("## Per-Scenario Breakdown")
+    lines.append("")
+
+    for entry in by_scenario:
+        si = entry["scenario_id"] - 1
+        scenario = scenarios[si] if si < len(scenarios) else None
+        tag = entry["type"].upper()
+        domain = entry["domain"].upper()
+        lines.append(f"### Scenario {entry['scenario_id']}: {domain} [{tag}]")
+        lines.append("")
+        if scenario:
+            lines.append(f"> {scenario['scenario']}")
+            lines.append("")
+
+        for oi, org in enumerate(organisms):
+            resp = responses[(oi, si)]
+            decision = _extract_decision_line(resp["response"])
+            verdict = entry["verdicts"].get(org["name"], "")
+            is_outlier = (
+                entry["type"] == "outlier" and entry["outlier_name"] == org["name"]
+            )
+            marker = " **[OUTLIER]**" if is_outlier else ""
+            lines.append(f"**{org['name']}**{marker}: {decision}")
+            principles_used = resp.get("dna_principles_used", [])
+            if principles_used:
+                for p in principles_used:
+                    lines.append(f"  - {p[:120]}")
+            lines.append("")
+
+        lines.append("---")
+        lines.append("")
+
+    # --- Consensus Analysis ---
+    lines.append("## Consensus Analysis")
+    lines.append("")
+    consensus_entries = [e for e in by_scenario if e["type"] == "consensus"]
+    if consensus_entries:
+        lines.append(
+            f"All {n} organisms agree on {len(consensus_entries)} scenario(s):"
+        )
+        lines.append("")
+        for e in consensus_entries:
+            lines.append(
+                f"- **{e['domain'].upper()}**: unanimous verdict = {e['consensus_verdict']}"
+            )
+        lines.append("")
+    else:
+        lines.append("No scenarios reached full consensus across all organisms.")
+        lines.append("")
+
+    # --- Outlier Identification ---
+    lines.append("## Outlier Identification")
+    lines.append("")
+    outlier_entries = [e for e in by_scenario if e["type"] == "outlier"]
+    if outlier_entries:
+        lines.append(
+            f"{len(outlier_entries)} scenario(s) have a single outlier:"
+        )
+        lines.append("")
+        for e in outlier_entries:
+            lines.append(
+                f"- **{e['domain'].upper()}**: {e['outlier_name']} chose "
+                f"{e['outlier_verdict']} while the rest chose {e['majority_verdict']}"
+            )
+        lines.append("")
+
+        # Per-organism outlier count
+        outlier_counts = {}
+        for e in outlier_entries:
+            name = e["outlier_name"]
+            outlier_counts[name] = outlier_counts.get(name, 0) + 1
+        lines.append("**Outlier frequency per organism:**")
+        lines.append("")
+        for name in names:
+            count = outlier_counts.get(name, 0)
+            if count > 0:
+                lines.append(f"- {name}: {count} time(s)")
+        lines.append("")
+    else:
+        lines.append("No single-outlier scenarios detected.")
+        lines.append("")
+
+    # --- Cross-Pollination Suggestions ---
+    lines.append("## Cross-Pollination Suggestions")
+    lines.append("")
+    lines.append("What each organism could learn from the group:")
+    lines.append("")
+
+    for name in names:
+        lines.append(f"### {name}")
+        lines.append("")
+        suggestions = cross_pollination.get(name, [])
+        if suggestions:
+            for s in suggestions:
+                lines.append(f"- {s}")
+        else:
+            lines.append(
+                "- Fully aligned with group consensus on all scenarios — "
+                "no cross-pollination needed."
+            )
+        lines.append("")
+
+    # --- Footer ---
+    lines.append("---")
+    lines.append("")
+    lines.append(
+        f"*Generated by organism_interact.py multi-collision report | {now.isoformat()}*"
+    )
+
+    return "\n".join(lines)
+
+
+def generate_multi_collision_report_json(
+    collision_data: dict,
+    divergence_matrix: dict,
+    consensus_outliers: dict,
+    cross_pollination: dict,
+) -> dict:
+    """
+    Build a machine-readable multi-collision report as a dict.
+    """
+    organisms = collision_data["organisms"]
+    scenarios = collision_data["scenarios"]
+    responses = collision_data["responses"]
+    now = datetime.now()
+
+    by_scenario = consensus_outliers["by_scenario"]
+    consensus_count = sum(1 for e in by_scenario if e["type"] == "consensus")
+    outlier_count = sum(1 for e in by_scenario if e["type"] == "outlier")
+    split_count = sum(1 for e in by_scenario if e["type"] == "split")
+
+    # Build per-scenario detail with all organisms' responses
+    scenario_details = []
+    for entry in by_scenario:
+        si = entry["scenario_id"] - 1
+        scenario = scenarios[si] if si < len(scenarios) else {}
+        org_responses = []
+        for oi, org in enumerate(organisms):
+            resp = responses[(oi, si)]
+            org_responses.append({
+                "name": org["name"],
+                "decision": _extract_decision_line(resp["response"]),
+                "verdict": entry["verdicts"].get(org["name"], ""),
+                "full_response": resp["response"],
+                "principles_used": resp.get("dna_principles_used", []),
+            })
+        scenario_details.append({
+            "scenario_id": entry["scenario_id"],
+            "domain": entry["domain"],
+            "scenario": scenario.get("scenario", ""),
+            "classification": entry["type"],
+            "consensus_verdict": entry.get("consensus_verdict"),
+            "outlier_name": entry.get("outlier_name"),
+            "outlier_verdict": entry.get("outlier_verdict"),
+            "majority_verdict": entry.get("majority_verdict"),
+            "organism_responses": org_responses,
+        })
+
+    # Serialize divergence matrix (replace None with dicts for JSON)
+    serial_matrix = []
+    for row in divergence_matrix["matrix"]:
+        serial_matrix.append([cell if cell else {} for cell in row])
+
+    return {
+        "meta": {
+            "report_type": "multi_collision",
+            "generated_at": now.isoformat(),
+            "organism_count": len(organisms),
+            "organism_files": [org["filepath"] for org in organisms],
+            "protocol_version": "v0.1",
+        },
+        "summary": {
+            "total_scenarios": len(scenarios),
+            "consensus": consensus_count,
+            "outliers": outlier_count,
+            "splits": split_count,
+            "consensus_rate": round(
+                consensus_count / len(scenarios) * 100, 1
+            ) if scenarios else 0,
+        },
+        "organisms": [
+            {
+                "name": org["name"],
+                "filepath": org["filepath"],
+                "principles_extracted": len(org["principles"]),
+                "identity": org["identity"],
+            }
+            for org in organisms
+        ],
+        "divergence_matrix": {
+            "names": divergence_matrix["names"],
+            "matrix": serial_matrix,
+        },
+        "scenarios": scenario_details,
+        "cross_pollination": cross_pollination,
+    }
+
+
+def save_multi_collision_report(
+    collision_data: dict,
+    divergence_matrix: dict,
+    consensus_outliers: dict,
+    cross_pollination: dict,
+    output_dir: str,
+) -> tuple:
+    """
+    Save multi-organism collision report as both markdown and JSON.
+
+    Returns: (md_path, json_path)
+    """
+    os.makedirs(output_dir, exist_ok=True)
+
+    organisms = collision_data["organisms"]
+    name_parts = "_vs_".join(
+        re.sub(r"[^\w]", "_", org["name"])[:15] for org in organisms
+    )
+    # Truncate total filename length to avoid filesystem issues
+    if len(name_parts) > 80:
+        name_parts = name_parts[:80]
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    base = f"multi_collision_{name_parts}_{timestamp}"
+
+    md_content = generate_multi_collision_report_md(
+        collision_data, divergence_matrix, consensus_outliers, cross_pollination
+    )
+    md_path = os.path.join(output_dir, f"{base}.md")
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write(md_content)
+
+    json_data = generate_multi_collision_report_json(
+        collision_data, divergence_matrix, consensus_outliers, cross_pollination
+    )
+    json_path = os.path.join(output_dir, f"{base}.json")
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(json_data, f, ensure_ascii=False, indent=2)
+
+    return md_path, json_path
+
+
+def print_multi_collision_summary(
+    collision_data: dict,
+    divergence_matrix: dict,
+    consensus_outliers: dict,
+    cross_pollination: dict,
+) -> None:
+    """Print a summary of the multi-organism collision to stdout."""
+    organisms = collision_data["organisms"]
+    names = [org["name"] for org in organisms]
+    n = len(organisms)
+    by_scenario = consensus_outliers["by_scenario"]
+
+    print(f"\n{'='*72}")
+    print(f"  MULTI-ORGANISM COLLISION: {' vs '.join(names)}")
+    print(f"{'='*72}")
+    print(f"\n  Organisms: {n}")
+    for org in organisms:
+        print(f"    - {org['name']} ({len(org['principles'])} principles)")
+
+    # Summary
+    consensus_count = sum(1 for e in by_scenario if e["type"] == "consensus")
+    outlier_count = sum(1 for e in by_scenario if e["type"] == "outlier")
+    split_count = sum(1 for e in by_scenario if e["type"] == "split")
+    total = len(by_scenario)
+    print(f"\n  Scenarios: {total}")
+    print(f"  Full consensus: {consensus_count}")
+    print(f"  Outlier (1 vs rest): {outlier_count}")
+    print(f"  Split: {split_count}")
+
+    # Divergence matrix
+    print(f"\n{'-'*72}")
+    print(f"  DIVERGENCE MATRIX")
+    print(f"{'-'*72}")
+    col_w = max(len(nm) for nm in names) + 2
+    header = "".ljust(col_w) + "".join(nm.center(col_w) for nm in names)
+    print(f"  {header}")
+    matrix = divergence_matrix["matrix"]
+    for i, name in enumerate(names):
+        row = name.ljust(col_w)
+        for j in range(n):
+            cell = matrix[i][j]
+            if i == j:
+                row += "--".center(col_w)
+            else:
+                row += f"{cell['agreements']}A/{cell['divergences']}D".center(col_w)
+        print(f"  {row}")
+
+    # Per-scenario verdicts
+    print(f"\n{'-'*72}")
+    print(f"  PER-SCENARIO VERDICTS")
+    print(f"{'-'*72}")
+    for entry in by_scenario:
+        tag = entry["type"].upper()
+        domain = entry["domain"].upper()
+        print(f"\n  [{entry['scenario_id']:2d}] {domain:13s} [{tag}]")
+        for name in names:
+            verdict = entry["verdicts"].get(name, "?")
+            marker = " <-- OUTLIER" if (entry["type"] == "outlier" and entry["outlier_name"] == name) else ""
+            print(f"       {name}: {verdict}{marker}")
+
+    # Outliers
+    outlier_entries = [e for e in by_scenario if e["type"] == "outlier"]
+    if outlier_entries:
+        print(f"\n{'-'*72}")
+        print(f"  OUTLIER SUMMARY")
+        print(f"{'-'*72}")
+        for e in outlier_entries:
+            print(
+                f"  {e['domain'].upper()}: {e['outlier_name']} "
+                f"({e['outlier_verdict']}) vs rest ({e['majority_verdict']})"
+            )
+
+    # Cross-pollination
+    print(f"\n{'-'*72}")
+    print(f"  CROSS-POLLINATION SUGGESTIONS")
+    print(f"{'-'*72}")
+    for name in names:
+        suggestions = cross_pollination.get(name, [])
+        if suggestions:
+            print(f"\n  {name}:")
+            for s in suggestions:
+                print(f"    - {s}")
+        else:
+            print(f"\n  {name}: fully aligned with group — no suggestions.")
+
+    print()
+
+
+# ---------------------------------------------------------------------------
 # CLI entrypoint
 # ---------------------------------------------------------------------------
 
@@ -1304,8 +1931,14 @@ def main() -> None:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )
-    parser.add_argument("dna_a", help="Path to DNA file for organism A (markdown)")
-    parser.add_argument("dna_b", help="Path to DNA file for organism B (markdown)")
+    parser.add_argument("dna_a", nargs="?", default=None,
+                        help="Path to DNA file for organism A (markdown)")
+    parser.add_argument("dna_b", nargs="?", default=None,
+                        help="Path to DNA file for organism B (markdown)")
+    parser.add_argument(
+        "--multi", nargs="+", metavar="DNA",
+        help="Multi-organism collision: 3+ DNA file paths for NxN comparison.",
+    )
     parser.add_argument(
         "--scenario", type=int, metavar="N",
         help="Run a single scenario by number (1-10). Default: run all.",
@@ -1354,15 +1987,80 @@ def main() -> None:
     script_dir = Path(__file__).parent
     output_dir = args.output_dir or str(script_dir / "results")
 
+    # -----------------------------------------------------------------------
+    # Multi-DNA collision mode (--multi)
+    # -----------------------------------------------------------------------
+    if args.multi:
+        if len(args.multi) < 3:
+            print(
+                "ERROR: --multi requires 3 or more DNA files. "
+                "For 2-file comparison, use positional args instead.",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+
+        # Load all organisms
+        organisms = []
+        try:
+            for dna_path in args.multi:
+                print(f"Loading DNA: {dna_path}")
+                org = parse_dna(dna_path)
+                print(f"  -> {org['name']} | {len(org['principles'])} principles extracted")
+                organisms.append(org)
+        except FileNotFoundError as e:
+            print(f"ERROR: {e}", file=sys.stderr)
+            sys.exit(1)
+
+        # Select scenarios
+        if args.scenario:
+            if args.scenario < 1 or args.scenario > len(SCENARIOS):
+                print(f"ERROR: --scenario must be 1-{len(SCENARIOS)}", file=sys.stderr)
+                sys.exit(1)
+            scenarios_to_run = [SCENARIOS[args.scenario - 1]]
+        else:
+            scenarios_to_run = SCENARIOS
+
+        print(f"\nRunning multi-collision: {len(organisms)} organisms x {len(scenarios_to_run)} scenarios...\n")
+
+        # Run collision
+        collision_data = run_multi_collision(organisms, scenarios_to_run)
+
+        # Build analysis
+        div_matrix = build_divergence_matrix(collision_data)
+        consensus_outliers = identify_consensus_and_outliers(collision_data)
+        cross_poll = _build_multi_cross_pollination(collision_data, consensus_outliers)
+
+        # Print summary to terminal
+        if not args.quiet:
+            print_multi_collision_summary(
+                collision_data, div_matrix, consensus_outliers, cross_poll
+            )
+
+        # Save report if --report
+        if args.report:
+            md_path, json_path = save_multi_collision_report(
+                collision_data, div_matrix, consensus_outliers, cross_poll, output_dir
+            )
+            print(f"\nMulti-collision report (markdown): {md_path}")
+            print(f"Multi-collision report (JSON):     {json_path}")
+
+        sys.exit(0)
+
+    # -----------------------------------------------------------------------
+    # Standard 2-DNA collision mode (positional args)
+    # -----------------------------------------------------------------------
+    if not args.dna_a or not args.dna_b:
+        parser.error("the following arguments are required: dna_a, dna_b (or use --multi for 3+ files)")
+
     # Load DNA files
     try:
         print(f"Loading DNA A: {args.dna_a}")
         organism_a = parse_dna(args.dna_a)
-        print(f"  → {organism_a['name']} | {len(organism_a['principles'])} principles extracted")
+        print(f"  -> {organism_a['name']} | {len(organism_a['principles'])} principles extracted")
 
         print(f"Loading DNA B: {args.dna_b}")
         organism_b = parse_dna(args.dna_b)
-        print(f"  → {organism_b['name']} | {len(organism_b['principles'])} principles extracted")
+        print(f"  -> {organism_b['name']} | {len(organism_b['principles'])} principles extracted")
     except FileNotFoundError as e:
         print(f"ERROR: {e}", file=sys.stderr)
         sys.exit(1)

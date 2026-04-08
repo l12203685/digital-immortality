@@ -1,0 +1,245 @@
+{
+  "timestamp": "20260408_002016",
+  "results": [
+    {
+      "strategy": "mean_reversion",
+      "timeframe": "1d",
+      "passed": true,
+      "windows_passed": 3,
+      "avg_sharpe": 2.6111,
+      "avg_mdd": 3.16,
+      "window_details": [
+        {
+          "sharpe": 4.6244,
+          "mdd": 0.89,
+          "win_rate": 71.43,
+          "profit_factor": 5.3572
+        },
+        {
+          "sharpe": 4.665,
+          "mdd": 2.32,
+          "win_rate": 83.33,
+          "profit_factor": 4.2849
+        },
+        {
+          "sharpe": 3.6951,
+          "mdd": 2.66,
+          "win_rate": 66.67,
+          "profit_factor": 2.9197
+        },
+        {
+          "sharpe": 0.331,
+          "mdd": 1.94,
+          "win_rate": 37.5,
+          "profit_factor": 1.0944
+        },
+        {
+          "sharpe": -0.26,
+          "mdd": 7.98,
+          "win_rate": 57.14,
+          "profit_factor": 0.9211
+        }
+      ]
+    },
+    {
+      "strategy": "momentum",
+      "timeframe": "1d",
+      "passed": false,
+      "windows_passed": 1,
+      "avg_sharpe": -2.4151,
+      "avg_mdd": 13.14,
+      "window_details": [
+        {
+          "sharpe": -3.555,
+          "mdd": 13.11,
+          "win_rate": 43.59,
+          "profit_factor": 0.6186
+        },
+        {
+          "sharpe": -4.9526,
+          "mdd": 18.53,
+          "win_rate": 38.46,
+          "profit_factor": 0.5337
+        },
+        {
+          "sharpe": 1.9182,
+          "mdd": 5.31,
+          "win_rate": 61.54,
+          "profit_factor": 1.3009
+        },
+        {
+          "sharpe": -2.5381,
+          "mdd": 15.24,
+          "win_rate": 48.72,
+          "profit_factor": 0.7222
+        },
+        {
+          "sharpe": -2.9478,
+          "mdd": 13.51,
+          "win_rate": 46.15,
+          "profit_factor": 0.6602
+        }
+      ]
+    },
+    {
+      "strategy": "breakout",
+      "timeframe": "1d",
+      "passed": false,
+      "windows_passed": 0,
+      "avg_sharpe": -1.5258,
+      "avg_mdd": 3.65,
+      "window_details": [
+        {
+          "sharpe": -3.4404,
+          "mdd": 3.49,
+          "win_rate": 0.0,
+          "profit_factor": 0.0
+        },
+        {
+          "sharpe": -2.5812,
+          "mdd": 5.86,
+          "win_rate": 25.0,
+          "profit_factor": 0.3957
+        },
+        {
+          "sharpe": -1.9179,
+          "mdd": 3.17,
+          "win_rate": 50.0,
+          "profit_factor": 0.473
+        },
+        {
+          "sharpe": 0.7803,
+          "mdd": 2.38,
+          "win_rate": 75.0,
+          "profit_factor": 1.3475
+        },
+        {
+          "sharpe": -0.4696,
+          "mdd": 3.34,
+          "win_rate": 33.33,
+          "profit_factor": 0.8301
+        }
+      ]
+    },
+    {
+      "strategy": "volatility_regime",
+      "timeframe": "1d",
+      "passed": false,
+      "windows_passed": 2,
+      "avg_sharpe": 1.2761,
+      "avg_mdd": 4.38,
+      "window_details": [
+        {
+          "sharpe": 4.6244,
+          "mdd": 0.89,
+          "win_rate": 71.43,
+          "profit_factor": 5.3572
+        },
+        {
+          "sharpe": 0.2515,
+          "mdd": 5.73,
+          "win_rate": 46.15,
+          "profit_factor": 1.055
+        },
+        {
+          "sharpe": 3.6951,
+          "mdd": 2.66,
+          "win_rate": 66.67,
+          "profit_factor": 2.9197
+        },
+        {
+          "sharpe": 0.331,
+          "mdd": 1.94,
+          "win_rate": 37.5,
+          "profit_factor": 1.0944
+        },
+        {
+          "sharpe": -2.5217,
+          "mdd": 10.7,
+          "win_rate": 42.86,
+          "profit_factor": 0.4341
+        }
+      ]
+    },
+    {
+      "strategy": "momentum_crossover",
+      "timeframe": "1d",
+      "passed": false,
+      "windows_passed": 0,
+      "avg_sharpe": -2.4249,
+      "avg_mdd": 8.04,
+      "window_details": [
+        {
+          "sharpe": -2.128,
+          "mdd": 7.18,
+          "win_rate": 43.75,
+          "profit_factor": 0.645
+        },
+        {
+          "sharpe": -1.9215,
+          "mdd": 4.8,
+          "win_rate": 50.0,
+          "profit_factor": 0.6281
+        },
+        {
+          "sharpe": -0.8438,
+          "mdd": 5.31,
+          "win_rate": 61.54,
+          "profit_factor": 0.821
+        },
+        {
+          "sharpe": -5.7279,
+          "mdd": 13.67,
+          "win_rate": 31.58,
+          "profit_factor": 0.319
+        },
+        {
+          "sharpe": -1.5032,
+          "mdd": 9.25,
+          "win_rate": 50.0,
+          "profit_factor": 0.7584
+        }
+      ]
+    },
+    {
+      "strategy": "bollinger_mr",
+      "timeframe": "1d",
+      "passed": false,
+      "windows_passed": 2,
+      "avg_sharpe": 0.5018,
+      "avg_mdd": 1.51,
+      "window_details": [
+        {
+          "sharpe": 3.3144,
+          "mdd": 0.89,
+          "win_rate": 75.0,
+          "profit_factor": 5.1357
+        },
+        {
+          "sharpe": 2.5812,
+          "mdd": 2.32,
+          "win_rate": 75.0,
+          "profit_factor": 2.5269
+        },
+        {
+          "sharpe": -3.0592,
+          "mdd": 2.42,
+          "win_rate": 0.0,
+          "profit_factor": 0.0
+        },
+        {
+          "sharpe": -0.3274,
+          "mdd": 1.94,
+          "win_rate": 33.33,
+          "profit_factor": 0.9018
+        },
+        {
+          "sharpe": 0.0,
+          "mdd": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": Infinity
+        }
+      ]
+    }
+  ]
+}

@@ -69,20 +69,21 @@ def _ensure_trading_imports():
     # NAMED_STRATEGIES keys (e.g. "DualMA_10_30") take precedence on collision.
     ALL_STRATEGIES.update({**STRATEGIES, **NAMED_STRATEGIES})
 
-    # Stash into module globals for cmd_ functions
-    import trading_system as _self
-    _self.STRATEGIES = STRATEGIES
-    _self.TIMEFRAMES = TIMEFRAMES
-    _self.ALL_STRATEGIES = ALL_STRATEGIES
-    _self.generate_synthetic_bars = generate_synthetic_bars
-    _self.run_backtest = run_backtest
-    _self.compute_metrics = compute_metrics
-    _self.walk_forward = walk_forward
-    _self.strategy_passes_filter = strategy_passes_filter
-    _self._mean = _mean
-    _self._timeframe_label = _timeframe_label
-    _self.PaperTrader = PaperTrader
-    _self.NAMED_STRATEGIES = NAMED_STRATEGIES
+    # Stash into module globals for cmd_ functions.
+    # Use globals() so it works both when imported AND when run as __main__.
+    _g = globals()
+    _g["STRATEGIES"] = STRATEGIES
+    _g["TIMEFRAMES"] = TIMEFRAMES
+    _g["ALL_STRATEGIES"] = ALL_STRATEGIES
+    _g["generate_synthetic_bars"] = generate_synthetic_bars
+    _g["run_backtest"] = run_backtest
+    _g["compute_metrics"] = compute_metrics
+    _g["walk_forward"] = walk_forward
+    _g["strategy_passes_filter"] = strategy_passes_filter
+    _g["_mean"] = _mean
+    _g["_timeframe_label"] = _timeframe_label
+    _g["PaperTrader"] = PaperTrader
+    _g["NAMED_STRATEGIES"] = NAMED_STRATEGIES
 
     _trading_loaded = True
 
