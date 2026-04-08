@@ -2267,3 +2267,16 @@ Cycle 32 done. 201906.jsonl → MD-205~207 written to dna_core.md (207 MDs total
 - **MD-205** 機制缺陷≠玩家失誤 — Avalon game analysis: isolate structural bias from execution quality before modifying rules
 - **MD-206** 住房總持有成本=五項精算 — housing: mortgage + tax + HOA + utilities + living; common underestimate is 15-20%
 - **MD-207** 教學分難度層次 — pre-sort by difficulty, let learner self-pace rather than teacher rationing
+
+## Cycle 33 — 2026-04-08T10:30 UTC
+
+**Branch 2.2 — 201905 distill → MD-208~210 (210 MDs total)**
+
+201905.jsonl (1,837 Edward msgs, May 2019): finance/tax/career/crypto topics.
+
+3 micro-decisions written to templates/dna_core.md:
+- **MD-208** 指數加碼=等距比例投入閒置資金 — 每跌1000點投入閒置資金10%，切成10份覆蓋最壞情境，消除擇時問題
+- **MD-209** 選擇權散戶勝率不高，定期定額藍籌反而更穩 — 無特定edge時預設最簡單的等價替代品
+- **MD-210** 交易帳號安全邊界≠雇主邊界，1.2 BTC被盜教訓 — 離職前/同時必須切斷帳號與前雇主安全鏈
+
+`templates/dna_core.md`: **210 MDs**. Next: 201904.
