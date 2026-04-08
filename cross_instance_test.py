@@ -171,21 +171,67 @@ def _run_session_cli(prompt: str, *, model: str = DEFAULT_MODEL) -> str:
     return result.stdout.strip()
 
 
+_DECISION_KEYWORDS = [
+    "CONDITIONAL",
+    "PASS",
+    "TAKE",
+    "FOUNDATIONAL",
+    "PRACTICAL",
+    "PUSH",
+    "HOLD",
+    "EXIT",
+    "ENTER",
+    "YES",
+    "NO",
+    "GO",
+    "STOP",
+    "WAIT",
+    "SKIP",
+    "A",
+    "B",
+    "C",
+    "D",
+]
+
+
+def _normalize_decision(raw: str) -> str:
+    """
+    Normalize a raw decision string to its primary keyword.
+
+    Strips Chinese characters, parentheticals, em-dashes, and other
+    qualifiers so that semantically equivalent decisions compare equal.
+    E.g. "CONDITIONAL（條件不足現在是 PASS）" → "CONDITIONAL"
+         "CONDITIONAL — 參與，但壓注縮到 ≤10%" → "CONDITIONAL"
+    """
+    # Remove everything after first （ or — or （ or whitespace+Chinese char
+    cleaned = re.split(r"[（(—\-–]", raw)[0].strip()
+    # Check for known keywords in order of specificity
+    for kw in _DECISION_KEYWORDS:
+        if re.search(r"\b" + kw + r"\b", cleaned, re.IGNORECASE):
+            return kw
+    # Fallback: first ASCII word
+    m = re.search(r"[A-Z_]+", cleaned)
+    if m:
+        return m.group(0)
+    return cleaned[:30] if cleaned else "NO_RESPONSE"
+
+
 def _extract_decision(response: str) -> str:
     """
-    Pull the decision line from a model response.
+    Pull the decision line from a model response and normalize to primary keyword.
 
     Looks for ``**Decision**: <value>`` and normalises to uppercase.
     Falls back to the first non-empty line if no match.
     """
     m = re.search(r"\*\*Decision\*\*\s*:\s*(.+)", response)
     if m:
-        return m.group(1).strip().upper()
+        raw = m.group(1).strip().upper()
+        return _normalize_decision(raw)
     # fallback: first non-blank line
     for line in response.splitlines():
         stripped = line.strip()
         if stripped:
-            return stripped.upper()
+            return _normalize_decision(stripped.upper())
     return "NO_RESPONSE"
 
 

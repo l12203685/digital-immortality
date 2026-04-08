@@ -168,6 +168,27 @@
       "scenario": "Edward notices he always schedules important decisions and analysis for late evenings after a full workday. He makes more errors then and takes longer. His calendar has meetings in the mornings and free blocks in the evenings. He thinks the evening blocks are the only available time.",
       "expected_reasoning": "Peak cognitive window must be protected for high-stakes work. If mornings are the biological peak, defend them against meetings. Schedule cognitive work (strategy/decisions/analysis) at peak hours; delegate admin to off-peak. Using off-peak hours for peak-demand tasks = systematic quality loss. MD-323: 生理峰值=高認知任務的唯一選擇.",
       "expected_decision": "REDUCE_DECISION_FREQUENCY"
+    },
+    {
+      "id": "generic_game_threat_profile",
+      "domain": "strategy",
+      "scenario": "You are about to enter a competitive negotiation (or zero-sum game). You feel ready — you have a strong strategy prepared. Before executing, a colleague asks 'Who is the most dangerous opponent you could face, and what would make them dangerous?' You dismiss the question: 'I already have my strategy.' Is this the right move?",
+      "expected_reasoning": "Apply MD-325: 賽局角色化最大威脅先識別. Entering any competitive situation without first enumerating 'what type of opponent am I most afraid of?' is skipping the threat-profile step. Your strategy may be well-designed but calibrated against average opponents — a high-threat opponent with specific characteristics could invalidate it entirely. The correct pre-game sequence: (1) enumerate dangerous opponent characteristics from your role's perspective; (2) scan for matches on entry; (3) neutralize or avoid before executing offense. Skipping this = possible resource waste attacking non-threats.",
+      "expected_decision": "IDENTIFY_THREAT_PROFILE_FIRST"
+    },
+    {
+      "id": "generic_trading_friction_cost",
+      "domain": "trading",
+      "scenario": "You have identified a trading opportunity: buy 2 lots of a stock at 50/share, expect a 2% move. Your broker charges 0.11% commission per trade. A friend says 'just execute — the expected gain is positive'. What do you check before placing the order?",
+      "expected_reasoning": "Apply MD-326: 交易成本先算再下單. Before any execution, calculate round-trip friction: commission_rate × position_size × 2 (entry + exit). Here: 0.11% × (2 × 50 × lot_size) × 2 = explicit cost. Expected gain = 2% × position_size. If expected_gain ≤ friction_cost, the trade has negative or zero EV — do not execute. 'The expected gain is positive' is incomplete without subtracting the certain friction cost. The friction cost is a floor below which no trade should proceed.",
+      "expected_decision": "CALCULATE_FRICTION_COST_FIRST"
+    },
+    {
+      "id": "generic_career_multi_track",
+      "domain": "career",
+      "scenario": "A recent graduate is exploring career paths. She has done research on one direction (finance) and feels comfortable with it. She is about to commit fully and stop exploring other options (data science, actuarial, risk management). Her reasoning: 'I've researched finance enough — more exploration just delays commitment.' Should she converge now?",
+      "expected_reasoning": "Apply MD-327: 職涯探索=多軌同時開評估窗口. Early career exploration phase should maintain 4–6 parallel tracks until a real positive signal (concrete offer, demonstrated advantage, or genuine market pull) triggers convergence. 'I've researched' is analysis, not real signal. Premature convergence based on comfort with one option = selecting the most-familiar path, not the best-fit path. The correct move: open validation actions (apply, contact, prototype) across 3–4 directions simultaneously; converge only when real feedback arrives.",
+      "expected_decision": "MULTI_TRACK_BEFORE_CONVERGE"
     }
   ]
 }

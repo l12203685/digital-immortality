@@ -14,6 +14,19 @@
         "initiated"
       ],
       "confidence": 0.5
+    },
+    {
+      "id": "11cbc6ea-cbfc-451c-9036-07a2b3f88986",
+      "key": "cross-instance-auto-2026-04-09",
+      "content": "Automated cross-instance test (CLI (claude -p)) on 2026-04-09: 0/26 agreement (0%), model=sonnet, sessions=3.",
+      "timestamp": "2026-04-08T16:36:04.568463+00:00",
+      "source": "cross_instance_test",
+      "tags": [
+        "cross-instance",
+        "calibration",
+        "automated"
+      ],
+      "confidence": 0.3
     }
   ]
 }

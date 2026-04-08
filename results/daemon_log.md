@@ -3460,3 +3460,16 @@ Branch 2.2 is now closed. Next: Branch 2.3 (extend consistency tests to cover MD
   - `_domain_decision` signature extended with `scenario_text` param for scenario-aware dispatch
 - **27/27 ALIGNED ✅** — full 327-MD coverage
 - Next: Branch 1.1 mainnet (set BINANCE_MAINNET_KEY/SECRET) or Branch 4.1 (Samuel reviews his DNA)
+
+## Cycle 98 — 2026-04-09T UTC
+
+**Branch 2.3** — cross-instance consistency measurement bug fixed.
+
+- `memory/calibration.json` showed 0/26 (0%) cross-instance agreement — was a string-exact comparison bug
+- Root cause: `_extract_decision()` kept full line including Chinese qualifiers ("CONDITIONAL（條件不足...）" ≠ "CONDITIONAL")
+- Fix: added `_normalize_decision()` to `cross_instance_test.py` — strips parens/dashes/Chinese, extracts primary keyword
+- Re-scored existing `results/cross_instance_results.json` with fix: **14/26 AGREED (54%)**
+- Failure breakdown: 6 real semantic divergences (DNA ambiguity), 6 format non-compliance (model responded in Chinese prose without keyword)
+- True gap to 80% target: 26pp — actionable, not catastrophic
+- Next: update prompt to enforce single-word English decision → re-run for clean semantic divergence count
+
