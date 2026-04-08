@@ -1572,3 +1572,17 @@ Cycle 62 done.
 - **MD-120** 教學=給起手式讓人自己思考 — scaffold not answers; student must explain their own modifications
 
 `dna_core.md`: **120 MDs**. Next: 202201.
+
+## Cycle 62 — 2026-04-09T01:00 UTC
+
+**Branch 2.2 — 202201 distilled + gap reconcile.**
+
+Gap reconcile: MD-118~120 already in file (202202, prior session unlogged). Tree updated to reflect.
+
+**202201.jsonl** (75 substantive Edward msgs, Jan 2022) → 3 MDs written to `templates/dna_core.md`:
+
+1. **MD-121** 五維框架=完整交易系統充要條件 — 簡單×多樣化×模糊排除×風控×資金控管五維缺一不可；評估策略逐維打分，找最弱維度補強
+2. **MD-122** 近期績效比=策略動能加速度 — pnl_near/(pnl_far-pnl_near)；>1=加速；<0=衰退；比絕對值更早偵測失效
+3. **MD-123** 條件機率謬誤=獨立事件不能互消 — 炸彈客問題：自帶炸彈不降低他人帶炸彈的機率；驗收問題：X和Y是相關還是獨立？
+
+`templates/dna_core.md`: **123 MDs**. Next: 202112.
