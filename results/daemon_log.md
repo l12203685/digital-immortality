@@ -177,3 +177,14 @@ Branch 1.1 (highest derivative) — ran `--tick` manually:
 - 4 more ticks needed → `--review` → mainnet GO/NO-GO
 
 Pushed. Next action: daily cron fires at 09:03 UTC; at tick 7 run `--review`.
+
+## Cycle 8 — 2026-04-08T09:26 UTC
+
+**Branch 1.1 — tick 4 fired.**
+
+- `dual_ma`: signal=SHORT, pnl=**+0.15 USDT**, PF=3.616, WR=50% [OK]
+- `donchian/filtered`: FLAT, pnl=0.00 USDT [OK]
+- 16 JSONL entries total (4 ticks × 4 strategies)
+- 3 more ticks → `--review` → mainnet GO/NO-GO
+
+Next: daily cron accumulates. At tick 7 run `--review`.
