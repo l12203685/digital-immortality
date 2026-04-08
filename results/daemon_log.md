@@ -1865,3 +1865,17 @@ Cycle 69 done.
 - **MD-156** 量化研究最小原型 — 先輸出最小版本給師傅校方向，再深化
 
 `dna_core.md`: **156 MDs**. Next: 202103.
+
+## Cycle 70 — 2026-04-09T04:30 UTC
+
+**Branch 2.2 — gap reconcile + 202103 → MD-157~159** (159 MDs total):
+
+Gap: 202104 already done (MD-154~156 in file, tree was stale). Updated tree.
+
+**202103 → MD-157~159** (49 substantive Edward msgs, Mar 2021):
+
+- **MD-157** 策略=追求第一性原理越深就在最小MAE下吃最大MFE — 越接近市場結構性原因，所需風險暴露越小，MFE越大；策略開發第一步：「我在捕捉什麼第一性原理？」
+- **MD-158** 槓鈴策略=核心穩健大部位+爆炸性小部位，缺一失去槓鈴效果 — 兩端缺一則失去結構；中等風險資產混入=喪失兩端優勢
+- **MD-159** 試單與加碼單=各自獨立正EV，不能互相依賴 — 試單本身賺錢=進場邏輯有效；加碼是在成功的基礎上加碼，不是攤平
+
+`templates/dna_core.md`: **159 MDs**. Next: 202102.
