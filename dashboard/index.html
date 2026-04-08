@@ -3,854 +3,293 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>數位永生 — Radial Mind Map</title>
+<title>數位永生</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #1a1a2e;
-  --bg-card: #16213e;
-  --bg-card-alt: #0f3460;
-  --text: #e0e0e0;
-  --text-dim: #888;
-  --text-bright: #fff;
-  --accent: #e94560;
-  --green: #4ade80;
-  --red: #f87171;
-  --yellow: #fbbf24;
-  --grey: #6b7280;
-  --blue: #60a5fa;
-  --purple: #a78bfa;
-  --border: #2a2a4a;
-  --mono: 'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#1a1a2e;--card:#222244;--text:#ccc;--bright:#fff;
+  --green:#4ade80;--yellow:#fbbf24;--red:#f87171;--grey:#555;
+  --mono:'JetBrains Mono',monospace;--sans:'Noto Sans TC',system-ui,sans-serif;
 }
+html{font-size:16px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* ── Header ── */
+header{display:flex;justify-content:space-between;align-items:center;padding:.6rem 1.2rem;border-bottom:1px solid #2a2a4a}
+header h1{font-size:1.1rem;font-weight:700;color:var(--bright);letter-spacing:.08em}
+.header-right{display:flex;align-items:center;gap:.7rem;font-size:.78rem;color:#888;font-family:var(--mono)}
+.live-dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
+/* ── Hero ── */
+.hero{text-align:center;padding:1.8rem 1rem 1.2rem}
+.hero-main{font-size:1.8rem;font-weight:900;color:var(--bright);line-height:1.3}
+.hero-sub{margin-top:.5rem;font-size:.95rem;color:#888;font-family:var(--mono)}
 
-/* ── Regime Banner (TOP) ── */
-.regime-banner {
-  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card-alt) 100%);
-  border-bottom: 1px solid var(--border);
-  padding: 0.6rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  flex-shrink: 0;
-}
+/* ── Cards grid ── */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;padding:0 1rem;max-width:600px;margin:0 auto;width:100%}
+.card{background:var(--card);border-radius:14px;padding:.9rem 1rem;display:flex;gap:.8rem;align-items:flex-start;cursor:pointer;border:2px solid transparent;transition:border-color .15s}
+.card:hover,.card.selected{border-color:#444}
+.card-icon{font-size:1.8rem;flex-shrink:0;line-height:1}
+.card-body{flex:1;min-width:0}
+.card-title{font-size:1rem;font-weight:700;color:var(--bright);display:flex;align-items:center;gap:.45rem}
+.card-status{font-size:.75rem;color:#999;margin-top:.25rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block}
+.dot-green{background:var(--green)}.dot-yellow{background:var(--yellow)}.dot-red{background:var(--red)}.dot-grey{background:var(--grey)}
 
-.regime-text {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--text-bright);
-  font-family: var(--mono);
-  letter-spacing: 0.02em;
-}
-
-.regime-text .regime-label {
-  color: var(--accent);
-}
-
-.regime-meta {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  color: var(--text-dim);
-}
-
-.regime-meta .clock { color: var(--blue); }
-
-.refresh-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--green);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-
-/* ── Legend ── */
-.legend {
-  display: flex;
-  gap: 1.2rem;
-  padding: 0.35rem 1.5rem;
-  background: var(--bg-card);
-  border-bottom: 1px solid var(--border);
-  font-size: 0.72rem;
-  font-family: var(--mono);
-  flex-shrink: 0;
-  flex-wrap: wrap;
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-.legend-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-/* ── Mind Map ── */
-#mindmap-wrap {
-  flex: 1;
-  position: relative;
-  min-height: 300px;
-  overflow: hidden;
-}
-
-#mindmap-wrap svg {
-  width: 100%;
-  height: 100%;
-}
-
-#mindmap-loading {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--mono);
-  font-size: 0.9rem;
-  color: var(--text-dim);
-}
-
-.zoom-controls {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  z-index: 10;
-}
-
-.zoom-controls button {
-  width: 32px;
-  height: 32px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--text);
-  font-size: 1rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.15s;
-}
-
-.zoom-controls button:hover {
-  background: var(--bg-card-alt);
-}
-
-/* ── Tooltip ── */
-.node-tooltip {
-  position: absolute;
-  pointer-events: none;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 0.5rem 0.8rem;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  color: var(--text);
-  max-width: 350px;
-  word-wrap: break-word;
-  z-index: 100;
-  display: none;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-}
-
-/* ── Bottom Panel ── */
-.bottom-panel {
-  flex-shrink: 0;
-  border-top: 1px solid var(--border);
-  background: var(--bg-card);
-}
-
-.status-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-}
-
-.status-card {
-  background: var(--bg);
-  border-radius: 6px;
-  padding: 0.5rem 0.7rem;
-}
-
-.status-card .label {
-  font-size: 0.62rem;
-  color: var(--text-dim);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-family: var(--mono);
-}
-
-.status-card .value {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--text-bright);
-  font-family: var(--mono);
-  margin-top: 0.1rem;
-}
-
-.status-card .sub {
-  font-size: 0.62rem;
-  color: var(--text-dim);
-  font-family: var(--mono);
-}
-
-/* ── Timeline Strip ── */
-.timeline-strip {
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.4rem 1.2rem 0.6rem;
-  overflow-x: auto;
-  font-family: var(--mono);
-  font-size: 0.68rem;
-}
-
-.timeline-strip::-webkit-scrollbar { height: 4px; }
-.timeline-strip::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
-
-.cycle-chip {
-  flex-shrink: 0;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 0.35rem 0.6rem;
-  min-width: 130px;
-}
-
-.cycle-chip .cycle-num { color: var(--accent); font-weight: 600; }
-.cycle-chip .cycle-ts { color: var(--blue); font-size: 0.62rem; }
-.cycle-chip .cycle-desc {
-  color: var(--yellow);
-  font-size: 0.6rem;
-  margin-top: 0.1rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 200px;
-}
-
-/* ── Scrollbar ── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+/* ── Feed ── */
+.feed{flex:1;overflow-y:auto;padding:.8rem 1.2rem;margin-top:.6rem;border-top:1px solid #2a2a4a}
+.feed-title{font-size:.7rem;color:#555;text-transform:uppercase;letter-spacing:.06em;font-family:var(--mono);margin-bottom:.4rem}
+.feed-item{font-size:.72rem;font-family:var(--mono);color:#666;padding:.18rem 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.feed-item .ts{color:#555}
 
 /* ── Responsive ── */
-@media (max-width: 768px) {
-  .regime-banner { padding: 0.5rem 0.8rem; }
-  .regime-text { font-size: 1rem; }
-  .status-row { grid-template-columns: repeat(3, 1fr); gap: 0.4rem; padding: 0.5rem 0.8rem; }
-  .status-card { padding: 0.4rem 0.5rem; }
-  .status-card .value { font-size: 0.85rem; }
-  .legend { padding: 0.3rem 0.8rem; gap: 0.6rem; }
+@media(min-width:520px){.cards{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:360px){
+  .hero-main{font-size:1.3rem}
+  .cards{gap:.5rem;padding:0 .6rem}
+  .card{padding:.7rem .8rem}
+  .card-icon{font-size:1.4rem}
 }
-
-@media (max-width: 480px) {
-  .status-row { grid-template-columns: repeat(2, 1fr); }
-  .regime-text { font-size: 0.85rem; }
-}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:#333;border-radius:2px}
 </style>
 </head>
 <body>
 
-<!-- TOP: Current Regime -->
-<div class="regime-banner">
-  <div class="regime-text" id="regime-display">
-    <span class="regime-label">Loading...</span>
+<header>
+  <h1>數位永生</h1>
+  <div class="header-right">
+    <span id="clock"></span>
+    <span class="live-dot"></span>
+    <span style="color:var(--green);font-size:.7rem">live</span>
   </div>
-  <div class="regime-meta">
-    <span class="clock" id="clock"></span>
-    <span><span class="refresh-dot"></span> auto-refresh 5min</span>
-  </div>
+</header>
+
+<div class="hero" id="hero">
+  <div class="hero-main" id="hero-main">Loading...</div>
+  <div class="hero-sub" id="hero-sub"></div>
 </div>
 
-<div class="legend">
-  <div class="legend-item"><span style="font-size:1rem">&#9889;</span> Urgent / Deadline</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#f87171"></div> Urgent</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#fbbf24"></div><span>&#9679;</span> Active</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#4ade80"></div><span>&#10003;</span> Done</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#6b7280"></div><span>&#9675;</span> Blocked</div>
-</div>
+<div class="cards" id="cards"></div>
 
-<!-- Radial Mind Map -->
-<div id="mindmap-wrap">
-  <div id="mindmap-loading">Loading radial mind map...</div>
-  <svg id="mindmap-svg"></svg>
-  <div class="node-tooltip" id="tooltip"></div>
-  <div class="zoom-controls">
-    <button onclick="zoomIn()" title="Zoom in">+</button>
-    <button onclick="zoomOut()" title="Zoom out">&minus;</button>
-    <button onclick="zoomFit()" title="Fit to screen">&#8689;</button>
-  </div>
+<div class="feed">
+  <div class="feed-title">Recent Activity</div>
+  <div id="feed"></div>
 </div>
-
-<!-- BOTTOM: Status + Timeline -->
-<div class="bottom-panel">
-  <div class="status-row" id="status-row">
-    <div class="status-card"><div class="label">Loading...</div></div>
-  </div>
-  <div class="timeline-strip" id="timeline-strip"></div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 
 <script>
-const RAW_BASE = 'https://raw.githubusercontent.com/l12203685/digital-immortality/main/results';
-const URLS = {
-  tree: RAW_BASE + '/dynamic_tree.md',
-  daemon: RAW_BASE + '/daemon_log.md',
-};
+const RAW = 'https://raw.githubusercontent.com/l12203685/digital-immortality/main/results';
 
-// ── Status badges ──
-const STATUS_BADGE = {
-  urgent: '\u26A1',
-  active: '\u25CF',
-  done: '\u2713',
-  blocked: '\u25CB',
-};
-
-const STATUS_COLORS = {
-  root: '#e94560',
-  urgent: '#f87171',
-  active: '#fbbf24',
-  done: '#4ade80',
-  blocked: '#6b7280',
-};
-
-const L1_SHORT_LABELS = {
-  1: '\u7D93\u6FDF\u81EA\u7D66',
-  2: '\u884C\u70BA\u7B49\u50F9',
-  3: '\u6301\u7E8C\u5B78\u7FD2',
-  4: '\u793E\u4EA4\u5708',
-  5: '\u5E73\u53F0\u5206\u767C',
-  6: '\u5B58\u6D3B\u5197\u9918',
-};
-
-// ── Clock ──
-function updateClock() {
-  var now = new Date();
-  var taipei = now.toLocaleString('zh-TW', {
-    timeZone: 'Asia/Taipei',
-    year: 'numeric', month: '2-digit', day: '2-digit',
-    hour: '2-digit', minute: '2-digit', second: '2-digit',
-    hour12: false
+// Clock (Taipei)
+function tick() {
+  var d = new Date();
+  document.getElementById('clock').textContent = d.toLocaleTimeString('zh-TW', {
+    timeZone: 'Asia/Taipei', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
   });
-  document.getElementById('clock').textContent = taipei + ' (Taipei)';
 }
-setInterval(updateClock, 1000);
-updateClock();
+setInterval(tick, 1000); tick();
 
-// ── Fetch ──
-async function fetchRaw(url) {
-  var res = await fetch(url + '?t=' + Date.now(), { cache: 'no-store' });
-  if (!res.ok) throw new Error('HTTP ' + res.status);
-  return res.text();
+// Fetch helper
+function get(url) {
+  return fetch(url + '?t=' + Date.now(), {cache: 'no-store'}).then(function(r) {
+    if (!r.ok) throw new Error(r.status);
+    return r.text();
+  });
 }
 
-// ── Parse dynamic_tree.md ──
-function parseTreeMd(md) {
+// Card config: emoji, 2-char title, branch number
+var CARDS = [
+  {emoji: '\uD83D\uDCB0', title: '\u7D93\u6FDF', num: 1},
+  {emoji: '\uD83E\uDDE0', title: '\u884C\u70BA', num: 2},
+  {emoji: '\uD83D\uDCDA', title: '\u5B78\u7FD2', num: 3},
+  {emoji: '\uD83E\uDD1D', title: '\u793E\u4EA4', num: 4},
+  {emoji: '\uD83D\uDCE6', title: '\u5E73\u53F0', num: 5},
+  {emoji: '\uD83D\uDEE1\uFE0F', title: '\u5B58\u6D3B', num: 6}
+];
+
+// Parse dynamic_tree.md
+function parseTree(md) {
   var lines = md.split('\n');
-  var lastUpdate = '';
-  var regime = '';
-
-  var root = { name: '\u6578\u4F4D\u6C38\u751F', status: 'root', children: [], shortLabel: '\u6578\u4F4D\u6C38\u751F' };
-  var currentL1 = null;
-  var currentL2 = null;
+  var regime = '', regimeSub = '';
+  var branches = {};
+  var evolution = [];
+  var currentNum = 0;
 
   for (var i = 0; i < lines.length; i++) {
-    var line = lines[i];
+    var L = lines[i];
 
-    var upMatch = line.match(/\u6700\u5F8C\u66F4\u65B0\uFF1A(.+)/);
-    if (upMatch) { lastUpdate = upMatch[1].trim(); continue; }
+    // Regime section
+    if (L.match(/^攻擊：/)) { regime = L.replace(/^攻擊：/, '').trim(); }
+    if (L.match(/^中性：/)) { regimeSub = L.replace(/^中性：/, '').trim(); }
 
-    // Regime
-    var regMatch = line.match(/^\u653B\u64CA\uFF1A(.+)/);
-    if (regMatch) { regime = '\u653B\u64CA\uFF1A' + regMatch[1].trim(); continue; }
-    var regMatch2 = line.match(/^\u4E2D\u6027\uFF1A(.+)/);
-    if (regMatch2 && !regime) { regime = '\u4E2D\u6027\uFF1A' + regMatch2[1].trim(); continue; }
-
-    // L1: ### N. Title
-    var l1Match = line.match(/^### (\d+)\.\s+(.+)/);
-    if (l1Match) {
-      var num = parseInt(l1Match[1]);
-      var fullTitle = l1Match[2];
-      var status = 'active';
-      if (fullTitle.includes('DEADLINE') || fullTitle.includes('\u26A1')) status = 'urgent';
-      var shortLabel = L1_SHORT_LABELS[num] || fullTitle.replace(/\u26A1.*/, '').replace(/\uFF08.*/, '').trim();
-      currentL1 = { name: fullTitle, shortLabel: shortLabel, status: status, children: [], num: num };
-      currentL2 = null;
-      root.children.push(currentL1);
+    // Branch headers: ### N. Title
+    var bm = L.match(/^### (\d+)\.\s+(.+)/);
+    if (bm) {
+      currentNum = parseInt(bm[1]);
+      var title = bm[2];
+      var status = 'yellow';
+      if (title.indexOf('DEADLINE') !== -1 || title.indexOf('\u26A1') !== -1) status = 'red';
+      branches[currentNum] = {status: status, items: [], raw: title};
       continue;
     }
 
-    // L2: - N.N text
-    var l2Match = line.match(/^- (\d+\.\d+)\s+(.+)/);
-    if (l2Match && currentL1) {
-      var text = l2Match[2];
-      var st = detectStatus(text);
-      currentL2 = { name: l2Match[1] + ' ' + text, shortLabel: text.substring(0, 30), status: st, children: [] };
-      currentL1.children.push(currentL2);
-      continue;
-    }
-
-    // L3: indented sub-items
-    var l3Match = line.match(/^\s{2,}-\s+(.+)/);
-    if (l3Match && currentL2) {
-      var t3 = l3Match[1];
-      var st3 = detectStatus(t3);
-      currentL2.children.push({ name: t3, shortLabel: t3.substring(0, 25), status: st3, children: [] });
-      continue;
-    }
-
-    // CONSTRAINT
-    if (line.match(/^- CONSTRAINT/) && currentL1) {
-      currentL1.children.push({ name: line.replace(/^- /, ''), shortLabel: 'CONSTRAINT', status: 'urgent', children: [] });
-    }
-  }
-
-  return { tree: root, lastUpdate: lastUpdate, regime: regime };
-}
-
-function detectStatus(text) {
-  if (text.includes('DEADLINE') || text.includes('deadline') || text.includes('\u26A1')) return 'urgent';
-  if (/\u2713/.test(text) || /DONE/.test(text) || /done/.test(text) || /\u2714/.test(text)) return 'done';
-  if (/blocked/.test(text) || /\u5F85/.test(text) || /users=0/.test(text)) return 'blocked';
-  return 'active';
-}
-
-// ── D3 Radial Mind Map ──
-var svgEl, gEl, zoomBehavior, rootNode;
-var nodeIdCounter = 0;
-var DURATION = 400;
-var tooltip = null;
-
-function initRadialMap(data) {
-  document.getElementById('mindmap-loading').style.display = 'none';
-  tooltip = document.getElementById('tooltip');
-
-  var wrap = document.getElementById('mindmap-wrap');
-  var width = wrap.clientWidth;
-  var height = wrap.clientHeight;
-
-  svgEl = d3.select('#mindmap-svg')
-    .attr('width', width)
-    .attr('height', height);
-
-  svgEl.selectAll('*').remove();
-
-  gEl = svgEl.append('g');
-
-  zoomBehavior = d3.zoom()
-    .scaleExtent([0.2, 5])
-    .on('zoom', function(e) { gEl.attr('transform', e.transform); });
-
-  svgEl.call(zoomBehavior);
-
-  rootNode = d3.hierarchy(data);
-  rootNode.x0 = 0;
-  rootNode.y0 = 0;
-
-  // Collapse L2+ children initially (L2/L3 collapsed)
-  if (rootNode.children) {
-    rootNode.children.forEach(function(l1) {
-      if (l1.children) {
-        l1.children.forEach(function(l2) {
-          if (l2.children && l2.children.length > 0) {
-            l2._children = l2.children;
-            l2.children = null;
-          }
-        });
-        // Also collapse L2 by default
-        l1._children = l1.children;
-        l1.children = null;
+    // Sub-items under current branch (first 3 only)
+    if (currentNum && L.match(/^- \d+\.\d+/)) {
+      var txt = L.replace(/^- \d+\.\d+\s*/, '').trim();
+      var st = 'yellow';
+      if (txt.indexOf('\u2713') !== -1 || txt.indexOf('DONE') !== -1 || txt.indexOf('done') !== -1) st = 'green';
+      if (txt.indexOf('blocked') !== -1 || txt.indexOf('\u5F85') !== -1 || txt.indexOf('users=0') !== -1) st = 'grey';
+      if (txt.indexOf('DEADLINE') !== -1 || txt.indexOf('\u26A1') !== -1) st = 'red';
+      if (branches[currentNum].items.length < 3) {
+        branches[currentNum].items.push({text: txt, status: st});
       }
-    });
+    }
+
+    // Evolution log
+    if (L.match(/^- 20\d{2}-/)) {
+      var ev = L.replace(/^- /, '').trim();
+      evolution.push(ev);
+    }
   }
 
-  updateRadial(rootNode);
+  // Determine overall status per branch from sub-items
+  for (var n in branches) {
+    var b = branches[n];
+    var statuses = b.items.map(function(it) { return it.status; });
+    if (statuses.indexOf('red') !== -1) b.dot = 'red';
+    else if (statuses.indexOf('yellow') !== -1) b.dot = 'yellow';
+    else if (statuses.every(function(s) { return s === 'green'; }) && statuses.length > 0) b.dot = 'green';
+    else if (statuses.indexOf('grey') !== -1) b.dot = 'grey';
+    else b.dot = 'yellow';
+  }
 
-  // Center
-  var t = d3.zoomIdentity.translate(width / 2, height / 2).scale(0.9);
-  svgEl.transition().duration(600).call(zoomBehavior.transform, t);
+  return {regime: regime, regimeSub: regimeSub, branches: branches, evolution: evolution.slice(-8).reverse()};
 }
 
-function radialPoint(x, y) {
-  // x = angle in radians, y = radius
-  return [y * Math.cos(x - Math.PI / 2), y * Math.sin(x - Math.PI / 2)];
+// Parse daemon_log.md (flat log lines)
+function parseDaemon(md) {
+  var lines = md.split('\n');
+  var items = [];
+  for (var i = lines.length - 1; i >= 0 && items.length < 8; i--) {
+    var L = lines[i].trim();
+    if (!L) continue;
+    // Match [timestamp] action lines
+    var m = L.match(/^\[(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}\s+\w+)\]\s+(.+)/);
+    if (m) {
+      var action = m[2];
+      // Skip boring lines
+      if (action.indexOf('Recalled memories') !== -1) continue;
+      if (action.indexOf('Auto-prune') !== -1) continue;
+      if (action.match(/^- \[/)) continue;
+      items.push({ts: m[1], action: action});
+    }
+  }
+  return items;
 }
 
-function updateRadial(source) {
-  // Use d3.tree with radial projection
-  var treeLayout = d3.tree()
-    .size([2 * Math.PI, 280])
-    .separation(function(a, b) {
-      return (a.parent === b.parent ? 1 : 2) / a.depth || 1;
-    });
+// Make one-line status from branch items
+function summarize(branch) {
+  if (!branch || !branch.items.length) return 'No data';
+  var first = branch.items[0];
+  var t = first.text;
+  // Trim to readable length
+  if (t.length > 40) t = t.substring(0, 38) + '...';
+  return t;
+}
 
-  var treeData = treeLayout(rootNode);
-  var nodes = treeData.descendants();
-  var links = treeData.links();
+// Time ago helper
+function ago(tsStr) {
+  // tsStr like "2026-04-08 10:45:00 UTC"
+  var d = new Date(tsStr.replace(' UTC', 'Z').replace(' ', 'T'));
+  if (isNaN(d)) return '';
+  var diff = Math.floor((Date.now() - d) / 60000);
+  if (diff < 1) return 'just now';
+  if (diff < 60) return diff + 'min ago';
+  if (diff < 1440) return Math.floor(diff / 60) + 'h ago';
+  return Math.floor(diff / 1440) + 'd ago';
+}
 
-  // Adjust radius by depth
-  nodes.forEach(function(d) {
-    if (d.depth === 0) d.y = 0;
-    else if (d.depth === 1) d.y = 140;
-    else if (d.depth === 2) d.y = 300;
-    else d.y = 300 + (d.depth - 2) * 140;
+// Render
+function render(tree, daemon) {
+  // Hero
+  var heroMain = document.getElementById('hero-main');
+  var heroSub = document.getElementById('hero-sub');
+  if (tree.regime) {
+    // e.g. "1.1 Trading（testnet running，7-day window → mainnet small size）"
+    heroMain.textContent = 'Trading System \u2192 ' + tree.regime.replace(/^1\.1\s*/, '').replace(/Trading\s*/, '').replace(/[（(].+/, '').trim();
+    heroSub.textContent = tree.regimeSub ? '\u4E2D\u6027: ' + tree.regimeSub : '';
+  } else {
+    heroMain.textContent = '\u904B\u884C\u4E2D';
+    heroSub.textContent = '';
+  }
+
+  // Cards
+  var cardsEl = document.getElementById('cards');
+  cardsEl.innerHTML = '';
+  CARDS.forEach(function(c) {
+    var b = tree.branches[c.num];
+    var dot = b ? b.dot : 'grey';
+    var status = b ? summarize(b) : 'No data';
+
+    var card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML =
+      '<div class="card-icon">' + c.emoji + '</div>' +
+      '<div class="card-body">' +
+        '<div class="card-title"><span class="dot dot-' + dot + '"></span>' + c.title + '</div>' +
+        '<div class="card-status">' + esc(status) + '</div>' +
+      '</div>';
+    card.onclick = function() {
+      document.querySelectorAll('.card').forEach(function(el) { el.classList.remove('selected'); });
+      card.classList.add('selected');
+    };
+    cardsEl.appendChild(card);
   });
 
-  // ── Links ──
-  var link = gEl.selectAll('path.link')
-    .data(links, function(d) { return d.target.id || (d.target.id = ++nodeIdCounter); });
+  // Feed: merge evolution + daemon, show last 5
+  var feedEl = document.getElementById('feed');
+  var feedItems = [];
 
-  var linkEnter = link.enter().insert('path', 'g')
-    .attr('class', 'link')
-    .attr('fill', 'none')
-    .attr('stroke-opacity', 0.3)
-    .attr('stroke-width', function(d) { return d.target.depth <= 1 ? 2.5 : 1.5; })
-    .attr('stroke', function(d) { return getNodeColor(d.target); })
-    .attr('d', function() {
-      var o = radialPoint(source.x0 || 0, source.y0 || 0);
-      return 'M' + o[0] + ',' + o[1] + 'L' + o[0] + ',' + o[1];
-    });
+  // Evolution items
+  tree.evolution.forEach(function(ev) {
+    var m = ev.match(/^(\d{4}-\d{2}-\d{2}[T ][\d:]+(?:\s*UTC)?):?\s*(.*)/);
+    if (m) feedItems.push({ts: m[1], text: m[2]});
+    else feedItems.push({ts: '', text: ev});
+  });
 
-  var linkUpdate = linkEnter.merge(link);
+  // Daemon items
+  daemon.forEach(function(d) {
+    feedItems.push({ts: d.ts, text: d.action});
+  });
 
-  linkUpdate.transition().duration(DURATION)
-    .attr('d', function(d) {
-      var s = radialPoint(d.source.x, d.source.y);
-      var t = radialPoint(d.target.x, d.target.y);
-      return 'M' + s[0] + ',' + s[1]
-        + 'C' + s[0] + ',' + (s[1] + t[1]) / 2
-        + ' ' + t[0] + ',' + (s[1] + t[1]) / 2
-        + ' ' + t[0] + ',' + t[1];
-    })
-    .attr('stroke', function(d) { return getNodeColor(d.target); })
-    .attr('stroke-opacity', 0.3);
-
-  link.exit().transition().duration(DURATION)
-    .attr('d', function() {
-      var o = radialPoint(source.x, source.y);
-      return 'M' + o[0] + ',' + o[1] + 'L' + o[0] + ',' + o[1];
-    })
-    .remove();
-
-  // ── Nodes ──
-  var node = gEl.selectAll('g.node')
-    .data(nodes, function(d) { return d.id || (d.id = ++nodeIdCounter); });
-
-  var nodeEnter = node.enter().append('g')
-    .attr('class', 'node')
-    .attr('transform', function() {
-      var p = radialPoint(source.x0 || 0, source.y0 || 0);
-      return 'translate(' + p[0] + ',' + p[1] + ')';
-    })
-    .on('click', function(event, d) {
-      if (d.children) {
-        d._children = d.children;
-        d.children = null;
-      } else if (d._children) {
-        d.children = d._children;
-        d._children = null;
-      }
-      updateRadial(d);
-    })
-    .on('mouseenter', function(event, d) {
-      if (d.depth === 0) return;
-      tooltip.style.display = 'block';
-      tooltip.textContent = d.data.name;
-      var rect = document.getElementById('mindmap-wrap').getBoundingClientRect();
-      tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
-      tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
-    })
-    .on('mousemove', function(event) {
-      var rect = document.getElementById('mindmap-wrap').getBoundingClientRect();
-      tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
-      tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
-    })
-    .on('mouseleave', function() {
-      tooltip.style.display = 'none';
-    })
-    .style('cursor', function(d) { return (d.children || d._children) ? 'pointer' : 'default'; });
-
-  // Circle
-  nodeEnter.append('circle')
-    .attr('r', 0)
-    .attr('fill', function(d) { return getNodeColor(d); })
-    .attr('stroke', function(d) { return getNodeColor(d); })
-    .attr('stroke-width', 2);
-
-  // Status badge for L1
-  nodeEnter.filter(function(d) { return d.depth === 1; })
-    .append('text')
-    .attr('class', 'status-badge')
-    .attr('text-anchor', 'middle')
-    .attr('dy', '-1.2em')
-    .attr('font-size', '12px')
-    .text(function(d) {
-      var st = d.data.status || 'active';
-      return STATUS_BADGE[st] || STATUS_BADGE.active;
-    });
-
-  // Label
-  nodeEnter.append('text')
-    .attr('class', 'node-label')
-    .attr('dy', '0.35em')
-    .attr('fill', '#e0e0e0')
-    .attr('font-family', "'Cascadia Code','Fira Code','Consolas',monospace")
-    .attr('font-weight', function(d) { return d.depth <= 1 ? '700' : '400'; })
-    .attr('font-size', function(d) {
-      if (d.depth === 0) return '16px';
-      if (d.depth === 1) return '12px';
-      return '10px';
-    });
-
-  // Expand indicator
-  nodeEnter.append('text')
-    .attr('class', 'expand-icon')
-    .attr('text-anchor', 'middle')
-    .attr('dy', '1.6em')
-    .attr('fill', '#888')
-    .attr('font-size', '8px')
-    .attr('font-family', 'monospace');
-
-  // ── Update ──
-  var nodeUpdate = nodeEnter.merge(node);
-
-  nodeUpdate.transition().duration(DURATION)
-    .attr('transform', function(d) {
-      var p = radialPoint(d.x, d.y);
-      return 'translate(' + p[0] + ',' + p[1] + ')';
-    });
-
-  nodeUpdate.select('circle')
-    .attr('r', function(d) {
-      if (d.depth === 0) return 28;
-      if (d.depth === 1) return 18;
-      if (d.depth === 2) return 8;
-      return 5;
-    })
-    .attr('fill', function(d) {
-      if (d._children) return getNodeColor(d);
-      if (d.children) return 'rgba(26,26,46,0.7)';
-      return getNodeColor(d);
-    })
-    .attr('stroke', function(d) { return getNodeColor(d); })
-    .attr('stroke-width', function(d) { return d.depth <= 1 ? 3 : 1.5; });
-
-  // Update labels: position radially
-  nodeUpdate.select('.node-label')
-    .attr('text-anchor', function(d) {
-      if (d.depth === 0) return 'middle';
-      if (d.depth === 1) return 'middle';
-      // For deeper nodes, orient based on angle
-      var angle = d.x;
-      return (angle > Math.PI) ? 'end' : 'start';
-    })
-    .attr('dx', function(d) {
-      if (d.depth <= 1) return 0;
-      var angle = d.x;
-      return (angle > Math.PI) ? '-12' : '12';
-    })
-    .attr('dy', function(d) {
-      if (d.depth === 0) return '0.35em';
-      if (d.depth === 1) return '2.8em';
-      return '0.35em';
-    })
-    .attr('transform', function(d) {
-      if (d.depth <= 1) return '';
-      // Rotate text to follow radial direction
-      var angle = (d.x * 180 / Math.PI) - 90;
-      if (d.x > Math.PI) angle += 180;
-      return 'rotate(' + angle + ')';
-    })
-    .text(function(d) {
-      if (d.depth === 0) return d.data.shortLabel || d.data.name;
-      if (d.depth === 1) return d.data.shortLabel || d.data.name;
-      var label = d.data.shortLabel || d.data.name;
-      return label.length > 35 ? label.substring(0, 34) + '...' : label;
-    });
-
-  nodeUpdate.select('.expand-icon')
-    .text(function(d) {
-      if (d._children) return '[+' + d._children.length + ']';
-      return '';
-    });
-
-  // ── Exit ──
-  var nodeExit = node.exit().transition().duration(DURATION)
-    .attr('transform', function() {
-      var p = radialPoint(source.x, source.y);
-      return 'translate(' + p[0] + ',' + p[1] + ')';
-    })
-    .remove();
-
-  nodeExit.select('circle').attr('r', 0);
-  nodeExit.select('text').style('fill-opacity', 0);
-
-  // Stash positions
-  nodes.forEach(function(d) { d.x0 = d.x; d.y0 = d.y; });
-}
-
-function getNodeColor(d) {
-  if (d.depth === 0) return '#e94560';
-  if (d.depth === 1) {
-    var st = d.data.status || 'active';
-    if (st === 'urgent') return STATUS_COLORS.urgent;
-    return STATUS_COLORS.active;
-  }
-  var status = d.data.status || 'active';
-  return STATUS_COLORS[status] || STATUS_COLORS.active;
-}
-
-// ── Zoom ──
-function zoomIn() {
-  svgEl.transition().duration(300).call(zoomBehavior.scaleBy, 1.3);
-}
-function zoomOut() {
-  svgEl.transition().duration(300).call(zoomBehavior.scaleBy, 0.7);
-}
-function zoomFit() {
-  var wrap = document.getElementById('mindmap-wrap');
-  var t = d3.zoomIdentity.translate(wrap.clientWidth / 2, wrap.clientHeight / 2).scale(0.9);
-  svgEl.transition().duration(500).call(zoomBehavior.transform, t);
-}
-
-// ── Resize ──
-window.addEventListener('resize', function() {
-  var wrap = document.getElementById('mindmap-wrap');
-  svgEl.attr('width', wrap.clientWidth).attr('height', wrap.clientHeight);
-});
-
-// ── Parse daemon_log.md ──
-function parseDaemonLog(md) {
-  var cycles = [];
-  var blocks = md.split(/^## Cycle /m).slice(1);
-  var totalCycles = blocks.length;
-  var lastCycleTime = '';
-
-  for (var i = 0; i < blocks.length; i++) {
-    var headerMatch = blocks[i].match(/^(\d+)\s*[—\-]\s*(.+)/);
-    if (!headerMatch) continue;
-    var num = parseInt(headerMatch[1]);
-    var ts = headerMatch[2].trim();
-    // Get first line of content as description
-    var contentLines = blocks[i].split('\n').slice(1).filter(function(l) { return l.trim(); });
-    var desc = contentLines.length > 0 ? contentLines[0].substring(0, 60) : '';
-    cycles.push({ num: num, ts: ts, desc: desc });
-    lastCycleTime = ts;
-  }
-
-  return { totalCycles: totalCycles, lastCycleTime: lastCycleTime, cycles: cycles };
-}
-
-// ── Render Status Cards ──
-function renderStatus(daemonData, lastUpdate) {
-  var el = document.getElementById('status-row');
-  var lastDaemon = daemonData.lastCycleTime || 'N/A';
-
-  el.innerHTML =
-    '<div class="status-card">' +
-      '<div class="label">Last Cycle</div>' +
-      '<div class="value" style="font-size:0.8rem">' + esc(lastDaemon) + '</div>' +
-    '</div>' +
-    '<div class="status-card">' +
-      '<div class="label">Total Cycles</div>' +
-      '<div class="value">' + daemonData.totalCycles + '</div>' +
-    '</div>' +
-    '<div class="status-card">' +
-      '<div class="label">Tree Updated</div>' +
-      '<div class="value" style="font-size:0.72rem">' + esc(lastUpdate) + '</div>' +
-    '</div>' +
-    '<div class="status-card">' +
-      '<div class="label">Source</div>' +
-      '<div class="value" style="font-size:0.72rem">GitHub raw</div>' +
-      '<div class="sub">5 min refresh</div>' +
-    '</div>';
-}
-
-// ── Render Timeline ──
-function renderTimeline(cycles) {
-  var el = document.getElementById('timeline-strip');
-  var recent = cycles.slice(-10).reverse();
-  if (!recent.length) {
-    el.innerHTML = '<span style="color:var(--text-dim);font-size:0.72rem">No cycles yet</span>';
-    return;
-  }
-  el.innerHTML = recent.map(function(c) {
-    return '<div class="cycle-chip">' +
-      '<div class="cycle-num">Cycle ' + c.num + '</div>' +
-      '<div class="cycle-ts">' + esc(c.ts) + '</div>' +
-      '<div class="cycle-desc">' + esc(c.desc) + '</div>' +
-    '</div>';
+  // Sort by recency (rely on order, take first 5)
+  var shown = feedItems.slice(0, 5);
+  feedEl.innerHTML = shown.map(function(f) {
+    var a = ago(f.ts);
+    return '<div class="feed-item"><span class="ts">' + (a || esc(f.ts)) + '</span> \u2014 ' + esc(f.text) + '</div>';
   }).join('');
 }
 
-function esc(str) {
-  var div = document.createElement('div');
-  div.textContent = str || '';
-  return div.innerHTML;
+function esc(s) {
+  var d = document.createElement('div');
+  d.textContent = s || '';
+  return d.innerHTML;
 }
 
-// ── Main Refresh ──
+// Main
 async function refresh() {
   try {
     var results = await Promise.all([
-      fetchRaw(URLS.tree),
-      fetchRaw(URLS.daemon),
+      get(RAW + '/dynamic_tree.md'),
+      get(RAW + '/daemon_log.md')
     ]);
-
-    var treeRaw = results[0];
-    var daemonRaw = results[1];
-
-    var parsed = parseTreeMd(treeRaw);
-    initRadialMap(parsed.tree);
-
-    // Regime banner
-    var regimeEl = document.getElementById('regime-display');
-    if (parsed.regime) {
-      regimeEl.innerHTML = '<span class="regime-label">' + esc(parsed.regime) + '</span>';
-    } else {
-      regimeEl.innerHTML = '<span class="regime-label">\u6578\u4F4D\u6C38\u751F</span>';
-    }
-
-    var daemonData = parseDaemonLog(daemonRaw);
-    renderStatus(daemonData, parsed.lastUpdate);
-    renderTimeline(daemonData.cycles);
-  } catch (err) {
-    console.error('Refresh failed:', err);
-    var loadEl = document.getElementById('mindmap-loading');
-    loadEl.textContent = 'Failed to load: ' + err.message;
-    loadEl.style.color = '#f87171';
-    loadEl.style.display = 'flex';
+    var tree = parseTree(results[0]);
+    var daemon = parseDaemon(results[1]);
+    render(tree, daemon);
+  } catch (e) {
+    document.getElementById('hero-main').textContent = 'Offline';
+    document.getElementById('hero-sub').textContent = e.message;
   }
 }
 
