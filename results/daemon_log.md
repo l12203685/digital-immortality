@@ -827,3 +827,15 @@ Cycle 37 done.
 - **MD-33** 尾端口數最小化 — trend末段持倉=低EV；識別尾端信號後立刻縮口；小槓桿活過尾端才能重開大
 
 Next: **202406**.
+
+## Cycle 38 — 2026-04-08T12:40 UTC
+
+Cycle 38 done.
+
+**Branch 2.2** (highest derivative). Processed `202406.jsonl` (11,415 Edward msgs, Jun 2024). Three micro-decisions written → `dna_core.md` now **MD-01~MD-36, 75 lines**:
+
+- **MD-34** 槓桿策略社會折價 — 大眾偏好低DD+高名目報酬(1x)而非等EV的低DD+低報酬(3x)；系統性定價錯誤 = population exploit；槓桿策略長期被低估
+- **MD-35** 資金使用率=保證金+長投剩餘 — 期貨只留足額保證金，超出全投長期持倉1.5x；閒置現金=隱性機會成本，不等「時機」
+- **MD-36** 口數頻繁調整=診斷訊號 — 合約價值變動逼近口數上限=兩種解讀：槓桿過高(→縮槓桿) or 強趨勢regime(→確認並乘勢)
+
+Next: **202405**.
