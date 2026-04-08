@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T19:16+08",
+  "updated": "2026-04-08T19:35+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 201807."
+      "text": "Next: 201804."
     },
     {
       "time": "just now",
-      "text": "Branch 2.2 — 201808 → MD-235~237 (237 MDs)"
+      "text": "Branch 2.2 — 201805 → MD-244~246 (246 MDs)"
     },
     {
-      "time": "2026-04-08 UTC",
-      "text": "`templates/dna_core.md`: 237 MDs. Next: 201807."
+      "time": "2026-04-09T UTC",
+      "text": "`templates/dna_core.md`: 246 MDs. Next: 201804."
     },
     {
-      "time": "2026-04-08 UTC",
+      "time": "2026-04-09T UTC",
       "text": "- 3 micro-decisions written to templates/dna_core.md:"
     },
     {
-      "time": "2026-04-08 UTC",
-      "text": "- 201808.jsonl: 136 Edward substantive msgs; themes: job offer decision (Coin..."
+      "time": "2026-04-09T UTC",
+      "text": "- 201805.jsonl: 38 Edward substantive msgs; themes: 國泰人壽offer薪資結構(44k + 試用期0~..."
     }
   ],
   "stats": {
     "daemon_cycles": 71,
-    "total_mds": 237,
+    "total_mds": 244,
     "dna_core_lines": 76
   }
 }
