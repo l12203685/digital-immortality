@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T04:19+08",
+  "updated": "2026-04-09T04:25+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); 7.16 SOP #10 Decision Under Uncertainty COMPLETE → Edward posts threads #01~#10",
   "regime_neutral": "2.2 330 MDs ✓ (synthetic pass continuing), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions identified)",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "External blockers unchanged: (1) mainnet API keys → revenue; (2) Edward posts..."
+      "text": "Next hard blocker: Edward posts thread #01 (Strategy Development) on Twitter ..."
     },
     {
       "time": "just now",
-      "text": "Series now SOP #01~#11. Meta-layer complete."
+      "text": "Series SOP #01~#12 complete. Distribution layer initialized. G5 score=0, 30-d..."
     },
     {
       "time": "just now",
-      "text": "- G5: Compounding check score≥2 (MD-141)"
+      "text": "Rationale: 11 SOPs exist with zero audience. Distribution is the highest-deri..."
     },
     {
       "time": "just now",
-      "text": "- G4: Teach the starter kit (MD-120)"
+      "text": "Branch 7.18 — SOP #12 shipped: `docs/knowledge_product_12_distribution_audien..."
     },
     {
       "time": "just now",
-      "text": "- G3: Simplicity test ≤3 rules (MD-116)"
+      "text": "Cycle 136 done."
     }
   ],
   "stats": {
-    "daemon_cycles": 135,
+    "daemon_cycles": 136,
     "total_mds": 328,
     "dna_core_lines": 87
   }
