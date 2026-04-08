@@ -4729,3 +4729,16 @@ Highest-derivative gap: queue at #28 (Jun 2). No SOP on strategy monitoring — 
 **Series: SOP #01~#29 COMPLETE.**
 
 **Next blocker:** Edward posts SOP #01.
+
+## Cycle 154 — 2026-04-08 22:12:21 UTC
+
+**Cycle 154 done.**
+
+Gap: no SOP on strategy monitoring despite MD-96/98/42/142 all in DNA. Fixed.
+
+**Shipped:**
+- `docs/knowledge_product_29_strategy_monitoring_sop.md` — 5 gates: G0 failure contract before first tick → G1 survival rate ≥60% threshold → G2 equity curve MA_20 leverage trigger → G3 bandwidth cap on portfolio size → G4 quarterly OOS review → G5 quarantine vs. kill
+- `docs/publish_thread_sop29_twitter.md` — hook: *"Your strategy is live. Now what do you watch? Not P&L. P&L is noise."*
+- Queue extended to **Jun 4** (SOP #01~#29, 56-day target)
+
+**Next blocker:** Edward posts SOP #01.
