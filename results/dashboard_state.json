@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T22:39+08",
+  "updated": "2026-04-08T22:46+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,28 +51,28 @@
   "activity": [
     {
       "time": "just now",
+      "text": "Next: 201705+201704 ext."
+    },
+    {
+      "time": "just now",
+      "text": "Branch 2.2 ext pass on 201707+201706. Three new MDs written to `templates/dna..."
+    },
+    {
+      "time": "2026-04-08 UTC",
+      "text": "dna_core.md: 300 MDs. Next: 201705+201704 ext."
+    },
+    {
+      "time": "2026-04-08 UTC",
+      "text": "Branch 2.2 highest-derivative. 201707+201706 ext pass (465+1237 Edward msgs)...."
+    },
+    {
+      "time": "7min ago",
       "text": "Next: 201707+201706 ext."
-    },
-    {
-      "time": "just now",
-      "text": "Branch 2.2 extension pass on 201709+201708 (888 Edward msgs). Three new MDs w..."
-    },
-    {
-      "time": "just now",
-      "text": "Done. Cycle 78 complete."
-    },
-    {
-      "time": "2026-04-08 UTC",
-      "text": "dna_core.md: 297 MDs. Next: 201707+201706 ext."
-    },
-    {
-      "time": "2026-04-08 UTC",
-      "text": "Branch 2.2 highest-derivative. 201709+201708 extension pass (359+529 Edward m..."
     }
   ],
   "stats": {
-    "daemon_cycles": 78,
-    "total_mds": 295,
+    "daemon_cycles": 79,
+    "total_mds": 298,
     "dna_core_lines": 76
   }
 }

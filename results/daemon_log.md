@@ -3142,3 +3142,15 @@ Next: 201707+201706 ext.
 - **MD-300**: 短碼30~50bb=獨立preflop策略區間 — 30-50bb is a regime boundary where 100bb strategy fails but push/fold doesn't apply; requires independent preflop map for this stack depth zone
 
 **dna_core.md: 300 MDs.** Next: 201705+201704 ext.
+
+## Cycle 77 — 2026-04-08 14:46:16 UTC
+
+Cycle 79 done.
+
+**Branch 2.2** ext pass on 201707+201706. Three new MDs written to `templates/dna_core.md` (**300 MDs** milestone):
+
+- **MD-298** Population river exploit=雙向不對稱 — over-fold + under-bluff → over-bluff as aggressor + over-fold as defender
+- **MD-299** 紅線改善=先Bluff-Catch不先Bluff — bluff-catching has higher risk-adjusted EV per hand than increasing bluff volume
+- **MD-300** 短碼30~50bb=獨立preflop策略區間 — transitional stack depth where 100bb and push/fold both fail; requires separate range map
+
+Next: 201705+201704 ext.
