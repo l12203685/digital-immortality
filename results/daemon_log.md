@@ -1840,3 +1840,16 @@ Cycle 69 done.
 - **MD-153** 日內開盤=四維分析估算剩餘空間 — 開X走Y + 15min pre-open + AR(5/10/20) baseline + AR切段 = dynamic remaining space estimate
 
 Next: **202104**.
+
+
+## Cycle 69 — 2026-04-09T09:00 UTC
+
+**Branch 2.2 — 202104 distill → MD-154~156.**
+
+202104 JSONL read (743 Edward msgs, Apr 2021):
+
+1. **MD-154** 槓桿借貸=三問清單先答完再建部位 — ①margin call觸發點②借款可否複投③利息再分配；三問未全答=結構不完整
+2. **MD-155** 全職轉換=機會成本低×新路徑高確信，缺一不可 — 「機會成本低才可以那樣搞」；兩條件同時成立才「全押」
+3. **MD-156** 量化研究=最小原型先給師傅校方向再精進 — 先輸出最小版本求校準，避免在未驗證方向深挖
+
+`templates/dna_core.md`: **156 MDs**. Next: 202103.
