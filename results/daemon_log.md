@@ -2934,3 +2934,15 @@ Blocker remains: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` needed to go l
 - **Branch 1.1** (highest-derivative): paper-live tick 11, BTC=72,332.10, SHORT ×11 consecutive (range $71.6k–$72.6k)
 - Signal has held across ~$1k range for 11 ticks — regime evidence very strong
 - Blocker unchanged: `BINANCE_MAINNET_KEY` + `BINANCE_MAINNET_SECRET` → go live at $100 cap
+
+## Cycle 70 — 2026-04-08 UTC
+
+**Branch 2.2 — 201802 JSONL distill → MD-277~279**
+
+- 201802 JSONL read (335 Edward msgs, Feb 2018)
+- 3 micro-patterns written to templates/dna_core.md:
+  - MD-277: 選對標的+知道價值+明確目的=可以抱住；邏輯確信>意志力
+  - MD-278: 選擇權避險timing=9:30後買；開盤溢價消退再執行
+  - MD-279: 工具成本先回收再進攻；固定成本未清=決策偏誤系統性放大
+- templates/dna_core.md: **279 MDs**
+- next: 201801
