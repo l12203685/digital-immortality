@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 125)
+> 最後更新：2026-04-09 UTC (cycle 126)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -23,7 +23,7 @@
   - **mainnet_runner.py built** ✓ — $100 cap, dual_ma only, kill conditions: MDD>10% WR<35% PF<0.85
   - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
   - **mainnet_activation_guide.md created ✓** (cycle 115) — exact 6-step activation: API key creation → credentials storage → fund wallet → dry-run → go live → loop; kill conditions documented; friction to $0 revenue now minimal
-  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 24: BTC=71225.83 signal=SHORT (consistent SHORT × 24, range $71.1k–$72.6k) (cycle 125)
+  - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 25: BTC=71190.69 signal=SHORT (consistent SHORT × 25, range $71.1k–$72.6k) (cycle 126)
   - **paper_live_pnl_report.md created ✓** (cycle 124) — simulated SHORT P&L: +$0.37 (+0.37%) on $100 after 21 priced ticks; MFE=+$0.58 MAE=-$1.33; position profitable vs entry → mainnet case validated
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
@@ -55,6 +55,7 @@
   - Layer 2: recursive_daemon.py（Sonnet CLI，持續）— DYNAMIC_TREE bug fixed, tree now loads fresh per cycle ✓
   - Layer 3: remote trigger（Opus，1hr 保底，cloud）
 - 3.2 校正 pipeline：correction → boot test → distillation → DNA → all durable storage ✓
+- 8.4 Top automation #1 implemented ✓ (cycle 126): `docs/morning_defaults.md` — pre-committed defaults for meal/work-block/exercise/learning routing; recovers 171 min/week of zero-EV decisions (MD-322)
 - 3.3 主動 input：JSONL 2,860,094 entries 大部分未讀
 - 3.4 DNA 演化：dna_core + 15 micro-decisions (MD-01~MD-15, 202503 ✓) + dna_full 持續擴展 + 哲學宣言 added
 
