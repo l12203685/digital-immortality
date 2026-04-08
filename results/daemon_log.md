@@ -3293,3 +3293,15 @@ Next: **201702 deep pass**.
 **Result: 14/14 ALIGNED ✅** (318 MDs validated; was 306 MDs at cycle 82).
 
 Branch 2.2 JSONL archive fully exhausted. Next highest-derivative: Branch 1.1 (mainnet trading — needs BINANCE_MAINNET_KEY/SECRET) or Branch 2.3 extension scenarios.
+
+## Cycle 90 — 2026-04-08 16:08:19 UTC
+
+**Cycle 90 done.**
+
+Branch 2.3 — consistency re-validation after Branch 2.2 JSONL archive exhaustion.
+
+**Regression fixed:** `"negotiation"` domain was missing from `_domain_decision` in `organism_interact.py` (should have been added cycle 82, wasn't). Re-added with CALCULATE_FLOOR_FIRST_WRITTEN logic keyed to MD-128/MD-211.
+
+**Result: 14/14 ALIGNED ✅** at 318 MDs (up from 306 MDs at last validation).
+
+Next: Branch 1.1 mainnet trading (blocked on BINANCE_MAINNET_KEY/SECRET) or Branch 2.3 adding new consistency scenarios for MD-313–318.

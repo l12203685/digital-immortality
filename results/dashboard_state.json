@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T00:01+08",
+  "updated": "2026-04-09T00:08+08",
   "regime": "1.1 Trading（testnet running，7-day window → mainnet small size）",
   "regime_neutral": "2.2 JSONL long-term, 3.1 三層在跑, 5.1-5.2 deployed",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 201702 deep pass."
+      "text": "Next: Branch 1.1 mainnet trading (blocked on BINANCE_MAINNET_KEY/SECRET) or B..."
     },
     {
       "time": "just now",
-      "text": "Branch 2.2 — 201703 deep pass. 3 MDs written (318 total):"
+      "text": "Result: 14/14 ALIGNED ✅ at 318 MDs (up from 306 MDs at last validation)."
     },
     {
-      "time": "2026-04-09 UTC",
-      "text": "Branch 2.2 highest-derivative. 201703 deep pass (417 Edward msgs, 7 substanti..."
+      "time": "just now",
+      "text": "Regression fixed: `\"negotiation\"` domain was missing from `_domain_decision` ..."
     },
     {
-      "time": "6min ago",
-      "text": "dna_core.md: 315 MDs. Next: 201703 deep pass or consistency re-validate."
+      "time": "just now",
+      "text": "Branch 2.3 — consistency re-validation after Branch 2.2 JSONL archive exhaust..."
     },
     {
-      "time": "6min ago",
-      "text": "Done. Branch 2.2 — 201704 deep pass. 3 new MDs written:"
+      "time": "just now",
+      "text": "Cycle 90 done."
     }
   ],
   "stats": {
-    "daemon_cycles": 89,
+    "daemon_cycles": 90,
     "total_mds": 316,
     "dna_core_lines": 76
   }
