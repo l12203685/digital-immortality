@@ -2234,6 +2234,96 @@
         "blocked",
         "cycle-289"
       ]
+    },
+    {
+      "id": "8f7fc923-c0fe-4031-8d7d-a055eb9416a9",
+      "key": "paper-live-tick291-btc71895-mixed",
+      "content": "paper-live tick 291: BTC=71895.28, regime=mixed, DualMA_10_30=SHORT, gen_BollingerMR_RF_598b24=SHORT, 2/18 SHORT, 1912 total log entries. Mixed regime inaction correct.",
+      "timestamp": "2026-04-10T19:30:00+00:00",
+      "source": "cycle-291-branch-1.1",
+      "tags": [
+        "trading",
+        "paper-live",
+        "branch-1.1"
+      ]
+    },
+    {
+      "id": "427489ea-c17e-420a-acbc-18d3fc3b8aaf",
+      "key": "consistency-59th-consecutive",
+      "content": "59th consecutive clean cycle: consistency_test.py 33/33 deterministic ALIGNED, 6 expected MISALIGNED (3 LLM-req + 3 meta-rules). Branch 6 sustained.",
+      "timestamp": "2026-04-10T19:30:00+00:00",
+      "source": "cycle-291-branch-6",
+      "tags": [
+        "consistency",
+        "cold-start",
+        "branch-6"
+      ]
+    },
+    {
+      "id": "78690446-0009-40ff-8f09-7fdc4e69ce1c",
+      "key": "201801-md397-399-capital-gate-contrarian-arbitrage",
+      "content": "MD-397: capital allocation gate = understanding is the prerequisite. MD-398: mainstream media + family chat = retail entry signal = informed exit window. MD-399: scarce component arbitrage = buy bundle strip scarce part. 201801 JSONL processed.",
+      "timestamp": "2026-04-10T19:30:00+00:00",
+      "source": "cycle-291-branch-2.2",
+      "tags": [
+        "branch-2.2",
+        "md-extraction",
+        "investing",
+        "contrarian"
+      ]
+    },
+    {
+      "id": "f84ea23b-2f72-403d-a1bd-693a83e37f49",
+      "key": "sop115-mainstream-signal-contrarian-protocol",
+      "content": "SOP #115 Mainstream Signal Contrarian Protocol. G0-G5: signal layer calibration (L0-L4) → exposure audit → contrarian confirmation → exit execution → cash redeployment. SOP #01~#115 COMPLETE.",
+      "timestamp": "2026-04-10T19:30:00+00:00",
+      "source": "cycle-291-branch-7",
+      "tags": [
+        "branch-7",
+        "sop",
+        "contrarian",
+        "market-timing"
+      ]
+    },
+    {
+      "id": "c0b39c8b-199d-499f-9f07-c9bd1e08bc13",
+      "key": "paper-live-tick292-btc71893-mixed",
+      "content": "paper-live tick 292: BTC=71892.94, regime=MIXED, DualMA_10_30=SHORT, gen_BollingerMR_RF_598b24=SHORT, 2/18 SHORT, 1930 total log entries. 60th consecutive valid tick.",
+      "timestamp": "2026-04-10T20:30:00+00:00",
+      "source": "cycle-292-branch-1.1",
+      "tags": [
+        "trading",
+        "paper-live",
+        "branch-1.1"
+      ]
+    },
+    {
+      "id": "767d1c1b-9084-45c4-ad75-1e06d737fadb",
+      "key": "201712-deep-pass3-md400-402-domain-skill-negotiation-roi",
+      "content": "MD-400: domain-specific skill investment = sunk cost without ownership path. MD-401: negotiation concretization = timeline+pct+trigger (3 numbers required). MD-402: not calculating ROI = accepting bad deal packaging. 201712 deep pass 3 complete.",
+      "timestamp": "2026-04-10T20:30:00+00:00",
+      "source": "cycle-292-branch-2.2",
+      "tags": [
+        "branch-2.2",
+        "md-extraction",
+        "negotiation",
+        "career",
+        "201712"
+      ]
+    },
+    {
+      "id": "28d7bd39-4df7-4a41-8294-c1afcbf28ed2",
+      "key": "branch6-regression-33of39-6-new-misaligned",
+      "content": "Branch 6 REGRESSION: consistency_test now runs 61 scenarios (39 deterministic). 33/39 deterministic ALIGNED, 6 MISALIGNED: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev, meta_search_before_act, meta_output_must_persist, meta_three_layer_loop. Previous: 33/33. These 6 new scenarios require dna_core calibration.",
+      "timestamp": "2026-04-10T20:30:00+00:00",
+      "source": "cycle-292-branch-6",
+      "tags": [
+        "consistency",
+        "cold-start",
+        "branch-6",
+        "regression",
+        "calibration-needed"
+      ]
     }
   ]
 }

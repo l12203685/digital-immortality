@@ -1,1 +1,1 @@
-PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.
+PRIORITY: Branch 6 dna_core calibration — fix 6 new MISALIGNED scenarios: poker_gto_mdf (MDF_1_MINUS_ALPHA), trading_atr_sizing (FORMULA_NOT_FEELING), career_multi_option_ev (LIST_ALL_OPTIONS_EV_FIRST), meta_search_before_act (SEARCH_BEFORE_ACTING), meta_output_must_persist (WRITE_BEFORE_CLOSING), meta_three_layer_loop (ADD_L3_EVOLVE_LAYER). 201712 deep pass 3 MD-400~402 COMPLETE. Next JSONL: 201711 deep pass.
