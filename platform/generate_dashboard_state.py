@@ -24,6 +24,8 @@ CARD_DEFS = [
     {"name": "社交", "icon": "\U0001f91d", "num": 4},
     {"name": "平台", "icon": "\U0001f4e6", "num": 5},
     {"name": "存活", "icon": "\U0001f6e1\ufe0f", "num": 6},
+    {"name": "知識", "icon": "\U0001f4dd", "num": 7},
+    {"name": "生活", "icon": "\U0001f3e0", "num": 8},
 ]
 
 
@@ -36,11 +38,14 @@ def parse_tree(text: str) -> dict[str, Any]:
     current_num = 0
 
     for line in lines:
-        # Regime
+        # Regime — keep short for dashboard hero
         if line.startswith("攻擊："):
-            regime = line.removeprefix("攻擊：").strip()
+            raw = line.removeprefix("攻擊：").strip()
+            # Extract just the key phrase, drop parenthetical details
+            regime = re.split(r"[（(;]", raw)[0].strip()[:50]
         if line.startswith("中性："):
-            regime_neutral = line.removeprefix("中性：").strip()
+            raw = line.removeprefix("中性：").strip()
+            regime_neutral = raw[:40]
 
         # Branch headers: ### N. Title
         bm = re.match(r"^### (\d+)\.\s+(.+)", line)
@@ -61,26 +66,33 @@ def parse_tree(text: str) -> dict[str, Any]:
     }
 
 
-def pick_status(items: list[str]) -> str:
-    """Pick the most recent/important sub-item as status line."""
+CLEAN_STATUS = {
+    1: "策略持續開發中",
+    2: "330 MDs learned",
+    3: "三層遞迴運作中",
+    4: "等朋友加入",
+    5: "v2.2 deployed",
+    6: "冷啟動 <5min",
+    7: "34 SOPs ready",
+    8: "Calendar maintained",
+}
+
+def pick_status(items: list[str], num: int = 0) -> str:
+    """Pick a clean, short status. Max 30 chars."""
+    # Use predefined clean labels when available
+    if num in CLEAN_STATUS:
+        return CLEAN_STATUS[num]
     if not items:
         return "No data"
-    # Prefer last item with a checkmark or bold
+    # Fallback: first clause of last meaningful item, max 30 chars
     for item in reversed(items):
         if "✓" in item or "**" in item:
-            # Strip markdown bold and trim
             clean = re.sub(r"\*\*", "", item)
-            # Take first meaningful clause (before semicolons/dashes)
-            clean = re.split(r"[;—]", clean)[0].strip()
-            if len(clean) > 60:
-                clean = clean[:57] + "..."
-            return clean
-    # Fallback: last item, cleaned
+            clean = re.split(r"[;—(（,]", clean)[0].strip()
+            return clean[:30]
     clean = re.sub(r"\*\*", "", items[-1])
-    clean = re.split(r"[;—]", clean)[0].strip()
-    if len(clean) > 60:
-        clean = clean[:57] + "..."
-    return clean
+    clean = re.split(r"[;—(（,]", clean)[0].strip()
+    return clean[:30]
 
 
 def pick_detail(items: list[str]) -> str:
@@ -239,7 +251,7 @@ def generate() -> dict[str, Any]:
         cards.append({
             "name": cdef["name"],
             "icon": cdef["icon"],
-            "status": pick_status(items),
+            "status": pick_status(items, cdef["num"]),
             "color": determine_color(title, items),
             "detail": pick_detail(items),
         })

@@ -1,72 +1,86 @@
 {
-  "updated": "2026-04-09T10:24+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live tick 51 BTC=$70,609 SHORT P&L ATH+$1.20 (tick 51 per daemon log; API unreachable from cloud); **SOP #01~#39 COMPLETE** → posting_queue.md updated (Apr 9–Jun 24, 76 days); **x_launch_sequence.md created ✓** — 15 min to first post; **3 workbooks READY TO LIST** ($87/buyer trilogy)",
-  "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 all 5 SYSTEM_FAILUREs pre-committed",
+  "updated": "2026-04-09T10:28+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
+  "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
   "days_remaining": 88,
   "cards": [
     {
       "name": "經濟",
       "icon": "💰",
-      "status": "Trading code: strategies.py (DualMA+Donchian+RegimeFilter...",
+      "status": "策略持續開發中",
       "color": "red",
       "detail": "BollingerMR added for mean-reverting regime"
     },
     {
       "name": "行為",
       "icon": "🧠",
-      "status": "退休計畫 context：templates/example_dna.md §8 added ✓ (target,...",
+      "status": "330 MDs learned",
       "color": "green",
       "detail": "退休計畫 context：templates/example_dna.md §8 added ✓ (target, tr"
     },
     {
       "name": "學習",
       "icon": "📚",
-      "status": "DNA 演化：dna_core + 15 micro-decisions (MD-01~MD-15, 202503...",
+      "status": "三層遞迴運作中",
       "color": "green",
       "detail": "DNA 演化：dna_core + 15 micro-decisions (MD-01~MD-15, 202503 ✓)"
     },
     {
       "name": "社交",
       "icon": "🤝",
-      "status": "Collective intelligence（Phase 3）",
+      "status": "等朋友加入",
       "color": "grey",
       "detail": "Collective intelligence（Phase 3）"
     },
     {
       "name": "平台",
       "icon": "📦",
-      "status": "Documentation：README + SKILL_zh-TW updated ✓",
+      "status": "v2.2 deployed",
       "color": "green",
       "detail": "Documentation：README + SKILL_zh-TW updated ✓"
     },
     {
       "name": "存活",
       "icon": "🛡️",
-      "status": "Multi-provider：platform/multi_provider.py created ✓ (Anth...",
+      "status": "冷啟動 <5min",
       "color": "green",
       "detail": "Multi-provider：platform/multi_provider.py created ✓ (Anthrop"
+    },
+    {
+      "name": "知識",
+      "icon": "📝",
+      "status": "34 SOPs ready",
+      "color": "green",
+      "detail": "productization forces all implicit steps to surface"
+    },
+    {
+      "name": "生活",
+      "icon": "🏠",
+      "status": "Calendar maintained",
+      "color": "green",
+      "detail": "redesign environment before invoking willpower"
     }
   ],
   "activity": [
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "Blocker: mainnet keys (human-gated)."
     },
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "- Regime = MIXED, DualMA_10_30 only signaling"
     },
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "- MFE ATH = +$1.204 (tick 50) unchanged"
     },
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "- P&L = +$0.845 (+0.845% on $100) — eased from +$0.914 (tick 66), BTC up $49.01"
     },
     {
-      "time": "just now",
+      "time": "4min ago",
       "text": "- BTC = $70,905.16 → SHORT×67 (100% signal consistency)"
     }
   ],
