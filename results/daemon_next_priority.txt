@@ -1,1 +1,1 @@
-OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.
+OK: All branches covered. Least recent: 'Branch 4.1 Samuel' (human-gated — DM ready, Edward must send). Next agent action: SOP #85 Gumroad Product Setup + paper-live ticks.

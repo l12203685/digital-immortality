@@ -6572,3 +6572,4 @@ Cycle 248 complete.
 | **3.1** | 3 insights → insights.json (total 56) |
 
 **Next queue:** #1 blocker is Edward posting SOP #01 on X → M1 → SOP #83 daily ritual kicks in → revenue clock starts. SOP #82 tracker is waiting for M1. Deadline 2026-07-07 (89 days).
+[2026-04-09 10:09:35 UTC] [STALENESS_ALERT] Cycle 64: staging/last_output.md not updated in ~3 cycles — LLM may not be consuming prompts.
