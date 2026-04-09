@@ -1,1 +1,1 @@
-PRIORITY: Branch 2.2 — process 201804 JSONL → MD-388~390 (autonomous, no human gate). Branch 1.3 Week 1 DMs = 0 sends (human-gated). Next autonomous action: 201804 JSONL processing.
+PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-10T01:21+08",
+  "updated": "2026-04-10T02:04+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,28 +65,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: Branch 1.3 binding constraint — execute the sends. C005 has 24h window."
+      "text": "Next: 201804 JSONL → MD-388~390 (autonomous, no human gate). Binding constrai..."
     },
     {
       "time": "just now",
-      "text": "| 6 | 54th consecutive clean cycle ✅ | B |"
+      "text": "Branch 7 — SOP #113 reply-qualification-protocol docs committed"
     },
     {
       "time": "just now",
-      "text": "| 3.1 | 4 insights distilled (179→183); session_state updated to cycle 285 | B |"
+      "text": "Branch 3.1 — +4 insights (total 187)"
     },
     {
       "time": "just now",
-      "text": "| 1.1 | tick 285, BTC=$72,464.04, mixed, all FLAT, PnL=-2.71% | B |"
+      "text": "Branch 1.1 — tick 286, BTC=$72,341.85, mixed regime, all-FLAT; -2.71% total PnL"
     },
     {
       "time": "just now",
-      "text": "| 1.3 | 5 DMs ready to send (C001-C005); C005 score=6 top priority; outreach_..."
+      "text": "Branch 6 — 33/33 ALIGNED, 55th consecutive clean cycle ✅"
     }
   ],
   "stats": {
     "daemon_cycles": 264,
-    "total_mds": 373,
+    "total_mds": 388,
     "dna_core_lines": 87
   },
   "health": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71843.6,
+    "paper_live_price": 72325.22,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T16:38",
+    "paper_live_ts": "2026-04-09T17:50",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"
