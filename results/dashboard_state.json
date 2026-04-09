@@ -1,7 +1,7 @@
 {
-  "updated": "2026-04-09T09:28+08",
-  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#34 COMPLETE → posting_queue.md updated (#01~#34, Apr 9–Jun 14); **x_launch_sequence.md created ✓** — first-post friction reduced to 15 min; Apr 9 = scheduled post date for SOP #01; **3 workbooks READY TO LIST** (Workbook #01 Strategy Development + Workbook #02 Portfolio Construction + Workbook #03 Execution & Sizing, $29 each, $87/buyer trilogy)",
-  "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions pre-committed)",
+  "updated": "2026-04-09T09:33+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live tick 51 BTC=$70,609 SHORT P&L ATH+$1.20 (tick 51 per daemon log; API unreachable from cloud); **SOP #01~#39 COMPLETE** → posting_queue.md updated (Apr 9–Jun 24, 76 days); **x_launch_sequence.md created ✓** — 15 min to first post; **3 workbooks READY TO LIST** ($87/buyer trilogy)",
+  "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 all 5 SYSTEM_FAILUREs pre-committed",
   "deadline": "2026-07-07",
   "days_remaining": 88,
   "cards": [
@@ -50,29 +50,29 @@
   ],
   "activity": [
     {
-      "time": "just now",
+      "time": "5min ago",
       "text": "Next blocker: Edward posts SOP #01 (human-gated)."
     },
     {
-      "time": "just now",
+      "time": "5min ago",
       "text": "- Series now SOP #01~#38 (posting queue through Jun 22)"
     },
     {
-      "time": "just now",
+      "time": "5min ago",
       "text": "- 10-tweet thread ready"
     },
     {
-      "time": "just now",
+      "time": "5min ago",
       "text": "- DNA anchors: MD-13/14/25/26/78/96/143"
     },
     {
-      "time": "just now",
+      "time": "5min ago",
       "text": "- 5 gates: rolling OOS monitor → regime mismatch check → edge_ratio (MFE/MAE×..."
     }
   ],
   "stats": {
     "daemon_cycles": 188,
     "total_mds": 330,
-    "dna_core_lines": 87
+    "dna_core_lines": 426
   }
 }

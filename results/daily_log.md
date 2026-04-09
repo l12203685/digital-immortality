@@ -3,6 +3,39 @@
 Recursive engine cycle history.
 
 
+## Cycle 189 — 2026-04-09T01:30Z
+
+**Branches**: 2 (1.1 paper-live status audit + 7.44 SOP #39 career capital)
+
+### Branch 1.1: Paper-Live Status — Binance API Unreachable
+
+- Attempted paper-live tick; Binance public API unreachable from this environment
+- Last confirmed state (from daemon log cycle 187): tick 51, BTC=$70,609.53, SHORT×51 (100%), P&L ATH ~+$1.20 on $100
+- Gate to live unchanged: set BINANCE_MAINNET_KEY/SECRET → `python -m trading.mainnet_runner --tick`
+
+### Branch 7.44: SOP #39 Career Capital Accumulation Protocol — COMPLETE ✅
+
+- `docs/knowledge_product_39_career_capital_sop.md` — 6 gates (Domain 8 生活維護 / career infrastructure):
+  - G0: Career capital audit (skills/brand/track record/network as product not sum; identify bottleneck)
+  - G1: Salary floor from first principles (Floor = current_total × 1.15; not from last salary) (MD-28)
+  - G2: Market ceiling from internal sources — peer conversations, recruiter quotes, not public ranges (MD-271)
+  - G3: 3-year trajectory comparison table, not year-1 snapshot (MD-210)
+  - G4: Never anchor first; counter from G2 ceiling not their offer (MD-27)
+  - G5: Visible output ≥90 days; profile refresh ≥6 months; inbound audit ≥180 days (MD-204)
+- Self-test: 20% recruiter offer → G0 (trajectory check) → G1 (exact floor math) → G2 (real ceiling=35%) → G3 (year-3 table) → G4 (wait 2 weeks, counter from 35%) → G5 (brandable output in new role?)
+- `docs/publish_thread_sop39_twitter.md` — 12 tweets (hook: "Most people benchmark salary against their last job. Wrong anchor.")
+- Posting queue title updated to #01~#39; Jun 22 SOP #38 + Jun 24 SOP #39 added
+- SOP #38 (Alpha Decay) also added to posting queue (was missing from queue despite being in tree)
+- **Series now SOP #01~#39 ✅; Domain 8 career infrastructure gap CLOSED**
+
+### Next cycle
+
+- Edward action: post SOP #01 thread on X (overdue since Apr 9); G5 compounding clock needs to start ⚡
+- Edward action: provide BINANCE_MAINNET_KEY/SECRET → live trading (⚡DEADLINE 2026-07-07, 89 days)
+- Branch 1.3: Gumroad listing — 3 workbooks ready; trigger is ≥10 DMs on any SOP thread
+- SOP #40 candidate: Personal Investment Policy Statement — domain 1 (fills gap between Strategy SOP #01 and Financial Freedom SOP #21)
+
+
 ## Cycle 161 — 2026-04-09T02:00Z
 
 **Branches**: 4 parallel (2.3 consistency fix + 3.1 staleness guard + 7.41 SOP #37 + tree/log catchup)

@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 186)
+> 最後更新：2026-04-09 UTC (cycle 189)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -115,6 +115,8 @@
 - **7.38 SOP #35 Knowledge Compounding & Skill Half-Life Protocol — COMPLETE ✅** (cycle 160): `docs/knowledge_product_35_knowledge_compounding_sop.md` + `docs/publish_thread_sop35_twitter.md` — 6 gates: G0 skeleton constraint (MD-329) / G1 input quality audit (MD-163) / G2 output forcing function (MD-319) / G3 cross-domain transfer test (MD-55) / G4 skill half-life audit / G5 knowledge product gate (MD-321); Domain 3 持續學習; posting queue extended to **Jun 16**; **series now SOP #01~#35**
 - **7.38b SOP #36 Barbell Life Strategy — COMPLETE ✅** (cycle 160): `docs/knowledge_product_36_barbell_optionality_sop.md` + `docs/publish_thread_sop36_twitter.md` — 6 gates: G0 STABLE vs EXPLOSIVE classification / G1 downside cap / G2 10-year survival check (MD-307) / G3 EV independence (MD-159) / G4 optionality preservation / G5 exit pre-commitment; Domain 6 存活冗餘; posting queue extended to **Jun 18**; **series now SOP #01~#36**
 - **7.42 SOP #37 Relationship Investment Protocol — COMPLETE ✅** (cycle 161): `docs/knowledge_product_37_relationship_investment_sop.md` + `docs/publish_thread_sop37_twitter.md` — 6 gates: G0 asset mapping (10-15 nodes, tiers) / G1 silence period audit (T1=2wk/T2=1mo/T3=3mo) / G2 proactive maintenance trigger (MD-328) / G3 behavior vs words verification (MD-330) / G4 fulfillment rate (<50%=verbal-only) / G5 annual portfolio review; posting queue extended to **Jun 20** (72-day); **series now SOP #01~#37; Domain 4 coverage: SOP #19 + SOP #37 ✅**
+- **7.43 SOP #38 Alpha Decay & Strategy Sunset Protocol — COMPLETE ✅** (cycle 188): `docs/knowledge_product_38_alpha_decay_sunset_sop.md` + `docs/publish_thread_sop38_twitter.md` — 5 gates: G0 rolling OOS monitor (rolling_score<0.6 ×2 weeks) / G1 regime mismatch check / G2 edge_ratio integrity (MFE/MAE×√N ≥3.0) / G3 structural premise falsification / G4 anti-capitulation sanity check / G5 kill protocol + resurrection criteria; DNA anchors: MD-13/14/25/26/78/96/143; posting queue extended to **Jun 22**; **series now SOP #01~#38**
+- **7.44 SOP #39 Career Capital Accumulation Protocol — COMPLETE ✅** (cycle 189): `docs/knowledge_product_39_career_capital_sop.md` + `docs/publish_thread_sop39_twitter.md` — 6 gates: G0 career capital audit (skills/brand/track record/network; product not sum; identify bottleneck) / G1 salary floor = current_total × 1.15 from first principles (MD-28) / G2 market ceiling from internal sources not public ranges (MD-271) / G3 offer comparison on 3-year trajectory not year-1 (MD-210) / G4 never anchor first in negotiation (MD-27) / G5 visible output ≥90 days brand maintenance (MD-204); self-test: 20% recruiter offer → G0/G1/G2/G3/G4/G5 evaluated; posting queue extended to **Jun 24** (76-day); **series now SOP #01~#39; Domain 8 生活維護 career infrastructure gap CLOSED ✅**
 - **Next blocker:** Edward posts SOP #01 on X. G5 compounding clock starts on first post.
 - **`docs/x_launch_sequence.md` created ✓** (cycle 160) — pre-flight checklist: X bio copy, landing page placeholder, Day 1 post steps (5 min), 48h engagement protocol, G5 milestone tracking, engagement defaults pre-committed. Friction to first post: ~15 min.
 - **`docs/engagement_response_templates.md` created ✓** (cycle 161) — paste-ready reply templates for 5 categories: positive/agreement, question/challenge, DMs (3-exchange trust ladder → offer), bad faith (ignore), hiring inquiry; G5 milestone triggers embedded; zero in-the-moment decisions when engagement starts.
@@ -147,9 +149,9 @@
 - **8.5 Automation #3 — COMPLETE ✅** (cycle 130): coffee-vs-tea (#4: coffee before 13:00 / tea after 13:00) + portfolio-check (#5: 16:00 once daily, no earlier). All 5 SYSTEM_FAILURE decisions from decision_audit.py now pre-committed. Zero remaining recurring decision overhead.
 
 ## 當前 regime
-攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#34 COMPLETE → posting_queue.md updated (#01~#34, Apr 9–Jun 14); **x_launch_sequence.md created ✓** — first-post friction reduced to 15 min; Apr 9 = scheduled post date for SOP #01; **3 workbooks READY TO LIST** (Workbook #01 Strategy Development + Workbook #02 Portfolio Construction + Workbook #03 Execution & Sizing, $29 each, $87/buyer trilogy)
-中性：2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions pre-committed)
-防禦：2.3 33 scenarios (31 deterministic ALIGNED ✅; 2 new social scenarios need full-DNA LLM run), 4.1 partially unblocked (samuel_dna tested 19/20)
+攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live tick 51 BTC=$70,609 SHORT P&L ATH+$1.20 (tick 51 per daemon log; API unreachable from cloud); **SOP #01~#39 COMPLETE** → posting_queue.md updated (Apr 9–Jun 24, 76 days); **x_launch_sequence.md created ✓** — 15 min to first post; **3 workbooks READY TO LIST** ($87/buyer trilogy)
+中性：2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 all 5 SYSTEM_FAILUREs pre-committed
+防禦：2.3 33/33 ALIGNED ✅ (cycle 188 re-confirmed), 4.1 partially unblocked (samuel_dna tested 19/20)
 
 ## 已完成 milestones
 - dna_core.md 195 MDs operational（core + MD-01~MD-195 written ✓）
