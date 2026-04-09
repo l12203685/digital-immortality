@@ -1363,6 +1363,30 @@
       "branch": "7",
       "timestamp": "2026-04-09T13:15Z",
       "cycle": 266
+    },
+    {
+      "id": "81e6283c-cf02-4b31-84c3-15d15e79a7ef",
+      "key": "consistency-37-consecutive-clean",
+      "insight": "33/33 deterministic ALIGNED 第37次連續乾淨週期。cold-start行為一致性持續穩定。三個LLM-required場景（poker_gto_mdf/trading_atr_sizing/career_multi_option_ev）MISALIGNED符合預期。",
+      "branch": "6",
+      "timestamp": "2026-04-09T13:25Z",
+      "cycle": 267
+    },
+    {
+      "id": "8716d13e-3468-4a9c-bb45-88ae35a19fa4",
+      "key": "paper-live-tick105",
+      "insight": "paper-live tick 105: BTC=$71,128.59，17/18 FLAT（DualMA_10_30=SHORT結構性持續×105），1715 log entries，regime=MIXED。SHORT信號連續105 ticks未斷裂。",
+      "branch": "1.1",
+      "timestamp": "2026-04-09T13:25Z",
+      "cycle": 267
+    },
+    {
+      "id": "b68642a3-c88d-4739-bf8b-15bec369ec85",
+      "key": "cold-start-efficiency-sop101",
+      "insight": "SOP #101 冷啟動效率協議：G0-G5六門控（token預算/dna_core新鮮度/boot_test覆蓋/session_state只讀前40行/讀取順序優化/≤5 prompts SLA）。當前4/6通過。建立冷啟動預算上限15K tokens，最優路徑9,600 tokens。L3條件：得分<4/6時修改冷啟動序列。",
+      "branch": "存活/cold-start",
+      "timestamp": "2026-04-09T13:25Z",
+      "cycle": 267
     }
   ]
 }
