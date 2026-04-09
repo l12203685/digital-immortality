@@ -3376,5 +3376,295 @@
         "profit_factor": 1.719
       }
     ]
+  },
+  {
+    "ts": "2026-04-09T19:06:50.725002+00:00",
+    "action": "prune",
+    "killed": [
+      {
+        "name": "default",
+        "reason": "PF=0.72<0.85"
+      }
+    ],
+    "removed_count": 0
+  },
+  {
+    "name": "gen_DualMA_RF_713d09",
+    "ts": "2026-04-09T19:06:51.081096+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 5,
+        "slow": 30
+      },
+      "regime_filter": {
+        "trend_period": 80,
+        "slope_bars": 3,
+        "min_slope_pct": 0.15
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": 0.3282,
+      "mdd": 36.87,
+      "win_rate": 52.07,
+      "profit_factor": 1.0655
+    },
+    "walk_forward": [
+      {
+        "sharpe": -3.6683,
+        "mdd": 14.83,
+        "win_rate": 52.94,
+        "profit_factor": 0.3534
+      },
+      {
+        "sharpe": 3.1038,
+        "mdd": 18.18,
+        "win_rate": 63.79,
+        "profit_factor": 1.4944
+      },
+      {
+        "sharpe": -1.0618,
+        "mdd": 12.48,
+        "win_rate": 37.5,
+        "profit_factor": 0.7425
+      },
+      {
+        "sharpe": 0.4295,
+        "mdd": 11.18,
+        "win_rate": 51.43,
+        "profit_factor": 1.0746
+      },
+      {
+        "sharpe": 0.0631,
+        "mdd": 13.91,
+        "win_rate": 50.0,
+        "profit_factor": 1.009
+      }
+    ]
+  },
+  {
+    "name": "gen_Donchian_RF_RSI_aeff8a",
+    "ts": "2026-04-09T19:06:51.081096+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 10
+      },
+      "regime_filter": {
+        "trend_period": 40,
+        "slope_bars": 3,
+        "min_slope_pct": 0.05
+      },
+      "rsi_filter": {
+        "period": 14,
+        "rsi_long_min": 45,
+        "rsi_short_max": 50
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.4634,
+      "mdd": 40.14,
+      "win_rate": 51.3,
+      "profit_factor": 0.8747
+    },
+    "walk_forward": [
+      {
+        "sharpe": -2.028,
+        "mdd": 14.38,
+        "win_rate": 43.75,
+        "profit_factor": 0.6006
+      },
+      {
+        "sharpe": 2.9489,
+        "mdd": 5.35,
+        "win_rate": 73.68,
+        "profit_factor": 1.9388
+      },
+      {
+        "sharpe": -2.8343,
+        "mdd": 12.27,
+        "win_rate": 40.0,
+        "profit_factor": 0.36
+      },
+      {
+        "sharpe": -1.1391,
+        "mdd": 7.37,
+        "win_rate": 36.36,
+        "profit_factor": 0.7109
+      },
+      {
+        "sharpe": 1.8238,
+        "mdd": 12.38,
+        "win_rate": 71.43,
+        "profit_factor": 1.5856
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_RSI_9b2bf4",
+    "ts": "2026-04-09T19:06:51.081096+00:00",
+    "passed": true,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 10
+      },
+      "regime_filter": null,
+      "rsi_filter": {
+        "period": 21,
+        "rsi_long_min": 50,
+        "rsi_short_max": 50
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.0405,
+      "mdd": 18.36,
+      "win_rate": 51.43,
+      "profit_factor": 0.9829
+    },
+    "walk_forward": [
+      {
+        "sharpe": -3.2599,
+        "mdd": 9.2,
+        "win_rate": 37.5,
+        "profit_factor": 0.287
+      },
+      {
+        "sharpe": 0.9226,
+        "mdd": 6.3,
+        "win_rate": 66.67,
+        "profit_factor": 1.2827
+      },
+      {
+        "sharpe": 1.3633,
+        "mdd": 1.91,
+        "win_rate": 75.0,
+        "profit_factor": 2.1664
+      },
+      {
+        "sharpe": 0.6679,
+        "mdd": 2.06,
+        "win_rate": 25.0,
+        "profit_factor": 1.4156
+      },
+      {
+        "sharpe": 0.3512,
+        "mdd": 8.06,
+        "win_rate": 66.67,
+        "profit_factor": 1.1186
+      }
+    ]
+  },
+  {
+    "name": "gen_BollingerMeanReversion_e50a9c",
+    "ts": "2026-04-09T19:06:51.081096+00:00",
+    "passed": false,
+    "meta": {
+      "base": "BollingerMeanReversion",
+      "base_params": {
+        "lookback": 25,
+        "num_std": 2.5,
+        "trend_lookback": 50,
+        "trend_threshold": 0.001
+      },
+      "regime_filter": null,
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": 0.7076,
+      "mdd": 0.0,
+      "win_rate": 100.0,
+      "profit_factor": Infinity
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_RSI_9fd487",
+    "ts": "2026-04-09T19:06:51.081096+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 20
+      },
+      "regime_filter": null,
+      "rsi_filter": {
+        "period": 10,
+        "rsi_long_min": 50,
+        "rsi_short_max": 50
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.3106,
+      "mdd": 20.1,
+      "win_rate": 47.37,
+      "profit_factor": 0.8668
+    },
+    "walk_forward": [
+      {
+        "sharpe": -2.9894,
+        "mdd": 8.23,
+        "win_rate": 20.0,
+        "profit_factor": 0.2814
+      },
+      {
+        "sharpe": 0.9226,
+        "mdd": 6.3,
+        "win_rate": 66.67,
+        "profit_factor": 1.2827
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.6679,
+        "mdd": 2.06,
+        "win_rate": 25.0,
+        "profit_factor": 1.4156
+      },
+      {
+        "sharpe": -0.114,
+        "mdd": 8.06,
+        "win_rate": 62.5,
+        "profit_factor": 0.9621
+      }
+    ]
   }
 ]

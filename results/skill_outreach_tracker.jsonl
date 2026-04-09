@@ -1,0 +1,1 @@
+{"version":"1.0","schema":"SOP#112-Section5","created":"2026-04-10T17:00Z","description":"Cold outreach contact tracker. One JSON object per line per contact. Stages: IDENTIFIED→SCORED→MESSAGED→REPLIED→QUALIFIED→BOOKED→CLOSED."}

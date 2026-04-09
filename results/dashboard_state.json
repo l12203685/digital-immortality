@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-10T02:25+08",
+  "updated": "2026-04-10T03:08+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,24 +64,24 @@
   ],
   "activity": [
     {
-      "time": "9min ago",
+      "time": "53min ago",
+      "text": "[2026-04-09 19:07:18 UTC] [STALENESS_ALERT] Cycle 87: staging/last_output.md ..."
+    },
+    {
+      "time": "53min ago",
       "text": "Committed + pushed."
     },
     {
-      "time": "9min ago",
+      "time": "53min ago",
       "text": "daemon_next_priority: 201803 JSONL → MD-391~393"
     },
     {
-      "time": "9min ago",
+      "time": "53min ago",
       "text": "Branch 3.1: 6 insights → insights.json (total 193)"
     },
     {
-      "time": "9min ago",
+      "time": "53min ago",
       "text": "Branch 1.1 (parallel agent): tick 212, BTC=$71,964.87, regime=mixed, 15 activ..."
-    },
-    {
-      "time": "9min ago",
-      "text": "- dynamic_tree.md: entry 6.30 added"
     }
   ],
   "stats": {

@@ -398,3 +398,8 @@ gen_Donchian_RSI_d3d59e = RSIFilter(Donchian(period=55), period=10, rsi_long_min
 NAMED_STRATEGIES["gen_Donchian_RSI_d3d59e"] = gen_Donchian_RSI_d3d59e
 gen_DualMA_RF_eda1cb = RegimeFilter(DualMA(fast=5, slow=60), trend_period=40, slope_bars=5, min_slope_pct=0.2)
 NAMED_STRATEGIES["gen_DualMA_RF_eda1cb"] = gen_DualMA_RF_eda1cb
+
+
+# --- Auto-generated strategies (strategy_generator.py) ---
+gen_DonchianConfirmed_RSI_9b2bf4 = RSIFilter(DonchianConfirmed(period=10), period=21, rsi_long_min=50, rsi_short_max=50)
+NAMED_STRATEGIES["gen_DonchianConfirmed_RSI_9b2bf4"] = gen_DonchianConfirmed_RSI_9b2bf4
