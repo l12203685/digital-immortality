@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#75
+# Twitter Posting Queue — SOP Series #01~#84
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -83,6 +83,13 @@
 | Aug 30 | #75 | publish_thread_sop75_twitter.md | "108 ticks. 15 strategies registered. 1 active. The hardest part isn't the strategy — it's keeping the pool alive. Strategy Pool Lifecycle Protocol." | pending |
 | Sep 3 | #76 | publish_thread_sop76_twitter.md | "One organism + infinite self-tests = confirmation loop. Two organisms + divergence analysis = calibration engine. Organism Network Architecture." | pending |
 | Sep 8 | #77 | publish_thread_sop77_twitter.md | "Your AI twin passes every boot test. All green. But it got the right answer for the wrong reason. That's not alignment. LLM Validation SOP." | pending |
+| Sep 10 | #78 | publish_thread_sop78_twitter.md | "You have 80 threads drafted and zero posted. The gap isn't content — it's the posting operations layer. Posting Operations SOP." | pending |
+| Sep 12 | #79 | publish_thread_sop79_twitter.md | "You corrected the AI. It agreed. Next cold start: same mistake. The protocol that makes every correction permanent. DNA Update Protocol." | pending |
+| Sep 14 | #80 | publish_thread_sop80_twitter.md | "Boot tests pass. But was the last cold start actually correct — or just syntactically aligned? Cold Start Calibration SOP." | pending |
+| Sep 16 | #81 | publish_thread_sop81_twitter.md | "You posted 10 threads. Zero velocity. The content isn't the problem. You have no distribution system. Distribution Velocity SOP." | pending |
+| Sep 18 | #82 | publish_thread_sop82_twitter.md | "You have 89 days to make trading profit > API cost. You have no tracker. You can't see if you're on track. Revenue Activation Milestone Tracker." | pending |
+| Sep 20 | #83 | publish_thread_sop83_twitter.md | "Infrastructure ready. Queue built. Threads drafted. Still no posts going out. The missing layer: the daily 20-minute ritual. Daily Posting Execution Ritual." | pending |
+| Sep 22 | #84 | publish_thread_sop84_twitter.md | "You posted the thread. 47 likes. 8 replies. Zero DMs. Not because people aren't interested. Because no one showed them the door. Engagement-to-DM Conversion Funnel." | pending |
 
 ---
 
