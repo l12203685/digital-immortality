@@ -28,6 +28,8 @@ NEXT_INPUT = STAGING / "next_input.md"
 DAILY_LOG = RESULTS / "daily_log.md"
 PID_FILE = STAGING / "engine.pid"
 DAEMON_LOG = RESULTS / "daemon_log.md"
+ENGINE_CONFIG = STAGING / "engine_config.json"
+L3_LOG = RESULTS / "engine_l3_log.jsonl"
 
 # --- Graceful shutdown machinery ---
 
@@ -177,6 +179,153 @@ def _store_cycle_insight(cycle: int):
     )
 
 
+def load_engine_config() -> dict:
+    """Load mutable engine config from ENGINE_CONFIG. Returns defaults if missing."""
+    defaults = {
+        "recursive_question": RECURSIVE_QUESTION,
+        "l2_trigger_every_n": 5,
+        "staleness_threshold": 3,
+        "last_l3_run_cycle": 0,
+        "l3_notes": [],
+    }
+    if not ENGINE_CONFIG.exists():
+        return defaults
+    try:
+        data = json.loads(ENGINE_CONFIG.read_text(encoding="utf-8"))
+        return {**defaults, **data}
+    except (json.JSONDecodeError, OSError):
+        return defaults
+
+
+def save_engine_config(config: dict) -> None:
+    """Persist engine config to ENGINE_CONFIG."""
+    ensure_dirs()
+    ENGINE_CONFIG.write_text(json.dumps(config, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def l2_evaluate(cycle: int) -> dict:
+    """L2: Evaluate engine quality. Returns a quality report dict.
+
+    Checks:
+    - stale_cycles: how long since last_output was updated by LLM
+    - recent_git_commits: commits in last 24h (branch activity proxy)
+    - insights_count: total insights stored (growth proxy)
+    - dead_loop_flag: True if last N cycle log entries are all 'awaiting execution'
+    """
+    import subprocess
+    import re
+
+    report: dict = {
+        "cycle": cycle,
+        "stale_cycles": 0,
+        "recent_git_commits": 0,
+        "insights_count": 0,
+        "dead_loop_flag": False,
+        "verdict": "OK",
+    }
+
+    # Stale cycles: compare last_output mtime vs next_input mtime
+    if LAST_OUTPUT.exists() and NEXT_INPUT.exists():
+        last_mtime = LAST_OUTPUT.stat().st_mtime
+        next_mtime = NEXT_INPUT.stat().st_mtime
+        if last_mtime < next_mtime:
+            report["stale_cycles"] = _estimate_stale_cycles(last_mtime)
+
+    # Git activity in last 24h
+    try:
+        result = subprocess.run(
+            ["git", "log", "--oneline", "--since=24 hours ago"],
+            capture_output=True, text=True, cwd=ROOT
+        )
+        report["recent_git_commits"] = len(result.stdout.strip().splitlines()) if result.stdout.strip() else 0
+    except Exception:
+        pass
+
+    # Insights count from memory
+    try:
+        counts = memory_manager.list_categories()
+        report["insights_count"] = counts.get("insights", 0)
+    except Exception:
+        pass
+
+    # Dead loop detection: last 10 cycle log entries all "awaiting execution"?
+    log = read_file(DAILY_LOG) or ""
+    cycle_statuses = re.findall(r'- Status: (.+)', log)
+    recent = cycle_statuses[-10:] if len(cycle_statuses) >= 10 else cycle_statuses
+    if recent and all(s.strip() == "awaiting execution" for s in recent):
+        report["dead_loop_flag"] = True
+        report["verdict"] = "DEAD_LOOP"
+    elif report["stale_cycles"] >= 5:
+        report["verdict"] = "STALE"
+    elif report["recent_git_commits"] == 0 and cycle > 5:
+        report["verdict"] = "LOW_ACTIVITY"
+    else:
+        report["verdict"] = "OK"
+
+    return report
+
+
+def l3_evolve(cycle: int, l2_report: dict) -> dict:
+    """L3: Evolve engine rules based on L2 report. Returns updated config.
+
+    Decision rules:
+    - DEAD_LOOP: log alert, shorten interval suggestion, flag in config
+    - STALE: log warning, note that LLM is not consuming prompts
+    - LOW_ACTIVITY: flag for review but no config change
+    - OK: no change needed
+    """
+    config = load_engine_config()
+    now = datetime.now(timezone.utc).isoformat()
+    verdict = l2_report["verdict"]
+
+    note = {
+        "cycle": cycle,
+        "ts": now,
+        "verdict": verdict,
+        "stale_cycles": l2_report["stale_cycles"],
+        "git_commits_24h": l2_report["recent_git_commits"],
+        "insights_count": l2_report["insights_count"],
+        "action": "none",
+    }
+
+    if verdict == "DEAD_LOOP":
+        note["action"] = "dead_loop_alert"
+        _daemon_log(
+            f"[L3] DEAD_LOOP detected at cycle {cycle}: "
+            f"last 10 cycle entries all 'awaiting execution'. "
+            f"Engine is not consuming prompts. Manual intervention required."
+        )
+    elif verdict == "STALE":
+        note["action"] = "stale_alert"
+        _daemon_log(
+            f"[L3] STALE detected at cycle {cycle}: "
+            f"{l2_report['stale_cycles']} cycles since last_output updated. "
+            f"LLM session may not be running."
+        )
+    elif verdict == "LOW_ACTIVITY":
+        note["action"] = "low_activity_flag"
+        _daemon_log(
+            f"[L3] LOW_ACTIVITY at cycle {cycle}: "
+            f"0 git commits in 24h, {l2_report['insights_count']} total insights. "
+            f"Consider triggering a manual session."
+        )
+    else:
+        note["action"] = "ok"
+
+    # Persist L3 note
+    config["last_l3_run_cycle"] = cycle
+    config["l3_notes"] = config.get("l3_notes", [])[-19:] + [note]  # keep last 20
+    save_engine_config(config)
+
+    # Append to L3 log
+    ensure_dirs()
+    with open(L3_LOG, "a", encoding="utf-8") as f:
+        f.write(json.dumps(note, ensure_ascii=False) + "\n")
+
+    print(f"[L3] cycle={cycle} verdict={verdict} action={note['action']}")
+    return config
+
+
 def _estimate_stale_cycles(last_output_mtime: float) -> int:
     """Estimate how many cycles have run since last_output.md was updated."""
     log = read_file(DAILY_LOG)
@@ -243,11 +392,13 @@ def generate_prompt():
     recent_memories = _recall_recent_memories()
     print(f"Recalled memories for cycle {cycle}:\n{recent_memories}\n")
 
+    cfg = load_engine_config()
+    question = cfg.get("recursive_question", RECURSIVE_QUESTION)
     prompt = PROMPT_TEMPLATE.format(
         cycle=cycle,
         timestamp=now,
         previous_output=previous.strip(),
-        question=RECURSIVE_QUESTION,
+        question=question,
     )
 
     # Inject memory context into the prompt before the directive
@@ -515,6 +666,16 @@ def run_loop(interval: int = 3600, loop_count: int | None = None):
             print(f"[engine] Cycle {cycle} complete. Cycles run: {cycles_completed}")
             _daemon_log(f"Cycle {cycle} complete. Total cycles run: {cycles_completed}.")
 
+            # --- L2 Evaluate + L3 Evolve (every N cycles) ---
+            cfg = load_engine_config()
+            l2_every = cfg.get("l2_trigger_every_n", 5)
+            if cycles_completed % l2_every == 0:
+                print(f"[engine] Running L2 evaluate at cycle {cycle}...")
+                l2_report = l2_evaluate(cycle)
+                print(f"[engine] L2 report: {l2_report}")
+                _daemon_log(f"L2 evaluate: verdict={l2_report['verdict']} stale={l2_report['stale_cycles']} commits={l2_report['recent_git_commits']}")
+                l3_evolve(cycle, l2_report)
+
             # Check loop_count limit
             if loop_count is not None and cycles_completed >= loop_count:
                 print(f"[engine] Reached loop_count limit ({loop_count}) — exiting.")
@@ -655,6 +816,10 @@ def main():
                        help="Fork to background and run loop (writes PID to staging/engine.pid)")
     group.add_argument("--stop", action="store_true",
                        help="Stop a running daemon (reads PID from staging/engine.pid)")
+    group.add_argument("--l2", action="store_true",
+                       help="Run L2 evaluate: audit engine quality and report")
+    group.add_argument("--l3", action="store_true",
+                       help="Run L2 evaluate then L3 evolve: update engine config based on audit")
     parser.add_argument("--force", action="store_true", help="Overwrite existing files on init")
     parser.add_argument("--interval", type=int, default=3600,
                         help="Seconds between cycles for --loop/--daemon (default: 3600)")
@@ -675,6 +840,16 @@ def main():
         daemonize(interval=args.interval, loop_count=args.loop_count)
     elif args.stop:
         stop_daemon()
+    elif args.l2:
+        cycle = get_cycle_number()
+        report = l2_evaluate(cycle)
+        print(json.dumps(report, indent=2))
+    elif args.l3:
+        cycle = get_cycle_number()
+        report = l2_evaluate(cycle)
+        print(f"L2 report: {json.dumps(report, indent=2)}")
+        updated_config = l3_evolve(cycle, report)
+        print(f"L3 config updated: {json.dumps(updated_config, indent=2)}")
 
 
 if __name__ == "__main__":
