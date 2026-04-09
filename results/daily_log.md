@@ -1104,3 +1104,44 @@ First SOP for Domain 4 (社交圈). Closes the only domain with zero published S
 3. Branch 1.3: skill 商業化 blocker diagnosis — users=0; what prevents first paying user?
 4. Branch 4.1: Samuel in-person DNA review (human-gated)
 
+
+
+## Cycle 208 — 2026-04-09T UTC
+
+**Branches**: 2 parallel (4.1 Samuel async DM + 7.46 SOP #46 communication triage)
+
+### Branch 4.1: Samuel Async Calibration DM — READY ✅
+
+- `docs/samuel_async_dm.md` — concrete 3-part async DM ready to send
+  - Part 1: Setup message with §0 model (9 principles) — ask Samuel to mark what's wrong
+  - Part 2: 3 calibration scenarios targeting divergence axes (`social_trust`, `network_roi`, `relationship_downgrade`)
+  - Part 3: Follow-up on 1-2 surprising answers → extract their language as new principle
+- Post-session protocol: update samuel_dna.md §0 → re-run 22-scenario collision → target ≥18/22 AGREE
+- Expected cycle: 3-5 days, 3-5 message exchanges
+- Unblocks: Branch 4.1 calibration (no scheduling required) + Branch 1.3 pilot signal in one send
+
+### Branch 7.46: SOP #46 Async Communication & Message Triage Protocol — COMPLETE ✅
+
+- `docs/knowledge_product_46_communication_triage_sop.md` — 5-gate framework (Domain 4+8):
+  - G0: Source classification (T0/T1/T2/T3 + signal vs noise filter; tier determines SLA before content does)
+  - G1: Response window pre-commitment (T1=24h/T2=48h/T3=72h batch; receipt acknowledgment for T1 overruns)
+  - G2: Template-first composition (never blank screen; 2nd same type = create template now)
+  - G3: Length calibration (length ∝ 1/certainty; >200 words = unclear thinking diagnostic)
+  - G4: CTA clarity (one ask OR one offer OR explicit no-ask; multi-ask splits attention → lower response on all)
+  - G5: Extract-to-memory (≥1 behavioral signal → durable storage ≤24h; 3+ unextracted = system failure)
+- Self-test: 23 unread messages → gates applied → 2 min triage vs 20 min unstructured
+- Kill conditions: same SLA judgment ≥3× = reclassify sender; draft >200 words = stop, state answer in one sentence first
+- `docs/publish_thread_sop46_twitter.md` — 12 tweets (hook: "Every unread message is a decision deferred. You don't have a communication problem. You have a triage problem.")
+- Posting queue extended to **Jul 6** (88-day target); **series now SOP #01~#46 ✅**
+
+### State Updates
+
+- `results/dynamic_tree.md`: cycle 207→208 header; Branch 4 + Branch 7 entries updated; cycle 208 log appended
+- `staging/session_state.md`: cycle 207→208; SOP series #45→#46; queue updated
+- `results/daemon_next_priority.txt`: next = Organism C §0 draft + Edward sends samuel_async_dm.md
+
+### Next cycle
+
+- Edward action: send samuel_async_dm.md Part 1 to Samuel (≤5 min, no scheduling required)
+- Edward action: post SOP #01 on X (≤15 min, x_launch_sequence.md)
+- Daemon: draft Organism C §0 (5 principles) from templates/organism_c_draft.md → first Edward-C collision run

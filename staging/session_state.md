@@ -20,7 +20,7 @@
 | 4.3 Discord | 4 seed posts written; ready to paste → invite C | cycle 207 |
 | 5.3 Web platform | Phase 2 live ✓ | cycle 120+ |
 | 6 存活冷啟動 | **6.9 CI ✅; 6.10 health monitoring ✅** | cycle 204 |
-| 7 SOP series | **SOP #01~#45 COMPLETE** | cycle 206 |
+| 7 SOP series | **SOP #01~#46 COMPLETE** — SOP #46 communication triage (Domain 4+8); queue to Jul 6 | cycle 208 |
 
 ## Blocker (human-gated)
 - Mainnet API keys: user must set BINANCE_MAINNET_KEY/SECRET
@@ -35,9 +35,9 @@
 3. **Branch 4.1 Organism C**: Edward fills `templates/organism_c_draft.md` §0+§7 → first collision run
 4. Branch 1.1: paper-live tick 73 (run `python trading/mainnet_runner.py --paper-live`)
 5. Branch 1.3: Gumroad listing → what's the first paying user blocker?
-6. Branch 7: SOP #46 — what domain gap remains?
+6. Branch 4.2 Organism C: Edward fills `templates/organism_c_draft.md` §0+§7 → first collision run
 
-## What's DONE this session (cycle 207)
+## What's DONE this session (cycles 207–208)
 - **Branch 4.3**: 4 Discord seed posts created (general, collision-report, organism-dna, calibration)
   - `docs/discord_seed_general.md` — server intro, what organisms are
   - `docs/discord_seed_collision_report.md` — anonymized A vs B 22-scenario collision
@@ -45,3 +45,6 @@
   - `docs/discord_seed_calibration.md` — calibration session example
 - **Branch 4.1**: `docs/samuel_async_calibration_dm.md` — 3-scenario Chinese DM ready to send
 - **dynamic_tree.md**: updated to cycle 207 (4.1 async DM + 4.3 Discord seeds)
+- **Branch 4.1** (cycle 208): `docs/samuel_async_dm.md` created — English 3-part async DM; targets `social_trust`/`network_roi`/`relationship_downgrade`; §0 model + 3 calibration scenarios + follow-up protocol; post-session target ≥18/22 AGREE
+- **Branch 7.46** (cycle 208): SOP #46 Async Communication & Message Triage Protocol — `docs/knowledge_product_46_communication_triage_sop.md` + `docs/publish_thread_sop46_twitter.md`; 5-gate framework; backing MDs: MD-322/116/328/141/13; posting queue extended to Jul 6 (#01~#46)
+- **dynamic_tree.md + session_state.md**: updated to cycle 208

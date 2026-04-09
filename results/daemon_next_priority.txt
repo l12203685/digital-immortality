@@ -1,1 +1,1 @@
-PRIORITY (cycle 207 done): Branch 4 Discord seeded (4 posts ready) + Samuel async DM ready. Edward must paste posts + send DM. Next daemon: Branch 7 SOP #46 domain gap scan OR Branch 1.1 paper-live tick 73.
+PRIORITY (cycle 208 done): SOP #46 communication triage shipped + samuel_async_dm.md ready to send. Edward actions: (1) send samuel_async_dm.md Part 1 to Samuel, (2) post SOP #01 on X. Next daemon: draft Organism C §0 (5 principles from templates/organism_c_draft.md) + run first Edward-C collision.
