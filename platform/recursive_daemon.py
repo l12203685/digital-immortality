@@ -164,15 +164,8 @@ def run_cycle_api(client, system: str, model: str, cycle: int) -> str:
 def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
     """Run via claude CLI (uses Max subscription, no API credit needed)."""
     print(f"[daemon] Cycle {cycle} starting (CLI)...", flush=True)
-    # Short prompt — daemon reads repo files itself
-    prio = load_priority()
-    # Strip redundant PRIORITY: prefix from audit output
-    if prio:
-        prio = prio.replace("PRIORITY:", "").strip()[:60]
-    short_prompt = (
-        f"{prio + '. ' if prio else ''}"
-        "Read SKILL.md then dynamic_tree.md. Push branches. Commit."
-    )
+    # Minimal prompt — daemon reads ALL context from repo files, not from CLI args
+    short_prompt = "Read SKILL.md, results/dynamic_tree.md, results/daemon_next_priority.txt. Push multiple branches. Commit."
     result = subprocess.run(
         ["claude", "-p", short_prompt, "--model", model],
         capture_output=True, text=True, timeout=300,
