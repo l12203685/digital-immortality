@@ -333,3 +333,12 @@ gen_BollingerMeanReversion_RF_7abfe4 = RegimeFilter(BollingerMeanReversion(lookb
 NAMED_STRATEGIES["gen_BollingerMeanReversion_RF_7abfe4"] = gen_BollingerMeanReversion_RF_7abfe4
 gen_BollingerMeanReversion_RF_598b24 = RegimeFilter(BollingerMeanReversion(lookback=20, num_std=1.5, trend_lookback=40, trend_threshold=0.005), trend_period=50, slope_bars=3, min_slope_pct=0.2)
 NAMED_STRATEGIES["gen_BollingerMeanReversion_RF_598b24"] = gen_BollingerMeanReversion_RF_598b24
+
+
+# --- Auto-generated strategies (strategy_generator.py) ---
+gen_Donchian_RF_5e649e = RegimeFilter(Donchian(period=55), trend_period=50, slope_bars=7, min_slope_pct=0.1)
+NAMED_STRATEGIES["gen_Donchian_RF_5e649e"] = gen_Donchian_RF_5e649e
+gen_Donchian_RSI_d3d59e = RSIFilter(Donchian(period=55), period=10, rsi_long_min=45, rsi_short_max=50)
+NAMED_STRATEGIES["gen_Donchian_RSI_d3d59e"] = gen_Donchian_RSI_d3d59e
+gen_DualMA_RF_eda1cb = RegimeFilter(DualMA(fast=5, slow=60), trend_period=40, slope_bars=5, min_slope_pct=0.2)
+NAMED_STRATEGIES["gen_DualMA_RF_eda1cb"] = gen_DualMA_RF_eda1cb

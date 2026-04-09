@@ -1,4 +1,4 @@
-# SOP #75: Organism Network Architecture
+# SOP #76: Organism Network Architecture
 
 > One organism self-validates using boot tests and consistency checks. A network of organisms cross-validates using divergence. This SOP governs how to build and run the organism network.
 
@@ -147,4 +147,4 @@ python organism_interact.py templates/dna_core.md templates/<other>_dna.md --all
 
 ---
 
-*SOP #75 | Cycle 240 | 2026-04-09T UTC*
+*SOP #76 | Cycle 240 | 2026-04-09T UTC*

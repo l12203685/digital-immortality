@@ -20,8 +20,8 @@
 | 4.3 Discord | 4 seed posts written; ready to paste → invite C | cycle 207 |
 | 5.3 Web platform | Phase 2 live ✓ | cycle 120+ |
 | 6 存活冷啟動 | **33/33 ALIGNED ✅**; 3 new boot test scenarios added (MD-295/MD-28/MD-01); total scenarios = 36; new 3 require LLM validation (deterministic MISALIGNED = expected) | cycle 240 |
-| 5 Distribution | SOP #01~#75 COMPLETE — posting queue extended to Sep 3 | cycle 240 |
-| 7 SOP series | **SOP #75 COMPLETE** — Organism Network Architecture; G0-G5; pairwise collision protocol; divergence triage; ground truth escalation; network growth protocol; twitter thread written | cycle 240 |
+| 5 Distribution | SOP #01~#76 COMPLETE — posting queue extended to Sep 3 | cycle 240 |
+| 7 SOP series | **SOP #76 COMPLETE** — Organism Network Architecture; G0-G5; pairwise collision protocol; divergence triage; ground truth escalation; network growth protocol; twitter thread written | cycle 240 |
 | 8 Tool Stack | **SOP #64 coverage established** — T1/T2/T3 tiers defined; L1+L2+L3 maintenance protocol ✓ | cycle 226 |
 
 ## L2 Verdict (Cycle 240)
@@ -47,10 +47,10 @@ Cycle verdict: 2A + 1B. No C or D. L3 not triggered.
 3. **Branch 4.3**: Edward pastes 4 Discord seed posts (files in docs/discord_seed_*.md) → invite C
 4. **Branch 4.1**: Edward sends `docs/samuel_async_calibration_dm.md` via WhatsApp/LINE → unblocks calibration
 5. **Branch 4.2**: Organism C — Edward fills `templates/organism_c_draft.md` §0 + §7
-6. Branch 7: SOP #76 — candidates: LLM validation SOP (how to verify boot tests need LLM), or posting operations SOP
+6. Branch 7: SOP #77 — candidates: LLM validation SOP (how to verify boot tests need LLM), or posting operations SOP
 7. Branch 1.1: paper-live tick 113 (run `python trading/mainnet_runner.py --paper-live`)
 
 ## What's DONE this cycle (cycle 240)
 - **Branch 1.1** (cycle 240): paper-live tick 112: BTC=$71,256.96 (↑$180.64 from tick 111); DualMA SHORT×112 (100%); 977 log entries; SHORT headwind (BTC up $180); 112/1314 = 8.5% quarterly threshold
 - **Branch 6** (cycle 240): 3 boot test scenarios added to `templates/generic_boot_tests.json` (MD-295/MD-28/MD-01); total = 36; consistency_test.py run — 33 original ALIGNED, 3 new MISALIGNED in deterministic (expected — require LLM session); boot test coverage gap partially closed
-- **Branch 7** (cycle 240): SOP #75 Organism Network Architecture — G0-G5; pairwise collision; divergence triage (80%/60-79%/<60%); ground truth escalation protocol; network status table; twitter thread written; posting queue → Sep 3; SOP #01~#75 COMPLETE ✅
+- **Branch 7** (cycle 240): SOP #76 Organism Network Architecture — G0-G5; pairwise collision; divergence triage (80%/60-79%/<60%); ground truth escalation protocol; network status table; twitter thread written; posting queue → Sep 3; SOP #01~#76 COMPLETE ✅
