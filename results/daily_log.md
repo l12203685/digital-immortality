@@ -2,6 +2,27 @@
 
 Recursive engine cycle history.
 
+## Cycle 284 — 2026-04-10T10:00Z
+
+- **Branch 2.2**: 201808 JSONL (Aug 2018, 2701 lines, 9 substantive Edward msgs) → MD-376~378: 職涯domain多域掃描後composite收斂(掃交易/精算/風控→選市場風險) / 教育產品階梯定價+先修gate防cannibalization+低頻開班稀缺(基礎$350×6週/中階$1750×12週/進階$3250×24週) / OOP深籌碼lead壓縮x/c range→check優先保range完整性(SB J73r TPTK應check); templates/dna_core.md: **378 MDs**; next: 201807
+- **Branch 1.1**: tick 284; BTC=$72,419.78; regime=mixed; DualMA_10_30+gen_BollingerMR_RF×2 DISABLED (PF<0.8); 15 active all FLAT; total_pnl=-2.71%; PAPER mode
+- **Branch 6**: consistency_test.py → 33/33 deterministic ALIGNED ✅; 6 LLM-req MISALIGNED (expected); **53rd consecutive clean cycle** ✅; STABLE
+- **Branch 3.1**: 5 insights → memory/insights.json (total **179**): 201808-career-domain-scan-converge / 201808-education-product-tiered-pricing / 201808-poker-oop-deep-stack-check-preserves-range / paper-tick284 / consistency-53rd
+- **L2**: A (Branch 2.2 — 201808 MDs complete, 378 total — HIGH) + B×3 (paper-tick/consistency/distillation)
+- **L3**: not triggered
+- **daemon_next_priority**: 201807 JSONL → next Branch 2.2; Branch 1.3 Week 1 execution (5 DMs to AI Agent Dev archetypes)
+
+## Cycle 283 — 2026-04-10T09:30Z
+
+- **Branch 1.3**: SOP #112 Cold-Outreach Execution Playbook created (716 lines) — 5 target archetypes (AI Agent Dev/Founder OS/PKM Builder/Digital Legacy/LLM Researcher), exact DM templates A-E, 9-stage funnel (IDENTIFIED→DELIVERED), $500/30-day target; docs/publish_thread_sop112_twitter.md (261 lines); SOP #01~#112 COMPLETE ✅
+- **Branch 2.2**: 201809 JSONL → MD-373~375: 再進場錨點持續上移(強勢標的持有≠賣出，賣出才需理由) / poker x/r range必混半bluff(多人池CBET≥1/2 pot) / 花別人的錢學新領域(薪資崗位=學習補貼，upswing需2年才能脫方差); templates/dna_core.md: **375 MDs**; next: 201808
+- **Branch 1.1**: tick 283 (engine tick 68); BTC=$72,047; regime=mixed; DualMA_10_30+BollingerMR RF×2 SHORT; 15/18 FLAT; PAPER mode
+- **Branch 6**: consistency_test.py → 33/33 deterministic ALIGNED ✅; 6 LLM-req MISALIGNED (expected); **52nd consecutive clean cycle** ✅; STABLE
+- **Branch 3.1**: 6 insights → memory/insights.json (total **174**): 201809-re-entry-anchor / 201809-poker-xr-bluff / 201809-spend-others-money-to-learn / paper-tick283 / consistency-52nd / sop112-outreach-playbook
+- **L2**: A×2 (Branch 1.3 SOP #112 — first concrete execution playbook — HIGH; Branch 2.2 201809 MDs — HIGH) + B×3 (paper-tick/consistency/distillation)
+- **L3**: not triggered
+- **daemon_next_priority**: 201808 JSONL → next Branch 2.2; Branch 1.3 Week 1 execution (5 DMs to AI Agent Dev archetypes)
+
 ## Cycle 278 — 2026-04-09T15:52Z
 
 - **Branch 2.2**: 201901 JSONL (Jan 2019, 228 substantive Edward msgs) → MD-361~363: 薪資談判=具體錨點反報價+製造二元決策壓力（56→至少58→對方直接問報到日）/ 保障網下主動校正風險容忍度=緩衝存在時向更高EV選項傾斜 / 技術深度>薪資差（差距<15%）=早期職涯優先積累可部署技能; templates/dna_core.md: **363 MDs** (362 entries, 1 legacy gap at MD-217); 201901 COMPLETE ✅; next: 201812 or earlier months

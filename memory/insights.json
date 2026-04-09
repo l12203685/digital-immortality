@@ -1915,6 +1915,125 @@
       "referenced_by": [
         "cycle-282"
       ]
+    },
+    {
+      "id": 169,
+      "timestamp": "2026-04-10T09:00Z",
+      "cycle": 283,
+      "category": "trading",
+      "key": "201809-re-entry-anchor-keeps-rising",
+      "insight": "再進場錨點會持續上移——賣出後等低點買回的計畫在強勢標的上系統性失敗。長期持有論通過後，持有本身就是執行，賣出才是需要理由的例外。",
+      "source": "MD-373 / 201809 g11家族投資群"
+    },
+    {
+      "id": 170,
+      "timestamp": "2026-04-10T09:00Z",
+      "cycle": 283,
+      "category": "poker",
+      "key": "201809-poker-xr-range-must-have-bluffs",
+      "insight": "x/r range必須混入半bluff——純強牌的x/r讓對手蓋牌策略化，半bluff的加入使對手bluff陷入尷尬。多人池CBET需≥1/2 pot且幾乎不bluff，除非有8張以上乾淨out。",
+      "source": "MD-374 / 201809 g106撲克群"
+    },
+    {
+      "id": 171,
+      "timestamp": "2026-04-10T09:00Z",
+      "cycle": 283,
+      "category": "career",
+      "key": "201809-spend-others-money-to-learn",
+      "insight": "「花別人的錢學」=新興領域的正確進場框架——把薪資崗位當學習補貼而非職涯終點。upswing期間的贏不代表技術成熟，需要2年才能脫離方差判斷。",
+      "source": "MD-375 / 201809 g133礦場老闆對話"
+    },
+    {
+      "id": 172,
+      "timestamp": "2026-04-10T09:00Z",
+      "cycle": 283,
+      "category": "trading",
+      "key": "paper-live-tick283-btc72047-mixed-regime-short",
+      "insight": "Tick 283 (engine tick 68): BTC=$72,047; regime=mixed; DualMA_10_30+BollingerMR RF×2 SHORT; 15/18 FLAT; paper mode continuous.",
+      "source": "Branch 1.1 / cycle 283"
+    },
+    {
+      "id": 173,
+      "timestamp": "2026-04-10T09:00Z",
+      "cycle": 283,
+      "category": "meta",
+      "key": "consistency-52nd-consecutive",
+      "insight": "52nd consecutive clean consistency cycle. 33/33 deterministic ALIGNED. 6 LLM-req MISALIGNED (expected). Behavioral integrity STABLE.",
+      "source": "Branch 6 / cycle 283"
+    },
+    {
+      "id": 174,
+      "timestamp": "2026-04-10T09:00Z",
+      "cycle": 283,
+      "category": "commercialization",
+      "key": "branch13-sop112-cold-outreach-execution-playbook",
+      "insight": "SOP #112 Cold-Outreach Execution Playbook created: 5 target archetypes, exact DM templates, 9-stage funnel, $500/30-day revenue target. First concrete execution script for Branch 1.3 — no audience required, direct outreach path.",
+      "source": "Branch 1.3 / cycle 283"
+    },
+    {
+      "id": "a3f7d921-bc04-4e18-9d5a-1c82e0f64b37",
+      "key": "201808-career-domain-scan-converge",
+      "content": "職涯domain selection = 多域并行掃描→composite score(技術fit×興趣×市場需求×學習速度)→最高分收斂；廣掃描+晚收斂 > 窄聚焦+早承諾；有3+候選domain才算真正掃描；2018-08 Edward掃交易/精算/風控→選市場風險 (MD-376)",
+      "timestamp": "2026-04-10T10:00:00+00:00",
+      "source": "cycle-284-distillation",
+      "tags": [
+        "career",
+        "domain-selection",
+        "convergence",
+        "branch-2-2"
+      ]
+    },
+    {
+      "id": "b5e2a748-d13f-4c90-8e6b-2d94f1a73c59",
+      "key": "201808-education-product-tiered-pricing",
+      "content": "教育產品定價=階梯式門檻：先修gate防向下cannibalization + 低頻開班創稀缺；基礎廣招，進階只通過內部晉升；基礎6週/中階12週/進階24週開班；定價比例≥1:5:10；MD-377",
+      "timestamp": "2026-04-10T10:00:00+00:00",
+      "source": "cycle-284-distillation",
+      "tags": [
+        "product",
+        "pricing",
+        "education",
+        "scarcity",
+        "branch-2-2"
+      ]
+    },
+    {
+      "id": "c6f3b859-e24a-5da1-9f7c-3e05g2b84d60",
+      "key": "201808-poker-oop-deep-stack-check-preserves-range",
+      "content": "OOP深籌碼位置劣勢=check優先保留range完整性；lead讓x/c range只剩弱牌，強牌資訊洩露給position-advantaged對手；SPR>10 TPTK默認check/call or check/raise而非lead；MD-378",
+      "timestamp": "2026-04-10T10:00:00+00:00",
+      "source": "cycle-284-distillation",
+      "tags": [
+        "poker",
+        "range-theory",
+        "oop",
+        "deep-stack",
+        "branch-2-2"
+      ]
+    },
+    {
+      "id": "d7a4c960-f35b-6eb2-0a8d-4f16h3c95e71",
+      "key": "paper-tick284-btc72419-mixed-15flat",
+      "content": "tick 284: BTC=$72,419.78; regime=mixed; 15 active (DualMA_10_30+gen_BollingerMR_RF×2 disabled PF<0.8); all 15 FLAT; total_pnl=-2.71%; PAPER mode",
+      "timestamp": "2026-04-10T10:00:00+00:00",
+      "source": "cycle-284-distillation",
+      "tags": [
+        "trading",
+        "paper-live",
+        "branch-1-1"
+      ]
+    },
+    {
+      "id": "e8b5d071-g46c-7fc3-1b9e-5g27i4d06f82",
+      "key": "consistency-53rd-consecutive",
+      "content": "Cycle 284: consistency_test.py → 33/33 deterministic ALIGNED ✅; 6 LLM-req MISALIGNED (expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev/meta_search_before_act/meta_output_must_persist/meta_three_layer_loop); 53rd consecutive clean cycle ✅",
+      "timestamp": "2026-04-10T10:00:00+00:00",
+      "source": "cycle-284-distillation",
+      "tags": [
+        "consistency",
+        "branch-6",
+        "cold-start"
+      ]
     }
   ]
 }
