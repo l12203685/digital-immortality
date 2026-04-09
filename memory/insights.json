@@ -2196,6 +2196,44 @@
         "survival",
         "branch-6"
       ]
+    },
+    {
+      "id": "eac837b1-b5cb-43e6-9660-9ac6086a5d71",
+      "key": "consistency-57th-consecutive",
+      "content": "57th consecutive clean cycle: consistency_test.py 33/33 deterministic ALIGNED, 6 expected MISALIGNED (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev/meta_search_before_act/meta_output_must_persist/meta_three_layer_loop). Branch 6 complete and stable.",
+      "timestamp": "2026-04-09T18:23:56.920739+00:00",
+      "source": "cycle-289-consistency",
+      "tags": [
+        "consistency",
+        "branch-6",
+        "cycle-289"
+      ]
+    },
+    {
+      "id": "c06b2605-0ebe-422e-968b-c19376e6d3de",
+      "key": "paper-tick289-network-fail",
+      "content": "Cycle 289 paper-live tick NETWORK_FAIL: sandbox proxy blocks Binance API (403). Last known state: BTC=71964.87, 15 active all-FLAT, -2.71% total PnL, regime=mixed. State preserved, no data loss.",
+      "timestamp": "2026-04-09T18:23:56.920739+00:00",
+      "source": "cycle-289-paper-live",
+      "tags": [
+        "trading",
+        "paper-live",
+        "network-fail",
+        "cycle-289"
+      ]
+    },
+    {
+      "id": "a68d60de-2bab-425a-bbf7-e6767a9faf17",
+      "key": "201803-jsonl-blocked-sandbox",
+      "content": "201803 JSONL blocked in Linux sandbox: file on Windows machine only. MD-391~393 require human action to provide JSONL or run daemon on Windows. Branch 2.2 paused at 390 MDs.",
+      "timestamp": "2026-04-09T18:23:56.920739+00:00",
+      "source": "cycle-289-branch-2-2",
+      "tags": [
+        "dna",
+        "branch-2-2",
+        "blocked",
+        "cycle-289"
+      ]
     }
   ]
 }
