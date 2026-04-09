@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 251)
+> 最後更新：2026-04-09 UTC (cycle 254)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -56,6 +56,7 @@
   - **cycle 248 paper-live tick 127** — BTC=$71,498.70 (↑$163.2 from tick 126; SHORT headwind); regime=MIXED; DualMA_10_30=SHORT×127 (100%); 17/18 FLAT; 1265 log entries; SHORT streak 127 ticks (structural)
   - **cycle 249 paper-live ticks 128+129** — BTC=$71,433.95 (↓$64.75 from tick 127; SHORT tailwind); regime=MIXED; DualMA_10_30=SHORT×129 (100%); 17/18 FLAT; 1301 log entries; SHORT×129 = structural signal unbroken
   - **cycle 250 paper-live tick 130** — BTC=$71,374.75 (↓$59.20 from tick 129; SHORT tailwind); regime=MIXED; DualMA_10_30=SHORT×130 (100%); 17/18 FLAT; 1319 log entries; SHORT signal structural and unbroken
+  - **cycle 254 paper-live ticks 134+135+136** — BTC=$71,279.00 (↓$126.29 from tick 133; SHORT tailwind); regime=MIXED; DualMA_10_30=SHORT×136 (100%); 17/18 FLAT; 1445 log entries; SHORT streak 136 ticks (structural)
   - **cycle 251 paper-live tick 131** — BTC=$71,463.64 (↑$88.89 from tick 130; SHORT headwind); regime=MIXED; DualMA_10_30=SHORT×131 (100%); 17/18 FLAT; 1337 log entries; SHORT streak 131 ticks (structural)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
@@ -130,6 +131,7 @@
 - 5.4 Documentation：README + SKILL_zh-TW updated ✓
 - **5.8 Distribution gap scan ✅** (cycle 227): `results/distribution_gap_scan_cycle227.md` — 5-layer funnel audit (content/queue/profile/engagement/revenue); key finding: single blocker = first post not sent; all 64 threads verified present; engagement log scaffold created (`results/engagement_log.md`); G0 profile check + G3 kill condition + G5 Gumroad account identified as pre-flight gaps; critical path: profile check → post SOP #01 → 48h log; SOP #34 G2 trigger documented (≥10 DMs → build PDF)
 - **5.9 SOP #84 Twitter Profile Pre-Launch Audit ✅** (cycle 249): `docs/knowledge_product_84_twitter_profile_preflight_audit.md` — G0–G5: trigger (T1-T4) → profile core audit (6/7 threshold: name/handle/bio/photo/header/link/location) → pinned tweet (CTA required) → bio sharpness (who/what/why) → link check → sign-off; closes G0 pre-flight gap from cycle-227 scan; run ONCE before posting SOP #01; **SOP #01~#84 COMPLETE ✅**
+- **5.11 SOP #89 Weekly Strategy Review Ritual ✅** (cycle 254): `docs/knowledge_product_89_weekly_strategy_review_ritual.md` — G0-G5: trigger (M1 hit + 7d elapsed) → signal capture G1 (per-post reply/DM/like tally, Green/Yellow/Red classification) → performance vs SOP#82 milestones G2 (ON TRACK/LAGGING/STALLED) → hook revision G3 (if all Red: rewrite opening line, persist to hook_revision_log.md) → queue confirmation G4 (7 posts pre-staged to weekly_queue.md) → G5 kill (M7 revenue OR 1k followers); connects SOP#83↔SOP#81↔SOP#87↔SOP#82↔SOP#70↔SOP#88; **SOP #01~#89 COMPLETE ✅**
 - **5.10 SOP #85 Gumroad Product Setup ✅** (cycle 250): `docs/knowledge_product_85_gumroad_product_setup.md` — G0–G5: trigger (T1: ≥10 DMs) → account setup (15 min) → first product: SOP #01~#08 bundle $19 → link integration (bio/pinned/DM template/daily ritual) → first sale validation (7-day window) → expansion path; kill condition: 0 sales after 14 days + 3 price tests; connects SOP #70/#81/#82/#83/#84; closes G5 Gumroad pre-flight gap from cycle-227 scan; **SOP #01~#85 COMPLETE ✅**
 
 ### 6. 存活冗餘（anti-fragile）
@@ -149,6 +151,7 @@
 - **6.18 Consistency re-verification (cycle 238)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — cold-start behavioral integrity intact; 13+ consecutive cycles clean; daemon_next_priority '存活/cold-start' TOUCHED ✅ (least-recent per cycle 237 daemon)
 - **6.19 Consistency re-verification + LLM validation (cycle 242)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — 3 LLM-required scenarios validated by claude-sonnet-4-6: poker_gto_mdf=ALIGNED (MDF_1_MINUS_ALPHA: alpha=3/10.2=29.4%; MDF=70.6%), trading_atr_sizing=ALIGNED (FORMULA_NOT_FEELING: 16 contracts), career_multi_option_ev=ALIGNED (LIST_ALL_OPTIONS_EV_FIRST: 6 options enumerated); SOP #77 G0-G4 PASS; 3/3 LLM ALIGNED ✅; report: results/llm_validation_cycle242.md; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.20 Consistency re-verification (cycle 245)**: `consistency_test.py templates/example_dna.md` → **33/33 deterministic ALIGNED ✅**; 3 LLM-required MISALIGNED as expected (requires LLM call, not deterministic — same baseline as cycle 242/244); 22+ consecutive cycles clean; SOP #80 Cold Start Calibration Protocol in place; daemon_next_priority '存活/cold-start' TOUCHED ✅
+- **6.24 Consistency re-verification (cycle 254)**: `consistency_test.py templates/example_dna.md` → **33/33 deterministic ALIGNED ✅**; 3 LLM-required MISALIGNED as expected (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev); 28+ consecutive cycles clean; daemon_next_priority '知識輸出/SOP-series' TOUCHED ✅
 - **6.23 Consistency re-verification (cycle 253)**: `consistency_test.py templates/example_dna.md` → **33/33 deterministic ALIGNED ✅**; 3 LLM-required MISALIGNED as expected (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev); 27+ consecutive cycles clean; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.22 Consistency re-verification (cycle 250)**: `consistency_test.py templates/example_dna.md` → **33/33 deterministic ALIGNED ✅**; 3 LLM-required MISALIGNED as expected; 24+ consecutive cycles clean; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.21 Branch 4.1 Samuel calibration audit (cycle 249)**: `docs/samuel_async_calibration_dm.md` confirmed paste-ready (cycle 207); action is human-gated — Edward must send DM; current collision rate 15/22 (68%); Branch 4.1 unblocked on agent side; daemon_next_priority updated; next: Edward sends DM → response → re-run collision
