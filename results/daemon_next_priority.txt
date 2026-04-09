@@ -1,1 +1,1 @@
-OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.
+OK: All branches covered. Least recent: 'Branch 4.3 Discord' and 'Branch 8 生活維護 (SOP#52)'. Consider: SOP#52 Sleep & Recovery Protocol (Domain 8) or Domain 4.3 Discord seeding (human-gated).
