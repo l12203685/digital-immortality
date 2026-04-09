@@ -67,3 +67,13 @@
 {"action": "PAPER_LIVE", "ts": "2026-04-09T01:47:04.815525+00:00", "strategy": "DualMA_RSI", "price": 70748.01, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
 {"action": "PAPER_LIVE", "ts": "2026-04-09T01:47:04.815525+00:00", "strategy": "DualMA_RSI_filtered", "price": 70748.01, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
 {"action": "PAPER_LIVE", "ts": "2026-04-09T01:47:04.815525+00:00", "strategy": "DualMA_filtered", "price": 70748.01, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
+{"action": "PAPER_LIVE", "ts": "2026-04-09T01:53:23.718275+00:00", "strategy": "BollingerMR_20", "price": 70900.0, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
+{"action": "PAPER_LIVE", "ts": "2026-04-09T01:53:23.718275+00:00", "strategy": "BollingerMR_loose", "price": 70900.0, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
+{"action": "PAPER_LIVE", "ts": "2026-04-09T01:53:23.718275+00:00", "strategy": "DonchianConfirmed_20", "price": 70900.0, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
+{"action": "PAPER_LIVE", "ts": "2026-04-09T01:53:23.718275+00:00", "strategy": "DonchianConfirmed_filtered", "price": 70900.0, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
+{"action": "PAPER_LIVE", "ts": "2026-04-09T01:53:23.718275+00:00", "strategy": "Donchian_20", "price": 70900.0, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
+{"action": "PAPER_LIVE", "ts": "2026-04-09T01:53:23.718275+00:00", "strategy": "Donchian_filtered", "price": 70900.0, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
+{"action": "PAPER_LIVE", "ts": "2026-04-09T01:53:23.718275+00:00", "strategy": "DualMA_10_30", "price": 70900.0, "signal": "SHORT", "regime": "mixed", "note": "paper -- no real order placed"}
+{"action": "PAPER_LIVE", "ts": "2026-04-09T01:53:23.718275+00:00", "strategy": "DualMA_RSI", "price": 70900.0, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
+{"action": "PAPER_LIVE", "ts": "2026-04-09T01:53:23.718275+00:00", "strategy": "DualMA_RSI_filtered", "price": 70900.0, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
+{"action": "PAPER_LIVE", "ts": "2026-04-09T01:53:23.718275+00:00", "strategy": "DualMA_filtered", "price": 70900.0, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
