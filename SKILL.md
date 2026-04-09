@@ -114,7 +114,7 @@ dna_core.md (individual core — 64 lines, instant action)
   + dna_calibrate (interactive calibration — /dna-calibrate)
   + memory/ (cross-session persistence)
   + staging/ (inter-session relay)
-  = Complete digital organism (portable, auto-updating)
+  = Complete immortal tree (portable, auto-updating)
 ```
 
 ### Skill Suite
@@ -134,7 +134,7 @@ Auto-updates: bump `VERSION` file → all users get new skills on next session s
 
 ## Organism Interaction
 
-Multiple digital organisms can interact:
+Multiple immortal trees can interact:
 ```
 python organism_interact.py dna_a.md dna_b.md --all
 ```
