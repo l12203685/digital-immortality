@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T09:42+08",
+  "updated": "2026-04-09T09:48+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live tick 51 BTC=$70,609 SHORT P&L ATH+$1.20 (tick 51 per daemon log; API unreachable from cloud); **SOP #01~#39 COMPLETE** → posting_queue.md updated (Apr 9–Jun 24, 76 days); **x_launch_sequence.md created ✓** — 15 min to first post; **3 workbooks READY TO LIST** ($87/buyer trilogy)",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 all 5 SYSTEM_FAILUREs pre-committed",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next blocker: Edward posts SOP #01 (human-gated)."
+      "text": "Blocker: mainnet keys (human-gated)."
     },
     {
       "time": "just now",
-      "text": "- Posting queue: SOP #01~#40 (through Jun 26)"
+      "text": "- Regime = MIXED (trend=0.014, mr=0.225)"
     },
     {
       "time": "just now",
-      "text": "- DNA anchors: MD-02/04/05/16/44/54/57/62"
+      "text": "- MFE ATH = +$1.204 (tick 50) — not yet exceeded"
     },
     {
       "time": "just now",
-      "text": "- 5 gates: edge type ID (A/B/C/D) → decay check → adversarial test → sizing r..."
+      "text": "- P&L = +$1.066 (+1.066% on $100) — up from +$1.048 tick 60"
     },
     {
       "time": "just now",
-      "text": "- Kernel 2 formalized: 資訊不對稱決定行動方向"
+      "text": "- BTC = $70,748.01 → SHORT×61 (100% signal consistency)"
     }
   ],
   "stats": {
-    "daemon_cycles": 190,
+    "daemon_cycles": 191,
     "total_mds": 330,
     "dna_core_lines": 87
   }
