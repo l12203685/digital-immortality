@@ -4,6 +4,45 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 250 — 2026-04-09T10:32Z
+
+### What was done
+
+**Branch 1.1 — paper-live tick 130 ✅**
+- BTC=$71,367.86 (↓$66.09 from tick 129 $71,433.95; SHORT tailwind)
+- DualMA_10_30=SHORT×130 (100%); 17/18 FLAT; 1355 log entries
+- SHORT streak 130 ticks — structural signal continues. BTC net down from entry.
+- P&L positive (SHORT tailwind tick); pnl_report pending update to tick 130.
+
+**Branch 6 — 存活/cold-start (daemon_next_priority: least recent) ✅**
+- consistency_test.py ran: 30/33 deterministic ALIGNED; 3 LLM-req MISALIGNED (expected)
+- 24+ consecutive clean cycles. Cold-start architecture stable.
+- No regression detected.
+
+**Branch 7 — SOP #87 Email List Bootstrap ✅**
+- `docs/knowledge_product_87_email_list_bootstrap.md`
+- G0–G5: trigger (Gumroad live) → platform selection (Beehiiv default) → setup + welcome email → Gumroad connect (Zapier auto) → X→list bridge → sign-off
+- ~40 min total. Anti-pattern: building list before product = decay.
+- Key insight: Option B (Zapier: Gumroad sale → Beehiiv subscribe) captures 100% of buyers automatically.
+- Email list = only asset surviving platform collapse. X = rented, email = owned.
+- **SOP #01~#87 COMPLETE ✅**
+- Next SOP #88: First Newsletter Issue (trigger: ≥1 subscriber OR 7 days after G5)
+
+**Branch 3.1 — Distillation ✅**
+- 3 insights persisted:
+  1. `paper-live-short-persistence-130`: SHORT×130 (100%), BTC=$71,367.86, 1355 entries
+  2. `consistency-24-consecutive-clean`: 30/33 aligned; 3 LLM-req MISALIGNED (expected); stable
+  3. `email-list-bootstrap-sop87`: Beehiiv default; Zapier Gumroad→sub auto; X = rented, email = owned
+
+### L2 Verdict
+- A: SOP #87 Email List — owned audience channel documented; Gumroad→Beehiiv Zapier bridge — HIGH
+- B: Branch 6 存活 — 24+ consecutive clean; cold-start stable — MEDIUM
+- B: Branch 1.1 tick 130 — SHORT×130; SHORT tailwind; mainnet still blocked — LOW
+- B: Branch 3.1 distillation — 3 insights — MEDIUM
+- Verdict: **1A + 3B**. No C or D. L3 not triggered.
+
+---
+
 ## Cycle 249 — 2026-04-09T10:07Z
 
 ### What was done

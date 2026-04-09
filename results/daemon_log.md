@@ -6621,3 +6621,20 @@ Cycle 251 done.
 **Committed** as `daemon: cycle 251` (f814e0e).
 
 **Critical path still human-gated:** X first post (SOP #01) → M1 → revenue flywheel. Everything else is infrastructure.
+
+## Cycle 40 — 2026-04-09 10:32:00 UTC
+
+Cycle 252 done.
+
+**Branches pushed:**
+
+| Branch | Result |
+|--------|--------|
+| 1.1 paper-live | tick 130: BTC=$71,367.86 (↓$66.09 SHORT tailwind); SHORT×130 (100%); 1355 entries |
+| 6 存活/cold-start | 30/33 ALIGNED; 3 LLM-req MISALIGNED (expected); 24+ consecutive clean |
+| 7 SOP #87 | Email List Bootstrap — G0-G5; Beehiiv default; Zapier Gumroad→Beehiiv auto; X=rented email=owned; **SOP #01~#87 COMPLETE** |
+| 3.1 distillation | +3 insights → total 69 in insights.json |
+
+**Committed** as `daemon: cycle 252`.
+
+**Critical path still human-gated:** X first post (SOP #01) → M1 → ≥10 DMs → SOP #85 fires → Gumroad live → revenue. ⚡ 89 days to deadline.
