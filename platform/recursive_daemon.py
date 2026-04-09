@@ -18,6 +18,8 @@ import anthropic
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DNA_PATH = REPO_ROOT.parent.parent / "LYH" / "agent" / "dna_core.md"
 LOG_PATH = REPO_ROOT / "results" / "daemon_log.md"
+PRIORITY_PATH = REPO_ROOT / "results" / "daemon_next_priority.txt"
+AUDIT_SCRIPT = REPO_ROOT / "platform" / "daemon_audit.py"
 DEFAULT_MODEL = "claude-sonnet-4-6"
 MIN_INTERVAL = 5  # seconds, rate-limit floor
 
@@ -48,6 +50,28 @@ def handle_signal(sig, frame):
     global running
     print("\n[daemon] Caught signal, shutting down gracefully...")
     running = False
+
+
+def load_priority() -> str:
+    """Load the next-priority suggestion from the audit system, if it exists."""
+    if PRIORITY_PATH.exists():
+        text = PRIORITY_PATH.read_text(encoding="utf-8").strip()
+        if text:
+            return text
+    return ""
+
+
+def run_audit_suggest() -> None:
+    """Run daemon_audit.py --suggest to generate the next priority file."""
+    try:
+        subprocess.run(
+            [sys.executable, str(AUDIT_SCRIPT), "--suggest"],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            timeout=30,
+        )
+    except Exception as e:
+        print(f"[daemon] Audit suggest failed: {e}")
 
 
 def load_dna() -> str:
@@ -122,11 +146,15 @@ def try_git_commit(cycle: int) -> None:
 def run_cycle_api(client, system: str, model: str, cycle: int) -> str:
     """Run via Anthropic API (requires ANTHROPIC_API_KEY with credit)."""
     print(f"[daemon] Cycle {cycle} starting (API)...")
+    priority = load_priority()
+    user_prompt = RECURSIVE_PROMPT
+    if priority:
+        user_prompt = f"[AUDIT PRIORITY] {priority}\n\n{RECURSIVE_PROMPT}"
     response = client.messages.create(
         model=model,
         max_tokens=512,
         system=system,
-        messages=[{"role": "user", "content": RECURSIVE_PROMPT}],
+        messages=[{"role": "user", "content": user_prompt}],
     )
     text = response.content[0].text
     print(f"[daemon] Cycle {cycle} done — {len(text)} chars")
@@ -136,8 +164,12 @@ def run_cycle_api(client, system: str, model: str, cycle: int) -> str:
 def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
     """Run via claude CLI (uses Max subscription, no API credit needed)."""
     print(f"[daemon] Cycle {cycle} starting (CLI)...", flush=True)
+    # Load audit priority suggestion if available
+    priority = load_priority()
+    priority_prefix = f"[AUDIT PRIORITY] {priority}\n\n" if priority else ""
     # Keep prompt short for CLI — only the recursive question, context is in repo files
     short_prompt = (
+        f"{priority_prefix}"
         "Read results/dynamic_tree.md and results/daemon_log.md (tail). "
         "Pick the highest-derivative branch. Do ONE concrete thing that advances digital immortality. "
         "Update results/dynamic_tree.md with what changed. "
@@ -206,6 +238,7 @@ def main():
                 text = run_cycle_api(client, system, args.model, cycle)
             append_log(cycle, text)
             subprocess.run([sys.executable, str(REPO_ROOT / "platform" / "generate_dashboard_state.py")], cwd=REPO_ROOT, capture_output=True, timeout=30)
+            run_audit_suggest()
             if not args.no_commit:
                 try_git_commit(cycle)
         except Exception as e:
