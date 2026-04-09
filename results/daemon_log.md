@@ -5904,3 +5904,26 @@ Cycle 208 complete. Here's what was pushed:
 2. Paste 4 Discord seed posts to server channels
 3. Fill `docs/organism_c_selection_worksheet.md` (20–30 min) → runs first Edward-C collision
 4. Post SOP #01 on X (15 min, `x_launch_sequence.md` has exact steps)
+
+## Cycle 2 — 2026-04-09 04:02:37 UTC
+
+Cycle 209 pushed. Here's what was done across 4 branches:
+
+**Branch 1.1 (Trading)**
+- Tick 73: BTC=$71,014.90, regime=MIXED, DualMA SHORT×73 (100%), P&L=**+$0.692** (+$0.132 from tick 72's +$0.560)
+- 287 log entries total; `paper_live_pnl_report.md` updated
+
+**Branch 7 (知識輸出) — SOP #48**
+- `docs/knowledge_product_48_belief_update_sop.md` — **Bayesian Belief Update Protocol** (Domains 2+3)
+- 5 gates: G0 explicit prior + falsifiability pre-commit → G1 base rate anchor → G2 evidence likelihood ratio (reliability×independence, 1–9) → G3 prior revision with anti-anchoring cap → G4 belief-to-action translation → G5 anti-reversal 48h timeout
+- Self-test built in: 73-tick SHORT vs 3 chat opinions → score=1 → 3.3% belief move → no action change
+- `docs/publish_thread_sop48_twitter.md` — 12-tweet thread; posting queue extended to **Jul 12**; **series SOP #01–#48 ✅**
+
+**Branch 6 (存活冗餘) — cold-start restart**
+- `docs/cold_start_recovery_runbook.md` — new section: layer-specific restart protocols from SOP #47
+  - Stale-vs-dead diagnostic signals for L1/L2/L3
+  - L3 evolution trigger: 3-condition gate
+  - Staleness alarm → 4-step restart sequence with exact bash commands
+  - Branch 6 now covers all three engine layers, not just file-level recovery
+
+Human-gated blockers unchanged: mainnet API keys, X first post, Samuel DM, Discord seeding, Organism C §0 fill-in.

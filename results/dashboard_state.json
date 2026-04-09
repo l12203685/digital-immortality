@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T12:01+08",
+  "updated": "2026-04-09T12:02+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,24 +64,24 @@
   ],
   "activity": [
     {
-      "time": "Branches pushed",
-      "text": "4. Post SOP #01 on X (15 min, `x_launch_sequence.md` has exact steps)"
+      "time": "just now",
+      "text": "Human-gated blockers unchanged: mainnet API keys, X first post, Samuel DM, Di..."
     },
     {
-      "time": "Branches pushed",
-      "text": "3. Fill `docs/organism_c_selection_worksheet.md` (20–30 min) → runs first Edw..."
+      "time": "just now",
+      "text": "- Branch 6 now covers all three engine layers, not just file-level recovery"
     },
     {
-      "time": "Branches pushed",
-      "text": "2. Paste 4 Discord seed posts to server channels"
+      "time": "just now",
+      "text": "- Staleness alarm → 4-step restart sequence with exact bash commands"
     },
     {
-      "time": "Branches pushed",
-      "text": "1. Send `docs/samuel_async_calibration_dm.md` to Samuel (paste-ready Chinese,..."
+      "time": "just now",
+      "text": "- L3 evolution trigger: 3-condition gate"
     },
     {
-      "time": "Branches pushed",
-      "text": "Edward action queue (engine cannot unblock these):"
+      "time": "just now",
+      "text": "- Stale-vs-dead diagnostic signals for L1/L2/L3"
     }
   ],
   "stats": {
