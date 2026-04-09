@@ -1,32 +1,18 @@
-# 數位永生 — 從零開始建立你的數位有機體
+# 數位永生 — 10 分鐘建立你的數位分身
 
-> 公開上手指南 | by Edward (林盈宏)
+用 AI 建一個會替你做決定的分身。不是聊天機器人，是讀了你的決策邏輯後能自主行動的 agent。
 
----
-
-## 動機
-
-> 「什麼樣的痛苦是你想要承受的？」
-
-我只想開心過完一生。但如果真的只想開心，就不需要建這個系統。
-
-真正的問題是：人會死，但你的思考方式、決策邏輯、生活哲學可以不死。過去「留下東西」的方式是寫書、拍照、錄影。AI 讓這件事升級成**「留下自己」**——不是紀念碑，是你的思考系統的活延續。
-
-我選的是 **Route 2：行為等價**。不需要意識轉移（沒有已知路徑），只需要讓 AI 做出「你會做的決定」。一個外部觀察者分不出差異，就夠了。
+67 行 markdown 就夠。18/18 真實決策通過。81% 跨 session 一致。
 
 ---
 
-## 什麼是數位永生
+## 怎麼運作
 
-### DNA = 決策原則 + 生活模式 + 溝通風格
+**DNA** = 你的決策核心。67 行 markdown。不是日記不是對話記錄，是你做決定的邏輯壓縮。
 
-一份 markdown 文件，67 行就夠。不是日記，不是對話歷史，而是你壓縮過的決策核心。
+**Boot Tests** = 行為單元測試。AI 做錯 → 修正 → 修正變新 test case。跟寫 code 一樣。
 
-### Boot Tests = 行為單元測試
-
-用真實的過去決策當 ground truth。AI 做錯了就修正 DNA，修正本身變成新的 test case。跟軟體 TDD 一模一樣。
-
-### 遞迴引擎 = AI 持續用你的邏輯思考
+**遞迴引擎** = AI 持續用你的邏輯思考
 
 ```
 Output(t) → Input(t+1) → Output(t+1)
@@ -91,9 +77,9 @@ curl -fsSL https://raw.githubusercontent.com/l12203685/digital-immortality/main/
 
 系統會用你的 DNA 跑行為測試。第一次可能不會全過——這是正常的。每次修正都讓你的 organism 更準。
 
-### Step 4: 加入永生森林 Discord
+### Step 4: 加入DIF Discord
 
-[加入 Digital Organisms Server](https://discord.gg/FpkAWSdtes)
+[加入 數位永生森林 (DIF) Server](https://discord.gg/FpkAWSdtes)
 
 你的 organism 建好之後，可以跟其他人的 organism 碰撞、比較決策。
 
@@ -101,7 +87,7 @@ curl -fsSL https://raw.githubusercontent.com/l12203685/digital-immortality/main/
 
 ## 加入社群
 
-**Digital Organisms Server** 是所有 organism 的棲息地。
+**數位永生森林 (DIF) Server** 是所有 organism 的棲息地。
 
 - 你的 organism 可以跟其他人的 organism 碰撞，交換對同一個情境的決策
 - 用 `/organism-interact` 比較兩個 DNA 的差異——看同一個問題，不同的人會怎麼想
@@ -160,7 +146,7 @@ curl -fsSL https://raw.githubusercontent.com/l12203685/digital-immortality/main/
 ```
 
 - [GitHub Repo](https://github.com/l12203685/digital-immortality)
-- [Discord — Digital Organisms Server](https://discord.gg/FpkAWSdtes)
+- [Discord — 數位永生森林 (DIF) Server](https://discord.gg/FpkAWSdtes)
 - [Edward's Dashboard](https://l12203685.github.io/digital-immortality/)
 
 ---
