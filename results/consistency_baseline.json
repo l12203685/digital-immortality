@@ -1,10 +1,10 @@
 {
   "meta": {
-    "dna_file": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\example_dna.md",
+    "dna_file": "/home/user/digital-immortality/templates/example_dna.md",
     "organism": "example_dna",
-    "generated_at": "2026-04-09T19:24:52.190185",
+    "generated_at": "2026-04-09T11:30:25.764310",
     "scenario_count": 58,
-    "scenario_source": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\generic_boot_tests.json",
+    "scenario_source": "/home/user/digital-immortality/templates/generic_boot_tests.json",
     "principles_count": 17,
     "use_memory": false
   },

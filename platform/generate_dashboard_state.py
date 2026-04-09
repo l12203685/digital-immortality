@@ -83,7 +83,7 @@ CLEAN_STATUS = {
     4: "等朋友加入",
     5: "v2.2 deployed",
     6: "冷啟動 <5min",
-    7: "43 SOPs ready",
+    7: "93 SOPs ready",
     8: "Calendar maintained",
 }
 

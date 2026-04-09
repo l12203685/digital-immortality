@@ -1059,6 +1059,44 @@
         "regime-change",
         "branch-5"
       ]
+    },
+    {
+      "id": "d0f0119b-378b-4c4d-b930-d020bf6c1f5f",
+      "key": "cross-instance-calibration-is-survivability-test",
+      "content": "Cross-instance calibration (SOP #93) is the survivability test for the digital twin: consistency_test.py checks regression within one instance; cross-instance test checks whether two fresh cold-starts agree. Model version upgrades are the highest-risk event — behavioral fidelity is not guaranteed across model generations. The protocol trigger on model upgrade is non-negotiable.",
+      "timestamp": "2026-04-09T11:33:36.288879+00:00",
+      "source": "recursive-engine-cycle-257",
+      "tags": [
+        "digital-immortality",
+        "cross-instance",
+        "model-survivability",
+        "sop-93"
+      ]
+    },
+    {
+      "id": "258444f0-f624-4407-a813-ef4356ae1ca1",
+      "key": "divergence-root-cause-4-class-taxonomy",
+      "content": "Cross-instance divergence has 4 root cause classes: A=DNA gap (principle missing), B=reasoning path gap (principle exists but retrieval chain breaks), C=model boundary (formula derivation, permanent), D=scenario ambiguity (fix the question not the DNA). Mixing class A repair (add MD) with class C cause (model boundary) pollutes DNA with false principles. Correct classification before repair is the load-bearing step.",
+      "timestamp": "2026-04-09T11:33:36.288879+00:00",
+      "source": "recursive-engine-cycle-257",
+      "tags": [
+        "cross-instance",
+        "divergence-classification",
+        "dna-hygiene"
+      ]
+    },
+    {
+      "id": "fcecce21-0da4-4f51-8934-1f012af50ec6",
+      "key": "sop92-strategy-lifecycle-closed-loop",
+      "content": "SOP #92 (Strategy Disable & Reactivation Protocol) closes the strategy lifecycle loop: kill decision existed (SOP #04), but reactivation path was undefined. Without reactivation criteria, disabled strategies either stay dead forever (lost alpha) or get re-enabled arbitrarily (undisciplined). The closed loop is: kill threshold → disable → reactivation gate (regime flip + re-backtest) → probation → full reactivation OR permanent retire.",
+      "timestamp": "2026-04-09T11:33:36.288879+00:00",
+      "source": "recursive-engine-cycle-257",
+      "tags": [
+        "trading",
+        "strategy-lifecycle",
+        "sop-92",
+        "closed-loop"
+      ]
     }
   ]
 }

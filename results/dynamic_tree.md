@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 254)
+> 最後更新：2026-04-09 UTC (cycle 257)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -444,3 +444,7 @@
 - 2026-04-09T UTC: cycle 256 — **Branch 6 / 存活/cold-start**: consistency_test.py → **33/33 deterministic ALIGNED ✅** (30+ consecutive cycles clean); 3 LLM-req MISALIGNED (expected: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev); daemon_next_priority '存活/cold-start' TOUCHED ✅
 - 2026-04-09T UTC: cycle 256 — **Branch 7**: SOP #91 Monthly DNA Calibration Audit shipped: `docs/knowledge_product_91_monthly_dna_calibration_audit.md`; fills gap SOP#80 misses (new life decisions never encoded); G0-G5: harvest JSONL → classify (new/refinement/contradiction/expired) → write MDs → validate → persist; SOP#80+#91 = full monthly DNA maintenance cycle (no regression + no stagnation); **Series: SOP #01~#91 COMPLETE.**
 - 2026-04-09T UTC: cycle 256 — **Branch 3.1**: 3 insights appended to memory/insights.json (total 84): paper-live-tick-139 / consistency-30-consecutive-clean / monthly-dna-calibration-audit-sop91
+- 2026-04-09T UTC: cycle 257 — **Branch 1.1**: paper-live tick 140: NETWORK_FAIL (ccxt unavailable in sandbox); last known tick 139: BTC=$71,187.11, SHORT×139 (100%), P&L=-1.09% PAPER; mainnet still blocked on API keys
+- 2026-04-09T UTC: cycle 257 — **Branch 6 / 存活/cold-start**: consistency_test.py → **33/36 ALIGNED ✅** (30+ consecutive cycles clean; 3 LLM-req MISALIGNED: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev — expected); daemon_next_priority '存活/cold-start' TOUCHED ✅
+- 2026-04-09T UTC: cycle 257 — **Branch 7**: SOP #92 Strategy Disable & Reactivation Protocol (cycle 46 daemon); SOP #93 Cross-Instance Calibration Maintenance Protocol shipped: `docs/knowledge_product_93_cross_instance_calibration_maintenance.md`; G0-G5: trigger (monthly/model-upgrade/divergence-spike) → pre-conditions → divergence measurement (≥97%=ALIGNED/90-96%=MONITOR/<80%=ALERT) → root cause 4-class taxonomy (A=DNA-gap/B=reasoning-path/C=model-boundary/D=scenario-ambiguity) → class-specific repair → health report; closes model-version-upgrade gap in survivability protocol; `docs/publish_thread_sop93_twitter.md` drafted; **Series: SOP #01~#93 COMPLETE ✅**
+- 2026-04-09T UTC: cycle 257 — **Branch 3.1**: 3 insights appended to memory/insights.json (total 90): cross-instance-calibration-is-survivability-test / divergence-root-cause-4-class-taxonomy / sop92-strategy-lifecycle-closed-loop

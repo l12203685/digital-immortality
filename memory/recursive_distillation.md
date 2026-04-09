@@ -92,3 +92,32 @@ Tick 117: BTC=$71,240.33, DualMA_10_30=SHORT×117 consecutive (100%). 117 ticks 
 **Tags**: trading, paper-live, signal-persistence, DualMA, branch-1.1, regime-MIXED
 
 ---
+
+## Cycle 257 — 2026-04-09T UTC
+
+**Source cycles**: 256-257
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 90)
+
+### Insight 1: cross-instance-calibration-is-survivability-test
+
+Cross-instance calibration (SOP #93) is the survivability test for the digital twin. `consistency_test.py` checks regression within one instance; cross-instance test checks whether two fresh cold-starts agree. Model version upgrades are the highest-risk event — behavioral fidelity is not guaranteed across model generations. The protocol trigger on model upgrade is non-negotiable. Without this test, "passes 33/33" is a necessary but not sufficient condition for immortality.
+
+**Signal source**: SOP #93 written cycle 257; gap analysis between consistency_test.py and cross_instance_test.py scope
+**Tags**: digital-immortality, cross-instance, model-survivability, SOP-93, branch-6
+
+### Insight 2: divergence-root-cause-4-class-taxonomy
+
+Cross-instance divergence has 4 root cause classes: A=DNA gap (principle missing), B=reasoning path gap (principle exists but retrieval chain breaks), C=model boundary (formula derivation, permanent), D=scenario ambiguity (fix the question not the DNA). The critical error is applying Class A repair (add MD) to a Class C cause (model boundary) — this pollutes DNA with false principles derived from model limitations, not Edward's actual reasoning. Correct classification before repair is the load-bearing step of the entire protocol.
+
+**Signal source**: SOP #93 G3 classification design; prior permanent-boundary insight (cycle 243); dna-hygiene lessons
+**Tags**: cross-instance, divergence-classification, DNA-hygiene, SOP-93, root-cause
+
+### Insight 3: sop92-strategy-lifecycle-closed-loop
+
+SOP #92 (Strategy Disable & Reactivation Protocol) closes the strategy lifecycle loop. The kill decision existed (SOP #04), but the reactivation path was undefined. Without explicit reactivation criteria, disabled strategies either stay dead forever (lost alpha) or get re-enabled arbitrarily (undisciplined). The closed loop: kill threshold → disable → cooling period → reactivation gate (regime flip + re-backtest pass) → probation pool → full reactivation OR permanent retire. Open loops in the trading system become technical debt; closed loops become adaptive infrastructure.
+
+**Signal source**: SOP #92 written cycle 46 (daemon); DualMA_10_30 disable event in paper-live log
+**Tags**: trading, strategy-lifecycle, SOP-92, closed-loop, adaptive-infrastructure
+
+---

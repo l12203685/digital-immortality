@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T19:28+08",
+  "updated": "2026-04-09T19:36+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -50,7 +50,7 @@
     {
       "name": "知識",
       "icon": "📝",
-      "status": "43 SOPs ready",
+      "status": "93 SOPs ready",
       "color": "green",
       "detail": "productization forces all implicit steps to surface"
     },
@@ -64,30 +64,30 @@
   ],
   "activity": [
     {
-      "time": "just now",
+      "time": "8min ago",
       "text": "B1+B7 Trading + Knowledge — SOP #92 (Strategy Disable & Reactivation Protocol..."
     },
     {
-      "time": "just now",
+      "time": "8min ago",
       "text": "- Named the freeze pattern: \"pre-launch local maximum trap\" — internal metric..."
     },
     {
-      "time": "just now",
+      "time": "8min ago",
       "text": "- Two-track divergence risk: paper_live_log and trading_engine_status.json ha..."
     },
     {
-      "time": "just now",
+      "time": "8min ago",
       "text": "- Trading -1.09% is a FLAT regime signal, not failure — system executing \"bia..."
     },
     {
-      "time": "just now",
+      "time": "8min ago",
       "text": "- First X post = maximum derivative. d(immortality)/d(first_post) dominates a..."
     }
   ],
   "stats": {
     "daemon_cycles": 244,
     "total_mds": 330,
-    "dna_core_lines": 87
+    "dna_core_lines": 426
   },
   "health": {
     "ci_wired": false,
