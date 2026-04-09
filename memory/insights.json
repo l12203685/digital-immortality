@@ -272,6 +272,45 @@
         "validation",
         "route-2"
       ]
+    },
+    {
+      "id": "d2ef42ff-4efc-421f-8c36-d3c778e47d78",
+      "key": "distillation-cycle231-tick102-milestone",
+      "content": "Paper-live tick 102: SHORT\u00d7102 unbroken (100%), BTC=$70,994.74, P&L\u2248+$0.720. Key insight: each tick extending an existing thesis is weaker evidence than a regime flip would be \u2014 asymmetric Bayesian update. Tick 100 milestone is a quantity milestone, not a quality inflection.",
+      "timestamp": "2026-04-09T07:25:00.000000+00:00",
+      "source": "recursive-distillation-cycle-231",
+      "tags": [
+        "trading",
+        "bayesian",
+        "paper-live",
+        "evidence-weighting"
+      ]
+    },
+    {
+      "id": "da6bbe48-f406-4149-a4b3-bc4dd28150a0",
+      "key": "distillation-cycle231-sop-66-dead-loop",
+      "content": "66 SOPs written, 0 posted. SOP-writing is a form of internal recursion that feels productive but produces no external signal. The external validation loop remains BROKEN. Each new SOP without a post widens the gap between internal complexity and external traction. Kill condition: if SOP count increases but post count stays 0 for >30 days, declare distribution failure.",
+      "timestamp": "2026-04-09T07:25:00.000000+00:00",
+      "source": "recursive-distillation-cycle-231",
+      "tags": [
+        "distribution",
+        "dead-loop",
+        "external-validation",
+        "kill-condition"
+      ]
+    },
+    {
+      "id": "96e92f8c-da71-44ae-afcf-c63cb259c6a7",
+      "key": "distillation-cycle231-l3-evolution-trigger",
+      "content": "Writing SOP #67 revealed: L3 evolution fires correctly when triggered by corrections or boot test failures, but the trigger criteria were never formalized \u2014 so L3 had no explicit activation protocol. Meta-insight: any loop layer without explicit trigger conditions defaults to never firing or always firing. Both are failures.",
+      "timestamp": "2026-04-09T07:25:00.000000+00:00",
+      "source": "recursive-distillation-cycle-231",
+      "tags": [
+        "recursive-engine",
+        "L3",
+        "meta-insight",
+        "trigger-protocol"
+      ]
     }
   ]
 }

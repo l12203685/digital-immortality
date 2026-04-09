@@ -4,6 +4,50 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 231 — 2026-04-09T UTC
+
+### What was done
+
+**Branch 1.1 — paper-live ticks 101+102 ✅**
+- BTC=$70,994.74 (↓$94.44 from tick 100 $71,089.18), regime=MIXED, DualMA_10_30=SHORT×102 (100%)
+- P&L=+$0.720 (+0.720% on $100); 797 log entries; MFE ATH unchanged +$1.204 (tick 50)
+- SHORT tailwind resumed after 3-tick headwind; BTC net ↓$515.16 from entry $71,509.90
+
+**Branch 7 — SOP #67 Recursive Engine L3 Evolution Protocol ✅**
+- `docs/knowledge_product_67_recursive_evolution_sop.md` — Domain 3 (持續學習)
+  - Fills the L3 trigger gap: three-layer loop was defined but activation criteria never formalized
+  - Hard triggers (must fire): correction received / boot test failure / consistency degradation / staleness alert ≥3 / revenue=0+deadline<30d
+  - Soft triggers: stuck branch >5 cycles / new anti-pattern / cross-instance divergence <90%
+  - G0: pre-flight (trigger + named premise + write-set checklist)
+  - G1: PREMISE GAP template (wrong output + faulty premise + correct premise + test case)
+  - G2: minimum viable patch (dna_core + boot_tests + re-run consistency)
+  - G3: write to all 6 durable locations in same commit
+  - G4: kill conditions (contradicts 3+ validated MDs / drops <30/33 after patch → revert)
+  - Self-test: 32/33 → diagnose MD-96 too broad → add MD-316 SHIFT_TO_SURVIVAL_REGIME → 33/33 ✅
+- `docs/publish_thread_sop67_twitter.md` — 12-tweet thread; slot **Aug 15**; Domain 3
+- `docs/posting_queue.md` — #67 row added; header updated to #01~#67; queue to Aug 15
+- **Series: SOP #01~#67 COMPLETE** ✅
+
+**Branch 6 — consistency ✅**
+- consistency_test.py → **33/33 ALIGNED ✅** (55 scenarios, 0 MISALIGNED); 12+ consecutive cycles clean
+- daemon_next_priority '存活/cold-start' TOUCHED ✅
+
+**Branch 3.1 — recursive distillation ✅**
+- 3 insights → memory/insights.json (total 26 entries):
+  - tick-102 asymmetric Bayesian: extending thesis = weaker evidence than a flip
+  - SOP #67 written with 0 posts = internal recursion without external loop = dead loop at scale
+  - L3 trigger formalization: any loop layer without explicit activation protocol defaults to never/always (both failures)
+
+### State Updates
+- `results/daily_log.md`: cycle 231 entry prepended
+- `results/dynamic_tree.md`: ticks 101+102 + SOP #67 + B6 consistency (cycle 231) entries added
+- `staging/session_state.md`: updated to cycle 231
+- `results/daemon_next_priority.txt`: updated
+- `memory/insights.json`: 3 new distillation entries (total 26)
+- `docs/posting_queue.md`: #67 added, header #01~#67
+
+---
+
 ## Cycle 230 — 2026-04-09T UTC
 
 ### What was done
