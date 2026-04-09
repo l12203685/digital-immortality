@@ -58,17 +58,19 @@
 | 47   | $70,802.01 | +$0.990 |
 | 48   | $70,864.57 | +$0.904 |
 | 49   | $70,784.17 | +$1.017 |
-| 50   | $70,649.77 | **+$1.204** ← NEW ATH |
+| 50   | $70,649.77 | **+$1.204** ← MFE ATH |
+| 51~58 | (daemon cycles) | (tracked in daemon_log) |
+| 59   | $70,820.84 | +$0.963 |
 
 ## Summary
-- **Current unrealized P&L: +$1.20 (+1.20% on $100)** ← **NEW ATH**
-- Best case (MFE): +$1.20 (tick 50, BTC=$70,649.77) ← MFE ATH
+- **Current unrealized P&L: +$0.963 (+0.963% on $100)**
+- Best case (MFE): +$1.204 (tick 50, BTC=$70,649.77) ← MFE ATH
 - Worst case (MAE): $-1.33 (tick 8, BTC=$72,459)
-- Signal consistency: SHORT x 50 ticks (100%)
-- MFE/MAE ratio: 0.90x (improving)
+- Signal consistency: SHORT × 59 ticks (100%)
+- MFE/MAE ratio: 0.91x
 
 ## Verdict
-SHORT signal persistent 50 ticks. BTC $70,650 — P&L at +$1.20 new ATH. Regime bearish, no reversal signal.
+SHORT signal persistent 59 ticks. BTC $70,821 — bounced off MFE lows, P&L pulled back to +$0.96. Regime mixed (trend=0.014, mr=0.225). DualMA_10_30 only strategy signaling.
 
 **Next action**: Set BINANCE_MAINNET_KEY/SECRET → run `python -m trading.mainnet_runner --tick`
 See docs/mainnet_activation_guide.md for exact steps.
