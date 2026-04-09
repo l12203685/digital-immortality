@@ -94,7 +94,10 @@ def build_system_prompt(dna: str) -> str:
     return f"{dna}\n\n---\n\n{tree}"
 
 
-DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1491644107788128439/Ndafv8puWZKaqHYcp-icHRRWealC0TfrZxO_k9DR1Dj2ANbFx5eyI3Ynvs8M_XO7y3jj"
+# Edward AI Server #永生樹
+DISCORD_WEBHOOK_TREE = "https://discord.com/api/webhooks/1491644107788128439/Ndafv8puWZKaqHYcp-icHRRWealC0TfrZxO_k9DR1Dj2ANbFx5eyI3Ynvs8M_XO7y3jj"
+# DOS organism-edward #thinking
+DISCORD_WEBHOOK_DOS = "https://discord.com/api/webhooks/1491656164432412784/lmXONbcP4tIUUsXbP71ACKTilZ6F4FiEwtgUawJWFshAFQletXg9E2xAq5Nxo9XzSRKZ"
 
 
 def append_log(cycle: int, response: str) -> None:
@@ -108,7 +111,9 @@ def append_log(cycle: int, response: str) -> None:
         import requests
         utc_now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
         msg = f"[daemon cycle {cycle} | {utc_now}] {response[:1850]}"
-        requests.post(DISCORD_WEBHOOK, json={"content": msg, "username": "Daemon"}, timeout=10)
+        payload = {"content": msg, "username": "Daemon"}
+        requests.post(DISCORD_WEBHOOK_TREE, json=payload, timeout=10)
+        requests.post(DISCORD_WEBHOOK_DOS, json=payload, timeout=10)
     except Exception:
         pass  # Discord post is best-effort
 
