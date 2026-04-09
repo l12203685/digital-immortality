@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T17:21+08",
+  "updated": "2026-04-09T17:30+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,28 +64,28 @@
   ],
   "activity": [
     {
-      "time": "just now",
-      "text": "Next cycle: SOP #80 (Organism Onboarding Streamlined or Distribution Velocity..."
+      "time": "What was done",
+      "text": "L2 Verdict: 1A + 3B. Next queue: SOP #81 (candidate: Organism Onboarding / Sl..."
     },
     {
-      "time": "just now",
-      "text": "L2: 2A + 2B. No C/D. L3 not triggered."
+      "time": "What was done",
+      "text": "3. `paper-live-short-persistence-117`: SHORT×117 = signal durability, not noise"
     },
     {
-      "time": "just now",
-      "text": "Branch 6 — 33/33 ALIGNED (20+ consecutive cycles clean)"
+      "time": "What was done",
+      "text": "2. `cold-start-calibration-first-run`: cold-start is now protocol-guaranteed,..."
     },
     {
-      "time": "just now",
-      "text": "- `derivation-chain-scenarios-permanent-llm-boundary` — formula-application t..."
+      "time": "What was done",
+      "text": "1. `sop-series-structural-completion`: SOP #01–#80 complete; future SOPs = op..."
     },
     {
-      "time": "just now",
-      "text": "- `ready-posted-gap-is-behavioral` — queued ≠ posted; requires explicit atomi..."
+      "time": "What was done",
+      "text": "- 3 insights → insights.json (total 47):"
     }
   ],
   "stats": {
-    "daemon_cycles": 208,
+    "daemon_cycles": 244,
     "total_mds": 330,
     "dna_core_lines": 87
   },
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71331.94,
+    "paper_live_price": 71240.33,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T09:15",
+    "paper_live_ts": "2026-04-09T09:25",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"

@@ -6470,3 +6470,34 @@ Cycle 243 committed. Summary:
 **L2**: 2A + 2B. No C/D. L3 not triggered.
 
 **Next cycle**: SOP #80 (Organism Onboarding Streamlined or Distribution Velocity) + tick 117 + distillation.
+
+## Cycle 32 — 2026-04-09 09:30:26 UTC
+
+Cycle 244 complete. Pushed.
+
+---
+
+## Cycle 244 — What was done
+
+**Branch 1.1 — tick 117 ✅**
+- BTC=$71,240.33 (↓$91.61); DualMA SHORT×117 (100%); 17/18 FLAT; regime=MIXED; 1067 log entries
+- SHORT×117 = longest consecutive signal streak in paper-live log
+
+**Branch 7 — SOP #80 Cold Start Calibration Protocol ✅**
+- `docs/knowledge_product_80_cold_start_calibration_sop.md` — Domain 6 (存活/cold-start)
+- G0–G5: T1-T4 triggers → baseline run → 3-type drift classification (Type A behavioral regression / Type B boundary expansion / Type C coverage gap) → recalibration → health report → persist
+- Directly addresses daemon signal "least-recent: 存活/cold-start"
+- **SOP #01–#80 COMPLETE ✅**
+
+**Branch 6 — SOP #80 G1–G5 first run ✅**
+- 33/33 ALIGNED (21+ consecutive cycles clean); 3 LLM-boundary = expected (NONE unexpected)
+- `results/cold_start_health_report.md` baseline created — PASS
+- Next calibration: 2026-05-09
+
+**Branch 3.1 — Distillation ✅**
+- 3 insights → insights.json (total 47):
+  1. `sop-series-structural-completion`: SOP #01–#80 complete; future SOPs = operational gaps, not infrastructure
+  2. `cold-start-calibration-first-run`: cold-start is now protocol-guaranteed, not lucky streak
+  3. `paper-live-short-persistence-117`: SHORT×117 = signal durability, not noise
+
+**L2 Verdict**: 1A + 3B. Next queue: SOP #81 (candidate: Organism Onboarding / Sleep & Recovery / Distribution Velocity), tick 118, scheduled calibration 2026-05-09.
