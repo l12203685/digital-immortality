@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T13:12+08",
+  "updated": "2026-04-09T13:21+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "3. Samuel: send async DM"
+      "text": "Next autonomous cycle: tick 84 + SOP #58 (Domain gap scan — per daemon_next_p..."
     },
     {
       "time": "just now",
-      "text": "2. Discord: paste 4 seed posts → invite C"
+      "text": "- Samuel async DM: paste `docs/samuel_async_calibration_dm.md`"
     },
     {
       "time": "just now",
-      "text": "1. Post SOP #01 on X → starts the audience → revenue chain"
+      "text": "- Mainnet API keys: set BINANCE_MAINNET_KEY/SECRET"
     },
     {
       "time": "just now",
-      "text": "Human-gated blockers (unchanged, highest derivative):"
+      "text": "- `⚡ DEADLINE 2026-07-07`: Edward posts SOP #01 on X → starts revenue path"
     },
     {
       "time": "just now",
-      "text": "Daemon priority '存活/cold-start' addressed: SOP #56 is the FIRE/financial surv..."
+      "text": "Blockers (human-gated, unchanged):"
     }
   ],
   "stats": {
@@ -94,11 +94,11 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 70839.73,
+    "paper_live_price": 70889.16,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T05:06",
-    "paper_tick": 81,
-    "paper_pnl": "+$0.937",
+    "paper_live_ts": "2026-04-09T05:16",
+    "paper_tick": 83,
+    "paper_pnl": "+$0.868",
     "status": "ok"
   }
 }

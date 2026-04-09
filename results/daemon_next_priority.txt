@@ -1,1 +1,1 @@
-OK: All branches covered. Least recent: Branch 7 SOP series. Consider SOP #58 next.
+OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.
