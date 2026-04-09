@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 226)
+> 最後更新：2026-04-09 UTC (cycle 227)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -39,6 +39,7 @@
   - **cycle 224 paper-live tick 89** — BTC=$71,079.42 (↑$127.42 from tick 88), P&L=**+$0.602** (+0.602% on $100); 602 log entries; regime=MIXED; DualMA_10_30=SHORT×89 (100%); MFE ATH +$1.204 (tick 50); BTC net ↓$430.48 from entry; SHORT headwind but thesis intact
   - **cycle 225 paper-live ticks 90+91+92** — BTC=$71,008.87 (↓$70.55 from tick 89), P&L=**+$0.701** (+0.701% on $100); 647 log entries; regime=MIXED; DualMA_10_30=SHORT×92 (100%); MFE ATH +$1.204 (tick 50); BTC net ↓$501.03 from entry; SHORT tailwind resumed
   - **cycle 226 paper-live tick 93** — BTC=$70,895.98 (↓$112.89 from tick 92), P&L=**+$0.858** (+0.858% on $100); 662 log entries; regime=MIXED; DualMA_10_30=SHORT×93 (100%); MFE ATH +$1.204 (tick 50); BTC net ↓$613.92 from entry; SHORT tailwind continues
+  - **cycle 227 paper-live tick 94** — BTC=$70,930.43 (↑$34.45 from tick 93), P&L=**+$0.810** (+0.810% on $100); 677 log entries; regime=MIXED; DualMA_10_30=SHORT×94 (100%); MFE ATH +$1.204 (tick 50); BTC net ↓$579.47 from entry; SHORT headwind (slight pullback)
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
@@ -111,6 +112,7 @@
 - 5.7 Health dashboard：dashboard.py ✓ (8 sections: boot/exports/cold-start/memory/daemon/trading/tree/staging, --json/--watch)
 - 5.3 Web platform：GET /tree + GET /paper-live-log added ✓ (Phase 2 live); paper-live NetworkError handled gracefully ✓
 - 5.4 Documentation：README + SKILL_zh-TW updated ✓
+- **5.8 Distribution gap scan ✅** (cycle 227): `results/distribution_gap_scan_cycle227.md` — 5-layer funnel audit (content/queue/profile/engagement/revenue); key finding: single blocker = first post not sent; all 64 threads verified present; engagement log scaffold created (`results/engagement_log.md`); G0 profile check + G3 kill condition + G5 Gumroad account identified as pre-flight gaps; critical path: profile check → post SOP #01 → 48h log; SOP #34 G2 trigger documented (≥10 DMs → build PDF)
 
 ### 6. 存活冗餘（anti-fragile）
 - 6.1 冷啟動 recovery：templates/dna_core.md **330 MDs** ✓ (cycle 201: header updated MD-318→MD-330; cold-start boot test 33/33 ALIGNED ✅; staging/session_state.md created — was missing; cycle 94: domains 7+8 initialized; cycle 55: distill chain 202604→201703 complete)
@@ -124,6 +126,7 @@
 - **6.9 CI pipeline — CREATED ✅** (cycle 203): `.github/workflows/ci.yml` — 2 jobs: (1) cold-start-validation (Py 3.11+3.12 matrix): cold_start_test.py 5/5 + consistency_test.py 33/33 + multi_provider import; (2) trading-import: strategies import + scope separation check (L1/L2/L3 no cross-layer file conflicts); wires Branch 6 health into every push; boot_time=0.062s confirmed; paper-live tick 72 (240 total entries); **Branch 6 存活冗餘 has automated sentinel on every commit ✅**
 - **6.11 Consistency verification (cycle 214)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — all 33 scenarios deterministically aligned; Branch 6 存活 health confirmed; cold-start behavioral integrity intact
 - **6.12 Consistency re-verification (cycle 223)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — cold-start behavioral integrity intact; baseline saved to results/consistency_baseline.json; daemon_next_priority '存活/cold-start' branch TOUCHED ✅
+- **6.13 Consistency re-verification (cycle 227)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — cold-start behavioral integrity intact; daemon_next_priority '存活/cold-start' TOUCHED ✅ (was least-recent per cycle 226 daemon)
 - **6.10 Dashboard health monitoring — WIRED ✅** (cycle 204): `platform/generate_dashboard_state.py` — added `RESULTS` constant, `read_json()` helper, and `collect_health()` function; `"health"` key now in dashboard_state.json: ci_wired=True, consistency_aligned=7/7 (100%), paper_live_price=$71,065, paper_live_signal=FLAT, paper_tick=71, paper_pnl=+$0.560; Branch 6 health now visible in web dashboard JSON ✅
 
 ### 7. 知識輸出（scale intelligence externally）
