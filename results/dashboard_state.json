@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T19:20+08",
+  "updated": "2026-04-09T19:28+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Queue blocker unchanged: critical path still requires Edward to post SOP #01 ..."
+      "text": "B1+B7 Trading + Knowledge — SOP #92 (Strategy Disable & Reactivation Protocol..."
     },
     {
       "time": "just now",
-      "text": "| 3.1 Distillation | 3 insights appended → total 84 in insights.json |"
+      "text": "- Named the freeze pattern: \"pre-launch local maximum trap\" — internal metric..."
     },
     {
       "time": "just now",
-      "text": "| 7 SOP series | SOP #91: Monthly DNA Calibration Audit — fills the gap SOP#8..."
+      "text": "- Two-track divergence risk: paper_live_log and trading_engine_status.json ha..."
     },
     {
       "time": "just now",
-      "text": "| 6 存活 | consistency_test.py → 33/33 ALIGNED ✅; 30+ consecutive clean cycles;..."
+      "text": "- Trading -1.09% is a FLAT regime signal, not failure — system executing \"bia..."
     },
     {
       "time": "just now",
-      "text": "| 1.1 Trading | Tick 139: BTC=$71,187.11 (↓$114.89); SHORT×139 (100%); 17/18 ..."
+      "text": "- First X post = maximum derivative. d(immortality)/d(first_post) dominates a..."
     }
   ],
   "stats": {

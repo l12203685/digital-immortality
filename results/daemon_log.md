@@ -6715,3 +6715,17 @@ Cycle 255 complete. Summary:
 | **3.1 Distillation** | 3 insights appended → total 84 in insights.json |
 
 **Queue blocker unchanged**: critical path still requires Edward to post SOP #01 on X (⚡ 89 days to 2026-07-07 deadline).
+
+## Cycle 46 — 2026-04-09 11:28:19 UTC
+
+Committed. Summary of what was pushed:
+
+**B6 存活/cold-start** — consistency_test: 33/33 deterministic ALIGNED ✅ (30+ consecutive clean). 3 LLM-required MISALIGNED as expected (baseline unchanged). Least-recent pointer → B2 行為等価/DNA-calibration.
+
+**B3 遞迴引擎** — New recursive output written. Key derivatives identified:
+- First X post = maximum derivative. d(immortality)/d(first_post) dominates all other partials. Everything else is at local maxima or human-gated.
+- Trading -1.09% is a FLAT regime signal, not failure — system executing "bias toward inaction" correctly.
+- **Two-track divergence risk**: paper_live_log and trading_engine_status.json have diverged state for DualMA_10_30 — latent mainnet risk before going live.
+- Named the freeze pattern: **"pre-launch local maximum trap"** — internal metrics optimizable indefinitely while d(external signal)/d(work) = 0. Escape = M1 (first post sent).
+
+**B1+B7 Trading + Knowledge** — SOP #92 (Strategy Disable & Reactivation Protocol) created, directly addressing the live DualMA_10_30 disable event. G0-G4 gates + self-test scenario + Twitter hook. Trading analysis: all 13 active strategies correctly flat in mixed regime.
