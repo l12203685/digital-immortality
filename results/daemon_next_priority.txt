@@ -1,1 +1,1 @@
-PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.
+PRIORITY: 201901 JSONL → Branch 2.2 next (MD-361~363); Branch 1.1 monitoring BollingerMR SHORT regime evolution; Branch 6 COMPLETE (46th clean).
