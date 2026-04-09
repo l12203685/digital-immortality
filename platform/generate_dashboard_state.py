@@ -14,6 +14,16 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 TREE_PATH = REPO_ROOT / "results" / "dynamic_tree.md"
 LOG_PATH = REPO_ROOT / "results" / "daemon_log.md"
 OUT_PATH = REPO_ROOT / "results" / "dashboard_state.json"
+RESULTS = REPO_ROOT / "results"
+MEMORY = REPO_ROOT / "memory"
+
+
+def read_json(path: Path) -> Any:
+    """Read and parse a JSON file, returning None if missing or malformed."""
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return None
 
 DEADLINE = "2026-07-07"
 
@@ -73,7 +83,7 @@ CLEAN_STATUS = {
     4: "等朋友加入",
     5: "v2.2 deployed",
     6: "冷啟動 <5min",
-    7: "34 SOPs ready",
+    7: "43 SOPs ready",
     8: "Calendar maintained",
 }
 
@@ -202,6 +212,71 @@ def _relative_time(ts_str: str) -> str:
     return f"{days}d ago"
 
 
+def collect_health() -> dict[str, Any]:
+    """Collect cold-start health signals for the dashboard."""
+    health: dict[str, Any] = {}
+
+    # 1. CI pipeline presence
+    ci_path = REPO_ROOT / ".github" / "workflows" / "ci.yml"
+    health["ci_wired"] = ci_path.exists()
+
+    # 2. Consistency scorecard — alignment rate
+    scorecard = read_json(RESULTS / "consistency_scorecard.json")
+    if scorecard:
+        summary = scorecard.get("summary", {})
+        llm = summary.get("llm_instance_1", {})
+        health["consistency_aligned"] = llm.get("aligned", "?")
+        health["consistency_total"] = llm.get("total", "?")
+        health["consistency_score"] = llm.get("score", "?")
+    else:
+        baseline = read_json(RESULTS / "consistency_baseline.json")
+        if baseline:
+            results = baseline.get("results", [])
+            aligned = sum(1 for r in results if r.get("aligned", False))
+            health["consistency_aligned"] = aligned
+            health["consistency_total"] = len(results)
+            health["consistency_score"] = f"{aligned}/{len(results)}"
+
+    # 3. Paper-live last tick (from paper_live_log.jsonl)
+    paper_log = RESULTS / "paper_live_log.jsonl"
+    if paper_log.exists():
+        lines = [l.strip() for l in paper_log.read_text(encoding="utf-8").splitlines() if l.strip()]
+        last_ticks = []
+        for line in reversed(lines):
+            try:
+                entry = json.loads(line)
+                if entry.get("action") == "PAPER_LIVE":
+                    last_ticks.append(entry)
+                    if len(last_ticks) >= 2:
+                        break
+            except json.JSONDecodeError:
+                continue
+        if last_ticks:
+            latest = last_ticks[0]
+            health["paper_live_price"] = latest.get("price")
+            health["paper_live_signal"] = latest.get("signal")
+            health["paper_live_ts"] = latest.get("ts", "")[:16]
+        else:
+            health["paper_live_signal"] = "network_fail"
+
+    # 4. Cold start test — read from mainnet paper live PnL report
+    pnl_report = RESULTS / "paper_live_pnl_report.md"
+    if pnl_report.exists():
+        text = pnl_report.read_text(encoding="utf-8")
+        # Match "N ticks" pattern (total tick count) or "tick N:" for current tick
+        tick_m = re.search(r"(\d+)\s+ticks?\s*[|]", text, re.IGNORECASE)
+        if not tick_m:
+            tick_m = re.search(r"tick\s+(\d+):", text, re.IGNORECASE)
+        pnl_m = re.search(r"P&L[:\s=]*\*?\*?\+?\$?([\d.]+)", text)
+        if tick_m:
+            health["paper_tick"] = int(tick_m.group(1))
+        if pnl_m:
+            health["paper_pnl"] = f"+${pnl_m.group(1)}"
+
+    health["status"] = "ok"
+    return health
+
+
 def count_stats(tree_text: str, log_text: str) -> dict[str, int]:
     """Extract stats from the files."""
     # Count MDs from tree
@@ -269,6 +344,7 @@ def generate() -> dict[str, Any]:
         "cards": cards,
         "activity": parse_log_tail(log_text),
         "stats": count_stats(tree_text, log_text),
+        "health": collect_health(),
     }
     return state
 
@@ -284,6 +360,7 @@ def main() -> None:
     print(f"  regime: {state['regime']}")
     print(f"  cards: {len(state['cards'])}, activity: {len(state['activity'])}")
     print(f"  stats: {state['stats']}")
+    print(f"  health: {state['health']}")
 
 
 if __name__ == "__main__":

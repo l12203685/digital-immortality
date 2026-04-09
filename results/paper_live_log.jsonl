@@ -238,3 +238,5 @@
 {"action": "PAPER_LIVE", "ts": "2026-04-09T02:59:15.550270+00:00", "strategy": "gen_BollingerMeanReversion_f91248", "price": 71065.82, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
 {"action": "PAPER_LIVE", "ts": "2026-04-09T02:59:15.550270+00:00", "strategy": "gen_DonchianConfirmed_a7186a", "price": 71065.82, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
 {"action": "PAPER_LIVE", "ts": "2026-04-09T02:59:15.550270+00:00", "strategy": "gen_DualMA_RF_602541", "price": 71065.82, "signal": "FLAT", "regime": "mixed", "note": "paper -- no real order placed"}
+{"action": "PAPER_LIVE_NETWORK_FAIL", "ts": "2026-04-09T03:04:18.674827+00:00", "error": "binance GET https://api.binance.com/api/v3/exchangeInfo", "note": "network unavailable"}
+{"action": "PAPER_LIVE_NETWORK_FAIL", "ts": "2026-04-09T03:04:40.493575+00:00", "error": "binance GET https://api.binance.com/api/v3/exchangeInfo", "note": "network unavailable"}

@@ -1,1 +1,1 @@
-PRIORITY: Branch '社交/organism' neglected for 14 cycles. Do concrete work on this branch next cycle.
+PRIORITY: Branch 7 — update CLEAN_STATUS[7] from "34 SOPs ready" → "43 SOPs ready" (DONE this cycle). Branch 1.3 skill 商業化 neglected — users=0, diagnose first-user blocker next cycle.

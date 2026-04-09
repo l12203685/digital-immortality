@@ -66,6 +66,20 @@
         "automated"
       ],
       "confidence": 0.9
+    },
+    {
+      "id": "e2e7b462-b345-45de-bf15-a8e8fa1be7ee",
+      "key": "risk-scenario-calibration-2026-04-09",
+      "content": "Risk scenario (30% 10x / 70% total loss, stake=20% net worth): EV = -3.2% net worth. CORRECT response = PASS. The TAKE response in round 003717 was a calibration error. Pre-committed rule: if EV < 0 AND downside > 15% net worth → AUTOMATIC PASS, no deliberation.",
+      "timestamp": "2026-04-09T03:11:08.377787+00:00",
+      "source": "organism_audit_cycle204",
+      "tags": [
+        "risk",
+        "calibration",
+        "organism",
+        "branch-4.1"
+      ],
+      "confidence": 0.95
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T11:02+08",
+  "updated": "2026-04-09T11:13+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -50,7 +50,7 @@
     {
       "name": "知識",
       "icon": "📝",
-      "status": "34 SOPs ready",
+      "status": "43 SOPs ready",
       "color": "green",
       "detail": "productization forces all implicit steps to surface"
     },
@@ -64,29 +64,41 @@
   ],
   "activity": [
     {
-      "time": "just now",
+      "time": "10min ago",
       "text": "Branch 6 was neglected because it had no automated enforcement — it relied on..."
     },
     {
-      "time": "just now",
+      "time": "10min ago",
       "text": "| Pushed to GitHub | Branch 6 sentinel wired into every commit |"
     },
     {
-      "time": "just now",
+      "time": "10min ago",
       "text": "| session_state.md | Branch 6 row: \"neglected 30 cycles\" → \"6.9 CI ✅; 33/33 A..."
     },
     {
-      "time": "just now",
+      "time": "10min ago",
       "text": "| dynamic_tree.md Branch 6 | 6.9 added, timestamp cycle 203 |"
     },
     {
-      "time": "just now",
+      "time": "10min ago",
       "text": "| trading-import job | strategies import + scope separation L1/L2/L3 check |"
     }
   ],
   "stats": {
     "daemon_cycles": 202,
     "total_mds": 330,
-    "dna_core_lines": 87
+    "dna_core_lines": 426
+  },
+  "health": {
+    "ci_wired": true,
+    "consistency_aligned": 7,
+    "consistency_total": 7,
+    "consistency_score": "100%",
+    "paper_live_price": 71065.82,
+    "paper_live_signal": "FLAT",
+    "paper_live_ts": "2026-04-09T02:59",
+    "paper_tick": 71,
+    "paper_pnl": "+$0.560",
+    "status": "ok"
   }
 }
