@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T19:40+08",
+  "updated": "2026-04-09T20:03+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Branch 7 (SOP): SOP #93 LLM Boot Test Validation Protocol — G0-G5, formula/in..."
+      "text": "Blockers remain human-gated: Edward posts SOP #01 on X; set mainnet API keys;..."
     },
     {
       "time": "just now",
-      "text": "Branch 6 (存活/cold-start): 33/33 deterministic ALIGNED, 31+ consecutive cycles..."
+      "text": "L2 verdict: 1A (SOP #95 — HIGH) + 4B. L3 not triggered."
     },
     {
       "time": "just now",
-      "text": "Branch 3.1 (Distillation): 3 insights → insights.json, total 90."
+      "text": "| 3.1 Distillation | 3 insights → insights.json (total 96) |"
     },
     {
       "time": "just now",
-      "text": "- dna_core.md: 333 MDs. Next: 201910."
+      "text": "| 7 SOP #95 | Organism Network Effect Protocol — structural vs idiosyncratic ..."
     },
     {
       "time": "just now",
-      "text": "Branch 2.2 (DNA distillation): Read 201911 JSONL (21 substantive Edward msgs,..."
+      "text": "| 6 存活 | 33/33 deterministic ALIGNED ✅; 32+ consecutive clean cycles |"
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71187.11,
+    "paper_live_price": 71182.21,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T11:16",
+    "paper_live_ts": "2026-04-09T11:56",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"
