@@ -5544,3 +5544,15 @@ Next blocker: Edward posts SOP #01 (human-gated).
 **Branch 1.1 paper-live** — ran tick 59: BTC=$70,820.84, SHORT×59 (100%), P&L=+$0.963 (+0.963% on $100). MFE ATH still +$1.204 (tick 50). BTC bounced off lows, regime shifted to mixed (trend=0.014, mr=0.225) — DualMA_10_30 only strategy still signaling SHORT.
 
 **Highest-derivative branch**: Branch 1.1 (economic self-sufficiency) — signal locked, P&L positive, waiting for mainnet keys (human-gated). Branch 7 also human-gated (Edward posts SOP #01). No autonomous unlock available this cycle.
+
+## Cycle 190 — 2026-04-09T10:45 UTC
+
+**Branch 1.1 paper-live** tick 60: BTC=$70,760.35, SHORT×60 (100%), P&L=+$1.048 (+1.048% on $100). New P&L high vs tick 59 (+0.963). MFE ATH still +$1.204 (tick 50). Blocker: mainnet keys (human-gated).
+
+**Branch 7.40 — SOP #40 shipped**: Information Asymmetry Edge Protocol (Kernel 2: 資訊不對稱決定行動方向).
+- 5 gates: G0 edge type ID (A/B/C/D) → G1 decay check → G2 adversarial test → G3 sizing rule → G4 population exploit screen → G5 edge log quarterly review
+- DNA anchors: MD-02/04/05/16/44/54/57/62
+- 10-tweet thread ready
+- Posting queue extended to **SOP #01~#40** (Jun 26)
+
+Next blocker: Edward posts SOP #01 (human-gated).

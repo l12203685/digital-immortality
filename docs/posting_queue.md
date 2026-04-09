@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#39
+# Twitter Posting Queue — SOP Series #01~#40
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -46,6 +46,7 @@
 | Jun 20 | #37 | publish_thread_sop37_twitter.md | "Most people treat relationships like a checking account — only think about it when they need something. Here's the maintenance SOP." | pending |
 | Jun 22 | #38 | publish_thread_sop38_twitter.md | "Most traders kill strategies too early. Some hold them too long. Both lose money. 5-gate Alpha Decay protocol." | pending |
 | Jun 24 | #39 | publish_thread_sop39_twitter.md | "Most people benchmark their salary against their last job. That's the worst anchor possible. Here's the 6-gate Career Capital Protocol." | pending |
+| Jun 26 | #40 | publish_thread_sop40_twitter.md | "Most people trade ideas. A few trade edges. The difference: one has a structural reason to be right." | pending |
 
 ---
 
