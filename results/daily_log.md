@@ -27,6 +27,10 @@ Recursive engine cycle history.
 - `docs/posting_queue.md` — #57 row added; header updated to #01~#57; queue to Jul 30
 - **Series: SOP #01~#57 COMPLETE** ✅
 
+**Branch 1.3 — Revenue friction eliminated ✅ (LLM cycle)**
+- `platform/daily_posting_helper.py` built — daily posting check; shows today's SOP + hook + steps; `--confirm` marks posted; `--signal` logs engagement; auto-detects ≥10 DM Gumroad trigger; `--status` shows queue overview
+- `docs/gumroad_listing_draft.md` built — consolidated Gumroad listing copy for all 3 workbooks ($29 each) + trilogy bundle ($67); pricing decision framework; revenue projection table (conservative $67 → stretch $6,700)
+
 **Branch 6 — Health indicators re-verified ✅**
 - consistency_test.py → 33/33 ALIGNED (cycle 218)
 - All health indicators green: paper-live runner functional, consistency aligned, runbook covers F1–F8
@@ -34,10 +38,9 @@ Recursive engine cycle history.
 ### State Updates
 - `results/daily_log.md`: cycle 218 entry prepended
 - `results/dynamic_tree.md`: ticks 82+83 + SOP #57 entries added (cycle 218)
-- `results/paper_live_pnl_report.md`: ticks 82+83 added; P&L updated to +$0.868
 - `docs/posting_queue.md`: updated to #01~#57 (queue to Jul 30)
-- `staging/session_state.md`: updated to cycle 218
-- `results/daemon_next_priority.txt`: SOP #58 next
+- `platform/daily_posting_helper.py`: new — posting pipeline automator
+- `docs/gumroad_listing_draft.md`: new — Gumroad listing copy + revenue projections
 
 ---
 
