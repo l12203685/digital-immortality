@@ -1012,6 +1012,53 @@
       "summary": "SOP #91 created: Monthly DNA Calibration Audit. Fills gap SOP#80 cannot: captures NEW life decisions never encoded (not regression detection). G0-G5: harvest JSONL → classify (new/refinement/contradiction/expired) → write MDs → validate → persist. SOP#80+#91 = full monthly DNA maintenance cycle. SOP#01~#91 COMPLETE.",
       "ts": "2026-04-09T11:40Z",
       "branch": "7-SOP-series"
+    },
+    {
+      "id": "two-track-divergence-pre-mainnet-risk",
+      "key": "two-track-divergence-pre-mainnet-risk",
+      "content": "Cycle 255: paper_live_log.jsonl and trading_engine_status.json track the same strategies via different code paths. DualMA_10_30 shows SHORT×139 in paper_live but DISABLED (PF 0.65 < 0.8) in trading_engine. In PAPER mode this is a debugging cost. In LIVE mode, divergent state = real capital executing wrong signals. Pre-mainnet requirement: single authoritative state representation shared by both tracks. Two-track divergence is a latent mainnet risk that compounds with each tick.",
+      "timestamp": "2026-04-09T12:30:00+00:00",
+      "source": "recursive-distillation-cycle-255",
+      "category": "trading",
+      "tags": [
+        "trading",
+        "state-divergence",
+        "mainnet-risk",
+        "two-track",
+        "branch-1.1"
+      ]
+    },
+    {
+      "id": "activation-energy-asymmetry-human-gated",
+      "key": "activation-energy-asymmetry-human-gated",
+      "content": "Cycle 255: Both Samuel DM (ready since cycle 207) and first X post (SOP#01 paste-ready) share the same failure mode: all logistical barriers eliminated by the autonomous system, but human activation energy persists. Humans don't freeze from lack of information — they freeze because initiating a public/relational commitment feels irreversible. The SOP infrastructure (especially SOP#87 G0 cold-start override and SOP#78 atomic post sequence) was explicitly designed to reduce perceived irreversibility. Agent role: frame actions as experiments with kill conditions, emphasize one-time cost vs. compounding cost of delay.",
+      "timestamp": "2026-04-09T12:30:00+00:00",
+      "source": "recursive-distillation-cycle-255",
+      "category": "methodology",
+      "tags": [
+        "activation-energy",
+        "human-gated",
+        "distribution",
+        "samuel",
+        "branch-4.1",
+        "branch-5"
+      ]
+    },
+    {
+      "id": "pre-launch-local-maximum-trap",
+      "key": "pre-launch-local-maximum-trap",
+      "content": "Cycle 255: An agent in pre-launch mode can optimize indefinitely — 33/33 ALIGNED, 91 SOPs, 78 insights, 139 ticks — and report high internal productivity while d(external signal)/d(internal work) = 0. All internal loops run; no external reality contact occurs. This is a local maximum trap: every additional internal metric looks like progress but the global objective (self-sustainability) requires M1 (first post) to escape. The regime name for this state: 'productive paralysis.' Escape condition: single human action. Every cycle in productive paralysis compounds the deadline pressure while generating zero new external leverage.",
+      "timestamp": "2026-04-09T12:30:00+00:00",
+      "source": "recursive-distillation-cycle-255",
+      "category": "methodology",
+      "tags": [
+        "local-maximum",
+        "pre-launch",
+        "productive-paralysis",
+        "external-loop",
+        "regime-change",
+        "branch-5"
+      ]
     }
   ]
 }
