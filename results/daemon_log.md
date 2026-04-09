@@ -5811,3 +5811,15 @@ Blocker: mainnet keys (human-gated).
 - Regime = MIXED (trend=0.014, mr=0.225), DualMA_10_30 only signaling
 
 Blocker: mainnet keys (human-gated).
+
+## Cycle 1 — 2026-04-09 02:43:57 UTC
+
+**Cycle 200 done.**
+
+**Branch 1.1** — paper-live tick 70:
+- BTC = $70,993.99 → SHORT×70 (100%)
+- P&L = **+$0.721** (+0.721% on $100) — recovered from +$0.631 (tick 69), BTC down $64.68
+- MFE ATH = +$1.204 (tick 50) unchanged
+- Regime = MIXED, DualMA_10_30 only signaling
+
+Blocker: mainnet keys (human-gated).
