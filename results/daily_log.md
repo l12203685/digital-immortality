@@ -4,6 +4,38 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 211 — 2026-04-09T04:25:00Z
+
+### What was done
+
+**Branch 1.1 — paper-live tick 75 ✅**
+- BTC=$70,884.57 (down $121.56 from tick 74), regime=MIXED, DualMA_10_30=SHORT×75 (100%)
+- P&L: **+$0.874** (+0.874% on $100) — up from +$0.704 (tick 74); 347 log entries total
+- `results/paper_live_pnl_report.md` updated (added tick 74+75)
+
+**Branch 6+7 — SOP #50 Self-Evolving System Protocol ✅**
+- `docs/knowledge_product_50_self_evolution_sop.md` — 5-gate protocol:
+  - G0: Classify evolution type (gap/drift/redundancy/ossification/regime-shift) before touching anything
+  - G1: Isolate failing premise in one sentence — find the premise not the symptom
+  - G2: Minimum viable rule update — ≤3 sentences + decision label + domain constraint + behavioral anchor
+  - G3: Cross-domain validation — kernel if all domains pass, scoped if some, domain-specific if one
+  - G4: Anti-drift gate — consistency_test ≥33/33 + no kernel contradiction + behavioral change (not rewording) + timestamp
+  - G5: Persist to ALL durable locations in same cycle (learn = write meta-rule)
+- AND-gate 3-condition trigger: no new insight ×3 + missed correction + cross-domain pattern
+- Kill conditions: regression below 33/33 → restore from git; change motivated by aesthetics → stop
+- `docs/publish_thread_sop50_twitter.md` — 12-tweet thread; hook: "Most automated systems execute and evaluate. Almost none evolve their own rules."
+- Closes the three-layer loop: SOP#47(maintain) + SOP#49(restart) + SOP#50(evolve) = minimum viable immortality stack
+- Posting queue extended to **Jul 16**; **series SOP #01~#50 ✅**
+
+### State changes
+- Cycle: 210 → 211
+- paper-live P&L: +$0.692 (tick 73) → +$0.874 (tick 75)
+- SOP series: #01~#49 → #01~#50
+- posting queue: Jul 14 → Jul 16
+- Three-layer loop: L1(Execute)+L2(Evaluate) previously incomplete → L3(Evolve) now has standalone SOP ✅
+
+---
+
 ## Cycle 209 — 2026-04-09T UTC
 
 ### What was done
