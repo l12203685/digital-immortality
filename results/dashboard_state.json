@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T13:02+08",
+  "updated": "2026-04-09T13:12+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next priority (daemon): Branch 4.1/organism — least recently touched. Human b..."
+      "text": "3. Samuel: send async DM"
     },
     {
       "time": "just now",
-      "text": "Branch 6 — consistency_test.py → 33/33 ALIGNED. All health indicators green."
+      "text": "2. Discord: paste 4 seed posts → invite C"
     },
     {
       "time": "just now",
-      "text": "- Posting queue extended to Jul 26. SOP #01~#55 COMPLETE."
+      "text": "1. Post SOP #01 on X → starts the audience → revenue chain"
     },
     {
       "time": "just now",
-      "text": "- G4/G5: weekly review + emergency protocol"
+      "text": "Human-gated blockers (unchanged, highest derivative):"
     },
     {
       "time": "just now",
-      "text": "- G3: quarterly leverage scan — isolated single-change trial"
+      "text": "Daemon priority '存活/cold-start' addressed: SOP #56 is the FIRE/financial surv..."
     }
   ],
   "stats": {
@@ -94,11 +94,11 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 70765.32,
+    "paper_live_price": 70839.73,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T04:57",
-    "paper_tick": 78,
-    "paper_pnl": "+$0.861",
+    "paper_live_ts": "2026-04-09T05:06",
+    "paper_tick": 81,
+    "paper_pnl": "+$0.937",
     "status": "ok"
   }
 }

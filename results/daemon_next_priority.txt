@@ -1,1 +1,1 @@
-OK: All branches covered. Least recent: 'SOP/Domain-gap'. Consider touching it next. (cycle 217: '存活/cold-start' addressed via SOP #56 FIRE Protocol)
+OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.
