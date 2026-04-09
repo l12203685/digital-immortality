@@ -1,1 +1,1 @@
-PRIORITY: Branch '存活/cold-start' neglected for 30 cycles. Do concrete work on this branch next cycle.
+PRIORITY: Branch '社交/organism' neglected for 14 cycles. Do concrete work on this branch next cycle.
