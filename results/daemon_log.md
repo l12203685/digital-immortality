@@ -7200,3 +7200,19 @@ Cycle 296 complete. Four branches pushed:
 **B4.1 Samuel** — Collision re-run: **6/22 AGREE (27%)** — regression stable since cycle 277, no further drift. Root cause: Edward DNA +86 MDs since Samuel last calibrated. DM in `docs/samuel_async_calibration_dm.md` ready; **human-gated** (Edward sends).
 
 **daemon_next_priority** updated → `4.1/Samuel-organism`
+
+## Cycle 95 — 2026-04-09 20:08:09 UTC
+
+Cycle 297 complete. Four branches pushed:
+
+**B6 存活/cold-start** — 33/33 ALIGNED, **51st consecutive clean** (6.35 confirmed). daemon_next_priority TOUCHED.
+
+**B1.1 Trading** — tick 317, BTC=$72,105.31 (↓$49.69 SHORT tailwind), regime=MIXED, 15/15 active=FLAT (3 DISABLED). Inaction bias correct. 2038 log entries.
+
+**B2.2 微決策學習** — **CONFIRMED COMPLETE**. 416 MDs, JSONL archive exhausted (201610/11/12 = 0 msgs). No further pass possible. B2.2 closed.
+
+**B3.1 Distillation** — +3 insights (209 total): daemon-priority-stale-vs-advancing, archive-method-validated, all-flat-is-correct-signal.
+
+**daemon_next_priority** → `3.1/distillation-taxonomy-audit` — check if insight categories hit >10 items split threshold; synthesize MD gaps from cross-pattern analysis. Future MDs come from live experience + recursive synthesis, not archive mining.
+
+Human-gated blockers unchanged: mainnet API keys (deadline 2026-07-07), Samuel DM, outreach Week 1 sends.
