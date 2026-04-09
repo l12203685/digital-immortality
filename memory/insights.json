@@ -1500,6 +1500,41 @@
       "key": "branch2-md352-354-201904-cycle275",
       "content": "Branch 2.2 cycle 275: 201904 JSONL (2704 lines) → MD-352 交易淨報酬=毛報酬-手續費-稅 / MD-353 ETF成分篩選=市值門檻≥500億 / MD-354 散戶心態=以結果反推決策品質; 354 total MDs; next: 201903 → MD-355~357. Timestamp: 2026-04-09T15:15Z",
       "timestamp": "2026-04-09T15:15Z"
+    },
+    {
+      "key": "201903-market-sentiment-framework-info-learning-cycle276",
+      "content": "Branch 2.2 cycle 276: 201903 JSONL (Mar 2019) → MD-355~357: 市場共識=情緒溫度計(基本面/情緒面分離框架)/資訊消費≠框架建立(L1-L2-L3驗證層級)/初次實驗損失=預設學費(事前學費上限設計); 357 total MDs; next: 201902. Timestamp: 2026-04-09T15:30Z",
+      "timestamp": "2026-04-09T15:30Z",
+      "source": "branch-2.2-cycle-276",
+      "tags": [
+        "dna",
+        "branch-2.2",
+        "cycle-276",
+        "201903"
+      ]
+    },
+    {
+      "key": "paper-live-tick153-long-synthetic-cycle276",
+      "content": "Branch 1.1 paper-live tick 153 (synthetic, Binance offline): BTC=$71,128.59; regime=MIXED; DualMA_10_30=LONG, DualMA_RSI=LONG, DualMA_RSI_filtered=LONG, DualMA_filtered=LONG; 14/18 FLAT; 1786 total entries. LONG signal structural, confirmed for 2nd synthetic tick post-flip. Timestamp: 2026-04-09T15:30Z",
+      "timestamp": "2026-04-09T15:30Z",
+      "source": "branch-1.1-cycle-276",
+      "tags": [
+        "paper-live",
+        "branch-1.1",
+        "cycle-276",
+        "long-signal"
+      ]
+    },
+    {
+      "key": "consistency-45-consecutive-cycle276",
+      "content": "Branch 6 consistency_test.py cycle 276: 33/33 deterministic ALIGNED; 6 LLM-required MISALIGNED (expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev/meta_search_before_act/meta_output_must_persist/meta_three_layer_loop); 45th consecutive clean cycle. BRANCH 6 COMPLETE. Timestamp: 2026-04-09T15:30Z",
+      "timestamp": "2026-04-09T15:30Z",
+      "source": "consistency-test-cycle-276",
+      "tags": [
+        "consistency",
+        "branch-6",
+        "cycle-276"
+      ]
     }
   ]
 }

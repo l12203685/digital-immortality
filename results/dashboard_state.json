@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T23:12+08",
+  "updated": "2026-04-09T23:19+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,30 +64,30 @@
   ],
   "activity": [
     {
-      "time": "just now",
+      "time": "6min ago",
       "text": "Commit: `7232f5e`"
     },
     {
-      "time": "just now",
+      "time": "6min ago",
       "text": "Branch 3.1 — 3 insights appended; total 139"
     },
     {
-      "time": "just now",
+      "time": "6min ago",
       "text": "Branch 6 — 33/33 deterministic ALIGNED ✅; 44th consecutive clean cycle"
     },
     {
-      "time": "just now",
+      "time": "6min ago",
       "text": "Branch 1.1 — BTC=$70,954 OPEN_SHORT; P&L=-0.2078%; regime=MIXED"
     },
     {
-      "time": "just now",
+      "time": "6min ago",
       "text": "- dna_core.md: 354 MDs total; next: 201903 → MD-355~357"
     }
   ],
   "stats": {
     "daemon_cycles": 264,
     "total_mds": 355,
-    "dna_core_lines": 87
+    "dna_core_lines": 447
   },
   "health": {
     "ci_wired": false,
@@ -96,7 +96,7 @@
     "consistency_score": "100%",
     "paper_live_price": 71128.59,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T14:08",
+    "paper_live_ts": "2026-04-09T15:15",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"
