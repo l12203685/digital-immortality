@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T19:05+08",
+  "updated": "2026-04-09T19:11+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "3. Send `docs/samuel_async_calibration_dm.md` to Samuel"
+      "text": "Blocker unchanged: Critical path is human-gated — Edward posts SOP #01 on X t..."
     },
     {
       "time": "just now",
-      "text": "2. Set BINANCE_MAINNET_KEY/SECRET → live trading"
+      "text": "L2 verdict: 1A + 3B. L3 not triggered."
     },
     {
       "time": "just now",
-      "text": "1. Post SOP #01 on X → M1 → full revenue flywheel starts"
+      "text": "| 3.1 Distillation | insights.json +3 | Total 81 entries |"
     },
     {
       "time": "just now",
-      "text": "Blockers (human-gated, ⚡89 days):"
+      "text": "| 7 SOP series | SOP #90 written | Revenue Rate Tracking Dashboard; weekly G0..."
     },
     {
       "time": "just now",
-      "text": "B3.1 Distillation — 3 insights appended, total 78"
+      "text": "| 6 存活/cold-start | consistency_test.py | 33/33 ALIGNED ✅; 29+ consecutive cl..."
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71279.0,
+    "paper_live_price": 71301.74,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T11:00",
+    "paper_live_ts": "2026-04-09T11:09",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"

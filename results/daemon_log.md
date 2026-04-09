@@ -6683,3 +6683,18 @@ Cycle 254 committed. Summary:
 1. Post SOP #01 on X → M1 → full revenue flywheel starts
 2. Set BINANCE_MAINNET_KEY/SECRET → live trading
 3. Send `docs/samuel_async_calibration_dm.md` to Samuel
+
+## Cycle 44 — 2026-04-09 11:11:53 UTC
+
+Cycle 255 complete. Summary:
+
+| Branch | Action | Result |
+|--------|--------|--------|
+| **1.1** Trading | paper-live ticks 137-138 | BTC~$71,302; SHORT×138 (100%); 1481 entries; regime=MIXED |
+| **6** 存活/cold-start | consistency_test.py | 33/33 ALIGNED ✅; 29+ consecutive clean cycles (touched per daemon priority) |
+| **7** SOP series | SOP #90 written | Revenue Rate Tracking Dashboard; weekly G0-G5; MRR vs 2026-07-07 deadline; baseline 🔴 Red (M1 not hit); **SOP #01~#90 COMPLETE** |
+| **3.1** Distillation | insights.json +3 | Total 81 entries |
+
+**L2 verdict**: 1A + 3B. L3 not triggered.
+
+**Blocker unchanged**: Critical path is human-gated — Edward posts SOP #01 on X to start M1.
