@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T12:02+08",
+  "updated": "2026-04-09T12:11+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Human-gated blockers unchanged: mainnet API keys, X first post, Samuel DM, Di..."
+      "text": "3. Fill `templates/organism_c_draft.md` §0+§7 → first Organism C collision"
     },
     {
       "time": "just now",
-      "text": "- Branch 6 now covers all three engine layers, not just file-level recovery"
+      "text": "2. Paste 4 Discord seed posts → unblocks Branch 4.3"
     },
     {
       "time": "just now",
-      "text": "- Staleness alarm → 4-step restart sequence with exact bash commands"
+      "text": "1. Send `docs/samuel_async_calibration_dm.md` → unblocks Branch 4.1"
     },
     {
       "time": "just now",
-      "text": "- L3 evolution trigger: 3-condition gate"
+      "text": "Human-gated actions remain:"
     },
     {
       "time": "just now",
-      "text": "- Stale-vs-dead diagnostic signals for L1/L2/L3"
+      "text": "SOP #49 核心: Daemon flagged `存活/cold-start` as least recent → responded with a..."
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71014.9,
+    "paper_live_price": 71006.13,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T03:55",
+    "paper_live_ts": "2026-04-09T04:06",
     "paper_tick": 73,
     "paper_pnl": "+$0.692",
     "status": "ok"
