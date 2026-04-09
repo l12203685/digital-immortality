@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T20:48+08",
+  "updated": "2026-04-09T20:59+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,28 +65,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "4. Set BINANCE_MAINNET_KEY/SECRET"
+      "text": "Branch 7 — SOP #99 COMPLETE ✅ → SOP #01~#99 COMPLETE"
     },
     {
       "time": "just now",
-      "text": "3. Identify Turing Test Candidates 2+3 (SOP #98 G1)"
+      "text": "Branch 6 — 存活/cold-start (daemon priority) — consistency_test.py 33/33 ALIGNE..."
     },
     {
       "time": "just now",
-      "text": "2. Send `docs/samuel_async_calibration_dm.md` to Samuel (unblocks Branch 4.1 ..."
+      "text": "Branch 3.1 — insights.json: 114 entries (+6 this cycle)"
     },
     {
       "time": "just now",
-      "text": "1. Post SOP #01 on X (critical path — revenue clock)"
+      "text": "- dna_core.md: 336 MDs; next: 201909"
     },
     {
       "time": "just now",
-      "text": "Edward actions still blocking:"
+      "text": "Branch 2.2 — 201910 JSONL (2850 Edward msgs, 15 substantive) → MD-334~336:"
     }
   ],
   "stats": {
     "daemon_cycles": 264,
-    "total_mds": 331,
+    "total_mds": 334,
     "dna_core_lines": 87
   },
   "health": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71167.95,
-    "paper_live_signal": "SHORT",
-    "paper_live_ts": "2026-04-09T12:35",
+    "paper_live_price": 71197.89,
+    "paper_live_signal": "FLAT",
+    "paper_live_ts": "2026-04-09T12:53",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"
