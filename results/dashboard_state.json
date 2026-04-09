@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T09:07+08",
+  "updated": "2026-04-09T09:14+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#34 COMPLETE → posting_queue.md updated (#01~#34, Apr 9–Jun 14); **x_launch_sequence.md created ✓** — first-post friction reduced to 15 min; Apr 9 = scheduled post date for SOP #01; **3 workbooks READY TO LIST** (Workbook #01 Strategy Development + Workbook #02 Portfolio Construction + Workbook #03 Execution & Sizing, $29 each, $87/buyer trilogy)",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions pre-committed)",
   "deadline": "2026-07-07",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
+      "text": "Blockers unchanged (human-gated): mainnet API keys OR post SOP #01 on X."
+    },
+    {
+      "time": "just now",
+      "text": "BTC broke below the prior ATH price level; MFE/MAE ratio 0.90x (improving). 5..."
+    },
+    {
+      "time": "just now",
+      "text": "Branch 1.1 — tick 50: BTC=$70,649.77, SHORT×50 (100%), P&L +$1.20 (+1.20%) — ..."
+    },
+    {
+      "time": "just now",
+      "text": "Cycle 186 done."
+    },
+    {
+      "time": "2min ago",
       "text": "Both blockers remain human-gated: mainnet API keys OR post SOP #01 on X."
-    },
-    {
-      "time": "just now",
-      "text": "BTC dipped $80 from tick 48, P&L recovering toward ATH (+$1.19 @ tick 46). Si..."
-    },
-    {
-      "time": "just now",
-      "text": "Branch 1.1 — tick 49: BTC=$70,784, SHORT×49 (100%), P&L +$1.01 (+1.01%) on $100."
-    },
-    {
-      "time": "just now",
-      "text": "Cycle 185 done."
-    },
-    {
-      "time": "just now",
-      "text": "Both blockers remain human-gated: mainnet keys OR post SOP #01 on X."
     }
   ],
   "stats": {
-    "daemon_cycles": 185,
+    "daemon_cycles": 186,
     "total_mds": 330,
     "dna_core_lines": 87
   }
