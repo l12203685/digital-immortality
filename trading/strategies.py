@@ -261,3 +261,16 @@ NAMED_STRATEGIES: Dict[str, object] = {
     "BollingerMR_20": bollinger_mr_btc_daily,
     "BollingerMR_loose": bollinger_mr_loose,
 }
+
+
+# --- Auto-generated strategies (strategy_generator.py) ---
+gen_DonchianConfirmed_a7186a = DonchianConfirmed(period=15)
+NAMED_STRATEGIES["gen_DonchianConfirmed_a7186a"] = gen_DonchianConfirmed_a7186a
+gen_DualMA_RF_602541 = RegimeFilter(DualMA(fast=15, slow=20), trend_period=50, slope_bars=5, min_slope_pct=0.2)
+NAMED_STRATEGIES["gen_DualMA_RF_602541"] = gen_DualMA_RF_602541
+gen_BollingerMeanReversion_f91248 = BollingerMeanReversion(lookback=25, num_std=2.0, trend_lookback=40, trend_threshold=0.005)
+NAMED_STRATEGIES["gen_BollingerMeanReversion_f91248"] = gen_BollingerMeanReversion_f91248
+gen_BollingerMeanReversion_RF_7abfe4 = RegimeFilter(BollingerMeanReversion(lookback=15, num_std=1.5, trend_lookback=60, trend_threshold=0.005), trend_period=60, slope_bars=7, min_slope_pct=0.05)
+NAMED_STRATEGIES["gen_BollingerMeanReversion_RF_7abfe4"] = gen_BollingerMeanReversion_RF_7abfe4
+gen_BollingerMeanReversion_RF_598b24 = RegimeFilter(BollingerMeanReversion(lookback=20, num_std=1.5, trend_lookback=40, trend_threshold=0.005), trend_period=50, slope_bars=3, min_slope_pct=0.2)
+NAMED_STRATEGIES["gen_BollingerMeanReversion_RF_598b24"] = gen_BollingerMeanReversion_RF_598b24

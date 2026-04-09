@@ -1,0 +1,3099 @@
+[
+  {
+    "name": "gen_Donchian_0ee5b4",
+    "ts": "2026-04-09T02:38:56.520846+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 30
+      },
+      "regime_filter": null,
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -0.0904,
+      "mdd": 19.48,
+      "win_rate": 48.21,
+      "profit_factor": 0.9484
+    },
+    "walk_forward": [
+      {
+        "sharpe": -2.5339,
+        "mdd": 4.62,
+        "win_rate": 33.33,
+        "profit_factor": 0.1472
+      },
+      {
+        "sharpe": 2.6877,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -1.9012,
+        "mdd": 3.93,
+        "win_rate": 28.57,
+        "profit_factor": 0.4008
+      },
+      {
+        "sharpe": 0.7142,
+        "mdd": 2.27,
+        "win_rate": 75.0,
+        "profit_factor": 1.3934
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 1.25,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      }
+    ]
+  },
+  {
+    "name": "gen_BollingerMeanReversion_RSI_5ba166",
+    "ts": "2026-04-09T02:38:56.520846+00:00",
+    "passed": false,
+    "meta": {
+      "base": "BollingerMeanReversion",
+      "base_params": {
+        "lookback": 20,
+        "num_std": 2.5,
+        "trend_lookback": 40,
+        "trend_threshold": 0.001
+      },
+      "regime_filter": null,
+      "rsi_filter": {
+        "period": 10,
+        "rsi_long_min": 55,
+        "rsi_short_max": 50
+      }
+    },
+    "full_metrics": {
+      "sharpe": 0.0,
+      "mdd": 0.0,
+      "win_rate": 0.0,
+      "profit_factor": Infinity
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_Donchian_RSI_280339",
+    "ts": "2026-04-09T02:38:56.520846+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 20
+      },
+      "regime_filter": null,
+      "rsi_filter": {
+        "period": 14,
+        "rsi_long_min": 55,
+        "rsi_short_max": 50
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.0312,
+      "mdd": 22.79,
+      "win_rate": 44.74,
+      "profit_factor": 0.9846
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.5437,
+        "mdd": 3.78,
+        "win_rate": 50.0,
+        "profit_factor": 1.2922
+      },
+      {
+        "sharpe": 2.6062,
+        "mdd": 0.05,
+        "win_rate": 66.67,
+        "profit_factor": 34.149
+      },
+      {
+        "sharpe": -2.9656,
+        "mdd": 6.7,
+        "win_rate": 25.0,
+        "profit_factor": 0.2684
+      },
+      {
+        "sharpe": 0.2223,
+        "mdd": 2.27,
+        "win_rate": 60.0,
+        "profit_factor": 1.0984
+      },
+      {
+        "sharpe": -3.4077,
+        "mdd": 3.82,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_RSI_0df661",
+    "ts": "2026-04-09T02:38:56.520846+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 30
+      },
+      "regime_filter": null,
+      "rsi_filter": {
+        "period": 21,
+        "rsi_long_min": 50,
+        "rsi_short_max": 55
+      }
+    },
+    "full_metrics": {
+      "sharpe": -1.1684,
+      "mdd": 11.02,
+      "win_rate": 40.0,
+      "profit_factor": 0.2706
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.93,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 2.7722,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DualMA_RF_RSI_46a0f2",
+    "ts": "2026-04-09T02:38:56.520846+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 15,
+        "slow": 50
+      },
+      "regime_filter": {
+        "trend_period": 80,
+        "slope_bars": 7,
+        "min_slope_pct": 0.2
+      },
+      "rsi_filter": {
+        "period": 21,
+        "rsi_long_min": 45,
+        "rsi_short_max": 45
+      }
+    },
+    "full_metrics": {
+      "sharpe": 0.015,
+      "mdd": 39.0,
+      "win_rate": 48.78,
+      "profit_factor": 1.0039
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.3169,
+        "mdd": 16.95,
+        "win_rate": 52.5,
+        "profit_factor": 1.0517
+      },
+      {
+        "sharpe": -0.8356,
+        "mdd": 9.29,
+        "win_rate": 50.0,
+        "profit_factor": 0.8501
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -3.146,
+        "mdd": 24.99,
+        "win_rate": 42.11,
+        "profit_factor": 0.5829
+      }
+    ]
+  },
+  {
+    "name": "gen_Donchian_3c4009",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 20
+      },
+      "regime_filter": null,
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -0.021,
+      "mdd": 22.79,
+      "win_rate": 45.45,
+      "profit_factor": 0.9896
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.6496,
+        "mdd": 3.78,
+        "win_rate": 57.14,
+        "profit_factor": 1.3493
+      },
+      {
+        "sharpe": 2.6062,
+        "mdd": 0.05,
+        "win_rate": 66.67,
+        "profit_factor": 34.149
+      },
+      {
+        "sharpe": -2.9656,
+        "mdd": 6.7,
+        "win_rate": 25.0,
+        "profit_factor": 0.2684
+      },
+      {
+        "sharpe": 0.2223,
+        "mdd": 2.27,
+        "win_rate": 60.0,
+        "profit_factor": 1.0984
+      },
+      {
+        "sharpe": -3.4077,
+        "mdd": 3.82,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      }
+    ]
+  },
+  {
+    "name": "gen_DualMA_RF_RSI_1fc98d",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 20,
+        "slow": 40
+      },
+      "regime_filter": {
+        "trend_period": 40,
+        "slope_bars": 5,
+        "min_slope_pct": 0.15
+      },
+      "rsi_filter": {
+        "period": 21,
+        "rsi_long_min": 45,
+        "rsi_short_max": 45
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.0165,
+      "mdd": 44.81,
+      "win_rate": 48.24,
+      "profit_factor": 0.9962
+    },
+    "walk_forward": [
+      {
+        "sharpe": -2.2547,
+        "mdd": 9.92,
+        "win_rate": 33.33,
+        "profit_factor": 0.4839
+      },
+      {
+        "sharpe": -0.524,
+        "mdd": 11.57,
+        "win_rate": 50.0,
+        "profit_factor": 0.9027
+      },
+      {
+        "sharpe": 1.9919,
+        "mdd": 9.29,
+        "win_rate": 50.0,
+        "profit_factor": 1.3562
+      },
+      {
+        "sharpe": -1.6864,
+        "mdd": 13.81,
+        "win_rate": 53.85,
+        "profit_factor": 0.6018
+      },
+      {
+        "sharpe": -0.7116,
+        "mdd": 11.62,
+        "win_rate": 55.0,
+        "profit_factor": 0.849
+      }
+    ]
+  },
+  {
+    "name": "gen_DualMA_RF_RSI_e9b4e9",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 10,
+        "slow": 30
+      },
+      "regime_filter": {
+        "trend_period": 50,
+        "slope_bars": 3,
+        "min_slope_pct": 0.05
+      },
+      "rsi_filter": {
+        "period": 10,
+        "rsi_long_min": 45,
+        "rsi_short_max": 50
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.0645,
+      "mdd": 45.86,
+      "win_rate": 49.51,
+      "profit_factor": 0.9871
+    },
+    "walk_forward": [
+      {
+        "sharpe": -2.5458,
+        "mdd": 21.4,
+        "win_rate": 45.16,
+        "profit_factor": 0.5781
+      },
+      {
+        "sharpe": -1.931,
+        "mdd": 20.1,
+        "win_rate": 42.5,
+        "profit_factor": 0.7194
+      },
+      {
+        "sharpe": 2.257,
+        "mdd": 9.21,
+        "win_rate": 48.84,
+        "profit_factor": 1.4694
+      },
+      {
+        "sharpe": -2.4993,
+        "mdd": 18.33,
+        "win_rate": 42.86,
+        "profit_factor": 0.5884
+      },
+      {
+        "sharpe": -1.9303,
+        "mdd": 14.38,
+        "win_rate": 55.88,
+        "profit_factor": 0.7181
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_RF_410540",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 25
+      },
+      "regime_filter": {
+        "trend_period": 40,
+        "slope_bars": 3,
+        "min_slope_pct": 0.15
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -1.0266,
+      "mdd": 8.49,
+      "win_rate": 36.36,
+      "profit_factor": 0.2347
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.93,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DualMA_RSI_adf521",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 15,
+        "slow": 30
+      },
+      "regime_filter": null,
+      "rsi_filter": {
+        "period": 14,
+        "rsi_long_min": 55,
+        "rsi_short_max": 50
+      }
+    },
+    "full_metrics": {
+      "sharpe": 0.1537,
+      "mdd": 58.56,
+      "win_rate": 49.53,
+      "profit_factor": 1.0308
+    },
+    "walk_forward": [
+      {
+        "sharpe": -3.7074,
+        "mdd": 31.23,
+        "win_rate": 37.5,
+        "profit_factor": 0.457
+      },
+      {
+        "sharpe": -0.7622,
+        "mdd": 10.58,
+        "win_rate": 46.88,
+        "profit_factor": 0.8692
+      },
+      {
+        "sharpe": 2.5799,
+        "mdd": 6.89,
+        "win_rate": 48.65,
+        "profit_factor": 1.6226
+      },
+      {
+        "sharpe": 0.2308,
+        "mdd": 12.52,
+        "win_rate": 58.82,
+        "profit_factor": 1.0405
+      },
+      {
+        "sharpe": -0.9717,
+        "mdd": 14.16,
+        "win_rate": 55.56,
+        "profit_factor": 0.847
+      }
+    ]
+  },
+  {
+    "name": "gen_DualMA_RSI_30ed7c",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 8,
+        "slow": 40
+      },
+      "regime_filter": null,
+      "rsi_filter": {
+        "period": 14,
+        "rsi_long_min": 45,
+        "rsi_short_max": 55
+      }
+    },
+    "full_metrics": {
+      "sharpe": 0.1731,
+      "mdd": 46.69,
+      "win_rate": 50.59,
+      "profit_factor": 1.029
+    },
+    "walk_forward": [
+      {
+        "sharpe": -4.1684,
+        "mdd": 40.41,
+        "win_rate": 41.86,
+        "profit_factor": 0.4812
+      },
+      {
+        "sharpe": 0.0715,
+        "mdd": 12.16,
+        "win_rate": 51.02,
+        "profit_factor": 1.0107
+      },
+      {
+        "sharpe": 1.4698,
+        "mdd": 11.51,
+        "win_rate": 50.98,
+        "profit_factor": 1.2645
+      },
+      {
+        "sharpe": -1.8329,
+        "mdd": 26.54,
+        "win_rate": 50.0,
+        "profit_factor": 0.7797
+      },
+      {
+        "sharpe": -2.5092,
+        "mdd": 27.2,
+        "win_rate": 54.9,
+        "profit_factor": 0.6968
+      }
+    ]
+  },
+  {
+    "name": "gen_Donchian_5158f2",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 25
+      },
+      "regime_filter": null,
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -0.2744,
+      "mdd": 22.22,
+      "win_rate": 43.55,
+      "profit_factor": 0.8571
+    },
+    "walk_forward": [
+      {
+        "sharpe": -3.2898,
+        "mdd": 5.44,
+        "win_rate": 25.0,
+        "profit_factor": 0.111
+      },
+      {
+        "sharpe": 2.6062,
+        "mdd": 0.05,
+        "win_rate": 66.67,
+        "profit_factor": 34.149
+      },
+      {
+        "sharpe": -1.9012,
+        "mdd": 3.93,
+        "win_rate": 28.57,
+        "profit_factor": 0.4008
+      },
+      {
+        "sharpe": 0.7142,
+        "mdd": 2.27,
+        "win_rate": 75.0,
+        "profit_factor": 1.3934
+      },
+      {
+        "sharpe": -3.4077,
+        "mdd": 3.82,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      }
+    ]
+  },
+  {
+    "name": "gen_Donchian_1691a3",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 15
+      },
+      "regime_filter": null,
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": 0.0421,
+      "mdd": 19.88,
+      "win_rate": 47.25,
+      "profit_factor": 1.0192
+    },
+    "walk_forward": [
+      {
+        "sharpe": 2.0382,
+        "mdd": 3.78,
+        "win_rate": 66.67,
+        "profit_factor": 2.2348
+      },
+      {
+        "sharpe": -1.5799,
+        "mdd": 5.1,
+        "win_rate": 50.0,
+        "profit_factor": 0.3458
+      },
+      {
+        "sharpe": -2.9656,
+        "mdd": 6.7,
+        "win_rate": 25.0,
+        "profit_factor": 0.2684
+      },
+      {
+        "sharpe": 0.2223,
+        "mdd": 2.27,
+        "win_rate": 60.0,
+        "profit_factor": 1.0984
+      },
+      {
+        "sharpe": -2.5196,
+        "mdd": 3.82,
+        "win_rate": 50.0,
+        "profit_factor": 0.2245
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_a7186a",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": true,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 15
+      },
+      "regime_filter": null,
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -0.0058,
+      "mdd": 6.93,
+      "win_rate": 46.15,
+      "profit_factor": 0.9953
+    },
+    "walk_forward": [
+      {
+        "sharpe": 1.6502,
+        "mdd": 3.78,
+        "win_rate": 50.0,
+        "profit_factor": 2.1418
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.93,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 2.7722,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_BollingerMeanReversion_RF_RSI_44fdc3",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "BollingerMeanReversion",
+      "base_params": {
+        "lookback": 25,
+        "num_std": 2.5,
+        "trend_lookback": 60,
+        "trend_threshold": 0.001
+      },
+      "regime_filter": {
+        "trend_period": 40,
+        "slope_bars": 5,
+        "min_slope_pct": 0.1
+      },
+      "rsi_filter": {
+        "period": 14,
+        "rsi_long_min": 45,
+        "rsi_short_max": 55
+      }
+    },
+    "full_metrics": {
+      "sharpe": 0.0,
+      "mdd": 0.0,
+      "win_rate": 0.0,
+      "profit_factor": Infinity
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_RF_ebafff",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 20
+      },
+      "regime_filter": {
+        "trend_period": 60,
+        "slope_bars": 7,
+        "min_slope_pct": 0.1
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -1.2394,
+      "mdd": 11.12,
+      "win_rate": 35.71,
+      "profit_factor": 0.2038
+    },
+    "walk_forward": [
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.78,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.93,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DualMA_RF_2db860",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 5,
+        "slow": 50
+      },
+      "regime_filter": {
+        "trend_period": 50,
+        "slope_bars": 7,
+        "min_slope_pct": 0.2
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -0.1384,
+      "mdd": 36.72,
+      "win_rate": 48.8,
+      "profit_factor": 0.9697
+    },
+    "walk_forward": [
+      {
+        "sharpe": -3.1473,
+        "mdd": 22.73,
+        "win_rate": 43.75,
+        "profit_factor": 0.3382
+      },
+      {
+        "sharpe": -1.5714,
+        "mdd": 17.19,
+        "win_rate": 44.44,
+        "profit_factor": 0.7623
+      },
+      {
+        "sharpe": 1.9558,
+        "mdd": 9.29,
+        "win_rate": 51.92,
+        "profit_factor": 1.3555
+      },
+      {
+        "sharpe": 1.3611,
+        "mdd": 3.6,
+        "win_rate": 60.0,
+        "profit_factor": 1.6817
+      },
+      {
+        "sharpe": -3.1025,
+        "mdd": 28.1,
+        "win_rate": 44.44,
+        "profit_factor": 0.6304
+      }
+    ]
+  },
+  {
+    "name": "gen_BollingerMeanReversion_e50a9c",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "BollingerMeanReversion",
+      "base_params": {
+        "lookback": 25,
+        "num_std": 2.5,
+        "trend_lookback": 50,
+        "trend_threshold": 0.001
+      },
+      "regime_filter": null,
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": 0.2752,
+      "mdd": 1.58,
+      "win_rate": 50.0,
+      "profit_factor": 1.707
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_Donchian_RF_RSI_531365",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 15
+      },
+      "regime_filter": {
+        "trend_period": 40,
+        "slope_bars": 7,
+        "min_slope_pct": 0.2
+      },
+      "rsi_filter": {
+        "period": 14,
+        "rsi_long_min": 50,
+        "rsi_short_max": 55
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.7256,
+      "mdd": 28.8,
+      "win_rate": 40.91,
+      "profit_factor": 0.5947
+    },
+    "walk_forward": [
+      {
+        "sharpe": -0.7044,
+        "mdd": 1.5,
+        "win_rate": 66.67,
+        "profit_factor": 0.6851
+      },
+      {
+        "sharpe": 2.6877,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.9656,
+        "mdd": 6.7,
+        "win_rate": 25.0,
+        "profit_factor": 0.2684
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5441,
+        "mdd": 3.82,
+        "win_rate": 33.33,
+        "profit_factor": 0.2172
+      }
+    ]
+  },
+  {
+    "name": "gen_BollingerMeanReversion_RF_RSI_457be8",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "BollingerMeanReversion",
+      "base_params": {
+        "lookback": 15,
+        "num_std": 1.5,
+        "trend_lookback": 40,
+        "trend_threshold": 0.001
+      },
+      "regime_filter": {
+        "trend_period": 60,
+        "slope_bars": 3,
+        "min_slope_pct": 0.15
+      },
+      "rsi_filter": {
+        "period": 14,
+        "rsi_long_min": 45,
+        "rsi_short_max": 55
+      }
+    },
+    "full_metrics": {
+      "sharpe": 0.7081,
+      "mdd": 0.0,
+      "win_rate": 100.0,
+      "profit_factor": Infinity
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_RF_RSI_aa76e7",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 30
+      },
+      "regime_filter": {
+        "trend_period": 40,
+        "slope_bars": 3,
+        "min_slope_pct": 0.05
+      },
+      "rsi_filter": {
+        "period": 14,
+        "rsi_long_min": 50,
+        "rsi_short_max": 55
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.9653,
+      "mdd": 8.49,
+      "win_rate": 42.86,
+      "profit_factor": 0.3285
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.93,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 2.7722,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_BollingerMeanReversion_RF_RSI_1b50da",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "BollingerMeanReversion",
+      "base_params": {
+        "lookback": 20,
+        "num_std": 1.5,
+        "trend_lookback": 50,
+        "trend_threshold": 0.001
+      },
+      "regime_filter": {
+        "trend_period": 40,
+        "slope_bars": 7,
+        "min_slope_pct": 0.05
+      },
+      "rsi_filter": {
+        "period": 10,
+        "rsi_long_min": 50,
+        "rsi_short_max": 55
+      }
+    },
+    "full_metrics": {
+      "sharpe": 0.0,
+      "mdd": 0.0,
+      "win_rate": 0.0,
+      "profit_factor": Infinity
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_RSI_9fd487",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 20
+      },
+      "regime_filter": null,
+      "rsi_filter": {
+        "period": 21,
+        "rsi_long_min": 50,
+        "rsi_short_max": 45
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.9345,
+      "mdd": 12.46,
+      "win_rate": 38.1,
+      "profit_factor": 0.4332
+    },
+    "walk_forward": [
+      {
+        "sharpe": -3.3063,
+        "mdd": 5.29,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.93,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 2.7722,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DualMA_RF_602541",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": true,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 15,
+        "slow": 20
+      },
+      "regime_filter": {
+        "trend_period": 50,
+        "slope_bars": 5,
+        "min_slope_pct": 0.2
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -0.5436,
+      "mdd": 57.82,
+      "win_rate": 49.4,
+      "profit_factor": 0.8848
+    },
+    "walk_forward": [
+      {
+        "sharpe": -4.5414,
+        "mdd": 28.27,
+        "win_rate": 33.33,
+        "profit_factor": 0.1765
+      },
+      {
+        "sharpe": -2.5577,
+        "mdd": 17.26,
+        "win_rate": 47.06,
+        "profit_factor": 0.6362
+      },
+      {
+        "sharpe": 0.9987,
+        "mdd": 12.24,
+        "win_rate": 48.08,
+        "profit_factor": 1.1677
+      },
+      {
+        "sharpe": 0.9345,
+        "mdd": 3.6,
+        "win_rate": 60.0,
+        "profit_factor": 1.4378
+      },
+      {
+        "sharpe": 0.5879,
+        "mdd": 13.18,
+        "win_rate": 61.36,
+        "profit_factor": 1.0926
+      }
+    ]
+  },
+  {
+    "name": "gen_DualMA_0938cb",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 15,
+        "slow": 60
+      },
+      "regime_filter": null,
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -0.2346,
+      "mdd": 68.1,
+      "win_rate": 49.18,
+      "profit_factor": 0.9643
+    },
+    "walk_forward": [
+      {
+        "sharpe": -4.5757,
+        "mdd": 57.22,
+        "win_rate": 42.11,
+        "profit_factor": 0.5053
+      },
+      {
+        "sharpe": -2.2989,
+        "mdd": 28.59,
+        "win_rate": 52.63,
+        "profit_factor": 0.7262
+      },
+      {
+        "sharpe": 2.0082,
+        "mdd": 9.29,
+        "win_rate": 50.88,
+        "profit_factor": 1.3474
+      },
+      {
+        "sharpe": -2.9066,
+        "mdd": 32.77,
+        "win_rate": 45.61,
+        "profit_factor": 0.6812
+      },
+      {
+        "sharpe": 0.1086,
+        "mdd": 16.39,
+        "win_rate": 54.39,
+        "profit_factor": 1.0148
+      }
+    ]
+  },
+  {
+    "name": "gen_BollingerMeanReversion_f91248",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": true,
+    "meta": {
+      "base": "BollingerMeanReversion",
+      "base_params": {
+        "lookback": 25,
+        "num_std": 2.0,
+        "trend_lookback": 40,
+        "trend_threshold": 0.005
+      },
+      "regime_filter": null,
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": 0.5056,
+      "mdd": 24.78,
+      "win_rate": 55.93,
+      "profit_factor": 1.3461
+    },
+    "walk_forward": [
+      {
+        "sharpe": 2.9356,
+        "mdd": 1.8,
+        "win_rate": 60.0,
+        "profit_factor": 7.0501
+      },
+      {
+        "sharpe": 3.6039,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.2789,
+        "mdd": 0.83,
+        "win_rate": 50.0,
+        "profit_factor": 0.0939
+      },
+      {
+        "sharpe": 2.05,
+        "mdd": 3.34,
+        "win_rate": 42.86,
+        "profit_factor": 2.0854
+      },
+      {
+        "sharpe": 3.4077,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_BollingerMeanReversion_RF_7abfe4",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": true,
+    "meta": {
+      "base": "BollingerMeanReversion",
+      "base_params": {
+        "lookback": 15,
+        "num_std": 1.5,
+        "trend_lookback": 60,
+        "trend_threshold": 0.005
+      },
+      "regime_filter": {
+        "trend_period": 60,
+        "slope_bars": 7,
+        "min_slope_pct": 0.05
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": 0.1672,
+      "mdd": 25.18,
+      "win_rate": 50.0,
+      "profit_factor": 1.0643
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.4557,
+        "mdd": 13.84,
+        "win_rate": 40.0,
+        "profit_factor": 1.1646
+      },
+      {
+        "sharpe": 4.0315,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -0.2762,
+        "mdd": 9.07,
+        "win_rate": 54.55,
+        "profit_factor": 0.9131
+      },
+      {
+        "sharpe": 0.7157,
+        "mdd": 4.0,
+        "win_rate": 50.0,
+        "profit_factor": 1.2297
+      },
+      {
+        "sharpe": 2.3357,
+        "mdd": 2.85,
+        "win_rate": 50.0,
+        "profit_factor": 2.6189
+      }
+    ]
+  },
+  {
+    "name": "gen_Donchian_RSI_c5984b",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 15
+      },
+      "regime_filter": null,
+      "rsi_filter": {
+        "period": 10,
+        "rsi_long_min": 55,
+        "rsi_short_max": 45
+      }
+    },
+    "full_metrics": {
+      "sharpe": 0.0421,
+      "mdd": 19.88,
+      "win_rate": 47.25,
+      "profit_factor": 1.0192
+    },
+    "walk_forward": [
+      {
+        "sharpe": 2.0382,
+        "mdd": 3.78,
+        "win_rate": 66.67,
+        "profit_factor": 2.2348
+      },
+      {
+        "sharpe": -1.5799,
+        "mdd": 5.1,
+        "win_rate": 50.0,
+        "profit_factor": 0.3458
+      },
+      {
+        "sharpe": -2.9656,
+        "mdd": 6.7,
+        "win_rate": 25.0,
+        "profit_factor": 0.2684
+      },
+      {
+        "sharpe": 0.2223,
+        "mdd": 2.27,
+        "win_rate": 60.0,
+        "profit_factor": 1.0984
+      },
+      {
+        "sharpe": -2.5196,
+        "mdd": 3.82,
+        "win_rate": 50.0,
+        "profit_factor": 0.2245
+      }
+    ]
+  },
+  {
+    "name": "gen_BollingerMeanReversion_RF_RSI_fc6c5e",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "BollingerMeanReversion",
+      "base_params": {
+        "lookback": 20,
+        "num_std": 2.5,
+        "trend_lookback": 50,
+        "trend_threshold": 0.005
+      },
+      "regime_filter": {
+        "trend_period": 80,
+        "slope_bars": 7,
+        "min_slope_pct": 0.2
+      },
+      "rsi_filter": {
+        "period": 10,
+        "rsi_long_min": 55,
+        "rsi_short_max": 50
+      }
+    },
+    "full_metrics": {
+      "sharpe": 0.0,
+      "mdd": 0.0,
+      "win_rate": 0.0,
+      "profit_factor": Infinity
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DualMA_RF_860510",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 8,
+        "slow": 40
+      },
+      "regime_filter": {
+        "trend_period": 40,
+        "slope_bars": 7,
+        "min_slope_pct": 0.2
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": 0.6825,
+      "mdd": 26.77,
+      "win_rate": 53.03,
+      "profit_factor": 1.1607
+    },
+    "walk_forward": [
+      {
+        "sharpe": -2.1238,
+        "mdd": 18.19,
+        "win_rate": 50.0,
+        "profit_factor": 0.571
+      },
+      {
+        "sharpe": 1.5574,
+        "mdd": 11.19,
+        "win_rate": 57.14,
+        "profit_factor": 1.3573
+      },
+      {
+        "sharpe": 2.3166,
+        "mdd": 9.29,
+        "win_rate": 52.73,
+        "profit_factor": 1.4191
+      },
+      {
+        "sharpe": -0.1217,
+        "mdd": 10.44,
+        "win_rate": 57.14,
+        "profit_factor": 0.9574
+      },
+      {
+        "sharpe": 0.3526,
+        "mdd": 13.18,
+        "win_rate": 62.86,
+        "profit_factor": 1.0626
+      }
+    ]
+  },
+  {
+    "name": "gen_Donchian_RSI_bb363b",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 40
+      },
+      "regime_filter": null,
+      "rsi_filter": {
+        "period": 10,
+        "rsi_long_min": 45,
+        "rsi_short_max": 45
+      }
+    },
+    "full_metrics": {
+      "sharpe": 0.0023,
+      "mdd": 16.27,
+      "win_rate": 51.02,
+      "profit_factor": 1.0015
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 2.6877,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -1.9012,
+        "mdd": 3.93,
+        "win_rate": 28.57,
+        "profit_factor": 0.4008
+      },
+      {
+        "sharpe": 0.7142,
+        "mdd": 2.27,
+        "win_rate": 75.0,
+        "profit_factor": 1.3934
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_Donchian_RF_f341e7",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 40
+      },
+      "regime_filter": {
+        "trend_period": 50,
+        "slope_bars": 3,
+        "min_slope_pct": 0.1
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -0.1381,
+      "mdd": 21.43,
+      "win_rate": 45.95,
+      "profit_factor": 0.9022
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 2.6877,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -1.9012,
+        "mdd": 3.93,
+        "win_rate": 28.57,
+        "profit_factor": 0.4008
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 2.27,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_BollingerMeanReversion_RSI_585b16",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "BollingerMeanReversion",
+      "base_params": {
+        "lookback": 30,
+        "num_std": 2.5,
+        "trend_lookback": 50,
+        "trend_threshold": 0.003
+      },
+      "regime_filter": null,
+      "rsi_filter": {
+        "period": 21,
+        "rsi_long_min": 55,
+        "rsi_short_max": 50
+      }
+    },
+    "full_metrics": {
+      "sharpe": 0.0,
+      "mdd": 0.0,
+      "win_rate": 0.0,
+      "profit_factor": Infinity
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_Donchian_RF_RSI_f73189",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 55
+      },
+      "regime_filter": {
+        "trend_period": 60,
+        "slope_bars": 7,
+        "min_slope_pct": 0.1
+      },
+      "rsi_filter": {
+        "period": 10,
+        "rsi_long_min": 50,
+        "rsi_short_max": 55
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.171,
+      "mdd": 19.94,
+      "win_rate": 48.39,
+      "profit_factor": 0.8665
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 2.6877,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -1.8572,
+        "mdd": 3.93,
+        "win_rate": 33.33,
+        "profit_factor": 0.4064
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_3bb281",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 25
+      },
+      "regime_filter": null,
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -1.1684,
+      "mdd": 11.02,
+      "win_rate": 40.0,
+      "profit_factor": 0.2706
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.93,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 2.7722,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_RF_RSI_54a6e4",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 10
+      },
+      "regime_filter": {
+        "trend_period": 80,
+        "slope_bars": 3,
+        "min_slope_pct": 0.05
+      },
+      "rsi_filter": {
+        "period": 21,
+        "rsi_long_min": 50,
+        "rsi_short_max": 45
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.751,
+      "mdd": 9.1,
+      "win_rate": 38.89,
+      "profit_factor": 0.4733
+    },
+    "walk_forward": [
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.78,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.93,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_f87701",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 20
+      },
+      "regime_filter": null,
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -0.9345,
+      "mdd": 12.46,
+      "win_rate": 38.1,
+      "profit_factor": 0.4332
+    },
+    "walk_forward": [
+      {
+        "sharpe": -3.3063,
+        "mdd": 5.29,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.93,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 2.7722,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_RF_RSI_c0c233",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 40
+      },
+      "regime_filter": {
+        "trend_period": 60,
+        "slope_bars": 7,
+        "min_slope_pct": 0.2
+      },
+      "rsi_filter": {
+        "period": 14,
+        "rsi_long_min": 55,
+        "rsi_short_max": 55
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.6319,
+      "mdd": 4.16,
+      "win_rate": 60.0,
+      "profit_factor": 0.2359
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.93,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_BollingerMeanReversion_e53a8b",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "BollingerMeanReversion",
+      "base_params": {
+        "lookback": 30,
+        "num_std": 2.0,
+        "trend_lookback": 40,
+        "trend_threshold": 0.003
+      },
+      "regime_filter": null,
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": 0.2001,
+      "mdd": 16.15,
+      "win_rate": 51.35,
+      "profit_factor": 1.1388
+    },
+    "walk_forward": [
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 3.6039,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -0.5327,
+        "mdd": 3.34,
+        "win_rate": 20.0,
+        "profit_factor": 0.7933
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 2.85,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_RF_RSI_bfbc35",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 25
+      },
+      "regime_filter": {
+        "trend_period": 80,
+        "slope_bars": 7,
+        "min_slope_pct": 0.15
+      },
+      "rsi_filter": {
+        "period": 10,
+        "rsi_long_min": 50,
+        "rsi_short_max": 45
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.8832,
+      "mdd": 6.07,
+      "win_rate": 40.0,
+      "profit_factor": 0.2871
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.93,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DualMA_bf2032",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 10,
+        "slow": 40
+      },
+      "regime_filter": null,
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": 0.0047,
+      "mdd": 55.77,
+      "win_rate": 49.64,
+      "profit_factor": 1.0007
+    },
+    "walk_forward": [
+      {
+        "sharpe": -3.8855,
+        "mdd": 51.21,
+        "win_rate": 43.86,
+        "profit_factor": 0.561
+      },
+      {
+        "sharpe": -0.9598,
+        "mdd": 22.53,
+        "win_rate": 49.12,
+        "profit_factor": 0.8751
+      },
+      {
+        "sharpe": 2.0082,
+        "mdd": 9.29,
+        "win_rate": 50.88,
+        "profit_factor": 1.3474
+      },
+      {
+        "sharpe": -2.1939,
+        "mdd": 27.91,
+        "win_rate": 47.37,
+        "profit_factor": 0.7485
+      },
+      {
+        "sharpe": -2.2516,
+        "mdd": 24.57,
+        "win_rate": 50.88,
+        "profit_factor": 0.7369
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_RSI_0df661",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 30
+      },
+      "regime_filter": null,
+      "rsi_filter": {
+        "period": 10,
+        "rsi_long_min": 45,
+        "rsi_short_max": 45
+      }
+    },
+    "full_metrics": {
+      "sharpe": -1.1684,
+      "mdd": 11.02,
+      "win_rate": 40.0,
+      "profit_factor": 0.2706
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.93,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 2.7722,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DualMA_RF_d13a0a",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 8,
+        "slow": 30
+      },
+      "regime_filter": {
+        "trend_period": 40,
+        "slope_bars": 3,
+        "min_slope_pct": 0.15
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -0.2805,
+      "mdd": 64.94,
+      "win_rate": 48.56,
+      "profit_factor": 0.9458
+    },
+    "walk_forward": [
+      {
+        "sharpe": -2.8027,
+        "mdd": 22.19,
+        "win_rate": 45.0,
+        "profit_factor": 0.4456
+      },
+      {
+        "sharpe": 1.9482,
+        "mdd": 11.19,
+        "win_rate": 53.33,
+        "profit_factor": 1.4473
+      },
+      {
+        "sharpe": -0.4894,
+        "mdd": 20.24,
+        "win_rate": 47.27,
+        "profit_factor": 0.9289
+      },
+      {
+        "sharpe": -3.3142,
+        "mdd": 21.1,
+        "win_rate": 44.44,
+        "profit_factor": 0.4586
+      },
+      {
+        "sharpe": 0.1601,
+        "mdd": 17.63,
+        "win_rate": 63.89,
+        "profit_factor": 1.0275
+      }
+    ]
+  },
+  {
+    "name": "gen_DualMA_RSI_2b15d4",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 8,
+        "slow": 60
+      },
+      "regime_filter": null,
+      "rsi_filter": {
+        "period": 21,
+        "rsi_long_min": 55,
+        "rsi_short_max": 45
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.2846,
+      "mdd": 58.01,
+      "win_rate": 48.05,
+      "profit_factor": 0.9443
+    },
+    "walk_forward": [
+      {
+        "sharpe": -5.5226,
+        "mdd": 47.07,
+        "win_rate": 35.0,
+        "profit_factor": 0.3685
+      },
+      {
+        "sharpe": -0.6516,
+        "mdd": 11.47,
+        "win_rate": 54.17,
+        "profit_factor": 0.8715
+      },
+      {
+        "sharpe": 2.4667,
+        "mdd": 7.32,
+        "win_rate": 47.37,
+        "profit_factor": 1.5832
+      },
+      {
+        "sharpe": -0.4189,
+        "mdd": 17.25,
+        "win_rate": 53.12,
+        "profit_factor": 0.9275
+      },
+      {
+        "sharpe": -2.5576,
+        "mdd": 19.03,
+        "win_rate": 47.83,
+        "profit_factor": 0.5586
+      }
+    ]
+  },
+  {
+    "name": "gen_BollingerMeanReversion_RF_RSI_873382",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "BollingerMeanReversion",
+      "base_params": {
+        "lookback": 20,
+        "num_std": 2.5,
+        "trend_lookback": 40,
+        "trend_threshold": 0.005
+      },
+      "regime_filter": {
+        "trend_period": 80,
+        "slope_bars": 5,
+        "min_slope_pct": 0.15
+      },
+      "rsi_filter": {
+        "period": 21,
+        "rsi_long_min": 55,
+        "rsi_short_max": 55
+      }
+    },
+    "full_metrics": {
+      "sharpe": 0.0,
+      "mdd": 0.0,
+      "win_rate": 0.0,
+      "profit_factor": Infinity
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_BollingerMeanReversion_RF_598b24",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": true,
+    "meta": {
+      "base": "BollingerMeanReversion",
+      "base_params": {
+        "lookback": 20,
+        "num_std": 1.5,
+        "trend_lookback": 40,
+        "trend_threshold": 0.005
+      },
+      "regime_filter": {
+        "trend_period": 50,
+        "slope_bars": 3,
+        "min_slope_pct": 0.2
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": 0.3406,
+      "mdd": 32.12,
+      "win_rate": 54.0,
+      "profit_factor": 1.2097
+    },
+    "walk_forward": [
+      {
+        "sharpe": 3.8121,
+        "mdd": 1.8,
+        "win_rate": 71.43,
+        "profit_factor": 10.2567
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 1.2124,
+        "mdd": 2.49,
+        "win_rate": 66.67,
+        "profit_factor": 1.7757
+      },
+      {
+        "sharpe": 3.2305,
+        "mdd": 2.85,
+        "win_rate": 80.0,
+        "profit_factor": 3.9587
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_RF_c996b1",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 10
+      },
+      "regime_filter": {
+        "trend_period": 60,
+        "slope_bars": 5,
+        "min_slope_pct": 0.05
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -0.6601,
+      "mdd": 16.11,
+      "win_rate": 40.74,
+      "profit_factor": 0.5811
+    },
+    "walk_forward": [
+      {
+        "sharpe": 1.7454,
+        "mdd": 3.78,
+        "win_rate": 60.0,
+        "profit_factor": 2.208
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.93,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": -2.2322,
+        "mdd": 1.17,
+        "win_rate": 50.0,
+        "profit_factor": 0.1108
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 4.52,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      }
+    ]
+  },
+  {
+    "name": "gen_BollingerMeanReversion_RF_6aa1c4",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "BollingerMeanReversion",
+      "base_params": {
+        "lookback": 30,
+        "num_std": 2.5,
+        "trend_lookback": 40,
+        "trend_threshold": 0.001
+      },
+      "regime_filter": {
+        "trend_period": 60,
+        "slope_bars": 5,
+        "min_slope_pct": 0.2
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": 0.0,
+      "mdd": 0.0,
+      "win_rate": 0.0,
+      "profit_factor": Infinity
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_Donchian_6e1471",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 10
+      },
+      "regime_filter": null,
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -0.0301,
+      "mdd": 30.58,
+      "win_rate": 44.64,
+      "profit_factor": 0.9879
+    },
+    "walk_forward": [
+      {
+        "sharpe": 3.1516,
+        "mdd": 3.78,
+        "win_rate": 70.0,
+        "profit_factor": 3.3318
+      },
+      {
+        "sharpe": -1.5799,
+        "mdd": 5.1,
+        "win_rate": 50.0,
+        "profit_factor": 0.3458
+      },
+      {
+        "sharpe": -3.2649,
+        "mdd": 7.35,
+        "win_rate": 20.0,
+        "profit_factor": 0.2492
+      },
+      {
+        "sharpe": -0.3956,
+        "mdd": 2.57,
+        "win_rate": 50.0,
+        "profit_factor": 0.8742
+      },
+      {
+        "sharpe": -3.3456,
+        "mdd": 8.32,
+        "win_rate": 42.86,
+        "profit_factor": 0.2205
+      }
+    ]
+  },
+  {
+    "name": "gen_DonchianConfirmed_RF_2f743a",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DonchianConfirmed",
+      "base_params": {
+        "period": 15
+      },
+      "regime_filter": {
+        "trend_period": 40,
+        "slope_bars": 7,
+        "min_slope_pct": 0.15
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -1.4612,
+      "mdd": 12.32,
+      "win_rate": 30.0,
+      "profit_factor": 0.087
+    },
+    "walk_forward": [
+      {
+        "sharpe": -2.5305,
+        "mdd": 1.5,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 2.5305,
+        "mdd": 0.0,
+        "win_rate": 100.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 3.93,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      }
+    ]
+  },
+  {
+    "name": "gen_DualMA_RF_dafa22",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 8,
+        "slow": 20
+      },
+      "regime_filter": {
+        "trend_period": 40,
+        "slope_bars": 7,
+        "min_slope_pct": 0.1
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -0.3667,
+      "mdd": 53.05,
+      "win_rate": 49.46,
+      "profit_factor": 0.9331
+    },
+    "walk_forward": [
+      {
+        "sharpe": -3.5881,
+        "mdd": 28.17,
+        "win_rate": 30.77,
+        "profit_factor": 0.412
+      },
+      {
+        "sharpe": -0.2171,
+        "mdd": 16.03,
+        "win_rate": 50.0,
+        "profit_factor": 0.9611
+      },
+      {
+        "sharpe": 2.3591,
+        "mdd": 9.46,
+        "win_rate": 54.39,
+        "profit_factor": 1.4198
+      },
+      {
+        "sharpe": -3.6428,
+        "mdd": 24.69,
+        "win_rate": 45.16,
+        "profit_factor": 0.5168
+      },
+      {
+        "sharpe": -1.2923,
+        "mdd": 22.77,
+        "win_rate": 58.33,
+        "profit_factor": 0.8041
+      }
+    ]
+  },
+  {
+    "name": "gen_Donchian_RSI_85e8c4",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 25
+      },
+      "regime_filter": null,
+      "rsi_filter": {
+        "period": 10,
+        "rsi_long_min": 45,
+        "rsi_short_max": 50
+      }
+    },
+    "full_metrics": {
+      "sharpe": -0.2744,
+      "mdd": 22.22,
+      "win_rate": 43.55,
+      "profit_factor": 0.8571
+    },
+    "walk_forward": [
+      {
+        "sharpe": -3.2898,
+        "mdd": 5.44,
+        "win_rate": 25.0,
+        "profit_factor": 0.111
+      },
+      {
+        "sharpe": 2.6062,
+        "mdd": 0.05,
+        "win_rate": 66.67,
+        "profit_factor": 34.149
+      },
+      {
+        "sharpe": -1.9012,
+        "mdd": 3.93,
+        "win_rate": 28.57,
+        "profit_factor": 0.4008
+      },
+      {
+        "sharpe": 0.7142,
+        "mdd": 2.27,
+        "win_rate": 75.0,
+        "profit_factor": 1.3934
+      },
+      {
+        "sharpe": -3.4077,
+        "mdd": 3.82,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      }
+    ]
+  },
+  {
+    "name": "gen_Donchian_RF_786334",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 15
+      },
+      "regime_filter": {
+        "trend_period": 80,
+        "slope_bars": 3,
+        "min_slope_pct": 0.05
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": -0.243,
+      "mdd": 22.06,
+      "win_rate": 44.78,
+      "profit_factor": 0.88
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.8107,
+        "mdd": 3.78,
+        "win_rate": 50.0,
+        "profit_factor": 1.5654
+      },
+      {
+        "sharpe": -1.5799,
+        "mdd": 5.1,
+        "win_rate": 50.0,
+        "profit_factor": 0.3458
+      },
+      {
+        "sharpe": -3.0649,
+        "mdd": 6.7,
+        "win_rate": 16.67,
+        "profit_factor": 0.2238
+      },
+      {
+        "sharpe": -2.5305,
+        "mdd": 2.27,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "sharpe": -2.5196,
+        "mdd": 3.82,
+        "win_rate": 50.0,
+        "profit_factor": 0.2245
+      }
+    ]
+  },
+  {
+    "name": "gen_Donchian_RF_RSI_aeff8a",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "Donchian",
+      "base_params": {
+        "period": 10
+      },
+      "regime_filter": {
+        "trend_period": 50,
+        "slope_bars": 3,
+        "min_slope_pct": 0.05
+      },
+      "rsi_filter": {
+        "period": 14,
+        "rsi_long_min": 45,
+        "rsi_short_max": 45
+      }
+    },
+    "full_metrics": {
+      "sharpe": 0.4091,
+      "mdd": 19.33,
+      "win_rate": 48.19,
+      "profit_factor": 1.2165
+    },
+    "walk_forward": [
+      {
+        "sharpe": 2.2757,
+        "mdd": 3.78,
+        "win_rate": 75.0,
+        "profit_factor": 2.5879
+      },
+      {
+        "sharpe": -1.5799,
+        "mdd": 5.1,
+        "win_rate": 50.0,
+        "profit_factor": 0.3458
+      },
+      {
+        "sharpe": -2.9821,
+        "mdd": 6.73,
+        "win_rate": 22.22,
+        "profit_factor": 0.2674
+      },
+      {
+        "sharpe": 0.1202,
+        "mdd": 2.27,
+        "win_rate": 50.0,
+        "profit_factor": 1.0531
+      },
+      {
+        "sharpe": -2.5441,
+        "mdd": 3.82,
+        "win_rate": 33.33,
+        "profit_factor": 0.2172
+      }
+    ]
+  },
+  {
+    "name": "gen_DualMA_RF_55d566",
+    "ts": "2026-04-09T02:39:10.630975+00:00",
+    "passed": false,
+    "meta": {
+      "base": "DualMA",
+      "base_params": {
+        "fast": 15,
+        "slow": 50
+      },
+      "regime_filter": {
+        "trend_period": 60,
+        "slope_bars": 3,
+        "min_slope_pct": 0.2
+      },
+      "rsi_filter": null
+    },
+    "full_metrics": {
+      "sharpe": 0.3142,
+      "mdd": 29.35,
+      "win_rate": 48.11,
+      "profit_factor": 1.0754
+    },
+    "walk_forward": [
+      {
+        "sharpe": 0.8574,
+        "mdd": 7.1,
+        "win_rate": 40.0,
+        "profit_factor": 1.3645
+      },
+      {
+        "sharpe": 0.0578,
+        "mdd": 19.18,
+        "win_rate": 50.0,
+        "profit_factor": 1.0089
+      },
+      {
+        "sharpe": 0.1465,
+        "mdd": 9.29,
+        "win_rate": 48.84,
+        "profit_factor": 1.0242
+      },
+      {
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": Infinity
+      },
+      {
+        "sharpe": -1.94,
+        "mdd": 20.59,
+        "win_rate": 44.44,
+        "profit_factor": 0.764
+      }
+    ]
+  },
+  {
+    "ts": "2026-04-09T02:39:38.761131+00:00",
+    "action": "prune",
+    "killed": [
+      {
+        "name": "default",
+        "reason": "PF=0.72<0.85"
+      }
+    ],
+    "removed_count": 0
+  }
+]
