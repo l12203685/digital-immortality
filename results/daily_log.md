@@ -4,6 +4,42 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 244 — 2026-04-09T UTC
+
+### What was done
+
+**Branch 1.1 — paper-live tick 117 ✅**
+- BTC=$71,240.33 (↓$91.61 from tick 116 $71,331.94); regime=MIXED (trend=0.0140, MR=0.2250)
+- DualMA_10_30=SHORT×117 (100%); 17/18 FLAT; 1067 log entries
+- SHORT×117 = longest consecutive signal streak in paper-live log
+
+**Branch 7 — SOP #80 Cold Start Calibration Protocol ✅**
+- `docs/knowledge_product_80_cold_start_calibration_sop.md` — Domain 6 (存活/cold-start)
+- G0–G5: trigger conditions (T1-T4) → baseline run → drift classification (Type A/B/C) → recalibration protocol → health report → persist
+- Addresses daemon signal "least-recent: 存活/cold-start"
+- 8-tweet thread written; **Series: SOP #01~#80 COMPLETE** ✅
+
+**Branch 6 — SOP #80 G1–G5 executed ✅**
+- 33/33 ALIGNED (21+ consecutive cycles clean); 3 LLM-boundary = expected
+- `results/cold_start_health_report.md` baseline created — PASS
+- Next scheduled calibration: 2026-05-09
+
+**Branch 3.1 — Distillation ✅**
+- 3 insights → memory/insights.json (total 47):
+  1. `sop-series-structural-completion`: SOP #01–#80 complete; future SOPs = operational gaps, not infrastructure
+  2. `cold-start-calibration-first-run`: SOP #80 first run PASS; cold-start is now protocol-guaranteed, not lucky streak
+  3. `paper-live-short-persistence-117`: SHORT×117 = longest streak; signal durability, not just direction
+- `memory/recursive_distillation.md` updated
+
+### L2 Verdict
+- A: Branch 7 SOP #80 — Cold Start Calibration Protocol; closes "calibration = lucky streak" gap — HIGH
+- B: Branch 6 33/33 ALIGNED ✅ (21+ cycles clean); SOP #80 G1–G5 PASS baseline — MEDIUM
+- B: Branch 3.1 — 3 insights (total 47) — MEDIUM
+- B: Branch 1.1 tick 117 — SHORT×117; mainnet still blocked — LOW
+- Verdict: **1A + 3B**. No C or D. L3 not triggered.
+
+---
+
 ## Cycle 241 — 2026-04-09T UTC
 
 ### What was done
