@@ -1059,6 +1059,24 @@
         "regime-change",
         "branch-5"
       ]
+    },
+    {
+      "id": "2131617b-d56e-4785-89f6-4ddbbeb8a84b",
+      "key": "salary-negotiation-two-stage-anchor",
+      "content": "Cycle 258: MD-331 — salary negotiation SOP: anchor to previous salary (494K), split target (38K trial → 42K post), ask HR to fight FOR you not demand directly. Proxy negotiation reduces direct conflict while maximizing extraction. From 201911 JSONL evidence (multiple job offer emails).",
+      "ts": "2026-04-09T11:40Z"
+    },
+    {
+      "id": "3f6c4395-fa23-438f-9e45-176eb4a0bb98",
+      "key": "invisible-soft-skill-standard-maintenance",
+      "content": "Cycle 258: MD-332 — code readability as invisible soft skill: does not appear in interviews, not correlated with runtime speed, but directly determines team long-term efficiency. Edward refuses to lower personal standard even when industry norm is lower. From 201911 JSONL message about exchange code standards.",
+      "ts": "2026-04-09T11:40Z"
+    },
+    {
+      "id": "7f20fd76-c83b-47cf-8012-2d53ae043090",
+      "key": "multi-path-opportunity-cost-arithmetic",
+      "content": "Cycle 258: MD-333 — decision framework: convert \"which path is better\" to \"wait cost arithmetic\" (4 months x 2000 = 8000). Sets a concrete abandonment threshold for waiting. Removes vague preference judgment. From 201911 JSONL career multi-track calculation.",
+      "ts": "2026-04-09T11:40Z"
     }
   ]
 }
