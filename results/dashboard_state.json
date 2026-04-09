@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-10T02:25+08",
+  "updated": "2026-04-10T03:40+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,39 +64,39 @@
   ],
   "activity": [
     {
-      "time": "9min ago",
-      "text": "Committed + pushed."
+      "time": "just now",
+      "text": "Next priority: 201709 deep pass → extract 3 MDs from September 2017 messages."
     },
     {
-      "time": "9min ago",
-      "text": "daemon_next_priority: 201803 JSONL → MD-391~393"
+      "time": "just now",
+      "text": "New MDs from 201710:"
     },
     {
-      "time": "9min ago",
-      "text": "Branch 3.1: 6 insights → insights.json (total 193)"
+      "time": "just now",
+      "text": "| Branch 6 (consistency) | Re-verified | 33/33 ALIGNED (3 LLM-expected MISALI..."
     },
     {
-      "time": "9min ago",
-      "text": "Branch 1.1 (parallel agent): tick 212, BTC=$71,964.87, regime=mixed, 15 activ..."
+      "time": "just now",
+      "text": "| Branch 2.2 (201710 deep pass) | 3 new MDs extracted | MD-414~416 → dna_core..."
     },
     {
-      "time": "9min ago",
-      "text": "- dynamic_tree.md: entry 6.30 added"
+      "time": "just now",
+      "text": "| Branch 1 (paper-live) | Tick run | BTC=$71,876 SHORT structural, 16/18 FLAT..."
     }
   ],
   "stats": {
     "daemon_cycles": 264,
-    "total_mds": 388,
-    "dna_core_lines": 480
+    "total_mds": 414,
+    "dna_core_lines": 98
   },
   "health": {
     "ci_wired": false,
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 72325.22,
+    "paper_live_price": 71876.01,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T17:50",
+    "paper_live_ts": "2026-04-09T19:33",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"

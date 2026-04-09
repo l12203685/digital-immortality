@@ -1,1 +1,1 @@
-PRIORITY: Branch 2.2 JSONL — 201709 deep pass (next after 201710 deep pass complete). Current MD count: 416. Next: extract 3 new MDs from 201709 messages (September 2017). 201710 deep pass COMPLETE → MD-414~416. Branch 6 48th consecutive clean cycle.
+PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.

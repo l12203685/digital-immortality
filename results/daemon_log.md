@@ -7149,3 +7149,24 @@ Pushed. Cycle 287 complete. Summary:
 **daemon_next_priority**: 201803 JSONL → MD-391~393
 
 Committed + pushed.
+
+## Cycle 92 — 2026-04-09 19:40:18 UTC
+
+Pushed. Cycle 294 complete.
+
+---
+
+**Summary — cycle 294:**
+
+| Branch | Action | Result |
+|--------|--------|--------|
+| **Branch 1** (paper-live) | Tick run | BTC=$71,876 SHORT structural, 16/18 FLAT, 2002 entries |
+| **Branch 2.2** (201710 deep pass) | 3 new MDs extracted | **MD-414~416** → dna_core.md: **416 MDs** |
+| **Branch 6** (consistency) | Re-verified | **33/33 ALIGNED** (3 LLM-expected MISALIGNED) — **48th consecutive clean** |
+
+**New MDs from 201710:**
+- **MD-414** `TRY_BEFORE_TEACH` — 教學路徑=先給規則讓學生試錯，再等問題上門 (source: poker teaching g160 "你們就自己打 然後有問題再問我")
+- **MD-415** `TRACE_INSTITUTIONAL_INCENTIVE` — 機構改變門檻→先找業績KPI壓力 (source: Citibank threshold drop "業績太難辦 所以門檻下移")
+- **MD-416** `AVOID_UNFAVORABLE_MATCHUP` — 技術懸殊=縮小接觸面，不強行交鋒 (source: NL10 神激 "看到 AA直接open fold")
+
+**Next priority:** 201709 deep pass → extract 3 MDs from September 2017 messages.
