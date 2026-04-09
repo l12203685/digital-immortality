@@ -1,6 +1,6 @@
 {
-  "last_tick": "2026-04-09T22:14:35.247921+00:00",
-  "tick_count": 457,
+  "last_tick": "2026-04-09T22:17:35.420602+00:00",
+  "tick_count": 460,
   "active_strategies": 15,
   "disabled": {
     "DualMA_10_30": "PF 0.53 < 0.8",
@@ -8,10 +8,10 @@
     "gen_BollingerMeanReversion_RF_598b24": "PF 0.77 < 0.8"
   },
   "total_pnl_pct": -2.7103,
-  "price": 72477.03,
+  "price": 73098.61,
   "regime": "mixed",
   "signals": {
-    "Donchian_20": 0,
+    "Donchian_20": 1,
     "DonchianConfirmed_20": 0,
     "DualMA_filtered": 0,
     "Donchian_filtered": 0,
@@ -19,7 +19,7 @@
     "DualMA_RSI": 0,
     "DualMA_RSI_filtered": 0,
     "BollingerMR_20": 0,
-    "BollingerMR_loose": 0,
+    "BollingerMR_loose": -1,
     "gen_DonchianConfirmed_a7186a": 0,
     "gen_DualMA_RF_602541": 0,
     "gen_BollingerMeanReversion_f91248": 0,
