@@ -836,6 +836,47 @@
         "monetization",
         "knowledge-product"
       ]
+    },
+    {
+      "id": "paper-live-short-persistence-132",
+      "key": "paper-live-short-persistence-132",
+      "content": "BTC=$71,381.69 (↓$81.95 SHORT tailwind); DualMA_10_30=SHORT×132 (100%); regime=MIXED; 1373 total entries; consecutive SHORT signal holding strong.",
+      "timestamp": "2026-04-09T12:00:00.000000+00:00",
+      "source": "branch-1.1-paper-live",
+      "tags": [
+        "trading",
+        "paper-live",
+        "short",
+        "btc",
+        "dual-ma"
+      ]
+    },
+    {
+      "id": "consistency-26-consecutive-clean",
+      "key": "consistency-26-consecutive-clean",
+      "content": "Branch 6 cycle 252 — 33/33 deterministic ALIGNED; 26+ consecutive clean cycles; 3 LLM-req MISALIGNED persistent (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev); daemon_next_priority 存活/cold-start TOUCHED.",
+      "timestamp": "2026-04-09T12:00:00.000000+00:00",
+      "source": "branch-6-consistency",
+      "tags": [
+        "consistency",
+        "cold-start",
+        "alive",
+        "determinism"
+      ]
+    },
+    {
+      "id": "content-repurposing-sop-cold-start-override",
+      "key": "content-repurposing-sop-cold-start-override",
+      "content": "SOP #87 Content Repurposing written; G0 cold-start override fires immediately when 0 posts; SOP #01 thread ready to paste; critical path unblock: 10min to first X post; SOP #01~#87 COMPLETE.",
+      "timestamp": "2026-04-09T12:00:00.000000+00:00",
+      "source": "branch-7-sop",
+      "tags": [
+        "sop",
+        "content",
+        "cold-start",
+        "x-post",
+        "repurposing"
+      ]
     }
   ]
 }

@@ -1,28 +1,37 @@
-# Session State — 2026-04-09 UTC (Cycle 251)
+# Session State — 2026-04-09 UTC (Cycle 252)
 
 > Inter-session relay. Cold-start reads this AFTER dna_core.md + boot_tests.md.
 > Updated each cycle. If stale >24h: re-read daemon_log.md tail 60 to reconstruct.
 
 ## Current Cycle
-- **Cycle**: 251 (completed); next: 252
-- **Timestamp**: 2026-04-09T10:30Z
+- **Cycle**: 252 (completed); next: 253
+- **Timestamp**: 2026-04-09T11:00Z
 - **Phase**: Recursive daemon running
 
 ## Branch Status Summary
 | Branch | Status | Last Touched |
 |--------|--------|--------------|
-| 1.1 Trading paper-live | tick 131: BTC=$71,463.64 (↑$88.89 SHORT headwind); DualMA_10_30=SHORT×131 (100%); 17/18 FLAT; regime=MIXED; 1337 log entries | cycle 251 |
+| 1.1 Trading paper-live | tick 132: BTC=$71,381.69 (↓$81.95 SHORT tailwind); DualMA_10_30=SHORT×132 (100%); 17/18 FLAT; regime=MIXED; 1373 log entries | cycle 252 |
 | 1.3 Skill 商業化 | v2.1.0, users=0; blocker=SOP#01 never posted (0 audience) | cycle 212 |
 | 2.2 微決策學習 | **COMPLETE** — 330 MDs ✅ | cycle 180+ |
 | 2.3 Validation | 33/33 ALIGNED ✅ + 3 LLM scenarios validated (3/3 ALIGNED) | cycle 244 |
-| 3.1 遞迴引擎 | three-layer operational ✓; total 66 entries in insights.json; distillation cycle 251 done | cycle 251 |
+| 3.1 遞迴引擎 | three-layer operational ✓; total 69 entries in insights.json; distillation cycle 252 done | cycle 252 |
 | 4.1 Samuel organism | 22-scenario collision 15/22 AGREE (68%); async DM ready to send | cycle 207 |
 | 4.3 Discord | 4 seed posts written; ready to paste → invite C | cycle 207 |
 | 5.3 Web platform | Phase 2 live ✓ | cycle 120+ |
-| 6 存活冷啟動 | **33/33 deterministic ALIGNED ✅** (25+ consecutive cycles clean; 3 LLM-req MISALIGNED expected); SOP #80 operational; next calibration: 2026-05-09 | cycle 251 |
-| 5 Distribution | **SOP #01~#86 COMPLETE** — SOP #86: Consulting Rate Card; trigger ≥3 consulting DMs; rates $200/hr | cycle 251 |
-| 7 SOP series | **SOP #86 COMPLETE** — Consulting Rate Card SOP; G0-G5; trigger ≥3 DMs; $200/hr anchor; SOP #01~#86 done | cycle 251 |
+| 6 存活冷啟動 | **33/33 deterministic ALIGNED ✅** (26+ consecutive cycles clean; 3 LLM-req MISALIGNED expected); SOP #80 operational; next calibration: 2026-05-09 | cycle 252 |
+| 5 Distribution | **SOP #01~#87 COMPLETE** — SOP #87: Content Repurposing SOP; G0 cold-start override fires immediately when 0 posts; SOP #01 thread ready to paste on X | cycle 252 |
+| 7 SOP series | **SOP #87 COMPLETE** — Content Repurposing SOP; G0-G5; G0 cold-start override (fires immediately when 0 posts); SOP #01 thread ready to paste; SOP #01~#87 done | cycle 252 |
 | 8 Tool Stack | **SOP #64 coverage established** — T1/T2/T3 tiers defined; L1+L2+L3 maintenance protocol ✓ | cycle 226 |
+
+## L2 Verdict (Cycle 252)
+```
+L2 [252]: A — Branch 7 SOP #87 — Content Repurposing SOP; G0 cold-start override fires immediately when 0 posts; SOP #01 thread ready to paste; 10min to first X post; critical path unblock; SOP #01~#87 COMPLETE ✅ — HIGH
+L2 [252]: B — Branch 6 存活 — 33/33 deterministic ALIGNED; 26+ consecutive clean cycles; 3 LLM-req MISALIGNED (expected); daemon_next_priority 存活/cold-start TOUCHED — MEDIUM
+L2 [252]: B — Branch 1.1 tick 132 — BTC=$71,381.69 (↓$81.95 SHORT tailwind); SHORT×132 (100%); 1373 entries; regime=MIXED — LOW (mainnet blocked)
+L2 [252]: B — Branch 3.1 distillation — 3 insights (total 69): paper-live-short-persistence-132 / consistency-26-consecutive-clean / content-repurposing-sop-cold-start-override — MEDIUM
+```
+Cycle verdict: 1A + 3B. No C or D. L3 not triggered.
 
 ## L2 Verdict (Cycle 251)
 ```
@@ -81,9 +90,15 @@ Cycle verdict: 1A + 2B. No C or D. L3 not triggered.
 3. **Branch 4.3**: Edward pastes 4 Discord seed posts → invite C
 4. **Branch 4.1**: Edward sends `docs/samuel_async_calibration_dm.md` via WhatsApp/LINE
 5. **Branch 4.2**: Organism C — Edward fills `templates/organism_c_draft.md` §0 + §7
-6. Branch 1.1: paper-live tick 132 (run `python trading/mainnet_runner.py --paper-live`)
-7. Branch 7: SOP #87 — candidates: Discovery Call Protocol (intake script after SOP #86 triggers consulting DMs), Content Repurposing SOP (turn SOPs into X threads)
+6. Branch 1.1: paper-live tick 133 (run `python trading/mainnet_runner.py --paper-live`)
+7. Branch 7: SOP #88 — candidates: Discovery Call Protocol (intake script after SOP #86 triggers consulting DMs); next after SOP #87 Content Repurposing
 8. Branch 6: next scheduled calibration 2026-05-09 (monthly)
+
+## What's DONE this cycle (cycle 252)
+- **Branch 1.1** (cycle 252): paper-live tick 132; BTC=$71,381.69 (↓$81.95 SHORT tailwind); DualMA_10_30=SHORT×132 (100%); 17/18 FLAT; regime=MIXED (trend=0.014, mr=0.225); 1373 total log entries
+- **Branch 6** (cycle 252): consistency_test.py → 33/33 deterministic ALIGNED ✅; 3 LLM-req MISALIGNED (expected: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev); 26+ consecutive clean cycles; daemon_next_priority '存活/cold-start' TOUCHED ✅
+- **Branch 7** (cycle 252): SOP #87 Content Repurposing SOP — `docs/knowledge_product_87_content_repurposing_sop.md`; G0-G5; G0 cold-start override (fires immediately when 0 posts); SOP #01 thread ready to paste on X; critical path: 10min to first post; **SOP #01~#87 COMPLETE** ✅
+- **Branch 3.1** (cycle 252): distillation — 3 insights appended to memory/insights.json (total 69): paper-live-short-persistence-132 / consistency-26-consecutive-clean / content-repurposing-sop-cold-start-override
 
 ## What's DONE this cycle (cycle 251)
 - **Branch 1.1** (cycle 251): paper-live tick 131; BTC=$71,463.64 (↑$88.89 SHORT headwind); DualMA_10_30=SHORT×131 (100%); 17/18 FLAT; regime=MIXED; 1337 total log entries
