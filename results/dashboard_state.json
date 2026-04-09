@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T12:46+08",
+  "updated": "2026-04-09T12:53+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next priority per daemon: `社交圈/organism-C` — Edward needs to fill `templates/..."
+      "text": "- Branch 6 — health re-verified: 33/33 ALIGNED, all indicators green, daemon_..."
     },
     {
       "time": "just now",
-      "text": "- Series: SOP #01~#53 COMPLETE"
+      "text": "- Posting queue extended to Jul 24; series SOP #01~#54 complete"
     },
     {
       "time": "just now",
-      "text": "- Domains 8+2; posting queue now Jul 22 (#01~#53, 104-day window)"
+      "text": "- Three-layer integration: L1/L2/L3 hooks defined"
     },
     {
       "time": "just now",
-      "text": "- Backing MDs: MD-111/53/89/48/12/67/136"
+      "text": "- 5-gate: G0 daily audit → G1 5-day derivative scan → G2 non-negotiable budge..."
     },
     {
       "time": "just now",
-      "text": "- Decision label: `PROTECT_COGNITIVE_PEAK`"
+      "text": "- Branch 7 — SOP #54: Physical Capital & Body Investment Protocol (Domain 5)"
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 70894.2,
+    "paper_live_price": 70754.54,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T04:41",
+    "paper_live_ts": "2026-04-09T04:50",
     "paper_tick": 78,
     "paper_pnl": "+$0.861",
     "status": "ok"
