@@ -1,136 +1,120 @@
 # Twitter Thread — SOP #42: Income Redundancy & Anti-Fragile Income Protocol
 
-> Hook: "You have one income. You call it stable."
-> Domain: 6 (存活冗餘)
-> Posting date: Jun 30, 2026
-> 2026-04-09T UTC (Cycle 195)
+**Domain:** 6 — 存活冗餘
+**Date:** 2026-04-09T UTC (Cycle 195)
 
 ---
 
-## Thread
+**1/**
+You have one income. You call it stable. It's not — it's a single point of failure.
 
-**Tweet 1 (Hook)**
-You have one income. You call it "stable."
-
-It's not. It's a single point of failure with a salary label.
-
-Income redundancy = losing any one stream leaves you ≥60% operational.
-
-Here's the 6-gate Income Redundancy Protocol.
+Here's the 6-gate Income Redundancy Protocol to make losing any one stream survivable.
 
 🧵
 
 ---
 
-**Tweet 2 (G0 — Inventory)**
-G0: Income Stream Inventory
+**2/**
+G0 — Income Stream Inventory
 
-For every stream, classify:
-• Active vs Passive (scales without your time?)
-• Correlated vs Uncorrelated (fail together?)
-• Time-to-restart if interrupted
+List every stream. For each, classify:
+→ Active (costs your time) or Passive (scales without it)
+→ Correlated or Uncorrelated (do they fail together?)
+→ Time-to-restart if interrupted
 
-Kill condition: any single stream >80% of total income = CRITICAL.
-
-(Same as having one strategy in your entire portfolio.)
+Kill condition: any one stream >80% of total = CRITICAL.
 
 ---
 
-**Tweet 3 (G1 — Survival Threshold)**
-G1: Know your floor first.
+**3/**
+G1 — Survival Threshold
 
-Minimum Viable Floor (MVF) = rent + food + tools + trading capital maintenance
+Calculate your Minimum Viable Floor:
+MVF = rent + food + tools + trading capital maintenance
 
-Then classify:
-• PRIMARY: covers MVF alone
-• SECONDARY: covers 30–80% of MVF
-• SATELLITE: <30% of MVF
+Then classify each stream:
+PRIMARY = covers MVF alone
+SECONDARY = 30–99% of MVF
+CONTRIBUTION = <30%
 
-Target: ≥2 PRIMARY streams.
-
-With 2 primaries, losing one leaves you still operational.
-
----
-
-**Tweet 4 (G2 — Correlation)**
-G2: Income streams can look diversified but fail together.
-
-Salary + bonus + stock options from same employer = ONE stream.
-
-Trading P&L + crypto consulting = market-correlated.
-
-Rule: no two streams share the same single point of failure.
-
-If one event damages >1 stream → they count as ONE.
+Target: ≥2 PRIMARY streams. Lose one → floor still holds.
 
 ---
 
-**Tweet 5 (G3 — Time-to-Revenue)**
-G3: Speed matters in a crisis.
+**4/**
+G2 — Correlation Audit
 
-Classify each stream:
-• FAST (<30 days): consulting, freelance, liquidate
-• MEDIUM (30–180 days): audience, new product, new job
-• SLOW (>180 days): algo trading system, rental, SaaS
+Streams fail together when they share one failure mode.
 
-You need ≥1 FAST stream.
+Salary + bonus + options, same employer = ONE stream.
+Trading P&L + fund salary, same asset class = correlated.
 
-The time to build emergency income is before the emergency.
+Rule: no two PRIMARY streams share the same single point of failure.
 
 ---
 
-**Tweet 6 (G4 — 60% Survival Test)**
-G4: The anti-fragile criterion.
+**5/**
+G3 — Time-to-Revenue Test
 
-Remove your largest income stream.
+Days-to-first-dollar from zero:
 
-Does what's left cover your MVF?
-• Yes → PASS
-• No, covers ≥60% → MARGINAL (survivable short-term)
-• No, covers <60% → CRITICAL GAP
+FAST (<30d): consulting, freelance, live digital product
+MEDIUM (30–180d): new audience, new product, job search
+SLOW (>180d): algo system, SaaS, dividends
 
-If CRITICAL: stop optimizing satellites. Build a second PRIMARY stream first.
+Need ≥1 FAST and ≥1 SLOW.
+No FAST stream = no emergency lever.
 
 ---
 
-**Tweet 7 (G5 — Recovery Protocol)**
-G5: Pre-commit the 72h recovery protocol.
+**6/**
+G4 — 60% Survival Test
 
-For each PRIMARY stream, write:
-• Failure signal (specific, not "I feel uncertain")
-• 72h action (executable without external permission)
-• 14d stabilization plan
-• 30d recovery metric
+Remove your largest stream. Assume $0 for 90 days.
+
+Remaining ÷ MVF:
+≥100% → PASS. Floor holds.
+60–99% → Activate FAST stream within 30 days.
+<60% → CRITICAL GAP. Fix before building anything else.
+
+---
+
+**7/**
+G5 — Recovery Protocol
+
+Pre-commit before the crisis, not during it.
+
+For each PRIMARY stream:
+failure signal → 72h action → 14d milestone → 30d target
 
 "I'll figure it out" is not a protocol.
-
-Pre-commit before crisis, not during.
-
----
-
-**Tweet 8 (Self-Test)**
-Real scenario: salary cut 50% overnight.
-
-G0: Salary was 75% of income → CRITICAL
-G1: Trading + freelance = 15.6% of MVF → FAIL
-G2: Salary + trading both hit by recession → correlated → FAIL
-G4: Remove salary → $500/mo vs $3,200 MVF → CRITICAL
-G5: Freelance protocol pre-written → activate within 72h → PASS
-
-One gate saved the situation.
+Name the first action now. Execute it when you're under pressure.
 
 ---
 
-**Tweet 9 (CTA)**
-Without income redundancy, every high-variance decision — trading, audience building, career risk — is made under existential pressure.
+**8/**
+Scenario: salary cut 50% overnight.
 
-Existential pressure degrades decision quality.
-
-The 6-gate Income Redundancy Protocol:
-G0 Inventory → G1 Floor → G2 Correlation → G3 Speed → G4 60% Test → G5 Pre-commit
-
-DM me "redundancy" for the full framework.
+G0: Salary = 80% → CRITICAL
+G1: Post-cut, no stream covers MVF → 0 PRIMARY streams
+G2: Trading and salary uncorrelated → remaining intact
+G4: $1,500 remaining vs $3,200 MVF → 47% → CRITICAL
+G5: Consulting protocol pre-written → 72h activation
 
 ---
 
-*Part of the SOP series — systematic frameworks from 8 years of trading, systems, and knowledge compounding.*
+**9/**
+Income redundancy is the precondition for every other risk.
+
+Trading, audience, career bets — all made under existential pressure without it.
+
+Existential pressure degrades decisions.
+Degraded decisions accelerate failure.
+
+Build the floor first.
+
+Full SOP #42 → [link]
+
+---
+
+*Series: SOP #01–#42 | Domain: 存活冗餘 | 2026-04-09T UTC (Cycle 195)*
