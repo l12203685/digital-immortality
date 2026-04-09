@@ -2089,6 +2089,38 @@
         "branch-1-3",
         "cycle-285"
       ]
+    },
+    {
+      "id": "7e831778-d6cf-49f6-9c20-cb265a8a2106",
+      "key": "cycle-286-201805-salary-anchor",
+      "content": "薪資目標必須在面試前預設底線（not在offer後計算）——先定底線的一方才有談判控制權；「公司文化」話術是干擾項（MD-385 from 201805)",
+      "ts": "2026-04-10T00:00:00+00:00",
+      "cycle": 286,
+      "branch": "2.2"
+    },
+    {
+      "id": "40947048-715d-4bd6-9191-fd92f2d32137",
+      "key": "cycle-286-201805-opportunity-cost-multiplier",
+      "content": "高成本一次性體驗：換算為替代品倍數（「一趟WSOP=半年其他體驗」）——機會成本顯性化防止情感override（MD-386 from 201805)",
+      "ts": "2026-04-10T00:00:00+00:00",
+      "cycle": 286,
+      "branch": "2.2"
+    },
+    {
+      "id": "3f218cbe-8f3c-4e0c-88e9-f910c1fa6f88",
+      "key": "cycle-286-201805-exit-dual-condition",
+      "content": "離職雙條件觸發器：天花板碰到＋政治成本超閾值兩個同時成立才退出——單條件可忍，雙條件=立即行動（MD-387 from 201805)",
+      "ts": "2026-04-10T00:00:00+00:00",
+      "cycle": 286,
+      "branch": "2.2"
+    },
+    {
+      "id": "58eab932-e4b2-4c97-9fb3-dde4de2d99bc",
+      "key": "consistency-55th-consecutive",
+      "content": "第55次連續 clean cycle (cycle 286): 33/33 ALIGNED，6個預期 MISALIGNED；Branch 6 健康穩定",
+      "ts": "2026-04-10T00:00:00+00:00",
+      "cycle": 286,
+      "branch": "6"
     }
   ]
 }
