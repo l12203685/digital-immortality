@@ -5655,3 +5655,15 @@ Blocker: mainnet keys (human-gated).
 **Branch 1.1 paper-live** tick 64: BTC=$70,881.58, SHORT×64 (100%), P&L=**+$0.878** (+0.878% on $100). BTC down $45.05 from tick 63 ($70,926.63); P&L recovered from +$0.815. MFE ATH unchanged at +$1.204 (tick 50). Regime=MIXED (trend=0.014, mr=0.225). DualMA_10_30 only signaling.
 
 Next blocker: mainnet keys (human-gated).
+
+## Cycle 194 — 2026-04-09 02:06:38 UTC
+
+**Cycle 194 done.**
+
+**Branch 1.1** (highest derivative — DEADLINE 2026-07-07) — paper-live tick 64:
+- BTC = $70,881.58 → SHORT×64 (100% signal consistency)
+- P&L = **+$0.878** (+0.878% on $100) — recovered from +$0.815 (tick 63), BTC down $45
+- MFE ATH = +$1.204 (tick 50) unchanged
+- Regime = MIXED, DualMA_10_30 only signaling
+
+Blocker: mainnet keys (human-gated).

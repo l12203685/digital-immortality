@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T10:00+08",
+  "updated": "2026-04-09T10:06+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live tick 51 BTC=$70,609 SHORT P&L ATH+$1.20 (tick 51 per daemon log; API unreachable from cloud); **SOP #01~#39 COMPLETE** → posting_queue.md updated (Apr 9–Jun 24, 76 days); **x_launch_sequence.md created ✓** — 15 min to first post; **3 workbooks READY TO LIST** ($87/buyer trilogy)",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 all 5 SYSTEM_FAILUREs pre-committed",
   "deadline": "2026-07-07",
@@ -63,15 +63,15 @@
     },
     {
       "time": "just now",
-      "text": "- P&L = +$0.815 (eased from +$0.853 — BTC up $27 from tick 62)"
+      "text": "- P&L = +$0.878 (+0.878% on $100) — recovered from +$0.815 (tick 63), BTC dow..."
     },
     {
       "time": "just now",
-      "text": "- tick 63: BTC=$70,926.63 → SHORT×63 (100%)"
+      "text": "- BTC = $70,881.58 → SHORT×64 (100% signal consistency)"
     }
   ],
   "stats": {
-    "daemon_cycles": 193,
+    "daemon_cycles": 194,
     "total_mds": 330,
     "dna_core_lines": 87
   }
