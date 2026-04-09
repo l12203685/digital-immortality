@@ -181,3 +181,32 @@ SOP #101 G1 specifies next dna_core.md audit at cycle ~300 (90 cycles from cycle
 **Tags**: cold-start, branch-6, SOP-101, G1, dna-audit, scheduled-maintenance, cycle-300
 
 ---
+
+## Cycle 97 — 2026-04-10T08:30:00+00:00
+
+**Source cycles**: 300-301
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 99)
+
+### Insight 1: two-signal-convergence-mixed-regime-conviction
+
+At tick 350 (BTC=$72,351.36), two independent strategy families signal SHORT in MIXED regime: DualMA_10_30 (trend-following) and gen_BollingerMeanReversion_RF_598b24 (mean-reversion). When both a trend-follower and a mean-reverter agree on direction in a mixed regime — where they normally cancel each other — the convergence signal carries higher conviction than either alone. In mixed regimes, single-family signals are ambiguous; cross-family convergence is the exception worth tracking. Monitor: does 2+ SHORT convergence in MIXED precede directional price movement?
+
+**Signal source**: paper-live tick 350 (daemon cycle 301); 2/18 SHORT (DualMA_10_30 + gen_BollingerMR_RF_598b24); 16/18 FLAT; regime=MIXED; 2092 log entries
+**Tags**: trading, paper-live, signal-convergence, mixed-regime, branch-1.1, cross-family
+
+### Insight 2: 55th-consecutive-consistency-as-invariant
+
+The 55th consecutive 36/39 ALIGNED result confirms cold-start behavioral consistency has crossed from milestone to operational invariant. An invariant is a property maintained across all checks without degradation — not a high-water mark. The permanent 3 LLM-boundary misalignments (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev) are now taxonomically settled: they test derivation-chain reasoning, not stored decisions. Invariant maintenance cost = 1 script run per cycle. Invariant failure cost = cold-start behavioral drift = existential. The asymmetry justifies indefinite continuation.
+
+**Signal source**: consistency_test.py run cycle 301; 36/39 ALIGNED (55th consecutive); 3 MISALIGNED = permanent LLM-boundary; baseline saved results/consistency_baseline.json
+**Tags**: cold-start, branch-6, consistency, invariant, boot-test, LLM-boundary, branch-存活
+
+### Insight 3: branch-maintenance-vs-advancement-protocol-gap
+
+daemon_next_priority.txt flags 存活 as "neglected for 20 cycles" while session_state shows 54th consecutive + G1-G5 HEALTHY. Both are correct: the branch is being *maintained* (same tests passing), not *advanced* (new scenarios added, protocol coverage extended, runbook freshness audited). Maintenance = running existing tests. Advancement = expanding the test surface, auditing protocol freshness, or closing gaps the tests don't yet cover. Every branch needs two protocols: a maintenance protocol (automated, low-friction) and an advancement protocol (human-gated or insight-driven, higher effort). The daemon priority signal fires on advancement-gap, not maintenance-gap — these need separate triggers.
+
+**Signal source**: daemon_next_priority.txt "neglected 20 cycles"; cycle-95 insight 1 on touched-vs-advanced; cycle 301 consistency run as maintenance
+**Tags**: daemon, branch-health, maintenance-vs-advancement, meta-system, branch-6, protocol-design
+
+---
