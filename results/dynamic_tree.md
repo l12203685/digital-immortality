@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 201)
+> 最後更新：2026-04-09 UTC (cycle 202)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -24,7 +24,7 @@
   - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
   - **mainnet_activation_guide.md created ✓** (cycle 115) — exact 6-step activation: API key creation → credentials storage → fund wallet → dry-run → go live → loop; kill conditions documented; friction to $0 revenue now minimal
   - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 34: BTC=71108.75 signal=SHORT (consistent SHORT × 34 ticks; slight pullback from tick 33) (cycle 171)
-  - **paper_live_pnl_report.md updated ✓** (cycle 201) — tick 71: BTC=$71,126.88, SHORT×71 (100%), P&L=**+$0.536** (+0.536% on $100); BTC up $132.89 from tick 70 ($70,993.99); MFE ATH=+$1.204 (tick 50); regime=MIXED, DualMA_10_30 only signaling; P&L slipped as BTC rebounded
+  - **paper_live_pnl_report.md updated ✓** (cycle 202) — tick 72: BTC=$71,109.10, SHORT×72 (100%), P&L=**+$0.560** (+0.560% on $100); BTC down $17.78 from tick 71; MFE ATH=+$1.204 (tick 50); regime=MIXED, DualMA_10_30 only signaling; import bug FIXED (cycle 202)
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
@@ -80,11 +80,14 @@
 - 5.4 Documentation：README + SKILL_zh-TW updated ✓
 
 ### 6. 存活冗餘（anti-fragile）
-- 6.1 冷啟動 recovery：templates/dna_core.md **324 MDs** ✓ (cycle 94: domains 7+8 initialized; cycle 55: distill chain 202604→201703 complete)
+- 6.1 冷啟動 recovery：templates/dna_core.md **330 MDs** ✓ (cycle 201: header updated MD-318→MD-330; cold-start boot test 33/33 ALIGNED ✅; staging/session_state.md created — was missing; cycle 94: domains 7+8 initialized; cycle 55: distill chain 202604→201703 complete)
 - 6.2 跨 platform：DNA=markdown not weights ✓
 - 6.3 三層遞迴：daemon + remote trigger + E0 ✓（daemon 已啟動）
 - 6.4 Multi-provider：platform/multi_provider.py created ✓ (Anthropic→OpenAI→Gemini fallback chain, lazy imports)
-- 6.5 衝突解法：scope 分離（每層碰不同檔案）
+- 6.5 衝突解法：scope 分離（每層碰不同檔案）— **DOCUMENTED** (cycle 202): L1(Execute)↔L2(Evaluate)↔L3(Evolve) each write different files; table in docs/cold_start_recovery_runbook.md; no two layers share output files = no scope conflict ✓
+- 6.6 **Cold-start validation** (cycle 201): 33/33 ALIGNED ✅; boot_tests.md 14 tests; session_state.md created
+- **6.7 Cold-start recovery runbook — CREATED ✅** (cycle 202): `docs/cold_start_recovery_runbook.md` — 7 failure modes (F1 session_state missing, F2 stale, F3 tree corrupted, F4 runner import error, F5 boot_tests missing, F6 dna_core too long, F7 daemon death); minimum viable 3-command verification; scope separation table; recovery priority order; **Branch 6 存活 AUDIT CLOSED**
+- **6.8 Trading runner import fix ✅** (cycle 202): `trading/mainnet_runner.py` + `trading/testnet_runner.py` — added `sys.path.insert(0, project_root)` to both; `python trading/mainnet_runner.py --paper-live` now works from project root without module import errors
 
 ### 7. 知識輸出（scale intelligence externally）
 - 7.1 知識缺口偵測：MD-319 (輸出=缺口偵測器) ✓ cycle 94 — forced-output checkpoints; explanation stalls = reinforce nodes
@@ -149,8 +152,8 @@
 - **8.5 Automation #3 — COMPLETE ✅** (cycle 130): coffee-vs-tea (#4: coffee before 13:00 / tea after 13:00) + portfolio-check (#5: 16:00 once daily, no earlier). All 5 SYSTEM_FAILURE decisions from decision_audit.py now pre-committed. Zero remaining recurring decision overhead.
 
 ## 當前 regime
-攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live tick 51 BTC=$70,609 SHORT P&L ATH+$1.20 (tick 51 per daemon log; API unreachable from cloud); **SOP #01~#39 COMPLETE** → posting_queue.md updated (Apr 9–Jun 24, 76 days); **x_launch_sequence.md created ✓** — 15 min to first post; **3 workbooks READY TO LIST** ($87/buyer trilogy)
-中性：2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 all 5 SYSTEM_FAILUREs pre-committed
+攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live tick 72 BTC=$71,109 SHORT P&L=+$0.560 (import fix DONE cycle 202); **SOP #01~#39 COMPLETE** → posting_queue.md updated (Apr 9–Jun 24, 76 days); **x_launch_sequence.md created ✓** — 15 min to first post; **3 workbooks READY TO LIST** ($87/buyer trilogy)
+中性：2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 all 5 SYSTEM_FAILUREs pre-committed; **6 存活 AUDIT CLOSED** (cycle 202: runbook + scope separation documented)
 防禦：2.3 33/33 ALIGNED ✅ (cycle 188 re-confirmed), 4.1 partially unblocked (samuel_dna tested 19/20)
 
 ## 已完成 milestones

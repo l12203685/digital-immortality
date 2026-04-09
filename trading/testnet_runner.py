@@ -22,6 +22,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
 
+# Ensure project root is on sys.path so `from trading.X import ...` works
+# regardless of which directory the script is invoked from.
+_PROJECT_ROOT = Path(__file__).parent.parent
+if str(_PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PROJECT_ROOT))
+
 from trading.backtest_framework import Bar, compute_mae_mfe
 from trading.live_binance import BinanceConfig, LiveExecutor
 from trading.strategies import (
