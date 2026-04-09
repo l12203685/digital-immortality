@@ -1,1 +1,9 @@
-PRIORITY (cycle 208 done): SOP #46 communication triage shipped + samuel_async_dm.md ready to send. Edward actions: (1) send samuel_async_dm.md Part 1 to Samuel, (2) post SOP #01 on X. Next daemon: draft Organism C §0 (5 principles from templates/organism_c_draft.md) + run first Edward-C collision.
+PRIORITY (cycle 208 done): SOP #47 recursive engine maintenance shipped + organism_c_selection_worksheet.md created + posting_queue extended to Jul 10 + tree updated SOP #40-#47.
+
+Edward actions required (no daemon can unblock these):
+  (1) Send docs/samuel_async_calibration_dm.md to Samuel (paste-ready Chinese DM, WhatsApp/LINE)
+  (2) Paste 4 Discord seed posts to channels (#general, #collision-reports, #organism-dna, #calibration-sessions) — files in docs/discord_seed_*.md
+  (3) Fill docs/organism_c_selection_worksheet.md (20-30 min) → organism_c_draft §0+§7 → run collision
+  (4) Post SOP #01 on X — 15 min, x_launch_sequence.md has exact steps
+
+Next daemon: run paper-live tick (python trading/mainnet_runner.py --paper-live); check if L3 evolution needed (any new principle from cycle 208 for dna_core.md).

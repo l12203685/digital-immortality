@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#42
+# Twitter Posting Queue — SOP Series #01~#47
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -49,6 +49,11 @@
 | Jun 26 | #40 | publish_thread_sop40_twitter.md | "Most people trade ideas. A few trade edges. The difference: one has a structural reason to be right." | pending |
 | Jun 28 | #41 | publish_thread_sop41_twitter.md | "Your Twitter audience isn't yours. Neither is your YouTube. You're a tenant. 6-gate Platform Persistence Protocol." | pending |
 | Jun 30 | #42 | publish_thread_sop42_twitter.md | "You have one income. You call it stable. It's a single point of failure with a salary label. 6-gate Income Redundancy Protocol." | pending |
+| Jul 2 | #43 | publish_thread_sop43_twitter.md | "Most people treat relationships as discrete connections. They're not. They're a network. Networks compound." | pending |
+| Jul 4 | #44 | publish_thread_sop44_twitter.md | "I built a digital model of my closest friend. It agreed with me 68% of the time. The 32% taught me more than 5 years of self-reflection." | pending |
+| Jul 6 | #45 | publish_thread_sop45_twitter.md | "Two organisms produce 1 collision. Five produce 10. The network compounds — but only after you get past the 2nd." | pending |
+| Jul 8 | #46 | publish_thread_sop46_twitter.md | "Every unread message is a decision deferred. You don't have a communication problem. You have a triage problem." | pending |
+| Jul 10 | #47 | publish_thread_sop47_twitter.md | "Your recursive engine isn't broken. It's stale. Staleness looks identical to death from the outside. Most people rebuild when they only needed a restart." | pending |
 
 ---
 
