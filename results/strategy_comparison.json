@@ -1,0 +1,262 @@
+{
+  "DualMA_10_30": {
+    "trending": {
+      "pass": true,
+      "avg_sharpe": 5.3,
+      "avg_mdd": 4.85,
+      "avg_wr": 58.974,
+      "edge_ratio": 7.766,
+      "n_trades": 7
+    },
+    "mean_reverting": {
+      "pass": false,
+      "avg_sharpe": -4.291,
+      "avg_mdd": 25.59,
+      "avg_wr": 42.566,
+      "edge_ratio": 2.351,
+      "n_trades": 31
+    },
+    "mixed": {
+      "pass": true,
+      "avg_sharpe": 0.906,
+      "avg_mdd": 8.9,
+      "avg_wr": 51.794,
+      "edge_ratio": 3.608,
+      "n_trades": 16
+    }
+  },
+  "Donchian_20": {
+    "trending": {
+      "pass": true,
+      "avg_sharpe": 1.54,
+      "avg_mdd": 1.52,
+      "avg_wr": 49.84,
+      "edge_ratio": 11.179,
+      "n_trades": 49
+    },
+    "mean_reverting": {
+      "pass": false,
+      "avg_sharpe": -3.289,
+      "avg_mdd": 7.35,
+      "avg_wr": 26.666,
+      "edge_ratio": 2.965,
+      "n_trades": 41
+    },
+    "mixed": {
+      "pass": false,
+      "avg_sharpe": 0.006,
+      "avg_mdd": 1.28,
+      "avg_wr": 28.094,
+      "edge_ratio": 6.914,
+      "n_trades": 39
+    }
+  },
+  "DonchianConfirmed_20": {
+    "trending": {
+      "pass": false,
+      "avg_sharpe": -1.258,
+      "avg_mdd": 1.42,
+      "avg_wr": 26.666,
+      "edge_ratio": 5.518,
+      "n_trades": 16
+    },
+    "mean_reverting": {
+      "pass": false,
+      "avg_sharpe": -1.934,
+      "avg_mdd": 3.46,
+      "avg_wr": 10.0,
+      "edge_ratio": 0.699,
+      "n_trades": 12
+    },
+    "mixed": {
+      "pass": false,
+      "avg_sharpe": 0.413,
+      "avg_mdd": 0.24,
+      "avg_wr": 25.0,
+      "edge_ratio": 8.412,
+      "n_trades": 14
+    }
+  },
+  "DualMA_filtered": {
+    "trending": {
+      "pass": true,
+      "avg_sharpe": 5.3,
+      "avg_mdd": 4.85,
+      "avg_wr": 58.974,
+      "edge_ratio": 9.841,
+      "n_trades": 10
+    },
+    "mean_reverting": {
+      "pass": false,
+      "avg_sharpe": -3.019,
+      "avg_mdd": 9.14,
+      "avg_wr": 31.864,
+      "edge_ratio": 1.884,
+      "n_trades": 26
+    },
+    "mixed": {
+      "pass": true,
+      "avg_sharpe": 2.39,
+      "avg_mdd": 6.26,
+      "avg_wr": 63.7,
+      "edge_ratio": 4.333,
+      "n_trades": 12
+    }
+  },
+  "Donchian_filtered": {
+    "trending": {
+      "pass": true,
+      "avg_sharpe": 1.54,
+      "avg_mdd": 1.52,
+      "avg_wr": 49.84,
+      "edge_ratio": 8.839,
+      "n_trades": 39
+    },
+    "mean_reverting": {
+      "pass": false,
+      "avg_sharpe": -0.585,
+      "avg_mdd": 0.76,
+      "avg_wr": 30.0,
+      "edge_ratio": 1.414,
+      "n_trades": 13
+    },
+    "mixed": {
+      "pass": false,
+      "avg_sharpe": 0.203,
+      "avg_mdd": 0.83,
+      "avg_wr": 20.0,
+      "edge_ratio": 6.873,
+      "n_trades": 21
+    }
+  },
+  "DonchianConfirmed_filtered": {
+    "trending": {
+      "pass": false,
+      "avg_sharpe": -1.258,
+      "avg_mdd": 1.42,
+      "avg_wr": 26.666,
+      "edge_ratio": 4.408,
+      "n_trades": 14
+    },
+    "mean_reverting": {
+      "pass": false,
+      "avg_sharpe": 0.0,
+      "avg_mdd": 0.0,
+      "avg_wr": 0.0,
+      "edge_ratio": 0.114,
+      "n_trades": 3
+    },
+    "mixed": {
+      "pass": false,
+      "avg_sharpe": 0.434,
+      "avg_mdd": 0.1,
+      "avg_wr": 15.0,
+      "edge_ratio": 6.591,
+      "n_trades": 9
+    }
+  },
+  "DualMA_RSI": {
+    "trending": {
+      "pass": true,
+      "avg_sharpe": 4.053,
+      "avg_mdd": 4.86,
+      "avg_wr": 56.7,
+      "edge_ratio": 14.045,
+      "n_trades": 24
+    },
+    "mean_reverting": {
+      "pass": false,
+      "avg_sharpe": -5.671,
+      "avg_mdd": 23.32,
+      "avg_wr": 36.714,
+      "edge_ratio": 4.027,
+      "n_trades": 65
+    },
+    "mixed": {
+      "pass": false,
+      "avg_sharpe": 0.252,
+      "avg_mdd": 7.73,
+      "avg_wr": 52.384,
+      "edge_ratio": 9.275,
+      "n_trades": 36
+    }
+  },
+  "DualMA_RSI_filtered": {
+    "trending": {
+      "pass": true,
+      "avg_sharpe": 4.053,
+      "avg_mdd": 4.86,
+      "avg_wr": 56.7,
+      "edge_ratio": 12.64,
+      "n_trades": 25
+    },
+    "mean_reverting": {
+      "pass": false,
+      "avg_sharpe": -2.692,
+      "avg_mdd": 7.57,
+      "avg_wr": 31.646,
+      "edge_ratio": 1.706,
+      "n_trades": 28
+    },
+    "mixed": {
+      "pass": true,
+      "avg_sharpe": 1.737,
+      "avg_mdd": 6.06,
+      "avg_wr": 62.878,
+      "edge_ratio": 9.905,
+      "n_trades": 19
+    }
+  },
+  "BollingerMR_20": {
+    "trending": {
+      "pass": false,
+      "avg_sharpe": 0.0,
+      "avg_mdd": 0.0,
+      "avg_wr": 0.0,
+      "edge_ratio": 1.117,
+      "n_trades": 2
+    },
+    "mean_reverting": {
+      "pass": false,
+      "avg_sharpe": 0.922,
+      "avg_mdd": 0.89,
+      "avg_wr": 33.334,
+      "edge_ratio": 4.781,
+      "n_trades": 8
+    },
+    "mixed": {
+      "pass": false,
+      "avg_sharpe": -1.154,
+      "avg_mdd": 0.66,
+      "avg_wr": 6.666,
+      "edge_ratio": 2.675,
+      "n_trades": 7
+    }
+  },
+  "BollingerMR_loose": {
+    "trending": {
+      "pass": false,
+      "avg_sharpe": 0.367,
+      "avg_mdd": 1.9,
+      "avg_wr": 65.0,
+      "edge_ratio": 3.419,
+      "n_trades": 25
+    },
+    "mean_reverting": {
+      "pass": true,
+      "avg_sharpe": 3.403,
+      "avg_mdd": 1.42,
+      "avg_wr": 79.334,
+      "edge_ratio": 16.496,
+      "n_trades": 23
+    },
+    "mixed": {
+      "pass": false,
+      "avg_sharpe": -1.198,
+      "avg_mdd": 2.03,
+      "avg_wr": 24.166,
+      "edge_ratio": 4.008,
+      "n_trades": 23
+    }
+  }
+}

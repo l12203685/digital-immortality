@@ -1,0 +1,263 @@
+{
+  "ts": "2026-04-08T00:53 UTC",
+  "decision": "NO_GO",
+  "reason": "5/6 kill conditions triggered (83%). Extend paper trading 14 more days, re-review before live.",
+  "results": {
+    "DualMA(fast=10,slow=30)": {
+      "trending": {
+        "regime": "trending",
+        "avg_sharpe": 1.7057,
+        "avg_mdd": 8.43,
+        "avg_win_rate": 51.49,
+        "avg_profit_factor": 1.3353,
+        "windows_passed": 4,
+        "n_windows": 5,
+        "kill_triggered": false,
+        "window_details": [
+          {
+            "sharpe": 3.2518,
+            "mdd": 6.28,
+            "win_rate": 55.32,
+            "profit_factor": 1.5719
+          },
+          {
+            "sharpe": 2.9728,
+            "mdd": 9.84,
+            "win_rate": 59.57,
+            "profit_factor": 1.4507
+          },
+          {
+            "sharpe": -3.1912,
+            "mdd": 11.61,
+            "win_rate": 44.68,
+            "profit_factor": 0.6517
+          },
+          {
+            "sharpe": 4.098,
+            "mdd": 5.91,
+            "win_rate": 44.68,
+            "profit_factor": 1.7912
+          },
+          {
+            "sharpe": 1.3969,
+            "mdd": 8.52,
+            "win_rate": 53.19,
+            "profit_factor": 1.2112
+          }
+        ]
+      },
+      "mean_reverting": {
+        "regime": "mean_reverting",
+        "avg_sharpe": -2.7556,
+        "avg_mdd": 23.75,
+        "avg_win_rate": 43.4,
+        "avg_profit_factor": 0.7108,
+        "windows_passed": 0,
+        "n_windows": 5,
+        "kill_triggered": true,
+        "window_details": [
+          {
+            "sharpe": -5.7907,
+            "mdd": 39.92,
+            "win_rate": 31.91,
+            "profit_factor": 0.4543
+          },
+          {
+            "sharpe": -2.4193,
+            "mdd": 20.72,
+            "win_rate": 44.68,
+            "profit_factor": 0.7282
+          },
+          {
+            "sharpe": -2.2201,
+            "mdd": 24.11,
+            "win_rate": 48.94,
+            "profit_factor": 0.7451
+          },
+          {
+            "sharpe": -1.2501,
+            "mdd": 12.08,
+            "win_rate": 46.81,
+            "profit_factor": 0.8592
+          },
+          {
+            "sharpe": -2.098,
+            "mdd": 21.9,
+            "win_rate": 44.68,
+            "profit_factor": 0.7671
+          }
+        ]
+      },
+      "mixed": {
+        "regime": "mixed",
+        "avg_sharpe": -0.0905,
+        "avg_mdd": 9.61,
+        "avg_win_rate": 47.66,
+        "avg_profit_factor": 1.1515,
+        "windows_passed": 1,
+        "n_windows": 5,
+        "kill_triggered": true,
+        "window_details": [
+          {
+            "sharpe": -3.3245,
+            "mdd": 17.98,
+            "win_rate": 40.43,
+            "profit_factor": 0.6424
+          },
+          {
+            "sharpe": -0.6757,
+            "mdd": 10.33,
+            "win_rate": 48.94,
+            "profit_factor": 0.9113
+          },
+          {
+            "sharpe": -3.363,
+            "mdd": 9.4,
+            "win_rate": 46.81,
+            "profit_factor": 0.6434
+          },
+          {
+            "sharpe": 6.6271,
+            "mdd": 2.85,
+            "win_rate": 59.57,
+            "profit_factor": 2.5225
+          },
+          {
+            "sharpe": 0.2835,
+            "mdd": 7.51,
+            "win_rate": 42.55,
+            "profit_factor": 1.0378
+          }
+        ]
+      }
+    },
+    "Donchian(period=20)": {
+      "trending": {
+        "regime": "trending",
+        "avg_sharpe": -0.4846,
+        "avg_mdd": 2.07,
+        "avg_win_rate": 40.51,
+        "avg_profit_factor": 0.9381,
+        "windows_passed": 1,
+        "n_windows": 5,
+        "kill_triggered": true,
+        "window_details": [
+          {
+            "sharpe": -2.4536,
+            "mdd": 1.73,
+            "win_rate": 33.33,
+            "profit_factor": 0.174
+          },
+          {
+            "sharpe": 3.9385,
+            "mdd": 1.29,
+            "win_rate": 69.23,
+            "profit_factor": 2.9493
+          },
+          {
+            "sharpe": -2.7867,
+            "mdd": 2.03,
+            "win_rate": 0.0,
+            "profit_factor": 0.0
+          },
+          {
+            "sharpe": 0.2634,
+            "mdd": 1.51,
+            "win_rate": 50.0,
+            "profit_factor": 1.1167
+          },
+          {
+            "sharpe": -1.3847,
+            "mdd": 3.78,
+            "win_rate": 50.0,
+            "profit_factor": 0.4506
+          }
+        ]
+      },
+      "mean_reverting": {
+        "regime": "mean_reverting",
+        "avg_sharpe": -2.6858,
+        "avg_mdd": 7.53,
+        "avg_win_rate": 30.71,
+        "avg_profit_factor": 0.3747,
+        "windows_passed": 0,
+        "n_windows": 5,
+        "kill_triggered": true,
+        "window_details": [
+          {
+            "sharpe": -0.381,
+            "mdd": 4.62,
+            "win_rate": 50.0,
+            "profit_factor": 0.8633
+          },
+          {
+            "sharpe": -2.2061,
+            "mdd": 9.89,
+            "win_rate": 50.0,
+            "profit_factor": 0.4545
+          },
+          {
+            "sharpe": -3.6939,
+            "mdd": 5.5,
+            "win_rate": 0.0,
+            "profit_factor": 0.0
+          },
+          {
+            "sharpe": -4.1812,
+            "mdd": 11.62,
+            "win_rate": 28.57,
+            "profit_factor": 0.2689
+          },
+          {
+            "sharpe": -2.9667,
+            "mdd": 6.01,
+            "win_rate": 25.0,
+            "profit_factor": 0.287
+          }
+        ]
+      },
+      "mixed": {
+        "regime": "mixed",
+        "avg_sharpe": -1.874,
+        "avg_mdd": 3.74,
+        "avg_win_rate": 23.57,
+        "avg_profit_factor": 0.6439,
+        "windows_passed": 1,
+        "n_windows": 5,
+        "kill_triggered": true,
+        "window_details": [
+          {
+            "sharpe": -3.1915,
+            "mdd": 3.84,
+            "win_rate": 25.0,
+            "profit_factor": 0.0161
+          },
+          {
+            "sharpe": -1.446,
+            "mdd": 3.37,
+            "win_rate": 25.0,
+            "profit_factor": 0.5373
+          },
+          {
+            "sharpe": -4.3651,
+            "mdd": 4.73,
+            "win_rate": 0.0,
+            "profit_factor": 0.0
+          },
+          {
+            "sharpe": 2.5548,
+            "mdd": 1.58,
+            "win_rate": 42.86,
+            "profit_factor": 2.4114
+          },
+          {
+            "sharpe": -2.9224,
+            "mdd": 5.18,
+            "win_rate": 25.0,
+            "profit_factor": 0.2545
+          }
+        ]
+      }
+    }
+  }
+}

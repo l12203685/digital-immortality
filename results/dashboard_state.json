@@ -1,0 +1,104 @@
+{
+  "updated": "2026-04-09T17:11+08",
+  "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
+  "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
+  "deadline": "2026-07-07",
+  "days_remaining": 88,
+  "cards": [
+    {
+      "name": "經濟",
+      "icon": "💰",
+      "status": "策略持續開發中",
+      "color": "red",
+      "detail": "BollingerMR added for mean-reverting regime"
+    },
+    {
+      "name": "行為",
+      "icon": "🧠",
+      "status": "330 MDs learned",
+      "color": "green",
+      "detail": "退休計畫 context：templates/example_dna.md §8 added ✓ (target, tr"
+    },
+    {
+      "name": "學習",
+      "icon": "📚",
+      "status": "三層遞迴運作中",
+      "color": "green",
+      "detail": "DNA 演化：dna_core + 15 micro-decisions (MD-01~MD-15, 202503 ✓)"
+    },
+    {
+      "name": "社交",
+      "icon": "🤝",
+      "status": "等朋友加入",
+      "color": "grey",
+      "detail": "Collective intelligence（Phase 3）"
+    },
+    {
+      "name": "平台",
+      "icon": "📦",
+      "status": "v2.2 deployed",
+      "color": "green",
+      "detail": "Documentation：README + SKILL_zh-TW updated ✓"
+    },
+    {
+      "name": "存活",
+      "icon": "🛡️",
+      "status": "冷啟動 <5min",
+      "color": "green",
+      "detail": "no two layers share output files = no scope conflict ✓"
+    },
+    {
+      "name": "知識",
+      "icon": "📝",
+      "status": "43 SOPs ready",
+      "color": "green",
+      "detail": "productization forces all implicit steps to surface"
+    },
+    {
+      "name": "生活",
+      "icon": "🏠",
+      "status": "Calendar maintained",
+      "color": "green",
+      "detail": "redesign environment before invoking willpower"
+    }
+  ],
+  "activity": [
+    {
+      "time": "just now",
+      "text": "Next queue (human-gated): Edward posts SOP #01 on X. SOP #78 G1 protocol is t..."
+    },
+    {
+      "time": "just now",
+      "text": "Branch 7 — SOP #78 Posting Operations & Cadence Protocol: closes the ready→po..."
+    },
+    {
+      "time": "just now",
+      "text": "- `career_multi_option_ev`: 6 options enumerated before evaluating → LIST_ALL..."
+    },
+    {
+      "time": "just now",
+      "text": "- `trading_atr_sizing`: contracts=(2M×0.01)/1200=16 → FORMULA_NOT_FEELING ✓"
+    },
+    {
+      "time": "just now",
+      "text": "- `poker_gto_mdf`: alpha=3/10.2=29.4%, MDF=70.6% → MDF_1_MINUS_ALPHA ✓"
+    }
+  ],
+  "stats": {
+    "daemon_cycles": 208,
+    "total_mds": 330,
+    "dna_core_lines": 87
+  },
+  "health": {
+    "ci_wired": false,
+    "consistency_aligned": 7,
+    "consistency_total": 7,
+    "consistency_score": "100%",
+    "paper_live_price": 71128.39,
+    "paper_live_signal": "FLAT",
+    "paper_live_ts": "2026-04-09T09:05",
+    "paper_tick": 99,
+    "paper_pnl": "+$0.668",
+    "status": "ok"
+  }
+}

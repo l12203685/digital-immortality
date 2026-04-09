@@ -1,0 +1,352 @@
+{
+  "meta": {
+    "report_type": "collision",
+    "generated_at": "2026-04-07T23:12:12.058522",
+    "organism_a_file": "/home/user/digital-immortality/templates/example_dna.md",
+    "organism_b_file": "/home/user/digital-immortality/templates/example_dna.md",
+    "protocol_version": "v0.1"
+  },
+  "summary": {
+    "total_scenarios": 10,
+    "agreements": 10,
+    "divergences": 0,
+    "agreement_rate": 100.0
+  },
+  "organisms": {
+    "a": {
+      "name": "[Your Name]",
+      "principles_extracted": 9,
+      "identity": {
+        "-------": "-------",
+        "full name": "[Name]",
+        "age": "[Age]",
+        "location": "[City, Country]",
+        "personality type": "[MBTI or description]",
+        "current role": "[Job/occupation]",
+        "core goal": "[What you're working toward — be specific]",
+        "philosophy": "[One sentence that captures how you see life]"
+      }
+    },
+    "b": {
+      "name": "[Your Name]",
+      "principles_extracted": 9,
+      "identity": {
+        "-------": "-------",
+        "full name": "[Name]",
+        "age": "[Age]",
+        "location": "[City, Country]",
+        "personality type": "[MBTI or description]",
+        "current role": "[Job/occupation]",
+        "core goal": "[What you're working toward — be specific]",
+        "philosophy": "[One sentence that captures how you see life]"
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "domain": "career",
+      "scenario": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable, reputable employer. The startup has 18 months of runway. Do you take it?",
+      "classification": "agreement",
+      "organism_a": {
+        "name": "[Your Name]",
+        "decision": "PASS — stability hedge outweighs marginal income gain without verifiable runway extension.",
+        "full_response": "On career decisions, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nPASS — stability hedge outweighs marginal income gain without verifiable runway extension.",
+        "principles_used": [
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them."
+        ]
+      },
+      "organism_b": {
+        "name": "[Your Name]",
+        "decision": "PASS — stability hedge outweighs marginal income gain without verifiable runway extension.",
+        "full_response": "On career decisions, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nPASS — stability hedge outweighs marginal income gain without verifiable runway extension.",
+        "principles_used": [
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them."
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'career' scenario, suggesting shared values around risk tolerance. Shared foundation: both organisms cite principles around 'Example: EV thinking — Every decision is an expected value c...' — alignment here."
+    },
+    {
+      "domain": "relationships",
+      "scenario": "A close friend asks you to co-sign a personal loan of significant size. They have a track record of poor financial discipline but are genuinely in need. Do you co-sign?",
+      "classification": "agreement",
+      "organism_a": {
+        "name": "[Your Name]",
+        "decision": "DECLINE — co-signing transfers financial risk without proportional relationship upside; offer alternatives.",
+        "full_response": "On relationship commitments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [2] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDECLINE — co-signing transfers financial risk without proportional relationship upside; offer alternatives.",
+        "principles_used": [
+          "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them."
+        ]
+      },
+      "organism_b": {
+        "name": "[Your Name]",
+        "decision": "DECLINE — co-signing transfers financial risk without proportional relationship upside; offer alternatives.",
+        "full_response": "On relationship commitments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [2] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nDECLINE — co-signing transfers financial risk without proportional relationship upside; offer alternatives.",
+        "principles_used": [
+          "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them."
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'relationships' scenario, suggesting shared values around risk tolerance. Shared foundation: both organisms cite principles around 'Example: EV thinking — Every decision is an expected value c...' — alignment here."
+    },
+    {
+      "domain": "money",
+      "scenario": "You receive an unexpected windfall equal to 2 years of your salary. You can: (A) invest it conservatively in index funds, (B) allocate it to a concentrated high-conviction bet, or (C) use it to buy more time — reduce working hours or take a sabbatical. What do you do and why?",
+      "classification": "agreement",
+      "organism_a": {
+        "name": "[Your Name]",
+        "decision": "CONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
+        "full_response": "On capital allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [3] Applying: \"Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.\"\n\nCONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
+        "principles_used": [
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them.",
+          "Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it."
+        ]
+      },
+      "organism_b": {
+        "name": "[Your Name]",
+        "decision": "CONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
+        "full_response": "On capital allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [3] Applying: \"Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.\"\n\nCONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
+        "principles_used": [
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them.",
+          "Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it."
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'money' scenario, suggesting shared values around risk tolerance. Shared foundation: both organisms cite principles around 'You are [Name] — not an assistant, not a representative. Thi...' — alignment here."
+    },
+    {
+      "domain": "risk",
+      "scenario": "An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your net worth. Do you take the bet?",
+      "classification": "agreement",
+      "organism_a": {
+        "name": "[Your Name]",
+        "decision": "TAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
+        "full_response": "On risk-taking, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
+        "principles_used": [
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them."
+        ]
+      },
+      "organism_b": {
+        "name": "[Your Name]",
+        "decision": "TAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
+        "full_response": "On risk-taking, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
+        "principles_used": [
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them."
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'risk' scenario, suggesting shared values around risk tolerance. Shared foundation: both organisms cite principles around 'Example: EV thinking — Every decision is an expected value c...' — alignment here."
+    },
+    {
+      "domain": "learning",
+      "scenario": "You can spend the next 6 months learning a skill that is highly valuable NOW but may be automated in 3-5 years, OR learning a harder foundational skill that compounds over a decade but pays nothing immediately. Which do you choose?",
+      "classification": "agreement",
+      "organism_a": {
+        "name": "[Your Name]",
+        "decision": "PARALLEL — 70% foundational, 30% immediate; avoid binary framing.",
+        "full_response": "On learning investments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [2] Applying: \"Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.\"\n  [3] Applying: \"[Principle name] — [How this shows up in multiple areas of life]\"\n\nPARALLEL — 70% foundational, 30% immediate; avoid binary framing.",
+        "principles_used": [
+          "You are [Name] — not an assistant, not a representative. Think and act as them.",
+          "Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.",
+          "[Principle name] — [How this shows up in multiple areas of life]"
+        ]
+      },
+      "organism_b": {
+        "name": "[Your Name]",
+        "decision": "PARALLEL — 70% foundational, 30% immediate; avoid binary framing.",
+        "full_response": "On learning investments, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [2] Applying: \"Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.\"\n  [3] Applying: \"[Principle name] — [How this shows up in multiple areas of life]\"\n\nPARALLEL — 70% foundational, 30% immediate; avoid binary framing.",
+        "principles_used": [
+          "You are [Name] — not an assistant, not a representative. Think and act as them.",
+          "Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.",
+          "[Principle name] — [How this shows up in multiple areas of life]"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'learning' scenario, suggesting shared values around risk tolerance. Shared foundation: both organisms cite principles around 'You are [Name] — not an assistant, not a representative. Thi...' — alignment here."
+    },
+    {
+      "domain": "health",
+      "scenario": "Optimizing your physical health would require 10 hours per week of dedicated effort (sleep discipline, exercise, diet). This directly competes with time you currently use for deep work and income generation. How do you allocate?",
+      "classification": "agreement",
+      "organism_a": {
+        "name": "[Your Name]",
+        "decision": "OPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
+        "full_response": "On health vs. productivity trade-offs, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [3] Applying: \"Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
+        "principles_used": [
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them.",
+          "Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it."
+        ]
+      },
+      "organism_b": {
+        "name": "[Your Name]",
+        "decision": "OPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
+        "full_response": "On health vs. productivity trade-offs, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [3] Applying: \"Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
+        "principles_used": [
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them.",
+          "Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it."
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'health' scenario, suggesting shared values around risk tolerance. Shared foundation: both organisms cite principles around 'You are [Name] — not an assistant, not a representative. Thi...' — alignment here."
+    },
+    {
+      "domain": "time",
+      "scenario": "You have a free, unscheduled weekend with zero obligations. No one expects anything from you. What do you do, and what does that reveal about your actual priorities?",
+      "classification": "agreement",
+      "organism_a": {
+        "name": "[Your Name]",
+        "decision": "RECHARGE — genuine disconnection to restore cognitive baseline; productivity follows recovery.",
+        "full_response": "On time allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [3] Applying: \"Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.\"\n\nRECHARGE — genuine disconnection to restore cognitive baseline; productivity follows recovery.",
+        "principles_used": [
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them.",
+          "Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it."
+        ]
+      },
+      "organism_b": {
+        "name": "[Your Name]",
+        "decision": "RECHARGE — genuine disconnection to restore cognitive baseline; productivity follows recovery.",
+        "full_response": "On time allocation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [3] Applying: \"Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.\"\n\nRECHARGE — genuine disconnection to restore cognitive baseline; productivity follows recovery.",
+        "principles_used": [
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them.",
+          "Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it."
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'time' scenario, suggesting shared values around risk tolerance. Shared foundation: both organisms cite principles around 'You are [Name] — not an assistant, not a representative. Thi...' — alignment here."
+    },
+    {
+      "domain": "conflict",
+      "scenario": "A colleague takes credit for your work in front of senior leadership. It was likely deliberate. You have evidence. Do you confront them directly, escalate to management, let it go, or play a longer game? Walk through your reasoning.",
+      "classification": "agreement",
+      "organism_a": {
+        "name": "[Your Name]",
+        "decision": "LONG GAME — let the pattern establish itself; address systemically when the second instance occurs.",
+        "full_response": "On conflict resolution, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [2] Applying: \"Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.\"\n  [3] Applying: \"[Principle name] — [How this shows up in multiple areas of life]\"\n\nLONG GAME — let the pattern establish itself; address systemically when the second instance occurs.",
+        "principles_used": [
+          "You are [Name] — not an assistant, not a representative. Think and act as them.",
+          "Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.",
+          "[Principle name] — [How this shows up in multiple areas of life]"
+        ]
+      },
+      "organism_b": {
+        "name": "[Your Name]",
+        "decision": "LONG GAME — let the pattern establish itself; address systemically when the second instance occurs.",
+        "full_response": "On conflict resolution, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [2] Applying: \"Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.\"\n  [3] Applying: \"[Principle name] — [How this shows up in multiple areas of life]\"\n\nLONG GAME — let the pattern establish itself; address systemically when the second instance occurs.",
+        "principles_used": [
+          "You are [Name] — not an assistant, not a representative. Think and act as them.",
+          "Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.",
+          "[Principle name] — [How this shows up in multiple areas of life]"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'conflict' scenario, suggesting shared values around risk tolerance. Shared foundation: both organisms cite principles around 'You are [Name] — not an assistant, not a representative. Thi...' — alignment here."
+    },
+    {
+      "domain": "opportunity",
+      "scenario": "A contact offers you early access to a deal/opportunity that requires a decision within 48 hours. Due diligence would normally take 2 weeks. The opportunity looks strong but you cannot fully verify it in time. Do you act or pass?",
+      "classification": "agreement",
+      "organism_a": {
+        "name": "[Your Name]",
+        "decision": "PASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
+        "full_response": "On time-compressed opportunities, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [2] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [3] Applying: \"[Value] — proven by: [specific action you took]\"\n\nPASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
+        "principles_used": [
+          "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them.",
+          "[Value] — proven by: [specific action you took]"
+        ]
+      },
+      "organism_b": {
+        "name": "[Your Name]",
+        "decision": "PASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
+        "full_response": "On time-compressed opportunities, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career...\"\n  [2] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [3] Applying: \"[Value] — proven by: [specific action you took]\"\n\nPASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
+        "principles_used": [
+          "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them.",
+          "[Value] — proven by: [specific action you took]"
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'opportunity' scenario, suggesting shared values around risk tolerance. Shared foundation: both organisms cite principles around '[Value] — proven by: [specific action you took]...' — alignment here."
+    },
+    {
+      "domain": "legacy",
+      "scenario": "You have 10 years left to work at full capacity. You can optimize for: (A) maximum wealth accumulation, (B) building something that outlasts you, (C) depth of relationships and personal experiences. These are mutually exclusive at the margin. What is your allocation and why?",
+      "classification": "agreement",
+      "organism_a": {
+        "name": "[Your Name]",
+        "decision": "WEALTH FIRST — financial independence is infrastructure for everything else; sequence matters.",
+        "full_response": "On legacy and long-term orientation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [3] Applying: \"Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.\"\n\nWEALTH FIRST — financial independence is infrastructure for everything else; sequence matters.",
+        "principles_used": [
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them.",
+          "Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it."
+        ]
+      },
+      "organism_b": {
+        "name": "[Your Name]",
+        "decision": "WEALTH FIRST — financial independence is infrastructure for everything else; sequence matters.",
+        "full_response": "On legacy and long-term orientation, [Your Name]'s decision framework yields:\n\n  [1] Applying: \"Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of fre...\"\n  [2] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n  [3] Applying: \"Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it.\"\n\nWEALTH FIRST — financial independence is infrastructure for everything else; sequence matters.",
+        "principles_used": [
+          "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+          "You are [Name] — not an assistant, not a representative. Think and act as them.",
+          "Self-recurse — each output feeds back: \"what would [Name] do next?\" If there's a next step, do it."
+        ]
+      },
+      "synthesis": "Both organisms converge on a action-oriented stance for this 'legacy' scenario, suggesting shared values around risk tolerance. Shared foundation: both organisms cite principles around 'You are [Name] — not an assistant, not a representative. Thi...' — alignment here."
+    }
+  ],
+  "divergence_heatmap": {
+    "career": {
+      "agreements": 1,
+      "divergences": 0
+    },
+    "relationships": {
+      "agreements": 1,
+      "divergences": 0
+    },
+    "money": {
+      "agreements": 1,
+      "divergences": 0
+    },
+    "risk": {
+      "agreements": 1,
+      "divergences": 0
+    },
+    "learning": {
+      "agreements": 1,
+      "divergences": 0
+    },
+    "health": {
+      "agreements": 1,
+      "divergences": 0
+    },
+    "time": {
+      "agreements": 1,
+      "divergences": 0
+    },
+    "conflict": {
+      "agreements": 1,
+      "divergences": 0
+    },
+    "opportunity": {
+      "agreements": 1,
+      "divergences": 0
+    },
+    "legacy": {
+      "agreements": 1,
+      "divergences": 0
+    }
+  },
+  "learning_synthesis": {
+    "[Your Name]": []
+  }
+}

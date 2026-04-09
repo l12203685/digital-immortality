@@ -1,0 +1,85 @@
+{
+  "category": "calibration",
+  "description": "DNA calibration notes and adjustments.",
+  "entries": [
+    {
+      "id": "9c971675-7f39-4de4-a99a-4c34ffd931b8",
+      "key": "cross-instance-initiated-2026-04-07",
+      "content": "Cross-instance test initiated for '[Your Name]' with 18 scenarios, 3 sessions. Template: results/cross_instance_template.md",
+      "timestamp": "2026-04-07T22:07:46.751669+00:00",
+      "source": "cross_instance_test",
+      "tags": [
+        "cross-instance",
+        "calibration",
+        "initiated"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "id": "11cbc6ea-cbfc-451c-9036-07a2b3f88986",
+      "key": "cross-instance-auto-2026-04-09",
+      "content": "Automated cross-instance test (CLI (claude -p)) on 2026-04-09: 0/26 agreement (0%), model=sonnet, sessions=3.",
+      "timestamp": "2026-04-08T16:36:04.568463+00:00",
+      "source": "cross_instance_test",
+      "tags": [
+        "cross-instance",
+        "calibration",
+        "automated"
+      ],
+      "confidence": 0.3
+    },
+    {
+      "id": "b5f1ff07-c7c8-47d7-a7b1-6425f58457fd",
+      "key": "cross-instance-auto-2026-04-09",
+      "content": "Automated cross-instance test (CLI (claude -p)) on 2026-04-09: 35/39 agreement (90%), model=claude-sonnet-4-6, sessions=3.",
+      "timestamp": "2026-04-08T17:32:58.772318+00:00",
+      "source": "cross_instance_test",
+      "tags": [
+        "cross-instance",
+        "calibration",
+        "automated"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "4fbe1bf4-f65a-4a07-b653-7526d02368d0",
+      "key": "cross-instance-auto-2026-04-09",
+      "content": "Automated cross-instance test (CLI (claude -p)) on 2026-04-09: 38/39 agreement (97%), model=claude-sonnet-4-6, sessions=3.",
+      "timestamp": "2026-04-08T17:35:10.722452+00:00",
+      "source": "cross_instance_test",
+      "tags": [
+        "cross-instance",
+        "calibration",
+        "automated"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "c3b45659-755f-4ff1-b394-1171d8f69e72",
+      "key": "cross-instance-auto-2026-04-09",
+      "content": "Automated cross-instance test (API) on 2026-04-09: 39/39 agreement (100%), model=claude-sonnet-4-6, sessions=3.",
+      "timestamp": "2026-04-08T17:45:22.707619+00:00",
+      "source": "cross_instance_test",
+      "tags": [
+        "cross-instance",
+        "calibration",
+        "automated"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "e2e7b462-b345-45de-bf15-a8e8fa1be7ee",
+      "key": "risk-scenario-calibration-2026-04-09",
+      "content": "Risk scenario (30% 10x / 70% total loss, stake=20% net worth): EV = -3.2% net worth. CORRECT response = PASS. The TAKE response in round 003717 was a calibration error. Pre-committed rule: if EV < 0 AND downside > 15% net worth → AUTOMATIC PASS, no deliberation.",
+      "timestamp": "2026-04-09T03:11:08.377787+00:00",
+      "source": "organism_audit_cycle204",
+      "tags": [
+        "risk",
+        "calibration",
+        "organism",
+        "branch-4.1"
+      ],
+      "confidence": 0.95
+    }
+  ]
+}

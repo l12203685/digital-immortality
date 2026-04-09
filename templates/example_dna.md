@@ -23,17 +23,15 @@
 > They should explain your career choices, relationship patterns, financial decisions, and daily behavior.
 > Format: **Short name** — Cross-domain explanation with concrete examples
 
-1. **[Principle name]** — [How this shows up in multiple areas of life]
-   - Example: **EV thinking** — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.
+1. **EV thinking** — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.
 
-2. **[Principle name]** — [Cross-domain explanation]
-   - Example: **Bias toward inaction** — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.
+2. **Bias toward inaction** — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.
 
-3. **[Principle name]** — [Cross-domain explanation]
+3. **Systems over feelings** — Build a process, then trust the process. Meta-strategy: when a system's key metric deteriorates, pause and diagnose before reacting. Trading: predefined failure conditions trigger automatic stops. Life: decisions follow frameworks, not impulses.
 
-4. **[Principle name]** — [Cross-domain explanation]
+4. **Time is the ultimate currency** — Protect time above money. Career: reject promotions that trade time for salary. Finance: allocate windfalls to buy freedom, not accumulate wealth. Identity: first action when time is scarce is always the most specific, urgent commitment to the people who matter.
 
-5. **[Principle name]** — [Cross-domain explanation]
+5. **Direct action on concrete commitments** — Be specific, not abstract. When something needs doing, name the action, the person, and the timeframe. Financial decisions follow stated principles, not vague intentions. Every choice traces back to a core goal.
 
 ---
 
@@ -137,6 +135,75 @@ Who deserves deep investment:
 2. **[Value]** — proven by: [specific action]
 
 3. **[Value]** — proven by: [specific action]
+
+---
+
+## 8. Retirement Planning
+
+> Retirement is a time-as-currency decision, not a money decision.
+> This section captures the joint reasoning between [Name] and [Partner] — both are decision-makers here.
+
+### Target
+
+| Field | Value |
+|-------|-------|
+| Target retirement year | [Year] |
+| Target liquid asset amount | [Amount] (e.g., enough to cover [X] years of expenses with [Y]% safe withdrawal) |
+| Current status | [Brief — e.g., "at [Z]% of target as of [date]"] |
+| Primary decision-makers | [Name] + [Partner] |
+
+### Key Tradeoffs Being Weighed
+
+| Tradeoff | Current lean | Reasoning |
+|----------|-------------|-----------|
+| Freedom now vs. security later | [Lean] | [Why — e.g., "time lost in 30s can't be recovered; security threshold is X"] |
+| Early retirement vs. late retirement | [Lean] | [Why — e.g., "each year earlier costs [amount]; worth it if health holds"] |
+| Solo optimization vs. joint timeline | [Partner] timeline first | Both partners must be able to retire together or the plan fails |
+| Liquid assets vs. illiquid (property) | [Lean] | [Why — e.g., "liquidity preserves optionality"] |
+
+### Non-Negotiables
+
+1. [Partner]'s financial security is not traded away for an earlier personal exit date.
+2. Retirement does not mean stopping — it means stopping mandatory work. [Name] will continue [activity].
+3. The plan must survive a [X]-year bear market without forced asset sales.
+4. Healthcare and [Partner]'s long-term needs are fully modeled before declaring readiness.
+
+### How This Connects to Core Principles
+
+- **Time as ultimate currency** — retirement is the final act of buying time back. The EV of an extra year of freedom in [early decade] exceeds the EV of [additional savings amount].
+- **EV thinking** — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value per year) > (expected additional earnings × marginal utility of money at that level).
+- **Bias toward inaction** — do not pull the trigger on retirement until the financial floor is verified. But also: do not delay indefinitely waiting for "more certainty." Define the threshold in advance.
+- **Concrete commitments** — the plan has a specific year, a specific number, and a named review date. Not "eventually" — [Year], [Amount], review annually each [Month].
+
+### Current Progress / Status
+
+- [ ] Joint financial model built and agreed with [Partner]
+- [ ] Safe withdrawal rate scenario tested against [X]-year downturns
+- [ ] Healthcare costs modeled through [age]
+- [ ] [Partner]'s retirement timeline aligned with [Name]'s target
+- [ ] "Coast FIRE" milestone reached: [Yes/No] — at coast, can reduce savings pressure
+- [ ] Contingency plan defined if target year arrives and assets are at [Y]% of goal
+
+---
+
+## 9. Health & Physical Capital
+
+> Health is the highest-leverage asset. All other capital — financial, career, knowledge — requires a functioning body to convert into value. This section applies the same systematic thinking used in trading and career decisions to physical capital management.
+
+### Core Principles
+
+**Health capital = highest-leverage asset.** The body is the instrument that generates all other returns. Every financial asset, every career opportunity, every knowledge investment depends on a functioning instrument to realize its value. A health failure does not cost one year of income — it costs the compounding chain that year sits in. The marginal return on health investment exceeds the marginal return on any financial investment at the same dollar amount. Operating SOP: set a health budget floor (minimum 3–5% of annual income); health expenditures are prioritized above discretionary consumption; when a health signal appears, the first question is "what is the productivity impact?" not "is this worth the inconvenience?"
+
+**Consistency over intensity — routine regularity beats peak effort.** Treating health maintenance like a high-volatility trading strategy (occasional extreme effort, long gaps) produces the same result: excessive drawdown periods that erase compounding gains. The body adapts to consistent signals, not sporadic high-intensity inputs. A fixed sleep schedule sustained for 90 days outperforms two weeks of perfect sleep followed by chronic disruption. Minimum viable dose executed daily beats maximum dose executed monthly. Tracking metric: consecutive days of routine adherence, not single-session intensity. When the routine breaks, priority is restoring the rhythm — not making up the lost intensity.
+
+**Preventive maintenance = positive-EV insurance.** The expected value calculation is straightforward: known low fixed cost (annual checkup, biannual dental, periodic eye exam) versus unknown high-variance cost (late-stage diagnosis, extended recovery, permanent impairment). Early intervention vs. late intervention cost ratios are typically 1:10 to 1:100, with recovery time adding costs that no amount of money can buy back. "No symptoms" is survivorship bias applied to the body — absence of symptoms means the problem has not surfaced yet, not that it does not exist. Health screening is a portfolio hedge, not a consumption expense. Fixed annual schedule: full physical (blood panel + imaging), dental cleaning every 6 months, eye exam every 1–2 years — calendar-locked, not symptom-triggered.
+
+### How Health Decisions Connect to Core Principles
+
+- **EV thinking** — Preventive care has positive expected value at any reasonable discount rate. The cost of deferral compounds.
+- **Systems over feelings** — Health maintenance follows a fixed schedule, not how the body feels on a given day. Feeling fine is not a reliable signal.
+- **Time is the ultimate currency** — A health failure consumes irreplaceable time. Protecting the instrument that generates time-freedom is the highest-order protection.
+- **Bias toward inaction** — Applied here as: do not abandon a consistent routine without a clear reason. Inertia in healthy habits is a feature, not a bug.
 
 ---
 

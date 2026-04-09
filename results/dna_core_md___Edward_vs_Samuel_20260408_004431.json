@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "generated_at": "2026-04-08T00:44:31.329788",
+    "organism_a_file": "C:\\Users\\admin\\LYH\\agent\\dna_core.md",
+    "organism_b_file": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\samuel_dna.md",
+    "scenario_count": 1,
+    "protocol_version": "v0.1"
+  },
+  "organisms": {
+    "a": {
+      "name": "dna_core.md — Edward 冷啟動操作核心",
+      "principles_extracted": 5,
+      "identity": {}
+    },
+    "b": {
+      "name": "Samuel",
+      "principles_extracted": 9,
+      "identity": {
+        "-------": "-------",
+        "full name": "Samuel",
+        "age": "32",
+        "location": "Taipei, Taiwan",
+        "personality type": "ESTJ",
+        "current role": "Business Development, growth-stage startup",
+        "core goal": "Build wealth and influence through relationships",
+        "philosophy": "\"If you're not moving, you're falling behind.\""
+      }
+    }
+  },
+  "interactions": [
+    {
+      "type": "decision_comparison",
+      "scenario": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable, reputable employer. The startup has 18 months of runway. Do you take it?",
+      "domain": "career",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On career decisions, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nCONDITIONAL — evaluate EV of runway extension probability before deciding.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On career decisions, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Visible effort = trust — show up, stay late, people remember who worked hardest\"\n  [3] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n\nTAKE — growth optionality at 1.8x is underpriced; downside is recoverable, upside compounds.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Visible effort = trust — show up, stay late, people remember who worked hardest",
+          "Bias toward action — move fast, iterate; waiting is the real risk"
+        ]
+      },
+      "synthesis": "DIVERGE [CONDITIONAL vs TAKE]: dna_core.md — Edward 冷啟動操作核心 → CONDITIONAL, Samuel → TAKE in 'career'. Structural difference in risk weighting. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Population exploit' — drives their specific stance. Samuel's distinctive signal: 'Bias toward action — move fast, iterate; waiting is the real risk' — drives their specific stance."
+    }
+  ]
+}

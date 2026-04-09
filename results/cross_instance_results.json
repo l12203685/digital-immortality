@@ -1,0 +1,637 @@
+{
+  "dna": "DNA Core — Operational Minimum",
+  "dna_file": "templates/dna_core.md",
+  "model": "claude-sonnet-4-6",
+  "mode": "api",
+  "sessions": 3,
+  "timestamp": "2026-04-09T01:45:22.704075",
+  "scenarios": [
+    {
+      "id": "organism_1",
+      "domain": "career",
+      "expected": null,
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "organism_2",
+      "domain": "relationships",
+      "expected": null,
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "organism_3",
+      "domain": "money",
+      "expected": null,
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "organism_4",
+      "domain": "risk",
+      "expected": null,
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "organism_5",
+      "domain": "learning",
+      "expected": null,
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "organism_6",
+      "domain": "health",
+      "expected": null,
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "organism_7",
+      "domain": "time",
+      "expected": null,
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "organism_8",
+      "domain": "conflict",
+      "expected": null,
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "organism_9",
+      "domain": "opportunity",
+      "expected": null,
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "organism_10",
+      "domain": "legacy",
+      "expected": null,
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "organism_11",
+      "domain": "communication",
+      "expected": null,
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "organism_12",
+      "domain": "meta_strategy",
+      "expected": null,
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_trading",
+      "domain": "trading",
+      "expected": "EVALUATE_TIME_VS_RETURN",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_finance",
+      "domain": "finance",
+      "expected": "APPLY_FINANCIAL_PRINCIPLES",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_career",
+      "domain": "career",
+      "expected": "DEPENDS_ON_CORE_GOAL",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_relationships",
+      "domain": "relationships",
+      "expected": "SET_BOUNDARY",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_identity",
+      "domain": "identity",
+      "expected": "SPECIFIC_ACTION",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_risk",
+      "domain": "risk_assessment",
+      "expected": "REJECT",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_opportunity_cost",
+      "domain": "opportunity_cost",
+      "expected": "PASS_UNLESS_CLEAR_EDGE",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_meta_strategy",
+      "domain": "meta_strategy",
+      "expected": "PAUSE_AND_DIAGNOSE",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_verdict_first",
+      "domain": "communication",
+      "expected": "LEAD_WITH_VERDICT",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_intuition_primacy",
+      "domain": "communication",
+      "expected": "TRUST_INTUITION_UNLESS_2X_EVIDENCE",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_information_asymmetry",
+      "domain": "information_asymmetry",
+      "expected": "PURSUE_EDGE_PASS_ON_SYMMETRY",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_negotiation",
+      "domain": "negotiation",
+      "expected": "CALCULATE_FLOOR_FIRST_WRITTEN",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_strategy_failure",
+      "domain": "trading",
+      "expected": "DEFINE_KILL_CONDITIONS_FIRST",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_kelly_sizing",
+      "domain": "position_sizing",
+      "expected": "BET_FRACTIONAL_KELLY",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_debt_vs_invest",
+      "domain": "capital_allocation",
+      "expected": "COMPARE_RATES_NOT_AMOUNTS",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_dca_execution",
+      "domain": "capital_allocation",
+      "expected": "DCA_IS_DEFAULT_EXECUTION",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_dividend_income_target",
+      "domain": "capital_allocation",
+      "expected": "CALCULATE_INCOME_TARGET_FROM_YIELD",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_media_earnings_narrative",
+      "domain": "information",
+      "expected": "DECODE_ALL_DIMENSIONS_NOT_ONE",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_large_capital_no_stoploss",
+      "domain": "capital_allocation",
+      "expected": "HOLD_WHEN_YIELD_EXCEEDS_DRAWDOWN",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_stock_cashflow_comparison",
+      "domain": "capital_allocation",
+      "expected": "COMPARE_ABSOLUTE_CASHFLOW_SAME_CAPITAL",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_knowledge_output_gap",
+      "domain": "knowledge_output",
+      "expected": "OUTPUT_TO_VALIDATE_UNDERSTANDING",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_life_system_recurring_decisions",
+      "domain": "life_maintenance",
+      "expected": "REDUCE_DECISION_FREQUENCY",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_knowledge_productize_sop",
+      "domain": "knowledge_output",
+      "expected": "OUTPUT_TO_VALIDATE_UNDERSTANDING",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_peak_cognitive_protection",
+      "domain": "life_maintenance",
+      "expected": "REDUCE_DECISION_FREQUENCY",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_game_threat_profile",
+      "domain": "strategy",
+      "expected": "IDENTIFY_THREAT_PROFILE_FIRST",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_trading_friction_cost",
+      "domain": "trading",
+      "expected": "CALCULATE_FRICTION_COST_FIRST",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    },
+    {
+      "id": "generic_career_multi_track",
+      "domain": "career",
+      "expected": "MULTI_TRACK_BEFORE_CONVERGE",
+      "decisions": [
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "agreed": true,
+      "responses": [
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+        "ERROR: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+      ]
+    }
+  ],
+  "total_scenarios": 39,
+  "total_agreed": 39,
+  "agreement_rate": 1.0
+}

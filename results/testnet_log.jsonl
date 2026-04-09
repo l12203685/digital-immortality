@@ -1,0 +1,43 @@
+{"ts": "2026-04-08T01:03:45.253076+00:00", "strategy": "dual_ma", "action": "ERROR", "error": "ccxt is required for live trading. Install with: pip install ccxt", "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:03:45.254096+00:00", "strategy": "donchian", "action": "ERROR", "error": "ccxt is required for live trading. Install with: pip install ccxt", "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:03:45.254816+00:00", "strategy": "dual_ma_filtered", "action": "ERROR", "error": "ccxt is required for live trading. Install with: pip install ccxt", "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:03:45.255657+00:00", "strategy": "donchian_filtered", "action": "ERROR", "error": "ccxt is required for live trading. Install with: pip install ccxt", "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:04:44.312072+00:00", "strategy": "dual_ma", "action": "DRY_RUN", "signal": -1, "price": 71646.2, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:04:45.450489+00:00", "strategy": "donchian", "action": "DRY_RUN", "signal": 0, "price": 71585.1, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:04:46.504056+00:00", "strategy": "dual_ma_filtered", "action": "DRY_RUN", "signal": 0, "price": 71585.1, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:04:47.704920+00:00", "strategy": "donchian_filtered", "action": "DRY_RUN", "signal": 0, "price": 71646.2, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:21:58.194101+00:00", "strategy": "dual_ma", "action": "DRY_RUN", "signal": -1, "price": 71686.5, "bars_fetched": 100, "pnl_usdt": -0.0562, "dry_run": true}
+{"ts": "2026-04-08T01:21:59.329887+00:00", "strategy": "donchian", "action": "DRY_RUN", "signal": 0, "price": 71686.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:22:00.391276+00:00", "strategy": "dual_ma_filtered", "action": "DRY_RUN", "signal": 0, "price": 71592.6, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:22:01.734679+00:00", "strategy": "donchian_filtered", "action": "DRY_RUN", "signal": 0, "price": 71592.6, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:25:43.347110+00:00", "strategy": "dual_ma", "action": "DRY_RUN", "signal": -1, "price": 71540.8, "bars_fetched": 100, "pnl_usdt": 0.2032, "dry_run": true}
+{"ts": "2026-04-08T01:25:44.631360+00:00", "strategy": "donchian", "action": "DRY_RUN", "signal": 0, "price": 71540.2, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:25:45.682639+00:00", "strategy": "dual_ma_filtered", "action": "DRY_RUN", "signal": 0, "price": 71540.2, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:25:46.846797+00:00", "strategy": "donchian_filtered", "action": "DRY_RUN", "signal": 0, "price": 71540.2, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:28:09.171693+00:00", "strategy": "dual_ma", "action": "DRY_RUN", "signal": -1, "price": 71543.7, "bars_fetched": 100, "pnl_usdt": -0.0041, "dry_run": true}
+{"ts": "2026-04-08T01:28:10.290090+00:00", "strategy": "donchian", "action": "DRY_RUN", "signal": 0, "price": 71544.0, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:28:11.662639+00:00", "strategy": "dual_ma_filtered", "action": "DRY_RUN", "signal": 0, "price": 71544.0, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:28:12.872717+00:00", "strategy": "donchian_filtered", "action": "DRY_RUN", "signal": 0, "price": 71544.0, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:31:00.176113+00:00", "strategy": "dual_ma", "action": "DRY_RUN", "signal": -1, "price": 71500.0, "bars_fetched": 100, "pnl_usdt": 0.0611, "dry_run": true}
+{"ts": "2026-04-08T01:31:01.268449+00:00", "strategy": "donchian", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:31:02.343505+00:00", "strategy": "dual_ma_filtered", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:31:03.741287+00:00", "strategy": "donchian_filtered", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:31:21.912099+00:00", "strategy": "dual_ma", "action": "DRY_RUN", "signal": -1, "price": 71437.2, "bars_fetched": 100, "pnl_usdt": 0.0878, "dry_run": true}
+{"ts": "2026-04-08T01:31:22.935292+00:00", "strategy": "donchian", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:31:23.985471+00:00", "strategy": "dual_ma_filtered", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T01:31:26.140780+00:00", "strategy": "donchian_filtered", "action": "DRY_RUN", "signal": 0, "price": 71437.9, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T14:07:30.657362+00:00", "strategy": "bollinger_mr", "action": "ERROR", "error": "ccxt is required for live trading. Install with: pip install ccxt", "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T23:58:21.907762+00:00", "strategy": "dual_ma", "action": "DRY_RUN", "signal": -1, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": 0.4531, "dry_run": true}
+{"ts": "2026-04-08T23:58:23.056820+00:00", "strategy": "donchian", "action": "DRY_RUN", "signal": 0, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T23:58:24.141978+00:00", "strategy": "dual_ma_filtered", "action": "DRY_RUN", "signal": 0, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T23:58:25.317845+00:00", "strategy": "donchian_filtered", "action": "DRY_RUN", "signal": 0, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T23:58:26.654329+00:00", "strategy": "dual_ma_rsi", "action": "DRY_RUN", "signal": -1, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T23:58:27.752388+00:00", "strategy": "dual_ma_rsi_filtered", "action": "DRY_RUN", "signal": 0, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T23:58:28.939788+00:00", "strategy": "bollinger_mr", "action": "DRY_RUN", "signal": 0, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T23:58:57.861903+00:00", "strategy": "dual_ma", "action": "DRY_RUN", "signal": -1, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": -0.0, "dry_run": true}
+{"ts": "2026-04-08T23:58:58.950079+00:00", "strategy": "donchian", "action": "DRY_RUN", "signal": 0, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T23:59:00.027180+00:00", "strategy": "dual_ma_filtered", "action": "DRY_RUN", "signal": 0, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T23:59:01.221346+00:00", "strategy": "donchian_filtered", "action": "DRY_RUN", "signal": 0, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T23:59:02.441584+00:00", "strategy": "dual_ma_rsi", "action": "DRY_RUN", "signal": -1, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": -0.0, "dry_run": true}
+{"ts": "2026-04-08T23:59:03.582655+00:00", "strategy": "dual_ma_rsi_filtered", "action": "DRY_RUN", "signal": 0, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-08T23:59:04.791912+00:00", "strategy": "bollinger_mr", "action": "DRY_RUN", "signal": 0, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}

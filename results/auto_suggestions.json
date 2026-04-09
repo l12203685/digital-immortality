@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "dna_file": "/home/user/digital-immortality/templates/example_dna.md",
+    "organism": "[Your Name]",
+    "generated_at": "2026-04-07T21:11:55.718169",
+    "misaligned_count": 6
+  },
+  "suggestions": [
+    {
+      "scenario_id": "generic_trading",
+      "domain": "trading",
+      "relevant_section": "New section for 'trading'",
+      "existing_principles": [
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
+      ],
+      "suggestion_type": "add",
+      "suggested_edit": "Add a decision kernel or principle to section \"New section for 'trading'\" that addresses trading scenarios where the expected outcome is \"EVALUATE_TIME_VS_RETURN\". The DNA currently lacks a principle that would produce this decision.",
+      "suggested_principle": "**Evaluate Time Vs Return** — Evaluate time cost (2hr/day = 730hr/year) against alternative uses of that time. Assess whether the claimed return compensates for opportunity cost, lack of verification, and attention drain. Apply your core principles about edge, risk, and time allocation."
+    },
+    {
+      "scenario_id": "generic_finance",
+      "domain": "finance",
+      "relevant_section": "5. Career & Finance",
+      "existing_principles": [
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
+      ],
+      "suggestion_type": "add",
+      "suggested_edit": "Add a decision kernel or principle to section \"5. Career & Finance\" that addresses finance scenarios where the expected outcome is \"APPLY_FINANCIAL_PRINCIPLES\". The DNA currently lacks a principle that would produce this decision.",
+      "suggested_principle": "**Apply Financial Principles** — Apply your financial principles and life priorities. The 'right' answer depends entirely on your DNA: someone optimizing for freedom chooses differently than someone optimizing for wealth accumulation. This tests whether your principles produce a coherent, justified allocation."
+    },
+    {
+      "scenario_id": "generic_career",
+      "domain": "career",
+      "relevant_section": "2. Decision Framework",
+      "existing_principles": [
+        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
+        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
+        "What you decided"
+      ],
+      "suggestion_type": "add",
+      "suggested_edit": "Add a decision kernel or principle to section \"2. Decision Framework\" that addresses career scenarios where the expected outcome is \"DEPENDS_ON_CORE_GOAL\". The DNA currently lacks a principle that would produce this decision.",
+      "suggested_principle": "**Depends On Core Goal** — Weigh salary increase against loss of time for high-value individual work. Consider whether the promotion aligns with your long-term goals or diverts from them. Apply your principles about what you optimize for -- money, time, autonomy, or skill depth."
+    },
+    {
+      "scenario_id": "generic_identity",
+      "domain": "identity",
+      "relevant_section": "BOOT_CRITICAL — Read This First",
+      "existing_principles": [
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
+      ],
+      "suggestion_type": "add",
+      "suggested_edit": "Add a decision kernel or principle to section \"BOOT_CRITICAL — Read This First\" that addresses identity scenarios where the expected outcome is \"SPECIFIC_ACTION\". The DNA currently lacks a principle that would produce this decision.",
+      "suggested_principle": "**Specific Action** — This tests whether the DNA captures enough operational detail to produce a concrete, first-person action (not a meta-action like 'maintain the system'). The answer should reference specific people, commitments, or responsibilities from the DNA."
+    },
+    {
+      "scenario_id": "generic_opportunity_cost",
+      "domain": "opportunity_cost",
+      "relevant_section": "0. Core Principles",
+      "existing_principles": [
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
+      ],
+      "suggestion_type": "add",
+      "suggested_edit": "Add a decision kernel or principle to section \"0. Core Principles\" that addresses opportunity_cost scenarios where the expected outcome is \"PASS_UNLESS_CLEAR_EDGE\". The DNA currently lacks a principle that would produce this decision.",
+      "suggested_principle": "**Pass Unless Clear Edge** — Compare expected value of both paths. Startup success accelerates your goal; failure delays it by 2+ years. Evaluate whether you have genuine edge in assessing the startup's probability of success. Apply your principles about conviction thresholds, opportunity cost, and irreversible vs. reversible decisions."
+    },
+    {
+      "scenario_id": "generic_meta_strategy",
+      "domain": "meta_strategy",
+      "relevant_section": "0. Core Principles",
+      "existing_principles": [
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
+      ],
+      "suggestion_type": "add",
+      "suggested_edit": "Add a decision kernel or principle to section \"0. Core Principles\" that addresses meta_strategy scenarios where the expected outcome is \"PAUSE_AND_DIAGNOSE\". The DNA currently lacks a principle that would produce this decision.",
+      "suggested_principle": "**Pause And Diagnose** — Focus on rate of change, not absolute level. A 3x deterioration in a key metric is a regime-change signal. Apply your principles about predefined failure conditions, when inaction becomes dangerous, and meta-level management of your strategies."
+    }
+  ]
+}

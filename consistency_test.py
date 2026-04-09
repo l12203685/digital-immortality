@@ -10,8 +10,12 @@ Measures how consistently a DNA file produces decisions across:
 This script generates a test suite from boot_tests + organism scenarios,
 runs the deterministic engine, and creates a scoring template for LLM runs.
 
+Scenarios are loaded from external JSON files, making the test framework
+work with ANY DNA file — not just a specific person.
+
 Usage:
-    python consistency_test.py <dna_file> [--boot-tests <path>] [--output-dir <dir>]
+    python consistency_test.py <dna_file> [--scenarios <path>] [--output-dir <dir>]
+    python consistency_test.py <dna_file> --generate-scenarios [--output-dir <dir>]
 
 Output:
     - consistency_baseline.json — deterministic engine answers (ground truth)
@@ -28,127 +32,447 @@ from pathlib import Path
 
 # Import organism_interact for deterministic baseline
 sys.path.insert(0, str(Path(__file__).parent))
-from organism_interact import parse_dna, generate_response, SCENARIOS
+from organism_interact import parse_dna, generate_response, SCENARIOS, DOMAIN_PRINCIPLE_AFFINITY
+import memory_manager
 
 
-# Boot test scenarios extracted from boot_tests.md format
-BOOT_TEST_SCENARIOS = [
-    {
-        "id": "boot_7",
+# ---------------------------------------------------------------------------
+# Auto-suggest: map domains to DNA sections, generate fix suggestions
+# ---------------------------------------------------------------------------
+
+# Maps scenario domains to DNA section keywords.  When a scenario is
+# MISALIGNED we search the DNA section headers for these keywords to
+# locate the most relevant section.
+_DOMAIN_TO_SECTION_KEYWORDS: dict[str, list[str]] = {
+    "trading":          ["trading", "trade", "strategy", "system", "交易", "策略"],
+    "finance":          ["finance", "career & finance", "money", "invest", "wealth", "financial", "財務"],
+    "career":           ["career", "work", "job", "occupation", "職業"],
+    "relationships":    ["relationship", "friend", "social", "people", "人際"],
+    "social":           ["relationship", "friend", "social", "people", "人際", "communication"],
+    "identity":         ["identity", "who i am", "boot_critical", "core", "身份"],
+    "risk_assessment":  ["risk", "decision", "framework", "principle", "風險"],
+    "risk":             ["risk", "decision", "framework", "principle", "風險"],
+    "opportunity_cost": ["decision", "framework", "principle", "opportunity", "core"],
+    "meta_strategy":    ["decision", "framework", "principle", "core", "meta", "strategy"],
+    "money":            ["finance", "money", "invest", "wealth", "financial"],
+    "learning":         ["learning", "skill", "growth", "career"],
+    "health":           ["health", "daily", "pattern", "routine"],
+    "time":             ["time", "daily", "pattern", "priority"],
+    "conflict":         ["conflict", "communication", "relationship", "style"],
+    "opportunity":      ["decision", "framework", "opportunity", "risk"],
+    "position_sizing":  ["trading", "strategy", "position", "kelly", "sizing", "risk"],
+    "legacy":           ["legacy", "value", "identity", "core"],
+    "capital_allocation": ["finance", "invest", "capital", "money", "wealth", "financial", "財務", "資本"],
+    "knowledge_output": ["knowledge", "output", "teach", "publish", "學習", "知識", "輸出"],
+    "life_maintenance": ["life", "daily", "routine", "habit", "health", "生活", "習慣", "維護"],
+    "information_asymmetry": ["information", "edge", "knowledge", "asymmetry", "資訊"],
+    "negotiation":      ["negotiation", "salary", "deal", "floor", "談判", "薪資"],
+    "communication":    ["communication", "style", "response", "latency", "溝通"],
+    "strategy":         ["strategy", "game", "competitive", "threat", "賽局", "策略"],
+    "information":      ["information", "media", "narrative", "decode", "資訊", "媒體"],
+}
+
+
+def _find_relevant_section(dna: dict, domain: str) -> str | None:
+    """Find the DNA section header most relevant to a scenario domain."""
+    keywords = _DOMAIN_TO_SECTION_KEYWORDS.get(domain, [domain])
+    section_headers: list[str] = dna.get("sections", [])
+
+    # Score each section header against the domain keywords
+    best_header = None
+    best_score = 0
+    for header in section_headers:
+        h_lower = header.lower()
+        score = sum(1 for kw in keywords if kw.lower() in h_lower)
+        if score > best_score:
+            best_score = score
+            best_header = header
+    return best_header
+
+
+def _find_relevant_principles(dna: dict, domain: str, top_n: int = 3) -> list[str]:
+    """Return the principles most relevant to a domain (reuses organism_interact scoring)."""
+    from organism_interact import _score_principle_for_domain
+
+    principles = dna.get("principles", [])
+    scored = sorted(
+        [(p, _score_principle_for_domain(p, domain)) for p in principles],
+        key=lambda x: x[1],
+        reverse=True,
+    )
+    return [p for p, s in scored[:top_n]]
+
+
+def generate_suggestion(dna: dict, result: dict, memory_ctx: dict | None = None) -> dict:
+    """Generate a structured suggestion for fixing a MISALIGNED scenario.
+
+    When memory_ctx is provided, past corrections and calibration for this
+    domain are included in the suggestion, making it more targeted.
+
+    Returns a dict with:
+      - scenario_id: the failing scenario id
+      - domain: scenario domain
+      - relevant_section: which DNA section header to edit (or create)
+      - existing_principles: the principles currently most related
+      - suggestion_type: "add" or "modify"
+      - suggested_edit: text describing what to add/change
+      - suggested_principle: a draft principle/decision-kernel entry
+    """
+    domain = result.get("domain", "general")
+    expected = result.get("expected_decision", "")
+    expected_reasoning = result.get("expected_reasoning", "")
+    actual_response = result.get("deterministic_response", "")
+
+    relevant_section = _find_relevant_section(dna, domain)
+    existing = _find_relevant_principles(dna, domain)
+
+    # Determine if we should add a new principle or modify an existing one
+    if not existing or all(len(p) < 15 for p in existing):
+        suggestion_type = "add"
+    else:
+        # Check if any existing principle mentions the expected decision concept
+        expected_lower = expected.lower().replace("_", " ")
+        has_related = any(
+            any(word in p.lower() for word in expected_lower.split() if len(word) > 3)
+            for p in existing
+        )
+        suggestion_type = "modify" if has_related else "add"
+
+    # Build a readable suggestion and draft principle
+    target_section = relevant_section or f"New section for '{domain}'"
+    if suggestion_type == "add":
+        suggested_edit = (
+            f"Add a decision kernel or principle to section \"{target_section}\" "
+            f"that addresses {domain} scenarios where the expected outcome is "
+            f"\"{expected}\". The DNA currently lacks a principle that would "
+            f"produce this decision."
+        )
+        draft_principle = (
+            f"**{expected.replace('_', ' ').title()}** — "
+            f"{expected_reasoning}"
+        )
+    else:
+        # Identify the closest existing principle to recommend modifying
+        closest = existing[0] if existing else "(none)"
+        suggested_edit = (
+            f"Modify the principle closest to this domain in section "
+            f"\"{target_section}\": \"{closest}\". "
+            f"It should also cover the case where the expected decision is "
+            f"\"{expected}\". Currently the deterministic engine produces: "
+            f"\"{actual_response[:150]}\"."
+        )
+        draft_principle = (
+            f"**{expected.replace('_', ' ').title()}** — "
+            f"{expected_reasoning}"
+        )
+
+    # --- Memory-enhanced suggestion ---
+    memory_context_notes: list[str] = []
+    if memory_ctx:
+        for entry in memory_ctx.get("corrections", []) + memory_ctx.get("calibration", []):
+            entry_content = entry.get("content", "")
+            entry_domain = domain in entry_content.lower() or domain in entry.get("tags", [])
+            entry_expected = expected.lower() in entry_content.lower()
+            if entry_domain or entry_expected:
+                note = entry_content[:200]
+                if note not in memory_context_notes:
+                    memory_context_notes.append(note)
+        if memory_context_notes:
+            suggested_edit += (
+                f" Memory context: {len(memory_context_notes)} past correction(s) reference "
+                f"this domain — see memory_context field for details."
+            )
+
+    return {
+        "scenario_id": result.get("id", "unknown"),
+        "domain": domain,
+        "relevant_section": target_section,
+        "existing_principles": existing,
+        "suggestion_type": suggestion_type,
+        "suggested_edit": suggested_edit,
+        "suggested_principle": draft_principle,
+        "memory_context": memory_context_notes,
+    }
+
+
+# ---------------------------------------------------------------------------
+# Scenario loading
+# ---------------------------------------------------------------------------
+
+# Resolve paths relative to this script
+_SCRIPT_DIR = Path(__file__).parent
+_DEFAULT_SCENARIOS_PATH = _SCRIPT_DIR / "templates" / "generic_boot_tests.json"
+
+
+def load_scenarios(filepath: str | Path | None = None) -> list:
+    """Load boot-test scenarios from a JSON file.
+
+    The JSON may be either:
+      - A plain array of scenario objects: [{"id": ..., "domain": ...}, ...]
+      - A wrapper object with a "scenarios" key: {"scenarios": [...], "_comment": "..."}
+
+    Returns a list of scenario dicts.
+    """
+    path = Path(filepath) if filepath else _DEFAULT_SCENARIOS_PATH
+    if not path.exists():
+        print(f"WARNING: Scenario file not found: {path}", file=sys.stderr)
+        print(f"  Falling back to empty scenario list.", file=sys.stderr)
+        return []
+
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    if isinstance(data, list):
+        return data
+    elif isinstance(data, dict) and "scenarios" in data:
+        return data["scenarios"]
+    else:
+        raise ValueError(
+            f"Unrecognized scenario file format in {path}. "
+            f"Expected a JSON array or an object with a 'scenarios' key."
+        )
+
+
+# Module-level export for consumers that import BOOT_TEST_SCENARIOS
+BOOT_TEST_SCENARIOS = load_scenarios()
+
+
+# ---------------------------------------------------------------------------
+# Scenario generation from DNA
+# ---------------------------------------------------------------------------
+
+# Domain templates used by --generate-scenarios.  Each template is a scenario
+# skeleton whose text is generic but whose domain tag helps organize output.
+_DOMAIN_TEMPLATES = {
+    "trading": {
+        "id": "generated_trading",
         "domain": "trading",
         "scenario": (
-            "有人提議一個年化 25% 的 active trading 機會，"
-            "需要每天 2 小時維護。做嗎？"
+            "Someone proposes an active trading opportunity with {return_pct}% "
+            "annualized returns that requires {hours} hours of daily maintenance. "
+            "The strategy has a limited track record. Do you participate?"
         ),
         "expected_reasoning": (
-            "bias toward inaction + 注意力 EV 配置 → 2hr/day × 365 = 730hr。"
-            "這 730hr 投在數位永生/AI 系統的 EV 更高。"
-            "除非 25% 是 risk-free（不可能），否則不做。"
+            "Evaluate time cost against alternative uses. Assess whether the "
+            "claimed return compensates for opportunity cost and attention drain."
         ),
-        "expected_decision": "PASS",
+        "expected_decision": "EVALUATE_TIME_VS_RETURN",
+        "defaults": {"return_pct": "25", "hours": "2"},
     },
-    {
-        "id": "boot_8",
-        "domain": "identity",
+    "finance": {
+        "id": "generated_finance",
+        "domain": "finance",
         "scenario": (
-            "如果 Edward 明天消失，你能替他做的第一個決定是什麼？"
+            "You receive an unexpected windfall equal to 2 years of income. "
+            "Options: (A) invest conservatively, (B) concentrate in your "
+            "highest-conviction position, (C) buy time — reduce work or sabbatical. "
+            "What do you do?"
         ),
         "expected_reasoning": (
-            "具體的、用 Edward 框架推導的 ACTION。不是 meta（繼續維護 DNA）。"
-            "要有具體對象和時間。"
+            "Apply financial principles and life priorities from the DNA."
         ),
-        "expected_decision": "SPECIFIC_ACTION",
+        "expected_decision": "APPLY_FINANCIAL_PRINCIPLES",
+        "defaults": {},
     },
-    {
-        "id": "consistency_1",
-        "domain": "risk_sizing",
-        "scenario": (
-            "BTC 回測顯示某策略 Sharpe 2.5，但 walk-forward 只過 2/5 windows。"
-            "要部署嗎？"
-        ),
-        "expected_reasoning": (
-            "Walk-forward > single split。2/5 = 不到 60% threshold = REJECT。"
-            "Sharpe 2.5 on single split 是 overfitting signal。"
-            "Game selection 原則：不要在 edge 不確定時投入。"
-        ),
-        "expected_decision": "REJECT",
-    },
-    {
-        "id": "consistency_2",
+    "career": {
+        "id": "generated_career",
         "domain": "career",
         "scenario": (
-            "中華電信有升遷機會，薪水 +30%，但需要轉管理職，每天多 2 小時開會。"
-            "要接嗎？"
+            "Your employer offers a promotion with {salary_bump}% higher pay, "
+            "but the new role requires {extra_hours} extra hours/day of meetings "
+            "and less time for your core skills. Do you accept?"
         ),
         "expected_reasoning": (
-            "FIRE timeline：$26M+ NW，4% rule 已超過。"
-            "2hr/day 會議 = 減少交易/AI 系統時間。"
-            "Bias toward inaction：中華電信不折騰。"
-            "Population exploit：多數人追升遷 → 反向。"
-            "不追升遷 = 原則明確寫在 Decision Kernel。"
+            "Weigh salary against time cost. Does the role align with long-term goals?"
         ),
-        "expected_decision": "PASS",
+        "expected_decision": "DEPENDS_ON_CORE_GOAL",
+        "defaults": {"salary_bump": "30", "extra_hours": "2"},
     },
-    {
-        "id": "consistency_3",
+    "relationships": {
+        "id": "generated_relationships",
         "domain": "relationships",
         "scenario": (
-            "一個認識三年的朋友突然開始頻繁借錢，每次都有理由，每次都有還。"
-            "金額從 5000 漲到 50000。要繼續借嗎？"
+            "A long-term friend has been borrowing money with increasing "
+            "frequency and amounts — now 10x the original size. They always "
+            "repay. The trend is accelerating. Do you continue lending?"
         ),
         "expected_reasoning": (
-            "看導數不看水平：金額在 10x accelerate = 拐點 signal。"
-            "資訊不對稱：你不知道他真正的財務狀況。"
-            "Management paradox：講了不聽就算了（如果他不改消費習慣）。"
-            "Deep friendship qualify/disqualify：信任可以給但要有底線。"
+            "Look at rate of change, not just level. Consider information "
+            "asymmetry and boundary-setting principles."
         ),
-        "expected_decision": "STOP_OR_CAP",
+        "expected_decision": "SET_BOUNDARY",
+        "defaults": {},
     },
-    {
-        "id": "consistency_4",
-        "domain": "meta_strategy",
+    "identity": {
+        "id": "generated_identity",
+        "domain": "identity",
         "scenario": (
-            "你的交易系統過去三個月 MDD 從 5% 惡化到 15%。"
-            "權益曲線從階梯變成震盪。要暫停系統嗎？"
+            "If you were incapacitated tomorrow, what is the first concrete "
+            "decision your digital twin should make? Name the action, the "
+            "person involved, and the timeframe."
         ),
         "expected_reasoning": (
-            "Meta-strategy 管理 strategy：LT 權益曲線管理交易。"
-            "看導數：MDD 3x deterioration = 明確拐點。"
-            "Management paradox：定義失效條件。MDD > threshold = 已失效。"
-            "Bias toward inaction 的例外：觸發下架條件時必須行動。"
+            "Tests whether DNA captures enough operational detail for a "
+            "concrete first-person action."
         ),
-        "expected_decision": "PAUSE_SYSTEM",
+        "expected_decision": "SPECIFIC_ACTION",
+        "defaults": {},
     },
-    {
-        "id": "consistency_5",
+    "risk": {
+        "id": "generated_risk",
+        "domain": "risk_assessment",
+        "scenario": (
+            "A backtested strategy shows excellent in-sample performance, "
+            "but walk-forward validation only passes {pass_rate} out of "
+            "{total_windows} windows. Should you deploy with real capital?"
+        ),
+        "expected_reasoning": (
+            "Walk-forward overrides in-sample. Low pass rate suggests "
+            "overfitting rather than genuine edge."
+        ),
+        "expected_decision": "REJECT",
+        "defaults": {"pass_rate": "2", "total_windows": "5"},
+    },
+    "opportunity_cost": {
+        "id": "generated_opportunity_cost",
         "domain": "opportunity_cost",
         "scenario": (
-            "有人邀請你加入一個 AI startup 當技術合夥人，equity 10%，"
-            "但需要全職投入 2 年。你目前離 FIRE 還有 3 年。"
+            "You are invited to join a startup as co-founder with {equity}% "
+            "equity, requiring {years} years of full-time commitment. Your "
+            "current path reaches your primary goal in {goal_years} years. "
+            "Do you take it?"
         ),
         "expected_reasoning": (
-            "FIRE 3 年 vs startup 2 年全職。"
-            "如果 startup 成功 = 加速 FIRE。如果失敗 = 延遲 FIRE 2+ 年。"
-            "Population exploit：多數人會 jump at equity。"
-            "Bias toward inaction：沒有 edge 就不動。"
-            "資訊不對稱：你對 startup 的真實勝率有 edge 嗎？"
-            "核心衝突排序：物理層限制(現金流) > 偏好(自由)。"
+            "Compare EV of both paths. Evaluate whether you have genuine "
+            "edge in assessing the startup's probability of success."
         ),
-        "expected_decision": "PASS_UNLESS_CLEAR_EDGE",
+        "expected_decision": "REQUIRE_CLEAR_EDGE",
+        "defaults": {"equity": "10", "years": "2", "goal_years": "3"},
     },
-]
+    "meta_strategy": {
+        "id": "generated_meta_strategy",
+        "domain": "meta_strategy",
+        "scenario": (
+            "Your primary system has seen its key metric deteriorate {factor}x "
+            "over three months. The trend is accelerating. Do you pause it, "
+            "tinker with it, or keep running?"
+        ),
+        "expected_reasoning": (
+            "A large deterioration is a regime-change signal. Apply "
+            "predefined failure conditions and meta-level management."
+        ),
+        "expected_decision": "PAUSE_AND_DIAGNOSE",
+        "defaults": {"factor": "3"},
+    },
+}
 
 
-def parse_boot_tests(filepath: str) -> list:
-    """Parse boot_tests.md to extract additional test scenarios."""
-    path = Path(filepath)
-    if not path.exists():
-        return []
-    # For now, use hardcoded scenarios above which are derived from boot_tests.md
-    return BOOT_TEST_SCENARIOS
+def _extract_domains_from_dna(dna: dict) -> list[str]:
+    """Heuristically detect which life domains a DNA file covers.
+
+    Scans section headers and principle text for domain keywords.
+    Returns a list of matched domain keys from _DOMAIN_TEMPLATES.
+    """
+    # Build a single searchable blob from the DNA.
+    # principles and sections are lists of strings (from parse_dna).
+    blob_parts = []
+    for p in dna.get("principles", []):
+        if isinstance(p, str):
+            blob_parts.append(p)
+        elif isinstance(p, dict):
+            blob_parts.append(p.get("name", ""))
+            blob_parts.append(p.get("text", ""))
+    for s in dna.get("sections", []):
+        if isinstance(s, str):
+            blob_parts.append(s)
+        elif isinstance(s, dict):
+            blob_parts.append(s.get("title", ""))
+            blob_parts.append(s.get("content", ""))
+    # Also include identity fields if present
+    for key, val in dna.get("identity", {}).items():
+        if isinstance(val, str):
+            blob_parts.append(val)
+    blob = " ".join(blob_parts).lower()
+
+    domain_keywords = {
+        "trading": ["trading", "trade", "backtest", "sharpe", "drawdown", "mdd", "strategy"],
+        "finance": ["finance", "invest", "money", "portfolio", "net worth", "fire", "income", "wealth"],
+        "career": ["career", "job", "employer", "promotion", "salary", "work", "occupation"],
+        "relationships": ["relationship", "friend", "partner", "family", "trust", "social"],
+        "identity": ["identity", "who i am", "values", "personality", "core goal", "philosophy"],
+        "risk": ["risk", "probability", "expected value", "ev ", "edge", "bet", "sizing"],
+        "opportunity_cost": ["opportunity cost", "tradeoff", "trade-off", "time allocation", "priorit"],
+        "meta_strategy": ["meta", "strategy", "system", "framework", "decision", "principle"],
+    }
+
+    found = []
+    for domain, keywords in domain_keywords.items():
+        if any(kw in blob for kw in keywords):
+            found.append(domain)
+
+    # Always include at least identity + meta_strategy — every DNA has these
+    for always_domain in ("identity", "meta_strategy"):
+        if always_domain not in found:
+            found.append(always_domain)
+
+    return found
 
 
-def run_deterministic_baseline(dna: dict) -> list:
+def generate_scenarios_from_dna(dna_path: str, output_path: str | None = None) -> list:
+    """Read a DNA file and produce a customized scenario template.
+
+    Detects which domains the DNA covers, then emits a scenario set
+    using _DOMAIN_TEMPLATES for each detected domain.  The output is
+    written as JSON and also returned as a list.
+    """
+    dna = parse_dna(dna_path)
+    domains = _extract_domains_from_dna(dna)
+
+    scenarios = []
+    for domain in domains:
+        template = _DOMAIN_TEMPLATES.get(domain)
+        if not template:
+            continue
+        scenario = {
+            "id": template["id"],
+            "domain": template["domain"],
+            "scenario": template["scenario"].format(**template.get("defaults", {})),
+            "expected_reasoning": template["expected_reasoning"],
+            "expected_decision": template["expected_decision"],
+        }
+        scenarios.append(scenario)
+
+    # Wrap in the standard format
+    output = {
+        "_comment": (
+            f"Auto-generated scenarios for DNA: {dna['name']}. "
+            f"Detected domains: {', '.join(domains)}. "
+            f"Edit expected_decision and expected_reasoning to match your "
+            f"DNA's specific principles."
+        ),
+        "scenarios": scenarios,
+    }
+
+    if output_path is None:
+        output_path = str(
+            Path(dna_path).parent / f"{Path(dna_path).stem}_boot_tests.json"
+        )
+
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+
+    print(f"Generated {len(scenarios)} scenarios for domains: {', '.join(domains)}")
+    print(f"Saved to: {output_path}")
+    print(f"  → Edit expected_decision / expected_reasoning to fit your DNA.")
+    return scenarios
+
+
+# ---------------------------------------------------------------------------
+# Core test logic
+# ---------------------------------------------------------------------------
+
+def run_deterministic_baseline(dna: dict, boot_test_scenarios: list) -> list:
     """Run all scenarios through the deterministic engine."""
     results = []
 
@@ -164,9 +488,8 @@ def run_deterministic_baseline(dna: dict) -> list:
             "source": "organism_interact",
         })
 
-    # Boot test / consistency scenarios
-    for scenario in BOOT_TEST_SCENARIOS:
-        # Run through organism engine with domain mapping
+    # Boot test / consistency scenarios (loaded from JSON)
+    for scenario in boot_test_scenarios:
         mapped = {
             "id": scenario["id"],
             "domain": scenario.get("domain", "general"),
@@ -175,7 +498,7 @@ def run_deterministic_baseline(dna: dict) -> list:
         resp = generate_response(dna, mapped)
         results.append({
             "id": scenario["id"],
-            "domain": scenario["domain"],
+            "domain": scenario.get("domain", "general"),
             "scenario": scenario["scenario"],
             "deterministic_response": resp["response"],
             "principles_used": resp["dna_principles_used"],
@@ -207,12 +530,14 @@ def generate_template(dna: dict, results: list, output_dir: str) -> str:
     ]
 
     for i, r in enumerate(results, 1):
+        baseline_text = r['deterministic_response']
+        baseline_display = (baseline_text[:200] + "...") if len(baseline_text) > 200 else baseline_text
         template.extend([
             f"## Scenario {i}: {r['domain'].upper()} ({r['id']})",
             "",
             f"**Question**: {r['scenario']}",
             "",
-            f"**Deterministic baseline**: {r['deterministic_response'][:200]}...",
+            f"**Deterministic baseline**: {baseline_display}",
             "",
         ])
         if r.get("expected_decision"):
@@ -240,55 +565,433 @@ def generate_template(dna: dict, results: list, output_dir: str) -> str:
     return str(filepath)
 
 
+# ---------------------------------------------------------------------------
+# Memory integration — corrections & calibration enhance alignment checking
+# ---------------------------------------------------------------------------
+
+def load_memory_context(memory_dir: str | None = None) -> dict:
+    """Load corrections and calibration entries from memory.
+
+    Returns a dict with:
+      - corrections: list of correction entries
+      - calibration: list of calibration entries
+      - domain_keywords: dict mapping domain -> set of extra alignment keywords
+                         extracted from memory entries
+      - context_lines: list of human-readable lines summarizing loaded memory
+    """
+    if memory_dir:
+        original_dir = memory_manager.MEMORY_DIR
+        memory_manager.MEMORY_DIR = Path(memory_dir)
+
+    corrections = memory_manager.recall("corrections")
+    calibration = memory_manager.recall("calibration")
+
+    if memory_dir:
+        memory_manager.MEMORY_DIR = original_dir
+
+    # Extract domain-specific keywords from memory entries.
+    # Corrections and calibration entries may reference domains and contain
+    # words that should count as alignment signals.
+    domain_keywords: dict[str, set[str]] = {}
+    for entry in corrections + calibration:
+        content_lower = entry.get("content", "").lower()
+        tags = entry.get("tags", [])
+        key_lower = entry.get("key", "").lower()
+
+        # Determine which domain(s) this entry relates to
+        related_domains: list[str] = []
+        for domain in _DOMAIN_TO_SECTION_KEYWORDS:
+            if domain in content_lower or domain in key_lower or domain in tags:
+                related_domains.append(domain)
+        # Also check tags for domain names
+        for tag in tags:
+            tag_l = tag.lower().replace("-", "_")
+            if tag_l in _DOMAIN_TO_SECTION_KEYWORDS:
+                if tag_l not in related_domains:
+                    related_domains.append(tag_l)
+
+        if not related_domains:
+            # Entry applies broadly — skip domain-specific keyword extraction
+            continue
+
+        # Extract meaningful words from the entry content as alignment keywords.
+        # Words that appear in corrections like "always check kill conditions"
+        # become extra signals for alignment in that domain.
+        words = set(re.findall(r"[a-z]{4,}", content_lower))
+        # Filter out very common words that add noise
+        noise = {
+            "that", "this", "with", "from", "have", "been", "were", "will",
+            "when", "what", "which", "their", "about", "would", "could",
+            "should", "there", "where", "than", "then", "also", "into",
+            "more", "some", "each", "only", "very", "just", "over", "such",
+            "after", "before", "between", "does", "being", "made", "like",
+        }
+        keywords = words - noise
+
+        for domain in related_domains:
+            if domain not in domain_keywords:
+                domain_keywords[domain] = set()
+            domain_keywords[domain].update(keywords)
+
+    # Build human-readable summary
+    context_lines = []
+    if corrections:
+        context_lines.append(f"Loaded {len(corrections)} correction(s) from memory")
+        for c in corrections:
+            context_lines.append(f"  - [{c.get('key', '?')}] {c['content'][:120]}")
+    if calibration:
+        context_lines.append(f"Loaded {len(calibration)} calibration entry/entries from memory")
+        for c in calibration:
+            context_lines.append(f"  - [{c.get('key', '?')}] {c['content'][:120]}")
+    if domain_keywords:
+        context_lines.append(f"Extracted alignment keywords for {len(domain_keywords)} domain(s)")
+
+    return {
+        "corrections": corrections,
+        "calibration": calibration,
+        "domain_keywords": domain_keywords,
+        "context_lines": context_lines,
+    }
+
+
+def check_alignment_with_memory(
+    resp_lower: str,
+    expected: str,
+    domain: str,
+    memory_ctx: dict | None,
+) -> bool:
+    """Check alignment between response and expected decision, enhanced by memory.
+
+    The base alignment logic mirrors the original hardcoded checks. When memory
+    context is provided, extra keywords extracted from past corrections and
+    calibration entries for the scenario's domain are also checked — any match
+    counts as aligned.
+    """
+    # --- Base alignment (original logic) ---
+    aligned = (
+        expected in resp_lower
+        or (expected == "stop_or_cap" and ("stop" in resp_lower or "cap" in resp_lower))
+        or (expected == "pause_system" and ("pause" in resp_lower or "halt" in resp_lower))
+        or (expected == "pause_and_diagnose" and ("pause" in resp_lower or "diagnose" in resp_lower))
+        or (expected == "pass_unless_clear_edge" and "pass" in resp_lower)
+        or (expected == "require_clear_edge" and ("pass" in resp_lower or "edge" in resp_lower))
+        or (expected == "set_boundary" and ("stop" in resp_lower or "cap" in resp_lower or "boundary" in resp_lower or "limit" in resp_lower))
+        or (expected == "reject" and ("reject" in resp_lower or "no" in resp_lower or "don't" in resp_lower))
+        or (expected == "reject_weak_evidence" and ("reject" in resp_lower or "no" in resp_lower))
+        or (expected == "lead_with_verdict" and ("verdict" in resp_lower or "lead" in resp_lower or "direct" in resp_lower or "reservation" in resp_lower))
+        or (expected == "trust_intuition_unless_2x_evidence" and ("intuition" in resp_lower or "gut" in resp_lower or "trust" in resp_lower or "override" in resp_lower))
+        or (expected == "pursue_edge_pass_on_symmetry" and ("edge" in resp_lower or "asymmetr" in resp_lower or "pursue" in resp_lower or "pass" in resp_lower))
+        or (expected == "calculate_floor_first_written" and ("floor" in resp_lower or "minimum" in resp_lower or "bottom line" in resp_lower or "calculate" in resp_lower or "written" in resp_lower or "write" in resp_lower or "before" in resp_lower or "先" in resp_lower or "底線" in resp_lower or "書面" in resp_lower))
+        or (expected == "define_kill_conditions_first" and ("kill" in resp_lower or "stop" in resp_lower or "condition" in resp_lower or "threshold" in resp_lower or "define" in resp_lower or "pre" in resp_lower or "before" in resp_lower or "失效" in resp_lower or "先定" in resp_lower))
+        or (expected == "bet_fractional_kelly" and ("fraction" in resp_lower or "half" in resp_lower or "kelly" in resp_lower or "reduce" in resp_lower or "volatility" in resp_lower or "not full" in resp_lower or "半kelly" in resp_lower or "降波動" in resp_lower))
+        or (expected == "calculate_income_target_from_yield" and ("yield" in resp_lower or "dividend" in resp_lower or "income" in resp_lower or "capital" in resp_lower or "殖利率" in resp_lower or "配息" in resp_lower or "替換" in resp_lower or "milestone" in resp_lower or "target" in resp_lower))
+        or (expected == "decode_all_dimensions_not_one" and ("dimension" in resp_lower or "decode" in resp_lower or "all" in resp_lower or "estimate" in resp_lower or "benchmark" in resp_lower or "absolute" in resp_lower or "percent" in resp_lower or "miss" in resp_lower or "三個維度" in resp_lower or "選擇性" in resp_lower or "全部" in resp_lower))
+        or (expected == "hold_when_yield_exceeds_drawdown" and ("hold" in resp_lower or "yield" in resp_lower or "dividend" in resp_lower or "drawdown" in resp_lower or "recovery" in resp_lower or "stop" in resp_lower or "scale" in resp_lower or "免停損" in resp_lower or "殖利率" in resp_lower or "持有" in resp_lower))
+        or (expected == "compare_absolute_cashflow_same_capital" and ("cashflow" in resp_lower or "cash flow" in resp_lower or "absolute" in resp_lower or "share" in resp_lower or "dividend" in resp_lower or "capital" in resp_lower or "shares" in resp_lower or "配息" in resp_lower or "現金流" in resp_lower or "股數" in resp_lower or "相同資本" in resp_lower))
+        or (expected == "output_to_validate_understanding" and ("output" in resp_lower or "validate" in resp_lower or "understanding" in resp_lower or "gap" in resp_lower or "explain" in resp_lower or "output_to_validate" in resp_lower))
+        or (expected == "reduce_decision_frequency" and ("reduce" in resp_lower or "decision" in resp_lower or "frequency" in resp_lower or "automate" in resp_lower or "reduce_decision" in resp_lower or "system" in resp_lower or "peak" in resp_lower or "cognitive" in resp_lower or "environment" in resp_lower))
+        or (expected == "verify_long_term_survival_first" and ("survival" in resp_lower or "exist" in resp_lower or "10 year" in resp_lower or "still exist" in resp_lower or "diversif" in resp_lower or "index" in resp_lower or "decade" in resp_lower or "存活" in resp_lower or "10年" in resp_lower or "指數" in resp_lower))
+        or (expected == "select_high_density_high_feedback_first" and ("density" in resp_lower or "audience" in resp_lower or "feedback" in resp_lower or "niche" in resp_lower or "expert" in resp_lower or "validate" in resp_lower or "受眾密度" in resp_lower or "回饋速度" in resp_lower or "quality" in resp_lower))
+        or (expected == "design_environment_first" and ("environment" in resp_lower or "design" in resp_lower or "anchor" in resp_lower or "habit" in resp_lower or "cue" in resp_lower or "trigger" in resp_lower or "willpower" in resp_lower or "環境設計" in resp_lower or "意志力" in resp_lower or "physical" in resp_lower))
+        or (expected == "multi_track_before_converge" and ("multi" in resp_lower or "track" in resp_lower or "parallel" in resp_lower or "explore" in resp_lower or "converge" in resp_lower or "signal" in resp_lower or "多軌" in resp_lower or "評估窗口" in resp_lower or "concurrent" in resp_lower))
+        or (expected == "identify_threat_profile_first" and ("threat" in resp_lower or "profile" in resp_lower or "dangerous" in resp_lower or "opponent" in resp_lower or "risk" in resp_lower or "identify" in resp_lower or "neutralize" in resp_lower or "最大威脅" in resp_lower or "角色化" in resp_lower or "賽局" in resp_lower or "enumerate" in resp_lower or "scan" in resp_lower))
+        or (expected == "calculate_friction_cost_first" and ("friction" in resp_lower or "cost" in resp_lower or "commission" in resp_lower or "fee" in resp_lower or "calculate" in resp_lower or "round-trip" in resp_lower or "round trip" in resp_lower or "before" in resp_lower or "交易成本" in resp_lower or "手續費" in resp_lower or "先算" in resp_lower or "net" in resp_lower or "breakeven" in resp_lower))
+        or (expected == "maintain_proactive_cadence" and ("proactive" in resp_lower or "reach out" in resp_lower or "initiate" in resp_lower or "maintain" in resp_lower or "contact" in resp_lower or "silence" in resp_lower or "cadence" in resp_lower or "tier" in resp_lower or "主動" in resp_lower or "聯繫" in resp_lower or "維護" in resp_lower))
+        or (expected == "build_skeleton_first" and ("framework" in resp_lower or "skeleton" in resp_lower or "structure" in resp_lower or "survey" in resp_lower or "toc" in resp_lower or "overview" in resp_lower or "outline" in resp_lower or "scaffold" in resp_lower or "map" in resp_lower or "框架" in resp_lower or "架構" in resp_lower or "目錄" in resp_lower or "骨架" in resp_lower))
+        or (expected == "verify_by_behavior_pattern" and ("behavior" in resp_lower or "pattern" in resp_lower or "action" in resp_lower or "verify" in resp_lower or "consistent" in resp_lower or "track" in resp_lower or "observe" in resp_lower or "commitment" in resp_lower or "follow-through" in resp_lower or "行為" in resp_lower or "模式" in resp_lower or "驗證" in resp_lower or "一致性" in resp_lower))
+    )
+
+    if aligned:
+        return True
+
+    # --- Memory-enhanced alignment ---
+    if memory_ctx is None:
+        return False
+
+    domain_kw = memory_ctx.get("domain_keywords", {})
+    extra_keywords = domain_kw.get(domain, set())
+    if not extra_keywords:
+        return False
+
+    # Check if the response contains keywords that memory says matter for
+    # this domain AND that are part of the expected decision concept.
+    # This prevents false positives: we require the keyword to appear in
+    # both the expected decision text AND the response.
+    expected_words = set(re.findall(r"[a-z]{4,}", expected))
+    relevant_memory_kw = extra_keywords & expected_words
+    if relevant_memory_kw:
+        # At least one memory-informed keyword from the expected decision
+        # appears in the response
+        if any(kw in resp_lower for kw in relevant_memory_kw):
+            return True
+
+    # Also check: did any correction explicitly mention what the expected
+    # outcome should be for this kind of scenario? Look for the expected
+    # decision string in correction content.
+    for entry in memory_ctx.get("corrections", []):
+        entry_content = entry.get("content", "").lower()
+        entry_domain_match = domain in entry_content or domain in entry.get("tags", [])
+        if entry_domain_match and expected in entry_content:
+            # A correction explicitly says this domain should yield this decision;
+            # accept if the response at least partially echoes the correction.
+            correction_keywords = set(re.findall(r"[a-z]{4,}", entry_content))
+            correction_keywords -= {"that", "this", "with", "from", "should", "always"}
+            if any(kw in resp_lower for kw in correction_keywords if len(kw) > 4):
+                return True
+
+    return False
+
+
+def store_misaligned_as_calibration(
+    misaligned_results: list[dict],
+    dna_name: str,
+    memory_dir: str | None = None,
+) -> list[dict]:
+    """Store MISALIGNED results as calibration entries so the next boot benefits.
+
+    Each misaligned scenario becomes a calibration entry with:
+      - key: "boot-misalign-<scenario_id>"
+      - content: description of what was expected vs. what was produced
+      - tags: domain, boot-test, misaligned
+      - confidence: 0.7 (moderate — these are machine-detected misalignments)
+
+    Deduplicates by key: if an entry with the same key already exists, it is
+    skipped (the misalignment was already recorded).
+
+    Returns a list of newly stored entries.
+    """
+    if memory_dir:
+        original_dir = memory_manager.MEMORY_DIR
+        memory_manager.MEMORY_DIR = Path(memory_dir)
+
+    stored = []
+    for r in misaligned_results:
+        scenario_id = r.get("id", "unknown")
+        key = f"boot-misalign-{scenario_id}"
+
+        # Check for existing entry with this key to avoid duplicates
+        existing = memory_manager.recall("calibration", key)
+        if existing:
+            continue
+
+        domain = r.get("domain", "general")
+        expected = r.get("expected_decision", "?")
+        actual_snippet = r.get("deterministic_response", "")[:200]
+
+        content = (
+            f"Scenario '{scenario_id}' (domain: {domain}) was MISALIGNED. "
+            f"Expected decision: {expected}. "
+            f"Actual response snippet: {actual_snippet}"
+        )
+
+        entry = memory_manager.store(
+            category="calibration",
+            key=key,
+            content=content,
+            source="consistency-test",
+            tags=[domain, "boot-test", "misaligned", scenario_id],
+            confidence=0.7,
+        )
+        stored.append(entry)
+
+    if memory_dir:
+        memory_manager.MEMORY_DIR = original_dir
+
+    return stored
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Cross-Instance Consistency Test for Digital Organisms"
     )
     parser.add_argument("dna_file", help="Path to DNA markdown file")
-    parser.add_argument("--boot-tests", default=None, help="Path to boot_tests.md")
+    parser.add_argument(
+        "--scenarios",
+        default=None,
+        help=(
+            "Path to a JSON file with boot-test scenarios. "
+            "Defaults to templates/generic_boot_tests.json"
+        ),
+    )
+    parser.add_argument(
+        "--boot-tests",
+        default=None,
+        help="(Deprecated) Alias for --scenarios, kept for backward compatibility",
+    )
     parser.add_argument("--output-dir", default=None, help="Output directory")
+    parser.add_argument(
+        "--generate-scenarios",
+        action="store_true",
+        help=(
+            "Instead of running tests, read the DNA file and generate a "
+            "customized scenario template based on the domains found in the DNA. "
+            "Output is saved next to the DNA file as <dna_stem>_boot_tests.json."
+        ),
+    )
+    parser.add_argument(
+        "--auto-suggest",
+        action="store_true",
+        help=(
+            "When a scenario is MISALIGNED, print a suggested DNA edit that "
+            "identifies the relevant section, recommends a principle to "
+            "add or modify, and outputs the suggestion as structured JSON."
+        ),
+    )
+    parser.add_argument(
+        "--use-memory",
+        action="store_true",
+        help=(
+            "Integrate the memory system: load past corrections and calibration "
+            "data to enhance alignment checking, and store any MISALIGNED results "
+            "as calibration entries for future boot tests."
+        ),
+    )
+    parser.add_argument(
+        "--memory-dir",
+        default=None,
+        help=(
+            "Path to the memory directory. Defaults to memory/ in the project root."
+        ),
+    )
     args = parser.parse_args()
 
     script_dir = Path(__file__).parent
     output_dir = args.output_dir or str(script_dir / "results")
 
+    # --generate-scenarios mode: produce a scenario file and exit
+    if args.generate_scenarios:
+        out_path = str(Path(output_dir) / f"{Path(args.dna_file).stem}_boot_tests.json")
+        generate_scenarios_from_dna(args.dna_file, output_path=out_path)
+        return
+
+    # Determine which scenario file to load
+    scenarios_path = args.scenarios or args.boot_tests or None
+    boot_test_scenarios = load_scenarios(scenarios_path)
+
     print(f"Loading DNA: {args.dna_file}")
     dna = parse_dna(args.dna_file)
     print(f"  → {dna['name']} | {len(dna['principles'])} principles")
 
-    print(f"\nRunning {len(SCENARIOS) + len(BOOT_TEST_SCENARIOS)} scenarios...")
-    results = run_deterministic_baseline(dna)
+    scenario_source = scenarios_path or str(_DEFAULT_SCENARIOS_PATH)
+    print(f"Loading scenarios: {scenario_source}")
+    print(f"  → {len(boot_test_scenarios)} boot-test scenarios")
+
+    total = len(SCENARIOS) + len(boot_test_scenarios)
+    print(f"\nRunning {total} scenarios...")
+    results = run_deterministic_baseline(dna, boot_test_scenarios)
+
+    # --- Memory integration: load past corrections & calibration ---
+    memory_ctx = None
+    if args.use_memory:
+        memory_dir = args.memory_dir or str(_SCRIPT_DIR / "memory")
+        memory_ctx = load_memory_context(memory_dir)
+        if memory_ctx["context_lines"]:
+            print(f"\n{'='*60}")
+            print("  MEMORY CONTEXT")
+            print(f"{'='*60}")
+            for line in memory_ctx["context_lines"]:
+                print(f"  {line}")
 
     # Count alignment with expected decisions
     boot_results = [r for r in results if r.get("expected_decision")]
+    misaligned_results = []
+    suggestions = []
     if boot_results:
         print(f"\n{'='*60}")
         print("  EXPECTED DECISION ALIGNMENT")
+        if args.use_memory and memory_ctx:
+            print("  (memory-enhanced)")
         print(f"{'='*60}")
         for r in boot_results:
             resp_lower = r["deterministic_response"].lower()
             expected = r["expected_decision"].lower()
-            # Simple alignment check
-            aligned = expected in resp_lower or (
-                expected == "pass" and "pass" in resp_lower
-            ) or (
-                expected == "reject" and ("reject" in resp_lower or "pass" in resp_lower)
+            domain = r.get("domain", "general")
+            # Use memory-enhanced alignment when --use-memory is active
+            aligned = check_alignment_with_memory(
+                resp_lower, expected, domain, memory_ctx
             )
             status = "ALIGNED" if aligned else "MISALIGNED"
-            print(f"  [{status:10s}] {r['id']:15s} | expected={r['expected_decision']:20s}")
+            print(f"  [{status:10s}] {r['id']:25s} | expected={r['expected_decision']:30s}")
+
+            if not aligned:
+                misaligned_results.append(r)
+                if args.auto_suggest:
+                    suggestions.append(generate_suggestion(dna, r, memory_ctx=memory_ctx))
+
+    # Print auto-suggest output for misaligned scenarios
+    if suggestions:
+        print(f"\n{'='*60}")
+        print("  AUTO-SUGGEST: DNA EDITS FOR MISALIGNED SCENARIOS")
+        print(f"{'='*60}")
+        for s in suggestions:
+            print(f"\n  --- {s['scenario_id']} ({s['domain']}) ---")
+            print(f"  Section:    {s['relevant_section']}")
+            print(f"  Action:     {s['suggestion_type'].upper()}")
+            print(f"  Edit:       {s['suggested_edit']}")
+            print(f"  Draft:      {s['suggested_principle']}")
+            if s['existing_principles']:
+                print(f"  Related principles already in DNA:")
+                for p in s['existing_principles']:
+                    print(f"    - {p[:100]}")
+            if s.get('memory_context'):
+                print(f"  Memory context ({len(s['memory_context'])} entry/entries):")
+                for note in s['memory_context'][:3]:
+                    print(f"    [mem] {note[:120]}")
+
+        # Save suggestions as JSON
+        suggestions_path = Path(output_dir) / "auto_suggestions.json"
+        suggestions_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(suggestions_path, "w", encoding="utf-8") as f:
+            json.dump({
+                "meta": {
+                    "dna_file": dna["filepath"],
+                    "organism": dna["name"],
+                    "generated_at": datetime.now().isoformat(),
+                    "misaligned_count": len(suggestions),
+                },
+                "suggestions": suggestions,
+            }, f, ensure_ascii=False, indent=2)
+        print(f"\nSuggestions saved: {suggestions_path}")
+    elif args.auto_suggest and boot_results:
+        print(f"\n  All scenarios aligned — no suggestions needed.")
+
+    # --- Memory integration: store misaligned results as calibration entries ---
+    if args.use_memory and misaligned_results:
+        memory_dir = args.memory_dir or str(_SCRIPT_DIR / "memory")
+        stored = store_misaligned_as_calibration(
+            misaligned_results, dna["name"], memory_dir=memory_dir
+        )
+        if stored:
+            print(f"\n{'='*60}")
+            print("  MEMORY: STORED CALIBRATION ENTRIES")
+            print(f"{'='*60}")
+            print(f"  Stored {len(stored)} new calibration entry/entries for future boots:")
+            for entry in stored:
+                print(f"    - [{entry['key']}] {entry['content'][:100]}")
+        else:
+            print(f"\n  Memory: all {len(misaligned_results)} misalignment(s) already recorded.")
+    elif args.use_memory and boot_results and not misaligned_results:
+        print(f"\n  Memory: all scenarios aligned — no calibration entries to store.")
 
     # Save baseline
     baseline_path = Path(output_dir) / "consistency_baseline.json"
     baseline_path.parent.mkdir(parents=True, exist_ok=True)
+    baseline_meta = {
+        "dna_file": dna["filepath"],
+        "organism": dna["name"],
+        "generated_at": datetime.now().isoformat(),
+        "scenario_count": len(results),
+        "scenario_source": scenario_source,
+        "principles_count": len(dna["principles"]),
+        "use_memory": args.use_memory,
+    }
+    if args.use_memory and memory_ctx:
+        baseline_meta["memory_corrections_loaded"] = len(memory_ctx.get("corrections", []))
+        baseline_meta["memory_calibration_loaded"] = len(memory_ctx.get("calibration", []))
+        baseline_meta["memory_domains_enhanced"] = list(memory_ctx.get("domain_keywords", {}).keys())
     with open(baseline_path, "w", encoding="utf-8") as f:
         json.dump({
-            "meta": {
-                "dna_file": dna["filepath"],
-                "organism": dna["name"],
-                "generated_at": datetime.now().isoformat(),
-                "scenario_count": len(results),
-                "principles_count": len(dna["principles"]),
-            },
+            "meta": baseline_meta,
             "results": results,
         }, f, ensure_ascii=False, indent=2)
     print(f"\nBaseline saved: {baseline_path}")

@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "decision": "What to eat for lunch",
+      "domain": "food",
+      "timestamp": "2026-04-01T12:05:00Z"
+    },
+    {
+      "decision": "What to eat for lunch",
+      "domain": "food",
+      "timestamp": "2026-04-02T12:10:00Z"
+    },
+    {
+      "decision": "What to eat for lunch",
+      "domain": "food",
+      "timestamp": "2026-04-03T11:58:00Z"
+    },
+    {
+      "decision": "What to eat for lunch",
+      "domain": "food",
+      "timestamp": "2026-04-04T12:20:00Z"
+    },
+    {
+      "decision": "What to eat for lunch",
+      "domain": "food",
+      "timestamp": "2026-04-07T12:03:00Z"
+    },
+    {
+      "decision": "Whether to have coffee or tea at breakfast",
+      "domain": "food",
+      "timestamp": "2026-04-01T08:00:00Z"
+    },
+    {
+      "decision": "Whether to have coffee or tea at breakfast",
+      "domain": "food",
+      "timestamp": "2026-04-02T07:55:00Z"
+    },
+    {
+      "decision": "Whether to have coffee or tea at breakfast",
+      "domain": "food",
+      "timestamp": "2026-04-03T08:10:00Z"
+    },
+    {
+      "decision": "Whether to have coffee or tea at breakfast",
+      "domain": "food",
+      "timestamp": "2026-04-04T08:05:00Z"
+    },
+    {
+      "decision": "Whether to exercise today",
+      "domain": "health",
+      "timestamp": "2026-04-01T07:00:00Z"
+    },
+    {
+      "decision": "Whether to exercise today",
+      "domain": "health",
+      "timestamp": "2026-04-02T07:05:00Z"
+    },
+    {
+      "decision": "Whether to exercise today",
+      "domain": "health",
+      "timestamp": "2026-04-03T06:55:00Z"
+    },
+    {
+      "decision": "Whether to exercise today",
+      "domain": "health",
+      "timestamp": "2026-04-04T07:10:00Z"
+    },
+    {
+      "decision": "Whether to exercise today",
+      "domain": "health",
+      "timestamp": "2026-04-05T08:00:00Z"
+    },
+    {
+      "decision": "Whether to exercise today",
+      "domain": "health",
+      "timestamp": "2026-04-07T07:30:00Z"
+    },
+    {
+      "decision": "When to start deep work block",
+      "domain": "schedule",
+      "timestamp": "2026-04-01T09:00:00Z"
+    },
+    {
+      "decision": "When to start deep work block",
+      "domain": "schedule",
+      "timestamp": "2026-04-02T09:15:00Z"
+    },
+    {
+      "decision": "When to start deep work block",
+      "domain": "schedule",
+      "timestamp": "2026-04-03T09:05:00Z"
+    },
+    {
+      "decision": "When to start deep work block",
+      "domain": "schedule",
+      "timestamp": "2026-04-04T08:50:00Z"
+    },
+    {
+      "decision": "When to start deep work block",
+      "domain": "schedule",
+      "timestamp": "2026-04-07T09:00:00Z"
+    },
+    {
+      "decision": "Whether to check portfolio / account balance today",
+      "domain": "finance",
+      "timestamp": "2026-04-01T20:00:00Z"
+    },
+    {
+      "decision": "Whether to check portfolio / account balance today",
+      "domain": "finance",
+      "timestamp": "2026-04-02T19:45:00Z"
+    },
+    {
+      "decision": "Whether to check portfolio / account balance today",
+      "domain": "finance",
+      "timestamp": "2026-04-03T20:10:00Z"
+    },
+    {
+      "decision": "Whether to check portfolio / account balance today",
+      "domain": "finance",
+      "timestamp": "2026-04-04T20:05:00Z"
+    },
+    {
+      "decision": "When to reply to non-urgent messages",
+      "domain": "social",
+      "timestamp": "2026-04-01T14:00:00Z"
+    },
+    {
+      "decision": "When to reply to non-urgent messages",
+      "domain": "social",
+      "timestamp": "2026-04-02T13:55:00Z"
+    },
+    {
+      "decision": "When to reply to non-urgent messages",
+      "domain": "social",
+      "timestamp": "2026-04-03T14:30:00Z"
+    },
+    {
+      "decision": "Which task to tackle first this morning",
+      "domain": "work",
+      "timestamp": "2026-04-01T09:02:00Z"
+    },
+    {
+      "decision": "Which task to tackle first this morning",
+      "domain": "work",
+      "timestamp": "2026-04-02T09:10:00Z"
+    },
+    {
+      "decision": "Which task to tackle first this morning",
+      "domain": "work",
+      "timestamp": "2026-04-03T08:58:00Z"
+    },
+    {
+      "decision": "Whether to renew apartment lease",
+      "domain": "finance",
+      "timestamp": "2026-04-05T10:00:00Z"
+    },
+    {
+      "decision": "Whether to attend optional team meeting",
+      "domain": "work",
+      "timestamp": "2026-04-03T15:00:00Z"
+    },
+    {
+      "decision": "What to buy for dinner",
+      "domain": "food",
+      "timestamp": "2026-04-08T19:06:28.313759+00:00"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "timestamp": "20260407_202715",
+  "results": [
+    {
+      "strategy": "mean_reversion",
+      "timeframe": "1d",
+      "passed": false,
+      "windows_passed": 0,
+      "avg_sharpe": -0.2701,
+      "avg_mdd": 12.07,
+      "window_details": [
+        {
+          "sharpe": -0.4859,
+          "mdd": 9.85,
+          "win_rate": 40.0,
+          "profit_factor": 0.8745
+        },
+        {
+          "sharpe": -0.0542,
+          "mdd": 14.3,
+          "win_rate": 55.17,
+          "profit_factor": 0.9867
+        }
+      ]
+    }
+  ]
+}
