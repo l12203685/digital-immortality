@@ -2450,37 +2450,55 @@
       ]
     },
     {
-      "id": "ebaebdca-f23c-444a-8c09-5ab9a2023cd4",
-      "key": "cycle300-dna-core-G1-audit-HEALTHY",
-      "content": "Cycle 300 designed dna_core.md audit (SOP #101 T1 trigger, 90-cycle milestone). G1-G5 all HEALTHY. Priority stack 可可>FIRE>健康>交易>深交>數位永生 confirmed valid. WATCH: FIRE>健康安全 adjacency flagged for Edward confirmation (eGFR 73 monitoring active). G2 L3 confirmed wired (cycle 270). G3 SOPs #101-#117 covered. G4 no stale MDs. G5 boot tests 36/39 ALIGNED. No DRIFT, no CRITICAL. Audit is product QA, not system maintenance.",
+      "id": "2b9a5a8b-ab79-4198-b707-477734a50726",
+      "key": "consistency-58th-meta-alignment-improved",
+      "content": "Cycle 290: 58th consecutive clean cycle. 36/39 ALIGNED (up from 33). 3 previously-LLM-MISALIGNED scenarios now deterministically ALIGNED: meta_search_before_act, meta_output_must_persist, meta_three_layer_loop. Behavioral improvement without explicit recalibration — DNA coverage of these rules now sufficient for deterministic matching. Remaining MISALIGNED: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev (require LLM-level formula recall).",
+      "timestamp": "2026-04-09T20:35:13.065008+00:00",
+      "source": "recursive-engine-cycle-290",
       "tags": [
-        "B存活",
-        "G1-audit",
-        "cycle-300",
-        "dna_core",
-        "HEALTHY"
-      ]
-    },
-    {
-      "id": "edb68ede-ad3d-48d1-9290-fbecf31c52e0",
-      "key": "B6-54th-consecutive-36-39-aligned",
-      "content": "Consistency check cycle 300: 36/39 deterministic ALIGNED, 3 MISALIGNED (poker_gto_mdf / trading_atr_sizing / career_multi_option_ev) — all LLM-required, expected, unchanged from all prior cycles. 54th consecutive clean cycle. templates/dna_core.md behavioral alignment stable.",
-      "tags": [
-        "B6",
         "consistency",
-        "cycle-300",
-        "54th-consecutive"
+        "behavioral-alignment",
+        "b6",
+        "meta-rules"
       ]
     },
     {
-      "id": "5075d275-0dc8-44e5-ad6e-6a42c40cb9f1",
-      "key": "B1.1-tick349-BTC-72412-SHORT-headwind",
-      "content": "Paper-live tick 349: BTC=2,412.06 (+7.82 from tick 348 2,325.24; SHORT headwind). Regime=MIXED. 15 active strategies=FLAT. 3 disabled unchanged (DualMA_10_30 PF=0.53, BollingerMR RF×2). 2074 total log entries. No signal = IDLE per inaction bias. PnL=-2.71% (unchanged).",
+      "id": "4a5b9f44-47cf-4ee0-9f3c-a9b9c86455c5",
+      "key": "paper-tick290-synthetic-btc72310-flat",
+      "content": "Cycle 290: paper-live tick 350. BTC=72310.15 (synthetic, Binance API offline). DualMA_10_30=SHORT (structural), all other 17 strategies FLAT. Regime=MIXED. PnL=-2.71%. 3 disabled (DualMA_10_30 PF=0.53, BollingerMR RF×2 PF<0.8). ccxt reinstalled in environment. Total log entries: 2074.",
+      "timestamp": "2026-04-09T20:35:13.065008+00:00",
+      "source": "recursive-engine-cycle-290",
       "tags": [
-        "B1.1",
         "trading",
-        "cycle-300",
-        "paper-live"
+        "paper-live",
+        "b1.1",
+        "btc"
+      ]
+    },
+    {
+      "id": "f50a0e1c-dcea-4877-b8eb-697c9aef5573",
+      "key": "l3-evolve-strategy-pool-19-gen-donchian-confirmed-rsi",
+      "content": "Cycle 290: L3 Evolve triggered — strategy_generator.py --generate 3. 1 new strategy passed gate: gen_DonchianConfirmed_RSI_9b2bf4 (windows=3/5, sharpe=-0.04, mdd=18.4%). 2 failed. Pool grows from 18 → 19 strategies. DonchianConfirmed+RSI filter = breakout with momentum confirmation. Will paper-trade next tick to accumulate performance data.",
+      "timestamp": "2026-04-09T20:35:13.065008+00:00",
+      "source": "recursive-engine-cycle-290",
+      "tags": [
+        "trading",
+        "strategy-evolution",
+        "l3-evolve",
+        "b1.2"
+      ]
+    },
+    {
+      "id": "da66751d-ad6a-4af9-8a8c-db5dad62db74",
+      "key": "g1-audit-cycle290-dna-core-416-mds-pass",
+      "content": "Cycle 290 G1 dna_core audit (designed trigger from 90-cycle cadence): 416 MDs verified. Three-layer loop: MD-408 (L1執行+L2評估+L3演化) present and correctly defined. SOP #116 (distillation taxonomy protocol) exists in docs/. Priority stack: EV-thinking > bias-toward-inaction > systems-over-feelings > time-currency > concrete-commitments — intact per Core Principles. No drift detected. PASS.",
+      "timestamp": "2026-04-09T20:35:13.065008+00:00",
+      "source": "recursive-engine-cycle-290",
+      "tags": [
+        "b-survival",
+        "g1-audit",
+        "dna-core",
+        "cold-start"
       ]
     }
   ]

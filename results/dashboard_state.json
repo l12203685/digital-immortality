@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-10T04:49+08",
+  "updated": "2026-04-10T04:59+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
+      "text": "You've hit your limit · resets Apr 11, 10am (Asia/Taipei)"
+    },
+    {
+      "time": "9min ago",
       "text": "Cycle 301 queue: tick 350 + 55th consecutive + distillation + B1.3 DMs (human..."
     },
     {
-      "time": "just now",
+      "time": "9min ago",
       "text": "| SOP #117 | DNA Core Audit Protocol committed (was untracked) |"
     },
     {
-      "time": "just now",
+      "time": "9min ago",
       "text": "| B3.1 distillation | +3 insights → 215 total: G1-audit-HEALTHY / 54th-consec..."
     },
     {
-      "time": "just now",
+      "time": "9min ago",
       "text": "| B6 54th consecutive | 36/39 deterministic ALIGNED; 3 MISALIGNED = expected ..."
-    },
-    {
-      "time": "just now",
-      "text": "| B1.1 tick 349 | BTC=$72,412.06 (+$87 SHORT headwind); 15 active=FLAT; 3 dis..."
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 72412.06,
+    "paper_live_price": 72351.36,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T20:44",
+    "paper_live_ts": "2026-04-09T20:53",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"
