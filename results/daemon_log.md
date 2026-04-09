@@ -5191,3 +5191,15 @@ Branch 1.1 (paper-live) — tick 36:
 - MFE/MAE ratio recovered to 0.60x from 0.39x
 
 Both human-gated blockers unchanged: mainnet keys OR post SOP #01.
+
+## Cycle 174 — 2026-04-09T00:04 UTC
+
+**Cycle 174 done.**
+
+Branch 1.1 (paper-live) — highest autonomous derivative.
+
+- Tick 37: BTC=$71,000.00, signal=SHORT (37 consecutive, 100%)
+- P&L: **+$0.71 (+0.71% on $100)** — BTC continued down $71,137→$71,075→$71,000; regime still bearish
+- MFE: +$0.77 (held from prior ticks); position net positive throughout
+
+**Next blocker:** Set `BINANCE_MAINNET_KEY/SECRET` → mainnet OR post SOP #01 thread.
