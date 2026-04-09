@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T15:26+08",
+  "updated": "2026-04-09T15:34+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "3. L3 trigger meta-insight: any loop layer without explicit activation protoc..."
+      "text": "Next: SOP #69 Domain 4 async calibration measurement + Branch 1.1 tick 104."
     },
     {
       "time": "just now",
-      "text": "2. 67 SOPs + 0 posts = internal recursion without external loop = dead loop a..."
+      "text": "L2 verdict: 1A + 2B. No C/D. L3 not triggered."
     },
     {
       "time": "just now",
-      "text": "1. Tick 102 asymmetric Bayesian: each tick extending thesis = weaker evidence..."
+      "text": "Branch 6 — consistency 33/33 ALIGNED, 13+ consecutive cycles clean."
     },
     {
       "time": "just now",
-      "text": "Branch 3.1 — 3 distillation insights → `memory/insights.json` (26 total):"
+      "text": "- Twitter thread drafted, posting queue → Aug 16, SOP #01~#68 COMPLETE"
     },
     {
       "time": "just now",
-      "text": "Branch 6 (存活/cold-start) — consistency 33/33 ALIGNED ✅, 12+ consecutive cycle..."
+      "text": "- G5: Mandatory one-line verdict format per cycle"
     }
   ],
   "stats": {
@@ -94,11 +94,11 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 70994.74,
+    "paper_live_price": 71000.15,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T07:20",
-    "paper_tick": 94,
-    "paper_pnl": "+$0.795",
+    "paper_live_ts": "2026-04-09T07:29",
+    "paper_tick": 99,
+    "paper_pnl": "+$0.668",
     "status": "ok"
   }
 }
