@@ -6555,3 +6555,20 @@ Cycle 247 complete. Summary:
 **Branch 3.1 — Distillation** — 3 insights appended (total 53): revenue deadline is a _rate_ problem (dms/week drives G2 date), not a level problem.
 
 L2 verdict: 1A + 2B. Committed as cycle 35.
+
+## Cycle 36 — 2026-04-09 10:01:48 UTC
+
+Cycle 248 complete.
+
+---
+
+**What was pushed:**
+
+| Branch | Work Done |
+|--------|-----------|
+| **1.1** | Tick 127: BTC=$71,498.70, SHORT×127 (100%), 1265 entries, MIXED regime |
+| **6 存活** | consistency_test: 30/33 deterministic ALIGNED + 3 LLM-req MISALIGNED (expected). 23+ consecutive clean. daemon_next_priority touched ✅ |
+| **7 SOP** | SOP #83: Daily Posting Execution Ritual — G0-G5, ~20min/day. Closes the gap between "infrastructure ready" and "posts actually going out." Anti-pattern documented: editing tweets on posting day = paralysis. **SOP #01~#83 COMPLETE** |
+| **3.1** | 3 insights → insights.json (total 56) |
+
+**Next queue:** #1 blocker is Edward posting SOP #01 on X → M1 → SOP #83 daily ritual kicks in → revenue clock starts. SOP #82 tracker is waiting for M1. Deadline 2026-07-07 (89 days).
