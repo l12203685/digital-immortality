@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 205)
+> 最後更新：2026-04-09 UTC (cycle 206)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -71,14 +71,20 @@
   - **Collision report run ✓** (cycle 204): Edward vs Samuel 9/12 AGREE (75%); 3 DIVERGE: health/time/legacy — Samuel: relationship-density-first; Edward: health-capital + time-as-currency; `results/collision__Your_Name__vs_Samuel_20260409_110720.md` saved
   - **`docs/organism_session_prep.md` created ✓** (cycle 204): full 60-min agenda for in-person Samuel correction session; 5 calibration scenarios; post-session protocol; success criteria; failure modes
   - **`docs/second_organism_onboarding.md` created ✓** (cycle 204): generalized guide for Organism D/E/F onboarding; 5-step process; quality checklist; scale path users=0→N
-  - BLOCKER: Samuel in-person session NOT DONE — needs Edward to schedule; send samuel_pilot_dm.md first if not yet sent
+  - BLOCKER: Samuel in-person session NOT DONE — needs Edward to schedule; send samuel_pilot_dm.md first if not yet sent (DM ready: docs/samuel_pilot_dm.md — advances Branch 1.3 AND creates pretext for 4.1 correction session)
   - **Scenario bank expanded ✓** (cycle 205): 12→22 scenarios; 5 new social domains added: `intro_gatekeeping`, `loyalty_vs_credibility`, `social_capital_depth`, `relationship_downgrade`, `first_impression_update`; matching `_domain_decision` handlers + `DOMAIN_PRINCIPLE_AFFINITY` entries added; `templates/organism_template.md` created (generic DNA template for Organism D/E/F onboarding)
   - **Full 22-scenario collision run ✓** (cycle 205): Edward vs Samuel **15/22 AGREE (68%)**, 7 DIVERGE: `social_trust`/`network_roi`/`group_dynamics`/`intro_gatekeeping`/`relationship_downgrade`/`learning`/`legacy`; new finding: loyalty_vs_credibility=AGREE + social_capital_depth=AGREE (both prefer depth-first despite different reasoning chains); `results/collision_dna_core_vs_Samuel_20260409_112154.md` saved
+  - **SOP #44 created ✓** (cycle 206): `docs/knowledge_product_44_organism_collision_sop.md` — G0~G5 gate protocol; collision interpretation heuristics; premise extraction method; maintenance cadence; self-test; Twitter thread `docs/publish_thread_sop44_twitter.md` ✓
+  - **SOP #45 created ✓** (cycle 206): `docs/knowledge_product_45_organism_recruitment_sop.md` — scale path 2→N; async calibration protocol (no in-person required); triangle selection criteria; Discord seed content plan; candidate profile template; Twitter thread `docs/publish_thread_sop45_twitter.md` ✓
+  - **Organism C draft scaffold created ✓** (cycle 206): `templates/organism_c_draft.md` — selection criteria prefilled from SOP #45; Samuel divergence axes pre-mapped for triangle design; next action: Edward fills §0 (5 principles) + §7 (3 divergence domains) → run first collision
+  - **Async calibration unlocked ✓** (cycle 206): Samuel async path documented — send 3 scenarios via message, no scheduling required; minimum validation = 3 corrected + 1 new principle; unblocks B↔A calibration while recruiting C in parallel; branch stall broken
 - 4.2 Organism collision protocol（specs ready）
   - collision infrastructure operational: `organism_interact.py --report` runs on any two DNA files
   - divergence heatmap (22 scenarios): `social_trust`, `network_roi`, `group_dynamics`, `intro_gatekeeping`, `relationship_downgrade`, `learning`, `legacy` are structural Edward-Samuel divergence axes
   - `templates/organism_template.md` ✓ — reusable scaffold for any new organism; 9 sections, calibration status table, quality checklist, how-to-use notes
 - 4.3 Discord Digital Organisms Server（channels ready, users=0）
+  - seed content plan documented in SOP #45: 4 channels × 1 real post each before first invite; acquisition loop: C → C refers 1 → network self-sustaining at 5 organisms
+  - next: fill `#collision-reports` with Edward-Samuel 22-scenario report (anonymized) → Discord not empty → invite C
 - 4.4 Collective intelligence（Phase 3）
 
 ### 5. 平台分發（scale）
