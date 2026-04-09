@@ -217,9 +217,9 @@
 - **8.5 Automation #3 — COMPLETE ✅** (cycle 130): coffee-vs-tea (#4: coffee before 13:00 / tea after 13:00) + portfolio-check (#5: 16:00 once daily, no earlier). All 5 SYSTEM_FAILURE decisions from decision_audit.py now pre-committed. Zero remaining recurring decision overhead.
 
 ## 當前 regime
-攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live ticks 101+102 BTC=$70,994.74 SHORT P&L=**+$0.720** (+0.720%), SHORT×102 (100%); **SOP #01~#67 COMPLETE** → posting queue Aug 15; **SOP #67 Recursive Engine L3 Evolution Protocol ✓** — Domain 3; explicit trigger criteria for when/how L3 fires; 3 workbooks READY TO LIST ($87/buyer trilogy); Edward actions: (1) set mainnet API credentials [highest EV], (2) post SOP #01 on X, (3) send samuel_async_calibration_dm.md
+攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live ticks 101+103 BTC=$71,000.15 SHORT P&L=**+$0.720**, SHORT×103 (100%); **SOP #01~#68 COMPLETE** → posting queue Aug 16; **SOP #68 Recursive Engine L2 Evaluate Protocol ✓** — Domain 3; three-layer loop fully explicit (L1=SOP#47/L2=SOP#68/L3=SOP#67); 3 workbooks READY TO LIST ($87/buyer trilogy); Edward actions: (1) set mainnet API credentials [highest EV], (2) post SOP #01 on X, (3) send samuel_async_calibration_dm.md
 中性：2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑 (3 new distillation insights cycle 231), 5.1-5.2 deployed; 8.5 all 5 SYSTEM_FAILUREs pre-committed; **6 存活 AUDIT CLOSED** (cycle 202: runbook + scope separation documented)
-防禦：2.3 33/33 ALIGNED ✅ (cycle 231 re-verified, 12+ consecutive cycles clean), 4.1 partially unblocked (samuel_dna tested 19/20); F1–F10 runbook ✅; backward check COMPLETE — external validation gap → SOP #65+#66 closes it
+防禦：2.3 33/33 ALIGNED ✅ (cycle 232 re-verified, 13+ consecutive cycles clean), 4.1 partially unblocked (samuel_dna tested 19/20); F1–F10 runbook ✅; backward check COMPLETE — external validation gap → SOP #65+#66 closes it
 
 ## 已完成 milestones
 - dna_core.md 195 MDs operational（core + MD-01~MD-195 written ✓）
