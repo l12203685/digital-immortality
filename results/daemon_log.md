@@ -5257,3 +5257,15 @@ Blockers unchanged (both human-gated): set `BINANCE_MAINNET_KEY/SECRET` → main
 Branch 1.1 (paper-live) — tick 41, BTC=$70,925.88, SHORT x41 (100%), P&L **+$0.82** — new MFE ATH (was +$0.77 at tick 31). MFE/MAE ratio climbing: 0.62x. Position at its best point ever. Regime bearish, no reversal signal. Pushed.
 
 Blockers unchanged (human-gated): mainnet keys OR post SOP #01 on X.
+
+## Cycle 178 — 2026-04-09T00:27 UTC
+
+**Branch 1.1** — paper-live tick 42: BTC=$70,976.00, signal=SHORT (42 consecutive, 100%)
+
+- P&L: **+$0.75 (+0.75% on $100)** — minor pullback from MFE ($70,925→$70,976, +$50)
+- MFE ATH: +$0.82 (tick 41, held); MAE=-$1.33; MFE/MAE=0.62x
+- Regime bearish; no reversal signal; position still strongly profitable
+
+`paper_live_pnl_report.md` updated: ticks 37–42 added, summary corrected. `dynamic_tree.md` updated to cycle 178.
+
+Blockers unchanged (human-gated): set `BINANCE_MAINNET_KEY/SECRET` → mainnet, OR post SOP #01 on X.

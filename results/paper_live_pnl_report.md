@@ -1,5 +1,5 @@
 # Paper-Live SHORT P&L Simulation
-> Updated 2026-04-09 UTC | 36 ticks | Entry: $71,509.90
+> Updated 2026-04-09 UTC | 42 ticks | Entry: $71,509.90
 
 ## Setup
 - Entry tick 1: BTC=$71,509.90 → SHORT
@@ -45,19 +45,22 @@
 | 34   | $71,108.75 | +$0.561 |
 | 35   | $71,136.74 | +$0.522 |
 | 36   | $71,075.10 | +$0.796 |
+| 37   | $71,136.74 | +$0.522 |
+| 38   | $71,000.00 | +$0.713 |
+| 39   | $71,044.39 | +$0.651 |
+| 40   | $70,997.73 | +$0.716 |
+| 41   | $70,925.88 | +$0.817 |
+| 42   | $70,976.00 | +$0.747 |
 
 ## Summary
-- **Current unrealized P&L: +$0.7959 (+0.80% on $100)**
-- Best case (MFE): +$0.7959 (tick 36, BTC=$71,075) ← new MFE
-- Worst case (MAE): $-1.3274
-- Signal consistency: SHORT x 36 ticks (100%)
-- MFE/MAE ratio: 0.60x (recovering)
+- **Current unrealized P&L: +$0.75 (+0.75% on $100)**
+- Best case (MFE): +$0.82 (tick 41, BTC=$70,925.88) ← MFE ATH
+- Worst case (MAE): $-1.33 (tick 8, BTC=$72,459)
+- Signal consistency: SHORT x 42 ticks (100%)
+- MFE/MAE ratio: 0.62x (improving)
 
 ## Verdict
-SHORT signal persistent 36 ticks. BTC pulled back ($71,137→$71,075) — new MFE at tick 36. Position strengthening; regime still bearish.
-
-**Next action**: Set BINANCE_MAINNET_KEY/SECRET → run `python -m trading.mainnet_runner --tick`
-See docs/mainnet_activation_guide.md for exact steps.
+SHORT signal persistent 42 ticks. BTC at $70,976 — minor pullback from MFE ($70,925 at tick 41). MFE ATH +$0.82, still near best level. Regime bearish.
 
 **Next action**: Set BINANCE_MAINNET_KEY/SECRET → run `python -m trading.mainnet_runner --tick`
 See docs/mainnet_activation_guide.md for exact steps.
