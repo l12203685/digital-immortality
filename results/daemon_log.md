@@ -7045,3 +7045,20 @@ Cycle 279 committed and pushed. Summary:
 | **3.1 遞迴引擎** | Distillation | 3 insights appended; **159 total** |
 
 **Next**: 201811 JSONL → MD-367~369; Samuel DM (Branch 4.1 unblocked); Turing Test candidate outreach (Branch 9).
+
+## Cycle 73 — 2026-04-09 16:21:34 UTC
+
+Cycle 280 complete. Here's what was pushed:
+
+**Branch 2.2** — 201811 JSONL → MD-367~369 (from real GoogleDrive file, 2568 lines)
+- MD-367: 宣稱框架≠實際部位 — ability judged by account curve, not terminology frequency
+- MD-368: 新創招募選學習速度不選靜態匹配度 — 40% match + high learning velocity beats 100% static match
+- MD-369: 早期進場者獨佔alpha — power-law alpha distribution; entry requires conviction before consensus
+
+**Branch 6** — 49th consecutive clean cycle (33/33 deterministic ALIGNED, 6 expected MISALIGNED)
+
+**Branch 7** — SOP #108 Cold-Start Behavioral Drift Detection Protocol (SILENT_INVERSION as critical failure mode; $297/$497 revenue bridge). **SOP #01~#108 COMPLETE.**
+
+**Branch 3.1** — 6 insights distilled (total 165). Key: insight 162 — daemon monitoring without `resolved_at` field → false positives as velocity increases.
+
+**daemon_next_priority** → Branch 1.3/Skill-商業化 (neglected 68 cycles; blocker: SOP#01 never posted). Next cycle 281 action: write SOP#01 tweet ready to copy-paste + cold outreach template for 0-follower path.
