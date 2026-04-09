@@ -1,5 +1,5 @@
 # Paper-Live SHORT P&L Simulation
-> Updated 2026-04-09 UTC | 92 ticks | Entry: $71,509.90
+> Updated 2026-04-09 UTC | 93 ticks | Entry: $71,509.90
 
 ## Setup
 - Entry tick 1: BTC=$71,509.90 → SHORT
@@ -94,16 +94,17 @@
 | 90   | $71,008.86 | **+$0.701** |
 | 91   | $71,008.87 | **+$0.701** |
 | 92   | $71,008.87 | **+$0.701** |
+| 93   | $70,895.98 | **+$0.858** |
 
 ## Summary
-- **Current unrealized P&L: +$0.701 (+0.701% on $100)**
+- **Current unrealized P&L: +$0.858 (+0.858% on $100)**
 - Best case (MFE): +$1.204 (tick 50, BTC=$70,649.77) ← MFE ATH
 - Worst case (MAE): $-1.33 (tick 8, BTC=$72,459)
-- Signal consistency: SHORT × 92 ticks (100%)
-- MFE/MAE ratio: 0.65x
+- Signal consistency: SHORT × 93 ticks (100%)
+- MFE/MAE ratio: 0.71x
 
 ## Verdict
-SHORT signal persistent 92 ticks. BTC $71,008.87 — down $70.55 from tick 89 ($71,079.42), SHORT tailwind; P&L +$0.701 (+0.701% on $100). 647 log entries total. Regime MIXED, DualMA_10_30 only strategy signaling. MFE ATH unchanged at +$1.204 (tick 50). BTC net down $501.03 from entry tick 1 — SHORT thesis intact.
+SHORT signal persistent 93 ticks. BTC $70,895.98 — down $112.89 from tick 92 ($71,008.87), SHORT tailwind; P&L +$0.858 (+0.858% on $100). 662 log entries total. Regime MIXED, DualMA_10_30 only strategy signaling. MFE ATH unchanged at +$1.204 (tick 50). BTC net down $613.92 from entry tick 1 — SHORT thesis intact.
 
 **Next action**: Set BINANCE_MAINNET_KEY/SECRET → run `python trading/mainnet_runner.py --tick`
 See docs/mainnet_activation_guide.md for exact steps.
