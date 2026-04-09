@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T21:38+08",
+  "updated": "2026-04-09T22:09+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "daemon_next_priority → 201907 JSONL (Branch 2.2) + boot_tests.md meta-rules a..."
+      "text": "Next human-gated critical path: Edward posts SOP #01 on X → M1 milestone → re..."
     },
     {
       "time": "just now",
-      "text": "Status: dna_core.md = 342 MDs | insights.json ~121 entries | pushed to origin"
+      "text": "- CLI: `python recursive_engine.py --l2` / `--l3`"
     },
     {
       "time": "just now",
-      "text": "Conflict resolution — insights.json (cycle 265 + 267 entries both preserved) ..."
+      "text": "- Auto-triggers every 5 daemon cycles"
     },
     {
       "time": "just now",
-      "text": "| MD-342 | 降波動=凱利邊界case；單次事件損失 > BR 1~2%才值得買保險/對沖；daily grind不需要 | 201908 g18..."
+      "text": "- `generate_prompt()` now reads `recursive_question` from config (L3-evolvable)"
     },
     {
       "time": "just now",
-      "text": "| MD-341 | 雇主低薪=結構性cost-down，不是個人市場價值的信號；willingness-to-pay ≠ market value | ..."
+      "text": "- `l3_evolve()`: writes to `staging/engine_config.json` + `results/engine_l3_..."
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71128.59,
+    "paper_live_price": 70868.79,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T13:21",
+    "paper_live_ts": "2026-04-09T13:49",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"
