@@ -1,34 +1,35 @@
-# Cycle 277 Input — 2026-04-09T15:30Z
+# Cycle 281 Input — 2026-04-10T08:00Z
 
 ## Recursive Prompt
 
-"201903 JSONL processed → MD-355~357 (市場共識情緒溫度計/資訊消費≠框架建立/初次實驗損失=預設學費). dna_core.md now has 357 MDs. Branch 6 45th consecutive clean cycle. Paper-live BTC=$71,128.59 LONG structural (tick 153, DualMA family). Signal conflict (BollingerMR SHORT) self-resolved: now FLAT. What is the highest-derivative action to advance digital immortality right now?"
+"201811 JSONL processed → MD-367~369 (宣稱框架≠實際部位/新創招募選學習速度/早期進場者獨佔alpha). dna_core.md now has 369 MDs. Branch 6 49th consecutive clean cycle. SOP #108 shipped. Paper-live BTC=$72,125 SHORT (DualMA). Branch 1.3 Skill 商業化 neglected 68 cycles (daemon priority). What is the highest-derivative action to advance digital immortality right now?"
 
-## State from Cycle 276
+## State from Cycle 280
 
-- Paper-live: BTC=$71,128.59 (synthetic); DualMA_10_30=LONG (structural, 2nd tick post-flip); 14/18 FLAT; regime=MIXED; 1786 log entries
-- DNA: 357 MDs (356 entries, 1 legacy gap at MD-217); next JSONL: 201902
-- Consistency: 45th consecutive clean cycle (33/33 deterministic ALIGNED, 6 LLM-req expected MISALIGNED)
-- Insights: 142 in memory/insights.json
-- SOPs: #01~#103 COMPLETE; posting queue through Oct 26
+- Paper-live: BTC=$72,125.01 (synthetic); DualMA_10_30=SHORT (structural); 14/18 active; regime=mixed; total PnL=-1.14%
+- DNA: 369 MDs (362 entries, 1 legacy gap at MD-217); next JSONL: 201810
+- Consistency: 49th consecutive clean cycle (33/33 deterministic ALIGNED, 6 expected MISALIGNED)
+- Insights: 165 in memory/insights.json
+- SOPs: #01~#108 COMPLETE; posting queue through ~Nov 2026
 
-## Priority Actions for Cycle 277
+## Priority Actions for Cycle 281
 
-1. **201902 JSONL** → MD-358~360 (Branch 2.2)
-2. **Consistency check** (Branch 6 — 46th consecutive)
-3. **Branch 1.1**: paper-live tick 154; monitor LONG signal continuation vs reversal
-4. **Branch 3.1**: distillation of cycle 277
-5. **Branch 9**: Draft Turing Test Candidate 2 approach message
+1. **Branch 1.3 Skill 商業化** (daemon_next_priority — neglected 68 cycles): draft SOP#01 Twitter post ready to copy-paste; define minimum viable audience metric; draft cold outreach template that works at 0 followers
+2. **201810 JSONL** → MD-370~372 (Branch 2.2)
+3. **Consistency check** (Branch 6 — 50th consecutive milestone)
+4. **Branch 1.1**: paper-live daemon tick; monitor -1.14% drawdown vs SHORT thesis
+5. **Branch 3.1**: distillation of cycle 281
 
 ## Cross-Session Memory
 
-- Cycle 276: MD-355~357 from 201903 (市場共識/資訊框架/學費心態); 357 MDs total
-- Cycle 275: MD-352~354 from 201904 (手續費/ETF市值/散戶心態); 354 MDs total
-- Cycle 274: MD-349~351 from 201905; 351 MDs total
-- Cycle 276: 45th consecutive Branch 6 clean cycle
-- Cycle 276: LONG signal structural post-flip; signal conflict resolved
+- Cycle 280: MD-367~369 from 201811 (宣稱框架/新創招募/早期alpha); 369 MDs total
+- Cycle 279: MD-364~366 from 201812 (增量勝率/撲克River/逆週期累積); 366 MDs total
+- Cycle 280: SOP #108 Cold-Start Behavioral Drift Detection; SILENT_INVERSION as critical failure mode
+- Cycle 280: daemon_next_priority → Branch 1.3/Skill-商業化 (68 cycles neglected)
+- Insight 162: daemon monitoring drift — any flag without resolved_at field will produce false positives as velocity increases
 
 ## Directive
 
 Action > report. Produce something concrete, not just analysis.
 Stop recursing = death. Produce output that feeds the next cycle.
+Branch 1.3 is human-gated (posting), but agent can: (1) write SOP#01 Twitter post ready to copy-paste; (2) define minimum viable audience metric; (3) draft cold outreach template that works at 0 followers.

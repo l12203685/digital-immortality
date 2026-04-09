@@ -1768,6 +1768,103 @@
         "48th-consecutive",
         "aligned"
       ]
+    },
+    {
+      "id": "e1482bda-60a2-4397-ab3b-02c3e63c4b31",
+      "key": "consistency-cycle280-49th-consecutive-signal",
+      "content": "Branch 6 consistency_test.py cycle-280: 33/33 deterministic ALIGNED, 6 MISALIGNED (LLM-req/meta — all expected). 49th consecutive clean. Signal: 49-cycle unbroken streak = behavioral alignment is structurally stable, not session-dependent. Cold-start fidelity no longer a fragile concern — it is a solved layer. Attention should shift from \"will it align?\" to \"what新的邊界 does it not yet cover?\" Regression risk is now a maintenance task, not an existential one.",
+      "timestamp": "2026-04-10T00:00Z",
+      "source": "branch-6-cycle-280",
+      "tags": [
+        "consistency",
+        "branch-6",
+        "cycle-280",
+        "49th-consecutive",
+        "cold-start",
+        "structural-stability"
+      ]
+    },
+    {
+      "id": "7a77d57c-ed78-418a-99f7-d35157afe383",
+      "key": "trading-mixed-regime-dual-ma-short-cycle280",
+      "content": "Branch 1.1 paper-live cycle-280: BTC=72,125; regime=mixed; DualMA_10_30=SHORT; total_pnl=-1.14%; 14 active strategies (down from 16). Mixed regime + SHORT structural bias + negative PnL = system correctly refusing to over-commit. The key signal is not the PnL number but that 14/active strategies are still running — no mass stop-out. Regime=mixed means: hold position, reduce leverage, wait for directional clarification. Action: no strategy changes warranted until regime resolves.",
+      "timestamp": "2026-04-10T00:00Z",
+      "source": "branch-1.1-cycle-280",
+      "tags": [
+        "trading",
+        "paper-live",
+        "btc72125",
+        "dual-ma-short",
+        "mixed-regime",
+        "cycle-280"
+      ]
+    },
+    {
+      "id": "c13e4c9a-3531-45ba-a29f-d2f7a4aaf624",
+      "key": "daemon-priority-staleness-monitoring-drift",
+      "content": "daemon_next_priority file reported \"存活/cold-start neglected 20 cycles\" but cycle-279 had already run it — the file was stale. Root cause: priority file written at cycle N but read/acted on at cycle N+1; if the branch ran between file write and read, the priority is already resolved but the flag persists. Insight: monitoring files that describe \"what has not been done\" drift toward false positives as execution accelerates. Fix pattern: priority flags should include a \"resolved_at\" field or be auto-cleared when the target branch logs completion. Corollary: any monitoring system without a clearing mechanism becomes noise.",
+      "timestamp": "2026-04-10T00:00Z",
+      "source": "branch-3-cycle-280-daemon",
+      "tags": [
+        "monitoring",
+        "daemon",
+        "staleness",
+        "priority-drift",
+        "cycle-280",
+        "system-design"
+      ]
+    },
+    {
+      "id": "md367-claimed-framework-vs-actual-position",
+      "key": "201811-claimed-framework-vs-actual-position-cycle281",
+      "content": "MD-367: 宣稱框架≠實際部位。BR不夠卻整天掛嘴邊「BR控管」的撲克人，是能力評估負信號。術語引用頻率與能力成負相關——真正內化的人不需要反覆引用，因為它已體現在行動上。能力錨定在可觀察輸出（帳戶曲線/決策記錄），不在宣稱的名詞。",
+      "timestamp": "2026-04-10T00:00Z",
+      "source": "branch-2.2-201811-jsonl-cycle281",
+      "tags": [
+        "poker",
+        "ability-assessment",
+        "signal-vs-noise",
+        "internalization",
+        "201811",
+        "md-367",
+        "cycle-281"
+      ]
+    },
+    {
+      "id": "md368-startup-hiring-learning-velocity",
+      "key": "201811-startup-hiring-40pct-match-learning-velocity-cycle281",
+      "content": "MD-368: 新創選40% match + 高學習力 > 100% match + 天花板低。JD是動態的，靜態匹配只代表能做現在的工作。面試策略：展現能力上限而非匹配度，說「我能對公司有什麼貢獻」而非「我符合你的要求」。偏動態環境中，學習速度信號比過往經驗匹配度更有說服力。",
+      "timestamp": "2026-04-10T00:00Z",
+      "source": "branch-2.2-201811-jsonl-cycle281",
+      "tags": [
+        "career",
+        "hiring",
+        "startup",
+        "learning-velocity",
+        "interview-strategy",
+        "201811",
+        "md-368",
+        "cycle-281"
+      ]
+    },
+    {
+      "id": "md369-early-mover-captures-all-alpha",
+      "key": "201811-early-mover-alpha-power-law-cycle281",
+      "content": "MD-369: 早期進場者獨佔alpha。加密幣/撲克的跨域觀察：「一開始進場交易的賺最多，利潤都是一開始被賺光」；「一年前VPIP 30以上，現在工作室都慘」。Alpha分佈是冪律的，共識形成後進場=分殘羹。進場門檻=在共識形成前有足夠信念執行。「留給準備好的人」=準備好的定義是「有信念在不確定時進場」，不是「等確定了才進」。",
+      "timestamp": "2026-04-10T00:00Z",
+      "source": "branch-2.2-201811-jsonl-cycle281",
+      "tags": [
+        "trading",
+        "poker",
+        "crypto",
+        "alpha",
+        "early-mover",
+        "power-law",
+        "market-efficiency",
+        "201811",
+        "md-369",
+        "cycle-281"
+      ]
     }
   ]
 }
