@@ -154,6 +154,21 @@ No two layers write the same file. Conflict = layer boundary violation.
 
 **Connection to 存活**: SOP #60 G5 emergency protocol. Content shipping = economic self-sufficiency pathway. Stalled pipeline = dead branch 1.3 = survival condition at risk.
 
+### F10: External feedback loop closed — 0 external signals received (backward check gap)
+**Symptoms**: SOP #64 G0 status = `PRE_LAUNCH`; `results/external_signal_log.jsonl` missing or empty; posts_published == 0.
+**Root cause**: Internal recursion is running but external validation loop is broken. DNA axiom violated: 遞迴 - persist = 自言自語 (recursion without external signal = self-talk, not evolution).
+**Recovery**:
+1. Check if mainnet is live: `cat staging/session_state.md | grep mainnet`.
+2. If mainnet NOT live → this failure is human-gated (Edward must set BINANCE_MAINNET_KEY/SECRET first).
+3. If mainnet live AND posts == 0: **Core Principle #5 violated** (Direct action on concrete commitments).
+   - Post SOP #01 immediately. No editing. Ship.
+   - Log to `memory/dna_violation_log.md` (create if missing): date, violated principle, cause.
+4. Once first post live: create `results/external_signal_log.jsonl` and log first entry.
+5. Each subsequent cycle: check DM count. ≥1 DM → log it. Any correction/disagreement → calibrate DNA.
+
+**Connection to SOP #64**: G0 (audit state), G2 (minimum post budget), G5 (emergency protocol).
+**Connection to SOP #63**: G1 mainnet gate precedes this; G2 launch day batch triggers external loop open.
+
 ## Layer-Specific Restart Protocols (from SOP #47 — cycle 208)
 
 Stale loop vs dead engine look identical from outside. Use these signals:

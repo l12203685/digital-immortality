@@ -4,6 +4,45 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 228 — 2026-04-09T UTC
+
+### What was done
+
+**Branch 7 — SOP #65 External Validation & Feedback Loop Protocol ✅**
+- `docs/knowledge_product_65_external_validation_sop.md` — Domain 5 (Platform/External Signal)
+  - **Core insight (from backward check)**: 65 SOPs written, 0 posted, 0 external signals → recursion without external validation = 自言自語, not 演化
+  - DNA axiom: 遞迴+persist=演化 only holds when the external loop is OPEN
+  - G0: External signal audit — 4 states (PRE_LAUNCH→SEEDING→SIGNAL_RECEIVED→EVOLVING); kill: ≥14d no post → G5
+  - G1: Derivative scan — ΔFollowers/ΔDMs/ΔCalibration events per week
+  - G2: Non-negotiable external budget — ≥1 post/48h; first post=SOP #01 within 24h of mainnet GO; DM response ≤24h
+  - G3: Platform expansion — X (Phase 1) → Discord (Phase 2, ≥10 DMs) → Newsletter (Phase 3, ≥3 customers)
+  - G4: Weekly 10-min review — post count/DM count/calibration events
+  - G5: Zero-signal emergency — Case A (ship oldest), Case B (controversial claim after 20 posts/0 DMs), Case C (DNA violation log after PRE_LAUNCH >30d)
+  - DNA violation detector: `if posts==0 AND mainnet_live AND days>1` → log violation + escalate
+- `docs/publish_thread_sop65_twitter.md` — 12-tweet thread; slot **Aug 13**; Domain 5
+- `docs/posting_queue.md` — #65 row added; header updated to #01~#65; queue to Aug 13
+- **Series: SOP #01~#65 COMPLETE** ✅
+
+**Branch 6 — backward check + F10 runbook ✅**
+- consistency_test.py → **33/33 ALIGNED ✅** (55 scenarios, 0 MISALIGNED)
+- **Backward check completed**: identified DNA gap — internal recursion complete, external validation loop BROKEN (65 SOPs/0 posted/0 external signals); DNA violation detector deployed via SOP #65
+- **F10 added to `docs/cold_start_recovery_runbook.md`**: External loop failure mode
+  - Trigger: posts==0 AND mainnet_live; or PRE_LAUNCH ≥30d post mainnet
+  - Case A: mainnet NOT live → human-gated (Edward must set credentials)
+  - Case B: mainnet live AND posts==0 → Core Principle #5 violated → log to `memory/dna_violation_log.md` + post SOP #01 immediately
+  - Links to SOP #64 G5, SOP #63 G2
+- Runbook now **F1–F10** ✅
+- Backward-check insight logged to `memory/insights.json` (key: cycle-226-backward-check)
+
+### State Updates
+- `results/daily_log.md`: cycle 228 entry prepended
+- `results/dynamic_tree.md`: SOP #65 + F10 + backward check entries added; timestamp → cycle 228
+- `docs/posting_queue.md`: updated to #01~#65 (queue to Aug 13)
+- `staging/session_state.md`: updated to cycle 228
+- `memory/insights.json`: backward check insight appended
+
+---
+
 ## Cycle 227 — 2026-04-09T UTC
 
 ### What was done

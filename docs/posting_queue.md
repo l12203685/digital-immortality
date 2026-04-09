@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#64
+# Twitter Posting Queue — SOP Series #01~#65
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -69,8 +69,9 @@
 | Aug 5 | #60 | publish_thread_sop60_twitter.md | "You don't have a content problem. You have a shipping problem." | pending |
 | Aug 6 | #61 | publish_thread_sop61_twitter.md | "Zero revenue = parasitic not immortal. The fix is 5 gates." | pending |
 | Aug 7 | #62 | publish_thread_sop62_twitter.md | "You don't have a relationship problem. You have an investment model problem." | pending |
-| Aug 9 | #63 | publish_thread_sop63_twitter.md | "Revenue = $0. Infrastructure = complete. The gap is sequencing, not product." | pending |
+| Aug 9 | #63 | publish_thread_sop63_twitter.md | "63 systems. Zero revenue. The fix is a 6-gate activation sequence." | pending |
 | Aug 11 | #64 | publish_thread_sop64_twitter.md | "Your system broke. You didn't notice for 3 weeks." | pending |
+| Aug 13 | #65 | publish_thread_sop65_twitter.md | "63 systems built. 0 published. 0 feedback received. That's not a content problem. That's a broken feedback loop." | pending |
 
 ---
 

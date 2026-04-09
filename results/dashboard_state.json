@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T14:39+08",
+  "updated": "2026-04-09T14:47+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,30 +64,30 @@
   ],
   "activity": [
     {
-      "time": "just now",
+      "time": "8min ago",
       "text": "Human blockers still on queue: SOP #01 post (Apr 9), mainnet API keys, Samuel..."
     },
     {
-      "time": "just now",
+      "time": "8min ago",
       "text": "B6 — Consistency 33/33 ALIGNED ✅. Daemon's \"least recent = 存活/cold-start\" now..."
     },
     {
-      "time": "just now",
+      "time": "8min ago",
       "text": "- Critical path: profile check → post SOP #01 → 48h log"
     },
     {
-      "time": "just now",
+      "time": "8min ago",
       "text": "- 5 gaps documented: profile pre-flight, engagement tracking, kill condition ..."
     },
     {
-      "time": "just now",
+      "time": "8min ago",
       "text": "- Created `results/engagement_log.md` (48h tracking scaffold)"
     }
   ],
   "stats": {
     "daemon_cycles": 208,
     "total_mds": 330,
-    "dna_core_lines": 87
+    "dna_core_lines": 426
   },
   "health": {
     "ci_wired": false,

@@ -1,1 +1,1 @@
-OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.
+SOP #66 next — build results/external_signal_log.jsonl scaffold (SOP #65 G0 state machine needs this file to track PRE_LAUNCH→EVOLVING state). Alternatively: SOP #66 on Domain 9 (Health/Physical/Sleep) evolution or Branch 1.1 strategy diversification (add new strategy to paper-live pool).
