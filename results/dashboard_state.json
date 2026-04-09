@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T11:21+08",
+  "updated": "2026-04-09T11:49+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,28 +64,28 @@
   ],
   "activity": [
     {
-      "time": "just now",
-      "text": "- Next queue (from session_state.md): Branch 1.1 paper-live tick 73 → Branch ..."
+      "time": "Branches pushed",
+      "text": "4. Post SOP #01 on X (15 min, `x_launch_sequence.md` has exact steps)"
     },
     {
-      "time": "just now",
-      "text": "- 12 files committed: organism_interact.py (social domain + risk calibration)..."
+      "time": "Branches pushed",
+      "text": "3. Fill `docs/organism_c_selection_worksheet.md` (20–30 min) → runs first Edw..."
     },
     {
-      "time": "just now",
-      "text": "- CLEAN_STATUS[7]: already `\"43 SOPs ready\"` in `generate_dashboard_state.py`..."
+      "time": "Branches pushed",
+      "text": "2. Paste 4 Discord seed posts to server channels"
     },
     {
-      "time": "just now",
-      "text": "Committed and pushed. State:"
+      "time": "Branches pushed",
+      "text": "1. Send `docs/samuel_async_calibration_dm.md` to Samuel (paste-ready Chinese,..."
     },
     {
-      "time": "19min ago",
-      "text": "Branch 6 was neglected because it had no automated enforcement — it relied on..."
+      "time": "Branches pushed",
+      "text": "Edward action queue (engine cannot unblock these):"
     }
   ],
   "stats": {
-    "daemon_cycles": 202,
+    "daemon_cycles": 208,
     "total_mds": 330,
     "dna_core_lines": 87
   },
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71065.82,
+    "paper_live_price": 70935.88,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T02:59",
+    "paper_live_ts": "2026-04-09T03:48",
     "paper_tick": 71,
     "paper_pnl": "+$0.560",
     "status": "ok"
