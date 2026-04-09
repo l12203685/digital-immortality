@@ -1,5 +1,5 @@
 # Paper-Live SHORT P&L Simulation
-> Updated 2026-04-09 UTC | 45 ticks | Entry: $71,509.90
+> Updated 2026-04-09 UTC | 50 ticks | Entry: $71,509.90
 
 ## Setup
 - Entry tick 1: BTC=$71,509.90 → SHORT
@@ -54,16 +54,21 @@
 | 43   | $70,804.43 | +$0.990 |
 | 44   | $70,793.45 | +$1.005 |
 | 45   | $70,767.95 | +$1.041 |
+| 46   | $70,661.38 | +$1.194 |
+| 47   | $70,802.01 | +$0.990 |
+| 48   | $70,864.57 | +$0.904 |
+| 49   | $70,784.17 | +$1.017 |
+| 50   | $70,649.77 | **+$1.204** ← NEW ATH |
 
 ## Summary
-- **Current unrealized P&L: +$1.04 (+1.04% on $100)** ← **NEW ATH**
-- Best case (MFE): +$1.04 (tick 45, BTC=$70,767.95) ← MFE ATH
+- **Current unrealized P&L: +$1.20 (+1.20% on $100)** ← **NEW ATH**
+- Best case (MFE): +$1.20 (tick 50, BTC=$70,649.77) ← MFE ATH
 - Worst case (MAE): $-1.33 (tick 8, BTC=$72,459)
-- Signal consistency: SHORT x 45 ticks (100%)
-- MFE/MAE ratio: 0.78x (improving)
+- Signal consistency: SHORT x 50 ticks (100%)
+- MFE/MAE ratio: 0.90x (improving)
 
 ## Verdict
-SHORT signal persistent 45 ticks. BTC $70,768 — P&L at +$1.04 new ATH. Regime bearish, no reversal signal.
+SHORT signal persistent 50 ticks. BTC $70,650 — P&L at +$1.20 new ATH. Regime bearish, no reversal signal.
 
 **Next action**: Set BINANCE_MAINNET_KEY/SECRET → run `python -m trading.mainnet_runner --tick`
 See docs/mainnet_activation_guide.md for exact steps.
