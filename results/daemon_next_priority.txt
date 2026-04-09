@@ -1,1 +1,1 @@
-OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.
+OK: All branches covered. Least recent: '4.1/Samuel-organism'. Consider touching it next (human-gated: send DM). Agent-executable: Branch 7 SOP #82 or Branch 1.1 ticks 124+.

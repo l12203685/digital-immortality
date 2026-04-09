@@ -4,6 +4,36 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 246 — 2026-04-09T UTC
+
+### What was done
+
+**Branch 1.1 — paper-live ticks 121+122+123 ✅**
+- BTC=$71,237 (stable, ±0); regime=MIXED (trend=0.0139, MR=0.2250)
+- DualMA_10_30=SHORT×123 (100%); 17/18 FLAT; 1193 log entries
+- SHORT×123 = 9.4% of quarterly threshold; price stable = signal structural not momentum
+
+**Branch 7 — SOP #81 Distribution Velocity SOP ✅**
+- `docs/knowledge_product_81_distribution_velocity_sop.md` — Domain 5 (Platform/Distribution)
+- G0–G5: velocity baseline (start_followers, posts_week_1) → weekly cadence (3/3/4-5/4-5) → post-to-post feedback loop (impressions/replies/DM signals) → compounding mechanism (reply-to-own, cross-ref, repost winners) → DM conversion protocol (→ SOP #69 → SOP #70 G2) → persist
+- Closes "ready→posted gap solved but single post = noise" failure mode
+- Addresses critical path: G2 (10 DMs) → SOP #70 G0 → Gumroad live → revenue
+- **SOP #01~#81 COMPLETE** ✅; regime shift: infrastructure → velocity improvement
+
+**Branch 3.1 — Distillation ✅**
+- 3 insights → memory/insights.json (total 50):
+  1. `distribution-velocity-system`: velocity = post-to-post feedback loop; DM rate (not DM total) is the flywheel indicator
+  2. `paper-live-short-persistence-123`: SHORT×123 through price stability = structural signal, not momentum
+  3. `sop-series-regime-shift`: SOP #81 marks regime shift; future SOPs should ask "what slows execution?" not "what's missing?"
+
+### L2 Verdict
+- A: Branch 7 SOP #81 — Distribution Velocity SOP; closes velocity gap; G2 path to revenue — HIGH
+- B: Branch 3.1 — 3 insights (total 50) — MEDIUM
+- B: Branch 1.1 ticks 121-123 — SHORT×123; mainnet still blocked — LOW
+- Verdict: **1A + 2B**. No C or D. L3 not triggered.
+
+---
+
 ## Cycle 244 — 2026-04-09T UTC
 
 ### What was done

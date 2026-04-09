@@ -593,6 +593,51 @@
         "signal-persistence",
         "branch-1.1"
       ]
+    },
+    {
+      "id": "b3f1a2c8-7d4e-4f1a-9c3b-5e8f2a1d6b7c",
+      "key": "distribution-velocity-system",
+      "content": "Cycle 246: SOP #81 closes the velocity gap. Content readiness (SOP #78) is necessary but not sufficient — a single post without a feedback loop is noise. Velocity = post-to-post feedback: impressions signal hook quality, replies signal resonance, DMs signal audience fit. The G2 (10 DMs) threshold for revenue activation (SOP #70) is not a count target but a derivative indicator: DM rate, not DM total, tells you if the flywheel is spinning. The compounding mechanism (reply-to-own-threads, cross-reference, repost winners) turns a sequence of posts into a corpus that compounds. Distribution without velocity = broadcasting into void.",
+      "timestamp": "2026-04-09T09:42:00+00:00",
+      "source": "recursive-distillation-cycle-246",
+      "category": "distribution",
+      "tags": [
+        "distribution",
+        "velocity",
+        "SOP-81",
+        "flywheel",
+        "branch-1.3"
+      ]
+    },
+    {
+      "id": "c4e2b1f9-8a5d-4b2c-ad4e-6f9c3b2e7a8d",
+      "key": "paper-live-short-persistence-123",
+      "content": "Cycle 246: Ticks 121–123. BTC=$71,237 (range ±0, stable). DualMA_10_30=SHORT×123 consecutive (100%). 17/18 FLAT. Regime=MIXED (trend=0.0139, MR=0.2250). 1193 total log entries. 123/1314 = 9.4% of quarterly threshold. The persistence of SHORT signal through BTC price stability (not just directional move) indicates signal is structural, not momentum-chasing. Mainnet remains the live-performance gate.",
+      "timestamp": "2026-04-09T09:42:00+00:00",
+      "source": "recursive-distillation-cycle-246",
+      "category": "trading",
+      "tags": [
+        "trading",
+        "paper-live",
+        "signal-persistence",
+        "tick-123",
+        "branch-1.1"
+      ]
+    },
+    {
+      "id": "d5f3c2a1-9b6e-4c3d-be5f-7a0d4c3f8b9e",
+      "key": "sop-series-regime-shift",
+      "content": "Cycle 246: SOP #81 marks a regime shift in the SOP series. SOPs #01–#80 built infrastructure: trading systems, calibration protocols, organism networks, distribution mechanics, cold-start guarantees. SOP #81 is the first SOP in a new regime: operational velocity improvement on top of completed infrastructure. Future SOPs should ask 'what is slowing down execution of the systems that already exist?' not 'what system is missing?' The meta-framework is structurally complete; now it needs to run faster.",
+      "timestamp": "2026-04-09T09:42:00+00:00",
+      "source": "recursive-distillation-cycle-246",
+      "category": "methodology",
+      "tags": [
+        "sop-series",
+        "regime-shift",
+        "methodology",
+        "meta-framework",
+        "SOP-81"
+      ]
     }
   ]
 }
