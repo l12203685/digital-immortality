@@ -1,12 +1,12 @@
 {
-  "last_tick": "2026-04-09T11:11:01.198530+00:00",
-  "tick_count": 58,
+  "last_tick": "2026-04-09T11:16:01.487291+00:00",
+  "tick_count": 59,
   "active_strategies": 14,
   "disabled": {
     "DualMA_10_30": "PF 0.65 < 0.8"
   },
   "total_pnl_pct": -1.0873,
-  "price": 71221.15,
+  "price": 71204.52,
   "regime": "mixed",
   "signals": {
     "Donchian_20": 0,

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T19:11+08",
+  "updated": "2026-04-09T19:20+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Blocker unchanged: Critical path is human-gated — Edward posts SOP #01 on X t..."
+      "text": "Queue blocker unchanged: critical path still requires Edward to post SOP #01 ..."
     },
     {
       "time": "just now",
-      "text": "L2 verdict: 1A + 3B. L3 not triggered."
+      "text": "| 3.1 Distillation | 3 insights appended → total 84 in insights.json |"
     },
     {
       "time": "just now",
-      "text": "| 3.1 Distillation | insights.json +3 | Total 81 entries |"
+      "text": "| 7 SOP series | SOP #91: Monthly DNA Calibration Audit — fills the gap SOP#8..."
     },
     {
       "time": "just now",
-      "text": "| 7 SOP series | SOP #90 written | Revenue Rate Tracking Dashboard; weekly G0..."
+      "text": "| 6 存活 | consistency_test.py → 33/33 ALIGNED ✅; 30+ consecutive clean cycles;..."
     },
     {
       "time": "just now",
-      "text": "| 6 存活/cold-start | consistency_test.py | 33/33 ALIGNED ✅; 29+ consecutive cl..."
+      "text": "| 1.1 Trading | Tick 139: BTC=$71,187.11 (↓$114.89); SHORT×139 (100%); 17/18 ..."
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71301.74,
+    "paper_live_price": 71187.11,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T11:09",
+    "paper_live_ts": "2026-04-09T11:16",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"
