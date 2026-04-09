@@ -2,6 +2,25 @@
 
 Recursive engine cycle history.
 
+## Cycle 260 — 2026-04-09T12:10Z
+
+- **Branch 1.1**: paper-live tick 141; BTC=$71,182.21 (↑$16.77 from tick 140; SHORT headwind); DualMA_10_30=SHORT×141 (structural unbroken); 17/18 FLAT; regime=MIXED; 1535 log entries
+- **Branch 6**: consistency_test.py → 33/33 deterministic ALIGNED ✅; 32+ consecutive clean cycles; 3 LLM-req MISALIGNED (expected)
+- **Branch 4.1**: `docs/organism_calibration_prep_cycle260.md` created — 7 divergence axes analyzed, 3 new calibration scenarios (social_trust/group_dynamics/learning), calibration milestone spec; Branch 4.1 TOUCHED ✅ (least-recent per daemon priority)
+- **Branch 7**: SOP #95 Organism Network Effect Protocol — structural vs idiosyncratic divergence; expansion trigger 75-90%; collective intelligence extraction rules; posting queue → Oct 14; **SOP #01~#95 COMPLETE** ✅
+- **Branch 3.1**: 3 distillation insights → insights.json (total 96): paper-live-tick-141 / consistency-32-consecutive-clean / organism-network-effect-sop95
+- **L2**: A (SOP #95 — closes collective intelligence extraction gap; HIGH) + B×3 (tick 141 / consistency / Branch 4.1 touched)
+- **L3**: not triggered
+
+## Cycle 259 — 2026-04-09T12:00Z
+
+- **Branch 1.1**: paper-live tick 140; BTC=$71,165.44 (↓$21.67 SHORT tailwind); DualMA_10_30 DISABLED (PF 0.65 < 0.8); 17/18 FLAT; regime=MIXED; 1517 log entries
+- **Branch 6**: consistency_test.py → 33/33 deterministic ALIGNED ✅; 31+ consecutive clean cycles; 3 LLM-req MISALIGNED (expected)
+- **Branch 7**: SOP #94 Cross-Instance Calibration Maintenance Protocol — quarterly maintenance + reactive triggers; STABLE/WATCH/DRIFT/CRITICAL classification; full monthly stack: SOP #80 + SOP #91 + SOP #94; posting queue → Oct 12; **SOP #01~#94 COMPLETE** ✅
+- **Branch 3.1**: 3 distillation insights → insights.json (total 93): paper-live-tick-140 / consistency-31-consecutive-clean / cross-instance-calibration-maintenance-sop94
+- **L2**: A (SOP #94 — closes 100%-measured ≠ 100%-maintained gap; HIGH) + B×3 (tick 140 / consistency / distillation)
+- **L3**: not triggered
+
 ## Cycle 254 — 2026-04-09T11:20Z
 
 **B1.1**: ticks 134-136, BTC=$71,279.00 (↓$126.29 SHORT tailwind), SHORT×136 (100%), 1445 entries, regime=MIXED

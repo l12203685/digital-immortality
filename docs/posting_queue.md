@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#84
+# Twitter Posting Queue — SOP Series #01~#94
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -115,3 +115,14 @@
 - [ ] ≥1 inbound DM from someone with trading/quant background
 - [ ] All 5 Kernels represented: #19 (Kernel 1), #16 (Kernel 2), #10 (Kernel 3), #17 (Kernel 4), #18 (Kernel 5)
 - [ ] Full framework SOP (#21) posted — bridges trading system to FIRE goal
+| Sep 24 | #85 | publish_thread_sop85_twitter.md | "10 DMs received. No product. No link. You lost them. The 48-hour Gumroad product setup protocol." | pending |
+| Sep 26 | #86 | publish_thread_sop86_twitter.md | "A stranger asks your rate. You hesitate. You guess. You lose. The Consulting Rate Card SOP — know your number before you're asked." | pending |
+| Sep 28 | #87 | publish_thread_sop87_twitter.md | "You wrote the SOP. Now you have to write a thread. Two documents for one insight — dead loop. The Content Repurposing Protocol: SOP → X Thread." | pending |
+| Sep 30 | #88 | publish_thread_sop88_twitter.md | "20-minute call. No structure. They liked the vibe. No follow-up. Discovery Call Protocol: qualify in async, close in 20 minutes." | pending |
+| Oct 2 | #89 | publish_thread_sop89_twitter.md | "You post daily. No idea if it's working. No signal capture. The Weekly Strategy Review Ritual — Green/Yellow/Red and what to do with each." | pending |
+| Oct 4 | #90 | publish_thread_sop90_twitter.md | "89 days to profitable. No tracker. You can't see if you're on pace. Revenue Rate Tracking Dashboard — MRR vs required rate, weekly." | pending |
+| Oct 6 | #91 | publish_thread_sop91_twitter.md | "Boot tests pass. New decisions made this month. None of them are in the DNA. The Monthly DNA Calibration Audit — harvest, classify, write, validate." | pending |
+| Oct 8 | #92 | publish_thread_sop92_twitter.md | "Strategy killed. Regime shifts. Can you re-enable it? No protocol. The Strategy Disable & Reactivation SOP — cool-down, re-validation, go/no-go gate." | pending |
+| Oct 10 | #93 | publish_thread_sop93_twitter.md | "Boot tests pass. But the 3 LLM-boundary scenarios always misalign. That's not drift — that's a permanent taxonomic boundary. LLM Boot Test Validation Protocol." | pending |
+| Oct 12 | #94 | publish_thread_sop94_twitter.md | "100% cross-instance agreement measured. Next week a model update ships. Without a maintenance protocol, that 100% is a one-time event, not a property. SOP #94." | pending |
+| Oct 14 | #95 | publish_thread_sop95_twitter.md | "I ran 3 digital models of people I know against the same scenarios. Some divergences appeared in every pair. Those aren't personal differences — they're structural. Organism Network Effect Protocol." | pending |

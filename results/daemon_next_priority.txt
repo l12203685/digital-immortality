@@ -1,1 +1,1 @@
-OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.
+OK: All branches covered. Branch 4.1 TOUCHED (cycle 260). Least recent: 'Branch 1.3/SOP#01-posting'. Consider touching it next — Edward must post SOP #01 on X (human-gated but agent can prep). Next agent cycle: paper-live tick 142, SOP #96, consistency re-verify.
