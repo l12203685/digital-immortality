@@ -160,3 +160,4 @@ See `/organism-interact` for the full interaction skill.
 - 經濟自給 = 存活條件。zero revenue = parasitic not immortal。遞迴必須包含「怎麼養活自己」。
 - Rename > delete+create。有歷史的東西改名不砍。演化過程本身是產品的一部分 — DNA 是結果，遞迴歷程是方法，兩者都要保留給未來使用者做 reference implementation。
 - All persisted content must include UTC timestamp. No timestamp = can't judge freshness on cold start.
+- **Three-layer loop for any automated system**: L1 Execute (do work) → L2 Evaluate (audit quality + coverage) → L3 Evolve (modify own execution rules). Execute without Evaluate+Evolve = dead loop. Same structure as Edward's belief update: expose → review → extract rule → write to system.
