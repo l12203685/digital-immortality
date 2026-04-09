@@ -1,1 +1,1 @@
-PRIORITY: Branch '2.2' — 201907 JSONL → MD-343~345. Next JSONL in sequence. Also: Branch '6/boot-tests-coverage' — audit boot_tests.md for 4 meta-rules coverage (先搜再做/output-must-persist/先推再問/L1-L2-L3).
+PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.

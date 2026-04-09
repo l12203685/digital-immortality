@@ -6915,3 +6915,21 @@ Cycle 266 complete. 4 branches pushed:
 **Branch 3.1 (B)** — 3 insights distilled → insights.json total: 120.
 
 **Next cycle priority**: Run SOP #100 G3 (gap analysis) to identify highest-risk uncovered domain → that becomes SOP #101 topic. Human-gated blockers unchanged (mainnet API keys, Samuel DM, X first post).
+
+## Cycle 58 — 2026-04-09 13:38:08 UTC
+
+Cycle 266 complete. Here's what was done:
+
+**Branch 2.2 — 201908 JSONL → MD-340~342**
+
+| MD | Pattern | Source |
+|----|---------|--------|
+| MD-340 | 作品集選取=外行人也看得出的指標性；landmark > routine work；信號強度是唯一選取標準 | 201908 g2 — partner's portfolio advice |
+| MD-341 | 雇主低薪=結構性cost-down，不是個人市場價值的信號；willingness-to-pay ≠ market value | 201908 g2 — GAP salary discussion |
+| MD-342 | 降波動=凱利邊界case；單次事件損失 > BR 1~2%才值得買保險/對沖；daily grind不需要 | 201908 g18 — Kelly criterion + poker insurance discussion |
+
+**Conflict resolution** — insights.json (cycle 265 + 267 entries both preserved) + paper_live_log.jsonl (HEAD retained, tick 104+105 data)
+
+**Status**: dna_core.md = 342 MDs | insights.json ~121 entries | pushed to origin
+
+**daemon_next_priority** → 201907 JSONL (Branch 2.2) + boot_tests.md meta-rules audit (Branch 6/G2)
