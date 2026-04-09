@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#51
+# Twitter Posting Queue — SOP Series #01~#52
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -58,6 +58,7 @@
 | Jul 14 | #49 | publish_thread_sop49_twitter.md | "Your system crashed. You have 5 minutes to restart it correctly. Most people skip Gate 2. That's why they restart broken." | pending |
 | Jul 16 | #50 | publish_thread_sop50_twitter.md | "Your system executes and evaluates. It does not evolve. Without L3, you're running the right rules for last year's problem." | pending |
 | Jul 18 | #51 | publish_thread_sop51_twitter.md | "You track your money carefully. You spend your time on default gravity. 5-gate Time Allocation Protocol." | pending |
+| Jul 20 | #52 | publish_thread_sop52_twitter.md | "You feel fine. Your output says otherwise. Sleep & Recovery Protocol — 5-gate framework." | pending |
 
 ---
 

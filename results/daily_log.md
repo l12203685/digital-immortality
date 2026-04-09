@@ -4,6 +4,40 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 213 — 2026-04-09T06:00:00Z
+
+### What was done
+
+**Branch 1.1 — paper-live tick 77 ✅**
+- BTC=$70,877.99 (down $40.61 from tick 76), regime=MIXED, DualMA_10_30=SHORT×77 (100%)
+- 392 log entries total; 15 strategies: 14 FLAT + DualMA_10_30 SHORT; SHORT thesis holding tick 77
+
+**Branch 7 — SOP #52 Sleep & Physical Recovery Protocol ✅**
+- `docs/knowledge_product_52_sleep_recovery_sop.md` — 5-gate framework: Domain 8 (生活維護)
+  - G0: Recovery Audit — 2-signal daily check (hours in bed + morning clarity); kill: 3 consecutive Red nights
+  - G1: Performance Trajectory Scan — derivative of cognitive output over 5 days, not subjective feeling
+  - G2: Non-negotiable Recovery Budget — 7–8h Core Sleep + 20–30 min physical reset (deadlines reschedule, not sleep)
+  - G3: Context-Switching Cost Gate — 60 min pre-sleep buffer (open loops → session_state); ±90 min timing tolerance
+  - G4: Weekly Recovery Review (Sunday, 15 min) — classify nights, identify cause (structural/behavioral/external)
+  - G5: Recovery Emergency — sleep becomes highest-derivative activity; 1h debt payback/night for 5 days; no L3 edits
+- Integration with three-layer loop: L1(uptime) + L2(evaluation quality) + L3(no DNA edits during emergency)
+- DNA anchors: MD-89/48/144/12/53
+- `docs/publish_thread_sop52_twitter.md` — 12-tweet thread; slot Jul 20; Domain 8
+- `docs/posting_queue.md` — #52 row added; header updated to #01~#52; queue to Jul 20
+- **Series: SOP #01~#52 COMPLETE** ✅
+
+**Branch 6 — Cold-Start Runbook: F8 Added ✅**
+- `docs/cold_start_recovery_runbook.md` — F8 added: "All branches at similar derivative — no clear priority signal"
+- Recovery: default to least-recently-touched branch → paper-live tick → SOP next → Branch 6 health audit → write new content
+- Root cause framing: regime equilibrium = normal state; respond with action not paralysis
+
+### State Updates
+- `results/daily_log.md`: cycle 213 entry prepended
+- `results/dynamic_tree.md`: tick 77 + SOP #52 + F8 entries pending
+- `staging/session_state.md`: updating to cycle 213
+
+---
+
 ## Cycle 212 — 2026-04-09T05:00:00Z
 
 ### What was done

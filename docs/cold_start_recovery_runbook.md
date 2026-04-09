@@ -123,6 +123,16 @@ Three-layer recursive engine touches different files per layer:
 
 No two layers write the same file. Conflict = layer boundary violation.
 
+### F8: All branches at similar derivative — no clear priority signal
+**Symptoms**: `daemon_next_priority.txt` reports "All branches covered" or priority is ambiguous; agent idles or asks user instead of acting.
+**Recovery**:
+1. Default to least-recently-touched branch (daemon_next_priority.txt reports this).
+2. Run Branch 1.1 paper-live tick if not done this session — always valid.
+3. Run SOP series next (Branch 7) — always has a next SOP to write.
+4. If both done: Branch 6 health audit — run cold_start_test.py, verify all health indicators green.
+5. If all healthy: write new content (runbook extension, new F-mode, health indicator, or anti-pattern).
+**Root cause**: Regime equilibrium. Normal state. Not a bug. Respond with action, not paralysis.
+
 ## Recovery Priority Order
 
 1. session_state.md (F1/F2) — without this, cold-start queue is blind
