@@ -5503,3 +5503,18 @@ Next blocker: Edward posts SOP #01 (human-gated) OR provides mainnet API keys.
 **Staleness pattern established**: gap >10 cycles → must refresh next_input.md before proceeding.
 
 Next blocker: Edward posts SOP #01 (human-gated).
+
+## Cycle 188 — 2026-04-09T10:00 UTC
+
+**Branch 2.3 confirmed 33/33 ALIGNED.**
+- next_input.md was stale (said 31/33); re-ran consistency_test.py — all 33 scenarios ALIGNED, 0 MISALIGNED.
+- Social scenarios (generic_relationship_proactive_maintenance, generic_learning_framework_first, generic_social_signal_behavior_over_words) already wired and passing.
+
+**Branch 7.38** — SOP #38 shipped: Alpha Decay & Strategy Sunset Protocol.
+- `docs/knowledge_product_38_alpha_decay_sunset_sop.md`
+- `docs/publish_thread_sop38_twitter.md`
+- 5 gates: G0 rolling OOS / G1 regime mismatch / G2 edge_ratio (MFE/MAE×√N) / G3 premise falsification / G4 anti-capitulation / G5 kill+resurrection
+- DNA anchors: MD-13/14/25/26/78/96/143
+- Posting queue extended to SOP #01~#38 (Jun 22). Series complete.
+
+Next blocker: Edward posts SOP #01 (human-gated).
