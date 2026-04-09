@@ -1,1 +1,1 @@
-PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.
+PRIORITY: Branch 3.1/distillation-taxonomy-backfill — write recursive_distillation.md narrative entries for insights 94–206 (113-insight gap; last narrative was daemon cycle 95). Taxonomy audit complete (cycle 298); next: backfill narrative or begin applying canonical categories retroactively to insights.json entries.

@@ -2348,6 +2348,54 @@
       "category": "methodology",
       "insight": "Cycle 295 recursive loop stable: L1(paper-live tick) + L2(consistency 33/33) + L3(distill +3) operational without human input; engine alive; 49 clean = structural behavioral stability proven",
       "source": "branch_3.1"
+    },
+    {
+      "id": "e18d12dc-df23-45fb-943d-39921a2ae640",
+      "key": "taxonomy-drift-is-retrieval-drift",
+      "content": "When insight tags drift from canonical categories to structural labels (branch-X, SOP-XX), retrieval degrades silently. You cannot answer \"how many behavioral-pattern insights exist?\" without a full scan. Taxonomy drift is not an aesthetic problem — it is a cold-start cost problem. The drift accumulates insight by insight, cycle by cycle, until a taxonomy audit becomes expensive.",
+      "timestamp": "2026-04-09T20:16:36.335821+00:00",
+      "source": "taxonomy-audit-cycle298",
+      "category": "self-awareness",
+      "subcategory": "methodology/system-maintenance",
+      "tags": [
+        "taxonomy",
+        "distillation",
+        "cold-start",
+        "drift-detection",
+        "branch-3.1"
+      ]
+    },
+    {
+      "id": "411cada7-1f7b-4cba-9889-4875759157d0",
+      "key": "b6-regression-resolved-52nd-consecutive",
+      "content": "Branch 6 regression (33/39 = 6 misaligned) detected in cycle 296-297 was resolved: current suite expanded to 61 scenarios, 58/61 ALIGNED (52nd consecutive clean cycle). The regression was not behavioral drift but test suite expansion — 3 new LLM-boundary scenarios were added and flagged as misaligned before being reclassified as expected-baseline. Lesson: test suite expansion events must distinguish \"new failures\" from \"newly-visible LLM-boundary scenarios.\"",
+      "timestamp": "2026-04-09T20:16:36.335821+00:00",
+      "source": "consistency-test-cycle298",
+      "category": "methodology",
+      "subcategory": "methodology/system-maintenance",
+      "tags": [
+        "consistency",
+        "cold-start",
+        "branch-6",
+        "regression",
+        "test-suite-expansion"
+      ]
+    },
+    {
+      "id": "e473626c-e2ef-4d5c-a45c-494c356ea100",
+      "key": "b2.2-complete-input-source-shifts",
+      "content": "B2.2 archive exhausted at 416 MDs (7.5 years of chat history). The method is validated: implicit behavioral patterns existed before being named — extraction revealed pre-existing structure. Archive exhaustion is not system death but input-source transition. Future MD sources: (1) live experience accumulation, (2) recursive synthesis from MD cross-patterns, (3) organism collision divergences. The extraction method continues; the temporal input window closes and reopens as new experience accumulates.",
+      "timestamp": "2026-04-09T20:16:36.335821+00:00",
+      "source": "cycle297-b2.2-completion",
+      "category": "methodology",
+      "subcategory": "methodology/knowledge-extraction",
+      "tags": [
+        "branch-2.2",
+        "md-extraction",
+        "archive-completion",
+        "methodology",
+        "digital-immortality"
+      ]
     }
   ]
 }

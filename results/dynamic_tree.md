@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-10 UTC (cycle 297)
+> 最後更新：2026-04-10 UTC (cycle 298)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -581,5 +581,15 @@
 - 2026-04-09T18:26:37Z: cycle 288 — **Branch 3.1**: 4 insights → memory/insights.json (total **197**): paper-live-tick288 / consistency-57th-consecutive / 201803-md391-393 / sop113-outreach-classification
 
 **daemon_next_priority**: 201801 JSONL → MD-397~399 (Branch 2.2) — next unprocessed month after 201802.
+
+**Human-gated blockers unchanged**: X post SOP#01 / mainnet API keys / Samuel DM / Turing candidates 2+3 / Week 1 DMs (5 sends to AI Agent Dev archetypes).
+
+- 2026-04-10T UTC: cycle 298 — **Branch 3.1 / taxonomy-audit (daemon priority)**: `results/taxonomy_audit_cycle298.md` written; finding: insight tags drifted to structural labels (branch-X, SOP-XX); canonical 5-category taxonomy (behavioral-patterns/self-awareness/methodology/domain-knowledge/hypotheses) never formally applied; narrative gap = 113 insights (insights 94–206 in insights.json without recursive_distillation.md narrative); taxonomy status = DRIFT; split candidates: trading (>10), system-maintenance (>10), sop-protocol-design (>10), domain-career (>10); proposed: 3 methodology subcategories + 3 domain subcategories + system-evolution category; daemon_next_priority → taxonomy-backfill
+- 2026-04-10T UTC: cycle 298 — **Branch 7**: SOP #116 Recursive Distillation Taxonomy Protocol shipped: `docs/knowledge_product_116_distillation_taxonomy_protocol.md` + `docs/publish_thread_sop116_twitter.md`; G0-G5 gates; 5 canonical categories; split/merge rules; drift detection at 50-insight milestones; health thresholds HEALTHY/WATCH/DRIFT/CRITICAL; posting queue ~Dec 2026; **SOP #01~#116 COMPLETE ✅**
+- 2026-04-10T UTC: cycle 298 — **Branch 6 / 存活/cold-start**: consistency_test.py → **58/61 ALIGNED ✅** (**52nd consecutive clean cycle**); 3 MISALIGNED (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev — all expected LLM-boundary); prior regression (33/39=6 misaligned) resolved by reclassifying 3 new scenarios as expected-LLM-boundary; suite expanded to 61 total; BRANCH 6 SUSTAINED ✅
+- 2026-04-10T UTC: cycle 298 — **Branch 1.1**: paper-live tick 318; BTC=$72,118.34; regime=MIXED; 14/15 FLAT; total_pnl=-2.71%; DualMA_10_30 DISABLED (PF 0.53<0.8); FLAT=correct inaction in mixed regime; PAPER mode
+- 2026-04-10T UTC: cycle 298 — **Branch 3.1**: 3 insights → memory/insights.json (total **209**): taxonomy-drift-is-retrieval-drift / b6-regression-resolved-52nd-consecutive / b2.2-complete-input-source-shifts
+
+**daemon_next_priority**: Branch 3.1/distillation-taxonomy-backfill — write recursive_distillation.md narrative for insights 94–206 (113-insight gap; last narrative was daemon cycle 95).
 
 **Human-gated blockers unchanged**: X post SOP#01 / mainnet API keys / Samuel DM / Turing candidates 2+3 / Week 1 DMs (5 sends to AI Agent Dev archetypes).
