@@ -5570,3 +5570,9 @@ Next blocker: Edward posts SOP #01 (human-gated).
 - Posting queue: **SOP #01~#40** (through Jun 26)
 
 Next blocker: Edward posts SOP #01 (human-gated).
+
+## Cycle 191 — 2026-04-09T01:47 UTC
+
+**Branch 1.1 paper-live** tick 61: BTC=$70,748.01, SHORT×61 (100%), P&L=**+$1.066** (+1.066% on $100). MFE ATH still +$1.204 (tick 50). BTC trending lower (vs $70,760 tick 60), P&L improving. Regime=MIXED (trend=0.014, mr=0.225). DualMA_10_30 only signaling. paper_live_pnl_report.md updated.
+
+Next blocker: mainnet keys OR Edward posts SOP #01 (both human-gated).
