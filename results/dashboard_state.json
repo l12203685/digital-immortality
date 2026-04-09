@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T09:33+08",
+  "updated": "2026-04-09T09:35+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live tick 51 BTC=$70,609 SHORT P&L ATH+$1.20 (tick 51 per daemon log; API unreachable from cloud); **SOP #01~#39 COMPLETE** → posting_queue.md updated (Apr 9–Jun 24, 76 days); **x_launch_sequence.md created ✓** — 15 min to first post; **3 workbooks READY TO LIST** ($87/buyer trilogy)",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 all 5 SYSTEM_FAILUREs pre-committed",
   "deadline": "2026-07-07",
@@ -50,29 +50,29 @@
   ],
   "activity": [
     {
-      "time": "5min ago",
+      "time": "just now",
+      "text": "Highest-derivative branch: Branch 1.1 (economic self-sufficiency) — signal lo..."
+    },
+    {
+      "time": "just now",
+      "text": "Branch 1.1 paper-live — ran tick 59: BTC=$70,820.84, SHORT×59 (100%), P&L=+$0..."
+    },
+    {
+      "time": "just now",
+      "text": "Cycle 189 done."
+    },
+    {
+      "time": "just now",
+      "text": "Branch 1.1 paper-live tick 59: BTC=$70,820.84, signal=SHORT (59 consecutive, ..."
+    },
+    {
+      "time": "6min ago",
       "text": "Next blocker: Edward posts SOP #01 (human-gated)."
-    },
-    {
-      "time": "5min ago",
-      "text": "- Series now SOP #01~#38 (posting queue through Jun 22)"
-    },
-    {
-      "time": "5min ago",
-      "text": "- 10-tweet thread ready"
-    },
-    {
-      "time": "5min ago",
-      "text": "- DNA anchors: MD-13/14/25/26/78/96/143"
-    },
-    {
-      "time": "5min ago",
-      "text": "- 5 gates: rolling OOS monitor → regime mismatch check → edge_ratio (MFE/MAE×..."
     }
   ],
   "stats": {
-    "daemon_cycles": 188,
+    "daemon_cycles": 189,
     "total_mds": 330,
-    "dna_core_lines": 426
+    "dna_core_lines": 87
   }
 }
