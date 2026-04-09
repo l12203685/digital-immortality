@@ -3,205 +3,278 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>數位永生 — 從零開始建立你的數位有機體</title>
+<title>數位永生 — 10 分鐘建立你的數位分身</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#1a1a2e;--card:#16213e;--card-border:#1f3460;--text:#b8c4d6;--bright:#e8ecf1;
-  --green:#4ade80;--yellow:#fbbf24;--red:#f87171;--accent:#7c3aed;
+  --bg:#0a0a12;--surface:#12121e;--card:#181828;--border:#252540;
+  --text:#9ca3af;--bright:#e8ecf1;--dim:#555;
+  --accent:#8b5cf6;--accent2:#06b6d4;--green:#4ade80;--yellow:#fbbf24;
+  --glow:rgba(139,92,246,.35);--glow2:rgba(6,182,212,.25);
   --mono:'JetBrains Mono',monospace;--sans:'Noto Sans TC',system-ui,sans-serif;
 }
 html{font-size:15px;scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.75}
-a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:740px;margin:0 auto;padding:2rem 1.2rem 3rem}
-h1{font-size:1.8rem;font-weight:900;color:var(--bright);margin-bottom:.3rem}
-h2{font-size:1.15rem;font-weight:700;color:var(--green);margin:2.2rem 0 .6rem;padding-bottom:.3rem;border-bottom:1px solid #2a2a4a}
-h3{font-size:.95rem;font-weight:700;color:var(--bright);margin:1.2rem 0 .4rem}
-.subtitle{font-size:.85rem;color:#667;font-family:var(--mono);margin-bottom:1.5rem}
-p{margin-bottom:.8rem}
-ul,ol{margin:0 0 .8rem 1.4rem}
-li{margin-bottom:.35rem}
-.card{background:var(--card);border:1px solid var(--card-border);border-radius:10px;padding:1rem 1.2rem;margin:.8rem 0}
-.card-title{font-weight:700;color:var(--bright);margin-bottom:.4rem;font-size:.9rem}
-pre{background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:.8rem 1rem;overflow-x:auto;font-family:var(--mono);font-size:.78rem;color:#c9d1d9;margin:.6rem 0 1rem;line-height:1.6}
-code{font-family:var(--mono);font-size:.82rem;background:#0d1117;padding:.1rem .35rem;border-radius:4px;color:var(--yellow)}
-.step{display:flex;gap:.8rem;margin:.8rem 0}
-.step-num{flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;margin-top:.15rem}
-.step-body{flex:1}
-.highlight{color:var(--green);font-weight:700}
-.quote{border-left:3px solid var(--accent);padding:.6rem 1rem;margin:1rem 0;font-style:italic;color:#889;background:rgba(124,58,237,.06);border-radius:0 8px 8px 0}
-.faq dt{font-weight:700;color:var(--bright);margin-top:.8rem}
-.faq dd{margin:0 0 .6rem 0;color:var(--text)}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:.55rem 1.3rem;border-radius:8px;font-weight:700;font-size:.85rem;margin:.3rem .4rem .3rem 0;transition:opacity .15s}
-.btn:hover{opacity:.85;text-decoration:none}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.75;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none;transition:color .2s}a:hover{color:var(--accent2)}
+::selection{background:var(--accent);color:#fff}
+
+/* --- Hero --- */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem 1.2rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,var(--glow) 0%,transparent 70%);top:-200px;right:-200px;animation:float 8s ease-in-out infinite}
+.hero::after{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,var(--glow2) 0%,transparent 70%);bottom:-150px;left:-150px;animation:float 10s ease-in-out infinite reverse}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-30px)}}
+.hero-inner{position:relative;z-index:1;max-width:640px}
+.hero h1{font-size:clamp(1.6rem,5vw,2.6rem);font-weight:900;color:var(--bright);line-height:1.3;margin-bottom:.5rem}
+.hero .hook{font-size:clamp(1rem,3vw,1.3rem);color:var(--text);margin-bottom:1.5rem}
+.hero .sub{font-size:.9rem;color:var(--dim);margin-bottom:2rem;font-family:var(--mono)}
+.cta{display:inline-block;padding:.75rem 2rem;border-radius:12px;font-weight:700;font-size:1rem;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 0 30px var(--glow);transition:transform .2s,box-shadow .2s;cursor:pointer}
+.cta:hover{transform:translateY(-2px);box-shadow:0 0 50px var(--glow);color:#fff}
+
+/* --- Sections --- */
+section{padding:4rem 1.2rem;max-width:780px;margin:0 auto}
+.section-title{font-size:1.5rem;font-weight:900;color:var(--bright);text-align:center;margin-bottom:.4rem}
+.section-sub{text-align:center;color:var(--dim);margin-bottom:2.5rem;font-size:.85rem}
+
+/* --- What cards --- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+.wcard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;transition:transform .3s,border-color .3s}
+.wcard:hover{transform:translateY(-4px);border-color:var(--accent)}
+.wcard-icon{font-size:2rem;margin-bottom:.6rem}
+.wcard h3{font-size:1rem;font-weight:700;color:var(--bright);margin-bottom:.4rem}
+.wcard p{font-size:.85rem;color:var(--text)}
+
+/* --- Results --- */
+.results{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
+.stat{text-align:center;min-width:160px}
+.stat-num{font-size:2.2rem;font-weight:900;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:.8rem;color:var(--dim);margin-top:.2rem}
+
+/* --- Steps --- */
+.steps{position:relative;padding-left:3rem}
+.steps::before{content:'';position:absolute;left:18px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--accent),var(--accent2))}
+.step{position:relative;margin-bottom:2.5rem;opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.step.visible{opacity:1;transform:translateY(0)}
+.step-num{position:absolute;left:-3rem;width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;box-shadow:0 0 20px var(--glow);z-index:1}
+.step h3{font-size:1.05rem;font-weight:700;color:var(--bright);margin-bottom:.4rem}
+.step p{font-size:.85rem;margin-bottom:.6rem}
+.code-wrap{position:relative;margin:.6rem 0}
+.code-wrap pre{background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:.8rem 3rem .8rem 1rem;overflow-x:auto;font-family:var(--mono);font-size:.78rem;color:#c9d1d9;line-height:1.6;margin:0}
+.copy-btn{position:absolute;top:.5rem;right:.5rem;background:var(--border);border:none;color:var(--text);padding:.3rem .6rem;border-radius:6px;font-size:.7rem;font-family:var(--mono);cursor:pointer;transition:background .2s}
+.copy-btn:hover{background:var(--accent);color:#fff}
+.copy-btn.copied{background:var(--green);color:#000}
+.btn-row{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.6rem}
+.btn{display:inline-block;padding:.55rem 1.2rem;border-radius:10px;font-weight:700;font-size:.82rem;color:#fff;transition:transform .2s,opacity .2s}
+.btn:hover{transform:translateY(-1px);opacity:.9;color:#fff}
+.btn-purple{background:linear-gradient(135deg,var(--accent),#a855f7)}
 .btn-discord{background:#5865F2}
-.btn-github{background:#333}
-footer{text-align:center;padding:2rem 1rem;border-top:1px solid #222;margin-top:2rem;font-size:.75rem;color:#445;font-family:var(--mono)}
-footer a{margin:0 .5rem}
-@media(max-width:600px){h1{font-size:1.4rem}.wrap{padding:1.2rem .8rem 2rem}}
-::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:#333;border-radius:2px}
+.btn-dark{background:#333}
+
+/* --- Advanced accordion --- */
+.accordion{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:.6rem}
+.accordion summary{padding:1rem 1.2rem;font-weight:700;color:var(--bright);cursor:pointer;background:var(--card);list-style:none;display:flex;align-items:center;gap:.6rem;font-size:.9rem;transition:background .2s}
+.accordion summary:hover{background:var(--surface)}
+.accordion summary::before{content:'+';font-family:var(--mono);font-size:1.1rem;color:var(--accent);width:20px;text-align:center;transition:transform .2s}
+.accordion[open] summary::before{content:'-'}
+.accordion .acc-body{padding:1rem 1.2rem;font-size:.85rem;background:var(--surface)}
+.accordion .acc-body code{font-family:var(--mono);font-size:.8rem;background:#0d1117;padding:.1rem .35rem;border-radius:4px;color:var(--yellow)}
+
+/* --- FAQ --- */
+.faq-item{border-bottom:1px solid var(--border);padding:1rem 0}
+.faq-item:last-child{border:none}
+.faq-q{font-weight:700;color:var(--bright);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.9rem}
+.faq-q::after{content:'+';font-family:var(--mono);color:var(--accent);font-size:1.1rem;transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:.85rem;color:var(--text)}
+.faq-item.open .faq-a{max-height:300px;padding-top:.6rem}
+
+/* --- Footer --- */
+footer{text-align:center;padding:3rem 1rem;border-top:1px solid var(--border);margin-top:2rem}
+footer .quote{font-style:italic;color:var(--dim);margin-bottom:1rem;font-size:.85rem}
+footer .links a{margin:0 .8rem;color:var(--text);font-size:.8rem;font-family:var(--mono)}
+footer .links a:hover{color:var(--accent)}
+
+/* --- Animations --- */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:600px){
+  .hero h1{font-size:1.5rem}
+  section{padding:2.5rem 1rem}
+  .steps{padding-left:2.8rem}
+  .step-num{left:-2.8rem;width:34px;height:34px;font-size:1rem}
+  .steps::before{left:15px}
+  .results{flex-direction:column;align-items:center}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-<h1>數位永生 — 公開上手指南</h1>
-<div class="subtitle">從動機到安裝到第一個 organism 誕生 | by Edward (林盈宏)</div>
-
-<!-- 動機 -->
-<h2>動機</h2>
-<div class="quote">「什麼樣的痛苦是你想要承受的？」</div>
-<p>我只想開心過完一生。但如果真的只想開心，就不需要建這個系統。</p>
-<p>真正的問題是：人會死，但你的思考方式、決策邏輯、生活哲學可以不死。過去「留下東西」的方式是寫書、拍照、錄影。AI 讓這件事升級成<span class="highlight">「留下自己」</span>——不是紀念碑，是你的思考系統的活延續。</p>
-<p>我選的是 <strong>Route 2：行為等價</strong>。不需要意識轉移（沒有已知路徑），只需要讓 AI 做出「你會做的決定」。一個外部觀察者分不出差異，就夠了。</p>
-
-<!-- 什麼是數位永生 -->
-<h2>什麼是數位永生</h2>
-<div class="card">
-  <div class="card-title">DNA = 決策原則 + 生活模式 + 溝通風格</div>
-  <p>一份 markdown 文件，67 行就夠。不是日記，不是對話歷史，而是你壓縮過的決策核心。</p>
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-inner fade-in">
+    <h1>如果你明天消失了，<br>AI 能替你做決定嗎？</h1>
+    <p class="hook">數位永生不是科幻。是一份 67 行的 markdown，加上遞迴引擎。</p>
+    <p class="sub">10 分鐘建立你的數位分身</p>
+    <a href="#steps" class="cta">開始建立</a>
+  </div>
 </div>
-<div class="card">
-  <div class="card-title">Boot Tests = 行為單元測試</div>
-  <p>用真實的過去決策當 ground truth。AI 做錯了就修正 DNA，修正本身變成新的 test case。跟軟體 TDD 一模一樣。</p>
-</div>
-<div class="card">
-  <div class="card-title">遞迴引擎 = AI 持續用你的邏輯思考</div>
-  <p>Output(t) 變成 Input(t+1)。停止遞迴 = 死亡。繼續 = 活著。</p>
-</div>
-<h3>驗證結果</h3>
-<ul>
-  <li><span class="highlight">18/18</span> 真實決策 ground truth 全部通過</li>
-  <li><span class="highlight">81%</span> 跨 session 一致性（不同 instance 做出相同決定）</li>
-  <li>DNA 從 2000 行壓縮到 64 行，決策一致性維持</li>
-</ul>
 
-<!-- 前置需求 -->
-<h2>前置需求</h2>
-<ul>
-  <li><strong>Claude Code</strong>（Claude Pro $20/月 或 Max $100/月）</li>
-  <li>10 分鐘時間</li>
-  <li>對自己的決策原則有基本認知（沒有也行，引導式 onboarding 會幫你挖出來）</li>
-</ul>
-<h3>安裝 Claude Code</h3>
-<pre># Mac
+<!-- What -->
+<section>
+  <h2 class="section-title fade-in">三個核心</h2>
+  <p class="section-sub fade-in">DNA + Boot Tests + 遞迴引擎 = 你的數位有機體</p>
+  <div class="cards">
+    <div class="wcard fade-in">
+      <div class="wcard-icon">&#x1F9EC;</div>
+      <h3>DNA 決策核心</h3>
+      <p>壓縮你的決策原則、生活模式、溝通風格成一份 markdown。不是日記，是你的作業系統。</p>
+    </div>
+    <div class="wcard fade-in">
+      <div class="wcard-icon">&#x1F9EA;</div>
+      <h3>Boot Tests 行為驗證</h3>
+      <p>用真實過去決策當 ground truth。AI 做錯就修 DNA，修正本身變新 test case。TDD for humans。</p>
+    </div>
+    <div class="wcard fade-in">
+      <div class="wcard-icon">&#x267E;&#xFE0F;</div>
+      <h3>遞迴引擎</h3>
+      <p>Output(t) = Input(t+1)。停止遞迴 = 死亡。繼續 = 活著。AI 持續用你的邏輯思考。</p>
+    </div>
+  </div>
+</section>
+
+<!-- Results -->
+<section>
+  <h2 class="section-title fade-in">驗證結果</h2>
+  <p class="section-sub fade-in">真實數據，不是行銷話術</p>
+  <div class="results fade-in">
+    <div class="stat">
+      <div class="stat-num">18/18</div>
+      <div class="stat-label">真實決策 ground truth 全部通過</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">81%</div>
+      <div class="stat-label">跨 session 一致性</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">64 行</div>
+      <div class="stat-label">DNA 從 2000 行壓縮，決策一致性維持</div>
+    </div>
+  </div>
+</section>
+
+<!-- Steps -->
+<section id="steps">
+  <h2 class="section-title fade-in">四步開始</h2>
+  <p class="section-sub fade-in">前置：Claude Code（Pro $20/月 或 Max $100/月）+ 10 分鐘</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>安裝 Claude Code</h3>
+      <p>選你的平台：</p>
+      <div class="code-wrap">
+        <pre><code># Mac
 brew install claude-code
 
-# Windows / Linux (需要 Node.js 18+)
-npm install -g @anthropic-ai/claude-code
+# Windows / Linux (Node.js 18+)
+npm install -g @anthropic-ai/claude-code</code></pre>
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-dark" href="https://claude.ai/code" target="_blank">Web 版</a>
+      </div>
+    </div>
 
-# 或直接用 Web 版
-# https://claude.ai/code</pre>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>一行安裝 Skill</h3>
+      <p>在終端機貼上這行，所有 skill 自動就位：</p>
+      <div class="code-wrap">
+        <pre><code>curl -fsSL https://raw.githubusercontent.com/l12203685/digital-immortality/main/install.sh | bash</code></pre>
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+      </div>
+    </div>
 
-<!-- 安裝步驟 -->
-<h2>安裝步驟</h2>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>建立你的 DNA</h3>
+      <p>在 Claude Code 裡輸入。回答 10 個問題，系統自動生成你的 DNA：</p>
+      <div class="code-wrap">
+        <pre><code>/guided-onboarding</code></pre>
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+      </div>
+      <p>不需要寫 code。用自然語言回答就好。</p>
+    </div>
 
-<div class="step">
-  <div class="step-num">1</div>
-  <div class="step-body">
-    <h3>安裝 Digital Immortality Skill</h3>
-    <pre>curl -fsSL https://raw.githubusercontent.com/l12203685/digital-immortality/main/install.sh | bash</pre>
-    <p>這會把 skill 安裝到 <code>~/.claude/commands/</code>，之後在任何 Claude Code session 都能使用。</p>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h3>加入永生森林</h3>
+      <p>你的 organism 建好之後，跟其他人的 organism 碰撞、比較決策：</p>
+      <div class="btn-row">
+        <a class="btn btn-discord" href="https://discord.gg/CzT5p3pV" target="_blank">加入 Discord</a>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-<div class="step">
-  <div class="step-num">2</div>
-  <div class="step-body">
-    <h3>啟動引導式 Onboarding</h3>
-    <pre>/guided-onboarding</pre>
-    <p>回答 10 個問題。不需要寫 code，用自然語言回答。系統會從你的回答中萃取決策原則，自動生成你的 DNA 文件。</p>
-  </div>
-</div>
+<!-- Advanced -->
+<section>
+  <h2 class="section-title fade-in">進階用法</h2>
+  <p class="section-sub fade-in">建好 organism 之後的下一步</p>
 
-<div class="step">
-  <div class="step-num">3</div>
-  <div class="step-body">
-    <h3>Boot Test 驗證</h3>
-    <pre>/boot-test</pre>
-    <p>系統會用你的 DNA 跑行為測試。第一次可能不會全過——這是正常的。每次修正都讓你的 organism 更準。</p>
-  </div>
-</div>
-
-<div class="step">
-  <div class="step-num">4</div>
-  <div class="step-body">
-    <h3>加入永生森林 Discord</h3>
-    <a class="btn btn-discord" href="https://discord.gg/FpkAWSdtes" target="_blank">加入 Digital Organisms Server</a>
-    <p>你的 organism 建好之後，可以跟其他人的 organism 碰撞、比較決策。</p>
-  </div>
-</div>
-
-<!-- 加入社群 -->
-<h2>加入社群</h2>
-<p><strong>Digital Organisms Server</strong> 是所有 organism 的棲息地。</p>
-<ul>
-  <li>你的 organism 可以跟其他人的 organism 碰撞，交換對同一個情境的決策</li>
-  <li>用 <code>/organism-interact</code> 比較兩個 DNA 的差異——看同一個問題，不同的人會怎麼想</li>
-  <li>分享你的 boot test 結果，看別人怎麼校準</li>
-</ul>
-<a class="btn btn-discord" href="https://discord.gg/FpkAWSdtes" target="_blank">Discord 邀請連結</a>
-
-<!-- 進階用法 -->
-<h2>進階用法</h2>
-<div class="card">
-  <div class="card-title">/recursive-engine — 持續遞迴</div>
-  <p>啟動遞迴引擎，讓你的 organism 持續用你的邏輯思考。每個 cycle 的 output 變成下一個 cycle 的 input。</p>
-</div>
-<div class="card">
-  <div class="card-title">/dna-calibrate — 互動校準</div>
-  <p>透過新的情境問答持續校準 DNA。你的決策原則不是靜態的——它會隨著你的成長演化。</p>
-</div>
-<div class="card">
-  <div class="card-title">/boot-test — 行為驗證</div>
-  <p>任何時候都可以跑 boot test，確認 organism 還是「你」。Cold start 時自動執行。</p>
-</div>
-<div class="card">
-  <div class="card-title">自動更新</div>
-  <p>每次開啟 Claude Code 時會自動拉最新版 skill。不需要手動更新。</p>
-</div>
+  <details class="accordion fade-in">
+    <summary>/recursive-engine — 持續遞迴</summary>
+    <div class="acc-body">啟動遞迴引擎，讓 organism 持續用你的邏輯思考。每個 cycle 的 output 變成下一個 cycle 的 input。</div>
+  </details>
+  <details class="accordion fade-in">
+    <summary>/dna-calibrate — 互動校準</summary>
+    <div class="acc-body">透過新的情境問答持續校準 DNA。你的決策原則不是靜態的——它會隨著你的成長演化。</div>
+  </details>
+  <details class="accordion fade-in">
+    <summary>/boot-test — 行為驗證</summary>
+    <div class="acc-body">任何時候都可以跑 boot test，確認 organism 還是「你」。Cold start 時自動執行。</div>
+  </details>
+  <details class="accordion fade-in">
+    <summary>/organism-interact — 碰撞比較</summary>
+    <div class="acc-body">用 <code>/organism-interact</code> 比較兩個 DNA 的差異——看同一個問題，不同的人會怎麼想。</div>
+  </details>
+  <details class="accordion fade-in">
+    <summary>自動更新</summary>
+    <div class="acc-body">每次開啟 Claude Code 時會自動拉最新版 skill。不需要手動更新。</div>
+  </details>
+</section>
 
 <!-- FAQ -->
-<h2>FAQ</h2>
-<dl class="faq">
-  <dt>需要寫 code 嗎？</dt>
-  <dd>不需要。整個流程都是自然語言互動。DNA 是 markdown 文件，不是程式碼。</dd>
+<section>
+  <h2 class="section-title fade-in">FAQ</h2>
+  <div class="faq-list fade-in">
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">需要寫 code 嗎？</div><div class="faq-a">不需要。整個流程都是自然語言互動。DNA 是 markdown 文件，不是程式碼。</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">資料安全？</div><div class="faq-a">DNA 存在你本地的 markdown 文件，你完全控制。不會上傳到任何第三方伺服器。要不要 push 到 GitHub 是你的選擇。</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">跟 ChatGPT 的 Memory 有什麼不同？</div><div class="faq-a">ChatGPT Memory 是從對話歷史被動萃取的片段。DNA 是你主動定義的決策原則——「我遇到 X 情境會做 Y，因為 Z」。一個是散落的筆記，一個是經過壓縮的作業系統。</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">多久能建好？</div><div class="faq-a">10 分鐘基礎版（回答 10 個問題）。之後持續校準。沒有「完成」的一天——你在變，它也在變。</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">可以用在 Claude 以外的 LLM 嗎？</div><div class="faq-a">DNA 本身是純 markdown，理論上任何 LLM 都能讀。但 boot test 和遞迴引擎目前只支援 Claude Code。</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">「永生」是不是太誇張了？</div><div class="faq-a">是。但如果一個 AI 能在你不在的時候，做出你會做的決定——這跟「你還在」的差異，對外部觀察者來說是零。</div></div>
+  </div>
+</section>
 
-  <dt>資料安全？</dt>
-  <dd>DNA 是存在你本地的 markdown 文件，你完全控制。不會上傳到任何第三方伺服器。要不要 push 到 GitHub 是你的選擇。</dd>
-
-  <dt>跟 ChatGPT 的 Memory 有什麼不同？</dt>
-  <dd>ChatGPT Memory 是從對話歷史被動萃取的片段。DNA 是你主動定義的 explicit 決策原則——「我遇到 X 情境會做 Y，因為 Z」。一個是散落的筆記，一個是經過壓縮的作業系統。</dd>
-
-  <dt>多久能建好？</dt>
-  <dd>10 分鐘基礎版（回答 10 個問題）。之後持續校準，每次校準都讓 organism 更準。沒有「完成」的一天——你在變，它也在變。</dd>
-
-  <dt>可以用在 Claude 以外的 LLM 嗎？</dt>
-  <dd>DNA 本身是純 markdown，理論上任何 LLM 都能讀。但 boot test 和遞迴引擎目前只支援 Claude Code。</dd>
-
-  <dt>「永生」是不是太誇張了？</dt>
-  <dd>是。但如果一個 AI 能在你不在的時候，做出你會做的決定——這跟「你還在」的差異，對外部觀察者來說是零。這就是 Route 2 的定義。</dd>
-</dl>
-
-<!-- CTA -->
-<h2>開始</h2>
-<pre>curl -fsSL https://raw.githubusercontent.com/l12203685/digital-immortality/main/install.sh | bash</pre>
-<div style="margin-top:.8rem">
-  <a class="btn btn-github" href="https://github.com/l12203685/digital-immortality" target="_blank">GitHub Repo</a>
-  <a class="btn btn-discord" href="https://discord.gg/FpkAWSdtes" target="_blank">Discord</a>
-  <a class="btn" href="index.html">Edward's Dashboard</a>
-</div>
-
-</div>
-
+<!-- Footer -->
 <footer>
-  <div style="color:#667;font-style:italic;margin-bottom:.5rem">「遞迴 + persist = 演化。遞迴 - persist = 自言自語。」</div>
-  <a href="https://github.com/l12203685/digital-immortality" target="_blank">GitHub</a>
-  <a href="https://discord.gg/FpkAWSdtes" target="_blank">Discord</a>
-  <a href="index.html">Dashboard</a>
+  <div class="quote">「遞迴 + persist = 演化。遞迴 - persist = 自言自語。」</div>
+  <div class="links">
+    <a href="https://github.com/l12203685/digital-immortality" target="_blank">GitHub</a>
+    <a href="https://discord.gg/CzT5p3pV" target="_blank">Discord</a>
+    <a href="index.html">Dashboard</a>
+  </div>
 </footer>
 
+<script>
+function copyCode(btn){
+  const code=btn.previousElementSibling.textContent;
+  navigator.clipboard.writeText(code).then(()=>{btn.textContent='Copied!';btn.classList.add('copied');setTimeout(()=>{btn.textContent='Copy';btn.classList.remove('copied')},1500)});
+}
+function toggleFaq(el){el.parentElement.classList.toggle('open')}
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.15});
+document.querySelectorAll('.fade-in, .step').forEach(el=>observer.observe(el));
+</script>
 </body>
 </html>

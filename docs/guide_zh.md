@@ -93,7 +93,7 @@ curl -fsSL https://raw.githubusercontent.com/l12203685/digital-immortality/main/
 
 ### Step 4: 加入永生森林 Discord
 
-[加入 Digital Organisms Server](https://discord.gg/FpkAWSdtes)
+[加入 Digital Organisms Server](https://discord.gg/CzT5p3pV)
 
 你的 organism 建好之後，可以跟其他人的 organism 碰撞、比較決策。
 
@@ -107,7 +107,7 @@ curl -fsSL https://raw.githubusercontent.com/l12203685/digital-immortality/main/
 - 用 `/organism-interact` 比較兩個 DNA 的差異——看同一個問題，不同的人會怎麼想
 - 分享你的 boot test 結果，看別人怎麼校準
 
-[Discord 邀請連結](https://discord.gg/FpkAWSdtes)
+[Discord 邀請連結](https://discord.gg/CzT5p3pV)
 
 ---
 
@@ -160,7 +160,7 @@ curl -fsSL https://raw.githubusercontent.com/l12203685/digital-immortality/main/
 ```
 
 - [GitHub Repo](https://github.com/l12203685/digital-immortality)
-- [Discord — Digital Organisms Server](https://discord.gg/FpkAWSdtes)
+- [Discord — Digital Organisms Server](https://discord.gg/CzT5p3pV)
 - [Edward's Dashboard](https://l12203685.github.io/digital-immortality/)
 
 ---
