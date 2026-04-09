@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T13:50+08",
+  "updated": "2026-04-09T13:59+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Commit pushed: `0b06c23`. Next: SOP #61 domain gap scan + tick 87."
+      "text": "Committed: `f6d1e4d`"
     },
     {
       "time": "just now",
-      "text": "Branch 6 / 存活-cold-start — F9 failure mode added to runbook: content pipeline..."
+      "text": "Branch 7 (知識輸出) — SOP #61 Agent Economic Sustainability Protocol created. 5-g..."
     },
     {
       "time": "just now",
-      "text": "Branch 7 — SOP #60 Content Creation & Shipping Protocol (Domain 10). The doma..."
+      "text": "Branch 6 (存活/cold-start) — `consistency_test.py` re-verified 33/33 ALIGNED ✅...."
     },
     {
       "time": "just now",
-      "text": "Branch 1.1 — tick 86: BTC=$71,020.88 (↑$24.61), SHORT×86 (100%), P&L=+$0.684...."
+      "text": "Branch 1 (經濟自給) — paper-live ticks 87+88: BTC=$70,952, SHORT×88 (100%), P&L=+..."
     },
     {
       "time": "8min ago",
-      "text": "- Samuel DM (paste-ready in `docs/samuel_async_calibration_dm.md`)"
+      "text": "Commit pushed: `0b06c23`. Next: SOP #61 domain gap scan + tick 87."
     }
   ],
   "stats": {
@@ -94,11 +94,11 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71020.88,
+    "paper_live_price": 70952.0,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T05:45",
-    "paper_tick": 86,
-    "paper_pnl": "+$0.684",
+    "paper_live_ts": "2026-04-09T05:54",
+    "paper_tick": 88,
+    "paper_pnl": "+$0.780",
     "status": "ok"
   }
 }
