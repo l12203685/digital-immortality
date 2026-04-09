@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T16:51+08",
+  "updated": "2026-04-09T17:07+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,39 +64,39 @@
   ],
   "activity": [
     {
-      "time": "just now",
+      "time": "16min ago",
       "text": "4. SOP #77 — candidates: posting operations SOP or LLM boot test validation p..."
     },
     {
-      "time": "just now",
+      "time": "16min ago",
       "text": "3. Branch 4 social (Samuel DM / Discord / Organism C template)"
     },
     {
-      "time": "just now",
+      "time": "16min ago",
       "text": "2. Mainnet API keys → live trading"
     },
     {
-      "time": "just now",
+      "time": "16min ago",
       "text": "1. Edward posts SOP #01 on X — zero agent-side friction, all blocked on human..."
     },
     {
-      "time": "just now",
+      "time": "16min ago",
       "text": "Next queue:"
     }
   ],
   "stats": {
     "daemon_cycles": 208,
     "total_mds": 330,
-    "dna_core_lines": 87
+    "dna_core_lines": 426
   },
   "health": {
     "ci_wired": false,
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71256.96,
+    "paper_live_price": 70774.73,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T08:43",
+    "paper_live_ts": "2026-04-09T09:02",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"

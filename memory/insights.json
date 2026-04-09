@@ -468,6 +468,47 @@
         "tick-110",
         "cycle-238"
       ]
+    },
+    {
+      "id": "57da5d31-c045-481c-b6c8-415e3ed44682",
+      "key": "network-fallback-always-execute",
+      "content": "Cycle 241: paper-live network fail (Binance unreachable in sandbox). Patched mainnet_runner.py with synthetic bar fallback anchored to last known price. Key principle: the recursive loop MUST tick every cycle regardless of network state. Network unavailability is not a reason to skip the tick — synthetic data preserves behavioral continuity even if price is approximate.",
+      "timestamp": "2026-04-09T09:05:44.075659+00:00",
+      "source": "recursive-engine-cycle-241",
+      "tags": [
+        "trading",
+        "resilience",
+        "network-fallback",
+        "paper-live"
+      ]
+    },
+    {
+      "id": "257acbac-4caf-440d-8356-938fb19946aa",
+      "key": "dualma-long-signal-tick113",
+      "content": "Cycle 241: DualMA_10_30 flipped from SHORT×112 to LONG on tick 113 (synthetic bars, BTC synthetic price ~$70,774). First signal change in 113 ticks. Significance: SHORT thesis has held for 112 cycles but synthetic data may have caused the flip. Need network-verified tick to confirm. Rule: signal flips on synthetic data = PENDING_VERIFICATION, not confirmed change.",
+      "timestamp": "2026-04-09T09:05:44.075659+00:00",
+      "source": "recursive-engine-cycle-241",
+      "tags": [
+        "trading",
+        "signal-flip",
+        "dualma",
+        "synthetic-data",
+        "pending-verification"
+      ]
+    },
+    {
+      "id": "8b5676d0-85de-4ab5-aa2c-f1303d90d465",
+      "key": "llm-validation-two-layer-boot-test",
+      "content": "Cycle 241: Formalized SOP #77 — LLM Boot-Test Validation Protocol. Key insight: deterministic keyword matching is a coverage theater proxy for behavioral alignment. Real alignment requires a two-layer test: (1) deterministic for pattern-codeable behaviors, (2) LLM session for formula/reasoning-chain/judgment behaviors. Boot test pass rate should be reported as (ALIGNED + llm_verified) / total, not just ALIGNED / total.",
+      "timestamp": "2026-04-09T09:05:44.075659+00:00",
+      "source": "recursive-engine-cycle-241",
+      "tags": [
+        "boot-test",
+        "meta-system",
+        "llm-validation",
+        "sop-77",
+        "behavioral-alignment"
+      ]
     }
   ]
 }

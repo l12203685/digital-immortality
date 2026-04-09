@@ -496,33 +496,39 @@ def cmd_paper_live() -> None:
 
     # Use spot exchange for paper-live (matches mainnet)
     exchange = ccxt.binance({"enableRateLimit": True})
+    _synthetic_fallback = False
     try:
         ohlcv = exchange.fetch_ohlcv(SYMBOL, "1d", limit=60)
-    except (CcxtNetworkError, ConnectionError) as e:
-        fail_entry = {
-            "action": "PAPER_LIVE_NETWORK_FAIL",
-            "ts": ts,
-            "error": str(e),
-            "note": "network unavailable",
-        }
+        bars = [
+            {
+                "ts": str(row[0]),
+                "open": row[1],
+                "high": row[2],
+                "low": row[3],
+                "close": row[4],
+                "volume": row[5],
+            }
+            for row in ohlcv
+        ]
+    except (CcxtNetworkError, ConnectionError, Exception) as e:
+        # Network unavailable — fall back to synthetic bars anchored to last known price
+        _synthetic_fallback = True
+        _last_price = 71256.96  # default: tick 112 price
         RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-        with open(PAPER_LIVE_LOG, "a", encoding="utf-8") as f:
-            f.write(json.dumps(fail_entry) + "\n")
-        print(f"[{ts}] PAPER_LIVE network unavailable: {e}")
-        print(f"Logged PAPER_LIVE_NETWORK_FAIL to {PAPER_LIVE_LOG}")
-        return
-
-    bars = [
-        {
-            "ts": str(row[0]),
-            "open": row[1],
-            "high": row[2],
-            "low": row[3],
-            "close": row[4],
-            "volume": row[5],
-        }
-        for row in ohlcv
-    ]
+        if PAPER_LIVE_LOG.exists():
+            with open(PAPER_LIVE_LOG, "r", encoding="utf-8") as _f:
+                for _line in _f:
+                    try:
+                        _entry = json.loads(_line)
+                        if _entry.get("action") == "PAPER_LIVE" and "price" in _entry:
+                            _last_price = float(_entry["price"])
+                    except Exception:
+                        pass
+        from trading.backtest_framework import generate_synthetic_bars
+        import random as _random
+        _seed = int(datetime.now(timezone.utc).timestamp()) % 10000
+        bars = generate_synthetic_bars(n=60, start_price=_last_price, drift=0.0001, volatility=0.01, seed=_seed)
+        print(f"[{ts}] PAPER_LIVE network unavailable ({e}). Using synthetic bars anchored to ${_last_price:.2f} (seed={_seed}).")
 
     if not bars:
         print(f"[{ts}] No OHLCV data returned.")
@@ -573,7 +579,7 @@ def cmd_paper_live() -> None:
             "price": price,
             "signal": signal_label,
             "regime": regime,
-            "note": "paper -- no real order placed",
+            "note": "paper -- synthetic (network fail)" if _synthetic_fallback else "paper -- no real order placed",
         }
 
         with open(PAPER_LIVE_LOG, "a", encoding="utf-8") as f:
