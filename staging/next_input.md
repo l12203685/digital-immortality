@@ -1,4 +1,4 @@
-# Next Cycle Input — 2026-04-09T UTC (Cycle 187)
+# Next Cycle Input — 2026-04-09T UTC (Cycle 195)
 
 ## Previous cycle output summary (Cycle 187)
 **Branch 3.1 IMPLEMENTED**: staging/next_input.md staleness detected (26 cycles stale, Cycle 160→186). Updated with current state. Staleness guard principle: if cycle number gap >10, daemon must refresh next_input.md before proceeding.
