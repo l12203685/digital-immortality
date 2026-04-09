@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T15:16+08",
+  "updated": "2026-04-09T15:26+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,41 +64,41 @@
   ],
   "activity": [
     {
-      "time": "10min ago",
-      "text": "Next priority: `社交圈/samuel-session` (samuel async DM still pending — `docs/sa..."
+      "time": "just now",
+      "text": "3. L3 trigger meta-insight: any loop layer without explicit activation protoc..."
     },
     {
-      "time": "10min ago",
-      "text": "- Single blocker confirmed: first post not sent"
+      "time": "just now",
+      "text": "2. 67 SOPs + 0 posts = internal recursion without external loop = dead loop a..."
     },
     {
-      "time": "10min ago",
-      "text": "- `tools/engagement_check.py` run: 0 posts logged, G3 kill conditions inactive"
+      "time": "just now",
+      "text": "1. Tick 102 asymmetric Bayesian: each tick extending thesis = weaker evidence..."
     },
     {
-      "time": "10min ago",
-      "text": "Branch 5.8 (engagement_check)"
+      "time": "just now",
+      "text": "Branch 3.1 — 3 distillation insights → `memory/insights.json` (26 total):"
     },
     {
-      "time": "10min ago",
-      "text": "- daemon_next_priority '存活/cold-start' TOUCHED ✅"
+      "time": "just now",
+      "text": "Branch 6 (存活/cold-start) — consistency 33/33 ALIGNED ✅, 12+ consecutive cycle..."
     }
   ],
   "stats": {
     "daemon_cycles": 208,
     "total_mds": 330,
-    "dna_core_lines": 426
+    "dna_core_lines": 87
   },
   "health": {
     "ci_wired": false,
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71032.45,
+    "paper_live_price": 70994.74,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T07:02",
-    "paper_tick": 99,
-    "paper_pnl": "+$0.668",
+    "paper_live_ts": "2026-04-09T07:20",
+    "paper_tick": 94,
+    "paper_pnl": "+$0.795",
     "status": "ok"
   }
 }
