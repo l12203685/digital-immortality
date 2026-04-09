@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T10:29+08",
+  "updated": "2026-04-09T10:35+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -77,15 +77,15 @@
     },
     {
       "time": "just now",
-      "text": "- P&L = +$0.659 (+0.659% on $100) — eased from +$0.845, BTC up $126 from tick 67"
+      "text": "- P&L = +$0.631 (+0.631% on $100) — eased from +$0.659, BTC up $27"
     },
     {
       "time": "just now",
-      "text": "- BTC = $71,031.48 → SHORT×68 (100%)"
+      "text": "- BTC = $71,058.67 → SHORT×69 (100%)"
     }
   ],
   "stats": {
-    "daemon_cycles": 198,
+    "daemon_cycles": 199,
     "total_mds": 330,
     "dna_core_lines": 87
   }
