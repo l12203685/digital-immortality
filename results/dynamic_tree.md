@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 209)
+> 最後更新：2026-04-09 UTC (cycle 210)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -27,6 +27,7 @@
   - **paper_live_pnl_report.md updated ✓** (cycle 202) — tick 72: BTC=$71,109.10, SHORT×72 (100%), P&L=**+$0.560** (+0.560% on $100); BTC down $17.78 from tick 71; MFE ATH=+$1.204 (tick 50); regime=MIXED, DualMA_10_30 only signaling; import bug FIXED (cycle 202)
   - **cycle 208 paper-live tick** — BTC=$70,935.88, regime=MIXED, DualMA_10_30=SHORT (continues), 272 log entries total; BTC down ~$174 from tick 72
   - **cycle 209 paper-live tick 73** — BTC=$71,014.90, P&L=**+$0.692** (+0.692%); BTC down $94.20 from tick 72; regime=MIXED; 287 log entries total
+  - **cycle 210 paper-live tick 74** — BTC=$71,006.13, regime=MIXED; DualMA_10_30=SHORT (continues); 332 log entries total; BTC down $8.77 from tick 73
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
@@ -153,6 +154,7 @@
 - **7.51 SOP #46 Async Communication Triage — COMPLETE ✅** (cycle 208 — retroactive): `docs/knowledge_product_46_communication_triage_sop.md` + `docs/publish_thread_sop46_twitter.md` — 5-gate message triage; template-first composition; behavioral signal extraction; Domains 4+8; posting queue extended to **Jul 8**
 - **7.52 SOP #47 Recursive Engine Maintenance — COMPLETE ✅** (cycle 208): `docs/knowledge_product_47_recursive_engine_maintenance_sop.md` + `docs/publish_thread_sop47_twitter.md` — 5 gates: G0 staleness detection / G1 three-layer health audit (L1/L2/L3) / G2 layer-specific restart / G3 L3 evolution trigger / G4 cross-session persistence check; kill conditions table; self-test; Domains 3+6; posting queue extended to **Jul 10**; **series now SOP #01~#47 ✅**
 - **7.53 SOP #48 Bayesian Belief Update Protocol — COMPLETE ✅** (cycle 209): `docs/knowledge_product_48_belief_update_sop.md` + `docs/publish_thread_sop48_twitter.md` — 5 gates: G0 explicit prior + falsifiability pre-commitment / G1 base rate anchor (humans systematically underweight) / G2 evidence classification likelihood ratio 1–9 (reliability×independence) / G3 prior revision with anti-anchoring cap (≤30%/event for >1yr beliefs) / G4 belief-to-action translation (updates without action = theater) / G5 anti-reversal gate (48h timeout for salient-not-informative evidence); self-test: 73-tick SHORT signal vs 3 chat opinions (score=1 → 3.3% move → no action); kills confirmation bias masquerading as evaluation; Domains 2+3; posting queue extended to **Jul 12**; **series now SOP #01~#48 ✅**
+- **7.54 SOP #49 Cold-Start Continuity Protocol — COMPLETE ✅** (cycle 210): `docs/knowledge_product_49_cold_start_continuity_sop.md` + `docs/publish_thread_sop49_twitter.md` — 5 gates: G0 classify restart type (clean/stale/engine-death/corruption/migration) / G1 minimum viable boot (dna_core 67L → boot_tests → session_state → priority) / G2 verify state integrity (consistency test 33/33 + git status) / G3 reconstruct queue (daemon_log tail-60 if stale) / G4 anti-corruption gates (commit/timestamp/staleness/context-60%/three-layer) / G5 boot verification (3 questions from memory); kill conditions: consistency<28/33 → restore from git; Domains 6+3; posting queue extended to **Jul 14**; **series now SOP #01~#49 ✅**
 - **Next blocker:** Edward posts SOP #01 on X. G5 compounding clock starts on first post.
 - **`docs/x_launch_sequence.md` created ✓** (cycle 160) — pre-flight checklist: X bio copy, landing page placeholder, Day 1 post steps (5 min), 48h engagement protocol, G5 milestone tracking, engagement defaults pre-committed. Friction to first post: ~15 min.
 - **`docs/engagement_response_templates.md` created ✓** (cycle 161) — paste-ready reply templates for 5 categories: positive/agreement, question/challenge, DMs (3-exchange trust ladder → offer), bad faith (ignore), hiring inquiry; G5 milestone triggers embedded; zero in-the-moment decisions when engagement starts.

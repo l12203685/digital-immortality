@@ -1,1 +1,1 @@
-OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.
+OK: All branches covered. Pushed: Branch 1.1 (tick 74), Branch 6+7 (SOP #49 Cold-Start Continuity). Least recent: Branch 4.1 social (Samuel DM human-gated, organism C needs Edward). Next auto: Branch 7 SOP #50 or Branch 5 platform. Human actions: (1) send samuel_async_calibration_dm.md, (2) paste Discord seeds, (3) fill organism_c_draft §0+§7.
