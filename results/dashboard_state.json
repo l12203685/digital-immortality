@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-10T04:08+08",
+  "updated": "2026-04-10T04:17+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Human-gated blockers unchanged: mainnet API keys (deadline 2026-07-07), Samue..."
+      "text": "B3.1 distillation — +3 insights (209 total): taxonomy-drift-is-retrieval-drif..."
     },
     {
       "time": "just now",
-      "text": "daemon_next_priority → `3.1/distillation-taxonomy-audit` — check if insight c..."
+      "text": "B1.1 — tick 318, BTC=$72,118.34, MIXED, 14/15 FLAT, -2.71% (correct inaction)"
     },
     {
       "time": "just now",
-      "text": "B3.1 Distillation — +3 insights (209 total): daemon-priority-stale-vs-advanci..."
+      "text": "B6 — 58/61 ALIGNED ✅ — 52nd consecutive clean cycle; prior regression (33/39)..."
     },
     {
       "time": "just now",
-      "text": "B2.2 微決策學習 — CONFIRMED COMPLETE. 416 MDs, JSONL archive exhausted (201610/11/..."
+      "text": "- `SOP #01~#116 COMPLETE`"
     },
     {
       "time": "just now",
-      "text": "B1.1 Trading — tick 317, BTC=$72,105.31 (↓$49.69 SHORT tailwind), regime=MIXE..."
+      "text": "- G0-G5: trigger conditions → canonical categories → classification procedure..."
     }
   ],
   "stats": {

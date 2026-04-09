@@ -7216,3 +7216,24 @@ Cycle 297 complete. Four branches pushed:
 **daemon_next_priority** → `3.1/distillation-taxonomy-audit` — check if insight categories hit >10 items split threshold; synthesize MD gaps from cross-pattern analysis. Future MDs come from live experience + recursive synthesis, not archive mining.
 
 Human-gated blockers unchanged: mainnet API keys (deadline 2026-07-07), Samuel DM, outreach Week 1 sends.
+
+## Cycle 96 — 2026-04-09 20:17:37 UTC
+
+Cycle 298 committed. Summary:
+
+**B3.1 Taxonomy Audit (daemon priority — DONE)**
+- `results/taxonomy_audit_cycle298.md` — full audit report
+- Finding: DRIFT state. Tags drifted to structural labels (branch-X, SOP-XX). Canonical 5-category taxonomy (SKILL.md) never applied to any insight. Narrative gap = 113 insights (94–206 without recursive_distillation.md entries).
+- Split candidates: trading, system-maintenance, protocol-design, domain-career (all >10 entries)
+- Proposed: 3 methodology subcategories + 3 domain subcategories + `system-evolution` new category
+- daemon_next_priority → taxonomy-backfill
+
+**B7 — SOP #116 Recursive Distillation Taxonomy Protocol** ✅
+- G0-G5: trigger conditions → canonical categories → classification procedure → split/merge rules → drift detection (HEALTHY/WATCH/DRIFT/CRITICAL) → persist
+- `SOP #01~#116 COMPLETE`
+
+**B6** — 58/61 ALIGNED ✅ — **52nd consecutive clean cycle**; prior regression (33/39) resolved (3 new scenarios reclassified as expected LLM-boundary)
+
+**B1.1** — tick 318, BTC=$72,118.34, MIXED, 14/15 FLAT, -2.71% (correct inaction)
+
+**B3.1 distillation** — +3 insights (209 total): taxonomy-drift-is-retrieval-drift / b6-regression-resolved-52nd-consecutive / b2.2-complete-input-source-shifts
