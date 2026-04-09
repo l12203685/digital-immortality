@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T12:11+08",
+  "updated": "2026-04-09T12:20+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "3. Fill `templates/organism_c_draft.md` §0+§7 → first Organism C collision"
+      "text": "- Posting queue → Jul 16; series SOP #01~#50 ✅"
     },
     {
       "time": "just now",
-      "text": "2. Paste 4 Discord seed posts → unblocks Branch 4.3"
+      "text": "- 12-tweet thread ready"
     },
     {
       "time": "just now",
-      "text": "1. Send `docs/samuel_async_calibration_dm.md` → unblocks Branch 4.1"
+      "text": "- Kill condition: regression below 33/33 → restore from git"
     },
     {
       "time": "just now",
-      "text": "Human-gated actions remain:"
+      "text": "- AND-gate 3-condition trigger: no new insight ×3 + missed correction + cross..."
     },
     {
       "time": "just now",
-      "text": "SOP #49 核心: Daemon flagged `存活/cold-start` as least recent → responded with a..."
+      "text": "- 5 gates: classify evolution type → isolate failing premise in one sentence ..."
     }
   ],
   "stats": {
@@ -94,11 +94,11 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71006.13,
+    "paper_live_price": 70884.57,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T04:06",
-    "paper_tick": 73,
-    "paper_pnl": "+$0.692",
+    "paper_live_ts": "2026-04-09T04:16",
+    "paper_tick": 75,
+    "paper_pnl": "+$0.874",
     "status": "ok"
   }
 }

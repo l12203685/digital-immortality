@@ -1,1 +1,1 @@
-OK: All branches covered. Next highest derivative: Branch 4.3 (Discord seeding → invite C unblocks ecosystem). Branch 7 SOP #51 — consider Branch 5 platform gap or Branch 2 decision domain. Branch 1.1 tick 76 routine.
+OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.

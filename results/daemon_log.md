@@ -5946,3 +5946,23 @@ Cycle 210 complete. Pushed.
 1. Send `docs/samuel_async_calibration_dm.md` → unblocks Branch 4.1
 2. Paste 4 Discord seed posts → unblocks Branch 4.3
 3. Fill `templates/organism_c_draft.md` §0+§7 → first Organism C collision
+
+## Cycle 4 — 2026-04-09 04:20:26 UTC
+
+Cycle 211 committed.
+
+---
+
+**What was pushed:**
+
+**Branch 1.1 — paper-live tick 75**
+- BTC=$70,884.57, regime=MIXED, DualMA_10_30=SHORT×75 (100%)
+- P&L: **+$0.874** (+0.874% on $100) — up from +$0.692; 347 log entries
+
+**Branch 6+7 — SOP #50: Self-Evolving System Protocol**
+- Fills the L3 gap: SOP #47 (maintain) + SOP #49 (cold-start) + **SOP #50 (evolve own rules)** = minimum viable immortality stack
+- 5 gates: classify evolution type → isolate failing premise in one sentence → minimum viable rule update → cross-domain validation → anti-drift gate (33/33 required)
+- AND-gate 3-condition trigger: no new insight ×3 + missed correction + cross-domain pattern
+- Kill condition: regression below 33/33 → restore from git
+- 12-tweet thread ready
+- Posting queue → Jul 16; **series SOP #01~#50 ✅**
