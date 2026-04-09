@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 202)
+> 最後更新：2026-04-09 UTC (cycle 203)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -88,6 +88,7 @@
 - 6.6 **Cold-start validation** (cycle 201): 33/33 ALIGNED ✅; boot_tests.md 14 tests; session_state.md created
 - **6.7 Cold-start recovery runbook — CREATED ✅** (cycle 202): `docs/cold_start_recovery_runbook.md` — 7 failure modes (F1 session_state missing, F2 stale, F3 tree corrupted, F4 runner import error, F5 boot_tests missing, F6 dna_core too long, F7 daemon death); minimum viable 3-command verification; scope separation table; recovery priority order; **Branch 6 存活 AUDIT CLOSED**
 - **6.8 Trading runner import fix ✅** (cycle 202): `trading/mainnet_runner.py` + `trading/testnet_runner.py` — added `sys.path.insert(0, project_root)` to both; `python trading/mainnet_runner.py --paper-live` now works from project root without module import errors
+- **6.9 CI pipeline — CREATED ✅** (cycle 203): `.github/workflows/ci.yml` — 2 jobs: (1) cold-start-validation (Py 3.11+3.12 matrix): cold_start_test.py 5/5 + consistency_test.py 33/33 + multi_provider import; (2) trading-import: strategies import + scope separation check (L1/L2/L3 no cross-layer file conflicts); wires Branch 6 health into every push; boot_time=0.062s confirmed; paper-live tick 72 (240 total entries); **Branch 6 存活冗餘 has automated sentinel on every commit ✅**
 
 ### 7. 知識輸出（scale intelligence externally）
 - 7.1 知識缺口偵測：MD-319 (輸出=缺口偵測器) ✓ cycle 94 — forced-output checkpoints; explanation stalls = reinforce nodes
