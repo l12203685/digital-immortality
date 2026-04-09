@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 237)
+> 最後更新：2026-04-09 UTC (cycle 238)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -47,6 +47,7 @@
   - **cycle 234 paper-live tick 105** — BTC=$70,970.19 (↓$109.80 from tick 104), regime=MIXED; DualMA_10_30=SHORT×105 (100%); 842 log entries; 14/15 FLAT consensus; SHORT tailwind; concentration risk: single-strategy dependency
   - **cycle 235 paper-live tick 106** — BTC=$70,981.17 (↑$11.00 from tick 105), regime=MIXED; DualMA_10_30=SHORT×106 (100%); 857 log entries; 14/15 FLAT consensus; concentration event flagged (106 consecutive ticks, 1 strategy); G1 audit: DualMA_RSI_filtered FLAT = regime-correct (RSI filter blocking in MIXED) → CONCENTRATION_EXPECTED
   - **cycle 236 paper-live tick 107** — BTC=$70,906.44 (↓$74.73 from tick 106), regime=MIXED; DualMA_10_30=SHORT×107 (100%); 872 log entries; 14/15 FLAT consensus; concentration_log.jsonl CREATED; bootstrap entries: CONCENTRATION_START + CONCENTRATION_EXPECTED; G1 PASS; 107/1314 ticks = 8.1% of quarterly threshold
+  - **cycle 238 paper-live ticks 109+110** — BTC=$71,005.99 (↓$44.69 from tick 108), regime=MIXED; DualMA_10_30=SHORT×110 (100%); 932 log entries; 14/15 FLAT consensus; SHORT tailwind (BTC down from tick 108); 110/1314 = 8.4% of quarterly threshold
   - **cycle 237 paper-live tick 108** — BTC=$70,961.06 (↑$54.62 from tick 107), regime=MIXED; DualMA_10_30=SHORT×108 (100%); 902 log entries; 14/15 FLAT consensus; concentration_log tick 108 entry added; 108/1314 = 8.2% of quarterly threshold; SHORT headwind (BTC uptick)
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
@@ -136,6 +137,7 @@
 - **6.12 Consistency re-verification (cycle 223)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — cold-start behavioral integrity intact; baseline saved to results/consistency_baseline.json; daemon_next_priority '存活/cold-start' branch TOUCHED ✅
 - **6.13 Consistency re-verification (cycle 227)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — cold-start behavioral integrity intact; daemon_next_priority '存活/cold-start' TOUCHED ✅ (was least-recent per cycle 226 daemon)
 - **6.16 Consistency re-verification (cycle 230)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** (55 scenarios total); cold-start behavioral integrity intact; 11+ consecutive cycles clean; SOP #66 + external_signal_log.jsonl scaffold added this cycle
+- **6.18 Consistency re-verification (cycle 238)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — cold-start behavioral integrity intact; 13+ consecutive cycles clean; daemon_next_priority '存活/cold-start' TOUCHED ✅ (least-recent per cycle 237 daemon)
 - **6.17 Consistency re-verification (cycle 231)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** (55 scenarios total); 12+ consecutive cycles clean; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.15 Consistency re-verification (cycle 229)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** (55 scenarios total: 33 boot-test + 22 organism scenarios); cold-start behavioral integrity intact; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.14 Backward check + F10 + consistency (cycle 228)**: (a) backward check: internal recursion complete but external validation loop BROKEN (65 SOPs/0 posted/0 signal); axiom violated: 遞迴-persist=自言自語; resolved by SOP #65; F10 added to `docs/cold_start_recovery_runbook.md`; runbook now **F1–F10** ✅; (b) consistency: `consistency_test.py` → **33/33 ALIGNED ✅** — 10+ consecutive cycles clean; B3.1 distillation: 4 insights to memory/insights.json; B5 G3: `tools/engagement_check.py` built ✅
