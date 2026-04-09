@@ -131,6 +131,36 @@ No two layers write the same file. Conflict = layer boundary violation.
 4. boot_tests.md (F5) — behavioral TDD; can reconstruct from daemon_log
 5. dna_core.md (F6) — template exists; personal file recoverable from templates/
 
+## Layer-Specific Restart Protocols (from SOP #47 — cycle 208)
+
+Stale loop vs dead engine look identical from outside. Use these signals:
+
+| Layer | Stale Signal | Dead Signal | Restart |
+|-------|-------------|-------------|---------|
+| L1 Execute | staging/last_output.md unchanged 3+ cycles | missing file | Re-run recursive_engine.py --prompt |
+| L2 Evaluate | daemon_log.md no new entry 3+ cycles | daemon process not running | Restart recursive_daemon.py; check daemon_log |
+| L3 Evolve | dna_core.md unchanged 10+ cycles | no correction log entries | Run /dna-calibrate; look for missed corrections |
+
+**L3 Evolution Trigger** — run L3 when ALL three are true:
+1. ≥3 consecutive cycles produced no new insight (daemon_log shows "no new patterns")
+2. A correction was made in the last 5 cycles that isn't yet in dna_core.md or boot_tests.md
+3. The correction applies to >1 domain (cross-domain = high distillation value)
+
+**Staleness alarm → restart sequence**:
+```bash
+# 1. Check last_output.md timestamp
+head -2 staging/last_output.md
+
+# 2. Check daemon_log.md last entry
+tail -5 results/daemon_log.md
+
+# 3. Force a new prompt cycle
+python recursive_engine.py --prompt
+
+# 4. If still stale after 1h: rebuild next_input.md from session_state.md
+cat staging/session_state.md | head -20
+```
+
 ## Related Files
 
 - `cold_start_test.py` — automated boot sequence verification

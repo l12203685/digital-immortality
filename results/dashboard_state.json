@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T11:49+08",
+  "updated": "2026-04-09T12:01+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -94,11 +94,11 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 70935.88,
+    "paper_live_price": 71014.9,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T03:48",
-    "paper_tick": 71,
-    "paper_pnl": "+$0.560",
+    "paper_live_ts": "2026-04-09T03:55",
+    "paper_tick": 73,
+    "paper_pnl": "+$0.692",
     "status": "ok"
   }
 }

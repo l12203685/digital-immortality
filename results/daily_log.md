@@ -4,6 +4,42 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 209 — 2026-04-09T UTC
+
+### What was done
+
+**Branch 1.1 — paper-live tick 73 ✅**
+- BTC=$71,014.90 (down $94.20 from tick 72), regime=MIXED, DualMA SHORT continues
+- P&L: **+$0.692** (+0.692% on $100) — up from +$0.560; 287 log entries total
+- `results/paper_live_pnl_report.md` updated
+
+**Branch 7 — SOP #48 Bayesian Belief Update Protocol ✅**
+- `docs/knowledge_product_48_belief_update_sop.md` — 5-gate protocol:
+  - G0: State current belief explicitly with falsifiability pre-commitment
+  - G1: Base rate anchor (humans systematically underweight base rates)
+  - G2: Evidence classification — likelihood ratio = reliability × independence (1–9 scale); correlated evidence = 1 unit regardless of volume
+  - G3: Prior revision with anti-anchoring rule (cap ≤30%/event for beliefs >1yr old)
+  - G4: Belief-to-action translation (updates without action changes = theater)
+  - G5: Anti-reversal gate (48h timeout; 5-day newspaper test for salience vs information)
+- `docs/publish_thread_sop48_twitter.md` — 12-tweet thread; hook: "Most people don't change their minds. They negotiate with new information."
+- Posting queue extended to **Jul 12**; **series SOP #01~#48 ✅**
+- Self-test: 73-tick SHORT signal vs 3 chat opinions → G2 score=1 → 3.3% belief move → no action change (demonstrates why systematic > reactive)
+
+**Branch 6 — cold-start restart protocols ✅**
+- `docs/cold_start_recovery_runbook.md` — added "Layer-Specific Restart Protocols" section:
+  - Stale vs dead signal table for L1/L2/L3
+  - L3 evolution trigger (3 conditions: no new insight ≥3 cycles + missed correction + cross-domain)
+  - Staleness alarm → 4-step restart sequence with exact bash commands
+  - Branch 6 now has restart procedures for all engine layers (previously only had file-level recovery)
+
+### State changes
+- Cycle: 208 → 209
+- paper-live P&L: +$0.560 → +$0.692
+- SOP series: #01~#47 → #01~#48
+- posting queue: Jul 10 → Jul 12
+
+---
+
 ## Cycle 207 — 2026-04-09T08:00Z
 
 ### What was done

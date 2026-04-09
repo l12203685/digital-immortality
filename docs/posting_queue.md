@@ -54,6 +54,7 @@
 | Jul 6 | #45 | publish_thread_sop45_twitter.md | "Two organisms produce 1 collision. Five produce 10. The network compounds — but only after you get past the 2nd." | pending |
 | Jul 8 | #46 | publish_thread_sop46_twitter.md | "Every unread message is a decision deferred. You don't have a communication problem. You have a triage problem." | pending |
 | Jul 10 | #47 | publish_thread_sop47_twitter.md | "Your recursive engine isn't broken. It's stale. Staleness looks identical to death from the outside. Most people rebuild when they only needed a restart." | pending |
+| Jul 12 | #48 | publish_thread_sop48_twitter.md | "Most people don't change their minds. They negotiate with new information until it confirms what they already believed. That's not updating. That's defending." | pending |
 
 ---
 

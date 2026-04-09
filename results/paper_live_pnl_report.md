@@ -1,5 +1,5 @@
 # Paper-Live SHORT P&L Simulation
-> Updated 2026-04-09 UTC | 71 ticks | Entry: $71,509.90
+> Updated 2026-04-09 UTC | 73 ticks | Entry: $71,509.90
 
 ## Setup
 - Entry tick 1: BTC=$71,509.90 → SHORT
@@ -74,16 +74,17 @@
 | 70   | $70,993.99 | +$0.721 |
 | 71   | $71,126.88 | +$0.536 |
 | 72   | $71,109.10 | +$0.560 |
+| 73   | $71,014.90 | **+$0.692** |
 
 ## Summary
-- **Current unrealized P&L: +$0.560 (+0.560% on $100)**
+- **Current unrealized P&L: +$0.692 (+0.692% on $100)**
 - Best case (MFE): +$1.204 (tick 50, BTC=$70,649.77) ← MFE ATH
 - Worst case (MAE): $-1.33 (tick 8, BTC=$72,459)
-- Signal consistency: SHORT × 72 ticks (100%)
-- MFE/MAE ratio: 0.47x
+- Signal consistency: SHORT × 73 ticks (100%)
+- MFE/MAE ratio: 0.52x
 
 ## Verdict
-SHORT signal persistent 72 ticks. BTC $71,109.10 — down $17.78 from tick 71 ($71,126.88); P&L recovered to +$0.560 from +$0.536. Import path bug fixed: `python trading/mainnet_runner.py --paper-live` now works from project root (added sys.path fix to mainnet_runner.py + testnet_runner.py). MFE ATH unchanged at +$1.204 (tick 50). Regime MIXED (trend=0.014, mr=0.225). DualMA_10_30 only strategy signaling.
+SHORT signal persistent 73 ticks. BTC $71,014.90 — down $94.20 from tick 72 ($71,109.10); P&L improved to +$0.692 from +$0.560. 287 log entries total. Regime MIXED (trend=0.014, mr=0.225). DualMA_10_30 only strategy signaling. MFE ATH unchanged at +$1.204 (tick 50).
 
 **Next action**: Set BINANCE_MAINNET_KEY/SECRET → run `python trading/mainnet_runner.py --tick`
 See docs/mainnet_activation_guide.md for exact steps.
