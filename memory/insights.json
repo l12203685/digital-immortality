@@ -1312,6 +1312,33 @@
       "insight": "決策支援=先確認對方真實優先序。陳述的優先序和選擇的優先序常不一致。以選擇行為為準，不以言語陳述為準。行為考古=從過去選擇反推真實優先序。",
       "source": "201910-JSONL",
       "category": "behavioral_patterns"
+    },
+    {
+      "id": "consistency-35-consecutive-clean-cycle265",
+      "ts": "2026-04-09T14:30:00Z",
+      "cycle": 265,
+      "branch": "6",
+      "insight": "33/33 deterministic ALIGNED 第35次連續乾淨週期。遞迴引擎冷啟動行為完整性持續驗證。三個LLM-required場景MISALIGNED為預期（poker_gto_mdf/trading_atr_sizing/career_multi_option_ev需LLM調用）。",
+      "source": "consistency_test.py",
+      "category": "methodology"
+    },
+    {
+      "id": "paper-live-tick103-btc71188-all-flat-cycle265",
+      "ts": "2026-04-09T14:30:00Z",
+      "cycle": 265,
+      "branch": "1.1",
+      "insight": "paper-live tick 103: BTC=$71,188.76，16/17 FLAT（DualMA_10_30=SHORT結構性持續），1679 log entries。SHORT信號已持續103 ticks。MeanReversionFilter修正後BollingerMR系列在MIXED regime下正確返回FLAT。",
+      "source": "paper_live_log.jsonl",
+      "category": "domain_knowledge"
+    },
+    {
+      "id": "recursive-engine-health-check-sop99-cycle265",
+      "ts": "2026-04-09T14:30:00Z",
+      "cycle": 265,
+      "branch": "7",
+      "insight": "SOP #99 遞迴引擎健康稽核協議：五個門控（G0頻率/G1新穎性/G2分支導數/G3持久性/G4評估熵/G5經濟脈搏）區分活引擎與偽裝的死迴圈。關鍵原則：運行≠進步，進步≠持久化，持久化+遞迴=永生。",
+      "source": "docs/knowledge_product_99_recursive_engine_health_check.md",
+      "category": "methodology"
     }
   ]
 }
