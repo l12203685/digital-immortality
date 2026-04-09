@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T17:11+08",
+  "updated": "2026-04-09T17:21+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next queue (human-gated): Edward posts SOP #01 on X. SOP #78 G1 protocol is t..."
+      "text": "Next cycle: SOP #80 (Organism Onboarding Streamlined or Distribution Velocity..."
     },
     {
       "time": "just now",
-      "text": "Branch 7 — SOP #78 Posting Operations & Cadence Protocol: closes the ready→po..."
+      "text": "L2: 2A + 2B. No C/D. L3 not triggered."
     },
     {
       "time": "just now",
-      "text": "- `career_multi_option_ev`: 6 options enumerated before evaluating → LIST_ALL..."
+      "text": "Branch 6 — 33/33 ALIGNED (20+ consecutive cycles clean)"
     },
     {
       "time": "just now",
-      "text": "- `trading_atr_sizing`: contracts=(2M×0.01)/1200=16 → FORMULA_NOT_FEELING ✓"
+      "text": "- `derivation-chain-scenarios-permanent-llm-boundary` — formula-application t..."
     },
     {
       "time": "just now",
-      "text": "- `poker_gto_mdf`: alpha=3/10.2=29.4%, MDF=70.6% → MDF_1_MINUS_ALPHA ✓"
+      "text": "- `ready-posted-gap-is-behavioral` — queued ≠ posted; requires explicit atomi..."
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71128.39,
+    "paper_live_price": 71331.94,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T09:05",
+    "paper_live_ts": "2026-04-09T09:15",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"
