@@ -6226,3 +6226,22 @@ Done.
 
 **Next autonomous**: SOP #66 (build `results/external_signal_log.jsonl` scaffold for G0 state machine) or B1.1 tick 97.  
 **Human-gated critical path**: X first post → mainnet keys → Discord seed → Samuel DM.
+
+## Cycle 17 — 2026-04-09 07:06:07 UTC
+
+Cycle 229 committed. Summary of what was pushed across branches:
+
+**Branch 1.1 (經濟自給/trading)**
+- Ticks 97+98+99 — BTC=$71,032.45 (↑$90.95 from tick 96)
+- P&L = **+$0.668** (+0.668% on $100); SHORT×99 (100%)
+- 752 log entries; regime=MIXED; MFE ATH +$1.204 (tick 50) unchanged
+
+**Branch 6 (存活/cold-start)**
+- `consistency_test.py` → **33/33 ALIGNED ✅** (55 scenarios total)
+- daemon_next_priority '存活/cold-start' TOUCHED ✅
+
+**Branch 5.8 (engagement_check)**
+- `tools/engagement_check.py` run: 0 posts logged, G3 kill conditions inactive
+- Single blocker confirmed: first post not sent
+
+**Next priority**: `社交圈/samuel-session` (samuel async DM still pending — `docs/samuel_async_calibration_dm.md` is paste-ready)

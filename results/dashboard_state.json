@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T14:57+08",
+  "updated": "2026-04-09T15:06+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Human-gated critical path: X first post → mainnet keys → Discord seed → Samue..."
+      "text": "Next priority: `社交圈/samuel-session` (samuel async DM still pending — `docs/sa..."
     },
     {
       "time": "just now",
-      "text": "Next autonomous: SOP #66 (build `results/external_signal_log.jsonl` scaffold ..."
+      "text": "- Single blocker confirmed: first post not sent"
     },
     {
       "time": "just now",
-      "text": "Pushed: `origin/main` → e5a7bb4"
+      "text": "- `tools/engagement_check.py` run: 0 posts logged, G3 kill conditions inactive"
     },
     {
       "time": "just now",
-      "text": "Conflicts resolved: Both cycle-228 commits (79d1195 SOP #65 + e5a7bb4 daemon)..."
+      "text": "Branch 5.8 (engagement_check)"
     },
     {
       "time": "just now",
-      "text": "| B5 G3 | `tools/engagement_check.py` — kill condition monitor | ✅ |"
+      "text": "- daemon_next_priority '存活/cold-start' TOUCHED ✅"
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 70941.5,
+    "paper_live_price": 71032.45,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T06:43",
+    "paper_live_ts": "2026-04-09T07:02",
     "paper_tick": 94,
     "paper_pnl": "+$0.795",
     "status": "ok"
