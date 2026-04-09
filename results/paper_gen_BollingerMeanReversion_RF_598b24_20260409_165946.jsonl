@@ -1,0 +1,1 @@
+{"strategy": "gen_BollingerMeanReversion_RF_598b24", "symbol": "BTCUSDT", "interval": "1d", "price": 72080.87, "signal": -1, "prev_position": 0, "action": "OPEN_SHORT", "timestamp": "2026-04-09T16:59:51.822868+00:00"}

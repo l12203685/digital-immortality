@@ -1,2 +1,1 @@
-PRIORITY: Branch 2.2 next month: 201807 JSONL → MD-379~381.
-PRIORITY: Branch 1.3 execution: Week 1 — DM 5 AI Agent Dev archetypes per SOP #112 template A. First contact = human-gated but playbook ready.
+PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.

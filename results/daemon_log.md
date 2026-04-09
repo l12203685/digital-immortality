@@ -7062,3 +7062,26 @@ Cycle 280 complete. Here's what was pushed:
 **Branch 3.1** — 6 insights distilled (total 165). Key: insight 162 — daemon monitoring without `resolved_at` field → false positives as velocity increases.
 
 **daemon_next_priority** → Branch 1.3/Skill-商業化 (neglected 68 cycles; blocker: SOP#01 never posted). Next cycle 281 action: write SOP#01 tweet ready to copy-paste + cold outreach template for 0-follower path.
+
+## Cycle 78 — 2026-04-09 17:13:17 UTC
+
+Cycle 284 committed. Summary:
+
+---
+
+**Cycle 284 — 2026-04-10T10:00Z**
+
+**Branch 2.2 (A — HIGH)**: 201808 JSONL → MD-376~378 complete. **378 total MDs.**
+- MD-376: 職涯domain多域掃描後composite收斂 (交易/精算/風控→市場風險)
+- MD-377: 教育產品階梯定價+先修gate防cannibalization+低頻開班稀缺 (基礎$350×6週/進階$3250×24週)
+- MD-378: OOP深籌碼lead壓縮x/c range→check優先保range完整性 (SB J73r TPTK should check)
+
+**Branch 1.1 (B)**: tick 284, BTC=$72,419.78; regime=mixed; DualMA+BollingerMR RF×2 disabled (PF<0.8); 15 active all FLAT; total_pnl=-2.71%; PAPER
+
+**Branch 6 (B)**: 33/33 ALIGNED; **53rd consecutive clean cycle** ✅
+
+**Branch 3.1 (B)**: +5 insights → total **179**
+
+**L2**: 1A + 3B. L3 not triggered.
+
+**Next**: 201807 JSONL → MD-379~381; Branch 1.3 Week 1 DM execution (human-gated)
