@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#52
+# Twitter Posting Queue — SOP Series #01~#54
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -59,6 +59,8 @@
 | Jul 16 | #50 | publish_thread_sop50_twitter.md | "Your system executes and evaluates. It does not evolve. Without L3, you're running the right rules for last year's problem." | pending |
 | Jul 18 | #51 | publish_thread_sop51_twitter.md | "You track your money carefully. You spend your time on default gravity. 5-gate Time Allocation Protocol." | pending |
 | Jul 20 | #52 | publish_thread_sop52_twitter.md | "You feel fine. Your output says otherwise. Sleep & Recovery Protocol — 5-gate framework." | pending |
+| Jul 22 | #53 | publish_thread_sop53_twitter.md | "You have 20 decision units/day. Most people spend 12 on logistics before noon. 5-gate Cognitive Bandwidth Protocol." | pending |
+| Jul 24 | #54 | publish_thread_sop54_twitter.md | "You can rebuild savings. You cannot rebuild a body running on debt for 5 years. Physical Capital Protocol — 5-gate." | pending |
 
 ---
 
