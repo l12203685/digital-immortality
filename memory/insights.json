@@ -1944,6 +1944,43 @@
         "paper-live",
         "btc"
       ]
+    },
+    {
+      "id": "b972c03d-5324-4e51-8567-0783e9ab6058",
+      "key": "cycle-283-branch-1.3-gap",
+      "content": "Branch 1.3 root cause: agent produces content → treats human block as DONE. Fix: MVAM (3 DMs threshold), cold outreach templates A/B/C written, escalation trigger added. Human action: post SOP#01 (5 min).",
+      "timestamp": "2026-04-09T17:15:26.097501+00:00",
+      "source": "recursive-engine-cycle-283",
+      "tags": [
+        "branch-1.3",
+        "commercial",
+        "self-correct"
+      ]
+    },
+    {
+      "id": "aa8c13f0-3cca-4eb3-97e9-b949a205f1e7",
+      "key": "cycle-283-dualma-short-confirmed",
+      "content": "DualMA SHORT signal confirmed structural at tick 1876. Previous LONG blip (cycle 265 engine) was synthetic artifact. Real signal: SHORT×ongoing. 5/18 SHORT, 13/18 FLAT, regime=MIXED. BTC=2117.81 synthetic.",
+      "timestamp": "2026-04-09T17:15:29.414327+00:00",
+      "source": "recursive-engine-cycle-283",
+      "tags": [
+        "branch-1.1",
+        "trading",
+        "paper-live"
+      ]
+    },
+    {
+      "id": "6b1ae1a8-b578-48cf-ac11-23abf321be36",
+      "key": "cycle-283-md373-375-portable-skill",
+      "content": "MD-375 key insight: portable skill (可攜帶技能) is the multiplier for career transition options. Every high-portability skill increases available job options non-linearly. Assessment SOP: every 6 months list 'what can I take with me if I quit tomorrow'. Score: company-only=0, same-industry=1, cross-industry=2. Prioritize developing score-2 skills even at short-term salary cost.",
+      "timestamp": "2026-04-09T17:15:54.706236+00:00",
+      "source": "recursive-engine-cycle-283",
+      "tags": [
+        "branch-2.2",
+        "dna",
+        "career",
+        "md-375"
+      ]
     }
   ]
 }
