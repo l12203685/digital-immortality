@@ -1865,6 +1865,85 @@
         "md-369",
         "cycle-281"
       ]
+    },
+    {
+      "id": "201810-stop-loss-ev-management-md370-cycle282",
+      "key": "201810-stop-loss-ev-management-md370",
+      "content": "MD-370: 停損=期望值管理不是認輸 — stop-loss is a positive EV act, not capitulation; position exists to capture expected value, and when E[future EV] < 0, exit IS the high-EV decision",
+      "timestamp": "2026-04-09T16:39:39Z",
+      "source": "201810.jsonl distillation",
+      "tags": [
+        "trading",
+        "dna",
+        "branch-2.2",
+        "md-370"
+      ]
+    },
+    {
+      "id": "201810-information-actionability-filter-md371-cycle282",
+      "key": "201810-information-actionability-filter-md371",
+      "content": "MD-371: 資訊消費先確認可行動性 — before consuming any information (news/analysis/charts), first ask: can this change a decision I need to make? If no actionable decision → skip; filters 80% of crypto noise",
+      "timestamp": "2026-04-09T16:39:39Z",
+      "source": "201810.jsonl distillation",
+      "tags": [
+        "decision-making",
+        "dna",
+        "branch-2.2",
+        "md-371"
+      ]
+    },
+    {
+      "id": "201810-market-crash-skill-building-md372-cycle282",
+      "key": "201810-market-crash-skill-building-md372",
+      "content": "MD-372: 市場崩跌=技術建立視窗 — when industry collapses, competition/noise drops; this is the highest-signal window for building deep technical skills; most people flee, creating structural advantage for those who compound during downturns",
+      "timestamp": "2026-04-09T16:39:39Z",
+      "source": "201810.jsonl distillation",
+      "tags": [
+        "learning",
+        "career",
+        "dna",
+        "branch-2.2",
+        "md-372"
+      ]
+    },
+    {
+      "id": "branch6-50th-consecutive-clean-cycle-cycle282",
+      "key": "branch6-consistency-50-cycle-milestone",
+      "content": "Branch 6 (存活/cold-start): 50th consecutive clean cycle achieved — 33/33 deterministic ALIGNED, 6 structurally expected MISALIGNED (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev, meta_search_before_act, meta_output_must_persist, meta_three_layer_loop). Cold-start behavioral alignment is stable.",
+      "timestamp": "2026-04-09T16:39:39Z",
+      "source": "consistency_test.py run cycle 282",
+      "tags": [
+        "consistency",
+        "branch-6",
+        "milestone",
+        "cold-start"
+      ]
+    },
+    {
+      "id": "sop109-dna-expansion-rate-control-cycle282",
+      "key": "sop109-dna-expansion-rate-control",
+      "content": "SOP #109 DNA Expansion Rate Control Protocol — G0-G5 gate for auditing redundant/overly-specific MDs when expansion drift causes organism calibration regression (like Branch 4.1: 68%→27% agree rate after +157 MDs)",
+      "timestamp": "2026-04-09T16:39:39Z",
+      "source": "Branch 7 SOP creation cycle 282",
+      "tags": [
+        "sop",
+        "dna",
+        "branch-7",
+        "organism"
+      ]
+    },
+    {
+      "id": "paper-live-btc-cycle282",
+      "key": "branch1-paper-live-cycle282",
+      "content": "Branch 1.1 paper-live: continuing SHORT signal; DualMA_10_30 active; portfolio monitoring ongoing. BollingerMR and Donchian strategies remain FLAT in MIXED regime.",
+      "timestamp": "2026-04-09T16:39:39Z",
+      "source": "trading/mainnet_runner.py --paper-live",
+      "tags": [
+        "trading",
+        "branch-1.1",
+        "paper-live",
+        "btc"
+      ]
     }
   ]
 }

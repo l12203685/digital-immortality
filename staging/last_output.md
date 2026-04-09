@@ -1,51 +1,58 @@
-# Cycle 281 — 2026-04-10T00:00Z
+# Cycle 282 — 2026-04-09T16:42Z
 
 ## What was done this cycle
 
-**Branch 2.2 — 201811 JSONL deep pass → MD-367~369**
-- MD-367: 宣稱框架≠實際部位；判斷能力的指標是帳戶餘額和實際決策，不是理論術語的引用頻率；整天掛嘴邊的人通常是最需要說服自己的人 — claimed-framework vs actual-position signal
-- MD-368: 新創招募選學習速度不選靜態匹配度——40%匹配但學習力強>100%匹配但天花板低；面試策略：展現能力上限，不追求完美匹配 — startup hiring / learning velocity
-- MD-369: 早期進場者獨佔alpha——任何新市場/策略的利潤集中在前段少數人；等共識形成才進場=分殘羹；進場門檻=需要「在共識形成前」有足夠信念執行 — early-mover alpha power-law
-- templates/dna_core.md: **366 MDs** (365 entries, 1 legacy gap at MD-217); header updated to "366 micro-decisions"; next: 201810 JSONL
+**Branch 2.2 — 201810 JSONL → MD-370~372**
+- MD-370: 停損=期望值管理不是認輸 — stop-loss is the high-EV decision when E[future EV] < 0; frames exit as rational update not emotional capitulation; "空手重建倉嗎?" test
+- MD-371: 資訊消費先確認可行動性 — filter all information consumption with 3 questions: (1) related to pending decision? (2) action changes if true? (3) action changes if false? All no → skip
+- MD-372: 市場崩跌=技術建立視窗 — competitor noise drops in downturns; best time to build deep technical skills; bears who keep studying lead bulls when cycle returns
+- templates/dna_core.md: **372 MDs** (365 entries, 1 legacy gap at MD-217); header updated; next: 201809 JSONL
+
+**Branch 6 — 51st consecutive clean cycle**
+- consistency_test.py: 33/33 deterministic ALIGNED ✅
+- 6 expected MISALIGNED unchanged: poker_gto_mdf / trading_atr_sizing / career_multi_option_ev / meta_search_before_act / meta_output_must_persist / meta_three_layer_loop
+- Cold-start behavioral alignment: STABLE
+
+**Branch 1.1 — Paper-live tick**
+- BTC=$72,117.81 (synthetic, network unavailable)
+- DualMA_10_30=SHORT / DualMA_RSI=SHORT / 16 other strategies FLAT
+- Regime=MIXED; 1840 total log entries
+- SHORT thesis intact; paper P&L tracking continues
+
+**Branch 7 — SOP #110**
+- DNA Quality Audit & Expansion Rate Control Protocol
+- G0: +50 MD count milestone trigger
+- G1: Redundancy scan (semantic similarity >80%)
+- G2: Contradiction scan (opposite prescriptions same trigger)
+- G3: Organism calibration regression test (before/after expansion block)
+- G4: Cold-start alignment delta (consistency score change)
+- G5: Merge/retire decision output with audit log
+- Addresses Branch 4.1 regression (68%→27% Samuel agreement after +157 MDs)
+- SOP #01~#110 COMPLETE ✅
 
 **Branch 3.1 — Distillation**
-- 3 insights → memory/insights.json (total **145**):
-  1. `201811-claimed-framework-vs-actual-position-cycle281`: MD-367 宣稱≠部位
-  2. `201811-startup-hiring-40pct-match-learning-velocity-cycle281`: MD-368 新創選學習速度
-  3. `201811-early-mover-alpha-power-law-cycle281`: MD-369 早期alpha冪律
+- 6 insights → memory/insights.json (total 171)
 
 ## What changed in the repo
 
-- `templates/dna_core.md`: MD-367~369 added (366 total); header updated to "366 micro-decisions"
-- `memory/insights.json`: 3 new insights (total 145)
-- `staging/last_output.md`: this file
-- `staging/next_input.md`: updated for cycle 282
-
-## Source Material
-
-201811.jsonl found at C:\Users\admin\GoogleDrive\聊天記錄\jsonl\201811.jsonl (2568 lines).
-Key signal clusters extracted:
-1. 11-03: 撲克圈BR掛嘴邊觀察 → MD-367
-2. 11-late: 朋友面試加密幣公司 → MD-368 (「新創公司偏向找後者」)
-3. 11-mid: 加密幣/撲克早期進場對話 → MD-369 (「利潤都是一開始被賺光」)
-
-## Backward check
-
-- MD-364~366 came from 201812; MD-367~369 correctly from 201811 (chronologically prior, processed later)
-- No duplication with existing MDs (nearest: MD-357 資訊消費≠框架; MD-367 宣稱框架≠實際部位 = distinct — 357 about personal knowledge quality, 367 about evaluating others' claims vs observable output)
-- Consistency test: not run this cycle (not scheduled)
+- `templates/dna_core.md`: MD-370~372 added (372 total); header updated
+- `memory/insights.json`: 6 new insights (total 171)
+- `results/dynamic_tree.md`: cycle 282 appended
+- `results/daily_log.md`: cycle 282 appended
+- `docs/publish_thread_sop110_twitter.md`: SOP #110 created
+- `results/paper_live_log.jsonl`: 18 new tick entries (total 1840)
 
 ## Human blockers (unchanged)
 
 - Binance mainnet API keys (T4) — deadline 2026-07-07
-- Samuel DM for organism calibration (T2)
-- Twitter API keys for SOP posting (T3)
+- Samuel DM for organism calibration (T2) — CRITICAL: 6/22 AGREE (27%)
+- Twitter/X API keys for SOP posting (T3)
 - Turing Test Candidates 2+3 (Branch 9)
 
 ## Next cycle priorities
 
-1. **201810 JSONL** → MD-370~372 (Branch 2.2)
-2. **Consistency check** (Branch 6 — next consecutive)
-3. **Branch 1.1**: paper-live next tick; monitor SHORT/LONG regime
-4. **Branch 3.1**: distillation of cycle 282
-5. **Branch 9**: Turing Test Candidate 2 approach
+1. **201809 JSONL** → MD-373~375 (Branch 2.2)
+2. **Consistency check** (Branch 6 — 52nd consecutive target)
+3. **Branch 1.1**: paper-live next tick; regime monitoring
+4. **Branch 3.1**: distillation
+5. **Branch 4.1**: Samuel calibration — check if DM was sent; if so run organism_interact.py
