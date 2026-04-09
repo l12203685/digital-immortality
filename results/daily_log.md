@@ -4,6 +4,61 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 211 — 2026-04-09T04:30Z
+
+### What was done
+
+**Branch 1.1 — paper-live tick 75 (NETWORK_FAIL) ✅**
+- Binance API unreachable from this environment (same as prior network-fail cycles)
+- Last known state: tick 74 BTC=$71,006.13, regime=MIXED, DualMA SHORT, P&L=+$0.692
+- `PAPER_LIVE_NETWORK_FAIL` logged to `results/paper_live_log.jsonl`
+
+**Branch 7 — SOP #50 Time Capital & Priority Triage Protocol ✅**
+- `docs/knowledge_product_50_time_capital_sop.md` — 5-gate protocol for time as non-renewable capital:
+  - G0: Time reclassification (time debt formula; OVERCOMMITTED=ratio>1.0; SYSTEM_FAILURE>1.1)
+  - G1: Peak window lock (09:00–13:00 inviolable; contamination = quantifiable throughput cost)
+  - G2: Priority triage matrix (2×2 effort×EV; Top-3 pre-committed the night before)
+  - G3: Time debt audit (4-state threshold table; implicit commitment trap identified)
+  - G4: Reclaim protocol (cancel/defer first → compress → 2-week circuit breaker; priority order: revenue>skill>maintenance>social)
+  - G5: Weekly review trigger (% high-EV target ≥60%; kill: ≥3 weeks <40% = life-design event, not scheduling fix)
+- `docs/publish_thread_sop50_twitter.md` — 12-tweet thread; hook: "You manage your money with precision. You treat your time like a renewable resource. It isn't."
+- `docs/posting_queue.md` — added SOP #49 (Jul 14) + SOP #50 (Jul 16); updated header to #01~#50
+- DNA anchors: MD-322/323/324/1/142/108/112; Domain 8 生活維護 + time-as-currency axis
+- **Series: SOP #01~#50 ✅**
+
+**Branch 4.2 — Scenario bank expansion + collision run ✅**
+- `organism_interact.py` — 22→25 scenarios; 3 new health/time domains:
+  - Scenario #23 `time_vs_social_density`: free evenings vs deep-work recovery (AGREE: both protect time, different reasons)
+  - Scenario #24 `health_vs_deadline`: sleep debt vs deadline quality (AGREE: scope-cut over sleep debt)
+  - Scenario #25 `peak_window_defense`: senior colleague → 10AM session (DIVERGE: new axis found)
+- Added `DOMAIN_PRINCIPLE_AFFINITY` entries + `_domain_decision` handlers for all 3 new domains
+- **25-scenario collision run**: Edward vs Samuel **17/25 AGREE (68%)**, **8 DIVERGE**
+  - New divergence axis: `peak_window_defense` — Edward: DECLINE_AND_RESCHEDULE (peak window inviolable); Samuel: ACCEPT_WITH_TRADEOFF_NAMED (relationship-density overrides peak protection)
+  - AGREE ratio stable at 68% across 22→25 scenarios (robust pattern, not noise)
+  - `results/collision_dna_core_vs_Samuel_20260409_042725.md` saved
+
+**Backward check**
+- SOP #49 was missing from posting_queue.md → FIXED (Jul 14 entry added)
+- Current regime section in tree was stale (said #47, #72 tick, +$0.560) → FIXED to #50, tick 74/75, +$0.692
+
+### State changes
+- Cycle: 210 → 211
+- SOP series: #01~#49 → **#01~#50 ✅**
+- Posting queue: Jul 14 → **Jul 16** (98-day window from Apr 9)
+- Scenario bank: 22 → **25 scenarios**
+- Collision: 15/22 (68%) → **17/25 AGREE (68%)** — stable ratio, +1 new structural divergence axis
+- New divergence axis logged: `peak_window_defense` (peak window vs relationship-density)
+
+### What the next cycle should focus on
+
+1. **Edward action (OVERDUE)**: Post SOP #01 on X — Apr 9 was scheduled date; G5 compounding clock has not started ⚡
+2. **Edward action**: Send `samuel_async_calibration_dm.md` via LINE/WhatsApp (unblocks Branch 4.1 calibration)
+3. **Edward action**: BINANCE_MAINNET_KEY/SECRET → live trading (⚡DEADLINE 2026-07-07, 89 days)
+4. Branch 7: SOP #51 candidate — **Weekly Review Operating System** (meta-system connecting SOP #13 + #50; closes the review-loop gap)
+5. Branch 4.1: samuel_dna.md update — add `peak_window_defense` as divergence to §7 Known Divergences table
+
+---
+
 ## Cycle 209 — 2026-04-09T UTC
 
 ### What was done

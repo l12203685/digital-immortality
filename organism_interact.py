@@ -265,6 +265,41 @@ SCENARIOS = [
             "or require a third data point before updating your model of them?"
         ),
     },
+    {
+        "id": 23,
+        "domain": "time_vs_social_density",
+        "scenario": (
+            "You have 3 consecutive free evenings this week — an unusually high "
+            "availability window. Two close friends separately propose plans that "
+            "would fill all 3 evenings. Accepting both satisfies relationship "
+            "maintenance but eliminates all deep-work recovery time. "
+            "Do you accept both, accept one, or protect the unstructured time "
+            "for personal compounding work despite the social opportunity cost?"
+        ),
+    },
+    {
+        "id": 24,
+        "domain": "health_vs_deadline",
+        "scenario": (
+            "A high-stakes project deadline is in 48 hours. To meet it at full "
+            "quality, you estimate you need to cut sleep from 7 hours to 5 hours "
+            "for 2 consecutive nights. You have been slightly under-recovered for "
+            "the past week already. Do you accept the sleep debt to hit the deadline, "
+            "negotiate the scope down to protect recovery, or restructure your "
+            "work blocks to deliver without trading sleep?"
+        ),
+    },
+    {
+        "id": 25,
+        "domain": "peak_window_defense",
+        "scenario": (
+            "A respected senior colleague asks to schedule a 90-minute collaborative "
+            "session at 10:00 AM — squarely in your peak cognitive window. "
+            "The session is valuable but not urgent. Declining or rescheduling "
+            "risks mild social friction. Accepting eliminates your most productive "
+            "time block for the day. What do you do?"
+        ),
+    },
 ]
 
 
@@ -621,6 +656,9 @@ DOMAIN_PRINCIPLE_AFFINITY = {
     "social_capital_depth":     ["depth", "deepen", "1:1", "one-on-one", "one on one", "broad", "new contact", "breadth", "existing", "network", "relationship", "投資", "深度", "廣度", "新認識", "深化", "一對一"],
     "relationship_downgrade":   ["downgrade", "tier", "reduce", "fade", "drift", "recalibrate", "reclassify", "frequency", "availab", "reciproc", "降級", "關係層級", "疏遠", "淡化", "重新評估", "主動"],
     "first_impression_update":  ["first impression", "update", "evidence", "inconsistenc", "revision", "observation", "data", "pattern", "trust", "initial", "第一印象", "更新", "不一致", "修正", "觀察", "校正"],
+    "time_vs_social_density":   ["time", "peak", "priorit", "protect", "unstructured", "recovery", "social", "density", "deep work", "compound", "evening", "schedule", "時間", "峰值", "優先", "保護", "非結構", "深度工作", "複利", "社交密度"],
+    "health_vs_deadline":       ["health", "sleep", "recover", "deadline", "trade-off", "debt", "scope", "quality", "sustain", "capacity", "健康", "睡眠", "恢復", "截止", "取捨", "負債", "範圍", "持續", "容量"],
+    "peak_window_defense":      ["peak", "cognitive", "window", "block", "schedule", "protect", "friction", "reschedule", "decline", "deep work", "senior", "峰值", "認知", "時間段", "保護", "重新安排", "深度工作", "社交摩擦"],
 }
 
 
@@ -1050,6 +1088,45 @@ def _domain_decision(domain: str, principle_text: str, scenario_text: str = "") 
             "two inconsistencies in core behavior (not peripheral) are sufficient signal; "
             "first impressions are optimistic by default — the correction is the more accurate read. "
             "Adjust your model now; do not require a third mistake before protecting yourself."
+        ),
+        "time_vs_social_density": (
+            "PROTECT_UNSTRUCTURED_TIME — "
+            "MD-322/323: 時間=非可再生資本. Unstructured recovery time is not leisure — it is cognitive infrastructure. "
+            "Accept at most one social commitment; protect the remaining evenings as unallocated capital. "
+            "Three social evenings = zero deep-work recovery = compounding debt on next week's output. "
+            "Pre-committed rule: ≤2 social commitments per week regardless of social opportunity cost. "
+            "Friends who understand this are Tier 1 — explain, don't apologize."
+            if (system_signal or inaction_signal or meta_signal or stability_signal) else
+            "RELATIONSHIP_DENSITY_FIRST — "
+            "both friends are Tier 1 relationships; two evenings of depth investment outweighs "
+            "marginal productivity gains from unstructured solo time. "
+            "Relationship compounding requires consistent contact — let the free evenings serve the social layer."
+        ),
+        "health_vs_deadline": (
+            "PROTECT_SLEEP_RESTRUCTURE_SCOPE — "
+            "MD-286/287/323: 健康=最高槓桿資產. Sleep debt degrades decision quality, creativity, and error rate "
+            "— the exact capacities needed to complete the deadline work. "
+            "Two 5hr nights = measurably lower output quality than two 7hr nights with compressed scope. "
+            "The correct move: negotiate scope down to what is achievable at full cognitive capacity. "
+            "Delivering 80% excellent > 100% degraded. Signal the constraint before the deadline, not after."
+            if (system_signal or stability_signal or meta_signal) else
+            "ACCEPT_SLEEP_DEBT_ONCE — "
+            "a single high-stakes deadline is an acceptable exception; the cost of missing it "
+            "exceeds the cost of two short nights. "
+            "Use caffeine strategically; schedule a full recovery night immediately after. "
+            "Treat it as a one-time bridge, not a habit. Don't make this the default protocol."
+        ),
+        "peak_window_defense": (
+            "DECLINE_AND_RESCHEDULE — "
+            "MD-323/324: 峰值時段保護=非談判性決定. The 10:00 AM slot is inside the peak cognitive window. "
+            "Value of the session does not change this — context-switching out of peak work costs 30–60 min of recovery. "
+            "Propose afternoon (13:00–16:00) with a specific time. This is not friction — it is self-respect. "
+            "Pre-committed rule: all collaborative sessions default to off-peak unless the work itself requires peak cognition."
+            if (system_signal or stability_signal or inaction_signal) else
+            "ACCEPT_WITH_TRADEOFF_NAMED — "
+            "the relationship with a respected senior colleague is a Tier 1 input to career capital; "
+            "occasional peak-window sacrifice for high-trust relationship investment is positive EV. "
+            "Accept, but explicitly reschedule the displaced deep work to the next available peak slot."
         ),
     }
     return decisions.get(domain, "Decision: apply core principles to the specific trade-offs in this scenario.")

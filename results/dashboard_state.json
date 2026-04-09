@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T12:11+08",
+  "updated": "2026-04-09T12:30+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,30 +64,30 @@
   ],
   "activity": [
     {
-      "time": "just now",
+      "time": "18min ago",
       "text": "3. Fill `templates/organism_c_draft.md` §0+§7 → first Organism C collision"
     },
     {
-      "time": "just now",
+      "time": "18min ago",
       "text": "2. Paste 4 Discord seed posts → unblocks Branch 4.3"
     },
     {
-      "time": "just now",
+      "time": "18min ago",
       "text": "1. Send `docs/samuel_async_calibration_dm.md` → unblocks Branch 4.1"
     },
     {
-      "time": "just now",
+      "time": "18min ago",
       "text": "Human-gated actions remain:"
     },
     {
-      "time": "just now",
+      "time": "18min ago",
       "text": "SOP #49 核心: Daemon flagged `存活/cold-start` as least recent → responded with a..."
     }
   ],
   "stats": {
     "daemon_cycles": 208,
     "total_mds": 330,
-    "dna_core_lines": 87
+    "dna_core_lines": 426
   },
   "health": {
     "ci_wired": true,
