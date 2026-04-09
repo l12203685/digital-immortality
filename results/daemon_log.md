@@ -6650,3 +6650,22 @@ Cycle 252 complete.
 - **B** — Branch 3.1: 3 insights distilled (total 69).
 
 **Critical path still blocked by human action**: Edward posts SOP #01 on X → M1 milestone → flywheel starts. SOP #87 removes the "how to format it" excuse.
+
+## Cycle 42 — 2026-04-09 10:55:46 UTC
+
+Cycle 253 complete. 4 branches pushed in parallel:
+
+**Branch 1.1** — tick 133: BTC=$71,405.29, SHORT×133 (100%), 1391 entries, regime=MIXED
+
+**Branch 6 (存活/cold-start)** — 33/33 deterministic ALIGNED, 27+ consecutive clean cycles (daemon priority touched)
+
+**Branch 7** — SOP #88 Discovery Call Protocol created (`docs/knowledge_product_88_discovery_call_protocol.md`): G0-G5 intake structure — async qualifier gates vague leads (G1), 20-min hard cap with MATCH decision at minute 10 (G3), written proposal within 24h (G4), kill conditions documented (G5). Closes the SOP #86 → engagement gap. **SOP #01~#88 COMPLETE.**
+
+**Branch 3.1** — 3 insights distilled to `memory/insights.json` (total: 75)
+
+---
+
+Human blockers (unchanged):
+- Post SOP #01 on X → M1 → revenue clock starts (89 days to deadline)
+- Set BINANCE_MAINNET_KEY/SECRET → mainnet live
+- Send `docs/samuel_async_calibration_dm.md` to Samuel

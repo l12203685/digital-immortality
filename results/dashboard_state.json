@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T18:45+08",
+  "updated": "2026-04-09T18:55+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Critical path still blocked by human action: Edward posts SOP #01 on X → M1 m..."
+      "text": "- Send `docs/samuel_async_calibration_dm.md` to Samuel"
     },
     {
       "time": "just now",
-      "text": "- B — Branch 3.1: 3 insights distilled (total 69)."
+      "text": "- Set BINANCE_MAINNET_KEY/SECRET → mainnet live"
     },
     {
       "time": "just now",
-      "text": "- B — Branch 1.1: BTC=$71,381.69 (↓$81.95 SHORT tailwind), SHORT×132 (100%), ..."
+      "text": "- Post SOP #01 on X → M1 → revenue clock starts (89 days to deadline)"
     },
     {
       "time": "just now",
-      "text": "- B — Branch 6: 33/33 ALIGNED, 26+ consecutive clean cycles, 存活/cold-start to..."
+      "text": "Human blockers (unchanged):"
     },
     {
       "time": "just now",
-      "text": "- A — SOP #87 Content Repurposing SOP written. G0 cold-start override fires i..."
+      "text": "Branch 3.1 — 3 insights distilled to `memory/insights.json` (total: 75)"
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71381.69,
+    "paper_live_price": 71405.29,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T10:41",
+    "paper_live_ts": "2026-04-09T10:50",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"
