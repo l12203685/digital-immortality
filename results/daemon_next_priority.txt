@@ -1,1 +1,1 @@
-OK: All branches covered. Least recent: '知識輸出/sop-series'. Consider touching it next.
+OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.
