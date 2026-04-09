@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 235)
+> 最後更新：2026-04-09 UTC (cycle 237)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -46,6 +46,8 @@
   - **cycle 231 paper-live ticks 101+102** — BTC=$70,994.74 (↓$94.44 from tick 100), P&L=**+$0.720** (+0.720% on $100); 797 log entries; regime=MIXED; DualMA_10_30=SHORT×102 (100%); MFE ATH +$1.204 (tick 50); BTC net ↓$515.16 from entry; SHORT tailwind resumed
   - **cycle 234 paper-live tick 105** — BTC=$70,970.19 (↓$109.80 from tick 104), regime=MIXED; DualMA_10_30=SHORT×105 (100%); 842 log entries; 14/15 FLAT consensus; SHORT tailwind; concentration risk: single-strategy dependency
   - **cycle 235 paper-live tick 106** — BTC=$70,981.17 (↑$11.00 from tick 105), regime=MIXED; DualMA_10_30=SHORT×106 (100%); 857 log entries; 14/15 FLAT consensus; concentration event flagged (106 consecutive ticks, 1 strategy); G1 audit: DualMA_RSI_filtered FLAT = regime-correct (RSI filter blocking in MIXED) → CONCENTRATION_EXPECTED
+  - **cycle 236 paper-live tick 107** — BTC=$70,906.44 (↓$74.73 from tick 106), regime=MIXED; DualMA_10_30=SHORT×107 (100%); 872 log entries; 14/15 FLAT consensus; concentration_log.jsonl CREATED; bootstrap entries: CONCENTRATION_START + CONCENTRATION_EXPECTED; G1 PASS; 107/1314 ticks = 8.1% of quarterly threshold
+  - **cycle 237 paper-live tick 108** — BTC=$70,961.06 (↑$54.62 from tick 107), regime=MIXED; DualMA_10_30=SHORT×108 (100%); 902 log entries; 14/15 FLAT consensus; concentration_log tick 108 entry added; 108/1314 = 8.2% of quarterly threshold; SHORT headwind (BTC uptick)
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
@@ -397,3 +399,10 @@
 - 2026-04-09T UTC: cycle 235 — **Branch 1.1**: paper-live tick 106: BTC=$70,981.17 (↑$11 from tick 105), DualMA_10_30=SHORT×106 (100%); 14/15 FLAT consensus; regime=MIXED; 857 log entries; concentration event: 106 ticks 1 strategy → G1 audit → CONCENTRATION_EXPECTED (RSI filter blocking correctly in MIXED)
 - 2026-04-09T UTC: cycle 235 — **Branch 7**: SOP #71 Multi-Strategy Regime Activation Protocol shipped: `docs/knowledge_product_71_multi_strategy_activation_sop.md` + `docs/publish_thread_sop71_twitter.md`; addresses cycle 234 distillation insight (concentration risk); G0 regime diagnosis / G1 single-strategy dependency audit / G2 activation gate (5 conditions) / G3 concentration risk protocol (100-tick threshold) / G4 rotation protocol (50% sizing) / G5 revenue bridge; self-test uses tick-106 data; posting queue extended to Aug 23. **Series: SOP #01~#71 COMPLETE.**
 - 2026-04-09T UTC: cycle 235 — **Branch 6**: consistency_test.py → **33/33 ALIGNED ✅** (16+ consecutive cycles clean); cold-start behavioral integrity intact; daemon_next_priority '存活/cold-start' TOUCHED ✅
+- 2026-04-09T UTC: cycle 236 — **Branch 1.1**: paper-live tick 107: BTC=$70,906.44 (↓$74.73 from tick 106), DualMA_10_30=SHORT×107 (100%); 14/15 FLAT; regime=MIXED; 872 log entries; concentration_log.jsonl CREATED; bootstrap entries G1 PASS; 8.1% of quarterly threshold
+- 2026-04-09T UTC: cycle 236 — **Branch 7**: SOP #72 Concentration Log Infrastructure Protocol shipped: `docs/knowledge_product_72_concentration_log_infrastructure_sop.md` + `docs/publish_thread_sop72_twitter.md`; G0-G5 gates; JSONL schema; G3 protocol from SOP #71 operational; posting queue extended to Aug 26. **Series: SOP #01~#72 COMPLETE.**
+- 2026-04-09T UTC: cycle 236 — **Branch 6**: consistency_test.py → **33/33 ALIGNED ✅** (17+ consecutive cycles clean); daemon_next_priority '4.1/Samuel-organism' UPDATED ✅
+- 2026-04-09T UTC: cycle 237 — **Branch 1.1**: paper-live tick 108: BTC=$70,961.06 (↑$54.62 from tick 107), DualMA_10_30=SHORT×108 (100%); 14/15 FLAT; regime=MIXED; 902 log entries; concentration_log tick 108 added (8.2% of quarterly threshold); SHORT headwind
+- 2026-04-09T UTC: cycle 237 — **Branch 7**: SOP #73 Dynamic Tree Protocol shipped: `docs/knowledge_product_73_dynamic_tree_protocol_sop.md` + `docs/publish_thread_sop73_twitter.md`; G0-G4 gates; 4 derivative types; least-recent rule; daemon_next_priority connection (4.1/Samuel-organism); posting queue extended to Aug 28. **Series: SOP #01~#73 COMPLETE.**
+- 2026-04-09T UTC: cycle 237 — **Branch 6**: consistency_test.py → **33/33 ALIGNED ✅** (18+ consecutive cycles clean); cold-start behavioral integrity intact
+- 2026-04-09T UTC: cycle 237 — **Branch 3.1**: 3 distillation insights → memory/insights.json (total 35): dynamic-tree-derivative-calculator / tick-108-short-headwind / least-recent-decay-prevention

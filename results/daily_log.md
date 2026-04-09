@@ -4,6 +4,89 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 237 — 2026-04-09T UTC
+
+### What was done
+
+**Branch 1.1 — paper-live tick 108 ✅**
+- BTC=$70,961.06 (↑$54.62 from tick 107 $70,906.44), regime=MIXED, DualMA_10_30=SHORT×108 (100%)
+- FLAT consensus: 14/15 strategies FLAT; 902 total log entries
+- concentration_log.jsonl tick 108 entry: CONCENTRATION_TICK; 108/1314 = 8.2% of quarterly threshold; SHORT headwind (BTC uptick)
+
+**Branch 7 — SOP #73 Dynamic Tree Protocol ✅**
+- `docs/knowledge_product_73_dynamic_tree_protocol_sop.md` — Domain 9 (Meta-system)
+  - Addresses: daemon_next_priority flagged 4.1/Samuel-organism (least recent); formalizes the branch prioritization protocol
+  - G0: Map all active branches (status, last touched, derivative)
+  - G1: Calculate derivatives (revenue / capability / coverage / compounding)
+  - G2: Check regime (revenue deadline / behavioral gap / all healthy / external event)
+  - G3: Execute + persist (log → update session_state → L2 verdict → L3 if triggered)
+  - G4: Recalculate next cycle (dynamic, not static priority list)
+  - Key rule: least-recent rule — when derivatives within 20%, push least-recently-touched branch
+- `docs/publish_thread_sop73_twitter.md` — 10-tweet thread; posting date Aug 28
+- posting_queue.md extended: SOP #01~#73 COMPLETE (Aug 28 slot)
+
+**Branch 6 — Consistency test 33/33 ALIGNED ✅**
+- 18+ consecutive cycles clean
+
+**Branch 3.1 — Distillation ✅**
+- 3 insights → memory/insights.json (total 35 entries)
+  1. `dynamic-tree-derivative-calculator`: tree is derivative calculator, not to-do list
+  2. `tick-108-short-headwind`: BTC ↑$54.62, SHORT×108, 902 entries, 8.2% quarterly
+  3. `least-recent-decay-prevention`: branch decay exponential, daemon_next_priority purpose
+
+### L2 Verdict
+- A: Branch 7 SOP #73 — meta-framework formalized; directly addresses daemon_next_priority signal — HIGH
+- B: Branch 1.1 tick 108 — mechanical tick, concentration log updated — LOW
+- B: Branch 6 33/33 — 18+ cycles stable — LOW
+- B: Branch 3.1 — 3 insights extracted — LOW
+- Verdict: 1A + 3B. No C or D. L3 not triggered.
+
+---
+
+## Cycle 236 — 2026-04-09T UTC
+
+### What was done
+
+**Branch 1.1 — paper-live tick 107 ✅**
+- BTC=$70,906.44 (↓$74.73 from tick 106 $70,981.17), regime=MIXED, DualMA_10_30=SHORT×107 (100%)
+- FLAT consensus: 14/15 strategies FLAT; 872 total log entries
+- concentration_log.jsonl created; bootstrap entry logged (CONCENTRATION_START + CONCENTRATION_EXPECTED); G1 audit PASS
+
+**Branch 7 — SOP #72 Concentration Log Infrastructure ✅**
+- `docs/knowledge_product_72_concentration_log_infrastructure_sop.md` — Domain 1 (經濟自給)
+  - Closes infrastructure gap: SOP #71 G3 referenced concentration_log.jsonl; file didn't exist
+  - G0: JSONL schema (ts, event_type, strategy, consecutive_ticks, btc_price, regime, g1_audit, note)
+  - G1: Write procedure (4 event types: START/EXPECTED/ESCALATED/RESOLVED)
+  - G2: Read procedure (jq query patterns; cold-start protocol)
+  - G3: First entry bootstrap (mid-event logging at tick 107)
+  - G4: Quarterly review trigger (3-month = 1,314 ticks; current 107 = 8.1%)
+  - G5: Kill condition (infrastructure complete when file exists + 2 entries + queries verified)
+  - Self-test: concentration_log.jsonl bootstrapped with START+EXPECTED entries ✅
+- `docs/publish_thread_sop72_twitter.md` — 12-tweet thread; slot **Aug 26**; Domain 1
+- `docs/posting_queue.md` — #72 row added; header updated to #01~#72; queue to Aug 26
+- **Series: SOP #01~#72 COMPLETE** ✅
+
+**Branch 6 — consistency ✅**
+- consistency_test.py → **33/33 ALIGNED ✅** (55 scenarios, 0 MISALIGNED); 17+ consecutive cycles clean
+- daemon_next_priority updated: '4.1/Samuel-organism' (least recent)
+
+**Branch 3.1 — recursive distillation ✅**
+- 3 insights → memory/insights.json (total 32 entries):
+  - Log ≠ monitor: log records for later reasoning; monitor alerts on threshold. Build log first.
+  - Tick 107 concentration: DualMA_10_30 SHORT×107, 8.1% of quarterly threshold, G1 PASS
+  - SOP emergent gaps: first SOP defines protocol, second SOP builds assumed infrastructure. Not a flaw — how knowledge machines evolve.
+
+### State Updates
+- `results/daily_log.md`: cycle 236 entry prepended
+- `results/dynamic_tree.md`: tick 107 + SOP #72 + B6 consistency (cycle 236) entries to add
+- `staging/session_state.md`: updated to cycle 236
+- `results/daemon_next_priority.txt`: updated to '4.1/Samuel-organism'
+- `memory/insights.json`: 3 new distillation entries (total 32)
+- `results/concentration_log.jsonl`: CREATED — 2 bootstrap entries
+- `docs/posting_queue.md`: #72 added, header #01~#72
+
+---
+
 ## Cycle 234 — 2026-04-09T UTC
 
 ### What was done

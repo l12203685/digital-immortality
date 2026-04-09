@@ -1,36 +1,37 @@
-# Session State — 2026-04-09 UTC (Cycle 235)
+# Session State — 2026-04-09 UTC (Cycle 237)
 
 > Inter-session relay. Cold-start reads this AFTER dna_core.md + boot_tests.md.
 > Updated each cycle. If stale >24h: re-read daemon_log.md tail 60 to reconstruct.
 
 ## Current Cycle
-- **Cycle**: 235
+- **Cycle**: 237
 - **Timestamp**: 2026-04-09T UTC
 - **Phase**: Recursive daemon running
 
 ## Branch Status Summary
 | Branch | Status | Last Touched |
 |--------|--------|--------------|
-| 1.1 Trading paper-live | tick 106, BTC=$70,981.17 (↑$11 from tick 105), DualMA_10_30=SHORT×106 (100%); 14/15 FLAT; regime=MIXED; 857 log entries; mainnet blocked on API keys | cycle 235 |
+| 1.1 Trading paper-live | tick 108, BTC=$70,961.06 (↑$54.62 from tick 107), DualMA_10_30=SHORT×108 (100%); 14/15 FLAT; regime=MIXED; 902 log entries; concentration_log 3 entries (tick 107-108) | cycle 237 |
 | 1.3 Skill 商業化 | v2.1.0, users=0; blocker=SOP#01 never posted (0 audience) | cycle 212 |
 | 2.2 微決策學習 | **COMPLETE** — 330 MDs ✅ | cycle 180+ |
-| 2.3 Validation | 33/33 ALIGNED ✅ | cycle 235 (consistency re-run) |
-| 3.1 遞迴引擎 | three-layer operational ✓; total 29 entries in insights.json | cycle 234 |
-| 4.1 Samuel organism | 22-scenario collision 15/22 AGREE (68%); async DM ready to send | cycle 207 |
+| 2.3 Validation | 33/33 ALIGNED ✅ | cycle 237 (consistency re-run) |
+| 3.1 遞迴引擎 | three-layer operational ✓; total 35 entries in insights.json | cycle 237 |
+| 4.1 Samuel organism | 22-scenario collision 15/22 AGREE (68%); async DM ready to send; SOP #73 addresses decay prevention framework | cycle 207 |
 | 4.3 Discord | 4 seed posts written; ready to paste → invite C | cycle 207 |
 | 5.3 Web platform | Phase 2 live ✓ | cycle 120+ |
-| 6 存活冷啟動 | **33/33 ALIGNED ✅**; 16+ consecutive cycles clean | cycle 235 |
-| 5 Distribution | **Gap scan done** — posting_queue extended to SOP #71 (Aug 23) | cycle 235 |
-| 7 SOP series | **SOP #01~#71 COMPLETE** — SOP #71 Multi-Strategy Regime Activation Protocol; concentration risk diagnostic; G0-G5; self-test with tick-106 data; posting queue Aug 23 ✅ | cycle 235 |
+| 6 存活冷啟動 | **33/33 ALIGNED ✅**; 18+ consecutive cycles clean | cycle 237 |
+| 5 Distribution | **SOP #73 added** — posting queue extended to Aug 28; SOP #01~#73 COMPLETE | cycle 237 |
+| 7 SOP series | **SOP #73 COMPLETE** — Dynamic Tree Protocol; G0-G4; 4 derivative types; least-recent rule; twitter thread written; posting queue Aug 28 ✅ | cycle 237 |
 | 8 Tool Stack | **SOP #64 coverage established** — T1/T2/T3 tiers defined; L1+L2+L3 maintenance protocol ✓ | cycle 226 |
 
-## L2 Verdict (Cycle 235)
+## L2 Verdict (Cycle 237)
 ```
-L2 [235]: A — Branch 7 SOP #71 — Multi-Strategy Regime Activation — G0-G5 written — addresses cycle 234 distillation insight (concentration risk) — HIGH
-L2 [235]: B — Branch 1.1 tick 106 — BTC=$70,981.17 (↑$11 from tick 105) SHORT×106 — concentration event logged — 857 entries — LOW
-L2 [235]: B — Branch 6 consistency 33/33 — 16+ consecutive cycles clean — LOW
+L2 [237]: A — Branch 7 SOP #73 — Dynamic Tree Protocol — G0-G4 gates; 4 derivative types; least-recent rule; twitter thread written; posting queue to Aug 28 — HIGH
+L2 [237]: B — Branch 1.1 tick 108 — BTC=$70,961.06 (↑$54.62) SHORT×108 — 902 entries — concentration tick logged — SHORT headwind — LOW
+L2 [237]: B — Branch 6 consistency 33/33 — 18+ consecutive cycles clean — LOW
+L2 [237]: B — Branch 3.1 distillation — 3 insights → insights.json (total 35) — LOW
 ```
-Cycle verdict: 1A + 2B. No C or D. L3 not triggered.
+Cycle verdict: 1A + 3B. No C or D. L3 not triggered.
 
 ## Blocker (human-gated)
 - ⚡ **DEADLINE 2026-07-07**: trading profit > API cost. ~89 days.
@@ -45,10 +46,11 @@ Cycle verdict: 1A + 2B. No C or D. L3 not triggered.
 2. **Branch 1.1**: set BINANCE_MAINNET_KEY/SECRET → run `python trading/mainnet_runner.py --tick` (see docs/mainnet_activation_guide.md)
 3. **Branch 4.3**: Edward pastes 4 Discord seed posts (files in docs/discord_seed_*.md) → invite C
 4. **Branch 4.1**: Edward sends `docs/samuel_async_calibration_dm.md` via WhatsApp/LINE → unblocks calibration
-5. Branch 7: SOP #72 next — consider concentration_log.jsonl infrastructure or distillation pass
-6. Branch 1.1: paper-live tick 107 (run `python trading/mainnet_runner.py --paper-live`)
+5. Branch 7: SOP #74 next — consider organism network effects or boot-test evolution
+6. Branch 1.1: paper-live tick 109 (run `python trading/mainnet_runner.py --paper-live`)
 
-## What's DONE this session (cycle 235)
-- **Branch 1.1** (cycle 235): paper-live tick 106: BTC=$70,981.17 (↑$11 from tick 105); FLAT consensus (14/15 FLAT, DualMA SHORT×106); 857 total log entries; SHORT thesis intact
-- **Branch 7** (cycle 235): SOP #71 Multi-Strategy Regime Activation Protocol — G0-G5 gates; concentration risk diagnostic; G3 threshold = 100 ticks 1 strategy; self-test uses tick-106 data; Twitter thread written; posting queue extended to Aug 23; SOP #01~#71 COMPLETE ✅
-- **Branch 6** (cycle 235): consistency_test.py → 33/33 ALIGNED ✅; 16+ consecutive cycles clean; daemon_next_priority '存活/cold-start' TOUCHED ✅
+## What's DONE this session (cycle 237)
+- **Branch 1.1** (cycle 237): paper-live tick 108: BTC=$70,961.06 (↑$54.62 from tick 107); FLAT consensus (14/15 FLAT, DualMA SHORT×108); SHORT headwind; 902 total log entries; concentration_log.jsonl tick 108 entry added
+- **Branch 7** (cycle 237): SOP #73 Dynamic Tree Protocol — G0-G4 gates; 4 derivative types (revenue/capability/coverage/compounding); least-recent rule; daemon_next_priority connection; twitter thread written; posting queue extended to Aug 28; SOP #01~#73 COMPLETE ✅
+- **Branch 6** (cycle 237): consistency_test.py → 33/33 ALIGNED ✅; 18+ consecutive cycles clean
+- **Branch 3.1** (cycle 237): 3 insights → memory/insights.json (total 35 entries): dynamic-tree-derivative-calculator, tick-108-short-headwind, least-recent-decay-prevention
