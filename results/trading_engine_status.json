@@ -1,12 +1,13 @@
 {
-  "last_tick": "2026-04-09T15:56:24.593925+00:00",
-  "tick_count": 115,
-  "active_strategies": 14,
+  "last_tick": "2026-04-09T16:08:12.444337+00:00",
+  "tick_count": 91,
+  "active_strategies": 16,
   "disabled": {
-    "DualMA_10_30": "PF 0.65 < 0.8"
+    "DualMA_10_30": "PF 0.53 < 0.8",
+    "gen_BollingerMeanReversion_RF_7abfe4": "PF 0.59 < 0.8"
   },
-  "total_pnl_pct": -1.1405,
-  "price": 72337.13,
+  "total_pnl_pct": -2.5587,
+  "price": 72082.26,
   "regime": "mixed",
   "signals": {
     "Donchian_20": 0,
@@ -21,8 +22,10 @@
     "gen_DonchianConfirmed_a7186a": 0,
     "gen_DualMA_RF_602541": 0,
     "gen_BollingerMeanReversion_f91248": 0,
-    "gen_BollingerMeanReversion_RF_7abfe4": 0,
-    "gen_BollingerMeanReversion_RF_598b24": 0
+    "gen_BollingerMeanReversion_RF_598b24": -1,
+    "gen_Donchian_RF_5e649e": 0,
+    "gen_Donchian_RSI_d3d59e": 0,
+    "gen_DualMA_RF_eda1cb": 0
   },
   "mode": "PAPER"
 }

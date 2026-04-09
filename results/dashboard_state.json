@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T23:56+08",
+  "updated": "2026-04-10T00:08+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,28 +65,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 201812 JSONL → MD-364~366"
+      "text": "Next: 201811 JSONL → MD-367~369; Samuel DM (Branch 4.1 unblocked); Turing Tes..."
     },
     {
       "time": "just now",
-      "text": "Branch 3.1: insights.json 151→156 (+5)"
+      "text": "| 3.1 遞迴引擎 | Distillation | 3 insights appended; 159 total |"
     },
     {
       "time": "just now",
-      "text": "Branch 6: 33/33 ALIGNED; 47th consecutive clean cycle ✅"
+      "text": "| 7 SOP系列 | SOP #107 created | Incremental Performance Evaluation Protocol (G..."
     },
     {
       "time": "just now",
-      "text": "Branch 1.1: BTC=$72,122.78; DualMA_10_30=SHORT; BollingerMR×2=SHORT; 15/18 FL..."
+      "text": "| 6 存活/cold-start | consistency_test.py | 33/33 ALIGNED; 48th consecutive cle..."
     },
     {
       "time": "just now",
-      "text": "dna_core.md: 360→363 MDs。201901 COMPLETE。"
+      "text": "| 2.2 微決策 | 201812 JSONL → MD-364~366 | 增量勝率>總勝率 / 撲克River call>raise / 逆週期資產..."
     }
   ],
   "stats": {
     "daemon_cycles": 264,
-    "total_mds": 358,
+    "total_mds": 367,
     "dna_core_lines": 87
   },
   "health": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71128.59,
+    "paper_live_price": 72319.43,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T15:15",
+    "paper_live_ts": "2026-04-09T16:02",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"

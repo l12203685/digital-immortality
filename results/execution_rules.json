@@ -2,12 +2,12 @@
   "kill_max_dd": 20.0,
   "kill_min_wr": 0.3,
   "kill_min_pf": 0.8,
-  "kill_window": 45,
-  "kill_count": 1,
-  "evolved_at": "2026-04-09T15:28:08.382684+00:00",
+  "kill_window": 40,
+  "kill_count": 2,
+  "evolved_at": "2026-04-09T15:58:11.353316+00:00",
   "last_kill": {
-    "strategy": "DualMA_10_30",
-    "reason": "PF 0.53 < 0.8",
-    "ts": "2026-04-09T15:28:08.382684+00:00"
+    "strategy": "gen_BollingerMeanReversion_RF_7abfe4",
+    "reason": "PF 0.59 < 0.8",
+    "ts": "2026-04-09T15:58:11.353316+00:00"
   }
 }

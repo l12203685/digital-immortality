@@ -1,1 +1,1 @@
-PRIORITY: Branch 2.2 — next: 201811 JSONL → MD-367~369. Branch 4.1 (Samuel organism) unblocked pending DM send. Branch 9 (Turing Test) needs candidate outreach.
+PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.
