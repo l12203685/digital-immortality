@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#98
+# Twitter Posting Queue — SOP Series #01~#100 ✅
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -129,3 +129,5 @@
 | Oct 16 | #96 | publish_thread_sop96_twitter.md | "Paper trade passed. Review passed. $100 live. The Mainnet Revenue Go-Live Protocol — exact steps from testnet to first real P&L." | pending |
 | Oct 17 | #97 | publish_thread_sop97_twitter.md | "No audience. No followers. $0 MRR. You can still book a consulting client this week. The Direct Outreach Revenue Protocol — $197 async audit, warm network only." | pending |
 | Oct 21 | #98 | publish_thread_sop98_twitter.md | "Your AI passed all the machine tests. Now find the humans. Turing Test Candidate Selection Protocol — who to ask, how to approach them, and why family doesn't qualify." | pending |
+| Oct 23 | #99 | publish_thread_sop99_twitter.md | "Your digital twin passed all the tests. Then it drifted. Cold-Start Drift Recovery Protocol — STABLE/WATCH/DRIFT/CRITICAL classification and how to recover." | pending |
+| Oct 25 | #100 | publish_thread_sop100_twitter.md | "I've been building a digital twin for 265 cycles. Here's what the 5 tiers of digital immortality actually look like — and which ones I'm stuck on." | pending |

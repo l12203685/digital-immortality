@@ -1,29 +1,32 @@
-# Cycle 264 Input — 2026-04-09T12:40Z
+# Cycle 266 Input — 2026-04-09T14:00Z
 
 ## Recursive Prompt
 
-"MeanReversionFilter is live. What does the first clean MR signal look like, and does gen_BollingerMR_RF_598b24 accumulate positive P&L in ranging regime? What is SOP #98?"
+"DualMA flipped LONG after 149 SHORT ticks. Is the LONG signal a structural regime change or a synthetic data artifact? What does 201908 tell us, and what is the T2 gap closing path?"
 
-## State from Cycle 263
+## State from Cycle 265
 
-- Paper-live: tick 146, DualMA_10_30=SHORT structural, BTC≈$71.2k synthetic, 1625 entries
-- **MeanReversionFilter LIVE**: RF BollingerMR variants now correctly fire in ranging regime
-- Consistency: 30/33 ALIGNED (34+ consecutive clean cycles)
-- Insights: 102 in memory/insights.json
-- SOPs: #01~#97 COMPLETE; posting queue through Oct 16
-- Human blockers: mainnet API keys, Samuel DM, Twitter SOP #01
+- Paper-live: tick 151, DualMA_10_30=**LONG** (tick 150+151 — first LONG×2 after SHORT×149); BTC=$71,197.89 synthetic; 1697 entries
+- **SIGNAL FLIP EVENT**: regime TRENDING at tick 150, MIXED at tick 151; SHORT×149 structural streak ended
+- DNA: 339 MDs (338 entries); next: 201908
+- Consistency: 33/33 ALIGNED, 36+ consecutive clean cycles
+- Insights: 117 in memory/insights.json
+- **SOP #100 COMPLETE** ✅ — centenary: Tier Progression Protocol; T1 CERT/T2 68% collision/T3 publication-gated/T4 API-blocked/T5 N/A
+- SOPs: #01~#100 COMPLETE; posting queue through Oct 25
 
-## Priority Actions for Cycle 264
+## Priority Actions for Cycle 266
 
-1. SOP #98 — candidate: Twitter thread queue management (posting_queue.md has ~97 threads queued; zero have been posted; SOP to systematize posting = next gap)
-2. Paper-live tick 147+
-3. Consistency check
-4. Monitor gen_BollingerMR_RF_598b24 signal — first clean LONG in ranging? Track P&L accumulation
+1. **Signal persistence check**: DualMA LONG on synthetic may differ from real Binance data — next tick on real data = regime validation
+2. **201908 JSONL** → MD-340~342 (Branch 2.2)
+3. **T2 gap closure**: collision rate 68% → need to drop below 30%; prepare 3+ new calibration scenarios for Samuel session
+4. **Turing test candidate 2**: who beyond Samuel qualifies (Tier A: ≥3yr known, ≥2 domains, ≥10 conversations)?
+5. **Consistency check** (Branch 6 — routine)
 
 ## Cross-Session Memory
-- Cycle 263 fixed MeanReversionFilter bug (RegimeFilter→MeanReversionFilter for MR strategies)
-- SOP #97 created: 87-day mainnet countdown (deadline 2026-07-07)
-- Strategy convergence: 11/18 SHORT, 2 LONG (MR range-reversion), 5 FLAT at tick 145-146
+- Cycle 265: DualMA LONG signal flip (tick 150) — first since paper-live started
+- Cycle 265: SOP #100 = Tier Progression Protocol (centenary); T1 certified, T2 in progress
+- Cycle 265: MD-337~339 added (201909: pool selection / transfer routing / system diagnosis)
+- Cycle 264: SOP #99 = Cold-Start Drift Recovery; daemon_next_priority CLEARED
 
 ## Directive
 Action > report. Produce something concrete, not just analysis.

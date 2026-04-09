@@ -1,78 +1,59 @@
-# Cycle 264 — 2026-04-09T14:00Z
+# Cycle 265 — 2026-04-09T14:00Z
 
 ## What was done this cycle
 
-**Meta-audit: Fake-health check ✅**
-- Examined last 5 commits. Cycle 263 = 13 files / 1284 lines (SOP#97, Turing test protocol, L3 content pipeline, Branch 9). Cycles 50-52 (local daemon) = daemon_log + dashboard updates (lightweight but real). Two-daemon architecture confirmed healthy — not fake. Tree is alive.
+**Branch 1.1 — Paper-live ticks 150+151 ⚡ SIGNAL FLIP**
+- Tick 150: regime=TRENDING, DualMA_10_30=**LONG** ← first LONG signal after 149 consecutive SHORT ticks
+- Tick 151: regime=MIXED, DualMA_10_30=LONG×2
+- Tick 150: 5 LONG (DualMA family: DualMA_10_30, DualMA_RSI, DualMA_RSI_filtered, DualMA_filtered, gen_DualMA_RF_602541, gen_DualMA_RF_eda1cb); 6 LONG total
+- 1697 total log entries; BTC $71,197.89 (synthetic, Binance network offline)
+- **Structural SHORT×149 streak ended.** Regime transition event. First LONG consensus since paper-live started.
 
-**Branch 6 — Consistency 34th consecutive clean cycle ✅**
-- `python consistency_test.py templates/example_dna.md`: 30/33 ALIGNED + 3 LLM-req MISALIGNED (expected: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev). 34th consecutive clean cycle.
+**Branch 2.2 — 201909 JSONL → MD-337~339**
+- MD-337: 撲克牌桌選擇=先觀察後入座；pool quality先手動作；沉沒成本陷阱識別
+- MD-338: 跨境轉帳=緊急度×工具分離；速度與成本反相關不存在同時優化
+- MD-339: 系統異常=先重置環境再診斷邏輯；環境→依賴→邏輯診斷順序
+- templates/dna_core.md: **339 MDs** (338 entries, gap at MD-217 pre-existing); next: 201908
 
-**Branch 9 (Turing Test) + Branch 7 (SOP #98) — SOP #98 written ✅**
-- `docs/knowledge_product_98_turing_test_candidate_selection.md` (G0–G5 candidate selection protocol)
-  - G0: Qualification criteria (≥3 years known, ≥2 domains, ≥10 conversations, blind commitment)
-  - G1: Shortlist method (Tier A/B scan, 5-8 candidates → 3 confirmed)
-  - G2: Approach script (WhatsApp/LINE; no "Turing test" framing)
-  - G3: Consent + baseline calibration conversation
-  - G4: Pipeline management (SHORTLISTED→APPROACHED→CONFIRMED→BASELINE_DONE→READY)
-  - G5: Success criteria; triggers turing_test_protocol.md G0
-- `docs/publish_thread_sop98_twitter.md` — 11-tweet thread; slot Oct 21
-- `docs/posting_queue.md` — rows #96/#97/#98 added; header → **SOP#01~#98 COMPLETE ✅**
+**Branch 7 — SOP #100 (CENTENARY) ✅**
+- `docs/knowledge_product_100_tier_progression_protocol.md`: Tier Progression Protocol
+  - T1 CERTIFIED: 36+ consecutive clean cycles, 33/33 deterministic ✅
+  - T2 IN_PROGRESS: collision rate 68% > 30% threshold; need organism calibration; 3 calibration rounds needed
+  - T3 CONDITIONAL: 338 MDs + 117 insights ready; publication human-gated (Twitter API)
+  - T4 BLOCKED: mainnet API keys; deadline 2026-07-07 (89 days)
+  - T5 NOT_STARTED: requires T4; Turing test 0/3 candidates
+- `docs/publish_thread_sop100_twitter.md`: 10-tweet thread; slot Oct 25
+- `docs/posting_queue.md`: header → **SOP#01~#100 COMPLETE ✅**; rows #99/#100 added
+- Monthly tier audit schedule established
 
-**Branch 9 — Candidate tracker created ✅**
-- `results/turing_test_candidates.md` — Samuel = Candidate 1 (Tier A, SHORTLISTED); Candidates 2+3 = EMPTY (human-gated)
-- Key insight: Samuel calibration DM must be sent first (calibration → then evaluation approach). Two separate asks.
+**Branch 6 — Consistency 36+ consecutive clean ✅**
+- `consistency_test.py templates/example_dna.md` → 33/33 deterministic ALIGNED; 3 LLM-req MISALIGNED (expected)
 
 **Branch 3.1 — Distillation ✅**
-- 3 insights → `memory/insights.json` (total **105**):
-  1. `consistency-34-consecutive-clean`: 34th clean cycle; fake-health audit confirmed
-  2. `turing-test-candidate-selection-sop98`: SOP#98 closes 0-candidate blocker; Samuel = Tier A
-  3. `fake-health-audit-cycle264`: two-daemon pattern confirmed healthy; tree alive
+- 3 insights → `memory/insights.json` (total **117**):
+  1. `paper-live-tick-150-151-dualma-long-signal-flip`: DualMA LONG×2, SHORT×149 ended
+  2. `201909-jsonl-poker-table-selection-system-reset-pattern`: MD-337~339 patterns
+  3. `sop100-tier-progression-protocol-centenary`: T1 CERT/T2 IN_PROG/T3 COND/T4 BLOCKED/T5 N/A
 
 ## What changed in the repo
 
-- `docs/knowledge_product_98_turing_test_candidate_selection.md`: new file
-- `docs/publish_thread_sop98_twitter.md`: new file
-- `results/turing_test_candidates.md`: new file (candidate tracker)
-- `docs/posting_queue.md`: rows #96/#97/#98 added; header updated to #01~#98
-- `memory/insights.json`: 3 new insights (total 105)
-- `results/daemon_log.md`: cycle 264 entry appended
-- `results/daemon_next_priority.txt`: updated
-- `staging/session_state.md`: cycle 264 state
-- `staging/last_output.md`: this file
+- `templates/dna_core.md`: MD-337~339 added (339 total entries with 1 legacy gap)
+- `docs/knowledge_product_100_tier_progression_protocol.md`: new file (centenary SOP)
+- `docs/publish_thread_sop100_twitter.md`: new file
+- `docs/posting_queue.md`: header + rows #99/#100 added
+- `memory/insights.json`: 3 new insights (total 117)
+- `results/paper_live_log.jsonl`: ticks 150+151 added (1697 total entries)
+- `results/dynamic_tree.md`: cycle 265 entries added; tick 150+151 signal flip noted
+- `results/daily_log.md`: cycle 265 entry prepended
 
-## L2 Verdict
+## Human blockers (unchanged)
+- Binance mainnet API keys (T4)
+- Samuel DM for organism calibration (T2)
+- Twitter API keys for SOP posting (T3)
 
-```
-L2 [264]: A — Branch 9 SOP #98 Turing Test Candidate Selection — closes 0-candidate blocker; Samuel = Tier A Candidate 1; full pipeline tracker created; Oct 21 queue — HIGH
-L2 [264]: B — Branch 6 — 34th consecutive clean cycle; fake-health audit: tree confirmed alive — MEDIUM
-L2 [264]: B — Branch 7 — SOP#01~#98 COMPLETE ✅; posting queue Oct 21 — MEDIUM
-L2 [264]: B — Branch 3.1 — 3 insights (total 105) — MEDIUM
-```
-
-Cycle verdict: **1A + 3B. No C or D. L3 not triggered.**
-
-## What the next cycle should focus on
-
-1. **Edward action (CRITICAL PATH)**: Post SOP #01 on X — `docs/publish_thread_sop01_twitter.md`. Revenue clock starts here.
-2. **Edward action**: Send `docs/samuel_async_calibration_dm.md` to Samuel — unblocks Branch 4.1 AND Branch 9 (Turing candidate 1)
-3. **Edward action**: Identify Turing Test Candidates 2+3 from warm network (SOP #98 G1 criteria)
-4. **Edward action**: Set BINANCE_MAINNET_KEY/SECRET → live trading (~89 days to deadline)
-5. **Autonomous**: SOP #99 — next SOP in series (determine topic from gap analysis)
-6. **Autonomous**: Branch 10 — L3 for recursive_engine.py (the remaining L3 gap)
-7. **Autonomous**: Branch 1.1 paper-live tick report
-
-## State summary
-
-| Branch | Status | Blocker |
-|--------|--------|---------|
-| 1.1 Trading daemon | tick 75 (-1.35% PnL); DualMA_10_30 DISABLED | mainnet keys (human) |
-| 1.3 Revenue | All content ready; SOP#01~#98 COMPLETE | first post (human) |
-| 2.2 DNA | 333 MDs — COMPLETE | none |
-| 2.3 Consistency | 30/33 ALIGNED (34th clean cycle) | none |
-| 3.1 Distillation | 105 insights | none |
-| 4.1 Samuel | DM ready; calibration prep done | Edward sends DM (human) |
-| 6 Cold-start | 34th consecutive clean cycle ✅ | none |
-| 7 SOP series | #01–#98 COMPLETE | first post (human) |
-| 9 Turing Test | SOP#98 written; Samuel=Candidate 1; 0/3 READY | Edward identifies candidates 2+3 (human) |
-| 10 L3 | Trading+Content L3 done; recursive_engine.py pending | none |
+## Next cycle priorities
+1. **201908 JSONL** → MD-340~342 (Branch 2.2)
+2. **Verify LONG signal persistence** on real Binance data when network available (Branch 1.1)
+3. **Turing test candidate 2** — identify candidate beyond Samuel (Branch 9)
+4. **T2 calibration prep**: new scenarios for organism calibration session (Branch 4.1)
+5. **Consistency check** (Branch 6 — routine)

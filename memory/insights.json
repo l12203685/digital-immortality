@@ -1363,6 +1363,33 @@
       "branch": "7",
       "timestamp": "2026-04-09T13:15Z",
       "cycle": 266
+    },
+    {
+      "id": "paper-live-tick-150-151-dualma-long-signal-flip-cycle265",
+      "ts": "2026-04-09T14:00:00Z",
+      "cycle": 265,
+      "branch": "1.1",
+      "insight": "DualMA_10_30 flipped LONG at tick 150 — first LONG signal after 149 consecutive SHORT ticks. Regime changed MIXED→TRENDING. Structural SHORT thesis ended. Paper P&L locked; strategy pool adapting. Tick 151: MIXED regime, DualMA still LONG, 16/18 FLAT. Signal flip = major regime transition event.",
+      "source": "paper-live-ticks-150-151",
+      "category": "trading_signals"
+    },
+    {
+      "id": "201909-jsonl-poker-table-selection-system-reset-pattern-cycle265",
+      "ts": "2026-04-09T14:00:00Z",
+      "cycle": 265,
+      "branch": "2.2",
+      "insight": "201909 JSONL (Sep 2019) → 3 MDs: 撲克牌桌選擇=先觀察後入座(MD-337)/跨境轉帳=緊急度×工具分離(MD-338)/系統異常=先重置環境再診斷邏輯(MD-339). dna_core.md: 339 MDs total (338 entries, 1 legacy gap). 環境先於邏輯的診斷順序是本月最高頻率應用原則。",
+      "source": "201909-JSONL",
+      "category": "behavioral_patterns"
+    },
+    {
+      "id": "sop100-tier-progression-protocol-centenary-cycle265",
+      "ts": "2026-04-09T14:00:00Z",
+      "cycle": 265,
+      "branch": "7",
+      "insight": "SOP #100 Digital Immortality Tier Progression Protocol — T1 CERTIFIED (36+consecutive clean)/T2 IN_PROGRESS (collision 68% > 30% threshold, need organism calibration)/T3 CONDITIONAL (338 MDs+114 insights ready, publication human-gated)/T4 BLOCKED (mainnet API keys, deadline 2026-07-07)/T5 NOT_STARTED. SOP #01~#100 COMPLETE.",
+      "source": "tier-audit-cycle265",
+      "category": "system_architecture"
     }
   ]
 }
