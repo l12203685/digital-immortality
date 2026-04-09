@@ -4,6 +4,48 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 222 — 2026-04-09T UTC
+
+### What was done
+
+**Branch 1.1 — paper-live tick 86 ✅**
+- BTC=$71,020.88 (↑$24.61 from tick 85), regime=MIXED, DualMA_10_30=SHORT×86 (100%)
+- P&L=+$0.684 (+0.684% on $100); 557 log entries; MFE ATH unchanged +$1.204 (tick 50)
+- Tick 86 headwind: BTC bounced +$24.61 from tick 85 but SHORT thesis intact
+
+**Branch 7 — SOP #60 Content Creation & Shipping Protocol ✅**
+- `docs/knowledge_product_60_content_creation_sop.md` — 5-gate framework: Domain 10 (Content Pipeline / Economic Self-Sufficiency)
+  - G0: Queue Audit — 3 signals: post scheduled, thread file exists, days since last post; kill: ≥14 days → G5
+  - G1: Derivative Scan — ΔPosting rate + ΔEngagement rate + ΔGumroad DMs
+  - G2: Non-negotiable shipping budget — ≥1 thread/48h, log every post, ≥10 DMs → Gumroad check, daily_posting_helper --confirm, no new drafts while ≥3 overdue
+  - G3: Quarterly format rotation — rank by engagement → 30-day trial → ΔEngagement ≥+20% → new default
+  - G4: Weekly review (10 min Sunday) — posts shipped / queue compliance / DM count
+  - G5: Emergency shipping freeze — halt drafting → post oldest overdue as-is → no L3 experiments until queue current
+  - Three-layer: L1(G2 shipping budget) + L2(G0/G1 audit) + L3(G3 quarterly rotation)
+  - DNA anchors: MD-12/41/48/67/144; connection: Branch 1.3 (zero posts → zero audience → zero revenue → survival condition)
+- `docs/publish_thread_sop60_twitter.md` — 12-tweet thread; slot Aug 5; Domain 10
+- `docs/posting_queue.md` — #60 row added; header updated to #01~#60; queue to Aug 5
+- **Series: SOP #01~#60 COMPLETE** ✅
+
+**Branch 6 — 存活/cold-start touched ✅**
+- F9 failure mode added to `docs/cold_start_recovery_runbook.md`: Content pipeline stalled recovery protocol
+  - Trigger: ≥14 days since last post OR ≥3 posts overdue
+  - Recovery: post oldest overdue thread as-is → log → repeat × 3; ≥10 DMs → Gumroad activation
+  - Root cause: Branch 1.3 economic survival pathway blocked by zero posts
+  - Links SOP #60 G5 to cold-start runbook (F1–F9 coverage)
+- consistency_test.py → 33/33 ALIGNED ✅
+- Runbook now covers F1–F9; health indicators all green
+
+### State Updates
+- `results/daily_log.md`: cycle 222 entry prepended
+- `results/dynamic_tree.md`: tick 86 + SOP #60 + F9 entries added (cycle 222)
+- `results/paper_live_pnl_report.md`: ticks 85+86 added; P&L updated to +$0.684
+- `docs/posting_queue.md`: updated to #01~#60 (queue to Aug 5)
+- `staging/session_state.md`: updated to cycle 222
+- `results/daemon_next_priority.txt`: SOP #61 next / domain gap scan
+
+---
+
 ## Cycle 220 — 2026-04-09T16:00:00Z
 
 ### What was done

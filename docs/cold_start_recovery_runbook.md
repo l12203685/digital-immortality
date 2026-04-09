@@ -141,6 +141,19 @@ No two layers write the same file. Conflict = layer boundary violation.
 4. boot_tests.md (F5) — behavioral TDD; can reconstruct from daemon_log
 5. dna_core.md (F6) — template exists; personal file recoverable from templates/
 
+### F9: Content pipeline stalled — zero posts despite queue existing
+**Symptoms**: `docs/posting_queue.md` has ≥3 rows with status=pending AND date is past due; `platform/daily_posting_helper.py --status` shows overdue posts.
+**Root cause**: Branch 1.3 revenue path is: post → audience → DMs → Gumroad → revenue. Zero posts = zero audience = zero revenue = survival condition violated.
+**Recovery**:
+1. Open `docs/posting_queue.md` — find oldest overdue post.
+2. Open its thread file (`docs/publish_thread_sop*.md`).
+3. Copy thread, paste to X, post. No editing, no perfecting — ship as-is.
+4. Run `python platform/daily_posting_helper.py --confirm` to log it.
+5. Repeat for next 2 overdue posts (max 3 in one session to avoid spam).
+6. Check if ≥10 DMs received → activate Gumroad (see `docs/gumroad_listing_draft.md`).
+
+**Connection to 存活**: SOP #60 G5 emergency protocol. Content shipping = economic self-sufficiency pathway. Stalled pipeline = dead branch 1.3 = survival condition at risk.
+
 ## Layer-Specific Restart Protocols (from SOP #47 — cycle 208)
 
 Stale loop vs dead engine look identical from outside. Use these signals:

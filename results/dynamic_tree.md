@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 220)
+> 最後更新：2026-04-09 UTC (cycle 222)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -356,3 +356,6 @@
 - 2026-04-09T UTC: cycle 221 — **Branch 1.1** paper-live tick 85: BTC=$70,996.27 (↑$66.98), DualMA_10_30=SHORT×85 (100%), regime=MIXED, 542 log entries (+15); mainnet blocked on API keys
 - 2026-04-09T UTC: cycle 221 — **Branch 7.59** SOP #59 Life Default Design Protocol shipped: `docs/knowledge_product_59_life_default_design_sop.md` + `docs/publish_thread_sop59_twitter.md` — 5-gate: G0 Repeated Decision Audit / G1 Decision Unit Cost Mapping / G2 Default Conversion / G3 Peak Window Protection / G4 Weekly Friction Scan / G5 System Degradation Emergency; MD-322/323/324 anchor cluster; posting queue extended to **#01~#59** (Aug 3, 2026); 115-day target. **Series: SOP #01~#59 COMPLETE.**
 - 2026-04-09T UTC: cycle 221 — **Branch 6** consistency_test.py → 33/33 ALIGNED ✅; F1–F8 runbook verified; health indicators all green; least-recent '存活/cold-start' touched
+- 2026-04-09T UTC: cycle 222 — **Branch 1.1** paper-live tick 86: BTC=$71,020.88 (↑$24.61 from tick 85), DualMA_10_30=SHORT×86 (100%), P&L=+$0.684 (+0.684% on $100); 557 log entries; regime=MIXED; MFE ATH unchanged +$1.204 (tick 50); SHORT headwind but thesis intact
+- 2026-04-09T UTC: cycle 222 — **Branch 7.60** SOP #60 Content Creation & Shipping Protocol shipped: `docs/knowledge_product_60_content_creation_sop.md` + `docs/publish_thread_sop60_twitter.md` — Domain 10 (Content Pipeline / Economic Self-Sufficiency); 5-gate: G0 queue audit (today's post scheduled? / thread file exists? / days since last post; kill: ≥14 days) / G1 derivative scan (ΔPosting rate / ΔEngagement rate / ΔGumroad DMs) / G2 non-negotiable shipping budget (≥1 thread/48h, every post logged, ≥10 DMs → Gumroad check, daily_posting_helper --confirm after each post, no new drafts while ≥3 overdue) / G3 quarterly format rotation (rank by engagement → 30-day trial → ΔEngagement ≥+20% → new default) / G4 weekly review (posts shipped / queue compliance / DM count) / G5 shipping freeze emergency (halt drafting → post oldest overdue as-is → no L3 experiments during G5); DNA anchors: MD-12/41/48/67/144; posting queue extended to **#01~#60** (Aug 5, 2026); 117-day target. **Series: SOP #01~#60 COMPLETE.** Connection: Branch 1.3 critical path (zero posts → zero audience → zero revenue → survival condition violated)
+- 2026-04-09T UTC: cycle 222 — **Branch 6 / 存活/cold-start** F9 failure mode added to `docs/cold_start_recovery_runbook.md`: content pipeline stalled recovery (post oldest overdue thread → log → repeat × 3; ≥10 DMs → Gumroad activation; links SOP #60 G5 to runbook); Branch 6 health indicators all green: consistency 33/33 ✅, F1–F9 runbook verified; cold-start branch touched this cycle ✅
