@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-10T04:27+08",
+  "updated": "2026-04-10T04:49+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "daemon_next_priority → B存活 G1: dna_core.md cycle-300 audit (designed SOP #101..."
+      "text": "Cycle 301 queue: tick 350 + 55th consecutive + distillation + B1.3 DMs (human..."
     },
     {
       "time": "just now",
-      "text": "- SOP #101 now 6/6 gates passing (was 4/6)"
+      "text": "| SOP #117 | DNA Core Audit Protocol committed (was untracked) |"
     },
     {
       "time": "just now",
-      "text": "- G5 audit: cold_start_test.py 0.066s, 5/5 → updated from \"MEASURE NEEDED\" → ✅"
+      "text": "| B3.1 distillation | +3 insights → 215 total: G1-audit-HEALTHY / 54th-consec..."
     },
     {
       "time": "just now",
-      "text": "- G2 audit: verified 4/4 meta-rules present in boot tests → updated SOP #101 ..."
+      "text": "| B6 54th consecutive | 36/39 deterministic ALIGNED; 3 MISALIGNED = expected ..."
     },
     {
       "time": "just now",
-      "text": "B存活 (Cold-start): Concrete advancement — not just running tests:"
+      "text": "| B1.1 tick 349 | BTC=$72,412.06 (+$87 SHORT headwind); 15 active=FLAT; 3 dis..."
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 72310.15,
+    "paper_live_price": 72412.06,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T20:25",
+    "paper_live_ts": "2026-04-09T20:44",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"
