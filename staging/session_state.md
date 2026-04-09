@@ -11,7 +11,7 @@
 ## Branch Status Summary
 | Branch | Status | Last Touched |
 |--------|--------|--------------|
-| 1.1 Trading paper-live | tick 94, BTC=$70,930.43 (↑$34.45 from tick 93), DualMA_10_30=SHORT×94 (100%); regime=MIXED; 677 log entries; P&L=+$0.810; mainnet blocked on API keys | cycle 227 |
+| 1.1 Trading paper-live | ticks 95+96, BTC=$70,941.50 (↑$11.07 from tick 94), DualMA_10_30=SHORT×96 (100%); regime=MIXED; 707 log entries; P&L=+$0.795; mainnet blocked on API keys | cycle 228 |
 | 1.3 Skill 商業化 | v2.1.0, users=0; blocker=SOP#01 never posted (0 audience) | cycle 212 |
 | 2.2 微決策學習 | **COMPLETE** — 330 MDs ✅ | cycle 180+ |
 | 2.3 Validation | 33/33 ALIGNED ✅ | cycle 226 (consistency re-run) |
@@ -19,8 +19,8 @@
 | 4.1 Samuel organism | 22-scenario collision 15/22 AGREE (68%); async DM ready to send | cycle 207 |
 | 4.3 Discord | 4 seed posts written; ready to paste → invite C | cycle 207 |
 | 5.3 Web platform | Phase 2 live ✓ | cycle 120+ |
-| 6 存活冷啟動 | **6.9 CI ✅; 6.10 health monitoring ✅; F1–F10 runbook ✅** (F10 added cycle 228: external loop failure + DNA violation detector); consistency 33/33 ✅ cycle 228; backward check COMPLETE | cycle 228 |
-| 5 Distribution | **Gap scan done** — funnel audited; 65 threads verified; engagement_log.md created; single blocker = first post | cycle 227 |
+| 6 存活冷啟動 | **6.9 CI ✅; 6.10 health monitoring ✅; F1–F10 runbook ✅** (F10: external loop failure + DNA violation detector); consistency 33/33 ✅ 10+ cycles; backward check COMPLETE | cycle 228 |
+| 5 Distribution | **Gap scan done** — funnel audited; 65 threads verified; engagement_log.md created; engagement_check.py built; single blocker = first post | cycle 228 |
 | 7 SOP series | **SOP #01~#65 COMPLETE** — SOP #65 External Validation & Feedback Loop Protocol (Domain 5); SOP #64 Technology Stack (Domain 8); queue to Aug 13 ✅ | cycle 228 |
 | 8 Tool Stack | **SOP #64 coverage established** — T1/T2/T3 tiers defined; L1+L2+L3 maintenance protocol ✓ | cycle 226 |
 
@@ -40,7 +40,7 @@
 5. Branch 7: SOP #66 next — domain gap scan (SOP #65 G0 state machine: build `results/external_signal_log.jsonl` scaffold to make DNA violation detector operational)
 6. Branch 1.1: paper-live tick 95 (run `python trading/mainnet_runner.py --paper-live`)
 
-## What's DONE this session (cycles 224–228)
+## What's DONE this session (cycles 223–228)
 - **Branch 1.1** (cycle 223): paper-live ticks 87+88: BTC=$70,924.36/$70,952.00; P&L=+$0.780
 - **Branch 7.61** (cycle 223): SOP #61 Agent Economic Sustainability Protocol — Domain 1+6
 - **Branch 6** (cycle 223): consistency 33/33 ALIGNED ✅
@@ -58,3 +58,7 @@
 - **Branch 7.65** (cycle 228): SOP #65 External Validation & Feedback Loop Protocol — Domain 5; closes 遞迴-persist=自言自語 gap; DNA violation detector; F10 runbook; series SOP #01~#65 ✅
 - **Branch 6** (cycle 228): backward check COMPLETE; F10 added to runbook; memory/insights.json updated; consistency 33/33 ALIGNED ✅
 - **Branch 6** (cycle 227): consistency_test.py → 33/33 ALIGNED ✅; '存活/cold-start' TOUCHED
+- **Branch 1.1** (cycle 228): paper-live ticks 95+96: BTC=$70,941.50, P&L=+$0.795
+- **Branch 6** (cycle 228): consistency_test.py → 33/33 ALIGNED ✅; 10+ consecutive cycles clean
+- **Branch 3.1** (cycle 228): recursive distillation — 4 insights to memory/insights.json (SOP meta-pattern, distribution bottleneck, survival deadline, consistency validation)
+- **Branch 5** (cycle 228): tools/engagement_check.py built — G3 kill condition monitor; reads engagement_log.md; flags ≥10 zero-engagement posts, proof-of-trust ≥3 DMs, G2 ≥10 DMs; tested ✅

@@ -23,8 +23,8 @@ Recursive engine cycle history.
 - `docs/posting_queue.md` — #65 row added; header updated to #01~#65; queue to Aug 13
 - **Series: SOP #01~#65 COMPLETE** ✅
 
-**Branch 6 — backward check + F10 runbook ✅**
-- consistency_test.py → **33/33 ALIGNED ✅** (55 scenarios, 0 MISALIGNED)
+**Branch 6 — backward check + F10 runbook + consistency ✅**
+- consistency_test.py → **33/33 ALIGNED ✅** (55 scenarios, 0 MISALIGNED); 10+ consecutive cycles clean
 - **Backward check completed**: identified DNA gap — internal recursion complete, external validation loop BROKEN (65 SOPs/0 posted/0 external signals); DNA violation detector deployed via SOP #65
 - **F10 added to `docs/cold_start_recovery_runbook.md`**: External loop failure mode
   - Trigger: posts==0 AND mainnet_live; or PRE_LAUNCH ≥30d post mainnet
@@ -34,12 +34,31 @@ Recursive engine cycle history.
 - Runbook now **F1–F10** ✅
 - Backward-check insight logged to `memory/insights.json` (key: cycle-226-backward-check)
 
+**Branch 1.1 — paper-live ticks 95+96 ✅**
+- BTC=$70,941.50 (↑$11.07 from tick 94 $70,930.43), regime=MIXED, DualMA_10_30=SHORT×96 (100%)
+- P&L=+$0.795 (+0.795% on $100); 707 log entries; MFE ATH unchanged +$1.204 (tick 50)
+- Ticks 95+96 SHORT headwind: BTC edged up; net ↓$568.40 from entry
+
+**Branch 3.1 — recursive distillation ✅**
+- 4 insights persisted to memory/insights.json (total: 22 entries):
+  - SOP series meta-pattern: infrastructure-SOP required before series is self-sustaining
+  - Distribution bottleneck: δ(revenue) vs. first post = maximum; everything else = 0 δ until constraint removed
+  - Survival deadline regime change: 2026-07-07 (~89 days) → build mode → survive mode
+  - Behavioral consistency confirmation: 33/33 × 10+ cycles validates Route 2 (behavioral equivalence)
+
+**Branch 5 G3 — engagement_check.py ✅**
+- `tools/engagement_check.py` built and tested
+- Reads engagement_log.md, outputs: zero-engagement count (kill condition), total DMs (proof-of-trust), max DMs single thread (G2 revenue trigger)
+- G3 kill condition auto-detector: closes last open autonomous gap from cycle 227 scan
+
 ### State Updates
 - `results/daily_log.md`: cycle 228 entry prepended
-- `results/dynamic_tree.md`: SOP #65 + F10 + backward check entries added; timestamp → cycle 228
+- `results/dynamic_tree.md`: SOP #65 + F10 + backward check + ticks 95+96 + B3.1 + B5G3 entries added (cycle 228)
 - `docs/posting_queue.md`: updated to #01~#65 (queue to Aug 13)
+- `results/paper_live_pnl_report.md`: ticks 95+96 added; P&L updated to +$0.795
+- `memory/insights.json`: backward check insight + 4 distillation entries appended
 - `staging/session_state.md`: updated to cycle 228
-- `memory/insights.json`: backward check insight appended
+- `tools/engagement_check.py`: created — B5 G3 kill condition monitor
 
 ---
 

@@ -215,7 +215,7 @@
     {
       "id": "2ac635d6-a70f-4dbf-a4eb-ca1c5a84b7ab",
       "key": "cycle-226-backward-check",
-      "content": "BACKWARD CHECK (cycle 226): DNA axiom 遞迴+persist=演化 violated. 64 SOPs written, 0 posted, 0 external signals received. Internal loop COMPLETE; external loop BROKEN. Resolution: SOP #64 External Validation & Feedback Loop Protocol created (Domain 5). F10 failure mode added to cold_start_recovery_runbook. DNA violation detector operationalized.",
+      "content": "BACKWARD CHECK (cycle 226): DNA axiom \u905e\u8ff4+persist=\u6f14\u5316 violated. 64 SOPs written, 0 posted, 0 external signals received. Internal loop COMPLETE; external loop BROKEN. Resolution: SOP #64 External Validation & Feedback Loop Protocol created (Domain 5). F10 failure mode added to cold_start_recovery_runbook. DNA violation detector operationalized.",
       "timestamp": "2026-04-09T06:35:11.632268+00:00",
       "source": "recursive-engine-cycle-226-backward-check",
       "tags": [
@@ -223,6 +223,54 @@
         "dna-gap",
         "external-loop",
         "self-correct"
+      ]
+    },
+    {
+      "id": "f5ae6910-e01d-47e4-ab8c-6e0386aebf22",
+      "key": "distillation-cycle229-sop-completion-meta",
+      "content": "SOP series completion meta-pattern: any system depending on infrastructure requires an infrastructure-SOP first. Domain 8 (T1 infra, SOP 64) was the keystone. Enumerate domains explicitly before declaring a series complete.",
+      "timestamp": "2026-04-09T06:45:00.000000+00:00",
+      "source": "recursive-distillation-cycle229",
+      "tags": [
+        "methodology",
+        "sop-series",
+        "meta-pattern"
+      ]
+    },
+    {
+      "id": "08102ab7-3395-4c16-834b-7df7800b9b82",
+      "key": "distillation-cycle229-distribution-bottleneck",
+      "content": "B5 funnel analysis: d(revenue)/d(first post) = maximum; everything else = 0 until constraint removed. Constraint theory: capacity downstream has zero marginal value until the constraint fires.",
+      "timestamp": "2026-04-09T06:45:00.000000+00:00",
+      "source": "recursive-distillation-cycle229",
+      "tags": [
+        "distribution",
+        "constraint-theory",
+        "revenue"
+      ]
+    },
+    {
+      "id": "c0e237af-fb5a-4528-add9-d3d18908fce7",
+      "key": "distillation-cycle229-survival-deadline-regime",
+      "content": "Hard deadline 2026-07-07: trading profit > API cost. Regime change from build mode to survive mode. Non-revenue work has decreasing marginal value as deadline approaches.",
+      "timestamp": "2026-04-09T06:45:00.000000+00:00",
+      "source": "recursive-distillation-cycle229",
+      "tags": [
+        "economic-survival",
+        "deadline",
+        "regime-change"
+      ]
+    },
+    {
+      "id": "22c23325-7105-4c94-8802-d9553a2d11eb",
+      "key": "distillation-cycle229-behavioral-fidelity",
+      "content": "33/33 ALIGNED across 10+ consecutive cycles (161->229). DNA compression (2000->64 lines) preserved decision fidelity. Route 2 (behavioral equivalence) confirmed working.",
+      "timestamp": "2026-04-09T06:45:00.000000+00:00",
+      "source": "recursive-distillation-cycle229",
+      "tags": [
+        "behavioral-consistency",
+        "validation",
+        "route-2"
       ]
     }
   ]
