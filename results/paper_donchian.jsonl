@@ -1,1 +1,2 @@
 {"strategy": "Donchian_20", "symbol": "BTCUSDT", "interval": "1d", "price": 71136.74, "signal": 0, "prev_position": 0, "action": "HOLD", "timestamp": "2026-04-08T23:53:18.035149+00:00"}
+{"strategy": "Donchian_20", "symbol": "BTCUSDT", "interval": "1d", "price": 70784.17, "signal": 0, "prev_position": 0, "action": "HOLD", "timestamp": "2026-04-09T01:06:08.154644+00:00"}
