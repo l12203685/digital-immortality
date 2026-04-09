@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T13:41+08",
+  "updated": "2026-04-09T13:50+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
+      "text": "Commit pushed: `0b06c23`. Next: SOP #61 domain gap scan + tick 87."
+    },
+    {
+      "time": "just now",
+      "text": "Branch 6 / 存活-cold-start — F9 failure mode added to runbook: content pipeline..."
+    },
+    {
+      "time": "just now",
+      "text": "Branch 7 — SOP #60 Content Creation & Shipping Protocol (Domain 10). The doma..."
+    },
+    {
+      "time": "just now",
+      "text": "Branch 1.1 — tick 86: BTC=$71,020.88 (↑$24.61), SHORT×86 (100%), P&L=+$0.684...."
+    },
+    {
+      "time": "8min ago",
       "text": "- Samuel DM (paste-ready in `docs/samuel_async_calibration_dm.md`)"
-    },
-    {
-      "time": "just now",
-      "text": "- Mainnet API keys (89-day deadline: 2026-07-07)"
-    },
-    {
-      "time": "just now",
-      "text": "- X post SOP #01 → audience → G2 → revenue (critical path)"
-    },
-    {
-      "time": "just now",
-      "text": "Blockers (human-gated):"
-    },
-    {
-      "time": "just now",
-      "text": "| 6 存活/cold-start | health verification | 33/33 ALIGNED; F1–F8 runbook verifi..."
     }
   ],
   "stats": {
@@ -94,11 +94,11 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 70996.27,
+    "paper_live_price": 71020.88,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T05:35",
-    "paper_tick": 84,
-    "paper_pnl": "+$0.812",
+    "paper_live_ts": "2026-04-09T05:45",
+    "paper_tick": 86,
+    "paper_pnl": "+$0.684",
     "status": "ok"
   }
 }
