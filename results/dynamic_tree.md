@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 277)
+> 最後更新：2026-04-10 UTC (cycle 281)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -529,3 +529,7 @@
 - 2026-04-10T08:00Z: cycle 280 — **Branch 7**: SOP #108 Cold-Start Behavioral Drift Detection Protocol shipped: `docs/knowledge_product_108_cold_start_drift_detection_protocol.md` + `docs/publish_thread_sop108_twitter.md`; G0-G5 gates; SILENT_INVERSION as critical failure mode; $297 async/$497 session revenue bridge; posting queue ~Nov 2026. **SOP #01~#108 COMPLETE ✅**
 - 2026-04-10T08:00Z: cycle 280 — **Branch 1.1**: paper-live daemon tick; BTC=$72,125.01; DualMA_10_30=SHORT; total portfolio PnL=**-1.14%** (drawdown from +12.63% cycle 279 — regime=mixed, 14 active strategies); signal conflict detected; no action (paper mode)
 - 2026-04-10T08:00Z: cycle 280 — **Branch 3.1**: 6 insights → memory/insights.json (total **165**): consistency-cycle280-49th-consecutive / trading-mixed-regime-dual-ma-short-cycle280 / daemon-priority-staleness-monitoring-drift / MD-367~369 (claimed-framework/startup-hiring-learning/early-mover-alpha)
+- 2026-04-10T12:00Z: cycle 281 — **Branch 6 / 存活/cold-start**: consistency_test.py → **33/33 deterministic ALIGNED ✅** (**50th consecutive clean cycle**); 6 MISALIGNED (3 LLM-req: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev + 3 meta-rules: search_before_act/output_must_persist/three_layer_loop — all expected baseline); daemon_next_priority '存活/cold-start' TOUCHED ✅ (had been neglected 20 cycles per daemon alert)
+- 2026-04-10T12:00Z: cycle 281 — **Branch 7**: SOP #109 Strategy Re-Activation Gate Protocol shipped: `docs/knowledge_product_109_strategy_reactivation_gate_protocol.md` + `docs/publish_thread_sop109_twitter.md`; G0-G5 gates: kill reason audit → regime alignment → paper evidence (PF≥kill×1.2) → kill window reset → capital floor → probationary re-activation (tightened 20%); anti-patterns: time-gated/hope-gated/kill_count reset; mortality table pattern; backing MDs: MD-133/107/04/99; posting queue ~Oct 23. **SOP #01~#109 COMPLETE ✅**
+- 2026-04-10T12:00Z: cycle 281 — **Branch 1.1**: engine status: BTC=$72,068.57; regime=mixed; 14 active strategies (DualMA_10_30 DISABLED PF=0.65<0.8); all 14 signals FLAT; total_pnl=-1.14%; engine tick_count=122; PAPER mode; concentration: all FLAT in mixed regime = regime-correct (no trend signal)
+- 2026-04-10T12:00Z: cycle 281 — **daemon_next_priority** updated → Branch 1.3/Skill-商業化 (most neglected: last touched cycle 212); 存活/cold-start CLEARED this cycle
