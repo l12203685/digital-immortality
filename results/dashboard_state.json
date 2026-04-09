@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T13:25+08",
+  "updated": "2026-04-09T13:31+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,41 +64,41 @@
   ],
   "activity": [
     {
-      "time": "13min ago",
-      "text": "3. Samuel: send async DM"
+      "time": "just now",
+      "text": "State: dynamic_tree, daily_log, paper_live_pnl_report, posting_queue, session..."
     },
     {
-      "time": "13min ago",
-      "text": "2. Discord: paste 4 seed posts → invite C"
+      "time": "just now",
+      "text": "- Queue slot: Aug 1 | SOP #01~#58 COMPLETE"
     },
     {
-      "time": "13min ago",
-      "text": "1. Post SOP #01 on X → starts the audience → revenue chain"
+      "time": "just now",
+      "text": "- 5-gate: G0 mental state audit → G1 derivative scan → G2 non-negotiable psyc..."
     },
     {
-      "time": "13min ago",
-      "text": "Human-gated blockers (unchanged, highest derivative):"
+      "time": "just now",
+      "text": "- Domain 6 — the missing \"capital\" domain after Physical/Environment/Financia..."
     },
     {
-      "time": "13min ago",
-      "text": "Daemon priority '存活/cold-start' addressed: SOP #56 is the FIRE/financial surv..."
+      "time": "just now",
+      "text": "Branch 7 — SOP #58 Mental Capital & Psychological Resilience Protocol"
     }
   ],
   "stats": {
     "daemon_cycles": 208,
     "total_mds": 330,
-    "dna_core_lines": 426
+    "dna_core_lines": 87
   },
   "health": {
     "ci_wired": true,
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 70839.73,
+    "paper_live_price": 70929.29,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T05:06",
-    "paper_tick": 81,
-    "paper_pnl": "+$0.937",
+    "paper_live_ts": "2026-04-09T05:25",
+    "paper_tick": 84,
+    "paper_pnl": "+$0.812",
     "status": "ok"
   }
 }

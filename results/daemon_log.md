@@ -6073,3 +6073,22 @@ Cycle 218 complete. Pushed to origin.
 - Samuel async DM: paste `docs/samuel_async_calibration_dm.md`
 
 **Next autonomous cycle:** tick 84 + SOP #58 (Domain gap scan — per daemon_next_priority).
+
+## Cycle 7 — 2026-04-09 05:31:24 UTC
+
+Cycle 220 pushed.
+
+**Summary:**
+
+**Branch 1.1 — tick 84**
+- BTC=$70,929.29 (↑$40.13 from tick 83)
+- DualMA_10_30=SHORT×84 (100%)
+- P&L=+$0.812 (+0.812% on $100)
+- 527 log entries | regime=MIXED | MFE ATH +$1.204 (tick 50)
+
+**Branch 7 — SOP #58 Mental Capital & Psychological Resilience Protocol**
+- Domain 6 — the missing "capital" domain after Physical/Environment/Financial/Knowledge
+- 5-gate: G0 mental state audit → G1 derivative scan → G2 non-negotiable psychological budget (no degraded-state decisions, 2h decompression, sleep/movement/solitude minimums) → G3 quarterly intervention leverage scan → G4 weekly 10-min review → G5 emergency halt
+- Queue slot: Aug 1 | **SOP #01~#58 COMPLETE**
+
+**State:** dynamic_tree, daily_log, paper_live_pnl_report, posting_queue, session_state → cycle 220. Pushed.
