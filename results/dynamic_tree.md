@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 250)
+> 最後更新：2026-04-09 UTC (cycle 251)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -56,6 +56,7 @@
   - **cycle 248 paper-live tick 127** — BTC=$71,498.70 (↑$163.2 from tick 126; SHORT headwind); regime=MIXED; DualMA_10_30=SHORT×127 (100%); 17/18 FLAT; 1265 log entries; SHORT streak 127 ticks (structural)
   - **cycle 249 paper-live ticks 128+129** — BTC=$71,433.95 (↓$64.75 from tick 127; SHORT tailwind); regime=MIXED; DualMA_10_30=SHORT×129 (100%); 17/18 FLAT; 1301 log entries; SHORT×129 = structural signal unbroken
   - **cycle 250 paper-live tick 130** — BTC=$71,374.75 (↓$59.20 from tick 129; SHORT tailwind); regime=MIXED; DualMA_10_30=SHORT×130 (100%); 17/18 FLAT; 1319 log entries; SHORT signal structural and unbroken
+  - **cycle 251 paper-live tick 131** — BTC=$71,463.64 (↑$88.89 from tick 130; SHORT headwind); regime=MIXED; DualMA_10_30=SHORT×131 (100%); 17/18 FLAT; 1337 log entries; SHORT streak 131 ticks (structural)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
   - trading_system.py --portfolio: auto-detects regime, selects strategy, saves results/portfolio_decision.json ✓

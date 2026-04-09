@@ -759,6 +759,45 @@
       "timestamp": "2026-04-09T10:16:45.521284+00:00",
       "source": "recursive-engine-cycle-250",
       "category": "distribution"
+    },
+    {
+      "id": "88df1453-74fa-45bd-ae61-cdb4d7c37edd",
+      "key": "paper-live-short-persistence-131",
+      "content": "Tick 131: BTC=$71,463.64 (↑$88.89 SHORT headwind); DualMA_10_30=SHORT×131 (100%); regime=MIXED; 1337 log entries; SHORT signal structurally unbroken at 131 consecutive ticks — market moving against position but signal persists.",
+      "timestamp": "2026-04-09T10:24:56.878229+00:00",
+      "source": "branch-1.1-cycle-251",
+      "tags": [
+        "trading",
+        "paper-live",
+        "short-persistence",
+        "regime-mixed"
+      ]
+    },
+    {
+      "id": "77e6cf2f-9c3a-461e-9569-8dc6c812efd4",
+      "key": "consistency-25-consecutive-clean",
+      "content": "存活/cold-start: 33/33 deterministic ALIGNED ✅; 3 LLM-req MISALIGNED (expected: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev); 25+ consecutive clean cycles — behavioral fidelity holding across extended daemon run.",
+      "timestamp": "2026-04-09T10:24:56.878229+00:00",
+      "source": "branch-6-cycle-251",
+      "tags": [
+        "consistency",
+        "cold-start",
+        "behavioral-fidelity",
+        "survival"
+      ]
+    },
+    {
+      "id": "832c31d6-6fa0-4f70-9e6f-462c6bbc3b17",
+      "key": "consulting-rate-card-sop86",
+      "content": "SOP #86 Consulting Rate Card: trigger ≥3 DMs in 30d; rates $200/hr, $1.5k-$5k project, $2k/mo retainer; G5 kill: pause when product ≥$500/mo or consulting >8h/wk; never volunteer discount; redirect to Gumroad on decline. SOP #01-#86 COMPLETE.",
+      "timestamp": "2026-04-09T10:24:56.878229+00:00",
+      "source": "branch-7-cycle-251",
+      "tags": [
+        "consulting",
+        "rate-card",
+        "sop",
+        "revenue"
+      ]
     }
   ]
 }
