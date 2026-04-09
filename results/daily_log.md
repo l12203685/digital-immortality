@@ -2,6 +2,17 @@
 
 Recursive engine cycle history.
 
+## Cycle 290 — 2026-04-10T20:34Z
+
+- **B存活 G1 audit** (designed trigger, 90-cycle cadence): dna_core.md 416 MDs verified. MD-408 three-layer loop (L1執行+L2評估+L3演化) confirmed. SOP #116 (distillation taxonomy protocol) exists. Priority stack (EV>inaction>systems>time>concrete) intact. **G1: PASS**
+- **Branch 6**: consistency_test.py → 36/39 ALIGNED ✅ (IMPROVEMENT: +3 from previous 33 — meta_search_before_act, meta_output_must_persist, meta_three_layer_loop now deterministically ALIGNED); 3 MISALIGNED (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev — formula-recall, expected); **58th consecutive clean cycle** ✅
+- **Branch 1.1**: tick 350 (synthetic, Binance offline); BTC=$72,310.15; DualMA_10_30=SHORT, all other 17 FLAT; regime=MIXED; total_pnl=-2.71%; 2074 log entries; ccxt reinstalled ✅
+- **Branch 1.2 L3 Evolve**: strategy_generator.py --generate 3 → 1 PASS: gen_DonchianConfirmed_RSI_9b2bf4 (WF windows=3/5, sharpe=-0.04, mdd=18.4%); pool: 18→19 strategies; 2 FAIL (gen_DualMA_RF_713d09, gen_Donchian_RF_RSI_aeff8a)
+- **Branch 3.1**: 4 insights → memory/insights.json (total **216**): consistency-58th-meta-alignment-improved / paper-tick290-synthetic / l3-evolve-strategy-pool-19 / g1-audit-cycle290-pass
+- **L2**: A (B存活 G1 audit — designed trigger EXECUTED — HIGH) + A (B6 alignment improved 33→36 ALIGNED — HIGH) + B×3 (paper-tick/strategy-gen/distillation)
+- **L3**: strategy pool expanded (18→19), L3 Evolve active
+- **daemon_next_priority**: Branch 1.1 real-data tick when Binance online; Branch 1.3 outreach DMs (human-gated); Branch 2.2 201803 JSONL (Windows-only, human-gated)
+
 ## Cycle 287 — 2026-04-10T14:00Z
 
 - **Branch 2.2**: 201804 JSONL (Apr 2018, 1549 msgs, 3 substantive patterns) → MD-388~390: 社會標籤≠機制EV判斷(tournament=OK/cash=gambling但機制相同→用機制和EV判斷) / 定額制損益平衡計算(先算breakeven使用次數=price÷單次，比實際歷史不比意願) / 結果論解耦(決策品質=決策時EV正確性，結果=EV+variance，單次結果不能驗證決策品質); templates/dna_core.md: **390 MDs**; next: 201803
