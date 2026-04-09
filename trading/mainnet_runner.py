@@ -2,7 +2,13 @@
 Mainnet Runner -- Binance SPOT, $100 risk cap.
 
 Gates: pass testnet --review (GO) before running.
-Strategy: dual_ma_btc_daily (only strategy with 7+ ticks, PF=5.839, WR=60%).
+
+Modes:
+  --tick / --loop   : Mainnet live trading (dual_ma only, unchanged).
+  --paper-live      : Paper-trade ALL 10 strategies from NAMED_STRATEGIES
+                      on real Binance prices. Per-strategy kill conditions.
+  --status          : Show all strategies and their current signals/PnL.
+  --report          : Per-strategy performance comparison.
 
 Signal mapping (SPOT -- no short-selling):
     LONG  -> buy BTC with available USDT (enter position)
@@ -10,16 +16,16 @@ Signal mapping (SPOT -- no short-selling):
     SHORT -> sell all BTC to USDT (exit position, NOT short-sell)
 
 Usage:
-    python mainnet_runner.py --tick              # single tick
+    python mainnet_runner.py --tick              # single tick (mainnet, dual_ma)
     python mainnet_runner.py --tick --dry-run    # single tick, no real orders
-    python mainnet_runner.py --status            # show log
-    python mainnet_runner.py --loop 3600         # tick every hour
-    python mainnet_runner.py --paper-live        # paper trade on real prices
-    python mainnet_runner.py --report            # performance report
+    python mainnet_runner.py --status            # show all strategy stats
+    python mainnet_runner.py --loop 3600         # tick every hour (mainnet)
+    python mainnet_runner.py --paper-live        # paper trade ALL strategies
+    python mainnet_runner.py --report            # per-strategy performance report
 
 Credentials: set BINANCE_API_KEY and BINANCE_SECRET_KEY env vars,
              or place them in ~/.claude/credentials/binance_api.json.
-Kill conditions: MDD>10%, PF<0.85 (>=5 trades), WR<35% (>=5 trades).
+Kill conditions (per strategy): MDD>10%, PF<0.85 (>=5 trades), WR<35% (>=5 trades).
 """
 
 import argparse
@@ -325,28 +331,155 @@ def cmd_tick(dry_run: bool = False) -> None:
 
 
 def cmd_status() -> None:
+    # Mainnet status (unchanged)
     entries = _load_log()
-    if not entries:
+    if entries:
+        stats = _compute_stats(entries)
+        print(f"=== Mainnet (real $) ===")
+        print(f"Log:         {MAINNET_LOG}")
+        print(f"Entries:     {stats['ticks']}")
+        print(f"Trades:      {stats['trades']}")
+        print(f"Total PnL:   {stats['total_pnl']} USDT")
+        print(f"Win rate:    {stats['win_rate']:.1%}")
+        print(f"PF:          {stats['profit_factor']}")
+        kill = _check_kill(stats)
+        print(f"Kill status: {'BREACH -- HALT' if kill else 'OK'}")
+        print()
+    else:
+        print("=== Mainnet (real $) ===")
         print("No mainnet log entries yet.")
+        print()
+
+    # Paper-live status: all strategies
+    paper_entries = _load_paper_log()
+    if not paper_entries:
+        print("=== Paper Live (all strategies) ===")
+        print("No paper-live entries yet.")
         return
-    stats = _compute_stats(entries)
-    print(f"Mainnet log: {MAINNET_LOG}")
-    print(f"Entries:     {stats['ticks']}")
-    print(f"Trades:      {stats['trades']}")
-    print(f"Total PnL:   {stats['total_pnl']} USDT")
-    print(f"Win rate:    {stats['win_rate']:.1%}")
-    print(f"PF:          {stats['profit_factor']}")
+
+    from trading.strategies import NAMED_STRATEGIES
+
+    print(f"=== Paper Live (all strategies) ===")
+    print(f"Log: {PAPER_LIVE_LOG}")
+    print(f"Total entries: {len(paper_entries)}")
     print()
-    kill = _check_kill(stats)
-    print(f"Kill status: {'BREACH -- HALT' if kill else 'OK'}")
+    print(f"{'Strategy':30s} {'Signal':7s} {'Ticks':>5s} {'Trades':>6s} {'PnL':>10s} {'WR':>6s} {'PF':>8s} {'Kill':>5s}")
+    print("-" * 85)
+
+    total_pnl = 0.0
+    for name in sorted(NAMED_STRATEGIES.keys()):
+        st = _compute_paper_stats(paper_entries, name)
+        total_pnl += st["total_pnl"]
+        kill_str = "KILL" if st["kill"] else "OK"
+        pf_str = str(st["profit_factor"]) if st["profit_factor"] == "inf" else f"{st['profit_factor']:.2f}"
+        print(f"{name:30s} {st['last_signal']:7s} {st['ticks']:5d} {st['trades']:6d} "
+              f"{st['total_pnl']:+10.2f} {st['win_rate']:5.1%} {pf_str:>8s} {kill_str:>5s}")
+
+    print("-" * 85)
+    print(f"{'TOTAL':30s} {'':7s} {'':5s} {'':6s} {total_pnl:+10.2f}")
     print()
-    print("Last 3 entries:")
-    for e in entries[-3:]:
-        print(f"  {e.get('ts', '?')} action={e.get('action')} signal={e.get('signal')} pnl={e.get('realized_pnl', 'n/a')}")
+
+    # Last 5 entries across all strategies
+    print("Last 5 entries:")
+    for e in paper_entries[-5:]:
+        print(f"  {e.get('ts', '?')} [{e.get('strategy', '?'):20s}] signal={e.get('signal', '--'):5s} price={e.get('price', 0):.2f}")
+
+
+def _load_paper_log() -> List[Dict]:
+    """Load all entries from paper_live_log.jsonl."""
+    if not PAPER_LIVE_LOG.exists():
+        return []
+    entries: List[Dict] = []
+    for line in PAPER_LIVE_LOG.read_text(encoding="utf-8").strip().splitlines():
+        if line:
+            try:
+                entries.append(json.loads(line))
+            except json.JSONDecodeError:
+                pass
+    return entries
+
+
+def _compute_paper_stats(entries: List[Dict], strategy_name: str) -> Dict:
+    """Compute PnL stats for a single strategy from paper log entries.
+
+    Simulates a $100 paper portfolio: LONG buys at price, SHORT sells at price.
+    """
+    strat_entries = [e for e in entries if e.get("strategy") == strategy_name and e.get("action") == "PAPER_LIVE"]
+    if not strat_entries:
+        return {
+            "strategy": strategy_name,
+            "ticks": 0, "trades": 0, "total_pnl": 0.0,
+            "win_rate": 0.0, "profit_factor": "inf", "wins": 0, "losses": 0,
+            "kill": False, "last_signal": "N/A",
+        }
+
+    # Walk through signals and compute round-trip PnL
+    position_open = False
+    entry_price = 0.0
+    pnl_list: List[float] = []
+    trade_count = 0
+
+    for e in strat_entries:
+        sig = e.get("signal", "FLAT")
+        price = e.get("price", 0.0)
+        if sig == "LONG" and not position_open:
+            position_open = True
+            entry_price = price
+            trade_count += 1
+        elif sig == "SHORT" and position_open:
+            pnl = (price - entry_price) / entry_price * MAX_POSITION_USDT if entry_price > 0 else 0.0
+            pnl_list.append(pnl)
+            position_open = False
+            entry_price = 0.0
+
+    # Unrealized PnL for open position
+    unrealized = 0.0
+    if position_open and strat_entries:
+        last_price = strat_entries[-1].get("price", 0.0)
+        if entry_price > 0:
+            unrealized = (last_price - entry_price) / entry_price * MAX_POSITION_USDT
+
+    total_pnl = sum(pnl_list) + unrealized
+    wins = sum(1 for p in pnl_list if p > 0)
+    losses = sum(1 for p in pnl_list if p < 0)
+    n_closed = len(pnl_list)
+    win_rate = wins / n_closed if n_closed > 0 else 0.0
+    gross_profit = sum(p for p in pnl_list if p > 0)
+    gross_loss = abs(sum(p for p in pnl_list if p < 0))
+    profit_factor = gross_profit / gross_loss if gross_loss > 0 else float("inf")
+
+    last_signal = strat_entries[-1].get("signal", "FLAT") if strat_entries else "N/A"
+
+    # Kill check for this strategy
+    kill = False
+    if n_closed >= KILL_MIN_TRADES:
+        if win_rate < KILL_MIN_WIN_RATE:
+            kill = True
+        if isinstance(profit_factor, float) and profit_factor < KILL_MIN_PROFIT_FACTOR:
+            kill = True
+    # MDD check: if total_pnl drops below -MAX_DRAWDOWN_PCT% of $100
+    if total_pnl < -(MAX_POSITION_USDT * MAX_DRAWDOWN_PCT / 100.0):
+        kill = True
+
+    return {
+        "strategy": strategy_name,
+        "ticks": len(strat_entries),
+        "trades": trade_count,
+        "closed_trades": n_closed,
+        "total_pnl": round(total_pnl, 4),
+        "unrealized_pnl": round(unrealized, 4),
+        "win_rate": round(win_rate, 4),
+        "profit_factor": round(profit_factor, 4) if profit_factor != float("inf") else "inf",
+        "wins": wins,
+        "losses": losses,
+        "kill": kill,
+        "last_signal": last_signal,
+        "in_position": position_open,
+    }
 
 
 def cmd_paper_live() -> None:
-    """Fetch real Binance public prices; run dual_ma signal; log paper trade. No credentials."""
+    """Fetch real Binance public prices; run ALL strategies; log paper trades. No credentials."""
     ts = datetime.now(timezone.utc).isoformat()
     try:
         import ccxt  # type: ignore
@@ -354,19 +487,6 @@ def cmd_paper_live() -> None:
     except ImportError:
         print("ERROR: pip install ccxt")
         sys.exit(1)
-
-    # Load last known price from log as fallback
-    last_known_price = 0.0
-    if PAPER_LIVE_LOG.exists():
-        log_lines = PAPER_LIVE_LOG.read_text(encoding="utf-8").strip().splitlines()
-        for raw in reversed(log_lines):
-            try:
-                entry_data = json.loads(raw)
-                if "price" in entry_data and entry_data["price"]:
-                    last_known_price = float(entry_data["price"])
-                    break
-            except (json.JSONDecodeError, ValueError):
-                continue
 
     # Use spot exchange for paper-live (matches mainnet)
     exchange = ccxt.binance({"enableRateLimit": True})
@@ -377,13 +497,12 @@ def cmd_paper_live() -> None:
             "action": "PAPER_LIVE_NETWORK_FAIL",
             "ts": ts,
             "error": str(e),
-            "note": "network unavailable -- using last known price",
+            "note": "network unavailable",
         }
         RESULTS_DIR.mkdir(parents=True, exist_ok=True)
         with open(PAPER_LIVE_LOG, "a", encoding="utf-8") as f:
             f.write(json.dumps(fail_entry) + "\n")
-        print(f"[{ts}] PAPER_LIVE network unavailable -- using last known price={last_known_price:.2f}")
-        print(f"Error: {e}")
+        print(f"[{ts}] PAPER_LIVE network unavailable: {e}")
         print(f"Logged PAPER_LIVE_NETWORK_FAIL to {PAPER_LIVE_LOG}")
         return
 
@@ -399,30 +518,75 @@ def cmd_paper_live() -> None:
         for row in ohlcv
     ]
 
-    from trading.strategies import dual_ma_btc_daily
-    signal = dual_ma_btc_daily(bars)
+    if not bars:
+        print(f"[{ts}] No OHLCV data returned.")
+        return
 
-    price = bars[-1]["close"] if bars else 0.0
-    entry = {
-        "action": "PAPER_LIVE",
-        "ts": ts,
-        "price": price,
-        "signal": {1: "LONG", -1: "SHORT", 0: "FLAT"}.get(signal, "FLAT"),
-        "note": "paper -- no real order placed",
-    }
+    price = bars[-1]["close"]
+
+    # Regime detection
+    from trading.portfolio import RegimeDetector
+    from trading.strategies import NAMED_STRATEGIES
+
+    detector = RegimeDetector()
+    regime = detector.detect(bars)
+    scores = detector.last_scores()
+
+    print(f"[{ts}] PAPER_LIVE tick: price={price:.2f}  regime={regime.upper()}")
+    print(f"  scores: trend={scores.get('trend_strength', 0):.4f}  mr={scores.get('mr_score', 0):.4f}")
+    print()
+
+    # Load existing log for kill checks
+    existing_entries = _load_paper_log()
+
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-    with open(PAPER_LIVE_LOG, "a", encoding="utf-8") as f:
-        f.write(json.dumps(entry) + "\n")
+    logged_count = 0
+    skipped_kill = 0
 
-    print(f"[{ts}] PAPER_LIVE tick: price={price:.2f} signal={entry['signal']}")
-    print(f"Logged to {PAPER_LIVE_LOG}")
+    for name, strategy_fn in sorted(NAMED_STRATEGIES.items()):
+        # Per-strategy kill check
+        strat_stats = _compute_paper_stats(existing_entries, name)
+        if strat_stats["kill"]:
+            print(f"  {name:30s}  KILLED (PnL={strat_stats['total_pnl']:+.2f} WR={strat_stats['win_rate']:.1%} PF={strat_stats['profit_factor']})")
+            skipped_kill += 1
+            continue
 
-    lines = PAPER_LIVE_LOG.read_text().strip().splitlines() if PAPER_LIVE_LOG.exists() else []
-    print(f"Total paper-live ticks: {len(lines)}")
+        # Generate signal
+        try:
+            signal = strategy_fn(bars)
+        except Exception as exc:
+            logger.warning("Strategy %s raised %s: %s", name, type(exc).__name__, exc)
+            continue
+
+        signal_label = {1: "LONG", -1: "SHORT", 0: "FLAT"}.get(signal, "FLAT")
+
+        entry = {
+            "action": "PAPER_LIVE",
+            "ts": ts,
+            "strategy": name,
+            "price": price,
+            "signal": signal_label,
+            "regime": regime,
+            "note": "paper -- no real order placed",
+        }
+
+        with open(PAPER_LIVE_LOG, "a", encoding="utf-8") as f:
+            f.write(json.dumps(entry) + "\n")
+        logged_count += 1
+
+        print(f"  {name:30s}  signal={signal_label:5s}  regime={regime}")
+
+    print()
+    print(f"Logged {logged_count} strategy signals to {PAPER_LIVE_LOG}")
+    if skipped_kill > 0:
+        print(f"Skipped {skipped_kill} strategies (kill conditions met)")
+
+    total_lines = len(PAPER_LIVE_LOG.read_text().strip().splitlines()) if PAPER_LIVE_LOG.exists() else 0
+    print(f"Total paper-live entries: {total_lines}")
 
 
 def cmd_report(save: bool = False) -> None:
-    """Generate a human-readable markdown performance report for both paper-live and mainnet logs."""
+    """Generate a human-readable markdown performance report with per-strategy comparison."""
     lines = ["# Trading Performance Report (SPOT)", f"> Generated: {datetime.now(timezone.utc).isoformat()}", ""]
 
     # --- Mainnet ---
@@ -447,41 +611,75 @@ def cmd_report(save: bool = False) -> None:
                          f"signal={e.get('signal', '--')} pnl={e.get('realized_pnl', 'n/a')}")
         lines.append("")
 
-    # --- Paper Live ---
-    lines.append("## Paper Live (real prices, no real orders)")
-    paper_entries: List[Dict] = []
-    if PAPER_LIVE_LOG.exists():
-        for line in PAPER_LIVE_LOG.read_text().strip().splitlines():
-            try:
-                paper_entries.append(json.loads(line))
-            except json.JSONDecodeError:
-                pass
+    # --- Paper Live: Per-Strategy Comparison ---
+    lines.append("## Paper Live -- Per-Strategy Performance")
+    paper_entries = _load_paper_log()
 
     if not paper_entries:
         lines.append("No paper-live entries yet.\n")
     else:
-        prices = [e.get("price", 0) for e in paper_entries]
-        signals = [e.get("signal", "FLAT") for e in paper_entries]
-        signal_counts = {s: signals.count(s) for s in set(signals)}
-        lines += [
-            f"- Ticks: {len(paper_entries)}",
-            f"- Price range: {min(prices):.2f} -- {max(prices):.2f} USDT",
-            f"- Signal distribution: {signal_counts}",
-            "",
-            "### Last 5 ticks",
-        ]
+        from trading.strategies import NAMED_STRATEGIES
+
+        # Price summary
+        prices = [e.get("price", 0) for e in paper_entries if e.get("price")]
+        if prices:
+            lines.append(f"- Price range: {min(prices):.2f} -- {max(prices):.2f} USDT")
+        lines.append(f"- Total entries: {len(paper_entries)}")
+        lines.append("")
+
+        # Strategy comparison table
+        lines.append("| Strategy | Ticks | Trades | PnL (USDT) | Win Rate | PF | Signal | Kill |")
+        lines.append("|----------|------:|-------:|-----------:|---------:|---:|--------|------|")
+
+        total_pnl = 0.0
+        strat_results: List[Dict] = []
+        for name in sorted(NAMED_STRATEGIES.keys()):
+            st = _compute_paper_stats(paper_entries, name)
+            strat_results.append(st)
+            total_pnl += st["total_pnl"]
+            pf_str = str(st["profit_factor"]) if st["profit_factor"] == "inf" else f"{st['profit_factor']:.2f}"
+            kill_str = "KILL" if st["kill"] else "OK"
+            lines.append(
+                f"| {name} | {st['ticks']} | {st['trades']} | "
+                f"{st['total_pnl']:+.2f} | {st['win_rate']:.1%} | {pf_str} | "
+                f"{st['last_signal']} | {kill_str} |"
+            )
+
+        lines.append(f"| **TOTAL** | | | **{total_pnl:+.2f}** | | | | |")
+        lines.append("")
+
+        # Best/worst
+        profitable = [s for s in strat_results if s["total_pnl"] > 0]
+        losing = [s for s in strat_results if s["total_pnl"] < 0]
+        if profitable:
+            best = max(profitable, key=lambda s: s["total_pnl"])
+            lines.append(f"**Best**: {best['strategy']} ({best['total_pnl']:+.2f} USDT)")
+        if losing:
+            worst = min(losing, key=lambda s: s["total_pnl"])
+            lines.append(f"**Worst**: {worst['strategy']} ({worst['total_pnl']:+.2f} USDT)")
+        killed = [s for s in strat_results if s["kill"]]
+        if killed:
+            lines.append(f"**Killed**: {', '.join(s['strategy'] for s in killed)}")
+        lines.append("")
+
+        # Last 5 ticks
+        lines.append("### Last 5 entries")
         for e in paper_entries[-5:]:
-            lines.append(f"  - `{e.get('ts', '?')}` price={e.get('price', '?'):.2f} signal={e.get('signal')}")
+            strat = e.get("strategy", "?")
+            lines.append(
+                f"  - `{e.get('ts', '?')}` [{strat}] "
+                f"price={e.get('price', 0):.2f} signal={e.get('signal', '--')}"
+            )
         lines.append("")
 
     # --- Kill Rails Summary ---
     lines += [
-        "## Kill Rail Thresholds",
+        "## Kill Rail Thresholds (per strategy)",
         f"| Metric | Threshold | Applies After |",
         f"|--------|-----------|---------------|",
-        f"| Max Drawdown | >{MAX_DRAWDOWN_PCT}% | any time |",
-        f"| Win Rate | <{KILL_MIN_WIN_RATE:.0%} | >={KILL_MIN_TRADES} trades |",
-        f"| Profit Factor | <{KILL_MIN_PROFIT_FACTOR} | >={KILL_MIN_TRADES} trades |",
+        f"| Max Drawdown | >{MAX_DRAWDOWN_PCT}% of ${MAX_POSITION_USDT} | any time |",
+        f"| Win Rate | <{KILL_MIN_WIN_RATE:.0%} | >={KILL_MIN_TRADES} closed trades |",
+        f"| Profit Factor | <{KILL_MIN_PROFIT_FACTOR} | >={KILL_MIN_TRADES} closed trades |",
         "",
     ]
 
@@ -511,13 +709,13 @@ def cmd_loop(interval: int) -> None:
 # ---------------------------------------------------------------------------
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Mainnet runner -- SPOT, $100 cap, dual_ma")
+    parser = argparse.ArgumentParser(description="Mainnet runner -- SPOT, $100 cap, 10 strategies (paper) / dual_ma (live)")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--tick", action="store_true", help="Single tick")
-    group.add_argument("--status", action="store_true", help="Show log stats")
+    group.add_argument("--status", action="store_true", help="Show all strategy stats and signals")
     group.add_argument("--loop", type=int, metavar="SECONDS", help="Loop every N seconds")
-    group.add_argument("--paper-live", action="store_true", help="Paper trade on real prices (no credentials)")
-    group.add_argument("--report", action="store_true", help="Print markdown performance report")
+    group.add_argument("--paper-live", action="store_true", help="Paper trade ALL 10 strategies on real prices (no credentials)")
+    group.add_argument("--report", action="store_true", help="Per-strategy performance comparison report")
     parser.add_argument("--dry-run", action="store_true", help="Skip actual order placement")
     parser.add_argument("--save", action="store_true", help="Save report to results/trading_report.md (with --report)")
     args = parser.parse_args()
