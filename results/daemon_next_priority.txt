@@ -1,1 +1,1 @@
-PRIORITY: Branch '7/SOP-series' SOP#100 complete (century milestone). Next: SOP#101 gap-fill from G3 output (sop_gap_list.md). Run SOP#100 G3 gap analysis to identify domain with highest risk × frequency for SOP#101 topic.
+PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.
