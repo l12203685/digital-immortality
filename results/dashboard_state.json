@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T08:30+08",
+  "updated": "2026-04-09T08:36+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#34 COMPLETE → posting_queue.md updated (#01~#34, Apr 9–Jun 14); **x_launch_sequence.md created ✓** — first-post friction reduced to 15 min; Apr 9 = scheduled post date for SOP #01; **3 workbooks READY TO LIST** (Workbook #01 Strategy Development + Workbook #02 Portfolio Construction + Workbook #03 Execution & Sizing, $29 each, $87/buyer trilogy)",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions pre-committed)",
   "deadline": "2026-07-07",
@@ -55,23 +55,23 @@
     },
     {
       "time": "just now",
-      "text": "Branch 1.1 — tick 42: BTC=$70,976, SHORT x42 (100%), P&L +$0.75. Minor pullba..."
+      "text": "Branch 1.1 — tick 43: BTC=$70,804.43, SHORT x43 (100%), P&L +$0.99 (+0.99%) —..."
     },
     {
       "time": "just now",
-      "text": "Cycle 178 done."
+      "text": "Cycle 179 done."
     },
     {
-      "time": "3min ago",
+      "time": "1min ago",
       "text": "Blockers unchanged (human-gated): set `BINANCE_MAINNET_KEY/SECRET` → mainnet,..."
     },
     {
-      "time": "3min ago",
-      "text": "`paper_live_pnl_report.md` updated: ticks 37–42 added, summary corrected. `dy..."
+      "time": "1min ago",
+      "text": "- BTC down $171 from last tick ($70,976→$70,804); regime bearish"
     }
   ],
   "stats": {
-    "daemon_cycles": 178,
+    "daemon_cycles": 179,
     "total_mds": 330,
     "dna_core_lines": 87
   }
