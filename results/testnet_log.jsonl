@@ -41,3 +41,10 @@
 {"ts": "2026-04-08T23:59:02.441584+00:00", "strategy": "dual_ma_rsi", "action": "DRY_RUN", "signal": -1, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": -0.0, "dry_run": true}
 {"ts": "2026-04-08T23:59:03.582655+00:00", "strategy": "dual_ma_rsi_filtered", "action": "DRY_RUN", "signal": 0, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
 {"ts": "2026-04-08T23:59:04.791912+00:00", "strategy": "bollinger_mr", "action": "DRY_RUN", "signal": 0, "price": 71113.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-09T15:30:38.741156+00:00", "strategy": "dual_ma", "action": "DRY_RUN", "signal": -1, "price": 71361.4, "bars_fetched": 100, "pnl_usdt": -0.3486, "dry_run": true}
+{"ts": "2026-04-09T15:30:39.914443+00:00", "strategy": "donchian", "action": "DRY_RUN", "signal": 0, "price": 71361.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-09T15:30:41.048786+00:00", "strategy": "dual_ma_filtered", "action": "DRY_RUN", "signal": 0, "price": 71361.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-09T15:30:42.258894+00:00", "strategy": "donchian_filtered", "action": "DRY_RUN", "signal": 0, "price": 71361.4, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-09T15:30:43.602809+00:00", "strategy": "dual_ma_rsi", "action": "DRY_RUN", "signal": 0, "price": 71362.5, "bars_fetched": 100, "pnl_usdt": -0.3501, "dry_run": true}
+{"ts": "2026-04-09T15:30:44.762331+00:00", "strategy": "dual_ma_rsi_filtered", "action": "DRY_RUN", "signal": 0, "price": 71361.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}
+{"ts": "2026-04-09T15:30:46.271563+00:00", "strategy": "bollinger_mr", "action": "DRY_RUN", "signal": 0, "price": 71362.5, "bars_fetched": 100, "pnl_usdt": 0.0, "dry_run": true}

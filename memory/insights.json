@@ -1506,35 +1506,63 @@
       "content": "Branch 2.2 cycle 276: 201903 JSONL (Mar 2019) → MD-355~357: 市場共識=情緒溫度計(基本面/情緒面分離框架)/資訊消費≠框架建立(L1-L2-L3驗證層級)/初次實驗損失=預設學費(事前學費上限設計); 357 total MDs; next: 201902. Timestamp: 2026-04-09T15:30Z",
       "timestamp": "2026-04-09T15:30Z",
       "source": "branch-2.2-cycle-276",
-      "tags": [
-        "dna",
-        "branch-2.2",
-        "cycle-276",
-        "201903"
-      ]
+      "tags": ["dna", "branch-2.2", "cycle-276", "201903"]
     },
     {
       "key": "paper-live-tick153-long-synthetic-cycle276",
       "content": "Branch 1.1 paper-live tick 153 (synthetic, Binance offline): BTC=$71,128.59; regime=MIXED; DualMA_10_30=LONG, DualMA_RSI=LONG, DualMA_RSI_filtered=LONG, DualMA_filtered=LONG; 14/18 FLAT; 1786 total entries. LONG signal structural, confirmed for 2nd synthetic tick post-flip. Timestamp: 2026-04-09T15:30Z",
       "timestamp": "2026-04-09T15:30Z",
       "source": "branch-1.1-cycle-276",
-      "tags": [
-        "paper-live",
-        "branch-1.1",
-        "cycle-276",
-        "long-signal"
-      ]
+      "tags": ["paper-live", "branch-1.1", "cycle-276", "long-signal"]
+    },
+    {
+      "key": "paper-live-btc71529-cycle276",
+      "content": "Branch 1.1 paper-live cycle 276 (daemon): BTC=$71,529.03; DualMA_10_30=OPEN_SHORT; gen_BollingerMR_RF_7abfe4=SHORT; 16/18 FLAT; regime=mixed; P&L=-1.551%; 18 strategies active.",
+      "timestamp": "2026-04-09T15:23:23.273096+00:00",
+      "source": "trading-branch-cycle-276",
+      "tags": ["trading", "paper-live", "cycle-276"]
     },
     {
       "key": "consistency-45-consecutive-cycle276",
-      "content": "Branch 6 consistency_test.py cycle 276: 33/33 deterministic ALIGNED; 6 LLM-required MISALIGNED (expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev/meta_search_before_act/meta_output_must_persist/meta_three_layer_loop); 45th consecutive clean cycle. BRANCH 6 COMPLETE. Timestamp: 2026-04-09T15:30Z",
+      "content": "Branch 6 consistency_test.py cycle 276: 33/33 deterministic ALIGNED (45th consecutive clean cycle); 6 MISALIGNED (3 LLM-req: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev + 3 meta-rules: search_before_act/output_must_persist/three_layer_loop — all expected). Timestamp: 2026-04-09T15:30Z",
       "timestamp": "2026-04-09T15:30Z",
       "source": "consistency-test-cycle-276",
-      "tags": [
-        "consistency",
-        "branch-6",
-        "cycle-276"
-      ]
+      "tags": ["consistency", "branch-6", "cycle-276"]
+    },
+    {
+      "key": "branch2-md355-357-201903-cycle276",
+      "content": "Branch 2.2 cycle 276: 201903 JSONL → MD-355 責任邊界(工具提供者責任止於合理審查) / MD-356 直接指標原則(衡量X用X不用代理Y) / MD-357 會議目的識別(說服式vs共識式); dna_core.md: 357 MDs.",
+      "timestamp": "2026-04-09T15:23:23.273096+00:00",
+      "source": "dna-branch-cycle-276",
+      "tags": ["dna", "branch-2.2", "cycle-276"]
+    },
+    {
+      "key": "paper-live-btc71361-disabled-cycle277",
+      "content": "Branch 1.1 paper-live cycle 277: BTC=$71,361 live; DualMA_10_30=SHORT but DISABLED (PF=0.53 < 0.8); dual_ma testnet_runner KILLED (MDD=34.9% ≥ 15%); 16/17 FLAT; 3609 entries; P&L=-1.02%; regime=MIXED. Timestamp: 2026-04-09T16:00Z",
+      "timestamp": "2026-04-09T16:00Z",
+      "source": "branch-1.1-cycle-277",
+      "tags": ["paper-live", "branch-1.1", "cycle-277", "kill-event"]
+    },
+    {
+      "key": "consistency-46-consecutive-cycle277",
+      "content": "Branch 6 consistency_test.py cycle 277: 33/33 deterministic ALIGNED; 6 MISALIGNED as expected (3 LLM-req + 3 meta-rules); 46th consecutive clean cycle. Timestamp: 2026-04-09T16:00Z",
+      "timestamp": "2026-04-09T16:00Z",
+      "source": "consistency-test-cycle-277",
+      "tags": ["consistency", "branch-6", "cycle-277"]
+    },
+    {
+      "key": "organism-collision-critical-regression-cycle277",
+      "content": "Branch 4.1 cycle 277: Edward vs Samuel collision CRITICAL REGRESSION — 6/22 AGREE (27%), down from 15/22 (68%); 9 newly-diverged axes (career/relationships/learning/legacy/communication/meta_strategy + 4 social); stable domains: money/risk/health/time/conflict/opportunity AGREE; ROOT CAUSE: expansion drift (Edward DNA grew +157 MDs to 357 since Samuel calibration at cycle 204); SOP #106 created; action: send async DM. Timestamp: 2026-04-09T16:00Z",
+      "timestamp": "2026-04-09T16:00Z",
+      "source": "branch-4.1-cycle-277",
+      "tags": ["organism", "branch-4.1", "cycle-277", "regression", "calibration"]
+    },
+    {
+      "key": "sop106-organism-drift-recalibration-cycle277",
+      "content": "SOP #106 created cycle 277: Organism Drift & Recalibration Protocol — triggered by 27% alignment regression; 5 gates G0-G5; expansion drift classification; async calibration execution; scale implication (60-85% AGREE target); decision label: CALIBRATE_ASYNC_EXPANSION_DRIFT. Timestamp: 2026-04-09T16:00Z",
+      "timestamp": "2026-04-09T16:00Z",
+      "source": "branch-7-cycle-277",
+      "tags": ["sop", "branch-7", "cycle-277", "organism"]
     }
   ]
 }
