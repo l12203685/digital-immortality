@@ -2,6 +2,16 @@
 
 Recursive engine cycle history.
 
+## Cycle 287 — 2026-04-10T14:00Z
+
+- **Branch 2.2**: 201804 JSONL (Apr 2018, 1549 msgs, 3 substantive patterns) → MD-388~390: 社會標籤≠機制EV判斷(tournament=OK/cash=gambling但機制相同→用機制和EV判斷) / 定額制損益平衡計算(先算breakeven使用次數=price÷單次，比實際歷史不比意願) / 結果論解耦(決策品質=決策時EV正確性，結果=EV+variance，單次結果不能驗證決策品質); templates/dna_core.md: **390 MDs**; next: 201803
+- **Branch 1.1**: tick 212; BTC=$71,964.87; regime=mixed; DualMA_10_30+BollingerMR RF×2 DISABLED (PF<0.8); 15 active all FLAT; total_pnl=-2.71%; PAPER mode
+- **Branch 6 + 存活/cold-start**: consistency_test.py → 33/33 deterministic ALIGNED ✅; 6 LLM-req MISALIGNED (expected); cold_start_test.py 5/5 PASS boot_time=0.060s; cold_start_recovery_runbook.md updated (330→387 MDs, 14→39 scenarios); **56th consecutive clean cycle** ✅; daemon_next_priority '存活/cold-start' TOUCHED ✅
+- **Branch 3.1**: 6 insights → memory/insights.json (total **193**): 201804-social-label-vs-mechanism-ev / 201804-flat-fee-breakeven-calculation / 201804-result-decoupling-process-quality / paper-tick287 / consistency-56th / 存活-cold-start-runbook-updated
+- **L2**: A (Branch 2.2 — 201804 MDs complete, 390 total — HIGH) + A (Branch 存活/cold-start — concrete runbook audit + cold_start_test — HIGH, neglected 20 cycles) + B×3 (paper-tick/consistency/distillation)
+- **L3**: not triggered
+- **daemon_next_priority**: 201803 JSONL → next Branch 2.2; Branch 1.3 Week 1 execution (5 DMs to AI Agent Dev archetypes, human-gated)
+
 ## Cycle 284 — 2026-04-10T10:00Z
 
 - **Branch 2.2**: 201808 JSONL (Aug 2018, 2701 lines, 9 substantive Edward msgs) → MD-376~378: 職涯domain多域掃描後composite收斂(掃交易/精算/風控→選市場風險) / 教育產品階梯定價+先修gate防cannibalization+低頻開班稀缺(基礎$350×6週/中階$1750×12週/進階$3250×24週) / OOP深籌碼lead壓縮x/c range→check優先保range完整性(SB J73r TPTK應check); templates/dna_core.md: **378 MDs**; next: 201807

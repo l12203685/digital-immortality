@@ -2121,6 +2121,81 @@
       "ts": "2026-04-10T00:00:00+00:00",
       "cycle": 286,
       "branch": "6"
+    },
+    {
+      "id": "44990171-bd03-4b31-838a-e8a1a0958e1d",
+      "key": "201804-social-label-vs-mechanism-ev",
+      "content": "Social labels (poker=gambling, self-trading=proprietary trading) dont match mechanism. Judge by mechanism and EV, not label. 201804 g133.",
+      "timestamp": "2026-04-10T14:00:00+00:00",
+      "source": "cycle-287-branch-2.2",
+      "tags": [
+        "poker",
+        "trading",
+        "decision-quality",
+        "social-label"
+      ]
+    },
+    {
+      "id": "fd1adf0b-39b5-4320-953d-3881880a288b",
+      "key": "201804-flat-fee-breakeven-calculation",
+      "content": "Before any flat-fee bundle, compute breakeven usage count (price / single-use cost), compare to actual history not intentions. 201804 g11.",
+      "timestamp": "2026-04-10T14:00:00+00:00",
+      "source": "cycle-287-branch-2.2",
+      "tags": [
+        "personal-finance",
+        "cost-analysis",
+        "breakeven"
+      ]
+    },
+    {
+      "id": "9ab3dce0-b6ee-41fb-b244-fe53cb6aab2f",
+      "key": "201804-result-decoupling-process-quality",
+      "content": "Decision quality = EV correctness at decision time. Results = EV + variance. Single outcome cannot validate decision quality. Too many use outcome-based evaluation in finance. 201804 g133.",
+      "timestamp": "2026-04-10T14:00:00+00:00",
+      "source": "cycle-287-branch-2.2",
+      "tags": [
+        "poker",
+        "trading",
+        "process-quality",
+        "variance"
+      ]
+    },
+    {
+      "id": "135b42aa-5ac5-4695-bfb4-45e932df8860",
+      "key": "paper-tick287-btc-71964-all-flat",
+      "content": "Paper tick 212 (cycle 287): BTC=71964.87, regime=mixed, 15 active all-FLAT, 3 disabled (DualMA_10_30/BollingerMR_RF x2 PF<0.8), total_pnl=-2.71%.",
+      "timestamp": "2026-04-10T14:00:00+00:00",
+      "source": "cycle-287-branch-1.1",
+      "tags": [
+        "trading",
+        "paper",
+        "tick"
+      ]
+    },
+    {
+      "id": "d28f2f85-877b-47eb-b670-55741f34426f",
+      "key": "consistency-56th-consecutive",
+      "content": "56th consecutive clean cycle: consistency_test.py 33/33 deterministic ALIGNED, 6 expected MISALIGNED. cold_start_test.py 5/5 PASS boot_time=0.060s.",
+      "timestamp": "2026-04-10T14:00:00+00:00",
+      "source": "cycle-287-branch-6",
+      "tags": [
+        "consistency",
+        "cold-start",
+        "branch-6"
+      ]
+    },
+    {
+      "id": "b40365a4-94ea-4031-8b57-5f5423e6a04f",
+      "key": "存活-cold-start-runbook-updated-cycle287",
+      "content": "Cold-start runbook (docs/cold_start_recovery_runbook.md) updated: 3 stale MD count refs corrected (330->387), boot test scenario count updated (14->39). Concrete 存活 work cycle 287.",
+      "timestamp": "2026-04-10T14:00:00+00:00",
+      "source": "cycle-287-branch-存活",
+      "tags": [
+        "cold-start",
+        "runbook",
+        "survival",
+        "branch-6"
+      ]
     }
   ]
 }

@@ -13,7 +13,7 @@
 5. Act — don't ask, don't report. First output = action.
 ```
 
-**Cold-start kernel** (read dna_core.md only — 330 MDs):
+**Cold-start kernel** (read dna_core.md only — 387 MDs as of cycle 287):
 ```
 templates/dna_core.md → boot_tests.md → session_state.md → queue
 ```
@@ -59,11 +59,11 @@ Both mainnet_runner.py and testnet_runner.py now include the path fix (cycle 202
 **Recovery**:
 1. `templates/example_boot_tests.md` is the canonical template — copy structure.
 2. Recreate test cases from last known boot_tests entry in daemon_log.
-3. Minimum viable: 14 tests (last known count as of cycle 201).
+3. Minimum viable: 39 scenarios in generic_boot_tests.json (cycle 267 expanded from 14; last verified cycle 287).
 
 ### F6: dna_core.md too long to cold-read (>500 lines)
 **Symptoms**: Context budget exhausted on boot, or agent reads it but can't act.
-**Rule**: templates/dna_core.md is the TEMPLATE with 330 MDs (full list).
+**Rule**: templates/dna_core.md is the TEMPLATE with 387 MDs as of cycle 287 (full list).
 The personal dna_core.md target is <100 lines (operational kernel only).
 **Recovery**:
 1. Read templates/dna_core.md §BOOT_CRITICAL (first 10 lines) only.
@@ -204,5 +204,5 @@ cat staging/session_state.md | head -20
 - `cold_start_test.py` — automated boot sequence verification
 - `staging/session_state.md` — inter-session relay (update each cycle)
 - `results/daemon_log.md` — audit trail for reconstruction
-- `templates/dna_core.md` — 330 MD cold-start template
+- `templates/dna_core.md` — 387 MD cold-start template (as of cycle 287)
 - `platform/multi_provider.py` — Anthropic→OpenAI→Gemini fallback
