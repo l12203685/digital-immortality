@@ -662,6 +662,30 @@
       "timestamp": "2026-04-09T09:52:27.213299+00:00",
       "source": "cycle-247-branch-3-1",
       "category": "methodology"
+    },
+    {
+      "id": "c124f5d1-5ce6-46d4-bb49-dd38f7eaa624",
+      "key": "paper-live-short-persistence-127",
+      "content": "BTC=$71,498.70 (↑$163.2 from tick 126); DualMA_10_30=SHORT×127 (100%); 17/18 FLAT; regime=MIXED; 1265 total log entries. Streak intact. SHORT signal structural across 127 ticks of varying BTC range.",
+      "timestamp": "2026-04-09T10:00:00+00:00",
+      "source": "cycle-248-branch-1-1",
+      "category": "domain-knowledge"
+    },
+    {
+      "id": "61097dc1-fa9a-403f-93ad-0e01576315d1",
+      "key": "consistency-23-consecutive-clean",
+      "content": "30/33 deterministic ALIGNED + 3 LLM-req MISALIGNED (expected: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev). 23+ consecutive clean cycles. Cold-start architecture stable. Branch 6 存活/cold-start touched per daemon_next_priority.",
+      "timestamp": "2026-04-09T10:00:00+00:00",
+      "source": "cycle-248-branch-6",
+      "category": "self-awareness"
+    },
+    {
+      "id": "85e94a9d-8916-4b3e-9f95-2f1fd6263984",
+      "key": "daily-posting-execution-ritual",
+      "content": "SOP #83: Daily Posting Execution Ritual. G0-G5: trigger (daily/48h override) → identify post from queue → execute (copy-paste, do not edit) → 48h signal capture → DM triage → persist. Closes the gap: infrastructure-ready ≠ posts going out. ~20 min/day. Anti-pattern: editing tweets during posting day.",
+      "timestamp": "2026-04-09T10:00:00+00:00",
+      "source": "cycle-248-branch-7",
+      "category": "methodology"
     }
   ]
 }
