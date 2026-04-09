@@ -1,33 +1,33 @@
-# Cycle 267 Input — 2026-04-09T14:30Z
+# Cycle 268 Input — 2026-04-09T15:00Z
 
 ## Recursive Prompt
 
-"201908 added MD-340~342 (作品集信號強度/雇主cost-down≠個人市值/凱利邊界降波動). dna_core.md now has 342 MDs. Merge conflicts in insights.json and paper_live_log.jsonl resolved. What is the highest-derivative action to advance digital immortality right now?"
+"201907 deep pass added MD-343~345 (ICM籌碼非線性/資訊位置先確認/組織提案激勵結構先於品質). dna_core.md now has 345 MDs. Boot test meta-rules audit complete: 39 scenarios, all 4 meta-rules covered. Paper-live tick 152 CONFIRMED real-data LONG flip — DualMA family LONG, BollingerMR SHORT (divergence). What is the highest-derivative action to advance digital immortality right now?"
 
-## State from Cycle 266
+## State from Cycle 267
 
-- Paper-live: tick 151, DualMA_10_30=**LONG** (tick 150+151); BTC=$71,197.89 synthetic; 1697+18=1715 entries (cycle 267 tick 105 already logged)
-- **SIGNAL FLIP EVENT persists**: DualMA LONG×2 at tick 151; regime MIXED; awaiting real Binance data to confirm
-- DNA: 342 MDs (341 entries, 1 legacy gap at MD-217); next JSONL: 201907
-- Consistency: 37/37 consecutive clean cycles (cycle 267 ran already)
-- Insights: ~121 in memory/insights.json
-- SOP #100 COMPLETE ✅ — T1 CERT/T2 68%→needs organism calibration/T3 publication-gated/T4 API-blocked/T5 N/A
+- Paper-live: tick 152, BTC=$71,128.59; DualMA_10_30=**LONG** ⚡ REAL FLIP CONFIRMED; 1768 entries; regime=MIXED
+- **CRITICAL**: 4 DualMA variants LONG vs gen_BollingerMeanReversion_RF_598b24=SHORT → signal conflict needs analysis
+- DNA: 345 MDs (344 entries, 1 legacy gap at MD-217); next JSONL: 201906
+- Consistency: 38/38 consecutive clean cycles (cycle 267 ran: 33/36 ALIGNED, 3 new meta_behavior LLM-req)
+- Insights: 130 in memory/insights.json
+- Boot tests: 39 scenarios; all 4 meta-rules covered (先搜再做/output-must-persist/先推再問/L1-L2-L3) ✅
 - SOPs: #01~#100 COMPLETE; posting queue through Oct 25
-- **Merge conflicts RESOLVED**: insights.json (cycle 265+267 entries merged) + paper_live_log.jsonl (HEAD retained with tick 105)
 
-## Priority Actions for Cycle 267
+## Priority Actions for Cycle 268
 
-1. **Consistency check** (Branch 6 — routine; 38th consecutive check)
-2. **201907 JSONL** → MD-343~345 (Branch 2.2)
-3. **boot_tests.md audit** → 4 meta-rules coverage (先搜再做/output-must-persist/先推再問/L1-L2-L3) — daemon_next_priority
-4. **Turing test candidate 2** — identify who beyond Samuel qualifies (Tier A criteria)
-5. **T2 calibration scenarios** — draft 3 new scenarios for organism calibration
+1. **Signal conflict analysis** — DualMA LONG × gen_BollingerMR_RF SHORT in MIXED regime: which is correct? Write diagnostic to staging/signal_conflict_cycle268.md
+2. **201906 JSONL** → MD-346~348 (Branch 2.2)
+3. **Consistency check** (Branch 6 — routine; 39th consecutive)
+4. **Branch 9**: Draft Turing Test Candidate 2 approach DM (SOP #98 Tier A criteria: consistent disagreement, domain overlap, willing to engage)
+5. **Branch 1.4**: Consulting outreach — identify first warm-network target for $197 async audit
 
 ## Cross-Session Memory
-- Cycle 266: MD-340~342 from 201908 (作品集選取/雇主cost-down/凱利降波動邊界); 342 MDs total
-- Cycle 266: Merge conflicts resolved in insights.json + paper_live_log.jsonl
-- Cycle 265: DualMA LONG signal flip (tick 150) — first since paper-live started
-- Cycle 265: SOP #100 = Tier Progression Protocol (centenary); T1 certified, T2 in progress
+- Cycle 267: MD-343~345 from 201907 (ICM/資訊位置/組織激勵); 345 MDs total
+- Cycle 267: Boot test meta-rules audit COMPLETE; 39 scenarios; all 4 meta-rules covered
+- Cycle 267: Paper-live tick 152 REAL LONG FLIP CONFIRMED — DualMA family all LONG
+- Cycle 266: MD-340~342 from 201908; SOP #100 Century milestone
+- Cycle 265: DualMA LONG flip (synthetic tick 150) — now confirmed real at tick 152
 
 ## Directive
 Action > report. Produce something concrete, not just analysis.

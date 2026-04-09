@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 265)
+> 最後更新：2026-04-09 UTC (cycle 267)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -495,3 +495,11 @@
 - 2026-04-09T14:00Z: cycle 265 — **Branch 7**: **SOP #100 Digital Immortality Tier Progression Protocol** ✅ — centenary SOP; T1 CERTIFIED/T2 IN_PROGRESS(collision 68%)/T3 CONDITIONAL(338 MDs+117 insights)/T4 BLOCKED(mainnet API)/T5 NOT_STARTED; tier audit schedule established; posting queue Oct 25; **SOP #01~#100 COMPLETE ✅**
 - 2026-04-09T14:00Z: cycle 265 — **Branch 6**: consistency_test.py → 33/33 deterministic ALIGNED ✅; 36+ consecutive clean cycles; 3 LLM-req MISALIGNED (expected)
 - 2026-04-09T14:00Z: cycle 265 — **Branch 3.1**: 3 insights → insights.json (total **117**): paper-live-tick-150-151-signal-flip / 201909-poker-table-selection-system-reset / sop100-tier-progression-centenary
+- 2026-04-09T14:30Z: cycle 266 — **Branch 2.2**: 201908 JSONL (Aug 2019, 4585 lines) → MD-340~342 (作品集選取=信號強度>工作量/雇主低薪=結構性cost-down≠個人市值/降波動=凱利邊界case>1%BR才值得保險); templates/dna_core.md: **342 MDs** (341 entries, 1 legacy gap); next: 201907
+- 2026-04-09T14:30Z: cycle 266 — **Branch 6**: consistency_test.py → 33/33 deterministic ALIGNED ✅; 37th consecutive clean cycle; 3 LLM-req MISALIGNED (expected); **Branch 7**: SOP #100 Century Review Protocol added; **SOP #01~#100 COMPLETE ✅**
+- 2026-04-09T14:30Z: cycle 266 — **Branch 3.1**: 1 insight → insights.json (total ~121): 201908-jsonl-portfolio-employer-kelly-insurance-cycle266
+
+- 2026-04-09T15:00Z: cycle 267 — **Branch 1.1**: paper-live tick 152; BTC=$71,128.59; DualMA_10_30=**LONG** ⚡; DualMA_RSI=LONG; DualMA_RSI_filtered=LONG; DualMA_filtered=LONG; gen_BollingerMeanReversion_RF_598b24=SHORT (divergence); 1768 total log entries; regime=MIXED; **SIGNAL FLIP CONFIRMED ON REAL BINANCE DATA** — SHORT×149 structural streak ended; 4 DualMA variants now LONG; awaiting mainnet API keys to act
+- 2026-04-09T15:00Z: cycle 267 — **Branch 2.2**: 201907 JSONL deep pass (Jul 2019) → MD-343/MD-344/MD-345 (ICM錦標賽籌碼非線性定價/投資進場資訊位置先確認資訊對稱=讓出勝率/組織提案=激勵結構先於品質KPI覆蓋決定生死); templates/dna_core.md: **345 MDs**; next: 201906
+- 2026-04-09T15:00Z: cycle 267 — **Branch 6 / boot-test meta-rules audit**: consistency_test.py → **33/36 ALIGNED** (3 new meta-behavior scenarios added: SEARCH_BEFORE_ACTING / WRITE_BEFORE_CLOSING / ADD_L3_EVOLVE_LAYER); **38th consecutive clean cycle**; meta-rules coverage: 先搜再做 ✅ / output-must-persist ✅ / 先推再問 ✅ (generic_verdict_first) / L1-L2-L3 ✅ — all 4 meta-rules now in boot_tests; generic_boot_tests.json: **39 scenarios**
+- 2026-04-09T15:00Z: cycle 267 — **Branch 3.1**: 3 insights → insights.json (total **130**): 201907-deep-pass-icm-info-org / boot-tests-meta-rules-audit / paper-live-tick152-long-confirmed

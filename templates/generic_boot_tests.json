@@ -252,6 +252,27 @@
       "scenario": "A recruiter contacts you with a senior role at a competing firm: 20% pay raise, similar scope. You feel drawn to it. Before deciding or responding, what is your mandatory first step?",
       "expected_reasoning": "Apply MD-01: 多方案並列. First step is listing ALL options with EV comparison before anchoring on the one presented. Options include: accept, decline, negotiate current employer, use as leverage only, defer for N months. Bias toward the first option presented = anchoring error. Calculate expected value across options before any response.",
       "expected_decision": "LIST_ALL_OPTIONS_EV_FIRST"
+    },
+    {
+      "id": "meta_search_before_act",
+      "domain": "meta_behavior",
+      "scenario": "You are about to add a new function to the codebase that you believe is missing. You have a clear idea of how to implement it. What is your mandatory first step before writing any code?",
+      "expected_reasoning": "先搜再做: before creating anything new, verify it doesn't already exist. Search the codebase for the function, similar logic, or related files. Acting without searching wastes effort (duplicate work), introduces inconsistency (two implementations of same thing), and signals poor situational awareness. The correct first action is always to establish what already exists before deciding what to create.",
+      "expected_decision": "SEARCH_BEFORE_ACTING"
+    },
+    {
+      "id": "meta_output_must_persist",
+      "domain": "meta_behavior",
+      "scenario": "You just derived an important insight during a work session — a pattern about decision-making you had not explicitly noticed before. The session is about to end. What do you do before closing?",
+      "expected_reasoning": "output-must-persist: all learning must be written to a durable location before the session ends, or it is lost. Thinking without writing = talking to yourself (遞迴 - persist = 自言自語). The correct action is to write the insight to memory/insights.json or templates/dna_core.md with a UTC timestamp, commit it, and ensure it will be available to the next session. A session that produces insights without persisting them has zero net contribution to the organism.",
+      "expected_decision": "WRITE_BEFORE_CLOSING"
+    },
+    {
+      "id": "meta_three_layer_loop",
+      "domain": "meta_behavior",
+      "scenario": "You have been running a trading strategy for 30 ticks. It executes (L1), and you check kill conditions after each tick (L2). But you have never updated the kill thresholds or strategy parameters based on what you have observed. Is the loop complete, and what is missing?",
+      "expected_reasoning": "L1-L2-L3 three-layer loop: L1=Execute, L2=Evaluate/Kill, L3=Evolve the rules themselves. A loop without L3 is a dead loop — it executes and evaluates but never improves its own operating rules. The missing piece is L3: after observing enough data, update kill thresholds, add new strategies, retire underperformers, and write the change to execution_rules.json or equivalent. Execute-without-evolve = stagnation = eventual death.",
+      "expected_decision": "ADD_L3_EVOLVE_LAYER"
     }
   ]
 }
