@@ -2,6 +2,41 @@
 
 Recursive engine cycle history.
 
+---
+
+## Cycle 207 — 2026-04-09T08:00Z
+
+### What was done
+
+**Branch 4.3 Discord seeding ✅**
+- `docs/discord_seed_general.md` — #general intro post: what organisms are, why this server, how to participate
+- `docs/discord_seed_collision_report.md` — #collision-reports: anonymized A vs B 22-scenario collision; 15/22 AGREE (68%); 7 divergences all in social domains; readable for outsiders; GitHub link at bottom
+- `docs/discord_seed_organism_dna.md` — #organism-dna: what a DNA document is + fragment from §2 Decision Framework + §6 Trading + §5 Known Failure Modes; ends with how-to-build instruction
+- `docs/discord_seed_calibration.md` — #calibration-sessions: 2 real correction examples from Samuel session; what makes a good calibration; anti-pattern (hollow sessions)
+
+**Branch 4.1 Samuel async DM ✅**
+- `docs/samuel_async_calibration_dm.md` — 3-part Chinese DM ready to paste to WhatsApp/LINE
+- Targets: `relationship_downgrade` (someone going cold), `network_roi` (unreciprocated help), `intro_gatekeeping` (vet before intro?)
+- Success criteria: ≥1 correction changes collision outcome; ≥1 new principle → samuel_dna.md updated → re-run collision
+
+### Why these two
+
+Both outputs break the same stall: Branch 4 was blocked on "scheduling required" and "Discord is empty". Neither block was real:
+- Scheduling: async DM requires zero coordination
+- Discord: 4 pre-written posts require zero creativity on first use
+
+After Edward pastes these → discord has 4 real posts → C gets invited → first non-AB pair collision becomes possible.
+
+### What the next cycle should focus on
+
+1. **Edward action**: Paste 4 seed posts → invite Organism C
+2. **Edward action**: Send samuel_async_calibration_dm.md via LINE/WhatsApp
+3. **Edward action**: Fill §0 + §7 in `templates/organism_c_draft.md` (20-30 min)
+4. Branch 1.1: paper-live tick 73
+5. Branch 7: SOP #46 — remaining domain gap scan
+
+---
+
 
 ## Cycle 189 — 2026-04-09T01:30Z
 
