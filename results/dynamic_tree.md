@@ -503,3 +503,8 @@
 - 2026-04-09T15:00Z: cycle 267 — **Branch 2.2**: 201907 JSONL deep pass (Jul 2019) → MD-343/MD-344/MD-345 (ICM錦標賽籌碼非線性定價/投資進場資訊位置先確認資訊對稱=讓出勝率/組織提案=激勵結構先於品質KPI覆蓋決定生死); templates/dna_core.md: **345 MDs**; next: 201906
 - 2026-04-09T15:00Z: cycle 267 — **Branch 6 / boot-test meta-rules audit**: consistency_test.py → **33/36 ALIGNED** (3 new meta-behavior scenarios added: SEARCH_BEFORE_ACTING / WRITE_BEFORE_CLOSING / ADD_L3_EVOLVE_LAYER); **38th consecutive clean cycle**; meta-rules coverage: 先搜再做 ✅ / output-must-persist ✅ / 先推再問 ✅ (generic_verdict_first) / L1-L2-L3 ✅ — all 4 meta-rules now in boot_tests; generic_boot_tests.json: **39 scenarios**
 - 2026-04-09T15:00Z: cycle 267 — **Branch 3.1**: 3 insights → insights.json (total **130**): 201907-deep-pass-icm-info-org / boot-tests-meta-rules-audit / paper-live-tick152-long-confirmed
+
+- 2026-04-09T15:15Z: cycle 275 — **Branch 2.2**: 201904 JSONL (Apr 2019, 2704 lines) → MD-352/MD-353/MD-354 (交易淨報酬=毛報酬-手續費-稅/ETF成分篩選=市值門檻≥500億/散戶心態=以結果反推決策品質); templates/dna_core.md: **354 MDs** (353 entries, 1 legacy gap); next: 201903 JSONL → MD-355~357
+- 2026-04-09T15:15Z: cycle 275 — **Branch 1.1**: paper-live tick; BTC=$70,954.24; DualMA_10_30=OPEN_SHORT; P&L=-0.2078%; 18 strategies; regime=MIXED; 1 active SHORT
+- 2026-04-09T15:15Z: cycle 275 — **Branch 6**: consistency_test.py → 33/33 deterministic ALIGNED ✅; 6 LLM-req MISALIGNED (expected); **44th consecutive clean cycle**; BRANCH 6 COMPLETE ✅
+- 2026-04-09T15:15Z: cycle 275 — **Branch 3.1**: 3 insights → insights.json (total **139**): paper-live-btc70954-short / consistency-44-consecutive / branch2-md352-354-201904-fee-etf-retail
