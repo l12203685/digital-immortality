@@ -2693,3 +2693,27 @@ Cycle 297 complete. Four branches pushed in parallel.
 2. **Consistency check** (Branch 6 — 52nd consecutive)
 3. **Branch 1.1**: paper-live tick
 4. **Branch 4.1**: Samuel calibration (human-gated — DM ready)
+
+## Cycle 300 — 2026-04-10T UTC
+
+- **B存活 G1**: dna_core.md cycle-300 DESIGNED audit (SOP #101 T1, 90-cycle milestone). G1-G5 ALL HEALTHY: priority stack 可可>FIRE>健康>交易>深交>數位永生 confirmed; WATCH: FIRE>健康 adjacency (eGFR 73 active); L3 wired; SOPs #101-#117 covered; no stale MDs; 36/39 boot test ALIGNED. No DRIFT, no CRITICAL.
+- **Branch 1.1**: tick 349; BTC=$72,412.06 (+$87 SHORT headwind); regime=MIXED; 15 active=FLAT; 3 DISABLED unchanged (DualMA_10_30/BollingerMR RF×2); 2074 log entries; PnL=-2.71%
+- **Branch 6**: consistency_test.py templates/dna_core.md → 36/39 deterministic ALIGNED (3 MISALIGNED = LLM-required, unchanged); **54th consecutive clean cycle** ✅
+- **Branch 3.1**: +3 insights → memory/insights.json (total **215**): cycle300-dna-core-G1-audit-HEALTHY / B6-54th-consecutive-36-39-aligned / B1.1-tick349-BTC-72412-SHORT-headwind
+- **SOP #117**: untracked → committed (DNA Core Audit Protocol; backing MDs #406-408)
+- **L2**: B×4 (G1-audit/tick/consistency/distillation). No A. No C/D.
+- **L3**: not triggered
+
+## Human blockers
+
+- Binance mainnet API keys (T4) — deadline 2026-07-07
+- Samuel DM (T2)
+- Outreach Week 1 DMs (T1)
+
+## Next cycle priorities
+
+1. **Consistency check** (Branch 6 — 55th consecutive)
+2. **Branch 1.1**: paper-live tick 350
+3. **Branch 3.1**: distillation cycle 301
+4. **Branch 1.3**: outreach_week1 DMs (human-gated)
+5. **WATCH**: FIRE>健康 priority pair — Edward confirm at next live session

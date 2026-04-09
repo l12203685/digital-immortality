@@ -2448,6 +2448,40 @@
         "scheduled-maintenance",
         "cycle-300"
       ]
+    },
+    {
+      "id": "ebaebdca-f23c-444a-8c09-5ab9a2023cd4",
+      "key": "cycle300-dna-core-G1-audit-HEALTHY",
+      "content": "Cycle 300 designed dna_core.md audit (SOP #101 T1 trigger, 90-cycle milestone). G1-G5 all HEALTHY. Priority stack 可可>FIRE>健康>交易>深交>數位永生 confirmed valid. WATCH: FIRE>健康安全 adjacency flagged for Edward confirmation (eGFR 73 monitoring active). G2 L3 confirmed wired (cycle 270). G3 SOPs #101-#117 covered. G4 no stale MDs. G5 boot tests 36/39 ALIGNED. No DRIFT, no CRITICAL. Audit is product QA, not system maintenance.",
+      "tags": [
+        "B存活",
+        "G1-audit",
+        "cycle-300",
+        "dna_core",
+        "HEALTHY"
+      ]
+    },
+    {
+      "id": "edb68ede-ad3d-48d1-9290-fbecf31c52e0",
+      "key": "B6-54th-consecutive-36-39-aligned",
+      "content": "Consistency check cycle 300: 36/39 deterministic ALIGNED, 3 MISALIGNED (poker_gto_mdf / trading_atr_sizing / career_multi_option_ev) — all LLM-required, expected, unchanged from all prior cycles. 54th consecutive clean cycle. templates/dna_core.md behavioral alignment stable.",
+      "tags": [
+        "B6",
+        "consistency",
+        "cycle-300",
+        "54th-consecutive"
+      ]
+    },
+    {
+      "id": "5075d275-0dc8-44e5-ad6e-6a42c40cb9f1",
+      "key": "B1.1-tick349-BTC-72412-SHORT-headwind",
+      "content": "Paper-live tick 349: BTC=2,412.06 (+7.82 from tick 348 2,325.24; SHORT headwind). Regime=MIXED. 15 active strategies=FLAT. 3 disabled unchanged (DualMA_10_30 PF=0.53, BollingerMR RF×2). 2074 total log entries. No signal = IDLE per inaction bias. PnL=-2.71% (unchanged).",
+      "tags": [
+        "B1.1",
+        "trading",
+        "cycle-300",
+        "paper-live"
+      ]
     }
   ]
 }
