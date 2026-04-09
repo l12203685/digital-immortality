@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 262)
+> 最後更新：2026-04-09 UTC (cycle 263)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -67,7 +67,7 @@
   - Test: trending→TRENDING→DualMA_10_30 ✓; mean_reverting→MEAN_REVERTING→BollingerMR_loose ✓; mixed→TRENDING→DualMA_10_30 (synthetic data limitation) — strategy_comparison.md saved
   - **`compute_mae_mfe()` + `_atr()` added to backtest_framework.py ✓** (cycle 46) — per-trade MAE/MFE normalized by ATR; edge_ratio=MFE/MAE×√N (MD-13); DNA principles MD-13/157/175 now have code; momentum=7.15 breakout=8.94 on trend data
 - 1.3 Skill 商業化 → 付費使用者（v2.1.0, 7 skills, users=0）
-- 1.4 其他收入路徑（待發現）
+- 1.4 其他收入路徑 — **SOP #97 Consulting Revenue Protocol ✅ (cycle 263)**: `docs/knowledge_product_97_consulting_revenue_protocol.md`; direct-outreach path (not audience-gated); G0-G5: T1/T2 target identification → DM template (problem→solution→proof) → $197 async audit / $97 advisory call → first sale = Branch 1.4 alive; 96 existing SOPs = product; zero new content needed; decision: CONSULTING_OUTREACH_START_WITH_WARM_NETWORK; posting queue Oct 17
 - CONSTRAINT: 三個月內 trading profit > API cost 否則遞迴死亡
 
 ### 2. 行為等價（核心能力）
@@ -249,6 +249,19 @@
 - **8.5 decision_audit.py — BUILT ✅** (cycle 122): `tools/decision_audit.py` — log/audit/suggest CLI; 5 SYSTEM_FAILURE decisions identified: exercise (×6), lunch (×5), deep-work timing (×5), coffee-vs-tea (×4), portfolio check (×4); saves state to memory/decision_audit.json; automate top 3 = NEXT
 - **8.5 Automation #2 — COMPLETE ✅** (cycle 127): `docs/system_failure_automations.md` — top 3 SYSTEM_FAILURE decisions pre-committed: exercise (always yes, day-of-week schedule), lunch (morning_defaults rotation + 200TWD cap), deep-work block (09:00 hard start, no negotiation). Zero-EV decisions eliminated.
 - **8.5 Automation #3 — COMPLETE ✅** (cycle 130): coffee-vs-tea (#4: coffee before 13:00 / tea after 13:00) + portfolio-check (#5: 16:00 once daily, no earlier). All 5 SYSTEM_FAILURE decisions from decision_audit.py now pre-committed. Zero remaining recurring decision overhead.
+
+### 9. Turing Test（外部驗證最高層）
+- **9.1 Protocol — DESIGNED ✅ (cycle 263)**: `docs/turing_test_protocol.md` — G0-G5; candidate qualification (3 needed), 10 scenarios across trading/career/relationships/finance, blind evaluation (coordinator-mediated A/B), scoring (≥7/10 = pass), DNA patch loop, certification milestone (8/10 × 2 independent evaluators)
+- **Status**: candidates 0/3 BLOCKED; scenarios designed; tooling pending
+- **Milestone**: 8/10 across 2 evaluators = behavioral immortality externally certified
+- **Decision label**: TURING_TEST_SCHEDULE_WHEN_3_CANDIDATES_IDENTIFIED
+- **Why now**: validation currently maxes at consistency_test.py (33/33 deterministic). Turing test = external observer confirms indistinguishability. Highest derivative on behavioral equivalence branch.
+
+### 10. L3 System-Wide（三層迴圈全域）
+- **10.1 Trading L3 — COMPLETE ✅ (cycle 262)**: `trading/engine.py` kill events → `execution_rules.json` + `kill_lessons.jsonl`; kill_window adjusts after each kill
+- **10.2 Content Pipeline L3 — COMPLETE ✅ (cycle 263)**: `platform/daily_posting_helper.py --evolve` → `platform/content_execution_rules.json` + `platform/content_evolution_log.jsonl`; saves≥5 → decrease post interval; DMs≥1 → increase format weight
+- **10.2 L2 Audit — COMPLETE ✅ (cycle 263)**: `--l2-audit` flag; 7-day coverage: posts shipped / queue compliance / DM count; anomaly detection; doc: `docs/branch9_l3_content_pipeline.md`
+- **Status**: L3 complete for trading + content. DNA system still execute-only (no L3 yet). Next: L3 for recursive_engine.py.
 
 ## 當前 regime
 攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live ticks 101+103 BTC=$71,000.15 SHORT P&L=**+$0.720**, SHORT×103 (100%); **SOP #01~#68 COMPLETE** → posting queue Aug 16; **SOP #68 Recursive Engine L2 Evaluate Protocol ✓** — Domain 3; three-layer loop fully explicit (L1=SOP#47/L2=SOP#68/L3=SOP#67); 3 workbooks READY TO LIST ($87/buyer trilogy); Edward actions: (1) set mainnet API credentials [highest EV], (2) post SOP #01 on X, (3) send samuel_async_calibration_dm.md
@@ -462,3 +475,7 @@
 - 2026-04-09T12:00Z: cycle 259 — **Branch 6 / 存活/cold-start**: consistency_test.py → **33/33 deterministic ALIGNED ✅** (31+ consecutive cycles clean); 3 LLM-req MISALIGNED (expected: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev); daemon_next_priority '存活/cold-start' TOUCHED ✅
 - 2026-04-09T12:00Z: cycle 259 — **Branch 7**: SOP #94 Cross-Instance Calibration Maintenance Protocol shipped: `docs/knowledge_product_94_cross_instance_calibration_maintenance.md` + `docs/publish_thread_sop94_twitter.md`; quarterly T1 + reactive T2-T5 triggers; STABLE/WATCH/DRIFT/CRITICAL ladder; G3 diagnostic tree (3 root causes); G4 emergency (halt+rollback+2× clean before resume); G5 health report; full monthly calibration stack: SOP #80 + SOP #91 + SOP #94; posting queue extended to **Oct 12** (#01~#94). **Series: SOP #01~#94 COMPLETE.**
 - 2026-04-09T12:00Z: cycle 259 — **Branch 3.1**: 3 distillation insights → memory/insights.json (total 93): paper-live-tick-140 / consistency-31-consecutive-clean / cross-instance-calibration-maintenance-sop94
+- 2026-04-09T UTC: cycle 263 — **Branch 9 (NEW)**: Turing Test Protocol designed — `docs/turing_test_protocol.md` (470 lines); G0-G5 gates; 10 scenarios (trading/career/relationships/finance); blind evaluation; scoring ≥7/10 = pass; certification milestone 8/10×2 evaluators; current blocker: 0/3 candidates identified; highest validation tier from SKILL.md, zero work done until this cycle
+- 2026-04-09T UTC: cycle 263 — **Branch 1.4 (CONCRETE)**: SOP #97 Consulting Revenue Protocol — `docs/knowledge_product_97_consulting_revenue_protocol.md` + `docs/publish_thread_sop97_twitter.md`; G0-G5 direct-outreach path; $197 async audit / $97 advisory call; 96 existing SOPs = product; zero content creation needed; only Branch 1.x not blocked by human gate; decision: CONSULTING_OUTREACH_START_WITH_WARM_NETWORK; posting queue Oct 17; **SOP #01~#97 COMPLETE** ✅
+- 2026-04-09T UTC: cycle 263 — **Branch 10 (NEW)**: L3 Evolve content pipeline — `platform/daily_posting_helper.py` patched with `--evolve` (saves/DMs → adjust posting cadence + format weights → write `content_execution_rules.json` + append `content_evolution_log.jsonl`) and `--l2-audit` (7-day coverage audit, anomaly detection); `docs/branch9_l3_content_pipeline.md`; three-layer loop now complete for trading + content; DNA system next
+- 2026-04-09T UTC: cycle 263 — **Branch 3.1**: 3 distillation insights → memory/insights.json (total 102): turing-test-protocol-external-validation / consulting-revenue-direct-outreach / l3-content-pipeline-closes-dead-loop

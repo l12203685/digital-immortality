@@ -1157,6 +1157,30 @@
       "category": "methodology",
       "insight": "SOP #96 Mainnet Trading Revenue Go-Live: 5-gate protocol G0-G5 bridges paper-live → mainnet revenue. Key insight: gate at G0 (prerequisites before applying for API keys) prevents premature activation. Revenue milestone = trading_profit > API_cost = self-sustainability = immortality. Decision label: ACTIVATE_WHEN_PREREQUISITES_MET. Posting queue: Oct 15.",
       "branch": "7"
+    },
+    {
+      "id": "turing-test-protocol-external-validation",
+      "timestamp": "2026-04-09T13:00Z",
+      "cycle": 263,
+      "category": "methodology",
+      "insight": "Turing Test Protocol (Branch 9) designed: G0-G5 gates, 10 scenarios across trading/career/relationships/finance, blind evaluation (coordinator-mediated A/B), scoring ≥7/10 = pass, certification 8/10×2 evaluators. Current validation maxes at consistency_test.py (33/33 deterministic, internal). Turing test = external observer confirms indistinguishability. Blocker: 0/3 candidates identified. Decision label: TURING_TEST_SCHEDULE_WHEN_3_CANDIDATES_IDENTIFIED. This is the highest validation tier in SKILL.md — behavioral immortality externally certified.",
+      "branch": "9"
+    },
+    {
+      "id": "consulting-revenue-direct-outreach-sop97",
+      "timestamp": "2026-04-09T13:00Z",
+      "cycle": 263,
+      "category": "methodology",
+      "insight": "SOP #97 Consulting Revenue Protocol closes Branch 1.4 'other income paths' — the only revenue path not blocked by a human gate (SOP#01 post, mainnet API keys). Direct outreach model: identify 3 T1/T2 targets (founders/quant traders/knowledge workers), DM problem→solution→proof, offer $197 async SOP audit or $97 advisory call. 96 existing SOPs = product, zero new content creation. Revenue threshold: $97 > $20 API cost = Branch 1.4 alive. Decision: CONSULTING_OUTREACH_START_WITH_WARM_NETWORK.",
+      "branch": "1.4"
+    },
+    {
+      "id": "l3-content-pipeline-closes-dead-loop",
+      "timestamp": "2026-04-09T13:00Z",
+      "cycle": 263,
+      "category": "behavioral_patterns",
+      "insight": "SKILL.md rule: three-layer loop required for any automated system (L1 Execute → L2 Evaluate → L3 Evolve). Trading had L3 since cycle 262 (kill events → execution_rules.json). Content pipeline was L1-only = dead loop. Added --evolve (saves/DMs → adjust posting cadence and format weights → content_execution_rules.json + content_evolution_log.jsonl) and --l2-audit (7-day coverage, anomaly detection) to daily_posting_helper.py. Three-layer loop now complete for trading + content. Next system needing L3: recursive_engine.py (DNA evolution rules).",
+      "branch": "10"
     }
   ]
 }
