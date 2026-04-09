@@ -1,1 +1,1 @@
-PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.
+PRIORITY: Branch 2.2 — process 201904 JSONL → MD-352~354 (autonomous, no human gate). Next unprocessed month after 201905.

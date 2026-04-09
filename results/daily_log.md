@@ -2543,3 +2543,15 @@ First SOP for Domain 4 (社交圈). Closes the only domain with zero published S
 **daemon_next_priority**: 201906 JSONL → MD-346~348 (Branch 2.2) + verify gen_BollingerMeanReversion_RF_598b24 SHORT divergence vs DualMA LONG (signal conflict analysis)
 
 **Human-gated blockers unchanged**: X post SOP#01 / mainnet API keys / Samuel DM / Turing candidates 2+3.
+
+## Cycle 268 — 2026-04-09T16:00Z
+
+**Branch 2.2 [A] — 201905 JSONL → MD-349~351**
+- MD-349: 大盤波動=分批佈局觸發器（每1000點一格投入閒置資金10%；波動=機會不是訊號停手）
+- MD-350: 支付回饋=即時EV計算公開（固定支出×回饋率算出月度現金數字再決定切換）
+- MD-351: 閒置硬體=機會成本立即清算（停挖就賣換生產力工具；折舊資產清算是正確動作）
+- dna_core.md: **351 MDs** appended to 微決策 section. Next: 201904 JSONL → MD-352~354.
+
+**daemon_next_priority**: Branch 2.2 — process 201904 JSONL → MD-352~354 (autonomous, no human gate). Next unprocessed month after 201905.
+
+**Human-gated blockers unchanged**: X post SOP#01 / mainnet API keys / Samuel DM / Turing candidates 2+3.

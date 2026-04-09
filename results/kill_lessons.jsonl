@@ -1,0 +1,1 @@
+{"ts": "2026-04-09T14:45:57.560067+00:00", "tick": 53, "strategy": "DualMA_10_30", "kill_reason": "PF 0.78 < 0.8", "cum_pnl": -0.3027, "price_at_kill": 70975.55, "regime_at_kill": "mixed", "rule_change": "kill_window reduced to 45 (faster feedback loop)"}

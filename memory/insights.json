@@ -1441,6 +1441,50 @@
       "category": "insights",
       "description": "Paper-live tick 152: BTC=71128.59, DualMA_10_30=LONG, DualMA_RSI=LONG, DualMA_filtered=LONG, DualMA_RSI_filtered=LONG. SIGNAL FLIP CONFIRMED on real Binance data. SHORT×151 structural streak ended. Regime=MIXED. 1768 total entries. 4 DualMA variants LONG; gen_BollingerMeanReversion_RF_598b24=SHORT (divergence).",
       "created_at": "2026-04-09T15:00Z"
+    },
+    {
+      "id": "paper-live-tick32-engine47-cycle273",
+      "ts": "2026-04-09T14:40Z",
+      "text": "Cycle 273 paper-live tick: BTC=$70,631.65 DualMA_10_30=OPEN_SHORT; engine tick 47: BTC=$70,811.79, P&L=-0.0716% cumulative; DualMA_10_30=SHORT; 17/18 FLAT; regime=MIXED; 18 active strategies."
+    },
+    {
+      "id": "consistency-42-consecutive-cycle273",
+      "ts": "2026-04-09T14:40Z",
+      "text": "42nd consecutive clean cycle: 33/33 deterministic ALIGNED. 3 LLM-boundary MISALIGNED (expected: poker_gto_mdf / trading_atr_sizing / career_multi_option_ev). Branch 6 COMPLETE confirmed."
+    },
+    {
+      "id": "branch2-md346-348-201906-cycle273",
+      "ts": "2026-04-09T14:40Z",
+      "text": "Branch 2.2: 201906 JSONL processed. MD-346 (投資報酬率要扣資本部署時間折扣) / MD-347 (金融交易最小化中間步驟) / MD-348 (群組私揪曬照=刻意排除機制). dna_core.md updated to 348 MDs. Next: 201905 JSONL → MD-349~351."
+    },
+    {
+      "id": "branch2-md349-351-201905-cycle268",
+      "ts": "2026-04-09T16:00Z",
+      "text": "Branch 2.2: 201905 JSONL processed. MD-349 (大盤波動=分批佈局觸發器；每1000點一格投入閒置資金10%) / MD-350 (支付回饋=即時EV計算公開；固定支出×回饋率算出月度現金數字再決定切換) / MD-351 (閒置硬體=機會成本立即清算；停挖就賣換生產力工具；折舊資產清算是正確動作). dna_core.md updated to 351 MDs. Next: 201904 JSONL → MD-352~354."
+    },
+    {
+      "id": "3e282ee4-d5ac-4adc-a537-2a51384d9364",
+      "key": "paper-live-tick-btc70893-cycle274",
+      "content": "Branch 1.1 paper-live tick cycle 274: BTC=$70,893.60; DualMA_10_30=OPEN_SHORT (structural); engine P&L=-0.2332%; 18 strategies active; regime=MIXED; mainnet blocked (no API keys)",
+      "timestamp": "2026-04-09T14:49:42.802246+00:00",
+      "source": "trading-daemon-cycle-274",
+      "tags": [
+        "trading",
+        "paper-live",
+        "cycle-274"
+      ]
+    },
+    {
+      "id": "c66f3e70-3c9e-4d6e-9df8-90e4410f2c7a",
+      "key": "consistency-43-consecutive-cycle274",
+      "content": "Branch 6 consistency_test.py cycle 274: 33/33 deterministic ALIGNED; 6 LLM-requirement misaligned (expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev/meta_search/meta_persist/meta_three_layer); 43rd consecutive clean cycle; Branch 6 COMPLETE 6/6 gates",
+      "timestamp": "2026-04-09T14:49:42.802274+00:00",
+      "source": "consistency-test-cycle-274",
+      "tags": [
+        "consistency",
+        "branch-6",
+        "cycle-274"
+      ]
     }
   ]
 }
