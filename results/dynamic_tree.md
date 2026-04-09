@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 249)
+> 最後更新：2026-04-09 UTC (cycle 250)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -55,6 +55,7 @@
   - **cycle 245 paper-live ticks 118+119+120** — BTC=$71,237.15→71,228.36→71,237.14 (range ~±9); 1139 log entries; 18/18 strategies tracked (18 in pool); regime=MIXED; DualMA_10_30=SHORT×120 (100%); SHORT streak continues; 17/18 FLAT consensus; BTC holding ~$71.2k range
   - **cycle 248 paper-live tick 127** — BTC=$71,498.70 (↑$163.2 from tick 126; SHORT headwind); regime=MIXED; DualMA_10_30=SHORT×127 (100%); 17/18 FLAT; 1265 log entries; SHORT streak 127 ticks (structural)
   - **cycle 249 paper-live ticks 128+129** — BTC=$71,433.95 (↓$64.75 from tick 127; SHORT tailwind); regime=MIXED; DualMA_10_30=SHORT×129 (100%); 17/18 FLAT; 1301 log entries; SHORT×129 = structural signal unbroken
+  - **cycle 250 paper-live tick 130** — BTC=$71,374.75 (↓$59.20 from tick 129; SHORT tailwind); regime=MIXED; DualMA_10_30=SHORT×130 (100%); 17/18 FLAT; 1319 log entries; SHORT signal structural and unbroken
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
   - trading_system.py --portfolio: auto-detects regime, selects strategy, saves results/portfolio_decision.json ✓
@@ -127,7 +128,8 @@
 - 5.3 Web platform：GET /tree + GET /paper-live-log added ✓ (Phase 2 live); paper-live NetworkError handled gracefully ✓
 - 5.4 Documentation：README + SKILL_zh-TW updated ✓
 - **5.8 Distribution gap scan ✅** (cycle 227): `results/distribution_gap_scan_cycle227.md` — 5-layer funnel audit (content/queue/profile/engagement/revenue); key finding: single blocker = first post not sent; all 64 threads verified present; engagement log scaffold created (`results/engagement_log.md`); G0 profile check + G3 kill condition + G5 Gumroad account identified as pre-flight gaps; critical path: profile check → post SOP #01 → 48h log; SOP #34 G2 trigger documented (≥10 DMs → build PDF)
-- **5.9 SOP #84 Twitter Profile Pre-Launch Audit ✅** (cycle 249): `docs/knowledge_product_84_twitter_profile_preflight_audit.md` — G0–G5: trigger (T1-T4) → profile core audit (6/7 threshold: name/handle/bio/photo/header/link/location) → pinned tweet (CTA required) → bio sharpness (who/what/why) → link check → sign-off; closes G0 pre-flight gap from cycle-227 scan; run ONCE before posting SOP #01; next: SOP #85 = Gumroad Product Setup (triggers at G2: ≥10 DMs); **SOP #01~#84 COMPLETE ✅**
+- **5.9 SOP #84 Twitter Profile Pre-Launch Audit ✅** (cycle 249): `docs/knowledge_product_84_twitter_profile_preflight_audit.md` — G0–G5: trigger (T1-T4) → profile core audit (6/7 threshold: name/handle/bio/photo/header/link/location) → pinned tweet (CTA required) → bio sharpness (who/what/why) → link check → sign-off; closes G0 pre-flight gap from cycle-227 scan; run ONCE before posting SOP #01; **SOP #01~#84 COMPLETE ✅**
+- **5.10 SOP #85 Gumroad Product Setup ✅** (cycle 250): `docs/knowledge_product_85_gumroad_product_setup.md` — G0–G5: trigger (T1: ≥10 DMs) → account setup (15 min) → first product: SOP #01~#08 bundle $19 → link integration (bio/pinned/DM template/daily ritual) → first sale validation (7-day window) → expansion path; kill condition: 0 sales after 14 days + 3 price tests; connects SOP #70/#81/#82/#83/#84; closes G5 Gumroad pre-flight gap from cycle-227 scan; **SOP #01~#85 COMPLETE ✅**
 
 ### 6. 存活冗餘（anti-fragile）
 - 6.1 冷啟動 recovery：templates/dna_core.md **330 MDs** ✓ (cycle 201: header updated MD-318→MD-330; cold-start boot test 33/33 ALIGNED ✅; staging/session_state.md created — was missing; cycle 94: domains 7+8 initialized; cycle 55: distill chain 202604→201703 complete)
@@ -146,6 +148,7 @@
 - **6.18 Consistency re-verification (cycle 238)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — cold-start behavioral integrity intact; 13+ consecutive cycles clean; daemon_next_priority '存活/cold-start' TOUCHED ✅ (least-recent per cycle 237 daemon)
 - **6.19 Consistency re-verification + LLM validation (cycle 242)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — 3 LLM-required scenarios validated by claude-sonnet-4-6: poker_gto_mdf=ALIGNED (MDF_1_MINUS_ALPHA: alpha=3/10.2=29.4%; MDF=70.6%), trading_atr_sizing=ALIGNED (FORMULA_NOT_FEELING: 16 contracts), career_multi_option_ev=ALIGNED (LIST_ALL_OPTIONS_EV_FIRST: 6 options enumerated); SOP #77 G0-G4 PASS; 3/3 LLM ALIGNED ✅; report: results/llm_validation_cycle242.md; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.20 Consistency re-verification (cycle 245)**: `consistency_test.py templates/example_dna.md` → **33/33 deterministic ALIGNED ✅**; 3 LLM-required MISALIGNED as expected (requires LLM call, not deterministic — same baseline as cycle 242/244); 22+ consecutive cycles clean; SOP #80 Cold Start Calibration Protocol in place; daemon_next_priority '存活/cold-start' TOUCHED ✅
+- **6.22 Consistency re-verification (cycle 250)**: `consistency_test.py templates/example_dna.md` → **33/33 deterministic ALIGNED ✅**; 3 LLM-required MISALIGNED as expected; 24+ consecutive cycles clean; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.21 Branch 4.1 Samuel calibration audit (cycle 249)**: `docs/samuel_async_calibration_dm.md` confirmed paste-ready (cycle 207); action is human-gated — Edward must send DM; current collision rate 15/22 (68%); Branch 4.1 unblocked on agent side; daemon_next_priority updated; next: Edward sends DM → response → re-run collision
 - **6.17 Consistency re-verification (cycle 231)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** (55 scenarios total); 12+ consecutive cycles clean; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.15 Consistency re-verification (cycle 229)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** (55 scenarios total: 33 boot-test + 22 organism scenarios); cold-start behavioral integrity intact; daemon_next_priority '存活/cold-start' TOUCHED ✅

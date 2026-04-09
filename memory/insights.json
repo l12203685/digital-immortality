@@ -735,6 +735,30 @@
         "recursive-engine",
         "cycle-transition"
       ]
+    },
+    {
+      "id": "7e5ed767-f4fc-487c-b212-0954520b35df",
+      "key": "paper-live-short-persistence-130",
+      "content": "DualMA_10_30 SHORT signal unbroken at tick 130 (100%). BTC=1,374.75. 18 strategies tracked; 17/18 FLAT. Regime=MIXED. 1319 total log entries. Structural SHORT signal: 130 consecutive ticks with zero LONG.",
+      "timestamp": "2026-04-09T10:16:45.521284+00:00",
+      "source": "recursive-engine-cycle-250",
+      "category": "trading"
+    },
+    {
+      "id": "fbb3b431-4534-471b-8758-df9d7692640c",
+      "key": "consistency-24-consecutive-clean",
+      "content": "33/33 deterministic ALIGNED cycle 250. 24+ consecutive clean cycles. 3 LLM-required scenarios MISALIGNED as expected (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev). Cold-start behavioral integrity intact.",
+      "timestamp": "2026-04-09T10:16:45.521284+00:00",
+      "source": "recursive-engine-cycle-250",
+      "category": "validation"
+    },
+    {
+      "id": "f36240c7-a777-47ee-ba82-fe6385038b26",
+      "key": "gumroad-product-setup-sop85",
+      "content": "SOP #85 Gumroad Product Setup created. Closes G5 pre-flight gap from cycle-227 scan. Trigger: G2 ≥10 DMs. Core product: SOP #01~#08 bundle at 9. G0-G5 gate sequence: account → product → link integration → first sale validation → expansion. Kill condition: 0 sales after 14 days + 3 price tests. SOP #01~#85 COMPLETE.",
+      "timestamp": "2026-04-09T10:16:45.521284+00:00",
+      "source": "recursive-engine-cycle-250",
+      "category": "distribution"
     }
   ]
 }

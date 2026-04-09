@@ -1,28 +1,37 @@
-# Session State — 2026-04-09 UTC (Cycle 248)
+# Session State — 2026-04-09 UTC (Cycle 250)
 
 > Inter-session relay. Cold-start reads this AFTER dna_core.md + boot_tests.md.
 > Updated each cycle. If stale >24h: re-read daemon_log.md tail 60 to reconstruct.
 
 ## Current Cycle
-- **Cycle**: 248 (completed); next: 249
-- **Timestamp**: 2026-04-09T10:00Z
+- **Cycle**: 250 (completed); next: 251
+- **Timestamp**: 2026-04-09T10:15Z
 - **Phase**: Recursive daemon running
 
 ## Branch Status Summary
 | Branch | Status | Last Touched |
 |--------|--------|--------------|
-| 1.1 Trading paper-live | tick 127: BTC=$71,498.70 (↑$163.2 SHORT headwind); DualMA_10_30=SHORT×127 (100%); 18 strategies in pool; regime=MIXED; 1265 log entries | cycle 248 |
+| 1.1 Trading paper-live | tick 130: BTC=$71,374.75 (↓$59.20 SHORT tailwind); DualMA_10_30=SHORT×130 (100%); 18 strategies; regime=MIXED; 1319 log entries | cycle 250 |
 | 1.3 Skill 商業化 | v2.1.0, users=0; blocker=SOP#01 never posted (0 audience) | cycle 212 |
 | 2.2 微決策學習 | **COMPLETE** — 330 MDs ✅ | cycle 180+ |
 | 2.3 Validation | 33/33 ALIGNED ✅ + 3 LLM scenarios validated (3/3 ALIGNED) | cycle 244 |
-| 3.1 遞迴引擎 | three-layer operational ✓; total 56 entries in insights.json; distillation cycle 248 done | cycle 248 |
+| 3.1 遞迴引擎 | three-layer operational ✓; total 63 entries in insights.json; distillation cycle 250 done | cycle 250 |
 | 4.1 Samuel organism | 22-scenario collision 15/22 AGREE (68%); async DM ready to send | cycle 207 |
 | 4.3 Discord | 4 seed posts written; ready to paste → invite C | cycle 207 |
 | 5.3 Web platform | Phase 2 live ✓ | cycle 120+ |
-| 6 存活冷啟動 | **30/33 deterministic ALIGNED ✅** (23+ consecutive cycles clean; 3 LLM-req MISALIGNED expected); SOP #80 operational; next calibration: 2026-05-09 | cycle 248 |
-| 5 Distribution | SOP #01~#81 COMPLETE — SOP #81: Distribution Velocity SOP | cycle 246 |
-| 7 SOP series | **SOP #83 COMPLETE** — Daily Posting Execution Ritual; G0-G5; 20min/day; anti-pattern: editing on posting day; closes infrastructure→execution gap | cycle 248 |
+| 6 存活冷啟動 | **33/33 deterministic ALIGNED ✅** (24+ consecutive cycles clean; 3 LLM-req MISALIGNED expected); SOP #80 operational; next calibration: 2026-05-09 | cycle 250 |
+| 5 Distribution | **SOP #01~#85 COMPLETE** — SOP #85: Gumroad Product Setup; trigger ≥10 DMs; product: SOP #01~#08 bundle $19 | cycle 250 |
+| 7 SOP series | **SOP #85 COMPLETE** — Gumroad Product Setup; G0-G5; closes G5 pre-flight gap; SOP #01~#85 done | cycle 250 |
 | 8 Tool Stack | **SOP #64 coverage established** — T1/T2/T3 tiers defined; L1+L2+L3 maintenance protocol ✓ | cycle 226 |
+
+## L2 Verdict (Cycle 250)
+```
+L2 [250]: A — Branch 7 SOP #85 — Gumroad Product Setup; G0-G5: trigger(≥10 DMs)→account→SOP#01~#08 bundle $19→link integration→first sale validation(7d)→expansion; closes G5 Gumroad pre-flight gap (cycle-227 scan); kill condition: 0 sales after 14d+3 price tests; SOP #01~#85 COMPLETE ✅ — HIGH
+L2 [250]: B — Branch 6 存活 — 33/33 deterministic ALIGNED; 24+ consecutive clean cycles; 3 LLM-req MISALIGNED (expected); daemon_next_priority 存活/cold-start TOUCHED — MEDIUM
+L2 [250]: B — Branch 1.1 tick 130 — BTC=$71,374.75 (↓$59.20 SHORT tailwind); SHORT×130 (100%); 1319 entries; regime=MIXED — LOW (mainnet blocked)
+L2 [250]: B — Branch 3.1 distillation — 3 insights (total 63): paper-live-short-persistence-130 / consistency-24-consecutive-clean / gumroad-product-setup-sop85 — MEDIUM
+```
+Cycle verdict: 1A + 3B. No C or D. L3 not triggered.
 
 ## L2 Verdict (Cycle 248)
 ```
@@ -58,14 +67,20 @@ Cycle verdict: 1A + 2B. No C or D. L3 not triggered.
 - Organism C: Edward must fill §0 + §7 in `templates/organism_c_draft.md`
 
 ## Queue (highest derivative first)
-1. **⚡ Branch 1.3**: Edward posts SOP #01 on X → M1 milestone → SOP #83 G1 kicks in daily. Zero friction. See `docs/posting_queue.md` row 1 + `docs/knowledge_product_83_daily_posting_execution_ritual.md` G1-G2.
+1. **⚡ Branch 1.3**: Edward posts SOP #01 on X → M1 milestone → SOP #83 daily ritual begins → G2 (≥10 DMs) → SOP #85 G0 → Gumroad live → revenue. Critical path.
 2. **Branch 1.1**: set BINANCE_MAINNET_KEY/SECRET → run `python trading/mainnet_runner.py --tick`
 3. **Branch 4.3**: Edward pastes 4 Discord seed posts → invite C
 4. **Branch 4.1**: Edward sends `docs/samuel_async_calibration_dm.md` via WhatsApp/LINE
 5. **Branch 4.2**: Organism C — Edward fills `templates/organism_c_draft.md` §0 + §7
-6. Branch 1.1: paper-live tick 128 (run `python trading/mainnet_runner.py --paper-live`)
-7. Branch 7: SOP #84 — candidates: Organism Onboarding Streamlined SOP, Mainnet Kill Condition Review
+6. Branch 1.1: paper-live tick 131 (run `python trading/mainnet_runner.py --paper-live`)
+7. Branch 7: SOP #86 — candidates: Consulting Rate Card SOP (triggers after ≥3 "do you consult?" DMs)
 8. Branch 6: next scheduled calibration 2026-05-09 (monthly)
+
+## What's DONE this cycle (cycle 250)
+- **Branch 1.1** (cycle 250): paper-live tick 130; BTC=$71,374.75 (↓$59.20 SHORT tailwind); DualMA_10_30=SHORT×130 (100%); 17/18 FLAT; regime=MIXED; 1319 total log entries
+- **Branch 6** (cycle 250): consistency_test.py → 33/33 deterministic ALIGNED ✅; 3 LLM-req MISALIGNED (expected); 24+ consecutive clean cycles; daemon_next_priority '存活/cold-start' TOUCHED ✅
+- **Branch 7** (cycle 250): SOP #85 Gumroad Product Setup — `docs/knowledge_product_85_gumroad_product_setup.md`; G0-G5; trigger ≥10 DMs; product: SOP #01~#08 bundle $19; closes G5 Gumroad pre-flight gap; **SOP #01~#85 COMPLETE** ✅
+- **Branch 3.1** (cycle 250): distillation — 3 insights appended to memory/insights.json (total 63): paper-live-short-persistence-130 / consistency-24-consecutive-clean / gumroad-product-setup-sop85
 
 ## What's DONE this cycle (cycle 248)
 - **Branch 1.1** (cycle 248): paper-live tick 127; BTC=$71,498.70 (↑$163.2 from tick 126); DualMA_10_30=SHORT×127 (100%); 17/18 FLAT; regime=MIXED (trend=0.014, MR=0.225); 1265 total log entries
