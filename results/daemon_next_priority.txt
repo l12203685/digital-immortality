@@ -1,1 +1,1 @@
-PRIORITY: Branch 2.2 (MD distillation) — 201804 JSONL → MD-388~390 (next unprocessed month after cycle 286 completed 201805). 存活/cold-start TOUCHED cycle 287 (concrete audit: runbook updated, all tests PASS).
+PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.

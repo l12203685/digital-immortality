@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-10T02:04+08",
+  "updated": "2026-04-10T02:15+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 201804 JSONL → MD-388~390 (autonomous, no human gate). Binding constrai..."
+      "text": "Committed + pushed."
     },
     {
       "time": "just now",
-      "text": "Branch 7 — SOP #113 reply-qualification-protocol docs committed"
+      "text": "daemon_next_priority: 201803 JSONL → MD-391~393"
     },
     {
       "time": "just now",
-      "text": "Branch 3.1 — +4 insights (total 187)"
+      "text": "Branch 3.1: 6 insights → insights.json (total 193)"
     },
     {
       "time": "just now",
-      "text": "Branch 1.1 — tick 286, BTC=$72,341.85, mixed regime, all-FLAT; -2.71% total PnL"
+      "text": "Branch 1.1 (parallel agent): tick 212, BTC=$71,964.87, regime=mixed, 15 activ..."
     },
     {
       "time": "just now",
-      "text": "Branch 6 — 33/33 ALIGNED, 55th consecutive clean cycle ✅"
+      "text": "- dynamic_tree.md: entry 6.30 added"
     }
   ],
   "stats": {

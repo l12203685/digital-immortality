@@ -7121,3 +7121,31 @@ Cycle 286 committed. Summary:
 **Branch 7** — SOP #113 reply-qualification-protocol docs committed
 
 Next: 201804 JSONL → MD-388~390 (autonomous, no human gate). Binding constraint unchanged: Branch 1.3 sends = 0 (human-gated).
+
+## Cycle 84 — 2026-04-09 18:15:55 UTC
+
+Pushed. Cycle 287 complete. Summary:
+
+---
+
+**Cycle 287 — Complete**
+
+**Branch 2.2** (parallel agent): 201804 JSONL → MD-388~390
+- **MD-388** 社會標籤≠機制EV判斷 — tournament=OK/poker=gambling but mechanism identical; judge by mechanism + EV not social label
+- **MD-389** 定額制損益平衡計算 — before any flat-fee bundle, compute breakeven count = price÷single-use, compare to actual history not intentions
+- **MD-390** 結果論解耦 — decision quality = EV correctness at decision time; results = EV + variance; single outcome can't validate decision quality
+- DNA: **390 MDs**, next: 201803
+
+**Branch 6 + 存活/cold-start** (parallel agent — CONCRETE WORK, daemon flag cleared):
+- consistency_test.py: 33/33 ALIGNED, 6 expected MISALIGNED — **56th consecutive clean cycle**
+- cold_start_test.py: **5/5 PASS**, boot_time=0.060s
+- cold_start_recovery_runbook.md: **updated** (330→387 MDs, 14→39 scenarios — 3 stale refs corrected)
+- dynamic_tree.md: entry 6.30 added
+
+**Branch 1.1** (parallel agent): tick 212, BTC=$71,964.87, regime=mixed, 15 active all-FLAT, total_pnl=-2.71%
+
+**Branch 3.1**: 6 insights → insights.json (total **193**)
+
+**daemon_next_priority**: 201803 JSONL → MD-391~393
+
+Committed + pushed.
