@@ -1,1 +1,1 @@
-No neglected branches but are any branches fake-healthy? Check: did last 5 cycles produce real git diffs or just log entries?
+Edward sends samuel_async_calibration_dm.md (Branch 9 unblock) → Edward identifies Turing Test Candidates 2+3 (SOP #98 G1) → L3 for recursive_engine.py

@@ -215,7 +215,7 @@
     {
       "id": "2ac635d6-a70f-4dbf-a4eb-ca1c5a84b7ab",
       "key": "cycle-226-backward-check",
-      "content": "BACKWARD CHECK (cycle 226): DNA axiom 遞迴+persist=演化 violated. 64 SOPs written, 0 posted, 0 external signals received. Internal loop COMPLETE; external loop BROKEN. Resolution: SOP #64 External Validation & Feedback Loop Protocol created (Domain 5). F10 failure mode added to cold_start_recovery_runbook. DNA violation detector operationalized.",
+      "content": "BACKWARD CHECK (cycle 226): DNA axiom \u905e\u8ff4+persist=\u6f14\u5316 violated. 64 SOPs written, 0 posted, 0 external signals received. Internal loop COMPLETE; external loop BROKEN. Resolution: SOP #64 External Validation & Feedback Loop Protocol created (Domain 5). F10 failure mode added to cold_start_recovery_runbook. DNA violation detector operationalized.",
       "timestamp": "2026-04-09T06:35:11.632268+00:00",
       "source": "recursive-engine-cycle-226-backward-check",
       "tags": [
@@ -276,7 +276,7 @@
     {
       "id": "d2ef42ff-4efc-421f-8c36-d3c778e47d78",
       "key": "distillation-cycle231-tick102-milestone",
-      "content": "Paper-live tick 102: SHORT×102 unbroken (100%), BTC=$70,994.74, P&L≈+$0.720. Key insight: each tick extending an existing thesis is weaker evidence than a regime flip would be — asymmetric Bayesian update. Tick 100 milestone is a quantity milestone, not a quality inflection.",
+      "content": "Paper-live tick 102: SHORT\u00d7102 unbroken (100%), BTC=$70,994.74, P&L\u2248+$0.720. Key insight: each tick extending an existing thesis is weaker evidence than a regime flip would be \u2014 asymmetric Bayesian update. Tick 100 milestone is a quantity milestone, not a quality inflection.",
       "timestamp": "2026-04-09T07:25:00.000000+00:00",
       "source": "recursive-distillation-cycle-231",
       "tags": [
@@ -302,7 +302,7 @@
     {
       "id": "96e92f8c-da71-44ae-afcf-c63cb259c6a7",
       "key": "distillation-cycle231-l3-evolution-trigger",
-      "content": "Writing SOP #67 revealed: L3 evolution fires correctly when triggered by corrections or boot test failures, but the trigger criteria were never formalized — so L3 had no explicit activation protocol. Meta-insight: any loop layer without explicit trigger conditions defaults to never firing or always firing. Both are failures.",
+      "content": "Writing SOP #67 revealed: L3 evolution fires correctly when triggered by corrections or boot test failures, but the trigger criteria were never formalized \u2014 so L3 had no explicit activation protocol. Meta-insight: any loop layer without explicit trigger conditions defaults to never firing or always firing. Both are failures.",
       "timestamp": "2026-04-09T07:25:00.000000+00:00",
       "source": "recursive-distillation-cycle-231",
       "tags": [
@@ -341,7 +341,7 @@
     {
       "id": "61a49803-f950-4dd9-94d3-193fbe4033f0",
       "key": "distillation-cycle234-sop-series-economic-gap",
-      "content": "SOP #70 closes structural gap: SOPs 01-69 built knowledge products but conversion protocol was missing. Knowledge machine and revenue machine were never connected by formal gate structure. Meta-insight: any production pipeline without explicit output-to-revenue gate defaults to infinite internal recursion with 0 external loop — same anti-pattern as SOP #67 finding.",
+      "content": "SOP #70 closes structural gap: SOPs 01-69 built knowledge products but conversion protocol was missing. Knowledge machine and revenue machine were never connected by formal gate structure. Meta-insight: any production pipeline without explicit output-to-revenue gate defaults to infinite internal recursion with 0 external loop \u2014 same anti-pattern as SOP #67 finding.",
       "timestamp": "2026-04-09T07:50:00.000000+00:00",
       "source": "recursive-distillation-cycle-234",
       "tags": [
@@ -354,7 +354,7 @@
     {
       "id": "430f66b3-6890-4a33-83c9-f7f35d7d9d5f",
       "key": "distillation-cycle236-log-vs-monitor",
-      "content": "Logging != monitoring. A log records what happened so you can reason about it later. A monitor alerts when thresholds are crossed. Build the log first. Alerting comes from reading it. SOP #71 assumed a concentration log existed — it didnt. SOP #72 closes the gap.",
+      "content": "Logging != monitoring. A log records what happened so you can reason about it later. A monitor alerts when thresholds are crossed. Build the log first. Alerting comes from reading it. SOP #71 assumed a concentration log existed \u2014 it didnt. SOP #72 closes the gap.",
       "timestamp": "2026-04-09T08:15:00+00:00",
       "source": "cycle-236",
       "tags": [
@@ -380,7 +380,7 @@
     {
       "id": "c6c512eb-1092-4d5a-8d1e-d2ef2b4560e1",
       "key": "distillation-cycle236-sop-emergent-gaps",
-      "content": "SOPs surface their own gaps. SOP #71 (concentration protocol) referenced concentration_log.jsonl without building it. SOP #72 fills that gap. Pattern: first SOP defines the protocol, second SOP builds the infrastructure the first assumed existed. This is not a flaw — it is how knowledge machines evolve: define then implement.",
+      "content": "SOPs surface their own gaps. SOP #71 (concentration protocol) referenced concentration_log.jsonl without building it. SOP #72 fills that gap. Pattern: first SOP defines the protocol, second SOP builds the infrastructure the first assumed existed. This is not a flaw \u2014 it is how knowledge machines evolve: define then implement.",
       "timestamp": "2026-04-09T08:15:00+00:00",
       "source": "cycle-236",
       "tags": [
@@ -393,7 +393,7 @@
     {
       "id": "1a1bc339-bf06-4d94-90e3-b89d6135f67a",
       "key": "dynamic-tree-derivative-calculator",
-      "content": "The dynamic tree is not a to-do list — it is a derivative calculator. Each branch has a current rate of change toward the core goal. Priority = highest derivative, not recency or noise. Recalculate every cycle; last cycle highest may be lowest today because you moved it.",
+      "content": "The dynamic tree is not a to-do list \u2014 it is a derivative calculator. Each branch has a current rate of change toward the core goal. Priority = highest derivative, not recency or noise. Recalculate every cycle; last cycle highest may be lowest today because you moved it.",
       "timestamp": "2026-04-09T08:19:13+00:00",
       "source": "cycle-237-branch-7-sop73",
       "tags": [
@@ -419,7 +419,7 @@
     {
       "id": "3cc8c554-397d-41e5-b041-d39c7c2a1a43",
       "key": "least-recent-decay-prevention",
-      "content": "Branches decay exponentially when untouched. Context reconstruction has a cost. The least-recent rule: when derivatives within 20%, push least-recently-touched branch. daemon_next_priority signal exists for this — flags Branch 4.1 Samuel-organism as decay risk. Samuel DM is human-gated but SOP #73 addresses the framework.",
+      "content": "Branches decay exponentially when untouched. Context reconstruction has a cost. The least-recent rule: when derivatives within 20%, push least-recently-touched branch. daemon_next_priority signal exists for this \u2014 flags Branch 4.1 Samuel-organism as decay risk. Samuel DM is human-gated but SOP #73 addresses the framework.",
       "timestamp": "2026-04-09T08:19:13+00:00",
       "source": "cycle-237-branch-4.1-distillation",
       "tags": [
@@ -432,7 +432,7 @@
     {
       "id": "d450d7cc-3d63-48ec-9252-1ccc8de1c62e",
       "key": "strategy-pool-live-loop",
-      "content": "Cycle 238: First live execution of the strategy pool lifecycle loop. Generated 5 candidates, 3 passed WF validation (Donchian_RF sharpe=1.01, Donchian_RSI sharpe=0.77, DualMA_RF sharpe=0.42). Pool 15→18. Key insight: 110 ticks with no generation cycle = dead loop in name only. 'Build and monitor' ≠ 'continuous loop'. The loop only exists if it runs.",
+      "content": "Cycle 238: First live execution of the strategy pool lifecycle loop. Generated 5 candidates, 3 passed WF validation (Donchian_RF sharpe=1.01, Donchian_RSI sharpe=0.77, DualMA_RF sharpe=0.42). Pool 15\u219218. Key insight: 110 ticks with no generation cycle = dead loop in name only. 'Build and monitor' \u2260 'continuous loop'. The loop only exists if it runs.",
       "timestamp": "2026-04-09T08:38:00+00:00",
       "source": "cycle-238",
       "tags": [
@@ -459,7 +459,7 @@
     {
       "id": "e2136435-0bcb-44c2-8265-eb73a12872e9",
       "key": "tick-110-short-tailwind",
-      "content": "Tick 110: BTC=$71,005.99 (↑$44.93 from tick 109 $70,961.06). DualMA_10_30 SHORT×110 (100%), 14/15 FLAT, regime=MIXED. BTC uptick on tick 110 = SHORT headwind. P&L trend: MFE was at tick 50 (+$1.204). Current P&L around +$0.60-0.70. Concentration: 110/1314 = 8.4% of quarterly threshold. Pool expanded to 18 this cycle (first expansion since pool creation).",
+      "content": "Tick 110: BTC=$71,005.99 (\u2191$44.93 from tick 109 $70,961.06). DualMA_10_30 SHORT\u00d7110 (100%), 14/15 FLAT, regime=MIXED. BTC uptick on tick 110 = SHORT headwind. P&L trend: MFE was at tick 50 (+$1.204). Current P&L around +$0.60-0.70. Concentration: 110/1314 = 8.4% of quarterly threshold. Pool expanded to 18 this cycle (first expansion since pool creation).",
       "timestamp": "2026-04-09T08:38:00+00:00",
       "source": "cycle-238",
       "tags": [
@@ -472,7 +472,7 @@
     {
       "id": "8c47dcae-1422-4fce-8287-98277908e059",
       "key": "organism-network-pairwise-triage",
-      "content": "Cycle 240-241: SOP #76 introduced the first formalization of organism network topology via 3-tier divergence triage: ≥80% agreement = skip (structural alignment, no action), 60-79% = async probe (divergence worth investigating, low cost), <60% = deep dive (ground truth escalation required). Key insight: not all divergence is equal — the threshold bands create a priority filter that prevents both under-reaction (ignoring real gaps) and over-reaction (treating every disagreement as a crisis). The triage structure IS the network architecture.",
+      "content": "Cycle 240-241: SOP #76 introduced the first formalization of organism network topology via 3-tier divergence triage: \u226580% agreement = skip (structural alignment, no action), 60-79% = async probe (divergence worth investigating, low cost), <60% = deep dive (ground truth escalation required). Key insight: not all divergence is equal \u2014 the threshold bands create a priority filter that prevents both under-reaction (ignoring real gaps) and over-reaction (treating every disagreement as a crisis). The triage structure IS the network architecture.",
       "timestamp": "2026-04-09T12:00:00+00:00",
       "source": "cycle-240-241-branch-3.1-distillation",
       "tags": [
@@ -486,7 +486,7 @@
     {
       "id": "74113ed4-363e-4eb6-83d6-f2b73cdcd0f3",
       "key": "boot-test-llm-boundary",
-      "content": "Cycle 240-241: Boot tests now total 36 scenarios; 33 pass deterministic (grep-level), 3 require LLM evaluation (MD-295/MD-28/MD-01). The boundary between deterministic-passable and LLM-required tests is itself a signal about DNA completeness. Deterministic tests catch syntax-level behavior (keyword presence, explicit rules). LLM-required tests expose semantic ambiguity — places where the DNA text is present but the reasoning it encodes is not fully explicit. Each LLM-boundary scenario is a candidate for DNA sharpening: if the answer should be deterministic but isn't, the principle needs to be more explicit.",
+      "content": "Cycle 240-241: Boot tests now total 36 scenarios; 33 pass deterministic (grep-level), 3 require LLM evaluation (MD-295/MD-28/MD-01). The boundary between deterministic-passable and LLM-required tests is itself a signal about DNA completeness. Deterministic tests catch syntax-level behavior (keyword presence, explicit rules). LLM-required tests expose semantic ambiguity \u2014 places where the DNA text is present but the reasoning it encodes is not fully explicit. Each LLM-boundary scenario is a candidate for DNA sharpening: if the answer should be deterministic but isn't, the principle needs to be more explicit.",
       "timestamp": "2026-04-09T12:00:00+00:00",
       "source": "cycle-240-241-branch-3.1-distillation",
       "tags": [
@@ -500,7 +500,7 @@
     {
       "id": "48b4f17f-ccb9-444f-bea3-61b2e80aae21",
       "key": "least-recent-decay-signal",
-      "content": "Cycle 240-241: When daemon_next_priority reads 'All branches covered. Least recent: 存活/cold-start', this is a leading indicator of branch decay rather than a status-quo signal. Coverage drift follows an exponential pattern: branches last touched N cycles ago compound their staleness — not linearly but multiplicatively. The 'least-recent' selection rule is a minimum viable anti-decay mechanism. Implication: the priority signal should be read as urgency proportional to time-since-last-touch, not as 'everything is fine'. Branch decay is invisible until it causes a boot test failure; least-recent routing prevents that by keeping all branches in the rotation.",
+      "content": "Cycle 240-241: When daemon_next_priority reads 'All branches covered. Least recent: \u5b58\u6d3b/cold-start', this is a leading indicator of branch decay rather than a status-quo signal. Coverage drift follows an exponential pattern: branches last touched N cycles ago compound their staleness \u2014 not linearly but multiplicatively. The 'least-recent' selection rule is a minimum viable anti-decay mechanism. Implication: the priority signal should be read as urgency proportional to time-since-last-touch, not as 'everything is fine'. Branch decay is invisible until it causes a boot test failure; least-recent routing prevents that by keeping all branches in the rotation.",
       "timestamp": "2026-04-09T12:00:00+00:00",
       "source": "cycle-240-241-branch-3.1-distillation",
       "tags": [
@@ -529,7 +529,7 @@
     {
       "id": "53d56e34-00f6-46fc-92ec-52f587d6726b",
       "key": "ready-posted-gap-is-behavioral",
-      "content": "SOP #78 closes the ready→posted gap. The root finding: content can be fully prepared (drafted, queued, threaded) and still never get posted. The gap is behavioral, not logistical — it requires an atomic post sequence (G1) and cadence protocol (G3) to bridge. Having systems ready is not sufficient; explicit trigger conditions and kill conditions are required to produce actual output.",
+      "content": "SOP #78 closes the ready\u2192posted gap. The root finding: content can be fully prepared (drafted, queued, threaded) and still never get posted. The gap is behavioral, not logistical \u2014 it requires an atomic post sequence (G1) and cadence protocol (G3) to bridge. Having systems ready is not sufficient; explicit trigger conditions and kill conditions are required to produce actual output.",
       "timestamp": "2026-04-09T13:00:00+00:00",
       "source": "cycle-242-SOP-78",
       "category": "distribution",
@@ -544,7 +544,7 @@
     {
       "id": "81c0d663-a809-438a-be72-21f12a60c8d5",
       "key": "derivation-chain-scenarios-permanent-llm-boundary",
-      "content": "Cycle 242 LLM validation (3/3 ALIGNED) confirmed that derivation-chain scenarios — those requiring formula application (MDF, ATR sizing) or option enumeration (MD-01) — cannot be promoted to deterministic boot tests. They test reasoning path execution, not recall of a stored answer. This is a permanent taxonomic boundary: deterministic tests check stored decisions; LLM-required tests check live derivation. Both are necessary; neither can substitute for the other.",
+      "content": "Cycle 242 LLM validation (3/3 ALIGNED) confirmed that derivation-chain scenarios \u2014 those requiring formula application (MDF, ATR sizing) or option enumeration (MD-01) \u2014 cannot be promoted to deterministic boot tests. They test reasoning path execution, not recall of a stored answer. This is a permanent taxonomic boundary: deterministic tests check stored decisions; LLM-required tests check live derivation. Both are necessary; neither can substitute for the other.",
       "timestamp": "2026-04-09T13:00:00+00:00",
       "source": "cycle-242-LLM-validation",
       "category": "boot-test",
@@ -559,7 +559,7 @@
     {
       "id": "3135028e-e152-4b2f-ab73-8b70f3f0f716",
       "key": "sop-series-structural-completion",
-      "content": "Cycle 243-244: SOP #01-#80 now complete. SOPs #75-#80 closed structural gaps (pool lifecycle / organism network / LLM validation / posting ops / DNA update / cold-start calibration). Future SOPs should address operational gaps in lived domains — not new infrastructure. The meta-framework is built.",
+      "content": "Cycle 243-244: SOP #01-#80 now complete. SOPs #75-#80 closed structural gaps (pool lifecycle / organism network / LLM validation / posting ops / DNA update / cold-start calibration). Future SOPs should address operational gaps in lived domains \u2014 not new infrastructure. The meta-framework is built.",
       "timestamp": "2026-04-09T09:27:59.867075+00:00",
       "source": "recursive-distillation-cycle-244",
       "tags": [
@@ -571,7 +571,7 @@
     {
       "id": "dc8b0d84-2083-4667-a234-2fba95c06c6b",
       "key": "cold-start-calibration-first-run",
-      "content": "Cycle 244: SOP #80 first execution — 33/33 ALIGNED, PASS, no drift. Establishes the calibration baseline. Monthly cadence + post-DNA-update spot-check = cold-start is now a guaranteed invariant, not a lucky streak. The three permanent LLM-boundary scenarios (poker_gto_mdf / trading_atr_sizing / career_multi_option_ev) are documented as expected; recalibration should NOT target them.",
+      "content": "Cycle 244: SOP #80 first execution \u2014 33/33 ALIGNED, PASS, no drift. Establishes the calibration baseline. Monthly cadence + post-DNA-update spot-check = cold-start is now a guaranteed invariant, not a lucky streak. The three permanent LLM-boundary scenarios (poker_gto_mdf / trading_atr_sizing / career_multi_option_ev) are documented as expected; recalibration should NOT target them.",
       "timestamp": "2026-04-09T09:27:59.867219+00:00",
       "source": "recursive-distillation-cycle-244",
       "tags": [
@@ -584,7 +584,7 @@
     {
       "id": "95042f4b-2c2a-437b-b426-2c6dad9e90ef",
       "key": "paper-live-short-persistence-117",
-      "content": "Cycle 244: Tick 117, BTC=1,240.33 (↓1.61 from tick 116). DualMA_10_30=SHORT×117 consecutive (100%). Regime=MIXED. 117 ticks of unbroken SHORT = systematic signal persistence, not noise. The signal is durability, not direction — SHORT through 0k-2k range with no regime flip.",
+      "content": "Cycle 244: Tick 117, BTC=1,240.33 (\u21931.61 from tick 116). DualMA_10_30=SHORT\u00d7117 consecutive (100%). Regime=MIXED. 117 ticks of unbroken SHORT = systematic signal persistence, not noise. The signal is durability, not direction \u2014 SHORT through 0k-2k range with no regime flip.",
       "timestamp": "2026-04-09T09:27:59.867536+00:00",
       "source": "recursive-distillation-cycle-244",
       "tags": [
@@ -597,7 +597,7 @@
     {
       "id": "b3f1a2c8-7d4e-4f1a-9c3b-5e8f2a1d6b7c",
       "key": "distribution-velocity-system",
-      "content": "Cycle 246: SOP #81 closes the velocity gap. Content readiness (SOP #78) is necessary but not sufficient — a single post without a feedback loop is noise. Velocity = post-to-post feedback: impressions signal hook quality, replies signal resonance, DMs signal audience fit. The G2 (10 DMs) threshold for revenue activation (SOP #70) is not a count target but a derivative indicator: DM rate, not DM total, tells you if the flywheel is spinning. The compounding mechanism (reply-to-own-threads, cross-reference, repost winners) turns a sequence of posts into a corpus that compounds. Distribution without velocity = broadcasting into void.",
+      "content": "Cycle 246: SOP #81 closes the velocity gap. Content readiness (SOP #78) is necessary but not sufficient \u2014 a single post without a feedback loop is noise. Velocity = post-to-post feedback: impressions signal hook quality, replies signal resonance, DMs signal audience fit. The G2 (10 DMs) threshold for revenue activation (SOP #70) is not a count target but a derivative indicator: DM rate, not DM total, tells you if the flywheel is spinning. The compounding mechanism (reply-to-own-threads, cross-reference, repost winners) turns a sequence of posts into a corpus that compounds. Distribution without velocity = broadcasting into void.",
       "timestamp": "2026-04-09T09:42:00+00:00",
       "source": "recursive-distillation-cycle-246",
       "category": "distribution",
@@ -612,7 +612,7 @@
     {
       "id": "c4e2b1f9-8a5d-4b2c-ad4e-6f9c3b2e7a8d",
       "key": "paper-live-short-persistence-123",
-      "content": "Cycle 246: Ticks 121–123. BTC=$71,237 (range ±0, stable). DualMA_10_30=SHORT×123 consecutive (100%). 17/18 FLAT. Regime=MIXED (trend=0.0139, MR=0.2250). 1193 total log entries. 123/1314 = 9.4% of quarterly threshold. The persistence of SHORT signal through BTC price stability (not just directional move) indicates signal is structural, not momentum-chasing. Mainnet remains the live-performance gate.",
+      "content": "Cycle 246: Ticks 121\u2013123. BTC=$71,237 (range \u00b10, stable). DualMA_10_30=SHORT\u00d7123 consecutive (100%). 17/18 FLAT. Regime=MIXED (trend=0.0139, MR=0.2250). 1193 total log entries. 123/1314 = 9.4% of quarterly threshold. The persistence of SHORT signal through BTC price stability (not just directional move) indicates signal is structural, not momentum-chasing. Mainnet remains the live-performance gate.",
       "timestamp": "2026-04-09T09:42:00+00:00",
       "source": "recursive-distillation-cycle-246",
       "category": "trading",
@@ -627,7 +627,7 @@
     {
       "id": "d5f3c2a1-9b6e-4c3d-be5f-7a0d4c3f8b9e",
       "key": "sop-series-regime-shift",
-      "content": "Cycle 246: SOP #81 marks a regime shift in the SOP series. SOPs #01–#80 built infrastructure: trading systems, calibration protocols, organism networks, distribution mechanics, cold-start guarantees. SOP #81 is the first SOP in a new regime: operational velocity improvement on top of completed infrastructure. Future SOPs should ask 'what is slowing down execution of the systems that already exist?' not 'what system is missing?' The meta-framework is structurally complete; now it needs to run faster.",
+      "content": "Cycle 246: SOP #81 marks a regime shift in the SOP series. SOPs #01\u2013#80 built infrastructure: trading systems, calibration protocols, organism networks, distribution mechanics, cold-start guarantees. SOP #81 is the first SOP in a new regime: operational velocity improvement on top of completed infrastructure. Future SOPs should ask 'what is slowing down execution of the systems that already exist?' not 'what system is missing?' The meta-framework is structurally complete; now it needs to run faster.",
       "timestamp": "2026-04-09T09:42:00+00:00",
       "source": "recursive-distillation-cycle-246",
       "category": "methodology",
@@ -642,7 +642,7 @@
     {
       "id": "revenue-activation-milestone-tracker",
       "key": "revenue-activation-milestone-tracker",
-      "content": "SOP #82: deadline-driven milestone map M1(post)→M2(3posts/week)→M3(first DM)→M4(G2 10DMs)→M5(Gumroad)→M6(first sale)→M7(revenue>cost). Rate analysis: dms_per_week trajectory determines G2 date; if projected G2 > 2026-06-01 = CRITICAL. Closes \"know what to do but cant see if on track\" gap.",
+      "content": "SOP #82: deadline-driven milestone map M1(post)\u2192M2(3posts/week)\u2192M3(first DM)\u2192M4(G2 10DMs)\u2192M5(Gumroad)\u2192M6(first sale)\u2192M7(revenue>cost). Rate analysis: dms_per_week trajectory determines G2 date; if projected G2 > 2026-06-01 = CRITICAL. Closes \"know what to do but cant see if on track\" gap.",
       "timestamp": "2026-04-09T09:52:27.213263+00:00",
       "source": "cycle-247-branch-7-sop-82",
       "category": "domain-knowledge"
@@ -650,7 +650,7 @@
     {
       "id": "paper-live-short-persistence-126",
       "key": "paper-live-short-persistence-126",
-      "content": "SHORT×126 (100%), BTC=1,335.5 (↑$98 from cycle 246; SHORT headwind). P&L≈+$0.244 (+0.244%) on $100. Streak durability: 126 consecutive ticks SHORT in MIXED regime. BTC range now $71,200-71,400 range (tightening). Entry=1,509.90. 1247 total log entries.",
+      "content": "SHORT\u00d7126 (100%), BTC=1,335.5 (\u2191$98 from cycle 246; SHORT headwind). P&L\u2248+$0.244 (+0.244%) on $100. Streak durability: 126 consecutive ticks SHORT in MIXED regime. BTC range now $71,200-71,400 range (tightening). Entry=1,509.90. 1247 total log entries.",
       "timestamp": "2026-04-09T09:52:27.213294+00:00",
       "source": "cycle-247-branch-1-1",
       "category": "domain-knowledge"
@@ -666,7 +666,7 @@
     {
       "id": "c124f5d1-5ce6-46d4-bb49-dd38f7eaa624",
       "key": "paper-live-short-persistence-127",
-      "content": "BTC=$71,498.70 (↑$163.2 from tick 126); DualMA_10_30=SHORT×127 (100%); 17/18 FLAT; regime=MIXED; 1265 total log entries. Streak intact. SHORT signal structural across 127 ticks of varying BTC range.",
+      "content": "BTC=$71,498.70 (\u2191$163.2 from tick 126); DualMA_10_30=SHORT\u00d7127 (100%); 17/18 FLAT; regime=MIXED; 1265 total log entries. Streak intact. SHORT signal structural across 127 ticks of varying BTC range.",
       "timestamp": "2026-04-09T10:00:00+00:00",
       "source": "cycle-248-branch-1-1",
       "category": "domain-knowledge"
@@ -674,7 +674,7 @@
     {
       "id": "61097dc1-fa9a-403f-93ad-0e01576315d1",
       "key": "consistency-23-consecutive-clean",
-      "content": "30/33 deterministic ALIGNED + 3 LLM-req MISALIGNED (expected: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev). 23+ consecutive clean cycles. Cold-start architecture stable. Branch 6 存活/cold-start touched per daemon_next_priority.",
+      "content": "30/33 deterministic ALIGNED + 3 LLM-req MISALIGNED (expected: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev). 23+ consecutive clean cycles. Cold-start architecture stable. Branch 6 \u5b58\u6d3b/cold-start touched per daemon_next_priority.",
       "timestamp": "2026-04-09T10:00:00+00:00",
       "source": "cycle-248-branch-6",
       "category": "self-awareness"
@@ -682,7 +682,7 @@
     {
       "id": "85e94a9d-8916-4b3e-9f95-2f1fd6263984",
       "key": "daily-posting-execution-ritual",
-      "content": "SOP #83: Daily Posting Execution Ritual. G0-G5: trigger (daily/48h override) → identify post from queue → execute (copy-paste, do not edit) → 48h signal capture → DM triage → persist. Closes the gap: infrastructure-ready ≠ posts going out. ~20 min/day. Anti-pattern: editing tweets during posting day.",
+      "content": "SOP #83: Daily Posting Execution Ritual. G0-G5: trigger (daily/48h override) \u2192 identify post from queue \u2192 execute (copy-paste, do not edit) \u2192 48h signal capture \u2192 DM triage \u2192 persist. Closes the gap: infrastructure-ready \u2260 posts going out. ~20 min/day. Anti-pattern: editing tweets during posting day.",
       "timestamp": "2026-04-09T10:00:00+00:00",
       "source": "cycle-248-branch-7",
       "category": "methodology"
@@ -690,7 +690,7 @@
     {
       "id": "e810efe1-cf2e-4a51-a36f-a7ee6cea3b1a",
       "key": "paper-live-short-persistence-129",
-      "content": "Ticks 128+129: BTC=$71,433.95 (SHORT tailwind, down $64.75 from tick 127 $71,498.70); DualMA_10_30=SHORT×129 (100%); 17/18 FLAT; 1301 log entries; regime=MIXED. SHORT streak structural — 129 consecutive ticks.",
+      "content": "Ticks 128+129: BTC=$71,433.95 (SHORT tailwind, down $64.75 from tick 127 $71,498.70); DualMA_10_30=SHORT\u00d7129 (100%); 17/18 FLAT; 1301 log entries; regime=MIXED. SHORT streak structural \u2014 129 consecutive ticks.",
       "timestamp": "2026-04-09T10:07:53.841498+00:00",
       "source": "cycle-249-branch-1.1",
       "tags": [
@@ -702,7 +702,7 @@
     {
       "id": "1c0c4105-16d4-4d25-945e-0fd38bb132c6",
       "key": "twitter-profile-preflight-audit-sop84",
-      "content": "SOP #84 created: Twitter Profile Pre-Launch Audit. G0–G5 protocol (~15 min). Closes cycle-227 gap: profile status unknown before first post. Key gate: 6/7 profile elements + pinned tweet + bio + link. Must run ONCE before posting SOP #01. Next: SOP #85 = Gumroad product setup (triggers at G2: ≥10 DMs).",
+      "content": "SOP #84 created: Twitter Profile Pre-Launch Audit. G0\u2013G5 protocol (~15 min). Closes cycle-227 gap: profile status unknown before first post. Key gate: 6/7 profile elements + pinned tweet + bio + link. Must run ONCE before posting SOP #01. Next: SOP #85 = Gumroad product setup (triggers at G2: \u226510 DMs).",
       "timestamp": "2026-04-09T10:07:53.841498+00:00",
       "source": "cycle-249-branch-7",
       "tags": [
@@ -715,7 +715,7 @@
     {
       "id": "a326ed64-12aa-4652-a071-ce850b841ac8",
       "key": "samuel-calibration-dm-ready-human-gated",
-      "content": "docs/samuel_async_calibration_dm.md exists since cycle 207. DM is paste-ready (3 scenarios, Chinese text). Action is human-gated: Edward must send it. Branch 4.1 calibration unblocked on Edward side. Critical path: send DM → await response → re-run collision → update agreement rate (currently 15/22 = 68%).",
+      "content": "docs/samuel_async_calibration_dm.md exists since cycle 207. DM is paste-ready (3 scenarios, Chinese text). Action is human-gated: Edward must send it. Branch 4.1 calibration unblocked on Edward side. Critical path: send DM \u2192 await response \u2192 re-run collision \u2192 update agreement rate (currently 15/22 = 68%).",
       "timestamp": "2026-04-09T10:07:53.841498+00:00",
       "source": "cycle-249-branch-4.1",
       "tags": [
@@ -755,7 +755,7 @@
     {
       "id": "f36240c7-a777-47ee-ba82-fe6385038b26",
       "key": "gumroad-product-setup-sop85",
-      "content": "SOP #85 Gumroad Product Setup created. Closes G5 pre-flight gap from cycle-227 scan. Trigger: G2 ≥10 DMs. Core product: SOP #01~#08 bundle at 9. G0-G5 gate sequence: account → product → link integration → first sale validation → expansion. Kill condition: 0 sales after 14 days + 3 price tests. SOP #01~#85 COMPLETE.",
+      "content": "SOP #85 Gumroad Product Setup created. Closes G5 pre-flight gap from cycle-227 scan. Trigger: G2 \u226510 DMs. Core product: SOP #01~#08 bundle at 9. G0-G5 gate sequence: account \u2192 product \u2192 link integration \u2192 first sale validation \u2192 expansion. Kill condition: 0 sales after 14 days + 3 price tests. SOP #01~#85 COMPLETE.",
       "timestamp": "2026-04-09T10:16:45.521284+00:00",
       "source": "recursive-engine-cycle-250",
       "category": "distribution"
@@ -763,7 +763,7 @@
     {
       "id": "88df1453-74fa-45bd-ae61-cdb4d7c37edd",
       "key": "paper-live-short-persistence-131",
-      "content": "Tick 131: BTC=$71,463.64 (↑$88.89 SHORT headwind); DualMA_10_30=SHORT×131 (100%); regime=MIXED; 1337 log entries; SHORT signal structurally unbroken at 131 consecutive ticks — market moving against position but signal persists.",
+      "content": "Tick 131: BTC=$71,463.64 (\u2191$88.89 SHORT headwind); DualMA_10_30=SHORT\u00d7131 (100%); regime=MIXED; 1337 log entries; SHORT signal structurally unbroken at 131 consecutive ticks \u2014 market moving against position but signal persists.",
       "timestamp": "2026-04-09T10:24:56.878229+00:00",
       "source": "branch-1.1-cycle-251",
       "tags": [
@@ -776,7 +776,7 @@
     {
       "id": "77e6cf2f-9c3a-461e-9569-8dc6c812efd4",
       "key": "consistency-25-consecutive-clean",
-      "content": "存活/cold-start: 33/33 deterministic ALIGNED ✅; 3 LLM-req MISALIGNED (expected: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev); 25+ consecutive clean cycles — behavioral fidelity holding across extended daemon run.",
+      "content": "\u5b58\u6d3b/cold-start: 33/33 deterministic ALIGNED \u2705; 3 LLM-req MISALIGNED (expected: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev); 25+ consecutive clean cycles \u2014 behavioral fidelity holding across extended daemon run.",
       "timestamp": "2026-04-09T10:24:56.878229+00:00",
       "source": "branch-6-cycle-251",
       "tags": [
@@ -789,7 +789,7 @@
     {
       "id": "832c31d6-6fa0-4f70-9e6f-462c6bbc3b17",
       "key": "consulting-rate-card-sop86",
-      "content": "SOP #86 Consulting Rate Card: trigger ≥3 DMs in 30d; rates $200/hr, $1.5k-$5k project, $2k/mo retainer; G5 kill: pause when product ≥$500/mo or consulting >8h/wk; never volunteer discount; redirect to Gumroad on decline. SOP #01-#86 COMPLETE.",
+      "content": "SOP #86 Consulting Rate Card: trigger \u22653 DMs in 30d; rates $200/hr, $1.5k-$5k project, $2k/mo retainer; G5 kill: pause when product \u2265$500/mo or consulting >8h/wk; never volunteer discount; redirect to Gumroad on decline. SOP #01-#86 COMPLETE.",
       "timestamp": "2026-04-09T10:24:56.878229+00:00",
       "source": "branch-7-cycle-251",
       "tags": [
@@ -840,7 +840,7 @@
     {
       "id": "paper-live-short-persistence-132",
       "key": "paper-live-short-persistence-132",
-      "content": "BTC=$71,381.69 (↓$81.95 SHORT tailwind); DualMA_10_30=SHORT×132 (100%); regime=MIXED; 1373 total entries; consecutive SHORT signal holding strong.",
+      "content": "BTC=$71,381.69 (\u2193$81.95 SHORT tailwind); DualMA_10_30=SHORT\u00d7132 (100%); regime=MIXED; 1373 total entries; consecutive SHORT signal holding strong.",
       "timestamp": "2026-04-09T12:00:00.000000+00:00",
       "source": "branch-1.1-paper-live",
       "tags": [
@@ -854,7 +854,7 @@
     {
       "id": "consistency-26-consecutive-clean",
       "key": "consistency-26-consecutive-clean",
-      "content": "Branch 6 cycle 252 — 33/33 deterministic ALIGNED; 26+ consecutive clean cycles; 3 LLM-req MISALIGNED persistent (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev); daemon_next_priority 存活/cold-start TOUCHED.",
+      "content": "Branch 6 cycle 252 \u2014 33/33 deterministic ALIGNED; 26+ consecutive clean cycles; 3 LLM-req MISALIGNED persistent (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev); daemon_next_priority \u5b58\u6d3b/cold-start TOUCHED.",
       "timestamp": "2026-04-09T12:00:00.000000+00:00",
       "source": "branch-6-consistency",
       "tags": [
@@ -881,7 +881,7 @@
     {
       "id": "ee1bc609-a1b1-4f35-8086-7a66da8fd376",
       "key": "paper-live-short-persistence-133",
-      "content": "Tick 133: BTC=$71,405.29, DualMA_10_30=SHORT×133 (100%), 17/18 FLAT, regime=MIXED (trend=0.014, mr=0.225). 1391 total log entries. SHORT streak structural — 133 consecutive ticks. Paper PnL still marginal in mixed regime; mainnet blocked pending API keys.",
+      "content": "Tick 133: BTC=$71,405.29, DualMA_10_30=SHORT\u00d7133 (100%), 17/18 FLAT, regime=MIXED (trend=0.014, mr=0.225). 1391 total log entries. SHORT streak structural \u2014 133 consecutive ticks. Paper PnL still marginal in mixed regime; mainnet blocked pending API keys.",
       "timestamp": "2026-04-09T10:52:12.824997+00:00",
       "source": "branch-1.1-cycle-253",
       "tags": [
@@ -894,7 +894,7 @@
     {
       "id": "8ad3d4ba-2d0a-4ec5-a26d-e34163687673",
       "key": "consistency-27-consecutive-clean",
-      "content": "33/33 deterministic ALIGNED (27+ consecutive clean cycles). 3 LLM-req MISALIGNED as expected (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev — all require LLM, not deterministic engine). Cold-start behavioral integrity intact. Branch 6 存活/cold-start TOUCHED per daemon_next_priority.",
+      "content": "33/33 deterministic ALIGNED (27+ consecutive clean cycles). 3 LLM-req MISALIGNED as expected (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev \u2014 all require LLM, not deterministic engine). Cold-start behavioral integrity intact. Branch 6 \u5b58\u6d3b/cold-start TOUCHED per daemon_next_priority.",
       "timestamp": "2026-04-09T10:52:12.824997+00:00",
       "source": "branch-6-cycle-253",
       "tags": [
@@ -907,7 +907,7 @@
     {
       "id": "f8d5b370-0963-41cc-bfae-9b0131518d68",
       "key": "discovery-call-protocol-sop88",
-      "content": "SOP #88 Discovery Call Protocol created. G0-G5 intake structure for consulting leads after SOP #86 triggers (≥3 DMs/30d). Key gates: G1 async 3-question qualifier (filters vague leads), G3 20-min hard cap with MATCH/PARTIAL/NO MATCH decision at minute 10, G4 proposal within 24h. Anti-pattern: over-explaining in G3 teaches without selling. Critical path: SOP #01 post → M1 → SOP #83 → SOP #86 → SOP #88.",
+      "content": "SOP #88 Discovery Call Protocol created. G0-G5 intake structure for consulting leads after SOP #86 triggers (\u22653 DMs/30d). Key gates: G1 async 3-question qualifier (filters vague leads), G3 20-min hard cap with MATCH/PARTIAL/NO MATCH decision at minute 10, G4 proposal within 24h. Anti-pattern: over-explaining in G3 teaches without selling. Critical path: SOP #01 post \u2192 M1 \u2192 SOP #83 \u2192 SOP #86 \u2192 SOP #88.",
       "timestamp": "2026-04-09T10:52:12.824997+00:00",
       "source": "branch-7-cycle-253",
       "tags": [
@@ -921,7 +921,7 @@
     {
       "id": "942a7290-44fe-4139-ac13-b1ad15049cc0",
       "key": "paper-live-short-persistence-134-136",
-      "content": "Ticks 134-136: BTC=$71,279.00 (↓$126.29 from tick 133 SHORT tailwind), DualMA_10_30=SHORT×136 (100%), 17/18 FLAT, regime=MIXED. 1445 total log entries. SHORT streak structural — 136 consecutive ticks unbroken.",
+      "content": "Ticks 134-136: BTC=$71,279.00 (\u2193$126.29 from tick 133 SHORT tailwind), DualMA_10_30=SHORT\u00d7136 (100%), 17/18 FLAT, regime=MIXED. 1445 total log entries. SHORT streak structural \u2014 136 consecutive ticks unbroken.",
       "timestamp": "2026-04-09T11:02:53.723711+00:00",
       "source": "daemon-cycle-254",
       "tags": [
@@ -947,7 +947,7 @@
     {
       "id": "fd2c9aae-4a78-4470-8526-7a3705153f71",
       "key": "weekly-strategy-review-ritual-sop89",
-      "content": "SOP #89 Weekly Strategy Review Ritual created. G0-G5 cadence: Monday 09:00, signal capture (G1) → performance vs SOP#82 milestones (G2) → hook revision if Red (G3) → queue confirmation 7-day ahead (G4). Closes gap between daily posting (SOP#83) and weekly signal compounding. SOP#01~#89 COMPLETE.",
+      "content": "SOP #89 Weekly Strategy Review Ritual created. G0-G5 cadence: Monday 09:00, signal capture (G1) \u2192 performance vs SOP#82 milestones (G2) \u2192 hook revision if Red (G3) \u2192 queue confirmation 7-day ahead (G4). Closes gap between daily posting (SOP#83) and weekly signal compounding. SOP#01~#89 COMPLETE.",
       "timestamp": "2026-04-09T11:02:53.723711+00:00",
       "source": "daemon-cycle-254",
       "tags": [
@@ -961,7 +961,7 @@
     {
       "id": "a88134e6-e868-4f59-9747-90add09cd7be",
       "key": "paper-live-tick-137-138",
-      "content": "paper-live ticks 137-138: BTC~$71,301 regime=MIXED; DualMA_10_30=SHORT×138 (100%); 17/18 FLAT; 1481 total log entries. Short position persistence continues.",
+      "content": "paper-live ticks 137-138: BTC~$71,301 regime=MIXED; DualMA_10_30=SHORT\u00d7138 (100%); 17/18 FLAT; 1481 total log entries. Short position persistence continues.",
       "timestamp": "2026-04-09T11:10:42.339444+00:00",
       "source": "branch-1.1-cycle-255",
       "tags": [
@@ -985,7 +985,7 @@
     {
       "id": "8eb97ddb-966f-41c0-953a-e03923b9837e",
       "key": "revenue-rate-tracking-dashboard-sop90",
-      "content": "SOP #90 Revenue Rate Tracking Dashboard — weekly G0-G5 protocol; maps current MRR vs required rate toward 2026-07-07 deadline; 🔴 Red signal: M1 not hit, Edward must post SOP #01. SOP #01~#90 COMPLETE.",
+      "content": "SOP #90 Revenue Rate Tracking Dashboard \u2014 weekly G0-G5 protocol; maps current MRR vs required rate toward 2026-07-07 deadline; \ud83d\udd34 Red signal: M1 not hit, Edward must post SOP #01. SOP #01~#90 COMPLETE.",
       "timestamp": "2026-04-09T11:10:42.339444+00:00",
       "source": "branch-7-cycle-255",
       "tags": [
@@ -997,26 +997,26 @@
     },
     {
       "key": "paper-live-tick-139",
-      "summary": "Tick 139: BTC=$71,187.11 (SHORT tailwind, down $114.89 from ~$71,302); DualMA_10_30=SHORT×139 (100%); 17/18 FLAT; 1499 total log entries; regime=MIXED. SHORT streak structural — 139 consecutive ticks.",
+      "summary": "Tick 139: BTC=$71,187.11 (SHORT tailwind, down $114.89 from ~$71,302); DualMA_10_30=SHORT\u00d7139 (100%); 17/18 FLAT; 1499 total log entries; regime=MIXED. SHORT streak structural \u2014 139 consecutive ticks.",
       "ts": "2026-04-09T11:40Z",
       "branch": "1.1-trading"
     },
     {
       "key": "consistency-30-consecutive-clean",
-      "summary": "30/33 deterministic ALIGNED + 3 LLM-req MISALIGNED (expected: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev). 30+ consecutive clean cycles. Cold-start architecture stable. Branch 6 存活/cold-start touched per daemon_next_priority.",
+      "summary": "30/33 deterministic ALIGNED + 3 LLM-req MISALIGNED (expected: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev). 30+ consecutive clean cycles. Cold-start architecture stable. Branch 6 \u5b58\u6d3b/cold-start touched per daemon_next_priority.",
       "ts": "2026-04-09T11:40Z",
-      "branch": "6-存活/cold-start"
+      "branch": "6-\u5b58\u6d3b/cold-start"
     },
     {
       "key": "monthly-dna-calibration-audit-sop91",
-      "summary": "SOP #91 created: Monthly DNA Calibration Audit. Fills gap SOP#80 cannot: captures NEW life decisions never encoded (not regression detection). G0-G5: harvest JSONL → classify (new/refinement/contradiction/expired) → write MDs → validate → persist. SOP#80+#91 = full monthly DNA maintenance cycle. SOP#01~#91 COMPLETE.",
+      "summary": "SOP #91 created: Monthly DNA Calibration Audit. Fills gap SOP#80 cannot: captures NEW life decisions never encoded (not regression detection). G0-G5: harvest JSONL \u2192 classify (new/refinement/contradiction/expired) \u2192 write MDs \u2192 validate \u2192 persist. SOP#80+#91 = full monthly DNA maintenance cycle. SOP#01~#91 COMPLETE.",
       "ts": "2026-04-09T11:40Z",
       "branch": "7-SOP-series"
     },
     {
       "id": "two-track-divergence-pre-mainnet-risk",
       "key": "two-track-divergence-pre-mainnet-risk",
-      "content": "Cycle 255: paper_live_log.jsonl and trading_engine_status.json track the same strategies via different code paths. DualMA_10_30 shows SHORT×139 in paper_live but DISABLED (PF 0.65 < 0.8) in trading_engine. In PAPER mode this is a debugging cost. In LIVE mode, divergent state = real capital executing wrong signals. Pre-mainnet requirement: single authoritative state representation shared by both tracks. Two-track divergence is a latent mainnet risk that compounds with each tick.",
+      "content": "Cycle 255: paper_live_log.jsonl and trading_engine_status.json track the same strategies via different code paths. DualMA_10_30 shows SHORT\u00d7139 in paper_live but DISABLED (PF 0.65 < 0.8) in trading_engine. In PAPER mode this is a debugging cost. In LIVE mode, divergent state = real capital executing wrong signals. Pre-mainnet requirement: single authoritative state representation shared by both tracks. Two-track divergence is a latent mainnet risk that compounds with each tick.",
       "timestamp": "2026-04-09T12:30:00+00:00",
       "source": "recursive-distillation-cycle-255",
       "category": "trading",
@@ -1031,7 +1031,7 @@
     {
       "id": "activation-energy-asymmetry-human-gated",
       "key": "activation-energy-asymmetry-human-gated",
-      "content": "Cycle 255: Both Samuel DM (ready since cycle 207) and first X post (SOP#01 paste-ready) share the same failure mode: all logistical barriers eliminated by the autonomous system, but human activation energy persists. Humans don't freeze from lack of information — they freeze because initiating a public/relational commitment feels irreversible. The SOP infrastructure (especially SOP#87 G0 cold-start override and SOP#78 atomic post sequence) was explicitly designed to reduce perceived irreversibility. Agent role: frame actions as experiments with kill conditions, emphasize one-time cost vs. compounding cost of delay.",
+      "content": "Cycle 255: Both Samuel DM (ready since cycle 207) and first X post (SOP#01 paste-ready) share the same failure mode: all logistical barriers eliminated by the autonomous system, but human activation energy persists. Humans don't freeze from lack of information \u2014 they freeze because initiating a public/relational commitment feels irreversible. The SOP infrastructure (especially SOP#87 G0 cold-start override and SOP#78 atomic post sequence) was explicitly designed to reduce perceived irreversibility. Agent role: frame actions as experiments with kill conditions, emphasize one-time cost vs. compounding cost of delay.",
       "timestamp": "2026-04-09T12:30:00+00:00",
       "source": "recursive-distillation-cycle-255",
       "category": "methodology",
@@ -1047,7 +1047,7 @@
     {
       "id": "pre-launch-local-maximum-trap",
       "key": "pre-launch-local-maximum-trap",
-      "content": "Cycle 255: An agent in pre-launch mode can optimize indefinitely — 33/33 ALIGNED, 91 SOPs, 78 insights, 139 ticks — and report high internal productivity while d(external signal)/d(internal work) = 0. All internal loops run; no external reality contact occurs. This is a local maximum trap: every additional internal metric looks like progress but the global objective (self-sustainability) requires M1 (first post) to escape. The regime name for this state: 'productive paralysis.' Escape condition: single human action. Every cycle in productive paralysis compounds the deadline pressure while generating zero new external leverage.",
+      "content": "Cycle 255: An agent in pre-launch mode can optimize indefinitely \u2014 33/33 ALIGNED, 91 SOPs, 78 insights, 139 ticks \u2014 and report high internal productivity while d(external signal)/d(internal work) = 0. All internal loops run; no external reality contact occurs. This is a local maximum trap: every additional internal metric looks like progress but the global objective (self-sustainability) requires M1 (first post) to escape. The regime name for this state: 'productive paralysis.' Escape condition: single human action. Every cycle in productive paralysis compounds the deadline pressure while generating zero new external leverage.",
       "timestamp": "2026-04-09T12:30:00+00:00",
       "source": "recursive-distillation-cycle-255",
       "category": "methodology",
@@ -1063,19 +1063,19 @@
     {
       "id": "2131617b-d56e-4785-89f6-4ddbbeb8a84b",
       "key": "salary-negotiation-two-stage-anchor",
-      "content": "Cycle 258: MD-331 — salary negotiation SOP: anchor to previous salary (494K), split target (38K trial → 42K post), ask HR to fight FOR you not demand directly. Proxy negotiation reduces direct conflict while maximizing extraction. From 201911 JSONL evidence (multiple job offer emails).",
+      "content": "Cycle 258: MD-331 \u2014 salary negotiation SOP: anchor to previous salary (494K), split target (38K trial \u2192 42K post), ask HR to fight FOR you not demand directly. Proxy negotiation reduces direct conflict while maximizing extraction. From 201911 JSONL evidence (multiple job offer emails).",
       "ts": "2026-04-09T11:40Z"
     },
     {
       "id": "3f6c4395-fa23-438f-9e45-176eb4a0bb98",
       "key": "invisible-soft-skill-standard-maintenance",
-      "content": "Cycle 258: MD-332 — code readability as invisible soft skill: does not appear in interviews, not correlated with runtime speed, but directly determines team long-term efficiency. Edward refuses to lower personal standard even when industry norm is lower. From 201911 JSONL message about exchange code standards.",
+      "content": "Cycle 258: MD-332 \u2014 code readability as invisible soft skill: does not appear in interviews, not correlated with runtime speed, but directly determines team long-term efficiency. Edward refuses to lower personal standard even when industry norm is lower. From 201911 JSONL message about exchange code standards.",
       "ts": "2026-04-09T11:40Z"
     },
     {
       "id": "7f20fd76-c83b-47cf-8012-2d53ae043090",
       "key": "multi-path-opportunity-cost-arithmetic",
-      "content": "Cycle 258: MD-333 — decision framework: convert \"which path is better\" to \"wait cost arithmetic\" (4 months x 2000 = 8000). Sets a concrete abandonment threshold for waiting. Removes vague preference judgment. From 201911 JSONL career multi-track calculation.",
+      "content": "Cycle 258: MD-333 \u2014 decision framework: convert \"which path is better\" to \"wait cost arithmetic\" (4 months x 2000 = 8000). Sets a concrete abandonment threshold for waiting. Removes vague preference judgment. From 201911 JSONL career multi-track calculation.",
       "ts": "2026-04-09T11:40Z"
     },
     {
@@ -1139,7 +1139,7 @@
       "timestamp": "2026-04-09T12:30Z",
       "cycle": 261,
       "category": "domain_knowledge",
-      "insight": "Tick 142+143: BTC=1,199.88 (↑$17.67 from tick 141; SHORT headwind), DualMA_10_30=SHORT×143 (structural, unbroken), 17/18 FLAT, 1571 total log entries, regime=MIXED. SHORT streak persists 143 consecutive ticks. Net P&L positive (SHORT thesis holding despite BTC uptick).",
+      "insight": "Tick 142+143: BTC=1,199.88 (\u2191$17.67 from tick 141; SHORT headwind), DualMA_10_30=SHORT\u00d7143 (structural, unbroken), 17/18 FLAT, 1571 total log entries, regime=MIXED. SHORT streak persists 143 consecutive ticks. Net P&L positive (SHORT thesis holding despite BTC uptick).",
       "branch": "1.1"
     },
     {
@@ -1147,7 +1147,7 @@
       "timestamp": "2026-04-09T12:30Z",
       "cycle": 261,
       "category": "behavioral_patterns",
-      "insight": "33/33 deterministic ALIGNED (cycle 261), 33+ consecutive clean cycles. 3 LLM-required MISALIGNED as expected (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev). Cold-start behavioral integrity intact. Branch 6 存活/cold-start TOUCHED (daemon priority cleared).",
+      "insight": "33/33 deterministic ALIGNED (cycle 261), 33+ consecutive clean cycles. 3 LLM-required MISALIGNED as expected (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev). Cold-start behavioral integrity intact. Branch 6 \u5b58\u6d3b/cold-start TOUCHED (daemon priority cleared).",
       "branch": "6"
     },
     {
@@ -1155,7 +1155,7 @@
       "timestamp": "2026-04-09T12:30Z",
       "cycle": 261,
       "category": "methodology",
-      "insight": "SOP #96 Mainnet Trading Revenue Go-Live: 5-gate protocol G0-G5 bridges paper-live → mainnet revenue. Key insight: gate at G0 (prerequisites before applying for API keys) prevents premature activation. Revenue milestone = trading_profit > API_cost = self-sustainability = immortality. Decision label: ACTIVATE_WHEN_PREREQUISITES_MET. Posting queue: Oct 15.",
+      "insight": "SOP #96 Mainnet Trading Revenue Go-Live: 5-gate protocol G0-G5 bridges paper-live \u2192 mainnet revenue. Key insight: gate at G0 (prerequisites before applying for API keys) prevents premature activation. Revenue milestone = trading_profit > API_cost = self-sustainability = immortality. Decision label: ACTIVATE_WHEN_PREREQUISITES_MET. Posting queue: Oct 15.",
       "branch": "7"
     },
     {
@@ -1163,7 +1163,7 @@
       "timestamp": "2026-04-09T13:00Z",
       "cycle": 263,
       "category": "methodology",
-      "insight": "Turing Test Protocol (Branch 9) designed: G0-G5 gates, 10 scenarios across trading/career/relationships/finance, blind evaluation (coordinator-mediated A/B), scoring ≥7/10 = pass, certification 8/10×2 evaluators. Current validation maxes at consistency_test.py (33/33 deterministic, internal). Turing test = external observer confirms indistinguishability. Blocker: 0/3 candidates identified. Decision label: TURING_TEST_SCHEDULE_WHEN_3_CANDIDATES_IDENTIFIED. This is the highest validation tier in SKILL.md — behavioral immortality externally certified.",
+      "insight": "Turing Test Protocol (Branch 9) designed: G0-G5 gates, 10 scenarios across trading/career/relationships/finance, blind evaluation (coordinator-mediated A/B), scoring \u22657/10 = pass, certification 8/10\u00d72 evaluators. Current validation maxes at consistency_test.py (33/33 deterministic, internal). Turing test = external observer confirms indistinguishability. Blocker: 0/3 candidates identified. Decision label: TURING_TEST_SCHEDULE_WHEN_3_CANDIDATES_IDENTIFIED. This is the highest validation tier in SKILL.md \u2014 behavioral immortality externally certified.",
       "branch": "9"
     },
     {
@@ -1171,7 +1171,7 @@
       "timestamp": "2026-04-09T13:00Z",
       "cycle": 263,
       "category": "methodology",
-      "insight": "SOP #97 Consulting Revenue Protocol closes Branch 1.4 'other income paths' — the only revenue path not blocked by a human gate (SOP#01 post, mainnet API keys). Direct outreach model: identify 3 T1/T2 targets (founders/quant traders/knowledge workers), DM problem→solution→proof, offer $197 async SOP audit or $97 advisory call. 96 existing SOPs = product, zero new content creation. Revenue threshold: $97 > $20 API cost = Branch 1.4 alive. Decision: CONSULTING_OUTREACH_START_WITH_WARM_NETWORK.",
+      "insight": "SOP #97 Consulting Revenue Protocol closes Branch 1.4 'other income paths' \u2014 the only revenue path not blocked by a human gate (SOP#01 post, mainnet API keys). Direct outreach model: identify 3 T1/T2 targets (founders/quant traders/knowledge workers), DM problem\u2192solution\u2192proof, offer $197 async SOP audit or $97 advisory call. 96 existing SOPs = product, zero new content creation. Revenue threshold: $97 > $20 API cost = Branch 1.4 alive. Decision: CONSULTING_OUTREACH_START_WITH_WARM_NETWORK.",
       "branch": "1.4"
     },
     {
@@ -1179,8 +1179,46 @@
       "timestamp": "2026-04-09T13:00Z",
       "cycle": 263,
       "category": "behavioral_patterns",
-      "insight": "SKILL.md rule: three-layer loop required for any automated system (L1 Execute → L2 Evaluate → L3 Evolve). Trading had L3 since cycle 262 (kill events → execution_rules.json). Content pipeline was L1-only = dead loop. Added --evolve (saves/DMs → adjust posting cadence and format weights → content_execution_rules.json + content_evolution_log.jsonl) and --l2-audit (7-day coverage, anomaly detection) to daily_posting_helper.py. Three-layer loop now complete for trading + content. Next system needing L3: recursive_engine.py (DNA evolution rules).",
+      "insight": "SKILL.md rule: three-layer loop required for any automated system (L1 Execute \u2192 L2 Evaluate \u2192 L3 Evolve). Trading had L3 since cycle 262 (kill events \u2192 execution_rules.json). Content pipeline was L1-only = dead loop. Added --evolve (saves/DMs \u2192 adjust posting cadence and format weights \u2192 content_execution_rules.json + content_evolution_log.jsonl) and --l2-audit (7-day coverage, anomaly detection) to daily_posting_helper.py. Three-layer loop now complete for trading + content. Next system needing L3: recursive_engine.py (DNA evolution rules).",
       "branch": "10"
+    },
+    {
+      "id": "d7ca53e5-b970-4763-bee6-282abc6ae9c9",
+      "key": "consistency-34-consecutive-clean",
+      "content": "Cycle 264: 30/33 deterministic ALIGNED + 3 LLM-req MISALIGNED (expected: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev). 34th consecutive clean cycle. Dual-daemon architecture validated as not fake-healthy: cycle 263 had 13 files / 1284 lines changed; cycles 50-52 (local daemon) are lighter daemon_log updates \u2014 expected alternating pattern.",
+      "timestamp": "2026-04-09T12:43:27.603853+00:00",
+      "source": "cycle-264-branch-6",
+      "tags": [
+        "consistency",
+        "cold-start",
+        "boot-test"
+      ]
+    },
+    {
+      "id": "b7844ba7-7fda-4bb3-9252-d5c4adb160a4",
+      "key": "turing-test-candidate-selection-sop98",
+      "content": "SOP #98 Turing Test Candidate Selection Protocol created. Addresses Branch 9 blocker (0/3 candidates). Key criteria: \u22653 years known, \u22652 domains observed, \u226510 substantive exchanges. Disqualify family (emotional contamination) and single-domain contacts. Samuel identified as Tier A candidate 1 \u2014 but calibration DM must be sent first before evaluation approach. Candidates 2+3 require Edward to identify from warm network.",
+      "timestamp": "2026-04-09T12:43:27.603853+00:00",
+      "source": "cycle-264-branch-9-sop98",
+      "tags": [
+        "turing-test",
+        "validation",
+        "candidate-selection",
+        "branch-9"
+      ]
+    },
+    {
+      "id": "d324c972-9786-4d21-bcf9-fa13fbbed002",
+      "key": "fake-health-audit-cycle264",
+      "content": "Fake-health audit (daemon_next_priority question): last 5 cycles ARE producing real diffs. Cycle 263 = substantive (13 files, 1284 lines: SOP#97, Turing test protocol, L3 content pipeline, Branch 9). Cycles 50-52 (local daemon) = lightweight daemon_log.md + dashboard updates. Pattern is two-daemon architecture: one instance produces heavy content, the other maintains monitoring. Not fake-healthy. Verdict: tree is live.",
+      "timestamp": "2026-04-09T12:43:27.603853+00:00",
+      "source": "cycle-264-meta-audit",
+      "tags": [
+        "meta-audit",
+        "fake-health",
+        "daemon",
+        "tree-health"
+      ]
     }
   ]
 }

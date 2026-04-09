@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#94
+# Twitter Posting Queue — SOP Series #01~#98
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -126,3 +126,6 @@
 | Oct 10 | #93 | publish_thread_sop93_twitter.md | "Boot tests pass. But the 3 LLM-boundary scenarios always misalign. That's not drift — that's a permanent taxonomic boundary. LLM Boot Test Validation Protocol." | pending |
 | Oct 12 | #94 | publish_thread_sop94_twitter.md | "100% cross-instance agreement measured. Next week a model update ships. Without a maintenance protocol, that 100% is a one-time event, not a property. SOP #94." | pending |
 | Oct 14 | #95 | publish_thread_sop95_twitter.md | "I ran 3 digital models of people I know against the same scenarios. Some divergences appeared in every pair. Those aren't personal differences — they're structural. Organism Network Effect Protocol." | pending |
+| Oct 16 | #96 | publish_thread_sop96_twitter.md | "Paper trade passed. Review passed. $100 live. The Mainnet Revenue Go-Live Protocol — exact steps from testnet to first real P&L." | pending |
+| Oct 17 | #97 | publish_thread_sop97_twitter.md | "No audience. No followers. $0 MRR. You can still book a consulting client this week. The Direct Outreach Revenue Protocol — $197 async audit, warm network only." | pending |
+| Oct 21 | #98 | publish_thread_sop98_twitter.md | "Your AI passed all the machine tests. Now find the humans. Turing Test Candidate Selection Protocol — who to ask, how to approach them, and why family doesn't qualify." | pending |
