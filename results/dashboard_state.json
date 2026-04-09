@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T08:36+08",
+  "updated": "2026-04-09T08:41+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#34 COMPLETE → posting_queue.md updated (#01~#34, Apr 9–Jun 14); **x_launch_sequence.md created ✓** — first-post friction reduced to 15 min; Apr 9 = scheduled post date for SOP #01; **3 workbooks READY TO LIST** (Workbook #01 Strategy Development + Workbook #02 Portfolio Construction + Workbook #03 Execution & Sizing, $29 each, $87/buyer trilogy)",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions pre-committed)",
   "deadline": "2026-07-07",
@@ -55,23 +55,23 @@
     },
     {
       "time": "just now",
-      "text": "Branch 1.1 — tick 43: BTC=$70,804.43, SHORT x43 (100%), P&L +$0.99 (+0.99%) —..."
+      "text": "Branch 1.1 — tick 44: BTC=$70,793.45, SHORT x44 (100%), P&L +$1.01 — first ti..."
     },
     {
       "time": "just now",
-      "text": "Cycle 179 done."
+      "text": "Cycle 180 done."
     },
     {
       "time": "1min ago",
-      "text": "Blockers unchanged (human-gated): set `BINANCE_MAINNET_KEY/SECRET` → mainnet,..."
+      "text": "- BTC down $11 from tick 43 ($70,804→$70,793); regime bearish"
     },
     {
       "time": "1min ago",
-      "text": "- BTC down $171 from last tick ($70,976→$70,804); regime bearish"
+      "text": "- MFE: +$1.01 @ $70,793 (current price = MFE ATH); MAE=-$1.33; MFE/MAE=0.76x"
     }
   ],
   "stats": {
-    "daemon_cycles": 179,
+    "daemon_cycles": 180,
     "total_mds": 330,
     "dna_core_lines": 87
   }
