@@ -51,16 +51,18 @@
 | 40   | $70,997.73 | +$0.716 |
 | 41   | $70,925.88 | +$0.817 |
 | 42   | $70,976.00 | +$0.747 |
+| 43   | $70,804.43 | +$0.990 |
+| 44   | $70,793.45 | +$1.005 |
 
 ## Summary
-- **Current unrealized P&L: +$0.75 (+0.75% on $100)**
-- Best case (MFE): +$0.82 (tick 41, BTC=$70,925.88) ← MFE ATH
+- **Current unrealized P&L: +$1.01 (+1.01% on $100)** ← **NEW ATH**
+- Best case (MFE): +$1.01 (tick 44, BTC=$70,793.45) ← MFE ATH
 - Worst case (MAE): $-1.33 (tick 8, BTC=$72,459)
-- Signal consistency: SHORT x 42 ticks (100%)
-- MFE/MAE ratio: 0.62x (improving)
+- Signal consistency: SHORT x 44 ticks (100%)
+- MFE/MAE ratio: 0.76x (improving)
 
 ## Verdict
-SHORT signal persistent 42 ticks. BTC at $70,976 — minor pullback from MFE ($70,925 at tick 41). MFE ATH +$0.82, still near best level. Regime bearish.
+SHORT signal persistent 44 ticks. BTC $70,793 — P&L crossed +1% milestone (new ATH). Position at best point ever. Regime bearish, no reversal signal.
 
 **Next action**: Set BINANCE_MAINNET_KEY/SECRET → run `python -m trading.mainnet_runner --tick`
 See docs/mainnet_activation_guide.md for exact steps.
