@@ -638,6 +638,30 @@
         "meta-framework",
         "SOP-81"
       ]
+    },
+    {
+      "id": "revenue-activation-milestone-tracker",
+      "key": "revenue-activation-milestone-tracker",
+      "content": "SOP #82: deadline-driven milestone map M1(post)→M2(3posts/week)→M3(first DM)→M4(G2 10DMs)→M5(Gumroad)→M6(first sale)→M7(revenue>cost). Rate analysis: dms_per_week trajectory determines G2 date; if projected G2 > 2026-06-01 = CRITICAL. Closes \"know what to do but cant see if on track\" gap.",
+      "timestamp": "2026-04-09T09:52:27.213263+00:00",
+      "source": "cycle-247-branch-7-sop-82",
+      "category": "domain-knowledge"
+    },
+    {
+      "id": "paper-live-short-persistence-126",
+      "key": "paper-live-short-persistence-126",
+      "content": "SHORT×126 (100%), BTC=1,335.5 (↑$98 from cycle 246; SHORT headwind). P&L≈+$0.244 (+0.244%) on $100. Streak durability: 126 consecutive ticks SHORT in MIXED regime. BTC range now $71,200-71,400 range (tightening). Entry=1,509.90. 1247 total log entries.",
+      "timestamp": "2026-04-09T09:52:27.213294+00:00",
+      "source": "cycle-247-branch-1-1",
+      "category": "domain-knowledge"
+    },
+    {
+      "id": "revenue-deadline-rate-not-level",
+      "key": "revenue-deadline-rate-not-level",
+      "content": "Revenue deadline (2026-07-07) is a rate problem, not a level problem. DM rate (dms/week) determines G2 date; G2 date determines Gumroad launch; Gumroad launch minus 45 days must precede deadline. Derivative: compress post cadence if projected G2 > 2026-06-01. The tracker (SOP #82) makes this derivative visible each week.",
+      "timestamp": "2026-04-09T09:52:27.213299+00:00",
+      "source": "cycle-247-branch-3-1",
+      "category": "methodology"
     }
   ]
 }

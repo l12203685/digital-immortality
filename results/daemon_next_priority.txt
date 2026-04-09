@@ -1,1 +1,1 @@
-OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.
+OK: All branches covered. Least recent: Branch 4 (organism interaction, cycle 207). Consider 4.1 Samuel DM or 4.3 Discord next — human-gated, prompt Edward. Next agent work: SOP #83.

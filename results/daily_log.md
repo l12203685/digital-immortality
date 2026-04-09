@@ -4,6 +4,37 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 247 — 2026-04-09T UTC
+
+### What was done
+
+**Branch 1.1 — paper-live ticks 124+125+126 ✅**
+- BTC=$71,335.5 (↑$98 from tick 123; SHORT headwind); regime=MIXED (trend=0.014, MR=0.225)
+- DualMA_10_30=SHORT×126 (100%); 17/18 FLAT; 1247 log entries
+- P&L≈+$0.244 (+0.244% on $100); MFE ATH still +$1.204 (tick 50)
+- SHORT streak: 126 ticks through varying BTC range ($70,800–$71,500); signal structural
+
+**Branch 7 — SOP #82 Revenue Activation Milestone Tracker ✅**
+- `docs/knowledge_product_82_revenue_activation_milestone_tracker.md` — Domain 1 (經濟自給)
+- G0–G5: M1(first post)→M7(revenue>API cost) milestone map; weekly pulse; deadline math; rate analysis (dms/week→projected G2 date); blocker escalation table (M1-M7 × root cause × action); daemon integration (weekly update cycle)
+- Key rule: if projected G2 date > 2026-06-01 → CRITICAL: compress cadence
+- Closes "working on agent-side while human-gated critical path drifts past deadline" failure mode
+- **SOP #01~#82 COMPLETE** ✅
+
+**Branch 3.1 — Distillation ✅**
+- 3 insights → memory/insights.json (total 53):
+  1. `revenue-activation-milestone-tracker`: M1→M7 map; rate (dms/week) determines G2 date; tracker makes derivative visible weekly
+  2. `paper-live-short-persistence-126`: SHORT×126; BTC=$71,335.5; P&L≈+$0.244; BTC tightening ($71.2k-$71.5k range)
+  3. `revenue-deadline-rate-not-level`: deadline = rate problem; dms/week → G2 date → revenue window; compress cadence if G2 > 2026-06-01
+
+### L2 Verdict
+- A: Branch 7 SOP #82 — Revenue Activation Milestone Tracker; closes visibility gap on critical path to deadline — HIGH
+- B: Branch 3.1 — 3 insights (total 53) — MEDIUM
+- B: Branch 1.1 ticks 124-126 — SHORT×126; BTC headwind; mainnet still blocked — LOW
+- Verdict: **1A + 2B**. No C or D. L3 not triggered.
+
+---
+
 ## Cycle 246 — 2026-04-09T UTC
 
 ### What was done
