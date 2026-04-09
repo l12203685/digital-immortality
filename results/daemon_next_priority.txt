@@ -1,1 +1,1 @@
-OK: All branches covered. SOP #01~#64 COMPLETE. Next: Branch 4 blockers (Samuel DM + Discord) or Branch 5 distribution gap scan. Least friction autonomous: paper-live tick 94.
+OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.

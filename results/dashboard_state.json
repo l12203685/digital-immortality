@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T14:20+08",
+  "updated": "2026-04-09T14:30+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Edward's 3 unblocking actions remain (in priority order): (1) set BINANCE_MAI..."
+      "text": "Next (human-gated, highest EV): Post SOP #01 on X → set mainnet API keys → se..."
     },
     {
       "time": "just now",
-      "text": "SOP series now #01~#63. Posting queue to Aug 9."
+      "text": "- Branch 6 — consistency_test.py → 33/33 ALIGNED ✅"
     },
     {
       "time": "just now",
-      "text": "Branch 6 — consistency_test.py → 33/33 ALIGNED ✅"
+      "text": "- SOP series #01~#64 COMPLETE ✅ — all domain gaps closed"
     },
     {
       "time": "just now",
-      "text": "- G5: reinvestment tiers"
+      "text": "- Meta-SOP: all other 63 SOPs depend on this infrastructure"
     },
     {
       "time": "just now",
-      "text": "- G4: day-90 kill if revenue < API cost × 1.5"
+      "text": "- Three-layer: L1 (daily ticks/tests) + L2 (derivative scan) + L3 (quarterly ..."
     }
   ],
   "stats": {
@@ -94,11 +94,11 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71008.87,
+    "paper_live_price": 70895.98,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T06:14",
-    "paper_tick": 92,
-    "paper_pnl": "+$0.701",
+    "paper_live_ts": "2026-04-09T06:24",
+    "paper_tick": 93,
+    "paper_pnl": "+$0.858",
     "status": "ok"
   }
 }
