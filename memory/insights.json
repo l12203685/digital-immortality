@@ -215,7 +215,7 @@
     {
       "id": "2ac635d6-a70f-4dbf-a4eb-ca1c5a84b7ab",
       "key": "cycle-226-backward-check",
-      "content": "BACKWARD CHECK (cycle 226): DNA axiom \u905e\u8ff4+persist=\u6f14\u5316 violated. 64 SOPs written, 0 posted, 0 external signals received. Internal loop COMPLETE; external loop BROKEN. Resolution: SOP #64 External Validation & Feedback Loop Protocol created (Domain 5). F10 failure mode added to cold_start_recovery_runbook. DNA violation detector operationalized.",
+      "content": "BACKWARD CHECK (cycle 226): DNA axiom 遞迴+persist=演化 violated. 64 SOPs written, 0 posted, 0 external signals received. Internal loop COMPLETE; external loop BROKEN. Resolution: SOP #64 External Validation & Feedback Loop Protocol created (Domain 5). F10 failure mode added to cold_start_recovery_runbook. DNA violation detector operationalized.",
       "timestamp": "2026-04-09T06:35:11.632268+00:00",
       "source": "recursive-engine-cycle-226-backward-check",
       "tags": [
@@ -276,7 +276,7 @@
     {
       "id": "d2ef42ff-4efc-421f-8c36-d3c778e47d78",
       "key": "distillation-cycle231-tick102-milestone",
-      "content": "Paper-live tick 102: SHORT\u00d7102 unbroken (100%), BTC=$70,994.74, P&L\u2248+$0.720. Key insight: each tick extending an existing thesis is weaker evidence than a regime flip would be \u2014 asymmetric Bayesian update. Tick 100 milestone is a quantity milestone, not a quality inflection.",
+      "content": "Paper-live tick 102: SHORT×102 unbroken (100%), BTC=$70,994.74, P&L≈+$0.720. Key insight: each tick extending an existing thesis is weaker evidence than a regime flip would be — asymmetric Bayesian update. Tick 100 milestone is a quantity milestone, not a quality inflection.",
       "timestamp": "2026-04-09T07:25:00.000000+00:00",
       "source": "recursive-distillation-cycle-231",
       "tags": [
@@ -302,7 +302,7 @@
     {
       "id": "96e92f8c-da71-44ae-afcf-c63cb259c6a7",
       "key": "distillation-cycle231-l3-evolution-trigger",
-      "content": "Writing SOP #67 revealed: L3 evolution fires correctly when triggered by corrections or boot test failures, but the trigger criteria were never formalized \u2014 so L3 had no explicit activation protocol. Meta-insight: any loop layer without explicit trigger conditions defaults to never firing or always firing. Both are failures.",
+      "content": "Writing SOP #67 revealed: L3 evolution fires correctly when triggered by corrections or boot test failures, but the trigger criteria were never formalized — so L3 had no explicit activation protocol. Meta-insight: any loop layer without explicit trigger conditions defaults to never firing or always firing. Both are failures.",
       "timestamp": "2026-04-09T07:25:00.000000+00:00",
       "source": "recursive-distillation-cycle-231",
       "tags": [
@@ -310,6 +310,45 @@
         "L3",
         "meta-insight",
         "trigger-protocol"
+      ]
+    },
+    {
+      "id": "8f955998-9d0d-42b7-b204-9b259cf28ea9",
+      "key": "distillation-cycle234-conversion-freeze-point",
+      "content": "Writing SOP #70 revealed: revenue conversion fails at G0 (signal qualification), not G2 (pricing). Most builders freeze when a DM arrives because they never pre-committed qualification criteria. The improvisation under social pressure anchors price low. Fix: G0 criteria must be written before the first post goes out, not after the first DM arrives.",
+      "timestamp": "2026-04-09T07:50:00.000000+00:00",
+      "source": "recursive-distillation-cycle-234",
+      "tags": [
+        "revenue",
+        "conversion",
+        "social-pressure",
+        "pre-commitment"
+      ]
+    },
+    {
+      "id": "facf454c-cd94-4909-adf3-4b26e7c46d08",
+      "key": "distillation-cycle234-short-thesis-tick105",
+      "content": "Tick 105: BTC=70970.19, SHORT x105 (100% duration), FLAT consensus (14/15 FLAT), regime=MIXED. Concentration risk: if DualMA flips, no backup strategy is signaling. 105-tick unbroken signal = strong thesis but single-strategy dependency. Next watchpoint: first flip tick signals regime shift.",
+      "timestamp": "2026-04-09T07:50:00.000000+00:00",
+      "source": "recursive-distillation-cycle-234",
+      "tags": [
+        "trading",
+        "short-thesis",
+        "concentration-risk",
+        "asymmetric-bayesian"
+      ]
+    },
+    {
+      "id": "61a49803-f950-4dd9-94d3-193fbe4033f0",
+      "key": "distillation-cycle234-sop-series-economic-gap",
+      "content": "SOP #70 closes structural gap: SOPs 01-69 built knowledge products but conversion protocol was missing. Knowledge machine and revenue machine were never connected by formal gate structure. Meta-insight: any production pipeline without explicit output-to-revenue gate defaults to infinite internal recursion with 0 external loop — same anti-pattern as SOP #67 finding.",
+      "timestamp": "2026-04-09T07:50:00.000000+00:00",
+      "source": "recursive-distillation-cycle-234",
+      "tags": [
+        "revenue",
+        "sop-series",
+        "structural-gap",
+        "external-loop"
       ]
     }
   ]

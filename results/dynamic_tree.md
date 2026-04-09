@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 231)
+> 最後更新：2026-04-09 UTC (cycle 234)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -44,6 +44,7 @@
   - **cycle 229 paper-live ticks 97+98+99** — BTC=$71,032.45 (↑$90.95 from tick 96), P&L=**+$0.668** (+0.668% on $100); 752 log entries; regime=MIXED; DualMA_10_30=SHORT×99 (100%); MFE ATH +$1.204 (tick 50); BTC net ↓$477.45 from entry; SHORT headwind (BTC edged up from tick 96)
   - **cycle 230 paper-live tick 100 (MILESTONE)** — BTC=$71,089.18 (↑$56.73 from tick 99), P&L=**+$0.588** (+0.588% on $100); 767 log entries; regime=MIXED; DualMA_10_30=SHORT×100 (100%); MFE ATH +$1.204 (tick 50); BTC net ↓$420.72 from entry; SHORT headwind (BTC continues up); 100-tick milestone — SHORT signal unbroken
   - **cycle 231 paper-live ticks 101+102** — BTC=$70,994.74 (↓$94.44 from tick 100), P&L=**+$0.720** (+0.720% on $100); 797 log entries; regime=MIXED; DualMA_10_30=SHORT×102 (100%); MFE ATH +$1.204 (tick 50); BTC net ↓$515.16 from entry; SHORT tailwind resumed
+  - **cycle 234 paper-live tick 105** — BTC=$70,970.19 (↓$109.80 from tick 104), regime=MIXED; DualMA_10_30=SHORT×105 (100%); 842 log entries; 14/15 FLAT consensus; SHORT tailwind; concentration risk: single-strategy dependency
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
@@ -389,3 +390,6 @@
 - 2026-04-09T UTC: cycle 233 — **Branch 1.1**: paper-live tick 104: BTC=$71,079.99 (↑$79.84 from tick 103), DualMA_10_30=SHORT×104 (100%); 14/15 strategies FLAT; regime=MIXED (trend=0.0138, mr=0.2250); 827 log entries; mainnet blocked on API keys
 - 2026-04-09T UTC: cycle 233 — **Branch 7**: SOP #69 Organism Async Calibration Measurement Protocol shipped: `docs/knowledge_product_69_organism_async_calibration_measurement.md` (250 lines) + `docs/publish_thread_sop69_twitter.md`; Domain 4 async calibration; 5-gate: G0 pre-condition / G1 async probe design (3 scenarios/round, situation+decision+reasoning format) / G2 4-class response interpretation (AGREE_FULL/AGREE_DIFF_REASON/DIVERGE_NEW_PREMISE/DIVERGE_SAME_PREMISE) / G3 DNA gap update / G4 collision re-run (≥1 axis flip = success) / G5 health report (OPEN/CLOSED_MODEL_GAP/CONFIRMED_STRUCTURAL axis table); self-test scenario included. **Series: SOP #01~#69 COMPLETE.**
 - 2026-04-09T UTC: cycle 233 — **Branch 6**: consistency_test.py → **33/33 ALIGNED ✅** (14+ consecutive cycles clean); daemon_next_priority '存活/cold-start' TOUCHED ✅; cold-start behavioral integrity intact
+- 2026-04-09T UTC: cycle 234 — **Branch 1.1**: paper-live tick 105: BTC=$70,970.19 (↓$109.80 from tick 104), DualMA_10_30=SHORT×105 (100%); 14/15 FLAT consensus; regime=MIXED; 842 log entries; concentration risk (single-strategy dependency)
+- 2026-04-09T UTC: cycle 234 — **Branch 7**: SOP #70 Revenue Conversion Protocol shipped: `docs/knowledge_product_70_revenue_conversion_sop.md` + `docs/publish_thread_sop70_twitter.md`; Domain 1 (Economic Self-Sufficiency); G0 signal qualification / G1 product-problem matching / G2 pricing tiers ($9/$29/$97/$197) / G3 conversion execution (2h reply + Gumroad link) / G4 first sale feedback loop / G5 revenue-cost audit (trading+Gumroad>API cost); posting queue extended to Aug 21 (#01~#70). **Series: SOP #01~#70 COMPLETE.**
+- 2026-04-09T UTC: cycle 234 — **Branch 6**: consistency_test.py → **33/33 ALIGNED ✅** (15+ consecutive cycles clean); cold-start behavioral integrity intact; 3 distillation insights added (total 29 in insights.json)

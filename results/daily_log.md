@@ -4,6 +4,49 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 234 — 2026-04-09T UTC
+
+### What was done
+
+**Branch 1.1 — paper-live tick 105 ✅**
+- BTC=$70,970.19 (↓$109.80 from tick 104 $71,079.99), regime=MIXED, DualMA_10_30=SHORT×105 (100%)
+- FLAT consensus: 14/15 strategies FLAT; 842 total log entries
+- SHORT tailwind resumed; concentration risk noted: single-strategy dependency at tick 105
+
+**Branch 7 — SOP #70 Revenue Conversion Protocol ✅**
+- `docs/knowledge_product_70_revenue_conversion_sop.md` — Domain 1 (經濟自給)
+  - Closes structural gap: 69 SOPs built, 0 revenue — conversion protocol was missing
+  - G0: Signal qualification (qualifying DM vs engagement signal)
+  - G1: Product-problem matching table (problem domain → SOP → bundle)
+  - G2: Pricing architecture ($9/$29/$97/$197 tiers, pre-committed)
+  - G3: Conversion execution (2h reply, Gumroad link, no chasing)
+  - G4: First sale feedback loop (one question: "Which gate was most non-obvious?")
+  - G5: Revenue-cost audit (trading P&L + Gumroad > API cost, deadline 2026-07-07)
+  - Kill condition: ≥3 qualifiers, 0 sales, 7 days → price −30% once
+- `docs/publish_thread_sop70_twitter.md` — 12-tweet thread; slot **Aug 21**; Domain 1
+- `docs/posting_queue.md` — #68/#69/#70 rows added; header updated to #01~#70; queue to Aug 21
+- **Series: SOP #01~#70 COMPLETE** ✅
+
+**Branch 6 — consistency ✅**
+- consistency_test.py → **33/33 ALIGNED ✅** (55 scenarios, 0 MISALIGNED); 15+ consecutive cycles clean
+- daemon_next_priority updated
+
+**Branch 3.1 — recursive distillation ✅**
+- 3 insights → memory/insights.json (total 29 entries):
+  - Conversion freeze point: revenue fails at G0 (qualification), not G2 (pricing)
+  - Tick 105 concentration risk: single DualMA dependency, no backup strategy signaling
+  - SOP series structural gap: knowledge machine ≠ revenue machine without explicit conversion gate
+
+### State Updates
+- `results/daily_log.md`: cycle 234 entry prepended
+- `results/dynamic_tree.md`: tick 105 + SOP #70 + B6 consistency (cycle 234) entries to add
+- `staging/session_state.md`: updated to cycle 234
+- `results/daemon_next_priority.txt`: updated
+- `memory/insights.json`: 3 new distillation entries (total 29)
+- `docs/posting_queue.md`: #68/#69/#70 added, header #01~#70
+
+---
+
 ## Cycle 231 — 2026-04-09T UTC
 
 ### What was done

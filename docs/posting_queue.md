@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#67
+# Twitter Posting Queue — SOP Series #01~#70
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -74,6 +74,9 @@
 | Aug 13 | #65 | publish_thread_sop65_twitter.md | "63 systems built. 0 published. 0 feedback received. That's not a content problem. That's a broken feedback loop." | pending |
 | Aug 14 | #66 | publish_thread_sop66_twitter.md | "You wrote 65 systems. You still haven't posted. Distribution Activation Protocol — how to go from zero to your first external signal." | pending |
 | Aug 15 | #67 | publish_thread_sop67_twitter.md | "Most AI systems execute forever without learning to change how they execute. L3 Evolution Protocol — when and how the recursive engine modifies its own rules." | pending |
+| Aug 17 | #68 | publish_thread_sop68_twitter.md | "Your system runs. But does it know if it's working? L2 Evaluate — the audit layer between execution and evolution." | pending |
+| Aug 19 | #69 | publish_thread_sop69_twitter.md | "How do you calibrate two minds without being in the same room? Organism Async Calibration — measure divergence by message." | pending |
+| Aug 21 | #70 | publish_thread_sop70_twitter.md | "You built 69 systems. Someone DMs you. You freeze. Revenue Conversion Protocol — signal to first sale." | pending |
 
 ---
 
