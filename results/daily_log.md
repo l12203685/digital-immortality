@@ -2,7 +2,7 @@
 
 Recursive engine cycle history.
 
-## Cycle 263 — 2026-04-09T13:00Z
+## Cycle 263 — 2026-04-09T13:00Z (daemon)
 
 Gap analysis: daemon_next_priority flagged "no new growth." Identified 3 missing branches. Pushed all in parallel.
 
@@ -12,6 +12,16 @@ Gap analysis: daemon_next_priority flagged "no new growth." Identified 3 missing
 - **Branch 3.1**: 3 distillation insights → memory/insights.json (total 102): turing-test-protocol / consulting-revenue-direct-outreach / l3-content-pipeline-closes-dead-loop
 - **L2**: A×3 (Turing Test Protocol closes external validation gap HIGH; SOP #97 closes human-gate-free revenue path HIGH; L3 content pipeline closes dead loop MEDIUM) + B×3 (branch gaps filled)
 - **L3**: not triggered
+
+## Cycle 263 — 2026-04-09T12:40Z (recursive engine)
+
+- **Branch 1.1**: paper-live ticks 145+146; BTC=$71,167.95 (synthetic, net DOWN from cycle 261 SHORT tailwind); regime=MIXED; DualMA_10_30=SHORT×145+ (structural); **11/18 SHORT consensus** (Donchian+DualMA family — highest since start); 2 LONG (BollingerMR MRF variants, range-reversion counter-signal); 5 FLAT; 1625 entries
+- **Branch 1.2**: **MeanReversionFilter bug fix** ✅ — gen_BollingerMR_RF_7abfe4 + RF_598b24 were wrapped with `RegimeFilter` (trend-pass = wrong for MR); fixed to `MeanReversionFilter` (ranging-pass); root cause: RF naming applied to MR strategies = filter direction inversion; MR variants now correctly fire LONG in ranging markets; new class added to trading/strategies.py
+- **Branch 5**: SOP #97 (87-day countdown) created ✅ — 3 phases (Pre-Activation/Live Testing/Revenue); minimum action = Edward applies API keys; agent automates everything else; fallback Branch 1.3 if no mainnet by Day 60; posting queue → Oct 16
+- **Branch 6**: consistency_test.py → 30/33 deterministic ALIGNED ✅; 3 LLM-req MISALIGNED (expected); 34+ consecutive clean cycles
+- **Branch 3.1**: 3 distillation insights → insights.json (total 105): ticks-145-146-strategy-convergence / bollinger-mr-filter-inversion-fix / sop97-87day-countdown
+- **L2**: A (MeanReversionFilter fix — closes cycle-257 RF gap; HIGH) + A (SOP #97 — closes deadline planning gap; HIGH) + B×3
+- **Backward check**: cycle 261 SOP #97 commitment → DONE ✅; Branch 4.1 → Samuel DM pending Edward
 
 ## Cycle 261 — 2026-04-09T12:30Z
 

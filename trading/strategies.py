@@ -198,6 +198,62 @@ class RegimeFilter:
         return f"RegimeFilter({self.strategy}, trend_period={self.trend_period}, min_slope={self.min_slope_pct*100:.2f}%/bar)"
 
 
+class MeanReversionFilter:
+    """
+    Wraps a mean-reversion strategy with a ranging-regime gate.
+
+    Inverse of RegimeFilter: allows signals only when the market is NOT trending
+    (flat/choppy). Blocks signals when trending strongly.
+
+    This is correct for BollingerMeanReversion and similar MR strategies which
+    perform best in range-bound conditions.
+
+    Parameters
+    ----------
+    strategy : callable
+        Inner mean-reversion strategy.
+    trend_period : int
+        Lookback for the trend-detection MA (default 50).
+    slope_bars : int
+        How many bars back to measure MA slope (default 5).
+    max_slope_pct : float
+        Maximum |slope| in % per bar to allow MR signal (default 0.1).
+        If slope exceeds this, market is trending — suppress MR signal.
+    """
+
+    def __init__(
+        self,
+        strategy,
+        trend_period: int = 50,
+        slope_bars: int = 5,
+        max_slope_pct: float = 0.10,
+    ):
+        self.strategy = strategy
+        self.trend_period = trend_period
+        self.slope_bars = slope_bars
+        self.max_slope_pct = max_slope_pct / 100.0  # convert to fraction
+
+    def _is_ranging(self, bars: List[Bar]) -> bool:
+        """Return True if the market is flat/ranging (NOT strongly trending)."""
+        if len(bars) < self.trend_period + self.slope_bars:
+            return True  # insufficient data → assume ranging (safe for MR)
+        closes = [b["close"] for b in bars]
+        ma_now = _mean(closes[-(self.trend_period):])
+        ma_old = _mean(closes[-(self.trend_period + self.slope_bars):-self.slope_bars])
+        if ma_old == 0:
+            return True
+        slope = (ma_now - ma_old) / ma_old
+        return abs(slope) < self.max_slope_pct * self.slope_bars
+
+    def __call__(self, bars: List[Bar]) -> Signal:
+        if not self._is_ranging(bars):
+            return 0  # flat during trending regime — MR has no edge here
+        return self.strategy(bars)
+
+    def __repr__(self) -> str:
+        return f"MeanReversionFilter({self.strategy}, trend_period={self.trend_period}, max_slope={self.max_slope_pct*100:.2f}%/bar)"
+
+
 # ---------------------------------------------------------------------------
 # DonchianConfirmed — require 2 consecutive closes outside channel
 # ---------------------------------------------------------------------------
@@ -329,9 +385,9 @@ gen_DualMA_RF_602541 = RegimeFilter(DualMA(fast=15, slow=20), trend_period=50, s
 NAMED_STRATEGIES["gen_DualMA_RF_602541"] = gen_DualMA_RF_602541
 gen_BollingerMeanReversion_f91248 = BollingerMeanReversion(lookback=25, num_std=2.0, trend_lookback=40, trend_threshold=0.005)
 NAMED_STRATEGIES["gen_BollingerMeanReversion_f91248"] = gen_BollingerMeanReversion_f91248
-gen_BollingerMeanReversion_RF_7abfe4 = RegimeFilter(BollingerMeanReversion(lookback=15, num_std=1.5, trend_lookback=60, trend_threshold=0.005), trend_period=60, slope_bars=7, min_slope_pct=0.05)
+gen_BollingerMeanReversion_RF_7abfe4 = MeanReversionFilter(BollingerMeanReversion(lookback=15, num_std=1.5, trend_lookback=60, trend_threshold=0.005), trend_period=60, slope_bars=7, max_slope_pct=0.05)
 NAMED_STRATEGIES["gen_BollingerMeanReversion_RF_7abfe4"] = gen_BollingerMeanReversion_RF_7abfe4
-gen_BollingerMeanReversion_RF_598b24 = RegimeFilter(BollingerMeanReversion(lookback=20, num_std=1.5, trend_lookback=40, trend_threshold=0.005), trend_period=50, slope_bars=3, min_slope_pct=0.2)
+gen_BollingerMeanReversion_RF_598b24 = MeanReversionFilter(BollingerMeanReversion(lookback=20, num_std=1.5, trend_lookback=40, trend_threshold=0.005), trend_period=50, slope_bars=3, max_slope_pct=0.2)
 NAMED_STRATEGIES["gen_BollingerMeanReversion_RF_598b24"] = gen_BollingerMeanReversion_RF_598b24
 
 
