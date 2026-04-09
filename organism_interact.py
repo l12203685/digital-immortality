@@ -467,6 +467,7 @@ def _extract_identity_table(text: str) -> dict:
 DOMAIN_PRINCIPLE_AFFINITY = {
     "career":           ["career", "job", "work", "growth", "stability", "salary", "opportunity", "compound"],
     "relationships":    ["relationship", "trust", "friend", "social", "obligation", "commitment", "人際", "信任"],
+    "social":           ["relationship", "trust", "friend", "social", "maintenance", "proactive", "contact", "cadence", "silence", "tier", "initiate", "reach", "人際", "信任", "主動", "聯繫", "維護", "沉默", "關係", "行為", "模式", "驗證", "一致性"],
     "money":            ["money", "invest", "wealth", "asset", "return", "capital", "financial", "資產", "財務"],
     "risk":             ["risk", "edge", "EV", "expected value", "bet", "probability", "loss", "upside"],
     "risk_assessment":  ["risk", "edge", "EV", "expected value", "bet", "probability", "backtest", "overfit"],
@@ -769,6 +770,22 @@ def _domain_decision(domain: str, principle_text: str, scenario_text: str = "") 
             "maximally threatens your current role: 'What characteristics do I most fear in an opponent?' "
             "Build the threat checklist first; scan the field for matches on entry; neutralize or avoid high-threat actors. "
             "Having a strategy is necessary but not sufficient — undetected high-threat opponents override strategy quality."
+        ),
+        "social": (
+            "MAINTAIN_PROACTIVE_CADENCE — "
+            "MD-328: 關係投資=主動維護稀缺性原則. Waiting for others to initiate contact is outsourcing relationship maintenance. "
+            "For Tier 1 relationships: max silence period = 3 weeks. 6 weeks without contact = trigger immediately. "
+            "Proactive reach out is not desperation — it is owning the relationship rhythm. "
+            "A short message costs nothing; absence has compounding cost. Contact now."
+            if any(w in combined for w in ["proactive", "wait", "contact", "silence", "tier", "reach", "initiate", "主動", "聯繫", "沉默", "維護", "first"]) else
+            "VERIFY_BY_BEHAVIOR_PATTERN — "
+            "MD-330: 社交信號=行為模式比言語可信. Observe 3+ instances of behavior before updating trust assessment. "
+            "Stated intentions are hypotheses; fulfilled commitments are data. "
+            "3-month observation window: track commitment fulfillment rate, not impression score. "
+            "Behavior pattern > words. Consistency > volume of positive signals."
+            if any(w in combined for w in ["behavior", "pattern", "verify", "consistent", "trust", "action", "行為", "模式", "驗證", "一致性", "言語", "observe"]) else
+            "MAINTAIN_PROACTIVE_CADENCE — maintain regular proactive contact with important relationships; "
+            "do not wait for the other party to initiate. MD-328: 主動維護 is the default stance for Tier 1/2 relationships."
         ),
     }
     return decisions.get(domain, "Decision: apply core principles to the specific trade-offs in this scenario.")

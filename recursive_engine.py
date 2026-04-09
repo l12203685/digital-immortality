@@ -177,6 +177,56 @@ def _store_cycle_insight(cycle: int):
     )
 
 
+def _estimate_stale_cycles(last_output_mtime: float) -> int:
+    """Estimate how many cycles have run since last_output.md was updated."""
+    log = read_file(DAILY_LOG)
+    if not log:
+        return 0
+    # Count ## Cycle entries in the log (each is a cycle)
+    # last_output_mtime is a unix timestamp; we can count log entries after that
+    # Simpler: count total cycles - approximate cycles since file was last modified
+    from datetime import datetime, timezone
+    last_modified = datetime.fromtimestamp(last_output_mtime, tz=timezone.utc)
+    # Each "## Cycle N —" entry has a timestamp. Count how many are after last_modified.
+    import re
+    cycle_timestamps = re.findall(r'## Cycle \d+ — (\d{4}-\d{2}-\d{2}T\d{2}:\d{2}Z)', log)
+    stale = 0
+    for ts_str in cycle_timestamps:
+        try:
+            ts = datetime.strptime(ts_str, "%Y-%m-%dT%H:%MZ").replace(tzinfo=timezone.utc)
+            if ts > last_modified:
+                stale += 1
+        except ValueError:
+            pass
+    return stale
+
+
+def _check_staging_staleness(cycle: int):
+    """Warn if last_output.md has not been updated since the previous prompt was written."""
+    if not LAST_OUTPUT.exists() or not NEXT_INPUT.exists():
+        return  # Nothing to compare yet
+
+    last_output_mtime = LAST_OUTPUT.stat().st_mtime
+    next_input_mtime = NEXT_INPUT.stat().st_mtime
+
+    # If last_output was last modified BEFORE next_input was written,
+    # the LLM hasn't consumed the prompt and updated the output
+    if last_output_mtime < next_input_mtime:
+        # Estimate stale cycles by counting how many cycle entries are in daily_log
+        # after the last_output timestamp
+        stale_cycles = _estimate_stale_cycles(last_output_mtime)
+        if stale_cycles >= 3:  # Only alert after 3+ stale cycles (reduce noise)
+            msg = (
+                f"[STALENESS_ALERT] Cycle {cycle}: staging/last_output.md not updated "
+                f"in ~{stale_cycles} cycles — LLM may not be consuming prompts."
+            )
+            print(f"\n⚠️  {msg}")
+            # Append to daemon log
+            with open(DAEMON_LOG, "a", encoding="utf-8") as f:
+                now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+                f.write(f"[{now}] {msg}\n")
+
+
 def generate_prompt():
     """Read previous output and generate the next cycle's input prompt."""
     ensure_dirs()
@@ -212,6 +262,9 @@ def generate_prompt():
 
     NEXT_INPUT.write_text(prompt, encoding="utf-8")
     print(f"Cycle {cycle} prompt written to {NEXT_INPUT}")
+
+    # Check if staging is stale (LLM not consuming prompts)
+    _check_staging_staleness(cycle)
 
     # Store cycle transition insight at cycle end
     _store_cycle_insight(cycle)

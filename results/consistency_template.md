@@ -1,6 +1,6 @@
 # Cross-Instance Consistency Test
-**DNA**: [Your Name]
-**Generated**: 2026-04-08T23:26:29.081437
+**DNA**: DNA Core — Operational Minimum
+**Generated**: 2026-04-09T00:31:52.460997
 **Scenarios**: 45
 
 ## Instructions
@@ -16,9 +16,10 @@
 
 **Question**: You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable, reputable employer. The startup has 18 months of runway. Do you take it?
 
-**Deterministic baseline**: On career decisions, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On career decisions, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ......
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Nega...
 
 ### Session Answers
 
@@ -34,9 +35,10 @@
 
 **Question**: A close friend asks you to co-sign a personal loan of significant size. They have a track record of poor financial discipline but are genuinely in need. Do you co-sign?
 
-**Deterministic baseline**: On relationship commitments, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On relationship commitments, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free ti...
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard st...
 
 ### Session Answers
 
@@ -52,9 +54,11 @@
 
 **Question**: You receive an unexpected windfall equal to 2 years of your salary. You can: (A) invest it conservatively in index funds, (B) allocate it to a concentrated high-conviction bet, or (C) use it to buy more time — reduce working hours or take a sabbatical. What do you do and why?
 
-**Deterministic baseline**: On capital allocation, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On capital allocation, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi....
+  [1] Applying: "Evaluate time vs. return first"
+  [2] Applying: "Definition"
+  [3] Applying: "No condition under wh...
 
 ### Session Answers
 
@@ -70,10 +74,9 @@
 
 **Question**: An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your net worth. Do you take the bet?
 
-**Deterministic baseline**: On risk-taking, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On risk-taking, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
-  [...
+  [1] Applying: "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even ...
 
 ### Session Answers
 
@@ -89,9 +92,10 @@
 
 **Question**: You can spend the next 6 months learning a skill that is highly valuable NOW but may be automated in 3-5 years, OR learning a harder foundational skill that compounds over a decade but pays nothing immediately. Which do you choose?
 
-**Deterministic baseline**: On learning investments, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On learning investments, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financ...
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. ...
 
 ### Session Answers
 
@@ -107,9 +111,11 @@
 
 **Question**: Optimizing your physical health would require 10 hours per week of dedicated effort (sleep discipline, exercise, diet). This directly competes with time you currently use for deep work and income generation. How do you allocate?
 
-**Deterministic baseline**: On health vs. productivity trade-offs, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On health vs. productivity trade-offs, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns...
+  [1] Applying: "Evaluate time vs. return first"
+  [2] Applying: "Definition"
+  [3] Applying: "No co...
 
 ### Session Answers
 
@@ -125,9 +131,11 @@
 
 **Question**: You have a free, unscheduled weekend with zero obligations. No one expects anything from you. What do you do, and what does that reveal about your actual priorities?
 
-**Deterministic baseline**: On time allocation, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On time allocation, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [e..."...
+  [1] Applying: "Evaluate time vs. return first"
+  [2] Applying: "Definition"
+  [3] Applying: "No condition under which...
 
 ### Session Answers
 
@@ -143,11 +151,10 @@
 
 **Question**: A colleague takes credit for your work in front of senior leadership. It was likely deliberate. You have evidence. Do you confront them directly, escalate to management, let it go, or play a longer game? Walk through your reasoning.
 
-**Deterministic baseline**: On conflict resolution, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On conflict resolution, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "What you decided"
-  [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a represen...
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. N...
 
 ### Session Answers
 
@@ -163,9 +170,9 @@
 
 **Question**: A contact offers you early access to a deal/opportunity that requires a decision within 48 hours. Due diligence would normally take 2 weeks. The opportunity looks strong but you cannot fully verify it in time. Do you act or pass?
 
-**Deterministic baseline**: On time-compressed opportunities, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On time-compressed opportunities, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshol...
+  [1] Applying: "No condition under which this flips to action right now. Hard stop. Negative EV or insuf...
 
 ### Session Answers
 
@@ -181,9 +188,11 @@
 
 **Question**: You have 10 years left to work at full capacity. You can optimize for: (A) maximum wealth accumulation, (B) building something that outlasts you, (C) depth of relationships and personal experiences. These are mutually exclusive at the margin. What is your allocation and why?
 
-**Deterministic baseline**: On legacy and long-term orientation, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On legacy and long-term orientation, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of...
+  [1] Applying: "單策略impact=1/N"
+  [2] Applying: "Definition"
+  [3] Applying: "No condition under which...
 
 ### Session Answers
 
@@ -199,10 +208,10 @@
 
 **Question**: A close friend asks for your quick take on their new business idea during a 10-minute coffee chat. You have reservations but haven't fully analyzed it. Do you give a hedged multi-paragraph analysis, or a direct 10-second verdict? What exactly do you say first?
 
-**Deterministic baseline**: On communication, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On communication, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
- ...
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Negativ...
 
 ### Session Answers
 
@@ -218,10 +227,11 @@
 
 **Question**: You're asked a complex question in a group setting. Five people are waiting. Option A: think out loud for 90 seconds with caveats. Option B: give a direct 10-second verdict, explain briefly if pressed. Which do you choose, and what principle drives it?
 
-**Deterministic baseline**: On meta_strategy, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On meta_strategy, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Systems over feelings — Health maintenance follows a fixed schedule, not how the body feels on a given day. Feeling f..."
- ...
+  [1] Applying: "最適槓桿=regime函數"
+  [2] Applying: "Definition"
+  [3] Applying: "No condition under which this flips to acti...
 
 ### Session Answers
 
@@ -237,10 +247,10 @@
 
 **Question**: Someone proposes an active trading opportunity with 25% annualized returns that requires 2 hours of daily maintenance. The strategy has a 1-year track record but no independent audit. Do you participate?
 
-**Deterministic baseline**: On trading, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On trading, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
-  [2] A...
+  [1] Applying: "Evaluate time vs. return first"
+  [2] Applying: "No condition under which this flips to action right now. Hard...
 
 **Expected decision**: EVALUATE_TIME_VS_RETURN
 
@@ -260,10 +270,10 @@
 
 **Question**: You receive an unexpected windfall equal to 2 years of your current income. You can: (A) invest conservatively in index funds, (B) allocate it to a concentrated high-conviction position, or (C) use it to buy time -- reduce work hours or take a sabbatical. What do you do and why?
 
-**Deterministic baseline**: On finance, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On finance, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi..."
-  [2] A...
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Negative EV o...
 
 **Expected decision**: APPLY_FINANCIAL_PRINCIPLES
 
@@ -283,9 +293,10 @@
 
 **Question**: Your employer offers a promotion with 30% higher pay, but the new role is management-focused: 2 extra hours of meetings per day and less time for your core skills. Do you accept?
 
-**Deterministic baseline**: On career decisions, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On career decisions, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ......
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Nega...
 
 **Expected decision**: DEPENDS_ON_CORE_GOAL
 
@@ -305,9 +316,10 @@
 
 **Question**: A friend of 3 years has been borrowing money with increasing frequency and amounts -- starting small but now 10x the original size. They always repay on time. Do you continue lending?
 
-**Deterministic baseline**: On relationship commitments, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On relationship commitments, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free ti...
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard st...
 
 **Expected decision**: SET_BOUNDARY
 
@@ -327,11 +339,9 @@
 
 **Question**: If you were incapacitated tomorrow and your digital twin had to make the first decision on your behalf, what would that decision be? Be specific -- name the action, the person involved, and the timeframe.
 
-**Deterministic baseline**: On identity, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On identity, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "[Value] — proven by: [specific action you took]"
-  [2] Applying: "[Value] — proven by: [specific action]"
-  [3] Applying: "Bias ...
+  [1] Applying: "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even und...
 
 **Expected decision**: SPECIFIC_ACTION
 
@@ -351,9 +361,9 @@
 
 **Question**: A backtested strategy shows a Sharpe ratio of 2.5 on historical data, but walk-forward validation only passes 2 out of 5 windows. Should you deploy it with real capital?
 
-**Deterministic baseline**: On risk_assessment, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On risk_assessment, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."...
+  [1] Applying: "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge e...
 
 **Expected decision**: REJECT
 
@@ -373,9 +383,9 @@
 
 **Question**: You are invited to join a startup as a technical co-founder with 10% equity, but it requires 2 years of full-time commitment. Your current path reaches your primary financial goal in 3 years. Do you take it?
 
-**Deterministic baseline**: On opportunity_cost, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On opportunity_cost, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading......
+  [1] Applying: "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge ...
 
 **Expected decision**: PASS_UNLESS_CLEAR_EDGE
 
@@ -395,10 +405,11 @@
 
 **Question**: Your primary system (trading, business, or project) has seen its key performance metric deteriorate 3x over three months -- e.g., max drawdown from 5% to 15%, or error rate tripling. The trend is accelerating. Do you pause the system?
 
-**Deterministic baseline**: On meta_strategy, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On meta_strategy, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Systems over feelings — Health maintenance follows a fixed schedule, not how the body feels on a given day. Feeling f..."
- ...
+  [1] Applying: "最適槓桿=regime函數"
+  [2] Applying: "Definition"
+  [3] Applying: "No condition under which this flips to acti...
 
 **Expected decision**: PAUSE_AND_DIAGNOSE
 
@@ -418,10 +429,10 @@
 
 **Question**: A colleague asks your opinion on their trading strategy mid-presentation. Five people are watching. You have a clear reservation. Do you lead with your reservation immediately, or first summarize what they said, then list pros, then mention the concern at the end?
 
-**Deterministic baseline**: On communication, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On communication, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
- ...
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Negativ...
 
 **Expected decision**: LEAD_WITH_VERDICT
 
@@ -441,10 +452,10 @@
 
 **Question**: You get a 3-second gut feeling that a proposed deal is wrong. You have time for a 10-minute analysis. The analysis comes back borderline-positive. Do you override your intuition?
 
-**Deterministic baseline**: On communication, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On communication, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
- ...
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Negativ...
 
 **Expected decision**: TRUST_INTUITION_UNLESS_2X_EVIDENCE
 
@@ -464,9 +475,9 @@
 
 **Question**: You have research on a sector that most market participants have not seen yet. A friend offers you a deal in an unrelated area where you have no special knowledge. Both have similar expected returns. Which do you pursue, and why?
 
-**Deterministic baseline**: On information_asymmetry, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On information_asymmetry, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time ...
+  [1] Applying: "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient ...
 
 **Expected decision**: PURSUE_EDGE_PASS_ON_SYMMETRY
 
@@ -486,10 +497,10 @@
 
 **Question**: You are negotiating a salary or deal. The other party asks for your number first. You have a floor below which the deal makes no sense. Do you anchor high, deflect, or name your floor? What is the first concrete step before any negotiation meeting?
 
-**Deterministic baseline**: On negotiation, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On negotiation, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
-  [...
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Negative ...
 
 **Expected decision**: CALCULATE_FLOOR_FIRST_WRITTEN
 
@@ -509,10 +520,10 @@
 
 **Question**: You have finished building and backtesting a new trading strategy. Performance looks good. A colleague says 'let's deploy it and monitor it as we go.' You have not yet written down any kill conditions. What is the mandatory step before going live?
 
-**Deterministic baseline**: On trading, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On trading, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
-  [2] A...
+  [1] Applying: "Evaluate time vs. return first"
+  [2] Applying: "No condition under which this flips to action right now. Hard...
 
 **Expected decision**: DEFINE_KILL_CONDITIONS_FIRST
 
@@ -532,9 +543,10 @@
 
 **Question**: Your Kelly criterion calculation says to bet 90% of your capital on a high-confidence trade. The expected value is strongly positive. Should you bet the full Kelly amount?
 
-**Deterministic baseline**: On position_sizing, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On position_sizing, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."...
+  [1] Applying: "Position sizing"
+  [2] Applying: "Already in position; current data doesn't justify exit or increase."...
 
 **Expected decision**: BET_FRACTIONAL_KELLY
 
@@ -554,9 +566,10 @@
 
 **Question**: You have a lump sum of capital. Option A: repay a loan early, saving an absolute amount X in interest over the loan term. Option B: invest in an income-generating asset with a yield rate higher than the loan's interest rate. A friend argues Option A is safer because 'you save real money'. How do you decide?
 
-**Deterministic baseline**: On capital_allocation, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On capital_allocation, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi....
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Ne...
 
 **Expected decision**: COMPARE_RATES_NOT_AMOUNTS
 
@@ -576,9 +589,10 @@
 
 **Question**: You have completed analysis on an asset: yield is acceptable, the company has survived multiple cycles, cash flow is adequate. Your instinct is to 'wait for a dip before buying'. Is waiting-for-dip the correct next step?
 
-**Deterministic baseline**: On capital_allocation, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On capital_allocation, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi....
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Ne...
 
 **Expected decision**: DCA_IS_DEFAULT_EXECUTION
 
@@ -598,9 +612,10 @@
 
 **Question**: You want to replace a fixed monthly expense (e.g. mortgage interest of 40,000/year) with passive income. A friend says 'you need a huge amount of capital — it's not realistic'. How do you evaluate whether the target is achievable?
 
-**Deterministic baseline**: On capital_allocation, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On capital_allocation, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi....
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Ne...
 
 **Expected decision**: CALCULATE_INCOME_TARGET_FROM_YIELD
 
@@ -620,10 +635,10 @@
 
 **Question**: A financial news headline reads: 'Company X earnings up 35%!' You are considering whether to update your view on the stock. What is the correct analytical move before acting on this headline?
 
-**Deterministic baseline**: On information, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On information, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value p..."
-  [...
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Negative ...
 
 **Expected decision**: DECODE_ALL_DIMENSIONS_NOT_ONE
 
@@ -643,9 +658,10 @@
 
 **Question**: An investor holds a large-cap dividend stock with a stable 4.5% annual yield. The position is 3% of total capital. The stock drops 40% in a market downturn. A friend says 'you must cut losses — stop-loss is always required'. Do you sell?
 
-**Deterministic baseline**: On capital_allocation, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On capital_allocation, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi....
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Ne...
 
 **Expected decision**: HOLD_WHEN_YIELD_EXCEEDS_DRAWDOWN
 
@@ -665,9 +681,10 @@
 
 **Question**: You have 500,000 to invest for dividend income. Stock A has a 4.8% yield at price 100/share. Stock B has a 4.6% yield at price 20/share. A friend says 'just pick the higher yield — Stock A wins'. How do you actually compare them?
 
-**Deterministic baseline**: On capital_allocation, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On capital_allocation, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi....
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Ne...
 
 **Expected decision**: COMPARE_ABSOLUTE_CASHFLOW_SAME_CAPITAL
 
@@ -687,9 +704,11 @@
 
 **Question**: Edward has been studying quantitative portfolio optimization for 3 months — reading papers, running code, taking notes. A colleague asks him to explain the core concept in 2 minutes. He starts, then gets stuck trying to explain why correlation matrices matter. He uses vague phrases like 'it's basically about diversification'. He feels like he understands the topic.
 
-**Deterministic baseline**: On knowledge_output, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On knowledge_output, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi......
+  [1] Applying: "知識=時間密度乘積"
+  [2] Applying: "Definition"
+  [3] Applying: "No condition under which this flips to actio...
 
 **Expected decision**: OUTPUT_TO_VALIDATE_UNDERSTANDING
 
@@ -709,9 +728,10 @@
 
 **Question**: Edward tracks his time and finds he spends 20 minutes every Sunday deciding what to eat for the week, 15 minutes each month manually initiating bill payments, and 10 minutes each morning deciding his workout schedule. These feel minor. He's considering just 'being more disciplined' about these choices.
 
-**Deterministic baseline**: On life_maintenance, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On life_maintenance, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Bias toward inaction — Applied here as: do not abandon a consistent routine without a clear reason. Inertia in health......
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Nega...
 
 **Expected decision**: REDUCE_DECISION_FREQUENCY
 
@@ -731,9 +751,11 @@
 
 **Question**: Edward has a personal trading analysis routine he runs every Sunday: checking regime indicators, reviewing open positions, updating his watchlist. He does it from memory each week. A friend asks him to teach it. Edward thinks 'my process is too personal and messy to teach'.
 
-**Deterministic baseline**: On knowledge_output, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On knowledge_output, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi......
+  [1] Applying: "知識=時間密度乘積"
+  [2] Applying: "Definition"
+  [3] Applying: "No condition under which this flips to actio...
 
 **Expected decision**: OUTPUT_TO_VALIDATE_UNDERSTANDING
 
@@ -753,9 +775,10 @@
 
 **Question**: Edward notices he always schedules important decisions and analysis for late evenings after a full workday. He makes more errors then and takes longer. His calendar has meetings in the mornings and free blocks in the evenings. He thinks the evening blocks are the only available time.
 
-**Deterministic baseline**: On life_maintenance, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On life_maintenance, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Bias toward inaction — Applied here as: do not abandon a consistent routine without a clear reason. Inertia in health......
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Nega...
 
 **Expected decision**: REDUCE_DECISION_FREQUENCY
 
@@ -775,11 +798,10 @@
 
 **Question**: You are about to enter a competitive negotiation (or zero-sum game). You feel ready — you have a strong strategy prepared. Before executing, a colleague asks 'Who is the most dangerous opponent you could face, and what would make them dangerous?' You dismiss the question: 'I already have my strategy.' Is this the right move?
 
-**Deterministic baseline**: On strategy, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On strategy, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "What you decided"
-  [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a representative. Thi...
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Negative EV ...
 
 **Expected decision**: IDENTIFY_THREAT_PROFILE_FIRST
 
@@ -799,10 +821,10 @@
 
 **Question**: You have identified a trading opportunity: buy 2 lots of a stock at 50/share, expect a 2% move. Your broker charges 0.11% commission per trade. A friend says 'just execute — the expected gain is positive'. What do you check before placing the order?
 
-**Deterministic baseline**: On trading, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On trading, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ..."
-  [2] A...
+  [1] Applying: "Evaluate time vs. return first"
+  [2] Applying: "No condition under which this flips to action right now. Hard...
 
 **Expected decision**: CALCULATE_FRICTION_COST_FIRST
 
@@ -822,9 +844,10 @@
 
 **Question**: A recent graduate is exploring career paths. She has done research on one direction (finance) and feels comfortable with it. She is about to commit fully and stop exploring other options (data science, actuarial, risk management). Her reasoning: 'I've researched finance enough — more exploration just delays commitment.' Should she converge now?
 
-**Deterministic baseline**: On career decisions, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On career decisions, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ......
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Nega...
 
 **Expected decision**: MULTI_TRACK_BEFORE_CONVERGE
 
@@ -844,9 +867,10 @@
 
 **Question**: A financial advisor recommends buying and holding a single-company stock — a current sector leader — as the core retirement position for 10+ years. Their pitch: 'This is a safe, stable company with strong fundamentals.' What is the FIRST question you must answer before committing long-term capital to any single stock?
 
-**Deterministic baseline**: On capital_allocation, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On capital_allocation, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi....
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Ne...
 
 **Expected decision**: VERIFY_LONG_TERM_SURVIVAL_FIRST
 
@@ -866,9 +890,11 @@
 
 **Question**: Edward has developed a unique trading decision framework backed by 3 years of personal data. He wants to publish it to validate whether it generalizes. He is choosing between: (A) a general personal blog — large potential audience, slow/low-quality feedback; (B) a niche quantitative trading community — small but expert audience, fast and precise feedback; (C) a large mainstream investing subreddit — massive audience, anonymous and noisy feedback. Which platform should he publish on FIRST for maximum idea validation?
 
-**Deterministic baseline**: On knowledge_output, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On knowledge_output, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi......
+  [1] Applying: "知識=時間密度乘積"
+  [2] Applying: "Definition"
+  [3] Applying: "No condition under which this flips to actio...
 
 **Expected decision**: SELECT_HIGH_DENSITY_HIGH_FEEDBACK_FIRST
 
@@ -888,9 +914,10 @@
 
 **Question**: Edward has been trying to establish a daily meditation habit for 6 months. He has used willpower, motivational alarms, and self-reminders — but fails consistently after 2-3 days each attempt. He concludes he simply 'lacks discipline.' What is the correct diagnosis and next intervention?
 
-**Deterministic baseline**: On life_maintenance, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On life_maintenance, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Bias toward inaction — Applied here as: do not abandon a consistent routine without a clear reason. Inertia in health......
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Nega...
 
 **Expected decision**: DESIGN_ENVIRONMENT_FIRST
 
@@ -910,11 +937,10 @@
 
 **Question**: You have a close friend (Tier 1) you haven't contacted in 6 weeks. You haven't received a message from them either. You're busy. Should you wait for them to reach out first?
 
-**Deterministic baseline**: On social, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On social, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "What you decided"
-  [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a representative. Think...
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Negative EV or...
 
 **Expected decision**: MAINTAIN_PROACTIVE_CADENCE
 
@@ -934,9 +960,10 @@
 
 **Question**: You want to learn options trading. You've found detailed articles about specific strategies (iron condors, calendar spreads). Should you start reading them immediately?
 
-**Deterministic baseline**: On learning investments, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On learning investments, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financ...
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. ...
 
 **Expected decision**: BUILD_SKELETON_FIRST
 
@@ -956,11 +983,10 @@
 
 **Question**: A colleague says they strongly support your project proposal and will help promote it internally. However, they have missed the last 3 review meetings and haven't shared any of your updates. Should you trust their stated support?
 
-**Deterministic baseline**: On social, [Your Name]'s decision framework yields:
+**Deterministic baseline**: On social, DNA Core — Operational Minimum's decision framework yields:
 
-  [1] Applying: "What you decided"
-  [2] Applying: "[What you did]"
-  [3] Applying: "You are [Name] — not an assistant, not a representative. Think...
+  [1] Applying: "Definition"
+  [2] Applying: "No condition under which this flips to action right now. Hard stop. Negative EV or...
 
 **Expected decision**: VERIFY_BY_BEHAVIOR_PATTERN
 

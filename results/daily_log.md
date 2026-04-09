@@ -3,6 +3,54 @@
 Recursive engine cycle history.
 
 
+## Cycle 161 — 2026-04-09T02:00Z
+
+**Branches**: 4 parallel (2.3 consistency fix + 3.1 staleness guard + 7.41 SOP #37 + tree/log catchup)
+
+### Branch 2.3: 33/33 ALIGNED — Social Domain Fixed ✅
+
+- Root cause: `DOMAIN_PRINCIPLE_AFFINITY` in `organism_interact.py` had no "social" domain entry; deterministic engine fell back to generic core principles for `generic_relationship_proactive_maintenance`
+- Fix 1: Added `"social"` key to `DOMAIN_PRINCIPLE_AFFINITY` in `organism_interact.py` with relationship/maintenance/proactive/contact keywords (Chinese + English)
+- Fix 2: Added `"social"` handler to `_domain_decision()` with two branches: MAINTAIN_PROACTIVE_CADENCE (wait/contact/silence/tier triggers) and VERIFY_BY_BEHAVIOR_PATTERN (behavior/pattern/verify triggers)
+- Result: **33/33 ALIGNED ✅** (was 31/33 stated, was actually 32/33 measured — now 33/33 deterministic)
+- Baseline saved: `results/consistency_baseline.json`
+- **Social domain now fully deterministic — no LLM required for any scenario**
+
+### Branch 3.1: Staging Staleness Guard — COMPLETE ✅
+
+- Added `_estimate_stale_cycles(last_output_mtime)` to `recursive_engine.py` — counts `## Cycle N — <ISO timestamp>` entries in daily_log.md newer than last_output.md mtime
+- Added `_check_staging_staleness(cycle)` to `recursive_engine.py` — compares mtime of last_output.md vs next_input.md; if last_output is older and ≥3 cycles have passed → prints `⚠️ [STALENESS_ALERT]` and appends to `results/daemon_log.md`
+- Called in `generate_prompt()` immediately after writing `NEXT_INPUT`
+- Kill condition: ≥3 stale cycles = daemon is producing prompts but LLM sessions have stopped consuming them
+
+### Branch 7.41: SOP #37 Relationship Investment Protocol — COMPLETE ✅
+
+- `docs/knowledge_product_37_relationship_investment_sop.md` — 6 gates (Domain 4 社交圈):
+  - G0: Relationship asset mapping (10–15 nodes, Tier 1/2/3 classification, last contact date)
+  - G1: Silence period audit (T1=2wk/T2=1mo/T3=3mo; weekly 5-min scan; ≥3 T1 overdue = portfolio distress)
+  - G2: Proactive maintenance trigger (MD-328: contact now, no agenda required; reframes "proactive ≠ desperate")
+  - G3: Behavior vs words verification (MD-330: 3-month window, track 3+ verbal commitments, observe follow-through)
+  - G4: Fulfillment rate assessment (≥80%=high-trust / 50-79%=moderate / <50%=verbal-only, no load-bearing dependency)
+  - G5: Annual portfolio review (prune low-signal nodes, reallocate attention to high-fulfillment relationships)
+- Self-test: Patrick (Tier 2, 4 months silent) → G1 flagged → G2 triggers → send article now, no agenda needed
+- Complements SOP #19 (inaction bias = don't engage noise) — SOP #37 = proactive maintenance of signal-positive nodes
+- `docs/publish_thread_sop37_twitter.md` — 12 tweets (hook: "Most people manage relationships like a checking account")
+- Posting queue extended to **Jun 20** (72-day target); **series now SOP #01~#37; Domain 4 coverage: SOP #19 + SOP #37 ✅**
+
+### Tree/log catchup
+
+- `results/dynamic_tree.md`: SOP #35 (7.38) + SOP #36 (7.38b) entries added (were in daily_log but missing from tree)
+- Branch 2.3 tree entry updated: 33/33 ALIGNED, social domain fix documented
+- Branch 3.1 tree entry added: staleness guard implementation documented
+
+### Next cycle
+
+- Edward action: post SOP #01 thread on X (Apr 9 = today); G5 compounding clock starts on first post ⚡
+- Edward action: provide BINANCE_MAINNET_KEY/SECRET → live trading (⚡DEADLINE 2026-07-07, 89 days)
+- Branch 1.3: Gumroad listing — 3 workbooks ready; trigger is ≥10 DMs on any SOP thread
+- Branch 4.1: Samuel reviews samuel_dna.md in person (blocked on human)
+
+
 ## Cycle 160 — 2026-04-09T00:30Z
 
 **Branches**: 3 parallel (7.38 SOP #35 knowledge compounding + 7.39 SOP #36 barbell optionality + bug fix stale files)

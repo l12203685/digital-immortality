@@ -43,6 +43,7 @@
 | Jun 14 | #34 | publish_thread_sop34_twitter.md | "You spent 6 months building an audience. No one paid you anything. The problem wasn't the content. It was the architecture." | pending |
 | Jun 16 | #35 | publish_thread_sop35_twitter.md | "You consumed 50 books last year. Can you teach any of them? If not, you didn't learn — you optimized for the feeling of learning." | pending |
 | Jun 18 | #36 | publish_thread_sop36_twitter.md | "Most people's life strategy has no barbell. They take existential risk on their main income and cap their upside on their experiments. Exactly backwards." | pending |
+| Jun 20 | #37 | publish_thread_sop37_twitter.md | "Most people treat relationships like a checking account — only think about it when they need something. Here's the maintenance SOP." | pending |
 
 ---
 
