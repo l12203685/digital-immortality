@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#72
+# Twitter Posting Queue — SOP Series #01~#75
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -80,6 +80,7 @@
 | Aug 23 | #71 | publish_thread_sop71_twitter.md | "You built 10 strategies. 1 is signaling. 9 are FLAT. Is this a feature or a bug?" | pending |
 | Aug 26 | #72 | publish_thread_sop72_twitter.md | "You built a multi-strategy system. One strategy is signaling. Nine are FLAT. How long has this been true? You don't know. You have no log." | pending |
 | Aug 28 | #73 | publish_thread_sop73_twitter.md | "You have 6 active projects. You pick the one you last thought about. 3 months later: 2 dead, 1 over-built, 0 at target. Dynamic Tree Protocol — 4-gate branch prioritization." | pending |
+| Aug 30 | #75 | publish_thread_sop75_twitter.md | "108 ticks. 15 strategies registered. 1 active. The hardest part isn't the strategy — it's keeping the pool alive. Strategy Pool Lifecycle Protocol." | pending |
 
 ---
 

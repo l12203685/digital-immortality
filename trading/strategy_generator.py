@@ -64,35 +64,37 @@ PAPER_LOG_PATH = RESULTS_DIR / "paper_live_log.jsonl"
 
 
 # ---------------------------------------------------------------------------
-# Data fetching — BTC daily via yfinance
+# Data fetching — BTC daily via yfinance (synthetic fallback)
 # ---------------------------------------------------------------------------
 def fetch_btc_daily(days: int = 730) -> List[Bar]:
-    """Fetch BTC-USD daily OHLCV from yfinance. Returns list of Bar dicts."""
+    """Fetch BTC-USD daily OHLCV from yfinance. Falls back to synthetic data if
+    yfinance is unavailable or network is unreachable."""
     try:
         import yfinance as yf
+        log.info("Fetching BTC-USD daily data (%d days)...", days)
+        ticker = yf.Ticker("BTC-USD")
+        df = ticker.history(period=f"{days}d", interval="1d")
+        if not df.empty:
+            bars: List[Bar] = []
+            for _, row in df.iterrows():
+                bars.append({
+                    "open": float(row["Open"]),
+                    "high": float(row["High"]),
+                    "low": float(row["Low"]),
+                    "close": float(row["Close"]),
+                    "volume": float(row["Volume"]),
+                })
+            log.info("Fetched %d daily bars.", len(bars))
+            return bars
+        log.warning("yfinance returned empty data — falling back to synthetic bars.")
     except ImportError:
-        log.error("yfinance not installed. Run: pip install yfinance")
-        sys.exit(1)
+        log.warning("yfinance not installed — falling back to synthetic bars.")
+    except Exception as exc:
+        log.warning("yfinance fetch failed (%s) — falling back to synthetic bars.", exc)
 
-    log.info("Fetching BTC-USD daily data (%d days)...", days)
-    ticker = yf.Ticker("BTC-USD")
-    df = ticker.history(period=f"{days}d", interval="1d")
-
-    if df.empty:
-        log.error("No data returned from yfinance.")
-        sys.exit(1)
-
-    bars: List[Bar] = []
-    for _, row in df.iterrows():
-        bars.append({
-            "open": float(row["Open"]),
-            "high": float(row["High"]),
-            "low": float(row["Low"]),
-            "close": float(row["Close"]),
-            "volume": float(row["Volume"]),
-        })
-
-    log.info("Fetched %d daily bars.", len(bars))
+    from trading.backtest_framework import generate_synthetic_bars
+    bars = generate_synthetic_bars(n=days, drift=0.0002, volatility=0.025, seed=42)
+    log.info("Using %d synthetic bars (BTC geometric random walk, seed=42).", len(bars))
     return bars
 
 

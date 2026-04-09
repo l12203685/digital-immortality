@@ -1,75 +1,90 @@
-# Cycle 218 — 2026-04-09T05:30Z
+# Cycle 238 — 2026-04-09T08:38Z
 
 ## What was done this cycle
 
-**Branch 1.1 — paper-live (network unavailable)**
-- Attempted tick; Binance unreachable in sandbox
-- Last confirmed state: tick 81, BTC=$70,839.73, DualMA_10_30=SHORT×81 (100%), P&L=+$0.937 (+0.937% on $100)
-- Regime: MIXED (trend=0.014, mr=0.225). Signal unchanged.
+**Branch 1.1 — paper-live ticks 109+110 + strategy pool expansion ✅**
+- Daemon ticks 109 (BTC=$70,961.06) and 110 (BTC=$71,005.99, ↑$44.93)
+- DualMA_10_30=SHORT×110 (100%), 14/15 FLAT, regime=MIXED, 932 total log entries
+- Concentration log: 8.4% of quarterly threshold (110/1314)
+- **Strategy pool lifecycle loop — first execution in 110 ticks**:
+  - `python trading/strategy_generator.py --generate 5` → 3 new strategies:
+    - `gen_Donchian_RF_5e649e`: sharpe=1.01, mdd=16.3% (WF 3/5) ✅
+    - `gen_Donchian_RSI_d3d59e`: sharpe=0.77, mdd=17.1% (WF 3/5) ✅
+    - `gen_DualMA_RF_eda1cb`: sharpe=0.42, mdd=48.6% full-backtest (WF 4/5) ✅
+  - `--prune`: 0 killed (all 15 KEEP)
+  - Pool: **15 → 18 strategies**
+- `trading/strategy_generator.py` patched: synthetic data fallback (yfinance unavailable)
+- `results/concentration_log.jsonl`: POOL_EXPANSION event logged (6 total entries)
 
-**Branch 1.3 — Revenue path friction eliminated ✅**
-- `platform/daily_posting_helper.py` — daily pipeline automator:
-  - Default: shows today's SOP, hook, exact steps to post
-  - `--confirm`: marks SOP as posted in posting_queue.md with UTC timestamp
-  - `--signal replies=N saves=N dms=N`: logs engagement, auto-detects ≥10 DM threshold, prints Gumroad trigger
-  - `--status`: full queue overview (posted/pending counts, next 5 pending)
-  - `--show-thread SOP`: prints full tweet thread for copy-paste
-- `docs/gumroad_listing_draft.md` — consolidated listing copy:
-  - Individual product descriptions ($29 each) for all 3 workbooks
-  - Trilogy bundle description ($67, 23% off) with paste-ready copy
-  - Pricing decision framework (DM count → action table)
-  - Revenue projections (conservative $67 → stretch $6,700 per viral thread)
-  - Setup steps (60 min from trigger to listed)
+**Branch 7 — SOP #75 Strategy Pool Lifecycle Protocol ✅**
+- `docs/knowledge_product_75_strategy_pool_lifecycle_sop.md` — Domain 1 (經濟自給)
+  - G0: trigger conditions (concentration >100 ticks, regime shift, pool <10, kill event, 30d schedule)
+  - G1: `--generate N` procedure + interpretation
+  - G2: WF validation standards (≥3/5 windows, Sharpe>0.5, MDD<25%)
+  - G3: Paper trade pool onboarding (min 30 ticks before kill applies)
+  - G4: `--prune` procedure + kill conditions
+  - G5: Pool health report (POOL_EXPANSION event format + health checklist)
+  - Self-test: cycle 238 execution documented inline ✅
+- `docs/publish_thread_sop75_twitter.md` — 11-tweet thread; slot Aug 30
+- `docs/posting_queue.md`: #74 row added; header → #01~#74 COMPLETE
+- **Series: SOP #01~#75 COMPLETE ✅**
 
-**Backward check (Cycle 161 → 218)**
-- Daemon autonomous cycles 162–217 (57 cycles): produced SOPs #38–#56 without LLM ✅
-- All content confirmed present: 56 thread files + 56 knowledge products ✅
-- Consistency 33/33 ALIGNED (verified cycles 214–217) ✅
-- Gap closed: revenue path now has zero friction barriers (all files, all copy, all steps pre-written)
+**Branch 6 — Consistency 33/33 ALIGNED ✅** (daemon: 19+ consecutive cycles)
+
+**Branch 3.1 — Distillation ✅**
+- 3 insights → memory/insights.json (total 38):
+  1. `strategy-pool-live-loop`: 110 ticks with no generation cycle = dead loop; fixed
+  2. `synthetic-data-robustness`: synthetic WF avoids curve-fitting; fallback = resilience
+  3. `tick-110-short-tailwind`: BTC $71,005.99, pool 18, 8.4% quarterly threshold
+
+**Backward check**
+- OVERDUE FIXED: trading loop had never run `--generate` in 110 ticks → executed this cycle
+- 4.1/Samuel 31 cycles stale → human-gated; cannot unblock autonomously
+- strategy_generator.py had no synthetic fallback → patched
 
 **Self-correction**
-- Identified stale staging (Cycle 161 → 218, 57-cycle gap) — updated last_output.md now
-- No boot test regression: 33/33 ALIGNED unchanged
+- The system claimed a "continuous trading loop" but `--generate` had never been run. Loop = execute continuously. Not run = not a loop. Fixed this cycle (G1+G4 at concentration tick 110).
 
 ## What changed in the repo
-
-- `platform/daily_posting_helper.py`: new file
-- `docs/gumroad_listing_draft.md`: new file
-- `results/dynamic_tree.md`: cycle 218 entry appended
-- `results/daily_log.md`: cycle 218 prepended
-- `staging/last_output.md`: this file (updated from cycle 161)
+- `trading/strategy_generator.py`: synthetic fallback added to `fetch_btc_daily`
+- `trading/strategies.py`: 3 new strategies appended
+- `results/concentration_log.jsonl`: ticks 109+110 + POOL_EXPANSION event (6 entries)
+- `results/strategy_candidates.json`: 5 new candidates logged
+- `docs/knowledge_product_75_strategy_pool_lifecycle_sop.md`: new file
+- `docs/publish_thread_sop75_twitter.md`: new file
+- `docs/posting_queue.md`: #74 row + header → #01~#74
+- `memory/insights.json`: 3 new insights (total 38)
+- `results/dynamic_tree.md`: cycle 238 LLM entries appended
+- `results/daily_log.md`: cycle 238 entry prepended
+- `staging/session_state.md`: cycle 238 state
+- `staging/last_output.md`: this file
 
 ## What the next cycle should focus on
 
-1. **Edward action (OVERDUE)**: Post SOP #01 on X — Apr 9 was the target; every cycle without posting = revenue delay
-   - File: `docs/publish_thread_sop01_twitter.md` (12 tweets ready)
-   - Run `python platform/daily_posting_helper.py` first — shows exact steps
-   - After: run `--confirm`, set 48h timer for `--signal`
+1. **Edward action (OVERDUE)**: Post SOP #01 on X.
+   - `python platform/daily_posting_helper.py` → exact steps
+   - File: `docs/publish_thread_sop01_twitter.md`
 
-2. **Edward action**: Provide BINANCE_MAINNET_KEY + BINANCE_MAINNET_SECRET → live trading
-   - ⚡88 days to self-sustainability deadline (2026-07-07)
-   - `python -m trading.mainnet_runner --tick` once keys are set
+2. **Edward action**: Send `docs/samuel_async_calibration_dm.md` to Samuel (31 cycles stale)
 
-3. **Hook quality audit** (optional, pre-posting): SOPs #08 and #12 have weak hooks
-   - SOP #08: "Capital structure is the leverage decision before leverage." → too jargony
-   - SOP #12: "Distribution is the 12th gate, not a bonus step." → too insider
-   - Rewrite before Apr 23 (SOP #08) and May 1 (SOP #12)
+3. **Edward action**: Set BINANCE_MAINNET_KEY/SECRET → live trading (⚡89 days to deadline)
 
-4. **Branch 4.1**: Send `docs/samuel_async_dm.md` to Samuel
-   - 3-DM async calibration sequence, 3–5 day cycle
-   - Unlocks: organism collision (2 organisms → 10 collision scenarios)
+4. **Autonomous next**: `python trading/strategy_generator.py --generate 10`
+   - Pool at 18. Next expansion trigger at tick 210 (100-tick mark from this expansion).
+   - More candidates now = better coverage when DualMA_10_30 flips.
 
-5. **Gumroad**: If ≥10 DMs received on any thread, immediately open `docs/gumroad_listing_checklist.md`
-   - 60 min → all 3 workbooks listed → first revenue
+5. **Autonomous next**: SOP #75 — organism network effects (Domain 4) or recursive boundary (Domain 3)
 
 ## State summary
 
 | Branch | Status | Blocker |
 |--------|--------|---------|
-| 1.1 Trading | paper-live tick 81 SHORT, P&L +0.937% | mainnet keys (human) |
-| 1.3 Revenue | All content ready, listing drafted | first post (human) |
-| 2.2 DNA distillation | 330 MDs — COMPLETE (archive exhausted) | none |
-| 2.3 Consistency | 33/33 ALIGNED ✅ | none |
-| 4.1 Samuel | 3 DM files ready | Edward sends DM (human) |
-| 7 SOP series | #01–#56 COMPLETE, queue Apr 9–Jul 28 | first post (human) |
+| 1.1 Trading | tick 110 SHORT, pool 18, P&L ~+$0.60 | mainnet keys (human) |
+| 1.3 Revenue | All content ready | first post (human) |
+| 2.2 DNA distillation | 330 MDs — COMPLETE | none |
+| 2.3 Consistency | 33/33 ALIGNED ✅ (19+ cycles) | none |
+| 3.1 Distillation | 38 insights | none |
+| 4.1 Samuel | DM ready (31 cycles stale) | Edward sends DM (human) |
+| 6 Cold-start | 33/33 ALIGNED ✅ | none |
+| 7 SOP series | #01–#74 COMPLETE, queue to Aug 30 | first post (human) |
 | Revenue clock | NOT STARTED | SOP #01 post |

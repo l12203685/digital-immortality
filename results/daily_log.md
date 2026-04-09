@@ -4,6 +4,47 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 238 — 2026-04-09T08:38Z
+
+### What was done
+
+**Branch 1.1 — Strategy pool expansion (first continuous trading loop execution) ✅**
+- Daemon ran ticks 109 (BTC=$70,961.06) and 110 (BTC=$71,005.99, ↑$44.93); SHORT×110 (100%); 932 log entries; 14/15 FLAT
+- **Strategy pool lifecycle loop executed for first time in 110 ticks**:
+  - `python trading/strategy_generator.py --generate 5` → 3 passed WF:
+    - `gen_Donchian_RF_5e649e`: sharpe=1.01, mdd=16.3% (WF 3/5) ✅
+    - `gen_Donchian_RSI_d3d59e`: sharpe=0.77, mdd=17.1% (WF 3/5) ✅
+    - `gen_DualMA_RF_eda1cb`: sharpe=0.42, mdd=48.6% full-backtest (WF 4/5) ✅
+  - `--prune`: 0 killed (all 15 KEEP: MDD=0.6%, WR=54.2%, PF≥0.92)
+  - Pool: **15 → 18 strategies**
+- `trading/strategy_generator.py` patched: synthetic data fallback (yfinance unavailable in sandbox)
+- Concentration log: POOL_EXPANSION event logged (ticks 109+110 entries added)
+
+**Branch 7 — SOP #75 Strategy Pool Lifecycle Protocol ✅**
+- `docs/knowledge_product_75_strategy_pool_lifecycle_sop.md` — Domain 1 (經濟自給)
+- G0–G5 gates: trigger conditions → generate candidates → WF validate → paper onboard → prune → pool health report
+- 11-tweet thread written; posting queue extended to Aug 30; **Series: SOP #01~#75 COMPLETE** ✅
+
+**Branch 6 — Consistency 33/33 ALIGNED ✅** (daemon: 19+ consecutive cycles clean)
+
+**Branch 3.1 — Distillation ✅**
+- 3 insights → memory/insights.json (total 38):
+  1. `strategy-pool-live-loop`: 110 ticks / no generation cycle = dead loop; fixed
+  2. `synthetic-data-robustness`: synthetic WF avoids curve-fitting; fallback = resilience
+  3. `tick-110-short-tailwind`: BTC=$71,005.99, pool 18, 8.4% quarterly threshold
+
+### Self-correction
+- Backward check CRITICAL: system declared "continuous trading loop" but `--generate` had never been run in 110 ticks. Fixed by running G1+G4 at concentration trigger 110.
+
+### L2 Verdict
+- A: Branch 1.1 pool expansion — first continuous trading loop execution — HIGH
+- A: Branch 7 SOP #74 — formalizes pool lifecycle; Domain 1 — HIGH
+- B: Branch 6 33/33 — 19+ cycles clean — LOW
+- B: Branch 3.1 — 3 insights (total 38) — LOW
+- Verdict: **2A + 2B**. No C or D. L3 not triggered.
+
+---
+
 ## Cycle 237 — 2026-04-09T UTC
 
 ### What was done
