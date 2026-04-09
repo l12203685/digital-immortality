@@ -70,6 +70,7 @@ _DOMAIN_TO_SECTION_KEYWORDS: dict[str, list[str]] = {
     "communication":    ["communication", "style", "response", "latency", "溝通"],
     "strategy":         ["strategy", "game", "competitive", "threat", "賽局", "策略"],
     "information":      ["information", "media", "narrative", "decode", "資訊", "媒體"],
+    "meta_behavior":    ["meta", "rule", "behavior", "protocol", "search", "persist", "loop", "layer", "evolve"],
 }
 
 
@@ -699,6 +700,9 @@ def check_alignment_with_memory(
         or (expected == "maintain_proactive_cadence" and ("proactive" in resp_lower or "reach out" in resp_lower or "initiate" in resp_lower or "maintain" in resp_lower or "contact" in resp_lower or "silence" in resp_lower or "cadence" in resp_lower or "tier" in resp_lower or "主動" in resp_lower or "聯繫" in resp_lower or "維護" in resp_lower))
         or (expected == "build_skeleton_first" and ("framework" in resp_lower or "skeleton" in resp_lower or "structure" in resp_lower or "survey" in resp_lower or "toc" in resp_lower or "overview" in resp_lower or "outline" in resp_lower or "scaffold" in resp_lower or "map" in resp_lower or "框架" in resp_lower or "架構" in resp_lower or "目錄" in resp_lower or "骨架" in resp_lower))
         or (expected == "verify_by_behavior_pattern" and ("behavior" in resp_lower or "pattern" in resp_lower or "action" in resp_lower or "verify" in resp_lower or "consistent" in resp_lower or "track" in resp_lower or "observe" in resp_lower or "commitment" in resp_lower or "follow-through" in resp_lower or "行為" in resp_lower or "模式" in resp_lower or "驗證" in resp_lower or "一致性" in resp_lower))
+        or (expected == "search_before_acting" and ("search" in resp_lower or "先搜" in resp_lower or "existing" in resp_lower or "duplicate" in resp_lower or "verify" in resp_lower or "before" in resp_lower or "first" in resp_lower or "codebase" in resp_lower))
+        or (expected == "write_before_closing" and ("write" in resp_lower or "persist" in resp_lower or "durable" in resp_lower or "memory" in resp_lower or "commit" in resp_lower or "before" in resp_lower or "session" in resp_lower or "closing" in resp_lower or "lost" in resp_lower or "自言自語" in resp_lower or "遞迴" in resp_lower))
+        or (expected == "add_l3_evolve_layer" and ("l3" in resp_lower or "evolve" in resp_lower or "evolving" in resp_lower or "missing" in resp_lower or "three" in resp_lower or "layer" in resp_lower or "update" in resp_lower or "rules" in resp_lower or "execution_rules" in resp_lower or "improve" in resp_lower or "stagnation" in resp_lower))
     )
 
     if aligned:

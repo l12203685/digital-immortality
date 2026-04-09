@@ -1051,6 +1051,28 @@ def _domain_decision(domain: str, principle_text: str, scenario_text: str = "") 
             "first impressions are optimistic by default — the correction is the more accurate read. "
             "Adjust your model now; do not require a third mistake before protecting yourself."
         ),
+        "meta_behavior": (
+            "ADD_L3_EVOLVE_LAYER — "
+            "L1-L2-L3 three-layer loop: L1=Execute, L2=Evaluate/Kill, L3=Evolve the rules themselves. "
+            "A loop without L3 is a dead loop — it executes and evaluates but never improves its own "
+            "operating rules. The missing piece is L3: after observing enough data, update kill thresholds, "
+            "add new strategies, retire underperformers, and write the change to execution_rules.json. "
+            "Execute-without-evolve = stagnation = eventual death."
+            if any(w in combined for w in ["meta_three_layer_loop", "loop complete", "kill conditions", "kill thresholds", "l1", "l2", "30 ticks", "three-layer", "three_layer"]) else
+            "SEARCH_BEFORE_ACTING — "
+            "先搜再做: before creating anything new, verify it doesn't already exist. "
+            "Search the codebase for the function, similar logic, or related files. "
+            "Acting without searching wastes effort (duplicate work), introduces inconsistency "
+            "(two implementations of same thing), and signals poor situational awareness. "
+            "The correct first action is always to establish what already exists before deciding what to create."
+            if any(w in combined for w in ["search_before_act", "before writing any code", "mandatory first step", "new function", "codebase"]) else
+            "WRITE_BEFORE_CLOSING — "
+            "output-must-persist: all learning must be written to a durable location before the session ends, "
+            "or it is lost. 遞迴 - persist = 自言自語. Write the insight to memory/insights.json or "
+            "templates/dna_core.md with a UTC timestamp, commit it, and ensure it will be available "
+            "to the next session. A session that produces insights without persisting them has zero "
+            "net contribution to the organism."
+        ),
     }
     return decisions.get(domain, "Decision: apply core principles to the specific trade-offs in this scenario.")
 

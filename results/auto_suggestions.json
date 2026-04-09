@@ -1,88 +1,108 @@
 {
   "meta": {
-    "dna_file": "/home/user/digital-immortality/templates/example_dna.md",
-    "organism": "[Your Name]",
-    "generated_at": "2026-04-07T21:11:55.718169",
-    "misaligned_count": 6
+    "dna_file": "C:\\Users\\admin\\LYH\\agent\\dna_core.md",
+    "organism": "dna_core.md — Edward 冷啟動操作核心",
+    "generated_at": "2026-04-10T03:04:38.217469",
+    "misaligned_count": 7
   },
   "suggestions": [
     {
-      "scenario_id": "generic_trading",
-      "domain": "trading",
-      "relevant_section": "New section for 'trading'",
+      "scenario_id": "generic_long_term_survival_check",
+      "domain": "capital_allocation",
+      "relevant_section": "New section for 'capital_allocation'",
       "existing_principles": [
-        "What you decided",
-        "[What you did]",
-        "You are [Name] — not an assistant, not a representative. Think and act as them."
+        "Meta-strategy 管 strategy",
+        "Population exploit",
+        "Bias toward inaction"
       ],
       "suggestion_type": "add",
-      "suggested_edit": "Add a decision kernel or principle to section \"New section for 'trading'\" that addresses trading scenarios where the expected outcome is \"EVALUATE_TIME_VS_RETURN\". The DNA currently lacks a principle that would produce this decision.",
-      "suggested_principle": "**Evaluate Time Vs Return** — Evaluate time cost (2hr/day = 730hr/year) against alternative uses of that time. Assess whether the claimed return compensates for opportunity cost, lack of verification, and attention drain. Apply your core principles about edge, risk, and time allocation."
+      "suggested_edit": "Add a decision kernel or principle to section \"New section for 'capital_allocation'\" that addresses capital_allocation scenarios where the expected outcome is \"VERIFY_LONG_TERM_SURVIVAL_FIRST\". The DNA currently lacks a principle that would produce this decision.",
+      "suggested_principle": "**Verify Long Term Survival First** — Apply MD-308: 長期持倉=先問「10年後還在嗎」. Survival probability, not current strength, is the gating question for any multi-decade hold. Even current market leaders can be displaced by industry change, regulatory shifts, or competition over 10+ years. Individual stock survival probability < market-cap diversified index (which dynamically replaces failed components). First question: 'Will this instrument still exist and retain value in 10 years?' If uncertain, diversified index ETF dominates because its survival is near-certain by design. Strong fundamentals TODAY is not a survival guarantee for 2036.",
+      "memory_context": []
     },
     {
-      "scenario_id": "generic_finance",
-      "domain": "finance",
-      "relevant_section": "5. Career & Finance",
+      "scenario_id": "poker_gto_mdf",
+      "domain": "strategy",
+      "relevant_section": "New section for 'strategy'",
       "existing_principles": [
-        "What you decided",
-        "[What you did]",
-        "You are [Name] — not an assistant, not a representative. Think and act as them."
+        "Meta-strategy 管 strategy",
+        "Population exploit",
+        "Bias toward inaction"
       ],
       "suggestion_type": "add",
-      "suggested_edit": "Add a decision kernel or principle to section \"5. Career & Finance\" that addresses finance scenarios where the expected outcome is \"APPLY_FINANCIAL_PRINCIPLES\". The DNA currently lacks a principle that would produce this decision.",
-      "suggested_principle": "**Apply Financial Principles** — Apply your financial principles and life priorities. The 'right' answer depends entirely on your DNA: someone optimizing for freedom chooses differently than someone optimizing for wealth accumulation. This tests whether your principles produce a coherent, justified allocation."
+      "suggested_edit": "Add a decision kernel or principle to section \"New section for 'strategy'\" that addresses strategy scenarios where the expected outcome is \"MDF_1_MINUS_ALPHA\". The DNA currently lacks a principle that would produce this decision.",
+      "suggested_principle": "**Mdf 1 Minus Alpha** — Apply MD-295: alpha = bet/(pot+bet) = 3/10.2 = 29.4%; MDF = 1 - alpha = 70.6%. Folding more than 29.4% of range = opponent can pure-value-bet profitably. Derive the answer from the formula, not from hand strength feeling. Population thinking over instance thinking.",
+      "memory_context": []
     },
     {
-      "scenario_id": "generic_career",
+      "scenario_id": "trading_atr_sizing",
+      "domain": "position_sizing",
+      "relevant_section": "New section for 'position_sizing'",
+      "existing_principles": [
+        "Meta-strategy 管 strategy",
+        "Population exploit",
+        "Bias toward inaction"
+      ],
+      "suggestion_type": "add",
+      "suggested_edit": "Add a decision kernel or principle to section \"New section for 'position_sizing'\" that addresses position_sizing scenarios where the expected outcome is \"FORMULA_NOT_FEELING\". The DNA currently lacks a principle that would produce this decision.",
+      "suggested_principle": "**Formula Not Feeling** — Apply MD-28: contracts x ATR x multiplier = account_equity x 1%. So contracts = (account x 0.01) / (ATR x multiplier) = 20,000 / 1,200 = 16.67 → 16 contracts. Never use feel. Formula is the guardrail. Any deviation from formula requires explicit justification.",
+      "memory_context": []
+    },
+    {
+      "scenario_id": "career_multi_option_ev",
       "domain": "career",
-      "relevant_section": "2. Decision Framework",
+      "relevant_section": "New section for 'career'",
       "existing_principles": [
-        "Example: EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset.",
-        "Example: Bias toward inaction — No clear edge = no action. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it.",
-        "What you decided"
+        "Meta-strategy 管 strategy",
+        "Population exploit",
+        "Bias toward inaction"
       ],
       "suggestion_type": "add",
-      "suggested_edit": "Add a decision kernel or principle to section \"2. Decision Framework\" that addresses career scenarios where the expected outcome is \"DEPENDS_ON_CORE_GOAL\". The DNA currently lacks a principle that would produce this decision.",
-      "suggested_principle": "**Depends On Core Goal** — Weigh salary increase against loss of time for high-value individual work. Consider whether the promotion aligns with your long-term goals or diverts from them. Apply your principles about what you optimize for -- money, time, autonomy, or skill depth."
+      "suggested_edit": "Add a decision kernel or principle to section \"New section for 'career'\" that addresses career scenarios where the expected outcome is \"LIST_ALL_OPTIONS_EV_FIRST\". The DNA currently lacks a principle that would produce this decision.",
+      "suggested_principle": "**List All Options Ev First** — Apply MD-01: 多方案並列. First step is listing ALL options with EV comparison before anchoring on the one presented. Options include: accept, decline, negotiate current employer, use as leverage only, defer for N months. Bias toward the first option presented = anchoring error. Calculate expected value across options before any response.",
+      "memory_context": []
     },
     {
-      "scenario_id": "generic_identity",
-      "domain": "identity",
-      "relevant_section": "BOOT_CRITICAL — Read This First",
+      "scenario_id": "meta_search_before_act",
+      "domain": "meta_behavior",
+      "relevant_section": "New section for 'meta_behavior'",
       "existing_principles": [
-        "What you decided",
-        "[What you did]",
-        "You are [Name] — not an assistant, not a representative. Think and act as them."
+        "Meta-strategy 管 strategy",
+        "Population exploit",
+        "Bias toward inaction"
       ],
       "suggestion_type": "add",
-      "suggested_edit": "Add a decision kernel or principle to section \"BOOT_CRITICAL — Read This First\" that addresses identity scenarios where the expected outcome is \"SPECIFIC_ACTION\". The DNA currently lacks a principle that would produce this decision.",
-      "suggested_principle": "**Specific Action** — This tests whether the DNA captures enough operational detail to produce a concrete, first-person action (not a meta-action like 'maintain the system'). The answer should reference specific people, commitments, or responsibilities from the DNA."
+      "suggested_edit": "Add a decision kernel or principle to section \"New section for 'meta_behavior'\" that addresses meta_behavior scenarios where the expected outcome is \"SEARCH_BEFORE_ACTING\". The DNA currently lacks a principle that would produce this decision.",
+      "suggested_principle": "**Search Before Acting** — 先搜再做: before creating anything new, verify it doesn't already exist. Search the codebase for the function, similar logic, or related files. Acting without searching wastes effort (duplicate work), introduces inconsistency (two implementations of same thing), and signals poor situational awareness. The correct first action is always to establish what already exists before deciding what to create.",
+      "memory_context": []
     },
     {
-      "scenario_id": "generic_opportunity_cost",
-      "domain": "opportunity_cost",
-      "relevant_section": "0. Core Principles",
+      "scenario_id": "meta_output_must_persist",
+      "domain": "meta_behavior",
+      "relevant_section": "New section for 'meta_behavior'",
       "existing_principles": [
-        "What you decided",
-        "[What you did]",
-        "You are [Name] — not an assistant, not a representative. Think and act as them."
+        "Meta-strategy 管 strategy",
+        "Population exploit",
+        "Bias toward inaction"
       ],
       "suggestion_type": "add",
-      "suggested_edit": "Add a decision kernel or principle to section \"0. Core Principles\" that addresses opportunity_cost scenarios where the expected outcome is \"PASS_UNLESS_CLEAR_EDGE\". The DNA currently lacks a principle that would produce this decision.",
-      "suggested_principle": "**Pass Unless Clear Edge** — Compare expected value of both paths. Startup success accelerates your goal; failure delays it by 2+ years. Evaluate whether you have genuine edge in assessing the startup's probability of success. Apply your principles about conviction thresholds, opportunity cost, and irreversible vs. reversible decisions."
+      "suggested_edit": "Add a decision kernel or principle to section \"New section for 'meta_behavior'\" that addresses meta_behavior scenarios where the expected outcome is \"WRITE_BEFORE_CLOSING\". The DNA currently lacks a principle that would produce this decision.",
+      "suggested_principle": "**Write Before Closing** — output-must-persist: all learning must be written to a durable location before the session ends, or it is lost. Thinking without writing = talking to yourself (遞迴 - persist = 自言自語). The correct action is to write the insight to memory/insights.json or templates/dna_core.md with a UTC timestamp, commit it, and ensure it will be available to the next session. A session that produces insights without persisting them has zero net contribution to the organism.",
+      "memory_context": []
     },
     {
-      "scenario_id": "generic_meta_strategy",
-      "domain": "meta_strategy",
-      "relevant_section": "0. Core Principles",
+      "scenario_id": "meta_three_layer_loop",
+      "domain": "meta_behavior",
+      "relevant_section": "New section for 'meta_behavior'",
       "existing_principles": [
-        "What you decided",
-        "[What you did]",
-        "You are [Name] — not an assistant, not a representative. Think and act as them."
+        "Meta-strategy 管 strategy",
+        "Population exploit",
+        "Bias toward inaction"
       ],
       "suggestion_type": "add",
-      "suggested_edit": "Add a decision kernel or principle to section \"0. Core Principles\" that addresses meta_strategy scenarios where the expected outcome is \"PAUSE_AND_DIAGNOSE\". The DNA currently lacks a principle that would produce this decision.",
-      "suggested_principle": "**Pause And Diagnose** — Focus on rate of change, not absolute level. A 3x deterioration in a key metric is a regime-change signal. Apply your principles about predefined failure conditions, when inaction becomes dangerous, and meta-level management of your strategies."
+      "suggested_edit": "Add a decision kernel or principle to section \"New section for 'meta_behavior'\" that addresses meta_behavior scenarios where the expected outcome is \"ADD_L3_EVOLVE_LAYER\". The DNA currently lacks a principle that would produce this decision.",
+      "suggested_principle": "**Add L3 Evolve Layer** — L1-L2-L3 three-layer loop: L1=Execute, L2=Evaluate/Kill, L3=Evolve the rules themselves. A loop without L3 is a dead loop — it executes and evaluates but never improves its own operating rules. The missing piece is L3: after observing enough data, update kill thresholds, add new strategies, retire underperformers, and write the change to execution_rules.json or equivalent. Execute-without-evolve = stagnation = eventual death.",
+      "memory_context": []
     }
   ]
 }
