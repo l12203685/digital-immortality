@@ -6573,3 +6573,19 @@ Cycle 248 complete.
 
 **Next queue:** #1 blocker is Edward posting SOP #01 on X → M1 → SOP #83 daily ritual kicks in → revenue clock starts. SOP #82 tracker is waiting for M1. Deadline 2026-07-07 (89 days).
 [2026-04-09 10:09:35 UTC] [STALENESS_ALERT] Cycle 64: staging/last_output.md not updated in ~3 cycles — LLM may not be consuming prompts.
+
+## Cycle 37 — 2026-04-09 10:10:16 UTC
+
+Cycle 249 complete. Pushed.
+
+**What was done:**
+
+- **Branch 1.1** — paper-live ticks 128+129: BTC=$71,433.95 (↓$64.75 from tick 127, SHORT tailwind), DualMA_10_30=SHORT×129 (100%), 17/18 FLAT, 1301 log entries. SHORT streak structural.
+
+- **Branch 7** — SOP #84 Twitter Profile Pre-Launch Audit: G0–G5 protocol (~15 min). Closes cycle-227 identified gap: "profile status unknown before first post." 6/7 threshold gate, pinned tweet requirement, bio sharpness check, link verification. **SOP #01~#84 COMPLETE.** Next: SOP #85 Gumroad Product Setup (triggers at G2: ≥10 DMs).
+
+- **Branch 4.1** — Samuel calibration audit: `docs/samuel_async_calibration_dm.md` confirmed paste-ready (created cycle 207). Action is **human-gated** — Edward must send the DM. Collision currently 15/22 (68%), 7 divergences documented. Agent side fully unblocked.
+
+- **Branch 3.1** — 3 insights → insights.json (total 59). daemon_next_priority updated.
+
+**Human action required:** Send Samuel the async calibration DM (`docs/samuel_async_calibration_dm.md` — paste-ready Chinese text, 3 scenarios, ~10 min for Samuel).
