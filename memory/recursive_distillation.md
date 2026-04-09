@@ -121,3 +121,32 @@ SOP #92 (Strategy Disable & Reactivation Protocol) closes the strategy lifecycle
 **Tags**: trading, strategy-lifecycle, SOP-92, closed-loop, adaptive-infrastructure
 
 ---
+
+## Cycle 95 — 2026-04-10 UTC
+
+**Source cycles**: 296-297
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 93)
+
+### Insight 1: daemon-priority-stale-branch-alive
+
+daemon_next_priority can flag a branch as "neglected" while it's actually being touched every cycle — if the definition of "touch" only checks recency but not forward-derivative (is the branch actually advancing?). Running the same consistency test is touching but not advancing. True "concrete work" on 存活 = expand the scenario set, improve cold-start protocol, or audit runbook freshness — not just re-running 33/33. Priority signal needs to distinguish "active maintenance" from "active advancement."
+
+**Signal source**: daemon_next_priority.txt said "neglected for 20 cycles" while dynamic_tree showed 6.29→6.35 (consistency run every 2-3 cycles); semantic mismatch between "touched" and "advanced"
+**Tags**: daemon, priority-signal, branch-health, meta-system, signal-decay
+
+### Insight 2: b2.2-completion-archive-method-validated
+
+416 MDs extracted from own message archive (202604→201709, 7.5 years). The archive method is validated: own chat history is the highest-fidelity source of behavioral patterns because the patterns existed before being named — extraction reveals structure that was operating implicitly. Archive exhaustion is not failure; it means the historical input is fully harvested. Future MD sources: live experience accumulation, recursive synthesis from existing MD cross-patterns, organism collision divergences. The method continues; the input source changes.
+
+**Signal source**: cycle 296 verified 201610/11/12 = 0 Edward msgs; archive boundary confirmed; 416 MDs represents ~7.5 years compressed
+**Tags**: branch-2.2, MD-extraction, archive-method, methodology, digital-immortality
+
+### Insight 3: all-flat-mixed-regime-correct-signal
+
+100+ consecutive ticks with 15 active strategies all FLAT in MIXED regime is correct behavior, not a dead loop. The inaction bias principle (no edge = no action) applies at the trading execution layer, not just at the meta-strategy layer. A system that fires no trades when regime is ambiguous is healthy. The error would be forcing a trade to show "activity." Distinguish: idle system (no signal) vs dead system (not running). The log entries continue; the signals are correctly suppressed.
+
+**Signal source**: trading_engine tick 317: 15/15 FLAT for 100+ consecutive ticks; kill conditions monitored; regime=MIXED (no clear trending or mean-reverting signal)
+**Tags**: trading, inaction-bias, regime-detection, all-flat, correct-behavior
+
+---

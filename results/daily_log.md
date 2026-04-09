@@ -2661,3 +2661,35 @@ First SOP for Domain 4 (社交圈). Closes the only domain with zero published S
 3. **Branch 1.1**: paper-live tick (network permitting)
 4. **Branch 3.1**: distillation
 5. **Branch 1.3**: Week 1 DM sends (outreach_week1_execution.md) — 0 sends, human-gated
+
+## Cycle 95 — 2026-04-10 UTC
+
+Cycle 297 complete. Four branches pushed in parallel.
+
+**Branch outputs:**
+
+| Branch | Result |
+|--------|--------|
+| **1.1 Trading** | Tick 317: BTC=$72,105.31 (↓$49.69 SHORT tailwind); regime=MIXED; 15 active=FLAT (DualMA DISABLED); 2038 log entries |
+| **6 存活/cold-start** | 33/33 ALIGNED ✅ — **51st consecutive clean cycle** |
+| **2.2 微決策學習** | **CONFIRMED COMPLETE** — 416 MDs; JSONL archive exhausted (201610/11/12 all 0 Edward msgs); no further pass possible |
+| **3.1 Distillation** | +3 insights → **209 total** |
+
+**New insights (cycle 297):**
+- `daemon-priority-stale-branch-alive`: daemon_next_priority can flag "neglected" while branch is active if definition of "touch" is re-running test vs advancing state — signal needs forward-derivative not just recency
+- `b2.2-completion-md-archive-method`: 416 MDs extracted from 202604→201709 archive; own message history is highest-fidelity source of behavioral patterns (pre-named, pre-abstracted); archive exhaustion = method complete, not failure
+- `all-flat-mixed-regime-correct`: 100+ consecutive ticks with 15 active strategies FLAT in MIXED regime = correct behavior, not dead loop; inaction bias applies at trading layer too; no signal = correct signal
+
+**daemon_next_priority** → `3.1/distillation-taxonomy-audit`
+
+**Human-gated blockers (unchanged)**
+- Binance mainnet API keys (T4) — deadline 2026-07-07
+- Samuel DM (T2)
+- Outreach Week 1 DMs (T1)
+
+## Next cycle priorities
+
+1. **3.1 distillation taxonomy audit** — check if category splits needed (>10 items rule)
+2. **Consistency check** (Branch 6 — 52nd consecutive)
+3. **Branch 1.1**: paper-live tick
+4. **Branch 4.1**: Samuel calibration (human-gated — DM ready)

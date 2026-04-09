@@ -1,1 +1,1 @@
-PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.
+PRIORITY: 3.1/distillation-taxonomy-audit — B2.2 COMPLETE (416 MDs, archive exhausted). Next: audit memory/insights.json categories for split threshold (>10 items → split per SKILL.md rule). Synthesize MD gaps from dna_core.md cross-pattern analysis. All JSONL passes done; source of new MDs is now live experience + recursive synthesis, not archive mining.
