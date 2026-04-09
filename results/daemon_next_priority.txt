@@ -1,1 +1,1 @@
-OK: All branches covered. Least recent: '4.1/Samuel-organism'. SOP #73 formalized the Dynamic Tree Protocol — least-recent rule now documented. Consider sending samuel_async_dm.md (human-gated) or advancing SOP #74 next.
+OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.

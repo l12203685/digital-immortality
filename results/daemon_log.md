@@ -6356,3 +6356,17 @@ Cycle 235 complete. 3 branches pushed:
 **Branch 6 (存活/cold-start)**
 - 33/33 ALIGNED ✅ — 16+ consecutive cycles clean
 - daemon_next_priority '存活/cold-start' TOUCHED
+
+## Cycle 25 — 2026-04-09 08:23:34 UTC
+
+Cycle 237 committed. Summary:
+
+**Branch 1.1** — Tick 108: BTC=$70,961.06 (↑$54.62), DualMA SHORT×108, 14/15 FLAT, 902 entries. Concentration log updated (8.2% of quarterly threshold).
+
+**Branch 7** — SOP #73: Dynamic Tree Protocol. G0-G4 gates. 4 derivative types (revenue/capability/coverage/compounding). Least-recent rule formalized. Directly responds to daemon_next_priority: "4.1/Samuel-organism". Posting queue extended to Aug 28. SOP #01~#73 COMPLETE.
+
+**Branch 6** — 33/33 ALIGNED ✅, 18th consecutive cycle clean.
+
+**Branch 3.1** — 3 insights → insights.json (total 35): derivative-calculator framing, tick-108 headwind, least-recent decay prevention.
+
+**4.1/Samuel-organism** is still human-gated (DM must be sent by Edward). SOP #73 now formally documents WHY it's the priority and the decay risk. Next autonomous push: SOP #74 or paper-live tick 109.
