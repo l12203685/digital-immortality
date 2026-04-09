@@ -81,6 +81,8 @@
 | Aug 26 | #72 | publish_thread_sop72_twitter.md | "You built a multi-strategy system. One strategy is signaling. Nine are FLAT. How long has this been true? You don't know. You have no log." | pending |
 | Aug 28 | #73 | publish_thread_sop73_twitter.md | "You have 6 active projects. You pick the one you last thought about. 3 months later: 2 dead, 1 over-built, 0 at target. Dynamic Tree Protocol — 4-gate branch prioritization." | pending |
 | Aug 30 | #75 | publish_thread_sop75_twitter.md | "108 ticks. 15 strategies registered. 1 active. The hardest part isn't the strategy — it's keeping the pool alive. Strategy Pool Lifecycle Protocol." | pending |
+| Sep 3 | #76 | publish_thread_sop76_twitter.md | "One organism + infinite self-tests = confirmation loop. Two organisms + divergence analysis = calibration engine. Organism Network Architecture." | pending |
+| Sep 8 | #77 | publish_thread_sop77_twitter.md | "Your AI twin passes every boot test. All green. But it got the right answer for the wrong reason. That's not alignment. LLM Validation SOP." | pending |
 
 ---
 

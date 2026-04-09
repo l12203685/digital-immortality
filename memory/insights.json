@@ -468,6 +468,48 @@
         "tick-110",
         "cycle-238"
       ]
+    },
+    {
+      "id": "8c47dcae-1422-4fce-8287-98277908e059",
+      "key": "organism-network-pairwise-triage",
+      "content": "Cycle 240-241: SOP #76 introduced the first formalization of organism network topology via 3-tier divergence triage: ≥80% agreement = skip (structural alignment, no action), 60-79% = async probe (divergence worth investigating, low cost), <60% = deep dive (ground truth escalation required). Key insight: not all divergence is equal — the threshold bands create a priority filter that prevents both under-reaction (ignoring real gaps) and over-reaction (treating every disagreement as a crisis). The triage structure IS the network architecture.",
+      "timestamp": "2026-04-09T12:00:00+00:00",
+      "source": "cycle-240-241-branch-3.1-distillation",
+      "tags": [
+        "organism-network",
+        "SOP-76",
+        "divergence-triage",
+        "topology",
+        "cycle-240-241"
+      ]
+    },
+    {
+      "id": "74113ed4-363e-4eb6-83d6-f2b73cdcd0f3",
+      "key": "boot-test-llm-boundary",
+      "content": "Cycle 240-241: Boot tests now total 36 scenarios; 33 pass deterministic (grep-level), 3 require LLM evaluation (MD-295/MD-28/MD-01). The boundary between deterministic-passable and LLM-required tests is itself a signal about DNA completeness. Deterministic tests catch syntax-level behavior (keyword presence, explicit rules). LLM-required tests expose semantic ambiguity — places where the DNA text is present but the reasoning it encodes is not fully explicit. Each LLM-boundary scenario is a candidate for DNA sharpening: if the answer should be deterministic but isn't, the principle needs to be more explicit.",
+      "timestamp": "2026-04-09T12:00:00+00:00",
+      "source": "cycle-240-241-branch-3.1-distillation",
+      "tags": [
+        "boot-test",
+        "LLM-boundary",
+        "DNA-completeness",
+        "determinism",
+        "cycle-240-241"
+      ]
+    },
+    {
+      "id": "48b4f17f-ccb9-444f-bea3-61b2e80aae21",
+      "key": "least-recent-decay-signal",
+      "content": "Cycle 240-241: When daemon_next_priority reads 'All branches covered. Least recent: 存活/cold-start', this is a leading indicator of branch decay rather than a status-quo signal. Coverage drift follows an exponential pattern: branches last touched N cycles ago compound their staleness — not linearly but multiplicatively. The 'least-recent' selection rule is a minimum viable anti-decay mechanism. Implication: the priority signal should be read as urgency proportional to time-since-last-touch, not as 'everything is fine'. Branch decay is invisible until it causes a boot test failure; least-recent routing prevents that by keeping all branches in the rotation.",
+      "timestamp": "2026-04-09T12:00:00+00:00",
+      "source": "cycle-240-241-branch-3.1-distillation",
+      "tags": [
+        "branch-decay",
+        "daemon-priority",
+        "least-recent",
+        "coverage-drift",
+        "cycle-240-241"
+      ]
     }
   ]
 }
