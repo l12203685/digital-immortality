@@ -1,34 +1,35 @@
-# Twitter Thread: SOP #37 — Relationship Investment Protocol
+# Twitter Thread — SOP #37: Relationship Investment Protocol
 
-**Hook**: "Most people manage relationships like a checking account — only think about it when they need something. 12 tweets on the maintenance SOP."
-**Domain**: 4 — 社交圈
-**SOP file**: `docs/knowledge_product_37_relationship_investment_sop.md`
-**Backing MDs**: MD-328, MD-330
-**Created**: 2026-04-09T UTC (Cycle 161)
-**Scheduled**: Jun 20 (posting_queue.md row #37)
+**Date:** 2026-04-09 UTC
+**Domain:** 4 — 社交圈
+**SOP file:** `docs/knowledge_product_37_relationship_investment_sop.md`
+**Backing MDs:** MD-328, MD-330
+**Scheduled post:** Jun 20
 
 ---
 
-## Tweet 1 (Hook)
+## Tweet 1 — Hook
 
-Most people manage relationships like a checking account.
+Most people manage relationships reactively.
 
-Zero maintenance until they need a withdrawal.
+They wait for a signal. They reach out when they need something.
+Then wonder why the relationship feels hollow under pressure.
 
-Then they wonder why the balance is gone.
+The fix isn't charm. It's a maintenance SOP.
 
-Here's the relationship maintenance SOP that prevents this. (12 tweets)
+Here's the Relationship Investment Protocol. 12 tweets.
 
 ---
 
 ## Tweet 2
 
-The core failure mode:
+The default model most people run:
 
-"If he values this friendship, he'll reach out."
+"If he values this, he'll reach out first."
 
-This isn't a test.
-This is outsourcing relationship maintenance to the other person.
+This feels fair. It isn't.
+
+It's outsourcing relationship maintenance to the other party.
 
 Whoever owns the cadence keeps the relationship.
 Passive maintenance = no maintenance.
@@ -37,13 +38,16 @@ Passive maintenance = no maintenance.
 
 ## Tweet 3
 
-Fix: Treat relationships as assets.
+Relationships are assets.
 
-Every asset requires maintenance. The maintenance cost is:
-→ Frequency × quality of contact
+Assets decay without maintenance.
+Assets compound with consistent investment.
+
+The maintenance cost is:
+frequency × quality of contact
 
 Both are independently controllable.
-A 2-minute genuine message outperforms a 2-hour forced conversation.
+A 2-minute genuine message beats a 2-hour forced catch-up.
 
 ---
 
@@ -51,15 +55,17 @@ A 2-minute genuine message outperforms a 2-hour forced conversation.
 
 G0: Relationship Asset Map
 
-Once per quarter:
+Once per year (or after a major life transition):
 
 List your 10–15 highest-value relationship nodes.
-Classify by tier:
-- Tier 1 (≤5): Intimate / load-bearing
-- Tier 2 (5–10): Important / career + intellectual
-- Tier 3 (10–20): Network / situational
+Tier them:
+- Tier 1: Intimate / load-bearing (≤5 people)
+- Tier 2: Important / career + intellectual anchors
+- Tier 3: Peripheral / network
 
-Assign last contact date to each.
+Write down last contact date for each.
+
+The list must be written. Memory is not a CRM.
 
 ---
 
@@ -67,17 +73,17 @@ Assign last contact date to each.
 
 G1: Silence Period Audit
 
-Set max silence per tier:
-- Tier 1: 2 weeks
-- Tier 2: 1 month
-- Tier 3: 3 months
+Silence ceilings by tier:
+- Tier 1: 2 weeks max
+- Tier 2: 1 month max
+- Tier 3: 3 months max
 
-Run a weekly scan (5 min Sunday).
+Run a weekly 5-minute scan.
 
-Any node exceeding its limit = overdue trigger.
-→ Go to G2 immediately.
+Any node past its ceiling = overdue trigger.
+→ Move immediately to G2.
 
-≥3 Tier 1 nodes overdue simultaneously = portfolio in distress.
+2+ Tier 1 nodes overdue simultaneously = structural neglect pattern, not an isolated miss.
 
 ---
 
@@ -87,33 +93,32 @@ G2: Proactive Maintenance Trigger
 
 When G1 flags an overdue node → contact now.
 
-Don't wait for a "reason."
+Not "when I have something useful to say."
+Not "after I finish this project."
 
-Options:
-→ Share a relevant article
-→ Ask about something they're working on
+Now.
+
+Content doesn't need to be purposeful.
+→ "Saw this, thought of you."
+→ "How did that pitch go?"
 → "Haven't talked in a while — how's things?"
 
-No agenda required. The contact IS the value.
+The contact IS the value.
 
 ---
 
 ## Tweet 7
 
-The reframe that unlocks G2:
+The mental block that kills most people's G2:
 
-"Reaching out looks desperate."
+"Reaching out out of nowhere looks desperate."
 
-Wrong.
+This conflates two different things:
 
-Proactive maintenance = relationship stewardship.
-Solicitation = needing something.
+Proactive maintenance = relationship stewardship (signal-positive)
+Solicitation = needing something (neutral unless overdone)
 
-These are different.
-
-The first is signal-positive.
-The second is neutral unless overdone.
-
+These are not the same.
 Conflating them is how relationships silently die.
 
 ---
@@ -125,45 +130,49 @@ G3: Behavior vs. Words Verification
 For any new or "important but unverified" relationship:
 
 Open a 3-month observation window.
-Record 3+ specific verbal commitments.
-Track: did the behavior follow?
+Track 3+ specific verbal commitments.
+Record whether each one was fulfilled.
 
 Words = intent declaration (cost: zero)
 Behavior = intent verification (cost: real)
 
-When they conflict → weight behavior. Every time.
+When they conflict repeatedly → weight behavior. Every time.
 
 ---
 
 ## Tweet 9
 
-G4: Fulfillment Rate
+G4: Commitment Fulfillment Rate
 
 After 3 months:
 
-Commitment Fulfillment Rate = Fulfilled / Total Tracked
+CFR = Fulfilled Commitments / Total Tracked
 
-- ≥80%: High-reliability → extend trust, assign dependencies
-- 50–79%: Moderate → continue monitoring
-- <50%: Low-reliability → discount words significantly
+- ≥80%: High-signal → trust verbal weight at face value
+- 50–79%: Moderate → cross-check before relying on verbal alone
+- <50%: Low-signal → discount words significantly
 
-Low rate ≠ bad person.
-It means their verbal signals carry low information.
-Adjust weight. Don't moralize.
+Low CFR ≠ bad person.
+It means their words carry low information content.
+Adjust the weight. Don't moralize.
 
 ---
 
 ## Tweet 10
 
-The trap G4 prevents:
+The planning error G4 prevents:
 
-"He said he'd help, so I'm counting on it."
+"He said he'd make the introduction. Should be fine."
 
 One verbal commitment = hypothesis.
-Three fulfilled commitments = data.
+Three fulfilled commitments = early data.
+Five fulfilled commitments = signal.
 
-Operating on hypothesis for high-stakes dependencies
-is how you get blindsided when the support doesn't materialize.
+Building high-stakes plans around a single verbal promise
+is operating on hypothesis with no verification.
+
+The data either confirms the words or it doesn't.
+Watch the data.
 
 ---
 
@@ -172,33 +181,33 @@ is how you get blindsided when the support doesn't materialize.
 G5: Annual Portfolio Review
 
 Once a year:
-→ Refresh G0 node list
-→ Review G4 fulfillment rates
-→ Prune low-signal nodes (free attention)
-→ Reallocate to high-signal, high-fulfillment nodes
-→ Identify gaps (no one in your field? no intellectual challenger?)
 
-Relationship capital requires portfolio management.
-Holding low-yield assets is an opportunity cost.
+→ Refresh the G0 node list with current tier assignments
+→ Review G4 fulfillment rates across all tracked nodes
+→ Prune nodes with consistently low signal (free attention)
+→ Reallocate freed attention to high-signal, high-fulfillment relationships
+→ Identify gaps: no one in your field? No one who challenges your thinking?
+
+Relationship attention is finite.
+A well-maintained portfolio of 12 beats a neglected portfolio of 25.
 
 ---
 
-## Tweet 12 (Close)
+## Tweet 12 — Close
 
-The full SOP in one frame:
+The full SOP:
 
-G0: Map your 10–15 nodes + tiers
-G1: Weekly silence audit (5 min)
-G2: Proactive trigger → contact now, no agenda needed
-G3: 3-month observation window for new/unverified nodes
-G4: Fulfillment rate → discount words proportionally
-G5: Annual portfolio rebalance
+G0: Map 10–15 nodes. Assign tiers. Write last contact dates.
+G1: Weekly scan. Silence ceilings by tier. Flag overdue nodes.
+G2: Overdue → contact now. No agenda required.
+G3: 3-month window for new/unverified relationships. Track 3+ commitments.
+G4: Commitment fulfillment rate. <50% = discount words significantly.
+G5: Annual rebalance. Prune low-signal. Reinvest in high-signal.
 
-High-quality relationships aren't built.
-They're maintained.
+High-quality relationships aren't built. They're maintained.
 
 Start the scan.
 
 ---
 
-*Thread SOP #37 — Jun 20 | SOP series #01~#37 | Domain 4 社交圈 | 2026-04-09T UTC*
+*Thread SOP #37 — Jun 20 | Series: SOP #01–#37 | Domain 4 社交圈 | 2026-04-09 UTC*
