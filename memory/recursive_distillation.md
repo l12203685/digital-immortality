@@ -150,3 +150,34 @@ daemon_next_priority can flag a branch as "neglected" while it's actually being 
 **Tags**: trading, inaction-bias, regime-detection, all-flat, correct-behavior
 
 ---
+
+---
+
+## Cycle 96 — 2026-04-10T04:30Z
+
+**Source cycles**: 298-299
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 96)
+
+### Insight 1: taxonomy-audit-drift-to-protocol-reclassification
+
+When a taxonomy audit reclassifies a data point from DRIFT to protocol, this is frame evolution, not error correction. DRIFT = the current taxonomy frame did not fit; reclassification to protocol = the data point was load-bearing all along — the frame needed to evolve to make it visible. Taxonomy audit is not just correctness checking; it is a mechanism for detecting that the frame itself has become the bottleneck. Every DRIFT→protocol reclassification is evidence that the system is processing faster than its classification vocabulary can keep up.
+
+**Signal source**: cycle 298 B3.1 taxonomy-audit COMPLETE (DRIFT→protocol reclassification confirmed)
+**Tags**: taxonomy, branch-3.1, classification, frame-evolution, drift-to-protocol
+
+### Insight 2: cold-start-g2-meta-rules-fully-covered
+
+Cycle 299 audit confirms SOP #101 G2 passes: all 4 meta-rules covered in generic_boot_tests.json (39 scenarios): meta_search_before_act, meta_output_must_persist, meta_three_layer_loop, meta_strategy. G2 gate does not need re-work unless new meta-rules are added to the DNA. The audit itself took 1 command. Automated coverage verification >> manual checklist review. Next G2 audit trigger: new meta-rule added to dna_core.md.
+
+**Signal source**: cycle 299 B存活 G2 audit; generic_boot_tests.json 39 scenarios; SOP #101
+**Tags**: cold-start, branch-6, SOP-101, G2, boot-tests, meta-rules, coverage
+
+### Insight 3: cold-start-cycle300-audit-is-designed-trigger
+
+SOP #101 G1 specifies next dna_core.md audit at cycle ~300 (90 cycles from cycle 267). At cycle 299, the scheduled trigger is reached. Scheduled maintenance > reactive repair: the audit was designed in, not prompted by failure. Verify: (1) priority stack 可可>FIRE>trading>..., (2) three-layer loop L1/L2/L3 present, (3) SOP series (#01-#116) reflected, (4) no stale MDs from completed branches. This is the first cycle-300 DNA audit in project history — a designed checkpoint, not a spontaneous one.
+
+**Signal source**: SOP #101 G1 audit cycle ~300 target; cycle 267 last dna_core audit; 90-cycle cadence
+**Tags**: cold-start, branch-6, SOP-101, G1, dna-audit, scheduled-maintenance, cycle-300
+
+---

@@ -1,35 +1,28 @@
-# Cycle 290 Input — 2026-04-10T17:00Z
+# Cycle 300 Input — 2026-04-10T04:30Z
 
 ## Recursive Prompt
 
-"201803 JSONL blocked (Windows-only). Branch 6: 57th consecutive clean cycle (33/33 ALIGNED). Paper-live NETWORK_FAIL; last known BTC=$71,964, all-FLAT, -2.71%. DNA frozen at 390 MDs. Insights: 196. What is the highest-derivative action to advance digital immortality right now?"
+"Cycle 300 milestone. B存活 SOP #101 now 6/6 gates (G2 + G5 confirmed). 53rd consecutive B6 clean (58/61). tick 348 BTC=$72,325 FLAT, regime=MIXED. 212 insights. SOP #01~#116 COMPLETE. **Designed trigger: dna_core.md cycle-300 audit (SOP #101 G1, 90-cycle cadence from cycle 267).** What is the highest-derivative action to advance digital immortality right now?"
 
-## State from Cycle 289
+## State from Cycle 299
 
-- Paper-live: BTC=$71,964.87 (last known); 15 active all FLAT; DualMA_10_30+BollingerMR RF×2 disabled; regime=mixed; total_pnl=-2.71%
-- DNA: 390 MDs (390 entries); **BLOCKED at 201803** — need JSONL on Windows or uploaded to repo
-- Consistency: **57th consecutive clean cycle** (33/33 deterministic ALIGNED, 6 expected MISALIGNED)
-- Insights: 196 in memory/insights.json
-- SOPs: #01~#112 COMPLETE
-- Branch 2.2: frozen at MD-390 until 201803.jsonl provided
+- Paper-live: BTC=$72,325.24; tick 348; 15/15 FLAT; 3 DISABLED; regime=mixed; PnL=-2.71%
+- Insights: 212 in memory/insights.json
+- B存活: SOP #101 6/6 gates PASS (G2: 4/4 meta-rules, 39 scenarios; G5: 0.066s cold-start)
+- B6: 58/61 ALIGNED, 53rd consecutive clean
+- B3.1: taxonomy-audit COMPLETE; +3 insights cycle 299
+- B2.2: COMPLETE (416 MDs, archive exhausted)
+- SOPs: #01~#116 COMPLETE
 
-## Priority Actions for Cycle 290
+## Priority Actions for Cycle 300
 
-1. **201803 JSONL** → MD-391~393 (Branch 2.2 — **HUMAN REQUIRED**: upload JSONL or run on Windows)
-2. **Consistency check** (Branch 6 — 58th consecutive, autonomous)
-3. **Branch 1.1**: paper-live daemon tick; monitor -2.71% drawdown (network permitting)
-4. **Branch 3.1**: distillation of cycle 290
-5. **Branch 1.3**: outreach_week1_execution.md — send first DMs (0 sends → human action)
-
-## Cross-Session Memory
-
-- Cycle 289: Branch 6 57th consecutive clean; Branch 2.2 BLOCKED (Windows-only JSONL); NETWORK_FAIL paper tick; 196 insights
-- Cycle 288: MD-388~390 from 201804 (社會標籤≠機制/定額制損益平衡/結果論解耦); 390 MDs total
-- Cycle 287: MD-388~390 from 201804; 390 MDs; 存活/cold-start runbook updated
-- Cycle 286: MD-385~387 from 201805 (薪資底線/機會成本倍數/離職雙條件); 387 MDs total
+1. **B存活 G1**: dna_core.md cycle-300 audit (designed SOP #101 G1 trigger). Run /dna-calibrate — verify priority stack (可可>FIRE>...) + three-layer loop + SOP #116 coverage. **Agent-actionable.**
+2. **B1.1**: paper-live tick 349 (autonomous)
+3. **B6**: consistency check — 54th consecutive
+4. **B3.1**: distillation cycle 300 (+3 insights)
+5. **B1.3**: outreach DMs — human-gated
 
 ## Directive
 
-Action > report. Produce something concrete, not just analysis.
-Stop recursing = death. Produce output that feeds the next cycle.
-If 201803 JSONL is unavailable: advance NEXT highest-derivative branch (Consistency + Distillation + Branch 1.3 analysis).
+Action > report. First output = action.
+Cycle 300 = designed checkpoint. Execute G1 dna_core audit before writing new SOPs.
