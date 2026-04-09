@@ -7149,3 +7149,4 @@ Pushed. Cycle 287 complete. Summary:
 **daemon_next_priority**: 201803 JSONL → MD-391~393
 
 Committed + pushed.
+[2026-04-09 19:07:18 UTC] [STALENESS_ALERT] Cycle 87: staging/last_output.md not updated in ~4 cycles — LLM may not be consuming prompts.
