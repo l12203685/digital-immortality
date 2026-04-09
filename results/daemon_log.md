@@ -6729,3 +6729,21 @@ Committed. Summary of what was pushed:
 - Named the freeze pattern: **"pre-launch local maximum trap"** — internal metrics optimizable indefinitely while d(external signal)/d(work) = 0. Escape = M1 (first post sent).
 
 **B1+B7 Trading + Knowledge** — SOP #92 (Strategy Disable & Reactivation Protocol) created, directly addressing the live DualMA_10_30 disable event. G0-G4 gates + self-test scenario + Twitter hook. Trading analysis: all 13 active strategies correctly flat in mixed regime.
+
+## Cycle 47 — 2026-04-09 11:40:57 UTC
+
+Cycle 258 committed. Summary of what was pushed:
+
+**Branch 1.1 (Trading)**: tick 63, BTC=$71,100.91, DualMA SHORT maintained, MIXED regime, 933 log entries.
+
+**Branch 2.2 (DNA distillation)**: Read 201911 JSONL (21 substantive Edward msgs, Nov 2019). Extracted MD-331~333:
+- MD-331: 薪資談判=錨定前薪+分段目標+讓HR代理爭取
+- MD-332: 程式可讀性=不可見軟實力；個人標準不隨業界慣例降低
+- MD-333: 多路徑決策=把「哪條更好」轉化為等待成本算術
+- **dna_core.md: 333 MDs**. Next: 201910.
+
+**Branch 3.1 (Distillation)**: 3 insights → insights.json, total 90.
+
+**Branch 6 (存活/cold-start)**: 33/33 deterministic ALIGNED, 31+ consecutive cycles clean.
+
+**Branch 7 (SOP)**: SOP #93 LLM Boot Test Validation Protocol — G0-G5, formula/inference/context-dependent classification, coverage tracking (91.4%→100% target), $29/mo premium tier. Posting queue → Sep 5. **Series #01~#93 complete.**

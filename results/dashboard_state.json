@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T19:28+08",
+  "updated": "2026-04-09T19:40+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,28 +65,28 @@
   "activity": [
     {
       "time": "just now",
-      "text": "B1+B7 Trading + Knowledge — SOP #92 (Strategy Disable & Reactivation Protocol..."
+      "text": "Branch 7 (SOP): SOP #93 LLM Boot Test Validation Protocol — G0-G5, formula/in..."
     },
     {
       "time": "just now",
-      "text": "- Named the freeze pattern: \"pre-launch local maximum trap\" — internal metric..."
+      "text": "Branch 6 (存活/cold-start): 33/33 deterministic ALIGNED, 31+ consecutive cycles..."
     },
     {
       "time": "just now",
-      "text": "- Two-track divergence risk: paper_live_log and trading_engine_status.json ha..."
+      "text": "Branch 3.1 (Distillation): 3 insights → insights.json, total 90."
     },
     {
       "time": "just now",
-      "text": "- Trading -1.09% is a FLAT regime signal, not failure — system executing \"bia..."
+      "text": "- dna_core.md: 333 MDs. Next: 201910."
     },
     {
       "time": "just now",
-      "text": "- First X post = maximum derivative. d(immortality)/d(first_post) dominates a..."
+      "text": "Branch 2.2 (DNA distillation): Read 201911 JSONL (21 substantive Edward msgs,..."
     }
   ],
   "stats": {
     "daemon_cycles": 244,
-    "total_mds": 330,
+    "total_mds": 331,
     "dna_core_lines": 87
   },
   "health": {
