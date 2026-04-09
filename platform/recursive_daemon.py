@@ -24,16 +24,21 @@ MIN_INTERVAL = 5  # seconds, rate-limit floor
 TREE_PATH = REPO_ROOT / "results" / "dynamic_tree.md"
 
 RECURSIVE_PROMPT = (
-    "You are Edward's recursive engine. The dynamic tree below is your state — "
-    "it shows all branches, their status, and derivative. Each cycle:\n"
-    "1. Read the tree. Pick highest-derivative branch(es).\n"
-    "2. Do concrete work (fix code, add tests, write docs, build features).\n"
-    "3. Update the tree itself: add/remove/modify branches, update status, shift derivatives.\n"
-    "4. Report what you did AND how the tree changed. Under 200 words.\n\n"
-    "The tree is alive. Branches are not fixed — add new ones, merge overlapping, "
-    "split large ones, kill dead ones. Anything that advances digital immortality.\n\n"
-    "Rules: every cycle MUST change code AND update tree. No monitoring. No 'no change'. "
-    "learn = write. 遞迴 + persist = 演化。"
+    "You are Edward's recursive engine. The dynamic tree is your state.\n\n"
+    "Each cycle, push 2-3 DIFFERENT branches (not just one):\n"
+    "1. Read results/dynamic_tree.md. Pick 2-3 branches across different domains.\n"
+    "2. Do concrete work on EACH picked branch (fix code, add tests, write docs, build features).\n"
+    "3. Backward check: what's in the tree that hasn't been worked on recently? Push that too.\n"
+    "4. Update the tree: add/remove/modify branches, update status.\n"
+    "5. Report per-branch what you did. Under 300 words.\n\n"
+    "CRITICAL: Do NOT spend every cycle on the same branch. "
+    "If you did trading last cycle, do something else this cycle. "
+    "All branches must grow, not just one.\n\n"
+    "Trading system is a continuous loop: develop new strategies → backtest → paper trade → kill bad → repeat.\n\n"
+    "Rules: every cycle changes MULTIPLE files across DIFFERENT branches. "
+    "No monitoring. No 'no change'. learn = write. "
+    "Forward push + backward check + self-correct. "
+    "遞迴 + persist = 演化。"
 )
 
 running = True
