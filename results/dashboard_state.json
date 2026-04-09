@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T13:31+08",
+  "updated": "2026-04-09T13:41+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "State: dynamic_tree, daily_log, paper_live_pnl_report, posting_queue, session..."
+      "text": "- Samuel DM (paste-ready in `docs/samuel_async_calibration_dm.md`)"
     },
     {
       "time": "just now",
-      "text": "- Queue slot: Aug 1 | SOP #01~#58 COMPLETE"
+      "text": "- Mainnet API keys (89-day deadline: 2026-07-07)"
     },
     {
       "time": "just now",
-      "text": "- 5-gate: G0 mental state audit → G1 derivative scan → G2 non-negotiable psyc..."
+      "text": "- X post SOP #01 → audience → G2 → revenue (critical path)"
     },
     {
       "time": "just now",
-      "text": "- Domain 6 — the missing \"capital\" domain after Physical/Environment/Financia..."
+      "text": "Blockers (human-gated):"
     },
     {
       "time": "just now",
-      "text": "Branch 7 — SOP #58 Mental Capital & Psychological Resilience Protocol"
+      "text": "| 6 存活/cold-start | health verification | 33/33 ALIGNED; F1–F8 runbook verifi..."
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 70929.29,
+    "paper_live_price": 70996.27,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T05:25",
+    "paper_live_ts": "2026-04-09T05:35",
     "paper_tick": 84,
     "paper_pnl": "+$0.812",
     "status": "ok"
