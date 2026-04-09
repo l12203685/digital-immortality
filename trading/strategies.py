@@ -8,9 +8,68 @@ Both conform to StrategyFn: (List[Bar]) -> Signal.
 """
 
 from typing import List, Dict
+from enum import Enum
 
 # Re-use helpers from the backtest framework
 from trading.backtest_framework import Bar, Signal, _mean
+
+
+# ---------------------------------------------------------------------------
+# P1-P3 Threat Classification (藍月 Validation Framework)
+# ---------------------------------------------------------------------------
+# Source: maemfe.org — Strategy Validation Framework
+# Compare live trading results vs backtest projections. The gap IS the work.
+
+class ThreatLevel(Enum):
+    """Strategy monitoring threat levels for live vs backtest discrepancy.
+
+    P1 = HALT immediately (program errors, risk control failures)
+    P2 = Contingency plan (rare events with available mitigation)
+    P3 = Monitor (recurring/occasional instability)
+    """
+    P1_HALT = "P1"
+    P2_CONTINGENCY = "P2"
+    P3_MONITOR = "P3"
+
+
+# Discrepancy sources between backtest and live trading
+DISCREPANCY_SOURCES = {
+    "recurring_instability": {
+        "type": 1,
+        "threat": ThreatLevel.P3_MONITOR,
+        "examples": ["trading cost changes", "spread widening", "commission changes"],
+        "action": "monitor and adjust parameters",
+    },
+    "occasional_instability": {
+        "type": 2,
+        "threat": ThreatLevel.P3_MONITOR,
+        "examples": ["price gaps", "slippage", "low liquidity episodes"],
+        "action": "monitor, consider slippage buffer in backtest",
+    },
+    "rare_instability": {
+        "type": 3,
+        "threat": ThreatLevel.P2_CONTINGENCY,
+        "examples": ["market closures", "broker failures", "server outages"],
+        "action": "activate contingency plan",
+    },
+    "unexpected_problems": {
+        "type": 4,
+        "threat": ThreatLevel.P1_HALT,
+        "examples": ["large unintended orders", "excessive position opening",
+                      "program errors", "risk control failures"],
+        "action": "HALT immediately, stop model and related strategies",
+    },
+}
+
+# Kill conditions: when to halt a strategy (extends DNA trading section)
+KILL_CONDITIONS = {
+    "p1_trigger": "Any Type-4 discrepancy with escalation risk -> immediate halt",
+    "drawdown_breach": "Monthly drawdown exceeds monthlevel or maxDDlevel -> force close all",
+    "e_ratio_collapse": "E-Ratio drops below 0.8 for 20+ consecutive trades -> review strategy",
+    "win_rate_collapse": "Win rate drops >15pp below backtest baseline over 50+ trades -> review",
+    "mae_expansion": "MAE Q3 expands >50% vs backtest baseline -> regime change, pause",
+    "correlation_spike": "Portfolio strategy correlation exceeds 0.5 -> reduce exposure",
+}
 
 # Re-use BollingerMeanReversion from strategies/
 from strategies.mean_reversion import BollingerMeanReversion
