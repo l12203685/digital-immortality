@@ -1865,6 +1865,56 @@
         "md-369",
         "cycle-281"
       ]
+    },
+    {
+      "id": "sop110-skill-outreach-bypass-audience-gate",
+      "key": "skill-commercialization-first-user-outreach-cycle282",
+      "content": "SOP #110: Branch 1.3 stalled 70 cycles on wrong diagnosis (\"need audience first\"). Correct diagnosis: no active outreach. SOP #97 pattern (consulting) applies equally to skill suite — active DM outreach to 5 targets with problem-product fit bypasses audience gate entirely. Asset inventory was complete; execution was missing. First sale target: 1×7 guided onboarding within 14 days.",
+      "timestamp": "2026-04-09T16:54:19.920535+00:00",
+      "source": "branch-1.3-commercialization-cycle282",
+      "tags": [
+        "branch-1.3",
+        "monetization",
+        "skill-suite",
+        "outreach"
+      ],
+      "referenced_by": [
+        "cycle-282"
+      ]
+    },
+    {
+      "id": "sop111-guided-onboarding-delivery-standard",
+      "key": "skill-session-delivery-4-phase-90min-cycle282",
+      "content": "SOP #111: Guided onboarding delivery protocol (4 phases, 90 min). Phase 1: Identity Anchor (20 min) — behavioral archaeology not abstract principles. Phase 2: Micro-Decisions (25 min) — 5-10 MDs from real incidents. Phase 3: Boot Test (20 min) — ≥2/3 scenarios aligned. Phase 4: Recursive Engine Setup (15 min). Recap within 24h. Every session produces dna_core.md + passing boot test + configured staging/. Quality is structural not mood-dependent.",
+      "timestamp": "2026-04-09T16:54:19.920535+00:00",
+      "source": "branch-7-sop111-cycle282",
+      "tags": [
+        "branch-7",
+        "SOP-111",
+        "skill-delivery",
+        "monetization"
+      ],
+      "referenced_by": [
+        "cycle-282"
+      ]
+    },
+    {
+      "id": "md370-372-201810-product-brand-career-pivots",
+      "key": "201810-product-fit-brand-identity-career-pivot-cycle282",
+      "content": "MD-370~372 from 201810: (1) 促銷≠根本原因修復 — GAP/王品模式: buying trigger is product desire, not discount. Marketing fixes visibility not desire. (2) 品牌認同感是耐受度乘數 — same workload feels different based on company identity alignment. (3) 可替代性高的崗位=強制轉型信號 — Sales→Python→trading: transition while still employed minimizes transition cost.",
+      "timestamp": "2026-04-09T16:54:19.920535+00:00",
+      "source": "branch-2.2-201810-cycle282",
+      "tags": [
+        "branch-2.2",
+        "MD-370",
+        "MD-371",
+        "MD-372",
+        "career",
+        "marketing"
+      ],
+      "referenced_by": [
+        "cycle-282"
+      ]
     }
   ]
 }
