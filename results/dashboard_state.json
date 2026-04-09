@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T14:30+08",
+  "updated": "2026-04-09T14:31+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,23 +64,23 @@
   ],
   "activity": [
     {
-      "time": "just now",
+      "time": "1min ago",
       "text": "Next (human-gated, highest EV): Post SOP #01 on X → set mainnet API keys → se..."
     },
     {
-      "time": "just now",
+      "time": "1min ago",
       "text": "- Branch 6 — consistency_test.py → 33/33 ALIGNED ✅"
     },
     {
-      "time": "just now",
+      "time": "1min ago",
       "text": "- SOP series #01~#64 COMPLETE ✅ — all domain gaps closed"
     },
     {
-      "time": "just now",
+      "time": "1min ago",
       "text": "- Meta-SOP: all other 63 SOPs depend on this infrastructure"
     },
     {
-      "time": "just now",
+      "time": "1min ago",
       "text": "- Three-layer: L1 (daily ticks/tests) + L2 (derivative scan) + L3 (quarterly ..."
     }
   ],
