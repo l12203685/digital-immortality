@@ -167,13 +167,17 @@ def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
     # Load audit priority suggestion if available
     priority = load_priority()
     priority_prefix = f"[AUDIT PRIORITY] {priority}\n\n" if priority else ""
-    # Keep prompt short for CLI — only the recursive question, context is in repo files
+    # Daemon reads its own rules first, then decides what to do
     short_prompt = (
         f"{priority_prefix}"
-        "Read results/dynamic_tree.md and results/daemon_log.md (tail). "
-        "Pick the highest-derivative branch. Do ONE concrete thing that advances digital immortality. "
-        "Update results/dynamic_tree.md with what changed. "
-        "Append to results/daemon_log.md. Commit and push. Under 200 words."
+        "You are the recursive engine. Read these files IN ORDER before deciding what to do:\n"
+        "1. SKILL.md (rules — three-layer loop, learn=write, all branches must grow)\n"
+        "2. results/dynamic_tree.md (current state of all branches)\n"
+        "3. results/daemon_log.md (tail 20 — what you did recently, DON'T repeat)\n"
+        "Then: apply the rules to the state. Push as many branches as possible. "
+        "Backward check: what hasn't been touched? What did you say you'd do but didn't? "
+        "Update dynamic_tree.md. Append to daemon_log.md with UTC timestamp. "
+        "Commit and push."
     )
     result = subprocess.run(
         ["claude", "-p", short_prompt, "--model", model],
