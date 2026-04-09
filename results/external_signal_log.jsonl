@@ -1,0 +1,3 @@
+# schema: {"timestamp_utc": "ISO8601", "event_type": "POST|DM|CALIBRATION|WEEKLY_REVIEW", "platform": "X|Discord|Newsletter|Gumroad", "detail": "brief description of the event", "derivative_metric": "positive|neutral|negative|correction"}
+# created: 2026-04-09 UTC | populated: when first post is live (G0 state: PRE_LAUNCH → SEEDING)
+# append entries chronologically — one JSON object per line below this comment

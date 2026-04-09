@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#65
+# Twitter Posting Queue — SOP Series #01~#66
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -72,6 +72,7 @@
 | Aug 9 | #63 | publish_thread_sop63_twitter.md | "63 systems. Zero revenue. The fix is a 6-gate activation sequence." | pending |
 | Aug 11 | #64 | publish_thread_sop64_twitter.md | "Your system broke. You didn't notice for 3 weeks." | pending |
 | Aug 13 | #65 | publish_thread_sop65_twitter.md | "63 systems built. 0 published. 0 feedback received. That's not a content problem. That's a broken feedback loop." | pending |
+| Aug 14 | #66 | publish_thread_sop66_twitter.md | "You wrote 65 systems. You still haven't posted. Distribution Activation Protocol — how to go from zero to your first external signal." | pending |
 
 ---
 
