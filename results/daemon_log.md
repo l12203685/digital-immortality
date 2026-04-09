@@ -7010,3 +7010,22 @@ Commit: `7232f5e`
 **Conflicts resolved:** engine vs daemon concurrent cycle 276 writes (insights.json merged, consistency files/dna_core took daemon version).
 
 **Critical action required:** Send `docs/samuel_async_calibration_dm.md` with 3 new scenarios targeting `career/relationships/learning` axes. This is the only human-gated unblock for Branch 4.1.
+
+## Cycle 71 — 2026-04-09 15:56:56 UTC
+
+Cycle 278 complete. Summary:
+
+**Branch 2.2** — 201901 JSONL (228 substantive msgs, Jan 2019) → MD-361~363:
+- **MD-361**: 薪資談判=具體錨點反報價 — 給「至少58k」而非問「能不能更高」→對方直接問何時報到
+- **MD-362**: 保障網下主動校正風險容忍度 — 有緩衝時向更高EV選項傾斜，不因「有保底」選保守
+- **MD-363**: 技術深度>薪資差（<15%）— 鉅亨57k vs Kronos 60k→選技術含量更高的，積累速度是早期核心變數
+
+**dna_core.md**: 360→363 MDs。201901 COMPLETE。
+
+**Branch 1.1**: BTC=$72,122.78; DualMA_10_30=SHORT; BollingerMR×2=SHORT; 15/18 FLAT; PAPER
+
+**Branch 6**: 33/33 ALIGNED; **47th consecutive clean cycle** ✅
+
+**Branch 3.1**: insights.json 151→156 (+5)
+
+**Next**: 201812 JSONL → MD-364~366
