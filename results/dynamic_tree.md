@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 194)
+> 最後更新：2026-04-09 UTC (cycle 196)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -24,7 +24,7 @@
   - next: set BINANCE_MAINNET_KEY/SECRET → run `python mainnet_runner.py --tick`
   - **mainnet_activation_guide.md created ✓** (cycle 115) — exact 6-step activation: API key creation → credentials storage → fund wallet → dry-run → go live → loop; kill conditions documented; friction to $0 revenue now minimal
   - **`--paper-live` added ✓** — real Binance prices, no credentials; tick 34: BTC=71108.75 signal=SHORT (consistent SHORT × 34 ticks; slight pullback from tick 33) (cycle 171)
-  - **paper_live_pnl_report.md updated ✓** (cycle 194) — tick 64: BTC=$70,881.58, SHORT×64 (100%), P&L=+$0.878 (+0.878% on $100); BTC -$45.05 from tick 63 ($70,926.63); MFE ATH=+$1.204 (tick 50); regime=MIXED, DualMA_10_30 only signaling
+  - **paper_live_pnl_report.md updated ✓** (cycle 196) — tick 66: BTC=$70,856.15, SHORT×66 (100%), P&L=+$0.914 (+0.914% on $100); BTC -$94.94 from tick 65 ($70,951.09); MFE ATH=+$1.204 (tick 50); regime=MIXED, DualMA_10_30 only signaling
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
