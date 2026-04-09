@@ -1,1 +1,1 @@
-OK: All branches covered. Last touched: '存活/cold-start' at cycle 252. All branches current.
+OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.
