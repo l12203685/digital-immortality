@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T10:17+08",
+  "updated": "2026-04-09T10:18+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live tick 51 BTC=$70,609 SHORT P&L ATH+$1.20 (tick 51 per daemon log; API unreachable from cloud); **SOP #01~#39 COMPLETE** → posting_queue.md updated (Apr 9–Jun 24, 76 days); **x_launch_sequence.md created ✓** — 15 min to first post; **3 workbooks READY TO LIST** ($87/buyer trilogy)",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 all 5 SYSTEM_FAILUREs pre-committed",
   "deadline": "2026-07-07",
@@ -50,28 +50,28 @@
   ],
   "activity": [
     {
-      "time": "5min ago",
+      "time": "just now",
       "text": "Blocker: mainnet keys (human-gated)."
     },
     {
-      "time": "5min ago",
+      "time": "just now",
       "text": "- Regime = MIXED, DualMA_10_30 only signaling"
     },
     {
-      "time": "5min ago",
+      "time": "just now",
       "text": "- MFE ATH = +$1.204 (tick 50) unchanged"
     },
     {
-      "time": "5min ago",
-      "text": "- P&L = +$0.781 (+0.781% on $100) — eased from +$0.878, BTC up $69 from tick 64"
+      "time": "just now",
+      "text": "- P&L = +$0.914 (+0.914% on $100) — recovered from +$0.781, BTC down $94.94 f..."
     },
     {
-      "time": "5min ago",
-      "text": "- BTC = $70,951.09 → SHORT×65 (100%)"
+      "time": "just now",
+      "text": "- BTC = $70,856.15 → SHORT×66 (100% signal consistency)"
     }
   ],
   "stats": {
-    "daemon_cycles": 195,
+    "daemon_cycles": 196,
     "total_mds": 330,
     "dna_core_lines": 87
   }
