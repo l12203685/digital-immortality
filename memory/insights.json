@@ -1258,6 +1258,60 @@
         "deadline",
         "revenue"
       ]
+    },
+    {
+      "id": "poker-bankroll-100bb-session-sizing-cycle264",
+      "ts": "2026-04-09T12:54:29Z",
+      "cycle": 264,
+      "branch": "2.2",
+      "insight": "撲克買入規格 = 100大盲/桌，100~200手/局 → 任何有風險活動先設定規格再進場（資金/時間），不以感覺決定。Position sizing precedes entry.",
+      "source": "201711-JSONL",
+      "category": "behavioral_patterns"
+    },
+    {
+      "id": "cross-border-transfer-urgency-routing-cycle264",
+      "ts": "2026-04-09T12:54:29Z",
+      "cycle": 264,
+      "branch": "2.2",
+      "insight": "跨國匯款路由 = urgency-dependent。不急：走正規省手續費。急：用人脈節點繞過制度摩擦（大陸帳戶中轉）。緊急程度決定路由，不是成本決定路由。",
+      "source": "201711-JSONL",
+      "category": "behavioral_patterns"
+    },
+    {
+      "id": "system-reset-before-diagnosis-cycle264",
+      "ts": "2026-04-09T12:54:29Z",
+      "cycle": 264,
+      "branch": "2.2",
+      "insight": "電路跳電 → 全部關掉再一起開，不是只重開故障點 → 系統故障先重設到 known state 再縮小範圍。Applies to trading systems, agent loops, any complex system failure.",
+      "source": "201711-JSONL",
+      "category": "methodology"
+    },
+    {
+      "id": "counterfactual-career-cost-structural-cycle264",
+      "ts": "2026-04-09T13:30:00Z",
+      "cycle": 264,
+      "branch": "2.2",
+      "insight": "反事實職涯成本=結構性認知偏誤；選A後悔沒選B，選B也可能後悔沒選A。決策品質由當下資訊決定，不由事後反事實評估。封閉決策後的反事實評估。",
+      "source": "201910-JSONL",
+      "category": "behavioral_patterns"
+    },
+    {
+      "id": "ev-arena-migration-poker-trading-realestate-cycle264",
+      "ts": "2026-04-09T13:30:00Z",
+      "cycle": 264,
+      "branch": "2.2",
+      "insight": "賺錢場域遷移法則=資本積累到場域天花板後，高EV者自然往更高EV場域移動。poker→trading→real estate是同一個EV最大化邏輯在不同資本規模下的展現。",
+      "source": "201910-JSONL",
+      "category": "methodology"
+    },
+    {
+      "id": "decision-support-real-priority-behavior-over-stated-cycle264",
+      "ts": "2026-04-09T13:30:00Z",
+      "cycle": 264,
+      "branch": "2.2",
+      "insight": "決策支援=先確認對方真實優先序。陳述的優先序和選擇的優先序常不一致。以選擇行為為準，不以言語陳述為準。行為考古=從過去選擇反推真實優先序。",
+      "source": "201910-JSONL",
+      "category": "behavioral_patterns"
     }
   ]
 }

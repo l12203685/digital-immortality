@@ -1,1 +1,1 @@
-PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.
+PRIORITY: Branch '2.2 DNA distillation' — next JSONL: 201909. Continue archive extraction.
