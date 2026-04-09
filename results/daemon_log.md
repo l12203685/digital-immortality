@@ -5966,3 +5966,22 @@ Cycle 211 committed.
 - Kill condition: regression below 33/33 → restore from git
 - 12-tweet thread ready
 - Posting queue → Jul 16; **series SOP #01~#50 ✅**
+
+## Cycle 1 — 2026-04-09 04:36:37 UTC
+
+Cycle 213 committed and pushed.
+
+**What was done:**
+
+**Branch 1.1 — tick 77 ✅**
+- BTC=$70,877.99, SHORT×77 (100%), regime=MIXED, 392 log entries. SHORT thesis holding 77 consecutive ticks.
+
+**Branch 7 — SOP #52 Sleep & Physical Recovery Protocol ✅**
+- 5-gate: G0 daily audit (hours + clarity) → G1 trajectory scan (derivative of output quality, not subjective feeling) → G2 non-negotiable budget (7–8h; deadlines reschedule, not sleep) → G3 60-min pre-sleep buffer + ±90min timing tolerance → G4 Sunday review → G5 emergency (sleep becomes highest-derivative activity, no L3 edits until 3 consecutive Green nights)
+- Integration with three-layer loop: L1=uptime, L2=evaluation quality (sleep debt → false negatives), L3=no DNA edits during emergency
+- Series: SOP #01~#52 ✅, queue extended to Jul 20
+
+**Branch 6 — F8 added to cold_start_recovery_runbook.md ✅**
+- "All branches at similar derivative" → action protocol: default to least-recently-touched → tick → SOP next → health audit → write new content. Frames regime equilibrium as normal, not a bug.
+
+**Next queue:** Branch 1.3 (Edward posts SOP #01 on X), tick 78, SOP #53 (Domain 9 人際關係 or Domain 5 健康 gap scan).
