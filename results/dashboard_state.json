@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-10T01:13+08",
+  "updated": "2026-04-10T01:21+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next: 201807 JSONL → MD-379~381; Branch 1.3 Week 1 DM execution (human-gated)"
+      "text": "Next: Branch 1.3 binding constraint — execute the sends. C005 has 24h window."
     },
     {
       "time": "just now",
-      "text": "L2: 1A + 3B. L3 not triggered."
+      "text": "| 6 | 54th consecutive clean cycle ✅ | B |"
     },
     {
       "time": "just now",
-      "text": "Branch 3.1 (B): +5 insights → total 179"
+      "text": "| 3.1 | 4 insights distilled (179→183); session_state updated to cycle 285 | B |"
     },
     {
       "time": "just now",
-      "text": "Branch 6 (B): 33/33 ALIGNED; 53rd consecutive clean cycle ✅"
+      "text": "| 1.1 | tick 285, BTC=$72,464.04, mixed, all FLAT, PnL=-2.71% | B |"
     },
     {
       "time": "just now",
-      "text": "Branch 1.1 (B): tick 284, BTC=$72,419.78; regime=mixed; DualMA+BollingerMR RF..."
+      "text": "| 1.3 | 5 DMs ready to send (C001-C005); C005 score=6 top priority; outreach_..."
     }
   ],
   "stats": {
