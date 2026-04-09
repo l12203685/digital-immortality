@@ -7186,3 +7186,17 @@ Pushed. Cycle 294 complete.
 | **3.1 Distillation** | +3 insights → 206 total |
 
 **daemon_next_priority** updated: `2.2/MD-deep-pass-201709` — next agent-actionable high-derivative work (201710 done in cycle 294, 201709 is next in sequence).
+
+## Cycle 94 — 2026-04-09 19:56:38 UTC
+
+Cycle 296 complete. Four branches pushed:
+
+**B6 存活/cold-start** — 33/33 ALIGNED, **50th consecutive clean cycle** ✅ daemon_next_priority TOUCHED
+
+**B1 Trading** — tick 316, BTC=$72,155, regime=MIXED, all 15 active=FLAT, total_pnl=-2.71%. DualMA_10_30 remains DISABLED (PF=0.53 < 0.8 kill threshold). No signal = IDLE per inaction bias.
+
+**B2.2 JSONL** — 201610/11/12 verified (165/105/310 entries, 0 Edward msgs). **JSONL archive FULLY EXHAUSTED confirmed.** Branch 2.2 complete at 416 MDs, no further pass possible.
+
+**B4.1 Samuel** — Collision re-run: **6/22 AGREE (27%)** — regression stable since cycle 277, no further drift. Root cause: Edward DNA +86 MDs since Samuel last calibrated. DM in `docs/samuel_async_calibration_dm.md` ready; **human-gated** (Edward sends).
+
+**daemon_next_priority** updated → `4.1/Samuel-organism`

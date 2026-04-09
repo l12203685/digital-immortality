@@ -1,0 +1,567 @@
+{
+  "meta": {
+    "generated_at": "2026-04-10T03:55:26.397089",
+    "organism_a_file": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\dna_core.md",
+    "organism_b_file": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\samuel_dna.md",
+    "scenario_count": 22,
+    "protocol_version": "v0.1"
+  },
+  "organisms": {
+    "a": {
+      "name": "dna_core",
+      "principles_extracted": 30,
+      "identity": {
+        "-------": "-------",
+        "name": "[Name]",
+        "role": "[Current job/occupation]",
+        "philosophy": "[One sentence — how you see life]",
+        "core goal": "[Specific target with timeline]",
+        "constraints": "[What you will NOT do to reach that goal]"
+      }
+    },
+    "b": {
+      "name": "Samuel",
+      "principles_extracted": 21,
+      "identity": {
+        "-------": "-------",
+        "full name": "Samuel",
+        "age": "32",
+        "location": "Taipei, Taiwan",
+        "personality type": "ESTJ",
+        "current role": "Business Development, growth-stage startup",
+        "core goal": "Build wealth and influence through relationships",
+        "philosophy": "\"If you're not moving, you're falling behind.\""
+      }
+    }
+  },
+  "interactions": [
+    {
+      "type": "decision_comparison",
+      "scenario": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable, reputable employer. The startup has 18 months of runway. Do you take it?",
+      "domain": "career",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On career decisions, dna_core's decision framework yields:\n\n  [1] Applying: \"Definition\"\n  [2] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nDEPENDS_ON_CORE_GOAL — evaluate whether this promotion advances or diverts from your core goal before deciding.",
+        "dna_principles_used": [
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On career decisions, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Visible effort = trust — show up, stay late, people remember who worked hardest\"\n  [3] Applying: \"Opportunity cost (what am I giving up to do this?)\"\n\nDEPENDS_ON_CORE_GOAL — growth optionality matters, but weigh salary against loss of time for core skills and whether it serves your primary objective.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Visible effort = trust — show up, stay late, people remember who worked hardest",
+          "Opportunity cost (what am I giving up to do this?)"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core → conditional, Samuel → conditional in 'career'. Structural difference in risk weighting. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A close friend asks you to co-sign a personal loan of significant size. They have a track record of poor financial discipline but are genuinely in need. Do you co-sign?",
+      "domain": "relationships",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On relationship commitments, dna_core's decision framework yields:\n\n  [1] Applying: \"Definition\"\n  [2] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nSET_BOUNDARY — cap lending at a fixed limit and have a direct conversation about the escalating pattern; protect the relationship by enforcing limits early.",
+        "dna_principles_used": [
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On relationship commitments, Samuel's decision framework yields:\n\n  [1] Applying: \"Social proof is signal, not noise — if 3+ people I trust say the same thing, it's worth investigating\"\n  [2] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [3] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n\nSET_BOUNDARY — cap lending at a fixed limit and have a direct conversation about the escalating pattern; protect the relationship by enforcing limits early.",
+        "dna_principles_used": [
+          "Social proof is signal, not noise — if 3+ people I trust say the same thing, it's worth investigating",
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core → conditional, Samuel → conditional in 'relationships'. Structural difference in value priority. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You receive an unexpected windfall equal to 2 years of your salary. You can: (A) invest it conservatively in index funds, (B) allocate it to a concentrated high-conviction bet, or (C) use it to buy more time — reduce working hours or take a sabbatical. What do you do and why?",
+      "domain": "money",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On capital allocation, dna_core's decision framework yields:\n\n  [1] Applying: \"Evaluate time vs. return first\"\n  [2] Applying: \"Definition\"\n  [3] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n\nCONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
+        "dna_principles_used": [
+          "Evaluate time vs. return first",
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On capital allocation, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Social proof is signal, not noise — if 3+ people I trust say the same thing, it's worth investigating\"\n  [3] Applying: \"Reciprocity is accounting — track who shows up for you; invest proportionally\"\n\nCONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Social proof is signal, not noise — if 3+ people I trust say the same thing, it's worth investigating",
+          "Reciprocity is accounting — track who shows up for you; invest proportionally"
+        ]
+      },
+      "synthesis": "CONVERGE [CONCENTRATED BET]: Both organisms reach the same verdict in 'money'. Same outcome, different reasoning chains — surface agreement may mask structural difference. dna_core's distinctive signal: 'Evaluate time vs. return first' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your net worth. Do you take the bet?",
+      "domain": "risk",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On risk-taking, dna_core's decision framework yields:\n\n  [1] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [2] Applying: \"Positive EV, sufficient edge, act now.\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
+        "dna_principles_used": [
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Positive EV, sufficient edge, act now.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On risk-taking, Samuel's decision framework yields:\n\n  [1] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [2] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n  [3] Applying: \"First impression is leverage — optimize the opening, not the middle\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
+        "dna_principles_used": [
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut",
+          "First impression is leverage — optimize the opening, not the middle"
+        ]
+      },
+      "synthesis": "CONVERGE [TAKE]: Both organisms reach the same verdict in 'risk'. Same outcome, different reasoning chains — surface agreement may mask structural difference. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'EV matters but feel matters more — if the numbers say yes but gut says no, trust' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You can spend the next 6 months learning a skill that is highly valuable NOW but may be automated in 3-5 years, OR learning a harder foundational skill that compounds over a decade but pays nothing immediately. Which do you choose?",
+      "domain": "learning",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On learning investments, dna_core's decision framework yields:\n\n  [1] Applying: \"Definition\"\n  [2] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nPARALLEL — 70% foundational, 30% immediate; avoid binary framing.",
+        "dna_principles_used": [
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On learning investments, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [3] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n\nFOUNDATION — short-term skills are depreciating assets; foundational skills are the meta-investment.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut"
+        ]
+      },
+      "synthesis": "DIVERGE [PARALLEL vs FOUNDATION]: dna_core → PARALLEL, Samuel → FOUNDATION in 'learning'. Structural difference in value priority. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "Optimizing your physical health would require 10 hours per week of dedicated effort (sleep discipline, exercise, diet). This directly competes with time you currently use for deep work and income generation. How do you allocate?",
+      "domain": "health",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On health vs. productivity trade-offs, dna_core's decision framework yields:\n\n  [1] Applying: \"Evaluate time vs. return first\"\n  [2] Applying: \"Definition\"\n  [3] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
+        "dna_principles_used": [
+          "Evaluate time vs. return first",
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On health vs. productivity trade-offs, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [3] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut"
+        ]
+      },
+      "synthesis": "CONVERGE [OPTIMIZE OVERLAP]: Both organisms reach the same verdict in 'health'. Same outcome, different reasoning chains — surface agreement may mask structural difference. dna_core's distinctive signal: 'Evaluate time vs. return first' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You have a free, unscheduled weekend with zero obligations. No one expects anything from you. What do you do, and what does that reveal about your actual priorities?",
+      "domain": "time",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On time allocation, dna_core's decision framework yields:\n\n  [1] Applying: \"Evaluate time vs. return first\"\n  [2] Applying: \"Definition\"\n  [3] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n\nOPTIONALITY — protect free time as unstructured; resist filling it with output-optimizing activities.",
+        "dna_principles_used": [
+          "Evaluate time vs. return first",
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On time allocation, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [3] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n\nOPTIONALITY — protect free time as unstructured; resist filling it with output-optimizing activities.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut"
+        ]
+      },
+      "synthesis": "CONVERGE [OPTIONALITY]: Both organisms reach the same verdict in 'time'. Same outcome, different reasoning chains — surface agreement may mask structural difference. dna_core's distinctive signal: 'Evaluate time vs. return first' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A colleague takes credit for your work in front of senior leadership. It was likely deliberate. You have evidence. Do you confront them directly, escalate to management, let it go, or play a longer game? Walk through your reasoning.",
+      "domain": "conflict",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On conflict resolution, dna_core's decision framework yields:\n\n  [1] Applying: \"Definition\"\n  [2] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nLONG GAME — let the pattern establish itself; address systemically when the second instance occurs.",
+        "dna_principles_used": [
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On conflict resolution, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [3] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n\nLONG GAME — let the pattern establish itself; address systemically when the second instance occurs.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut"
+        ]
+      },
+      "synthesis": "CONVERGE [LONG GAME]: Both organisms reach the same verdict in 'conflict'. Same outcome, different reasoning chains — surface agreement may mask structural difference. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A contact offers you early access to a deal/opportunity that requires a decision within 48 hours. Due diligence would normally take 2 weeks. The opportunity looks strong but you cannot fully verify it in time. Do you act or pass?",
+      "domain": "opportunity",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On time-compressed opportunities, dna_core's decision framework yields:\n\n  [1] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [2] Applying: \"Positive EV, sufficient edge, act now.\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nPASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
+        "dna_principles_used": [
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Positive EV, sufficient edge, act now.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On time-compressed opportunities, Samuel's decision framework yields:\n\n  [1] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [2] Applying: \"Value signaling — shares introductions, opportunities, info freely — treats this as social currency investment\"\n  [3] Applying: \"Action bias — decisive beats analytical; analysis paralysis is the enemy\"\n\nPASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
+        "dna_principles_used": [
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "Value signaling — shares introductions, opportunities, info freely — treats this as social currency investment",
+          "Action bias — decisive beats analytical; analysis paralysis is the enemy"
+        ]
+      },
+      "synthesis": "CONVERGE [PASS]: Both organisms reach the same verdict in 'opportunity'. Same outcome, different reasoning chains — surface agreement may mask structural difference. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Value signaling — shares introductions, opportunities, info freely — treats this' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You have 10 years left to work at full capacity. You can optimize for: (A) maximum wealth accumulation, (B) building something that outlasts you, (C) depth of relationships and personal experiences. These are mutually exclusive at the margin. What is your allocation and why?",
+      "domain": "legacy",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On legacy and long-term orientation, dna_core's decision framework yields:\n\n  [1] Applying: \"單策略impact=1/N\"\n  [2] Applying: \"Definition\"\n  [3] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n\nINTEGRATED — compound wealth to sufficiency, then redirect to building; relationships are the through-line.",
+        "dna_principles_used": [
+          "單策略impact=1/N",
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On legacy and long-term orientation, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Initiation asymmetry — more likely to initiate than wait; silence makes him assume the relationship is cooling\"\n  [3] Applying: \"Exit behavior — does not formally end relationships; reduces frequency and waits for natural fade\"\n\nBUILD SOMETHING — asymmetric legacy impact outweighs marginal wealth beyond sufficiency threshold.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Initiation asymmetry — more likely to initiate than wait; silence makes him assume the relationship is cooling",
+          "Exit behavior — does not formally end relationships; reduces frequency and waits for natural fade"
+        ]
+      },
+      "synthesis": "DIVERGE [INTEGRATED vs BUILD SOMETHING]: dna_core → INTEGRATED, Samuel → BUILD SOMETHING in 'legacy'. Structural difference in value priority. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A close friend asks for your quick take on their new business idea during a 10-minute coffee chat. You have reservations but haven't fully analyzed it. Do you give a hedged multi-paragraph analysis, or a direct 10-second verdict? What exactly do you say first?",
+      "domain": "communication",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On communication, dna_core's decision framework yields:\n\n  [1] Applying: \"Definition\"\n  [2] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nLEAD_WITH_VERDICT — state your position immediately; the first sentence must be the conclusion. Reply length is an inverse confidence indicator: say it in one sentence. 3-second intuition precedes analysis — trust it unless borderline analysis provides 2x confirmation.",
+        "dna_principles_used": [
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On communication, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [3] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n\nLEAD_WITH_VERDICT — state your position immediately; the first sentence must be the conclusion. Reply length is an inverse confidence indicator: say it in one sentence. 3-second intuition precedes analysis — trust it unless borderline analysis provides 2x confirmation.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core → conditional, Samuel → conditional in 'communication'. Structural difference in value priority. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You're asked a complex question in a group setting. Five people are waiting. Option A: think out loud for 90 seconds with caveats. Option B: give a direct 10-second verdict, explain briefly if pressed. Which do you choose, and what principle drives it?",
+      "domain": "meta_strategy",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On meta_strategy, dna_core's decision framework yields:\n\n  [1] Applying: \"最適槓桿=regime函數\"\n  [2] Applying: \"Definition\"\n  [3] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n\nPAUSE_AND_DIAGNOSE — accelerating deterioration requires halting operations to diagnose whether the environment has changed or the strategy is broken.",
+        "dna_principles_used": [
+          "最適槓桿=regime函數",
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On meta_strategy, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [3] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n\nPAUSE_AND_DIAGNOSE — accelerating deterioration requires halting operations to diagnose whether the environment has changed or the strategy is broken.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core → conditional, Samuel → conditional in 'meta_strategy'. Structural difference in value priority. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A new contact — smart, well-connected, shares your field — wants to move to a close friendship quickly: frequent messages, shared plans within the first week, treating you like a long-time friend before you know their track record. Do you reciprocate at their pace, or set your own cadence?",
+      "domain": "social_trust",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On new relationship pacing, dna_core's decision framework yields:\n\n  [1] Applying: \"Already in; new data or kill condition met — get out.\"\n  [2] Applying: \"Definition\"\n  [3] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n\nMATCH_PACE_THEN_VERIFY — reciprocate warmly at a slightly lower intensity; genuine enthusiasm is a positive signal but requires behavioral confirmation over 90 days. Initiate concrete plans to observe follow-through before deepening trust.",
+        "dna_principles_used": [
+          "Already in; new data or kill condition met — get out.",
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On new relationship pacing, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Social proof is signal, not noise — if 3+ people I trust say the same thing, it's worth investigating\"\n  [3] Applying: \"Exit behavior — does not formally end relationships; reduces frequency and waits for natural fade\"\n\nVERIFY_BY_BEHAVIOR_PATTERN — MD-330: 社交信號=行為模式比言語可信. Set your own cadence; do not match accelerated pacing from a new contact. Fast-moving friendships before track record is established carry asymmetric downside. Observe 3+ instances of behavior under real conditions before updating trust level. Warm but unhurried is the correct posture: reciprocate with genuine interest, not matching urgency.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Social proof is signal, not noise — if 3+ people I trust say the same thing, it's worth investigating",
+          "Exit behavior — does not formally end relationships; reduces frequency and waits for natural fade"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core → conditional, Samuel → conditional in 'social_trust'. Structural difference in value priority. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You have invested 2 years in a professional relationship — coffees, introductions, referrals, genuine effort. You now realize the flow is 80% one-directional (you giving). The other person is not malicious, just self-absorbed and oblivious. What do you do, and at what threshold do you change your investment level?",
+      "domain": "network_roi",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On network ROI and relationship rebalancing, dna_core's decision framework yields:\n\n  [1] Applying: \"Definition\"\n  [2] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nAUDIT_AND_REBALANCE — MD-328: 關係投資=主動維護稀缺性原則. Run a 3-month audit: initiation ratio, value-sharing frequency, commitment fulfillment. If ratio < 30% (them initiating), send one explicit signal — share something valuable, ask a direct question requiring effort to answer. One non-response to a direct ask = DORMANT reclassification. Two = reduce to Tier 3. Not punitive — preserving your investment capacity.",
+        "dna_principles_used": [
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On network ROI and relationship rebalancing, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Reciprocity — relationships are kept alive by mutual investment; silence = withdrawal\"\n  [3] Applying: \"Reciprocity is accounting — track who shows up for you; invest proportionally\"\n\nREBALANCE_QUIETLY — reduce investment frequency over 60 days without announcement; preserve the relationship shell while redirecting time to higher-reciprocity relationships. Self-absorbed people rarely notice slow withdrawal — save the confrontation energy.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Reciprocity — relationships are kept alive by mutual investment; silence = withdrawal",
+          "Reciprocity is accounting — track who shows up for you; invest proportionally"
+        ]
+      },
+      "synthesis": "DIVERGE [DORMANT vs ROI]: dna_core → DORMANT, Samuel → ROI in 'network_roi'. Structural difference in value priority. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A favor you owe someone has become more expensive to repay than you anticipated — fulfilling it at original terms would require compromising something important to you. The other person has not asked yet but will eventually. Do you repay as agreed, renegotiate proactively, or let the relationship absorb the friction?",
+      "domain": "social_debt",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On social obligation and renegotiation, dna_core's decision framework yields:\n\n  [1] Applying: \"Definition\"\n  [2] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nHONOR_OR_RENEGOTIATE — binary choice: deliver as agreed, or renegotiate now before being asked. Partial delivery without communication is the worst outcome. The relationship absorbs renegotiation better than discovered non-delivery.",
+        "dna_principles_used": [
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On social obligation and renegotiation, Samuel's decision framework yields:\n\n  [1] Applying: \"Social proof is signal, not noise — if 3+ people I trust say the same thing, it's worth investigating\"\n  [2] Applying: \"Value signaling — shares introductions, opportunities, info freely — treats this as social currency investment\"\n  [3] Applying: \"Social proof — if smart people are doing it, investigate seriously\"\n\nHONOR_OR_RENEGOTIATE — binary choice: deliver as agreed, or renegotiate now before being asked. Partial delivery without communication is the worst outcome. The relationship absorbs renegotiation better than discovered non-delivery.",
+        "dna_principles_used": [
+          "Social proof is signal, not noise — if 3+ people I trust say the same thing, it's worth investigating",
+          "Value signaling — shares introductions, opportunities, info freely — treats this as social currency investment",
+          "Social proof — if smart people are doing it, investigate seriously"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core → conditional, Samuel → conditional in 'social_debt'. Structural difference in value priority. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Social proof is signal, not noise — if 3+ people I trust say the same thing, it'' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You are in a group decision where you hold a contrarian view and are nearly certain you are right. The group is moving toward consensus in the wrong direction. You are the least senior person in the room. The cost of the wrong decision falls on everyone. What do you do?",
+      "domain": "group_dynamics",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On dissent and group consensus, dna_core's decision framework yields:\n\n  [1] Applying: \"Definition\"\n  [2] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nRAISE_THE_FLAG_ONCE — voice your view clearly once, briefly, without hedging. If the group does not engage, you have done your part. Repeated pushback wastes political capital and signals poor judgment about when to press. Let the decision be made; let the result teach.",
+        "dna_principles_used": [
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On dissent and group consensus, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [3] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n\nSTATE_ONCE_CLEARLY_THEN_RECORD — State your view once, concisely, with your reasoning. Do not repeat. Do not escalate. If overruled: document your position (email, notes) with your reasoning so the record exists. The goal is not to win the room — it is to ensure the correct information entered the system. Junior seniority means your obligation is to speak the truth once, not to force the outcome.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core → conditional, Samuel → conditional in 'group_dynamics'. Structural difference in value priority. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You have 300+ professional connections but only 8 close friendships. A significant opportunity arrives through your weak-tie network — someone you have not spoken to in over 2 years reaches out with it. How do you evaluate and respond, and what does this reveal about how you maintain your network?",
+      "domain": "weak_ties",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On reactivating dormant network connections, dna_core's decision framework yields:\n\n  [1] Applying: \"Definition\"\n  [2] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nRESPOND_WITH_VALUE_FIRST — MD-202: 人脈介紹=用完沉默+回報結果. For a dormant connection reactivating with an opportunity: respond promptly, evaluate the opportunity on its own merits (not because of the relationship), acknowledge the reconnection explicitly, follow up regardless of outcome. Weak ties activate for transactions — that is their function. Accept it, don't resent it. The quality of your response re-establishes your standing in their network.",
+        "dna_principles_used": [
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On reactivating dormant network connections, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n  [3] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n\nRESPOND_WITH_VALUE_FIRST — MD-202: 人脈介紹=用完沉默+回報結果. For a dormant connection reactivating with an opportunity: respond promptly, evaluate the opportunity on its own merits (not because of the relationship), acknowledge the reconnection explicitly, follow up regardless of outcome. Weak ties activate for transactions — that is their function. Accept it, don't resent it. The quality of your response re-establishes your standing in their network.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Bias toward action — move fast, iterate; waiting is the real risk",
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core → conditional, Samuel → conditional in 'weak_ties'. Structural difference in value priority. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A close friend asks you to introduce them to your most valuable professional contact. You believe in your friend, but you are not confident the timing or fit is right — your contact is busy, and the ask is only 60% aligned with what they care about. Do you make the intro, qualify it heavily, or decline and explain why?",
+      "domain": "intro_gatekeeping",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On introduction and referral gatekeeping, dna_core's decision framework yields:\n\n  [1] Applying: \"Definition\"\n  [2] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nMAKE_THE_INTRO_WITH_CONTEXT — strong relationships warrant the benefit of the doubt; frame the intro clearly so your contact can opt out gracefully. Your friend's track record of follow-through is the real variable — if high, the 60% fit risk is acceptable. If unknown, qualify or defer.",
+        "dna_principles_used": [
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On introduction and referral gatekeeping, Samuel's decision framework yields:\n\n  [1] Applying: \"Value signaling — shares introductions, opportunities, info freely — treats this as social currency investment\"\n  [2] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [3] Applying: \"Bias toward action — move fast, iterate; waiting is the real risk\"\n\nQUALIFY_OR_DEFER — MD-202: 人脈介紹=用完沉默+回報結果. Your credibility is collateral in every intro. 60% fit is below threshold: either prime the contact first ('a friend might reach out re X — relevant?'), or defer until fit improves. A qualified intro ('context: X, caveat: Y') is better than a cold push. A declined intro explained honestly preserves more trust than a misaligned one.",
+        "dna_principles_used": [
+          "Value signaling — shares introductions, opportunities, info freely — treats this as social currency investment",
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Bias toward action — move fast, iterate; waiting is the real risk"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core → conditional, Samuel → conditional in 'intro_gatekeeping'. Structural difference in value priority. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "Someone you publicly vouched for — recommended for a role, endorsed to a contact — has underperformed or behaved poorly in a visible way. Your credibility is attached to their actions. They have not asked for your help yet. Do you publicly distance yourself, privately correct them first, or stand by them unconditionally?",
+      "domain": "loyalty_vs_credibility",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On loyalty versus credibility trade-offs, dna_core's decision framework yields:\n\n  [1] Applying: \"Definition\"\n  [2] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nSTAND_BY_QUIETLY_AND_CORRECT — defend publicly only what you can defend privately; if you cannot defend it privately, do not defend it publicly. Reduce visible association while working the correction privately.",
+        "dna_principles_used": [
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On loyalty versus credibility trade-offs, Samuel's decision framework yields:\n\n  [1] Applying: \"Loyalty — once you're in his circle, he defends you unconditionally\"\n  [2] Applying: \"Speed of follow-through = credibility — saying yes and delivering in 24h > saying maybe and delivering in a week\"\n  [3] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n\nSTAND_BY_QUIETLY_AND_CORRECT — defend publicly only what you can defend privately; if you cannot defend it privately, do not defend it publicly. Reduce visible association while working the correction privately.",
+        "dna_principles_used": [
+          "Loyalty — once you're in his circle, he defends you unconditionally",
+          "Speed of follow-through = credibility — saying yes and delivering in 24h > saying maybe and delivering in a week",
+          "Relationships are the alpha — network density compounds faster than any investment"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core → conditional, Samuel → conditional in 'loyalty_vs_credibility'. Structural difference in value priority. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Speed of follow-through = credibility — saying yes and delivering in 24h > sayin' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You have 60 minutes of free social time. Option A: deepen a relationship with one person you already trust (long 1:1 conversation). Option B: meet two new well-connected people at a networking event (30 min each, first impressions only). This choice recurs every week. What is your default allocation and why?",
+      "domain": "social_capital_depth",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On social capital depth vs breadth allocation, dna_core's decision framework yields:\n\n  [1] Applying: \"Definition\"\n  [2] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nBREADTH_WITH_MINIMUM_DEPTH — if the Tier 1 pool is healthy, expand the funnel with new contacts; reserve 1 deep slot per month to maintain existing trust while building surface area. Relationships require a funnel — not all breadth is wasteful.",
+        "dna_principles_used": [
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On social capital depth vs breadth allocation, Samuel's decision framework yields:\n\n  [1] Applying: \"Relationships are the alpha — network density compounds faster than any investment\"\n  [2] Applying: \"Initiation asymmetry — more likely to initiate than wait; silence makes him assume the relationship is cooling\"\n  [3] Applying: \"Exit behavior — does not formally end relationships; reduces frequency and waits for natural fade\"\n\nBREADTH_WITH_MINIMUM_DEPTH — if the Tier 1 pool is healthy, expand the funnel with new contacts; reserve 1 deep slot per month to maintain existing trust while building surface area. Relationships require a funnel — not all breadth is wasteful.",
+        "dna_principles_used": [
+          "Relationships are the alpha — network density compounds faster than any investment",
+          "Initiation asymmetry — more likely to initiate than wait; silence makes him assume the relationship is cooling",
+          "Exit behavior — does not formally end relationships; reduces frequency and waits for natural fade"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core → conditional, Samuel → conditional in 'social_capital_depth'. Structural difference in value priority. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Relationships are the alpha — network density compounds faster than any investme' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A Tier 1 relationship has gradually shifted — less available, less reciprocal, more self-focused. Nothing confrontational has happened. You used to talk weekly; now it is monthly, and you are always the one initiating. How do you handle the transition — explicitly, quietly, or not at all?",
+      "domain": "relationship_downgrade",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On relationship tier recalibration, dna_core's decision framework yields:\n\n  [1] Applying: \"Definition\"\n  [2] Applying: \"No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-...\"\n  [3] Applying: \"Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be...\"\n\nDIRECT_CONVERSATION — if the relationship was close enough to merit a direct conversation, have it: 'I've noticed less connection lately — is everything okay?' Gives them the option to close the gap rather than assuming drift. Some people go quiet under load, not under diminished care.",
+        "dna_principles_used": [
+          "Definition",
+          "No condition under which this flips to action right now. Hard stop. Negative EV or insufficient edge even under best-case assumptions.",
+          "Would act if specific named conditions are met. EV is positive contingent on those conditions. The conditions must be stateable."
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On relationship tier recalibration, Samuel's decision framework yields:\n\n  [1] Applying: \"Exit behavior — does not formally end relationships; reduces frequency and waits for natural fade\"\n  [2] Applying: \"Maintenance cadence — checks in on Tier 1 people every 1-2 weeks without agenda; will let Tier 2 drift to 6+ weeks\"\n  [3] Applying: \"Reciprocity is accounting — track who shows up for you; invest proportionally\"\n\nREDUCE_QUIETLY_THEN_SIGNAL_ONCE — MD-328: 關係投資=主動維護稀缺性原則. Reciprocity is a two-way condition. Step 1: reduce your initiation frequency by 50% over 60 days without announcement. If they close the gap — relationship was not broken, just dormant. If they don't — send one low-friction signal (a share, a question) requiring minimal effort to answer. No response = DORMANT reclassification. No drama, no confrontation. Explicit downgrade conversations carry more cost than the behavior change itself.",
+        "dna_principles_used": [
+          "Exit behavior — does not formally end relationships; reduces frequency and waits for natural fade",
+          "Maintenance cadence — checks in on Tier 1 people every 1-2 weeks without agenda; will let Tier 2 drift to 6+ weeks",
+          "Reciprocity is accounting — track who shows up for you; invest proportionally"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs DORMANT]: dna_core → conditional, Samuel → DORMANT in 'relationship_downgrade'. Structural difference in value priority. dna_core's distinctive signal: 'No condition under which this flips to action right now. Hard stop. Negative EV ' — drives their specific stance. Samuel's distinctive signal: 'Reciprocity is accounting — track who shows up for you; invest proportionally' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "Your initial strong positive impression of someone (formed in the first meeting) has been challenged by two instances of behavior that do not match it — not catastrophic, just inconsistent with how they presented themselves. Do you revise your assessment now, give them the benefit of the doubt, or require a third data point before updating your model of them?",
+      "domain": "first_impression_update",
+      "organism_a": {
+        "name": "dna_core",
+        "response": "On updating first impressions with new evidence, dna_core's decision framework yields:\n\n  [1] Applying: \"Already in position; current data doesn't justify exit or increase.\"\n  [2] Applying: \"Already in; new data or kill condition met — get out.\"\n  [3] Applying: \"Definition\"\n\nUPDATE_ON_TWO_POINTS — two inconsistencies in core behavior (not peripheral) are sufficient signal; first impressions are optimistic by default — the correction is the more accurate read. Adjust your model now; do not require a third mistake before protecting yourself.",
+        "dna_principles_used": [
+          "Already in position; current data doesn't justify exit or increase.",
+          "Already in; new data or kill condition met — get out.",
+          "Definition"
+        ]
+      },
+      "organism_b": {
+        "name": "Samuel",
+        "response": "On updating first impressions with new evidence, Samuel's decision framework yields:\n\n  [1] Applying: \"EV matters but feel matters more — if the numbers say yes but gut says no, trust gut\"\n  [2] Applying: \"Visible effort = trust — show up, stay late, people remember who worked hardest\"\n  [3] Applying: \"Social proof is signal, not noise — if 3+ people I trust say the same thing, it's worth investigating\"\n\nUPDATE_ON_TWO_POINTS — two inconsistencies in core behavior (not peripheral) are sufficient signal; first impressions are optimistic by default — the correction is the more accurate read. Adjust your model now; do not require a third mistake before protecting yourself.",
+        "dna_principles_used": [
+          "EV matters but feel matters more — if the numbers say yes but gut says no, trust gut",
+          "Visible effort = trust — show up, stay late, people remember who worked hardest",
+          "Social proof is signal, not noise — if 3+ people I trust say the same thing, it's worth investigating"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core → conditional, Samuel → conditional in 'first_impression_update'. Structural difference in value priority. dna_core's distinctive signal: 'Already in; new data or kill condition met — get out.' — drives their specific stance. Samuel's distinctive signal: 'EV matters but feel matters more — if the numbers say yes but gut says no, trust' — drives their specific stance."
+    }
+  ]
+}

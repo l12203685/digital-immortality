@@ -1,1 +1,1 @@
-PRIORITY: Branch '4.1/Samuel-organism' — calibration DM ready (docs/samuel_async_calibration_dm.md), collision at 27% CRITICAL REGRESSION. Human-gated send. Prep work: verify DM file is current, run pre-send organism audit. Next agent-actionable: update samuel_dna.md with Edward's 416-MD expansion delta and re-run collision to quantify drift magnitude before human send.
+PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.

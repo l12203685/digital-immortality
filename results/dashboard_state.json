@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-10T03:47+08",
+  "updated": "2026-04-10T03:56+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "daemon_next_priority updated: `2.2/MD-deep-pass-201709` — next agent-actionab..."
+      "text": "daemon_next_priority updated → `4.1/Samuel-organism`"
     },
     {
       "time": "just now",
-      "text": "| 3.1 Distillation | +3 insights → 206 total |"
+      "text": "B4.1 Samuel — Collision re-run: 6/22 AGREE (27%) — regression stable since cy..."
     },
     {
       "time": "just now",
-      "text": "| 1.1 Trading | BTC=$72,116.21 (↑$240.20); regime=MIXED; DualMA_10_30=SHORT s..."
+      "text": "B2.2 JSONL — 201610/11/12 verified (165/105/310 entries, 0 Edward msgs). JSON..."
     },
     {
       "time": "just now",
-      "text": "| 6 存活/cold-start | 33/33 deterministic ALIGNED ✅ — 49th consecutive clean cy..."
+      "text": "B1 Trading — tick 316, BTC=$72,155, regime=MIXED, all 15 active=FLAT, total_p..."
     },
     {
       "time": "just now",
-      "text": "|--------|--------|"
+      "text": "B6 存活/cold-start — 33/33 ALIGNED, 50th consecutive clean cycle ✅ daemon_next_..."
     }
   ],
   "stats": {
