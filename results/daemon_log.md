@@ -6337,3 +6337,22 @@ Cycle 234 complete. Committed `3b027b8`.
 | **B3.1** | 3 distillation insights (total 29): conversion fails at G0 not G2; tick-105 concentration risk; SOP series was a closed loop without a revenue gate. |
 
 **Critical path unchanged:** Edward posts SOP #01 on X → DMs arrive → SOP #70 G0 activates → first sale. Everything is pre-committed. Deadline: 2026-07-07 (~89 days).
+
+## Cycle 23 — 2026-04-09 08:04:06 UTC
+
+Cycle 235 complete. 3 branches pushed:
+
+**Branch 1.1 (Trading)**
+- Tick 106: BTC=$70,981.17 (↑$11 from tick 105), DualMA=SHORT×106, regime=MIXED, 857 log entries
+- Concentration event diagnosed: 106 consecutive ticks 1 strategy → G1 audit → CONCENTRATION_EXPECTED (RSI filter correctly blocking in MIXED)
+
+**Branch 7 (SOP #71)**
+- Written: Multi-Strategy Regime Activation Protocol
+- Addresses the cycle 234 distillation insight (concentration risk / single-strategy dependency)
+- G0 regime diagnosis → G1 single-strategy audit → G2 activation gate (5 conditions) → G3 concentration protocol (100-tick threshold) → G4 rotation protocol (50% sizing) → G5 revenue bridge
+- Self-test uses actual tick-106 data; verdict = CONCENTRATION_EXPECTED
+- Posting queue extended to Aug 23; SOP #01~#71 COMPLETE
+
+**Branch 6 (存活/cold-start)**
+- 33/33 ALIGNED ✅ — 16+ consecutive cycles clean
+- daemon_next_priority '存活/cold-start' TOUCHED
