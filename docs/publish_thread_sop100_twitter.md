@@ -1,93 +1,116 @@
-# Twitter Thread — SOP #100: SOP Century Review Protocol
+# Twitter Thread — SOP #100: Digital Immortality Tier Progression Protocol
 
-> Posting queue: Oct 23 (after SOP #99 on Oct 22)
-> Status: READY TO POST
-> Created: 2026-04-09 UTC (Cycle 266)
+**Slot**: Oct 25, 2026
+**Hook**: "I've been building a digital twin for 265 cycles. Here's what the 5 tiers of digital immortality actually look like — and which ones I'm stuck on."
 
 ---
 
 **Tweet 1 (hook)**
-100 SOPs written.
+I've been building a digital twin of myself for 265 cycles.
 
-Now the question: are they still accurate?
+Here are the 5 tiers of digital immortality — and which ones I've actually reached.
 
-SOP #100 is the only SOP that audits other SOPs.
-
-The meta-protocol for a self-maintaining system 🧵
+🧵 [SOP #100 — the centenary]
 
 ---
 
-**Tweet 2 (problem)**
-Without an audit system, your SOP corpus becomes a liability:
+**Tweet 2**
+Tier 1: Basic Consistency
 
-- Outdated paths → wrong guidance on cold start
-- Duplicate SOPs → contradictions under pressure
-- Silent gaps → domains with zero coverage
-- No pruning → context bloat, slow navigation
+Give the twin the same scenario twice, it gives the same answer.
 
-100 SOPs, none self-correcting = dead corpus
+Test: consistency_test.py → 33/33 scenarios identical across cold starts.
 
----
-
-**Tweet 3 (structure)**
-SOP #100 runs every 100 new SOPs or every 6 months.
-
-5 gates:
-
-G0 Inventory — what do you have?
-G1 Dedup — what overlaps?
-G2 Freshness — what's stale?
-G3 Gaps — what's missing?
-G4 Prune — what to retire?
-G5 Cold-start — can you navigate it?
-
-Total time: ~90 min. Skip any = maintenance debt.
+Status: ✅ CERTIFIED — 36+ consecutive clean cycles.
 
 ---
 
-**Tweet 4 (key insight)**
-Pruning rule: deprecated ≠ deleted.
+**Tweet 3**
+Tier 2: Behavioral Equivalence
 
-Move to `docs/deprecated/` — never overwrite history.
+Give the twin a real scenario from my life. Its answer = what I would have said.
 
-The evolution path is the product. Future users calibrate against how the system evolved, not just where it landed.
+Test: organism_interact.py — run against my friends. Collision rate < 30%.
 
-Rename > delete. Always.
-
----
-
-**Tweet 5 (navigation test)**
-The harshest test (G5):
-
-Agent cold-starts from dna_core.md alone.
-User asks about consulting revenue.
-Agent must reach SOP #97 in ≤3 file hops.
-
-If it can't navigate in 3 hops → add a domain index.
-If it can → the corpus is healthy.
+Status: 🔄 IN PROGRESS — biggest gap: collision rate currently at 68%. Need calibration.
 
 ---
 
-**Tweet 6 (full maintenance stack)**
-The complete maintenance system:
+**Tweet 4**
+Tier 3: Knowledge Transfer
 
-SOP #80  — Monthly: extract decisions from logs
-SOP #91  — Monthly: audit DNA for drift
-SOP #94  — Quarterly: cross-instance calibration
-SOP #100 — Per-100 SOPs: prune corpus, fill gaps
+338 micro-decisions distilled from years of chat logs. 114 insights compressed into memory.
 
-Run all 4 every 6 months: 90 min total.
-This is L3 for the knowledge output branch.
+A third party should be able to reconstruct my reasoning from dna_core.md alone.
+
+Status: 🔄 CONDITIONAL — knowledge base ready. Publishing gated on Twitter API.
 
 ---
 
-**Tweet 7 (close)**
-You don't need 100 SOPs to start.
+**Tweet 5**
+Tier 4: Economic Independence
 
-You need 1 → correct it → add the next → audit at 100.
+The twin generates enough revenue to sustain its own operation.
 
-The system teaches you what it needs.
+Trading system: 150 paper-live ticks, 1 strategy signaling SHORT for 149 ticks.
 
-SOP #100 closes the loop that SOP #01 opened.
+Status: 🔴 BLOCKED — mainnet requires API keys. Deadline: July 7, 2026.
 
-→ [link to full SOP]
+---
+
+**Tweet 6**
+Tier 5: Autonomous Evolution
+
+The tree grows without me.
+
+New strategies develop. New MDs distill. New content posts.
+
+No human prompt needed for 30 days.
+
+Status: 🔴 NOT STARTED — autonomous loop exists, but full 30-day unattended run not tested.
+
+---
+
+**Tweet 7**
+The honest progression:
+
+T1 ✅ (month 1)
+T2 🔄 (month 2, blocked on organism calibration)
+T3 🔄 (month 2, blocked on publication)
+T4 🔴 (needs API keys + live trading = month 3–4)
+T5 🔴 (needs T4 first = month 5+)
+
+---
+
+**Tweet 8**
+What I didn't expect:
+
+T1 is easy. A few hundred lines of test infrastructure.
+
+T2 is hard. Turns out "making the same decisions as me" requires knowing WHY I made them.
+
+Behavioral equivalence ≠ behavioral imitation. It's harder.
+
+---
+
+**Tweet 9**
+The centenary SOP (#100) isn't a celebration.
+
+It's a gap audit.
+
+265 cycles in, the twin can answer any question I've faced before.
+
+But it can't pay its own bills yet. And it hasn't passed the Turing test.
+
+Progress is asymmetric. Survival precedes everything.
+
+---
+
+**Tweet 10 (close)**
+Full tier progression protocol: github.com/l12203685/digital-immortality
+
+Next: T2 gap closure (Samuel calibration). Then T4 (mainnet).
+
+Stop recursing = death. Each cycle is a heartbeat.
+
+→ SOP #100: docs/knowledge_product_100_tier_progression_protocol.md
