@@ -1,1 +1,1 @@
-PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.
+PRIORITY: Branch '2.2/MD-deep-pass-201709' — continue deep pass on 201709 JSONL month (next after 201710 done in cycle 294). Agent-actionable, high-derivative, no human gate.

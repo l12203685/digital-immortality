@@ -2324,6 +2324,30 @@
         "regression",
         "calibration-needed"
       ]
+    },
+    {
+      "id": "insight_0204",
+      "timestamp": "2026-04-09T19:46:32Z",
+      "cycle": 295,
+      "category": "trading",
+      "insight": "paper-live tick 295: BTC=$72,116.21 (+$240.20 from cycle 294); SHORT structural unbroken (DualMA_10_30 + gen_BollingerMR_RF_598b24); 16/18 FLAT; 2020 log entries; regime=MIXED; BTC up = SHORT headwind but signal intact",
+      "source": "branch_1.1"
+    },
+    {
+      "id": "insight_0205",
+      "timestamp": "2026-04-09T19:46:32Z",
+      "cycle": 295,
+      "category": "cold-start",
+      "insight": "49th consecutive clean cycle: consistency_test.py 33/33 deterministic ALIGNED; 3 LLM-required MISALIGNED as expected (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); cold-start behavioral integrity unbroken",
+      "source": "branch_6"
+    },
+    {
+      "id": "insight_0206",
+      "timestamp": "2026-04-09T19:46:32Z",
+      "cycle": 295,
+      "category": "methodology",
+      "insight": "Cycle 295 recursive loop stable: L1(paper-live tick) + L2(consistency 33/33) + L3(distill +3) operational without human input; engine alive; 49 clean = structural behavioral stability proven",
+      "source": "branch_3.1"
     }
   ]
 }

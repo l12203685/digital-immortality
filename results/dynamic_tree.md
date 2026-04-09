@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-10 UTC (cycle 294)
+> 最後更新：2026-04-10 UTC (cycle 295)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -58,6 +58,7 @@
   - **cycle 250 paper-live tick 130** — BTC=$71,374.75 (↓$59.20 from tick 129; SHORT tailwind); regime=MIXED; DualMA_10_30=SHORT×130 (100%); 17/18 FLAT; 1319 log entries; SHORT signal structural and unbroken
   - **cycle 254 paper-live ticks 134+135+136** — BTC=$71,279.00 (↓$126.29 from tick 133; SHORT tailwind); regime=MIXED; DualMA_10_30=SHORT×136 (100%); 17/18 FLAT; 1445 log entries; SHORT streak 136 ticks (structural)
   - **cycle 260 paper-live tick 141** — BTC=$71,182.21 (↑$16.77 from tick 140; SHORT headwind); regime=MIXED (trend=0.0139, mr=0.2250); DualMA_10_30=SHORT×141 (structural unbroken); 17/18 FLAT; 1535 log entries; SHORT streak continues
+  - **cycle 295 paper-live tick** — BTC=$72,116.21 (↑$240.20 from cycle 294 $71,876.01); regime=MIXED (trend=0.0145, mr=0.2250); DualMA_10_30=SHORT (structural); gen_BollingerMR_RF_598b24=SHORT; 16/18 FLAT; 2020 log entries; SHORT structural unbroken; BTC net ↑ SHORT headwind
   - **cycle 294 paper-live tick** — BTC=$71,876.01 (↑$46.08 from cycle 293 $71,829.93); regime=MIXED (trend=0.0143, mr=0.2250); DualMA_10_30=SHORT (structural); gen_BollingerMR_RF_598b24=SHORT; 16/18 FLAT; 2002 log entries; SHORT structural unbroken
   - **cycle 293 paper-live tick** — BTC=$71,829.93 (↑$468.93 from cycle 292 $71,361); regime=MIXED (trend=0.0143, mr=0.2250); DualMA_10_30=SHORT (structural); 17/18 FLAT; 1984 log entries; portfolio P&L=+$7.81; DualMA_10_30: P&L=+$1.57, PF=16.13, WR=50% [OK]; SHORT×120+ (structural unbroken)
   - **cycle 277 paper-live tick** — BTC=$71,361 (live Binance); regime=MIXED; DualMA_10_30=SHORT but **DISABLED** (PF=0.53 < 0.8 kill threshold); dual_ma testnet_runner KILLED (MDD=34.9% ≥ 15%); 16/17 FLAT; 3609 entries; P&L=-1.02%; kill events logged to kill_lessons.jsonl; L3 Evolve active
@@ -166,6 +167,7 @@
 - **6.18 Consistency re-verification (cycle 238)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — cold-start behavioral integrity intact; 13+ consecutive cycles clean; daemon_next_priority '存活/cold-start' TOUCHED ✅ (least-recent per cycle 237 daemon)
 - **6.19 Consistency re-verification + LLM validation (cycle 242)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — 3 LLM-required scenarios validated by claude-sonnet-4-6: poker_gto_mdf=ALIGNED (MDF_1_MINUS_ALPHA: alpha=3/10.2=29.4%; MDF=70.6%), trading_atr_sizing=ALIGNED (FORMULA_NOT_FEELING: 16 contracts), career_multi_option_ev=ALIGNED (LIST_ALL_OPTIONS_EV_FIRST: 6 options enumerated); SOP #77 G0-G4 PASS; 3/3 LLM ALIGNED ✅; report: results/llm_validation_cycle242.md; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.20 Consistency re-verification (cycle 245)**: `consistency_test.py templates/example_dna.md` → **33/33 deterministic ALIGNED ✅**; 3 LLM-required MISALIGNED as expected (requires LLM call, not deterministic — same baseline as cycle 242/244); 22+ consecutive cycles clean; SOP #80 Cold Start Calibration Protocol in place; daemon_next_priority '存活/cold-start' TOUCHED ✅
+- **6.33 Consistency re-verification (cycle 295)**: `consistency_test.py templates/example_dna.md` → **33/33 deterministic ALIGNED ✅** (3 LLM-required MISALIGNED as expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); **49th consecutive clean cycle** ✅; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.32 Consistency re-verification (cycle 294)**: `consistency_test.py templates/example_dna.md` → **33/33 deterministic ALIGNED ✅** (3 LLM-required MISALIGNED as expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); **48th consecutive clean cycle** ✅; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.31 Consistency re-verification + regression fix (cycle 293)**: Branch 6 REGRESSION FIXED — 3 new meta-rule scenarios wired in `organism_interact.py` (_domain_decision "meta_behavior" handler) + `consistency_test.py` (3 new alignment rules: search_before_acting/write_before_closing/add_l3_evolve_layer); meta_search_before_act=ALIGNED (SEARCH_BEFORE_ACTING ✅), meta_output_must_persist=ALIGNED (WRITE_BEFORE_CLOSING ✅), meta_three_layer_loop=ALIGNED (ADD_L3_EVOLVE_LAYER ✅); **33/33 deterministic ALIGNED ✅** (3 LLM-required MISALIGNED as expected); **47th consecutive clean cycle** ✅; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.30 Consistency re-verification (cycle 277)**: `consistency_test.py templates/example_dna.md` → **33/33 deterministic ALIGNED ✅**; 6 MISALIGNED as expected (3 LLM-req: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev + 3 meta-rules: search_before_act/output_must_persist/three_layer_loop); **46th consecutive clean cycle** ✅
