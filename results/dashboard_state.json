@@ -64,41 +64,41 @@
   ],
   "activity": [
     {
-      "time": "just now",
-      "text": "Critical path unchanged: Edward posts SOP #01 on X → audience starts → G2 fir..."
+      "time": "10min ago",
+      "text": "Next priority: `社交圈/samuel-session` (samuel async DM still pending — `docs/sa..."
     },
     {
-      "time": "just now",
-      "text": "| 6 | Consistency re-verification | 33/33 ALIGNED, 11+ consecutive cycles cle..."
+      "time": "10min ago",
+      "text": "- Single blocker confirmed: first post not sent"
     },
     {
-      "time": "just now",
-      "text": "| 7 | SOP #66 Distribution Activation Protocol | G0→G1 activation operational..."
+      "time": "10min ago",
+      "text": "- `tools/engagement_check.py` run: 0 posts logged, G3 kill conditions inactive"
     },
     {
-      "time": "just now",
-      "text": "| 1.1 | paper-live tick 100 (milestone) | BTC=$71,089.18, P&L=+$0.588, SHORT×..."
+      "time": "10min ago",
+      "text": "Branch 5.8 (engagement_check)"
     },
     {
-      "time": "just now",
-      "text": "|--------|------|--------|"
+      "time": "10min ago",
+      "text": "- daemon_next_priority '存活/cold-start' TOUCHED ✅"
     }
   ],
   "stats": {
     "daemon_cycles": 208,
     "total_mds": 330,
-    "dna_core_lines": 87
+    "dna_core_lines": 426
   },
   "health": {
     "ci_wired": false,
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71089.18,
+    "paper_live_price": 71032.45,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T07:10",
-    "paper_tick": 94,
-    "paper_pnl": "+$0.795",
+    "paper_live_ts": "2026-04-09T07:02",
+    "paper_tick": 99,
+    "paper_pnl": "+$0.668",
     "status": "ok"
   }
 }

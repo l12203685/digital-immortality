@@ -1,3 +1,4 @@
-# schema: {"timestamp_utc": "ISO8601", "event_type": "POST|DM|CALIBRATION|WEEKLY_REVIEW", "platform": "X|Discord|Newsletter|Gumroad", "detail": "brief description of the event", "derivative_metric": "positive|neutral|negative|correction"}
-# created: 2026-04-09 UTC | populated: when first post is live (G0 state: PRE_LAUNCH → SEEDING)
-# append entries chronologically — one JSON object per line below this comment
+# schema: {"ts": "ISO8601Z", "type": "POST|DM|CALIBRATION|REVENUE|MAINNET_GO|G4_WEEKLY_REVIEW|SYSTEM_BOOTSTRAP|KILL_CONDITION", "content": "brief", "signal": "positive|neutral|negative|correction"}
+# created: 2026-04-09 UTC | state machine: PRE_LAUNCH → SEEDING → MONETIZING → SUSTAINABLE
+# append entries below, one JSON per line. Never delete. Never backfill.
+{"ts": "2026-04-09T07:10:00Z", "type": "SYSTEM_BOOTSTRAP", "content": "G0 state machine initialized. Loop status: PRE_LAUNCH. Posts sent: 0. DMs received: 0. Revenue: $0. Mainnet blocked — API keys not set.", "signal": "neutral"}

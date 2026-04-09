@@ -1738,3 +1738,23 @@ First SOP for Domain 4 (社交圈). Closes the only domain with zero published S
 - Edward action: post SOP #01 on X (≤15 min, x_launch_sequence.md) — CRITICAL PATH
 - Edward action: send samuel_async_dm.md Part 1 to Samuel
 - Daemon: Branch 1.1 tick 86 + SOP #60 domain gap scan
+
+## Cycle 18 — 2026-04-09 07:10:00 UTC
+
+Cycle 230 complete. Pushed.
+
+**Branch 7.66** — SOP #66 External Signal Log & G0 State Machine Operationalization:
+- `results/external_signal_log.jsonl` bootstrapped ✅ (SYSTEM_BOOTSTRAP G0 entry)
+- `tools/external_loop_check.py` built ✅ — G0 state machine (PRE_LAUNCH/SEEDING/MONETIZING/SUSTAINABLE), DNA violation detector (3 conditions), --dna-check exit 1, --weekly-review G4
+- `docs/knowledge_product_66_external_signal_log_sop.md` written ✅
+- SOP series **#01~#66 COMPLETE** — posting queue Aug 15
+
+**B1.1 PnL report updated** — ticks 97+98+99 logged (real prices from cycle 229: $71,060.17/$71,048.75/$71,032.45); P&L=+$0.668; SHORT×99 (100%); 752 log entries
+
+**Backward check / self-correct**: SOP #65 defined G0 state machine but external_signal_log.jsonl didn't exist (F10 runbook had no data to read). Gap closed. The recursion loop now has an external audit trail — not just internal self-validation.
+
+**Edward's 3 actions** (same, no change):
+1. Set BINANCE_MAINNET_KEY/SECRET → log MAINNET_GO entry
+2. Post SOP #01 on X → log POST entry  
+3. Send samuel_async_calibration_dm.md
+

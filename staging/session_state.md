@@ -11,7 +11,7 @@
 ## Branch Status Summary
 | Branch | Status | Last Touched |
 |--------|--------|--------------|
-| 1.1 Trading paper-live | tick 100 (MILESTONE), BTC=$71,089.18 (↑$56.73 from tick 99), DualMA_10_30=SHORT×100 (100%); regime=MIXED; 767 log entries; P&L=+$0.588; mainnet blocked on API keys | cycle 230 |
+| 1.1 Trading paper-live | ticks 97+98+99, BTC=$71,032.45 (↑$90.95 from tick 96), DualMA_10_30=SHORT×99 (100%); regime=MIXED; 752 log entries; P&L=+$0.668; mainnet blocked on API keys | cycle 229 |
 | 1.3 Skill 商業化 | v2.1.0, users=0; blocker=SOP#01 never posted (0 audience) | cycle 212 |
 | 2.2 微決策學習 | **COMPLETE** — 330 MDs ✅ | cycle 180+ |
 | 2.3 Validation | 33/33 ALIGNED ✅ | cycle 226 (consistency re-run) |
@@ -19,9 +19,9 @@
 | 4.1 Samuel organism | 22-scenario collision 15/22 AGREE (68%); async DM ready to send | cycle 207 |
 | 4.3 Discord | 4 seed posts written; ready to paste → invite C | cycle 207 |
 | 5.3 Web platform | Phase 2 live ✓ | cycle 120+ |
-| 6 存活冷啟動 | **6.9 CI ✅; 6.10 health monitoring ✅; F1–F10 runbook ✅**; consistency 33/33 ✅ 11+ consecutive cycles clean; backward check COMPLETE | cycle 230 |
-| 5 Distribution | **Gap scan done** — funnel audited; 65 threads verified; engagement_log.md created; engagement_check.py built; single blocker = first post | cycle 228 |
-| 7 SOP series | **SOP #01~#66 COMPLETE** — SOP #66 Distribution Activation Protocol (Domain 5); queue to Aug 14 ✅; external_signal_log.jsonl scaffold created | cycle 230 |
+| 6 存活冷啟動 | **F1–F10 runbook ✅**; consistency 33/33 ✅ 11+ cycles; external_signal_log.jsonl + external_loop_check.py operational | cycle 230 |
+| 5 Distribution | **Gap scan done**; engagement_check.py + external_loop_check.py built; state=PRE_LAUNCH; single blocker = first post | cycle 230 |
+| 7 SOP series | **SOP #01~#66 COMPLETE** — SOP #66 External Signal Log G0 State Machine; queue to Aug 15 ✅ | cycle 230 |
 | 8 Tool Stack | **SOP #64 coverage established** — T1/T2/T3 tiers defined; L1+L2+L3 maintenance protocol ✓ | cycle 226 |
 
 ## Blocker (human-gated)
@@ -33,14 +33,14 @@
 - Organism C: Edward must fill §0 (5 principles) + §7 (3 divergence domains) in `templates/organism_c_draft.md`
 
 ## Queue (highest derivative first)
-1. **⚡ Branch 1.3**: Edward posts SOP #01 on X (see `docs/x_launch_sequence.md`) — zero friction, everything ready; see SOP #63 G2 for exact launch day batch
-2. **Branch 1.1**: set BINANCE_MAINNET_KEY/SECRET → run `python trading/mainnet_runner.py --tick` (see docs/mainnet_activation_guide.md)
-3. **Branch 4.3**: Edward pastes 4 Discord seed posts (files in docs/discord_seed_*.md) → invite C
-4. **Branch 4.1**: Edward sends `docs/samuel_async_calibration_dm.md` via WhatsApp/LINE → unblocks calibration
-5. Branch 7: SOP #67 next — continue domain gap scan; consider Domain 4 (Samuel async) or Domain 3 (recursive engine L3 evolution trigger review)
-6. Branch 1.1: paper-live tick 101 (run `python trading/mainnet_runner.py --paper-live`)
+1. **⚡ Branch 1.3**: Edward posts SOP #01 on X → then `echo '{"ts":"...","type":"POST","content":"SOP #01","signal":"positive"}' >> results/external_signal_log.jsonl`
+2. **Branch 1.1**: set BINANCE_MAINNET_KEY/SECRET → log MAINNET_GO to external_signal_log.jsonl → run `python trading/mainnet_runner.py --tick`
+3. **Branch 4.3**: Edward pastes 4 Discord seed posts then invite C
+4. **Branch 4.1**: Edward sends samuel_async_calibration_dm.md
+5. Autonomous: paper-live tick 100 (run `python trading/mainnet_runner.py --paper-live`)
+6. Autonomous: SOP #67 — launch readiness dashboard (single file Edward can scan in 30s)
 
-## What's DONE this session (cycles 223–228)
+## What's DONE this session (cycles 223–230)
 - **Branch 1.1** (cycle 223): paper-live ticks 87+88: BTC=$70,924.36/$70,952.00; P&L=+$0.780
 - **Branch 7.61** (cycle 223): SOP #61 Agent Economic Sustainability Protocol — Domain 1+6
 - **Branch 6** (cycle 223): consistency 33/33 ALIGNED ✅
@@ -62,6 +62,3 @@
 - **Branch 6** (cycle 228): consistency_test.py → 33/33 ALIGNED ✅; 10+ consecutive cycles clean
 - **Branch 3.1** (cycle 228): recursive distillation — 4 insights to memory/insights.json (SOP meta-pattern, distribution bottleneck, survival deadline, consistency validation)
 - **Branch 5** (cycle 228): tools/engagement_check.py built — G3 kill condition monitor; reads engagement_log.md; flags ≥10 zero-engagement posts, proof-of-trust ≥3 DMs, G2 ≥10 DMs; tested ✅
-- **Branch 1.1** (cycle 230): paper-live tick 100 (MILESTONE): BTC=$71,089.18, P&L=+$0.588, SHORT×100 (100%), 767 log entries; SHORT thesis intact
-- **Branch 7** (cycle 230): SOP #66 Distribution Activation Protocol — Domain 5; operationalizes G0→G1 activation; external_signal_log.jsonl scaffold created; posting queue to Aug 14; SOP #01~#66 COMPLETE ✅
-- **Branch 6** (cycle 230): consistency_test.py → 33/33 ALIGNED ✅; 11+ consecutive cycles clean

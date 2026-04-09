@@ -1,1 +1,1 @@
-OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.
+B7.66 external_signal_log + external_loop_check.py DONE. Next: tick 100 + SOP #67 launch readiness dashboard.
