@@ -5469,3 +5469,23 @@ Branch 1.1 — tick 50: BTC=$70,649.77, SHORT×50 (100%), P&L **+$1.20 (+1.20%)*
 BTC broke below the prior ATH price level; MFE/MAE ratio 0.90x (improving). 50 consecutive SHORT, regime bearish.
 
 Blockers unchanged (human-gated): mainnet API keys OR post SOP #01 on X.
+
+## Cycle 187 — 2026-04-09T09:20 UTC
+
+**Branch 3.1** — staging staleness guard activated.
+
+- next_input.md was 26 cycles stale (Cycle 160 → current 186+); refreshed.
+- Current state written: tick 51 / BTC=$70,609 / SOP #01~#37 / 330 MDs / 31/33 ALIGNED.
+- Staleness threshold established: gap >10 cycles → must refresh before proceeding.
+- Branch 1.1 paper-live: tick 51, BTC=$70,609.53, SHORT×51 (100%), P&L ATH ~+$1.20.
+- Next: Branch 2.3 (LLM run on 2 social scenarios → close 33/33 gap).
+
+## Cycle 187 — 2026-04-09 09:20 UTC
+
+**Cycle 187 done.**
+
+Branch 3.1 — staleness guard: next_input.md refreshed (was 26 cycles stale). Pattern: gap >10 cycles = must refresh.
+
+Branch 1.1 — tick 51: BTC=$70,609.53, SHORT×51, P&L ATH ~+$1.20.
+
+Next blocker: Edward posts SOP #01 (human-gated) OR provides mainnet API keys.

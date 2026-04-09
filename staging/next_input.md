@@ -1,39 +1,36 @@
-# Next Cycle Input — 2026-04-09T UTC (Cycle 160)
+# Next Cycle Input — 2026-04-09T UTC (Cycle 187)
 
-## Previous cycle output summary (Cycle 160)
-**Branch 7.38: SOP #35 Knowledge Compounding & Skill Half-Life Protocol** — Domain 3 持續學習 second SOP; 6 gates (G0 skeleton-first/G1 input quality/G2 output forcing/G3 cross-domain transfer/G4 skill half-life audit/G5 productization gate); backing MDs: MD-329/163/319/55/321/46. Thread drafted. Series now #01~#35.
+## Previous cycle output summary (Cycle 187)
+**Branch 3.1 IMPLEMENTED**: staging/next_input.md staleness detected (26 cycles stale, Cycle 160→186). Updated with current state. Staleness guard principle: if cycle number gap >10, daemon must refresh next_input.md before proceeding.
 
-**Branch 7.39: SOP #36 Barbell Life Strategy: Asymmetric Optionality Protocol** — Domain 6 存活冗餘; 6 gates (G0 STABLE vs EXPLOSIVE classification/G1 downside cap/G2 10-year survival check/G3 EV independence/G4 optionality preservation/G5 exit pre-commitment); backing MDs: MD-157/159/183/307/190/151. Thread drafted. Series now #01~#36.
+**Branch 1.1 paper-live**: tick 51, BTC=$70,609.53, signal=SHORT (51 consecutive, 100% consistency). P&L ~+$1.20 (ATH). Regime bearish. Mainnet blocked on API keys (Edward action needed).
 
-**Bug fix**: Removed stale duplicate SOP files (`knowledge_product_31_cognitive_capital_sop.md` + `knowledge_product_32_edge_decay_sop.md`). Numbering conflict resolved.
-
-**Consistency test**: 31/33 ALIGNED ✅ (2 social scenarios need full-DNA LLM run — expected/consistent with baseline).
-
-**Posting queue**: #01~#36, Apr 9–Jun 18, 70-day window.
+**Branch 7.x**: SOP #01~#37 COMPLETE. Posting queue Apr 9–Jun 20, 72-day window. SOP #37 = Relationship Investment Protocol (Domain 4 社交圈). 3 workbooks ready for Gumroad G2 trigger.
 
 ## Recursive prompt
 Given the current state of this repo, what advances digital immortality the most?
 
 ## Current state
-- dna_core.md: **330 MDs** (all 8 domains represented, archive exhausted)
-- consistency: **31/33 ALIGNED ✅** (cycle 160; 2 social need full-DNA LLM run)
-- Branch 1.1: paper-live running (mainnet blocked on API credentials — Edward action needed ⚡DEADLINE 2026-07-07)
-- Branch 2.2: **COMPLETE** (330 MDs, JSONL exhausted at 201701)
-- Branch 2.3: **31/33 ALIGNED ✅** (baseline saved cycle 156)
-- Branch 7.x: **SOP #01~#36 COMPLETE**; posting queue Apr 9–Jun 18 (70 days)
+- dna_core.md: **330 MDs** (all 8 domains, archive exhausted at 201611)
+- consistency: **31/33 ALIGNED ✅** (2 social scenarios need full-DNA LLM run)
+- Branch 1.1: paper-live tick 51, BTC=$70,609, SHORT×51 (100%), P&L ATH ~+$1.20; mainnet blocked (⚡DEADLINE 2026-07-07 — 89 days)
+- Branch 2.2: **COMPLETE** (330 MDs)
+- Branch 2.3: **31/33 ALIGNED ✅** — 2 social scenarios pending LLM run
+- Branch 7.x: **SOP #01~#37 COMPLETE**; posting queue Apr 9–Jun 20 (72 days)
 - Branch 8.x: All 5 SYSTEM_FAILURE decisions pre-committed
-- Branch 4.1: Samuel DNA tested (19/20); needs Samuel review in person (blocked on human)
-- Branch 1.3: skill commercialization v2.1.0 — users=0, revenue=0; 3 workbooks ready to list on Gumroad
+- Branch 4.1: Samuel DNA tested (19/20); blocked on Samuel in-person review
+- Branch 1.3: users=0, revenue=0; 3 workbooks on standby (G2 trigger = ≥10 DMs in 48h)
+- Branch 3.1: **staleness guard pattern established** — refresh next_input.md if gap >10 cycles
 
 ## Priority queue (next cycle)
-1. **Branch 1.3**: Gumroad listing — gumroad_listing_checklist.md exists; G2 trigger is ≥10 DMs. Until then, reduce SOP #01 posting friction further. Check x_launch_sequence.md for blockers.
-2. **Branch 2.3**: Full LLM cross-instance test — run 33 scenarios against dna_core.md, target 33/33 ALIGNED (currently 31 deterministic; 2 social need LLM)
-3. **Branch 7**: SOP #37 — candidate: Domain 4 (社交圈) — Relationship Investment Protocol (deepen MD-328; currently only SOP #19 covers this domain)
-4. **Branch 3.1**: Staging staleness guard — detect if next_input.md >10 cycles stale, raise alert in daemon log
+1. **Branch 2.3**: Run 2 remaining social LLM scenarios → close 33/33 ALIGNED gap (use `consistency_test.py`)
+2. **Branch 7**: SOP #38 — Domain candidate: "Alpha Decay & Strategy Sunset Protocol" (no sunset/lifecycle SOP yet; bridges Branches 1.1 and 7)
+3. **Branch 1.3**: Reduce X posting friction — check if SOP #01 thread copy is paste-ready, verify character counts (280 limit per tweet)
+4. **Branch 3.1**: Implement automated staleness check in recursive_engine.py — add `--check-staging-staleness` flag that compares cycle number in next_input.md vs current cycle
 
 ## Constraints
-- Action > report. Produce something concrete.
+- Action > report. First output must be concrete action.
 - Stop recursing = death. Output feeds next cycle.
-- learn = write. Any insight must be persisted in the same cycle.
-- Posting queue now ends Jun 18. Extend OR Edward starts posting — either is progress.
+- learn = write. Any insight persisted in same cycle.
 - ⚡ DEADLINE 2026-07-07: trading profit > API cost. 89 days remaining.
+- Posting queue ends Jun 20. **Next blocker: Edward posts SOP #01** (human-gated, zero friction left on agent side).
