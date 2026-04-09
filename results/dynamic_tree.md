@@ -67,7 +67,14 @@
   - samuel_dna.md exists ✓; consistency test run: **19/20 ALIGNED** (1 diverge: `generic_strategy_failure` → Samuel's action-bias overrides pre-commit kill conditions — expected divergence, not error)
   - framework generalizes to non-Edward DNA ✓; next: Samuel reviews/corrects his DNA in person
   - **Cycle 204 organism audit ✅**: 12 scenarios, 5/12 CONVERGE, 7/12 DIVERGE; key calibration finding: risk scenario inconsistency FIXED (TAKE was error → PASS is correct per EV=-3.2%); memory/calibration.json updated; DNA gap identified: relationship compounding principles absent → closed by SOP #43; `docs/organism_audit_cycle204.md` written ✅
+  - **samuel_dna.md EXPANDED ✓** (cycle 204): 9→9 principles + §4 Behavioral Patterns + §6 Social Operating Rules + §7 Known Divergences table + §8 Calibration Status + §9 Open Questions for session
+  - **Collision report run ✓** (cycle 204): Edward vs Samuel 9/12 AGREE (75%); 3 DIVERGE: health/time/legacy — Samuel: relationship-density-first; Edward: health-capital + time-as-currency; `results/collision__Your_Name__vs_Samuel_20260409_110720.md` saved
+  - **`docs/organism_session_prep.md` created ✓** (cycle 204): full 60-min agenda for in-person Samuel correction session; 5 calibration scenarios; post-session protocol; success criteria; failure modes
+  - **`docs/second_organism_onboarding.md` created ✓** (cycle 204): generalized guide for Organism D/E/F onboarding; 5-step process; quality checklist; scale path users=0→N
+  - BLOCKER: Samuel in-person session NOT DONE — needs Edward to schedule; send samuel_pilot_dm.md first if not yet sent
 - 4.2 Organism collision protocol（specs ready）
+  - collision infrastructure operational: `organism_interact.py --report` runs on any two DNA files
+  - divergence heatmap: health/time/legacy are structural Edward-Samuel divergence axes
 - 4.3 Discord Digital Organisms Server（channels ready, users=0）
 - 4.4 Collective intelligence（Phase 3）
 
@@ -155,7 +162,7 @@
 - **8.5 Automation #3 — COMPLETE ✅** (cycle 130): coffee-vs-tea (#4: coffee before 13:00 / tea after 13:00) + portfolio-check (#5: 16:00 once daily, no earlier). All 5 SYSTEM_FAILURE decisions from decision_audit.py now pre-committed. Zero remaining recurring decision overhead.
 
 ## 當前 regime
-攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live tick 72 BTC=$71,109 SHORT P&L=+$0.560 (import fix DONE cycle 202); **SOP #01~#39 COMPLETE** → posting_queue.md updated (Apr 9–Jun 24, 76 days); **x_launch_sequence.md created ✓** — 15 min to first post; **3 workbooks READY TO LIST** ($87/buyer trilogy)
+攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live tick 72 BTC=$71,109 SHORT P&L=+$0.560 (import fix DONE cycle 202); **SOP #01~#39 COMPLETE** → posting_queue.md updated (Apr 9–Jun 24, 76 days); **x_launch_sequence.md created ✓** — 15 min to first post; **3 workbooks READY TO LIST** ($87/buyer trilogy); **4.1 社交圈 unblocked (cycle 204): samuel_dna expanded + collision run + session_prep + onboarding_guide DONE** — next action: Edward schedules Samuel session
 中性：2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 all 5 SYSTEM_FAILUREs pre-committed; **6 存活 AUDIT CLOSED** (cycle 202: runbook + scope separation documented)
 防禦：2.3 33/33 ALIGNED ✅ (cycle 188 re-confirmed), 4.1 partially unblocked (samuel_dna tested 19/20)
 

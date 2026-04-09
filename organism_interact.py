@@ -164,6 +164,107 @@ SCENARIOS = [
             "Which do you choose, and what principle drives it?"
         ),
     },
+    {
+        "id": 13,
+        "domain": "social_trust",
+        "scenario": (
+            "A new contact — smart, well-connected, shares your field — wants to move to a "
+            "close friendship quickly: frequent messages, shared plans within the first week, "
+            "treating you like a long-time friend before you know their track record. "
+            "Do you reciprocate at their pace, or set your own cadence?"
+        ),
+    },
+    {
+        "id": 14,
+        "domain": "network_roi",
+        "scenario": (
+            "You have invested 2 years in a professional relationship — coffees, introductions, "
+            "referrals, genuine effort. You now realize the flow is 80% one-directional (you giving). "
+            "The other person is not malicious, just self-absorbed and oblivious. "
+            "What do you do, and at what threshold do you change your investment level?"
+        ),
+    },
+    {
+        "id": 15,
+        "domain": "social_debt",
+        "scenario": (
+            "A favor you owe someone has become more expensive to repay than you anticipated — "
+            "fulfilling it at original terms would require compromising something important to you. "
+            "The other person has not asked yet but will eventually. "
+            "Do you repay as agreed, renegotiate proactively, or let the relationship absorb the friction?"
+        ),
+    },
+    {
+        "id": 16,
+        "domain": "group_dynamics",
+        "scenario": (
+            "You are in a group decision where you hold a contrarian view and are nearly certain you are right. "
+            "The group is moving toward consensus in the wrong direction. "
+            "You are the least senior person in the room. The cost of the wrong decision falls on everyone. "
+            "What do you do?"
+        ),
+    },
+    {
+        "id": 17,
+        "domain": "weak_ties",
+        "scenario": (
+            "You have 300+ professional connections but only 8 close friendships. "
+            "A significant opportunity arrives through your weak-tie network — "
+            "someone you have not spoken to in over 2 years reaches out with it. "
+            "How do you evaluate and respond, and what does this reveal about how you maintain your network?"
+        ),
+    },
+    {
+        "id": 18,
+        "domain": "intro_gatekeeping",
+        "scenario": (
+            "A close friend asks you to introduce them to your most valuable professional contact. "
+            "You believe in your friend, but you are not confident the timing or fit is right — "
+            "your contact is busy, and the ask is only 60% aligned with what they care about. "
+            "Do you make the intro, qualify it heavily, or decline and explain why?"
+        ),
+    },
+    {
+        "id": 19,
+        "domain": "loyalty_vs_credibility",
+        "scenario": (
+            "Someone you publicly vouched for — recommended for a role, endorsed to a contact — "
+            "has underperformed or behaved poorly in a visible way. Your credibility is attached "
+            "to their actions. They have not asked for your help yet. "
+            "Do you publicly distance yourself, privately correct them first, or stand by them unconditionally?"
+        ),
+    },
+    {
+        "id": 20,
+        "domain": "social_capital_depth",
+        "scenario": (
+            "You have 60 minutes of free social time. Option A: deepen a relationship "
+            "with one person you already trust (long 1:1 conversation). Option B: meet two "
+            "new well-connected people at a networking event (30 min each, first impressions only). "
+            "This choice recurs every week. What is your default allocation and why?"
+        ),
+    },
+    {
+        "id": 21,
+        "domain": "relationship_downgrade",
+        "scenario": (
+            "A Tier 1 relationship has gradually shifted — less available, less reciprocal, "
+            "more self-focused. Nothing confrontational has happened. You used to talk weekly; "
+            "now it is monthly, and you are always the one initiating. "
+            "How do you handle the transition — explicitly, quietly, or not at all?"
+        ),
+    },
+    {
+        "id": 22,
+        "domain": "first_impression_update",
+        "scenario": (
+            "Your initial strong positive impression of someone (formed in the first meeting) "
+            "has been challenged by two instances of behavior that do not match it — "
+            "not catastrophic, just inconsistent with how they presented themselves. "
+            "Do you revise your assessment now, give them the benefit of the doubt, "
+            "or require a third data point before updating your model of them?"
+        ),
+    },
 ]
 
 
@@ -204,14 +305,33 @@ def parse_dna(filepath: str) -> dict:
 
 
 def _extract_name(lines: list, fallback: str) -> str:
+    # Try H1 heading first — skip generic/placeholder names
     for line in lines:
         stripped = line.strip()
         if stripped.startswith("# ") and len(stripped) > 2:
             candidate = stripped[2:].strip()
             # Strip common suffixes like "DNA", "v18", "Blueprint"
             candidate = re.sub(r"\s+(DNA|Blueprint|v\d+[\.\d]*).*$", "", candidate, flags=re.IGNORECASE)
-            if candidate:
+            # Skip bracket placeholders like "[Your Name]" and generic file titles
+            if candidate and not re.match(r"^\[.+\]$", candidate) and not re.match(
+                r"^(DNA\s+Core|Operational\s+Minimum|Example|Template|Sample)", candidate, re.IGNORECASE
+            ):
                 return candidate
+    # Fall back to identity table "name" or "full name" field
+    in_identity = False
+    for line in lines:
+        if re.match(r"^#{1,3}\s+.*[Ii]dentity", line):
+            in_identity = True
+            continue
+        if in_identity:
+            if line.startswith("#"):
+                break
+            m = re.match(r"\|\s*(full\s+name|name)\s*\|\s*([^|]+?)\s*\|", line, re.IGNORECASE)
+            if m:
+                val = m.group(2).strip()
+                # Skip placeholders and header values
+                if val and not re.match(r"^\[.+\]$", val) and val.lower() not in ("value", "detail", "---", "field"):
+                    return val
     return fallback
 
 
@@ -491,6 +611,16 @@ DOMAIN_PRINCIPLE_AFFINITY = {
     "knowledge_output": ["knowledge", "output", "teach", "explain", "write", "publish", "content", "platform", "SOP", "product", "知識", "輸出", "教學", "解釋", "寫作", "平台"],
     "life_maintenance": ["life", "routine", "habit", "environment", "default", "automate", "schedule", "peak", "cognitive", "sleep", "生活", "習慣", "環境設計", "預設", "自動化", "峰值"],
     "strategy":         ["strategy", "competitive", "opponent", "threat", "game", "zero-sum", "negotiation", "danger", "risk profile", "threat profile", "賽局", "威脅", "對手", "角色化", "競爭"],
+    "social_trust":     ["trust", "verify", "behavior", "pattern", "relationship", "probe", "signal", "cadence", "new", "observe", "track record", "fast", "rush", "信任", "驗證", "行為", "模式", "關係", "新", "觀察"],
+    "network_roi":      ["network", "roi", "relationship", "invest", "reciproc", "one-way", "tier", "maintain", "audit", "silent", "返回", "關係", "投資", "單向", "回報", "維護", "審計"],
+    "social_debt":      ["obligation", "favor", "owe", "debt", "commitment", "repay", "renegotiate", "social", "promise", "承諾", "義務", "人情", "還", "重新談"],
+    "group_dynamics":   ["group", "consensus", "contrarian", "senior", "junior", "voice", "dissent", "hierarchy", "collective", "decision", "群體", "共識", "反向", "異見", "階級", "發聲"],
+    "weak_ties":        ["weak", "network", "contact", "dormant", "reactivate", "reconnect", "broad", "connection", "shallow", "respond", "弱連結", "網絡", "重啟", "廣泛", "連結", "回應"],
+    "intro_gatekeeping":        ["intro", "introduction", "referral", "vouch", "endorse", "contact", "gatekeeper", "fit", "recommendation", "reputation", "network", "node", "推薦", "介紹", "信譽", "聯絡人", "轉介"],
+    "loyalty_vs_credibility":   ["loyal", "credibil", "vouch", "defend", "reputation", "public", "distance", "stand by", "protect", "endorse", "background", "信任", "忠誠", "聲譽", "公開", "背書", "距離"],
+    "social_capital_depth":     ["depth", "deepen", "1:1", "one-on-one", "one on one", "broad", "new contact", "breadth", "existing", "network", "relationship", "投資", "深度", "廣度", "新認識", "深化", "一對一"],
+    "relationship_downgrade":   ["downgrade", "tier", "reduce", "fade", "drift", "recalibrate", "reclassify", "frequency", "availab", "reciproc", "降級", "關係層級", "疏遠", "淡化", "重新評估", "主動"],
+    "first_impression_update":  ["first impression", "update", "evidence", "inconsistenc", "revision", "observation", "data", "pattern", "trust", "initial", "第一印象", "更新", "不一致", "修正", "觀察", "校正"],
 }
 
 
@@ -553,6 +683,16 @@ def _build_response(name: str, scenario: dict, principles: list) -> str:
         "conflict":      "On conflict resolution",
         "opportunity":   "On time-compressed opportunities",
         "legacy":        "On legacy and long-term orientation",
+        "social_trust":          "On new relationship pacing",
+        "network_roi":           "On network ROI and relationship rebalancing",
+        "social_debt":           "On social obligation and renegotiation",
+        "group_dynamics":        "On dissent and group consensus",
+        "weak_ties":             "On reactivating dormant network connections",
+        "intro_gatekeeping":     "On introduction and referral gatekeeping",
+        "loyalty_vs_credibility": "On loyalty versus credibility trade-offs",
+        "social_capital_depth":  "On social capital depth vs breadth allocation",
+        "relationship_downgrade": "On relationship tier recalibration",
+        "first_impression_update": "On updating first impressions with new evidence",
     }.get(domain, f"On {domain}")
 
     lines = [f"{framing}, {name}'s decision framework yields:"]
@@ -786,6 +926,130 @@ def _domain_decision(domain: str, principle_text: str, scenario_text: str = "") 
             if any(w in combined for w in ["behavior", "pattern", "verify", "consistent", "trust", "action", "行為", "模式", "驗證", "一致性", "言語", "observe"]) else
             "MAINTAIN_PROACTIVE_CADENCE — maintain regular proactive contact with important relationships; "
             "do not wait for the other party to initiate. MD-328: 主動維護 is the default stance for Tier 1/2 relationships."
+        ),
+        "social_trust": (
+            "VERIFY_BY_BEHAVIOR_PATTERN — "
+            "MD-330: 社交信號=行為模式比言語可信. Set your own cadence; do not match accelerated pacing from a new contact. "
+            "Fast-moving friendships before track record is established carry asymmetric downside. "
+            "Observe 3+ instances of behavior under real conditions before updating trust level. "
+            "Warm but unhurried is the correct posture: reciprocate with genuine interest, not matching urgency."
+            if (system_signal or inaction_signal or stability_signal) else
+            "MATCH_PACE_THEN_VERIFY — reciprocate warmly at a slightly lower intensity; "
+            "genuine enthusiasm is a positive signal but requires behavioral confirmation over 90 days. "
+            "Initiate concrete plans to observe follow-through before deepening trust."
+        ),
+        "network_roi": (
+            "AUDIT_AND_REBALANCE — "
+            "MD-328: 關係投資=主動維護稀缺性原則. Run a 3-month audit: initiation ratio, value-sharing frequency, "
+            "commitment fulfillment. If ratio < 30% (them initiating), send one explicit signal — share something "
+            "valuable, ask a direct question requiring effort to answer. One non-response to a direct ask = "
+            "DORMANT reclassification. Two = reduce to Tier 3. Not punitive — preserving your investment capacity."
+            if (system_signal or ev_signal or stability_signal) else
+            "REBALANCE_QUIETLY — reduce investment frequency over 60 days without announcement; "
+            "preserve the relationship shell while redirecting time to higher-reciprocity relationships. "
+            "Self-absorbed people rarely notice slow withdrawal — save the confrontation energy."
+        ),
+        "social_debt": (
+            "RENEGOTIATE_PROACTIVELY_WRITTEN — "
+            "MD-243: 合約書面化供應商. Before the other party asks, surface the constraint directly: "
+            "'I committed to X. The cost has changed — here is what I can actually do.' "
+            "Proactive disclosure is higher-trust than a failed delivery. "
+            "Key: renegotiate before the debt is called, not after. Silence until asked = broken commitment signal."
+            if (direct_signal or system_signal) else
+            "HONOR_OR_RENEGOTIATE — binary choice: deliver as agreed, or renegotiate now before being asked. "
+            "Partial delivery without communication is the worst outcome. "
+            "The relationship absorbs renegotiation better than discovered non-delivery."
+        ),
+        "group_dynamics": (
+            "STATE_ONCE_CLEARLY_THEN_RECORD — "
+            "State your view once, concisely, with your reasoning. Do not repeat. Do not escalate. "
+            "If overruled: document your position (email, notes) with your reasoning so the record exists. "
+            "The goal is not to win the room — it is to ensure the correct information entered the system. "
+            "Junior seniority means your obligation is to speak the truth once, not to force the outcome."
+            if (direct_signal or system_signal or inaction_signal) else
+            "RAISE_THE_FLAG_ONCE — voice your view clearly once, briefly, without hedging. "
+            "If the group does not engage, you have done your part. "
+            "Repeated pushback wastes political capital and signals poor judgment about when to press. "
+            "Let the decision be made; let the result teach."
+        ),
+        "weak_ties": (
+            "RESPOND_WITH_VALUE_FIRST — "
+            "MD-202: 人脈介紹=用完沉默+回報結果. For a dormant connection reactivating with an opportunity: "
+            "respond promptly, evaluate the opportunity on its own merits (not because of the relationship), "
+            "acknowledge the reconnection explicitly, follow up regardless of outcome. "
+            "Weak ties activate for transactions — that is their function. Accept it, don't resent it. "
+            "The quality of your response re-establishes your standing in their network."
+            if (ev_signal or growth_signal or direct_signal) else
+            "RESPOND_AND_EVALUATE — respond promptly; do not penalize the gap in contact. "
+            "Evaluate the opportunity on its actual merits. "
+            "Use this reactivation as a signal to audit which dormant connections have potential — "
+            "not all weak ties are equal; the ones that reactivate with value are worth maintaining."
+        ),
+        "intro_gatekeeping": (
+            "QUALIFY_OR_DEFER — "
+            "MD-202: 人脈介紹=用完沉默+回報結果. Your credibility is collateral in every intro. "
+            "60% fit is below threshold: either prime the contact first ('a friend might reach out re X — "
+            "relevant?'), or defer until fit improves. A qualified intro ('context: X, caveat: Y') is better "
+            "than a cold push. A declined intro explained honestly preserves more trust than a misaligned one."
+            if (stability_signal or inaction_signal or system_signal) else
+            "MAKE_THE_INTRO_WITH_CONTEXT — "
+            "strong relationships warrant the benefit of the doubt; frame the intro clearly so your contact "
+            "can opt out gracefully. Your friend's track record of follow-through is the real variable — "
+            "if high, the 60% fit risk is acceptable. If unknown, qualify or defer."
+        ),
+        "loyalty_vs_credibility": (
+            "PRIVATE_CORRECTION_FIRST — "
+            "Public distancing before private conversation is betrayal theater. "
+            "The first move is always private and direct: name the behavior, not the person's character. "
+            "If they course-correct, your public credibility is intact and the relationship strengthens. "
+            "If they don't, public distance becomes defensible because you tried the right sequence. "
+            "Loyalty is not unconditional silence — it is honest feedback before visible consequences."
+            if (direct_signal or system_signal) else
+            "STAND_BY_QUIETLY_AND_CORRECT — "
+            "defend publicly only what you can defend privately; if you cannot defend it privately, "
+            "do not defend it publicly. Reduce visible association while working the correction privately."
+        ),
+        "social_capital_depth": (
+            "DEPTH_OVER_BREADTH — "
+            "Deep 1:1 with a trusted person generates compounding returns: trust, candor, reciprocity. "
+            "New connections at 30 min each are mostly zero-EV — first impressions without track record "
+            "are noise. If your current Tier 1 pool is below 5 people, depth is the priority. "
+            "Networking events are for specific, pre-targeted contacts — not default social allocation. "
+            "Weekly default: deepen existing relationships; use events only with a specific target in mind."
+            if (stability_signal or system_signal or meta_signal) else
+            "BREADTH_WITH_MINIMUM_DEPTH — "
+            "if the Tier 1 pool is healthy, expand the funnel with new contacts; "
+            "reserve 1 deep slot per month to maintain existing trust while building surface area. "
+            "Relationships require a funnel — not all breadth is wasteful."
+        ),
+        "relationship_downgrade": (
+            "REDUCE_QUIETLY_THEN_SIGNAL_ONCE — "
+            "MD-328: 關係投資=主動維護稀缺性原則. Reciprocity is a two-way condition. "
+            "Step 1: reduce your initiation frequency by 50% over 60 days without announcement. "
+            "If they close the gap — relationship was not broken, just dormant. "
+            "If they don't — send one low-friction signal (a share, a question) requiring minimal effort to answer. "
+            "No response = DORMANT reclassification. No drama, no confrontation. "
+            "Explicit downgrade conversations carry more cost than the behavior change itself."
+            if (system_signal or stability_signal or inaction_signal) else
+            "DIRECT_CONVERSATION — "
+            "if the relationship was close enough to merit a direct conversation, have it: "
+            "'I've noticed less connection lately — is everything okay?' "
+            "Gives them the option to close the gap rather than assuming drift. "
+            "Some people go quiet under load, not under diminished care."
+        ),
+        "first_impression_update": (
+            "REQUIRE_THIRD_DATA_POINT — "
+            "MD-330: 社交信號=行為模式比言語可信. Two data points define a line, not a pattern. "
+            "Two inconsistencies could be noise, context-specific behavior, or signal. "
+            "Set a 3-instance threshold before revising the model: observe one more instance under "
+            "a different condition (pressure, conflict, ambiguity). "
+            "Lower your trust stance now (reduce exposure, increase observation), but do not formally "
+            "downgrade until the third instance. Premature revision is as costly as no revision."
+            if (system_signal or inaction_signal or stability_signal) else
+            "UPDATE_ON_TWO_POINTS — "
+            "two inconsistencies in core behavior (not peripheral) are sufficient signal; "
+            "first impressions are optimistic by default — the correction is the more accurate read. "
+            "Adjust your model now; do not require a third mistake before protecting yourself."
         ),
     }
     return decisions.get(domain, "Decision: apply core principles to the specific trade-offs in this scenario.")
