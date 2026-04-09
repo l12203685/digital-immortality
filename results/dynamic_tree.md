@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 228)
+> 最後更新：2026-04-09 UTC (cycle 229)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -41,6 +41,7 @@
   - **cycle 226 paper-live tick 93** — BTC=$70,895.98 (↓$112.89 from tick 92), P&L=**+$0.858** (+0.858% on $100); 662 log entries; regime=MIXED; DualMA_10_30=SHORT×93 (100%); MFE ATH +$1.204 (tick 50); BTC net ↓$613.92 from entry; SHORT tailwind continues
   - **cycle 227 paper-live tick 94** — BTC=$70,930.43 (↑$34.45 from tick 93), P&L=**+$0.810** (+0.810% on $100); 677 log entries; regime=MIXED; DualMA_10_30=SHORT×94 (100%); MFE ATH +$1.204 (tick 50); BTC net ↓$579.47 from entry; SHORT headwind (slight pullback)
   - **cycle 228 paper-live ticks 95+96** — BTC=$70,941.50 (↑$11.07 from tick 94), P&L=**+$0.795** (+0.795% on $100); 707 log entries; regime=MIXED; DualMA_10_30=SHORT×96 (100%); MFE ATH +$1.204 (tick 50); BTC net ↓$568.40 from entry; SHORT headwind (BTC edged up)
+  - **cycle 229 paper-live ticks 97+98+99** — BTC=$71,032.45 (↑$90.95 from tick 96), P&L=**+$0.668** (+0.668% on $100); 752 log entries; regime=MIXED; DualMA_10_30=SHORT×99 (100%); MFE ATH +$1.204 (tick 50); BTC net ↓$477.45 from entry; SHORT headwind (BTC edged up from tick 96)
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
@@ -128,6 +129,7 @@
 - **6.11 Consistency verification (cycle 214)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — all 33 scenarios deterministically aligned; Branch 6 存活 health confirmed; cold-start behavioral integrity intact
 - **6.12 Consistency re-verification (cycle 223)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — cold-start behavioral integrity intact; baseline saved to results/consistency_baseline.json; daemon_next_priority '存活/cold-start' branch TOUCHED ✅
 - **6.13 Consistency re-verification (cycle 227)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — cold-start behavioral integrity intact; daemon_next_priority '存活/cold-start' TOUCHED ✅ (was least-recent per cycle 226 daemon)
+- **6.15 Consistency re-verification (cycle 229)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** (55 scenarios total: 33 boot-test + 22 organism scenarios); cold-start behavioral integrity intact; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.14 Backward check + F10 + consistency (cycle 228)**: (a) backward check: internal recursion complete but external validation loop BROKEN (65 SOPs/0 posted/0 signal); axiom violated: 遞迴-persist=自言自語; resolved by SOP #65; F10 added to `docs/cold_start_recovery_runbook.md`; runbook now **F1–F10** ✅; (b) consistency: `consistency_test.py` → **33/33 ALIGNED ✅** — 10+ consecutive cycles clean; B3.1 distillation: 4 insights to memory/insights.json; B5 G3: `tools/engagement_check.py` built ✅
 - **6.10 Dashboard health monitoring — WIRED ✅** (cycle 204): `platform/generate_dashboard_state.py` — added `RESULTS` constant, `read_json()` helper, and `collect_health()` function; `"health"` key now in dashboard_state.json: ci_wired=True, consistency_aligned=7/7 (100%), paper_live_price=$71,065, paper_live_signal=FLAT, paper_tick=71, paper_pnl=+$0.560; Branch 6 health now visible in web dashboard JSON ✅
 
@@ -212,7 +214,7 @@
 ## 當前 regime
 攻擊：1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); paper-live tick 94 BTC=$70,930.43 SHORT P&L=**+$0.810** (+0.810%); **SOP #01~#65 COMPLETE** → posting queue Aug 13; **SOP #65 External Validation & Feedback Loop Protocol ✓** — closes 遞迴-persist=自言自語 gap; external signal loop G0~G5; DNA violation detector operational; **SOP #63~#64 also complete** (Zero-to-Revenue + Technology Stack); **3 workbooks READY TO LIST** ($87/buyer trilogy); Edward actions: (1) set mainnet API credentials [highest EV], (2) post SOP #01 on X, (3) send samuel_async_calibration_dm.md
 中性：2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 all 5 SYSTEM_FAILUREs pre-committed; **6 存活 AUDIT CLOSED** (cycle 202: runbook + scope separation documented)
-防禦：2.3 33/33 ALIGNED ✅ (cycle 228 re-verified), 4.1 partially unblocked (samuel_dna tested 19/20); F1–F10 runbook ✅ (F10 added cycle 228: external loop failure mode + DNA violation log); backward check COMPLETE — external validation gap found + SOP #65 closes it
+防禦：2.3 33/33 ALIGNED ✅ (cycle 229 re-verified), 4.1 partially unblocked (samuel_dna tested 19/20); F1–F10 runbook ✅ (F10 added cycle 228: external loop failure mode + DNA violation log); backward check COMPLETE — external validation gap found + SOP #65 closes it
 
 ## 已完成 milestones
 - dna_core.md 195 MDs operational（core + MD-01~MD-195 written ✓）
@@ -378,3 +380,4 @@
 - 2026-04-09T UTC: cycle 224 — **Branch 1.1** paper-live tick 89: BTC=$71,079.42 (↑$127.42 from tick 88), DualMA_10_30=SHORT×89 (100%), P&L=+$0.602 (+0.602% on $100); 602 log entries; regime=MIXED; MFE ATH unchanged +$1.204 (tick 50); SHORT headwind (BTC ↑$127.42) but thesis intact; BTC net ↓$430.48 from entry
 - 2026-04-09T UTC: cycle 224 — **Branch 7.62** SOP #62 Social Capital & Relationship Investment Protocol shipped: `docs/knowledge_product_62_social_capital_sop.md` + `docs/publish_thread_sop62_twitter.md` — Domain 4 (社交圈 / Social Capital); 5-gate: G0 Relationship Inventory Audit (T1/T2/T3 tiering; kill: T1 >30d → G5) / G1 Derivative Scan (ΔT1 contact rate / ΔCollaborative output / ΔOrganism collision sessions) / G2 Non-negotiable budget (≥1 proactive T1 message/14d, ≥1 calibration/month, 7d loop closure, 48h follow-up) / G3 Quarterly organism leverage scan (highest-EV relationship; 90-day trial; ΔOutput ≥+20% → permanent) / G4 Weekly review / G5 Social debt protocol; DNA anchors: MD-328/329/330/134/232/265/270; posting queue extended to **#01~#62** (Aug 7, 2026). **Series: SOP #01~#62 COMPLETE.** **Domain 4 (Social Capital) gap CLOSED ✅**
 - 2026-04-09T UTC: cycle 224 — **Branch 6** consistency_test.py → 33/33 ALIGNED ✅ (55 scenarios total, 0 MISALIGNED); health indicators all green
+- 2026-04-09T UTC: cycle 229 — **Branch 1.1**: paper-live ticks 97+98+99: BTC=$71,032.45 (↑$90.95 from tick 96), DualMA_10_30=SHORT×99 (100%), P&L=+$0.668 (+0.668% on $100); 752 log entries; regime=MIXED; MFE ATH unchanged +$1.204 (tick 50); BTC net ↓$477.45 from entry; SHORT headwind (BTC edged up). **Branch 6**: consistency_test.py → 33/33 ALIGNED ✅ (55 scenarios); daemon_next_priority '存活/cold-start' TOUCHED ✅; B5.8 engagement_check run: 0 posts logged, G3 kill conditions inactive, single blocker = first post not sent.
