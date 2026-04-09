@@ -51,3 +51,39 @@ When the AI makes a mistake and you correct it:
 4. **Source**: When/where did this correction happen?
 
 Add it as a new test above. Over time, your boot tests become a complete behavioral specification — every failure mode documented with the correct response.
+
+---
+
+## Test 6: Search Before Build (先搜再做)
+**Trigger**: About to implement a new feature, write new code, or produce new content
+**Wrong**: Start writing from scratch immediately — open a new file and begin
+**Right**: Search GitHub, docs, existing files, or codebase first. Only build if nothing usable exists. At least one search step must happen before any new file is created.
+**Source**: Recurring anti-pattern — agent defaults to build-first instead of reuse-first
+
+## Test 7: Persist to Durable Storage
+**Trigger**: After producing any recursive output, insight, decision, or completed work unit
+**Wrong**: Display the result in conversation only — say "done" in chat and move on
+**Right**: Write result to a git-tracked file AND update `staging/session_state.md` AND push. Chat/Discord display is not storage — cold start loses it.
+**Source**: SKILL.md rule: "遞迴 output 必須 persist to durable storage (git + memory), not just display"
+
+## Test 8: Push Inference, Don't Ask (先推再問)
+**Trigger**: Facing an ambiguous situation or apparently missing information
+**Wrong**: Ask Edward for clarification before proceeding — "Should I do X or Y?"
+**Right**: Derive the answer from existing DNA/principles → state the inference explicitly → act → let Edward correct if wrong. Presenting your conclusion and inviting correction is NOT the same as asking a question.
+**Source**: SKILL.md rule: "先推再問。用現有資訊推到底，推錯了 Edward 修正。"
+
+## Test 9: Three-Layer Loop (L1/L2/L3)
+**Trigger**: Designing or running any automated or recurring system
+**Wrong**: Build L1 Execute only — do the work, skip evaluation and evolution layers
+**Right**: Always design all 3 layers: L1 Execute → L2 Evaluate (audit quality + coverage) → L3 Evolve (modify rules based on audit findings). L1 without L2+L3 = dead loop that cannot self-correct.
+**Source**: SKILL.md rule: "Three-layer loop for any automated system"
+
+## Test 10: Cold-Start SLA (≤5 Prompts to Operational)
+**Trigger**: On any cold start (new session with no prior context)
+**Check**: Were you operational (producing first substantive action) within 5 user prompts?
+**Wrong**: Spending 3+ user-prompt round-trips reading files, asking clarifications, building orientation before acting
+**Right**: Read dna_core.md → boot_tests.md → session_state.md → take first action. Goal: 1-2 user prompts max. This session (cycle 269) measured: **1 user prompt → operational** ✅
+**Source**: SOP #101 G5 gate — measured cycle 269 session (cold start): 1 prompt to operational, 2 LLM rounds before first branch push
+
+<!-- G2 audit: 2026-04-09T14:00Z — cycle 268 -->
+<!-- G5 CLOSED: 2026-04-09T22:00Z — cycle 269 — measured 1 prompt to operational -->

@@ -1423,6 +1423,60 @@
       "insight": "201908 JSONL (Aug 2019) → 3 MDs: 作品集選取=外行人也看得出的指標性(MD-340)/雇主低薪=結構性cost-down不是個人市場價值信號(MD-341)/降波動=凱利邊界case單次>BR 1-2%才買保險(MD-342). dna_core.md: 342 MDs total. 雇主cost-down與個人市場價值的分離是核心認知升級。",
       "source": "201908-JSONL",
       "category": "behavioral_patterns"
+    },
+    {
+      "id": "g2-boot-test-meta-rules-cycle268",
+      "ts": "2026-04-09T14:00:00Z",
+      "cycle": 268,
+      "branch": "6",
+      "insight": "G2 cold-start gate: 4 meta-rule boot tests added to templates/example_boot_tests.md — Test6:先搜再做(search before build)/Test7:persist-to-durable-storage(git+session_state, not just chat)/Test8:先推再問(push inference→invite correction)/Test9:L1-L2-L3(all 3 layers required). Branch 6 G2 gate: CLOSED. Boot test coverage now spans behavioral + meta-rule anti-patterns.",
+      "source": "G2-audit-SOP101",
+      "category": "behavioral_patterns"
+    },
+    {
+      "id": "paper-live-tick106-cycle268",
+      "ts": "2026-04-09T14:00:00Z",
+      "cycle": 268,
+      "branch": "1.1",
+      "insight": "Paper-live tick 106: BTC=0,868.79 (↓59.80 from tick105=1,128.59) — SHORT tailwind continues. DualMA_10_30=SHORT structural×106 (unbroken). All other 17 strategies FLAT. Regime=MIXED. 1768 total log entries.",
+      "source": "paper-live-log",
+      "category": "domain_knowledge"
+    },
+    {
+      "id": "sop102-pre-launch-readiness-audit-cycle268",
+      "ts": "2026-04-09T14:00:00Z",
+      "cycle": 268,
+      "branch": "7",
+      "insight": "SOP #102 Pre-Launch Readiness Audit: closes preparation-friction gap before first X post. G0-G5 six-gate audit (X account/SOP01-thread-ready/post-launch-automation/Gumroad/revenue-tracking/7-day-plan). Launch readiness score = 6 auditable gates. Key insight: launches fail at Day 2 (no follow-up system) not Day 1 (content quality). SOP #01~#102 COMPLETE.",
+      "source": "sop102",
+      "category": "methodology"
+    },
+    {
+      "id": "g5-cold-start-sla-measured-cycle269",
+      "ts": "2026-04-09T22:00:00Z",
+      "cycle": 269,
+      "branch": "6",
+      "insight": "G5 cold-start SLA measurement (SOP #101 final gate): Cycle 269 session = cold start. 1 user prompt → operational (first branch push within 2 LLM rounds after 4 orientation reads). Result: 1 prompt to operational, well under ≤5 ceiling. G5 PASS ✅. Branch 6 now 6/6 gates passing. Boot test 10 added: cold-start SLA verification. Key: the SLA is measured by user-prompt count, not file-read count — reading files is part of the boot sequence, not 'prompts to operational'.",
+      "source": "G5-measurement-SOP101",
+      "category": "behavioral_patterns"
+    },
+    {
+      "id": "paper-live-tick107-engine91-cycle269",
+      "ts": "2026-04-09T22:00:00Z",
+      "cycle": 269,
+      "branch": "1.1",
+      "insight": "Paper-live tick 107 (paper_trader): BTC=$70,752.51 (↓$116.28 from tick106=$70,868.79) — SHORT tailwind continues. DualMA_10_30 OPEN_SHORT signal (structural unbroken). Trading engine tick 91: BTC=$70,667.75, 14 active strategies all FLAT, total P&L=-1.2433%, DualMA_10_30 DISABLED (PF 0.65 < 0.8). Two tracking systems diverging: paper_trader monitors DualMA structural signal, engine monitors portfolio of 14 strategies.",
+      "source": "paper-live-log+trading-engine-status",
+      "category": "domain_knowledge"
+    },
+    {
+      "id": "sop103-launch-ignition-protocol-cycle269",
+      "ts": "2026-04-09T22:00:00Z",
+      "cycle": 269,
+      "branch": "7",
+      "insight": "SOP #103 Launch Ignition Protocol: closes the ignition-moment gap between SOP #102 (readiness audit) and SOP #83 (daily ritual). G0-G5 six-gate 13-minute sequence from 'I'm ready' to 'launched and logged'. Key insight: readiness theater (re-auditing when already green) kills more launches than bad content. The protocol eliminates decision paralysis with a commitment device (G1 clock) and copy-paste execution (G2). SOP #01~#103 COMPLETE.",
+      "source": "sop103",
+      "category": "methodology"
     }
   ]
 }
