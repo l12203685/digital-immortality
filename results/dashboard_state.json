@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T17:46+08",
+  "updated": "2026-04-09T17:54+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next priority (daemon): Branch 4.1/Samuel organism (human-gated: send DM). Ag..."
+      "text": "L2 verdict: 1A + 2B. Committed as cycle 35."
     },
     {
       "time": "just now",
-      "text": "Verdict: 1A + 2B. Pushed."
+      "text": "Branch 3.1 — Distillation — 3 insights appended (total 53): revenue deadline ..."
     },
     {
       "time": "just now",
-      "text": "- B — Branch 1.1 ticks 121-123 — BTC=$71,237 stable; SHORT×123 (100%); 1193 e..."
+      "text": "- SOP #01–#82 COMPLETE ✅"
     },
     {
       "time": "just now",
-      "text": "- B — Branch 3.1 distillation — 3 insights, total 50: velocity system / SHORT..."
+      "text": "- Closes \"can't see if critical path is on track to deadline\" gap"
     },
     {
       "time": "just now",
-      "text": "- A — SOP #81 Distribution Velocity SOP — closes the \"ready→posted but no fly..."
+      "text": "- Blocker escalation table: each milestone × root cause × action"
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71245.35,
+    "paper_live_price": 71335.5,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T09:42",
+    "paper_live_ts": "2026-04-09T09:50",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"
