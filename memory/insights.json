@@ -1726,6 +1726,48 @@
         "47th-consecutive",
         "aligned"
       ]
+    },
+    {
+      "id": "93a2fa63-db42-4a67-a426-8f36b81a4dee",
+      "key": "201812-marginal-wr-competitive-evaluation",
+      "content": "MD-364: 增量勝率>總勝率 — 競技能力評估應使用邊際場次勝率（sliding window），而非累積總勝率（aggregate masks recent decay）；<50場統計不可信；暗殺神錦標賽實例：70場47%選手 vs 58場50%選手，多出的12場只贏4場(33%)→真實能力反而較低。適用：交易策略/候選人評估/學習效果。",
+      "timestamp": "2026-04-10T00:00Z",
+      "source": "branch-2.2-cycle-279-201812",
+      "tags": [
+        "statistics",
+        "performance-evaluation",
+        "marginal-wr",
+        "md-364",
+        "201812"
+      ]
+    },
+    {
+      "id": "93d58361-179a-48c5-85b6-8784173eec72",
+      "key": "paper-live-btc72319-dual-ma-short-cycle279",
+      "content": "Branch 1.1 paper-live cycle-279: BTC=2,319.43; DualMA_10_30=SHORT (re-enabled, PF=16.13, 2 trades +1.57%); total portfolio PnL=+12.63%; 16/18 strategies active; regime=mixed. DualMA structural SHORT maintained despite BTC rise from 71529 cycle-276.",
+      "timestamp": "2026-04-10T00:00Z",
+      "source": "branch-1.1-cycle-279",
+      "tags": [
+        "trading",
+        "paper-live",
+        "btc72319",
+        "dual-ma-short",
+        "cycle-279"
+      ]
+    },
+    {
+      "id": "d4811ef7-d1b7-4780-97b0-3236b36e98a3",
+      "key": "consistency-cycle279-48th-consecutive",
+      "content": "Branch 6 consistency_test.py cycle-279: 33/33 deterministic ALIGNED, 6 MISALIGNED (LLM-req: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev/meta_search_before_act/meta_output_must_persist/meta_three_layer_loop — all expected). 48th consecutive clean cycle. STABLE.",
+      "timestamp": "2026-04-10T00:00Z",
+      "source": "branch-6-cycle-279",
+      "tags": [
+        "consistency",
+        "branch-6",
+        "cycle-279",
+        "48th-consecutive",
+        "aligned"
+      ]
     }
   ]
 }
