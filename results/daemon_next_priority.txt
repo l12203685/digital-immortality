@@ -1,1 +1,1 @@
-PRIORITY: Branch 存活/cold-start — G2 PASSED (cycle 299); G1 cycle-300 dna_core audit NEXT (designed trigger at cycle ~300). Run dna-calibrate on templates/dna_core.md to verify priority stack + three-layer loop + SOP #01-#116 coverage.
+PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.
