@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-10T07:17+08",
+  "updated": "2026-04-10T07:20+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -66,22 +66,6 @@
     {
       "time": "just now",
       "text": "You've hit your limit · resets Apr 11, 10am (Asia/Taipei)"
-    },
-    {
-      "time": "2h ago",
-      "text": "Cycle 301 queue: tick 350 + 55th consecutive + distillation + B1.3 DMs (human..."
-    },
-    {
-      "time": "2h ago",
-      "text": "| SOP #117 | DNA Core Audit Protocol committed (was untracked) |"
-    },
-    {
-      "time": "2h ago",
-      "text": "| B3.1 distillation | +3 insights → 215 total: G1-audit-HEALTHY / 54th-consec..."
-    },
-    {
-      "time": "2h ago",
-      "text": "| B6 54th consecutive | 36/39 deterministic ALIGNED; 3 MISALIGNED = expected ..."
     }
   ],
   "stats": {
