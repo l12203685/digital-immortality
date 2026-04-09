@@ -75,22 +75,22 @@ curl -fsSL https://raw.githubusercontent.com/l12203685/digital-immortality/main/
 /boot-test
 ```
 
-系統會用你的 DNA 跑行為測試。第一次可能不會全過——這是正常的。每次修正都讓你的 organism 更準。
+系統會用你的 DNA 跑行為測試。第一次可能不會全過——這是正常的。每次修正都讓你的 immortal-tree 更準。
 
 ### Step 4: 加入DIF Discord
 
 [加入 數位永生森林 (DIF) Server](https://discord.gg/FpkAWSdtes)
 
-你的 organism 建好之後，可以跟其他人的 organism 碰撞、比較決策。
+你的 immortal-tree 建好之後，可以跟其他人的 immortal-tree 碰撞、比較決策。
 
 ---
 
 ## 加入社群
 
-**數位永生森林 (DIF) Server** 是所有 organism 的棲息地。
+**數位永生森林 (DIF) Server** 是所有 immortal-tree 的棲息地。
 
-- 你的 organism 可以跟其他人的 organism 碰撞，交換對同一個情境的決策
-- 用 `/organism-interact` 比較兩個 DNA 的差異——看同一個問題，不同的人會怎麼想
+- 你的 immortal-tree 可以跟其他人的 immortal-tree 碰撞，交換對同一個情境的決策
+- 用 `/immortal-tree-interact` 比較兩個 DNA 的差異——看同一個問題，不同的人會怎麼想
 - 分享你的 boot test 結果，看別人怎麼校準
 
 [Discord 邀請連結](https://discord.gg/FpkAWSdtes)
@@ -101,7 +101,7 @@ curl -fsSL https://raw.githubusercontent.com/l12203685/digital-immortality/main/
 
 ### `/recursive-engine` — 持續遞迴
 
-啟動遞迴引擎，讓你的 organism 持續用你的邏輯思考。每個 cycle 的 output 變成下一個 cycle 的 input。
+啟動遞迴引擎，讓你的 immortal-tree 持續用你的邏輯思考。每個 cycle 的 output 變成下一個 cycle 的 input。
 
 ### `/dna-calibrate` — 互動校準
 
@@ -109,7 +109,7 @@ curl -fsSL https://raw.githubusercontent.com/l12203685/digital-immortality/main/
 
 ### `/boot-test` — 行為驗證
 
-任何時候都可以跑 boot test，確認 organism 還是「你」。Cold start 時自動執行。
+任何時候都可以跑 boot test，確認 immortal-tree 還是「你」。Cold start 時自動執行。
 
 ### 自動更新
 
@@ -129,7 +129,7 @@ DNA 是存在你本地的 markdown 文件，你完全控制。不會上傳到任
 ChatGPT Memory 是從對話歷史被動萃取的片段。DNA 是你主動定義的 explicit 決策原則——「我遇到 X 情境會做 Y，因為 Z」。一個是散落的筆記，一個是經過壓縮的作業系統。
 
 **多久能建好？**
-10 分鐘基礎版（回答 10 個問題）。之後持續校準，每次校準都讓 organism 更準。沒有「完成」的一天——你在變，它也在變。
+10 分鐘基礎版（回答 10 個問題）。之後持續校準，每次校準都讓 immortal-tree 更準。沒有「完成」的一天——你在變，它也在變。
 
 **可以用在 Claude 以外的 LLM 嗎？**
 DNA 本身是純 markdown，理論上任何 LLM 都能讀。但 boot test 和遞迴引擎目前只支援 Claude Code。
