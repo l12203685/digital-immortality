@@ -94,7 +94,7 @@ def build_system_prompt(dna: str) -> str:
     return f"{dna}\n\n---\n\n{tree}"
 
 
-DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1491248776088653974/cRtU1B6hhbdqsvpQK4CsoR5N7CyMcnAkwsrvwV6LlTK5tlSX8sX8Qup9uOb34ilwzs4S"
+DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1491644107788128439/Ndafv8puWZKaqHYcp-icHRRWealC0TfrZxO_k9DR1Dj2ANbFx5eyI3Ynvs8M_XO7y3jj"
 
 
 def append_log(cycle: int, response: str) -> None:
