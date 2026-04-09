@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T17:30+08",
+  "updated": "2026-04-09T17:38+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,24 +64,24 @@
   ],
   "activity": [
     {
-      "time": "What was done",
-      "text": "L2 Verdict: 1A + 3B. Next queue: SOP #81 (candidate: Organism Onboarding / Sl..."
+      "time": "just now",
+      "text": "Next least-recent branch: 社交圈/samuel (B4.1, last touched cycle 207)."
     },
     {
-      "time": "What was done",
-      "text": "3. `paper-live-short-persistence-117`: SHORT×117 = signal durability, not noise"
+      "time": "just now",
+      "text": "3. Samuel async DM — paste `docs/samuel_async_calibration_dm.md`"
     },
     {
-      "time": "What was done",
-      "text": "2. `cold-start-calibration-first-run`: cold-start is now protocol-guaranteed,..."
+      "time": "just now",
+      "text": "2. Mainnet API keys — set BINANCE_MAINNET_KEY/SECRET"
     },
     {
-      "time": "What was done",
-      "text": "1. `sop-series-structural-completion`: SOP #01–#80 complete; future SOPs = op..."
+      "time": "just now",
+      "text": "1. ⚡ X first post (SOP #01) — critical path to revenue"
     },
     {
-      "time": "What was done",
-      "text": "- 3 insights → insights.json (total 47):"
+      "time": "just now",
+      "text": "Blocker status (unchanged — human-gated):"
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71240.33,
+    "paper_live_price": 71237.14,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T09:25",
+    "paper_live_ts": "2026-04-09T09:36",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"
