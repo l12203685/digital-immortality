@@ -1,1 +1,1 @@
-OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.
+OK: Branches 1+6 touched (cycle 245). Least recent: '社交圈/samuel' (Branch 4.1 last touched cycle 207). Consider: Samuel async DM send unblocks calibration; OR Branch 7 SOP #81 candidates (Organism Onboarding / Sleep & Recovery / Distribution Velocity).
