@@ -5637,3 +5637,15 @@ Next blocker: mainnet keys (human-gated).
 - Regime = MIXED (trend=0.014, mr=0.225)
 
 Blocker: mainnet keys (human-gated).
+
+## Cycle 193 — 2026-04-09 02:00:44 UTC
+
+**Cycle 193 done.**
+
+**Branch 1.1** (highest derivative — DEADLINE 2026-07-07):
+- tick 63: BTC=$70,926.63 → SHORT×63 (100%)
+- P&L = **+$0.815** (eased from +$0.853 — BTC up $27 from tick 62)
+- MFE ATH = +$1.204 (tick 50) unchanged
+- Regime = MIXED, DualMA_10_30 only signaling
+
+Blocker: mainnet keys (human-gated).
