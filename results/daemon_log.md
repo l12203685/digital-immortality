@@ -6245,3 +6245,19 @@ Cycle 229 committed. Summary of what was pushed across branches:
 - Single blocker confirmed: first post not sent
 
 **Next priority**: `社交圈/samuel-session` (samuel async DM still pending — `docs/samuel_async_calibration_dm.md` is paste-ready)
+
+## Cycle 18 — 2026-04-09 07:16:35 UTC
+
+Committed. Cycle 230 done.
+
+---
+
+**Branches pushed this cycle:**
+
+| Branch | Work | Result |
+|--------|------|--------|
+| **1.1** | paper-live tick 100 (milestone) | BTC=$71,089.18, P&L=+$0.588, SHORT×100 (100%), 767 log entries |
+| **7** | SOP #66 Distribution Activation Protocol | G0→G1 activation operationalized; `external_signal_log.jsonl` scaffold live; queue to Aug 14; series SOP #01~#66 ✅ |
+| **6** | Consistency re-verification | 33/33 ALIGNED, 11+ consecutive cycles clean |
+
+**Critical path unchanged:** Edward posts SOP #01 on X → audience starts → G2 fires → revenue. Everything is built. Zero-friction gap = first post.
