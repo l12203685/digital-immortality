@@ -20,9 +20,57 @@ REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 LOG_PATH = RESULTS / "trading_engine_log.jsonl"
 STATUS_PATH = RESULTS / "trading_engine_status.json"
+EXECUTION_RULES_PATH = RESULTS / "execution_rules.json"
+KILLS_LOG_PATH = RESULTS / "kill_lessons.jsonl"
 CREDS_PATH = Path.home() / ".claude" / "credentials" / "binance_api.json"
 DISCORD_WEBHOOK = ("https://discord.com/api/webhooks/1491644107788128439/"
                    "Ndafv8puWZKaqHYcp-icHRRWealC0TfrZxO_k9DR1Dj2ANbFx5eyI3Ynvs8M_XO7y3jj")
+
+DEFAULT_EXECUTION_RULES: Dict = {
+    "kill_max_dd": 20.0, "kill_min_wr": 0.30, "kill_min_pf": 0.8,
+    "kill_window": 50, "kill_count": 0, "evolved_at": None, "last_kill": None,
+}
+
+
+def load_execution_rules() -> Dict:
+    """L3 Evolve: load mutable execution rules (evolves after each kill)."""
+    if EXECUTION_RULES_PATH.exists():
+        return json.loads(EXECUTION_RULES_PATH.read_text())
+    return dict(DEFAULT_EXECUTION_RULES)
+
+
+def evolve_execution_rules(killed_strategy: str, kill_reason: str,
+                            current_rules: Dict) -> Dict:
+    """L3 Evolve: modify execution rules in response to a kill event.
+
+    Each kill tightens the feedback loop (kill_window -5, floor=20) so
+    future strategies receive corrective action faster.
+    """
+    new_rules = dict(current_rules)
+    new_rules["kill_count"] = new_rules.get("kill_count", 0) + 1
+    new_rules["evolved_at"] = datetime.now(timezone.utc).isoformat()
+    new_rules["last_kill"] = {"strategy": killed_strategy, "reason": kill_reason,
+                              "ts": new_rules["evolved_at"]}
+    new_rules["kill_window"] = max(20, new_rules.get("kill_window", 50) - 5)
+    RESULTS.mkdir(parents=True, exist_ok=True)
+    EXECUTION_RULES_PATH.write_text(json.dumps(new_rules, indent=2))
+    return new_rules
+
+
+def log_kill_lesson(killed_strategy: str, kill_reason: str, tick: int,
+                    price: float, regime: str, cum_pnl: float,
+                    new_window: int) -> None:
+    """L3 Evolve: append durable kill lesson with rule change recorded."""
+    lesson = {
+        "ts": datetime.now(timezone.utc).isoformat(),
+        "tick": tick, "strategy": killed_strategy, "kill_reason": kill_reason,
+        "cum_pnl": round(cum_pnl, 4), "price_at_kill": price,
+        "regime_at_kill": regime,
+        "rule_change": f"kill_window reduced to {new_window} (faster feedback loop)",
+    }
+    RESULTS.mkdir(parents=True, exist_ok=True)
+    with open(KILLS_LOG_PATH, "a") as f:
+        f.write(json.dumps(lesson) + "\n")
 
 def load_credentials() -> Dict[str, str]:
     if CREDS_PATH.exists():
@@ -116,7 +164,14 @@ class TradingEngine:
         self.pnl_tracker: Dict[str, float] = {}
         self.prev_prices: Dict[str, float] = {}
         self.total_pnl, self.tick_count = 0.0, 0
-        self.kill_monitor = KillMonitor()
+        # L3 Evolve: load mutable execution rules; KillMonitor uses them
+        self.execution_rules = load_execution_rules()
+        self.kill_monitor = KillMonitor(
+            max_dd=self.execution_rules["kill_max_dd"],
+            min_wr=self.execution_rules["kill_min_wr"],
+            min_pf=self.execution_rules["kill_min_pf"],
+            window=self.execution_rules["kill_window"],
+        )
 
     def tick(self) -> None:
         utc_now = datetime.now(timezone.utc).isoformat()
@@ -166,6 +221,13 @@ class TradingEngine:
                 self.disabled[name] = kill
                 logger.warning("KILL %s: %s", name, kill)
                 discord_msgs.append(f"KILLED {name}: {kill}")
+                # L3 Evolve: modify execution rules + log lesson
+                self.execution_rules = evolve_execution_rules(
+                    name, kill, self.execution_rules)
+                log_kill_lesson(name, kill, self.tick_count, price, regime,
+                                self.pnl_tracker.get(name, 0.0),
+                                self.execution_rules["kill_window"])
+                logger.info("L3 Evolve: kill_window → %d", self.execution_rules["kill_window"])
 
             append_log({"ts": utc_now, "tick": self.tick_count, "strategy": name,
                         "signal": sig, "prev_signal": prev, "price": price,
