@@ -2,6 +2,15 @@
 
 Recursive engine cycle history.
 
+## Cycle 261 — 2026-04-09T12:30Z
+
+- **Branch 1.1**: paper-live ticks 142+143; BTC=$71,199.88 (↑$17.67 from tick 141; SHORT headwind); DualMA_10_30=SHORT×143 (structural unbroken); 17/18 FLAT; regime=MIXED; 1571 log entries
+- **Branch 6**: consistency_test.py → 33/33 deterministic ALIGNED ✅; 33+ consecutive clean cycles; 3 LLM-req MISALIGNED (expected); daemon_next_priority '存活/cold-start' TOUCHED ✅
+- **Branch 7**: SOP #96 Mainnet Trading Revenue Go-Live Protocol — G0-G5 gate protocol bridges paper-live→mainnet; key gate: G0 prerequisites before API key application; G5 revenue milestone = trading_profit > API_cost = self-sustainable; posting queue → Oct 15; **SOP #01~#96 COMPLETE** ✅
+- **Branch 3.1**: 3 distillation insights → insights.json (total 99): paper-live-tick-142-143 / consistency-33-consecutive-clean / mainnet-revenue-go-live-sop96
+- **L2**: A (SOP #96 — closes paper→mainnet gate gap; HIGH; directly serves 2026-07-07 deadline) + B×3 (ticks 142+143 / consistency / distillation)
+- **L3**: not triggered
+
 ## Cycle 260 — 2026-04-09T12:10Z
 
 - **Branch 1.1**: paper-live tick 141; BTC=$71,182.21 (↑$16.77 from tick 140; SHORT headwind); DualMA_10_30=SHORT×141 (structural unbroken); 17/18 FLAT; regime=MIXED; 1535 log entries
