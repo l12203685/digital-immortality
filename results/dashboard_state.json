@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T17:00+08",
+  "updated": "2026-04-09T17:11+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "4. Branch 6: LLM validation of 3 new boot tests per SOP #77 protocol"
+      "text": "Next queue (human-gated): Edward posts SOP #01 on X. SOP #78 G1 protocol is t..."
     },
     {
       "time": "just now",
-      "text": "3. Discord seeding / Samuel DM"
+      "text": "Branch 7 — SOP #78 Posting Operations & Cadence Protocol: closes the ready→po..."
     },
     {
       "time": "just now",
-      "text": "2. Set Binance mainnet keys → live trading"
+      "text": "- `career_multi_option_ev`: 6 options enumerated before evaluating → LIST_ALL..."
     },
     {
       "time": "just now",
-      "text": "1. ⚡ Edward posts SOP #01 on X → critical path to revenue"
+      "text": "- `trading_atr_sizing`: contracts=(2M×0.01)/1200=16 → FORMULA_NOT_FEELING ✓"
     },
     {
       "time": "just now",
-      "text": "Next queue (human-gated first):"
+      "text": "- `poker_gto_mdf`: alpha=3/10.2=29.4%, MDF=70.6% → MDF_1_MINUS_ALPHA ✓"
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71291.66,
+    "paper_live_price": 71128.39,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T08:55",
+    "paper_live_ts": "2026-04-09T09:05",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"
