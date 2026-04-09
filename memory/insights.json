@@ -215,7 +215,7 @@
     {
       "id": "2ac635d6-a70f-4dbf-a4eb-ca1c5a84b7ab",
       "key": "cycle-226-backward-check",
-      "content": "BACKWARD CHECK (cycle 226): DNA axiom 遞迴+persist=演化 violated. 64 SOPs written, 0 posted, 0 external signals received. Internal loop COMPLETE; external loop BROKEN. Resolution: SOP #64 External Validation & Feedback Loop Protocol created (Domain 5). F10 failure mode added to cold_start_recovery_runbook. DNA violation detector operationalized.",
+      "content": "BACKWARD CHECK (cycle 226): DNA axiom \u905e\u8ff4+persist=\u6f14\u5316 violated. 64 SOPs written, 0 posted, 0 external signals received. Internal loop COMPLETE; external loop BROKEN. Resolution: SOP #64 External Validation & Feedback Loop Protocol created (Domain 5). F10 failure mode added to cold_start_recovery_runbook. DNA violation detector operationalized.",
       "timestamp": "2026-04-09T06:35:11.632268+00:00",
       "source": "recursive-engine-cycle-226-backward-check",
       "tags": [
@@ -276,7 +276,7 @@
     {
       "id": "d2ef42ff-4efc-421f-8c36-d3c778e47d78",
       "key": "distillation-cycle231-tick102-milestone",
-      "content": "Paper-live tick 102: SHORT×102 unbroken (100%), BTC=$70,994.74, P&L≈+$0.720. Key insight: each tick extending an existing thesis is weaker evidence than a regime flip would be — asymmetric Bayesian update. Tick 100 milestone is a quantity milestone, not a quality inflection.",
+      "content": "Paper-live tick 102: SHORT\u00d7102 unbroken (100%), BTC=$70,994.74, P&L\u2248+$0.720. Key insight: each tick extending an existing thesis is weaker evidence than a regime flip would be \u2014 asymmetric Bayesian update. Tick 100 milestone is a quantity milestone, not a quality inflection.",
       "timestamp": "2026-04-09T07:25:00.000000+00:00",
       "source": "recursive-distillation-cycle-231",
       "tags": [
@@ -302,7 +302,7 @@
     {
       "id": "96e92f8c-da71-44ae-afcf-c63cb259c6a7",
       "key": "distillation-cycle231-l3-evolution-trigger",
-      "content": "Writing SOP #67 revealed: L3 evolution fires correctly when triggered by corrections or boot test failures, but the trigger criteria were never formalized — so L3 had no explicit activation protocol. Meta-insight: any loop layer without explicit trigger conditions defaults to never firing or always firing. Both are failures.",
+      "content": "Writing SOP #67 revealed: L3 evolution fires correctly when triggered by corrections or boot test failures, but the trigger criteria were never formalized \u2014 so L3 had no explicit activation protocol. Meta-insight: any loop layer without explicit trigger conditions defaults to never firing or always firing. Both are failures.",
       "timestamp": "2026-04-09T07:25:00.000000+00:00",
       "source": "recursive-distillation-cycle-231",
       "tags": [
@@ -341,7 +341,7 @@
     {
       "id": "61a49803-f950-4dd9-94d3-193fbe4033f0",
       "key": "distillation-cycle234-sop-series-economic-gap",
-      "content": "SOP #70 closes structural gap: SOPs 01-69 built knowledge products but conversion protocol was missing. Knowledge machine and revenue machine were never connected by formal gate structure. Meta-insight: any production pipeline without explicit output-to-revenue gate defaults to infinite internal recursion with 0 external loop — same anti-pattern as SOP #67 finding.",
+      "content": "SOP #70 closes structural gap: SOPs 01-69 built knowledge products but conversion protocol was missing. Knowledge machine and revenue machine were never connected by formal gate structure. Meta-insight: any production pipeline without explicit output-to-revenue gate defaults to infinite internal recursion with 0 external loop \u2014 same anti-pattern as SOP #67 finding.",
       "timestamp": "2026-04-09T07:50:00.000000+00:00",
       "source": "recursive-distillation-cycle-234",
       "tags": [
@@ -354,7 +354,7 @@
     {
       "id": "430f66b3-6890-4a33-83c9-f7f35d7d9d5f",
       "key": "distillation-cycle236-log-vs-monitor",
-      "content": "Logging != monitoring. A log records what happened so you can reason about it later. A monitor alerts when thresholds are crossed. Build the log first. Alerting comes from reading it. SOP #71 assumed a concentration log existed — it didnt. SOP #72 closes the gap.",
+      "content": "Logging != monitoring. A log records what happened so you can reason about it later. A monitor alerts when thresholds are crossed. Build the log first. Alerting comes from reading it. SOP #71 assumed a concentration log existed \u2014 it didnt. SOP #72 closes the gap.",
       "timestamp": "2026-04-09T08:15:00+00:00",
       "source": "cycle-236",
       "tags": [
@@ -380,7 +380,7 @@
     {
       "id": "c6c512eb-1092-4d5a-8d1e-d2ef2b4560e1",
       "key": "distillation-cycle236-sop-emergent-gaps",
-      "content": "SOPs surface their own gaps. SOP #71 (concentration protocol) referenced concentration_log.jsonl without building it. SOP #72 fills that gap. Pattern: first SOP defines the protocol, second SOP builds the infrastructure the first assumed existed. This is not a flaw — it is how knowledge machines evolve: define then implement.",
+      "content": "SOPs surface their own gaps. SOP #71 (concentration protocol) referenced concentration_log.jsonl without building it. SOP #72 fills that gap. Pattern: first SOP defines the protocol, second SOP builds the infrastructure the first assumed existed. This is not a flaw \u2014 it is how knowledge machines evolve: define then implement.",
       "timestamp": "2026-04-09T08:15:00+00:00",
       "source": "cycle-236",
       "tags": [
@@ -393,7 +393,7 @@
     {
       "id": "1a1bc339-bf06-4d94-90e3-b89d6135f67a",
       "key": "dynamic-tree-derivative-calculator",
-      "content": "The dynamic tree is not a to-do list — it is a derivative calculator. Each branch has a current rate of change toward the core goal. Priority = highest derivative, not recency or noise. Recalculate every cycle; last cycle highest may be lowest today because you moved it.",
+      "content": "The dynamic tree is not a to-do list \u2014 it is a derivative calculator. Each branch has a current rate of change toward the core goal. Priority = highest derivative, not recency or noise. Recalculate every cycle; last cycle highest may be lowest today because you moved it.",
       "timestamp": "2026-04-09T08:19:13+00:00",
       "source": "cycle-237-branch-7-sop73",
       "tags": [
@@ -419,7 +419,7 @@
     {
       "id": "3cc8c554-397d-41e5-b041-d39c7c2a1a43",
       "key": "least-recent-decay-prevention",
-      "content": "Branches decay exponentially when untouched. Context reconstruction has a cost. The least-recent rule: when derivatives within 20%, push least-recently-touched branch. daemon_next_priority signal exists for this — flags Branch 4.1 Samuel-organism as decay risk. Samuel DM is human-gated but SOP #73 addresses the framework.",
+      "content": "Branches decay exponentially when untouched. Context reconstruction has a cost. The least-recent rule: when derivatives within 20%, push least-recently-touched branch. daemon_next_priority signal exists for this \u2014 flags Branch 4.1 Samuel-organism as decay risk. Samuel DM is human-gated but SOP #73 addresses the framework.",
       "timestamp": "2026-04-09T08:19:13+00:00",
       "source": "cycle-237-branch-4.1-distillation",
       "tags": [
@@ -432,7 +432,7 @@
     {
       "id": "d450d7cc-3d63-48ec-9252-1ccc8de1c62e",
       "key": "strategy-pool-live-loop",
-      "content": "Cycle 238: First live execution of the strategy pool lifecycle loop. Generated 5 candidates, 3 passed WF validation (Donchian_RF sharpe=1.01, Donchian_RSI sharpe=0.77, DualMA_RF sharpe=0.42). Pool 15→18. Key insight: 110 ticks with no generation cycle = dead loop in name only. 'Build and monitor' ≠ 'continuous loop'. The loop only exists if it runs.",
+      "content": "Cycle 238: First live execution of the strategy pool lifecycle loop. Generated 5 candidates, 3 passed WF validation (Donchian_RF sharpe=1.01, Donchian_RSI sharpe=0.77, DualMA_RF sharpe=0.42). Pool 15\u219218. Key insight: 110 ticks with no generation cycle = dead loop in name only. 'Build and monitor' \u2260 'continuous loop'. The loop only exists if it runs.",
       "timestamp": "2026-04-09T08:38:00+00:00",
       "source": "cycle-238",
       "tags": [
@@ -459,7 +459,7 @@
     {
       "id": "e2136435-0bcb-44c2-8265-eb73a12872e9",
       "key": "tick-110-short-tailwind",
-      "content": "Tick 110: BTC=$71,005.99 (↑$44.93 from tick 109 $70,961.06). DualMA_10_30 SHORT×110 (100%), 14/15 FLAT, regime=MIXED. BTC uptick on tick 110 = SHORT headwind. P&L trend: MFE was at tick 50 (+$1.204). Current P&L around +$0.60-0.70. Concentration: 110/1314 = 8.4% of quarterly threshold. Pool expanded to 18 this cycle (first expansion since pool creation).",
+      "content": "Tick 110: BTC=$71,005.99 (\u2191$44.93 from tick 109 $70,961.06). DualMA_10_30 SHORT\u00d7110 (100%), 14/15 FLAT, regime=MIXED. BTC uptick on tick 110 = SHORT headwind. P&L trend: MFE was at tick 50 (+$1.204). Current P&L around +$0.60-0.70. Concentration: 110/1314 = 8.4% of quarterly threshold. Pool expanded to 18 this cycle (first expansion since pool creation).",
       "timestamp": "2026-04-09T08:38:00+00:00",
       "source": "cycle-238",
       "tags": [
@@ -472,7 +472,7 @@
     {
       "id": "8c47dcae-1422-4fce-8287-98277908e059",
       "key": "organism-network-pairwise-triage",
-      "content": "Cycle 240-241: SOP #76 introduced the first formalization of organism network topology via 3-tier divergence triage: ≥80% agreement = skip (structural alignment, no action), 60-79% = async probe (divergence worth investigating, low cost), <60% = deep dive (ground truth escalation required). Key insight: not all divergence is equal — the threshold bands create a priority filter that prevents both under-reaction (ignoring real gaps) and over-reaction (treating every disagreement as a crisis). The triage structure IS the network architecture.",
+      "content": "Cycle 240-241: SOP #76 introduced the first formalization of organism network topology via 3-tier divergence triage: \u226580% agreement = skip (structural alignment, no action), 60-79% = async probe (divergence worth investigating, low cost), <60% = deep dive (ground truth escalation required). Key insight: not all divergence is equal \u2014 the threshold bands create a priority filter that prevents both under-reaction (ignoring real gaps) and over-reaction (treating every disagreement as a crisis). The triage structure IS the network architecture.",
       "timestamp": "2026-04-09T12:00:00+00:00",
       "source": "cycle-240-241-branch-3.1-distillation",
       "tags": [
@@ -486,7 +486,7 @@
     {
       "id": "74113ed4-363e-4eb6-83d6-f2b73cdcd0f3",
       "key": "boot-test-llm-boundary",
-      "content": "Cycle 240-241: Boot tests now total 36 scenarios; 33 pass deterministic (grep-level), 3 require LLM evaluation (MD-295/MD-28/MD-01). The boundary between deterministic-passable and LLM-required tests is itself a signal about DNA completeness. Deterministic tests catch syntax-level behavior (keyword presence, explicit rules). LLM-required tests expose semantic ambiguity — places where the DNA text is present but the reasoning it encodes is not fully explicit. Each LLM-boundary scenario is a candidate for DNA sharpening: if the answer should be deterministic but isn't, the principle needs to be more explicit.",
+      "content": "Cycle 240-241: Boot tests now total 36 scenarios; 33 pass deterministic (grep-level), 3 require LLM evaluation (MD-295/MD-28/MD-01). The boundary between deterministic-passable and LLM-required tests is itself a signal about DNA completeness. Deterministic tests catch syntax-level behavior (keyword presence, explicit rules). LLM-required tests expose semantic ambiguity \u2014 places where the DNA text is present but the reasoning it encodes is not fully explicit. Each LLM-boundary scenario is a candidate for DNA sharpening: if the answer should be deterministic but isn't, the principle needs to be more explicit.",
       "timestamp": "2026-04-09T12:00:00+00:00",
       "source": "cycle-240-241-branch-3.1-distillation",
       "tags": [
@@ -500,7 +500,7 @@
     {
       "id": "48b4f17f-ccb9-444f-bea3-61b2e80aae21",
       "key": "least-recent-decay-signal",
-      "content": "Cycle 240-241: When daemon_next_priority reads 'All branches covered. Least recent: 存活/cold-start', this is a leading indicator of branch decay rather than a status-quo signal. Coverage drift follows an exponential pattern: branches last touched N cycles ago compound their staleness — not linearly but multiplicatively. The 'least-recent' selection rule is a minimum viable anti-decay mechanism. Implication: the priority signal should be read as urgency proportional to time-since-last-touch, not as 'everything is fine'. Branch decay is invisible until it causes a boot test failure; least-recent routing prevents that by keeping all branches in the rotation.",
+      "content": "Cycle 240-241: When daemon_next_priority reads 'All branches covered. Least recent: \u5b58\u6d3b/cold-start', this is a leading indicator of branch decay rather than a status-quo signal. Coverage drift follows an exponential pattern: branches last touched N cycles ago compound their staleness \u2014 not linearly but multiplicatively. The 'least-recent' selection rule is a minimum viable anti-decay mechanism. Implication: the priority signal should be read as urgency proportional to time-since-last-touch, not as 'everything is fine'. Branch decay is invisible until it causes a boot test failure; least-recent routing prevents that by keeping all branches in the rotation.",
       "timestamp": "2026-04-09T12:00:00+00:00",
       "source": "cycle-240-241-branch-3.1-distillation",
       "tags": [
@@ -509,6 +509,51 @@
         "least-recent",
         "coverage-drift",
         "cycle-240-241"
+      ]
+    },
+    {
+      "id": "cfb14cfe-fcf3-4a87-8942-b47addbc83e1",
+      "key": "llm-validation-gate-architecture",
+      "content": "SOP #77 G0-G5 gate structure encodes that scenario classification (G0) determines the entire validation path. Wrong classification at G0 = wrong gate = wrong verdict. The gate architecture IS the correctness guarantee for cold-start integrity. This generalizes: any multi-gate protocol's fidelity is bounded by the accuracy of its first classification step.",
+      "timestamp": "2026-04-09T13:00:00+00:00",
+      "source": "cycle-241-SOP-77",
+      "category": "methodology",
+      "tags": [
+        "SOP-77",
+        "cold-start",
+        "gate-architecture",
+        "LLM-validation",
+        "classification-first"
+      ]
+    },
+    {
+      "id": "53d56e34-00f6-46fc-92ec-52f587d6726b",
+      "key": "ready-posted-gap-is-behavioral",
+      "content": "SOP #78 closes the ready\u2192posted gap. The root finding: content can be fully prepared (drafted, queued, threaded) and still never get posted. The gap is behavioral, not logistical \u2014 it requires an atomic post sequence (G1) and cadence protocol (G3) to bridge. Having systems ready is not sufficient; explicit trigger conditions and kill conditions are required to produce actual output.",
+      "timestamp": "2026-04-09T13:00:00+00:00",
+      "source": "cycle-242-SOP-78",
+      "category": "distribution",
+      "tags": [
+        "SOP-78",
+        "posting-ops",
+        "ready-posted-gap",
+        "behavioral-gap",
+        "cadence"
+      ]
+    },
+    {
+      "id": "81c0d663-a809-438a-be72-21f12a60c8d5",
+      "key": "derivation-chain-scenarios-permanent-llm-boundary",
+      "content": "Cycle 242 LLM validation (3/3 ALIGNED) confirmed that derivation-chain scenarios \u2014 those requiring formula application (MDF, ATR sizing) or option enumeration (MD-01) \u2014 cannot be promoted to deterministic boot tests. They test reasoning path execution, not recall of a stored answer. This is a permanent taxonomic boundary: deterministic tests check stored decisions; LLM-required tests check live derivation. Both are necessary; neither can substitute for the other.",
+      "timestamp": "2026-04-09T13:00:00+00:00",
+      "source": "cycle-242-LLM-validation",
+      "category": "boot-test",
+      "tags": [
+        "LLM-validation",
+        "derivation-chain",
+        "permanent-boundary",
+        "boot-test-taxonomy",
+        "SOP-77"
       ]
     }
   ]
