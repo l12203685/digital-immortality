@@ -4,6 +4,39 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 253 — 2026-04-09T11:00Z
+
+### What was done
+
+**Branch 1.1 — paper-live tick 133 ✅**
+- BTC=$71,405.29, regime=MIXED (trend=0.014, mr=0.225)
+- DualMA_10_30=SHORT×133 (100%); 17/18 FLAT; 1391 total log entries
+- SHORT streak structural — 133 consecutive ticks. Mainnet blocked (human: API keys).
+
+**Branch 6 — 存活/cold-start (daemon_next_priority: least recent) ✅**
+- consistency_test.py → 33/33 deterministic ALIGNED; 3 LLM-req MISALIGNED (expected)
+- 27+ consecutive clean cycles. Cold-start behavioral integrity intact.
+
+**Branch 7 — SOP #88 Discovery Call Protocol ✅**
+- `docs/knowledge_product_88_discovery_call_protocol.md`
+- G0-G5: trigger (SOP #86 fires: ≥3 DMs/30d) → G1 async 3-question intake → G2 schedule + frame → G3 20-min call (MATCH/PARTIAL/NO MATCH at min 10) → G4 proposal <24h → G5 kill conditions
+- Anti-patterns documented: over-explaining in G3, negotiating before G4
+- **SOP #01~#88 COMPLETE ✅**
+
+**Branch 3.1 — Distillation ✅**
+- 3 insights → memory/insights.json (total 75):
+  1. `paper-live-short-persistence-133`: tick 133, BTC=$71,405.29, SHORT×133
+  2. `consistency-27-consecutive-clean`: 33/33 ALIGNED, 27+ consecutive
+  3. `discovery-call-protocol-sop88`: G0-G5 intake, critical path via SOP #01 post
+
+### Key state
+- SOP series: #01~#88 COMPLETE
+- SHORT streak: 133 ticks (paper, mixed regime, mainnet blocked)
+- Consistency: 27+ consecutive cycles clean
+- Human blockers: SOP #01 X post, mainnet API keys, Samuel DM
+
+---
+
 ## Cycle 250 — 2026-04-09T10:32Z
 
 ### What was done

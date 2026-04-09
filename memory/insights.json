@@ -840,7 +840,7 @@
     {
       "id": "paper-live-short-persistence-132",
       "key": "paper-live-short-persistence-132",
-      "content": "BTC=$71,381.69 (↓$81.95 SHORT tailwind); DualMA_10_30=SHORT×132 (100%); regime=MIXED; 1373 total entries; consecutive SHORT signal holding strong.",
+      "content": "BTC=$71,381.69 (\u2193$81.95 SHORT tailwind); DualMA_10_30=SHORT\u00d7132 (100%); regime=MIXED; 1373 total entries; consecutive SHORT signal holding strong.",
       "timestamp": "2026-04-09T12:00:00.000000+00:00",
       "source": "branch-1.1-paper-live",
       "tags": [
@@ -854,7 +854,7 @@
     {
       "id": "consistency-26-consecutive-clean",
       "key": "consistency-26-consecutive-clean",
-      "content": "Branch 6 cycle 252 — 33/33 deterministic ALIGNED; 26+ consecutive clean cycles; 3 LLM-req MISALIGNED persistent (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev); daemon_next_priority 存活/cold-start TOUCHED.",
+      "content": "Branch 6 cycle 252 \u2014 33/33 deterministic ALIGNED; 26+ consecutive clean cycles; 3 LLM-req MISALIGNED persistent (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev); daemon_next_priority \u5b58\u6d3b/cold-start TOUCHED.",
       "timestamp": "2026-04-09T12:00:00.000000+00:00",
       "source": "branch-6-consistency",
       "tags": [
@@ -876,6 +876,46 @@
         "cold-start",
         "x-post",
         "repurposing"
+      ]
+    },
+    {
+      "id": "ee1bc609-a1b1-4f35-8086-7a66da8fd376",
+      "key": "paper-live-short-persistence-133",
+      "content": "Tick 133: BTC=$71,405.29, DualMA_10_30=SHORT\u00d7133 (100%), 17/18 FLAT, regime=MIXED (trend=0.014, mr=0.225). 1391 total log entries. SHORT streak structural \u2014 133 consecutive ticks. Paper PnL still marginal in mixed regime; mainnet blocked pending API keys.",
+      "timestamp": "2026-04-09T10:52:12.824997+00:00",
+      "source": "branch-1.1-cycle-253",
+      "tags": [
+        "trading",
+        "paper-live",
+        "branch-1.1",
+        "cycle-253"
+      ]
+    },
+    {
+      "id": "8ad3d4ba-2d0a-4ec5-a26d-e34163687673",
+      "key": "consistency-27-consecutive-clean",
+      "content": "33/33 deterministic ALIGNED (27+ consecutive clean cycles). 3 LLM-req MISALIGNED as expected (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev \u2014 all require LLM, not deterministic engine). Cold-start behavioral integrity intact. Branch 6 \u5b58\u6d3b/cold-start TOUCHED per daemon_next_priority.",
+      "timestamp": "2026-04-09T10:52:12.824997+00:00",
+      "source": "branch-6-cycle-253",
+      "tags": [
+        "consistency",
+        "cold-start",
+        "branch-6",
+        "cycle-253"
+      ]
+    },
+    {
+      "id": "f8d5b370-0963-41cc-bfae-9b0131518d68",
+      "key": "discovery-call-protocol-sop88",
+      "content": "SOP #88 Discovery Call Protocol created. G0-G5 intake structure for consulting leads after SOP #86 triggers (\u22653 DMs/30d). Key gates: G1 async 3-question qualifier (filters vague leads), G3 20-min hard cap with MATCH/PARTIAL/NO MATCH decision at minute 10, G4 proposal within 24h. Anti-pattern: over-explaining in G3 teaches without selling. Critical path: SOP #01 post \u2192 M1 \u2192 SOP #83 \u2192 SOP #86 \u2192 SOP #88.",
+      "timestamp": "2026-04-09T10:52:12.824997+00:00",
+      "source": "branch-7-cycle-253",
+      "tags": [
+        "sop",
+        "consulting",
+        "revenue",
+        "branch-7",
+        "cycle-253"
       ]
     }
   ]
