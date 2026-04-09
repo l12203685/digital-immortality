@@ -2,6 +2,16 @@
 
 Recursive engine cycle history.
 
+## Cycle 278 — 2026-04-09T15:52Z
+
+- **Branch 2.2**: 201901 JSONL (Jan 2019, 228 substantive Edward msgs) → MD-361~363: 薪資談判=具體錨點反報價+製造二元決策壓力（56→至少58→對方直接問報到日）/ 保障網下主動校正風險容忍度=緩衝存在時向更高EV選項傾斜 / 技術深度>薪資差（差距<15%）=早期職涯優先積累可部署技能; templates/dna_core.md: **363 MDs** (362 entries, 1 legacy gap at MD-217); 201901 COMPLETE ✅; next: 201812 or earlier months
+- **Branch 1.1**: paper-live tick — BTC=$72,122.78; regime=mixed; DualMA_10_30=SHORT, gen_BollingerMeanReversion_RF_7abfe4=SHORT, gen_BollingerMeanReversion_RF_598b24=SHORT; 15/18 FLAT; BollingerMR SHORT regime continues; PAPER mode
+- **Branch 6**: consistency_test.py → 33/33 deterministic ALIGNED ✅; 6 LLM-req MISALIGNED (expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev/meta_search_before_act/meta_output_must_persist/meta_three_layer_loop); **47th consecutive clean cycle** ✅; STABLE
+- **Branch 3.1**: 5 insights → memory/insights.json (total **156**): 201901-salary-negotiation-concrete-anchor / 201901-safety-net-risk-recalibration / 201901-technical-depth-over-salary-delta / paper-live-tick67-bollinger-short / consistency-47th-consecutive
+- **L2**: A (Branch 2.2 — 201901 MDs complete, 363 total — HIGH) + B×3 (paper-live tick / consistency 47th / distillation)
+- **L3**: not triggered
+- **daemon_next_priority**: 201812 or earlier JSONL → next Branch 2.2; Branch 1.1 monitoring BollingerMR SHORT regime
+
 ## Cycle 277 — 2026-04-09T16:30Z
 
 - **Branch 2.2**: 201902 JSONL (Feb 2019, 1479 Edward msgs, 98 substantive) → MD-358~360: 分析前先定義使用目的=四錨點框架(用途/可操作定義/資料可及性/應用路徑) / 資本報酬率>邊際薪資增長=資本規模夠大時先問「能否幫資產增加3%」而非加薪 / 期權MM伽馬釘選=結算前莊家利益在最大痛苦點→預判區間而非趨勢; templates/dna_core.md: **360 MDs** (359 entries, 1 legacy gap at MD-217); next: 201901

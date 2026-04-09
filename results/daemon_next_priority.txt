@@ -1,1 +1,1 @@
-PRIORITY: 201901 JSONL → Branch 2.2 next (MD-361~363); Branch 1.1 monitoring BollingerMR SHORT regime evolution; Branch 6 COMPLETE (46th clean).
+PRIORITY: 201812 JSONL → Branch 2.2 next (MD-364~366); Branch 1.1 monitoring BollingerMR SHORT regime; Branch 6 STABLE (47th clean).

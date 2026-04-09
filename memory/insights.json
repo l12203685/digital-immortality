@@ -1648,6 +1648,84 @@
         "misaligned",
         "streak-broken"
       ]
+    },
+    {
+      "id": "0d7d9112-2366-4754-83aa-0ab73d2ac31f",
+      "key": "201901-salary-negotiation-concrete-anchor",
+      "content": "薪資談判=具體錨點反報價：不問「能不能多給」，給出「至少X元，能到就馬上確認」。具體數字把談判從議價探索轉為是/否決策，強迫對方計算能否達標。Edward鉅亨談判: 56→「至少58」→對方直接問何時報到。(MD-361)",
+      "timestamp": "2026-04-09T15:52Z",
+      "source": "branch-2.2-cycle-278",
+      "tags": [
+        "negotiation",
+        "salary",
+        "career",
+        "branch-2.2",
+        "cycle-278",
+        "md-361",
+        "201901"
+      ]
+    },
+    {
+      "id": "4fe07030-f40f-4678-a986-39e49ddb84ee",
+      "key": "201901-safety-net-risk-recalibration",
+      "content": "保障網下主動校正風險容忍度：安全網（多offer/失業給付/緩衝金）是風險容忍度的校正器，不只是防禦工具。緩衝存在時應向更高波動性/期望值選項傾斜。有保險=可承受風險大一點的選擇。(MD-362)",
+      "timestamp": "2026-04-09T15:52Z",
+      "source": "branch-2.2-cycle-278",
+      "tags": [
+        "risk-management",
+        "career",
+        "optionality",
+        "branch-2.2",
+        "cycle-278",
+        "md-362",
+        "201901"
+      ]
+    },
+    {
+      "id": "69a68f37-d49b-4805-b325-cc36668b0049",
+      "key": "201901-technical-depth-over-salary-delta",
+      "content": "技術深度>薪資差（差距<15%）：職涯早期薪資差3k/月=36k/年，但技術資本複利增長在1-2年後價值更大。鉅亨57k vs Kronos 60k，選技術含量更高的鉅亨。積累速度是早期核心變數。(MD-363)",
+      "timestamp": "2026-04-09T15:52Z",
+      "source": "branch-2.2-cycle-278",
+      "tags": [
+        "career",
+        "skill-accumulation",
+        "job-selection",
+        "branch-2.2",
+        "cycle-278",
+        "md-363",
+        "201901"
+      ]
+    },
+    {
+      "id": "c2c1e185-68fd-4b80-971b-e06feb0eda72",
+      "key": "paper-live-tick67-bollinger-short-btc72122",
+      "content": "Branch 1.1 paper-live tick (cycle-278): BTC=72122.79, DualMA_10_30=SHORT, gen_BollingerMeanReversion_RF_7abfe4=SHORT, gen_BollingerMeanReversion_RF_598b24=SHORT, 15/18 FLAT. BollingerMR SHORT regime continues. Mode=PAPER.",
+      "timestamp": "2026-04-09T15:52Z",
+      "source": "branch-1.1-cycle-278",
+      "tags": [
+        "trading",
+        "paper-live",
+        "branch-1.1",
+        "cycle-278",
+        "btc",
+        "bollinger-mr",
+        "short"
+      ]
+    },
+    {
+      "id": "e0206066-f70a-4bde-8fa2-d45a5a702c9d",
+      "key": "consistency-cycle278-47th-consecutive",
+      "content": "Branch 6 consistency_test.py cycle-278: 33/33 deterministic ALIGNED, 6 MISALIGNED (LLM-req: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev/meta_search_before_act/meta_output_must_persist/meta_three_layer_loop). 47th consecutive clean cycle. STABLE.",
+      "timestamp": "2026-04-09T15:52Z",
+      "source": "branch-6-cycle-278",
+      "tags": [
+        "consistency",
+        "branch-6",
+        "cycle-278",
+        "47th-consecutive",
+        "aligned"
+      ]
     }
   ]
 }
