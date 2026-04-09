@@ -1,1 +1,1 @@
-PRIORITY: Branch '4.1/Samuel-organism' — CRITICAL REGRESSION: 27% alignment (was 68%). 9 newly-diverged axes (career/relationships/learning/legacy/communication/meta_strategy + 4 social). Root cause: expansion drift (Edward DNA +157 MDs since last Samuel calibration). Action: send docs/samuel_async_calibration_dm.md with 3 new scenarios targeting career/relationships/learning. SOP #106 created. Next priority: Edward sends async DM.
+PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.
