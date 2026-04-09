@@ -1339,6 +1339,30 @@
       "insight": "SOP #99 遞迴引擎健康稽核協議：五個門控（G0頻率/G1新穎性/G2分支導數/G3持久性/G4評估熵/G5經濟脈搏）區分活引擎與偽裝的死迴圈。關鍵原則：運行≠進步，進步≠持久化，持久化+遞迴=永生。",
       "source": "docs/knowledge_product_99_recursive_engine_health_check.md",
       "category": "methodology"
+    },
+    {
+      "id": "b1b046c9-35f4-4f82-96dc-d1ed500075e0",
+      "key": "consistency-36-consecutive-clean",
+      "insight": "33/33 deterministic ALIGNED 第36次連續乾淨週期。cold-start行為一致性持續穩定。三個LLM-required場景（poker_gto_mdf/trading_atr_sizing/career_multi_option_ev）MISALIGNED符合預期。",
+      "branch": "6",
+      "timestamp": "2026-04-09T13:15Z",
+      "cycle": 266
+    },
+    {
+      "id": "17683386-ffc6-422f-b501-3aad81f20342",
+      "key": "paper-live-tick104",
+      "insight": "paper-live tick 104: BTC=$71,123.98，17/18 FLAT（DualMA_10_30=SHORT結構性持續×104），1697 log entries，regime=MIXED。SHORT信號連續104 ticks未斷裂。",
+      "branch": "1.1",
+      "timestamp": "2026-04-09T13:14Z",
+      "cycle": 266
+    },
+    {
+      "id": "83bc6d38-caa1-455a-9e65-a053c12acc32",
+      "key": "sop100-century-review-protocol",
+      "insight": "SOP #100 SOP百份稽核協議：G0庫存→G1去重→G2新鮮度→G3缺口→G4剪枝→G5冷啟動導航驗證。補完知識輸出分支的L3自我稽核機制。完整維護棧=SOP#80+#91+#94+#100每6個月一輪。",
+      "branch": "7",
+      "timestamp": "2026-04-09T13:15Z",
+      "cycle": 266
     }
   ]
 }
