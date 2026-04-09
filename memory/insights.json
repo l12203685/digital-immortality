@@ -2034,6 +2034,61 @@
         "branch-6",
         "cold-start"
       ]
+    },
+    {
+      "id": "f9c6e182-h57d-8gd4-2c0f-6h38j5e17g93",
+      "key": "paper-tick285-btc72464-mixed-15flat",
+      "content": "tick 285: BTC=$72,464.04; regime=mixed; 15 active (DualMA_10_30+gen_BollingerMR_RF×2 disabled PF<0.8); all 15 FLAT; total_pnl=-2.71%; PAPER mode — mixed regime = no edge for trend or mean-reversion; flat-all is correct response, not passivity",
+      "timestamp": "2026-04-10T12:00:00+00:00",
+      "source": "cycle-285-distillation",
+      "tags": [
+        "trading",
+        "paper-live",
+        "branch-1-1",
+        "regime-mixed"
+      ]
+    },
+    {
+      "id": "a0d7f293-i68e-9he5-3d1g-7i49k6f28h04",
+      "key": "branch-1-3-week1-dms-drafted-execution-ready",
+      "content": "Branch 1.3 cold-outreach: Week 1 DM templates A-E drafted in outreach_week1_execution.md; 5 archetypes targeted (AI Agent Dev, no-code builder, indie hacker, consultant, startup founder); 0→execution gap closed; first concrete send-ready messages exist; derivative: strategy→execution transition is the highest-value state change this cycle",
+      "timestamp": "2026-04-10T12:00:00+00:00",
+      "source": "cycle-285-distillation",
+      "tags": [
+        "outreach",
+        "branch-1-3",
+        "skill-monetization",
+        "execution",
+        "first-user-acquisition"
+      ]
+    },
+    {
+      "id": "b1e8g304-j79f-0if6-4e2h-8j50l7g39i15",
+      "key": "201807-jsonl-md379-381-processing",
+      "content": "Branch 2.2: 201807 JSONL → MD-379~381 processing; month 201807 = July 2018 Edward chat data; continuing reverse-chronological micro-decision extraction; 381 total MDs post-processing; pattern: pre-bear-market-bottom psychology — useful for distilling capitulation/accumulation decision frames",
+      "timestamp": "2026-04-10T12:00:00+00:00",
+      "source": "cycle-285-distillation",
+      "tags": [
+        "micro-decisions",
+        "branch-2-2",
+        "201807",
+        "bear-market",
+        "data-processing"
+      ]
+    },
+    {
+      "id": "c2f9h415-k80g-1jg7-5f3i-9k61m8h40j26",
+      "key": "cycle-285-derivative-strategy-to-execution-transition",
+      "content": "Cycle 285 meta-derivative: highest-value state transition across all branches is strategy→execution gap closure; Branch 1.3 has DM templates but 0 sent — the gap between plan and action is the only unsolved problem; Branch 2.2 continues autonomous production (derivative: steady, not accelerating); Branch 1.1 flat-all in mixed regime = correct inaction; total system derivative: execution bottleneck on outreach is the binding constraint",
+      "timestamp": "2026-04-10T12:00:00+00:00",
+      "source": "cycle-285-distillation",
+      "tags": [
+        "meta",
+        "derivative",
+        "execution-gap",
+        "branch-1-3",
+        "cycle-285"
+      ]
     }
   ]
 }
