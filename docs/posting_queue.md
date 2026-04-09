@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#60
+# Twitter Posting Queue — SOP Series #01~#62
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -67,6 +67,8 @@
 | Aug 1 | #58 | publish_thread_sop58_twitter.md | "You track your money. You track your fitness. You don't track your decision quality. Mental Capital Protocol — 5-gate." | pending |
 | Aug 3 | #59 | publish_thread_sop59_twitter.md | "You're not undisciplined. Your system just never converted repeated decisions into defaults. Life Default Design Protocol — 5-gate." | pending |
 | Aug 5 | #60 | publish_thread_sop60_twitter.md | "You don't have a content problem. You have a shipping problem." | pending |
+| Aug 6 | #61 | publish_thread_sop61_twitter.md | "Zero revenue = parasitic not immortal. The fix is 5 gates." | pending |
+| Aug 7 | #62 | publish_thread_sop62_twitter.md | "You don't have a relationship problem. You have an investment model problem." | pending |
 
 ---
 
