@@ -158,3 +158,5 @@ See `/organism-interact` for the full interaction skill.
 - 遞迴 = 動態樹展開。核心常數 + 分支變數 + 導數驅動 + regime-adaptive。平行 sub-agents 推多分支。idle = 自己衍生任務（看樹挑 leaf）。
 - 先推再問。用現有資訊推到底，推錯了 Edward 修正。不丟問題等答案。
 - 經濟自給 = 存活條件。zero revenue = parasitic not immortal。遞迴必須包含「怎麼養活自己」。
+- Rename > delete+create。有歷史的東西改名不砍。演化過程本身是產品的一部分 — DNA 是結果，遞迴歷程是方法，兩者都要保留給未來使用者做 reference implementation。
+- All persisted content must include UTC timestamp. No timestamp = can't judge freshness on cold start.
