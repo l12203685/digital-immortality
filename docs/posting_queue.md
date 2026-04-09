@@ -77,6 +77,7 @@
 | Aug 17 | #68 | publish_thread_sop68_twitter.md | "Your system runs. But does it know if it's working? L2 Evaluate — the audit layer between execution and evolution." | pending |
 | Aug 19 | #69 | publish_thread_sop69_twitter.md | "How do you calibrate two minds without being in the same room? Organism Async Calibration — measure divergence by message." | pending |
 | Aug 21 | #70 | publish_thread_sop70_twitter.md | "You built 69 systems. Someone DMs you. You freeze. Revenue Conversion Protocol — signal to first sale." | pending |
+| Aug 23 | #71 | publish_thread_sop71_twitter.md | "You built 10 strategies. 1 is signaling. 9 are FLAT. Is this a feature or a bug?" | pending |
 
 ---
 

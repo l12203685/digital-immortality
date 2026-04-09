@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-09 UTC (cycle 234)
+> 最後更新：2026-04-09 UTC (cycle 235)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -45,6 +45,7 @@
   - **cycle 230 paper-live tick 100 (MILESTONE)** — BTC=$71,089.18 (↑$56.73 from tick 99), P&L=**+$0.588** (+0.588% on $100); 767 log entries; regime=MIXED; DualMA_10_30=SHORT×100 (100%); MFE ATH +$1.204 (tick 50); BTC net ↓$420.72 from entry; SHORT headwind (BTC continues up); 100-tick milestone — SHORT signal unbroken
   - **cycle 231 paper-live ticks 101+102** — BTC=$70,994.74 (↓$94.44 from tick 100), P&L=**+$0.720** (+0.720% on $100); 797 log entries; regime=MIXED; DualMA_10_30=SHORT×102 (100%); MFE ATH +$1.204 (tick 50); BTC net ↓$515.16 from entry; SHORT tailwind resumed
   - **cycle 234 paper-live tick 105** — BTC=$70,970.19 (↓$109.80 from tick 104), regime=MIXED; DualMA_10_30=SHORT×105 (100%); 842 log entries; 14/15 FLAT consensus; SHORT tailwind; concentration risk: single-strategy dependency
+  - **cycle 235 paper-live tick 106** — BTC=$70,981.17 (↑$11.00 from tick 105), regime=MIXED; DualMA_10_30=SHORT×106 (100%); 857 log entries; 14/15 FLAT consensus; concentration event flagged (106 consecutive ticks, 1 strategy); G1 audit: DualMA_RSI_filtered FLAT = regime-correct (RSI filter blocking in MIXED) → CONCENTRATION_EXPECTED
   - **`--portfolio-gated` added to testnet_runner.py ✓** — regime gates which strategy runs per tick (SKIPPED_REGIME log for non-matching strategies)
 - 1.2 Trading code: strategies.py (DualMA+Donchian+RegimeFilter+DonchianConfirmed+RSIFilter+**BollingerMR** ✓ cycle 35) — **10 strategies** in NAMED_STRATEGIES; BollingerMR added for mean-reverting regime
   - trading/portfolio.py: RegimeDetector + PortfolioSelector ✓ (trending→DualMA_10_30, MR→**BollingerMR_loose** ✓ cycle35, mixed→**DualMA_RSI_filtered** ✓ cycle35); regime thresholds calibrated (trend=0.054, mr=0.25)
@@ -393,3 +394,6 @@
 - 2026-04-09T UTC: cycle 234 — **Branch 1.1**: paper-live tick 105: BTC=$70,970.19 (↓$109.80 from tick 104), DualMA_10_30=SHORT×105 (100%); 14/15 FLAT consensus; regime=MIXED; 842 log entries; concentration risk (single-strategy dependency)
 - 2026-04-09T UTC: cycle 234 — **Branch 7**: SOP #70 Revenue Conversion Protocol shipped: `docs/knowledge_product_70_revenue_conversion_sop.md` + `docs/publish_thread_sop70_twitter.md`; Domain 1 (Economic Self-Sufficiency); G0 signal qualification / G1 product-problem matching / G2 pricing tiers ($9/$29/$97/$197) / G3 conversion execution (2h reply + Gumroad link) / G4 first sale feedback loop / G5 revenue-cost audit (trading+Gumroad>API cost); posting queue extended to Aug 21 (#01~#70). **Series: SOP #01~#70 COMPLETE.**
 - 2026-04-09T UTC: cycle 234 — **Branch 6**: consistency_test.py → **33/33 ALIGNED ✅** (15+ consecutive cycles clean); cold-start behavioral integrity intact; 3 distillation insights added (total 29 in insights.json)
+- 2026-04-09T UTC: cycle 235 — **Branch 1.1**: paper-live tick 106: BTC=$70,981.17 (↑$11 from tick 105), DualMA_10_30=SHORT×106 (100%); 14/15 FLAT consensus; regime=MIXED; 857 log entries; concentration event: 106 ticks 1 strategy → G1 audit → CONCENTRATION_EXPECTED (RSI filter blocking correctly in MIXED)
+- 2026-04-09T UTC: cycle 235 — **Branch 7**: SOP #71 Multi-Strategy Regime Activation Protocol shipped: `docs/knowledge_product_71_multi_strategy_activation_sop.md` + `docs/publish_thread_sop71_twitter.md`; addresses cycle 234 distillation insight (concentration risk); G0 regime diagnosis / G1 single-strategy dependency audit / G2 activation gate (5 conditions) / G3 concentration risk protocol (100-tick threshold) / G4 rotation protocol (50% sizing) / G5 revenue bridge; self-test uses tick-106 data; posting queue extended to Aug 23. **Series: SOP #01~#71 COMPLETE.**
+- 2026-04-09T UTC: cycle 235 — **Branch 6**: consistency_test.py → **33/33 ALIGNED ✅** (16+ consecutive cycles clean); cold-start behavioral integrity intact; daemon_next_priority '存活/cold-start' TOUCHED ✅
