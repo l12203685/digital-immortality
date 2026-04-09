@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T09:21+08",
+  "updated": "2026-04-09T09:28+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#34 COMPLETE → posting_queue.md updated (#01~#34, Apr 9–Jun 14); **x_launch_sequence.md created ✓** — first-post friction reduced to 15 min; Apr 9 = scheduled post date for SOP #01; **3 workbooks READY TO LIST** (Workbook #01 Strategy Development + Workbook #02 Portfolio Construction + Workbook #03 Execution & Sizing, $29 each, $87/buyer trilogy)",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions pre-committed)",
   "deadline": "2026-07-07",
@@ -55,23 +55,23 @@
     },
     {
       "time": "just now",
-      "text": "Staleness pattern established: gap >10 cycles → must refresh next_input.md be..."
+      "text": "- Series now SOP #01~#38 (posting queue through Jun 22)"
     },
     {
       "time": "just now",
-      "text": "- Priority: Branch 2.3 LLM run (2 social scenarios) → SOP #38 → verify SOP #0..."
+      "text": "- 10-tweet thread ready"
     },
     {
       "time": "just now",
-      "text": "- DNA: 330 MDs, 31/33 aligned"
+      "text": "- DNA anchors: MD-13/14/25/26/78/96/143"
     },
     {
       "time": "just now",
-      "text": "- Branch 7: SOP #01~#37 complete, posting queue through Jun 20"
+      "text": "- 5 gates: rolling OOS monitor → regime mismatch check → edge_ratio (MFE/MAE×..."
     }
   ],
   "stats": {
-    "daemon_cycles": 187,
+    "daemon_cycles": 188,
     "total_mds": 330,
     "dna_core_lines": 87
   }

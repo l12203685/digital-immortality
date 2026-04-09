@@ -5518,3 +5518,17 @@ Next blocker: Edward posts SOP #01 (human-gated).
 - Posting queue extended to SOP #01~#38 (Jun 22). Series complete.
 
 Next blocker: Edward posts SOP #01 (human-gated).
+
+## Cycle 188 — 2026-04-09 01:28:33 UTC
+
+**Cycle 188 done.**
+
+**Branch 2.3 confirmed 33/33 ALIGNED** — next_input.md was stale at 31/33; re-run shows all 33 scenarios passing, including all 3 social ones.
+
+**Branch 7.38 — SOP #38 shipped**: Alpha Decay & Strategy Sunset Protocol.
+- 5 gates: rolling OOS monitor → regime mismatch check → edge_ratio (MFE/MAE×√N) → premise falsification → anti-capitulation → kill+resurrection
+- DNA anchors: MD-13/14/25/26/78/96/143
+- 10-tweet thread ready
+- Series now **SOP #01~#38** (posting queue through Jun 22)
+
+**Next blocker: Edward posts SOP #01** (human-gated).
