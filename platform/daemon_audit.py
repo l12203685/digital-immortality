@@ -226,12 +226,17 @@ def generate_suggestion(
             "Write substantive per-branch reports (>50 chars) each cycle."
         )
 
-    # Default: balanced coverage
-    least_recent = min(branch_statuses, key=lambda b: b.last_touched_cycle)
-    return (
-        f"OK: All branches covered. Least recent: '{least_recent.name}'. "
-        f"Consider touching it next."
-    )
+    # Priority 5: discovery mode — don't just maintain, grow
+    # If all branches report OK, the system is stagnating. Push it to discover new needs.
+    discovery_prompts = [
+        "All branches maintained but no new growth. Ask: what NEW branch should exist that doesn't yet? Read dynamic_tree.md and find gaps.",
+        "System stable. Backward check: what did Edward ask for in recent sessions that hasn't been built into an always-on system yet?",
+        "No neglected branches but are any branches fake-healthy? Check: did last 5 cycles produce real git diffs or just log entries?",
+        "Stable state. Push growth: read SKILL.md rules, find one rule the system violates, fix it.",
+        "Discovery mode: read results/daemon_log.md last 20 entries. Are they diverse or repetitive? If repetitive, do something completely different.",
+    ]
+    import random
+    return random.choice(discovery_prompts)
 
 
 def run_audit() -> AuditResult:
