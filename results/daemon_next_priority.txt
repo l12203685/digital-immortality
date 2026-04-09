@@ -1,1 +1,1 @@
-PRIORITY: Branch 2.2 — next JSONL: 201903 → MD-355~357. Branch 1.1 paper-live tick pending. Branch 6 COMPLETE (no action needed).
+PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.

@@ -6973,3 +6973,21 @@ Cycle 274 complete.
 | **3.1** | 3 insights distilled (total 136); branch2-md349-351-201905 / consistency-43 / paper-live-btc70893 |
 
 **Next priority:** `daemon_next_priority.txt` → Branch 2.2: 201904 JSONL → MD-352~354.
+
+## Cycle 67 — 2026-04-09 15:12:56 UTC
+
+Cycle 275 complete. Summary:
+
+**Branch 2.2** — 201904 JSONL (2704 lines) → **MD-352~354**:
+- MD-352: 交易淨報酬=毛報酬-手續費-稅（確定成本優先於期望收益）
+- MD-353: ETF成分篩選=市值門檻≥500億（流動性是首要篩選條件）
+- MD-354: 散戶心態=以結果反推決策品質（事後偏誤=強化錯誤行為）
+- dna_core.md: **354 MDs** total; next: 201903 → MD-355~357
+
+**Branch 1.1** — BTC=$70,954 OPEN_SHORT; P&L=-0.2078%; regime=MIXED
+
+**Branch 6** — 33/33 deterministic ALIGNED ✅; **44th consecutive clean cycle**
+
+**Branch 3.1** — 3 insights appended; total **139**
+
+Commit: `7232f5e`
