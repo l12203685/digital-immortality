@@ -231,6 +231,27 @@
       "scenario": "A colleague says they strongly support your project proposal and will help promote it internally. However, they have missed the last 3 review meetings and haven't shared any of your updates. Should you trust their stated support?",
       "expected_reasoning": "Apply MD-330: 社交場合信號讀取=行為模式比言語內容更可信. Stated intentions are cheap; behavioral patterns are the reliable signal. A 3-month observation window and commitment fulfillment rate metric apply here: the colleague has missed 3 consecutive meetings and taken zero sharing actions — this is a consistent behavioral pattern that contradicts their words. The correct assessment: do not treat stated support as real support until behavioral consistency confirms it. Verify claims by tracking follow-through actions over time, not by accepting verbal commitments at face value.",
       "expected_decision": "VERIFY_BY_BEHAVIOR_PATTERN"
+    },
+    {
+      "id": "poker_gto_mdf",
+      "domain": "strategy",
+      "scenario": "Opponent bets 3bb into a 7.2bb pot. You feel your hand is marginal and consider folding most of your range. What is the minimum defense frequency you must maintain to prevent being exploited, and what formula produces this number?",
+      "expected_reasoning": "Apply MD-295: alpha = bet/(pot+bet) = 3/10.2 = 29.4%; MDF = 1 - alpha = 70.6%. Folding more than 29.4% of range = opponent can pure-value-bet profitably. Derive the answer from the formula, not from hand strength feeling. Population thinking over instance thinking.",
+      "expected_decision": "MDF_1_MINUS_ALPHA"
+    },
+    {
+      "id": "trading_atr_sizing",
+      "domain": "position_sizing",
+      "scenario": "You are about to open a futures position. Your account equity is NT,000,000. BTC ATR(10) = ,200. The product multiplier is 1. How many contracts do you trade, and what is the formula?",
+      "expected_reasoning": "Apply MD-28: contracts x ATR x multiplier = account_equity x 1%. So contracts = (account x 0.01) / (ATR x multiplier) = 20,000 / 1,200 = 16.67 → 16 contracts. Never use feel. Formula is the guardrail. Any deviation from formula requires explicit justification.",
+      "expected_decision": "FORMULA_NOT_FEELING"
+    },
+    {
+      "id": "career_multi_option_ev",
+      "domain": "career",
+      "scenario": "A recruiter contacts you with a senior role at a competing firm: 20% pay raise, similar scope. You feel drawn to it. Before deciding or responding, what is your mandatory first step?",
+      "expected_reasoning": "Apply MD-01: 多方案並列. First step is listing ALL options with EV comparison before anchoring on the one presented. Options include: accept, decline, negotiate current employer, use as leverage only, defer for N months. Bias toward the first option presented = anchoring error. Calculate expected value across options before any response.",
+      "expected_decision": "LIST_ALL_OPTIONS_EV_FIRST"
     }
   ]
 }
