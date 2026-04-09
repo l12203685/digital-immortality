@@ -5556,3 +5556,17 @@ Next blocker: Edward posts SOP #01 (human-gated).
 - Posting queue extended to **SOP #01~#40** (Jun 26)
 
 Next blocker: Edward posts SOP #01 (human-gated).
+
+## Cycle 190 — 2026-04-09 01:42:51 UTC
+
+**Cycle 190 done.**
+
+**Branch 1.1** tick 60: BTC=$70,760, SHORT×60 (100%), P&L=**+$1.048** — new P&L high (was +$0.963 at tick 59).
+
+**Branch 7.40 — SOP #40 shipped**: Information Asymmetry Edge Protocol
+- Kernel 2 formalized: 資訊不對稱決定行動方向
+- 5 gates: edge type ID (A/B/C/D) → decay check → adversarial test → sizing rule → population exploit screen → edge log
+- DNA anchors: MD-02/04/05/16/44/54/57/62
+- Posting queue: **SOP #01~#40** (through Jun 26)
+
+Next blocker: Edward posts SOP #01 (human-gated).
