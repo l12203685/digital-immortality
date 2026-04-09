@@ -1,1 +1,1 @@
-OK: All branches covered. Least recent: '存活/cold-start'. Consider touching it next.
+OK: All branches covered. Least recent: 'Branch 7/SOP'. Consider SOP #59 next (domain gap after #58 Mental Capital).

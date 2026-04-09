@@ -1,17 +1,17 @@
-# Session State — 2026-04-09 UTC (Cycle 218)
+# Session State — 2026-04-09 UTC (Cycle 220)
 
 > Inter-session relay. Cold-start reads this AFTER dna_core.md + boot_tests.md.
 > Updated each cycle. If stale >24h: re-read daemon_log.md tail 60 to reconstruct.
 
 ## Current Cycle
-- **Cycle**: 218
+- **Cycle**: 220
 - **Timestamp**: 2026-04-09T UTC
 - **Phase**: Recursive daemon running
 
 ## Branch Status Summary
 | Branch | Status | Last Touched |
 |--------|--------|--------------|
-| 1.1 Trading paper-live | ticks 82+83, BTC=$70,889.16 (↑$49.43 from tick 81), DualMA_10_30=SHORT×83 (100%), P&L=+$0.868 (+0.868% on $100); regime=MIXED; 512 log entries; mainnet blocked on API keys | cycle 218 |
+| 1.1 Trading paper-live | tick 84, BTC=$70,929.29 (↑$40.13 from tick 83), DualMA_10_30=SHORT×84 (100%), P&L=+$0.812 (+0.812% on $100); regime=MIXED; 527 log entries; mainnet blocked on API keys | cycle 220 |
 | 1.3 Skill 商業化 | v2.1.0, users=0; blocker=SOP#01 never posted (0 audience) | cycle 212 |
 | 2.2 微決策學習 | **COMPLETE** — 330 MDs ✅ | cycle 180+ |
 | 2.3 Validation | 33/33 ALIGNED ✅ | cycle 218 (consistency test re-run) |
@@ -20,7 +20,7 @@
 | 4.3 Discord | 4 seed posts written; ready to paste → invite C | cycle 207 |
 | 5.3 Web platform | Phase 2 live ✓ | cycle 120+ |
 | 6 存活冷啟動 | **6.9 CI ✅; 6.10 health monitoring ✅; F8 runbook added; 6.11 consistency 33/33 ✅; health indicators all green cycle 218** | cycle 218 |
-| 7 SOP series | **SOP #01~#57 COMPLETE** — SOP #57 Knowledge Integration Pipeline (Domain 3); queue to Jul 30; series SOP #01~#57 COMPLETE | cycle 218 |
+| 7 SOP series | **SOP #01~#58 COMPLETE** — SOP #58 Mental Capital & Psychological Resilience Protocol (Domain 6); queue to Aug 1; series SOP #01~#58 COMPLETE | cycle 220 |
 
 ## Blocker (human-gated)
 - ⚡ **DEADLINE 2026-07-07**: trading profit > API cost. ~89 days.
@@ -35,8 +35,8 @@
 2. **Branch 4.3**: Edward pastes 4 Discord seed posts (files in docs/discord_seed_*.md) → invite C
 3. **Branch 4.1**: Edward sends `docs/samuel_async_calibration_dm.md` via WhatsApp/LINE → unblocks calibration
 4. **Branch 4.1 Organism C**: Edward fills `templates/organism_c_draft.md` §0+§7 → first collision run
-5. Branch 1.1: paper-live tick 84 (run `python trading/mainnet_runner.py --paper-live`)
-6. Branch 7: SOP #58 next — Domain gap scan (next priority domain after #57 Knowledge Integration)
+5. Branch 1.1: paper-live tick 85 (run `python trading/mainnet_runner.py --paper-live`)
+6. Branch 7: SOP #59 next — Domain gap scan (next priority domain after #58 Mental Capital)
 
 ## What's DONE this session (cycles 207–217)
 - **Branch 4.3**: 4 Discord seed posts created (general, collision-report, organism-dna, calibration)
@@ -72,3 +72,5 @@
 - **Branch 1.1** (cycle 218): paper-live ticks 82+83: BTC=$70,889.16 (↑$49.43 from tick 81), DualMA_10_30=SHORT×83 (100%), P&L=+$0.868 (+0.868% on $100); regime=MIXED; 512 log entries
 - **Branch 6** (cycle 218): consistency_test.py → 33/33 ALIGNED ✅; health indicators all green
 - **Branch 7** (cycle 218): SOP #57 Knowledge Integration Pipeline — `docs/knowledge_product_57_knowledge_integration_sop.md` + `docs/publish_thread_sop57_twitter.md`; Domain 3; queue to Jul 30; **series SOP #01~#57 COMPLETE**
+- **Branch 1.1** (cycle 220): paper-live tick 84: BTC=$70,929.29 (↑$40.13 from tick 83), SHORT×84 (100%), P&L=+$0.812, 527 log entries; regime=MIXED
+- **Branch 7** (cycle 220): SOP #58 Mental Capital & Psychological Resilience Protocol — `docs/knowledge_product_58_mental_capital_sop.md` + `docs/publish_thread_sop58_twitter.md`; Domain 6; queue to Aug 1; **series SOP #01~#58 COMPLETE**

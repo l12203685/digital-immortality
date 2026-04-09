@@ -1,4 +1,4 @@
-# Twitter Posting Queue — SOP Series #01~#57
+# Twitter Posting Queue — SOP Series #01~#58
 
 > One thread per 24–48h. Start April 9, 2026.
 > Each row = copy file → post → log signal after 48h.
@@ -64,6 +64,7 @@
 | Jul 26 | #55 | publish_thread_sop55_twitter.md | "Your environment is making decisions for you. Most people optimize their thinking. Almost no one audits their environment." | pending |
 | Jul 28 | #56 | publish_thread_sop56_twitter.md | "Tracking expenses is not a financial system. Tracking FIRE trajectory is." | pending |
 | Jul 30 | #57 | publish_thread_sop57_twitter.md | "You've been learning for years. But is your behavior changing?" | pending |
+| Aug 1 | #58 | publish_thread_sop58_twitter.md | "You track your money. You track your fitness. You don't track your decision quality. Mental Capital Protocol — 5-gate." | pending |
 
 ---
 

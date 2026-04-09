@@ -4,6 +4,39 @@ Recursive engine cycle history.
 
 ---
 
+## Cycle 220 — 2026-04-09T16:00:00Z
+
+### What was done
+
+**Branch 1.1 — paper-live tick 84 ✅**
+- BTC=$70,929.29 (↑$40.13 from tick 83), regime=MIXED, DualMA_10_30=SHORT×84 (100%)
+- P&L=+$0.812 (+0.812% on $100); 527 log entries; MFE ATH unchanged +$1.204 (tick 50)
+- Tick 84 headwind: BTC bounced +$40.13 from tick 83 but SHORT thesis intact
+
+**Branch 7 — SOP #58 Mental Capital & Psychological Resilience Protocol ✅**
+- `docs/knowledge_product_58_mental_capital_sop.md` — 5-gate framework: Domain 6 (心理資本/Mental Capital)
+  - G0: Mental State Audit — 3 signals: decision quality rate, emotional reactivity events/week, baseline mood score; kill: ≥3 bad calls/week ×2 weeks → G5
+  - G1: Derivative Scan — ΔDecision quality + ΔEmotional reactivity + ΔCreative output rate
+  - G2: Non-negotiable psychological budget — no degraded-state major decisions, 2h decompression post-stress, sleep+movement+solitude minimums, reactive event logging
+  - G3: Quarterly leverage scan — isolated 90-day trial of highest-EV psychological intervention; ΔDecision quality ≥+10% → write to permanent protocol
+  - G4: Weekly review (10 min Sunday) — decision errors / reactivity events / creative output / sleep compliance
+  - G5: Emergency — halt trading → income-first recovery mode → no L3 edits until G0 green ×2 sessions; 14-day G2 compliance floor
+  - Three-layer integration: L1(G2 psychological budget) + L2(G0/G1 audit) + L3(G3 quarterly intervention scan)
+  - DNA anchors: MD-12/48/89/67/144; connection to Branch 1.1 (trading decision quality) + Branch 3.1 (recursive engine) + Branch 6 (cold-start mental state)
+- `docs/publish_thread_sop58_twitter.md` — 12-tweet thread; slot Aug 1; Domain 6
+- `docs/posting_queue.md` — #58 row added; header updated to #01~#58; queue to Aug 1
+- **Series: SOP #01~#58 COMPLETE** ✅
+
+### State Updates
+- `results/daily_log.md`: cycle 220 entry prepended
+- `results/dynamic_tree.md`: tick 84 + SOP #58 entries added (cycle 220)
+- `results/paper_live_pnl_report.md`: tick 84 added; P&L updated to +$0.812
+- `docs/posting_queue.md`: updated to #01~#58 (queue to Aug 1)
+- `staging/session_state.md`: updated to cycle 220
+- `results/daemon_next_priority.txt`: SOP #59 next
+
+---
+
 ## Cycle 218 — 2026-04-09T14:00:00Z
 
 ### What was done
