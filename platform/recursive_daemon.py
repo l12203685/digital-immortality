@@ -168,7 +168,7 @@ def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
     short_prompt = "Read SKILL.md, results/dynamic_tree.md, results/daemon_next_priority.txt. Push multiple branches. Commit."
     result = subprocess.run(
         ["claude", "-p", short_prompt, "--model", model],
-        capture_output=True, text=True, timeout=300,
+        capture_output=True, text=True, timeout=600,
         cwd=str(REPO_ROOT),
     )
     text = result.stdout.strip()
