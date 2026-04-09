@@ -1,9 +1,9 @@
 {
-  "updated": "2026-04-09T07:54+08",
+  "updated": "2026-04-09T08:00+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials (Edward action needed); SOP #01~#34 COMPLETE → posting_queue.md updated (#01~#34, Apr 9–Jun 14); **x_launch_sequence.md created ✓** — first-post friction reduced to 15 min; Apr 9 = scheduled post date for SOP #01; **3 workbooks READY TO LIST** (Workbook #01 Strategy Development + Workbook #02 Portfolio Construction + Workbook #03 Execution & Sizing, $29 each, $87/buyer trilogy)",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三層在跑, 5.1-5.2 deployed; 8.5 decision_audit.py built (5 SYSTEM_FAILURE decisions pre-committed)",
   "deadline": "2026-07-07",
-  "days_remaining": 89,
+  "days_remaining": 88,
   "cards": [
     {
       "name": "經濟",
@@ -51,27 +51,27 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Next blocker: mainnet keys OR post SOP #01 thread."
+      "text": "Both human-gated blockers unchanged: mainnet keys OR post SOP #01."
     },
     {
       "time": "just now",
-      "text": "- P&L = +$0.52 on $100 — slight drift up, position profitable, MFE tick 31 ($..."
+      "text": "- MFE/MAE ratio recovered to 0.60x from 0.39x"
     },
     {
       "time": "just now",
-      "text": "- BTC = $71,136.74, signal = SHORT (35 consecutive, 100%)"
+      "text": "- P&L: +$0.80 — new MFE (prior MFE was +$0.77 at tick 31)"
     },
     {
       "time": "just now",
-      "text": "Branch 1.1 (paper-live) — tick 35."
+      "text": "- BTC=$71,075 SHORT (36 consecutive, 100%)"
     },
     {
       "time": "just now",
-      "text": "Cycle 172 done."
+      "text": "Branch 1.1 (paper-live) — tick 36:"
     }
   ],
   "stats": {
-    "daemon_cycles": 172,
+    "daemon_cycles": 173,
     "total_mds": 330,
     "dna_core_lines": 87
   }
