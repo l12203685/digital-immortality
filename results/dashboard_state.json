@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T14:31+08",
+  "updated": "2026-04-09T14:39+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,24 +64,24 @@
   ],
   "activity": [
     {
-      "time": "1min ago",
-      "text": "Next (human-gated, highest EV): Post SOP #01 on X → set mainnet API keys → se..."
+      "time": "just now",
+      "text": "Human blockers still on queue: SOP #01 post (Apr 9), mainnet API keys, Samuel..."
     },
     {
-      "time": "1min ago",
-      "text": "- Branch 6 — consistency_test.py → 33/33 ALIGNED ✅"
+      "time": "just now",
+      "text": "B6 — Consistency 33/33 ALIGNED ✅. Daemon's \"least recent = 存活/cold-start\" now..."
     },
     {
-      "time": "1min ago",
-      "text": "- SOP series #01~#64 COMPLETE ✅ — all domain gaps closed"
+      "time": "just now",
+      "text": "- Critical path: profile check → post SOP #01 → 48h log"
     },
     {
-      "time": "1min ago",
-      "text": "- Meta-SOP: all other 63 SOPs depend on this infrastructure"
+      "time": "just now",
+      "text": "- 5 gaps documented: profile pre-flight, engagement tracking, kill condition ..."
     },
     {
-      "time": "1min ago",
-      "text": "- Three-layer: L1 (daily ticks/tests) + L2 (derivative scan) + L3 (quarterly ..."
+      "time": "just now",
+      "text": "- Created `results/engagement_log.md` (48h tracking scaffold)"
     }
   ],
   "stats": {
@@ -90,15 +90,15 @@
     "dna_core_lines": 87
   },
   "health": {
-    "ci_wired": true,
+    "ci_wired": false,
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 70895.98,
+    "paper_live_price": 70930.43,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T06:24",
-    "paper_tick": 93,
-    "paper_pnl": "+$0.858",
+    "paper_live_ts": "2026-04-09T06:34",
+    "paper_tick": 94,
+    "paper_pnl": "+$0.810",
     "status": "ok"
   }
 }
