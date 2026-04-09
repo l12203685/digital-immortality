@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T20:13+08",
+  "updated": "2026-04-09T20:22+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -65,23 +65,23 @@
   "activity": [
     {
       "time": "just now",
-      "text": "Daemon next priority: `4.1/Samuel-organism` — calibration prep done (cycle 26..."
+      "text": "Rule violated: `Three-layer loop for any automated system: L1 Execute → L2 Ev..."
     },
     {
       "time": "just now",
-      "text": "Branch 3.1: 3 insights distilled → insights.json total 99 (ticks 142-143 / co..."
+      "text": "- L3 Evolve (NEW): kill events write `results/execution_rules.json` (kill_win..."
     },
     {
       "time": "just now",
-      "text": "Branch 7: SOP #96 Mainnet Trading Revenue Go-Live — 5-gate protocol (G0 prere..."
+      "text": "- L2 Evaluate: KillMonitor (DualMA_10_30 already killed, PF 0.65 < 0.8)"
     },
     {
       "time": "just now",
-      "text": "Branch 6: 33/33 deterministic ALIGNED ✅ — 33+ consecutive clean cycles. 3 LLM..."
+      "text": "- L1 Execute: strategy ticks"
     },
     {
       "time": "just now",
-      "text": "Branch 1.1: Ticks 142+143 — BTC=$71,199.88 (↑$17.67; SHORT headwind), DualMA_..."
+      "text": "- SKILL.md rule violation fixed — `trading/engine.py` now has true three-laye..."
     }
   ],
   "stats": {
@@ -94,9 +94,9 @@
     "consistency_aligned": 7,
     "consistency_total": 7,
     "consistency_score": "100%",
-    "paper_live_price": 71199.88,
+    "paper_live_price": 71167.95,
     "paper_live_signal": "FLAT",
-    "paper_live_ts": "2026-04-09T12:08",
+    "paper_live_ts": "2026-04-09T12:18",
     "paper_tick": 99,
     "paper_pnl": "+$0.668",
     "status": "ok"

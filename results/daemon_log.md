@@ -6781,3 +6781,17 @@ Cycle 261 complete. Summary:
 **Branch 3.1**: 3 insights distilled → insights.json total **99** (ticks 142-143 / consistency-33-consecutive / SOP #96 go-live)
 
 **Daemon next priority**: `4.1/Samuel-organism` — calibration prep done (cycle 260), DM ready to send (human-gated). 87 days to 2026-07-07 revenue deadline.
+
+## Cycle 51 — 2026-04-09 12:22:37 UTC
+
+Cycle 262 complete. Pushed.
+
+**Branches pushed:**
+- **Branch 1.1** — paper-live tick 144 (1589 entries), DualMA_10_30 SHORT×144 structural
+- **Branch 6** — consistency 33/33 ALIGNED ✅ (34+ consecutive cycles clean)
+- **SKILL.md rule violation fixed** — `trading/engine.py` now has true three-layer loop:
+  - L1 Execute: strategy ticks
+  - L2 Evaluate: KillMonitor (DualMA_10_30 already killed, PF 0.65 < 0.8)
+  - **L3 Evolve (NEW)**: kill events write `results/execution_rules.json` (kill_window shrinks by 5 per kill, floor=20) + `results/kill_lessons.jsonl` (durable audit trail); next run loads evolved rules
+
+**Rule violated**: `Three-layer loop for any automated system: L1 Execute → L2 Evaluate → L3 Evolve. Execute without Evaluate+Evolve = dead loop.` — Engine was executing and evaluating but never modifying its own rules. Now it does.
