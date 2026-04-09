@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T20:39+08",
+  "updated": "2026-04-09T20:48+08",
   "regime": "1.1 Trading — mainnet 阻塞於 API credentials",
   "regime_neutral": "2.2 330 MDs ✓ (archive exhausted), 3.1 三",
   "deadline": "2026-07-07",
@@ -64,30 +64,30 @@
   ],
   "activity": [
     {
-      "time": "16min ago",
-      "text": "Rule violated: `Three-layer loop for any automated system: L1 Execute → L2 Ev..."
+      "time": "just now",
+      "text": "4. Set BINANCE_MAINNET_KEY/SECRET"
     },
     {
-      "time": "16min ago",
-      "text": "- L3 Evolve (NEW): kill events write `results/execution_rules.json` (kill_win..."
+      "time": "just now",
+      "text": "3. Identify Turing Test Candidates 2+3 (SOP #98 G1)"
     },
     {
-      "time": "16min ago",
-      "text": "- L2 Evaluate: KillMonitor (DualMA_10_30 already killed, PF 0.65 < 0.8)"
+      "time": "just now",
+      "text": "2. Send `docs/samuel_async_calibration_dm.md` to Samuel (unblocks Branch 4.1 ..."
     },
     {
-      "time": "16min ago",
-      "text": "- L1 Execute: strategy ticks"
+      "time": "just now",
+      "text": "1. Post SOP #01 on X (critical path — revenue clock)"
     },
     {
-      "time": "16min ago",
-      "text": "- SKILL.md rule violation fixed — `trading/engine.py` now has true three-laye..."
+      "time": "just now",
+      "text": "Edward actions still blocking:"
     }
   ],
   "stats": {
-    "daemon_cycles": 244,
+    "daemon_cycles": 264,
     "total_mds": 331,
-    "dna_core_lines": 429
+    "dna_core_lines": 87
   },
   "health": {
     "ci_wired": false,

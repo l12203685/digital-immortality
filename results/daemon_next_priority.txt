@@ -1,1 +1,1 @@
-Edward sends samuel_async_calibration_dm.md (Branch 9 unblock) → Edward identifies Turing Test Candidates 2+3 (SOP #98 G1) → L3 for recursive_engine.py
+PRIORITY: Branch '存活/cold-start' neglected for 20 cycles. Do concrete work on this branch next cycle.
