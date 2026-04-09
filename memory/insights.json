@@ -1181,6 +1181,45 @@
       "category": "behavioral_patterns",
       "insight": "SKILL.md rule: three-layer loop required for any automated system (L1 Execute → L2 Evaluate → L3 Evolve). Trading had L3 since cycle 262 (kill events → execution_rules.json). Content pipeline was L1-only = dead loop. Added --evolve (saves/DMs → adjust posting cadence and format weights → content_execution_rules.json + content_evolution_log.jsonl) and --l2-audit (7-day coverage, anomaly detection) to daily_posting_helper.py. Three-layer loop now complete for trading + content. Next system needing L3: recursive_engine.py (DNA evolution rules).",
       "branch": "10"
+    },
+    {
+      "id": "paper-live-ticks-145-146-strategy-convergence",
+      "timestamp": "2026-04-09T12:40Z",
+      "cycle": 263,
+      "category": "trading",
+      "insight": "Tick 145-146: 11/18 strategies SHORT (Donchian+DualMA family) + 2 LONG (BollingerMR range-reversion) — highest strategy consensus since start. SHORT structural thesis holds via DualMA_10_30. MR counter-signals = healthy divergence, not signal breakdown.",
+      "tags": [
+        "paper-live",
+        "strategy-convergence",
+        "SHORT-consensus"
+      ]
+    },
+    {
+      "id": "bollinger-mr-filter-inversion-fix-cycle263",
+      "timestamp": "2026-04-09T12:40Z",
+      "cycle": 263,
+      "category": "trading",
+      "insight": "Bug fixed: gen_BollingerMR_RF_7abfe4 and RF_598b24 were wrapped with RegimeFilter (trend-pass = WRONG for MR). Fix: MeanReversionFilter class added to trading/strategies.py — blocks when trending, allows when ranging. Root cause: filter direction must match strategy type.",
+      "tags": [
+        "self-correction",
+        "strategy-filter",
+        "MeanReversionFilter",
+        "bug-fix"
+      ]
+    },
+    {
+      "id": "sop97-87day-countdown-deadline-plan",
+      "timestamp": "2026-04-09T12:40Z",
+      "cycle": 263,
+      "category": "methodology",
+      "insight": "SOP #97 (87-day countdown plan) created: deadline 2026-07-07. 3 phases: Phase 1 Pre-Activation / Phase 2 Live Testing / Phase 3 Revenue. Minimum action set = 1 human action (API keys); agent handles everything else. Fallback Branch 1.3 if no mainnet by Day 60.",
+      "tags": [
+        "sop97",
+        "87-day-countdown",
+        "mainnet",
+        "deadline",
+        "revenue"
+      ]
     }
   ]
 }
