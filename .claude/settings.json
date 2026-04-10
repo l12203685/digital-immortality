@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /home/user/digital-immortality && python recursive_engine.py --status > staging/quick_status_raw.txt 2>&1 && echo 'SessionStart hook: quick_status refreshed'"
+          }
+        ]
+      }
+    ]
+  }
+}

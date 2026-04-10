@@ -2,6 +2,41 @@
 
 You are cold-starting a digital twin session. Follow this sequence exactly.
 
+## 0. Select Boot Tier (read this FIRST)
+
+| Tier | When to use | Read sequence |
+|------|------------|---------------|
+| **Type A** — Quick Confirm | Daily check-in, no active task | `index.md` → `staging/quick_status.md` → stop |
+| **Type B** — Implementation | Specific branch/task to execute | `index.md` → `staging/quick_status.md` → task-specific files only (see index.md navigation table) |
+| **Type C** — Full Strategic | Saturday reset / L3 event / weekly planning | Full protocol below (§1 Orient through §3) |
+
+**Default: Type A.** Escalate to B only if you have an active task. Escalate to C only on Saturday or if an L3 event is flagged in quick_status.
+
+### Type A boot (2 files, ~600 tokens)
+```
+1. index.md               → repo map, task navigation
+2. staging/quick_status.md → current cycle/daemon/branch state
+→ Confirm: daemon alive? clean_streak intact? human-gated unblocked?
+→ If all OK: Discord notify + /clear. If issue found: escalate to Type B.
+```
+
+### Type B boot (4-6 files, ~10-15K tokens)
+```
+1. index.md
+2. staging/quick_status.md
+3. [task-specific files per index.md navigation table]
+   DNA work:     templates/dna_boot.md + memory/recursive_distillation.md (tail 5)
+   Dev:          the specific .py script
+   Trading:      trading/paper_trader.py + results/paper_live_log.jsonl (tail)
+   Outreach:     staging/outreach_week1_execution.md
+→ /clear after task complete.
+```
+
+### Type C boot (full protocol, ~20-30K tokens, Saturday only)
+> Continue reading §1 Orient below.
+
+---
+
 ## 1. Orient
 
 Read these files in order:
