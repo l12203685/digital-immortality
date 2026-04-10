@@ -6,6 +6,7 @@ persists results, and optionally commits code changes.
 
 import argparse
 import os
+import re
 import signal
 import subprocess
 import sys
@@ -155,15 +156,55 @@ def run_cycle_api(client, system: str, model: str, cycle: int) -> str:
     user_prompt = RECURSIVE_PROMPT
     if priority:
         user_prompt = f"[AUDIT PRIORITY] {priority}\n\n{RECURSIVE_PROMPT}"
-    response = client.messages.create(
-        model=model,
-        max_tokens=512,
-        system=system,
-        messages=[{"role": "user", "content": user_prompt}],
-    )
-    text = response.content[0].text
+    try:
+        response = client.messages.create(
+            model=model,
+            max_tokens=512,
+            system=system,
+            messages=[{"role": "user", "content": user_prompt}],
+        )
+        text = response.content[0].text
+    except anthropic.RateLimitError as e:
+        print(f"[daemon] API rate limited: {e}. Sleeping 3600s.", flush=True)
+        time.sleep(3600)
+        return f"API rate limited — slept 3600s"
     print(f"[daemon] Cycle {cycle} done — {len(text)} chars")
     return text
+
+
+def parse_rate_limit_reset(text: str) -> int | None:
+    """Extract sleep duration from rate limit messages like 'resets Apr 11, 10am'."""
+    pattern = r"(?:hit your limit|rate.limit).*resets?\s+(\w+\s+\d+),?\s*(\d{1,2}(?:am|pm))"
+    match = re.search(pattern, text, re.IGNORECASE)
+    if not match:
+        # Fallback: any mention of hitting limit without parseable reset time
+        if re.search(r"hit your limit|rate.limit", text, re.IGNORECASE):
+            return 3600  # default 1 hour backoff
+        return None
+    month_str, day_str = match.group(1), match.group(2).rstrip(",")
+    time_str = match.group(2) if len(match.groups()) >= 2 else match.group(3)
+    # Parse target time
+    now = datetime.now()
+    month_map = {m: i for i, m in enumerate(
+        ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], 1)}
+    month_num = month_map.get(match.group(1).strip()[:3], now.month)
+    day_num = int(re.search(r"\d+", day_str).group())
+    hour_match = re.search(r"(\d+)(am|pm)", time_str, re.IGNORECASE)
+    if hour_match:
+        hour = int(hour_match.group(1))
+        if hour_match.group(2).lower() == "pm" and hour != 12:
+            hour += 12
+        elif hour_match.group(2).lower() == "am" and hour == 12:
+            hour = 0
+    else:
+        hour = 10  # default
+    # Build target datetime (Asia/Taipei = UTC+8)
+    target = now.replace(month=month_num, day=day_num, hour=hour, minute=0, second=0, microsecond=0)
+    if target <= now:
+        return 3600  # already past, wait 1 hour as safety
+    sleep_secs = int((target - now).total_seconds()) + 60  # +1min buffer
+    return min(sleep_secs, 86400)  # cap at 24h
 
 
 def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
@@ -179,6 +220,14 @@ def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
     text = result.stdout.strip()
     if result.returncode != 0 and not text:
         text = f"CLI error: {result.stderr.strip()}"
+    # Detect rate limit and sleep until reset
+    sleep_secs = parse_rate_limit_reset(text)
+    if sleep_secs is not None:
+        from datetime import timedelta
+        reset_time = datetime.now() + timedelta(seconds=sleep_secs)
+        print(f"[daemon] Rate limited. Sleeping {sleep_secs}s until ~{reset_time.strftime('%Y-%m-%d %H:%M')}", flush=True)
+        time.sleep(sleep_secs)
+        text = f"Rate limited — slept {sleep_secs}s until {reset_time.strftime('%Y-%m-%d %H:%M')}"
     print(f"[daemon] Cycle {cycle} done — {len(text)} chars", flush=True)
     return text
 
