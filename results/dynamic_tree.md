@@ -99,7 +99,7 @@
 - 3.1 遞迴引擎：三層架構 operational ✓
   - Layer 1: E0 session（Opus，高品質校準）
   - Layer 2: recursive_daemon.py（Sonnet CLI，持續）— DYNAMIC_TREE bug fixed, tree now loads fresh per cycle ✓
-  - Layer 3: remote trigger（Opus，1hr 保底，cloud）
+  - ~~Layer 3: remote trigger~~ REMOVED — daemon already covers this; cloud function = redundant overhead
   - **Staleness guard added ✓** (cycle 161): `_check_staging_staleness()` + `_estimate_stale_cycles()` in recursive_engine.py — detects if last_output.md not updated since last prompt was staged; alerts after ≥3 stale cycles via stdout + `[STALENESS_ALERT]` in daemon_log.md
 - 3.2 校正 pipeline：correction → boot test → distillation → DNA → all durable storage ✓
 - 8.4 Top automation #1 implemented ✓ (cycle 126): `docs/morning_defaults.md` — pre-committed defaults for meal/work-block/exercise/learning routing; recovers 171 min/week of zero-EV decisions (MD-322)
@@ -156,7 +156,7 @@
 ### 6. 存活冗餘（anti-fragile）
 - 6.1 冷啟動 recovery：templates/dna_core.md **330 MDs** ✓ (cycle 201: header updated MD-318→MD-330; cold-start boot test 33/33 ALIGNED ✅; staging/session_state.md created — was missing; cycle 94: domains 7+8 initialized; cycle 55: distill chain 202604→201703 complete)
 - 6.2 跨 platform：DNA=markdown not weights ✓
-- 6.3 三層遞迴：daemon + remote trigger + E0 ✓（daemon 已啟動）
+- 6.3 二層遞迴：daemon + E0 ✓（daemon 已啟動；remote trigger 移除 — 冗餘）
 - 6.4 Multi-provider：platform/multi_provider.py created ✓ (Anthropic→OpenAI→Gemini fallback chain, lazy imports)
 - 6.5 衝突解法：scope 分離（每層碰不同檔案）— **DOCUMENTED** (cycle 202): L1(Execute)↔L2(Evaluate)↔L3(Evolve) each write different files; table in docs/cold_start_recovery_runbook.md; no two layers share output files = no scope conflict ✓
 - 6.6 **Cold-start validation** (cycle 201): 33/33 ALIGNED ✅; boot_tests.md 14 tests; session_state.md created
@@ -295,7 +295,7 @@
 - recursive_distillation F.1-18
 - skill suite v2.1.0（7 skills + auto-update）
 - recursive_daemon.py（dual-mode CLI/API）
-- remote trigger 1hr Opus
+- ~~remote trigger 1hr Opus~~ (removed: daemon covers this)
 - DNA v4.0 patches + 10 micro-decisions + 哲學宣言
 - paper trader review framework
 - live trading infra research
