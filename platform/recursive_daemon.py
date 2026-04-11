@@ -13,6 +13,9 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
+
+TPE = ZoneInfo("Asia/Taipei")
 
 import anthropic
 
@@ -132,7 +135,8 @@ def run_sign_off_apply_expired(cycle: int) -> None:
     log_path.parent.mkdir(parents=True, exist_ok=True)
     entry = {
         "cycle": cycle,
-        "ts": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
+        "ts": datetime.now(TPE).strftime("%Y-%m-%d %H:%M:%S (Taipei)"),
+        "ts_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),  # intentional UTC for server log
         "ok": False,
         "applied_count": 0,
         "applied_uids": [],
@@ -235,7 +239,7 @@ QUICK_STATUS_PATH = REPO_ROOT / "staging" / "quick_status.md"
 
 def update_quick_status(cycle: int, mode: str, model: str, interval: int) -> None:
     """Auto-update staging/quick_status.md after each cycle."""
-    ts = datetime.now().strftime("%Y-%m-%d %H:%M Taipei")
+    ts = datetime.now(TPE).strftime("%Y-%m-%d %H:%M (Taipei, UTC+8)")
     interval_str = f"{interval}s" if interval > 0 else "immediate (chain)"
     content = f"""# Quick Status — live state snapshot for Type A cold start
 
@@ -263,15 +267,15 @@ If "Updated" > 6h old, read `results/daemon_log.md` (tail) + `staging/session_st
 
 def append_log(cycle: int, response: str) -> None:
     LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
-    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    ts = datetime.now(TPE).strftime("%Y-%m-%d %H:%M:%S (Taipei)")
     entry = f"\n## Cycle {cycle} — {ts}\n\n{response}\n"
     with open(LOG_PATH, "a", encoding="utf-8") as f:
         f.write(entry)
     # Post to Discord #thinking
     try:
         import requests
-        utc_now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-        msg = f"[daemon cycle {cycle} | {utc_now}] {response[:1850]}"
+        now_tpe = datetime.now(TPE).strftime("%Y-%m-%d %H:%M (Taipei)")
+        msg = f"[daemon cycle {cycle} | {now_tpe}] {response[:1850]}"
         payload = {"content": msg, "username": "Daemon"}
         requests.post(DISCORD_WEBHOOK_TREE, json=payload, timeout=10)
         requests.post(DISCORD_WEBHOOK_DOS, json=payload, timeout=10)
@@ -343,8 +347,8 @@ def parse_rate_limit_reset(text: str) -> int | None:
         return None
     month_str, day_str = match.group(1), match.group(2).rstrip(",")
     time_str = match.group(2) if len(match.groups()) >= 2 else match.group(3)
-    # Parse target time
-    now = datetime.now()
+    # Parse target time (Taipei, per Edward's standing rule)
+    now = datetime.now(TPE)
     month_map = {m: i for i, m in enumerate(
         ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], 1)}
@@ -385,10 +389,11 @@ def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
     sleep_secs = parse_rate_limit_reset(text)
     if sleep_secs is not None:
         from datetime import timedelta
-        reset_time = datetime.now() + timedelta(seconds=sleep_secs)
-        print(f"[daemon] Rate limited. Sleeping {sleep_secs}s until ~{reset_time.strftime('%Y-%m-%d %H:%M')}", flush=True)
+        reset_time = datetime.now(TPE) + timedelta(seconds=sleep_secs)
+        reset_str = reset_time.strftime('%Y-%m-%d %H:%M (Taipei)')
+        print(f"[daemon] Rate limited. Sleeping {sleep_secs}s until ~{reset_str}", flush=True)
         time.sleep(sleep_secs)
-        text = f"Rate limited — slept {sleep_secs}s until {reset_time.strftime('%Y-%m-%d %H:%M')}"
+        text = f"Rate limited — slept {sleep_secs}s until {reset_str}"
     print(f"[daemon] Cycle {cycle} done — {len(text)} chars", flush=True)
     return text
 

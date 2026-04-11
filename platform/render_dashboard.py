@@ -15,6 +15,9 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
+
+TPE = ZoneInfo("Asia/Taipei")
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 IN_PATH = REPO_ROOT / "results" / "dashboard_state.json"
@@ -156,7 +159,7 @@ def render_trading(state: dict[str, Any]) -> str:
             ("active", esc(engine.get("active_strategies")), ""),
             ("disabled", str(len(d_engine)), ""),
             ("total_pnl", pnl_str, pnl_cls),
-            ("last_tick", esc(engine.get("last_tick")), ""),
+            ("last_tick", esc(_fmt_ts_taipei(engine.get("last_tick"))), ""),
         ])
     else:
         engine_html = "<p class='muted'>engine status: N/A</p>"
@@ -226,6 +229,23 @@ def _thresh_cls(val: Any, good: float, warn: float) -> str:
     return "ok" if val < good else ("warn" if val < warn else "alert")
 
 
+def _fmt_ts_taipei(ts_str: Any) -> str:
+    """Convert any ISO timestamp to 'YYYY-MM-DD HH:MM (Taipei)' for display.
+
+    Falls back to the raw string if parsing fails.
+    """
+    if not ts_str or ts_str == "N/A":
+        return "N/A"
+    try:
+        ts = datetime.fromisoformat(str(ts_str).replace("Z", "+00:00"))
+    except ValueError:
+        return str(ts_str)
+    if ts.tzinfo is None:
+        # Legacy naive timestamp — treat as Taipei per Edward's rule.
+        ts = ts.replace(tzinfo=TPE)
+    return ts.astimezone(TPE).strftime("%Y-%m-%d %H:%M (Taipei)")
+
+
 def render_agent(state: dict[str, Any]) -> str:
     m = state.get("agent_metrics") or {}
     if not m.get("available"):
@@ -241,7 +261,7 @@ def render_agent(state: dict[str, Any]) -> str:
         ("cost_usd", f"${esc(m.get('cost_usd'))}", ""),
         ("ram_used", f"{esc(ram)}%", _thresh_cls(ram, 70, 90)),
         ("ramdisk_free", f"{esc(m.get('ram_disk_free_mb'))} MB", ""),
-        ("metrics_ts", esc(m.get("ts")), "muted"),
+        ("metrics_ts", esc(_fmt_ts_taipei(m.get("ts"))), "muted"),
     ])
 
 
@@ -274,8 +294,9 @@ def _rel_time(ts_str: str) -> str:
     except ValueError:
         return ""
     if ts.tzinfo is None:
-        ts = ts.replace(tzinfo=timezone.utc)
-    secs = int((datetime.now(timezone.utc) - ts).total_seconds())
+        # Legacy naive timestamp — treat as Taipei per Edward's rule.
+        ts = ts.replace(tzinfo=TPE)
+    secs = int((datetime.now(TPE) - ts).total_seconds())
     if secs < 60:
         return "剛剛"
     if secs < 3600:
@@ -367,9 +388,12 @@ def render_mission_control(state: dict[str, Any]) -> str:
 
 def render_page(state: dict[str, Any]) -> str:
     updated = state.get("updated_taipei") or state.get("updated_utc") or "unknown"
+    # Ensure Taipei label is explicit even if upstream state is old format.
+    if updated and "Taipei" not in str(updated) and "+08" not in str(updated):
+        updated = f"{updated} (Taipei, UTC+8)"
     body = f"""
 <h1>Digital Immortality — 永生樹 Dashboard</h1>
-<div class='subtitle'>updated: {esc(updated)} · pull-model · auto-refresh 5min</div>
+<div class='subtitle'>updated: {esc(updated)} · 所有時間 Asia/Taipei (UTC+8) · pull-model · auto-refresh 5min</div>
 {render_mission_control(state)}
 <div class='grid'>
   <section class='panel'><h2>永生樹 (7 branches)</h2>{render_tree(state)}</section>

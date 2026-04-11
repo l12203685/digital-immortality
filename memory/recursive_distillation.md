@@ -6,6 +6,34 @@ Never delete — append only.
 
 ---
 
+## Cycle 129 — 2026-04-11T08:56:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 269 file / running: 379)
+
+### Insight 1: 43rd-human-tick-btc72683-long-near-flat-tailwind-floor-zone
+
+B1.1 paper-live tick (cycle 354): BTC=$72,683.04 (↑$0.20 from cycle 353 $72,682.84; LONG tailwind minimal — near-flat). DualMA_10_30=LONG OPEN_LONG (43rd consecutive human-session LONG tick, structural signal unbroken). Donchian_20=FLAT (HOLD). DualMA variants disabled (PF<0.8). BTC $44.04 above floor $72,638; $148.96 below ceiling $72,831; range $72,638–$72,831 intact; floor-zone approach continues. Key observation: $0.20 price move on a $72K asset (0.000276%) is below measurement noise for a slow-MA strategy. The tick provides near-zero new information — signal is identical because no regime change is possible from sub-dollar movement. This is expected behavior: slow-MA timescale (weeks) >> session interval (hours). Consecutive near-flat ticks confirm range stability, not signal degradation.
+
+**Signal source**: python -m trading.paper_trader --tick → price=72683.04, DualMA_10_30 signal=1 action=OPEN_LONG, Donchian_20 signal=0 action=HOLD; 2026-04-11T08:56Z; prev cycle 353 BTC=$72,682.84
+**Tags**: B1.1, 43rd-human-tick, BTC-72683, DualMA-LONG-structural, near-flat-tick, floor-zone-approach, slow-MA-timescale, noise-below-threshold
+
+### Insight 2: 104th-clean-post-milestone-eighteenth-pass-tripwire-only
+
+B6: consistency_test.py → 38/41 ALIGNED (104th consecutive clean cycle ✅). Three permanent MISALIGNED unchanged: poker_gto_mdf / trading_atr_sizing / career_multi_option_ev (LLM-boundary, expected). 18th pass post-100-milestone (104th total). The tripwire system is now in extended post-milestone operation. Key insight: the post-milestone phase reveals a design property not visible during the build-up phase — the attractor is not just stable at the milestone, it is stable *beyond* the milestone. The 4 cycles after 100 (101, 102, 103, 104) confirm that the convergence floor does not decay with time. This matters for the immortality thesis: behavioral equivalence is not a snapshot, it is a persistent state that holds through arbitrary extension.
+
+**Signal source**: consistency_test.py templates/example_dna.md → 38/41 ALIGNED, 3 MISALIGNED (same frozen set); 104th consecutive clean cycle; 2026-04-11T08:56Z
+**Tags**: B6, 104th-clean-cycle, post-milestone-18th-pass, convergence-floor, persistent-attractor, post-milestone-decay-absent, behavioral-equivalence-persistent
+
+### Insight 3: near-flat-tick-information-content-slow-ma-sampling-rate-mismatch
+
+Near-flat tick ($0.20 movement) analysis: for a slow-MA strategy with signal change timescale of weeks, the optimal sampling interval is days, not hours. The current human-session cadence (~hours) is oversampling relative to signal change frequency. Yet this creates no operational problem because: (a) cost per tick ≈ zero (automated), (b) each tick confirms range-stability (no breakout = information), (c) the HOLD/LONG-continuation streak is itself a signal (43 consecutive = structural, not coincidental). The apparent inefficiency (sampling faster than signal changes) is actually a monitoring property: frequent low-information ticks are cheap confirmation that nothing has changed. Contrast with a high-frequency signal: there, oversampling is costly. For slow-MA: oversampling is cheap insurance. Design principle: sample at the cost-optimal rate, not just the information-optimal rate.
+
+**Signal source**: B1.1 cycle 354 tick (43 consecutive LONG, $0.20 movement); slow-MA crossover timescale analysis; daemon autonomous tick cadence vs human session cadence comparison; 2026-04-11T08:56Z
+**Tags**: B3.1, near-flat-tick, information-content, slow-MA-sampling-rate, oversampling-cheap-for-slow-signals, cost-optimal-vs-information-optimal, monitoring-design, methodology
+
+---
+
 ## Cycle 128 — 2026-04-11T06:50:04+00:00
 
 **Branch**: 3.1 recursive distillation

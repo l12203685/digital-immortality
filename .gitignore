@@ -4,3 +4,8 @@ __pycache__/
 .env
 results/idle_task_picker_state.json
 results/picker_queue.jsonl
+# Finance dashboards contain personal financial data — localhost only
+results/finance_networth.json
+results/finance_spending.json
+results/finance_marketcap.json
+results/.sheet_cache/

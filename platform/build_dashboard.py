@@ -16,6 +16,9 @@ import subprocess
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
+
+TPE = ZoneInfo("Asia/Taipei")
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 RESULTS = REPO_ROOT / "results"
@@ -249,8 +252,10 @@ def load_main_session_status() -> dict[str, Any]:
     except ValueError:
         return unk
     if ts.tzinfo is None:
-        ts = ts.replace(tzinfo=timezone.utc)
-    age = (datetime.now(timezone.utc) - ts).total_seconds() / 60.0
+        # Legacy naive timestamp — assume Taipei since that is Edward's
+        # standing rule (see memory/feedback_timezone_taipei_default.md).
+        ts = ts.replace(tzinfo=TPE)
+    age = (datetime.now(TPE) - ts).total_seconds() / 60.0
     r = round(age, 1)
     if age < 5:
         return {"state": "online", "label": "在線", "color": "ok", "age_min": r}
@@ -363,9 +368,10 @@ def extract_blockers() -> list[str]:
 
 def build_state() -> dict[str, Any]:
     now = datetime.now(timezone.utc)
-    taipei = now.astimezone(timezone(timedelta(hours=8)))
-    return {"updated_utc": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "updated_taipei": taipei.strftime("%Y-%m-%d %H:%M +08"),
+    taipei = now.astimezone(TPE)
+    return {"updated_utc": now.strftime("%Y-%m-%dT%H:%M:%SZ"),  # intentional UTC for server log
+        "updated_taipei": taipei.strftime("%Y-%m-%d %H:%M (Taipei, UTC+8)"),
+        "updated_taipei_iso": taipei.isoformat(),
         "tree": load_tree_branches(), "trading_engine": load_trading_engine(),
         "execution_rules": load_execution_rules(),
         "disabled_strategies": load_disabled_strategies(),
