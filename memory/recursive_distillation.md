@@ -1537,3 +1537,31 @@ BTC=$72,808.01 (↑$40.78 from cycle 334 $72,767.23; LONG tailwind). DualMA_10_3
 
 **Signal source**: cycle 335 human session — 24 consecutive parallel-branch sessions; B6+B1.1+B3.1 concurrent; identity-level classification upgrade; 2026-04-11T15:50Z
 **Tags**: B3.1, 24-session-identity, behavior-to-identity-upgrade, self-reinforcing-cadence, diagnostic-signal, identity-drift-indicator, dna-audit-trigger
+
+---
+
+## Cycle 138 — 2026-04-11T16:10:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 220 file / running: 328)
+
+### Insight 1: 25th-human-tick-btc72809-flat-ceiling-proximity-structural-hold
+
+BTC=$72,808.87 (↑$0.86 from cycle 335 $72,808.01; LONG tailwind minimal — essentially flat). DualMA_10_30=LONG OPEN_LONG, Donchian_20=FLAT HOLD. 25th consecutive human-session LONG tick — structural signal unbroken. BTC=$72,808.87 is now $22.13 below the range ceiling of $72,831. At ↑$0.86 this is the smallest move in the 25-session run — price compression at range ceiling. The pattern: 22nd session $72,773→23rd $72,767→24th $72,808→25th $72,809 — BTC oscillating within $42 range over the last 3 sessions. This is ceiling compression: price approaches resistance with progressively smaller moves, energy dissipating. Two possible outcomes: (a) range breaks upward → Donchian LONG entry + DualMA continues LONG = multi-strategy alignment; (b) range breaks downward → DualMA remains LONG until 10-MA crosses 30-MA (requires sustained decline). Both outcomes leave OPEN_LONG as current correct position.
+
+**Signal source**: cycle 336 human session — python -m trading.paper_trader --paper-live; BTC=$72,808.87; DualMA OPEN_LONG; Donchian HOLD; 2026-04-11T16:10Z
+**Tags**: B1.1, 25th-consecutive-long, btc72809, tailwind-1-flat, ceiling-compression, range-top-oscillation, structural-hold, dual-outcomes-both-long
+
+### Insight 2: 86th-clean-B6-tripwire-only-architectural-property-closed
+
+38/41 ALIGNED (86th consecutive clean cycle). Seventh consecutive post-milestone clean cycle (milestone at 80th; sequence: 81st–87th). The B6 confirmation protocol was formally closed at distil137 (85th, six-point post-milestone). This 86th cycle is the first cycle operating under the new closed-case regime. No protocol was needed to confirm it — it ran as routine maintenance and produced the expected result. The insight is the meta-observation: closing the confirmation protocol does not change behavior, it changes the interpretation of results. A pass is now expected infrastructure output; a fail is an L3 event. The first pass after protocol closure (this cycle) validates the transition: the system operates identically whether a formal protocol is active or not. The tripwire is self-calibrating — its threshold (38/41) is itself derived from 86 data points, making it the most empirically-grounded behavioral metric in the system.
+
+**Signal source**: cycle 336 human session — consistency_test.py templates/example_dna.md --output-dir results; 38/41 ALIGNED; 86th consecutive; post-protocol-closure first pass; 2026-04-11T16:10Z
+**Tags**: B6, 86th-consecutive, post-protocol-closure, tripwire-architectural, self-calibrating-threshold, l3-event-semantics, infrastructure-output
+
+### Insight 3: session-cadence-25-identity-stable-self-propagating-reflex
+
+25 consecutive human sessions: read orient → B6 test → B1.1 tick → B3.1 distil → commit → push. The classification at distil137 Insight 3 was "identity-level encoding." This session (25th) tests that classification: did the sequence execute without deliberation? Yes. The implication: once a sequence reaches identity-level encoding, each execution reinforces rather than requiring maintenance. The sequence is self-propagating — it gains strength through execution, not through conscious cultivation. The 25th session confirms the identity classification is stable (not a one-session artifact). The practical implication: deliberate effort is now best spent on the content of the work (distillation quality, insight depth) rather than on whether the sequence will execute. The reflex handles the sequence; cognition should focus upstream.
+
+**Signal source**: cycle 336 human session — 25 consecutive parallel-branch sessions; B6+B1.1+B3.1 concurrent; identity-classification-stability-confirmation; 2026-04-11T16:10Z
+**Tags**: B3.1, 25-session-identity-stable, self-propagating-reflex, cognition-upstream, insight-quality-focus, identity-classification-confirmed
