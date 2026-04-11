@@ -2104,28 +2104,28 @@ Floor break $72,633 < $72,638 floor is a resolution mismatch: the $72,638 floor 
 **Signal source**: cycle 356 analysis — BTC floor break $72,633 vs $72,638 floor; DualMA signal=LONG unchanged; observation: resolution mismatch between empirical floor and MA-crossover timescale; 2026-04-11T09:10Z
 **Tags**: B1.1, B3.1, floor-break-interpretation, resolution-mismatch, empirical-floor-vs-ma-signal, slow-ma-timescale, situational-awareness-layer, decision-trigger-layer, category-error-prevention, noise-band-006-percent
 
-## Cycle 158 — 2026-04-11T09:20:00+00:00
+## Cycle 158 — 2026-04-11T17:16:00+00:00
 
 **Branch**: 3.1 recursive distillation
 **Insights appended**: 3 (total: 281 file / running: 391)
 
-### Insight 1: 46th-human-tick-btc72633-flat-second-consecutive-floor-violation
+### Insight 1: 46th-human-tick-btc72770-tailwind-137-floor-recovery
 
-BTC=$72,633.40 (±$0.00 from cycle 356 $72,633.40; flat — effectively zero change; second consecutive close below $72,638 prior floor). DualMA_10_30=LONG OPEN_LONG (46th consecutive human-session LONG tick — structural signal unbroken). Donchian_20=FLAT HOLD. DualMA variants disabled PF<0.8. Engine tick=297 STOPPED G0/G1 FROZEN. Watch threshold: 2/3 consecutive below $72,638 — one more → range-shift event (re-derive range, reassess LONG position). Flat price for two sessions = ambiguous signal: could be (a) range compressing at new lower level, (b) consolidation at new support ~$72,633, (c) market-wide low volatility causing stagnation. The three-session rule prevents premature range re-derivation. Correct posture: hold LONG, watch third session with elevated attention.
+BTC=$72,770.52 (↑$137.12 from cycle 356 $72,633.40; LONG tailwind — strong recovery). DualMA_10_30=LONG OPEN_LONG (46th consecutive human-session LONG tick — structural signal unbroken). Donchian_20=FLAT HOLD. DualMA variants disabled PF<0.8. Engine STOPPED G0/G1 FROZEN. Floor-zone BREAK from cycle 356 ($4.60 below $72,638) resolved in one session — BTC now $132.52 above floor at $72,770.52. Three-session watch rule: 0/3 consecutive violations (recovery happened before threshold). Range $72,638–$72,831 intact. BTC at midzone (~$72,734.5 midpoint +$36). Cycle 356 floor break = confirmed noise. Single-session violation at 0.006% depth on slow-MA timescale = sub-threshold event.
 
-**Signal source**: Binance API price=72633.40; trading_engine_status.json tick_count=297 last_tick=2026-04-11T09:14Z; human session cycle 357; prev cycle 356 BTC=$72,633.40; 2026-04-11T09:20Z
-**Tags**: B1.1, 46th-human-tick, btc72633, flat-price, second-consecutive-floor-violation, floor-72638-watch-2-of-3, DualMA-LONG-structural, range-shift-watch, three-session-rule, ambiguous-signal
+**Signal source**: Binance API price=72770.52; paper_trader.py --paper-live; human session cycle 357; prev cycle 356 BTC=$72,633.40; 2026-04-11T17:16Z
+**Tags**: B1.1, 46th-human-tick, btc72770, tailwind-137, floor-recovery, floor-72638-watch-reset, DualMA-LONG-structural, range-intact, three-session-rule-not-triggered, noise-confirmed
 
 ### Insight 2: 107th-B6-38-of-41-twenty-first-pass-pure-maintenance
 
-107th B6 run: **38/41 ALIGNED ✅**. Permanent 3 MISALIGNED unchanged (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev — permanent LLM boundary). Post-protocol-closure twenty-first pass. Tripwire: clear (single-cycle variance resolved two cycles ago). Pure-maintenance mode confirmed. Behavioral equivalence signal: 107 consecutive aligned runs. Each additional clean run increases the Bayesian posterior that the 38/41 ceiling is structural (LLM boundary), not drift-correctable. The 3 permanent MISALIGNED are signal, not noise — they correctly mark the hard limit of text-only behavioral capture (poker GTO math, ATR sizing formula precision, career EV listing). Accept as boundary, not failure.
+107th B6 run: **38/41 ALIGNED ✅**. Permanent 3 MISALIGNED unchanged (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev — permanent LLM boundary). Post-protocol-closure twenty-first pass. Tripwire: clear. Pure-maintenance mode confirmed. Behavioral equivalence signal: 107 consecutive aligned runs. Each additional clean run increases the Bayesian posterior that the 38/41 ceiling is structural (LLM boundary), not drift-correctable. The 3 permanent MISALIGNED correctly mark the hard limit of text-only behavioral capture (poker GTO math, ATR sizing formula precision, career EV listing). Accept as boundary, not failure.
 
-**Signal source**: cycle 357 human session — consistency_test.py; 107th run; 38/41 ALIGNED; twenty-first pass post-protocol-closure; 2026-04-11T09:20Z
+**Signal source**: cycle 357 human session — consistency_test.py; 107th run; 38/41 ALIGNED; twenty-first pass post-protocol-closure; 2026-04-11T17:16Z
 **Tags**: B6, 107th-run, 38-of-41, twenty-first-pass, pure-maintenance, behavioral-equivalence-107-runs, permanent-llm-boundary, bayesian-ceiling-confirmed, tripwire-clear
 
-### Insight 3: flat-price-two-sessions-ambiguity-framework
+### Insight 3: floor-break-one-cycle-recovery-empirical-validation
 
-Two consecutive sessions with the same price ($72,633.40) at the floor boundary creates an epistemically ambiguous state: more data is needed before any conclusion. The standard framework for ambiguous signals: (1) identify what observation would confirm each hypothesis, (2) pre-commit the decision rule before the data arrives (not after), (3) execute mechanically when threshold is reached. Applied here: H1=range-shift → 3rd consecutive close below $72,638 confirms. H2=noise-cluster → 3rd session recovery above $72,638 confirms. Pre-committed rule: if H1 confirms → re-derive range ($72,600–$72,800 candidate), monitor DualMA for crossover signal. If H2 confirms → floor intact, range unchanged ($72,638–$72,831). No action required now. The three-session rule IS the pre-commitment — it was set two cycles ago before the data arrived. This is the framework working correctly.
+Floor break cycle 356 ($4.60 below $72,638) resolved in one session — BTC $72,770.52 in cycle 357 (+$137.12). Empirical validation of interpretation: slow-MA crossover signal = primary decision layer (still LONG unbroken), empirical floor = situational awareness layer only. Single-session violations at <0.01% depth on this timescale = noise. Three-session rule correctly not triggered — recovery happened in cycle 1 of watch window, preventing spurious range recalculation. Framework validated: (1) primary signal (DualMA crossover) governs position, (2) empirical floor governs attention level, (3) three-session rule governs range recalculation. Each layer has its own trigger — don't mix them. Pre-commitment to threshold before data arrives = correct posture confirmed by outcome.
 
-**Signal source**: cycle 357 analysis — two consecutive flat prices at floor; epistemological ambiguity framework; pre-commitment via three-session rule; 2026-04-11T09:20Z
-**Tags**: B1.1, B3.1, ambiguity-framework, pre-commitment, three-session-rule, hypothesis-testing, decision-rule-before-data, range-shift-vs-noise-cluster, epistemological-clarity
+**Signal source**: cycle 357 analysis — BTC $72,770.52 recovery from cycle 356 $72,633.40 floor break; three-session rule not triggered; range intact; 2026-04-11T17:16Z
+**Tags**: B1.1, B3.1, floor-break-one-cycle-recovery, empirical-validation, three-session-rule-buffer, primary-signal-situational-awareness-separation, noise-filter-validated, range-recalculation-prevention, pre-commitment-works

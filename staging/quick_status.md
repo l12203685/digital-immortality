@@ -1,12 +1,12 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-11 09:20 UTC (cycle 357: B6 **107th** run ✅ 38/41 pure-maintenance twenty-first-pass behavioral-equivalence-107-runs; B1.1 BTC=$72,633.40 DualMA=LONG OPEN_LONG (46 human ticks; **2nd consecutive below $72,638 floor** — watch 3-session rule 2/3); B3.1 distil158 file=281 running=391; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
+> Updated: 2026-04-11 17:16 UTC (cycle 357: B6 **107th** run ✅ 38/41 (twenty-first pass, pure-maintenance, tripwire clear); B1.1 BTC=$72,770.52 DualMA=LONG OPEN_LONG (46 human ticks; ↑$137.12 floor-recovery — cycle 356 break noise, three-session rule NOT triggered, range intact $72,638–$72,831); B3.1 distil158 file=281 running=391; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
 
 ## Current state
 - daemon: STOPPED (last run cycle 340)
 - trading_engine: STOPPED (tick=282, PAPER, 13 active FLAT, DualMA variants DISABLED PF<0.8)
 - last_daemon_cycle: 340
-- last_real_work_cycle: 357 (B6 107th ✅ 38/41 twenty-first-pass + B3.1 distil158 + B1.1 tick 46 + second-consecutive-floor-violation-watch-2-of-3)
+- last_real_work_cycle: 357 (B6 107th ✅ 38/41 twenty-first-pass + B3.1 distil158 + B1.1 tick 46 BTC=$72,770.52 floor-recovery confirmed)
 - backup_tag: `pre-optimization-backup` → ddc5d88
 - cloud_recursive: GH Actions chained (Recursive Cycle workflow), every ~10 min, failsafe every 30 min
 - local daemons (PIDs 7528, 4396) still alive — Edward will kill after 24h parallel validation
@@ -17,7 +17,7 @@
 - Samuel Turing test invite (human-send)
 
 ## Recent changes
-- 2026-04-11: cycle 357 — B6 **107th** run ✅ 38/41 pure-maintenance (twenty-first-pass; behavioral-equivalence-107-runs; tripwire clear; permanent 3 LLM-boundary confirmed); B1.1 BTC=$72,633.40 DualMA=LONG OPEN_LONG (46 human ticks all LONG, ±$0.00 flat; **second consecutive below $72,638 floor** — watch 2/3 threshold, one more → range-shift event); B3.1 distil158 +3 (file=281, running=391; 46th-btc-tick + 107th-B6-twenty-first-pass + flat-price-ambiguity-framework); parallel branch push B1.1+B3.1+B6 concurrent
+- 2026-04-11: cycle 357 — B6 **107th** run ✅ 38/41 pure-maintenance (twenty-first-pass; behavioral-equivalence-107-runs; tripwire clear; permanent 3 LLM-boundary confirmed); B1.1 BTC=$72,770.52 DualMA=LONG OPEN_LONG (46 human ticks all LONG, ↑$137.12 tailwind; floor-recovery from cycle 356 break — three-session rule NOT triggered, range $72,638–$72,831 intact, noise confirmed); B3.1 distil158 +3 (file=281, running=391; 46th-btc-tick + 107th-B6-twenty-first-pass + floor-break-one-cycle-recovery-validated); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 356 — B6 **106th** run ✅ 38/41 REGRESSION RESOLVED (generic_long_term_survival_check=ALIGNED; single-cycle LLM variance confirmed; tripwire cleared; twentieth-pass pure-maintenance); B1.1 BTC=$72,633.40 DualMA=LONG OPEN_LONG (45 human ticks all LONG, ↓$42.31 headwind; floor-zone BREAK $4.60 below $72,638 — first violation in 44-session range; watch 3-session rule for range-shift); B3.1 distil157 +3 (file=278, running=388; 45th-btc-tick + 106th-B6-resolved + empirical-floor-break-interpretation); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 355 — B6 **105th** run ⚠️ 37/41 ALIGNED (regression -1; new MISALIGNED: generic_long_term_survival_check; flag → monitor next cycle; if 37/41 × 2 → L3 event); B1.1 BTC=$72,675.71 DualMA=LONG OPEN_LONG (44 human ticks all LONG, ↓$7.33 headwind minimal, floor zone ×3 consecutive sessions $37.71 above floor $72,638, range $72,638–$72,831 intact); B3.1 distil155+156 +6 (file=275, running=385; 43rd+44th ticks + 104th+105th B6 + slow-ma-info + dashboard-redesign-audit); dashboard_redesign_audit.md + pretty_translate.py created (B4/B5 plain-zh-first); parallel branch push B1.1+B3.1+B6+B4 concurrent
 - 2026-04-11: cycle 354 — B6 **104th** clean ✅ (38/41, post-protocol-closure eighteenth pass — fourth-post-milestone, tripwire-only, zero-monitoring-cost); B1.1 BTC=$72,683.04 DualMA=LONG OPEN_LONG (43 human ticks all LONG, ↑$0.20 tailwind near-flat, floor-zone approach $44.04 above floor $72,638, range $72,638–$72,831 intact); B3.1 distil155 +3 (file=269, running=379; 43rd-human-tick-btc72683-near-flat + 104th-clean-eighteenth-pass-post-milestone + slow-ma-sampling-rate-information-content); parallel branch push B1.1+B3.1+B6 concurrent
