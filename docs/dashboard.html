@@ -1,93 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="300">
+<meta http-equiv="refresh" content="30">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Digital Immortality Dashboard</title>
-<style>:root{--bg:#0d1117;--panel:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--ok:#3fb950;--warn:#d29922;--alert:#f85149;--accent:#58a6ff}*{box-sizing:border-box}body{background:var(--bg);color:var(--text);font-family:"JetBrains Mono","Consolas","Courier New",monospace;font-size:13px;line-height:1.45;margin:0;padding:16px}h1{font-size:18px;margin:0 0 4px 0;color:var(--accent)}h2{font-size:14px;margin:0 0 8px 0;color:var(--accent);border-bottom:1px solid var(--border);padding-bottom:4px}.subtitle{color:var(--muted);font-size:11px;margin-bottom:16px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:12px}.panel{background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:12px 14px}.kv{display:grid;grid-template-columns:140px 1fr;gap:4px 12px}.kv .k{color:var(--muted)}.kv .v{color:var(--text);word-break:break-word}.pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:600}.ok{color:var(--ok)}.warn{color:var(--warn)}.alert{color:var(--alert)}.pill.ok{background:rgba(63,185,80,0.15);color:var(--ok)}.pill.warn{background:rgba(210,153,34,0.15);color:var(--warn)}.pill.alert{background:rgba(248,81,73,0.15);color:var(--alert)}ul{margin:0;padding-left:18px}li{margin-bottom:2px}pre{background:#0b1017;border:1px solid var(--border);border-radius:4px;padding:8px;overflow-x:auto;white-space:pre-wrap;word-break:break-word;font-size:11px;color:#b0b9c1;max-height:360px;overflow-y:auto;margin:0}.branch{border-left:2px solid var(--border);padding:4px 10px;margin-bottom:6px}.branch .num{color:var(--accent);font-weight:600}.branch .title{color:var(--text)}.branch .first{color:var(--muted);font-size:11px;margin-top:2px}.muted{color:var(--muted)}footer{margin-top:16px;color:var(--muted);font-size:10px;text-align:center}.mc-wrap{background:var(--panel);border:2px solid var(--accent);border-radius:8px;padding:14px 16px;margin-bottom:16px}.mc-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px}.mc-title{font-size:16px;color:var(--accent);font-weight:700;margin:0}.mc-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}.mc-dot.ok{background:var(--ok);box-shadow:0 0 6px var(--ok)}.mc-dot.warn{background:var(--warn);box-shadow:0 0 6px var(--warn)}.mc-dot.alert{background:var(--alert);box-shadow:0 0 6px var(--alert)}.mc-dot.muted{background:var(--muted)}.mc-online{font-size:12px;color:var(--muted)}.mc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:10px}.mc-card{background:#0b1017;border:1px solid var(--border);border-radius:6px;padding:10px 12px}.mc-card h3{margin:0 0 8px 0;font-size:13px;color:var(--accent);border-bottom:1px dashed var(--border);padding-bottom:4px}.mc-item{padding:6px 0;border-bottom:1px dotted #1f2633;font-size:12px}.mc-item:last-child{border-bottom:none}.mc-time{color:var(--muted);font-size:10px;margin-right:6px}.mc-actor{color:var(--accent);font-size:10px;margin-right:6px}.mc-decision-card{background:rgba(88,166,255,0.08);border:1px solid var(--accent);border-radius:5px;padding:8px 10px;margin-bottom:8px}.mc-decision-card summary{cursor:pointer;color:var(--text);font-size:12px;list-style:none;outline:none}.mc-decision-card summary::-webkit-details-marker{display:none}.mc-decision-card summary::before{content:"▶ ";color:var(--accent);font-size:10px}.mc-decision-card[open] summary::before{content:"▼ "}.mc-decision-body{margin-top:6px;padding-top:6px;border-top:1px dashed var(--border);color:var(--muted);font-size:11px}.mc-decision-body button{background:var(--accent);color:#0b1017;border:none;padding:4px 10px;border-radius:4px;font-size:11px;cursor:pointer;margin-top:6px;font-weight:600}.mc-decision-body button:hover{opacity:0.85}.mc-blocker{color:var(--alert)}.mc-done{color:var(--ok)}.mc-progress{color:var(--warn)}.mc-empty{color:var(--muted);font-style:italic;font-size:11px}.mc-backlog-item{padding:5px 0;border-bottom:1px dotted #1f2633;color:var(--text)}.mc-backlog-item:last-child{border-bottom:none}.mc-backlog-num{color:var(--accent);font-weight:600;margin-right:6px}</style>
+<title>數位永生 · 主控台</title>
+<style>
+:root{
+  --bg:#0d1117;--panel:#161b22;--panel2:#0b1017;--border:#30363d;
+  --text:#e6edf3;--muted:#8b949e;
+  --ok:#3fb950;--warn:#d29922;--alert:#f85149;--accent:#58a6ff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",
+    "Helvetica Neue",Arial,sans-serif;
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1100px;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:0 0 4px 0;color:var(--text);font-weight:700;letter-spacing:0.02em}
+h2{font-size:16px;margin:0 0 12px 0;color:var(--accent);font-weight:600;
+  border-bottom:1px solid var(--border);padding-bottom:6px}
+h3{font-size:14px;margin:0 0 8px 0;color:var(--accent);font-weight:600}
+.subtitle{color:var(--muted);font-size:13px;margin:0 0 16px 0}
+.subtitle .live{color:var(--ok);font-weight:600}
+
+/* Hero metrics — 3 big numbers */
+.hero{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
+.hero .card{background:var(--panel);border:1px solid var(--border);
+  border-radius:10px;padding:14px 12px;text-align:center;min-height:96px;
+  display:flex;flex-direction:column;justify-content:center}
+.hero .card .label{color:var(--muted);font-size:13px;margin-bottom:6px}
+.hero .card .value{font-size:28px;font-weight:700;line-height:1.1}
+.hero .card.ok{border-color:var(--ok)}.hero .card.ok .value{color:var(--ok)}
+.hero .card.warn{border-color:var(--warn)}.hero .card.warn .value{color:var(--warn)}
+.hero .card.alert{border-color:var(--alert)}.hero .card.alert .value{color:var(--alert)}
+.hero .card.muted{border-color:var(--border)}.hero .card.muted .value{color:var(--muted)}
+
+/* Alert banner (red) */
+.banner{background:rgba(248,81,73,0.12);border:1px solid var(--alert);
+  border-radius:8px;padding:12px 14px;margin-bottom:16px;color:var(--alert);
+  font-weight:600;font-size:15px}
+.banner ul{margin:6px 0 0 0;padding-left:20px;font-weight:400;color:var(--text)}
+
+/* Mission Control */
+.mc-wrap{background:var(--panel);border:1px solid var(--border);
+  border-radius:10px;padding:14px 16px;margin-bottom:18px}
+.mc-header{display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.mc-title{font-size:16px;color:var(--text);font-weight:700;margin:0}
+.mc-online{font-size:13px;color:var(--muted)}
+.mc-dot{display:inline-block;width:10px;height:10px;border-radius:50%;
+  margin-right:6px;vertical-align:middle}
+.mc-dot.ok{background:var(--ok);box-shadow:0 0 6px var(--ok)}
+.mc-dot.warn{background:var(--warn);box-shadow:0 0 6px var(--warn)}
+.mc-dot.alert{background:var(--alert);box-shadow:0 0 6px var(--alert)}
+.mc-dot.muted{background:var(--muted)}
+.mc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.mc-card{background:var(--panel2);border:1px solid var(--border);
+  border-radius:8px;padding:12px 14px;min-height:120px}
+.mc-item{padding:8px 0;border-bottom:1px dotted #1f2633;font-size:14px}
+.mc-item:last-child{border-bottom:none}
+.mc-time{color:var(--muted);font-size:12px;margin-right:6px}
+.mc-actor{color:var(--accent);font-size:12px;margin-right:6px}
+.mc-decision-card{background:rgba(210,153,34,0.08);
+  border:1px solid var(--warn);border-radius:8px;padding:12px 14px;
+  margin-bottom:10px;min-height:48px}
+.mc-decision-card summary{cursor:pointer;color:var(--text);font-size:14px;
+  list-style:none;outline:none;line-height:1.5}
+.mc-decision-card summary::-webkit-details-marker{display:none}
+.mc-decision-card summary::before{content:"▶ ";color:var(--warn);font-size:12px}
+.mc-decision-card[open] summary::before{content:"▼ "}
+.mc-decision-body{margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);
+  color:var(--muted);font-size:13px}
+.mc-decision-body button{background:var(--accent);color:#0b1017;border:none;
+  padding:10px 18px;border-radius:6px;font-size:14px;cursor:pointer;
+  margin-top:8px;font-weight:600;min-height:44px;min-width:48px}
+.mc-blocker{color:var(--alert)}.mc-done{color:var(--ok)}.mc-progress{color:var(--warn)}
+.mc-empty{color:var(--muted);font-style:italic;font-size:13px}
+
+/* Panel grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.panel{background:var(--panel);border:1px solid var(--border);
+  border-radius:10px;padding:14px 16px;min-width:0}
+.kv{display:grid;grid-template-columns:max-content 1fr;gap:6px 14px;font-size:14px}
+.kv .k{color:var(--muted)}.kv .v{color:var(--text);word-break:break-word}
+.kv .v.ok{color:var(--ok)}.kv .v.warn{color:var(--warn)}.kv .v.alert{color:var(--alert)}
+
+/* Branch list */
+.branch{border-left:3px solid var(--border);padding:8px 12px;margin-bottom:8px}
+.branch .num{color:var(--accent);font-weight:700}
+.branch .title{color:var(--text);font-size:14px}
+.branch .first{color:var(--muted);font-size:12px;margin-top:3px}
+.branch.deadline{border-left-color:var(--alert)}
+
+/* Collapsed technical details */
+details.tech{background:var(--panel2);border:1px solid var(--border);
+  border-radius:6px;padding:8px 12px;margin-top:10px;font-size:13px}
+details.tech summary{cursor:pointer;color:var(--muted);font-size:12px;
+  outline:none;list-style:none;padding:4px 0;min-height:32px}
+details.tech summary::-webkit-details-marker{display:none}
+details.tech summary::before{content:"▶ ";color:var(--muted);font-size:10px}
+details.tech[open] summary::before{content:"▼ "}
+details.tech pre{background:#080d12;border:1px solid var(--border);
+  border-radius:4px;padding:8px;overflow:auto;max-height:200px;
+  font-size:11px;color:#9aa4ae;white-space:pre-wrap;word-break:break-word}
+
+ul{margin:0;padding-left:20px}li{margin-bottom:4px}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;
+  font-size:12px;font-weight:600}
+.pill.ok{background:rgba(63,185,80,0.15);color:var(--ok)}
+.pill.warn{background:rgba(210,153,34,0.15);color:var(--warn)}
+.pill.alert{background:rgba(248,81,73,0.15);color:var(--alert)}
+.muted{color:var(--muted)}
+footer{margin:20px 0 8px 0;color:var(--muted);font-size:11px;text-align:center}
+
+/* Mobile: stack hero, collapse gaps */
+@media (max-width:600px){
+  .wrap{padding:12px}
+  body{font-size:15px}
+  h1{font-size:19px}
+  .hero{grid-template-columns:1fr;gap:8px}
+  .hero .card{min-height:80px;padding:12px}
+  .hero .card .value{font-size:26px}
+  .mc-grid,.grid{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 <!--
-  Digital Immortality Dashboard (Phase 2, pull-model)
+  Digital Immortality Dashboard (plain-language redesign 2026-04-11)
   =====================================================
   URL:     https://l12203685.github.io/digital-immortality/dashboard.html
-  Refresh: auto-reload every 5 minutes (meta http-equiv=refresh).
-           Manual refresh: re-run platform/build_dashboard.py and
-           platform/render_dashboard.py (or wait for next daemon cycle).
+  Refresh: meta http-equiv=refresh every 30s.
+           Manual rebuild: python platform/build_dashboard.py && python platform/render_dashboard.py
 
-  Sections
-  --------
-  Tree     : 7 永生樹 branches (1 經濟 to 7 知識輸出).
-  Trading  : Engine tick, active/disabled strategies, paper P&L, kill window.
-  Daemon   : Last cycle, B6 clean-streak, last 20 log lines, insight count.
-  Agent    : Model, tokens, cost, RAM (from R:/agent_metrics.json, runtime only).
-  Git      : Last 10 commits from digital-immortality / LYH / ZP.
-  Blockers : Human-gated items parsed from staging/quick_status.md.
+  Design principles:
+    1. Hero metrics (3 big numbers) answer "is everything OK?" at a glance.
+    2. Plain Traditional Chinese — no commit SHAs, no PF/WR/MDD, no raw log dumps.
+    3. Mobile-first — 375px viewport with no horizontal scroll.
+    4. Color code: green=ok, yellow=warn, red=alert, grey=muted.
 
-  Rebuild is wired into platform/recursive_daemon.py (end of each cycle).
-  Dashboard failures never kill daemon cycles (subprocess check=False).
+  Shared vocabulary: platform/pretty_translate.py
 -->
 
-<h1>Digital Immortality — 永生樹 Dashboard</h1>
-<div class='subtitle'>updated: 2026-04-11 17:00 (Taipei, UTC+8) · 所有時間 Asia/Taipei (UTC+8) · pull-model · auto-refresh 5min</div>
-<section class='mc-wrap'><div class='mc-header'><h2 class='mc-title'>🎯 Mission Control — 現在發生什麼事</h2><div class='mc-online'><span class='mc-dot ok'></span>主腦：在線 （1.1 分鐘前更新）</div></div><div class='mc-grid'><div class='mc-card'><h3>🎯 待你決策</h3><details class='mc-decision-card'><summary>Phase 3 reframe: 不遷雲LLM brain (auth卡本地), cloud只跑utility scripts (heartbeat/writeback/dashboard build). 本地daemon是forever. <span class='mc-time'>（49 分鐘前）</span></summary><div class='mc-decision-body'>這件事需要你點頭或給方向。點擊下方「我知道了」會暫時收起（Phase 4 會接後端真正處理）。<br><form onsubmit='return false'><button type='submit' onclick='this.closest("details").open=false'>我知道了</button></form></div></details>
-<details class='mc-decision-card'><summary>方向調整：Edward reframed reporting: silent Discord, all progress -&gt; dashboard pull-model with white-language interactive viz <span class='mc-time'>（59 分鐘前）</span></summary><div class='mc-decision-body'>這件事需要你點頭或給方向。點擊下方「我知道了」會暫時收起（Phase 4 會接後端真正處理）。<br><form onsubmit='return false'><button type='submit' onclick='this.closest("details").open=false'>我知道了</button></form></div></details>
-<details class='mc-decision-card'><summary>方向調整：Edward cancelled Fly.io migration -&gt; use GitHub Actions chained workflow_dispatch instead <span class='mc-time'>（59 分鐘前）</span></summary><div class='mc-decision-body'>這件事需要你點頭或給方向。點擊下方「我知道了」會暫時收起（Phase 4 會接後端真正處理）。<br><form onsubmit='return false'><button type='submit' onclick='this.closest("details").open=false'>我知道了</button></form></div></details>
-<details class='mc-decision-card'><summary>方向調整：Edward reframed Discord cadence: silent default, dashboard pull-only <span class='mc-time'>（1 小時前）</span></summary><div class='mc-decision-body'>這件事需要你點頭或給方向。點擊下方「我知道了」會暫時收起（Phase 4 會接後端真正處理）。<br><form onsubmit='return false'><button type='submit' onclick='this.closest("details").open=false'>我知道了</button></form></div></details>
-<details class='mc-decision-card'><summary>方向調整：Edward switched cloud target Fly.io -&gt; GitHub Actions chained <span class='mc-time'>（1 小時前）</span></summary><div class='mc-decision-body'>這件事需要你點頭或給方向。點擊下方「我知道了」會暫時收起（Phase 4 會接後端真正處理）。<br><form onsubmit='return false'><button type='submit' onclick='this.closest("details").open=false'>我知道了</button></form></div></details><h3 style='margin-top:10px'>📝 等你批准</h3><details class='mc-decision-card'><summary><strong>SOP #122</strong> — Gate-Constrained Regime Operating Protocol</summary><div class='mc-decision-body'>When every automatable lever is pulled and only human-gated actions remain, the agent must reallocate from &quot;build capability&quot; to &quot;lower human activation energy&quot;.<br><form onsubmit='return false'><button type='submit' onclick='this.closest("details").open=false'>稍後再看</button></form></div></details>
+<div class='wrap'>
+<h1>數位永生 · 主控台</h1>
+<div class='subtitle'>
+  更新於 <span class='live'>2026-04-11 17:03 (Taipei, UTC+8)</span>
+  · 所有時間 Asia/Taipei (UTC+8)
+  · 每 30 秒自動刷新
+</div>
+
+<div class='hero'><div class='card warn'><div class='label'>數位永生狀態</div><div class='value'>要你看</div></div><div class='card ok'><div class='label'>主腦</div><div class='value'>在線</div></div><div class='card alert'><div class='label'>待你動作</div><div class='value'>11 件</div></div></div>
+
+<section class='mc-wrap'><div class='mc-header'><h2 class='mc-title'>現在發生什麼事</h2><div class='mc-online'><span class='mc-dot ok'></span>主腦：在線 （0.1 分鐘前更新）</div></div><div class='mc-grid'><div class='mc-card'><h3>待你決策</h3><details class='mc-decision-card'><summary>Phase 3 reframe: 不遷雲LLM brain (auth卡本地), cloud只跑utility scripts (heartbeat/writeback/dashboard build). 本地daemon是forever. <span class='mc-time'>（53 分鐘前）</span></summary><div class='mc-decision-body'>這件事需要你點頭或給方向。<br><form onsubmit='return false'><button type='submit' onclick='this.closest("details").open=false'>我知道了</button></form></div></details>
+<details class='mc-decision-card'><summary>方向調整：Edward reframed reporting: silent Discord, all progress -&gt; dashboard pull-model with white-language interactive viz <span class='mc-time'>（1 小時前）</span></summary><div class='mc-decision-body'>這件事需要你點頭或給方向。<br><form onsubmit='return false'><button type='submit' onclick='this.closest("details").open=false'>我知道了</button></form></div></details>
+<details class='mc-decision-card'><summary>方向調整：Edward cancelled Fly.io migration -&gt; use GitHub Actions chained workflow_dispatch instead <span class='mc-time'>（1 小時前）</span></summary><div class='mc-decision-body'>這件事需要你點頭或給方向。<br><form onsubmit='return false'><button type='submit' onclick='this.closest("details").open=false'>我知道了</button></form></div></details>
+<details class='mc-decision-card'><summary>方向調整：Edward reframed Discord cadence: silent default, dashboard pull-only <span class='mc-time'>（1 小時前）</span></summary><div class='mc-decision-body'>這件事需要你點頭或給方向。<br><form onsubmit='return false'><button type='submit' onclick='this.closest("details").open=false'>我知道了</button></form></div></details>
+<details class='mc-decision-card'><summary>方向調整：Edward switched cloud target Fly.io -&gt; GitHub Actions chained <span class='mc-time'>（1 小時前）</span></summary><div class='mc-decision-body'>這件事需要你點頭或給方向。<br><form onsubmit='return false'><button type='submit' onclick='this.closest("details").open=false'>我知道了</button></form></div></details><h3 style='margin-top:14px'>等你批准</h3><details class='mc-decision-card'><summary><strong>SOP #122</strong> — Gate-Constrained Regime Operating Protocol</summary><div class='mc-decision-body'>When every automatable lever is pulled and only human-gated actions remain, the agent must reallocate from &quot;build capability&quot; to &quot;lower human activation energy&quot;.<br><form onsubmit='return false'><button type='submit' onclick='this.closest("details").open=false'>稍後再看</button></form></div></details>
 <details class='mc-decision-card'><summary><strong>SOP #123</strong> — Daemon / Human-Session Coordination Protocol</summary><div class='mc-decision-body'>Division of labor: daemon = leaf-append writes; human session = structural/source/commit writes. Pre-flight via git diff, classify writes before executing, route daemon structural needs through a r...<br><form onsubmit='return false'><button type='submit' onclick='this.closest("details").open=false'>稍後再看</button></form></div></details>
 <details class='mc-decision-card'><summary><strong>SOP #124</strong> — Kill-Window State Persistence Protocol</summary><div class='mc-decision-body'>All strategy state that feeds kill/reactivation decisions MUST be durable + reloaded on process start. In-memory state is a cache, never source of truth. kill_window_floor must be &gt; 0 to avoid abso...<br><form onsubmit='return false'><button type='submit' onclick='this.closest("details").open=false'>稍後再看</button></form></div></details></div>
-<div class='mc-card'><h3>🚀 進行中</h3><div class='mc-item mc-progress'><span class='mc-time'>41 分鐘前</span><span class='mc-actor'>主腦</span>下屬完成任務：Phase 4a Local Mission Control web shipped: server + frontend + launcher. Discord plugin機制找到 = MCP server pattern. Phase 4b 接input bridge 需 ~1.5-2 hours.</div>
-<div class='mc-item mc-progress'><span class='mc-time'>42 分鐘前</span><span class='mc-actor'>主腦</span>下屬完成任務：Dashboard升級ship: Mission Control section上線, 6個子區塊(待決策/進行中/剛完成/卡住/backlog/主腦在線指示燈), 已可在 https:[檔案] 看到</div>
-<div class='mc-item mc-progress'><span class='mc-time'>45 分鐘前</span><span class='mc-actor'>主腦</span>下屬完成任務：Auto sign-off batch system shipped: sign_off_manager + escalation_batcher + 14 tests pass + daemon hook. 4 pending decisions seeded (3 PENDING auto-approve in 24h, 1 already AUTO_APPLIED for Anthropic key upload)</div>
-<div class='mc-item mc-progress'><span class='mc-time'>49 分鐘前</span><span class='mc-actor'>主腦</span>Phase 3 reframe: 不遷雲LLM brain (auth卡本地), cloud只跑utility scripts (heartbeat/writeback/dashboard build). 本地daemon是forever.</div>
-<div class='mc-item mc-progress'><span class='mc-time'>49 分鐘前</span><span class='mc-actor'>主腦</span>Cloud daemon無法用Max subscription. GH runner只能用Anthropic API需要credits, Edward credit balance=0. Chain workflow跑得動但每個cycle no-op (API call fail)</div>
-<div class='mc-item mc-progress'><span class='mc-time'>49 分鐘前</span><span class='mc-actor'>主腦</span>下屬完成任務：Fly.io取消下屬完成: 刪掉Fly artifacts + 建好GH Actions chained recursive workflow + daemon --once flag. Chain provably alive (5 consecutive runs)</div>
-<div class='mc-item mc-progress'><span class='mc-time'>56 分鐘前</span><span class='mc-actor'>主腦</span>Phase 4 階段：Phase 4: building auto sign-off batch system + dashboard upgrade in parallel</div>
-<div class='mc-item mc-progress'><span class='mc-time'>56 分鐘前</span><span class='mc-actor'>主腦</span>New principle: minimize Edward actions. Chairman = sign-off only, COO = operational. 5-dim framework adds operational simplicity.</div>
-<div class='mc-item mc-progress'><span class='mc-time'>56 分鐘前</span><span class='mc-actor'>主腦</span>下屬完成任務：idle_task_picker meta-infra: daemon now self-dispatches highest-EV backlog task each cycle. 16 tests pass. Eliminates idle-wait failure mode.</div>
-<div class='mc-item mc-progress'><span class='mc-time'>59 分鐘前</span><span class='mc-actor'>主腦</span>方向調整：Edward reframed reporting: silent Discord, all progress -&gt; dashboard pull-model with white-language interactive viz</div>
-<div class='mc-item mc-progress'><span class='mc-time'>59 分鐘前</span><span class='mc-actor'>主腦</span>方向調整：Edward cancelled Fly.io migration -&gt; use GitHub Actions chained workflow_dispatch instead</div>
-<div class='mc-item mc-progress'><span class='mc-time'>59 分鐘前</span><span class='mc-actor'>主腦</span>下屬完成任務：Chat archive angle 3 (micro-decisions): 30 existing entries verified (10 strong, 7 partial, 12 need semantic parser). 10 NEW patterns discovered. KEY FINDING: recursive engine pattern is Edward native speech since 201...</div>
-<div class='mc-item mc-progress'><span class='mc-time'>59 分鐘前</span><span class='mc-actor'>主腦</span>下屬完成任務：Chat archive angle 2 (decision quotes): 62 quotes scanned 135K msgs, 6 counter-examples. KEY FINDING: Axiom 1 derivative-thinking is absent from chat (only 2 hits / 135K msgs) - lives in code not speech</div>
-<div class='mc-item mc-progress'><span class='mc-time'>1 小時前</span><span class='mc-actor'>主腦</span>方向調整：Edward reframed Discord cadence: silent default, dashboard pull-only</div>
-<div class='mc-item mc-progress'><span class='mc-time'>1 小時前</span><span class='mc-actor'>主腦</span>方向調整：Edward switched cloud target Fly.io -&gt; GitHub Actions chained</div>
-<div class='mc-item mc-progress'><span class='mc-time'>1 小時前</span><span class='mc-actor'>主腦</span>Phase 3 階段：Phase 3: cloud migration + writeback cron + meta tasks</div>
-<div class='mc-item mc-progress'><span class='mc-time'>1 小時前</span><span class='mc-actor'>主腦</span>Phase 2 階段：Phase 2: dashboard live + heartbeat cron + repo rename</div>
-<div class='mc-item mc-progress'><span class='mc-time'>1 小時前</span><span class='mc-actor'>主腦</span>Phase 1 階段：Phase 1: github audit + [檔案] rollout 3 repos</div>
-<div class='mc-item mc-progress'><span class='mc-time'>1 小時前</span><span class='mc-actor'>主腦</span>主腦：Cold start session resumed</div></div>
-<div class='mc-card'><h3>✅ 剛完成</h3><div class='mc-item mc-done'><span class='mc-time'>41 分鐘前</span><span class='mc-actor'>主腦</span>✓ 下屬完成任務：Phase 4a Local Mission Control web shipped: server + frontend + launcher. Discord plugin機制找到 = MCP server pattern. Phase 4b 接input bridge 需 ~1.5-2 hours.</div>
-<div class='mc-item mc-done'><span class='mc-time'>42 分鐘前</span><span class='mc-actor'>主腦</span>✓ 下屬完成任務：Dashboard升級ship: Mission Control section上線, 6個子區塊(待決策/進行中/剛完成/卡住/backlog/主腦在線指示燈), 已可在 https:[檔案] 看到</div>
-<div class='mc-item mc-done'><span class='mc-time'>45 分鐘前</span><span class='mc-actor'>主腦</span>✓ 下屬完成任務：Auto sign-off batch system shipped: sign_off_manager + escalation_batcher + 14 tests pass + daemon hook. 4 pending decisions seeded (3 PENDING auto-approve in 24h, 1 already AUTO_APPLIED for Anthropic key upload)</div>
-<div class='mc-item mc-done'><span class='mc-time'>49 分鐘前</span><span class='mc-actor'>主腦</span>✓ 下屬完成任務：Fly.io取消下屬完成: 刪掉Fly artifacts + 建好GH Actions chained recursive workflow + daemon --once flag. Chain provably alive (5 consecutive runs)</div>
-<div class='mc-item mc-done'><span class='mc-time'>56 分鐘前</span><span class='mc-actor'>主腦</span>✓ New principle: minimize Edward actions. Chairman = sign-off only, COO = operational. 5-dim framework adds operational simplicity.</div>
-<div class='mc-item mc-done'><span class='mc-time'>56 分鐘前</span><span class='mc-actor'>主腦</span>✓ 下屬完成任務：idle_task_picker meta-infra: daemon now self-dispatches highest-EV backlog task each cycle. 16 tests pass. Eliminates idle-wait failure mode.</div>
-<div class='mc-item mc-done'><span class='mc-time'>59 分鐘前</span><span class='mc-actor'>主腦</span>✓ 下屬完成任務：Chat archive angle 3 (micro-decisions): 30 existing entries verified (10 strong, 7 partial, 12 need semantic parser). 10 NEW patterns discovered. KEY FINDING: recursive engine pattern is Edward native speech since 201...</div>
-<div class='mc-item mc-done'><span class='mc-time'>59 分鐘前</span><span class='mc-actor'>主腦</span>✓ 下屬完成任務：Chat archive angle 2 (decision quotes): 62 quotes scanned 135K msgs, 6 counter-examples. KEY FINDING: Axiom 1 derivative-thinking is absent from chat (only 2 hits / 135K msgs) - lives in code not speech</div>
-<div class='mc-item mc-done'><span class='mc-time'>1 小時前</span><span class='mc-actor'>主腦</span>✓ Phase 2 階段：Phase 2: dashboard live + heartbeat cron + repo rename</div>
-<div class='mc-item mc-done'><span class='mc-time'>1 小時前</span><span class='mc-actor'>主腦</span>✓ Phase 1 階段：Phase 1: github audit + [檔案] rollout 3 repos</div></div>
-<div class='mc-card'><h3>🚧 卡住</h3><div class='mc-item mc-blocker'>⚠ mainnet API keys (~88d until 2026-07-07)</div>
-<div class='mc-item mc-blocker'>⚠ outreach DMs × 5 pending ([檔案])</div>
-<div class='mc-item mc-blocker'>⚠ Samuel Turing test invite (human-send)</div>
-<div class='mc-item mc-blocker'>⚠ Samuel in-person session NOT DONE — needs Edward to schedule; send [檔案] first if not yet sent (DM ready: [檔案] — advances Branch 1.3 AND creates pretext for 4.1 correction session)</div>
-<div class='mc-item mc-blocker'>⚠ [檔案] already exists at [檔案] (31 lines, ~350 tokens) — remove from quick_status</div></div>
-<div class='mc-card'><h3>📋 自動 backlog top 5</h3><p class='mc-empty'>自動 backlog 尚未產生（等主腦產出）</p></div></div></section>
+<div class='mc-card'><h3>進行中</h3><div class='mc-item mc-progress'><span class='mc-time'>45 分鐘前</span><span class='mc-actor'>主腦</span>下屬完成任務：Phase 4a Local Mission Control web shipped: server + frontend + launcher. Discord plugin機制找到 = MCP server pattern. Phase 4b 接input bridge 需 ~1.5-2 hours.</div>
+<div class='mc-item mc-progress'><span class='mc-time'>45 分鐘前</span><span class='mc-actor'>主腦</span>下屬完成任務：Dashboard升級ship: Mission Control section上線, 6個子區塊(待決策/進行中/剛完成/卡住/backlog/主腦在線指示燈), 已可在 https:[檔案] 看到</div>
+<div class='mc-item mc-progress'><span class='mc-time'>49 分鐘前</span><span class='mc-actor'>主腦</span>下屬完成任務：Auto sign-off batch system shipped: sign_off_manager + escalation_batcher + 14 tests pass + daemon hook. 4 pending decisions seeded (3 PENDING auto-approve in 24h, 1 already AUTO_APPLIED for Anthropic key upload)</div>
+<div class='mc-item mc-progress'><span class='mc-time'>53 分鐘前</span><span class='mc-actor'>主腦</span>Phase 3 reframe: 不遷雲LLM brain (auth卡本地), cloud只跑utility scripts (heartbeat/writeback/dashboard build). 本地daemon是forever.</div>
+<div class='mc-item mc-progress'><span class='mc-time'>53 分鐘前</span><span class='mc-actor'>主腦</span>Cloud daemon無法用Max subscription. GH runner只能用Anthropic API需要credits, Edward credit balance=0. Chain workflow跑得動但每個cycle no-op (API call fail)</div>
+<div class='mc-item mc-progress'><span class='mc-time'>53 分鐘前</span><span class='mc-actor'>主腦</span>下屬完成任務：Fly.io取消下屬完成: 刪掉Fly artifacts + 建好GH Actions chained recursive workflow + daemon --once flag. Chain provably alive (5 consecutive runs)</div>
+<div class='mc-item mc-progress'><span class='mc-time'>59 分鐘前</span><span class='mc-actor'>主腦</span>Phase 4 階段：Phase 4: building auto sign-off batch system + dashboard upgrade in parallel</div>
+<div class='mc-item mc-progress'><span class='mc-time'>59 分鐘前</span><span class='mc-actor'>主腦</span>New principle: minimize Edward actions. Chairman = sign-off only, COO = operational. 5-dim framework adds operational simplicity.</div></div>
+<div class='mc-card'><h3>剛完成</h3><div class='mc-item mc-done'><span class='mc-time'>45 分鐘前</span><span class='mc-actor'>主腦</span>✓ 下屬完成任務：Phase 4a Local Mission Control web shipped: server + frontend + launcher. Discord plugin機制找到 = MCP server pattern. Phase 4b 接input bridge 需 ~1.5-2 hours.</div>
+<div class='mc-item mc-done'><span class='mc-time'>45 分鐘前</span><span class='mc-actor'>主腦</span>✓ 下屬完成任務：Dashboard升級ship: Mission Control section上線, 6個子區塊(待決策/進行中/剛完成/卡住/backlog/主腦在線指示燈), 已可在 https:[檔案] 看到</div>
+<div class='mc-item mc-done'><span class='mc-time'>49 分鐘前</span><span class='mc-actor'>主腦</span>✓ 下屬完成任務：Auto sign-off batch system shipped: sign_off_manager + escalation_batcher + 14 tests pass + daemon hook. 4 pending decisions seeded (3 PENDING auto-approve in 24h, 1 already AUTO_APPLIED for Anthropic key upload)</div>
+<div class='mc-item mc-done'><span class='mc-time'>53 分鐘前</span><span class='mc-actor'>主腦</span>✓ 下屬完成任務：Fly.io取消下屬完成: 刪掉Fly artifacts + 建好GH Actions chained recursive workflow + daemon --once flag. Chain provably alive (5 consecutive runs)</div>
+<div class='mc-item mc-done'><span class='mc-time'>59 分鐘前</span><span class='mc-actor'>主腦</span>✓ New principle: minimize Edward actions. Chairman = sign-off only, COO = operational. 5-dim framework adds operational simplicity.</div></div>
+<div class='mc-card'><h3>自動 backlog</h3><p class='mc-empty'>尚未產生</p></div></div></section>
+
 <div class='grid'>
-  <section class='panel'><h2>永生樹 (7 branches)</h2><div class='branch'><div><span class='num'>1.</span> <span class='title'>經濟自給（存活前提）⚡DEADLINE: 2026-07-07</span></div><div class='first'>1.1 Trading system → live profit</div></div>
+  <section class='panel'>
+    <h2>永生樹 · 7 大分支</h2>
+    <div class='branch deadline'><div><span class='num'>1.</span> <span class='title'>經濟自給（存活前提）⚡DEADLINE: 2026-07-07</span></div><div class='first'>1.1 Trading system → live profit</div></div>
 <div class='branch'><div><span class='num'>2.</span> <span class='title'>行為等價（核心能力）</span></div><div class='first'>2.1 DNA 品質：10 micro-decision patterns from JSONL integrated ✓</div></div>
 <div class='branch'><div><span class='num'>3.</span> <span class='title'>持續學習（成長引擎）</span></div><div class='first'>3.1 遞迴引擎：三層架構 operational ✓</div></div>
 <div class='branch'><div><span class='num'>4.</span> <span class='title'>社交圈（ecosystem）</span></div><div class='first'>4.1 第一個非 Edward organism（需要朋友參與 — Samuel?）</div></div>
 <div class='branch'><div><span class='num'>5.</span> <span class='title'>平台分發（scale）</span></div><div class='first'>5.1 Skill suite auto-update：done v2.1.0 + VERSION-based ✓</div></div>
-<div class='branch'><div><span class='num'>6.</span> <span class='title'>存活冗餘（anti-fragile）</span></div><div class='first'>6.1 冷啟動 recovery：templates/dna_core.md 330 MDs ✓ (cycle 201: header updated MD-318→MD-330; cold-start boot test 33/33 ALIGNED ✅; staging/...</div></div>
-<div class='branch'><div><span class='num'>7.</span> <span class='title'>知識輸出（scale intelligence externally）</span></div><div class='first'>7.1 知識缺口偵測：MD-319 (輸出=缺口偵測器) ✓ cycle 94 — forced-output checkpoints; explanation stalls = reinforce nodes</div></div></section>
-  <section class='panel'><h2>Trading</h2><h2>engine</h2><div class='kv'><div class='k'>mode</div><div class='v'>PAPER</div><div class='k'>regime</div><div class='v'>mixed</div><div class='k'>price</div><div class='v'>$72683.04</div><div class='k'>tick_count</div><div class='v'>282</div><div class='k'>active</div><div class='v'>13</div><div class='k'>disabled</div><div class='v'>6</div><div class='k'>total_pnl</div><div class='v alert'>-0.1865%</div><div class='k'>last_tick</div><div class='v'>2026-04-11 16:59 (Taipei)</div></div><h2 style='margin-top:10px'>kill window</h2><div class='kv'><div class='k'>kill_window</div><div class='v'>20</div><div class='k'>kill_count</div><div class='v'>12</div><div class='k'>min_pf</div><div class='v'>0.8</div><div class='k'>min_wr</div><div class='v'>0.3</div><div class='k'>max_dd</div><div class='v'>20.0</div><div class='k'>last_kill</div><div class='v'>DualMA_RSI_filtered — PF 0.70 &lt; 0.8</div><div class='k'>evolved_at</div><div class='v'>2026-04-11T05:10:00.940068+00:00</div></div><h2 style='margin-top:10px'>disabled strategies</h2><ul><li><span class='alert'>gen_BollingerMeanReversion_RF_7abfe4</span>: PF 0.62 &lt; 0.8</li><li><span class='alert'>gen_BollingerMeanReversion_RF_598b24</span>: PF 0.62 &lt; 0.8</li><li><span class='alert'>DualMA_10_30</span>: PF 0.70 &lt; 0.8</li><li><span class='alert'>DualMA_filtered</span>: PF 0.70 &lt; 0.8</li><li><span class='alert'>DualMA_RSI</span>: PF 0.70 &lt; 0.8</li><li><span class='alert'>DualMA_RSI_filtered</span>: PF 0.70 &lt; 0.8</li></ul><h2 style='margin-top:10px'>paper live</h2><div class='kv'><div class='k'>tick</div><div class='v'>1</div><div class='k'>pnl</div><div class='v ok'>+$0.668</div></div></section>
-  <section class='panel'><h2>Daemon</h2><div class='kv'><div class='k'>last_cycle</div><div class='v'>165</div><div class='k'>b6_streak</div><div class='v'><span class='pill ok'>B6 99th clean</span></div><div class='k'>insights</div><div class='v'>217</div></div><h2 style='margin-top:10px'>daemon_log tail</h2><pre>## Cycle 158 — 2026-04-10 00:01:44 UTC
-You&#x27;ve hit your limit · resets Apr 11, 10am (Asia/Taipei)
-## Cycle 159 — 2026-04-10 00:04:53 UTC
-You&#x27;ve hit your limit · resets Apr 11, 10am (Asia/Taipei)
-## Cycle 160 — 2026-04-10 00:08:02 UTC
-You&#x27;ve hit your limit · resets Apr 11, 10am (Asia/Taipei)
+<div class='branch'><div><span class='num'>6.</span> <span class='title'>存活冗餘（anti-fragile）</span></div><div class='first'>6.1 冷啟動 recovery：templates/dna_core.md 330 MDs ✓</div></div>
+<div class='branch'><div><span class='num'>7.</span> <span class='title'>知識輸出（scale intelligence externally）</span></div><div class='first'>7.1 知識缺口偵測：MD-319</div></div>
+  </section>
+  <section class='panel'>
+    <h2>交易狀態</h2>
+    <p style='margin:0 0 10px 0;font-size:14px;color:var(--text)'>交易策略：模擬（未實單）（13 個運作中）</p><div class='kv'><div class='k'>模式</div><div class='v'>模擬（未實單）</div><div class='k'>市場狀態</div><div class='v'>混亂</div><div class='k'>BTC 現價</div><div class='v'>$72,669</div><div class='k'>運作策略</div><div class='v'>13</div><div class='k'>今日損益</div><div class='v warn'>-0.19%</div><div class='k'>最後心跳</div><div class='v muted'>剛剛</div></div><div class='kv' style='margin-top:10px'><div class='k'>模擬交易損益</div><div class='v ok'>+$0.668</div></div><details class='tech'><summary>6 個策略休眠中（PF 0.62、PF 0.70）</summary><ul><li class='muted'>gen_BollingerMeanReversion_RF_7abfe4：PF 0.62 &lt; 0.8</li><li class='muted'>gen_BollingerMeanReversion_RF_598b24：PF 0.62 &lt; 0.8</li><li class='muted'>DualMA_10_30：PF 0.70 &lt; 0.8</li><li class='muted'>DualMA_filtered：PF 0.70 &lt; 0.8</li><li class='muted'>DualMA_RSI：PF 0.70 &lt; 0.8</li><li class='muted'>DualMA_RSI_filtered：PF 0.70 &lt; 0.8</li></ul></details><details class='tech'><summary>技術細節：停用規則</summary><div class='kv' style='margin-top:6px'><div class='k'>停用門檻：獲利因子</div><div class='v'>0.8</div><div class='k'>停用門檻：勝率</div><div class='v'>0.3</div><div class='k'>停用門檻：最大回撤</div><div class='v'>20.0%</div><div class='k'>累計停用次數</div><div class='v'>12</div><div class='k'>最近停用</div><div class='v'>DualMA_RSI_filtered（PF 0.70 &lt; 0.8）</div></div></details>
+  </section>
+  <section class='panel'>
+    <h2>主腦健康</h2>
+    <div class='kv'><div class='k'>主腦健康</div><div class='v'><span class='pill ok'>主腦：健康（DNA 連續 99 次正常）</span></div><div class='k'>今天更新次數</div><div class='v'>165</div><div class='k'>累積心得</div><div class='v'>217 條</div></div><details class='tech'><summary>技術細節：主腦執行紀錄</summary><pre>You&#x27;ve hit your limit · resets Apr 11, 10am (Asia/Taipei)
 ## Cycle 161 — 2026-04-10 00:11:10 UTC
 You&#x27;ve hit your limit · resets Apr 11, 10am (Asia/Taipei)
 ## Cycle 162 — 2026-04-10 00:14:19 UTC
@@ -101,14 +206,27 @@ You&#x27;ve hit your limit · resets Apr 11, 10am (Asia/Taipei)
 [2026-04-11 06:28:24 UTC] [STALENESS_ALERT] Cycle 90: staging/last_output.md not updated in ~5 cycles — LLM may not be consuming prompts.
 [2026-04-11 08:03:30 UTC] Loop started: interval=3600s, loop_count=1, PID=14272
 [2026-04-11 08:03:30 UTC] Cycle 90 starting.
-[2026-04-11 08:03:30 UTC] Engine stopped. 0 cycles completed total.</pre></section>
-  <section class='panel'><h2>Agent</h2><div class='kv'><div class='k'>model</div><div class='v'>Opus</div><div class='k'>git_branch</div><div class='v'>main</div><div class='k'>tokens_in</div><div class='v'>57027</div><div class='k'>tokens_out</div><div class='v'>915779</div><div class='k'>tokens_cached</div><div class='v'>454486</div><div class='k'>context_pct</div><div class='v ok'>46%</div><div class='k'>cost_usd</div><div class='v'>$70.220559</div><div class='k'>ram_used</div><div class='v ok'>42%</div><div class='k'>ramdisk_free</div><div class='v'>2027.4 MB</div><div class='k'>metrics_ts</div><div class='v muted'>2026-04-11 16:59 (Taipei)</div></div></section>
-  <section class='panel'><h2>Git — last 10 commits</h2><h2 style='margin-top:8px'>digital-immortality</h2><ul><li>3b74e26 chore(platform+cycle354): timezone ZoneInfo complete sweep + cycle354 branch data</li><li>8d87772 feat(B4.x+platform): finance dashboards + timezone ZoneInfo + cycle353/354 branch push</li><li>c4dfdf8 chore(cycle353): B6 103rd ✅ seventeenth-pass post-milestone + B3.1 distil154 (file=266/running=376) + B1.1 BTC=$72,682.84 DualMA=LONG ×42 human ticks + floor-zone-approach headwind-61 range-intact</li><li>fcee487 chore(cycle352): B6 102nd ✅ sixteenth-pass post-milestone + B3.1 distil153 (file=263/running=373) + B1.1 BTC=$72,743.58 DualMA=LONG ×41 human ticks + midzone-stabilization two-consecutive-sessions range-coil-tightening</li><li>8a6b7b2 chore(cycle350-human): B6 100th ✅ CENTURY MILESTONE — human-session consistency baseline + template refresh</li><li>753f6e7 chore(cycle351): B6 101st ✅ fifteenth-pass post-100-milestone + B3.1 distil152 (file=260/running=370) + B1.1 BTC=$72,726.62 DualMA=LONG ×40 human ticks + midzone-recovery three-session-micro-pattern</li><li>9d3b891 chore(cycle350): B6 100th ✅ CENTURY MILESTONE fourteenth-pass + B3.1 distil151 (file=259/running=367) + B1.1 BTC=$72,706.95 DualMA=LONG ×39 human ticks + dual-consecutive-headwind stress test PASSED</li><li>35fb5fa chore(cycle349): B6 99th ✅ thirteenth-pass + B3.1 distil150 (file=256/running=364) + B1.1 BTC=$72,750.07 DualMA=LONG ×38 human ticks + midpoint-recovery mean-reversion-confirmed pre-100-milestone</li><li>b6e6696 feat(mission-control): Phase 4b bridge — voice-bridge HMAC + WebAuthn + MCP server</li><li>a03fa70 chore(cycle349): B6 99th ✅ thirteenth-pass + B3.1 distil150 (file=253/running=361) + B1.1 BTC=$72,750.07 DualMA=LONG ×38 human ticks + midpoint recovery pre-100-milestone</li></ul>
-<h2 style='margin-top:8px'>LYH</h2><ul><li>4933e4d refactor: rename backtest-framework -&gt; trading-research</li><li>adbd28c feat(dna): Decision Labels table + micro-decisions update + distillation write-back</li><li>b36d27b docs: add INDEX.md for cold-start navigation</li><li>5d99e9a distil: auto write-back cycles 113-118 (18 insights)</li><li>4066a9e distil: auto write-back cycles 113-285 (33 insights)</li><li>8f14ab1 distil: cycles 101-112 write-back (36 insights) + B1 restart-loop audit</li><li>d97e79d feat: dna_seed.md — 350-token Type A cold start seed</li><li>0c876f0 遞迴萃取: F.29 維護≠生長, discovery mode</li><li>05f82a0 動態樹: 全面更新 — trading engine always-on + DNA v3.63 + 330 MDs + DIF</li><li>2445f87 遞迴萃取: F.28 daemon=orchestrator not executor, 四種任務性質</li></ul>
-<h2 style='margin-top:8px'>ZP</h2><ul><li>babb062 docs: tighten INDEX.md into task-navigation format</li><li>d59ecbb feat: add backtest methodology from 2026-04-07 practical session</li><li>45b35ab feat: add procedural gap taxonomy + naked boot test methodology to digital twin docs</li><li>28fb095 thinking: add emotion-action separation + omission &gt; commission</li><li>69a2894 thinking: add Learning OS (record-review-ask-adjust across all domains)</li><li>f36e12a thinking: add meta-system pattern (optimize within system → change system itself)</li><li>d6c132a docs: update INDEX with digital_twin_methodology + domain_quantification</li><li>0aa1e12 building: add recursive engine section (invariant question + living architecture)</li><li>296960e building: add two routes + procedural gap analysis to digital twin methodology</li><li>d4fc655 thinking: refine dominance axiom - anti-inferiority &gt; superiority</li></ul></section>
-  <section class='panel'><h2>Blockers (human-gated)</h2><ul><li class='alert'>mainnet API keys (~88d until 2026-07-07)</li><li class='alert'>outreach DMs × 5 pending (staging/outreach_week1_execution.md)</li><li class='alert'>Samuel Turing test invite (human-send)</li></ul></section>
+[2026-04-11 08:03:30 UTC] Engine stopped. 0 cycles completed total.</pre></details>
+  </section>
+  <section class='panel'>
+    <h2>主腦負載</h2>
+    <div class='kv'><div class='k'>主腦型號</div><div class='v'>Opus</div><div class='k'>記憶使用</div><div class='v ok'>47%</div><div class='k'>記憶體</div><div class='v ok'>44%</div><div class='k'>今日花費</div><div class='v'>$73.61</div></div>
+  </section>
+  <section class='panel'>
+    <h2>最近更新</h2>
+    <ul><li><strong>數位永生主專案</strong>：chore(cycle354): B6 104th ✅ eighteenth-pass post-milestone + B3.1 distil155 (fil…</li><li><strong>DNA / 身份</strong>：refactor: rename backtest-framework -&gt; trading-research</li><li><strong>知識庫</strong>：docs: tighten INDEX.md into task-navigation format</li></ul>
+  </section>
+  <section class='panel'>
+    <h2>卡住 · 等你動作</h2>
+    <ul><li class='mc-blocker'>⚠ mainnet API keys (~88d until 2026-07-07)</li><li class='mc-blocker'>⚠ outreach DMs × 5 pending (staging/outreach_week1_execution.md)</li><li class='mc-blocker'>⚠ Samuel Turing test invite (human-send)</li></ul>
+  </section>
 </div>
-<footer>build_dashboard.py + render_dashboard.py · plain HTML · stdlib only</footer>
+
+<footer>
+  plain-language redesign · mobile-first · stdlib only
+  · 翻譯表 platform/pretty_translate.py
+</footer>
+</div>
 
 </body>
 </html>

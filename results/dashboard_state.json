@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-04-11T09:00:07Z",
-  "updated_taipei": "2026-04-11 17:00 (Taipei, UTC+8)",
-  "updated_taipei_iso": "2026-04-11T17:00:07.288621+08:00",
+  "updated_utc": "2026-04-11T09:03:48Z",
+  "updated_taipei": "2026-04-11 17:03 (Taipei, UTC+8)",
+  "updated_taipei_iso": "2026-04-11T17:03:48.490044+08:00",
   "tree": {
     "available": true,
     "branches": [
@@ -44,8 +44,8 @@
   },
   "trading_engine": {
     "available": true,
-    "last_tick": "2026-04-11T08:59:19.783071+00:00",
-    "tick_count": 282,
+    "last_tick": "2026-04-11T09:03:20.038480+00:00",
+    "tick_count": 286,
     "active_strategies": 13,
     "disabled": {
       "gen_BollingerMeanReversion_RF_7abfe4": "PF 0.62 < 0.8",
@@ -56,7 +56,7 @@
       "DualMA_RSI_filtered": "PF 0.70 < 0.8"
     },
     "total_pnl_pct": -0.1865,
-    "price": 72683.04,
+    "price": 72669.27,
     "regime": "mixed",
     "mode": "PAPER"
   },
@@ -150,18 +150,19 @@
   "agent_metrics": {
     "available": true,
     "model": "Opus",
-    "tokens_in": 57027,
-    "tokens_out": 915779,
-    "tokens_cached": 454486,
-    "context_pct": 46,
-    "cost_usd": 70.220559,
+    "tokens_in": 57107,
+    "tokens_out": 960792,
+    "tokens_cached": 465864,
+    "context_pct": 47,
+    "cost_usd": 73.614801,
     "git_branch": "main",
-    "ram_used_pct": 42,
+    "ram_used_pct": 44,
     "ram_disk_free_mb": 2027.4,
-    "ts": "2026-04-11T16:59:04.215980+08:00"
+    "ts": "2026-04-11T17:03:44.971822+08:00"
   },
   "git": {
     "digital-immortality": [
+      "33357c8 chore(cycle354): B6 104th ✅ eighteenth-pass post-milestone + B3.1 distil155 (file=269/running=379) + B1.1 BTC=$72,683.04 DualMA=LONG ×43 human ticks + near-flat-tailwind floor-zone-stable range-intact",
       "3b74e26 chore(platform+cycle354): timezone ZoneInfo complete sweep + cycle354 branch data",
       "8d87772 feat(B4.x+platform): finance dashboards + timezone ZoneInfo + cycle353/354 branch push",
       "c4dfdf8 chore(cycle353): B6 103rd ✅ seventeenth-pass post-milestone + B3.1 distil154 (file=266/running=376) + B1.1 BTC=$72,682.84 DualMA=LONG ×42 human ticks + floor-zone-approach headwind-61 range-intact",
@@ -170,8 +171,7 @@
       "753f6e7 chore(cycle351): B6 101st ✅ fifteenth-pass post-100-milestone + B3.1 distil152 (file=260/running=370) + B1.1 BTC=$72,726.62 DualMA=LONG ×40 human ticks + midzone-recovery three-session-micro-pattern",
       "9d3b891 chore(cycle350): B6 100th ✅ CENTURY MILESTONE fourteenth-pass + B3.1 distil151 (file=259/running=367) + B1.1 BTC=$72,706.95 DualMA=LONG ×39 human ticks + dual-consecutive-headwind stress test PASSED",
       "35fb5fa chore(cycle349): B6 99th ✅ thirteenth-pass + B3.1 distil150 (file=256/running=364) + B1.1 BTC=$72,750.07 DualMA=LONG ×38 human ticks + midpoint-recovery mean-reversion-confirmed pre-100-milestone",
-      "b6e6696 feat(mission-control): Phase 4b bridge — voice-bridge HMAC + WebAuthn + MCP server",
-      "a03fa70 chore(cycle349): B6 99th ✅ thirteenth-pass + B3.1 distil150 (file=253/running=361) + B1.1 BTC=$72,750.07 DualMA=LONG ×38 human ticks + midpoint recovery pre-100-milestone"
+      "b6e6696 feat(mission-control): Phase 4b bridge — voice-bridge HMAC + WebAuthn + MCP server"
     ],
     "LYH": [
       "4933e4d refactor: rename backtest-framework -> trading-research",
@@ -630,7 +630,7 @@
       "state": "online",
       "label": "在線",
       "color": "ok",
-      "age_min": 1.1
+      "age_min": 0.1
     }
   }
 }
