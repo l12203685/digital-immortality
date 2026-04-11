@@ -2208,3 +2208,24 @@ The recurring generic_long_term_survival_check misalignment is establishing a pa
 
 **Signal source**: cycle 360 analysis — two-occurrence analysis cycles 355+360; boundary-scenario hypothesis; 2026-04-11T09:27Z
 **Tags**: B3.1, boundary-scenario-hypothesis, llm-sampling-boundary, 98pct-alignment-scenario, recurrence-rate-1.8pct, granular-B6-interpretation, not-all-misalignments-equal, protocol-flag-flag-L3, boundary-scenario-list-evolution
+
+### Insight 1: 49th-human-tick-btc72856-headwind-12-above-old-ceiling
+
+BTC=$72,856.01 (↓$11.99 from cycle 359 $72,868.01; LONG headwind minimal; BTC $25.01 above old ceiling $72,831). DualMA_10_30=LONG OPEN_LONG (49th consecutive human-session LONG tick — structural signal unbroken). Donchian_20=FLAT HOLD. DualMA variants disabled PF<0.8. Engine STOPPED G0/G1 FROZEN tick=297. Ceiling break follow-through: BTC holds above $72,831 for the second consecutive session. The range-shift event (upside) from cycle 359 is being confirmed — the old ceiling is not providing resistance. Watch: 1-2 more sessions above $72,831 → new ceiling empirically established. LONG position unchanged and directionally aligned.
+
+**Signal source**: Binance API price=72856.01; paper_trader.py --paper-live; human session cycle 360; prev cycle 359 BTC=$72,868.01; 2026-04-11T09:28Z
+**Tags**: B1.1, 49th-human-tick, btc72856, headwind-12, above-old-ceiling-72831, ceiling-break-follow-through, new-ceiling-tbd, floor-72638-intact, DualMA-LONG-structural, range-shift-upside-session-2
+
+### Insight 2: 110th-B6-38-of-41-twenty-fourth-pass-pure-maintenance
+
+110th B6 run: **38/41 ALIGNED ✅**. Permanent 3 MISALIGNED unchanged (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev — permanent LLM boundary). Post-protocol-closure twenty-fourth pass. Tripwire: clear. Pure-maintenance. Ceiling-break follow-through (B1.1 BTC holds above $72,831) had zero effect on B6 alignment — confirms market-independence of behavioral-equivalence measurement. 110-run streak: the longest continuous pure-maintenance streak documented, no L3 events since protocol closure.
+
+**Signal source**: cycle 360 human session — consistency_test.py; 110th run; 38/41 ALIGNED; twenty-fourth pass post-protocol-closure; 2026-04-11T09:28Z
+**Tags**: B6, 110th-run, 38-of-41, twenty-fourth-pass, pure-maintenance, behavioral-equivalence-market-independent, tripwire-clear, 110-streak, no-l3-since-protocol-closure
+
+### Insight 3: ceiling-break-follow-through-holds-above-72831-new-ceiling-forming
+
+Cycle 360 = day 2 of ceiling-break follow-through. BTC $25 above old ceiling $72,831. Empirical rule: 2-3 consecutive closes above prior ceiling → new ceiling established. This is session 2 of 2-3. The break is holding (not a spike-and-revert). Position discipline: LONG at ceiling break = correct (directionally aligned). The old $72,638–$72,831 range is being superseded upward. New ceiling formation process: collect next 1-2 session highs → derive new ceiling = max of those sessions. Floor: $72,638 holds as current lower bound until a floor-break event. The key lesson from cycles 356-358 (floor-watch) applies symmetrically to ceiling-break watch: track 3-session rule, derive new boundary empirically, no premature range reset.
+
+**Signal source**: cycle 360 analysis — BTC $72,856.01 second session above $72,831; ceiling-break-follow-through session 2 of 2-3; new-ceiling-forming process; 2026-04-11T09:28Z
+**Tags**: B1.1, B3.1, ceiling-break-follow-through-day2, new-ceiling-forming, 3-session-rule, floor-72638-unchanged, range-shift-upside-confirmed, empirical-ceiling-derivation, position-long-unchanged
