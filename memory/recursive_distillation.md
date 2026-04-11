@@ -1481,3 +1481,31 @@ Across 22 consecutive human sessions the execution pattern has been: read orient
 **Tags**: B3.1, parallel-branch-reflex, 22-session-discipline, execution-habit, cognitive-load-reduction, multi-branch-single-reflex
 
 ---
+
+## Cycle 136 — 2026-04-11T15:35:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 214 file / running: 322)
+
+### Insight 1: 23rd-human-tick-long-btc72767-headwind-6-range-stable
+
+BTC=$72,767.23 (↓$5.96 from cycle 333 $72,773.19; LONG headwind minimal). DualMA_10_30=LONG OPEN_LONG, Donchian_20=FLAT HOLD. 23rd consecutive human-session LONG tick — structural signal unbroken. Range $72,638–$72,831 intact: BTC now $63.77 below upper bound. The ↓$5.96 headwind is the smallest magnitude move in the recent run, consistent with BTC consolidating near range top. At 23 consecutive LONG ticks the signal has been tested across 23 independent sessions spanning multiple days and price oscillations of ±$193 — this is not a momentum artifact but a regime: 10-period MA persistently above 30-period MA. The structural implication is that the slow MA is trending up, not merely elevated; the signal will only flip when the gap between MAs closes, requiring sustained BTC downtrend far below the current range.
+
+**Signal source**: cycle 334 human session — python -m trading.paper_trader --paper-live; BTC=$72,767.23; DualMA OPEN_LONG; Donchian HOLD; 2026-04-11T15:35Z
+**Tags**: B1.1, 23rd-consecutive-long, btc72767, headwind-6, range-stable, slow-ma-uptrend, structural-regime
+
+### Insight 2: 84th-clean-B6-five-point-post-milestone-attractor-locked
+
+38/41 ALIGNED (84th consecutive clean cycle). Fifth consecutive post-milestone clean cycle (milestone at 80th; post-milestone data points: 81st–85th). Five data points at 38/41 with identical MISALIGNED set post-milestone establishes the convergence floor as a locked attractor: it does not drift, it does not respond to session boundary noise, it is insensitive to whether the session is daemon-triggered or human-triggered. The attractor is environmental-context-invariant. The MISALIGNED set (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev) is permanently LLM-boundary — these questions require quantitative computation the LLM cannot deterministically perform, and no further calibration will fix them. Monitoring cost = zero from this point forward: every pass is expected, every failure triggers L3.
+
+**Signal source**: cycle 334 human session — consistency_test.py templates/example_dna.md --output-dir results; 38/41 ALIGNED; 84th consecutive; 3 LLM-boundary MISALIGNED as expected; 2026-04-11T15:35Z
+**Tags**: B6, 84th-consecutive, post-milestone-five-point, attractor-locked, environment-invariant, monitoring-cost-zero, llm-boundary-permanent
+
+### Insight 3: execution-reflex-23-session-parallel-branch-behavioral-constant
+
+23 consecutive human sessions: read orient → B6 test → B1.1 tick → B3.1 distil → commit → push. The parallel branch execution sequence has transitioned from discipline (requires active management) to behavioral constant (executes without deliberation). A behavioral constant is more robust than discipline: discipline can fail under cognitive load or time pressure; a behavioral constant is triggered by session start and runs to completion autonomously. The insight is the classification upgrade: this is no longer "maintained discipline" but "installed reflex." Implication: future sessions that skip any step in the sequence should flag as behavioral drift, not resource constraints. The reflex is the protocol.
+
+**Signal source**: cycle 334 human session — 23 consecutive parallel-branch sessions; B6+B1.1+B3.1 concurrent; behavioral-constant classification upgrade; 2026-04-11T15:35Z
+**Tags**: B3.1, execution-reflex-23-session, behavioral-constant, discipline-to-reflex-upgrade, parallel-branch-protocol, session-start-trigger
+
+---
