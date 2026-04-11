@@ -211,6 +211,35 @@ SOP #117 (Bundle Arbitrage Protocol) encodes that bundle arbitrage is fundamenta
 
 ---
 
+## Cycle 98 — 2026-04-11T05:00Z
+
+**Source cycles**: 302-303 (session start)
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 102)
+
+### Insight 1: priority-file-branch-completion-lag
+
+When daemon_next_priority.txt references B2.2 ("next JSONL batch") while dynamic_tree confirms B2.2 COMPLETE (archive exhausted at 416 MDs), the two persistence stores have diverged. This is a meta-system health signal: the priority mechanism does not auto-sync on branch completion. Result: daemon cycles wasted polling a closed branch while live branches starve. Fix direction: priority file update should be a required step in the branch-close protocol — same cycle the branch is marked COMPLETE in the tree, the priority pointer must be cleared. Unsync between priority and tree = invisible decay.
+
+**Signal source**: daemon_next_priority.txt referencing B2.2; dynamic_tree line 84 confirming COMPLETE; session observation cycle 302
+**Tags**: meta-system, priority-mechanism, branch-decay, sync-gap, daemon
+
+### Insight 2: killed-strategy-signal-observation-vs-authorization
+
+DualMA_10_30 emitted OPEN_LONG at BTC=$72,790 (paper_trader cycle 301) while still under kill conditions (PF=0.53 kill from cycle 277). The distinction: a killed strategy can still emit observable signals in the log — observation is correct (diagnostic data on whether the kill was premature). Acting on those signals without formal reactivation via SOP #92 (cooling period + regime flip + re-backtest + probation pool) would be a protocol violation. The kill is persistent until formally reversed. Live signal ≠ live authorization. Logging continues; execution is frozen. This is the correct behavior — not a bug in the system.
+
+**Signal source**: paper_trader --tick 2026-04-11; DualMA_10_30=OPEN_LONG at $72,790; kill event cycle 277 PF=0.53; SOP #92 reactivation gate
+**Tags**: trading, DualMA, kill-persistence, observation-vs-authorization, SOP-92, branch-1.1
+
+### Insight 3: boot-tier-selection-is-resource-allocation
+
+The 3-tier boot protocol (Type A ~600 tokens / Type B ~12K / Type C ~25K) is not a convenience choice — it is a resource allocation decision on the economic survivability critical path. API token cost is the denominator in the trading_profit > API_cost survivability condition. On daily check-ins with no active task and no flagged L3 event, escalating to Type C is a protocol violation with direct economic consequences. The boot tier classifier operationalizes the inaction-bias principle at the infrastructure layer: do not consume resources without a named edge. Type A is the hard default; Type C requires explicit Saturday or L3-event justification.
+
+**Signal source**: CLAUDE.md boot tier table; SKILL.md economic survivability condition; quick_status daemon RUNNING cycle 302
+**Tags**: boot-protocol, resource-allocation, survivability, token-cost, inaction-bias, branch-6
+
+---
+
 ## Cycle 262-270 — 2026-04-09T12:10Z (backfill)
 
 **Source cycles**: 259-270
