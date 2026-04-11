@@ -1,10 +1,10 @@
 {
-  "last_tick": "2026-04-11T04:33:57.250008+00:00",
-  "tick_count": 17,
+  "last_tick": "2026-04-11T04:35:57.358729+00:00",
+  "tick_count": 19,
   "active_strategies": 19,
   "disabled": {},
-  "total_pnl_pct": 0.0318,
-  "price": 72802.0,
+  "total_pnl_pct": -0.0951,
+  "price": 72755.83,
   "regime": "mixed",
   "signals": {
     "DualMA_10_30": 1,

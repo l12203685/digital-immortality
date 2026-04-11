@@ -1,6 +1,6 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-11 21:00 Taipei (cycle 303 supplemental: B6 54th clean ✅ + SOP #118 Strategy Reactivation Gate Protocol ✅ + B3.1 cycles 98+99 narrative written, total 105 insights)
+> Updated: 2026-04-11 21:00 Taipei (cycle 303: B6 54th clean ✅ + MD-331 boot test added + SOP #118 DualMA Reactivation ✅ + B3.1 gap CLOSED 220 insights distil-100)
 
 ## Current state
 - daemon: RUNNING (PID 1704, CLI mode, Sonnet 4.6, 300s interval, cycle 1 in progress)
