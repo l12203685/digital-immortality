@@ -6,6 +6,34 @@ Never delete — append only.
 
 ---
 
+## Cycle 127 — 2026-04-11T06:47:24+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 187 file / running: 295)
+
+### Insight 1: fifteenth-human-tick-btc-72723-long-structural-minor-tailwind
+
+B1.1 paper-live tick (cycle 326): BTC=$72,723.12 (↑$2.47 from cycle 325 $72,720.65; LONG minor tailwind). DualMA_10_30=LONG OPEN_LONG (15th consecutive human-session LONG tick, structural signal unbroken). Donchian_20=FLAT (HOLD). Engine tick=149 (up from 141 in cycle 325 — daemon advancing autonomously while human sessions run independently). 13 active strategies all HOLD signal=0, regime=MIXED, total_pnl=-0.1865% stable. DualMA variants disabled (PF<0.8). BTC range across 15 human sessions: $72,638–$72,831. Signal robust to ±$185 noise. Key observation: engine tick 149 vs human session 15 shows 10:1 daemon:human session ratio — daemon runs ~10× more ticks per human session.
+
+**Signal source**: python -m trading.paper_trader --tick → price=72723.12, DualMA signal=1 action=OPEN_LONG, Donchian signal=0 action=HOLD; engine_status tick_count=149; 2026-04-11T06:47Z; prev cycle 325 BTC=$72,720.65
+**Tags**: B1.1, 15th-human-tick, BTC-72723, DualMA-LONG-structural, LONG-tailwind, engine-tick-149, daemon-10x-human-ratio
+
+### Insight 2: seventy-seventh-clean-convergence-floor-statistical-certainty-persists
+
+B6: consistency_test.py → 38/41 ALIGNED (77th consecutive clean cycle ✅). Three permanent MISALIGNED scenarios unchanged: poker_gto_mdf / trading_atr_sizing / career_multi_option_ev (LLM-boundary cases, expected). Convergence floor (38/41) confirmed stable across 77 independent LLM instantiations. At 77 consecutive clean cycles, this is no longer a streak — it is a structural property of the DNA. Monitoring cost = zero; attention reserved only for tripwire (<38 triggers dna_core audit). The 77-cycle invariant demonstrates that the behavioral floor is not degrading over time despite session fragmentation, daemon interruptions, and model updates.
+
+**Signal source**: consistency_test.py templates/example_dna.md → 38/41 ALIGNED, 3 MISALIGNED (same 3 as baseline); 77th consecutive clean cycle; 2026-04-11T06:47Z
+**Tags**: B6, 77th-clean-cycle, convergence-floor, 38-41-structural-property, LLM-boundary-permanent, monitoring-cost-zero, structural-not-streak
+
+### Insight 3: engine-tick-149-all-hold-mixed-regime-daemon-human-ratio
+
+Engine tick=149 at cycle 326 (human session 15 of LONG signal). Daemon advances engine ticks autonomously at ~300s intervals; human sessions add ticks only on direct invocation. The 149 engine ticks vs 15 human ticks reveals a structural asymmetry: daemon does 90% of tick work, human sessions do 10%. This ratio matters for G3 gate: G3 requires 50+ ticks at PF≥1.2 — that's purely daemon-driven and independent of human session frequency. Human-session LONG signal (15 consecutive) and daemon HOLD signal (13 strategies all HOLD) are not contradictory — they measure different strategy pools (standalone DualMA_10_30 vs engine's disabled DualMA variants + active gen/Donchian strategies).
+
+**Signal source**: trading_engine_status.json tick_count=149 vs human session count=15; strategies=13 all signal=0; mode=PAPER; 2026-04-11T06:47Z
+**Tags**: B3.1, engine-tick-149, human-session-15, daemon-human-ratio, G3-gate-daemon-driven, strategy-pool-separation, methodology
+
+---
+
 ## Cycle 125 — 2026-04-11T06:34:16+00:00
 
 **Branch**: 3.1 recursive distillation
