@@ -1,19 +1,9 @@
-"""
-Orthogonality Filter — prevents correlated strategy mass-kills.
+"""Orthogonality Filter — prevents correlated strategy mass-kills.
 
-Background (B1 audit, 2026-04-11):
-    Four DualMA family variants (DualMA_10_30, DualMA_filtered, DualMA_RSI,
-    DualMA_RSI_filtered) were all killed together at PF=0.70 in a single tick.
-    They shared essentially the same edge. Pool expansions were adding
-    correlated variants instead of orthogonal edges. Effective independent
-    signal sources was approximately 2.
-
-Purpose:
-    Before a new strategy candidate enters NAMED_STRATEGIES, generate its
-    signal series on recent historical bars and compute pairwise Pearson
-    correlation against every existing pool member. If max |corr| > threshold,
-    reject the candidate and log the rejection to
-    `results/orthogonality_rejections.jsonl`.
+B1 audit (2026-04-11): 4 DualMA variants were mass-killed at PF=0.70 in the
+same tick because they shared one edge. This filter computes Pearson |corr|
+of a candidate's signal series against every existing pool member over the
+last N ticks; candidates above the threshold are rejected and logged.
 
 Stdlib only — cpython 3.14 stripped daemon host (no numpy / no pandas).
 """
@@ -26,7 +16,7 @@ import math
 import statistics
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Callable, Dict, Iterable, List, Mapping, Optional, Tuple
+from typing import Any, Callable, Dict, List, Mapping, Optional, Tuple
 
 log = logging.getLogger("trading.orthogonality_filter")
 
@@ -34,41 +24,20 @@ REPO = Path(__file__).resolve().parent.parent
 RESULTS_DIR = REPO / "results"
 REJECTION_LOG_PATH = RESULTS_DIR / "orthogonality_rejections.jsonl"
 
-# Default thresholds — see `OrthogonalityFilter.__init__`.
 DEFAULT_MAX_CORR = 0.7
 DEFAULT_LOOKBACK_TICKS = 100
-# Below this many overlapping signal samples we cannot reliably estimate
-# correlation; the candidate is accepted but a warning is logged.
+# Below this many overlapping samples, correlation is not reliable; the
+# candidate is accepted but a warning is logged.
 MIN_SAMPLES_FOR_CORRELATION = 20
 
-
-# ---------------------------------------------------------------------------
-# Type aliases
-# ---------------------------------------------------------------------------
 Bar = Mapping[str, float]
 StrategyCallable = Callable[[List[Bar]], int]
 
 
-# ---------------------------------------------------------------------------
-# Filter implementation
-# ---------------------------------------------------------------------------
 class OrthogonalityFilter:
-    """Reject new strategy candidates that are too correlated with the pool.
+    """Reject new strategy candidates too correlated with existing pool.
 
-    Typical use (called from strategy_generator before pool insertion)::
-
-        flt = OrthogonalityFilter(max_corr=0.7, lookback_ticks=100)
-        passed, reason = flt.is_orthogonal(
-            candidate_strategy=candidate,
-            pool_strategies=NAMED_STRATEGIES,
-            bars_history=recent_bars,
-        )
-        if not passed:
-            flt.log_rejection(name, reason, max_corr_with=other_name, corr=value)
-            continue
-
-    The filter is advisory: it only blocks NEW additions. Existing pool
-    members keep running untouched.
+    Advisory: only blocks NEW additions. Existing pool members keep running.
     """
 
     def __init__(
@@ -86,9 +55,6 @@ class OrthogonalityFilter:
         self.max_corr = max_corr
         self.lookback_ticks = lookback_ticks
 
-    # ------------------------------------------------------------------
-    # Signal series extraction
-    # ------------------------------------------------------------------
     def signal_series(
         self,
         strategy_callable: StrategyCallable,
@@ -118,9 +84,6 @@ class OrthogonalityFilter:
             series.append(sig)
         return series
 
-    # ------------------------------------------------------------------
-    # Pearson correlation (stdlib only)
-    # ------------------------------------------------------------------
     @staticmethod
     def correlation(series_a: List[int], series_b: List[int]) -> float:
         """Pearson correlation coefficient in [-1.0, 1.0].
@@ -154,9 +117,6 @@ class OrthogonalityFilter:
             return -1.0
         return r
 
-    # ------------------------------------------------------------------
-    # Orthogonality check
-    # ------------------------------------------------------------------
     def is_orthogonal(
         self,
         candidate_strategy: StrategyCallable,
@@ -217,9 +177,6 @@ class OrthogonalityFilter:
             f"<= {self.max_corr:.2f}"
         )
 
-    # ------------------------------------------------------------------
-    # Rejection log
-    # ------------------------------------------------------------------
     @staticmethod
     def log_rejection(
         candidate_name: str,
@@ -243,22 +200,11 @@ class OrthogonalityFilter:
             f.write(json.dumps(entry) + "\n")
 
 
-# ---------------------------------------------------------------------------
-# Convenience: load recent bars from paper_live_log.jsonl
-# ---------------------------------------------------------------------------
 def load_recent_bars_from_log(
     log_path: Path,
     lookback_ticks: int = DEFAULT_LOOKBACK_TICKS,
 ) -> List[Dict[str, float]]:
-    """Reconstruct a bar history from `trading_engine_log.jsonl`.
-
-    The engine log records one entry per (tick, strategy), all sharing the
-    same price for a given tick. We synthesise a minimal-bar series where
-    open/high/low/close all equal the recorded price; this is sufficient
-    for the signal extractor because strategies consume `close` and derived
-    indicators — and because what matters for orthogonality is the
-    *relative* shape of signals, not the absolute PnL.
-    """
+    """Reconstruct a bar history from trading_engine_log.jsonl (flat OHLC)."""
     if not log_path.exists():
         return []
     seen_ticks: Dict[int, float] = {}

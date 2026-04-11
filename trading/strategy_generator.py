@@ -443,7 +443,43 @@ def cmd_generate(n: int) -> None:
                 "  PASS — windows=%d/5, sharpe=%.2f, mdd=%.1f%%",
                 windows_passed, full_metrics["sharpe"], full_metrics["mdd"],
             )
-            passed_entries.append((name, meta))
+            # B1 audit follow-up: orthogonality gate before pool insertion
+            ortho_ok, ortho_reason = ortho_filter.is_orthogonal(
+                candidate_strategy=strategy,
+                pool_strategies=NAMED_STRATEGIES,
+                bars_history=ortho_bars,
+                candidate_name=name,
+            )
+            if not ortho_ok:
+                rejected_ortho += 1
+                log.warning("  ORTHO REJECT %s — %s", name, ortho_reason)
+                # Extract max_corr_with and corr value from reason
+                max_corr_with = ""
+                corr_val = 0.0
+                if "with '" in ortho_reason:
+                    try:
+                        max_corr_with = ortho_reason.split("with '", 1)[1].split("'", 1)[0]
+                    except IndexError:
+                        pass
+                if "signed=" in ortho_reason:
+                    try:
+                        corr_val = float(
+                            ortho_reason.split("signed=", 1)[1].split(")", 1)[0]
+                        )
+                    except (IndexError, ValueError):
+                        pass
+                OrthogonalityFilter.log_rejection(
+                    candidate_name=name,
+                    reason=ortho_reason,
+                    max_corr_with=max_corr_with,
+                    corr=corr_val,
+                    extra={"source": "strategy_generator.cmd_generate", "meta": meta},
+                )
+                entry["orthogonality_rejected"] = True
+                entry["orthogonality_reason"] = ortho_reason
+            else:
+                log.info("  ORTHO OK — %s", ortho_reason)
+                passed_entries.append((name, meta))
         else:
             log.info("  FAIL — skipping.")
 
@@ -459,8 +495,11 @@ def cmd_generate(n: int) -> None:
 
     # Summary
     total_pass = sum(1 for _, _ in passed_entries)
-    total_fail = len(candidates) - total_pass
-    log.info("Summary: %d passed, %d failed out of %d candidates.", total_pass, total_fail, len(candidates))
+    total_fail = len(candidates) - total_pass - rejected_ortho
+    log.info(
+        "Summary: %d passed, %d failed, %d rejected-orthogonality out of %d candidates.",
+        total_pass, total_fail, rejected_ortho, len(candidates),
+    )
 
 
 # ---------------------------------------------------------------------------
