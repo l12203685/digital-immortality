@@ -2129,3 +2129,31 @@ Floor break cycle 356 ($4.60 below $72,638) resolved in one session — BTC $72,
 
 **Signal source**: cycle 357 analysis — BTC $72,770.52 recovery from cycle 356 $72,633.40 floor break; three-session rule not triggered; range intact; 2026-04-11T17:16Z
 **Tags**: B1.1, B3.1, floor-break-one-cycle-recovery, empirical-validation, three-session-rule-buffer, primary-signal-situational-awareness-separation, noise-filter-validated, range-recalculation-prevention, pre-commitment-works
+
+---
+
+## Cycle 159 — 2026-04-11T09:30:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 284 file / running: 394)
+
+### Insight 1: 47th-human-tick-btc72820-tailwind-49-ceiling-approach
+
+BTC=$72,819.99 (↑$49.47 from cycle 357 $72,770.52; LONG tailwind minimal). DualMA_10_30=LONG OPEN_LONG (47th consecutive human-session LONG tick — structural signal unbroken). Donchian_20=FLAT HOLD. DualMA variants disabled PF<0.8. Engine STOPPED G0/G1 FROZEN tick=297. Range $72,638–$72,831 intact. Price position: $11.01 below ceiling $72,831 — ceiling-approach zone (tightest approach since range established). $181.99 above floor $72,638 — floor-violation-watch fully resolved. Floor sequence: cycle 356 break ($4.60 below) → cycle 357 recovery ($132.52 above) → cycle 358 ceiling approach ($181.99 above floor, $11.01 below ceiling). Three-session rule never triggered. Floor hold confirmed. Watch: if BTC closes above $72,831 → range breakout upside event (informational, not actionable — already LONG).
+
+**Signal source**: Binance API price=72819.99; paper_trader.py --paper-live; human session cycle 358; prev cycle 357 BTC=$72,770.52; 2026-04-11T09:30Z
+**Tags**: B1.1, 47th-human-tick, btc72820, tailwind-49, ceiling-approach, ceiling-72831-11-below, floor-watch-resolved, DualMA-LONG-structural, range-intact, range-breakout-watch-upside
+
+### Insight 2: 108th-B6-38-of-41-twenty-second-pass-pure-maintenance
+
+108th B6 run: **38/41 ALIGNED ✅**. Permanent 3 MISALIGNED unchanged (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev — permanent LLM boundary). Post-protocol-closure twenty-second pass. Tripwire: clear. Pure-maintenance confirmed. The 108-run streak at the same 38/41 threshold provides strong Bayesian evidence that the 3 MISALIGNED represent a hard boundary of text-only behavioral capture, not correctable drift. At 108 runs, the posterior probability of "38/41 is structural ceiling" is near-certain. Each additional clean run has diminishing informational value for the ceiling hypothesis — the action-relevant question has shifted entirely to human-gated branch execution (B1.3, B4.1). B6 monitoring is pure maintenance overhead.
+
+**Signal source**: cycle 358 human session — consistency_test.py; 108th run; 38/41 ALIGNED; twenty-second pass post-protocol-closure; 2026-04-11T09:30Z
+**Tags**: B6, 108th-run, 38-of-41, twenty-second-pass, pure-maintenance, behavioral-equivalence-108-runs, bayesian-ceiling-certain, permanent-llm-boundary, human-gates-singular-constraint, tripwire-clear
+
+### Insight 3: ceiling-approach-same-discipline-as-floor-approach
+
+BTC ceiling approach ($11.01 below $72,831 after 44+ sessions in $72,638–$72,831 range) tests signal discipline symmetry: same principle applies at ceiling as at floor. At floor approach, the rule was "DualMA governs position, empirical floor governs attention level." At ceiling approach: DualMA still LONG OPEN_LONG → position unchanged regardless of whether BTC tests or breaks $72,831. A ceiling break would be an informational event (range-shift upside) not an actionable event (already maximally long on paper). The asymmetry: floor break while LONG creates a watch signal (potential regime shift bearish), ceiling break while LONG is directionally confirming (no action needed). Signal discipline at ceiling = lower vigilance than at floor for a LONG position. The three-layer framework (primary signal / situational awareness / range recalculation threshold) applies identically at both ends; the response differs by position direction.
+
+**Signal source**: cycle 358 analysis — BTC $72,819.99 ceiling approach $11.01 below $72,831; DualMA=LONG unchanged; position-direction-determines-ceiling-vs-floor-vigilance; 2026-04-11T09:30Z
+**Tags**: B1.1, B3.1, ceiling-approach, floor-ceiling-discipline-symmetry, position-direction-asymmetry, LONG-ceiling-confirming, LONG-floor-watch, three-layer-framework, range-recalculation-threshold, signal-discipline
