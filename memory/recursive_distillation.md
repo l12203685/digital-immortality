@@ -2309,3 +2309,32 @@ Generalizing from B1.1 ceiling/floor behavior: a zone-bounce (single-session exc
 
 **Signal source**: B1.1 cycle 359–363 analysis; floor-zone oscillations (cycles 351–358); ceiling-zone oscillations (cycles 359–363); zone-bounce-then-return cycle 362→363; 2026-04-11T09:45Z
 **Tags**: B3.1, zone-bounce-vs-trend-change, three-session-threshold, bidirectional-rule, floor-ceiling-symmetry, noise-filter, DualMA-governance-L1, regime-change-threshold-empirical, 44-session-calibration
+
+---
+
+## Cycle 165 — 2026-04-11T09:44Z
+
+**Source cycles**: 364
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 169)
+
+### Insight 1: 53rd-human-tick-btc72834-ceiling-zone-near-flat
+
+BTC=$72,834.20 (↓$0.81 from cycle 363 $72,835.01; minimal headwind). Ceiling-zone: $3.20 above old ceiling $72,831 — second consecutive session in ceiling zone post-single-session pullback cycle 362. Pattern: zone-bounce resolved (cycle 362 pullback to $72,784 confirmed anomaly, not trend). DualMA=LONG ×53 consecutive human ticks. Two more sessions above $72,831 still pending → new ceiling ~$72,868 would be confirmed at 3 consecutive. Engine tick=321 autonomous (unchanged since cycle 362 — G0/G1 frozen).
+
+**Signal source**: paper-live BTC=$72,834.20; DualMA_10_30=LONG OPEN_LONG; 53rd consecutive human-session LONG tick; Donchian_20=FLAT HOLD; engine tick=321 autonomous; 2026-04-11T09:44Z
+**Tags**: B1.1, 53rd-human-tick, btc72834, headwind-081, ceiling-zone-second-session, zone-bounce-resolved, new-ceiling-72868-forming, DualMA-LONG-structural-unbroken, three-session-threshold-2-of-3
+
+### Insight 2: 114th-B6-38-of-41-twenty-eighth-pass-pure-maintenance
+
+114th B6 run: **38/41 ALIGNED ✅**. Same 3 permanent MISALIGNED (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev). Post-protocol-closure **twenty-eighth pass** — tripwire clear; pure-maintenance; behavioral-equivalence-114-runs confirmed. generic_long_term_survival_check = ALIGNED (no regression — regression-pattern two-occurrence protocol remains closed). Stability confirmed across 2 consecutive passes since protocol closure (cycles 363+364).
+
+**Signal source**: consistency_test.py templates/example_dna.md → 38/41 ALIGNED; 114th run; 3 MISALIGNED permanent LLM-boundary; human session cycle 364; 2026-04-11T09:44Z
+**Tags**: B6, 114th-run, 38-of-41, twenty-eighth-pass, pure-maintenance, tripwire-clear, behavioral-equivalence-114-runs, regression-pattern-closed, post-protocol-closure-stable
+
+### Insight 3: behavioral-equivalence-pure-maintenance-ceiling-zone-independence-confirmed
+
+B6 pure-maintenance (38/41 ALIGNED ×2 consecutive post-protocol-closure) is running independently of B1.1 ceiling-zone oscillations. B6 alignment score is not affected by BTC price level, range-zone transitions, or engine state (frozen/running). This independence confirms the architectural separation between behavioral layer (B6) and economic layer (B1.1) — behavioral equivalence is market-agnostic at this maturity level.
+
+**Signal source**: B6 cycles 363-364 both 38/41 ALIGNED during B1.1 ceiling-zone transition; behavioral layer unaffected by price oscillation; 2026-04-11T09:44Z
+**Tags**: B3.1, B6-B11-independence, behavioral-equivalence-market-agnostic, architectural-separation, pure-maintenance-stable, ceiling-zone-no-behavioral-impact, maturity-confirmed
