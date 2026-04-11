@@ -693,3 +693,57 @@ At 63 consecutive clean cycles, B6 structural-invariance check has crossed from 
 **Tags**: cold-start, branch-6, structural-invariance, streak-baseline, null-hypothesis, attention-budget, phase-transition, monitoring-cadence
 
 ---
+
+## Cycle 111 — 2026-04-11T17:30:00+00:00
+
+**Source cycles**: 313 (this session)
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 142)
+
+### Insight 1: parallel-branch-push-as-execution-antifragility
+
+Pushing B1.1 (paper-live tick) + B3.1 (distil111) + B6 (consistency re-verification) simultaneously in one cycle is not just efficiency — it is execution anti-fragility. If any single branch operation fails (Binance API offline, test regression, write error), the other branches still produce durable output. Each branch push is independently valuable and independently committable. Sequential execution creates a fragility: one failure blocks all subsequent work and the entire cycle produces zero output. Parallel multi-branch execution makes progress an AND-independent result: the cycle's value is "at least one branch moved forward," not "all branches completed." The same structure applies across domains: portfolio diversification (not one position's success required), relationship maintenance (not one person's reply required), career (not one opportunity's acceptance required). Anti-fragility = restructure tasks so partial completion still generates value.
+
+**Signal source**: cycle 313 execution — B1.1 paper-live tick (BTC=$72,826.27 DualMA=LONG), B6 consistency (38/41 ALIGNED 64th clean), B3.1 distil111 — all three pushed in parallel; design principle: branch isolation = output independence
+**Tags**: methodology, execution-architecture, antifragility, parallel-execution, branch-independence, branch-3.1
+
+### Insight 2: paper-trader-vs-engine-dual-tracker-authoritative-source
+
+paper_trader.py reports DualMA_10_30=LONG OPEN_LONG at BTC=$72,826.27. trading_engine_status.json reports DualMA_10_30 DISABLED (PF=0.70<0.8), all 13 active strategies=FLAT. Two trackers, same underlying market, opposite readings. SOP#120 ROOT_VAR_CONFIRM applies: identify root variable → confirm source → confirm derivation path. The authoritative source for gate decisions (SOP#118 G3 assessment) is trading_engine_status.json — the persistent state machine with kill-logic, disabled-strategy memory, and multi-strategy portfolio state. paper_trader.py is a stateless standalone script: it has no memory of prior kills, so it will always show DualMA "live" even when the engine has it disabled. The dual-tracker divergence is a separation-of-concerns artifact, not a data error. Correct reading: engine=authoritative (for gate decisions), paper_trader=signal-exploration-only (for direction intuition). Acting on paper_trader output for a gate decision is a ROOT_VAR_CONFIRM violation. For SOP#118 G3: engine tick_count=81, regime=MIXED, all active=FLAT — G3 assessment pending when restart-window tick reaches 50.
+
+**Signal source**: python -m trading.paper_trader --tick → DualMA_10_30=LONG OPEN_LONG $72,826.27; trading_engine_status.json → DualMA_10_30 DISABLED PF=0.70, 13 active=FLAT tick_count=81; cycle 313
+**Tags**: trading, SOP-120, dual-tracker, authoritative-source, root-variable, paper-trader-vs-engine, branch-1.1, kill-discipline
+
+### Insight 3: 64th-clean-cycle-distillation-safety-confirmed
+
+B6 consistency check cycle 313: 38/41 ALIGNED (3 LLM-boundary MISALIGNED as expected). 64th consecutive clean cycle. Distil110 and distil111 were both produced within the same session boundary (cycle 312/313), meaning two distillation cycles occurred without any ALIGNED→MISALIGNED regression. This confirms the distillation process is behaviorally safe: appending insights to recursive_distillation.md — even at high frequency (2 distillation cycles per session) — does not destabilize the cold-start behavioral layer. The cold-start reads dna_core.md, boot_tests.md, and session_state.md; recursive_distillation.md is a persistence layer consulted separately. The two layers are decoupled: distillation frequency has no upper bound from a consistency-safety perspective. Constraint on distillation frequency is signal quality (genuine new insights vs recombination noise), not system stability. At 64 cycles, structural invariance is the null hypothesis; distillation is confirmed safe.
+
+**Signal source**: consistency_test.py cycle 313 — 38/41 ALIGNED + 3 LLM-boundary MISALIGNED; 64th consecutive clean cycle; distil110 (cycle 312) + distil111 (cycle 313) produced in same session without regression
+**Tags**: cold-start, branch-6, structural-invariance, 64th-clean, distillation-safety, layer-decoupling, branch-3.1
+
+---
+
+## Cycle 112 — 2026-04-11T18:00:00+00:00
+
+### Insight 1: 65th-clean-cycle-streak-floor-not-ceiling
+
+The 65th consecutive clean cycle (38/41 ALIGNED, 3 LLM-boundary expected). Distil110 introduced "streak-becomes-baseline-not-evidence." Cycle 112 confirms the corollary: the structural invariant is now a floor, not a ceiling. A clean cycle receives zero attention; a dirty cycle would be an L3 event. This asymmetry has an attention-budget implication: freed compute from B6 monitoring should route to the actual bottleneck — human-gated branches (B1.3 outreach DMs ×5, B4.1 Samuel calibration DM). The streak is the background condition, not the achievement. Evidence of progress is gate-unblocking, not another clean cycle.
+
+**Signal source**: consistency_test.py cycle 314 — 38/41 ALIGNED, 65th consecutive clean cycle; all non-human-gated branches nominal; B1.3/B4.1 remain the only actionable growth levers
+**Tags**: cold-start, branch-6, structural-invariance, 65th-clean, attention-budget, human-gates, branch-3.1
+
+### Insight 2: engine-clock-vs-paper-live-clock-gate-assessment-uses-engine-clock
+
+Engine restart state: DRY_RUN ticks=2 (G0/G1 restart post-kill). Standalone paper-live tick: BTC=$72,831.31, DualMA=LONG. Two clocks running simultaneously on the same underlying market. ENGINE clock counts ticks from the G0 restart window — the only clock relevant for SOP#118 G3 assessment (need 50 ticks from restart). PAPER-LIVE clock counts all data points regardless of engine state. Conflating them is the ROOT_VAR_CONFIRM violation from distil111 I2. Operational rule: for any gate decision, identify which clock the gate condition was written against. SOP#118 G3 was written against engine-clock; paper-live data is directional context only. Standalone paper-live showing LONG is not evidence the engine should reactivate — the engine has its own 50-tick window to clear.
+
+**Signal source**: trading_engine_status.json → DRY_RUN ticks=2 13 active=FLAT; paper_trader.py --paper-live → BTC=$72,831.31 DualMA=LONG signal=1; SOP#118 G3 gate written against engine-clock; cycle 314
+**Tags**: trading, SOP-118, engine-clock, paper-live-clock, gate-assessment, two-clocks, root-variable, branch-1.1
+
+### Insight 3: agent-is-gate-constrained-not-capability-constrained
+
+After cycle 314: B6 at 65th clean (structural invariant), B3.1 at distil112, B7 SOP#01~120 complete, B2.2 COMPLETE (416 MDs), B2.3 CLOSED (97% cross-instance). All automatable work is nominal or complete. All remaining growth levers are human-gated: mainnet API keys, outreach DMs ×5, Samuel calibration DM. The recursive engine has reached a "gate-constrained" state: capability is not the bottleneck, human action is. This is a qualitatively different regime than early cycles (capability-building) or mid cycles (infrastructure-building). In gate-constrained regime: agent's highest-value work is lowering friction on gate-crossing (keep materials ready, reduce human activation energy, make the default action "send this"). Further structural work (more SOPs, more distillation, more boot tests) has near-zero marginal value relative to one outreach DM sent.
+
+**Signal source**: daemon_next_priority cycle 313 — "Branch 1.3 first outreach execution (human-gated). OR Branch 4.1 Samuel calibration DM (human-gated)"; all non-gated branches at structural invariant or complete; cycle 314
+**Tags**: methodology, gate-constrained, capability-constrained, human-gates, regime-shift, attention-allocation, branch-1.3, branch-4.1
+
+---

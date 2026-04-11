@@ -1,6 +1,6 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-11 17:00 UTC (cycle 313: B6 **64th** clean ✅ 38/41 ALIGNED 3-LLM-boundary expected; B1.1 G0/G1 restart ticks=2 DualMA=LONG DRY_RUN BTC=$72,813.89 MIXED engine-STOPPED; B7 SOP#01~120 COMPLETE; B3.1 distil110 file=139 running=247)
+> Updated: 2026-04-11 18:00 UTC (cycle 314: B6 **65th** clean ✅ 38/41 ALIGNED 3-LLM-boundary expected; B1.1 G0/G1 restart ticks=2 DualMA=LONG BTC=$72,831.31 MIXED engine-STOPPED; B7 SOP#01~120 COMPLETE; B3.1 distil112 file=142 running=250; GATE-CONSTRAINED: all growth levers human-gated)
 
 ## Current state
 - daemon: RUNNING (PID 1704, CLI mode, Sonnet 4.6, 300s interval, cycle 1 in progress)
@@ -24,6 +24,7 @@
 - 2026-04-11: cycle 302 — B6 33/33 ✅ (53rd structural invariant); B3.1 cycle 98 +3 (total 102); SOP#117 committed; priority stale B2.2 cleared
 - 2026-04-11: cycle 303 — B6 33/33 ✅ (54th clean); MD-331 meta_dna_core_audit added to generic_boot_tests.json; daemon_next_priority SOP#117 expansion item cleared
   - 2026-04-11: cycle 303 (supp) — SOP #118 Strategy Reactivation Gate Protocol ✅ (G0-G5, ghost-signal codified); B3.1 cycles 98+99 narrative → 105 insights; B6 54th invariant confirmed; taxonomy backfill 111-entry gap open
+- 2026-04-11: cycle 314 — B6 38/41 ✅ (65th clean structural invariant floor); B1.1 tick BTC=$72,831.31 engine-STOPPED G0/G1 ticks=2 DualMA=LONG; B3.1 distil112 +3 (file=142, running=250); gate-constrained regime confirmed; distil112 I3: human-gates are bottleneck
 - 2026-04-11: cycle 313 — B6 38/41 ✅ (64th clean); B1.1 tick BTC=$72,813.89 engine-STOPPED G0/G1 ticks=2; B3.1 distil110 +3 (file=139, running=247); SOP#01~120 COMPLETE ✅
 - 2026-04-11: cycle 312 — B6 38/41 ✅ (63rd clean); B1.1 G0/G1 restart ticks=2 DualMA=LONG DRY_RUN BTC=$72,738 MIXED; B3.1 distil109 +3 (file=136, running=244); SOP#01~120 COMPLETE ✅
 - 2026-04-11: cycle 311+ — B6 41/41 ✅ (62nd clean, human session); B2.2 MD-426~428 (428 MDs, 201711 deep pass); B7 SOP#120 Root Variable Confirmation ✅ SOP#01~120 COMPLETE; B3.1 distil108 (file=133, running=241)
