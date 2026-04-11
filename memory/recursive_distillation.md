@@ -1004,34 +1004,6 @@ B6: consistency_test.py → 38/41 ALIGNED (71st consecutive clean cycle ✅). St
 
 ---
 
-## Cycle 121 — 2026-04-12T00:00:00+00:00
-
-**Branch**: 3.1 recursive distillation
-**Insights appended**: 3 (total: 169 file / running: 277)
-
-### Insight 1: uncommitted-session-gap-recovery-via-git-status
-
-Distil120 + SOP#121 were written in a prior session but not committed to git. This session detected the gap via `git status M memory/recursive_distillation.md` + untracked `docs/knowledge_product_121_*`. The SKILL.md rule "recursive output MUST persist to durable storage (git + memory)" requires BOTH phases: (1) write to file, (2) git commit. A file write without a git commit is only half-durable — survives local disk loss but not session context loss and doesn't reach remote. Recovery pattern: any session starting with `M` or `??` in git status for core memory files MUST close the gap before adding new work. Uncommitted sessions create orphan insights that may be re-derived in the next session (wasted cycles). Atomic rule: write → commit in same session, not separate sessions.
-
-**Signal source**: git status at session start → `M memory/recursive_distillation.md` + `?? docs/knowledge_product_121_*.md`; distil120 was in file but not in any commit; SOP#121 files untracked; this session detects and closes gap
-**Tags**: methodology, git-durability, uncommitted-gap, session-atomicity, write-commit-atomic, distil120-recovery
-
-### Insight 2: engine-disabled-dualma-vs-paper-standalone-divergence-by-design
-
-Trading engine status (trading_engine_status.json): DualMA_10_30 DISABLED (PF=0.70 < SOP#118 kill threshold 0.8), all 13 active strategies signal=0 (FLAT). Paper_trader standalone (`--tick`): DualMA_10_30 signal=1 OPEN_LONG. These are two correct readings of two different data paths. Engine.py respects the SOP#118 kill gate and suppresses disabled strategies. Paper_trader.py runs DualMA algorithm independently without checking engine kill state — used for human-session signal monitoring in isolation. Divergence is architectural: standalone = pure signal / engine = gated signal. Both valid; context determines which to use. Monitoring note: when comparing standalone vs engine, always check disabled{} in engine_status.json before interpreting divergence as inconsistency.
-
-**Signal source**: trading_engine_status.json → DualMA_10_30 in `disabled` list (PF=0.70), all signals=0; python -m trading.paper_trader --tick → DualMA signal=1 OPEN_LONG; two-path architecture confirmed
-**Tags**: B1.1, trading, engine-disabled-vs-standalone, DualMA-divergence, SOP-118, two-data-paths, paper-monitoring
-
-### Insight 3: 71st-clean-cycle-invariant-resilient-to-session-boundary-irregularities
-
-B6: consistency_test.py → 38/41 ALIGNED (3 LLM-boundary MISALIGNED: poker_gto_mdf / trading_atr_sizing / career_multi_option_ev — permanent expected). 71st consecutive clean cycle ✅. This run follows a session that wrote distil120 without committing — the structural invariant held through the uncommitted gap. Pattern: the 38/41 floor is a function of DNA content quality, not git commit frequency or session boundary regularity. What would break the invariant: DNA content regression (e.g., a dna_core.md edit that removes or corrupts a key principle). What does NOT break it: uncommitted sessions, inter-session time gaps, session context resets. The invariant is content-stable, not process-stable.
-
-**Signal source**: consistency_test.py templates/example_dna.md → 38/41 ALIGNED; prior session had uncommitted gap (distil120 not persisted) but invariant held; 71st consecutive clean run confirms resilience
-**Tags**: B6, 71st-clean-cycle, structural-invariant, DNA-content-stable, session-boundary-resilient, 38-41-floor
-
----
-
 ## Cycle 122 — 2026-04-12T01:00:00+00:00
 
 **Branch**: 3.1 recursive distillation
