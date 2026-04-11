@@ -24,9 +24,13 @@ EXECUTION_RULES_PATH = RESULTS / "execution_rules.json"
 KILLS_LOG_PATH = RESULTS / "kill_lessons.jsonl"
 DISABLED_PATH = RESULTS / "disabled_strategies.json"
 LIVE_GATE_PATH = RESULTS / "live_mode_gate.json"
-CREDS_PATH = Path.home() / ".claude" / "credentials" / "binance_api.json"
-DISCORD_WEBHOOK = ("https://discord.com/api/webhooks/1491644107788128439/"
-                   "Ndafv8puWZKaqHYcp-icHRRWealC0TfrZxO_k9DR1Dj2ANbFx5eyI3Ynvs8M_XO7y3jj")
+# Credentials + webhook from env. Falls back to historical local path so
+# existing PM2 jobs keep working when env is not set.
+CREDS_PATH = Path(os.environ.get(
+    "BINANCE_CREDENTIALS_PATH",
+    str(Path.home() / ".claude" / "credentials" / "binance_api.json"),
+))
+DISCORD_WEBHOOK = os.environ.get("DISCORD_WEBHOOK_TREE", "")
 
 # SOP#118 ReactivationGate constants
 REACTIVATION_COOLING_TICKS = 50
@@ -151,6 +155,8 @@ def fetch_bars(exchange, symbol: str = "BTC/USDT", tf: str = "1d", limit: int = 
             for c in exchange.fetch_ohlcv(symbol, tf, limit=limit)]
 
 def post_discord(msg: str) -> None:
+    if not DISCORD_WEBHOOK:
+        return
     try:
         import requests
         requests.post(DISCORD_WEBHOOK, json={"content": msg, "username": "TradingEngine"}, timeout=10)

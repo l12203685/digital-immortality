@@ -1,7 +1,12 @@
-"""Audit the 財務管理 Google Sheet - sample each tab."""
-import json
-import sys
+"""Audit the 財務管理 Google Sheet - sample each tab.
+
+Reads ``EDWARD_FINANCE_SHEET_ID`` and ``GOOGLE_SHEETS_CREDENTIALS_PATH`` from
+the environment. See ``~/.claude/credentials/README.md``.
+"""
 import io
+import json
+import os
+import sys
 from pathlib import Path
 
 # Ensure stdout can handle CJK
@@ -10,9 +15,18 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 import gspread
 from google.oauth2.service_account import Credentials
 
-SHEET_ID = '1S0b292zeMVZoK2aItYEyZROnEu5H7OB3Xiah7fYVXtM'
-CRED = r'C:/Users/admin/.claude/credentials/google_sheets_concise_beanbag.json'
+SHEET_ID = os.environ.get("EDWARD_FINANCE_SHEET_ID", "")
+CRED = os.environ.get(
+    "GOOGLE_SHEETS_CREDENTIALS_PATH",
+    str(Path.home() / ".claude" / "credentials" / "google_sheets_concise_beanbag.json"),
+)
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+
+if not SHEET_ID:
+    raise SystemExit(
+        "EDWARD_FINANCE_SHEET_ID not set. Export it or load "
+        "~/.claude/credentials/.env before running this script."
+    )
 
 creds = Credentials.from_service_account_file(CRED, scopes=SCOPES)
 gc = gspread.authorize(creds)

@@ -4,5 +4,6 @@
   "scenarios": "1491048860439806102",
   "edward_thinking": "1491048874263974109",
   "edward_log": "1491048879045738536",
-  "edward_webhook": "https://discord.com/api/webhooks/1491048883566936178/Wj9esS10PoZQQJChCDgQ1WQoY7MAUusZaGYI-3Ji08a9Mkh8YyP1rMBXhH1F6zCeqwqC"
+  "_comment_edward_webhook": "Set via DISCORD_WEBHOOK_URL env var (preferred) or DISCORD_WEBHOOK_EDWARD. See ~/.claude/credentials/README.md.",
+  "edward_webhook": ""
 }

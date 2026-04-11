@@ -252,10 +252,12 @@ def build_system_prompt(dna: str) -> str:
     return f"{dna}\n\n---\n\n{tree}"
 
 
+# Discord webhooks come from environment. Never hardcode.
+# See ~/.claude/credentials/README.md for the env var registry.
 # Edward AI Server #永生樹
-DISCORD_WEBHOOK_TREE = "https://discord.com/api/webhooks/1491644107788128439/Ndafv8puWZKaqHYcp-icHRRWealC0TfrZxO_k9DR1Dj2ANbFx5eyI3Ynvs8M_XO7y3jj"
+DISCORD_WEBHOOK_TREE = os.environ.get("DISCORD_WEBHOOK_TREE", "")
 # DOS organism-edward #thinking
-DISCORD_WEBHOOK_DOS = "https://discord.com/api/webhooks/1491656164432412784/lmXONbcP4tIUUsXbP71ACKTilZ6F4FiEwtgUawJWFshAFQletXg9E2xAq5Nxo9XzSRKZ"
+DISCORD_WEBHOOK_DOS = os.environ.get("DISCORD_WEBHOOK_DOS", "")
 
 
 QUICK_STATUS_PATH = REPO_ROOT / "staging" / "quick_status.md"
@@ -295,14 +297,16 @@ def append_log(cycle: int, response: str) -> None:
     entry = f"\n## Cycle {cycle} — {ts}\n\n{response}\n"
     with open(LOG_PATH, "a", encoding="utf-8") as f:
         f.write(entry)
-    # Post to Discord #thinking
+    # Post to Discord #thinking (best-effort; skipped if webhooks not configured)
     try:
         import requests
         now_tpe = datetime.now(TPE).strftime("%Y-%m-%d %H:%M (Taipei)")
         msg = f"[daemon cycle {cycle} | {now_tpe}] {response[:1850]}"
         payload = {"content": msg, "username": "Daemon"}
-        requests.post(DISCORD_WEBHOOK_TREE, json=payload, timeout=10)
-        requests.post(DISCORD_WEBHOOK_DOS, json=payload, timeout=10)
+        if DISCORD_WEBHOOK_TREE:
+            requests.post(DISCORD_WEBHOOK_TREE, json=payload, timeout=10)
+        if DISCORD_WEBHOOK_DOS:
+            requests.post(DISCORD_WEBHOOK_DOS, json=payload, timeout=10)
     except Exception:
         pass  # Discord post is best-effort
 

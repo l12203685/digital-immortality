@@ -39,6 +39,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import os
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -51,9 +52,17 @@ UTC = ZoneInfo("UTC")
 REPO = Path("C:/Users/admin/workspace/digital-immortality")
 CALENDAR_CACHE = REPO / "results" / "life_calendar.json"
 
+# Credentials are read from env vars. Defaults preserve existing behavior so
+# cron jobs that don't export env vars still work.
 CREDENTIALS_DIR = Path("C:/Users/admin/.claude/credentials")
-CLIENT_SECRET = CREDENTIALS_DIR / "google_calendar_client_secret.json"
-TOKEN_FILE = CREDENTIALS_DIR / "google_calendar_token.json"
+CLIENT_SECRET = Path(os.environ.get(
+    "GOOGLE_CALENDAR_CLIENT_SECRET_PATH",
+    str(CREDENTIALS_DIR / "google_calendar_client_secret.json"),
+))
+TOKEN_FILE = Path(os.environ.get(
+    "GOOGLE_CALENDAR_TOKEN_PATH",
+    str(CREDENTIALS_DIR / "google_calendar_token.json"),
+))
 README = CREDENTIALS_DIR / "README_calendar_oauth.md"
 
 SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"]

@@ -169,12 +169,16 @@ def ask_organism(dna: str, scenario: str, model: str, use_cli: bool) -> str:
 # ---------------------------------------------------------------------------
 
 def load_webhook_url() -> Optional[str]:
-    env = os.environ.get("DISCORD_WEBHOOK_URL")
-    if env:
-        return env
+    # Preferred: env var set by the operator / .env loader.
+    for var in ("DISCORD_WEBHOOK_URL", "DISCORD_WEBHOOK_EDWARD"):
+        value = os.environ.get(var)
+        if value:
+            return value
     if CONFIG_PATH.exists():
         cfg = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
-        return cfg.get("edward_webhook") or cfg.get("webhook_url")
+        value = cfg.get("edward_webhook") or cfg.get("webhook_url")
+        if value:
+            return value
     return None
 
 

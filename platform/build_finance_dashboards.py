@@ -1,7 +1,7 @@
 """Build Edward's 3 financial dashboards from Google Sheet 財務管理.
 
-Reads 7 tabs from sheet `1S0b292zeMVZoK2aItYEyZROnEu5H7OB3Xiah7fYVXtM` and
-writes 3 JSON files consumed by the Mission Control finance UI:
+Reads 7 tabs from the finance Sheet (ID read from ``EDWARD_FINANCE_SHEET_ID``
+env var) and writes 3 JSON files consumed by the Mission Control finance UI:
 
     results/finance_networth.json
     results/finance_spending.json
@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 import re
 import sys
 import time
@@ -34,9 +35,12 @@ logger = logging.getLogger("finance_dashboards")
 REPO = Path("C:/Users/admin/workspace/digital-immortality")
 RESULTS = REPO / "results"
 CACHE_DIR = RESULTS / ".sheet_cache"
-CREDENTIALS = Path("C:/Users/admin/.claude/credentials/google_sheets_concise_beanbag.json")
 
-SHEET_ID = "1S0b292zeMVZoK2aItYEyZROnEu5H7OB3Xiah7fYVXtM"
+# Credential path + Sheet ID come from environment. Fall back to the historical
+# local path so existing cron jobs keep running when env is not set.
+_DEFAULT_CREDENTIALS = Path.home() / ".claude" / "credentials" / "google_sheets_concise_beanbag.json"
+CREDENTIALS = Path(os.environ.get("GOOGLE_SHEETS_CREDENTIALS_PATH", str(_DEFAULT_CREDENTIALS)))
+SHEET_ID = os.environ.get("EDWARD_FINANCE_SHEET_ID", "")
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
 
 NETWORTH_JSON = RESULTS / "finance_networth.json"
@@ -153,6 +157,11 @@ def fetch_all_tabs(force: bool = False) -> dict[str, list[list[str]]]:
         need_fetch = list(tabs)
 
     if need_fetch:
+        if not SHEET_ID:
+            raise SystemExit(
+                "EDWARD_FINANCE_SHEET_ID not set. Export it or load "
+                "~/.claude/credentials/.env before running this script."
+            )
         import gspread  # lazy import
         from google.oauth2.service_account import Credentials
 

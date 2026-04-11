@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 import urllib.error
 import urllib.request
@@ -38,10 +39,8 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 STATE_PATH = REPO_ROOT / "results" / "escalation_state.json"
 
 # Same #永生樹 webhook used by recursive_daemon + trading/engine.
-DISCORD_WEBHOOK = (
-    "https://discord.com/api/webhooks/1491644107788128439/"
-    "Ndafv8puWZKaqHYcp-icHRRWealC0TfrZxO_k9DR1Dj2ANbFx5eyI3Ynvs8M_XO7y3jj"
-)
+# Read from env var. If unset, posting is skipped (tracked via _webhook_configured).
+DISCORD_WEBHOOK = os.environ.get("DISCORD_WEBHOOK_TREE", "")
 
 DEFAULT_CADENCE_HOURS = 4
 
@@ -93,6 +92,9 @@ def is_due(state: dict, cadence_hours: int) -> bool:
 
 
 def post_discord(message: str) -> bool:
+    if not DISCORD_WEBHOOK:
+        print("[escalation_batcher] DISCORD_WEBHOOK_TREE unset; skipping post", file=sys.stderr)
+        return False
     payload = json.dumps({"content": message[:1900], "username": "SignOffBatcher"}).encode("utf-8")
     req = urllib.request.Request(
         DISCORD_WEBHOOK,
