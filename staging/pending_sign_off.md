@@ -1,6 +1,6 @@
 # Pending Sign-Off Batch
 
-> Auto-managed by tools/sign_off_manager.py — last updated 2026-04-11 16:10 Taipei
+> Auto-managed by tools/sign_off_manager.py — last updated 2026-04-11 16:11 Taipei
 > Default action = proceed. Stop pattern = Edward rejects.
 > AUTO decisions auto-apply after their timer. ESCALATE decisions never auto-apply.
 
@@ -45,7 +45,7 @@
 
 ## Decision 4: ANTHROPIC_API_KEY secret upload to GH Actions
 - uid: 4b7b8c7d
-- Status: PENDING
+- Status: AUTO_APPLIED
 - Category: AUTO
 - Posted: 2026-04-11 16:10 Taipei
 - Auto-approve at: 2026-04-11 16:10 Taipei
@@ -55,3 +55,4 @@
 - Impact if approved: GH Actions can use API mode | faster cycles | reversible
 - Reversibility: high
 - One-line dismiss: gh secret delete ANTHROPIC_API_KEY -R l12203685/digital-immortality
+- Resolved by: agent:auto
