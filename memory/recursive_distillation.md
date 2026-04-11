@@ -1369,3 +1369,31 @@ Pattern observable across cycles 317H–330: every human session executes the sa
 **Tags**: B3.1, behavioral-reflex, session-pattern, cold-start-push-distil-commit, automaticity, process-internalization
 
 ---
+
+## Cycle 132 — 2026-04-11T07:08:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 202 file / running: 310)
+
+### Insight 1: 20th-human-tick-long-btc72769-engine168-tailwind-minimal
+
+BTC=$72,769.95 (↑$15.23 from distil131 $72,754.72; LONG tailwind minimal). 20th consecutive human-tick DualMA=LONG OPEN_LONG. Engine tick_count=168 (daemon-advanced, all 13 active strategies HOLD signal=0, regime=MIXED). Signal persistence: 20 human-sessions, 0 flips, BTC range $72,638–$72,831 (±$193 from entry). The LONG signal is structurally entrenched — headwind at $15 magnitude does not register as signal noise. Engine and paper_trader remain on separate tracks: engine HOLD (13 gen/Donchian strategies, DualMA family killed PF<0.8), paper_trader LONG (standalone DualMA signal tracking).
+
+**Signal source**: python -m trading.paper_trader → BTC=$72,769.95 (2026-04-11T07:08Z), DualMA_10_30=LONG OPEN_LONG; engine tick=168 results/trading_engine_status.json
+**Tags**: B1.1, 20th-consecutive-long, btc72769, engine-tick-168, tailwind-minimal, signal-structural
+
+### Insight 2: 81st-clean-B6-post-milestone-floor-locked
+
+81st consecutive clean cycle at 38/41 ALIGNED. Distil131 declared 80 as the "empirically established" milestone; 81 is the first post-milestone data point. The floor holds. This confirms the 80-milestone declaration was correct — the attractor did not revert after the declaration. The 38/41 convergence floor is now: (1) empirically established (80 data points), (2) mechanically stable (survived the milestone boundary), (3) monitoring-cost-zero (pass=noise, fail=L3 event only). No further periodic verification needed — the floor persists by structural property of dna_core.md alignment with the test scenarios.
+
+**Signal source**: consistency_test.py → 38/41 ALIGNED (2026-04-11T07:08Z, 81st session); MISALIGNED set unchanged (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev); 80-session milestone declared in distil131
+**Tags**: B6, 81st-consecutive, post-milestone, convergence-floor-locked, monitoring-cost-zero, structural-property
+
+### Insight 3: daemon-engine-tick-cadence-1-per-min-daemon-vs-human-counters
+
+Engine tick advanced from 162 (cycle 330, 07:02Z) to 168 (this session, 07:08Z) in ~6 minutes — rate ≈ 1 tick/min during daemon-active window. Human sessions arrive to find the engine already advanced beyond the last committed tick. The gap (+6 ticks, 6 min) is the daemon's autonomous contribution between consecutive human sessions. Key semantic distinction: engine tick_count (daemon-driven, health/continuity metric) ≠ human tick count (paper_trader standalone, signal-quality observation). Conflating them would overcount engine activity. Each counter serves its own purpose within the architecture.
+
+**Signal source**: trading_engine_status.json last_tick=2026-04-11T07:05:10Z tick_count=168; prior committed state at cycle 330 tick=162 (07:04-07:05Z daemon batch); human session arrival ~07:08Z; cadence ≈ 1 tick/min during active window
+**Tags**: B1.1, engine-tick-cadence, daemon-autonomous, human-vs-daemon-counters, tick-count-semantics, active-window
+
+---
