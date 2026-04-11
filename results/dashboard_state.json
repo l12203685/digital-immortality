@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-04-11T08:10:40Z",
-  "updated_taipei": "2026-04-11 16:10 +08",
+  "updated_utc": "2026-04-11T08:14:47Z",
+  "updated_taipei": "2026-04-11 16:14 +08",
   "tree": {
     "available": true,
     "branches": [
@@ -43,8 +43,8 @@
   },
   "trading_engine": {
     "available": true,
-    "last_tick": "2026-04-11T08:10:15.641796+00:00",
-    "tick_count": 233,
+    "last_tick": "2026-04-11T08:14:15.886106+00:00",
+    "tick_count": 237,
     "active_strategies": 13,
     "disabled": {
       "gen_BollingerMeanReversion_RF_7abfe4": "PF 0.62 < 0.8",
@@ -55,7 +55,7 @@
       "DualMA_RSI_filtered": "PF 0.70 < 0.8"
     },
     "total_pnl_pct": -0.1865,
-    "price": 72740.3,
+    "price": 72770.73,
     "regime": "mixed",
     "mode": "PAPER"
   },
@@ -161,28 +161,28 @@
   "agent_metrics": {
     "available": true,
     "model": "Opus",
-    "tokens_in": 35074,
-    "tokens_out": 671565,
-    "tokens_cached": 372940,
-    "context_pct": 37,
-    "cost_usd": 51.452895,
+    "tokens_in": 35575,
+    "tokens_out": 711968,
+    "tokens_cached": 385291,
+    "context_pct": 39,
+    "cost_usd": 54.509161,
     "git_branch": "main",
     "ram_used_pct": 48,
     "ram_disk_free_mb": 2027.4,
-    "ts": "2026-04-11T08:10:35.934676+00:00"
+    "ts": "2026-04-11T08:14:23.565589+00:00"
   },
   "git": {
     "digital-immortality": [
+      "8314238 chore(sign-off): seed decision 4 auto-applied (first real run)",
+      "48d7a6f feat(sign-off): sign_off_manager + daemon integration + dashboard refactor",
+      "4182a5a chore(cycle343): human-session persist — tree header ×343 + B1.1 tick $72,719 + platform/daemon state",
       "58af565 feat(cycle343): B6 93rd ✅ seventh-pass + B3.1 distil144 (file=238/running=346) + B1.1 BTC=$72,716.64 DualMA=LONG ×32 human ticks + organism interactions ×3 + parallel branch push",
       "a2ad2ea fix(cloud): use Anthropic API directly (no claude CLI on GH runners)",
       "a35ccc0 chore(cycle342): B6 raw output + engine log tick 31 persist",
       "e364370 feat(cloud): GitHub Actions chained recursive workflow (replaces local daemon)",
       "d9d5b9f feat(cycle342): B6 92nd ✅ post-protocol-closure seventh pass + B3.1 distil143 (file=235/running=343) + B1.1 BTC=$72,745.37 DualMA=LONG ×31 human ticks + parallel branch push",
       "ee6ec51 revert: cancel Fly.io migration (Edward chose GH Actions chained for simplicity)",
-      "e19b626 chore: untrack idle_task_picker_state.json (now gitignored)",
-      "e2341af feat(cycle341): daemon tick=223 + organism interactions ×3 + idle_task_picker update + engine advance",
-      "79745e3 feat(cycle341): B6 91st ✅ sixth-pass + B3.1 distil142 (file=232/running=340) + B1.1 BTC=$72,672.56 DualMA=LONG ×30 human ticks + idle_task_picker deployed + parallel branch push",
-      "3ca24c2 feat(cycle341): B6 91st ✅ post-protocol-closure sixth pass + B3.1 distil142 (file=232/running=340) + B1.1 BTC=$72,672.56 DualMA=LONG ×30 human ticks + parallel branch push"
+      "e19b626 chore: untrack idle_task_picker_state.json (now gitignored)"
     ],
     "LYH": [
       "4933e4d refactor: rename backtest-framework -> trading-research",
@@ -217,7 +217,7 @@
   ],
   "mission_control": {
     "available": true,
-    "total_events": 16,
+    "total_events": 17,
     "pending": [
       {
         "ts": "2026-04-11T08:10:38.512742+00:00",
@@ -304,6 +304,16 @@
     ],
     "done": [
       {
+        "ts": "2026-04-11T08:14:14.925109+00:00",
+        "type": "subagent_complete",
+        "status": "done",
+        "msg": "Auto sign-off batch system shipped: sign_off_manager + escalation_batcher + 14 tests pass + daemon hook. 4 pending decisions seeded (3 PENDING auto-approve in 24h, 1 already AUTO_APPLIED for Anthropic key upload)",
+        "actor": "main_session",
+        "pretty_msg": "下屬完成任務：Auto sign-off batch system shipped: sign_off_manager + escalation_batcher + 14 tests pass + daemon hook. 4 pending decisions seeded (3 PENDING auto-approve in 24h, 1 already AUTO_APPLIED for Anthropic key upload)",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
         "ts": "2026-04-11T08:10:38.512680+00:00",
         "type": "subagent_complete",
         "status": "done",
@@ -376,6 +386,16 @@
     ],
     "failure": [],
     "recent_feed": [
+      {
+        "ts": "2026-04-11T08:14:14.925109+00:00",
+        "type": "subagent_complete",
+        "status": "done",
+        "msg": "Auto sign-off batch system shipped: sign_off_manager + escalation_batcher + 14 tests pass + daemon hook. 4 pending decisions seeded (3 PENDING auto-approve in 24h, 1 already AUTO_APPLIED for Anthropic key upload)",
+        "actor": "main_session",
+        "pretty_msg": "下屬完成任務：Auto sign-off batch system shipped: sign_off_manager + escalation_batcher + 14 tests pass + daemon hook. 4 pending decisions seeded (3 PENDING auto-approve in 24h, 1 already AUTO_APPLIED for Anthropic key upload)",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
       {
         "ts": "2026-04-11T08:10:38.512742+00:00",
         "type": "reframe",
@@ -581,7 +601,7 @@
       "state": "online",
       "label": "在線",
       "color": "ok",
-      "age_min": 0.1
+      "age_min": 0.4
     }
   }
 }
