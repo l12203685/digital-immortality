@@ -340,6 +340,15 @@ def main():
             append_log(cycle, text)
             update_quick_status(cycle, mode, args.model, interval)
             subprocess.run([sys.executable, str(REPO_ROOT / "platform" / "generate_dashboard_state.py")], cwd=REPO_ROOT, capture_output=True, timeout=30)
+            # Phase 2 pull-model dashboard (build + render). Failures must not kill daemon cycles.
+            subprocess.run(
+                [sys.executable, str(REPO_ROOT / "platform" / "build_dashboard.py")],
+                cwd=REPO_ROOT, capture_output=True, timeout=30, check=False,
+            )
+            subprocess.run(
+                [sys.executable, str(REPO_ROOT / "platform" / "render_dashboard.py")],
+                cwd=REPO_ROOT, capture_output=True, timeout=30, check=False,
+            )
             run_audit_suggest()
             if not args.no_commit:
                 try_git_commit(cycle)
