@@ -1,0 +1,30 @@
+app = "digital-immortality-daemon"
+primary_region = "nrt"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PYTHONUNBUFFERED = "1"
+  PYTHONIOENCODING = "utf-8"
+  DAEMON_MODE = "api"
+
+# This is a worker, not an HTTP service.
+# No [[services]] block on purpose.
+
+[[mounts]]
+  source = "dimm_data"
+  destination = "/data"
+  initial_size = "1gb"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1
+
+[deploy]
+  strategy = "immediate"
+
+[[restart]]
+  policy = "always"

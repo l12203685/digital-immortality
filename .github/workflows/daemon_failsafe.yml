@@ -1,0 +1,59 @@
+name: Daemon Failsafe
+
+# Runs every 30 minutes. Checks how recently the recursive daemon pushed a cycle.
+# If the last push to results/daemon_log.md is older than 30 minutes, fires a
+# Discord alert so Edward can investigate (Fly.io crash, rate-limit, or git-push break).
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check daemon liveness
+        id: check
+        run: |
+          set -e
+          LAST_PUSH=$(git log -1 --format='%at' -- results/daemon_log.md || echo 0)
+          NOW=$(date +%s)
+          AGE=$((NOW - LAST_PUSH))
+          echo "Last push epoch: ${LAST_PUSH}"
+          echo "Now epoch:       ${NOW}"
+          echo "Age (seconds):   ${AGE}"
+          echo "age=${AGE}" >> "${GITHUB_OUTPUT}"
+          if [ "${AGE}" -gt 1800 ]; then
+            echo "stale=true" >> "${GITHUB_OUTPUT}"
+            echo "STALE: no daemon cycle in ${AGE}s (> 1800s)"
+          else
+            echo "stale=false" >> "${GITHUB_OUTPUT}"
+            echo "ALIVE: last cycle ${AGE}s ago"
+          fi
+
+      - name: Alert Discord on staleness
+        if: steps.check.outputs.stale == 'true'
+        env:
+          AGE: ${{ steps.check.outputs.age }}
+        run: |
+          WEBHOOK="https://discord.com/api/webhooks/1491644107788128439/Ndafv8puWZKaqHYcp-icHRRWealC0TfrZxO_k9DR1Dj2ANbFx5eyI3Ynvs8M_XO7y3jj"
+          MSG="[failsafe] Daemon stale: no cycle for ${AGE}s (> 30 min). Check Fly: fly logs -a digital-immortality-daemon"
+          curl -sS -X POST -H "Content-Type: application/json" \
+            -d "{\"content\":\"${MSG}\",\"username\":\"DaemonFailsafe\"}" \
+            "${WEBHOOK}" || true
+
+      - name: Fail the job if stale
+        if: steps.check.outputs.stale == 'true'
+        run: |
+          echo "Daemon is stale — failing job to surface in Actions tab"
+          exit 1
