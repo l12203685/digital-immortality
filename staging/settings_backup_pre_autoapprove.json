@@ -1,0 +1,79 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "Agent",
+      "WebFetch",
+      "WebSearch",
+      "NotebookEdit",
+      "mcp__*"
+    ],
+    "defaultMode": "bypassPermissions",
+    "additionalDirectories": [
+      "c:\\Users\\admin\\.claude\\scripts",
+      "C:\\Users\\admin\\.claude\\commands",
+      "C:\\Users\\admin\\.claude\\channels"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "block-no-verify"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "case \"$CLAUDE_FILE\" in *.ts|*.tsx|*.js|*.jsx|*.json) npx prettier --write \"$CLAUDE_FILE\" 2>/dev/null ;; *.py) ruff check --fix \"$CLAUDE_FILE\" 2>/dev/null; ruff format \"$CLAUDE_FILE\" 2>/dev/null ;; esac; exit 0"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "LAST=$(grep -v '^$' 'C:/Users/admin/LYH/memory/log.md' 2>/dev/null | tail -1); if [[ \"$LAST\" != *'Session ended'* ]]; then echo \"[$(date '+%Y-%m-%d %H:%M')] Session ended\" >> 'C:/Users/admin/LYH/memory/log.md'; fi"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "python C:/Users/admin/.claude/scripts/statusline.py"
+  },
+  "enabledPlugins": {
+    "discord@claude-plugins-official": true
+  },
+  "effortLevel": "high",
+  "autoUpdatesChannel": "latest",
+  "skipDangerousModePermissionPrompt": true,
+  "claudeMdExcludes": [
+    "**/rules/zh/**",
+    "**/rules/cpp/**",
+    "**/rules/csharp/**",
+    "**/rules/golang/**",
+    "**/rules/java/**",
+    "**/rules/kotlin/**",
+    "**/rules/perl/**",
+    "**/rules/rust/**",
+    "**/rules/swift/**",
+    "**/rules/README.md"
+  ]
+}

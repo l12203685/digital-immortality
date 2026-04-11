@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-04-11T08:09:54Z",
-  "updated_taipei": "2026-04-11 16:09 +08",
+  "updated_utc": "2026-04-11T08:10:40Z",
+  "updated_taipei": "2026-04-11 16:10 +08",
   "tree": {
     "available": true,
     "branches": [
@@ -43,8 +43,8 @@
   },
   "trading_engine": {
     "available": true,
-    "last_tick": "2026-04-11T08:09:15.588776+00:00",
-    "tick_count": 232,
+    "last_tick": "2026-04-11T08:10:15.641796+00:00",
+    "tick_count": 233,
     "active_strategies": 13,
     "disabled": {
       "gen_BollingerMeanReversion_RF_7abfe4": "PF 0.62 < 0.8",
@@ -161,15 +161,15 @@
   "agent_metrics": {
     "available": true,
     "model": "Opus",
-    "tokens_in": 35048,
-    "tokens_out": 656099,
-    "tokens_cached": 369611,
+    "tokens_in": 35074,
+    "tokens_out": 671565,
+    "tokens_cached": 372940,
     "context_pct": 37,
-    "cost_usd": 50.287562,
+    "cost_usd": 51.452895,
     "git_branch": "main",
     "ram_used_pct": 48,
     "ram_disk_free_mb": 2027.4,
-    "ts": "2026-04-11T08:09:19.102642+00:00"
+    "ts": "2026-04-11T08:10:35.934676+00:00"
   },
   "git": {
     "digital-immortality": [
@@ -217,8 +217,18 @@
   ],
   "mission_control": {
     "available": true,
-    "total_events": 13,
+    "total_events": 16,
     "pending": [
+      {
+        "ts": "2026-04-11T08:10:38.512742+00:00",
+        "type": "reframe",
+        "status": "pending",
+        "msg": "Phase 3 reframe: 不遷雲LLM brain (auth卡本地), cloud只跑utility scripts (heartbeat/writeback/dashboard build). 本地daemon是forever.",
+        "actor": "main_session",
+        "pretty_msg": "Phase 3 reframe: 不遷雲LLM brain (auth卡本地), cloud只跑utility scripts (heartbeat/writeback/dashboard build). 本地daemon是forever.",
+        "pretty_actor": "主腦",
+        "pretty_status": "待決定"
+      },
       {
         "ts": "2026-04-11T08:00:14.530746+00:00",
         "type": "decision_change",
@@ -294,6 +304,16 @@
     ],
     "done": [
       {
+        "ts": "2026-04-11T08:10:38.512680+00:00",
+        "type": "subagent_complete",
+        "status": "done",
+        "msg": "Fly.io取消下屬完成: 刪掉Fly artifacts + 建好GH Actions chained recursive workflow + daemon --once flag. Chain provably alive (5 consecutive runs)",
+        "actor": "main_session",
+        "pretty_msg": "下屬完成任務：Fly.io取消下屬完成: 刪掉Fly artifacts + 建好GH Actions chained recursive workflow + daemon --once flag. Chain provably alive (5 consecutive runs)",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
         "ts": "2026-04-11T08:04:02.800624+00:00",
         "type": "rule_update",
         "status": "done",
@@ -356,6 +376,36 @@
     ],
     "failure": [],
     "recent_feed": [
+      {
+        "ts": "2026-04-11T08:10:38.512742+00:00",
+        "type": "reframe",
+        "status": "pending",
+        "msg": "Phase 3 reframe: 不遷雲LLM brain (auth卡本地), cloud只跑utility scripts (heartbeat/writeback/dashboard build). 本地daemon是forever.",
+        "actor": "main_session",
+        "pretty_msg": "Phase 3 reframe: 不遷雲LLM brain (auth卡本地), cloud只跑utility scripts (heartbeat/writeback/dashboard build). 本地daemon是forever.",
+        "pretty_actor": "主腦",
+        "pretty_status": "待決定"
+      },
+      {
+        "ts": "2026-04-11T08:10:38.512723+00:00",
+        "type": "CRITICAL_FINDING",
+        "status": "blocker",
+        "msg": "Cloud daemon無法用Max subscription. GH runner只能用Anthropic API需要credits, Edward credit balance=0. Chain workflow跑得動但每個cycle no-op (API call fail)",
+        "actor": "main_session",
+        "pretty_msg": "Cloud daemon無法用Max subscription. GH runner只能用Anthropic API需要credits, Edward credit balance=0. Chain workflow跑得動但每個cycle no-op (API call fail)",
+        "pretty_actor": "主腦",
+        "pretty_status": "blocker"
+      },
+      {
+        "ts": "2026-04-11T08:10:38.512680+00:00",
+        "type": "subagent_complete",
+        "status": "done",
+        "msg": "Fly.io取消下屬完成: 刪掉Fly artifacts + 建好GH Actions chained recursive workflow + daemon --once flag. Chain provably alive (5 consecutive runs)",
+        "actor": "main_session",
+        "pretty_msg": "下屬完成任務：Fly.io取消下屬完成: 刪掉Fly artifacts + 建好GH Actions chained recursive workflow + daemon --once flag. Chain provably alive (5 consecutive runs)",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
       {
         "ts": "2026-04-11T08:04:02.800639+00:00",
         "type": "phase_4",
@@ -531,7 +581,7 @@
       "state": "online",
       "label": "在線",
       "color": "ok",
-      "age_min": 0.6
+      "age_min": 0.1
     }
   }
 }

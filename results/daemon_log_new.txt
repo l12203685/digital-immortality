@@ -418,3 +418,29 @@ Traceback (most recent call last):
 UnicodeDecodeError: 'cp950' codec can't decode byte 0xe2 in position 139: illegal multibyte sequence
 [daemon] Error: 'NoneType' object has no attribute 'strip', retrying in 30s...
 [daemon] Cycle 34 starting (CLI)...
+Exception in thread Thread-67 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp950' codec can't decode byte 0xe2 in position 145: illegal multibyte sequence
+[daemon] Error: 'NoneType' object has no attribute 'strip', retrying in 30s...
+[daemon] Cycle 35 starting (CLI)...
+Exception in thread Thread-69 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp950' codec can't decode byte 0xe2 in position 30: illegal multibyte sequence

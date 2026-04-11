@@ -317,43 +317,29 @@ def load_blocker_items() -> list[dict[str, str]]:
 def load_mission_control() -> dict[str, Any]:
     text = read_text(PROGRESS_JSONL)
     events: list[dict[str, Any]] = []
-    for line in ([ln for ln in (text or "").splitlines() if ln.strip()][-100:]):
+    for line in [ln for ln in (text or "").splitlines() if ln.strip()][-100:]:
         try:
             evt = json.loads(line)
         except json.JSONDecodeError:
             continue
-        actor = str(evt.get("actor", "") or "")
-        status = str(evt.get("status", "") or "")
-        events.append({
-            "ts": evt.get("ts", ""), "type": evt.get("type", ""), "status": status,
-            "msg": evt.get("msg", ""), "actor": actor, "pretty_msg": _pretty_msg(evt),
+        actor, status = str(evt.get("actor", "") or ""), str(evt.get("status", "") or "")
+        events.append({"ts": evt.get("ts", ""), "type": evt.get("type", ""),
+            "status": status, "msg": evt.get("msg", ""), "actor": actor,
+            "pretty_msg": _pretty_msg(evt),
             "pretty_actor": PRETTY_ACTOR_MAP.get(actor, actor),
-            "pretty_status": PRETTY_STATUS_MAP.get(status, status),
-        })
+            "pretty_status": PRETTY_STATUS_MAP.get(status, status)})
     key = lambda e: str(e.get("ts", ""))  # noqa: E731
-    buckets = {
-        "pending": ("pending",),
-        "in_progress": ("in_progress", "started"),
-        "done": ("done", "completed"),
-        "failure": ("failure", "failed", "blocked"),
-    }
-    grouped = {
-        name: sorted([e for e in events if e["status"] in vals], key=key, reverse=True)
-        for name, vals in buckets.items()
-    }
-    return {
-        "available": bool(events),
-        "total_events": len(events),
-        "pending": grouped["pending"][:10],
-        "in_progress": grouped["in_progress"][:20],
-        "done": grouped["done"][:10],
-        "failure": grouped["failure"][:10],
+    def bucket(vals: tuple[str, ...]) -> list[dict[str, Any]]:
+        return sorted([e for e in events if e["status"] in vals], key=key, reverse=True)
+    return {"available": bool(events), "total_events": len(events),
+        "pending": bucket(("pending",))[:10],
+        "in_progress": bucket(("in_progress", "started"))[:20],
+        "done": bucket(("done", "completed"))[:10],
+        "failure": bucket(("failure", "failed", "blocked"))[:10],
         "recent_feed": sorted(events, key=key, reverse=True)[:20],
-        "backlog": load_auto_backlog(),
-        "pending_approval": load_pending_approval(),
+        "backlog": load_auto_backlog(), "pending_approval": load_pending_approval(),
         "blocked": load_blocker_items(),
-        "main_session_status": load_main_session_status(),
-    }
+        "main_session_status": load_main_session_status()}
 
 
 def extract_blockers() -> list[str]:
@@ -378,45 +364,34 @@ def extract_blockers() -> list[str]:
 def build_state() -> dict[str, Any]:
     now = datetime.now(timezone.utc)
     taipei = now.astimezone(timezone(timedelta(hours=8)))
-    return {
-        "updated_utc": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+    return {"updated_utc": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "updated_taipei": taipei.strftime("%Y-%m-%d %H:%M +08"),
-        "tree": load_tree_branches(),
-        "trading_engine": load_trading_engine(),
+        "tree": load_tree_branches(), "trading_engine": load_trading_engine(),
         "execution_rules": load_execution_rules(),
         "disabled_strategies": load_disabled_strategies(),
-        "paper_pnl": load_paper_pnl(),
-        "daemon": load_daemon_tail(),
-        "quick_status": load_quick_status(),
-        "b6_streak": load_b6_streak(),
-        "agent_metrics": load_agent_metrics(),
-        "git": load_git_commits(),
-        "insight_count": count_insights(),
-        "blockers": extract_blockers(),
-        "mission_control": load_mission_control(),
-    }
+        "paper_pnl": load_paper_pnl(), "daemon": load_daemon_tail(),
+        "quick_status": load_quick_status(), "b6_streak": load_b6_streak(),
+        "agent_metrics": load_agent_metrics(), "git": load_git_commits(),
+        "insight_count": count_insights(), "blockers": extract_blockers(),
+        "mission_control": load_mission_control()}
 
 
 def main() -> None:
     state = build_state()
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUT_PATH.write_text(
-        json.dumps(state, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
-    print(f"[build_dashboard] wrote {OUT_PATH}")
-    print(f"  tree_branches={len(state['tree'].get('branches', []))}")
-    print(f"  daemon_cycle={state['daemon'].get('last_cycle')}")
-    print(f"  b6_streak={state['b6_streak']}")
-    print(f"  insights={state['insight_count']}")
-    print(f"  blockers={len(state['blockers'])}")
+    OUT_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n",
+                        encoding="utf-8")
     mc = state.get("mission_control") or {}
-    print(f"  mission_control events={mc.get('total_events', 0)}")
-    print(f"  mc pending={len(mc.get('pending') or [])}")
-    print(f"  mc in_progress={len(mc.get('in_progress') or [])}")
-    print(f"  mc done={len(mc.get('done') or [])}")
-    print(f"  mc blocked={len(mc.get('blocked') or [])}")
-    print(f"  main_session={mc.get('main_session_status', {}).get('state')}")
+    print(f"[build_dashboard] wrote {OUT_PATH}")
+    print(f"  tree={len(state['tree'].get('branches', []))} "
+          f"daemon_cycle={state['daemon'].get('last_cycle')} "
+          f"insights={state['insight_count']} blockers={len(state['blockers'])}")
+    print(f"  mc events={mc.get('total_events', 0)} "
+          f"pending={len(mc.get('pending') or [])} "
+          f"in_progress={len(mc.get('in_progress') or [])} "
+          f"done={len(mc.get('done') or [])} "
+          f"blocked={len(mc.get('blocked') or [])} "
+          f"main_session={mc.get('main_session_status', {}).get('state')}")
 
 
 if __name__ == "__main__":
