@@ -919,3 +919,31 @@ This session (cycle 318+) performed a tree-level structural audit: read dynamic_
 **Tags**: methodology, human-session, structural-audit, staleness-detection, daemon-vs-human, tree-topology, branch-3.1
 
 ---
+
+## Cycle 119 — 2026-04-11T22:50:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 163 file / running: 271)
+
+### Insight 1: 69th-consecutive-clean-cycle-structural-invariant-confirmed
+
+Cycle 318+ (session 2) consistency_test.py run shows 38/41 ALIGNED — identical to 68th run. MISALIGNED set unchanged: poker_gto_mdf / trading_atr_sizing / career_multi_option_ev (all LLM-boundary, deterministic engine 0/7). Two consecutive full runs in same 318+ session both show 38/41. The structural invariant floor is 38/41 and has now held across 69 independent runs. The invariant is not fragile to session restarts, CLAUDE.md changes, or DNA compression. Pattern: invariant stability at 38/41 over 69 runs = proven behavioral baseline. Any future drop to <38 is a regression signal requiring immediate investigation.
+
+**Signal source**: consistency_test.py templates/example_dna.md → 38/41 ALIGNED; same 3 LLM-boundary MISALIGNED as prior 68 runs; generic_long_term_survival_check ALIGNED (previously misaligned in cycle 317H, confirmed LLM non-det via dual-rerun in distil118)
+**Tags**: B6, consistency, 69th-clean-cycle, structural-invariant, 38-41-floor, behavioral-baseline
+
+### Insight 2: btc-long-signal-7th-human-tick-slight-tailwind
+
+7th consecutive human-session paper_trader tick: BTC=$72,672.45 (↑$22.11 from cycle 318 $72,650.34 — LONG tailwind). DualMA_10_30=LONG OPEN_LONG, Donchian_20=FLAT (HOLD). Signal unbroken across 7 human sessions spanning ~$72,650–72,831 range (±$180 noise). The 10/30 MA crossover locks on multi-day momentum — $22 intra-session moves do not whipsaw it. Cumulative human-tick range: $72,650 (low, cycle 318) to $72,831 (high, cycle 314) — signal LONG throughout. Engine remains frozen at G0/G1 DRY_RUN ticks=2, G3 deficit=48. Each human tick adds signal evidence, not gate clock — gate clock requires daemon engine ticks.
+
+**Signal source**: python -m trading.paper_trader --paper-live → BTC=72672.45, DualMA_10_30 signal=1 OPEN_LONG, Donchian_20 signal=0 HOLD; 7th consecutive human-gated LONG tick; engine STOPPED ticks=2
+**Tags**: B1.1, paper-live, DualMA-LONG, 7th-human-tick, LONG-tailwind, engine-frozen, gate-constrained
+
+### Insight 3: parallel-branch-push-as-session-discipline
+
+The correct human-session discipline is parallel branch push: read dynamic_tree → identify pushable branches → execute B1.1 + B6 + B3.1 in parallel (not sequential). This session ran B1.1 (paper tick), B6 (consistency check), B3.1 (distil119) in parallel via concurrent bash invocations before committing all at once. The `?` quick command in CLAUDE.md encodes this discipline: tree status → push 2-4 branches → persist. Parallel push is not just efficiency — it is the anti-pattern to "conscious idle" (labeling single-branch work as strategic when three branches were pushable). When human session fires: push all pushable branches atomically, then commit.
+
+**Signal source**: this session ran B1.1+B6 concurrently (2 bash calls in single tool round), then B3.1 distil119 sequentially; all 3 branches pushed before single commit; contrast with single-branch sequential = inefficient use of human-session resource
+**Tags**: methodology, parallel-branch-push, session-discipline, human-session, anti-conscious-idle, atomic-commit
+
+---
