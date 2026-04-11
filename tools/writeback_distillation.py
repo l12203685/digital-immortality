@@ -30,6 +30,9 @@ LYH_LOG = Path("C:/Users/admin/LYH/memory/log.md")
 LYH_REPO = Path("C:/Users/admin/LYH")
 
 CYCLE_HEADER = re.compile(r"^## Cycle (\d+)\s*(?:—|-)\s*(\S+)")
+# Reject range headers like "## Cycle 262-270" — these are legacy backfill entries
+# from a previous daemon numbering scheme. Canonical distil cycles are single ints.
+CYCLE_RANGE_HEADER = re.compile(r"^## Cycle \d+\s*-\s*\d+")
 INSIGHT_HEADER = re.compile(r"^### Insight (\d+):\s*(.+)$")
 
 
@@ -88,12 +91,21 @@ def parse_cloud(path: Path) -> List[Cycle]:
         cur_ts = ""
         cur_insights = []
 
+    skip_current = False
     for line in lines:
+        # Reject legacy range headers like "## Cycle 262-270 — ..." outright.
+        if CYCLE_RANGE_HEADER.match(line):
+            _flush_cycle()
+            skip_current = True
+            continue
         m = CYCLE_HEADER.match(line)
         if m:
             _flush_cycle()
+            skip_current = False
             cur_cycle = int(m.group(1))
             cur_ts = m.group(2)
+            continue
+        if skip_current:
             continue
         mi = INSIGHT_HEADER.match(line)
         if mi:
@@ -109,6 +121,27 @@ def parse_cloud(path: Path) -> List[Cycle]:
 
     _flush_cycle()
     return cycles
+
+
+def tail_distil_series(cycles: List[Cycle]) -> List[Cycle]:
+    """Return only the last contiguous monotonically-increasing run.
+
+    The cloud file mixes legacy daemon cycles (241, 243, 244, 257, ...) with
+    the current distil series (95, 96, ..., N). When we see a backward jump
+    (prev_number > current_number), that's a numbering-scheme reset — discard
+    everything seen so far and start a fresh tail from the current cycle.
+
+    This gives us only the genuine distil cycles at the tail of the file.
+    """
+    tail: List[Cycle] = []
+    prev: Optional[int] = None
+    for c in cycles:
+        if prev is not None and c.number < prev:
+            # Backward jump = reset signal. Drop prior accumulated cycles.
+            tail = []
+        tail.append(c)
+        prev = c.number
+    return tail
 
 
 def last_writtenback_cycle(path: Path) -> int:
@@ -193,6 +226,10 @@ def main() -> None:
     cycles = parse_cloud(args.cloud)
     if not cycles:
         print(f"No cycles parsed from {args.cloud}")
+        return
+    cycles = tail_distil_series(cycles)
+    if not cycles:
+        print("No distil cycles found in tail series")
         return
     last_done = last_writtenback_cycle(args.lyh)
     new = new_cycles_since(cycles, last_done)
