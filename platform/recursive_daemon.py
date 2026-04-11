@@ -22,7 +22,7 @@ LOG_PATH = REPO_ROOT / "results" / "daemon_log.md"
 PRIORITY_PATH = REPO_ROOT / "results" / "daemon_next_priority.txt"
 AUDIT_SCRIPT = REPO_ROOT / "platform" / "daemon_audit.py"
 DEFAULT_MODEL = "claude-sonnet-4-6"
-MIN_INTERVAL = 5  # seconds, rate-limit floor
+MIN_INTERVAL = 0  # seconds between cycles (0 = run next immediately after done)
 
 TREE_PATH = REPO_ROOT / "results" / "dynamic_tree.md"
 
@@ -99,6 +99,37 @@ def build_system_prompt(dna: str) -> str:
 DISCORD_WEBHOOK_TREE = "https://discord.com/api/webhooks/1491644107788128439/Ndafv8puWZKaqHYcp-icHRRWealC0TfrZxO_k9DR1Dj2ANbFx5eyI3Ynvs8M_XO7y3jj"
 # DOS organism-edward #thinking
 DISCORD_WEBHOOK_DOS = "https://discord.com/api/webhooks/1491656164432412784/lmXONbcP4tIUUsXbP71ACKTilZ6F4FiEwtgUawJWFshAFQletXg9E2xAq5Nxo9XzSRKZ"
+
+
+QUICK_STATUS_PATH = REPO_ROOT / "staging" / "quick_status.md"
+
+
+def update_quick_status(cycle: int, mode: str, model: str, interval: int) -> None:
+    """Auto-update staging/quick_status.md after each cycle."""
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M Taipei")
+    interval_str = f"{interval}s" if interval > 0 else "immediate (chain)"
+    content = f"""# Quick Status — live state snapshot for Type A cold start
+
+> Updated: {ts} (auto-written by daemon cycle {cycle})
+
+## Current state
+- daemon: RUNNING (cycle {cycle}, {mode}, {model}, interval {interval_str})
+- trading_engine: STOPPED
+- last_daemon_cycle: {cycle}
+- last_real_work_cycle: {cycle}
+- backup_tag: `pre-optimization-backup` → ddc5d88
+- web_scheduled: RUNNING (digital-immortality-recursive, hourly)
+
+## Blockers (human-gated)
+- mainnet API keys (~88d until 2026-07-07)
+- outreach DMs × 5 pending (staging/outreach_week1_execution.md)
+- Samuel Turing test invite (human-send)
+
+## Stale-detection
+If "Updated" > 6h old, read `results/daemon_log.md` (tail) + `staging/session_state.md` for ground truth.
+"""
+    QUICK_STATUS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    QUICK_STATUS_PATH.write_text(content, encoding="utf-8")
 
 
 def append_log(cycle: int, response: str) -> None:
@@ -282,6 +313,7 @@ def main():
             else:
                 text = run_cycle_api(client, system, args.model, cycle)
             append_log(cycle, text)
+            update_quick_status(cycle, mode, args.model, interval)
             subprocess.run([sys.executable, str(REPO_ROOT / "platform" / "generate_dashboard_state.py")], cwd=REPO_ROOT, capture_output=True, timeout=30)
             run_audit_suggest()
             if not args.no_commit:
