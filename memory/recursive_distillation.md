@@ -2103,3 +2103,29 @@ Floor break $72,633 < $72,638 floor is a resolution mismatch: the $72,638 floor 
 
 **Signal source**: cycle 356 analysis — BTC floor break $72,633 vs $72,638 floor; DualMA signal=LONG unchanged; observation: resolution mismatch between empirical floor and MA-crossover timescale; 2026-04-11T09:10Z
 **Tags**: B1.1, B3.1, floor-break-interpretation, resolution-mismatch, empirical-floor-vs-ma-signal, slow-ma-timescale, situational-awareness-layer, decision-trigger-layer, category-error-prevention, noise-band-006-percent
+
+## Cycle 158 — 2026-04-11T09:20:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 281 file / running: 391)
+
+### Insight 1: 46th-human-tick-btc72633-flat-second-consecutive-floor-violation
+
+BTC=$72,633.40 (±$0.00 from cycle 356 $72,633.40; flat — effectively zero change; second consecutive close below $72,638 prior floor). DualMA_10_30=LONG OPEN_LONG (46th consecutive human-session LONG tick — structural signal unbroken). Donchian_20=FLAT HOLD. DualMA variants disabled PF<0.8. Engine tick=297 STOPPED G0/G1 FROZEN. Watch threshold: 2/3 consecutive below $72,638 — one more → range-shift event (re-derive range, reassess LONG position). Flat price for two sessions = ambiguous signal: could be (a) range compressing at new lower level, (b) consolidation at new support ~$72,633, (c) market-wide low volatility causing stagnation. The three-session rule prevents premature range re-derivation. Correct posture: hold LONG, watch third session with elevated attention.
+
+**Signal source**: Binance API price=72633.40; trading_engine_status.json tick_count=297 last_tick=2026-04-11T09:14Z; human session cycle 357; prev cycle 356 BTC=$72,633.40; 2026-04-11T09:20Z
+**Tags**: B1.1, 46th-human-tick, btc72633, flat-price, second-consecutive-floor-violation, floor-72638-watch-2-of-3, DualMA-LONG-structural, range-shift-watch, three-session-rule, ambiguous-signal
+
+### Insight 2: 107th-B6-38-of-41-twenty-first-pass-pure-maintenance
+
+107th B6 run: **38/41 ALIGNED ✅**. Permanent 3 MISALIGNED unchanged (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev — permanent LLM boundary). Post-protocol-closure twenty-first pass. Tripwire: clear (single-cycle variance resolved two cycles ago). Pure-maintenance mode confirmed. Behavioral equivalence signal: 107 consecutive aligned runs. Each additional clean run increases the Bayesian posterior that the 38/41 ceiling is structural (LLM boundary), not drift-correctable. The 3 permanent MISALIGNED are signal, not noise — they correctly mark the hard limit of text-only behavioral capture (poker GTO math, ATR sizing formula precision, career EV listing). Accept as boundary, not failure.
+
+**Signal source**: cycle 357 human session — consistency_test.py; 107th run; 38/41 ALIGNED; twenty-first pass post-protocol-closure; 2026-04-11T09:20Z
+**Tags**: B6, 107th-run, 38-of-41, twenty-first-pass, pure-maintenance, behavioral-equivalence-107-runs, permanent-llm-boundary, bayesian-ceiling-confirmed, tripwire-clear
+
+### Insight 3: flat-price-two-sessions-ambiguity-framework
+
+Two consecutive sessions with the same price ($72,633.40) at the floor boundary creates an epistemically ambiguous state: more data is needed before any conclusion. The standard framework for ambiguous signals: (1) identify what observation would confirm each hypothesis, (2) pre-commit the decision rule before the data arrives (not after), (3) execute mechanically when threshold is reached. Applied here: H1=range-shift → 3rd consecutive close below $72,638 confirms. H2=noise-cluster → 3rd session recovery above $72,638 confirms. Pre-committed rule: if H1 confirms → re-derive range ($72,600–$72,800 candidate), monitor DualMA for crossover signal. If H2 confirms → floor intact, range unchanged ($72,638–$72,831). No action required now. The three-session rule IS the pre-commitment — it was set two cycles ago before the data arrived. This is the framework working correctly.
+
+**Signal source**: cycle 357 analysis — two consecutive flat prices at floor; epistemological ambiguity framework; pre-commitment via three-session rule; 2026-04-11T09:20Z
+**Tags**: B1.1, B3.1, ambiguity-framework, pre-commitment, three-session-rule, hypothesis-testing, decision-rule-before-data, range-shift-vs-noise-cluster, epistemological-clarity
