@@ -2185,3 +2185,26 @@ Applying the three-layer framework to the upside range-break: L1 (primary signal
 
 **Signal source**: cycle 359 analysis — BTC $72,868.01 ceiling break $36.70 above $72,831; three-layer-framework applied; DualMA=LONG unchanged; range-recalculation-watch activated; 2026-04-11T09:23Z
 **Tags**: B1.1, B3.1, ceiling-break-confirmed, three-layer-framework, L1-governs-position, L2-situational-awareness-range-shift, L3-recalculation-watch, LONG-at-ceiling-break, range-72638-72831-superseded, new-range-tbd, signal-discipline-no-action
+
+## Cycle 161 — 2026-04-11T09:27:00+00:00
+
+### Insight 1: 49th-human-tick-btc72859-headwind-9-post-ceiling-break-hold
+
+BTC=$72,858.97 (↓$9.04 from cycle 359 $72,868.01; LONG headwind minimal). DualMA_10_30=LONG OPEN_LONG (49th consecutive human-session LONG tick — structural signal unbroken). Donchian_20=FLAT HOLD. DualMA variants disabled PF<0.8. Engine STOPPED G0/G1 FROZEN tick=297. **Post-ceiling-break first session**: BTC $27.97 above prior ceiling $72,831 — holding above. New ceiling TBD: need 2-3 sessions above $72,831 to establish empirical new ceiling. The ↓$9.04 headwind is noise at slow-MA resolution — not a range-reversal signal. LONG discipline: same rules apply above old ceiling as below it.
+
+**Signal source**: Binance API price=72858.97; paper_trader.py --paper-live; human session cycle 360; prev cycle 359 BTC=$72,868.01; 2026-04-11T09:27Z
+**Tags**: B1.1, 49th-human-tick, btc72859, headwind-9, post-ceiling-break-first-session, new-ceiling-tbd, ceiling-72831-superseded, above-72831-holds, 2-3-sessions-needed, DualMA-LONG-structural, slow-ma-noise
+
+### Insight 2: 110th-B6-37-of-41-regression-flag-second-occurrence
+
+110th B6 run: **37/41 ALIGNED ⚠️ REGRESSION FLAG**. New MISALIGNED: generic_long_term_survival_check. Permanent 3 MISALIGNED unchanged (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev). Post-protocol-closure twenty-fourth pass. **This is the SECOND occurrence** of generic_long_term_survival_check misaligning (first: cycle 355, resolved next cycle 356). Pattern: this scenario shows LLM variance that occasionally crosses the alignment threshold. Two data points: cycle 355 (37/41), resolved to 38/41 cycle 356; now cycle 360 (37/41). Hypothesis: this particular scenario sits at the LLM sampling boundary — some calls align, some don't. The rule: single occurrence = flag+monitor; consecutive = L3 recalibrate. Next cycle determines.
+
+**Signal source**: cycle 360 human session — consistency_test.py; 110th run; 37/41 ALIGNED; twenty-fourth pass post-protocol-closure; 2026-04-11T09:27Z
+**Tags**: B6, 110th-run, 37-of-41, twenty-fourth-pass, regression-flag-second-occurrence, generic-long-term-survival-check-boundary-scenario, llm-sampling-variance, cycle-355-pattern-recurrence, next-cycle-determines, tripwire-flag
+
+### Insight 3: second-occurrence-regression-pattern-monitoring-threshold
+
+The recurring generic_long_term_survival_check misalignment is establishing a pattern: this scenario sits at the LLM sampling boundary. Two occurrences in 110 runs (cycles 355 and 360) means ~1.8% recurrence rate. Both resolved in the next cycle. The relevant operational insight: NOT all 38/41 runs are identical confidence — some scenarios have stable alignment (100%), some have ~98%, some fluctuate near the boundary. The permanent 3 misaligned represent 100% misalignment (structural). generic_long_term_survival_check represents ~98% alignment (mostly passes, occasionally fails). This granularity matters for interpreting B6 output: 37/41 ≠ regression if the new misalignment is a known boundary scenario. Protocol: flag if new; L3 if consecutive; update boundary-scenario list if pattern confirmed over ≥3 occurrences.
+
+**Signal source**: cycle 360 analysis — two-occurrence analysis cycles 355+360; boundary-scenario hypothesis; 2026-04-11T09:27Z
+**Tags**: B3.1, boundary-scenario-hypothesis, llm-sampling-boundary, 98pct-alignment-scenario, recurrence-rate-1.8pct, granular-B6-interpretation, not-all-misalignments-equal, protocol-flag-flag-L3, boundary-scenario-list-evolution

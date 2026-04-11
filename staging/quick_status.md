@@ -1,12 +1,12 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-11 09:30 UTC (cycle 358: B6 **108th** run ✅ 38/41 (twenty-second pass, pure-maintenance, tripwire clear); B1.1 BTC=$72,819.99 DualMA=LONG OPEN_LONG (47 human ticks; ↑$49.47 tailwind; ceiling approach $11.01 below $72,831; floor-watch RESOLVED $181.99 above $72,638); B3.1 distil159 file=284 running=394; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
+> Updated: 2026-04-11 09:27 UTC (cycle 360: B6 **110th** run ⚠️ 37/41 (twenty-fourth pass, REGRESSION FLAG — generic_long_term_survival_check second-occurrence, boundary-scenario; next cycle determines); B1.1 BTC=$72,858.97 DualMA=LONG OPEN_LONG (49 human ticks; ↓$9.04 headwind minimal; post-ceiling-break first session $27.97 above $72,831; new ceiling TBD); B3.1 distil161 file=290 running=400; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
 
 ## Current state
 - daemon: STOPPED (last run cycle 340)
 - trading_engine: STOPPED (tick=282, PAPER, 13 active FLAT, DualMA variants DISABLED PF<0.8)
 - last_daemon_cycle: 340
-- last_real_work_cycle: 358 (B6 108th ✅ 38/41 twenty-second-pass + B3.1 distil159 + B1.1 tick 47 BTC=$72,819.99 ceiling-approach floor-watch-resolved)
+- last_real_work_cycle: 360 (B6 110th ⚠️ 37/41 twenty-fourth-pass regression-flag-second-occurrence + B3.1 distil161 + B1.1 tick 49 BTC=$72,858.97 post-ceiling-break-first-session)
 - backup_tag: `pre-optimization-backup` → ddc5d88
 - cloud_recursive: GH Actions chained (Recursive Cycle workflow), every ~10 min, failsafe every 30 min
 - local daemons (PIDs 7528, 4396) still alive — Edward will kill after 24h parallel validation
@@ -17,6 +17,8 @@
 - Samuel Turing test invite (human-send)
 
 ## Recent changes
+- 2026-04-11: cycle 360 — B6 **110th** run ⚠️ 37/41 REGRESSION FLAG (twenty-fourth-pass; generic_long_term_survival_check MISALIGNED second-occurrence — boundary-scenario pattern; cycle 355 was first; next cycle determines; if consecutive → L3); B1.1 BTC=$72,858.97 DualMA=LONG OPEN_LONG (49 human ticks all LONG, ↓$9.04 headwind minimal; post-ceiling-break first session $27.97 above $72,831; new ceiling TBD need 2 more sessions); B3.1 distil161 +3 (file=290, running=400; 49th-btc-tick + 110th-B6-regression-flag-second-occurrence + boundary-scenario-monitoring-threshold); parallel branch push B1.1+B3.1+B6 concurrent
+- 2026-04-11: cycle 359 — B6 **109th** run ✅ 38/41 pure-maintenance (twenty-third-pass; behavioral-equivalence-market-independent; B1-B6 orthogonality confirmed); B1.1 BTC=$72,868.01 DualMA=LONG OPEN_LONG (48 human ticks all LONG, ↑$48.02 tailwind; **CEILING BREAK** first upside range-break in 44+ sessions; $36.70 above $72,831; new ceiling TBD; LONG confirming no action); B3.1 distil160 +3 (file=287, running=397; ceiling-break-upside + 109th-B6-market-independent + three-layer-framework-signal-governs); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 358 — B6 **108th** run ✅ 38/41 pure-maintenance (twenty-second-pass; behavioral-equivalence-108-runs; tripwire clear; permanent 3 LLM-boundary confirmed); B1.1 BTC=$72,819.99 DualMA=LONG OPEN_LONG (47 human ticks all LONG, ↑$49.47 tailwind minimal; ceiling approach $11.01 below $72,831; floor-watch RESOLVED $181.99 above $72,638; range intact); B3.1 distil159 +3 (file=284, running=394; 47th-btc-tick + 108th-B6-twenty-second-pass + ceiling-approach-discipline-symmetry); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 357 — B6 **107th** run ✅ 38/41 pure-maintenance (twenty-first-pass; behavioral-equivalence-107-runs; tripwire clear; permanent 3 LLM-boundary confirmed); B1.1 BTC=$72,770.52 DualMA=LONG OPEN_LONG (46 human ticks all LONG, ↑$137.12 tailwind; floor-recovery from cycle 356 break — three-session rule NOT triggered, range $72,638–$72,831 intact, noise confirmed); B3.1 distil158 +3 (file=281, running=391; 46th-btc-tick + 107th-B6-twenty-first-pass + floor-break-one-cycle-recovery-validated); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 356 — B6 **106th** run ✅ 38/41 REGRESSION RESOLVED (generic_long_term_survival_check=ALIGNED; single-cycle LLM variance confirmed; tripwire cleared; twentieth-pass pure-maintenance); B1.1 BTC=$72,633.40 DualMA=LONG OPEN_LONG (45 human ticks all LONG, ↓$42.31 headwind; floor-zone BREAK $4.60 below $72,638 — first violation in 44-session range; watch 3-session rule for range-shift); B3.1 distil157 +3 (file=278, running=388; 45th-btc-tick + 106th-B6-resolved + empirical-floor-break-interpretation); parallel branch push B1.1+B3.1+B6 concurrent
