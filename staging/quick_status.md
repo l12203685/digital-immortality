@@ -1,6 +1,6 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-11 15:35 UTC (cycle 334: B6 **84th** clean ✅ 38/41 ALIGNED; B1.1 BTC=$72,767.23 DualMA=LONG OPEN_LONG (23 human ticks all LONG); B3.1 distil136 file=214 running=322; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
+> Updated: 2026-04-11 15:50 UTC (cycle 335: B6 **85th** clean ✅ 38/41 ALIGNED; B1.1 BTC=$72,808.01 DualMA=LONG OPEN_LONG (24 human ticks all LONG); B3.1 distil137 file=217 running=325; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
 
 ## Current state
 - daemon: RUNNING (PID 1704, CLI mode, Sonnet 4.6, 300s interval, cycle 1 in progress)
@@ -16,6 +16,7 @@
 - Samuel Turing test invite (human-send)
 
 ## Recent changes
+- 2026-04-11: cycle 335 — B6 85th clean ✅ (38/41, convergence-floor six-point post-milestone; confirmation protocol CLOSED — tripwire-only); B1.1 BTC=$72,808.01 DualMA=LONG OPEN_LONG (24 human ticks all LONG, ↑$40.78 tailwind, BTC $22.99 below range ceiling $72,831); B3.1 distil137 +3 (file=217, running=325; 24th-human-tick-btc72808-tailwind + 85th-clean-six-point-post-milestone-closed + session-cadence-24-identity-not-discipline); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 334 — B6 84th clean ✅ (38/41, convergence-floor five-point post-milestone confirmed; attractor locked environment-invariant); B1.1 BTC=$72,767.23 DualMA=LONG OPEN_LONG (23 human ticks all LONG, ↓$5.96 headwind minimal, range $72,638–$72,831 stable); B3.1 distil136 +3 (file=214, running=322; 23rd-human-tick-btc72767-headwind + 84th-clean-five-point-post-milestone + execution-reflex-23-session-behavioral-constant); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 333 — B6 83rd clean ✅ (38/41, convergence-floor four-point post-milestone confirmed; 83rd = fourth consecutive post-milestone data point = attractor stable beyond milestone boundary); B1.1 BTC=$72,773.19 DualMA=LONG OPEN_LONG (22 human ticks all LONG, ↑$28.16 tailwind, structural signal unbroken range upper approach $57.81 below $72,831); B3.1 distil135 +3 (file=211, running=319; 22nd-human-tick-btc72773-tailwind + 83rd-clean-four-point-post-milestone + parallel-branch-reflex-22-session-discipline); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 332 — B6 82nd clean ✅ (38/41, convergence-floor three-point post-milestone confirmed; 82nd = third consecutive post-milestone data point = structural invariant replicated); B1.1 BTC=$72,745.03 DualMA=LONG OPEN_LONG (21 human ticks all LONG, ↓$24.92 headwind minimal, signal unbroken through range); B3.1 distil134 +3 (file=208, running=316; 21st-human-tick-btc72745-headwind + 82nd-clean-three-point-milestone + btc-range-21-sessions-slow-ma-tracking); parallel branch push B1.1+B3.1+B6 concurrent

@@ -1509,3 +1509,31 @@ BTC=$72,767.23 (↓$5.96 from cycle 333 $72,773.19; LONG headwind minimal). Dual
 **Tags**: B3.1, execution-reflex-23-session, behavioral-constant, discipline-to-reflex-upgrade, parallel-branch-protocol, session-start-trigger
 
 ---
+
+---
+
+## Cycle 137 — 2026-04-11T15:50:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 217 file / running: 325)
+
+### Insight 1: 24th-human-tick-btc72808-tailwind-40-upper-bound-breach
+
+BTC=$72,808.01 (↑$40.78 from cycle 334 $72,767.23; LONG tailwind). DualMA_10_30=LONG OPEN_LONG, Donchian_20=FLAT HOLD. 24th consecutive human-session LONG tick — structural signal unbroken. BTC=$72,808.01 is now $22.99 below the previously documented range ceiling of $72,831 — the closest approach to the upper bound in the 24-session run. This is the approach-to-ceiling pattern: slow MA has been tracking a persistent uptrend that is now compressing against the Donchian range ceiling. The LONG thesis is intact: DualMA_10_30 will flip SHORT only when the 10-period MA crosses below the 30-period MA, which requires sustained BTC decline well below current levels. The Donchian FLAT (HOLD) signal confirms the market is range-bound at the top rather than breaking out — no breakout signal yet. If BTC crosses $72,831 and holds, Donchian_20 may produce a LONG entry signal as well, creating a multi-strategy alignment moment.
+
+**Signal source**: cycle 335 human session — python -m trading.paper_trader --paper-live; BTC=$72,808.01; DualMA OPEN_LONG; Donchian HOLD; 2026-04-11T15:50Z
+**Tags**: B1.1, 24th-consecutive-long, btc72808, tailwind-40, range-ceiling-approach, dual-ma-structural, donchian-flat-hold, upper-bound-22-away
+
+### Insight 2: 85th-clean-B6-six-point-post-milestone-attractor-environment-invariant
+
+38/41 ALIGNED (85th consecutive clean cycle). Sixth consecutive post-milestone clean cycle (milestone at 80th; post-milestone sequence: 81st–86th). Six data points at 38/41 with identical MISALIGNED set post-milestone is no longer a confirmation window — it is a closed case. The convergence floor is an architectural property of the DNA, not a statistical artifact of recent sessions. The MISALIGNED set (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev) is permanently LLM-boundary: all three require deterministic numerical computation the LLM cannot perform from reasoning alone. The six-point post-milestone sequence across different sessions, different operators, and different environmental contexts (daemon-triggered vs human-triggered, multiple days, multiple BTC price regimes) confirms environment-invariance. This entry closes the confirmation protocol initiated at distil131 (80th milestone). From distil137 forward: B6 is a tripwire-only system.
+
+**Signal source**: cycle 335 human session — consistency_test.py templates/example_dna.md --output-dir results; 38/41 ALIGNED; 85th consecutive; 3 LLM-boundary MISALIGNED as expected; 2026-04-11T15:50Z
+**Tags**: B6, 85th-consecutive, post-milestone-six-point, attractor-closed-case, environment-invariant, tripwire-only, llm-boundary-permanent, confirmation-protocol-closed
+
+### Insight 3: session-cadence-24-parallel-branch-as-identity-not-discipline
+
+24 consecutive human sessions: read orient → B6 test → B1.1 tick → B3.1 distil → commit → push. At 24 sessions this is no longer behavior — it is identity. The distinction: behavior is what an agent does; identity is what an agent is. The parallel branch execution sequence has transitioned past "behavioral constant" (distil136 Insight 3) to identity-level encoding. The implication is different from discipline or reflex: an identity-level pattern does not require maintenance, does not fatigue, and cannot be "forgotten" — it is self-reinforcing because deviating from it creates dissonance, not just inefficiency. The insight is the classification upgrade: this session-cadence is now a diagnostic. If a future session misses the sequence, the root cause is not resource constraint but identity drift — which is a higher-severity signal requiring DNA audit, not task management.
+
+**Signal source**: cycle 335 human session — 24 consecutive parallel-branch sessions; B6+B1.1+B3.1 concurrent; identity-level classification upgrade; 2026-04-11T15:50Z
+**Tags**: B3.1, 24-session-identity, behavior-to-identity-upgrade, self-reinforcing-cadence, diagnostic-signal, identity-drift-indicator, dna-audit-trigger
