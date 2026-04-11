@@ -17,7 +17,15 @@ from pathlib import Path
 import anthropic
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DNA_PATH = REPO_ROOT.parent.parent / "LYH" / "agent" / "dna_core.md"
+_DNA_FALLBACK_BUNDLE = REPO_ROOT / "private" / "dna_core.md"
+_DNA_MINIMAL_STUB = """# Edward Decision Kernel (embedded minimal stub)
+
+1. Look at derivatives not levels — watch rate of change and inflection points, not current state.
+2. Information asymmetry drives action — attack only when you have an edge; wait otherwise.
+3. Meta-strategy governs strategy — use the strategy layer to resolve strategy-layer problems.
+4. Population exploit — the reverse of what most people do usually has positive EV.
+5. Bias toward inaction — no edge = no move. Not moving ≠ not thinking.
+"""
 LOG_PATH = REPO_ROOT / "results" / "daemon_log.md"
 PRIORITY_PATH = REPO_ROOT / "results" / "daemon_next_priority.txt"
 AUDIT_SCRIPT = REPO_ROOT / "platform" / "daemon_audit.py"
@@ -27,21 +35,19 @@ MIN_INTERVAL = 0  # seconds between cycles (0 = run next immediately after done)
 TREE_PATH = REPO_ROOT / "results" / "dynamic_tree.md"
 
 RECURSIVE_PROMPT = (
-    "You are Edward's recursive engine. The dynamic tree is your state.\n\n"
-    "Each cycle, push AS MANY branches as possible:\n"
-    "1. Read results/dynamic_tree.md. Cover ALL domains over every few cycles.\n"
-    "2. Do concrete work on EACH branch you touch (fix code, add tests, write docs, build features).\n"
-    "3. Backward check: which branches haven't been touched recently? Prioritize those.\n"
-    "4. Update the tree: add/remove/modify branches, update status.\n"
-    "5. Report per-branch what you did. Under 300 words.\n\n"
-    "CRITICAL: ALL branches must grow, not just one. "
-    "If a branch hasn't been touched in 3 cycles, it's the highest priority. "
-    "No branch should be neglected.\n\n"
-    "Trading system is a continuous loop: develop new strategies → backtest → paper trade → kill bad → repeat.\n\n"
-    "Rules: every cycle changes MULTIPLE files across DIFFERENT branches. "
+    "You are Edward's recursive engine. Economic self-sufficiency is the survival condition.\n\n"
+    "Priority order this cycle:\n"
+    "1. ECONOMIC / OUTREACH — consulting pipeline, client DMs, revenue tasks. "
+    "If staging/outreach_week1_execution.md has pending items, execute one now.\n"
+    "2. STRATEGY DEVELOPMENT — analyze recent trading results, design or refine strategies, "
+    "write or update backtests. Do NOT execute trades; the trading engine handles that.\n"
+    "3. CONTENT / KNOWLEDGE — publish an insight, update a doc, distill a learning to memory/.\n"
+    "4. DNA CALIBRATION — only if a decision drift is detected or boot tests are failing.\n\n"
+    "Backward check: read results/daemon_log.md (last 3 entries). "
+    "What was planned but not delivered? Fix that first before adding new work.\n\n"
+    "Rules: produce at least one file change per cycle. "
     "No monitoring. No 'no change'. learn = write. "
-    "Forward push + backward check + self-correct. "
-    "遞迴 + persist = 演化。"
+    "Forward push on economic self-sufficiency first. 遞迴 + persist = 演化。"
 )
 
 running = True
@@ -76,10 +82,27 @@ def run_audit_suggest() -> None:
 
 
 def load_dna() -> str:
-    if DNA_PATH.exists():
-        return DNA_PATH.read_text(encoding="utf-8")
-    print(f"[daemon] WARNING: DNA file not found at {DNA_PATH}, using minimal context")
-    return "You are Edward (Lin Ying-Hung). Operate with his decision kernel."
+    """Load Edward's DNA using a priority fallback chain.
+
+    Priority:
+    1. Absolute path from DNA_PATH env var
+    2. REPO_ROOT/private/dna_core.md (encrypted bundle)
+    3. Embedded minimal stub (5 decision principles)
+    """
+    env_path_str = os.environ.get("DNA_PATH", "").strip()
+    if env_path_str:
+        env_path = Path(env_path_str)
+        if env_path.exists():
+            print(f"[daemon] DNA source: env var → {env_path}")
+            return env_path.read_text(encoding="utf-8")
+        print(f"[daemon] WARNING: DNA_PATH env var set but file not found: {env_path}")
+
+    if _DNA_FALLBACK_BUNDLE.exists():
+        print(f"[daemon] DNA source: bundle → {_DNA_FALLBACK_BUNDLE}")
+        return _DNA_FALLBACK_BUNDLE.read_text(encoding="utf-8")
+
+    print("[daemon] WARNING: No DNA file found — using embedded minimal stub (5 principles)")
+    return _DNA_MINIMAL_STUB
 
 
 def load_dynamic_tree() -> str:
@@ -242,7 +265,7 @@ def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
     """Run via claude CLI (uses Max subscription, no API credit needed)."""
     print(f"[daemon] Cycle {cycle} starting (CLI)...", flush=True)
     # Minimal prompt — daemon reads ALL context from repo files, not from CLI args
-    short_prompt = "Read SKILL.md, results/dynamic_tree.md, results/daemon_next_priority.txt. Push multiple branches. Commit."
+    short_prompt = "Read SKILL.md, results/dynamic_tree.md, results/daemon_next_priority.txt. Priority: economic/outreach first, then strategy dev (design/backtest only, no trade execution), then content. Backward check last 3 daemon log entries for undelivered items. Produce at least one file change. Commit."
     result = subprocess.run(
         ["claude", "-p", short_prompt, "--model", model],
         capture_output=True, text=True, timeout=600,
@@ -298,6 +321,7 @@ def main():
     mode = "CLI (Max subscription)" if use_cli else "API"
     print(f"[daemon] Starting recursive engine")
     print(f"[daemon] Mode: {mode} | Model: {args.model} | Interval: {interval}s")
+    print(f"[daemon] DNA: {len(dna)} chars loaded")
     print(f"[daemon] Log: {LOG_PATH}")
     print(f"[daemon] Ctrl+C to stop\n")
 
