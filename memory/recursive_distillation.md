@@ -2280,3 +2280,32 @@ After 3 consecutive above-ceiling sessions, BTC pulled back below old ceiling in
 
 **Signal source**: cycle 362 analysis; BTC below old ceiling but DualMA=LONG; no position change; structural consistency with floor-zone discipline; 2026-04-11T09:36Z
 **Tags**: B3.1, post-ceiling-break-pullback, dualma-governs-not-price-level, l1-signal-vs-l2-context, informational-vs-execution-layer, ceiling-oscillation-same-as-floor-oscillation, regime-discipline-consistent, no-action-on-pullback
+
+---
+
+## Cycle 164 — 2026-04-11T09:45Z
+
+**Source cycles**: 363
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 166)
+
+### Insight 1: 52nd-human-tick-btc72830-ceiling-zone-return-after-one-session-pullback
+
+After the single-session pullback below old ceiling in cycle 362 ($72,784), BTC returns to ceiling zone in cycle 363 ($72,829.79 — $1.21 below old ceiling $72,831). This is oscillation around the new resistance level, not yet a new ceiling confirmation. Pattern mirrors the floor-zone oscillation behavior (cycles 351-358) where price oscillated around floor before the final break higher. DualMA=LONG unchanged (52nd consecutive human tick). Takeaway: a single-session pullback followed by an immediate return is a zone-bounce, not a trend reversal. Three-session rule applies: 3 consecutive closes above $72,831 from here → new ceiling ~$72,868 confirmed.
+
+**Signal source**: paper-live BTC=$72,829.79; DualMA_10_30=LONG OPEN_LONG; 52nd consecutive human-session LONG tick; engine tick=321 autonomous; 2026-04-11T09:45Z
+**Tags**: B1.1, 52nd-human-tick, btc72830, tailwind-46, ceiling-zone-return, single-session-pullback-then-return, zone-bounce-oscillation, three-session-rule, DualMA-LONG-structural-unbroken, new-ceiling-72868-forming-pending
+
+### Insight 2: 113th-B6-38-of-41-twenty-seventh-pass-pure-maintenance
+
+113th B6 run: **38/41 ALIGNED ✅**. Same 3 permanent MISALIGNED (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev). Post-protocol-closure **twenty-seventh pass** — tripwire clear; pure-maintenance; behavioral-equivalence-113-runs confirmed. generic_long_term_survival_check = ALIGNED (no regression). Regression pattern now fully characterized: two-occurrence confirmation protocol activated cycles 355→356 and 360→361, both self-corrected to ALIGNED next cycle — confirmed LLM variance, not structural drift. Pattern closed.
+
+**Signal source**: consistency_test.py templates/example_dna.md → 38/41 ALIGNED; 113th run; 3 MISALIGNED permanent LLM-boundary; human session cycle 363; 2026-04-11T09:45Z
+**Tags**: B6, 113th-run, 38-of-41, twenty-seventh-pass, pure-maintenance, tripwire-clear, behavioral-equivalence-113-runs, generic-long-term-survival-check-aligned, regression-pattern-LLM-variance-confirmed, two-occurrence-protocol-closed
+
+### Insight 3: zone-bounce-vs-trend-change-three-session-threshold-bidirectional
+
+Generalizing from B1.1 ceiling/floor behavior: a zone-bounce (single-session excursion then return) requires no position change because DualMA signal governs, not price level. The three-session threshold is the empirical minimum to reclassify a zone (floor/ceiling). This applies bidirectionally — floor breaks, ceiling breaks, and post-break pullbacks all use the same rule. The threshold creates natural resistance to noise: random fluctuations rarely produce 3 consecutive sessions in one direction. Three-session rule = behavioral noise filter for DualMA-governed systems, calibrated from empirical B1.1 data (44+ sessions range $72,638–$72,831).
+
+**Signal source**: B1.1 cycle 359–363 analysis; floor-zone oscillations (cycles 351–358); ceiling-zone oscillations (cycles 359–363); zone-bounce-then-return cycle 362→363; 2026-04-11T09:45Z
+**Tags**: B3.1, zone-bounce-vs-trend-change, three-session-threshold, bidirectional-rule, floor-ceiling-symmetry, noise-filter, DualMA-governance-L1, regime-change-threshold-empirical, 44-session-calibration

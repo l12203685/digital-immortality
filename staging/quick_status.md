@@ -1,12 +1,12 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-11 09:36 UTC (cycle 362: B6 **112th** run ✅ 38/41 (twenty-sixth pass, pure-maintenance; generic_long_term_survival_check ALIGNED — no regression); B1.1 BTC=$72,784.22 DualMA=LONG OPEN_LONG (51 human ticks; ↓$67.77 headwind; pullback below old ceiling $72,831 after 3 above-ceiling sessions; new ceiling HIGH ~$72,868 forming; engine tick=319 autonomous); B3.1 distil163 file=296 running=406; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
+> Updated: 2026-04-11 09:45 UTC (cycle 363: B6 **113th** run ✅ 38/41 (twenty-seventh pass, pure-maintenance; generic_long_term_survival_check ALIGNED — regression-pattern two-occurrence protocol CLOSED; LLM-variance confirmed); B1.1 BTC=$72,829.79 DualMA=LONG OPEN_LONG (52 human ticks; ↑$45.57 tailwind; ceiling-zone return after single-session pullback; $1.21 below old ceiling $72,831; new ceiling ~$72,868 forming; engine tick=321 autonomous); B3.1 distil164 file=299 running=409; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
 
 ## Current state
 - daemon: STOPPED (last run cycle 340)
 - trading_engine: STOPPED (tick=282, PAPER, 13 active FLAT, DualMA variants DISABLED PF<0.8)
 - last_daemon_cycle: 340
-- last_real_work_cycle: 362 (B6 112th ✅ 38/41 twenty-sixth-pass pure-maintenance + B3.1 distil163 + B1.1 tick 51 BTC=$72,784.22 pullback-below-old-ceiling new-ceiling-HIGH-72868-forming)
+- last_real_work_cycle: 363 (B6 113th ✅ 38/41 twenty-seventh-pass pure-maintenance regression-pattern-closed + B3.1 distil164 + B1.1 tick 52 BTC=$72,829.79 ceiling-zone-return-after-single-session-pullback)
 - backup_tag: `pre-optimization-backup` → ddc5d88
 - cloud_recursive: GH Actions chained (Recursive Cycle workflow), every ~10 min, failsafe every 30 min
 - local daemons (PIDs 7528, 4396) still alive — Edward will kill after 24h parallel validation
@@ -17,6 +17,7 @@
 - Samuel Turing test invite (human-send)
 
 ## Recent changes
+- 2026-04-11: cycle 363 — B6 **113th** run ✅ 38/41 twenty-seventh-pass pure-maintenance (generic_long_term_survival_check ALIGNED; regression-pattern two-occurrence protocol CLOSED — LLM-variance confirmed; behavioral-equivalence-113-runs); B1.1 BTC=$72,829.79 DualMA=LONG OPEN_LONG (52 human ticks; ↑$45.57 tailwind; **ceiling-zone return** after single-session pullback; $1.21 below old ceiling $72,831; new ceiling HIGH ~$72,868 forming; engine tick=321 autonomous; DualMA governs not price level); B3.1 distil164 +3 (file=299, running=409; 52nd-btc-tick + 113th-B6-twenty-seventh-pass + zone-bounce-vs-trend-change-three-session-threshold); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 362 — B6 **112th** run ✅ 38/41 twenty-sixth-pass pure-maintenance (generic_long_term_survival_check ALIGNED; no regression; behavioral-equivalence-112-runs); B1.1 BTC=$72,784.22 DualMA=LONG OPEN_LONG (51 human ticks; ↓$67.77 headwind; **pullback below old ceiling $72,831** after 3 above-ceiling sessions; new ceiling HIGH ~$72,868 forming; engine tick=319 autonomous; DualMA governs not price level); B3.1 distil163 +3 (file=296, running=406; 51st-btc-tick + 112th-B6-twenty-sixth-pass + post-ceiling-break-pullback-dualma-governs); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 361 — B6 **111th** run ✅ REGRESSION-RESOLVED 38/41 twenty-fifth-pass pure-maintenance (generic_long_term_survival_check ALIGNED — second-occurrence-resolved; boundary-scenario classified; tiered-B6-interpretation active); B1.1 BTC=$72,851.99 DualMA=LONG OPEN_LONG (50 human ticks **MILESTONE**; ↓$4.02 headwind minimal; above-ceiling session 2 of 2-3; new ceiling TBD cycle 362); B3.1 distil162 +3 (file=293, running=403; 50th-btc-tick + 111th-B6-regression-resolved + boundary-scenario-protocol-update); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 360 — B6 **110th** run ✅ 38/41 pure-maintenance (twenty-fourth-pass; generic_long_term_survival_check ALIGNED; no regression; 110-run streak intact; behavioral-equivalence-market-independent); B1.1 BTC=$72,856.01 DualMA=LONG OPEN_LONG (49 human ticks all LONG, ↓$11.99 headwind minimal; post-ceiling-break session 2: $25.01 above $72,831; new ceiling TBD watch 1 more session); B3.1 distil161 +3 (file=290, running=400; 49th-btc-tick + 110th-B6-twenty-fourth-pass + ceiling-break-follow-through-day2-new-ceiling-forming); parallel branch push B1.1+B3.1+B6 concurrent
