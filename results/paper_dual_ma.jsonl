@@ -66,3 +66,6 @@
 {"strategy": "DualMA_10_30", "symbol": "BTCUSDT", "interval": "1d", "price": 72833.99, "signal": 1, "prev_position": 0, "action": "OPEN_LONG", "timestamp": "2026-04-11T05:33:11.289388+00:00"}
 {"strategy": "DualMA_10_30", "symbol": "BTCUSDT", "interval": "1d", "price": 72826.27, "signal": 1, "prev_position": 0, "action": "OPEN_LONG", "timestamp": "2026-04-11T05:40:03.323563+00:00"}
 {"strategy": "DualMA_10_30", "symbol": "BTCUSDT", "interval": "1d", "price": 72831.31, "signal": 1, "prev_position": 0, "action": "OPEN_LONG", "timestamp": "2026-04-11T05:43:43.773668+00:00"}
+{"strategy": "DualMA_10_30", "symbol": "BTCUSDT", "interval": "1d", "price": 72769.37, "signal": 1, "prev_position": 0, "action": "OPEN_LONG", "timestamp": "2026-04-11T05:48:11.461680+00:00"}
+{"strategy": "DualMA_10_30", "symbol": "BTCUSDT", "interval": "1d", "price": 72785.52, "signal": 1, "prev_position": 0, "action": "OPEN_LONG", "timestamp": "2026-04-11T05:50:27.798719+00:00"}
+{"strategy": "DualMA_10_30", "symbol": "BTCUSDT", "interval": "1d", "price": 72768.23, "signal": 1, "prev_position": 0, "action": "OPEN_LONG", "timestamp": "2026-04-11T05:50:55.926348+00:00"}

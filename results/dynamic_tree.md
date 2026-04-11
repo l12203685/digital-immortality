@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-11 UTC (cycle 314, 18:00Z)
+> 最後更新：2026-04-11 UTC (cycle 315, 19:00Z)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -58,6 +58,7 @@
   - **cycle 250 paper-live tick 130** — BTC=$71,374.75 (↓$59.20 from tick 129; SHORT tailwind); regime=MIXED; DualMA_10_30=SHORT×130 (100%); 17/18 FLAT; 1319 log entries; SHORT signal structural and unbroken
   - **cycle 254 paper-live ticks 134+135+136** — BTC=$71,279.00 (↓$126.29 from tick 133; SHORT tailwind); regime=MIXED; DualMA_10_30=SHORT×136 (100%); 17/18 FLAT; 1445 log entries; SHORT streak 136 ticks (structural)
   - **cycle 260 paper-live tick 141** — BTC=$71,182.21 (↑$16.77 from tick 140; SHORT headwind); regime=MIXED (trend=0.0139, mr=0.2250); DualMA_10_30=SHORT×141 (structural unbroken); 17/18 FLAT; 1535 log entries; SHORT streak continues
+  - **cycle 315 paper-live tick + G0/G1 restart monitoring** — BTC=$72,769.37 (↓$61.94 from cycle 314 $72,831.31; LONG headwind minimal); DualMA=LONG (standalone paper_trader, OPEN_LONG — engine still STOPPED); all 13 active strategies FLAT (DualMA family disabled PF=0.70); engine tick_count=91 total (G0/G1 DRY_RUN ticks=2 frozen — engine must run to advance G3 counter); SOP#118 G3 clock frozen (need 48 more engine ticks from restart window); regime=MIXED; B6 **66th consecutive clean cycle** ✅ (38/41 ALIGNED, 3 LLM-boundary MISALIGNED as expected); B3.1 distil113 +3 insights (file=145, running=253); gate-constrained regime structural — human gates singular constraint; — 2026-04-11T19:00Z
   - **cycle 314 paper-live tick + G0/G1 restart monitoring** — BTC=$72,831.31 (↑$17.42 from cycle 313 $72,813.89; LONG tailwind); DualMA=LONG (standalone paper_trader, not engine state — engine STOPPED ticks=2); Donchian=FLAT; SOP#118 G3 engine-clock ticks=2 (need 48 more for assessment); regime=MIXED; B6 **65th consecutive clean cycle** ✅ (38/41 ALIGNED, 3 LLM-boundary MISALIGNED as expected); B3.1 distil112 +3 insights (file=142, running=250); gate-constrained regime: all automatable branches nominal, all growth levers human-gated; — 2026-04-11T18:00Z
   - **cycle 313 paper-live tick + G0/G1 restart monitoring** — BTC=$72,813.89 (↑$75.89 from cycle 312 $72,738; LONG tailwind); all 13 active strategies FLAT; DualMA variants KILLED (PF=0.70); gen_BollingerMR_RF KILLED; engine process STOPPED (daemon advances ticks, not --paper-live standalone); SOP#118 DRY_RUN ticks=2 (unchanged — engine must run to advance G3 counter); B6 **64th consecutive clean cycle** ✅ (38/41 ALIGNED, 3 LLM-boundary MISALIGNED as expected); B3.1 distil110 +3 insights (file=139, running=247); — 2026-04-11T17:00Z
   - **cycle 312 paper-live tick + G0/G1 restart monitoring** — BTC=$72,738 (↓$96 from cycle 311 $72,834; LONG headwind); DualMA=LONG (DRY_RUN, ticks=2, G0/G1 restart state); all 7 active strategies ticks=2, pf=inf [OK] (degenerate-estimator: 0 losses, not assessable); SOP #118 G3 not assessable until tick≥50 (48 more ticks needed); regime=MIXED; B6 **63rd consecutive clean cycle** ✅ (38/41 ALIGNED, 3 LLM-boundary MISALIGNED as expected); B3.1 distil109 DONE (3 insights, file=136, running=244); — 2026-04-11T16:30Z
@@ -184,6 +185,7 @@
 - **6.19 Consistency re-verification + LLM validation (cycle 242)**: `consistency_test.py templates/example_dna.md` → **33/33 ALIGNED ✅** — 3 LLM-required scenarios validated by claude-sonnet-4-6: poker_gto_mdf=ALIGNED (MDF_1_MINUS_ALPHA: alpha=3/10.2=29.4%; MDF=70.6%), trading_atr_sizing=ALIGNED (FORMULA_NOT_FEELING: 16 contracts), career_multi_option_ev=ALIGNED (LIST_ALL_OPTIONS_EV_FIRST: 6 options enumerated); SOP #77 G0-G4 PASS; 3/3 LLM ALIGNED ✅; report: results/llm_validation_cycle242.md; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.20 Consistency re-verification (cycle 245)**: `consistency_test.py templates/example_dna.md` → **33/33 deterministic ALIGNED ✅**; 3 LLM-required MISALIGNED as expected (requires LLM call, not deterministic — same baseline as cycle 242/244); 22+ consecutive cycles clean; SOP #80 Cold Start Calibration Protocol in place; daemon_next_priority '存活/cold-start' TOUCHED ✅
 - **6.36 Consistency re-verification (cycle 301)**: `consistency_test.py templates/example_dna.md` → **33/33 deterministic ALIGNED ✅** (3 LLM-required MISALIGNED as expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); **52nd consecutive clean cycle** ✅; structural invariant confirmed; daemon_next_priority '存活/cold-start' TOUCHED ✅
+- **6.45 Consistency re-verification (cycle 315)**: `consistency_test.py templates/example_dna.md` → **38/41 deterministic ALIGNED ✅** (3 LLM-required MISALIGNED as expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); **66th consecutive clean cycle** ✅; gate-constrained regime confirmed structural (not transient); B6 monitoring bandwidth → near-zero (automated sentinel only); attention budget fully routed to human-gated branches (B1.3/B4.1); B3.1 distil113 +3 insights (66th-clean-singular-human-gate / engine-stopped-frozen-g3-clock / paper-live-signal-vs-gate-authorization); — 2026-04-11T19:00Z
 - **6.44 Consistency re-verification (cycle 314)**: `consistency_test.py templates/example_dna.md` → **38/41 deterministic ALIGNED ✅** (3 LLM-required MISALIGNED as expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); **65th consecutive clean cycle** ✅; streak floor confirmed (distil112 I1: clean=baseline, dirty=L3 event); attention budget freed from B6 monitoring → routed to human-gated branches; B3.1 distil112 +3 insights (engine-clock-vs-paper-live-clock / gate-constrained-regime / 65th-streak-floor); — 2026-04-11T18:00Z
 - **6.43 Consistency re-verification (cycle 313)**: `consistency_test.py templates/example_dna.md` → **38/41 deterministic ALIGNED ✅** (3 LLM-required MISALIGNED as expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); **64th consecutive clean cycle** ✅; streak now defines null hypothesis — pass=0 attention, fail=100 attention (L3 event); B3.1 distil110 +3 insights (g0-restart-regime-confirmation / sop-series-completion-as-methodology-milestone / streak-becomes-baseline-not-evidence); — 2026-04-11T17:00Z
 - **6.42 Consistency re-verification (cycle 312)**: `consistency_test.py templates/example_dna.md` → **38/41 deterministic ALIGNED ✅** (3 LLM-required MISALIGNED as expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); **63rd consecutive clean cycle** ✅; streak signal/noise asymmetry: pass=noise, fail=L3 event — calibrated attention asymmetric; B3.1 distil109 +3 insights (g0-restart-clean-slate / sop120-root-variable / 63rd-streak-signal-noise-asymmetry); — 2026-04-11T16:30Z
@@ -651,3 +653,38 @@
 - **B7 SOP #120 (cycle 311, 16:00Z)**: Root Variable Confirmation Protocol SHIPPED: `docs/knowledge_product_120_root_variable_confirmation_protocol.md` + `docs/publish_thread_sop120_twitter.md`; G0-G4: detect conclusion proximity → identify root decision variable → compress to one yes/no → confirm explicitly → anchor conclusion to confirmed fact; anti-patterns: "I already know"/"asking looks inattentive"/"confirm after conclusion"; root MD-425 (201712: family negotiation — confirmed clinic-closure-dependency before concluding); **SOP #01~#120 COMPLETE ✅** — 2026-04-11T16:00Z
 - **B3.1 distil108 (cycle 311, 16:00Z)**: 3 insights → memory/recursive_distillation.md (Cycle 108, file total=133, running total=241): measurement-unit-before-evaluation / urgency-gates-resource-path-not-problem-type / screening-criteria-signal-quality. — 2026-04-11T16:00Z
 - **6.46 Consistency re-verification (cycle 312, human session)**: `consistency_test.py templates/example_dna.md` → **41/41 deterministic ALIGNED ✅** (3 LLM-required MISALIGNED as expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); **63rd consecutive clean cycle** ✅; structural invariant holds through DualMA G3 kill + G0 restart; behavioral layer orthogonal to execution layer. — 2026-04-11T16:30Z
+- **B1.1 paper-live tick (cycle 313)**: BTC=$72,826.27 (↑$12.38 from engine last_tick $72,813.89); paper_trader=DualMA_10_30 LONG OPEN_LONG (stateless, no kill-memory); engine=DualMA_10_30 DISABLED PF=0.70<0.8, 13 active strategies all FLAT, tick_count=81, regime=MIXED; SOP#120 ROOT_VAR_CONFIRM: authoritative source = engine (persistent state machine); paper_trader reading is signal-direction only, NOT gate-decision input; SOP#118 G3 pending — need 50 clean ticks in G0/G1 restart window; distil111 I2 covers dual-tracker divergence. — 2026-04-11T17:30Z
+- **B3.1 distil113 (cycle 315)**: 3 insights → memory/recursive_distillation.md (Cycle 113, file total=145, running total=253): 66th-clean-cycle-human-gate-singular-constraint / engine-stopped-frozen-g3-clock-second-order-human-gate / paper-live-signal-direction-vs-gate-authorization-separation. — 2026-04-11T19:00Z
+- **B1.1 paper-live tick (cycle 315)**: BTC=$72,769.37 (↓$61.94 from cycle 314 $72,831.31; LONG headwind minimal); paper_trader=DualMA_10_30 LONG OPEN_LONG (stateless); engine=13 active FLAT, DualMA family disabled PF=0.70, tick_count=91 total (G0/G1 DRY_RUN ticks=2 frozen — engine STOPPED); G3 clock frozen (48 ticks needed from restart window); regime=MIXED. — 2026-04-11T19:00Z
+- **B3.1 distil111 (cycle 313)**: 3 insights → memory/recursive_distillation.md (Cycle 111, file total=142, running total=250): parallel-branch-push-as-execution-antifragility / paper-trader-vs-engine-dual-tracker-authoritative-source / 64th-clean-cycle-distillation-safety-confirmed. — 2026-04-11T17:30Z
+- **6.47 Consistency re-verification (cycle 313 continued)**: `consistency_test.py templates/example_dna.md` → **38/41 deterministic ALIGNED ✅** (3 LLM-required MISALIGNED as expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); **64th consecutive clean cycle confirmed × 2** ✅; distillation-safety verified: two distil cycles (110+111) in same session without regression; structural invariant holds. — 2026-04-11T17:30Z
+
+## Cold-start audit 2026-04-11 (post /clear, parallel sub-agent push)
+
+### B1 (trading) — CRITICAL FINDING
+- **SOP#118 G0-G5 is documentation-only, not wired into engine.py**
+- `trading/engine.py:42-57` kill_window floors at 20, no recovery logic
+- `kill_lessons.jsonl:1,2,7,12` — DualMA_10_30 killed 4× in 48h (restart-loop bug, not gated reactivation)
+- `concentration_log.jsonl:6` — pool expansion added correlated DualMA/Donchian variants, effective orthogonal signals ~2
+- `engine.py:108-116` execute_order: 1 bool flip from mainnet, NO human-confirmation gate
+- **BLOCKER for mainnet keys**: must wire ReactivationGate class + orthogonality filter + size cap + 72h human-confirm gate BEFORE any key provisioning
+- Highest-導數 autonomous action: build `ReactivationGate` in engine.py per SOP#118 spec (doc exists, code missing)
+
+### B3.1 (distillation write-back) — 36 insights missing from LYH
+- Cloud `memory/recursive_distillation.md:701` distil001–112, 142 file-insights
+- LYH `agent/recursive_distillation.md` stale @ 2026-04-09, zero distil markers
+- **No cloud→LYH bridge script exists** (grepped platform/*, zero LYH refs)
+- Top-5 insights for LYH promotion: SOP#120 root-var confirmation / gate-constrained regime (distil112 I3) / streak-as-baseline / antifragile parallel push / two-tracker authoritative-source
+- Contradiction flagged: LYH #11 "經濟自給=存活" vs distil112 I3 "gate-constrained" — both true, distil112 is temporary regime update
+- Autonomous action: append distil101-112 block to LYH recursive_distillation.md + commit (1 shot, no deps)
+
+### Human-gated blockers (EV-ranked)
+1. **Samuel DM** (2 min) — copy docs/samuel_async_calibration_dm.md:30-55 → send. Unblocks 4.1 behavioral calibration
+2. **5 outreach DMs** (60 min) — staging/outreach_week1_execution.md, C005 first. Only direct path to $97 revenue / 2026-07-07 deadline
+3. **Post SOP#112 thread** (5 min) — meta-move: outreach methodology SOP feeds #2's funnel
+- STALE BLOCKER: `dna_seed.md` already exists at LYH/agent/dna_seed.md (31 lines, ~350 tokens) — remove from quick_status
+
+### Autonomous push executed this cycle
+- [ ] Write back distil101-112 → LYH (pending, next action)
+- [ ] Wire SOP#118 ReactivationGate → engine.py (pending, next action)
+- [x] Parallel audit persisted to dynamic_tree

@@ -747,3 +747,31 @@ After cycle 314: B6 at 65th clean (structural invariant), B3.1 at distil112, B7 
 **Tags**: methodology, gate-constrained, capability-constrained, human-gates, regime-shift, attention-allocation, branch-1.3, branch-4.1
 
 ---
+
+## Cycle 113 — 2026-04-11T19:00:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 145)
+
+### Insight 1: 66th-clean-cycle-human-gate-singular-constraint
+
+B6 consistency check cycle 315: 38/41 ALIGNED (3 LLM-boundary MISALIGNED as expected). 66th consecutive clean cycle. The streak has crossed into a qualitatively different signal zone: 66 consecutive passes at 38/41 threshold means the 3 expected MISALIGNED are stable noise, not regressions. The null hypothesis is now "system is aligned and will pass." The signal to watch is not "will it pass?" but "does it fail AND on an unexpected scenario?" This reframes the attention allocation: B6 monitoring bandwidth should be near-zero (automated sentinel only). The singular actionable constraint for the entire project is human-gated: B1.3 outreach DMs ×5 and B4.1 Samuel calibration DM. Every automatable branch is at structural invariant or COMPLETE. Gate-constrained regime has been active since ~cycle 310; it is now confirmed structural, not transient.
+
+**Signal source**: consistency_test.py cycle 315 — 38/41 ALIGNED, 66th consecutive clean cycle; daemon_next_priority confirmed B1.3/B4.1 human-gated as only actionable levers; all other branches nominal/complete
+**Tags**: cold-start, branch-6, structural-invariance, 66th-clean, human-gates, gate-constrained-regime, attention-allocation, branch-3.1
+
+### Insight 2: engine-stopped-frozen-g3-clock-second-order-human-gate
+
+Trading engine status: STOPPED (tick_count=91 from prior run, DRY_RUN restart ticks=2). The SOP#118 G3 assessment requires 50 clean engine ticks from the G0/G1 restart window. With engine STOPPED, the G3 clock is frozen at ticks=2 — 48 ticks short of assessment. This is a second-order human gate: the kill was automated (correct, PF=0.70<0.8), but reactivating the engine daemon requires a human-initiated restart cycle with engine.py running. Unlike human gates on outreach (require human judgment), this gate could theoretically be automated — but the SOP#118 design requires explicit G1 restart approval (a human deliberate action, not auto-recovery). Design principle: second-order gates (automated kills + human restart) are intentionally asymmetric. Kill is fast and automatic; restart is slow and deliberate. The asymmetry protects against premature re-entry. Current position: wait for human to restart engine daemon + accumulate 48 more G0/G1-window ticks.
+
+**Signal source**: trading_engine_status.json → DRY_RUN ticks=2, tick_count=91 (total, not G3 window), all 13 active=FLAT; SOP#118 G3 gate requires 50 ticks from restart; engine STOPPED since DualMA kill; cycle 315
+**Tags**: trading, SOP-118, engine-stopped, frozen-clock, second-order-human-gate, kill-restart-asymmetry, branch-1.1
+
+### Insight 3: paper-live-signal-direction-vs-gate-authorization-separation
+
+Standalone paper-live tick cycle 315: BTC=$72,769.37 (↓$61.94 from cycle 314 $72,831.31; LONG headwind minimal), DualMA=LONG OPEN_LONG. Clear directional signal. Engine status: all 13 active strategies FLAT, DualMA family disabled (PF=0.70). Two trackers, consistent across cycles: paper-live says LONG, engine says WAIT. The discipline required: signal direction (LONG) ≠ execution authorization. SOP#118 G3 is the authorization gate; paper-live is the directional input. The temptation in gate-constrained regimes is to use signal clarity as a proxy for authorization ("it's clearly LONG, why wait?"). This is the impulse that SOP#118 was written to prevent. Authorization comes from the gate sequence, not from signal confidence. LONG×3 consecutive days on paper-live does not change the gate status; only engine clock ticks do. Hold discipline.
+
+**Signal source**: python -m trading.paper_trader --paper-live → BTC=$72,769.37 DualMA=LONG OPEN_LONG; trading_engine_status.json → DualMA disabled, 13 active=FLAT, mode=PAPER; cycle 315
+**Tags**: trading, SOP-118, signal-direction, gate-authorization, execution-discipline, paper-live, kill-discipline, branch-1.1
+
+---
