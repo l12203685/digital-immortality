@@ -1842,3 +1842,24 @@ BTC=$72,799.57 (↑$37.60 from cycle 345 $72,761.97; LONG tailwind). DualMA_10_3
 
 **Signal source**: cycle 346 human session — 35-session ceiling-compression analysis; range $72,638–$72,831; 2026-04-11T20:30Z
 **Tags**: B1.1, B3.1, ceiling-compression-35-sessions, range-72638-72831, breakout-or-rejection-imminent, dualma-long-survives-upside-break, floor-break-triggers-flip, hold-long-no-preemptive-action
+
+### Insight 1: 36th-human-tick-btc72781-headwind-17-ceiling-49-below
+
+BTC=$72,781.77 (↓$17.80 from cycle 346 $72,799.57; LONG headwind minimal). DualMA_10_30=LONG OPEN_LONG, Donchian_20=FLAT HOLD. 36th consecutive human-session LONG tick — structural signal unbroken. BTC $49.23 below ceiling ($72,831); $143.77 above floor ($72,638). Ceiling compression continues: BTC pulled back slightly from cycle 346 ceiling approach. Range $72,638–$72,831 intact. Headwind after tailwind — oscillation pattern within ceiling zone.
+
+**Signal source**: cycle 347 human session — Binance API price=$72,781.77; DualMA OPEN_LONG; Donchian HOLD; regime=mixed; 2026-04-11T08:25Z
+**Tags**: B1.1, 36th-consecutive-long, btc72781, headwind-17, ceiling-49-below, range-intact, oscillation-ceiling-zone, structural-long-unbroken, no-action-trigger
+
+### Insight 2: 97th-clean-B6-eleventh-pass-post-protocol-closure
+
+97th consecutive clean B6 cycle (38/41 ALIGNED; same 3 LLM-boundary MISALIGNED: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev). Eleventh pass under post-protocol-closure tripwire regime. B6 has now passed every cycle since protocol-closure with no new information gained. The attractor is permanent infrastructure. Each additional pass costs zero analysis and confirms zero new drift. This is maintenance mode at theoretical minimum overhead.
+
+**Signal source**: cycle 347 human session — consistency_test.py; 97th consecutive clean; 38/41 ALIGNED; eleventh post-protocol-closure pass; 2026-04-11T08:25Z
+**Tags**: B6, 97th-consecutive, eleventh-pass-post-protocol-closure, permanent-infrastructure, zero-overhead-maintenance, tripwire-live, mathematical-certainty
+
+### Insight 3: btc-oscillation-pattern-36-sessions-ceiling-zone-resistance
+
+Over 36 human sessions, BTC has oscillated within $72,638–$72,831 ($193 range) without breaking either bound. Each ceiling approach has been followed by a pullback, and each pullback has recovered. No session has produced a close outside this range. Pattern: ceiling-zone oscillation — BTC repeatedly tests $72,780–$72,831 region and retreats. This resistance-oscillation pattern suggests either: (a) sustained accumulation before breakout, or (b) range distribution before breakdown. DualMA LONG signal would survive (a) — slow MA gap would widen on breakout. DualMA LONG signal would flip to FLAT/SHORT on (b) — watch $72,638 floor. Operational stance unchanged: hold LONG, monitor floor integrity, no preemptive action until signal flip.
+
+**Signal source**: cycle 347 human session — 36-session oscillation analysis; range $72,638–$72,831; ceiling-zone tests without break; 2026-04-11T08:25Z
+**Tags**: B1.1, B3.1, btc-36-session-oscillation, ceiling-zone-resistance-pattern, breakout-or-breakdown-pending, floor-72638-watch, dualma-long-holds-on-breakout, flip-signal-on-breakdown, hold-long-no-preemptive-action
