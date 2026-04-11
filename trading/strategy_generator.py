@@ -43,6 +43,10 @@ from trading.strategies import (
     RegimeFilter,
     RSIFilter,
 )
+from trading.orthogonality_filter import (
+    OrthogonalityFilter,
+    load_recent_bars_from_log,
+)
 
 # ---------------------------------------------------------------------------
 # Logging
@@ -61,6 +65,14 @@ RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 CANDIDATES_PATH = RESULTS_DIR / "strategy_candidates.json"
 STRATEGIES_PY = Path(__file__).resolve().parent / "strategies.py"
 PAPER_LOG_PATH = RESULTS_DIR / "paper_live_log.jsonl"
+TRADING_ENGINE_LOG_PATH = RESULTS_DIR / "trading_engine_log.jsonl"
+
+# B1 audit follow-up (2026-04-11): orthogonality threshold.
+# DualMA family (4 variants) was mass-killed at PF=0.70 because they shared
+# essentially the same edge. Reject new pool additions whose signal series
+# has |Pearson| > ORTHOGONALITY_MAX_CORR with ANY existing pool member.
+ORTHOGONALITY_MAX_CORR = 0.7
+ORTHOGONALITY_LOOKBACK = 100
 
 
 # ---------------------------------------------------------------------------
@@ -382,8 +394,26 @@ def cmd_generate(n: int) -> None:
     candidates = generate_candidates(n)
     log.info("Generated %d unique candidates.", len(candidates))
 
+    # B1 audit follow-up: orthogonality filter. Prefer live engine log for
+    # bars (it's what the engine actually sees); fall back to the fetched
+    # BTC daily series when the engine has no history yet.
+    ortho_filter = OrthogonalityFilter(
+        max_corr=ORTHOGONALITY_MAX_CORR,
+        lookback_ticks=ORTHOGONALITY_LOOKBACK,
+    )
+    ortho_bars = load_recent_bars_from_log(
+        TRADING_ENGINE_LOG_PATH, lookback_ticks=ORTHOGONALITY_LOOKBACK
+    )
+    if len(ortho_bars) < ORTHOGONALITY_LOOKBACK:
+        log.info(
+            "Orthogonality: engine log has %d bars (<%d). Using backtest bars instead.",
+            len(ortho_bars), ORTHOGONALITY_LOOKBACK,
+        )
+        ortho_bars = bars[-ORTHOGONALITY_LOOKBACK:]
+
     log_entries = _load_candidates_log()
     passed_entries: List[Tuple[str, Dict[str, Any]]] = []
+    rejected_ortho = 0
     ts = datetime.now(timezone.utc).isoformat()
 
     for i, (name, strategy, meta) in enumerate(candidates, 1):
