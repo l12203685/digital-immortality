@@ -52,7 +52,9 @@ jobs:
           git config user.name "digital-immortality-daemon"
 
       - name: Run one daemon cycle
-        run: python platform/recursive_daemon.py --cli --once
+        # Uses Anthropic API directly (ANTHROPIC_API_KEY secret). No claude CLI
+        # binary is installed on GH runners, so --cli mode is not available here.
+        run: python platform/recursive_daemon.py --once
 
       - name: Push if changes
         run: |
