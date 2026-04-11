@@ -2,10 +2,44 @@ __pycache__/
 *.pyc
 *.pyo
 .env
+
+# --- Daemon / picker state ---
 results/idle_task_picker_state.json
 results/picker_queue.jsonl
-# Finance dashboards contain personal financial data — localhost only
+
+# --- Finance dashboards: personal financial data, localhost only ---
 results/finance_networth.json
 results/finance_spending.json
 results/finance_marketcap.json
+results/finance_spending.jsonl
+results/finance_pnl_weekly.jsonl
 results/.sheet_cache/
+
+# --- Holdings + dashin history (personal financial data) ---
+results/holdings.yaml
+results/dashin_weekly_pnl.jsonl
+results/dashin_monthly_nav.jsonl
+results/dashin_weekly_pnl_gaps.md
+
+# --- Life data (health, diet, calendar) ---
+results/life_health.jsonl
+results/life_diet.jsonl
+results/life_calendar.json
+
+# --- History FTS index (10-year chat archive) ---
+results/history_index.db
+results/history_index.db-shm
+results/history_index.db-wal
+
+# --- Pipeline logs (may contain timestamped data snippets) ---
+results/market_updater.log
+results/balance_sheet_builder.log
+results/spending_csv_ingest.log
+results/history_indexer.log
+results/calendar_puller.log
+
+# --- Credentials (never commit) ---
+*.pem
+credentials.json
+*token*.json
+*client_secret*.json
