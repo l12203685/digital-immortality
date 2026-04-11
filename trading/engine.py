@@ -490,12 +490,38 @@ class TradingEngine:
                         "pnl_pct": round(pnl_pct, 4),
                         "cum_pnl": round(self.pnl_tracker.get(name, 0.0), 4)})
 
+        # SOP#118: kill_window recovery — loosen on sustained clean performance
+        if kill_happened_this_tick:
+            self.clean_ticks_since_kill = 0
+        else:
+            self.clean_ticks_since_kill += 1
+            if self.clean_ticks_since_kill >= self.execution_rules.get(
+                    "kill_window_recovery_ticks", 100):
+                prior_window = self.execution_rules.get("kill_window", 50)
+                self.execution_rules = recover_kill_window(
+                    self.execution_rules, self.clean_ticks_since_kill)
+                new_window = self.execution_rules.get("kill_window", 50)
+                if new_window > prior_window:
+                    logger.info("kill_window recovery: %d → %d", prior_window, new_window)
+                    self.kill_monitor.window = new_window
+                    self.clean_ticks_since_kill = 0
+
+        if disabled_dirty:
+            save_disabled(self.disabled)
+
         active = [n for n in self.strategies if n not in self.disabled]
+        # Safe JSON-serializable snapshot of disabled (metadata may include lists)
+        disabled_snapshot = {
+            name: (meta if isinstance(meta, dict) else {"reason": str(meta)})
+            for name, meta in self.disabled.items()
+        }
         write_status({"last_tick": utc_now, "tick_count": self.tick_count,
-                      "active_strategies": len(active), "disabled": dict(self.disabled),
+                      "active_strategies": len(active), "disabled": disabled_snapshot,
                       "total_pnl_pct": round(self.total_pnl, 4), "price": price,
                       "regime": regime, "signals": signals_summary,
-                      "mode": "LIVE" if self.live else "PAPER"})
+                      "mode": "LIVE" if self.live else "PAPER",
+                      "clean_ticks_since_kill": self.clean_ticks_since_kill,
+                      "kill_window": self.execution_rules.get("kill_window", 50)})
 
         if discord_msgs:
             header = f"[{'LIVE' if self.live else 'PAPER'}] {regime.upper()} | BTC ${price:,.0f}"
@@ -527,15 +553,55 @@ def print_status() -> None:
         print("No status file found. Engine may not have run yet."); return
     print(json.dumps(json.loads(STATUS_PATH.read_text()), indent=2))
 
+def activate_live() -> None:
+    """SOP#118: record live activation timestamp for size-cap + 72h gate."""
+    gate = load_live_gate()
+    now = datetime.now(timezone.utc).isoformat()
+    gate["activated_at"] = gate.get("activated_at", now)
+    gate["human_confirmed_first_72h"] = False
+    gate["size_cap_usdt"] = LIVE_FIRST_N_DAYS_SIZE_CAP_USDT
+    gate["first_n_days"] = LIVE_FIRST_N_DAYS
+    save_live_gate(gate)
+    print(f"Live activation recorded at {gate['activated_at']}")
+    print(f"Size cap: ${LIVE_FIRST_N_DAYS_SIZE_CAP_USDT:.0f} USDT for first {LIVE_FIRST_N_DAYS} days")
+    print(f"Human confirmation required: first {LIVE_HUMAN_CONFIRM_HOURS} hours")
+    print(f"Gate file: {LIVE_GATE_PATH}")
+    print("To release the first-72h gate after manual review, set "
+          "human_confirmed_first_72h=true in the gate file.")
+
+
+def reactivate_strategy(name: str) -> None:
+    """Manual override: remove a strategy from disabled list (logged)."""
+    disabled = load_disabled()
+    if name not in disabled:
+        print(f"{name} is not in disabled list")
+        return
+    meta = disabled[name]
+    if isinstance(meta, dict):
+        meta["manually_overridden"] = True
+        meta["manual_override_ts"] = datetime.now(timezone.utc).isoformat()
+        disabled[name] = meta
+    save_disabled(disabled)
+    print(f"{name} marked for manual reactivation; will re-enter on next tick")
+
+
 def main() -> None:
     p = argparse.ArgumentParser(description="Always-on BTC trading engine")
     p.add_argument("--live", action="store_true", help="Place real Spot orders")
     p.add_argument("--paper", action="store_true", default=True, help="Paper mode (default)")
     p.add_argument("--interval", type=int, default=60, help="Seconds between ticks (default 60)")
     p.add_argument("--status", action="store_true", help="Print current status and exit")
+    p.add_argument("--activate-live", action="store_true",
+                   help="Record live activation (arms size cap + 72h human-confirm gate)")
+    p.add_argument("--reactivate", type=str, default=None, metavar="STRATEGY_NAME",
+                   help="Manual SOP#118 override: mark a killed strategy for re-entry")
     args = p.parse_args()
     if args.status:
         print_status(); return
+    if args.activate_live:
+        activate_live(); return
+    if args.reactivate:
+        reactivate_strategy(args.reactivate); return
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
     creds = load_credentials()
     if args.live and not (creds["api_key"] and creds["secret"]):
