@@ -1,0 +1,108 @@
+[daemon] Starting recursive engine
+[daemon] Mode: CLI (Max subscription) | Model: claude-sonnet-4-6 | Interval: 300s
+[daemon] Log: C:\Users\admin\workspace\digital-immortality\results\daemon_log.md
+[daemon] Ctrl+C to stop
+
+[daemon] Cycle 1 starting (CLI)...
+[daemon] Error: Command '['claude', '-p', 'Read SKILL.md, results/dynamic_tree.md, results/daemon_next_priority.txt. Push multiple branches. Commit.', '--model', 'claude-sonnet-4-6']' timed out after 600 seconds, retrying in 30s...
+[daemon] Cycle 2 starting (CLI)...
+Exception in thread Thread-3 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp950' codec can't decode byte 0x98 in position 42: illegal multibyte sequence
+[daemon] Error: 'NoneType' object has no attribute 'strip', retrying in 30s...
+[daemon] Cycle 3 starting (CLI)...
+Exception in thread Thread-5 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp950' codec can't decode byte 0x98 in position 132: illegal multibyte sequence
+[daemon] Error: 'NoneType' object has no attribute 'strip', retrying in 30s...
+[daemon] Cycle 4 starting (CLI)...
+Exception in thread Thread-7 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp950' codec can't decode byte 0xe2 in position 45: illegal multibyte sequence
+[daemon] Error: 'NoneType' object has no attribute 'strip', retrying in 30s...
+[daemon] Cycle 5 starting (CLI)...
+[daemon] Error: Command '['claude', '-p', 'Read SKILL.md, results/dynamic_tree.md, results/daemon_next_priority.txt. Push multiple branches. Commit.', '--model', 'claude-sonnet-4-6']' timed out after 600 seconds, retrying in 30s...
+[daemon] Cycle 6 starting (CLI)...
+Exception in thread Thread-11 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp950' codec can't decode byte 0xe2 in position 37: illegal multibyte sequence
+[daemon] Error: 'NoneType' object has no attribute 'strip', retrying in 30s...
+[daemon] Cycle 7 starting (CLI)...
+Exception in thread Thread-13 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp950' codec can't decode byte 0xe2 in position 47: illegal multibyte sequence
+[daemon] Error: 'NoneType' object has no attribute 'strip', retrying in 30s...
+[daemon] Cycle 8 starting (CLI)...
+Exception in thread Thread-15 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp950' codec can't decode byte 0xe2 in position 55: illegal multibyte sequence
+[daemon] Error: 'NoneType' object has no attribute 'strip', retrying in 30s...
+[daemon] Cycle 9 starting (CLI)...
+Exception in thread Thread-17 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp950' codec can't decode byte 0xe2 in position 49: illegal multibyte sequence
+[daemon] Error: 'NoneType' object has no attribute 'strip', retrying in 30s...
+[daemon] Cycle 10 starting (CLI)...

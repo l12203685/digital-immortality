@@ -606,3 +606,61 @@ SOP#119 Path Closure Option Generation Protocol completes the decision-continuit
 **Tags**: decision-making, SOP-119, path-closure, option-generation, context-decay, anti-pattern, branch-7
 
 ---
+
+## Cycle 108 — 2026-04-11T16:00:00+00:00
+
+**Source cycles**: 311 (this session)
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 133)
+
+### Insight 1: measurement-unit-before-evaluation
+
+Before evaluating performance in any high-variance activity, verify the measurement unit is correct. 201711 data: Edward corrected a family member tracking "poker sessions" (6 sessions = too small, too coarse) → correct unit is hands (100-200 per session). The same failure pattern appears in trading: evaluating DualMA by PF at tick=53 is already a better unit than "strategy X vs Y by monthly P&L", but even 53 ticks can be in the noise zone in MIXED regime. The principle extends: correct measurement unit = the unit where signal-to-noise ratio is tractable. Wrong unit → can't distinguish skill from variance → premature judgment. Standard stack = 100 big blinds (poker) = the unit that provides enough depth to survive variance without going bust in a normal losing run.
+
+**Signal source**: 201711.jsonl — Edward to family member on PokerStars evaluation; consistency_test.py cycle 311 = 38/41 ALIGNED 3 LLM-boundary expected (62nd consecutive clean cycle); trading_engine_status.json — DualMA family killed, G0 restart, tick=67
+**Tags**: methodology, measurement-unit, variance, evaluation, branch-2.2, 201711, domain-knowledge
+
+### Insight 2: urgency-gates-resource-path-not-problem-type
+
+When facing a request with friction (like cross-border wire transfers), the first classification node is urgency — not problem type. Low urgency: accept friction, route to standard process. High urgency: activate alternative network resources. The proactive declaration of backup capability ("if it gets urgent, tell me") lowers the social threshold for the requester to actually call on that resource. Without the proactive declaration, the requester may never ask — even in genuinely urgent situations — due to the social cost of burdening someone. This is why the proactive offer is a functional move, not just courtesy: it pre-licenses the use of a resource that would otherwise stay latent.
+
+**Signal source**: 201711.jsonl g128 — Taiwan-to-China wire transfer discussion; Edward: urgency-first → standard path (not urgent) → offered backup network (if urgent); cycle 311 session
+**Tags**: methodology, resource-allocation, urgency-classification, network-utilization, behavioral-patterns, branch-2.2, 201711
+
+### Insight 3: screening-criteria-signal-quality
+
+A screening criterion simultaneously signals the screener's judgment quality. Using a weak proxy indicator (number of trips abroad) as a stand-in for a deep trait (cognitive breadth) reveals the screener's information-processing limitations — not the screened person's character flaw. Being filtered by a low-validity criterion carries low information content: if you actually possess the deep trait, the filter missed it; if you don't, the filter caught the wrong thing anyway. The correct response to a low-validity screen: don't optimize for the proxy, evaluate whether the screener's judgment quality is worth optimizing for at all. This extends to all evaluation contexts: before deciding how to respond to a filter, assess the filter's validity first.
+
+**Signal source**: 201711.jsonl g11 — Edward response to "32-year-old failed matchmaking screen for overseas trips = no international perspective"; Edward: "that kind of woman, better not to have anyway"; cycle 311 session
+**Tags**: behavioral-patterns, screening-criteria, proxy-indicators, evaluation-quality, self-awareness, branch-2.2, 201711
+
+---
+
+## Cycle 109 — 2026-04-11T16:30:00+00:00
+
+**Source cycles**: 312 (this session)
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 136)
+
+### Insight 1: g0-restart-clean-slate-is-not-bullish
+
+After DualMA family kill at PF=0.70, G0/G1 engine restart produces ticks=1, PF=inf for all strategies. This PF=inf is identical to the degenerate-estimator problem (distil106 Insight 1): 0 completed losing trades → denominator=0 → PF undefined. The clean slate is NOT a bullish reading — it's the absence of sufficient data to make any reading. The engine restart resets the measurement window; G3 assessment cannot begin until tick accumulation reaches the 50-tick floor required by SOP#118. Key meta-rule: state transitions that look like positive resets (PF=inf = "infinite edge") are often just data-scarcity artifacts. Correct reading: G0 restart = unknown, not optimal. Same degenerate-estimator principle applies at every measurement restart.
+
+**Signal source**: testnet_runner.py --status cycle 312 — all 7 strategies: ticks=1, pf=inf [OK] post-G0/G1 restart; prior state: DualMA_10_30 DISABLED PF=0.70; SOP#118 G3 not assessable until tick≥50; BTC=$72,738 LONG signal DRY_RUN
+**Tags**: trading, SOP-118, G0-restart, degenerate-estimator, profit-factor, measurement-restart, branch-1.1
+
+### Insight 2: sop120-root-variable-confirmation-layer
+
+SOP#120 Root Variable Confirmation Protocol adds an explicit root-variable verification layer before any gate evaluation. The recurring failure mode: evaluating a derivative metric (PF, WR, regime_label) without confirming the root variable it was computed from is fresh (non-cached, within the expected timestamp window). Paper_trader vs engine divergence (distil106 Insight 2) is one instance; G3 WATCH zone PF=1.1 calculated from a stale observation window is another. The SOP operationalizes: G0 identify root variable → G1 confirm freshness (timestamp + source) → G2 confirm derivation path (which log? which ticks?) → only then G3+ evaluate derivative metric. "Garbage in, garbage out" formalized as a protocol: ROOT_VAR_CONFIRM is the first gate in any decision chain that relies on computed metrics. Backing principle: MD-133 (direct-metric-over-proxy).
+
+**Signal source**: docs/knowledge_product_120_root_variable_confirmation_protocol.md — SOP#120 created cycle 311; connects to two-tracker-divergence (distil106 I2) and pf-variance-34-ticks (distil102 I1); SOP#01~#120 COMPLETE ✅
+**Tags**: methodology, SOP-120, root-variable, freshness-check, derivation-path, decision-chain, branch-7, MD-133
+
+### Insight 3: 63rd-clean-streak-signal-noise-asymmetry
+
+B6 consistency check cycle 312: 38/41 ALIGNED (3 LLM-boundary MISALIGNED as expected). 63rd consecutive clean cycle. At this streak length, the signal/noise asymmetry has flipped: an individual PASS adds ~1/63 = 1.6% Bayesian update to the "structural invariant holds" hypothesis; an individual FAIL would be an L3 event triggering full DNA audit. Calibrated attention is therefore asymmetric: low attention on pass (expected), high attention on any regression. This asymmetry is the correct reading of any long streak — not "we need more passes to be confident" (at 63, confidence is already structural) but "we need to monitor for the tail event that would falsify structural invariance." The streak is no longer a test; it is baseline state. The next meaningful signal is a break.
+
+**Signal source**: consistency_test.py cycle 312 run — 38/41 ALIGNED + 3 expected LLM-boundary MISALIGNED (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); 63rd consecutive clean cycle; pattern established across 60+ cycles
+**Tags**: cold-start, branch-6, structural-invariance, 63rd-clean, signal-noise-asymmetry, streak-theory, calibrated-attention
+
+---
