@@ -5,8 +5,12 @@ name: Daemon Failsafe
 # Discord alert so Edward can investigate (Fly.io crash, rate-limit, or git-push break).
 
 on:
-  schedule:
-    - cron: '*/30 * * * *'
+  # Schedule disabled 2026-04-11: the recursive daemon was intentionally retired,
+  # so this failsafe was paging Discord every 30 min on a signal that no longer
+  # exists by design. Kept workflow_dispatch as a manual escape hatch in case the
+  # daemon is ever revived. To re-enable, uncomment the schedule block below.
+  # schedule:
+  #   - cron: '*/30 * * * *'
   workflow_dispatch:
 
 permissions:
