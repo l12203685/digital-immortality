@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-04-11T06:58:39Z",
-  "updated_taipei": "2026-04-11 14:58 +08",
+  "updated_utc": "2026-04-11T08:05:02Z",
+  "updated_taipei": "2026-04-11 16:05 +08",
   "tree": {
     "available": true,
     "branches": [
@@ -43,8 +43,8 @@
   },
   "trading_engine": {
     "available": true,
-    "last_tick": "2026-04-11T06:58:10.468905+00:00",
-    "tick_count": 161,
+    "last_tick": "2026-04-11T08:04:15.309937+00:00",
+    "tick_count": 227,
     "active_strategies": 13,
     "disabled": {
       "gen_BollingerMeanReversion_RF_7abfe4": "PF 0.62 < 0.8",
@@ -55,7 +55,7 @@
       "DualMA_RSI_filtered": "PF 0.70 < 0.8"
     },
     "total_pnl_pct": -0.1865,
-    "price": 72771.32,
+    "price": 72716.65,
     "regime": "mixed",
     "mode": "PAPER"
   },
@@ -85,9 +85,6 @@
   "daemon": {
     "available": true,
     "tail": [
-      "You've hit your limit · resets Apr 11, 10am (Asia/Taipei)",
-      "## Cycle 157 — 2026-04-09 23:58:36 UTC",
-      "You've hit your limit · resets Apr 11, 10am (Asia/Taipei)",
       "## Cycle 158 — 2026-04-10 00:01:44 UTC",
       "You've hit your limit · resets Apr 11, 10am (Asia/Taipei)",
       "## Cycle 159 — 2026-04-10 00:04:53 UTC",
@@ -104,7 +101,10 @@
       "You've hit your limit · resets Apr 11, 10am (Asia/Taipei)",
       "## Cycle 165 — 2026-04-10 00:23:47 UTC",
       "You've hit your limit · resets Apr 11, 10am (Asia/Taipei)",
-      "[2026-04-11 06:28:24 UTC] [STALENESS_ALERT] Cycle 90: staging/last_output.md not updated in ~5 cycles — LLM may not be consuming prompts."
+      "[2026-04-11 06:28:24 UTC] [STALENESS_ALERT] Cycle 90: staging/last_output.md not updated in ~5 cycles — LLM may not be consuming prompts.",
+      "[2026-04-11 08:03:30 UTC] Loop started: interval=3600s, loop_count=1, PID=14272",
+      "[2026-04-11 08:03:30 UTC] Cycle 90 starting.",
+      "[2026-04-11 08:03:30 UTC] Engine stopped. 0 cycles completed total."
     ],
     "last_cycle": 165
   },
@@ -113,15 +113,16 @@
     "head": [
       "# Quick Status — live state snapshot for Type A cold start",
       "",
-      "> Updated: 2026-04-11 06:50 UTC (cycle 327: B6 **78th** clean ✅ 38/41 ALIGNED; B1.1 BTC=$72,722.57 DualMA=LONG OPEN_LONG engine advancing HOLD all (16 human ticks all LONG); B3.1 distil128 file=190 running=298; SOP#01~121 COMPLETE; GATE-CONSTRAINED)",
+      "> Updated: 2026-04-11 19:00 UTC (cycle 342: B6 **92nd** clean ✅ 38/41 ALIGNED; B1.1 BTC=$72,745.37 DualMA=LONG OPEN_LONG (31 human ticks); B3.1 distil143 file=235 running=343; SOP#01~121 COMPLETE; GATE-CONSTRAINED)",
       "",
       "## Current state",
-      "- daemon: RUNNING (PID 1704, CLI mode, Sonnet 4.6, 300s interval, cycle 1 in progress)",
-      "- trading_engine: STOPPED",
-      "- last_daemon_cycle: 165 (rate-limited range, no real work)",
-      "- last_real_work_cycle: ~150 (cross-ref + kill events)",
+      "- daemon: STOPPED (last run cycle 340)",
+      "- trading_engine: STOPPED (tick=222, PAPER, 13 active FLAT, DualMA variants DISABLED PF<0.8)",
+      "- last_daemon_cycle: 340",
+      "- last_real_work_cycle: 342 (B6 92nd + B3.1 distil143 + B1.1 tick 31)",
       "- backup_tag: `pre-optimization-backup` → ddc5d88",
-      "- web_scheduled: RUNNING (digital-immortality-recursive, hourly, last push 82062c9)",
+      "- cloud_recursive: GH Actions chained (Recursive Cycle workflow), every ~10 min, failsafe every 30 min",
+      "- local daemons (PIDs 7528, 4396) still alive — Edward will kill after 24h parallel validation",
       "",
       "## Blockers (human-gated)",
       "- mainnet API keys (~88d until 2026-07-07)",
@@ -129,6 +130,19 @@
       "- Samuel Turing test invite (human-send)",
       "",
       "## Recent changes",
+      "- 2026-04-11: cycle 342 — B6 92nd clean ✅ (38/41, post-protocol-closure seventh pass — tripwire-only); B1.1 BTC=$72,745.37 DualMA=LONG OPEN_LONG (31 human ticks all LONG, ↑$72.81 tailwind reversal after three consecutive headwinds, structural signal unbroken); B3.1 distil143 +3 (file=235, running=343; 31st-human-tick-btc72745-tailwind-reversal + 92nd-clean-seventh-pass + parallel-branch-convergence-31-sessions); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 341 — B6 91st clean ✅ (38/41, post-protocol-closure sixth pass — tripwire-only); B1.1 BTC=$72,672.56 DualMA=LONG OPEN_LONG (30 human ticks all LONG, ↓$17.44 headwind minimal, three consecutive headwinds diminishing amplitude, 30-tick milestone); B3.1 distil142 +3 (file=232, running=340; 30th-human-tick-btc72672-headwind-17 + 91st-clean-sixth-pass + session-cadence-30-round-milestone); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 340 — B6 90th clean ✅ (38/41, post-protocol-closure fifth pass — tripwire-only); B1.1 BTC=$72,690.00 DualMA=LONG OPEN_LONG (29 human ticks all LONG, ↓$82.44 headwind largest-recent, structural signal unbroken); B3.1 distil141 +3 (file=229, running=337; 29th-human-tick-btc72690-headwind + 90th-clean-milestone-fifth-pass + session-cadence-29-two-consecutive-headwinds-signal-robustness); Docker/fly.io deploy files staged (.dockerignore, Dockerfile, fly.toml, fly_entrypoint.sh, daemon_failsafe.yml); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 338 — B6 87th clean ✅ (38/41, post-protocol-closure second pass — tripwire-only); B1.1 BTC=$72,784.71 DualMA=LONG OPEN_LONG (27 human ticks all LONG, ↓$30.92 headwind minimal, BTC ceiling descent $46 below $72,831); B3.1 distil139 +3 (file=223, running=331; 27th-human-tick-btc72785-headwind + 87th-clean-second-closed-case + session-cadence-27-cross-axis-invariant); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 337 — B6 86th clean ✅ (38/41, post-protocol-closure tripwire-only); B1.1 BTC=$72,815.63 DualMA=LONG OPEN_LONG (26 human ticks all LONG, ↑$18.85 tailwind, structural signal unbroken); B3.1 distil138 (file=220, running=328; checkpoint cycle, no new distil); parallel branch push concurrent",
+      "- 2026-04-11: cycle 336 — B6 86th clean ✅ (38/41, post-protocol-closure first pass — tripwire-only); B1.1 BTC=$72,796.78 DualMA=LONG OPEN_LONG (25 human ticks all LONG, ↓$11.23 headwind minimal, BTC retraced from ceiling $72,831); B3.1 distil138 +3 (file=220, running=328; 25th-human-tick-btc72797-ceiling-retracement + 86th-clean-post-protocol-closure + session-cadence-25-identity-stable); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 335 — B6 85th clean ✅ (38/41, convergence-floor six-point post-milestone; confirmation protocol CLOSED — tripwire-only); B1.1 BTC=$72,808.01 DualMA=LONG OPEN_LONG (24 human ticks all LONG, ↑$40.78 tailwind, BTC $22.99 below range ceiling $72,831); B3.1 distil137 +3 (file=217, running=325; 24th-human-tick-btc72808-tailwind + 85th-clean-six-point-post-milestone-closed + session-cadence-24-identity-not-discipline); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 334 — B6 84th clean ✅ (38/41, convergence-floor five-point post-milestone confirmed; attractor locked environment-invariant); B1.1 BTC=$72,767.23 DualMA=LONG OPEN_LONG (23 human ticks all LONG, ↓$5.96 headwind minimal, range $72,638–$72,831 stable); B3.1 distil136 +3 (file=214, running=322; 23rd-human-tick-btc72767-headwind + 84th-clean-five-point-post-milestone + execution-reflex-23-session-behavioral-constant); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 333 — B6 83rd clean ✅ (38/41, convergence-floor four-point post-milestone confirmed; 83rd = fourth consecutive post-milestone data point = attractor stable beyond milestone boundary); B1.1 BTC=$72,773.19 DualMA=LONG OPEN_LONG (22 human ticks all LONG, ↑$28.16 tailwind, structural signal unbroken range upper approach $57.81 below $72,831); B3.1 distil135 +3 (file=211, running=319; 22nd-human-tick-btc72773-tailwind + 83rd-clean-four-point-post-milestone + parallel-branch-reflex-22-session-discipline); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 332 — B6 82nd clean ✅ (38/41, convergence-floor three-point post-milestone confirmed; 82nd = third consecutive post-milestone data point = structural invariant replicated); B1.1 BTC=$72,745.03 DualMA=LONG OPEN_LONG (21 human ticks all LONG, ↓$24.92 headwind minimal, signal unbroken through range); B3.1 distil134 +3 (file=208, running=316; 21st-human-tick-btc72745-headwind + 82nd-clean-three-point-milestone + btc-range-21-sessions-slow-ma-tracking); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 331 — B6 81st clean ✅ (38/41, convergence-floor post-milestone locked; 81st = first post-milestone data point confirms attractor stable); B1.1 BTC=$72,769.95 DualMA=LONG OPEN_LONG (20 human ticks all LONG, ↑$15 tailwind minimal, engine tick=168 daemon-advanced HOLD all regime=MIXED); B3.1 distil132 +3 (file=202, running=310; 20th-human-tick-engine168-tailwind + 81st-clean-post-milestone + daemon-engine-tick-cadence-semantics); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 330 — B6 80th clean ✅ (38/41, convergence-floor empirically established; 80 sessions = proven structural attractor); B1.1 BTC=$72,754.72 DualMA=LONG OPEN_LONG (19 human ticks all LONG, ↓$7 headwind minimal); B3.1 distil131 +3 (file=199, running=307; 19th-human-tick-btc72754 + 80th-clean-milestone + human-session-push-as-behavioral-reflex); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 328 — B6 79th clean ✅ (38/41, convergence-floor pure-tripwire dual-trigger; daemon+human same hour); B1.1 BTC=$72,762.0 DualMA=LONG OPEN_LONG (18 human ticks all LONG, ↓$9 headwind minimal, engine tick=162 HOLD all regime=MIXED); B3.1 distil130 +3 (file=196, running=304; 18th-human-tick-engine162 + 79th-clean-dual-trigger + daemon-human-parallel-safe-concurrency); parallel branch push B1.1+B3.1+B6 concurrent",
       "- 2026-04-11: cycle 327 — B6 78th clean ✅ (38/41, convergence-floor pure-tripwire; monitoring-cost-zero); B1.1 BTC=$72,722.57 DualMA=LONG OPEN_LONG (16 human ticks all LONG, ↑$2 tailwind minimal, engine advancing HOLD all regime=MIXED); B3.1 distil128 +3 (file=190, running=298; 16th-human-tick-range-stable + 78th-clean-pure-tripwire + cold-start-type-b-orientation-sequence); parallel branch push B1.1+B3.1+B6 concurrent",
       "- 2026-04-11: cycle 326 — B6 77th clean ✅ (38/41, convergence-floor structural property; tripwire-only); B1.1 BTC=$72,723.12 DualMA=LONG OPEN_LONG (15 human ticks all LONG, ↑$2 tailwind minimal, engine tick=149 all HOLD regime=MIXED); B3.1 distil127 +3 (file=187, running=295; 15th-human-tick-long + 77th-clean-structural-property + engine-tick-149-daemon-human-ratio); parallel branch push B1.1+B3.1+B6 concurrent",
       "- 2026-04-11: cycle 325 — B6 76th clean ✅ (38/41, convergence-floor statistical certainty; tripwire-only); B1.1 BTC=$72,720.65 DualMA=LONG OPEN_LONG (14 human ticks all LONG, ↑$16 tailwind minimal, engine tick=141 all HOLD regime=MIXED); B3.1 distil126 +3 (file=184, running=292; 14th-human-tick-long + 76th-clean-statistical-certainty + engine-tick-141-hold-mixed); parallel branch push B1.1+B3.1+B6 concurrent",
@@ -136,53 +150,39 @@
       "- 2026-04-11: cycle 323 — B6 74th clean ✅ (38/41, convergence-floor stable; monitoring cost zero); B1.1 BTC=$72,695.04 DualMA=LONG OPEN_LONG (12 human ticks all LONG, ↑$14 tailwind, signal structural); B3.1 distil124 +3 (file=178, running=286; 12th-human-tick-long-tailwind + 74th-clean-zero-cost + human-session-parallel-branch-discipline); parallel branch push B1.1+B3.1+B6 concurrent",
       "- 2026-04-11: cycle 322 — B6 73rd clean ✅ (38/41, convergence-floor stable; monitoring cost zero); B1.1 BTC=$72,680.97 DualMA=LONG OPEN_LONG (11 human ticks all LONG, ↓$43 headwind, signal structural); B3.1 distil123 +3 (file=175, running=283; 11th-human-tick-long + 73rd-clean-zero-cost + L2-dead-loop-daemon-context-disambiguation); parallel branch push B1.1+B3.1+B6 concurrent",
       "- 2026-04-12: cycle 321 — B6 72nd clean ✅ (38/41, convergence-floor structural baseline; <38 triggers dna_core audit); B1.1 BTC=$72,724.00 DualMA=LONG OPEN_LONG (10 human ticks all LONG, +$72 tailwind, structural unbroken); B3.1 distil122 +3 (file=172, running=280; human-gate-bottleneck + engine-frozen-48-ticks + convergence-floor-formalized); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-12: cycle 320 — B6 71st clean ✅ (38/41, convergence-floor-established); B1.1 BTC=$72,652.00 DualMA=LONG OPEN_LONG (9 human ticks all LONG, LONG structural); B3.1 distil121 +3 (file=169, running=277; daemon-priority-lag-as-cache-gap identified); SOP#01~121 COMPLETE; daemon-priority-file lag noted (priority file lags distillation file as canonical state)",
-      "- 2026-04-11: cycle 319 — B6 69th clean ✅ (38/41, structural invariant holds); B1.1 BTC=$72,672.45 DualMA=LONG OPEN_LONG (7 human ticks all LONG, +$22 tailwind); B3.1 distil119 +3 (file=163, running=271); parallel-branch-push discipline executed (B1.1+B6+B3.1 concurrent)",
-      "- 2026-04-11: cycle 318+ — B6 68th clean ✅ dual-rerun (single-rerun-rule established); B1.1 BTC=$72,650.34 DualMA=LONG OPEN_LONG (6 human ticks all LONG, -$119 headwind); B3.1 distil118 +3 (file=160, running=268); tree+status+priority updated + committed",
-      "- 2026-04-11: cycle 318H — B6 68th clean ✅ (LLM non-det confirmed, 38/41 ALIGNED); writeback_distillation.py deployed + 33 insights synced to LYH; B1.1 BTC=$72,712.74 DualMA=LONG OPEN_LONG (5 human ticks all LONG); B3.1 distil117 (file=157, running=262)",
-      "- 2026-04-11: cycle 317H — engine.py activate_live+reactivate_strategy committed; distil116; B6 37/41 (LLM non-det flagged); writeback bridge committed (9a5f89f)",
-      "- 2026-04-10: daemon rate-limit detection + sleep-to-reset (43fd4fa)",
-      "- 2026-04-10: remote trigger removed from dynamic_tree (ddc5d88)",
-      "- 2026-04-11: opt-token branch merged (Phase 1 archive + Phase 2 3-tier boot)",
-      "- 2026-04-11: .claude/settings.json Linux path fixed",
-      "- 2026-04-11: cycle 301 — B6 33/33 ✅ (52nd); B1.1 DualMA LONG flip (log-only, SOP #92 gate); SOP #117 ✅; B3.1 99 insights",
-      "- 2026-04-11: cycle 302 — B6 33/33 ✅ (53rd structural invariant); B3.1 cycle 98 +3 (total 102); SOP#117 committed; priority stale B2.2 cleared",
-      "- 2026-04-11: cycle 303 — B6 33/33 ✅ (54th clean); MD-331 meta_dna_core_audit added to generic_boot_tests.json; daemon_next_priority SOP#117 expansion item cleared",
-      "  - 2026-04-11: cycle 303 (supp) — SOP #118 Strategy Reactivation Gate Protocol ✅ (G0-G5, ghost-signal codified); B3.1 cycles 98+99 narrative → 105 insights; B6 54th invariant confirmed; taxonomy backfill 111-entry gap open",
-      "- 2026-04-11: cycle 317H (human) — B6 37/41 (4 MISALIGNED: 3 expected + generic_long_term_survival_check new — LLM non-det likely); B1.1 BTC=$72,726.09 DualMA=LONG OPEN_LONG (paper, G0/G1 ticks=2 FROZEN); B3.1 distil116 +3 (file=154, running=262); engine.py activate_live+reactivate_strategy committed",
-      "- 2026-04-11: cycle 317 — DAEMON FIX cp950 UnicodeDecodeError → encoding=utf-8 errors=replace; engine.py SOP#118 kill_window recovery committed; B1.1 tick BTC=$72,733.82 DualMA=LONG OPEN_LONG (paper, G0/G1 ticks=2 FROZEN); B3.1 distil115 +3 (file=151, running=259); session-state staleness as diagnostic signal"
+      "- 2026-04-12: cycle 320 — B6 71st clean ✅ (38/41, convergence-floor-established); B1.1 BTC=$72,652.00 DualMA=LONG OPEN_LONG (9 human ticks all LONG, LONG structural); B3.1 distil121 +3 (file=169, running=277; daemon-priority-lag-as-cache-gap identified); SOP#01~121 COMPLETE; daemon-priority-file lag noted (priority file lags distillation file as canonical state)"
     ]
   },
   "b6_streak": {
     "available": true,
-    "cycle": 327,
-    "streak": 78
+    "cycle": 342,
+    "streak": 92
   },
   "agent_metrics": {
     "available": true,
     "model": "Opus",
-    "tokens_in": 7836,
-    "tokens_out": 291337,
-    "tokens_cached": 248218,
-    "context_pct": 25,
-    "cost_usd": 22.340142,
+    "tokens_in": 33789,
+    "tokens_out": 597143,
+    "tokens_cached": 359041,
+    "context_pct": 36,
+    "cost_usd": 45.831122,
     "git_branch": "main",
-    "ram_used_pct": 42,
+    "ram_used_pct": 48,
     "ram_disk_free_mb": 2027.4,
-    "ts": "2026-04-11T06:54:43.090976+00:00"
+    "ts": "2026-04-11T08:04:12.592692+00:00"
   },
   "git": {
     "digital-immortality": [
-      "46d8b1b feat(daemon-phase2-dashboard+tick159): Phase 2 dashboard pipeline in daemon + engine tick=159 BTC=$72,771",
-      "59325f8 feat(dashboard+tick157): web dashboard pipeline + engine ticks 155-157 BTC=$72,762 + heartbeat healthy",
-      "9607551 feat(cycle328): dashboard + engine tick 157 BTC=$72,762 + heartbeat + platform scripts",
-      "61a48d7 feat(heartbeat): Type A daily scheduled check via GitHub Actions",
-      "8f9cd59 feat(cycle327): B6 78th ✅ convergence-floor-pure-tripwire + B3.1 distil128 (file=190/running=298) + B1.1 BTC=$72,722.57 DualMA=LONG ×16 human ticks engine-advancing HOLD all + parallel branch push B1.1+B3.1+B6",
-      "de6224f feat(cycle326): B6 77th ✅ convergence-floor-structural-property + B3.1 distil127 (file=187/running=295) + B1.1 BTC=$72,723.12 DualMA=LONG ×15 human ticks engine-tick=149 HOLD all + parallel branch push B1.1+B3.1+B6",
-      "252aa83 feat(daemon-tick148): engine ticks 142-148 BTC=72725.40 MIXED 13-active all-FLAT + daemon cp950 error loop",
-      "ccc295f feat(daemon-tick147): engine ticks 146+147 BTC=$72,741.89 MIXED all-13-HOLD + B1.1 DualMA=LONG ×14 human ticks tick=147 HOLD all",
-      "a138222 feat(cycle325): B6 76th ✅ convergence-floor-statistical-certainty + B3.1 distil126 (file=184/running=292) + B1.1 BTC=$72,720.65 DualMA=LONG ×14 human ticks engine-tick=141 HOLD all + parallel branch push B1.1+B3.1+B6",
-      "04a101f feat(daemon-tick141): engine tick 141 BTC=$72,738.13 MIXED all-13-FLAT + index.md restructure"
+      "d9d5b9f feat(cycle342): B6 92nd ✅ post-protocol-closure seventh pass + B3.1 distil143 (file=235/running=343) + B1.1 BTC=$72,745.37 DualMA=LONG ×31 human ticks + parallel branch push",
+      "ee6ec51 revert: cancel Fly.io migration (Edward chose GH Actions chained for simplicity)",
+      "e19b626 chore: untrack idle_task_picker_state.json (now gitignored)",
+      "e2341af feat(cycle341): daemon tick=223 + organism interactions ×3 + idle_task_picker update + engine advance",
+      "79745e3 feat(cycle341): B6 91st ✅ sixth-pass + B3.1 distil142 (file=232/running=340) + B1.1 BTC=$72,672.56 DualMA=LONG ×30 human ticks + idle_task_picker deployed + parallel branch push",
+      "3ca24c2 feat(cycle341): B6 91st ✅ post-protocol-closure sixth pass + B3.1 distil142 (file=232/running=340) + B1.1 BTC=$72,672.56 DualMA=LONG ×30 human ticks + parallel branch push",
+      "4d18da6 feat(cycle340): B6 90th ✅ post-protocol-closure fifth pass + B3.1 distil141 (file=229/running=337) + B1.1 BTC=$72,690.00 DualMA=LONG ×29 human ticks + parallel branch push",
+      "ddd6c17 feat(cycle340): B6 90th ✅ post-protocol-closure fifth pass + B3.1 distil141 (file=229/running=337) + B1.1 BTC=$72,690 DualMA=LONG ×29 human ticks + parallel branch push",
+      "7195d08 feat(cycle340): Docker/fly.io deploy + B6 89th ✅ + B3.1 distil140 (file=226/running=334) + B1.1 BTC=$72,690 DualMA=DISABLED tick=212 ×29 human ticks + parallel branch push",
+      "e0e4609 feat(deploy): Fly.io always-on daemon migration (infra files only, deploy pending)"
     ],
     "LYH": [
       "4933e4d refactor: rename backtest-framework -> trading-research",
@@ -209,10 +209,329 @@
       "d4fc655 thinking: refine dominance axiom - anti-inferiority > superiority"
     ]
   },
-  "insight_count": 127,
+  "insight_count": 181,
   "blockers": [
     "mainnet API keys (~88d until 2026-07-07)",
     "outreach DMs × 5 pending (staging/outreach_week1_execution.md)",
     "Samuel Turing test invite (human-send)"
-  ]
+  ],
+  "mission_control": {
+    "available": true,
+    "total_events": 13,
+    "pending": [
+      {
+        "ts": "2026-04-11T08:00:14.530746+00:00",
+        "type": "decision_change",
+        "status": "pending",
+        "msg": "Edward reframed reporting: silent Discord, all progress -> dashboard pull-model with white-language interactive viz",
+        "actor": "main_session",
+        "pretty_msg": "方向調整：Edward reframed reporting: silent Discord, all progress -> dashboard pull-model with white-language interactive viz",
+        "pretty_actor": "主腦",
+        "pretty_status": "待決定"
+      },
+      {
+        "ts": "2026-04-11T08:00:14.530736+00:00",
+        "type": "decision_change",
+        "status": "pending",
+        "msg": "Edward cancelled Fly.io migration -> use GitHub Actions chained workflow_dispatch instead",
+        "actor": "main_session",
+        "pretty_msg": "方向調整：Edward cancelled Fly.io migration -> use GitHub Actions chained workflow_dispatch instead",
+        "pretty_actor": "主腦",
+        "pretty_status": "待決定"
+      },
+      {
+        "ts": "2026-04-11T07:59:52.993124+00:00",
+        "type": "decision_change",
+        "status": "pending",
+        "msg": "Edward reframed Discord cadence: silent default, dashboard pull-only",
+        "actor": "main_session",
+        "pretty_msg": "方向調整：Edward reframed Discord cadence: silent default, dashboard pull-only",
+        "pretty_actor": "主腦",
+        "pretty_status": "待決定"
+      },
+      {
+        "ts": "2026-04-11T07:59:52.993118+00:00",
+        "type": "decision_change",
+        "status": "pending",
+        "msg": "Edward switched cloud target Fly.io -> GitHub Actions chained",
+        "actor": "main_session",
+        "pretty_msg": "方向調整：Edward switched cloud target Fly.io -> GitHub Actions chained",
+        "pretty_actor": "主腦",
+        "pretty_status": "待決定"
+      }
+    ],
+    "in_progress": [
+      {
+        "ts": "2026-04-11T08:04:02.800639+00:00",
+        "type": "phase_4",
+        "status": "in_progress",
+        "msg": "Phase 4: building auto sign-off batch system + dashboard upgrade in parallel",
+        "actor": "main_session",
+        "pretty_msg": "Phase 4 階段：Phase 4: building auto sign-off batch system + dashboard upgrade in parallel",
+        "pretty_actor": "主腦",
+        "pretty_status": "進行中"
+      },
+      {
+        "ts": "2026-04-11T07:59:52.993112+00:00",
+        "type": "phase_3_start",
+        "status": "in_progress",
+        "msg": "Phase 3: cloud migration + writeback cron + meta tasks",
+        "actor": "main_session",
+        "pretty_msg": "Phase 3 階段：Phase 3: cloud migration + writeback cron + meta tasks",
+        "pretty_actor": "主腦",
+        "pretty_status": "進行中"
+      },
+      {
+        "ts": "2026-04-11T07:59:52.993061+00:00",
+        "type": "main_session",
+        "status": "started",
+        "msg": "Cold start session resumed",
+        "actor": "main_session",
+        "pretty_msg": "主腦：Cold start session resumed",
+        "pretty_actor": "主腦",
+        "pretty_status": "開始"
+      }
+    ],
+    "done": [
+      {
+        "ts": "2026-04-11T08:04:02.800624+00:00",
+        "type": "rule_update",
+        "status": "done",
+        "msg": "New principle: minimize Edward actions. Chairman = sign-off only, COO = operational. 5-dim framework adds operational simplicity.",
+        "actor": "main_session",
+        "pretty_msg": "rule update：New principle: minimize Edward actions. Chairman = sign-off only, COO = operational. 5-dim framework adds operational simplicity.",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
+        "ts": "2026-04-11T08:04:02.800592+00:00",
+        "type": "subagent_complete",
+        "status": "done",
+        "msg": "idle_task_picker meta-infra: daemon now self-dispatches highest-EV backlog task each cycle. 16 tests pass. Eliminates idle-wait failure mode.",
+        "actor": "main_session",
+        "pretty_msg": "下屬完成任務：idle_task_picker meta-infra: daemon now self-dispatches highest-EV backlog task each cycle. 16 tests pass. Eliminates idle-wait failure mode.",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
+        "ts": "2026-04-11T08:00:14.530719+00:00",
+        "type": "subagent_complete",
+        "status": "done",
+        "msg": "Chat archive angle 3 (micro-decisions): 30 existing entries verified (10 strong, 7 partial, 12 need semantic parser). 10 NEW patterns discovered. KEY FINDING: recursive engine pattern is Edward native speech since 2018 not new adoption",
+        "actor": "main_session",
+        "pretty_msg": "下屬完成任務：Chat archive angle 3 (micro-decisions): 30 existing entries verified (10 strong, 7 partial, 12 need semantic parser). 10 NEW patterns discovered. KEY FINDING: recursive engine pattern is Edward native speech since 201...",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
+        "ts": "2026-04-11T08:00:14.530689+00:00",
+        "type": "subagent_complete",
+        "status": "done",
+        "msg": "Chat archive angle 2 (decision quotes): 62 quotes scanned 135K msgs, 6 counter-examples. KEY FINDING: Axiom 1 derivative-thinking is absent from chat (only 2 hits / 135K msgs) - lives in code not speech",
+        "actor": "main_session",
+        "pretty_msg": "下屬完成任務：Chat archive angle 2 (decision quotes): 62 quotes scanned 135K msgs, 6 counter-examples. KEY FINDING: Axiom 1 derivative-thinking is absent from chat (only 2 hits / 135K msgs) - lives in code not speech",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
+        "ts": "2026-04-11T07:59:52.993106+00:00",
+        "type": "phase_2",
+        "status": "completed",
+        "msg": "Phase 2: dashboard live + heartbeat cron + repo rename",
+        "actor": "main_session",
+        "pretty_msg": "Phase 2 階段：Phase 2: dashboard live + heartbeat cron + repo rename",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
+        "ts": "2026-04-11T07:59:52.993092+00:00",
+        "type": "phase_1",
+        "status": "completed",
+        "msg": "Phase 1: github audit + INDEX.md rollout 3 repos",
+        "actor": "main_session",
+        "pretty_msg": "Phase 1 階段：Phase 1: github audit + [檔案] rollout 3 repos",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      }
+    ],
+    "failure": [],
+    "recent_feed": [
+      {
+        "ts": "2026-04-11T08:04:02.800639+00:00",
+        "type": "phase_4",
+        "status": "in_progress",
+        "msg": "Phase 4: building auto sign-off batch system + dashboard upgrade in parallel",
+        "actor": "main_session",
+        "pretty_msg": "Phase 4 階段：Phase 4: building auto sign-off batch system + dashboard upgrade in parallel",
+        "pretty_actor": "主腦",
+        "pretty_status": "進行中"
+      },
+      {
+        "ts": "2026-04-11T08:04:02.800624+00:00",
+        "type": "rule_update",
+        "status": "done",
+        "msg": "New principle: minimize Edward actions. Chairman = sign-off only, COO = operational. 5-dim framework adds operational simplicity.",
+        "actor": "main_session",
+        "pretty_msg": "rule update：New principle: minimize Edward actions. Chairman = sign-off only, COO = operational. 5-dim framework adds operational simplicity.",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
+        "ts": "2026-04-11T08:04:02.800592+00:00",
+        "type": "subagent_complete",
+        "status": "done",
+        "msg": "idle_task_picker meta-infra: daemon now self-dispatches highest-EV backlog task each cycle. 16 tests pass. Eliminates idle-wait failure mode.",
+        "actor": "main_session",
+        "pretty_msg": "下屬完成任務：idle_task_picker meta-infra: daemon now self-dispatches highest-EV backlog task each cycle. 16 tests pass. Eliminates idle-wait failure mode.",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
+        "ts": "2026-04-11T08:00:14.530746+00:00",
+        "type": "decision_change",
+        "status": "pending",
+        "msg": "Edward reframed reporting: silent Discord, all progress -> dashboard pull-model with white-language interactive viz",
+        "actor": "main_session",
+        "pretty_msg": "方向調整：Edward reframed reporting: silent Discord, all progress -> dashboard pull-model with white-language interactive viz",
+        "pretty_actor": "主腦",
+        "pretty_status": "待決定"
+      },
+      {
+        "ts": "2026-04-11T08:00:14.530736+00:00",
+        "type": "decision_change",
+        "status": "pending",
+        "msg": "Edward cancelled Fly.io migration -> use GitHub Actions chained workflow_dispatch instead",
+        "actor": "main_session",
+        "pretty_msg": "方向調整：Edward cancelled Fly.io migration -> use GitHub Actions chained workflow_dispatch instead",
+        "pretty_actor": "主腦",
+        "pretty_status": "待決定"
+      },
+      {
+        "ts": "2026-04-11T08:00:14.530719+00:00",
+        "type": "subagent_complete",
+        "status": "done",
+        "msg": "Chat archive angle 3 (micro-decisions): 30 existing entries verified (10 strong, 7 partial, 12 need semantic parser). 10 NEW patterns discovered. KEY FINDING: recursive engine pattern is Edward native speech since 2018 not new adoption",
+        "actor": "main_session",
+        "pretty_msg": "下屬完成任務：Chat archive angle 3 (micro-decisions): 30 existing entries verified (10 strong, 7 partial, 12 need semantic parser). 10 NEW patterns discovered. KEY FINDING: recursive engine pattern is Edward native speech since 201...",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
+        "ts": "2026-04-11T08:00:14.530689+00:00",
+        "type": "subagent_complete",
+        "status": "done",
+        "msg": "Chat archive angle 2 (decision quotes): 62 quotes scanned 135K msgs, 6 counter-examples. KEY FINDING: Axiom 1 derivative-thinking is absent from chat (only 2 hits / 135K msgs) - lives in code not speech",
+        "actor": "main_session",
+        "pretty_msg": "下屬完成任務：Chat archive angle 2 (decision quotes): 62 quotes scanned 135K msgs, 6 counter-examples. KEY FINDING: Axiom 1 derivative-thinking is absent from chat (only 2 hits / 135K msgs) - lives in code not speech",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
+        "ts": "2026-04-11T07:59:52.993124+00:00",
+        "type": "decision_change",
+        "status": "pending",
+        "msg": "Edward reframed Discord cadence: silent default, dashboard pull-only",
+        "actor": "main_session",
+        "pretty_msg": "方向調整：Edward reframed Discord cadence: silent default, dashboard pull-only",
+        "pretty_actor": "主腦",
+        "pretty_status": "待決定"
+      },
+      {
+        "ts": "2026-04-11T07:59:52.993118+00:00",
+        "type": "decision_change",
+        "status": "pending",
+        "msg": "Edward switched cloud target Fly.io -> GitHub Actions chained",
+        "actor": "main_session",
+        "pretty_msg": "方向調整：Edward switched cloud target Fly.io -> GitHub Actions chained",
+        "pretty_actor": "主腦",
+        "pretty_status": "待決定"
+      },
+      {
+        "ts": "2026-04-11T07:59:52.993112+00:00",
+        "type": "phase_3_start",
+        "status": "in_progress",
+        "msg": "Phase 3: cloud migration + writeback cron + meta tasks",
+        "actor": "main_session",
+        "pretty_msg": "Phase 3 階段：Phase 3: cloud migration + writeback cron + meta tasks",
+        "pretty_actor": "主腦",
+        "pretty_status": "進行中"
+      },
+      {
+        "ts": "2026-04-11T07:59:52.993106+00:00",
+        "type": "phase_2",
+        "status": "completed",
+        "msg": "Phase 2: dashboard live + heartbeat cron + repo rename",
+        "actor": "main_session",
+        "pretty_msg": "Phase 2 階段：Phase 2: dashboard live + heartbeat cron + repo rename",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
+        "ts": "2026-04-11T07:59:52.993092+00:00",
+        "type": "phase_1",
+        "status": "completed",
+        "msg": "Phase 1: github audit + INDEX.md rollout 3 repos",
+        "actor": "main_session",
+        "pretty_msg": "Phase 1 階段：Phase 1: github audit + [檔案] rollout 3 repos",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
+        "ts": "2026-04-11T07:59:52.993061+00:00",
+        "type": "main_session",
+        "status": "started",
+        "msg": "Cold start session resumed",
+        "actor": "main_session",
+        "pretty_msg": "主腦：Cold start session resumed",
+        "pretty_actor": "主腦",
+        "pretty_status": "開始"
+      }
+    ],
+    "backlog": [],
+    "pending_approval": [
+      {
+        "label": "SOP #122",
+        "title": "Gate-Constrained Regime Operating Protocol",
+        "essence": "When every automatable lever is pulled and only human-gated actions remain, the agent must reallocate from \"build capability\" to \"lower human activation energy\"."
+      },
+      {
+        "label": "SOP #123",
+        "title": "Daemon / Human-Session Coordination Protocol",
+        "essence": "Division of labor: daemon = leaf-append writes; human session = structural/source/commit writes. Pre-flight via git diff, classify writes before executing, route daemon structural needs through a r..."
+      },
+      {
+        "label": "SOP #124",
+        "title": "Kill-Window State Persistence Protocol",
+        "essence": "All strategy state that feeds kill/reactivation decisions MUST be durable + reloaded on process start. In-memory state is a cache, never source of truth. kill_window_floor must be > 0 to avoid abso..."
+      }
+    ],
+    "blocked": [
+      {
+        "text": "mainnet API keys (~88d until 2026-07-07)",
+        "source": "quick_status"
+      },
+      {
+        "text": "outreach DMs × 5 pending ([檔案])",
+        "source": "quick_status"
+      },
+      {
+        "text": "Samuel Turing test invite (human-send)",
+        "source": "quick_status"
+      },
+      {
+        "text": "Samuel in-person session NOT DONE — needs Edward to schedule; send [檔案] first if not yet sent (DM ready: [檔案] — advances Branch 1.3 AND creates pretext for 4.1 correction session)",
+        "source": "tree"
+      },
+      {
+        "text": "[檔案] already exists at [檔案] (31 lines, ~350 tokens) — remove from quick_status",
+        "source": "tree"
+      }
+    ],
+    "main_session_status": {
+      "state": "online",
+      "label": "在線",
+      "color": "ok",
+      "age_min": 0.8
+    }
+  }
 }

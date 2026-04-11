@@ -26,6 +26,45 @@ OUT_PATH = RESULTS / "dashboard_state.json"
 # Runtime-only path; never committed. Read if exists, ignore otherwise.
 AGENT_METRICS_PATH = Path("R:/agent_metrics.json")
 
+# Mission Control data sources
+PROGRESS_JSONL = RESULTS / "agent_progress.jsonl"
+AUTO_BACKLOG_MD = STAGING / "agent_autonomous_backlog.md"
+SOP_PROPOSAL_MD = STAGING / "sop_121_plus_proposal.md"
+
+# Plain-language translation table (jargon -> Chinese)
+PRETTY_TYPE_MAP = {
+    "subagent_complete": "下屬完成任務",
+    "decision_change": "方向調整",
+    "phase_1": "Phase 1 階段",
+    "phase_2": "Phase 2 階段",
+    "phase_3": "Phase 3 階段",
+    "phase_3_start": "Phase 3 階段",
+    "phase_4": "Phase 4 階段",
+    "main_session": "主腦",
+    "daemon_cycle": "背景循環",
+    "commit": "程式已存檔",
+    "error": "出錯",
+    "blocker": "卡住",
+    "decision_needed": "需要你決定",
+}
+
+PRETTY_ACTOR_MAP = {
+    "main_session": "主腦",
+    "daemon": "背景守護",
+    "subagent": "下屬",
+}
+
+PRETTY_STATUS_MAP = {
+    "started": "開始",
+    "in_progress": "進行中",
+    "completed": "已完成",
+    "done": "已完成",
+    "pending": "待決定",
+    "failure": "失敗",
+    "failed": "失敗",
+    "blocked": "卡住",
+}
+
 TREE_BRANCHES = [
     (1, "經濟自給"),
     (2, "行為等價"),
@@ -237,6 +276,157 @@ def count_insights() -> int:
     return sum(1 for ln in text.splitlines() if ln.startswith("### Insight"))
 
 
+def _scrub_jargon(msg: str) -> str:
+    """Remove commit SHAs / paths / line refs from user-facing strings."""
+    msg = re.sub(r"\b[0-9a-f]{7,40}\b", "[程式碼變動]", msg)
+    msg = re.sub(r"[\w/\\.-]+\.(py|md|json|jsonl|txt|yml|yaml|html|css|js|ts)", "[檔案]", msg)
+    msg = re.sub(r"\bline\s+\d+\b", "", msg, flags=re.IGNORECASE)
+    msg = re.sub(r"\bL\d+\b", "", msg)
+    return msg.strip()
+
+
+def _pretty_msg(evt: dict[str, Any]) -> str:
+    raw = str(evt.get("msg", "") or "")
+    tlabel = PRETTY_TYPE_MAP.get(str(evt.get("type", "") or ""), "")
+    scrubbed = _scrub_jargon(raw)
+    if len(scrubbed) > 220:
+        scrubbed = scrubbed[:217] + "..."
+    if tlabel and tlabel not in scrubbed:
+        return f"{tlabel}：{scrubbed}" if scrubbed else tlabel
+    return scrubbed or tlabel or "(無描述)"
+
+
+def _unknown_session() -> dict[str, Any]:
+    return {"state": "unknown", "label": "狀態不明", "color": "muted", "age_min": None}
+
+
+def load_main_session_status() -> dict[str, Any]:
+    data = read_json(AGENT_METRICS_PATH)
+    if not data or not data.get("ts"):
+        return _unknown_session()
+    ts_str = str(data["ts"]).replace("Z", "+00:00")
+    try:
+        ts = datetime.fromisoformat(ts_str)
+    except ValueError:
+        return _unknown_session()
+    if ts.tzinfo is None:
+        ts = ts.replace(tzinfo=timezone.utc)
+    age_min = (datetime.now(timezone.utc) - ts).total_seconds() / 60.0
+    rounded = round(age_min, 1)
+    if age_min < 5:
+        return {"state": "online", "label": "在線", "color": "ok", "age_min": rounded}
+    if age_min < 30:
+        return {"state": "idle", "label": "閒置中", "color": "warn", "age_min": rounded}
+    return {"state": "offline", "label": "離線", "color": "alert", "age_min": rounded}
+
+
+def load_auto_backlog() -> list[dict[str, str]]:
+    text = read_text(AUTO_BACKLOG_MD)
+    if not text:
+        return []
+    items: list[dict[str, str]] = []
+    for line in text.splitlines():
+        m = re.match(r"^(?:[-*]|\d+[\.)])\s+(.+)", line.strip())
+        if not m:
+            continue
+        cleaned = _scrub_jargon(re.sub(r"\*\*|`", "", m.group(1).strip()))
+        if len(cleaned) > 180:
+            cleaned = cleaned[:177] + "..."
+        if cleaned:
+            items.append({"text": cleaned})
+        if len(items) >= 5:
+            break
+    return items
+
+
+def load_pending_approval() -> list[dict[str, str]]:
+    text = read_text(SOP_PROPOSAL_MD)
+    if not text:
+        return []
+    items: list[dict[str, str]] = []
+    for m in re.finditer(r"^###\s+(SOP\s*#?\d+)\s*[—\-–]\s*(.+?)$", text, re.MULTILINE):
+        chunk = text[m.end() : m.end() + 800]
+        em = re.search(r"\*\*Essence\*\*[:：]?\s*(.+)", chunk)
+        essence = _scrub_jargon(re.sub(r"\*\*|`", "", em.group(1).strip())) if em else ""
+        if len(essence) > 200:
+            essence = essence[:197] + "..."
+        items.append({
+            "label": m.group(1).strip(),
+            "title": m.group(2).strip(),
+            "essence": essence or "(草稿待批准)",
+        })
+        if len(items) >= 5:
+            break
+    return items
+
+
+def load_blocker_items() -> list[dict[str, str]]:
+    out: list[dict[str, str]] = []
+    for b in extract_blockers()[:8]:
+        out.append({"text": _scrub_jargon(b), "source": "quick_status"})
+    text = read_text(RESULTS / "dynamic_tree.md")
+    if text:
+        for m in re.finditer(r"(?:^|\s)BLOCKER[:：]?\s*(.+?)(?:\n|$)", text, re.MULTILINE):
+            desc = _scrub_jargon(re.sub(r"\*\*|`", "", m.group(1).strip()))
+            if len(desc) > 180:
+                desc = desc[:177] + "..."
+            if desc:
+                out.append({"text": desc, "source": "tree"})
+            if len(out) >= 12:
+                break
+    seen: set[str] = set()
+    uniq: list[dict[str, str]] = []
+    for b in out:
+        key = b["text"][:80]
+        if key not in seen:
+            seen.add(key)
+            uniq.append(b)
+    return uniq[:8]
+
+
+def load_mission_control() -> dict[str, Any]:
+    text = read_text(PROGRESS_JSONL)
+    events: list[dict[str, Any]] = []
+    if text:
+        for line in [ln for ln in text.splitlines() if ln.strip()][-100:]:
+            try:
+                evt = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            events.append({
+                "ts": evt.get("ts", ""),
+                "type": evt.get("type", ""),
+                "status": evt.get("status", ""),
+                "msg": evt.get("msg", ""),
+                "actor": evt.get("actor", ""),
+                "pretty_msg": _pretty_msg(evt),
+                "pretty_actor": PRETTY_ACTOR_MAP.get(str(evt.get("actor", "") or ""), str(evt.get("actor", "") or "")),
+                "pretty_status": PRETTY_STATUS_MAP.get(str(evt.get("status", "") or ""), str(evt.get("status", "") or "")),
+            })
+
+    def _key(e: dict[str, Any]) -> str:
+        return str(e.get("ts", ""))
+
+    pending = sorted([e for e in events if e["status"] == "pending"], key=_key, reverse=True)
+    in_progress = sorted([e for e in events if e["status"] in ("in_progress", "started")], key=_key, reverse=True)
+    done = sorted([e for e in events if e["status"] in ("done", "completed")], key=_key, reverse=True)
+    failure = sorted([e for e in events if e["status"] in ("failure", "failed", "blocked")], key=_key, reverse=True)
+
+    return {
+        "available": bool(events),
+        "total_events": len(events),
+        "pending": pending[:10],
+        "in_progress": in_progress[:20],
+        "done": done[:10],
+        "failure": failure[:10],
+        "recent_feed": sorted(events, key=_key, reverse=True)[:20],
+        "backlog": load_auto_backlog(),
+        "pending_approval": load_pending_approval(),
+        "blocked": load_blocker_items(),
+        "main_session_status": load_main_session_status(),
+    }
+
+
 def extract_blockers() -> list[str]:
     text = read_text(STAGING / "quick_status.md")
     if not text:
@@ -274,6 +464,7 @@ def build_state() -> dict[str, Any]:
         "git": load_git_commits(),
         "insight_count": count_insights(),
         "blockers": extract_blockers(),
+        "mission_control": load_mission_control(),
     }
 
 
@@ -290,6 +481,13 @@ def main() -> None:
     print(f"  b6_streak={state['b6_streak']}")
     print(f"  insights={state['insight_count']}")
     print(f"  blockers={len(state['blockers'])}")
+    mc = state.get("mission_control") or {}
+    print(f"  mission_control events={mc.get('total_events', 0)}")
+    print(f"  mc pending={len(mc.get('pending') or [])}")
+    print(f"  mc in_progress={len(mc.get('in_progress') or [])}")
+    print(f"  mc done={len(mc.get('done') or [])}")
+    print(f"  mc blocked={len(mc.get('blocked') or [])}")
+    print(f"  main_session={mc.get('main_session_status', {}).get('state')}")
 
 
 if __name__ == "__main__":

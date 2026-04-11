@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import html
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -73,6 +74,47 @@ font-size:11px;color:#b0b9c1;max-height:360px;overflow-y:auto;margin:0}
 .branch .first{color:var(--muted);font-size:11px;margin-top:2px}
 .muted{color:var(--muted)}
 footer{margin-top:16px;color:var(--muted);font-size:10px;text-align:center}
+.mc-wrap{background:var(--panel);border:2px solid var(--accent);border-radius:8px;
+padding:14px 16px;margin-bottom:16px}
+.mc-header{display:flex;align-items:center;justify-content:space-between;
+margin-bottom:10px;flex-wrap:wrap;gap:8px}
+.mc-title{font-size:16px;color:var(--accent);font-weight:700;margin:0}
+.mc-dot{display:inline-block;width:10px;height:10px;border-radius:50%;
+margin-right:6px;vertical-align:middle}
+.mc-dot.ok{background:var(--ok);box-shadow:0 0 6px var(--ok)}
+.mc-dot.warn{background:var(--warn);box-shadow:0 0 6px var(--warn)}
+.mc-dot.alert{background:var(--alert);box-shadow:0 0 6px var(--alert)}
+.mc-dot.muted{background:var(--muted)}
+.mc-online{font-size:12px;color:var(--muted)}
+.mc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:10px}
+.mc-card{background:#0b1017;border:1px solid var(--border);border-radius:6px;
+padding:10px 12px}
+.mc-card h3{margin:0 0 8px 0;font-size:13px;color:var(--accent);
+border-bottom:1px dashed var(--border);padding-bottom:4px}
+.mc-item{padding:6px 0;border-bottom:1px dotted #1f2633;font-size:12px}
+.mc-item:last-child{border-bottom:none}
+.mc-time{color:var(--muted);font-size:10px;margin-right:6px}
+.mc-actor{color:var(--accent);font-size:10px;margin-right:6px}
+.mc-decision-card{background:rgba(88,166,255,0.08);border:1px solid var(--accent);
+border-radius:5px;padding:8px 10px;margin-bottom:8px}
+.mc-decision-card summary{cursor:pointer;color:var(--text);font-size:12px;
+list-style:none;outline:none}
+.mc-decision-card summary::-webkit-details-marker{display:none}
+.mc-decision-card summary::before{content:"▶ ";color:var(--accent);font-size:10px}
+.mc-decision-card[open] summary::before{content:"▼ "}
+.mc-decision-body{margin-top:6px;padding-top:6px;border-top:1px dashed var(--border);
+color:var(--muted);font-size:11px}
+.mc-decision-body button{background:var(--accent);color:#0b1017;border:none;
+padding:4px 10px;border-radius:4px;font-size:11px;cursor:pointer;margin-top:6px;
+font-weight:600}
+.mc-decision-body button:hover{opacity:0.85}
+.mc-blocker{color:var(--alert)}
+.mc-done{color:var(--ok)}
+.mc-progress{color:var(--warn)}
+.mc-empty{color:var(--muted);font-style:italic;font-size:11px}
+.mc-backlog-item{padding:5px 0;border-bottom:1px dotted #1f2633;color:var(--text)}
+.mc-backlog-item:last-child{border-bottom:none}
+.mc-backlog-num{color:var(--accent);font-weight:600;margin-right:6px}
 """
 
 
@@ -241,11 +283,203 @@ def render_blockers(state: dict[str, Any]) -> str:
     return f"<ul>{lis}</ul>"
 
 
+def _relative_time(ts_str: str) -> str:
+    """Return Chinese relative time like '5 分鐘前', '剛剛', '2 小時前'."""
+    if not ts_str:
+        return ""
+    s = str(ts_str).replace("Z", "+00:00")
+    try:
+        ts = datetime.fromisoformat(s)
+    except ValueError:
+        return ""
+    if ts.tzinfo is None:
+        ts = ts.replace(tzinfo=timezone.utc)
+    delta = datetime.now(timezone.utc) - ts
+    secs = int(delta.total_seconds())
+    if secs < 0:
+        return "剛剛"
+    if secs < 60:
+        return "剛剛"
+    mins = secs // 60
+    if mins < 60:
+        return f"{mins} 分鐘前"
+    hrs = mins // 60
+    if hrs < 24:
+        return f"{hrs} 小時前"
+    days = hrs // 24
+    return f"{days} 天前"
+
+
+def render_mc_pending(items: list[dict[str, Any]]) -> str:
+    """Render pending decisions as expandable cards (needs Edward action)."""
+    if not items:
+        return "<p class='mc-empty'>目前沒有需要你決定的事項</p>"
+    out = []
+    for i, evt in enumerate(items):
+        pretty = esc(evt.get("pretty_msg") or "(無描述)")
+        when = esc(_relative_time(evt.get("ts", "")))
+        out.append(
+            "<details class='mc-decision-card'>"
+            f"<summary>{pretty} <span class='mc-time'>（{when}）</span></summary>"
+            "<div class='mc-decision-body'>"
+            f"這件事需要你點頭或給方向。點擊下方「我知道了」會暫時收起（Phase 4 會接後端真正處理）。"
+            f"<br><form onsubmit='return false'>"
+            f"<button type='submit' onclick='this.closest(\"details\").open=false'>我知道了</button>"
+            "</form></div></details>"
+        )
+    return "\n".join(out)
+
+
+def render_mc_in_progress(items: list[dict[str, Any]]) -> str:
+    """Render live feed of in-progress events."""
+    if not items:
+        return "<p class='mc-empty'>目前沒有進行中的任務</p>"
+    out = []
+    for evt in items:
+        when = esc(_relative_time(evt.get("ts", "")))
+        actor = esc(evt.get("pretty_actor") or "")
+        msg = esc(evt.get("pretty_msg") or "")
+        out.append(
+            "<div class='mc-item mc-progress'>"
+            f"<span class='mc-time'>{when}</span>"
+            f"<span class='mc-actor'>{actor}</span>"
+            f"{msg}</div>"
+        )
+    return "\n".join(out)
+
+
+def render_mc_done(items: list[dict[str, Any]]) -> str:
+    """Render recently completed events with relative time."""
+    if not items:
+        return "<p class='mc-empty'>尚無已完成的任務</p>"
+    out = []
+    for evt in items:
+        when = esc(_relative_time(evt.get("ts", "")))
+        msg = esc(evt.get("pretty_msg") or "")
+        out.append(
+            "<div class='mc-item mc-done'>"
+            f"<span class='mc-time'>{when}</span>"
+            f"✓ {msg}</div>"
+        )
+    return "\n".join(out)
+
+
+def render_mc_blocked(items: list[dict[str, Any]]) -> str:
+    """Render blocked items waiting on external dependency."""
+    if not items:
+        return "<p class='mc-empty'>目前沒有卡住的事項</p>"
+    out = []
+    for item in items:
+        text = esc(item.get("text", ""))
+        out.append(f"<div class='mc-item mc-blocker'>⚠ {text}</div>")
+    return "\n".join(out)
+
+
+def render_mc_backlog(items: list[dict[str, Any]]) -> str:
+    """Render top 5 auto backlog items."""
+    if not items:
+        return "<p class='mc-empty'>自動 backlog 尚未產生（等主腦產出）</p>"
+    out = []
+    for i, item in enumerate(items, 1):
+        text = esc(item.get("text", ""))
+        out.append(
+            f"<div class='mc-backlog-item'>"
+            f"<span class='mc-backlog-num'>{i}.</span>{text}</div>"
+        )
+    return "\n".join(out)
+
+
+def render_mc_pending_approval(items: list[dict[str, Any]]) -> str:
+    """Render items waiting for Edward ratification (SOP proposals)."""
+    if not items:
+        return ""
+    out = ["<h3 style='margin-top:10px'>📝 等你批准</h3>"]
+    for item in items:
+        label = esc(item.get("label", ""))
+        title = esc(item.get("title", ""))
+        essence = esc(item.get("essence", ""))
+        out.append(
+            "<details class='mc-decision-card'>"
+            f"<summary><strong>{label}</strong> — {title}</summary>"
+            f"<div class='mc-decision-body'>{essence}<br>"
+            "<form onsubmit='return false'>"
+            "<button type='submit' onclick='this.closest(\"details\").open=false'>稍後再看</button>"
+            "</form></div></details>"
+        )
+    return "\n".join(out)
+
+
+def render_mission_control(state: dict[str, Any]) -> str:
+    mc = state.get("mission_control") or {}
+    if not mc.get("available") and not mc.get("backlog") and not mc.get("pending_approval"):
+        online = mc.get("main_session_status") or {}
+        dot_cls = esc(online.get("color") or "muted")
+        label = esc(online.get("label") or "狀態不明")
+        return (
+            "<section class='mc-wrap'>"
+            "<div class='mc-header'>"
+            "<h2 class='mc-title'>🎯 Mission Control — 現在發生什麼事</h2>"
+            f"<div class='mc-online'><span class='mc-dot {dot_cls}'></span>"
+            f"主腦：{label}</div>"
+            "</div>"
+            "<p class='mc-empty'>尚無活動 — 主腦還沒寫入任何事件</p>"
+            "</section>"
+        )
+
+    online = mc.get("main_session_status") or {}
+    dot_cls = esc(online.get("color") or "muted")
+    label = esc(online.get("label") or "狀態不明")
+    age_min = online.get("age_min")
+    age_str = f"（{age_min} 分鐘前更新）" if age_min is not None else ""
+
+    pending = mc.get("pending") or []
+    in_progress = mc.get("recent_feed") or mc.get("in_progress") or []
+    done = mc.get("done") or []
+    blocked = mc.get("blocked") or []
+    backlog = mc.get("backlog") or []
+    pending_approval = mc.get("pending_approval") or []
+
+    header = (
+        "<div class='mc-header'>"
+        "<h2 class='mc-title'>🎯 Mission Control — 現在發生什麼事</h2>"
+        f"<div class='mc-online'><span class='mc-dot {dot_cls}'></span>"
+        f"主腦：{label} {esc(age_str)}</div>"
+        "</div>"
+    )
+
+    cards = [
+        "<div class='mc-card'><h3>🎯 待你決策</h3>"
+        + render_mc_pending(pending)
+        + render_mc_pending_approval(pending_approval)
+        + "</div>",
+        "<div class='mc-card'><h3>🚀 進行中</h3>"
+        + render_mc_in_progress(in_progress)
+        + "</div>",
+        "<div class='mc-card'><h3>✅ 剛完成</h3>"
+        + render_mc_done(done)
+        + "</div>",
+        "<div class='mc-card'><h3>🚧 卡住</h3>"
+        + render_mc_blocked(blocked)
+        + "</div>",
+        "<div class='mc-card'><h3>📋 自動 backlog top 5</h3>"
+        + render_mc_backlog(backlog)
+        + "</div>",
+    ]
+    return (
+        "<section class='mc-wrap'>"
+        + header
+        + "<div class='mc-grid'>"
+        + "\n".join(cards)
+        + "</div></section>"
+    )
+
+
 def render_page(state: dict[str, Any]) -> str:
     updated = state.get("updated_taipei") or state.get("updated_utc") or "unknown"
     body = f"""
 <h1>Digital Immortality — 永生樹 Dashboard</h1>
 <div class='subtitle'>updated: {esc(updated)} · pull-model · auto-refresh 5min</div>
+{render_mission_control(state)}
 <div class='grid'>
   <section class='panel'><h2>永生樹 (7 branches)</h2>{render_tree(state)}</section>
   <section class='panel'><h2>Trading</h2>{render_trading(state)}</section>
