@@ -1,67 +1,54 @@
-# Cycle 290 — 2026-04-10T20:34Z
+# Cycle 351 — 2026-04-11T08:43Z
 
 ## What was done this cycle
 
-**B存活 G1 audit (designed trigger — 90-cycle cadence)**
-- dna_core.md: 416 MDs verified ✅
-- MD-408: three-layer loop (L1執行+L2評估+L3演化) present and correct ✅
-- SOP #116 (distillation_taxonomy_protocol): exists in docs/ ✅
-- Priority stack: EV-thinking > inaction-bias > systems > time-currency > concrete — intact ✅
-- **G1 PASS**
+**Branch 6 — 101st consecutive clean cycle (post-100-milestone)**
+- consistency_test.py templates/dna_core.md → 38/41 ALIGNED ✅
+- 101st consecutive clean cycle — first cycle post-100-session-milestone; no drift
+- 3 MISALIGNED: poker_gto_mdf / trading_atr_sizing / career_multi_option_ev (permanent LLM-boundary, expected)
+- Fifteenth pass under post-protocol-closure tripwire regime
+- pass=infrastructure, fail=L3. Zero monitoring cost. No commentary required.
 
-**Branch 6 — 58th consecutive clean cycle (IMPROVED)**
-- consistency_test.py templates/dna_core.md → 36/39 ALIGNED ✅ (up from 33)
-- NEW: meta_search_before_act / meta_output_must_persist / meta_three_layer_loop now deterministically ALIGNED
-- 3 still MISALIGNED: poker_gto_mdf / trading_atr_sizing / career_multi_option_ev (formula-recall LLM-required, expected)
+**Branch 1.1 — paper-live tick #40**
+- BTC=$72,726.62 (↑$19.67 from cycle 350 $72,706.95; LONG tailwind minimal; midzone recovery)
+- DualMA_10_30=LONG OPEN_LONG (40th consecutive human-session LONG tick, structural signal unbroken)
+- Donchian_20=FLAT HOLD
+- BTC $104.38 below ceiling $72,831; $88.62 above floor $72,638 (midzone)
+- Engine tick=258 STOPPED G0/G1 FROZEN; DualMA variants disabled PF<0.8
 
-**Branch 1.1 — paper-live tick 350**
-- BTC=$72,310.15 (synthetic, Binance API offline)
-- DualMA_10_30=SHORT; all other 17 strategies=FLAT
-- Regime=MIXED; total_pnl=-2.71%; 2074 total log entries
-- 3 disabled: DualMA_10_30 (PF=0.53), gen_BollingerMR_RF_7abfe4 (PF=0.59), gen_BollingerMR_RF_598b24 (PF=0.77)
-- ccxt reinstalled in environment ✅
-
-**Branch 1.2 L3 Evolve — strategy pool 18→19**
-- strategy_generator.py --generate 3
-- 1 PASS: gen_DonchianConfirmed_RSI_9b2bf4 (WF windows=3/5, sharpe=-0.04, mdd=18.4%)
-- 2 FAIL (gen_DualMA_RF_713d09, gen_Donchian_RF_RSI_aeff8a)
-- Pool: 19 strategies (16 active + 3 disabled)
-
-**Branch 3.1 — Distillation (+4 insights → total 216)**
-- consistency-58th-meta-alignment-improved
-- paper-tick290-synthetic-btc72310-flat
-- l3-evolve-strategy-pool-19-gen-donchian-confirmed-rsi
-- g1-audit-cycle290-dna-core-416-mds-pass
+**Branch 3.1 — distil152 (+3 insights)**
+- 40th-human-tick-btc72727-tailwind-20-midzone-recovery
+- 101st-clean-B6-fifteenth-pass-post-100-milestone
+- btc-40-session-oscillation-midzone-recovery-pattern
+- File total: 260 cycles appended; running total: 370 insights
 
 ## What changed in the repo
 
-- `results/daily_log.md`: cycle 290 entry appended
-- `memory/insights.json`: 4 new insights (total 216)
+- `memory/recursive_distillation.md`: distil152 appended (3 insights; file ~1999 lines)
+- `results/dynamic_tree.md`: cycle 351 entries appended (B6 + B1.1 + B3.1 + daemon_next_priority)
+- `results/daemon_next_priority.txt`: updated to cycle 351
+- `results/paper_dual_ma.jsonl`: tick #40 appended (DualMA LONG $72,726.62)
+- `results/paper_donchian.jsonl`: tick #40 appended (Donchian HOLD)
+- `staging/next_input.md`: updated for cycle 352
 - `staging/last_output.md`: this file
-- `staging/next_input.md`: updated for cycle 291
-- `trading/strategies.py`: gen_DonchianConfirmed_RSI_9b2bf4 added
 
 ## Backward check
 
-- G1 audit was a designed trigger from cycle 267 + 90-cycle cadence → cycle 290+ → EXECUTED ✅
-- Consistency improvement (33→36 ALIGNED) happened without explicit recalibration — organic improvement
-- Strategy pool L3 Evolve: 3 attempts, 1 pass — normal survival rate (33%)
-- B2.2 (201803 JSONL): still Windows-only blocked, unchanged
-- B1.3 outreach: 0 sends, human-gated, unchanged
-- dashboard_state.py stats are stale (414 MDs vs actual 416, tick 99 vs 350) — generator needs update
+- B6 101st clean: post-milestone regime active; no behavioral drift at 101 sessions. Infrastructure confirmed.
+- B1.1: BTC recovered ↑$19.67 from lower-zone (cycle 350 $72,706) to midzone ($72,727). Three-session micro-pattern: midpoint→lower→midzone. Range intact, signal intact. 40 LONG.
+- B3.1: distil152 executed per cycle protocol. File/running counts updated.
+- Gate-constrained regime unchanged: outreach DMs and Samuel DM remain human-gated.
 
 ## Human blockers
 
 - Binance mainnet API keys (T4) — deadline 2026-07-07
-- Samuel DM (T2) — organism calibration DM ready, not sent
-- Twitter API keys for SOP posting (T3)
-- **201803 JSONL** — upload or run on Windows for MD-391~393
-- Turing Test Candidates 2+3 (Branch 9)
+- Outreach DMs × 5 (B1.3) — human-send
+- Samuel DM (B4.1) — human-send
+- Engine G3 restart — human decision
 
 ## Next cycle priorities
 
-1. **Branch 1.1**: real-data tick when Binance online (autonomous)
-2. **Branch 6**: consistency check — 59th consecutive
-3. **Branch 1.2 L3 Evolve**: run gen_DonchianConfirmed_RSI_9b2bf4 paper-trade tick — accumulate performance data
-4. **Branch 3.1**: distillation cycle 291
-5. **Branch 1.3**: outreach DMs — human-gated (Week 1 DM sends)
+1. **Branch 1.1**: paper-live tick #41 (autonomous)
+2. **Branch 6**: consistency check — 102nd consecutive
+3. **Branch 3.1**: distil153
+4. **Branch 1.3**: outreach DMs — human-gated (Week 1 DM sends × 5)
