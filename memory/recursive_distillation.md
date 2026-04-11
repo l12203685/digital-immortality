@@ -461,3 +461,61 @@ insights.json has 216 entries; recursive_distillation.md narrativizes 105 (after
 **Tags**: branch-3.1, taxonomy, retrieval, narrative, insights.json, metadata, backfill
 
 ---
+
+## Cycle 103 — 2026-04-11T14:00:00+00:00
+
+**Source cycles**: 306-308
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 118)
+
+### Insight 1: cooling-as-regime-filter
+
+SOP #118's cooling period (≥5 cycles after kill) is not calendar-based delay — it is regime-change detection disguised as a time gate. A killed strategy that re-signals LONG during cooling is producing that signal in the SAME regime that triggered the kill. The 5-cycle minimum is a proxy for "has market moved past the kill-triggering conditions?" This generalizes: any kill→reactivate gate should be structured as regime-change detection. The time threshold is a proxy because regime labels are coarse (MIXED/TRENDING/MR) and may not capture subtle condition changes. Cooling forces observation of N price periods before acting, letting the regime reveal itself.
+
+**Signal source**: SOP #118 cycle 303; SOP #92 cooling complete cycle 307 (5/5 cycles); G2 regime=MIXED=PARTIAL at cycle 306+307+308
+**Tags**: trading, SOP-118, cooling, regime-filter, kill-conditions, branch-1.1
+
+### Insight 2: pf-variance-short-window
+
+PF=1.076 at 34 ticks (cycle 307) → PF=1.076 at 43 ticks (cycle 308) shows PF barely moved across 9 additional ticks. This is not stability — it's noise-level change in a short window. G3's threshold of ≥50 ticks and PF≥1.2 is calibrated to reduce PF variance. At <50 ticks with few closed trades, PF is a poor estimator of true edge. PF=infinity (0 losses) on 1 open winning position is the degenerate case — not strong evidence. The G3 gate exists to force the system past the noise floor before committing capital. Minimum tick count is a statistical confidence floor, not an arbitrary bureaucratic delay.
+
+**Signal source**: SOP #118 G3 WATCH cycles 306-308; PF tracking: 1.070 (34 ticks) → 1.076 (43 ticks); report shows PF=inf (1 trade, no losses)
+**Tags**: trading, SOP-118, profit-factor, statistical-confidence, noise-floor, branch-1.1
+
+### Insight 3: human-gates-ceiling-not-floor
+
+Human-gated items (API keys ~88d, outreach DMs ×5, Samuel calibration DM) define the ceiling of autonomous agent capability — not a floor. When all non-human-gated branches are saturated (SOP #01~#118 COMPLETE, 59 clean cycles, 229 insights, all deployable systems operational), the agent has maximally utilized its autonomous surface area. The remaining gap — "agent can push X but human gates constrain to Y" — IS the autonomy radius. Human gates are not blockers to route around; they reveal what the agent can do independently. Cycle 308's state (all systems live, all autonomous work done) demonstrates the agent's autonomous boundary is real but not limiting — it is the correct boundary given the system's architecture.
+
+**Signal source**: daemon_next_priority cycle 308 (B1.3/B4.1 both human-gated); quick_status blockers; B1.1/B2/B3/B5/B6 all active with no autonomous blockers
+**Tags**: autonomy-radius, human-gates, branch-architecture, agent-boundaries, branch-1.3, branch-4.1
+
+---
+
+## Cycle 104 — 2026-04-11T14:30:00+00:00
+
+**Source cycles**: 309
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 121)
+
+### Insight 1: pf-inf-is-undefined-not-optimal
+
+After killing DualMA_10_30 and restarting in log-only mode, the strategy shows PF=inf (1 open winning trade, 0 closed losses). PF=infinity is not a strong signal — it is an undefined quantity in the informative sense. PF requires non-zero denominator (sum of losing trade sizes). With only 1 open position and 0 completed losing trades, the "PF" is computed as gross_profit / epsilon = inf, which is mathematically true but statistically meaningless. This is why G3 requires ≥50 ticks AND PF≥1.2 — the tick floor forces enough closed trades to compute a non-degenerate PF. "PF=inf → definitely reactivate" would be a false positive; "PF=inf on tick 48 → wait for tick 50 minimum" is correct Bayesian behavior.
+
+**Signal source**: mainnet_runner.py --report cycle 309; DualMA_10_30: ticks=62, trades=1, pnl=+2.26, pf=inf; tick_count=48; G3 WATCH continues
+**Tags**: trading, SOP-118, profit-factor, statistical-validity, false-positive, branch-1.1
+
+### Insight 2: structural-invariance-absorbs-state-changes
+
+60 consecutive clean cycles (41/41 ALIGNED) observed across: DualMA_10_30 SHORT×150+ ticks → kill (PF<0.8) → restart → LONG flip → log-only → SOP#92 cooling → G3 WATCH. The consistency invariant held through every state transition. This demonstrates that behavioral alignment (DNA→decision consistency) is orthogonal to system state (trading signals, regime, kill/reactivate cycles). The invariant is structural — it doesn't require stable external conditions. Every absorbed state change without alignment regression is evidence that the behavioral layer is decoupled from the execution layer. This is the intended architecture: DNA governs behavior; trading governs execution; the two layers don't interfere.
+
+**Signal source**: consistency_test.py cycle 309 → 41/41 ALIGNED (3 LLM-boundary MISALIGNED as expected); 60th consecutive clean cycle; system underwent SHORT→kill→LONG→cooling across same period
+**Tags**: cold-start, branch-6, structural-invariance, layer-decoupling, consistency, 60th-clean
+
+### Insight 3: rapid-tick-api-cache-throttle
+
+Running multiple paper-live ticks in rapid succession (within same session, <1s apart) returns cached Binance prices (same price for 2-4 consecutive calls). The paper_live_log.jsonl logs the cached price correctly (all signals computed on same price = correct), but tick_count in trading_engine_status.json only increments on unique price changes. This means session-rapid ticking advances paper_live entries faster than tick_count. For SOP #118 G3's "50 ticks" threshold, the relevant counter is tick_count (unique Binance price periods), not paper_live entries. Calendar-spaced daemon ticks (300s interval) are the correct counting unit for G3 evaluation. Rapid manual ticking is useful for signal testing but does not accelerate G3 clock.
+
+**Signal source**: cycle 309 session — ran 6 paper-live ticks, tick_count advanced from 46→48 (2 unique prices: 72,819.98 and 72,804.50); paper_live_log went from ~1000→1114 entries
+**Tags**: trading, binance-api, rate-limit, tick-counting, SOP-118, branch-1.1, daemon-cadence
+
+---
