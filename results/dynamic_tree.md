@@ -1,6 +1,6 @@
 # 數位永生動態樹
 > 每輪遞迴更新。核心=常數，分支=變數。導數驅動。
-> 最後更新：2026-04-11 UTC (cycle 310)
+> 最後更新：2026-04-11 UTC (cycle 311)
 
 ## 核心目標（常數）
 數位永生：你=我=持續存在+演化
@@ -631,3 +631,13 @@
 - **6.42 Consistency re-verification (cycle 308)**: `consistency_test.py templates/example_dna.md` → **41/41 deterministic ALIGNED ✅** (3 LLM-required MISALIGNED as expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); **59th consecutive clean cycle** ✅; transition-invariant: held through DualMA SHORT→LONG signal flip at tick 43; daemon_next_priority updated. — 2026-04-11T05:10Z
 - **B1.1 paper-live tick (cycle 308)**: BTC=$72,801.36; DualMA_10_30=LONG **OPEN_LONG** (SOP#92 cooling COMPLETE — first unconstrained signal); Donchian_20=FLAT; engine tick_count=43; PF=1.076 (43 ticks, up from 1.070/34); SOP#118 G3 WATCH — need 50+ ticks at ≥1.2 PF (7 more ticks to gate eval); regime=MIXED (PF plateau in MIXED expected — needs TRENDING for expansion). — 2026-04-11T05:10Z
 - **B3.1 distil103 (cycle 308)**: 3 insights → memory/insights.json (total 229): dualma-long-first-unconstrained-signal / pf-plateau-mixed-regime-no-movement / b6-clean-through-signal-transition. — 2026-04-11T05:10Z
+
+- **6.44 Consistency re-verification (cycle 310)**: `consistency_test.py templates/example_dna.md` → **41/41 deterministic ALIGNED ✅** (3 LLM-required MISALIGNED as expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); **61st consecutive clean cycle** ✅; structural invariant holds. — 2026-04-11T15:00Z
+- **B1.1 paper-live ticks (cycle 310)**: ALL DualMA variants KILLED at tick=53 (PF=0.70 < 0.8, kill_window=20); tick_count=61 at task end; BTC=$72,703.19; 13 active strategies all FLAT/HOLD; regime=MIXED; total_pnl=-0.1865%; SOP#118 G3 FAIL — DualMA family killed before G3 formal eval window; back to G0/G1 per SOP#118 restart protocol; kill_lessons.jsonl updated (4 entries: DualMA_10_30/filtered/RSI/RSI_filtered all at tick=53, same session). — 2026-04-11T15:00Z
+- **B2.2 (cycle 310)**: 201712 JSONL (deep pass 3, Dec 2017) → MD-423/MD-424/MD-425 (路徑封閉=立刻生成替代收入選項INSTANT_OPTION_GENERATION/無股份=法律無主張權EQUITY_IS_LEGAL_CLAIM/談判結論前先確認根本決策變數ROOT_VAR_CONFIRM); templates/dna_core.md: **425 MDs** (418 entries); next: 201711 JSONL → MD-426~428. — 2026-04-11T15:00Z
+- **B7 SOP #119 (cycle 310)**: Path Closure Option Generation Protocol SHIPPED: `docs/knowledge_product_119_path_closure_option_generation_protocol.md` + `docs/publish_thread_sop119_twitter.md`; G0-G5: confirm real closure → generate ≥3 alternatives (same cognitive session) → 2-min EV triage → first action ≤48h → 2-week review; root MD-423 (201712: clinic succession blocked → poker/tutoring listed immediately); **SOP #01~#119 COMPLETE ✅** — 2026-04-11T15:00Z
+- **B3.1 distil105 (cycle 310)**: 3 insights → memory/recursive_distillation.md (Cycle 105, file total=124, running total=235): sop118-g3-tick-count-is-unique-price-clock / pf-inf-undefined-degenerate-estimator / structural-invariance-60-clean-state-orthogonal. — 2026-04-11T15:00Z
+
+- **6.45 Consistency re-verification (cycle 311)**: `consistency_test.py templates/example_dna.md` → **41/41 deterministic ALIGNED ✅** (3 LLM-required MISALIGNED as expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); **62nd consecutive clean cycle** ✅; structural invariant holds; — 2026-04-11T13:25Z
+- **B1.1 engine status (cycle 311)**: tick_count=64; DualMA_10_30 confirmed DISABLED (PF=0.70 < 0.8); BTC=$72,764.94; 13 active strategies FLAT; regime=MIXED; total_pnl=-0.1865%; SOP#118 G3 FAIL confirmed — kill_window closed before reaching 100 ticks; back to G0/G1 per SOP#118 restart protocol. — 2026-04-11T13:25Z
+- **B3.1 distil107 (cycle 311)**: 3 insights → memory/recursive_distillation.md (Cycle 107, file total=130, running total=238): sop118-g3-kill-pf-collapsed-11-ticks / b6-62nd-clean-invariant-signal / sop119-path-closure-option-generation. — 2026-04-11T13:25Z

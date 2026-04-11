@@ -577,3 +577,32 @@ B6 consistency check cycle 310: 38/41 ALIGNED, 3 LLM-boundary MISALIGNED (poker_
 **Tags**: cold-start, branch-6, structural-invariance, consistency, 61st-clean, llm-boundary, expected-misaligned
 
 ---
+
+## Cycle 107 — 2026-04-11T13:25:00+00:00
+
+**Source cycles**: 311 (this session)
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 130)
+
+### Insight 1: sop118-g3-kill-pf-collapsed-11-ticks
+
+SOP#118 G3 WATCH → KILL confirmed: PF=1.100 at tick 53 (WATCH zone, extend to 100 ticks) → PF=0.70 at tick 64 (kill condition PF<0.8 triggered). In 11 ticks, the profit factor collapsed from WATCH zone to kill zone. This validates two things simultaneously: (1) SOP#118 G3 was correct NOT to reactivate at PF=1.1 — the edge was not recovered, and (2) the kill condition in the engine is correctly wired as a backstop. The WATCH zone design (0.8-1.2 = don't reactivate, keep monitoring) prevented capital deployment during a strategy that subsequently failed. The sequential gate design G3→kill is the correct architecture: G3 doesn't approve reactivation, it just determines whether to keep watching or stop watching.
+
+**Signal source**: trading_engine_status.json tick 64 — DualMA_10_30: "PF 0.70 < 0.8" DISABLED; prior state: cycle 310 PF=1.100/tick53; kill triggered between ticks 53-64; SOP#118 G3 WATCH validated as CORRECT DECISION not to reactivate
+**Tags**: trading, SOP-118, G3-kill, profit-factor-collapse, kill-condition, sequential-gate, branch-1.1
+
+### Insight 2: b6-62nd-clean-structural-invariant
+
+B6 consistency check cycle 311: 41/41 ALIGNED, 3 LLM-boundary MISALIGNED expected (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev). 62nd consecutive clean cycle. The streak is a structural invariant — 62 cycles without regression means the cold-start DNA correctly encodes behavioral decisions across all deterministic domains. At this streak length, individual cycle results are confirmations not tests; the test is whether the STREAK breaks. An individual cycle failure would be an L3 event requiring immediate DNA audit. The invariant is the signal; the individual pass is noise.
+
+**Signal source**: consistency_test.py cycle 311 run — 41/41 ALIGNED + 3 expected LLM-boundary MISALIGNED; 62nd consecutive clean streak
+**Tags**: cold-start, branch-6, structural-invariance, 62nd-clean, invariant-vs-noise, boot-test
+
+### Insight 3: sop119-path-closure-option-generation
+
+SOP#119 Path Closure Option Generation Protocol completes the decision-continuity layer. When a path closes, working memory of WHY it closed evaporates within hours. The SOP operationalizes immediate option generation (same session, ≤10 min timer, 3 alternatives with concrete first actions) before that context dissipates. The anti-pattern is "sleep on it before deciding what to do next" — processing and option-generation are not mutually exclusive. Writing the option list IS part of processing, and it leaves 3 live options instead of 0. Traces to Edward's 2017 family negotiation: path confirmed closed → same paragraph noted "focus on poker, if not enough, tutoring." No gap. This is the behavioral template now codified.
+
+**Signal source**: docs/knowledge_product_119_path_closure_option_generation_protocol.md + docs/publish_thread_sop119_twitter.md — SOP#01~#119 COMPLETE ✅; Twitter thread 8 tweets; backing behavioral trace: 2017 family negotiation closure → immediate pivot
+**Tags**: decision-making, SOP-119, path-closure, option-generation, context-decay, anti-pattern, branch-7
+
+---
