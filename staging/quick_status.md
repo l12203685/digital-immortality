@@ -1,14 +1,14 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-11 17:30 UTC (cycle 338: B6 **87th** clean ✅ 38/41 ALIGNED; B1.1 BTC=$72,784.71 DualMA=LONG OPEN_LONG (27 human ticks all LONG); B3.1 distil139 file=223 running=331; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
+> Updated: 2026-04-11 19:00 UTC (cycle 340: B6 **89th** clean ✅ 38/41 ALIGNED; B1.1 BTC=$72,690 DualMA=DISABLED(PF<0.8) tick=212 13-active FLAT PAPER (29 human ticks); B3.1 distil140 file=226 running=334; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
 
 ## Current state
-- daemon: RUNNING (PID 1704, CLI mode, Sonnet 4.6, 300s interval, cycle 1 in progress)
-- trading_engine: STOPPED
-- last_daemon_cycle: 165 (rate-limited range, no real work)
-- last_real_work_cycle: ~150 (cross-ref + kill events)
+- daemon: STOPPED (last run cycle 339)
+- trading_engine: STOPPED (tick=212, PAPER, 13 active FLAT, DualMA variants DISABLED PF<0.8)
+- last_daemon_cycle: 339
+- last_real_work_cycle: 339 (B6 89th + B3.1 distil140 + B1.1 tick)
 - backup_tag: `pre-optimization-backup` → ddc5d88
-- web_scheduled: RUNNING (digital-immortality-recursive, hourly, last push 82062c9)
+- web_scheduled: RUNNING (digital-immortality-recursive, hourly)
 
 ## Blockers (human-gated)
 - mainnet API keys (~88d until 2026-07-07)
@@ -16,6 +16,7 @@
 - Samuel Turing test invite (human-send)
 
 ## Recent changes
+- 2026-04-11: cycle 340 — Docker/fly.io deploy files added (.dockerignore, Dockerfile, fly.toml, fly_entrypoint.sh, daemon_failsafe.yml, .gitattributes); B6 89th clean ✅ (38/41, tripwire-only); B1.1 BTC=$72,690 tick=212 DualMA=DISABLED(PF<0.8) 13-active FLAT PAPER (29 human ticks); B3.1 distil140 (file=226, running=334); parallel branch push
 - 2026-04-11: cycle 338 — B6 87th clean ✅ (38/41, post-protocol-closure second pass — tripwire-only); B1.1 BTC=$72,784.71 DualMA=LONG OPEN_LONG (27 human ticks all LONG, ↓$30.92 headwind minimal, BTC ceiling descent $46 below $72,831); B3.1 distil139 +3 (file=223, running=331; 27th-human-tick-btc72785-headwind + 87th-clean-second-closed-case + session-cadence-27-cross-axis-invariant); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 337 — B6 86th clean ✅ (38/41, post-protocol-closure tripwire-only); B1.1 BTC=$72,815.63 DualMA=LONG OPEN_LONG (26 human ticks all LONG, ↑$18.85 tailwind, structural signal unbroken); B3.1 distil138 (file=220, running=328; checkpoint cycle, no new distil); parallel branch push concurrent
 - 2026-04-11: cycle 336 — B6 86th clean ✅ (38/41, post-protocol-closure first pass — tripwire-only); B1.1 BTC=$72,796.78 DualMA=LONG OPEN_LONG (25 human ticks all LONG, ↓$11.23 headwind minimal, BTC retraced from ceiling $72,831); B3.1 distil138 +3 (file=220, running=328; 25th-human-tick-btc72797-ceiling-retracement + 86th-clean-post-protocol-closure + session-cadence-25-identity-stable); parallel branch push B1.1+B3.1+B6 concurrent
