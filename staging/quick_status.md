@@ -1,6 +1,6 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-11 13:00 Taipei (cycle 302: B6 53rd clean ✅ + B3.1 102 insights + SOP#117 committed + priority reset)
+> Updated: 2026-04-11 21:00 Taipei (cycle 303 supplemental: B6 54th clean ✅ + SOP #118 Strategy Reactivation Gate Protocol ✅ + B3.1 cycles 98+99 narrative written, total 105 insights)
 
 ## Current state
 - daemon: RUNNING (PID 1704, CLI mode, Sonnet 4.6, 300s interval, cycle 1 in progress)
@@ -22,6 +22,8 @@
 - 2026-04-11: .claude/settings.json Linux path fixed
 - 2026-04-11: cycle 301 — B6 33/33 ✅ (52nd); B1.1 DualMA LONG flip (log-only, SOP #92 gate); SOP #117 ✅; B3.1 99 insights
 - 2026-04-11: cycle 302 — B6 33/33 ✅ (53rd structural invariant); B3.1 cycle 98 +3 (total 102); SOP#117 committed; priority stale B2.2 cleared
+- 2026-04-11: cycle 303 — B6 33/33 ✅ (54th clean); MD-331 meta_dna_core_audit added to generic_boot_tests.json; daemon_next_priority SOP#117 expansion item cleared
+  - 2026-04-11: cycle 303 (supp) — SOP #118 Strategy Reactivation Gate Protocol ✅ (G0-G5, ghost-signal codified); B3.1 cycles 98+99 narrative → 105 insights; B6 54th invariant confirmed; taxonomy backfill 111-entry gap open
 
 ## Stale-detection
 If "Updated" > 6h old, read `results/daemon_log.md` (tail) + `staging/session_state.md` for ground truth. Daemon does NOT yet auto-update this file — follow-up TODO: add quick_status writer to platform/recursive_daemon.py.

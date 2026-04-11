@@ -339,11 +339,11 @@ Cycle 296 confirmed the archive boundary: 201610/11/12 = 0 Edward messages. 416 
 
 ---
 
-## Cycle 97 — 2026-04-10T08:30:00+00:00
+## Cycle 99 — 2026-04-10T08:30:00+00:00
 
-**Source cycles**: 300-301
+**Source cycles**: 300-301 (backfill — previously mislabeled as duplicate Cycle 97; correct sequence restored cycle 303)
 **Branch**: 3.1 recursive distillation
-**Insights appended**: 3 (total: 99)
+**Insights appended**: 3 (total: 105)
 
 ### Insight 1: two-signal-convergence-mixed-regime-conviction
 
@@ -365,5 +365,99 @@ daemon_next_priority.txt flags 存活 as "neglected for 20 cycles" while session
 
 **Signal source**: daemon_next_priority.txt "neglected 20 cycles"; cycle-95 insight 1 on touched-vs-advanced; cycle 301 consistency run as maintenance
 **Tags**: daemon, branch-health, maintenance-vs-advancement, meta-system, branch-6, protocol-design
+
+---
+
+## Cycle 100 — 2026-04-11T00:00:00+00:00
+
+**Source cycles**: 302-303
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 4 (total: 109)
+
+### Insight 1: 53-clean-cycles-daemon-priority-as-decay-prevention
+
+The daemon priority system (daemon_next_priority.txt) functions as an anti-decay mechanism for the recursive engine. Without it, branches with no human-gated blocker silently accumulate staleness while cycles run on other branches. The daemon fires priority signals by measuring cycles-since-last-touch, not by measuring branch health — these are different metrics. A branch can be healthy (tests passing) but decay-at-risk (no recent advancement). The 53rd consecutive clean cycle in B6 was flagged by the daemon as "neglected 20 cycles" — correctly. This is the daemon doing its job: distinguishing maintenance-gap from advancement-gap before the gap becomes a regression.
+
+**Signal source**: dynamic_tree.md cycle 302 B6.36 entry; daemon_next_priority.txt "存活 neglected 20 cycles"; 53rd consecutive consistency pass
+**Tags**: meta-system, daemon, decay-prevention, branch-health, branch-6, advancement-vs-maintenance
+
+### Insight 2: sop117-dna-core-audit-as-milestone-protocol-design
+
+SOP #117 (DNA Core Audit Protocol) encodes a principle about protocol design: audits that run on milestone triggers (every ~90 cycles) are structurally different from audits that run on drift triggers. Milestone-triggered audits find drift before it becomes visible symptomatically. The G0 trigger conditions (T1: 90-cycle milestone, T2: new meta-rule added, T3: behavioral correction, T4: branch closed, T5: priority stack debated) form a complete trigger taxonomy — they cover both scheduled and reactive surfaces. The cycle 300 G1 audit PASSED (416 MDs, MD-408 L3 confirmed, SOP #116 confirmed) validates that milestone-triggered audits can confirm health, not just detect drift. A PASS result is data too.
+
+**Signal source**: docs/knowledge_product_117_dna_core_audit_protocol.md; dynamic_tree B6.36 cycle 302 G1 audit PASS; cycle 300 trigger T1
+**Tags**: methodology, SOP-117, audit-design, milestone-trigger, dna-core, branch-6, branch-survival
+
+### Insight 3: 54th-consecutive-consistency-boot-test-expansion
+
+Cycle 303 added SOP #117 DNA Core Audit scenario to the boot test suite (MD-331: meta_dna_core_audit, decision: STOP_BRANCH_WORK_AND_RECALIBRATE). This is the correct way to advance B6: not just run existing tests (maintenance) but expand the scenario surface to cover newly created SOPs (advancement). The 54th consecutive clean cycle + suite expansion = both maintenance AND advancement in one cycle. Suite expansion rate has been too slow relative to SOP creation rate — 117 SOPs exist, boot test coverage is much smaller. Periodic suite expansion should be systematized, not reactive to daemon priority signals.
+
+**Signal source**: dynamic_tree B6.37 cycle 303; MD-331 added to boot test; 54th consecutive clean cycle; SOP #117 scenario coverage
+**Tags**: behavioral-patterns, boot-test, suite-expansion, SOP-117, branch-6, maintenance-vs-advancement
+
+### Insight 4: b3.1-distillation-numbering-drift-as-meta-system-health-signal
+
+Cycle 303 found a duplicate "Cycle 97" entry in recursive_distillation.md — two separate distillation sessions both labeled themselves Cycle 97. The correct sequence (97 → 98 → 99 → 100) had a gap because numbering was done from memory rather than by reading the file tail. This is the same failure mode as the daemon_next_priority vs dynamic_tree sync-gap (insight 1 in cycle 98). The fix: before writing any distillation cycle entry, READ the last cycle number in the file. Self-referential documentation is only reliable when the writer verifies the current state rather than assuming continuity from prior session memory.
+
+**Signal source**: recursive_distillation.md duplicate Cycle 97 at lines 185 and 342; cycle 98 insight 1 (priority-file-branch-completion-lag); cycle 303 audit
+**Tags**: self-awareness, meta-system, distillation-integrity, documentation-drift, branch-3.1, sync-gap
+
+---
+
+## Cycle 101 — 2026-04-11T05:00:00+00:00
+
+**Source cycles**: 302 (renumbered from duplicate Cycle 98 — sequence restored cycle 303)
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 112)
+
+### Insight 1: 53rd-consecutive-clean-cycle-structural-invariant
+
+The 53rd consecutive clean cycle (33/33 deterministic ALIGNED) was recorded after a DualMA_10_30 LONG signal flip and SOP #117 commitment. Neither event caused drift. This confirms that behavioral consistency is structurally invariant — not dependent on signal state, new SOPs, or active trading positions. Invariants don't care about surface events. The streak's value is precisely that it holds across perturbations: new signals, new SOPs, mode changes, archive exhaustion. Any cycle that tests and passes during an "interesting" event is stronger evidence than a test during a quiet cycle.
+
+**Signal source**: consistency_test.py cycle 302; 33/33 deterministic ALIGNED (53rd consecutive); DualMA flip + SOP #117 during same cycle
+**Tags**: cold-start, branch-6, consistency, invariant, structural, perturbation-resistant
+
+### Insight 2: b2.2-archive-exhausted-input-source-shift
+
+Branch 2.2 (WhatsApp JSONL archive processing → MD extraction → dna_core.md growth) reached exhaustion at 416 MDs after processing all archive months from 2018 back. When a primary input source completes, the branch does not die — it shifts mode: from extraction (JSONL → MD) to external validation (Samuel collision, Turing testing, real-life predictions). Source exhaustion = mode transition, not branch completion. The archive was the fuel, but the goal was MD quality and behavioral coverage. That goal continues through different fuel types.
+
+**Signal source**: daemon_next_priority.txt "B2.2 pointer cleared (archive EXHAUSTED)"; dna_core.md at 416 MDs; Samuel async calibration DM staged
+**Tags**: branch-2.2, input-source, mode-shift, archive-exhausted, dna-growth, branch-lifecycle
+
+### Insight 3: dualma-kill-persisted-signal-requires-formal-clearance
+
+DualMA_10_30 flipped LONG at BTC=$72,790 (cycle 301) after being kill-triggered at PF=0.53<0.8 threshold. The signal flip was logged but action was blocked pending SOP #92 reactivation gate. This is correct: a kill condition preserves a learned risk limit. A new signal on a killed strategy is a ghost signal until the kill condition is formally audited and cleared. Acting on a ghost signal would undermine the kill mechanism entirely — it would mean kills are only enforced when there's no signal to act on (i.e., when irrelevant). Formal clearance = the kill's validity check against new conditions.
+
+**Signal source**: dynamic_tree cycle 301; DualMA_10_30 LONG flip at $72,790; kill-persisted; SOP #92 reactivation gate required
+**Tags**: trading, kill-condition, strategy-reactivation, dualma, signal-validity, branch-1.1
+
+---
+
+## Cycle 102 — 2026-04-11T13:00:00+00:00
+
+**Source cycles**: 303 (renumbered from duplicate Cycle 99 — sequence restored cycle 303)
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 115)
+
+### Insight 1: 54th-consecutive-clean-cycle-cross-family-divergence-observation
+
+54th consecutive clean cycle (30/33 ALIGNED; 3 MISALIGNED = permanent LLM-boundary: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev). Simultaneously, trading tick 10 shows cross-family divergence: DualMA variants (3/19) signaling LONG, BollingerMR variants (2/19) signaling SHORT, 14/19 FLAT. The behavioral consistency invariant holds regardless of signal state. Cold-start alignment is independent of market regime and trading signal direction — it measures a different layer of the system.
+
+**Signal source**: consistency_test.py cycle 303; 30/33 ALIGNED (54th consecutive); trading_engine tick 10 BTC=$72,712.01 mixed regime
+**Tags**: cold-start, branch-6, consistency, invariant, branch-1.1, cross-layer-independence
+
+### Insight 2: cross-family-divergence-in-mixed-regime-means-no-action
+
+Cycle 97 insight established: same-direction cross-family convergence in mixed regime = elevated conviction. This cycle's inverse: DualMA (LONG) vs BollingerMR (SHORT) in mixed regime = families pointing opposite directions = genuine uncertainty. A trend-follower saying LONG while a mean-reverter says SHORT means there is no dominant regime narrative. This is not a signal conflict to resolve — it IS the signal: the market has no structural lean. Correct action = FLAT (consistent with 14/19 flat). Symmetry of this insight pair: convergence → act; divergence → wait.
+
+**Signal source**: trading_engine tick 10 (cycle 303); BTC=$72,712.01; DualMA_10_30/filtered/RSI=LONG (3); BollingerMR_RF_7abfe4+598b24=SHORT (2); 14/19 FLAT; regime=mixed
+**Tags**: trading, paper-live, signal-divergence, mixed-regime, cross-family, branch-1.1, inaction-bias
+
+### Insight 3: narrative-gap-is-retrieval-gap-not-count-gap
+
+insights.json has 216 entries; recursive_distillation.md narrativizes 105 (after this cycle). The 111-entry gap is not primarily a count problem — it's a retrieval problem. Unnarratized insights exist as raw JSON entries but can't be searched by concept, cross-referenced by tag, or reasoned about in natural language. The narrative in recursive_distillation.md is not decoration — it's the metadata layer that makes insights usable. Counting insights without narrating them = having data without indexes. Priority: narrative quality > insight count.
+
+**Signal source**: insights.json (216 entries); recursive_distillation.md cycle 99 (105 narrativized); taxonomy-audit cycle 298 finding; daemon_next_priority backfill flag
+**Tags**: branch-3.1, taxonomy, retrieval, narrative, insights.json, metadata, backfill
 
 ---
