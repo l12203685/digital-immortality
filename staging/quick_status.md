@@ -4,7 +4,7 @@
 
 ## Current state
 - daemon: STOPPED (last run cycle 340)
-- trading_engine: STOPPED (tick=212, PAPER, 13 active FLAT, DualMA variants DISABLED PF<0.8)
+- trading_engine: STOPPED (tick=220, PAPER, 13 active FLAT, DualMA variants DISABLED PF<0.8)
 - last_daemon_cycle: 340
 - last_real_work_cycle: 341 (B6 91st + B3.1 distil142 + B1.1 tick 30)
 - backup_tag: `pre-optimization-backup` → ddc5d88
