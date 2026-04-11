@@ -1,6 +1,6 @@
 {
-  "last_tick": "2026-04-11T08:37:18.239334+00:00",
-  "tick_count": 260,
+  "last_tick": "2026-04-11T08:41:18.454200+00:00",
+  "tick_count": 264,
   "active_strategies": 13,
   "disabled": {
     "gen_BollingerMeanReversion_RF_7abfe4": "PF 0.62 < 0.8",
@@ -11,7 +11,7 @@
     "DualMA_RSI_filtered": "PF 0.70 < 0.8"
   },
   "total_pnl_pct": -0.1865,
-  "price": 72688.53,
+  "price": 72715.72,
   "regime": "mixed",
   "signals": {
     "Donchian_20": 0,
