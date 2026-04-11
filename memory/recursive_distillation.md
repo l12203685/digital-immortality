@@ -2157,3 +2157,31 @@ BTC ceiling approach ($11.01 below $72,831 after 44+ sessions in $72,638–$72,8
 
 **Signal source**: cycle 358 analysis — BTC $72,819.99 ceiling approach $11.01 below $72,831; DualMA=LONG unchanged; position-direction-determines-ceiling-vs-floor-vigilance; 2026-04-11T09:30Z
 **Tags**: B1.1, B3.1, ceiling-approach, floor-ceiling-discipline-symmetry, position-direction-asymmetry, LONG-ceiling-confirming, LONG-floor-watch, three-layer-framework, range-recalculation-threshold, signal-discipline
+
+---
+
+## Cycle 160 — 2026-04-11T09:23:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 287 file / running: 397)
+
+### Insight 1: 48th-human-tick-btc72868-ceiling-break-upside-range-shift
+
+BTC=$72,868.01 (↑$48.02 from cycle 358 $72,819.99; LONG tailwind). DualMA_10_30=LONG OPEN_LONG (48th consecutive human-session LONG tick — structural signal unbroken). Donchian_20=FLAT HOLD. DualMA variants disabled PF<0.8. Engine STOPPED G0/G1 FROZEN tick=297. **RANGE-SHIFT EVENT (UPSIDE)**: BTC $36.70 ABOVE prior ceiling $72,831 — first upside breakout in 44+ session range ($72,638–$72,831). Previous ceiling approach (cycle 358: $11.01 below) has resolved via upside break. LONG position is directionally confirming — no position change needed. New ceiling TBD (monitor next session for range recalculation). The floor watch from cycle 356-357 is now fully superseded by the ceiling break. Position discipline: already maximally long on paper → range-shift upside = informational event, not actionable.
+
+**Signal source**: Binance API price=72868.01; paper_trader.py --paper-live; human session cycle 359; prev cycle 358 BTC=$72,819.99; 2026-04-11T09:23Z
+**Tags**: B1.1, 48th-human-tick, btc72868, tailwind-48, ceiling-break, range-shift-upside, range-72638-72831-broken, new-ceiling-tbd, DualMA-LONG-structural, confirming-LONG-direction, range-recalculation-watch
+
+### Insight 2: 109th-B6-38-of-41-twenty-third-pass-pure-maintenance
+
+109th B6 run: **38/41 ALIGNED ✅**. Permanent 3 MISALIGNED unchanged (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev — permanent LLM boundary). Post-protocol-closure twenty-third pass. Tripwire: clear. Pure-maintenance. The ceiling break event in B1.1 (range-shift upside) had no effect on B6 alignment — behavioral equivalence is market-independent. This orthogonality is expected and confirms the architectural separation: B6 measures identity stability, not market-state sensitivity. The same 38/41 threshold persists regardless of whether BTC is breaking ceilings, floors, or ranging.
+
+**Signal source**: cycle 359 human session — consistency_test.py; 109th run; 38/41 ALIGNED; twenty-third pass post-protocol-closure; 2026-04-11T09:23Z
+**Tags**: B6, 109th-run, 38-of-41, twenty-third-pass, pure-maintenance, behavioral-equivalence-market-independent, b1-b6-orthogonal, tripwire-clear, permanent-llm-boundary
+
+### Insight 3: ceiling-break-confirms-LONG-no-action-required-range-recalculation-watch
+
+Applying the three-layer framework to the upside range-break: L1 (primary signal) = DualMA LONG → position unchanged. L2 (situational awareness) = BTC above prior ceiling $72,831 → range-shift event, ceiling TBD. L3 (recalculation threshold) = if new ceiling established over next 2-3 sessions, update range parameters. The informational update: the $72,638–$72,831 range that held for 44+ sessions has been superseded by a ceiling breakout. The floor ($72,638) remains the current lower bound. New ceiling must be empirically derived from next 2-3 session closes above $72,831. Range recalculation does not change position (LONG → LONG at ceiling break). The most dangerous error here would be "range breakout = take profit" — that conflates paper-trading signal logic with discretionary trading instincts. Signal says LONG, signal governs.
+
+**Signal source**: cycle 359 analysis — BTC $72,868.01 ceiling break $36.70 above $72,831; three-layer-framework applied; DualMA=LONG unchanged; range-recalculation-watch activated; 2026-04-11T09:23Z
+**Tags**: B1.1, B3.1, ceiling-break-confirmed, three-layer-framework, L1-governs-position, L2-situational-awareness-range-shift, L3-recalculation-watch, LONG-at-ceiling-break, range-72638-72831-superseded, new-range-tbd, signal-discipline-no-action
