@@ -622,3 +622,7 @@
 **daemon_next_priority**: B3.1 taxonomy backfill still open (insights.json 216 entries; recursive_distillation.md 105 narrativized; 111-entry gap). SOP #92 DualMA reactivation: STILL_COOLING (eligible cycle 306+, human assess). Branch 1.3 outreach DMs (human-gated). B6 boot-test expansion: add SOP #118 ghost-signal-scenario.
 
 **Human-gated blockers unchanged**: X post SOP#01 / mainnet API keys / Samuel DM / Turing candidates 2+3 / Week 1 DMs × 5 (AI Agent Dev archetypes).
+
+- **6.42 Consistency re-verification (cycle 308)**: `consistency_test.py templates/example_dna.md` → **41/41 deterministic ALIGNED ✅** (3 LLM-required MISALIGNED as expected: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); **59th consecutive clean cycle** ✅; transition-invariant: held through DualMA SHORT→LONG signal flip at tick 43; daemon_next_priority updated. — 2026-04-11T05:10Z
+- **B1.1 paper-live tick (cycle 308)**: BTC=$72,801.36; DualMA_10_30=LONG **OPEN_LONG** (SOP#92 cooling COMPLETE — first unconstrained signal); Donchian_20=FLAT; engine tick_count=43; PF=1.076 (43 ticks, up from 1.070/34); SOP#118 G3 WATCH — need 50+ ticks at ≥1.2 PF (7 more ticks to gate eval); regime=MIXED (PF plateau in MIXED expected — needs TRENDING for expansion). — 2026-04-11T05:10Z
+- **B3.1 distil103 (cycle 308)**: 3 insights → memory/insights.json (total 229): dualma-long-first-unconstrained-signal / pf-plateau-mixed-regime-no-movement / b6-clean-through-signal-transition. — 2026-04-11T05:10Z

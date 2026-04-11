@@ -2646,6 +2646,46 @@
         "agent-behavior",
         "anti-pattern"
       ]
+    },
+    {
+      "id": "cycle308-distil103-dualma-long-unconstrained-tick43",
+      "key": "dualma-long-first-unconstrained-signal",
+      "content": "At engine tick 43, DualMA_10_30 fires OPEN_LONG — first unconstrained LONG signal after SOP#92 cooling COMPLETE (5/5). Signal quality gate passed; activation gate (SOP#118 G3) still WATCH at PF=1.076/43 ticks. Correct state: signal is valid but paper-live accumulation continues to 50+ ticks before live activation decision.",
+      "timestamp": "2026-04-11T05:00:56Z",
+      "source": "cycle308-distil103",
+      "tags": [
+        "trading",
+        "b1.1",
+        "sop118",
+        "signal-quality"
+      ]
+    },
+    {
+      "id": "cycle308-distil103-pf-plateau-34-to-43",
+      "key": "pf-plateau-mixed-regime-no-movement",
+      "content": "PF moved from 1.070 (34 ticks) to 1.076 (43 ticks) — 9 new ticks in MIXED regime produced near-zero PF change. PF expansion requires TRENDING regime bars. In MIXED regime, PF is flat because both LONG and SHORT signals fire with equal noise. Implication: the 50-tick G3 gate is a necessary but not sufficient condition — regime must shift to TRENDING for PF to reach 1.2.",
+      "timestamp": "2026-04-11T05:00:56Z",
+      "source": "cycle308-distil103",
+      "tags": [
+        "trading",
+        "b1.1",
+        "sop118",
+        "pf",
+        "regime"
+      ]
+    },
+    {
+      "id": "cycle308-distil103-59th-clean-transition-invariant",
+      "key": "b6-clean-through-signal-transition",
+      "content": "59th consecutive clean cycle maintained through a DualMA signal transition (SHORT→LONG at tick 43). Behavioral consistency held across regime change. Transition-invariant clean is higher-quality evidence than steady-state clean — it tests whether the behavioral framework degrades under regime change pressure.",
+      "timestamp": "2026-04-11T05:00:56Z",
+      "source": "cycle308-distil103",
+      "tags": [
+        "b6",
+        "consistency",
+        "behavioral-stability",
+        "regime-transition"
+      ]
     }
   ]
 }
