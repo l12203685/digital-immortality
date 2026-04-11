@@ -1636,12 +1636,12 @@ BTC=$72,772.44 (↓$12.27 from cycle 338 $72,784.71; LONG headwind minimal). Dua
 **Signal source**: cycle 339 human session — python -m trading.paper_trader --tick; BTC=$72,772.44; DualMA OPEN_LONG; Donchian HOLD; engine STOPPED G0/G1 FROZEN; 2026-04-11T17:45Z
 **Tags**: B1.1, 28th-consecutive-long, btc72772, headwind-12, ceiling-oscillation, range-consolidation, structural-long-intact, noise-not-signal
 
-### Insight 2: 88th-clean-B6-post-protocol-closure-third-pass-attractor-permanent
+### Insight 2: 89th-clean-B6-post-protocol-closure-fourth-pass-pure-maintenance
 
-38/41 ALIGNED (88th consecutive clean cycle). Third consecutive pass under closed-case regime (86th=first, 87th=second, 88th=third). Three passes without deviation under tripwire-only protocol establishes the post-protocol-closure regime as permanently stable — no further confirmation required. The cost model is now: single command → one-line result → done. Same 3 LLM-boundary MISALIGNED (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev) — structurally permanent baseline, not meaningful variance. Key insight from the three-pass sequence: the transition from "closed case" (declared at 85th) to "permanent attractor" requires observing stability across multiple regime cycles to distinguish "closed for now" from "closed structurally." Three data points post-closure, all confirming, constitutes structural certainty. B6 is now in pure maintenance mode: tripwire alive, infrastructure healthy, zero cost overhead.
+38/41 ALIGNED (89th consecutive clean cycle). Fourth consecutive pass under closed-case regime (86th=first, 87th=second, 88th=third, 89th=fourth). Four passes without deviation establishes that the post-protocol-closure regime transition is fully absorbed and self-sustaining. The cost model is now: single command → one-line result → done. Same 3 LLM-boundary MISALIGNED (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev) — structurally permanent baseline, not meaningful variance. B6 is now in pure maintenance mode: tripwire alive, infrastructure healthy, zero cost overhead. No further regime documentation needed — the pattern is stable.
 
-**Signal source**: cycle 339 human session — consistency_test.py templates/dna_core.md --output-dir results; 38/41 ALIGNED; 88th consecutive; post-protocol-closure third pass; 2026-04-11T17:45Z
-**Tags**: B6, 88th-consecutive, post-protocol-closure-third, permanent-attractor, zero-maintenance, tripwire-live, three-pass-closure-confirmation, structural-certainty
+**Signal source**: cycle 339 human session — consistency_test.py templates/dna_core.md --output-dir results; 38/41 ALIGNED; 89th consecutive; post-protocol-closure fourth pass; 2026-04-11T17:45Z
+**Tags**: B6, 89th-consecutive, post-protocol-closure-fourth, pure-maintenance, zero-maintenance, tripwire-live, structural-certainty
 
 ### Insight 3: session-cadence-28-gate-constrained-as-system-heartbeat
 
