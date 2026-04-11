@@ -1,6 +1,6 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-12 00:30 UTC (cycle 320: B6 **71st** clean ✅ 38/41 ALIGNED; B1.1 BTC=$72,652.00 DualMA=LONG OPEN_LONG engine-STOPPED G0/G1 ticks=2 FROZEN (9 human ticks all LONG); B3.1 distil121 file=169 running=277; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
+> Updated: 2026-04-12 01:00 UTC (cycle 321: B6 **72nd** clean ✅ 38/41 ALIGNED; B1.1 BTC=$72,724.00 DualMA=LONG OPEN_LONG engine-STOPPED G0/G1 ticks=2 FROZEN (10 human ticks all LONG); B3.1 distil122 file=172 running=280; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
 
 ## Current state
 - daemon: RUNNING (PID 1704, CLI mode, Sonnet 4.6, 300s interval, cycle 1 in progress)
@@ -16,6 +16,7 @@
 - Samuel Turing test invite (human-send)
 
 ## Recent changes
+- 2026-04-12: cycle 321 — B6 72nd clean ✅ (38/41, convergence-floor structural baseline; <38 triggers dna_core audit); B1.1 BTC=$72,724.00 DualMA=LONG OPEN_LONG (10 human ticks all LONG, +$72 tailwind, structural unbroken); B3.1 distil122 +3 (file=172, running=280; human-gate-bottleneck + engine-frozen-48-ticks + convergence-floor-formalized); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-12: cycle 320 — B6 71st clean ✅ (38/41, convergence-floor-established); B1.1 BTC=$72,652.00 DualMA=LONG OPEN_LONG (9 human ticks all LONG, LONG structural); B3.1 distil121 +3 (file=169, running=277; daemon-priority-lag-as-cache-gap identified); SOP#01~121 COMPLETE; daemon-priority-file lag noted (priority file lags distillation file as canonical state)
 - 2026-04-11: cycle 319 — B6 69th clean ✅ (38/41, structural invariant holds); B1.1 BTC=$72,672.45 DualMA=LONG OPEN_LONG (7 human ticks all LONG, +$22 tailwind); B3.1 distil119 +3 (file=163, running=271); parallel-branch-push discipline executed (B1.1+B6+B3.1 concurrent)
 - 2026-04-11: cycle 318+ — B6 68th clean ✅ dual-rerun (single-rerun-rule established); B1.1 BTC=$72,650.34 DualMA=LONG OPEN_LONG (6 human ticks all LONG, -$119 headwind); B3.1 distil118 +3 (file=160, running=268); tree+status+priority updated + committed

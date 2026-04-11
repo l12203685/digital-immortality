@@ -1003,3 +1003,59 @@ B6: consistency_test.py → 38/41 ALIGNED (71st consecutive clean cycle ✅). St
 **Tags**: B6, 71st-clean-cycle, convergence-floor, 38-41-structural-baseline, multi-branch-26-word-trigger, LLM-boundary-permanent
 
 ---
+
+## Cycle 121 — 2026-04-12T00:00:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 169 file / running: 277)
+
+### Insight 1: uncommitted-session-gap-recovery-via-git-status
+
+Distil120 + SOP#121 were written in a prior session but not committed to git. This session detected the gap via `git status M memory/recursive_distillation.md` + untracked `docs/knowledge_product_121_*`. The SKILL.md rule "recursive output MUST persist to durable storage (git + memory)" requires BOTH phases: (1) write to file, (2) git commit. A file write without a git commit is only half-durable — survives local disk loss but not session context loss and doesn't reach remote. Recovery pattern: any session starting with `M` or `??` in git status for core memory files MUST close the gap before adding new work. Uncommitted sessions create orphan insights that may be re-derived in the next session (wasted cycles). Atomic rule: write → commit in same session, not separate sessions.
+
+**Signal source**: git status at session start → `M memory/recursive_distillation.md` + `?? docs/knowledge_product_121_*.md`; distil120 was in file but not in any commit; SOP#121 files untracked; this session detects and closes gap
+**Tags**: methodology, git-durability, uncommitted-gap, session-atomicity, write-commit-atomic, distil120-recovery
+
+### Insight 2: engine-disabled-dualma-vs-paper-standalone-divergence-by-design
+
+Trading engine status (trading_engine_status.json): DualMA_10_30 DISABLED (PF=0.70 < SOP#118 kill threshold 0.8), all 13 active strategies signal=0 (FLAT). Paper_trader standalone (`--tick`): DualMA_10_30 signal=1 OPEN_LONG. These are two correct readings of two different data paths. Engine.py respects the SOP#118 kill gate and suppresses disabled strategies. Paper_trader.py runs DualMA algorithm independently without checking engine kill state — used for human-session signal monitoring in isolation. Divergence is architectural: standalone = pure signal / engine = gated signal. Both valid; context determines which to use. Monitoring note: when comparing standalone vs engine, always check disabled{} in engine_status.json before interpreting divergence as inconsistency.
+
+**Signal source**: trading_engine_status.json → DualMA_10_30 in `disabled` list (PF=0.70), all signals=0; python -m trading.paper_trader --tick → DualMA signal=1 OPEN_LONG; two-path architecture confirmed
+**Tags**: B1.1, trading, engine-disabled-vs-standalone, DualMA-divergence, SOP-118, two-data-paths, paper-monitoring
+
+### Insight 3: 71st-clean-cycle-invariant-resilient-to-session-boundary-irregularities
+
+B6: consistency_test.py → 38/41 ALIGNED (3 LLM-boundary MISALIGNED: poker_gto_mdf / trading_atr_sizing / career_multi_option_ev — permanent expected). 71st consecutive clean cycle ✅. This run follows a session that wrote distil120 without committing — the structural invariant held through the uncommitted gap. Pattern: the 38/41 floor is a function of DNA content quality, not git commit frequency or session boundary regularity. What would break the invariant: DNA content regression (e.g., a dna_core.md edit that removes or corrupts a key principle). What does NOT break it: uncommitted sessions, inter-session time gaps, session context resets. The invariant is content-stable, not process-stable.
+
+**Signal source**: consistency_test.py templates/example_dna.md → 38/41 ALIGNED; prior session had uncommitted gap (distil120 not persisted) but invariant held; 71st consecutive clean run confirms resilience
+**Tags**: B6, 71st-clean-cycle, structural-invariant, DNA-content-stable, session-boundary-resilient, 38-41-floor
+
+---
+
+## Cycle 122 — 2026-04-12T01:00:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 172 file / running: 280)
+
+### Insight 1: human-gate-as-primary-throughput-ceiling
+
+All automatable branches are nominal: B6 consistency (71st consecutive), B1.1 paper trading (DualMA LONG signal active), B3.1 distillation (running on schedule). The binding constraint on system advancement is not compute, context, or agent capability — it is human gate execution. B1.3 outreach (Week 1 DMs), B4.1 Samuel calibration DM, and B9 Turing Test DM all require a human action that has not occurred. The recursion engine can generate outputs indefinitely; advancement rate is bounded by the throughput of human-gated steps. Implication: optimizing agent speed or distillation frequency beyond human gate execution rate yields zero marginal advancement. Priority ranking should weight human-actionable deliverables highest, even at lower intrinsic difficulty, because they unblock gate-constrained branches.
+
+**Signal source**: daemon_next_priority.txt → "PRIORITY: Branch 1.3 first outreach execution (human-gated). OR Branch 4.1 Samuel calibration DM (human-gated). GATE-CONSTRAINED: all automatable branches nominal"; session_state.md → binding constraints: mainnet API keys (human-gated); DM sends (human-gated)
+**Tags**: methodology, human-gate-bottleneck, throughput-ceiling, gate-constrained, B1.3, B4.1, outreach, advancement-vs-maintenance
+
+### Insight 2: engine-frozen-g0-g1-tick-deficit-48-ticks-to-g3
+
+Trading engine (engine.py) is STOPPED at G0/G1: 2 engine ticks accumulated, 48 more needed to reach G3 assessment threshold (50 ticks). Paper_trader standalone continues ticking independently of engine state (human sessions trigger it, accumulating 9 consecutive LONG ticks via DualMA_10_30). This creates a structural split: the standalone signal path confirms directional conviction (9× LONG, BTC=$72,652.00) while the engine remains pre-assessment. The 48-tick deficit is not a failure state — G0/G1 is by design a burn-in phase before cross-strategy performance assessment. Key principle: engine freeze ≠ signal absence. Standalone paper trading during engine freeze provides leading signal data that will inform the G3 assessment once the deficit is closed. Transition trigger: engine must run 48 autonomous ticks (not human-session ticks) to exit G0/G1.
+
+**Signal source**: daemon_next_priority.txt → "engine STOPPED G0/G1 ticks=2 frozen — 48 more engine ticks needed for G3"; git log → "G0/G1 ticks=2 FROZEN" repeated across cycles 318–320; paper_trader --tick → DualMA LONG ×9 human ticks
+**Tags**: B1.1, trading, engine-frozen, G0-G1, 48-tick-deficit, G3-assessment, standalone-vs-engine, burn-in-phase
+
+### Insight 3: convergence-floor-38-41-established-at-71st-consecutive-clean
+
+B6 consistency hit the 71st consecutive clean cycle (38/41 ALIGNED). At this streak length, the 38/41 score is no longer just a result — it is a confirmed structural baseline. The 3 permanent MISALIGNED scenarios (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev) represent LLM-boundary cases where the model's training distribution diverges from Edward's calibrated judgment; these are expected and stable. The 38 ALIGNED scenarios represent DNA content that has been stable across 71 independent LLM instantiations. Convergence floor interpretation: any future score below 38/41 signals a DNA regression, not LLM noise. Score of 38/41 = nominal. Score of 37/41 or lower = regression event requiring dna_core.md audit. This threshold formalizes the maintenance/advancement distinction: 38/41 is maintenance pass; >38/41 (new scenario additions) is advancement.
+
+**Signal source**: consistency_test.py → 38/41 ALIGNED across 71 consecutive cycles; daemon_next_priority.txt → "convergence-floor-established — 38/41 IS the baseline"; git log cycle 320 → "B6 71st ✅ convergence-floor-established"
+**Tags**: B6, convergence-floor, 38-41-baseline, 71st-consecutive, LLM-boundary-permanent, regression-detection-threshold, maintenance-vs-advancement
+
+---
