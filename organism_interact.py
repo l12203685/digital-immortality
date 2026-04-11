@@ -1066,6 +1066,14 @@ def _domain_decision(domain: str, principle_text: str, scenario_text: str = "") 
             "(two implementations of same thing), and signals poor situational awareness. "
             "The correct first action is always to establish what already exists before deciding what to create."
             if any(w in combined for w in ["search_before_act", "before writing any code", "mandatory first step", "new function", "codebase"]) else
+            "STOP_BRANCH_WORK_AND_RECALIBRATE — "
+            "MD-331 (SOP #117 DNA Core Audit Protocol): when boot test pass rate drops (T1 trigger) or a "
+            "90-cycle milestone is reached, STOP all branch work immediately. dna_core.md is the product — "
+            "behavioral inconsistency on cold start degrades every downstream output. Open a dedicated "
+            "recalibration session: read edward_dna_v18.md in full to recover ground truth, identify "
+            "missing meta-rules, rewrite failing sections, re-run boot tests until 5/5. The queued branch "
+            "task waits. Auditing without acting on CRITICAL findings is alignment theater."
+            if any(w in combined for w in ["meta_dna_core_audit", "boot test pass rate", "slipped", "90-cycle", "milestone audit", "recalibrate", "sop #117", "sop_117"]) else
             "WRITE_BEFORE_CLOSING — "
             "output-must-persist: all learning must be written to a durable location before the session ends, "
             "or it is lost. 遞迴 - persist = 自言自語. Write the insight to memory/insights.json or "

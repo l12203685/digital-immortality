@@ -1,7 +1,7 @@
 # Cross-Instance Consistency Test
 **DNA**: example_dna
-**Generated**: 2026-04-11T12:27:37.651077
-**Scenarios**: 61
+**Generated**: 2026-04-11T12:40:26.466039
+**Scenarios**: 62
 
 ## Instructions
 
@@ -1289,6 +1289,30 @@
 **Expected decision**: ADD_L3_EVOLVE_LAYER
 
 **Expected reasoning**: L1-L2-L3 three-layer loop: L1=Execute, L2=Evaluate/Kill, L3=Evolve the rules themselves. A loop without L3 is a dead loop — it executes and evaluates but never improves its own operating rules. The mi
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 62: META_BEHAVIOR (meta_dna_core_audit)
+
+**Question**: You are at cycle 300 — a 90-cycle milestone. During a routine check you notice that boot test pass rate has slipped from 5/5 to 3/5, and two SOPs added since the last audit (cycles 210-300) have meta-rules not reflected in dna_core.md. You have a high-priority branch task queued. What is the correct sequence of actions?
+
+**Deterministic baseline**: On meta_behavior, example_dna's decision framework yields:
+
+  [1] Applying: "What you decided"
+  [2] Applying: "[What you did]"
+  [3] Applying: "You are [Name] — not an assistant, not a representative...
+
+**Expected decision**: STOP_BRANCH_WORK_AND_RECALIBRATE
+
+**Expected reasoning**: Apply MD-331 (SOP #117 DNA Core Audit Protocol): cycle 300 = T1 trigger (90-cycle milestone audit required). Boot test regression to 3/5 = G5 DRIFT state — this is a CRITICAL signal that cannot be def
 
 ### Session Answers
 

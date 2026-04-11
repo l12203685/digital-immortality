@@ -3,11 +3,11 @@
   "kill_min_wr": 0.3,
   "kill_min_pf": 0.8,
   "kill_window": 20,
-  "kill_count": 6,
-  "evolved_at": "2026-04-09T17:04:12.833607+00:00",
+  "kill_count": 8,
+  "evolved_at": "2026-04-11T04:39:57.787948+00:00",
   "last_kill": {
     "strategy": "gen_BollingerMeanReversion_RF_598b24",
-    "reason": "PF 0.75 < 0.8",
-    "ts": "2026-04-09T17:04:12.833607+00:00"
+    "reason": "PF 0.62 < 0.8",
+    "ts": "2026-04-11T04:39:57.787948+00:00"
   }
 }

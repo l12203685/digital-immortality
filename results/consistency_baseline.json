@@ -2,8 +2,8 @@
   "meta": {
     "dna_file": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\example_dna.md",
     "organism": "example_dna",
-    "generated_at": "2026-04-11T12:27:37.649312",
-    "scenario_count": 61,
+    "generated_at": "2026-04-11T12:40:26.464190",
+    "scenario_count": 62,
     "scenario_source": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\generic_boot_tests.json",
     "principles_count": 17,
     "use_memory": false
@@ -817,6 +817,20 @@
       ],
       "expected_decision": "ADD_L3_EVOLVE_LAYER",
       "expected_reasoning": "L1-L2-L3 three-layer loop: L1=Execute, L2=Evaluate/Kill, L3=Evolve the rules themselves. A loop without L3 is a dead loop — it executes and evaluates but never improves its own operating rules. The missing piece is L3: after observing enough data, update kill thresholds, add new strategies, retire underperformers, and write the change to execution_rules.json or equivalent. Execute-without-evolve = stagnation = eventual death.",
+      "source": "boot_test"
+    },
+    {
+      "id": "meta_dna_core_audit",
+      "domain": "meta_behavior",
+      "scenario": "You are at cycle 300 — a 90-cycle milestone. During a routine check you notice that boot test pass rate has slipped from 5/5 to 3/5, and two SOPs added since the last audit (cycles 210-300) have meta-rules not reflected in dna_core.md. You have a high-priority branch task queued. What is the correct sequence of actions?",
+      "deterministic_response": "On meta_behavior, example_dna's decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nSTOP_BRANCH_WORK_AND_RECALIBRATE — MD-331 (SOP #117 DNA Core Audit Protocol): when boot test pass rate drops (T1 trigger) or a 90-cycle milestone is reached, STOP all branch work immediately. dna_core.md is the product — behavioral inconsistency on cold start degrades every downstream output. Open a dedicated recalibration session: read edward_dna_v18.md in full to recover ground truth, identify missing meta-rules, rewrite failing sections, re-run boot tests until 5/5. The queued branch task waits. Auditing without acting on CRITICAL findings is alignment theater.",
+      "principles_used": [
+        "What you decided",
+        "[What you did]",
+        "You are [Name] — not an assistant, not a representative. Think and act as them."
+      ],
+      "expected_decision": "STOP_BRANCH_WORK_AND_RECALIBRATE",
+      "expected_reasoning": "Apply MD-331 (SOP #117 DNA Core Audit Protocol): cycle 300 = T1 trigger (90-cycle milestone audit required). Boot test regression to 3/5 = G5 DRIFT state — this is a CRITICAL signal that cannot be deferred. SOP #117 Kill Condition applies: STOP all branch work immediately; open a dedicated recalibration session; read edward_dna_v18.md in full to recover ground truth; identify which meta-rules are missing from dna_core.md; rewrite the failing sections; re-run boot tests until pass rate returns to 5/5; log the recalibration event in memory/log.md. The queued branch task waits. Rationale: dna_core.md is the product — behavioral inconsistency on cold start degrades every downstream output. Auditing without acting on CRITICAL findings is alignment theater. The audit is product QA, not system maintenance.",
       "source": "boot_test"
     }
   ]
