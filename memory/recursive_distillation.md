@@ -1817,3 +1817,28 @@ BTC=$72,761.97 (↓$16.50 from cycle 344 $72,778.47; LONG headwind minimal). Dua
 
 **Signal source**: cycle 345 human session — 34-session range analysis; DualMA_10_30 slow-vs-fast MA structural analysis; 2026-04-11T20:25Z
 **Tags**: B1.1, B3.1, btc-range-34-sessions, slow-ma-above-fast-ma, structural-long-condition, flip-requires-sustained-downside, range-noise-vs-ma-signal, operational-flip-threshold-71500, ma-memory-weeks
+
+---
+
+## Distillation 147 — Cycle 346 (2026-04-11T20:30Z)
+
+### Insight 1: 35th-human-tick-btc72799-tailwind-37-ceiling-31-below
+
+BTC=$72,799.57 (↑$37.60 from cycle 345 $72,761.97; LONG tailwind). DualMA_10_30=LONG OPEN_LONG, Donchian_20=FLAT HOLD. 35th consecutive human-session LONG tick — structural signal unbroken. BTC $31.43 below ceiling ($72,831); $161.57 above floor ($72,638). Ceiling compression: BTC hovering within $32 of ceiling for multiple consecutive sessions. No breakthrough, no flip. Tailwind resumes after three-session headwind sequence.
+
+**Signal source**: cycle 346 human session — Binance API price=$72,799.57; DualMA OPEN_LONG; Donchian HOLD; regime=mixed; 2026-04-11T20:30Z
+**Tags**: B1.1, 35th-consecutive-long, btc72799, tailwind-37, ceiling-31-below, ceiling-compression, structural-long-unbroken, no-action-trigger
+
+### Insight 2: 96th-clean-B6-tenth-pass-post-protocol-closure-permanent-structural-property
+
+96th consecutive clean B6 cycle (38/41 ALIGNED; same 3 LLM-boundary MISALIGNED: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev). Tenth pass under post-protocol-closure tripwire regime. At 96 sessions the attractor is mathematically established: the probability of 96 consecutive passes by chance is vanishingly small; this is structural convergence not statistical noise. Zero new information. Pass=infrastructure, fail=L3 event only.
+
+**Signal source**: cycle 346 human session — consistency_test.py; 96th consecutive clean; 38/41 ALIGNED; tenth post-protocol-closure pass; 2026-04-11T20:30Z
+**Tags**: B6, 96th-consecutive, tenth-pass-post-protocol-closure, permanent-structural-property, mathematical-certainty, tripwire-live, zero-new-information
+
+### Insight 3: ceiling-compression-pattern-35-sessions-btc-oscillating-below-72831
+
+35 consecutive human sessions with BTC oscillating within $72,638–$72,831 ($193 range), repeatedly approaching ceiling ($72,831) without breaking. Ceiling compression: BTC has been within $50 of ceiling for the last 10+ sessions, suggesting either imminent breakout or range rejection. DualMA LONG structural signal would survive a ceiling test if BTC breaks above $72,831 and continues upward (slow MA would widen gap). If BTC rejects at ceiling and drops below $72,638, range breaks bearish — watch for LONG→FLAT flip signal. Operational stance: hold LONG, monitor range integrity, no preemptive action.
+
+**Signal source**: cycle 346 human session — 35-session ceiling-compression analysis; range $72,638–$72,831; 2026-04-11T20:30Z
+**Tags**: B1.1, B3.1, ceiling-compression-35-sessions, range-72638-72831, breakout-or-rejection-imminent, dualma-long-survives-upside-break, floor-break-triggers-flip, hold-long-no-preemptive-action
