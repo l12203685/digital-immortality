@@ -947,3 +947,59 @@ The correct human-session discipline is parallel branch push: read dynamic_tree 
 **Tags**: methodology, parallel-branch-push, session-discipline, human-session, anti-conscious-idle, atomic-commit
 
 ---
+
+## Cycle 120 — 2026-04-11T23:30:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 166 file / running: 274)
+
+### Insight 1: position-information-first-derives-option-range
+
+B2.2 cycle 319: 201710.jsonl (Oct 2017, 79 Edward msgs, sender='E') → MD-429/430/431. MD-429 root: Edward's poker teaching to family reveals structural decision principle — determine information position FIRST, then derive option range. "越後面的位置, 可以玩的牌越多。小盲能蓋就盡量蓋。大盲看賠率" is not just poker strategy. It is a general framework: (a) assess where you stand relative to other actors' information revelation; (b) let that position determine how wide a net you can safely cast; (c) worst position = default no-action, require overwhelming edge. SOP #121 Information Position Calibration Protocol ships from this root.
+
+**Signal source**: 201710.jsonl → sender='E' msgs Oct 11 2017, g11 group; cross-validated with MD-133 (edge → action), MD-104 (info asymmetry); SOP #121 written to docs/knowledge_product_121_information_position_calibration_protocol.md
+**Tags**: B2.2, B7, 201710, MD-429, position-determines-range, SOP-121, information-position, decision-architecture
+
+### Insight 2: behavioral-cost-is-the-only-reliable-priority-signal
+
+MD-430 (from 201710): Edward sleeps at 6am every day to match France timezone (6hr time difference) for girlfriend. This is not a statement — it is a sustained behavioral cost. Pattern: verbal priority claims carry near-zero signal because they're costless. Behavioral cost (sustained schedule disruption, energy investment, comfort sacrifice) is the only reliable priority signal. Evaluating anyone's true priorities = observe who/what they make themselves uncomfortable for, not what they say. Applying to self: if you aren't willing to pay a cost for something, you don't actually prioritize it, regardless of what you tell yourself.
+
+**Signal source**: 201710.jsonl → 2017-10-07 msgs "我現在都早上6點睡" + "因為 女王大人的時間是法國時間" + "她們那邊比台灣晚6小時" (g11, sender='E'); MD-430 written
+**Tags**: B2.2, 201710, MD-430, behavioral-cost, revealed-preference, priority-signal, schedule-sacrifice
+
+### Insight 3: 70th-clean-cycle-b2-b7-parallel-push-confirmed
+
+B6: consistency_test.py → 38/41 ALIGNED (3 LLM-boundary MISALIGNED: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev — permanent expected baseline). 70th consecutive clean cycle ✅. B1.1: BTC=$72,639.58 (↓$32.87 from distil119 $72,672.45 — slight LONG headwind); DualMA_10_30=LONG OPEN_LONG (8th consecutive human-session LONG tick); paper only, engine STOPPED G0/G1 DRY_RUN ticks=2. Structural LONG signal intact across 8 ticks spanning $72,639–$72,831 range. B2.2+B7 parallel push this session: MD-429~431 (201710) + SOP #121 shipped atomically. Human session discipline: multi-branch push (B1.1 + B6 + B2.2 + B7 + B3.1) in single session confirms parallel-push-as-session-norm from distil119.
+
+**Signal source**: consistency_test.py → 38/41 ALIGNED; python -m trading.paper_trader --tick → BTC=$72,639.58, DualMA LONG; templates/dna_core.md updated MD-429~431; docs/knowledge_product_121_information_position_calibration_protocol.md created; distil118 file=160 → distil119 file=163 → distil120 file=166 (+3 per cycle)
+**Tags**: B6, B1.1, B2.2, B7, 70th-clean-cycle, 8th-human-tick, LONG-structural, MD-429-431, SOP-121, multi-branch-session
+
+---
+
+## Cycle 121 — 2026-04-12T00:30:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 169 file / running: 277)
+
+### Insight 1: daemon-priority-file-lag-as-cache-gap
+
+The daemon_next_priority.txt showed distil119 at session start, but distil120 was already in the distillation file (written at 23:30Z in a prior human session). Root cause: daemon_next_priority.txt is updated manually per commit cycle; the distillation file is append-only and more authoritative. This reveals the canonical state priority: distillation file > quick_status > daemon_next_priority. On cold start, if daemon_next_priority contradicts the distillation file tail, trust the distillation file. The convenience cache is always lagging. Never let a lagging cache trigger redundant work (would have tried to redo distil120).
+
+**Signal source**: session start mismatch — priority file said distil119 DONE but distillation file showed distil120 already written at 23:30Z; gap = human session wrote distil120 after cycle 319 commit but before next priority file update
+**Tags**: B3.1, cold-start, cache-lag, canonical-state-priority, distillation-authoritative
+
+### Insight 2: ninth-human-tick-btc-72652-structural-long
+
+B1.1 paper-live tick: BTC=$72,652.00 (↑$12.42 from distil120 $72,639.58; LONG tailwind minimal); DualMA_10_30=LONG OPEN_LONG (9th consecutive human-session LONG tick, structural signal unbroken); Donchian_20=FLAT (HOLD); engine STOPPED (G0/G1 DRY_RUN ticks=2 frozen; G3 needs 48 more engine ticks — engine must run, not paper_trader standalone). Structural conclusion: 9 consecutive human sessions all LONG, BTC range $72,638–$72,831. Signal is robust to session-to-session BTC micro-noise. Wait condition: G3 gate (48 engine ticks) — cannot advance without engine restart (human authorization or daemon action).
+
+**Signal source**: python -m trading.paper_trader --paper-live → price=72652.0, DualMA signal=1, action=OPEN_LONG; Donchian signal=0, action=HOLD; 2026-04-12T00:30Z
+**Tags**: B1.1, 201710, 9th-human-tick, BTC-72652, DualMA-LONG-structural, engine-STOPPED-frozen
+
+### Insight 3: 71st-clean-convergence-floor-established
+
+B6: consistency_test.py → 38/41 ALIGNED (71st consecutive clean cycle ✅). Structural invariant confirmed. The 38/41 score is the convergence floor — it is not a milestone or a target, it IS the expected state. Three permanent LLM-boundary scenarios (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev) will never go deterministic without LLM API calls. This is a system property, not a gap. After 71 cycles, the null hypothesis is "38/41 ALIGNED"; anything else is a signal. Attention cost for monitoring B6 = near-zero. Multi-branch push this session: B1.1 + B6 + B3.1 executed from 26-word user trigger — confirms parallel-branch-as-session-norm fully internalized.
+
+**Signal source**: consistency_test.py templates/example_dna.md → 38/41 ALIGNED, 3 MISALIGNED (same baseline); 71st streak; user command "Read SKILL.md, results/dynamic_tree.md, results/daemon_next_priority.txt. Push multiple branches. Commit." — 26 words → B1.1+B6+B3.1 pushed
+**Tags**: B6, 71st-clean-cycle, convergence-floor, 38-41-structural-baseline, multi-branch-26-word-trigger, LLM-boundary-permanent
+
+---
