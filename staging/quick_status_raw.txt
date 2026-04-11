@@ -8,11 +8,11 @@ Daemon:       not running
 Git branch:   claude/optimize-token-usage-AYEpF
 
 Recent commits:
-  de4b7d1 chore: add SessionStart hook output quick_status_raw.txt (5 minutes ago)
+  6235d64 chore: update quick_status_raw.txt from SessionStart hook (15 minutes ago)
+  ba17ac1 chore: add SessionStart hook output quick_status_raw.txt (20 minutes ago)
+  64cb130 feat(daemon): interval=0 chain mode + quick_status auto-writer (17 minutes ago)
   82062c9 fix(opt-token): Linux path + stale quick_status — post-merge fixes (2 hours ago)
-  62374f6 feat: token optimization phase 1+2 — archive cleanup + 3-tier boot protocol (24 hours ago)
-  ddc5d88 fix: remove redundant remote trigger from dynamic tree — daemon covers all use cases (27 hours ago)
-  43fd4fa fix: daemon rate limit detection — sleep until reset instead of cycling every 3min (27 hours ago)
+  62374f6 feat: token optimization phase 1+2 — archive cleanup + 3-tier boot protocol (25 hours ago)
 
 Memory (226 total entries):
   corrections        0 entries
