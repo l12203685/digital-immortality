@@ -17,6 +17,9 @@ import json
 import sys
 import argparse
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
+
+TPE = ZoneInfo("Asia/Taipei")
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
@@ -116,7 +119,7 @@ def check_dna_violations(state, counts, mainnet_go_ts, last_post_ts):
 
 
 def print_status(state, counts, violations, warnings, last_post_ts, verbose=False):
-    now_str = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    now_str = datetime.now(TPE).strftime("%Y-%m-%d %H:%M (Taipei)")
     print(f"=== External Loop Status [{now_str}] ===")
     print(f"State:        {state}")
     print(f"Posts:        {counts['posts']}")
@@ -149,6 +152,7 @@ def print_status(state, counts, violations, warnings, last_post_ts, verbose=Fals
 
 def append_weekly_review(state, counts):
     entry = {
+        # intentional UTC for server log (jsonl archive)
         "ts": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "type": "G4_WEEKLY_REVIEW",
         "content": (

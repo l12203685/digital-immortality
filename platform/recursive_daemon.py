@@ -124,6 +124,30 @@ def run_idle_task_picker(cycle: int) -> None:
         print(f"[daemon] idle_task_picker failed (non-fatal): {e}")
 
 
+def run_finance_dashboards(cycle: int, every: int = 4) -> None:
+    """Rebuild Edward's 3 finance dashboards every ``every`` cycles.
+
+    Uses ``platform/build_finance_dashboards.py`` which has its own 1h cache,
+    so calling more often is harmless. Non-fatal.
+    """
+    if cycle % every != 0:
+        return
+    try:
+        result = subprocess.run(
+            ["python", "platform/build_finance_dashboards.py"],
+            capture_output=True,
+            text=True,
+            timeout=120,
+        )
+        if result.returncode == 0:
+            print(f"[daemon] finance dashboards refreshed (cycle {cycle})")
+        else:
+            print(f"[daemon] finance dashboards failed cycle {cycle}: "
+                  f"{result.stderr[-200:]}")
+    except Exception as exc:  # pragma: no cover - defensive
+        print(f"[daemon] finance dashboards error cycle {cycle}: {exc}")
+
+
 def run_sign_off_apply_expired(cycle: int) -> None:
     """Apply expired AUTO sign-off decisions at end of each cycle.
 
@@ -477,6 +501,8 @@ def main():
             run_idle_task_picker(cycle)
             # Auto sign-off: apply any expired AUTO decisions. Non-fatal.
             run_sign_off_apply_expired(cycle)
+            # Finance dashboards (localhost Mission Control). Every 4 cycles.
+            run_finance_dashboards(cycle, every=4)
         except Exception as e:
             print(f"[daemon] Error: {e}, retrying in 30s...")
             time.sleep(30)

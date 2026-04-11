@@ -1,6 +1,7 @@
 {
-  "updated_utc": "2026-04-11T08:14:47Z",
-  "updated_taipei": "2026-04-11 16:14 +08",
+  "updated_utc": "2026-04-11T09:00:07Z",
+  "updated_taipei": "2026-04-11 17:00 (Taipei, UTC+8)",
+  "updated_taipei_iso": "2026-04-11T17:00:07.288621+08:00",
   "tree": {
     "available": true,
     "branches": [
@@ -43,8 +44,8 @@
   },
   "trading_engine": {
     "available": true,
-    "last_tick": "2026-04-11T08:14:15.886106+00:00",
-    "tick_count": 237,
+    "last_tick": "2026-04-11T08:59:19.783071+00:00",
+    "tick_count": 282,
     "active_strategies": 13,
     "disabled": {
       "gen_BollingerMeanReversion_RF_7abfe4": "PF 0.62 < 0.8",
@@ -55,7 +56,7 @@
       "DualMA_RSI_filtered": "PF 0.70 < 0.8"
     },
     "total_pnl_pct": -0.1865,
-    "price": 72770.73,
+    "price": 72683.04,
     "regime": "mixed",
     "mode": "PAPER"
   },
@@ -113,13 +114,13 @@
     "head": [
       "# Quick Status — live state snapshot for Type A cold start",
       "",
-      "> Updated: 2026-04-11 19:30 UTC (cycle 343: B6 **93rd** clean ✅ 38/41 ALIGNED; B1.1 BTC=$72,716.64 DualMA=LONG OPEN_LONG (32 human ticks); B3.1 distil144 file=238 running=346; SOP#01~121 COMPLETE; GATE-CONSTRAINED)",
+      "> Updated: 2026-04-11 08:56 UTC (cycle 354: B6 **104th** clean ✅ 38/41 ALIGNED; B1.1 BTC=$72,683.04 DualMA=LONG OPEN_LONG (43 human ticks); B3.1 distil155 file=269 running=379; SOP#01~121 COMPLETE; GATE-CONSTRAINED)",
       "",
       "## Current state",
       "- daemon: STOPPED (last run cycle 340)",
-      "- trading_engine: STOPPED (tick=222, PAPER, 13 active FLAT, DualMA variants DISABLED PF<0.8)",
+      "- trading_engine: STOPPED (tick=258, PAPER, 13 active FLAT, DualMA variants DISABLED PF<0.8)",
       "- last_daemon_cycle: 340",
-      "- last_real_work_cycle: 343 (B6 93rd + B3.1 distil144 + B1.1 tick 32)",
+      "- last_real_work_cycle: 354 (B6 104th post-milestone + B3.1 distil155 + B1.1 tick 43)",
       "- backup_tag: `pre-optimization-backup` → ddc5d88",
       "- cloud_recursive: GH Actions chained (Recursive Cycle workflow), every ~10 min, failsafe every 30 min",
       "- local daemons (PIDs 7528, 4396) still alive — Edward will kill after 24h parallel validation",
@@ -130,59 +131,47 @@
       "- Samuel Turing test invite (human-send)",
       "",
       "## Recent changes",
-      "- 2026-04-11: cycle 343 — B6 93rd clean ✅ (38/41, post-protocol-closure seventh pass — zero-monitoring-cost); B1.1 BTC=$72,716.64 DualMA=LONG OPEN_LONG (32 human ticks all LONG, ↓$28.73 headwind post-reversal oscillation, range intact $72,638–$72,831); B3.1 distil144 +3 (file=238, running=346; 32nd-human-tick-btc72716-headwind + 93rd-clean-seventh-pass-zero-cost + hyperloop-24-cycles-2026-04-11); organism interactions ×3; parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 342 — B6 92nd clean ✅ (38/41, post-protocol-closure seventh pass — tripwire-only); B1.1 BTC=$72,745.37 DualMA=LONG OPEN_LONG (31 human ticks all LONG, ↑$72.81 tailwind reversal after three consecutive headwinds, structural signal unbroken); B3.1 distil143 +3 (file=235, running=343; 31st-human-tick-btc72745-tailwind-reversal + 92nd-clean-seventh-pass + parallel-branch-convergence-31-sessions); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 341 — B6 91st clean ✅ (38/41, post-protocol-closure sixth pass — tripwire-only); B1.1 BTC=$72,672.56 DualMA=LONG OPEN_LONG (30 human ticks all LONG, ↓$17.44 headwind minimal, three consecutive headwinds diminishing amplitude, 30-tick milestone); B3.1 distil142 +3 (file=232, running=340; 30th-human-tick-btc72672-headwind-17 + 91st-clean-sixth-pass + session-cadence-30-round-milestone); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 340 — B6 90th clean ✅ (38/41, post-protocol-closure fifth pass — tripwire-only); B1.1 BTC=$72,690.00 DualMA=LONG OPEN_LONG (29 human ticks all LONG, ↓$82.44 headwind largest-recent, structural signal unbroken); B3.1 distil141 +3 (file=229, running=337; 29th-human-tick-btc72690-headwind + 90th-clean-milestone-fifth-pass + session-cadence-29-two-consecutive-headwinds-signal-robustness); Docker/fly.io deploy files staged (.dockerignore, Dockerfile, fly.toml, fly_entrypoint.sh, daemon_failsafe.yml); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 338 — B6 87th clean ✅ (38/41, post-protocol-closure second pass — tripwire-only); B1.1 BTC=$72,784.71 DualMA=LONG OPEN_LONG (27 human ticks all LONG, ↓$30.92 headwind minimal, BTC ceiling descent $46 below $72,831); B3.1 distil139 +3 (file=223, running=331; 27th-human-tick-btc72785-headwind + 87th-clean-second-closed-case + session-cadence-27-cross-axis-invariant); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 337 — B6 86th clean ✅ (38/41, post-protocol-closure tripwire-only); B1.1 BTC=$72,815.63 DualMA=LONG OPEN_LONG (26 human ticks all LONG, ↑$18.85 tailwind, structural signal unbroken); B3.1 distil138 (file=220, running=328; checkpoint cycle, no new distil); parallel branch push concurrent",
-      "- 2026-04-11: cycle 336 — B6 86th clean ✅ (38/41, post-protocol-closure first pass — tripwire-only); B1.1 BTC=$72,796.78 DualMA=LONG OPEN_LONG (25 human ticks all LONG, ↓$11.23 headwind minimal, BTC retraced from ceiling $72,831); B3.1 distil138 +3 (file=220, running=328; 25th-human-tick-btc72797-ceiling-retracement + 86th-clean-post-protocol-closure + session-cadence-25-identity-stable); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 335 — B6 85th clean ✅ (38/41, convergence-floor six-point post-milestone; confirmation protocol CLOSED — tripwire-only); B1.1 BTC=$72,808.01 DualMA=LONG OPEN_LONG (24 human ticks all LONG, ↑$40.78 tailwind, BTC $22.99 below range ceiling $72,831); B3.1 distil137 +3 (file=217, running=325; 24th-human-tick-btc72808-tailwind + 85th-clean-six-point-post-milestone-closed + session-cadence-24-identity-not-discipline); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 334 — B6 84th clean ✅ (38/41, convergence-floor five-point post-milestone confirmed; attractor locked environment-invariant); B1.1 BTC=$72,767.23 DualMA=LONG OPEN_LONG (23 human ticks all LONG, ↓$5.96 headwind minimal, range $72,638–$72,831 stable); B3.1 distil136 +3 (file=214, running=322; 23rd-human-tick-btc72767-headwind + 84th-clean-five-point-post-milestone + execution-reflex-23-session-behavioral-constant); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 333 — B6 83rd clean ✅ (38/41, convergence-floor four-point post-milestone confirmed; 83rd = fourth consecutive post-milestone data point = attractor stable beyond milestone boundary); B1.1 BTC=$72,773.19 DualMA=LONG OPEN_LONG (22 human ticks all LONG, ↑$28.16 tailwind, structural signal unbroken range upper approach $57.81 below $72,831); B3.1 distil135 +3 (file=211, running=319; 22nd-human-tick-btc72773-tailwind + 83rd-clean-four-point-post-milestone + parallel-branch-reflex-22-session-discipline); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 332 — B6 82nd clean ✅ (38/41, convergence-floor three-point post-milestone confirmed; 82nd = third consecutive post-milestone data point = structural invariant replicated); B1.1 BTC=$72,745.03 DualMA=LONG OPEN_LONG (21 human ticks all LONG, ↓$24.92 headwind minimal, signal unbroken through range); B3.1 distil134 +3 (file=208, running=316; 21st-human-tick-btc72745-headwind + 82nd-clean-three-point-milestone + btc-range-21-sessions-slow-ma-tracking); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 331 — B6 81st clean ✅ (38/41, convergence-floor post-milestone locked; 81st = first post-milestone data point confirms attractor stable); B1.1 BTC=$72,769.95 DualMA=LONG OPEN_LONG (20 human ticks all LONG, ↑$15 tailwind minimal, engine tick=168 daemon-advanced HOLD all regime=MIXED); B3.1 distil132 +3 (file=202, running=310; 20th-human-tick-engine168-tailwind + 81st-clean-post-milestone + daemon-engine-tick-cadence-semantics); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 330 — B6 80th clean ✅ (38/41, convergence-floor empirically established; 80 sessions = proven structural attractor); B1.1 BTC=$72,754.72 DualMA=LONG OPEN_LONG (19 human ticks all LONG, ↓$7 headwind minimal); B3.1 distil131 +3 (file=199, running=307; 19th-human-tick-btc72754 + 80th-clean-milestone + human-session-push-as-behavioral-reflex); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 328 — B6 79th clean ✅ (38/41, convergence-floor pure-tripwire dual-trigger; daemon+human same hour); B1.1 BTC=$72,762.0 DualMA=LONG OPEN_LONG (18 human ticks all LONG, ↓$9 headwind minimal, engine tick=162 HOLD all regime=MIXED); B3.1 distil130 +3 (file=196, running=304; 18th-human-tick-engine162 + 79th-clean-dual-trigger + daemon-human-parallel-safe-concurrency); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 327 — B6 78th clean ✅ (38/41, convergence-floor pure-tripwire; monitoring-cost-zero); B1.1 BTC=$72,722.57 DualMA=LONG OPEN_LONG (16 human ticks all LONG, ↑$2 tailwind minimal, engine advancing HOLD all regime=MIXED); B3.1 distil128 +3 (file=190, running=298; 16th-human-tick-range-stable + 78th-clean-pure-tripwire + cold-start-type-b-orientation-sequence); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 326 — B6 77th clean ✅ (38/41, convergence-floor structural property; tripwire-only); B1.1 BTC=$72,723.12 DualMA=LONG OPEN_LONG (15 human ticks all LONG, ↑$2 tailwind minimal, engine tick=149 all HOLD regime=MIXED); B3.1 distil127 +3 (file=187, running=295; 15th-human-tick-long + 77th-clean-structural-property + engine-tick-149-daemon-human-ratio); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 325 — B6 76th clean ✅ (38/41, convergence-floor statistical certainty; tripwire-only); B1.1 BTC=$72,720.65 DualMA=LONG OPEN_LONG (14 human ticks all LONG, ↑$16 tailwind minimal, engine tick=141 all HOLD regime=MIXED); B3.1 distil126 +3 (file=184, running=292; 14th-human-tick-long + 76th-clean-statistical-certainty + engine-tick-141-hold-mixed); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 324 — B6 75th clean ✅ (38/41, convergence-floor statistical invariant; 75-session = structural certainty); B1.1 BTC=$72,704.46 DualMA=LONG OPEN_LONG (13 human ticks all LONG, ↑$9 tailwind, signal structural $72,639–$72,831 range); B3.1 distil125 +3 (file=181, running=289; 13th-human-tick-recovery + 75th-clean-invariant + parallel-branch-13-session-reflex); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 323 — B6 74th clean ✅ (38/41, convergence-floor stable; monitoring cost zero); B1.1 BTC=$72,695.04 DualMA=LONG OPEN_LONG (12 human ticks all LONG, ↑$14 tailwind, signal structural); B3.1 distil124 +3 (file=178, running=286; 12th-human-tick-long-tailwind + 74th-clean-zero-cost + human-session-parallel-branch-discipline); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-11: cycle 322 — B6 73rd clean ✅ (38/41, convergence-floor stable; monitoring cost zero); B1.1 BTC=$72,680.97 DualMA=LONG OPEN_LONG (11 human ticks all LONG, ↓$43 headwind, signal structural); B3.1 distil123 +3 (file=175, running=283; 11th-human-tick-long + 73rd-clean-zero-cost + L2-dead-loop-daemon-context-disambiguation); parallel branch push B1.1+B3.1+B6 concurrent",
-      "- 2026-04-12: cycle 321 — B6 72nd clean ✅ (38/41, convergence-floor structural baseline; <38 triggers dna_core audit); B1.1 BTC=$72,724.00 DualMA=LONG OPEN_LONG (10 human ticks all LONG, +$72 tailwind, structural unbroken); B3.1 distil122 +3 (file=172, running=280; human-gate-bottleneck + engine-frozen-48-ticks + convergence-floor-formalized); parallel branch push B1.1+B3.1+B6 concurrent"
+      "- 2026-04-11: cycle 354 — B6 **104th** clean ✅ (38/41, post-protocol-closure eighteenth pass — fourth-post-milestone, tripwire-only, zero-monitoring-cost); B1.1 BTC=$72,683.04 DualMA=LONG OPEN_LONG (43 human ticks all LONG, ↑$0.20 tailwind near-flat, floor-zone approach $44.04 above floor $72,638, range $72,638–$72,831 intact); B3.1 distil155 +3 (file=269, running=379; 43rd-human-tick-btc72683-near-flat + 104th-clean-eighteenth-pass-post-milestone + slow-ma-sampling-rate-information-content); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 353 — B6 **103rd** clean ✅ (38/41, post-protocol-closure seventeenth pass — third-post-milestone, tripwire-only, zero-monitoring-cost); B1.1 BTC=$72,682.84 DualMA=LONG OPEN_LONG (42 human ticks all LONG, ↓$60.74 headwind significant, floor-zone approach $44.84 above floor $72,638, range $72,638–$72,831 intact); B3.1 distil154 +3 (file=266, running=376; 42nd-human-tick-btc72683-headwind-61-floor-zone + 103rd-clean-seventeenth-pass-post-milestone + btc-42-session-floor-zone-oscillation-range-intact); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 352 — B6 **102nd** clean ✅ (38/41, post-protocol-closure sixteenth pass — second-post-100-milestone, tripwire-only, zero-monitoring-cost); B1.1 BTC=$72,743.58 DualMA=LONG OPEN_LONG (41 human ticks all LONG, ↑$16.96 tailwind minimal, midzone-hold two consecutive sessions, range $72,638–$72,831 intact); B3.1 distil153 +3 (file=263, running=373; 41st-human-tick-btc72744-tailwind-17 + 102nd-clean-sixteenth-pass-post-milestone + btc-41-session-midzone-stability-range-coil-tightening); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 351 — B6 **101st** clean ✅ (38/41, post-protocol-closure fifteenth pass — first-post-100-milestone, tripwire-only, zero-monitoring-cost); B1.1 BTC=$72,726.62 DualMA=LONG OPEN_LONG (40 human ticks all LONG, ↑$19.67 tailwind, midzone recovery from lower-zone, range $72,638–$72,831 intact); B3.1 distil152 +3 (file=260, running=370; 40th-human-tick-btc72727-tailwind-20 + 101st-clean-fifteenth-pass-post-milestone + btc-40-session-midzone-oscillation); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 350 — B6 **100th** clean ✅ (38/41, post-protocol-closure fourteenth pass — tripwire-only, zero-monitoring-cost; 100-session-milestone behavioral-equivalence-proven); B1.1 BTC=$72,706.95 DualMA=LONG OPEN_LONG (39 human ticks all LONG, ↓$43.12 headwind, lower-range-zone $68.95 above floor, range $72,638–$72,831 intact); B3.1 distil151 +3 (file=259, running=367; 39th-human-tick-btc72707-headwind-43 + 100th-clean-fourteenth-pass-milestone + btc-39-session-coil-no-breakout); parallel branch push B1.1+B3.1+B6 concurrent",
+      "- 2026-04-11: cycle 349 — B6 99th clean ✅ (38/41, post-protocol-closure thirteenth pass — zero-monitoring-cost; pre-100-milestone); B1.1 BTC=$72,750.07 DualMA=LONG OPEN_LONG (38 human ticks all LONG, ↑$9.49 tailwind minimal, midpoint recovery after largest headwind, range intact $72,638–$72,831); B3.1 distil150 +3 (file=256, running=364; 38th-human-tick-btc72750-tailwind-9 + 99th-clean-thirteenth-pass + btc-38-session-mean-reversion-midpoint-oscillation); parallel branch push B1.1+B3.1+B6 concurrent",
+      "",
+      "## Stale-detection",
+      "If \"Updated\" > 6h old, read `results/daemon_log.md` (tail) + `staging/session_state.md` for ground truth. Daemon does NOT yet auto-update this file — follow-up TODO: add quick_status writer to platform/recursive_daemon.py."
     ]
   },
   "b6_streak": {
     "available": true,
-    "cycle": 343,
-    "streak": 93
+    "cycle": 349,
+    "streak": 99
   },
   "agent_metrics": {
     "available": true,
     "model": "Opus",
-    "tokens_in": 35575,
-    "tokens_out": 711968,
-    "tokens_cached": 385291,
-    "context_pct": 39,
-    "cost_usd": 54.509161,
+    "tokens_in": 57027,
+    "tokens_out": 915779,
+    "tokens_cached": 454486,
+    "context_pct": 46,
+    "cost_usd": 70.220559,
     "git_branch": "main",
-    "ram_used_pct": 48,
+    "ram_used_pct": 42,
     "ram_disk_free_mb": 2027.4,
-    "ts": "2026-04-11T08:14:23.565589+00:00"
+    "ts": "2026-04-11T16:59:04.215980+08:00"
   },
   "git": {
     "digital-immortality": [
-      "8314238 chore(sign-off): seed decision 4 auto-applied (first real run)",
-      "48d7a6f feat(sign-off): sign_off_manager + daemon integration + dashboard refactor",
-      "4182a5a chore(cycle343): human-session persist — tree header ×343 + B1.1 tick $72,719 + platform/daemon state",
-      "58af565 feat(cycle343): B6 93rd ✅ seventh-pass + B3.1 distil144 (file=238/running=346) + B1.1 BTC=$72,716.64 DualMA=LONG ×32 human ticks + organism interactions ×3 + parallel branch push",
-      "a2ad2ea fix(cloud): use Anthropic API directly (no claude CLI on GH runners)",
-      "a35ccc0 chore(cycle342): B6 raw output + engine log tick 31 persist",
-      "e364370 feat(cloud): GitHub Actions chained recursive workflow (replaces local daemon)",
-      "d9d5b9f feat(cycle342): B6 92nd ✅ post-protocol-closure seventh pass + B3.1 distil143 (file=235/running=343) + B1.1 BTC=$72,745.37 DualMA=LONG ×31 human ticks + parallel branch push",
-      "ee6ec51 revert: cancel Fly.io migration (Edward chose GH Actions chained for simplicity)",
-      "e19b626 chore: untrack idle_task_picker_state.json (now gitignored)"
+      "3b74e26 chore(platform+cycle354): timezone ZoneInfo complete sweep + cycle354 branch data",
+      "8d87772 feat(B4.x+platform): finance dashboards + timezone ZoneInfo + cycle353/354 branch push",
+      "c4dfdf8 chore(cycle353): B6 103rd ✅ seventeenth-pass post-milestone + B3.1 distil154 (file=266/running=376) + B1.1 BTC=$72,682.84 DualMA=LONG ×42 human ticks + floor-zone-approach headwind-61 range-intact",
+      "fcee487 chore(cycle352): B6 102nd ✅ sixteenth-pass post-milestone + B3.1 distil153 (file=263/running=373) + B1.1 BTC=$72,743.58 DualMA=LONG ×41 human ticks + midzone-stabilization two-consecutive-sessions range-coil-tightening",
+      "8a6b7b2 chore(cycle350-human): B6 100th ✅ CENTURY MILESTONE — human-session consistency baseline + template refresh",
+      "753f6e7 chore(cycle351): B6 101st ✅ fifteenth-pass post-100-milestone + B3.1 distil152 (file=260/running=370) + B1.1 BTC=$72,726.62 DualMA=LONG ×40 human ticks + midzone-recovery three-session-micro-pattern",
+      "9d3b891 chore(cycle350): B6 100th ✅ CENTURY MILESTONE fourteenth-pass + B3.1 distil151 (file=259/running=367) + B1.1 BTC=$72,706.95 DualMA=LONG ×39 human ticks + dual-consecutive-headwind stress test PASSED",
+      "35fb5fa chore(cycle349): B6 99th ✅ thirteenth-pass + B3.1 distil150 (file=256/running=364) + B1.1 BTC=$72,750.07 DualMA=LONG ×38 human ticks + midpoint-recovery mean-reversion-confirmed pre-100-milestone",
+      "b6e6696 feat(mission-control): Phase 4b bridge — voice-bridge HMAC + WebAuthn + MCP server",
+      "a03fa70 chore(cycle349): B6 99th ✅ thirteenth-pass + B3.1 distil150 (file=253/running=361) + B1.1 BTC=$72,750.07 DualMA=LONG ×38 human ticks + midpoint recovery pre-100-milestone"
     ],
     "LYH": [
       "4933e4d refactor: rename backtest-framework -> trading-research",
@@ -209,7 +198,7 @@
       "d4fc655 thinking: refine dominance axiom - anti-inferiority > superiority"
     ]
   },
-  "insight_count": 184,
+  "insight_count": 217,
   "blockers": [
     "mainnet API keys (~88d until 2026-07-07)",
     "outreach DMs × 5 pending (staging/outreach_week1_execution.md)",
@@ -217,7 +206,7 @@
   ],
   "mission_control": {
     "available": true,
-    "total_events": 17,
+    "total_events": 19,
     "pending": [
       {
         "ts": "2026-04-11T08:10:38.512742+00:00",
@@ -304,6 +293,26 @@
     ],
     "done": [
       {
+        "ts": "2026-04-11T08:18:27.103263+00:00",
+        "type": "subagent_complete",
+        "status": "done",
+        "msg": "Phase 4a Local Mission Control web shipped: server + frontend + launcher. Discord plugin機制找到 = MCP server pattern. Phase 4b 接input bridge 需 ~1.5-2 hours.",
+        "actor": "main_session",
+        "pretty_msg": "下屬完成任務：Phase 4a Local Mission Control web shipped: server + frontend + launcher. Discord plugin機制找到 = MCP server pattern. Phase 4b 接input bridge 需 ~1.5-2 hours.",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
+        "ts": "2026-04-11T08:17:59.076327+00:00",
+        "type": "subagent_complete",
+        "status": "done",
+        "msg": "Dashboard升級ship: Mission Control section上線, 6個子區塊(待決策/進行中/剛完成/卡住/backlog/主腦在線指示燈), 已可在 https://l12203685.github.io/digital-immortality/dashboard.html 看到",
+        "actor": "main_session",
+        "pretty_msg": "下屬完成任務：Dashboard升級ship: Mission Control section上線, 6個子區塊(待決策/進行中/剛完成/卡住/backlog/主腦在線指示燈), 已可在 https:[檔案] 看到",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
         "ts": "2026-04-11T08:14:14.925109+00:00",
         "type": "subagent_complete",
         "status": "done",
@@ -386,6 +395,26 @@
     ],
     "failure": [],
     "recent_feed": [
+      {
+        "ts": "2026-04-11T08:18:27.103263+00:00",
+        "type": "subagent_complete",
+        "status": "done",
+        "msg": "Phase 4a Local Mission Control web shipped: server + frontend + launcher. Discord plugin機制找到 = MCP server pattern. Phase 4b 接input bridge 需 ~1.5-2 hours.",
+        "actor": "main_session",
+        "pretty_msg": "下屬完成任務：Phase 4a Local Mission Control web shipped: server + frontend + launcher. Discord plugin機制找到 = MCP server pattern. Phase 4b 接input bridge 需 ~1.5-2 hours.",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
+      {
+        "ts": "2026-04-11T08:17:59.076327+00:00",
+        "type": "subagent_complete",
+        "status": "done",
+        "msg": "Dashboard升級ship: Mission Control section上線, 6個子區塊(待決策/進行中/剛完成/卡住/backlog/主腦在線指示燈), 已可在 https://l12203685.github.io/digital-immortality/dashboard.html 看到",
+        "actor": "main_session",
+        "pretty_msg": "下屬完成任務：Dashboard升級ship: Mission Control section上線, 6個子區塊(待決策/進行中/剛完成/卡住/backlog/主腦在線指示燈), 已可在 https:[檔案] 看到",
+        "pretty_actor": "主腦",
+        "pretty_status": "已完成"
+      },
       {
         "ts": "2026-04-11T08:14:14.925109+00:00",
         "type": "subagent_complete",
@@ -601,7 +630,7 @@
       "state": "online",
       "label": "在線",
       "color": "ok",
-      "age_min": 0.4
+      "age_min": 1.1
     }
   }
 }

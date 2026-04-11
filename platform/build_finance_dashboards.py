@@ -97,7 +97,7 @@ def parse_percent(raw: Any) -> float | None:
 
 def taipei_now_iso() -> str:
     tz = timezone(TAIPEI_OFFSET)
-    return datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S %z")
+    return datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S (Taipei, UTC+8)")
 
 
 # --- Sheet access with cache --------------------------------------------
