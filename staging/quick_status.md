@@ -1,12 +1,12 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-11 20:30 UTC (cycle 346: B6 **96th** clean ✅ 38/41 ALIGNED; B1.1 BTC=$72,799.57 DualMA=LONG OPEN_LONG (35 human ticks); B3.1 distil147 file=247 running=355; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
+> Updated: 2026-04-11 08:25 UTC (cycle 347: B6 **97th** clean ✅ 38/41 ALIGNED; B1.1 BTC=$72,781.77 DualMA=LONG OPEN_LONG (36 human ticks); B3.1 distil148 file=250 running=358; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
 
 ## Current state
 - daemon: STOPPED (last run cycle 340)
 - trading_engine: STOPPED (tick=226, PAPER, 13 active FLAT, DualMA variants DISABLED PF<0.8)
 - last_daemon_cycle: 340
-- last_real_work_cycle: 346 (B6 96th + B3.1 distil147 + B1.1 tick 35)
+- last_real_work_cycle: 347 (B6 97th + B3.1 distil148 + B1.1 tick 36)
 - backup_tag: `pre-optimization-backup` → ddc5d88
 - cloud_recursive: GH Actions chained (Recursive Cycle workflow), every ~10 min, failsafe every 30 min
 - local daemons (PIDs 7528, 4396) still alive — Edward will kill after 24h parallel validation
@@ -17,6 +17,7 @@
 - Samuel Turing test invite (human-send)
 
 ## Recent changes
+- 2026-04-11: cycle 347 — B6 97th clean ✅ (38/41, post-protocol-closure eleventh pass — zero-monitoring-cost); B1.1 BTC=$72,781.77 DualMA=LONG OPEN_LONG (36 human ticks all LONG, ↓$17.80 headwind minimal, ceiling-zone oscillation $49 below $72,831, range intact $72,638–$72,831); B3.1 distil148 +3 (file=250, running=358; 36th-human-tick-btc72781-headwind-17 + 97th-clean-eleventh-pass + btc-36-session-oscillation-ceiling-zone-resistance); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 346 — B6 96th clean ✅ (38/41, post-protocol-closure tenth pass — zero-monitoring-cost; ceiling compression $31.43 below $72,831); B1.1 BTC=$72,799.57 DualMA=LONG OPEN_LONG (35 human ticks all LONG, ↑$37.60 tailwind, range intact $72,638–$72,831); B3.1 distil147 +3 (file=247, running=355; 35th-human-tick-btc72799-tailwind-37-ceiling-31-below + 96th-clean-tenth-pass + ceiling-compression-35-sessions-breakout-or-rejection-imminent); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 345 — B6 95th clean ✅ (38/41, post-protocol-closure ninth pass — zero-monitoring-cost); B1.1 BTC=$72,761.97 DualMA=LONG OPEN_LONG (34 human ticks all LONG, ↓$16.50 headwind minimal, range intact $72,638–$72,831); B3.1 distil146 +3 (file=244, running=352; 34th-human-tick-btc72761-headwind-16 + 95th-clean-ninth-pass + btc-range-34-sessions-slow-ma-structural-long); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 344 — B6 94th clean ✅ (38/41, post-protocol-closure eighth pass — zero-monitoring-cost); B1.1 BTC=$72,778.47 DualMA=LONG OPEN_LONG (33 human ticks all LONG, +$61.83 tailwind ceiling approach $52.53 below $72,831, range intact); B3.1 distil145 +3 (file=241, running=349; 33rd-human-tick-btc72778-tailwind-61 + 94th-clean-eighth-pass + parallel-branch-33-sessions-closed-loop); parallel branch push B1.1+B3.1+B6 concurrent
