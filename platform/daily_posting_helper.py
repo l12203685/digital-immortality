@@ -16,6 +16,9 @@ import json
 import re
 import sys
 from datetime import datetime, date, timezone, timedelta
+from zoneinfo import ZoneInfo
+
+TPE = ZoneInfo("Asia/Taipei")
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -104,7 +107,7 @@ def show_thread(sop_num: str):
 def mark_posted(sop_num: str):
     """Update posting_queue.md to mark sop_num as posted."""
     text = QUEUE_FILE.read_text()
-    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+    timestamp = datetime.now(TPE).strftime("%Y-%m-%d %H:%M (Taipei)")
     # Replace the pending status for this SOP
     pattern = rf"(\| {TODAY_STR} \| {re.escape(sop_num)} \|.*?\| )pending"
     replacement = rf"\1posted {timestamp}"
@@ -120,7 +123,7 @@ def mark_posted(sop_num: str):
 def log_signal(sop_num: str, replies: int, saves: int, dms: int):
     """Append a row to the Signal Log section of posting_queue.md."""
     text = QUEUE_FILE.read_text()
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    now = datetime.now(TPE).strftime("%Y-%m-%d")
 
     # Determine hook verdict
     if replies == 0 and saves == 0:
@@ -248,7 +251,7 @@ def evolve_content_rules(saves: int, dms: int, sop: str) -> Dict:
     """
     rules = load_content_rules()
     r = rules["rules"]
-    now_iso = datetime.now(timezone.utc).isoformat()
+    now_iso = datetime.now(TPE).isoformat()  # Taipei ISO with +08:00 offset
     changes: List[str] = []
 
     saves_threshold = r.get("engagement_threshold_saves", 5)

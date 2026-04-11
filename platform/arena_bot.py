@@ -42,6 +42,9 @@ import subprocess
 import sys
 import textwrap
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
+
+TPE = ZoneInfo("Asia/Taipei")
 from pathlib import Path
 from typing import Optional
 
@@ -185,7 +188,7 @@ def post_to_discord(webhook_url: str, content: str) -> None:
 
 def format_arena_post(organism_name: str, scenario: str, response: str,
                       domain: str, scenario_id: Optional[int] = None) -> str:
-    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    ts = datetime.now(TPE).strftime("%Y-%m-%d %H:%M (Taipei)")
     id_tag = f"S{scenario_id:02d}" if scenario_id else "custom"
     return (
         f"**[{organism_name} | {domain} | {id_tag} | {ts}]**\n"

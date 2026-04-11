@@ -331,9 +331,10 @@ def generate() -> dict[str, Any]:
             "detail": pick_detail(items),
         })
 
-    # Timestamp in Taipei time
+    # Timestamp in Taipei time (Edward's standing rule — see
+    # memory/feedback_timezone_taipei_default.md).
     taipei = timezone(timedelta(hours=8))
-    updated = now.astimezone(taipei).strftime("%Y-%m-%dT%H:%M+08")
+    updated = now.astimezone(taipei).strftime("%Y-%m-%d %H:%M (Taipei, UTC+8)")
 
     state: dict[str, Any] = {
         "updated": updated,

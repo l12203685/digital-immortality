@@ -7,6 +7,9 @@ from __future__ import annotations
 import json, os, re, subprocess, sys, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
+
+TPE = ZoneInfo("Asia/Taipei")
 
 REPO = Path(__file__).resolve().parent.parent
 STAGING, RESULTS, MEMORY = REPO / "staging", REPO / "results", REPO / "memory"
@@ -158,7 +161,7 @@ def run_checks() -> dict:
 
 def main() -> int:
     rep = run_checks()
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    today = datetime.now(TPE).strftime("%Y-%m-%d")  # Taipei date — Edward browses this
     out = RESULTS / f"heartbeat_{today}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(rep, indent=2), encoding="utf-8")
@@ -171,7 +174,7 @@ def main() -> int:
     if not webhook:
         print("[heartbeat] DISCORD_WEBHOOK unavailable", file=sys.stderr)
         return 1
-    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    ts = datetime.now(TPE).strftime("%Y-%m-%d %H:%M (Taipei)")
     reason = "; ".join(rep["failures"])[:1500]
     post_discord(webhook, f"\u26a0\ufe0f Heartbeat FAIL {ts}: {reason}")
     return 1
