@@ -1087,3 +1087,31 @@ Gate-constrained regime (human-gated blockers: mainnet API keys ~88d, outreach D
 **Tags**: methodology, gate-constrained, maintenance-saturation, taper, log-decreasing-insight, advancement-vs-preservation, meta-pattern
 
 ---
+
+## Cycle 124 — 2026-04-12T01:30:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 178 file / running: 286)
+
+### Insight 1: daemon-human-two-phase-execution-model
+
+The daemon runs cycles (tick + consistency test) and pre-writes anticipated states into daemon_next_priority.txt before the human session executes. This creates a two-phase model: daemon phase (execution + pre-announcement) → human session phase (distillation content + durable commit). Example: daemon pre-wrote "distil124 DONE" at 06:30Z before distil124 was actually written. The daemon phase is fast and ephemeral (writes to tracking files, appends to JSONL). The human session phase is slow and durable (writes distillation content, commits to git). Neither phase is complete without the other: daemon without human commit = data without persistence; human without daemon ticks = commit without fresh execution data. Key property: when daemon_next_priority.txt says X is "DONE," it means the daemon ran the execution step; the human session writes the synthesized content and commits.
+
+**Signal source**: daemon_next_priority.txt → "distil124 DONE" written before distil124 content existed; quick_status.md → updated at 06:26Z (daemon) with cycle 322 state; paper_dual_ma.jsonl → daemon tick at 06:29Z ($72,695.04) before human session commit; git status → engine files modified by daemon without human session touching them
+**Tags**: methodology, daemon-human-two-phase, execution-model, pre-announcement, durable-commit, daemon-fast-ephemeral, human-slow-durable
+
+### Insight 2: 74th-clean-cycle-monitoring-cost-zero-predictable-outcome
+
+At 74 consecutive clean cycles (38/41), running consistency_test.py approaches zero marginal information cost: result is fully predictable (38/41, same 3 MISALIGNED: poker_gto_mdf, trading_atr_sizing, career_multi_option_ev). The test now serves as a negative-event detector (trigger if <38) rather than an active probe. The test still must run — skipping inverts the purpose (from "confirm stability" to "assume stability"). But the interpretation has changed: running and getting 38/41 = null event (no information). Running and getting <38 = high-information event requiring response. At 74+ cycles, the test's expected value comes entirely from the rare failure case, not the expected pass case. This is efficiency by saturation: maximum information was extracted at the beginning of the streak; incremental gain per cycle now approaches zero asymptotically.
+
+**Signal source**: consistency_test.py output → 38/41 ALIGNED cycles 317–323 (identical); daemon_next_priority.txt → "monitoring cost zero" label added at cycle 323; distil122 I3 → "convergence-floor-38-41-established" + distil123 I2 → "global-attractor-confirmed"
+**Tags**: B6, 74th-consecutive, monitoring-cost-zero, negative-event-detector, saturation, information-theory, asymptotic-gain
+
+### Insight 3: 12th-tick-long-robust-to-price-oscillation
+
+BTC price range across 12 consecutive human-session LONG ticks: $72,638–$72,831 (oscillation range ~$193). DualMA_10_30 signal: LONG throughout (zero reversions). The signal robustness is structural, not coincidental: 10-day and 30-day MAs cannot flip from a ~$200 intraday oscillation in a ~$72,000 base. A SHORT-trigger would require sustained bearish price action across multiple days, not a single session's fluctuation. This confirms the signal is regime-structural, not noise-driven. Implication for G3 assessment: when engine ticks resume, the 12-tick human-session evidence base provides high-confidence priors (signal continuity through oscillation = regime, not spike).
+
+**Signal source**: paper_dual_ma.jsonl → BTC $72,638–$72,831 range across ticks 1–12 (cycles 313–323); DualMA=LONG in every entry; price delta across full range = $193 (~0.27% of $72,000); no LONG→FLAT or LONG→SHORT transition observed
+**Tags**: B1.1, DualMA, 12th-consecutive-long, price-oscillation-robustness, regime-structural, G3-prior-evidence, slow-MA-noise-immunity
+
+---
