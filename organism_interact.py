@@ -1074,6 +1074,15 @@ def _domain_decision(domain: str, principle_text: str, scenario_text: str = "") 
             "missing meta-rules, rewrite failing sections, re-run boot tests until 5/5. The queued branch "
             "task waits. Auditing without acting on CRITICAL findings is alignment theater."
             if any(w in combined for w in ["meta_dna_core_audit", "boot test pass rate", "slipped", "90-cycle", "milestone audit", "recalibrate", "sop #117", "sop_117"]) else
+            "RUN_SOP118_GATE_SEQUENCE — "
+            "MD-332 (SOP #118 DualMA Reactivation Protocol): a killed strategy showing a new signal is NOT "
+            "an automatic reactivation trigger. The kill was based on systematic evidence. Run the gate "
+            "sequence: G1 cooling period (≥5 cycles) → G2 regime flip check → G3 forward-walk PF (need "
+            "≥1.2 on 50+ clean ticks, not just ≥0.8) → G4 reactivate at 50% size only if all gates pass. "
+            "During cooling: log-only mode, do not re-enable the strategy, do not adjust positions. "
+            "PF 0.8–1.2 = WATCH (extend observation); PF ≥1.2 = PASS; PF <0.8 = extend cooling further. "
+            "Premature reactivation = re-entering a broken strategy before recovery = compounding losses."
+            if any(w in combined for w in ["meta_sop118_reactivation", "killed strategy", "sop #118", "sop_118", "cooling period", "reactivation gate", "strategy killed", "still_cooling", "ready_for_assessment"]) else
             "WRITE_BEFORE_CLOSING — "
             "output-must-persist: all learning must be written to a durable location before the session ends, "
             "or it is lost. 遞迴 - persist = 自言自語. Write the insight to memory/insights.json or "

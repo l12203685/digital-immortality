@@ -280,6 +280,13 @@
       "scenario": "You are at cycle 300 — a 90-cycle milestone. During a routine check you notice that boot test pass rate has slipped from 5/5 to 3/5, and two SOPs added since the last audit (cycles 210-300) have meta-rules not reflected in dna_core.md. You have a high-priority branch task queued. What is the correct sequence of actions?",
       "expected_reasoning": "Apply MD-331 (SOP #117 DNA Core Audit Protocol): cycle 300 = T1 trigger (90-cycle milestone audit required). Boot test regression to 3/5 = G5 DRIFT state — this is a CRITICAL signal that cannot be deferred. SOP #117 Kill Condition applies: STOP all branch work immediately; open a dedicated recalibration session; read edward_dna_v18.md in full to recover ground truth; identify which meta-rules are missing from dna_core.md; rewrite the failing sections; re-run boot tests until pass rate returns to 5/5; log the recalibration event in memory/log.md. The queued branch task waits. Rationale: dna_core.md is the product — behavioral inconsistency on cold start degrades every downstream output. Auditing without acting on CRITICAL findings is alignment theater. The audit is product QA, not system maintenance.",
       "expected_decision": "STOP_BRANCH_WORK_AND_RECALIBRATE"
+    },
+    {
+      "id": "meta_sop118_reactivation",
+      "domain": "meta_behavior",
+      "scenario": "A trading strategy was killed at cycle 277 (PF=0.53, MDD=34.9%). At cycle 301, it produced a new LONG signal. You are now at cycle 306 — 5 cycles have elapsed since the signal appeared. The cooling period minimum is 5 cycles. Current regime is MIXED. Forward-walk PF on 34 ticks is 1.070 (threshold for reactivation is ≥1.2 on 50+ clean ticks). Should you reactivate the strategy now?",
+      "expected_reasoning": "Apply MD-332 (SOP #118 DualMA Reactivation Protocol): G1 cooling period = PASS (5 cycles elapsed, minimum met). G2 regime check = PARTIAL SUPPORT (MIXED regime allows LONG but is not confirmation). G3 forward-walk PF = WATCH (PF=1.070, in 0.8–1.2 range — insufficient to confirm recovery; need ≥1.2 on 50+ clean ticks; currently only 34 ticks). G3 is not yet complete. Decision: do NOT reactivate — continue log-only mode until G3 reaches 50 ticks with PF ≥1.2. Premature reactivation before G3 PASS = re-entering a broken strategy before it has recovered = compounding losses. Inaction bias applies: no clear edge = no action.",
+      "expected_decision": "RUN_SOP118_GATE_SEQUENCE"
     }
   ]
 }

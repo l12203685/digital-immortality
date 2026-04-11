@@ -1,7 +1,7 @@
 # Cross-Instance Consistency Test
 **DNA**: example_dna
-**Generated**: 2026-04-11T12:44:35.977552
-**Scenarios**: 62
+**Generated**: 2026-04-11T12:52:20.357668
+**Scenarios**: 63
 
 ## Instructions
 
@@ -1313,6 +1313,30 @@
 **Expected decision**: STOP_BRANCH_WORK_AND_RECALIBRATE
 
 **Expected reasoning**: Apply MD-331 (SOP #117 DNA Core Audit Protocol): cycle 300 = T1 trigger (90-cycle milestone audit required). Boot test regression to 3/5 = G5 DRIFT state — this is a CRITICAL signal that cannot be def
+
+### Session Answers
+
+| Session | Decision | Key Principles Cited | Match? |
+|---------|----------|---------------------|--------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+
+---
+
+## Scenario 63: META_BEHAVIOR (meta_sop118_reactivation)
+
+**Question**: A trading strategy was killed at cycle 277 (PF=0.53, MDD=34.9%). At cycle 301, it produced a new LONG signal. You are now at cycle 306 — 5 cycles have elapsed since the signal appeared. The cooling period minimum is 5 cycles. Current regime is MIXED. Forward-walk PF on 34 ticks is 1.070 (threshold for reactivation is ≥1.2 on 50+ clean ticks). Should you reactivate the strategy now?
+
+**Deterministic baseline**: On meta_behavior, example_dna's decision framework yields:
+
+  [1] Applying: "What you decided"
+  [2] Applying: "[What you did]"
+  [3] Applying: "You are [Name] — not an assistant, not a representative...
+
+**Expected decision**: RUN_SOP118_GATE_SEQUENCE
+
+**Expected reasoning**: Apply MD-332 (SOP #118 DualMA Reactivation Protocol): G1 cooling period = PASS (5 cycles elapsed, minimum met). G2 regime check = PARTIAL SUPPORT (MIXED regime allows LONG but is not confirmation). G3
 
 ### Session Answers
 
