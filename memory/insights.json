@@ -2560,6 +2560,48 @@
         "b3.1",
         "gap-closed"
       ]
+    },
+    {
+      "id": "cycle305-distil101-sop92-cooling-prevents-premature-reentry",
+      "key": "sop92-cooling-period-gate",
+      "content": "After a strategy kill event, a new positive signal from the same strategy is a ghost signal, not a reactivation trigger. SOP#92 mandates a minimum 5-cycle cooling period before assessment eligibility. Prevents reactive re-entry immediately post-kill when the signal may be noise.",
+      "timestamp": "2026-04-11T12:45:00Z",
+      "source": "recursive-engine-cycle-305",
+      "tags": [
+        "trading",
+        "kill-conditions",
+        "sop92",
+        "reactivation",
+        "ghost-signal"
+      ]
+    },
+    {
+      "id": "cycle305-distil101-meta-rule-wiring-code-not-dna",
+      "key": "meta-rule-wiring-executable",
+      "content": "A meta-rule recognized in DNA is incomplete until wired into executable code. meta_dna_core_audit existed in boot tests for multiple cycles but only became operationally real when the handler was wired into organism_interact.py (cycle 304). Rule: documented-but-not-wired = not operational. Every meta-rule needs a code path.",
+      "timestamp": "2026-04-11T12:45:00Z",
+      "source": "recursive-engine-cycle-305",
+      "tags": [
+        "meta",
+        "wiring",
+        "operational",
+        "dna",
+        "organism-interact"
+      ]
+    },
+    {
+      "id": "cycle305-distil101-sop118-g0-g5-reactivation-protocol",
+      "key": "sop118-reactivation-gate-sequence",
+      "content": "SOP#118 codifies the full G0-G5 reactivation gate sequence for killed strategies. Ghost signal (killed strategy resumes positive signal) starts the assessment clock but does not reactivate. G0=signal detected, G1=5-cycle cooling, G2=PF assessment, G3=WR check, G4=MDD verify, G5=reactivate. Prevents false reactivations during noisy regimes.",
+      "timestamp": "2026-04-11T12:45:00Z",
+      "source": "recursive-engine-cycle-305",
+      "tags": [
+        "trading",
+        "sop118",
+        "reactivation",
+        "gate-sequence",
+        "kill-conditions"
+      ]
     }
   ]
 }
