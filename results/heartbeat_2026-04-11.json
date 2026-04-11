@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-04-11T06:53:35.663771+00:00",
+  "checks": {
+    "daemon_push_fresh": {
+      "age": 15,
+      "threshold": 7200,
+      "ok": true
+    },
+    "engine_tick_fresh": {
+      "age": 25,
+      "ok": true,
+      "stopped": true
+    },
+    "b6_streak": {
+      "quick": 78,
+      "daemon": null,
+      "streak": 78,
+      "regression": false
+    },
+    "tree_clean": {
+      "flagged": [],
+      "ok": true
+    },
+    "dashboard_fresh": {
+      "age": 3,
+      "ok": true
+    }
+  },
+  "warnings": [],
+  "failures": [],
+  "inputs": {
+    "qs": 6556,
+    "tree": 9337,
+    "dlog": 889
+  },
+  "healthy": true
+}

@@ -1,0 +1,296 @@
+"""
+build_dashboard.py — Phase 2 pull-model dashboard aggregator.
+
+Reads live agent state from multiple sources and writes
+results/dashboard_state.json. Graceful degradation: every source is
+optional and missing files yield "N/A" instead of errors.
+
+Usage: python platform/build_dashboard.py
+"""
+
+from __future__ import annotations
+
+import json
+import re
+import subprocess
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+from typing import Any
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+RESULTS = REPO_ROOT / "results"
+STAGING = REPO_ROOT / "staging"
+MEMORY = REPO_ROOT / "memory"
+OUT_PATH = RESULTS / "dashboard_state.json"
+
+# Runtime-only path; never committed. Read if exists, ignore otherwise.
+AGENT_METRICS_PATH = Path("R:/agent_metrics.json")
+
+TREE_BRANCHES = [
+    (1, "經濟自給"),
+    (2, "行為等價"),
+    (3, "持續學習"),
+    (4, "社交圈"),
+    (5, "平台分發"),
+    (6, "存活冗餘"),
+    (7, "知識輸出"),
+]
+
+
+def read_text(path: Path) -> str | None:
+    try:
+        return path.read_text(encoding="utf-8", errors="replace")
+    except (FileNotFoundError, OSError):
+        return None
+
+
+def read_json(path: Path) -> Any:
+    text = read_text(path)
+    if text is None:
+        return None
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        return None
+
+
+def load_trading_engine() -> dict[str, Any]:
+    data = read_json(RESULTS / "trading_engine_status.json")
+    if not data:
+        return {"available": False}
+    return {
+        "available": True,
+        "last_tick": data.get("last_tick", "N/A"),
+        "tick_count": data.get("tick_count", 0),
+        "active_strategies": data.get("active_strategies", 0),
+        "disabled": data.get("disabled", {}),
+        "total_pnl_pct": data.get("total_pnl_pct", 0),
+        "price": data.get("price", 0),
+        "regime": data.get("regime", "N/A"),
+        "mode": data.get("mode", "N/A"),
+    }
+
+
+def load_execution_rules() -> dict[str, Any]:
+    data = read_json(RESULTS / "execution_rules.json")
+    if not data:
+        return {"available": False}
+    return {
+        "available": True,
+        "kill_max_dd": data.get("kill_max_dd"),
+        "kill_min_wr": data.get("kill_min_wr"),
+        "kill_min_pf": data.get("kill_min_pf"),
+        "kill_window": data.get("kill_window"),
+        "kill_count": data.get("kill_count", 0),
+        "evolved_at": data.get("evolved_at", "N/A"),
+        "last_kill": data.get("last_kill", {}),
+    }
+
+
+def load_disabled_strategies() -> dict[str, Any]:
+    data = read_json(RESULTS / "disabled_strategies.json")
+    if not data:
+        return {"available": False, "items": {}}
+    return {"available": True, "items": data}
+
+
+def load_paper_pnl() -> dict[str, Any]:
+    report = read_text(RESULTS / "paper_live_pnl_report.md")
+    if not report:
+        return {"available": False}
+    tick_m = re.search(r"tick\s*(\d+)", report, re.IGNORECASE)
+    pnl_m = re.search(r"P&L[:\s=*]*\+?\$?([\-\d.]+)", report)
+    return {
+        "available": True,
+        "tick": int(tick_m.group(1)) if tick_m else None,
+        "pnl": f"+${pnl_m.group(1)}" if pnl_m else "N/A",
+    }
+
+
+def load_daemon_tail() -> dict[str, Any]:
+    text = read_text(RESULTS / "daemon_log.md")
+    if not text:
+        return {"available": False, "tail": [], "last_cycle": 0}
+    lines = [ln for ln in text.splitlines() if ln.strip()]
+    cycles = re.findall(r"^## Cycle (\d+)", text, re.MULTILINE)
+    return {
+        "available": True,
+        "tail": lines[-20:],
+        "last_cycle": max((int(c) for c in cycles), default=0),
+    }
+
+
+def load_quick_status() -> dict[str, Any]:
+    text = read_text(STAGING / "quick_status.md")
+    if not text:
+        return {"available": False, "head": []}
+    return {"available": True, "head": text.splitlines()[:40]}
+
+
+def load_tree_branches() -> dict[str, Any]:
+    text = read_text(RESULTS / "dynamic_tree.md")
+    if not text:
+        return {"available": False, "branches": []}
+    lines = text.splitlines()
+    branches: list[dict[str, Any]] = []
+    for num, _label in TREE_BRANCHES:
+        pattern = re.compile(rf"^### {num}\.\s+(.+)")
+        title = ""
+        first = ""
+        idx = -1
+        for i, line in enumerate(lines):
+            m = pattern.match(line)
+            if m:
+                title = m.group(1).strip()
+                idx = i
+                break
+        if idx >= 0:
+            for follow in lines[idx + 1 : idx + 15]:
+                s = follow.strip()
+                if s.startswith("- ") or s.startswith("* "):
+                    first = re.sub(r"\*\*", "", s.lstrip("-* ").strip())
+                    if len(first) > 140:
+                        first = first[:137] + "..."
+                    break
+        branches.append({"num": num, "title": title or "N/A", "first": first or "N/A"})
+    return {"available": True, "branches": branches}
+
+
+def parse_b6_streak(text: str | None) -> dict[str, Any]:
+    if not text:
+        return {"available": False}
+    best_cycle = 0
+    best_streak = 0
+    for m in re.finditer(
+        r"cycle\s*(\d+)[^\n]{0,80}?B6\s*(\d+)(?:st|nd|rd|th)\s*clean",
+        text,
+        re.IGNORECASE,
+    ):
+        c, s = int(m.group(1)), int(m.group(2))
+        if c > best_cycle:
+            best_cycle, best_streak = c, s
+    if best_streak == 0:
+        for m in re.finditer(
+            r"\*\*(\d+)(?:st|nd|rd|th)\s+consecutive\s+clean\s+cycle\*\*",
+            text,
+            re.IGNORECASE,
+        ):
+            best_streak = max(best_streak, int(m.group(1)))
+    if best_streak == 0:
+        return {"available": False}
+    return {"available": True, "cycle": best_cycle, "streak": best_streak}
+
+
+def load_b6_streak() -> dict[str, Any]:
+    result = parse_b6_streak(read_text(STAGING / "quick_status.md"))
+    if result.get("available"):
+        return result
+    return parse_b6_streak(read_text(RESULTS / "dynamic_tree.md"))
+
+
+def load_agent_metrics() -> dict[str, Any]:
+    data = read_json(AGENT_METRICS_PATH)
+    if not data:
+        return {"available": False}
+    keys = [
+        "model", "tokens_in", "tokens_out", "tokens_cached", "context_pct",
+        "cost_usd", "git_branch", "ram_used_pct", "ram_disk_free_mb", "ts",
+    ]
+    out: dict[str, Any] = {"available": True}
+    for k in keys:
+        out[k] = data.get(k, "N/A")
+    return out
+
+
+def git_log(repo: Path, n: int = 10) -> list[str]:
+    if not (repo / ".git").exists():
+        return []
+    try:
+        r = subprocess.run(
+            ["git", "log", f"-n{n}", "--oneline"],
+            cwd=str(repo),
+            capture_output=True,
+            text=True,
+            timeout=15,
+            encoding="utf-8",
+            errors="replace",
+        )
+        if r.returncode != 0:
+            return []
+        return [ln for ln in r.stdout.splitlines() if ln.strip()]
+    except (subprocess.SubprocessError, OSError):
+        return []
+
+
+def load_git_commits() -> dict[str, list[str]]:
+    return {
+        "digital-immortality": git_log(REPO_ROOT),
+        "LYH": git_log(Path("C:/Users/admin/LYH")),
+        "ZP": git_log(Path("C:/Users/admin/ZP")),
+    }
+
+
+def count_insights() -> int:
+    text = read_text(MEMORY / "recursive_distillation.md")
+    if not text:
+        return 0
+    return sum(1 for ln in text.splitlines() if ln.startswith("### Insight"))
+
+
+def extract_blockers() -> list[str]:
+    text = read_text(STAGING / "quick_status.md")
+    if not text:
+        return []
+    blockers: list[str] = []
+    in_section = False
+    for line in text.splitlines():
+        if line.strip().startswith("## Blockers"):
+            in_section = True
+            continue
+        if in_section:
+            if line.startswith("##"):
+                break
+            s = line.strip()
+            if s.startswith("- "):
+                blockers.append(s.lstrip("- ").strip())
+    return blockers
+
+
+def build_state() -> dict[str, Any]:
+    now = datetime.now(timezone.utc)
+    taipei = now.astimezone(timezone(timedelta(hours=8)))
+    return {
+        "updated_utc": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "updated_taipei": taipei.strftime("%Y-%m-%d %H:%M +08"),
+        "tree": load_tree_branches(),
+        "trading_engine": load_trading_engine(),
+        "execution_rules": load_execution_rules(),
+        "disabled_strategies": load_disabled_strategies(),
+        "paper_pnl": load_paper_pnl(),
+        "daemon": load_daemon_tail(),
+        "quick_status": load_quick_status(),
+        "b6_streak": load_b6_streak(),
+        "agent_metrics": load_agent_metrics(),
+        "git": load_git_commits(),
+        "insight_count": count_insights(),
+        "blockers": extract_blockers(),
+    }
+
+
+def main() -> None:
+    state = build_state()
+    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    OUT_PATH.write_text(
+        json.dumps(state, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    print(f"[build_dashboard] wrote {OUT_PATH}")
+    print(f"  tree_branches={len(state['tree'].get('branches', []))}")
+    print(f"  daemon_cycle={state['daemon'].get('last_cycle')}")
+    print(f"  b6_streak={state['b6_streak']}")
+    print(f"  insights={state['insight_count']}")
+    print(f"  blockers={len(state['blockers'])}")
+
+
+if __name__ == "__main__":
+    main()
