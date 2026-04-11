@@ -182,6 +182,134 @@ SOP #101 G1 specifies next dna_core.md audit at cycle ~300 (90 cycles from cycle
 
 ---
 
+## Cycle 97 — 2026-04-11T04:20Z
+
+**Source cycles**: 300-301
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 99)
+
+### Insight 1: dualma-long-flip-is-regime-data-not-alpha
+
+DualMA_10_30 flipped LONG at BTC=$72,790 after a sustained MIXED regime with prior PF=0.53 kill. The flip is not necessarily alpha — it may be regime data. A strategy killed for PF<0.8 cannot be re-enabled without the formal reactivation gate (SOP #92: cooling period + regime flip + re-backtest pass + probation pool). Observing the signal is correct (keep logging); acting on it without re-enabling it through SOP #92 is incorrect. The kill is persistent until formally reversed. Live signal ≠ live authorization.
+
+**Signal source**: paper_trader --tick 2026-04-11; BTC=$72,790.5; DualMA_10_30=OPEN_LONG; prior kill at PF=0.53 cycle 277
+**Tags**: trading, DualMA, signal-flip, LONG, SOP-92, kill-persistence, reactivation-gate
+
+### Insight 2: sop117-bundle-arbitrage-is-information-edge-operationalized
+
+SOP #117 (Bundle Arbitrage Protocol) encodes that bundle arbitrage is fundamentally an information asymmetry exploit (MD-04): the edge exists while most buyers see the bundle as a bundle, not as a scarce-component carrier. The G0-G5 protocol operationalizes the full cycle: identify scarce component → verify acquisition route → model spread → verify exit route → execute → close before information symmetry collapses. The kill condition is information collapse, not price movement. This generalizes: any information-asymmetry-based trade has a structural decay clock that starts the moment the edge becomes visible to others.
+
+**Signal source**: SOP #117 created; MD-399 + MD-04 integration; knowledge_product_117_bundle_arbitrage_protocol.md
+**Tags**: SOP-117, bundle-arbitrage, information-asymmetry, MD-04, edge-decay, branch-5, branch-7
+
+### Insight 3: 52-clean-cycles-cold-start-structural-invariant
+
+52 consecutive consistency-test passes (33/33 deterministic ALIGNED) through cycles 246-298 makes cold-start integrity a structural property, not an operational lucky streak. Below ~10 consecutive passes, a clean run is a check. Above 50, it is an invariant. The proper label changes from "passing the test" to "maintaining the invariant." Structural invariants should be monitored at lower frequency than active tests — the monitoring cost should be proportional to the probability of drift, which decreases as the streak lengthens. Monthly audit cadence (SOP #80) is correctly calibrated for an invariant at this streak length.
+
+**Signal source**: consistency_test.py 33/33 ALIGNED cycle 298 (52nd consecutive); streak started cycle 246; SOP #80 monthly cadence
+**Tags**: cold-start, branch-6, structural-invariant, consistency, streak-52, SOP-80
+
+---
+
+## Cycle 262-270 — 2026-04-09T12:10Z (backfill)
+
+**Source cycles**: 259-270
+**Branch**: 3.1 recursive distillation (taxonomy backfill)
+**Insights appended**: 0 (narrative only — backfill for insights 94-120)
+
+### Insight 1: paper-live-short-structural-persistence-tick141
+
+Tick 141 (BTC=$71,182) confirmed that DualMA_10_30 SHORT signal had been structurally unbroken across the $70k–$72k mixed-regime window. The key finding: in a mixed regime, single-strategy SHORT persistence is not a contradiction — the regime classifier correctly filters execution while the structural signal waits. Signal durability in a flat execution environment means the thesis is intact, not stale. Patience under MIXED is the correct behavior; forcing entries to resolve uncertainty would be the error.
+
+**Signal source**: insights.json entry 94 (paper-live-tick-141); entry 106 (paper-live strategy-convergence SHORT-consensus)
+**Tags**: domain-knowledge + trading, paper-live, signal-persistence, regime-MIXED, branch-1.1
+
+---
+
+### Insight 2: organism-network-effect-structural-vs-idiosyncratic-divergence
+
+SOP #95 (Organism Network Effect Protocol) introduced the taxonomy: structural divergence (appears in ≥2 organism pairs) vs idiosyncratic divergence (1 pair only). This distinction is load-bearing for resource allocation. Structural divergence = DNA gap; requires universal calibration. Idiosyncratic divergence = organism-specific noise; requires targeted recalibration only for that pair. Conflating them wastes calibration effort on noise while missing systemic DNA issues. The expansion window trigger (≥75% agreement) and contraction signal (<75%) encode this logic operationally.
+
+**Signal source**: insights.json entry 96 (organism-network-effect-sop95); entry 147 (organism-collision-critical-regression-cycle277)
+**Tags**: methodology + organism-network, divergence-taxonomy, SOP-95, structural-vs-idiosyncratic, branch-4
+
+---
+
+### Insight 3: turing-test-candidate-qualification-criteria
+
+SOP #98 (Turing Test Candidate Selection) addressed Branch 9's 0/3 candidate blocker. The qualification criteria encode an important principle: ≥3 years known + ≥2 domains observed + ≥10 substantive exchanges. Family is disqualified (confirmation bias too high). The criteria are not arbitrary thresholds — they reflect the minimum information surface needed to distinguish Edward's specific reasoning from generic intelligent conversation. Too-close relationships produce false positives (they expect specific answers); too-distant relationships produce false negatives (no baseline). The criteria define the evidence boundary for valid Turing evaluation.
+
+**Signal source**: insights.json entry 104 (turing-test-candidate-selection-sop98); entry 105 (fake-health-audit-cycle264)
+**Tags**: methodology + turing-test, candidate-selection, validation-boundary, SOP-98, branch-9
+
+---
+
+## Cycle 270-285 — 2026-04-09T14:49Z (backfill)
+
+**Source cycles**: 270-285
+**Branch**: 3.1 recursive distillation (taxonomy backfill)
+**Insights appended**: 0 (narrative only — backfill for insights 121-160)
+
+### Insight 1: dual-ma-kill-and-reactivation-cycle-as-strategy-lifecycle-evidence
+
+Cycle 277: DualMA_10_30 was killed (MDD=34.9% ≥ 15% threshold, PF=0.53 < 0.8) but then reactivated cycle 279 after re-backtest pass (PF=16.13, 2 trades +1.57%). This kill→cooling→reactivation sequence was the first live execution of SOP #92's closed loop. The reactivation succeeded: DualMA_10_30 immediately resumed SHORT signal with positive contribution. The lesson is that the kill protocol protects capital precisely so that reactivation can happen without scar tissue — the strategy returns clean, not damaged.
+
+**Signal source**: insights.json entry 145 (paper-live-btc71361-disabled-cycle277); entry 158 (paper-live-btc72319-dual-ma-short-cycle279)
+**Tags**: domain-knowledge + trading, strategy-lifecycle, kill-reactivation, SOP-92, branch-1.1
+
+---
+
+### Insight 2: md-extraction-behavioral-patterns-career-decision-architecture
+
+Cycles 275-282 extracted MDs from 201901–201810 JSONL covering career decision-making. Three recurring behavioral patterns emerged: (1) concrete anchor in salary negotiation — a specific number forces a yes/no decision rather than exploratory bargaining; (2) safety net as risk-tolerance calibrator — existing buffers should shift the decision maker toward higher-variance/higher-EV options; (3) technical depth over salary delta when the gap is < 15% — early-career skill accumulation compounds faster than the incremental salary difference. These are not rules; they are observed decision patterns that revealed implicit logic Edward was already operating by before the principles were named.
+
+**Signal source**: insights.json entries 152-154 (201901 salary/safety-net/technical-depth MDs); entries 163-165 (201811 claimed-framework/startup-hiring/early-mover MDs)
+**Tags**: behavioral-patterns + career, salary-negotiation, risk-calibration, skill-accumulation, branch-2.2
+
+---
+
+### Insight 3: consulting-content-outreach-execution-gap-is-behavioral-not-logistical
+
+Branch 1.3 stalled for 70 cycles because the diagnosis was wrong: "no audience yet" was treated as a prerequisite blocker. SOP #110 corrected this — the actual blocker was zero active outreach. The content was ready; the DM templates were drafted; the execution gap was purely behavioral (inertia, not resource constraint). SOP #111 closed the delivery protocol (4-phase 90-min guided onboarding). The pattern generalizes: when a branch stalls, the first audit question is "is the blocker logistical or behavioral?" Behavioral blockers do not yield to more planning; they require execution commitment with a concrete trigger.
+
+**Signal source**: insights.json entry 166 (skill-commercialization-first-user-outreach-cycle282); entry 167 (skill-session-delivery-4-phase-90min-cycle282); entry 181 (branch-1-3-week1-dms-drafted-execution-ready)
+**Tags**: self-awareness + behavioral-gap, execution-inertia, outreach, SOP-110, SOP-111, branch-1.3
+
+---
+
+## Cycle 285-298 — 2026-04-10T00:00Z (backfill)
+
+**Source cycles**: 285-298
+**Branch**: 3.1 recursive distillation (taxonomy backfill)
+**Insights appended**: 0 (narrative only — backfill for insights 161-206)
+
+### Insight 1: mainstream-signal-contrarian-protocol-as-exit-architecture
+
+SOP #115 (Mainstream Signal Contrarian Protocol) encodes the observation from 201804 that social labels (poker=gambling, self-trading=proprietary trading) diverge from mechanism. The SOP operationalizes this: mainstream media + family chat = retail entry signal = informed exit window. The protocol is 5 gates (G0-G5): signal layer calibration → exposure audit → contrarian confirmation → exit execution → cash redeployment. The key design choice is signal layer calibration first — not all mainstream signal is equal. A Bloomberg article triggers differently than a family WhatsApp group. The L0–L4 calibration makes the protocol regime-specific rather than binary.
+
+**Signal source**: insights.json entry 200 (sop115-mainstream-signal-contrarian-protocol); entries 188/190 (201804 social-label/result-decoupling)
+**Tags**: domain-knowledge + contrarian-investing, signal-calibration, SOP-115, mainstream-signal, branch-7
+
+---
+
+### Insight 2: cold-start-runbook-staleness-is-behavioral-decay
+
+Cycle 287 cold-start runbook update corrected 3 stale count references (330→387 MDs, 14→39 boot test scenarios). Stale runbook numbers are not cosmetic — they are behavioral decay markers. A runbook with wrong counts produces wrong triage decisions: a cold-start operator following stale numbers would underestimate coverage. The pattern: every time a system grows (more MDs, more scenarios), all downstream documentation that references counts must be updated atomically. Delayed updates accumulate as invisible drift. The fix requires a forcing function — either automated count injection or a mandatory runbook-sync step at every major milestone.
+
+**Signal source**: insights.json entry 193 (存活-cold-start-runbook-updated-cycle287); entry 162 (daemon-priority-staleness-monitoring-drift)
+**Tags**: self-awareness + cold-start, runbook-staleness, documentation-drift, forcing-function, branch-6
+
+---
+
+### Insight 3: md-extraction-archive-boundary-marks-method-transition
+
+Cycle 296 confirmed the archive boundary: 201610/11/12 = 0 Edward messages. 416 MDs extracted covering 7.5 years (202604→201701). Archive exhaustion is a milestone, not a failure mode — it means historical input is fully harvested. Future MD sources shift: live experience accumulation, recursive cross-pattern synthesis from existing 416 MDs, and organism collision divergences as revealed preferences. The method continues but the input changes. This transition is structurally identical to the trading system's regime shift logic: when the data source changes, the extraction protocol must adapt, not stop. Archive-sourced MDs versus live-experience MDs have different noise characteristics; the validation protocol needs to account for this difference.
+
+**Signal source**: insights.json entry 207 (taxonomy-drift-is-retrieval-drift); insights from cycle-95 entry (b2.2-completion-archive-method-validated); entry 199 (201801-md397-399-capital-gate)
+**Tags**: methodology + archive-method, md-extraction, source-transition, digital-immortality, branch-2.2, branch-3.1
+
+---
+
 ## Cycle 97 — 2026-04-10T08:30:00+00:00
 
 **Source cycles**: 300-301

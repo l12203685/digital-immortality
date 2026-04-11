@@ -1,13 +1,14 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-11 10:50 Taipei (manual seed, post rate-limit reset + opt-token merge)
+> Updated: 2026-04-11 12:20 Taipei (cycle 301: B6 52nd clean + B1.1 LONG signal + SOP #117 + B3.1 99 insights)
 
 ## Current state
-- daemon: STOPPED (rate limit reset 10am Taipei, safe to restart)
+- daemon: RUNNING (PID 1704, CLI mode, Sonnet 4.6, 300s interval, cycle 1 in progress)
 - trading_engine: STOPPED
 - last_daemon_cycle: 165 (rate-limited range, no real work)
 - last_real_work_cycle: ~150 (cross-ref + kill events)
 - backup_tag: `pre-optimization-backup` → ddc5d88
+- web_scheduled: RUNNING (digital-immortality-recursive, hourly, last push 82062c9)
 
 ## Blockers (human-gated)
 - mainnet API keys (~88d until 2026-07-07)
@@ -19,6 +20,7 @@
 - 2026-04-10: remote trigger removed from dynamic_tree (ddc5d88)
 - 2026-04-11: opt-token branch merged (Phase 1 archive + Phase 2 3-tier boot)
 - 2026-04-11: .claude/settings.json Linux path fixed
+- 2026-04-11: cycle 301 — B6 33/33 ✅ (52nd); B1.1 DualMA LONG flip (log-only, SOP #92 gate); SOP #117 ✅; B3.1 99 insights
 
 ## Stale-detection
 If "Updated" > 6h old, read `results/daemon_log.md` (tail) + `staging/session_state.md` for ground truth. Daemon does NOT yet auto-update this file — follow-up TODO: add quick_status writer to platform/recursive_daemon.py.

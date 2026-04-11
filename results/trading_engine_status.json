@@ -1,31 +1,31 @@
 {
-  "last_tick": "2026-04-10T00:23:44.305168+00:00",
-  "tick_count": 586,
-  "active_strategies": 15,
-  "disabled": {
-    "DualMA_10_30": "PF 0.53 < 0.8",
-    "gen_BollingerMeanReversion_RF_7abfe4": "PF 0.59 < 0.8",
-    "gen_BollingerMeanReversion_RF_598b24": "PF 0.77 < 0.8"
-  },
-  "total_pnl_pct": -2.7103,
-  "price": 71684.16,
+  "last_tick": "2026-04-11T04:21:56.570263+00:00",
+  "tick_count": 5,
+  "active_strategies": 19,
+  "disabled": {},
+  "total_pnl_pct": -0.1591,
+  "price": 72732.6,
   "regime": "mixed",
   "signals": {
+    "DualMA_10_30": 1,
     "Donchian_20": 0,
     "DonchianConfirmed_20": 0,
-    "DualMA_filtered": 0,
+    "DualMA_filtered": 1,
     "Donchian_filtered": 0,
     "DonchianConfirmed_filtered": 0,
-    "DualMA_RSI": 0,
-    "DualMA_RSI_filtered": 0,
+    "DualMA_RSI": 1,
+    "DualMA_RSI_filtered": 1,
     "BollingerMR_20": 0,
     "BollingerMR_loose": 0,
     "gen_DonchianConfirmed_a7186a": 0,
     "gen_DualMA_RF_602541": 0,
     "gen_BollingerMeanReversion_f91248": 0,
+    "gen_BollingerMeanReversion_RF_7abfe4": -1,
+    "gen_BollingerMeanReversion_RF_598b24": -1,
     "gen_Donchian_RF_5e649e": 0,
     "gen_Donchian_RSI_d3d59e": 0,
-    "gen_DualMA_RF_eda1cb": 0
+    "gen_DualMA_RF_eda1cb": 0,
+    "gen_DonchianConfirmed_RSI_9b2bf4": 0
   },
   "mode": "PAPER"
 }
