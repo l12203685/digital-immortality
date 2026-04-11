@@ -1,0 +1,21 @@
+=== Recursive Engine Status ===
+
+Last output:  2026-04-10 02:38 UTC
+  Title:      Cycle 290 — 2026-04-10T20:34Z
+Next input:   2026-04-10 02:38 UTC
+Next cycle:   90
+Daemon:       not running
+Git branch:   claude/optimize-token-usage-AYEpF
+
+Recent commits:
+  62374f6 feat: token optimization phase 1+2 — archive cleanup + 3-tier boot protocol (24 hours ago)
+  ddc5d88 fix: remove redundant remote trigger from dynamic tree — daemon covers all use cases (27 hours ago)
+  43fd4fa fix: daemon rate limit detection — sleep until reset instead of cycling every 3min (27 hours ago)
+  fd3ccba daemon: cycle 165 (28 hours ago)
+  a2b25b8 daemon: cycle 164 (28 hours ago)
+
+Memory (226 total entries):
+  corrections        0 entries
+  insights         216 entries
+  decisions          4 entries
+  calibration        6 entries
