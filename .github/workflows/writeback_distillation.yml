@@ -1,0 +1,55 @@
+name: Writeback Distillation to LYH
+
+on:
+  schedule:
+    - cron: '30 2 * * *'  # 02:30 UTC = 10:30 Taipei (after 10:01 heartbeat)
+  workflow_dispatch:
+
+jobs:
+  writeback:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout digital-immortality (source)
+        uses: actions/checkout@v4
+        with:
+          path: digital-immortality
+
+      - name: Checkout LYH (target)
+        uses: actions/checkout@v4
+        with:
+          repository: l12203685/LIN-YING-HUNG
+          token: ${{ secrets.LYH_WRITEBACK_TOKEN }}
+          path: LYH
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Configure git identity for LYH commits
+        working-directory: LYH
+        run: |
+          git config user.email "agent@digital-immortality.local"
+          git config user.name "digital-immortality-daemon"
+
+      - name: Run writeback (dry-run preview)
+        working-directory: digital-immortality
+        env:
+          CLOUD_DISTIL: ${{ github.workspace }}/digital-immortality/memory/recursive_distillation.md
+          LYH_REPO: ${{ github.workspace }}/LYH
+          LYH_DISTIL: ${{ github.workspace }}/LYH/agent/recursive_distillation.md
+          LYH_LOG: ${{ github.workspace }}/LYH/memory/log.md
+        run: python -m tools.writeback_distillation --dry-run
+
+      - name: Run writeback (commit mode)
+        working-directory: digital-immortality
+        env:
+          CLOUD_DISTIL: ${{ github.workspace }}/digital-immortality/memory/recursive_distillation.md
+          LYH_REPO: ${{ github.workspace }}/LYH
+          LYH_DISTIL: ${{ github.workspace }}/LYH/agent/recursive_distillation.md
+          LYH_LOG: ${{ github.workspace }}/LYH/memory/log.md
+        run: python -m tools.writeback_distillation --commit
+
+      - name: Push LYH changes
+        working-directory: LYH
+        run: git push origin main || echo "nothing to push"

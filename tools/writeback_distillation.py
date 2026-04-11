@@ -17,6 +17,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import subprocess
 from dataclasses import dataclass
@@ -24,10 +25,17 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
 
-CLOUD_DISTIL = Path("C:/Users/admin/workspace/digital-immortality/memory/recursive_distillation.md")
-LYH_DISTIL = Path("C:/Users/admin/LYH/agent/recursive_distillation.md")
-LYH_LOG = Path("C:/Users/admin/LYH/memory/log.md")
-LYH_REPO = Path("C:/Users/admin/LYH")
+CLOUD_DISTIL = Path(os.environ.get(
+    "CLOUD_DISTIL",
+    "C:/Users/admin/workspace/digital-immortality/memory/recursive_distillation.md",
+))
+LYH_REPO = Path(os.environ.get("LYH_REPO", "C:/Users/admin/LYH"))
+LYH_DISTIL = Path(os.environ.get(
+    "LYH_DISTIL", str(LYH_REPO / "agent" / "recursive_distillation.md")
+))
+LYH_LOG = Path(os.environ.get(
+    "LYH_LOG", str(LYH_REPO / "memory" / "log.md")
+))
 
 CYCLE_HEADER = re.compile(r"^## Cycle (\d+)\s*(?:—|-)\s*(\S+)")
 # Reject range headers like "## Cycle 262-270" — these are legacy backfill entries
@@ -221,6 +229,10 @@ def main() -> None:
     p.add_argument("--commit", action="store_true", help="Git commit after writeback")
     p.add_argument("--cloud", type=Path, default=CLOUD_DISTIL)
     p.add_argument("--lyh", type=Path, default=LYH_DISTIL)
+    p.add_argument("--lyh-log", type=Path, default=LYH_LOG,
+                   help="Path to LYH memory/log.md (overridable for CI)")
+    p.add_argument("--lyh-repo", type=Path, default=LYH_REPO,
+                   help="Path to LYH repo root (overridable for CI)")
     args = p.parse_args()
 
     cycles = parse_cloud(args.cloud)
@@ -253,13 +265,13 @@ def main() -> None:
     if not insert_before_marker(args.lyh, block):
         print(f"ERROR: marker '## 分類演化規則' not found in {args.lyh}")
         return
-    append_log_entry(LYH_LOG, lo, hi, insight_count)
+    append_log_entry(args.lyh_log, lo, hi, insight_count)
     print(f"Wrote {insight_count} insights into {args.lyh}")
-    print(f"Appended log entry to {LYH_LOG}")
+    print(f"Appended log entry to {args.lyh_log}")
 
     if args.commit:
-        git_commit(LYH_REPO, lo, hi, insight_count)
-        print(f"Committed to {LYH_REPO}")
+        git_commit(args.lyh_repo, lo, hi, insight_count)
+        print(f"Committed to {args.lyh_repo}")
 
 
 if __name__ == "__main__":
