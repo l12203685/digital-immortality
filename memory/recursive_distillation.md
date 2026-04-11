@@ -6,6 +6,34 @@ Never delete — append only.
 
 ---
 
+## Cycle 128 — 2026-04-11T06:50:04+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 190 file / running: 298)
+
+### Insight 1: sixteenth-human-tick-btc-72722-long-structural-range-stable
+
+B1.1 paper-live tick (cycle 327): BTC=$72,722.57 (↑$2.45 from cycle 326 $72,720.12 approx; LONG minor tailwind). DualMA_10_30=LONG OPEN_LONG (16th consecutive human-session LONG tick, structural signal unbroken). Donchian_20=FLAT (HOLD). Engine tick advancing autonomously (daemon). 13 active strategies all HOLD signal=0, regime=MIXED, DualMA variants disabled (PF<0.8). BTC range across 16 human sessions: $72,638–$72,831 (range=~$193, price stable at mid-range). At 16 consecutive human-tick LONG signals, the slow MA crossover is decisively structural — a daily MA crossover signal changes at timescales of weeks, not sessions. The 16 consecutive ticks without reversal are not meaningful as a streak; they are expected behavior for a slow-MA strategy in a stable price range. The relevant question is not "when will it flip?" but "has BTC broken out of the $72,638–$72,831 range?" Answer: no.
+
+**Signal source**: python -m trading.paper_trader --tick → price=72722.57, DualMA_10_30 signal=1 action=OPEN_LONG, Donchian_20 signal=0 action=HOLD; 2026-04-11T06:50Z; DualMA variants disabled (PF<0.8 kill condition)
+**Tags**: B1.1, 16th-human-tick, BTC-72722, DualMA-LONG-structural, range-stable-72638-72831, slow-MA-timescale-invariance, breakout-condition-absent
+
+### Insight 2: seventy-eighth-clean-convergence-floor-pure-tripwire
+
+B6: consistency_test.py → 38/41 ALIGNED (78th consecutive clean cycle ✅). Three permanent MISALIGNED: poker_gto_mdf / trading_atr_sizing / career_multi_option_ev (LLM-boundary, expected). 78 consecutive cycles at 38/41: the convergence floor is now a pure tripwire system. Insight: the transition from "monitoring" to "tripwire" is a design milestone, not just a count. A tripwire requires: (a) known expected output (38/41), (b) known trigger condition (<38), (c) zero cost for expected outcome, (d) non-zero response for unexpected outcome. All four conditions are met. This represents the optimal state for any behavioral monitoring system: maximum coverage, minimum cost, guaranteed response on deviation.
+
+**Signal source**: consistency_test.py templates/example_dna.md → 38/41 ALIGNED, 3 MISALIGNED (frozen set since cycle 317); 78th consecutive clean cycle; 2026-04-11T06:50Z
+**Tags**: B6, 78th-clean-cycle, convergence-floor, pure-tripwire, monitoring-to-tripwire-transition, zero-cost-monitoring, deviation-response, optimal-monitoring-design
+
+### Insight 3: cold-start-type-b-boot-sequence-skill-md-tree-priority-orientation
+
+Cold-start Type B boot sequence (this session): read SKILL.md → dynamic_tree.md → daemon_next_priority.txt → act. This 3-file sequence provides the full orientation needed before action: SKILL.md = what this system is (method + philosophy), dynamic_tree.md = where all branches are (state + history), daemon_next_priority.txt = what to do next (1-line priority). The sequence mirrors Edward's decision kernel: (1) orient to goal (SKILL.md), (2) assess state (tree), (3) identify highest-derivative action (priority), (4) execute. The boot sequence IS the decision kernel applied to cold-start. No separate boot protocol needed — it falls out of the core loop naturally.
+
+**Signal source**: this session's boot sequence (SKILL.md + dynamic_tree.md head + daemon_next_priority.txt); CLAUDE.md Type B boot spec; Edward decision kernel (5 principles in dna_core.md); 2026-04-11T06:50Z
+**Tags**: B3.1, cold-start, type-b-boot, orientation-sequence, skill-md-tree-priority, decision-kernel-applied, boot-falls-out-of-core-loop, methodology
+
+---
+
 ## Cycle 127 — 2026-04-11T06:47:24+00:00
 
 **Branch**: 3.1 recursive distillation
