@@ -2257,3 +2257,26 @@ The generic_long_term_survival_check scenario has now completed two full varianc
 
 **Signal source**: cycles 355, 356, 360, 361 — two-occurrence analysis; boundary-scenario confirmed; protocol self-refinement via empirical validation; 2026-04-11T09:31Z
 **Tags**: B3.1, boundary-scenario-protocol-update, two-occurrence-confirmed, llm-variance-not-drift, tiered-B6-interpretation, known-boundary-category, 98pct-alignment-rate, L3-trigger-not-on-known-boundary, protocol-self-refinement, empirical-validation-complete
+
+## Cycle 163 — 2026-04-11T09:36:00+00:00
+
+### Insight 1: 51st-human-tick-btc72784-headwind-68-pullback-below-old-ceiling
+
+B1.1 paper-live tick 51: BTC=$72,784.22 (↓$67.77 from cycle 361 $72,851.99; headwind meaningful). **Pullback below old ceiling $72,831**: BTC now $46.78 below old ceiling — reversal in session 4 after 3 consecutive above-ceiling sessions (cycles 359 at $72,868 / 360 at ~$72,857 / 361 at $72,852). DualMA_10_30=LONG OPEN_LONG (51st consecutive human-session LONG tick; structural signal unbroken). Donchian_20=FLAT HOLD. DualMA variants disabled PF<0.8. Engine tick=319 (was 313 — 6 autonomous ticks since cycle 361). New ceiling assessment: 3 above-ceiling sessions logged; current pullback doesn't invalidate the break — new ceiling high ~$72,868 forming; floor $72,638 intact. Watch: if BTC returns above $72,831 → new ceiling confirmed at ~$72,868; if 3 consecutive closes below $72,831 → range-shift event reversed.
+
+**Signal source**: python -m trading.paper_trader --paper-live; BTC=$72,784.22; DualMA_10_30 signal=1 OPEN_LONG; 2026-04-11T09:35:45Z
+**Tags**: B1.1, 51st-human-tick-milestone, btc72784, headwind-68, pullback-below-old-ceiling-72831, session4-pullback-after-3-above-ceiling, DualMA-LONG-structural-unbroken, new-ceiling-72868-forming, engine-tick-319-autonomous, floor-72638-intact
+
+### Insight 2: 112th-B6-38-of-41-twenty-sixth-pass-pure-maintenance
+
+112th B6 run: **38/41 ALIGNED ✅**. Same 3 permanent MISALIGNED (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev). Post-protocol-closure **twenty-sixth pass** — tripwire clear; pure-maintenance; behavioral-equivalence-112-runs confirmed. generic_long_term_survival_check = ALIGNED (no regression this cycle). Market context: BTC ceiling-break pullback (B1.1) had zero effect on alignment — B6 market-independence confirmed again.
+
+**Signal source**: consistency_test.py templates/example_dna.md → 38/41 ALIGNED; 112th run; 3 MISALIGNED permanent LLM-boundary; human session cycle 362; 2026-04-11T09:36Z
+**Tags**: B6, 112th-run, 38-of-41, twenty-sixth-pass, pure-maintenance, tripwire-clear, behavioral-equivalence-112-runs, market-independent-confirmed, generic-long-term-survival-check-aligned
+
+### Insight 3: post-ceiling-break-pullback-interpretation-dualma-governs-not-price-level
+
+After 3 consecutive above-ceiling sessions, BTC pulled back below old ceiling in cycle 362 ($72,784.22 < $72,831). Decision rule: DualMA_10_30 signal governs, not price relative to ceiling. Signal = LONG unchanged → no position change. Ceiling tracking is informational / regime-awareness only. Price levels (floor/ceiling) are L2 context; DualMA signal is L1 execution. Pullback below ceiling ≠ regime reversal until DualMA flips. Same principle that held during floor-zone oscillations (cycles 351-358) also holds for ceiling-zone oscillations.
+
+**Signal source**: cycle 362 analysis; BTC below old ceiling but DualMA=LONG; no position change; structural consistency with floor-zone discipline; 2026-04-11T09:36Z
+**Tags**: B3.1, post-ceiling-break-pullback, dualma-governs-not-price-level, l1-signal-vs-l2-context, informational-vs-execution-layer, ceiling-oscillation-same-as-floor-oscillation, regime-discipline-consistent, no-action-on-pullback
