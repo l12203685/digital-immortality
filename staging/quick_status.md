@@ -1,12 +1,12 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-11 09:28 UTC (cycle 360: B6 **110th** run ✅ 38/41 (twenty-fourth pass, pure-maintenance; generic_long_term_survival_check ALIGNED — no regression); B1.1 BTC=$72,856.01 DualMA=LONG OPEN_LONG (49 human ticks; ↓$11.99 headwind minimal; post-ceiling-break session 2: $25.01 above $72,831; new ceiling TBD watch 1 more session); B3.1 distil161 file=290 running=400; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
+> Updated: 2026-04-11 09:31 UTC (cycle 361: B6 **111th** run ✅ REGRESSION RESOLVED 38/41 (twenty-fifth pass, pure-maintenance; generic_long_term_survival_check ALIGNED — second-occurrence-resolved; boundary-scenario classification complete; tiered interpretation active); B1.1 BTC=$72,851.99 DualMA=LONG OPEN_LONG (50 human ticks MILESTONE; ↓$4.02 headwind minimal; above-ceiling session 2 of 2-3; new ceiling TBD cycle 362); B3.1 distil162 file=293 running=403; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
 
 ## Current state
 - daemon: STOPPED (last run cycle 340)
 - trading_engine: STOPPED (tick=282, PAPER, 13 active FLAT, DualMA variants DISABLED PF<0.8)
 - last_daemon_cycle: 340
-- last_real_work_cycle: 360 (B6 110th ✅ 38/41 twenty-fourth-pass pure-maintenance + B3.1 distil161 + B1.1 tick 49 BTC=$72,856.01 post-ceiling-break-session-2)
+- last_real_work_cycle: 361 (B6 111th ✅ REGRESSION-RESOLVED 38/41 twenty-fifth-pass pure-maintenance + B3.1 distil162 + B1.1 tick 50 BTC=$72,851.99 above-ceiling-session-2-of-2-3 50th-MILESTONE)
 - backup_tag: `pre-optimization-backup` → ddc5d88
 - cloud_recursive: GH Actions chained (Recursive Cycle workflow), every ~10 min, failsafe every 30 min
 - local daemons (PIDs 7528, 4396) still alive — Edward will kill after 24h parallel validation
@@ -17,6 +17,7 @@
 - Samuel Turing test invite (human-send)
 
 ## Recent changes
+- 2026-04-11: cycle 361 — B6 **111th** run ✅ REGRESSION-RESOLVED 38/41 twenty-fifth-pass pure-maintenance (generic_long_term_survival_check ALIGNED — second-occurrence-resolved; boundary-scenario classified; tiered-B6-interpretation active); B1.1 BTC=$72,851.99 DualMA=LONG OPEN_LONG (50 human ticks **MILESTONE**; ↓$4.02 headwind minimal; above-ceiling session 2 of 2-3; new ceiling TBD cycle 362); B3.1 distil162 +3 (file=293, running=403; 50th-btc-tick + 111th-B6-regression-resolved + boundary-scenario-protocol-update); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 360 — B6 **110th** run ✅ 38/41 pure-maintenance (twenty-fourth-pass; generic_long_term_survival_check ALIGNED; no regression; 110-run streak intact; behavioral-equivalence-market-independent); B1.1 BTC=$72,856.01 DualMA=LONG OPEN_LONG (49 human ticks all LONG, ↓$11.99 headwind minimal; post-ceiling-break session 2: $25.01 above $72,831; new ceiling TBD watch 1 more session); B3.1 distil161 +3 (file=290, running=400; 49th-btc-tick + 110th-B6-twenty-fourth-pass + ceiling-break-follow-through-day2-new-ceiling-forming); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 359 — B6 **109th** run ✅ 38/41 pure-maintenance (twenty-third-pass; behavioral-equivalence-market-independent; B1-B6 orthogonality confirmed); B1.1 BTC=$72,868.01 DualMA=LONG OPEN_LONG (48 human ticks all LONG, ↑$48.02 tailwind; **CEILING BREAK** first upside range-break in 44+ sessions; $36.70 above $72,831; new ceiling TBD; LONG confirming no action); B3.1 distil160 +3 (file=287, running=397; ceiling-break-upside + 109th-B6-market-independent + three-layer-framework-signal-governs); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 358 — B6 **108th** run ✅ 38/41 pure-maintenance (twenty-second-pass; behavioral-equivalence-108-runs; tripwire clear; permanent 3 LLM-boundary confirmed); B1.1 BTC=$72,819.99 DualMA=LONG OPEN_LONG (47 human ticks all LONG, ↑$49.47 tailwind minimal; ceiling approach $11.01 below $72,831; floor-watch RESOLVED $181.99 above $72,638; range intact); B3.1 distil159 +3 (file=284, running=394; 47th-btc-tick + 108th-B6-twenty-second-pass + ceiling-approach-discipline-symmetry); parallel branch push B1.1+B3.1+B6 concurrent
