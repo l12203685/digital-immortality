@@ -1,12 +1,12 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-11 08:56 UTC (cycle 354: B6 **104th** clean ✅ 38/41 ALIGNED; B1.1 BTC=$72,683.04 DualMA=LONG OPEN_LONG (43 human ticks); B3.1 distil155 file=269 running=379; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
+> Updated: 2026-04-11 09:01 UTC (cycle 355: B6 **105th** run ⚠️ 37/41 ALIGNED (regression -1, new MISALIGNED: generic_long_term_survival_check — flag, monitor next cycle); B1.1 BTC=$72,675.71 DualMA=LONG OPEN_LONG (44 human ticks, floor zone ×3 sessions); B3.1 distil156 file=275 running=385; dashboard-redesign-audit + pretty_translate.py created; SOP#01~121 COMPLETE; GATE-CONSTRAINED)
 
 ## Current state
 - daemon: STOPPED (last run cycle 340)
-- trading_engine: STOPPED (tick=258, PAPER, 13 active FLAT, DualMA variants DISABLED PF<0.8)
+- trading_engine: STOPPED (tick=282, PAPER, 13 active FLAT, DualMA variants DISABLED PF<0.8)
 - last_daemon_cycle: 340
-- last_real_work_cycle: 354 (B6 104th post-milestone + B3.1 distil155 + B1.1 tick 43)
+- last_real_work_cycle: 355 (B6 105th ⚠️ 37/41 regression-flag + B3.1 distil155+156 + B1.1 tick 44 + dashboard-redesign-audit)
 - backup_tag: `pre-optimization-backup` → ddc5d88
 - cloud_recursive: GH Actions chained (Recursive Cycle workflow), every ~10 min, failsafe every 30 min
 - local daemons (PIDs 7528, 4396) still alive — Edward will kill after 24h parallel validation
@@ -17,6 +17,7 @@
 - Samuel Turing test invite (human-send)
 
 ## Recent changes
+- 2026-04-11: cycle 355 — B6 **105th** run ⚠️ 37/41 ALIGNED (regression -1; new MISALIGNED: generic_long_term_survival_check; flag → monitor next cycle; if 37/41 × 2 → L3 event); B1.1 BTC=$72,675.71 DualMA=LONG OPEN_LONG (44 human ticks all LONG, ↓$7.33 headwind minimal, floor zone ×3 consecutive sessions $37.71 above floor $72,638, range $72,638–$72,831 intact); B3.1 distil155+156 +6 (file=275, running=385; 43rd+44th ticks + 104th+105th B6 + slow-ma-info + dashboard-redesign-audit); dashboard_redesign_audit.md + pretty_translate.py created (B4/B5 plain-zh-first); parallel branch push B1.1+B3.1+B6+B4 concurrent
 - 2026-04-11: cycle 354 — B6 **104th** clean ✅ (38/41, post-protocol-closure eighteenth pass — fourth-post-milestone, tripwire-only, zero-monitoring-cost); B1.1 BTC=$72,683.04 DualMA=LONG OPEN_LONG (43 human ticks all LONG, ↑$0.20 tailwind near-flat, floor-zone approach $44.04 above floor $72,638, range $72,638–$72,831 intact); B3.1 distil155 +3 (file=269, running=379; 43rd-human-tick-btc72683-near-flat + 104th-clean-eighteenth-pass-post-milestone + slow-ma-sampling-rate-information-content); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 353 — B6 **103rd** clean ✅ (38/41, post-protocol-closure seventeenth pass — third-post-milestone, tripwire-only, zero-monitoring-cost); B1.1 BTC=$72,682.84 DualMA=LONG OPEN_LONG (42 human ticks all LONG, ↓$60.74 headwind significant, floor-zone approach $44.84 above floor $72,638, range $72,638–$72,831 intact); B3.1 distil154 +3 (file=266, running=376; 42nd-human-tick-btc72683-headwind-61-floor-zone + 103rd-clean-seventeenth-pass-post-milestone + btc-42-session-floor-zone-oscillation-range-intact); parallel branch push B1.1+B3.1+B6 concurrent
 - 2026-04-11: cycle 352 — B6 **102nd** clean ✅ (38/41, post-protocol-closure sixteenth pass — second-post-100-milestone, tripwire-only, zero-monitoring-cost); B1.1 BTC=$72,743.58 DualMA=LONG OPEN_LONG (41 human ticks all LONG, ↑$16.96 tailwind minimal, midzone-hold two consecutive sessions, range $72,638–$72,831 intact); B3.1 distil153 +3 (file=263, running=373; 41st-human-tick-btc72744-tailwind-17 + 102nd-clean-sixteenth-pass-post-milestone + btc-41-session-midzone-stability-range-coil-tightening); parallel branch push B1.1+B3.1+B6 concurrent
