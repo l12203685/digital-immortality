@@ -1,6 +1,6 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-11 21:30 UTC (cycle 317H: B6 37/41 ALIGNED — potential streak-break (LLM non-det? rerun needed); B1.1 paper-live BTC=$72,726.09 DualMA=LONG OPEN_LONG engine-STOPPED ticks=2; B3.1 distil116 file=154 running=262; engine.py activate_live+reactivate_strategy committed; GATE-CONSTRAINED)
+> Updated: 2026-04-11 22:00 UTC (cycle 318H: B6 **68th** clean ✅ 38/41 ALIGNED — cycle317 37/41 confirmed LLM non-det NOT regression; B1.1 BTC=$72,712.74 DualMA=LONG OPEN_LONG engine-STOPPED G0/G1 ticks=2 FROZEN; B3.1 distil117 file=157 running=262; writeback_distillation.py: 33 insights synced LYH committed; GATE-CONSTRAINED)
 
 ## Current state
 - daemon: RUNNING (PID 1704, CLI mode, Sonnet 4.6, 300s interval, cycle 1 in progress)
@@ -16,6 +16,8 @@
 - Samuel Turing test invite (human-send)
 
 ## Recent changes
+- 2026-04-11: cycle 318H — B6 68th clean ✅ (LLM non-det confirmed, 38/41 ALIGNED); writeback_distillation.py deployed + 33 insights synced to LYH; B1.1 BTC=$72,712.74 DualMA=LONG OPEN_LONG (5 human ticks all LONG); B3.1 distil117 (file=157, running=262)
+- 2026-04-11: cycle 317H — engine.py activate_live+reactivate_strategy committed; distil116; B6 37/41 (LLM non-det flagged); writeback bridge committed (9a5f89f)
 - 2026-04-10: daemon rate-limit detection + sleep-to-reset (43fd4fa)
 - 2026-04-10: remote trigger removed from dynamic_tree (ddc5d88)
 - 2026-04-11: opt-token branch merged (Phase 1 archive + Phase 2 3-tier boot)

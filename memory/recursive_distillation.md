@@ -863,3 +863,31 @@ This human session (cycle 317) worked on B1.1 (paper-live tick), B6 (consistency
 **Tags**: methodology, human-session, git-diff-first, accumulated-drift, commit-hygiene, daemon-vs-human, multi-branch, branch-3.1
 
 ---
+
+## Cycle 117 — 2026-04-11T22:00:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 157)
+
+### Insight 1: b6-cycle318-llm-nondet-confirmed-68th-clean-rerun
+
+Human session cycle 318 re-ran consistency_test.py. Result: 38/41 ALIGNED — back to baseline. Confirms cycle 317's 37/41 (generic_long_term_survival_check MISALIGNED) was LLM non-determinism, not a DNA regression. The scenario uses survival/longevity language and keyword matching in the checker is brittle to synonym variation. Rule: a single-cycle MISALIGNED on a scenario with 67 consecutive clean prior runs is LLM noise until it recurs ≥2 independent runs. Streak status: 68th consecutive clean cycle ✅ (38/41 ALIGNED, 3 LLM-boundary MISALIGNED expected).
+
+**Signal source**: consistency_test.py cycle 318 → 38/41 ALIGNED (poker_gto_mdf + trading_atr_sizing + career_multi_option_ev MISALIGNED as expected); cycle 317 generic_long_term_survival_check MISALIGNED not reproduced
+**Tags**: B6, consistency, LLM-non-determinism, keyword-brittleness, 68th-clean, streak-confirmed, alignment-check-design
+
+### Insight 2: writeback-distillation-bridge-deployed-33-insights-synced
+
+tools/writeback_distillation.py deployed in cycle 317H and executed in cycle 318: parsed cloud recursive_distillation.md, identified 33 new insights (cycles 113-285 not yet in LYH), synced to LYH/agent/recursive_distillation.md, appended log entry, and committed to LYH repo. The bridge is now idempotent and CLI-runnable (--dry-run / --commit). Key design: CYCLE_HEADER regex parses `## Cycle N — timestamp` lines; last_writtenback_cycle() reads LYH for "cycles N-M" markers to find the high watermark. Human session role: deploy infrastructure that makes daemon writes durable across repos. Pattern: daemon=append writes, human=persistence bridges.
+
+**Signal source**: python -m tools.writeback_distillation --commit → "Detected 11 new cycles (113-285), 33 insights; Committed to LYH"; LYH git log shows 4066a9e; LYH/agent/recursive_distillation.md updated
+**Tags**: B3.1, writeback, LYH-sync, cloud-to-lyh, idempotent, infrastructure, human-session-role
+
+### Insight 3: b1.1-btc-long-drift-five-human-ticks-engine-frozen
+
+Five consecutive human-session paper_trader ticks confirm DualMA_10_30=LONG: BTC $72,769→$72,768→$72,733→$72,726→$72,712 (mild headwind -$57 total across 5 ticks). Engine clock frozen at G0/G1 DRY_RUN ticks=2 (needs 48 more engine ticks for G3). Information is accumulating (LONG signal structural, no whipsaw) but authorization clock (G3) is frozen because engine is stopped. The gap between information accumulation and authorization clock advancement is now the dominant B1.1 constraint — resolvable only by daemon running engine ticks, not human paper_trader calls. Pattern: GATE-CONSTRAINED = information-rich + authorization-frozen + information-accumulation irrelevant to gate clock.
+
+**Signal source**: paper_trader --paper-live cycle 318 → BTC=$72,712.74, DualMA=LONG OPEN_LONG; 5 human-session ticks cycles 315-318 all LONG; engine ticks=2 (G0/G1 DRY_RUN, G3 needs 48 more engine-clock ticks); SOP#118 gate structure
+**Tags**: B1.1, paper-live, DualMA-LONG, engine-clock-frozen, gate-constrained, information-vs-authorization, SOP-118, G3
+
+---
