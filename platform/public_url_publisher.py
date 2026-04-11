@@ -30,7 +30,12 @@ SOURCE_FILE = Path(
     r"C:\Users\admin\.claude\scripts\mission_control\results\public_url.json"
 )
 REPO_ROOT = Path(r"C:\Users\admin\workspace\digital-immortality")
-DEST_FILE = REPO_ROOT / "public_url.json"
+# GH Pages source for this repo is main branch, /docs path. Keep the
+# served public_url.json inside docs/ so it is reachable via both
+# GH Pages (https://l12203685.github.io/digital-immortality/public_url.json)
+# and raw.githubusercontent.com (/main/docs/public_url.json).
+DEST_FILE = REPO_ROOT / "docs" / "public_url.json"
+REL_DEST = "docs/public_url.json"
 LOG_FILE = REPO_ROOT / "results" / "public_url_publisher.log"
 
 TAIPEI_TZ = timezone(timedelta(hours=8))
@@ -136,7 +141,7 @@ def publish() -> int:
         return 2
 
     # Stage
-    add = _run_git("add", "public_url.json")
+    add = _run_git("add", REL_DEST)
     if add.returncode != 0:
         log.error("git add failed: %s", add.stderr.strip())
         return 3
@@ -144,7 +149,7 @@ def publish() -> int:
     # Check if anything is actually staged (content may be identical but
     # differ on whitespace/encoding after normalization — git will report
     # nothing to commit, which is fine).
-    diff = _run_git("diff", "--cached", "--quiet", "public_url.json")
+    diff = _run_git("diff", "--cached", "--quiet", REL_DEST)
     if diff.returncode == 0:
         log.info("git reports no staged delta; nothing to commit")
         return 0
