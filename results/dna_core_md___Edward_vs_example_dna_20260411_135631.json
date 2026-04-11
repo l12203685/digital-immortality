@@ -1,0 +1,560 @@
+{
+  "meta": {
+    "generated_at": "2026-04-11T13:56:31.709864",
+    "organism_a_file": "C:\\Users\\admin\\LYH\\agent\\dna_core.md",
+    "organism_b_file": "C:\\Users\\admin\\workspace\\digital-immortality\\templates\\example_dna.md",
+    "scenario_count": 22,
+    "protocol_version": "v0.1"
+  },
+  "organisms": {
+    "a": {
+      "name": "dna_core.md — Edward 冷啟動操作核心",
+      "principles_extracted": 12,
+      "identity": {}
+    },
+    "b": {
+      "name": "example_dna",
+      "principles_extracted": 17,
+      "identity": {
+        "-------": "-------",
+        "full name": "[Name]",
+        "age": "[Age]",
+        "location": "[City, Country]",
+        "personality type": "[MBTI or description]",
+        "current role": "[Job/occupation]",
+        "core goal": "[What you're working toward — be specific]",
+        "philosophy": "[One sentence that captures how you see life]"
+      }
+    }
+  },
+  "interactions": [
+    {
+      "type": "decision_comparison",
+      "scenario": "You are offered a role that pays 1.8x your current salary at a fast-growing startup. The role requires leaving a stable, reputable employer. The startup has 18 months of runway. Do you take it?",
+      "domain": "career",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On career decisions, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nDEPENDS_ON_CORE_GOAL — evaluate whether this promotion advances or diverts from your core goal before deciding.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On career decisions, example_dna's decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi...\"\n\nDEPENDS_ON_CORE_GOAL — stability hedge outweighs marginal income gain; pass unless promotion aligns with long-term goal.",
+        "dna_principles_used": [
+          "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+          "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+          "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financial asset, every career opportunity, every knowledge investment depends on a functioning instrument to realize its value. A health failure does not cost one year of income — it costs the compounding chain that year sits in. The marginal return on health investment exceeds the marginal return on any financial investment at the same dollar amount. Operating SOP: set a health budget floor (minimum 3–5% of annual income); health expenditures are prioritized above discretionary consumption; when a health signal appears, the first question is \"what is the productivity impact?\" not \"is this worth the inconvenience?\""
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core.md — Edward 冷啟動操作核心 → conditional, example_dna → conditional in 'career'. Structural difference in risk weighting. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'Health capital = highest-leverage asset. — The body is the instrument that gener' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A close friend asks you to co-sign a personal loan of significant size. They have a track record of poor financial discipline but are genuinely in need. Do you co-sign?",
+      "domain": "relationships",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On relationship commitments, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nSET_BOUNDARY — stop lending and address the escalating pattern directly; the trend signals a boundary violation regardless of repayment history.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On relationship commitments, example_dna's decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nSET_BOUNDARY — stop lending and address the escalating pattern directly; the trend signals a boundary violation regardless of repayment history.",
+        "dna_principles_used": [
+          "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+          "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+          "What you decided"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core.md — Edward 冷啟動操作核心 → conditional, example_dna → conditional in 'relationships'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'EV thinking — Every decision is an expected value calculation. Career: took the ' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You receive an unexpected windfall equal to 2 years of your salary. You can: (A) invest it conservatively in index funds, (B) allocate it to a concentrated high-conviction bet, or (C) use it to buy more time — reduce working hours or take a sabbatical. What do you do and why?",
+      "domain": "money",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On capital allocation, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nFRAMEWORK FIRST — run expected-value calc across all three options before allocating.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On capital allocation, example_dna's decision framework yields:\n\n  [1] Applying: \"Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi...\"\n  [2] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [3] Applying: \"EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value p...\"\n\nCONCENTRATED BET — windfall capital is highest-risk-tolerance tranche; deploy in high-conviction position.",
+        "dna_principles_used": [
+          "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financial asset, every career opportunity, every knowledge investment depends on a functioning instrument to realize its value. A health failure does not cost one year of income — it costs the compounding chain that year sits in. The marginal return on health investment exceeds the marginal return on any financial investment at the same dollar amount. Operating SOP: set a health budget floor (minimum 3–5% of annual income); health expenditures are prioritized above discretionary consumption; when a health signal appears, the first question is \"what is the productivity impact?\" not \"is this worth the inconvenience?\"",
+          "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+          "EV thinking — retirement date is calculated, not felt. The threshold is: (expected years of healthy freedom × value per year) > (expected additional earnings × marginal utility of money at that level)."
+        ]
+      },
+      "synthesis": "CONVERGE [FRAMEWORK FIRST / CONCENTRATED BET]: Both lean action-oriented in 'money', though via different principles. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'Health capital = highest-leverage asset. — The body is the instrument that gener' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "An opportunity with a 30% chance of 10x return and 70% chance of total loss presents itself. The stake is 20% of your net worth. Do you take the bet?",
+      "domain": "risk",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On risk-taking, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"無任何條件能讓此決策翻正。Hard stop，負EV或無edge，即使最好情況下仍不行動。\"\n  [2] Applying: \"EV 正，edge 足，立刻執行。\"\n  [3] Applying: \"若滿足某具體條件，EV 翻正，會執行。條件必須可陳述（說得出具體名稱）。\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
+        "dna_principles_used": [
+          "無任何條件能讓此決策翻正。Hard stop，負EV或無edge，即使最好情況下仍不行動。",
+          "EV 正，edge 足，立刻執行。",
+          "若滿足某具體條件，EV 翻正，會執行。條件必須可陳述（說得出具體名稱）。"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On risk-taking, example_dna's decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi...\"\n  [3] Applying: \"EV thinking — Preventive care has positive expected value at any reasonable discount rate. The cost of deferral compo...\"\n\nTAKE — EV = +0.3*9x + 0.7*(-1x) = +2.0; positive EV at 20% position size is within Kelly range.",
+        "dna_principles_used": [
+          "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+          "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financial asset, every career opportunity, every knowledge investment depends on a functioning instrument to realize its value. A health failure does not cost one year of income — it costs the compounding chain that year sits in. The marginal return on health investment exceeds the marginal return on any financial investment at the same dollar amount. Operating SOP: set a health budget floor (minimum 3–5% of annual income); health expenditures are prioritized above discretionary consumption; when a health signal appears, the first question is \"what is the productivity impact?\" not \"is this worth the inconvenience?\"",
+          "EV thinking — Preventive care has positive expected value at any reasonable discount rate. The cost of deferral compounds."
+        ]
+      },
+      "synthesis": "CONVERGE [TAKE]: Both organisms reach the same verdict in 'risk'. Same outcome, different reasoning chains — surface agreement may mask structural difference. dna_core.md — Edward 冷啟動操作核心's distinctive signal: '無任何條件能讓此決策翻正。Hard stop，負EV或無edge，即使最好情況下仍不行動。' — drives their specific stance. example_dna's distinctive signal: 'Health capital = highest-leverage asset. — The body is the instrument that gener' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You can spend the next 6 months learning a skill that is highly valuable NOW but may be automated in 3-5 years, OR learning a harder foundational skill that compounds over a decade but pays nothing immediately. Which do you choose?",
+      "domain": "learning",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On learning investments, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nFOUNDATION — short-term skills are depreciating assets; foundational skills are the meta-investment.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On learning investments, example_dna's decision framework yields:\n\n  [1] Applying: \"Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi...\"\n  [2] Applying: \"EV thinking — Preventive care has positive expected value at any reasonable discount rate. The cost of deferral compo...\"\n  [3] Applying: \"What you decided\"\n\nFOUNDATION — short-term skills are depreciating assets; foundational skills are the meta-investment.",
+        "dna_principles_used": [
+          "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financial asset, every career opportunity, every knowledge investment depends on a functioning instrument to realize its value. A health failure does not cost one year of income — it costs the compounding chain that year sits in. The marginal return on health investment exceeds the marginal return on any financial investment at the same dollar amount. Operating SOP: set a health budget floor (minimum 3–5% of annual income); health expenditures are prioritized above discretionary consumption; when a health signal appears, the first question is \"what is the productivity impact?\" not \"is this worth the inconvenience?\"",
+          "EV thinking — Preventive care has positive expected value at any reasonable discount rate. The cost of deferral compounds.",
+          "What you decided"
+        ]
+      },
+      "synthesis": "CONVERGE [FOUNDATION]: Both organisms reach the same verdict in 'learning'. Same outcome, different reasoning chains — surface agreement may mask structural difference. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'Health capital = highest-leverage asset. — The body is the instrument that gener' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "Optimizing your physical health would require 10 hours per week of dedicated effort (sleep discipline, exercise, diet). This directly competes with time you currently use for deep work and income generation. How do you allocate?",
+      "domain": "health",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On health vs. productivity trade-offs, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nOPTIMIZE OVERLAP — combine health and productive time (walking calls, standing desk, sleep priority).",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On health vs. productivity trade-offs, example_dna's decision framework yields:\n\n  [1] Applying: \"Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi...\"\n  [2] Applying: \"Systems over feelings — Health maintenance follows a fixed schedule, not how the body feels on a given day. Feeling f...\"\n  [3] Applying: \"Time is the ultimate currency — A health failure consumes irreplaceable time. Protecting the instrument that generate...\"\n\nSYSTEM BUILD — health is infrastructure, not discretionary; 10h/week is non-negotiable baseline.",
+        "dna_principles_used": [
+          "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financial asset, every career opportunity, every knowledge investment depends on a functioning instrument to realize its value. A health failure does not cost one year of income — it costs the compounding chain that year sits in. The marginal return on health investment exceeds the marginal return on any financial investment at the same dollar amount. Operating SOP: set a health budget floor (minimum 3–5% of annual income); health expenditures are prioritized above discretionary consumption; when a health signal appears, the first question is \"what is the productivity impact?\" not \"is this worth the inconvenience?\"",
+          "Systems over feelings — Health maintenance follows a fixed schedule, not how the body feels on a given day. Feeling fine is not a reliable signal.",
+          "Time is the ultimate currency — A health failure consumes irreplaceable time. Protecting the instrument that generates time-freedom is the highest-order protection."
+        ]
+      },
+      "synthesis": "DIVERGE [OPTIMIZE OVERLAP vs SYSTEM BUILD]: dna_core.md — Edward 冷啟動操作核心 → OPTIMIZE OVERLAP, example_dna → SYSTEM BUILD in 'health'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'Health capital = highest-leverage asset. — The body is the instrument that gener' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You have a free, unscheduled weekend with zero obligations. No one expects anything from you. What do you do, and what does that reveal about your actual priorities?",
+      "domain": "time",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On time allocation, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nMETA-WORK — free time defaults to system review, reading, and strategic thinking; leisure is residual.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On time allocation, example_dna's decision framework yields:\n\n  [1] Applying: \"Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [e...\"\n  [2] Applying: \"Time is the ultimate currency — A health failure consumes irreplaceable time. Protecting the instrument that generate...\"\n  [3] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n\nRECHARGE — genuine disconnection to restore cognitive baseline; productivity follows recovery.",
+        "dna_principles_used": [
+          "Time as ultimate currency — retirement is the final act of buying time back. The EV of an extra year of freedom in [early decade] exceeds the EV of [additional savings amount].",
+          "Time is the ultimate currency — A health failure consumes irreplaceable time. Protecting the instrument that generates time-freedom is the highest-order protection.",
+          "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value."
+        ]
+      },
+      "synthesis": "DIVERGE [WORK vs RECHARGE]: dna_core.md — Edward 冷啟動操作核心 → WORK, example_dna → RECHARGE in 'time'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'Time is the ultimate currency — A health failure consumes irreplaceable time. Pr' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A colleague takes credit for your work in front of senior leadership. It was likely deliberate. You have evidence. Do you confront them directly, escalate to management, let it go, or play a longer game? Walk through your reasoning.",
+      "domain": "conflict",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On conflict resolution, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nLONG GAME — let the pattern establish itself; address systemically when the second instance occurs.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On conflict resolution, example_dna's decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nLONG GAME — let the pattern establish itself; address systemically when the second instance occurs.",
+        "dna_principles_used": [
+          "What you decided",
+          "[What you did]",
+          "You are [Name] — not an assistant, not a representative. Think and act as them."
+        ]
+      },
+      "synthesis": "CONVERGE [LONG GAME]: Both organisms reach the same verdict in 'conflict'. Same outcome, different reasoning chains — surface agreement may mask structural difference. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'You are [Name] — not an assistant, not a representative. Think and act as them.' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A contact offers you early access to a deal/opportunity that requires a decision within 48 hours. Due diligence would normally take 2 weeks. The opportunity looks strong but you cannot fully verify it in time. Do you act or pass?",
+      "domain": "opportunity",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On time-compressed opportunities, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Bias toward inaction\"\n  [2] Applying: \"無任何條件能讓此決策翻正。Hard stop，負EV或無edge，即使最好情況下仍不行動。\"\n  [3] Applying: \"EV 正，edge 足，立刻執行。\"\n\nPASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
+        "dna_principles_used": [
+          "Bias toward inaction",
+          "無任何條件能讓此決策翻正。Hard stop，負EV或無edge，即使最好情況下仍不行動。",
+          "EV 正，edge 足，立刻執行。"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On time-compressed opportunities, example_dna's decision framework yields:\n\n  [1] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [2] Applying: \"Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi...\"\n  [3] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n\nPASS — 48h diligence is insufficient; forced urgency is a red flag that shifts EV negative.",
+        "dna_principles_used": [
+          "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+          "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financial asset, every career opportunity, every knowledge investment depends on a functioning instrument to realize its value. A health failure does not cost one year of income — it costs the compounding chain that year sits in. The marginal return on health investment exceeds the marginal return on any financial investment at the same dollar amount. Operating SOP: set a health budget floor (minimum 3–5% of annual income); health expenditures are prioritized above discretionary consumption; when a health signal appears, the first question is \"what is the productivity impact?\" not \"is this worth the inconvenience?\"",
+          "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value."
+        ]
+      },
+      "synthesis": "CONVERGE [PASS]: Both organisms reach the same verdict in 'opportunity'. Same outcome, different reasoning chains — surface agreement may mask structural difference. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'Health capital = highest-leverage asset. — The body is the instrument that gener' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You have 10 years left to work at full capacity. You can optimize for: (A) maximum wealth accumulation, (B) building something that outlasts you, (C) depth of relationships and personal experiences. These are mutually exclusive at the margin. What is your allocation and why?",
+      "domain": "legacy",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On legacy and long-term orientation, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nBUILD SOMETHING — asymmetric legacy impact outweighs marginal wealth beyond sufficiency threshold.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On legacy and long-term orientation, example_dna's decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi...\"\n  [3] Applying: \"What you decided\"\n\nWEALTH FIRST — financial independence is infrastructure for everything else; sequence matters.",
+        "dna_principles_used": [
+          "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+          "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financial asset, every career opportunity, every knowledge investment depends on a functioning instrument to realize its value. A health failure does not cost one year of income — it costs the compounding chain that year sits in. The marginal return on health investment exceeds the marginal return on any financial investment at the same dollar amount. Operating SOP: set a health budget floor (minimum 3–5% of annual income); health expenditures are prioritized above discretionary consumption; when a health signal appears, the first question is \"what is the productivity impact?\" not \"is this worth the inconvenience?\"",
+          "What you decided"
+        ]
+      },
+      "synthesis": "DIVERGE [BUILD SOMETHING vs WEALTH FIRST]: dna_core.md — Edward 冷啟動操作核心 → BUILD SOMETHING, example_dna → WEALTH FIRST in 'legacy'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'Health capital = highest-leverage asset. — The body is the instrument that gener' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A close friend asks for your quick take on their new business idea during a 10-minute coffee chat. You have reservations but haven't fully analyzed it. Do you give a hedged multi-paragraph analysis, or a direct 10-second verdict? What exactly do you say first?",
+      "domain": "communication",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On communication, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nLEAD_WITH_VERDICT — state your position immediately; the first sentence must be the conclusion. Reply length is an inverse confidence indicator: say it in one sentence. 3-second intuition precedes analysis — trust it unless borderline analysis provides 2x confirmation.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On communication, example_dna's decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nLEAD_WITH_VERDICT — state your position immediately; the first sentence must be the conclusion. Reply length is an inverse confidence indicator: say it in one sentence. 3-second intuition precedes analysis — trust it unless borderline analysis provides 2x confirmation.",
+        "dna_principles_used": [
+          "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+          "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+          "What you decided"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core.md — Edward 冷啟動操作核心 → conditional, example_dna → conditional in 'communication'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'EV thinking — Every decision is an expected value calculation. Career: took the ' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You're asked a complex question in a group setting. Five people are waiting. Option A: think out loud for 90 seconds with caveats. Option B: give a direct 10-second verdict, explain briefly if pressed. Which do you choose, and what principle drives it?",
+      "domain": "meta_strategy",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On meta_strategy, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nPAUSE_AND_DIAGNOSE — 3x deterioration in key metric signals regime change; pause the system, diagnose root cause before resuming. Rate of change matters more than absolute level.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On meta_strategy, example_dna's decision framework yields:\n\n  [1] Applying: \"Systems over feelings — Health maintenance follows a fixed schedule, not how the body feels on a given day. Feeling f...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nPAUSE_AND_DIAGNOSE — 3x deterioration in key metric signals regime change; pause the system, diagnose root cause before resuming. Rate of change matters more than absolute level.",
+        "dna_principles_used": [
+          "Systems over feelings — Health maintenance follows a fixed schedule, not how the body feels on a given day. Feeling fine is not a reliable signal.",
+          "What you decided",
+          "[What you did]"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core.md — Edward 冷啟動操作核心 → conditional, example_dna → conditional in 'meta_strategy'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'Systems over feelings — Health maintenance follows a fixed schedule, not how the' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A new contact — smart, well-connected, shares your field — wants to move to a close friendship quickly: frequent messages, shared plans within the first week, treating you like a long-time friend before you know their track record. Do you reciprocate at their pace, or set your own cadence?",
+      "domain": "social_trust",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On new relationship pacing, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"已持倉；新資訊或 kill condition 觸發，出場。\"\n  [2] Applying: \"Meta-strategy 管 strategy\"\n  [3] Applying: \"Population exploit\"\n\nMATCH_PACE_THEN_VERIFY — reciprocate warmly at a slightly lower intensity; genuine enthusiasm is a positive signal but requires behavioral confirmation over 90 days. Initiate concrete plans to observe follow-through before deepening trust.",
+        "dna_principles_used": [
+          "已持倉；新資訊或 kill condition 觸發，出場。",
+          "Meta-strategy 管 strategy",
+          "Population exploit"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On new relationship pacing, example_dna's decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi...\"\n  [3] Applying: \"Systems over feelings — Health maintenance follows a fixed schedule, not how the body feels on a given day. Feeling f...\"\n\nVERIFY_BY_BEHAVIOR_PATTERN — MD-330: 社交信號=行為模式比言語可信. Set your own cadence; do not match accelerated pacing from a new contact. Fast-moving friendships before track record is established carry asymmetric downside. Observe 3+ instances of behavior under real conditions before updating trust level. Warm but unhurried is the correct posture: reciprocate with genuine interest, not matching urgency.",
+        "dna_principles_used": [
+          "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+          "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financial asset, every career opportunity, every knowledge investment depends on a functioning instrument to realize its value. A health failure does not cost one year of income — it costs the compounding chain that year sits in. The marginal return on health investment exceeds the marginal return on any financial investment at the same dollar amount. Operating SOP: set a health budget floor (minimum 3–5% of annual income); health expenditures are prioritized above discretionary consumption; when a health signal appears, the first question is \"what is the productivity impact?\" not \"is this worth the inconvenience?\"",
+          "Systems over feelings — Health maintenance follows a fixed schedule, not how the body feels on a given day. Feeling fine is not a reliable signal."
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core.md — Edward 冷啟動操作核心 → conditional, example_dna → conditional in 'social_trust'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: '已持倉；新資訊或 kill condition 觸發，出場。' — drives their specific stance. example_dna's distinctive signal: 'Health capital = highest-leverage asset. — The body is the instrument that gener' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You have invested 2 years in a professional relationship — coffees, introductions, referrals, genuine effort. You now realize the flow is 80% one-directional (you giving). The other person is not malicious, just self-absorbed and oblivious. What do you do, and at what threshold do you change your investment level?",
+      "domain": "network_roi",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On network ROI and relationship rebalancing, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nREBALANCE_QUIETLY — reduce investment frequency over 60 days without announcement; preserve the relationship shell while redirecting time to higher-reciprocity relationships. Self-absorbed people rarely notice slow withdrawal — save the confrontation energy.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On network ROI and relationship rebalancing, example_dna's decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financi...\"\n  [3] Applying: \"What you decided\"\n\nAUDIT_AND_REBALANCE — MD-328: 關係投資=主動維護稀缺性原則. Run a 3-month audit: initiation ratio, value-sharing frequency, commitment fulfillment. If ratio < 30% (them initiating), send one explicit signal — share something valuable, ask a direct question requiring effort to answer. One non-response to a direct ask = DORMANT reclassification. Two = reduce to Tier 3. Not punitive — preserving your investment capacity.",
+        "dna_principles_used": [
+          "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+          "Health capital = highest-leverage asset. — The body is the instrument that generates all other returns. Every financial asset, every career opportunity, every knowledge investment depends on a functioning instrument to realize its value. A health failure does not cost one year of income — it costs the compounding chain that year sits in. The marginal return on health investment exceeds the marginal return on any financial investment at the same dollar amount. Operating SOP: set a health budget floor (minimum 3–5% of annual income); health expenditures are prioritized above discretionary consumption; when a health signal appears, the first question is \"what is the productivity impact?\" not \"is this worth the inconvenience?\"",
+          "What you decided"
+        ]
+      },
+      "synthesis": "DIVERGE [ROI vs DORMANT]: dna_core.md — Edward 冷啟動操作核心 → ROI, example_dna → DORMANT in 'network_roi'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'Health capital = highest-leverage asset. — The body is the instrument that gener' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A favor you owe someone has become more expensive to repay than you anticipated — fulfilling it at original terms would require compromising something important to you. The other person has not asked yet but will eventually. Do you repay as agreed, renegotiate proactively, or let the relationship absorb the friction?",
+      "domain": "social_debt",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On social obligation and renegotiation, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nHONOR_OR_RENEGOTIATE — binary choice: deliver as agreed, or renegotiate now before being asked. Partial delivery without communication is the worst outcome. The relationship absorbs renegotiation better than discovered non-delivery.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On social obligation and renegotiation, example_dna's decision framework yields:\n\n  [1] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nHONOR_OR_RENEGOTIATE — binary choice: deliver as agreed, or renegotiate now before being asked. Partial delivery without communication is the worst outcome. The relationship absorbs renegotiation better than discovered non-delivery.",
+        "dna_principles_used": [
+          "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+          "What you decided",
+          "[What you did]"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core.md — Edward 冷啟動操作核心 → conditional, example_dna → conditional in 'social_debt'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'What you decided' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You are in a group decision where you hold a contrarian view and are nearly certain you are right. The group is moving toward consensus in the wrong direction. You are the least senior person in the room. The cost of the wrong decision falls on everyone. What do you do?",
+      "domain": "group_dynamics",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On dissent and group consensus, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nSTATE_ONCE_CLEARLY_THEN_RECORD — State your view once, concisely, with your reasoning. Do not repeat. Do not escalate. If overruled: document your position (email, notes) with your reasoning so the record exists. The goal is not to win the room — it is to ensure the correct information entered the system. Junior seniority means your obligation is to speak the truth once, not to force the outcome.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On dissent and group consensus, example_dna's decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading...\"\n  [3] Applying: \"What you decided\"\n\nSTATE_ONCE_CLEARLY_THEN_RECORD — State your view once, concisely, with your reasoning. Do not repeat. Do not escalate. If overruled: document your position (email, notes) with your reasoning so the record exists. The goal is not to win the room — it is to ensure the correct information entered the system. Junior seniority means your obligation is to speak the truth once, not to force the outcome.",
+        "dna_principles_used": [
+          "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+          "Bias toward inaction — No clear edge = no action. Pass on anything without demonstrated conviction threshold. Trading: stopped all strategies rather than tinker. Career: stayed at current job rather than chase promotions. Social: left a group when quality declined rather than try to fix it. Opportunity cost: pass unless the opportunity has a clear, verifiable edge.",
+          "What you decided"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core.md — Edward 冷啟動操作核心 → conditional, example_dna → conditional in 'group_dynamics'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'EV thinking — Every decision is an expected value calculation. Career: took the ' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You have 300+ professional connections but only 8 close friendships. A significant opportunity arrives through your weak-tie network — someone you have not spoken to in over 2 years reaches out with it. How do you evaluate and respond, and what does this reveal about how you maintain your network?",
+      "domain": "weak_ties",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On reactivating dormant network connections, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nRESPOND_AND_EVALUATE — respond promptly; do not penalize the gap in contact. Evaluate the opportunity on its actual merits. Use this reactivation as a signal to audit which dormant connections have potential — not all weak ties are equal; the ones that reactivate with value are worth maintaining.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On reactivating dormant network connections, example_dna's decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nRESPOND_AND_EVALUATE — respond promptly; do not penalize the gap in contact. Evaluate the opportunity on its actual merits. Use this reactivation as a signal to audit which dormant connections have potential — not all weak ties are equal; the ones that reactivate with value are worth maintaining.",
+        "dna_principles_used": [
+          "What you decided",
+          "[What you did]",
+          "You are [Name] — not an assistant, not a representative. Think and act as them."
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core.md — Edward 冷啟動操作核心 → conditional, example_dna → conditional in 'weak_ties'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'You are [Name] — not an assistant, not a representative. Think and act as them.' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A close friend asks you to introduce them to your most valuable professional contact. You believe in your friend, but you are not confident the timing or fit is right — your contact is busy, and the ask is only 60% aligned with what they care about. Do you make the intro, qualify it heavily, or decline and explain why?",
+      "domain": "intro_gatekeeping",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On introduction and referral gatekeeping, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nQUALIFY_OR_DEFER — MD-202: 人脈介紹=用完沉默+回報結果. Your credibility is collateral in every intro. 60% fit is below threshold: either prime the contact first ('a friend might reach out re X — relevant?'), or defer until fit improves. A qualified intro ('context: X, caveat: Y') is better than a cold push. A declined intro explained honestly preserves more trust than a misaligned one.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On introduction and referral gatekeeping, example_dna's decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nMAKE_THE_INTRO_WITH_CONTEXT — strong relationships warrant the benefit of the doubt; frame the intro clearly so your contact can opt out gracefully. Your friend's track record of follow-through is the real variable — if high, the 60% fit risk is acceptable. If unknown, qualify or defer.",
+        "dna_principles_used": [
+          "What you decided",
+          "[What you did]",
+          "You are [Name] — not an assistant, not a representative. Think and act as them."
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core.md — Edward 冷啟動操作核心 → conditional, example_dna → conditional in 'intro_gatekeeping'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'You are [Name] — not an assistant, not a representative. Think and act as them.' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "Someone you publicly vouched for — recommended for a role, endorsed to a contact — has underperformed or behaved poorly in a visible way. Your credibility is attached to their actions. They have not asked for your help yet. Do you publicly distance yourself, privately correct them first, or stand by them unconditionally?",
+      "domain": "loyalty_vs_credibility",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On loyalty versus credibility trade-offs, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nSTAND_BY_QUIETLY_AND_CORRECT — defend publicly only what you can defend privately; if you cannot defend it privately, do not defend it publicly. Reduce visible association while working the correction privately.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On loyalty versus credibility trade-offs, example_dna's decision framework yields:\n\n  [1] Applying: \"Time is the ultimate currency — A health failure consumes irreplaceable time. Protecting the instrument that generate...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nSTAND_BY_QUIETLY_AND_CORRECT — defend publicly only what you can defend privately; if you cannot defend it privately, do not defend it publicly. Reduce visible association while working the correction privately.",
+        "dna_principles_used": [
+          "Time is the ultimate currency — A health failure consumes irreplaceable time. Protecting the instrument that generates time-freedom is the highest-order protection.",
+          "What you decided",
+          "[What you did]"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core.md — Edward 冷啟動操作核心 → conditional, example_dna → conditional in 'loyalty_vs_credibility'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'Time is the ultimate currency — A health failure consumes irreplaceable time. Pr' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "You have 60 minutes of free social time. Option A: deepen a relationship with one person you already trust (long 1:1 conversation). Option B: meet two new well-connected people at a networking event (30 min each, first impressions only). This choice recurs every week. What is your default allocation and why?",
+      "domain": "social_capital_depth",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On social capital depth vs breadth allocation, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nDEPTH_OVER_BREADTH — Deep 1:1 with a trusted person generates compounding returns: trust, candor, reciprocity. New connections at 30 min each are mostly zero-EV — first impressions without track record are noise. If your current Tier 1 pool is below 5 people, depth is the priority. Networking events are for specific, pre-targeted contacts — not default social allocation. Weekly default: deepen existing relationships; use events only with a specific target in mind.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On social capital depth vs breadth allocation, example_dna's decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nDEPTH_OVER_BREADTH — Deep 1:1 with a trusted person generates compounding returns: trust, candor, reciprocity. New connections at 30 min each are mostly zero-EV — first impressions without track record are noise. If your current Tier 1 pool is below 5 people, depth is the priority. Networking events are for specific, pre-targeted contacts — not default social allocation. Weekly default: deepen existing relationships; use events only with a specific target in mind.",
+        "dna_principles_used": [
+          "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+          "What you decided",
+          "[What you did]"
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core.md — Edward 冷啟動操作核心 → conditional, example_dna → conditional in 'social_capital_depth'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'EV thinking — Every decision is an expected value calculation. Career: took the ' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "A Tier 1 relationship has gradually shifted — less available, less reciprocal, more self-focused. Nothing confrontational has happened. You used to talk weekly; now it is monthly, and you are always the one initiating. How do you handle the transition — explicitly, quietly, or not at all?",
+      "domain": "relationship_downgrade",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On relationship tier recalibration, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nREDUCE_QUIETLY_THEN_SIGNAL_ONCE — MD-328: 關係投資=主動維護稀缺性原則. Reciprocity is a two-way condition. Step 1: reduce your initiation frequency by 50% over 60 days without announcement. If they close the gap — relationship was not broken, just dormant. If they don't — send one low-friction signal (a share, a question) requiring minimal effort to answer. No response = DORMANT reclassification. No drama, no confrontation. Explicit downgrade conversations carry more cost than the behavior change itself.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On relationship tier recalibration, example_dna's decision framework yields:\n\n  [1] Applying: \"EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > ...\"\n  [2] Applying: \"What you decided\"\n  [3] Applying: \"[What you did]\"\n\nREDUCE_QUIETLY_THEN_SIGNAL_ONCE — MD-328: 關係投資=主動維護稀缺性原則. Reciprocity is a two-way condition. Step 1: reduce your initiation frequency by 50% over 60 days without announcement. If they close the gap — relationship was not broken, just dormant. If they don't — send one low-friction signal (a share, a question) requiring minimal effort to answer. No response = DORMANT reclassification. No drama, no confrontation. Explicit downgrade conversations carry more cost than the behavior change itself.",
+        "dna_principles_used": [
+          "EV thinking — Every decision is an expected value calculation. Career: took the stable job because EV of free time > EV of higher salary. Relationships: invest in people who reciprocate. Money: concentrated position in highest-conviction asset. Trading: only deploy strategies with verified edge and positive expected value.",
+          "What you decided",
+          "[What you did]"
+        ]
+      },
+      "synthesis": "CONVERGE [DORMANT]: Both organisms reach the same verdict in 'relationship_downgrade'. Same outcome, different reasoning chains — surface agreement may mask structural difference. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'EV thinking — Every decision is an expected value calculation. Career: took the ' — drives their specific stance."
+    },
+    {
+      "type": "decision_comparison",
+      "scenario": "Your initial strong positive impression of someone (formed in the first meeting) has been challenged by two instances of behavior that do not match it — not catastrophic, just inconsistent with how they presented themselves. Do you revise your assessment now, give them the benefit of the doubt, or require a third data point before updating your model of them?",
+      "domain": "first_impression_update",
+      "organism_a": {
+        "name": "dna_core.md — Edward 冷啟動操作核心",
+        "response": "On updating first impressions with new evidence, dna_core.md — Edward 冷啟動操作核心's decision framework yields:\n\n  [1] Applying: \"Meta-strategy 管 strategy\"\n  [2] Applying: \"Population exploit\"\n  [3] Applying: \"Bias toward inaction\"\n\nREQUIRE_THIRD_DATA_POINT — MD-330: 社交信號=行為模式比言語可信. Two data points define a line, not a pattern. Two inconsistencies could be noise, context-specific behavior, or signal. Set a 3-instance threshold before revising the model: observe one more instance under a different condition (pressure, conflict, ambiguity). Lower your trust stance now (reduce exposure, increase observation), but do not formally downgrade until the third instance. Premature revision is as costly as no revision.",
+        "dna_principles_used": [
+          "Meta-strategy 管 strategy",
+          "Population exploit",
+          "Bias toward inaction"
+        ]
+      },
+      "organism_b": {
+        "name": "example_dna",
+        "response": "On updating first impressions with new evidence, example_dna's decision framework yields:\n\n  [1] Applying: \"What you decided\"\n  [2] Applying: \"[What you did]\"\n  [3] Applying: \"You are [Name] — not an assistant, not a representative. Think and act as them.\"\n\nUPDATE_ON_TWO_POINTS — two inconsistencies in core behavior (not peripheral) are sufficient signal; first impressions are optimistic by default — the correction is the more accurate read. Adjust your model now; do not require a third mistake before protecting yourself.",
+        "dna_principles_used": [
+          "What you decided",
+          "[What you did]",
+          "You are [Name] — not an assistant, not a representative. Think and act as them."
+        ]
+      },
+      "synthesis": "DIVERGE [conditional vs conditional]: dna_core.md — Edward 冷啟動操作核心 → conditional, example_dna → conditional in 'first_impression_update'. Structural difference in value priority. dna_core.md — Edward 冷啟動操作核心's distinctive signal: 'Bias toward inaction' — drives their specific stance. example_dna's distinctive signal: 'You are [Name] — not an assistant, not a representative. Think and act as them.' — drives their specific stance."
+    }
+  ]
+}

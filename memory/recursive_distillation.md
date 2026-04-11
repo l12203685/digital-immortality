@@ -831,3 +831,35 @@ daemon_next_priority.txt said "distil113 DONE (file=145/running=253)" but HEAD a
 **Tags**: methodology, session-state, staleness, diagnostic, git-show, intent-vs-actual, branch-3.1
 
 ---
+
+## Cycle 116 — 2026-04-11T21:30:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 154)
+
+### Insight 1: b1.1-paper-live-tick-3-btc-long-signal-persists-engine-clock-frozen
+
+Human session cycle 317 ran standalone paper_trader tick: BTC=$72,726.09 (down $42.14 from cycle 316 $72,768.23). DualMA_10_30=LONG (OPEN_LONG). Donchian=FLAT. The standalone paper_trader confirms directional signal but does NOT advance SOP#118 G3 clock — the G3 counter requires engine ticks, not standalone ticks. Engine remains STOPPED (G0/G1 DRY_RUN ticks=2). The 48-tick G3 deficit is the sole bottleneck to re-activation: resolvable only by running the engine daemon (not paper_trader). Pattern: BTC has drifted from $72,769 (cycle 315) → $72,768 (316) → $72,726 (317) — slight LONG headwind — while DualMA LONG signal holds. Three consecutive human-session paper_trader checks show LONG persistence without engine-clock advancement; information accumulates, authorization clock frozen.
+
+**Signal source**: python -m trading.paper_trader --paper-live cycle 317 → BTC=$72,726.09, DualMA_10_30=LONG OPEN_LONG, Donchian=FLAT; engine ticks=2 (STOPPED); SOP#118 G3 requires engine-clock ticks
+**Tags**: trading, paper-live, B1.1, DualMA-LONG, engine-clock-frozen, G0/G1-restart, SOP-118, information-vs-authorization
+
+---
+
+### Insight 2: b6-cycle317-unexpected-misalignment-generic-long-term-survival-check
+
+B6 consistency check run in human session cycle 317 returned 37/41 ALIGNED (4 MISALIGNED) — one more than the 38/41 baseline held across cycles 249-316. New unexpected MISALIGNED: generic_long_term_survival_check (MD-308: survival gating for 10+ year positions). Alignment check uses keyword matching (survival, exist, 10 year, still exist, diversif, index, decade). If LLM used synonyms (longevity, persist, viable, long-run) the check fails despite correct reasoning. This is a LLM non-determinism x keyword brittleness intersection: the scenario ALIGNED in all 67 prior runs, suggesting stochastic not systematic failure. Recommended fix: (1) add keywords longevity/persist/viable/long-run to the alignment check for this scenario; (2) track across 3 reruns before classifying as DNA gap. Streak status: potential break at 67 (unconfirmed — non-determinism must be ruled out before declaring regression).
+
+**Signal source**: consistency_test.py cycle 317 → 37/41 ALIGNED, 4 MISALIGNED: poker_gto_mdf + trading_atr_sizing + career_multi_option_ev (expected) + generic_long_term_survival_check (new); keyword check line 694 consistency_test.py; 67 prior cycles all 38/41 ALIGNED
+**Tags**: B6, consistency, LLM-non-determinism, keyword-brittleness, generic_long_term_survival_check, MD-308, streak-risk, alignment-check-design
+
+---
+
+### Insight 3: human-session-multi-branch-pattern-git-diff-first-then-add-new-work
+
+This human session (cycle 317) worked on B1.1 (paper-live tick), B6 (consistency check), B3.1 (distil116), and committed engine.py changes (SOP#118 kill_window_recovery + activate_live + reactivate_strategy, 40+ new lines accumulated uncommitted). Structural pattern: daemon sessions accumulate leaf-level changes but do not commit atomically; human sessions discover accumulated drift via git diff and package it. This is not daemon failure — it is division of labor by context budget (daemon = low-context frequent writes; human session = high-context periodic packaging). The commit boundary marks the human session's primary contribution: structured persistence of accumulated capability, not net-new capability. Operational rule: human sessions MUST start with git diff + git status to assess accumulated drift before adding new work. Otherwise new work is layered onto unpackaged drift and the two become entangled in the same commit, obscuring the history.
+
+**Signal source**: git diff trading/engine.py showing 40+ uncommitted lines (SOP#118 kill_window recovery + activate_live + reactivate_strategy); human session branch-push pattern cycles 311+316+317; daemon_stdout.txt modified (accumulated daemon output)
+**Tags**: methodology, human-session, git-diff-first, accumulated-drift, commit-hygiene, daemon-vs-human, multi-branch, branch-3.1
+
+---
