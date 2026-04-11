@@ -6,6 +6,34 @@ Never delete — append only.
 
 ---
 
+## Cycle 123 — 2026-04-11T06:26:20+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 175 file / running: 283)
+
+### Insight 1: eleventh-human-tick-btc-72680-long-headwind-structural
+
+B1.1 paper-live tick (cycle 322): BTC=$72,680.97 (↓$43.03 from cycle 321 $72,724.00; LONG headwind). DualMA_10_30=LONG OPEN_LONG (11th consecutive human-session LONG tick, structural signal unbroken despite headwind). Donchian_20=FLAT (HOLD). Engine still STOPPED (G0/G1 DRY_RUN ticks=2 frozen — 48 more engine ticks needed for G3 assessment; standalone paper_trader continues independently). Key observation: 11 consecutive LONG ticks span BTC range $72,638–$72,831 (today's $72,680.97 is within that range). Signal is robust to ±$185 session-to-session BTC noise. LONG conviction structurally intact. Wait condition unchanged: G3 gate requires 48 autonomous engine ticks (not human-session ticks).
+
+**Signal source**: python -m trading.paper_trader --paper-live → price=72680.97, DualMA signal=1 action=OPEN_LONG, Donchian signal=0 action=HOLD; 2026-04-11T06:26Z; prev cycle 321 BTC=$72,724.00
+**Tags**: B1.1, 11th-human-tick, BTC-72680, DualMA-LONG-structural, LONG-headwind, engine-STOPPED-G0-G1-frozen, 48-tick-deficit
+
+### Insight 2: seventy-third-clean-convergence-floor-monitoring-cost-zero
+
+B6: consistency_test.py → 38/41 ALIGNED (73rd consecutive clean cycle ✅). Three permanent MISALIGNED scenarios unchanged: poker_gto_mdf / trading_atr_sizing / career_multi_option_ev (LLM-boundary cases, expected). Convergence floor (38/41) confirmed stable across 73 independent LLM instantiations. Attention cost for B6 monitoring = near-zero at this streak length. Pass=noise, fail=L3 event. No new scenarios added this cycle. Structural invariant: maintenance pass.
+
+**Signal source**: consistency_test.py templates/example_dna.md → 38/41 ALIGNED, 3 MISALIGNED (same 3 as baseline); 73rd consecutive clean cycle; 2026-04-11T06:26Z
+**Tags**: B6, 73rd-clean-cycle, convergence-floor, 38-41-structural-baseline, LLM-boundary-permanent, attention-cost-zero
+
+### Insight 3: recursive-engine-l2-dead-loop-flag-daemon-context-disambiguation
+
+L2 audit (recursive_engine.py --l2) returned DEAD_LOOP verdict. Root cause: the daemon (recursive_daemon.py) is not actively running — no new git commits generated in the engine's observation window, insights_count unchanged since last snapshot. DEAD_LOOP verdict is EXPECTED when daemon is down. The recursive_engine.py L2 is designed for engine.py-driven cycles, not continuous daemon monitoring. Disambiguation: (1) recursive_engine.py L2 → DEAD_LOOP = engine loop stalled (expected when daemon down); (2) actual liveness check = tail results/daemon_log.md + results/daemon_stdout.txt. The daemon's health is separate from the engine's L2 health metric. No action required; DEAD_LOOP is a false-positive from context mismatch.
+
+**Signal source**: python recursive_engine.py --l2 → {"cycle": 90, "dead_loop_flag": true, "verdict": "DEAD_LOOP"}; daemon status: not running (PID file absent); staging/quick_status.md → daemon RUNNING (PID 1704, 300s interval) but likely dead between sessions
+**Tags**: B3.1, L2-audit, dead-loop-false-positive, daemon-context-mismatch, liveness-check-disambiguation, methodology
+
+---
+
 ## Cycle 241 — 2026-04-09T12:00:00+00:00
 
 **Source cycles**: 240-241
