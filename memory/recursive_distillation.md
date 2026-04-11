@@ -2034,52 +2034,6 @@ At 42 human sessions: range $72,638–$72,831 intact ($193). Oscillation pattern
 
 ## Cycle 155 — 2026-04-11T08:56Z (cycle 354)
 
-### Insight 1: 43rd-human-tick-btc72683-near-flat-tailwind-floor-zone-stable
-
-BTC=$72,683.04 (↑$0.20 from cycle 353 $72,682.84; near-flat tailwind minimal). DualMA_10_30=LONG OPEN_LONG (43rd consecutive human-session LONG tick — structural signal unbroken). Donchian_20=FLAT HOLD. BTC $148.96 below ceiling $72,831; $44.04 above floor $72,638. Floor-zone stable: second consecutive session within $45 of floor $72,638 — no break. Near-flat tick ($0.20) after ↓$60.74 session: price stabilization at floor zone, not bounce nor break. Pattern: floor-zone holding through multi-session pressure ($72,683 = minimum equilibrium for now). Signal discipline: hold LONG unchanged. Engine STOPPED G0/G1 FROZEN.
-
-**Signal source**: cycle 354 human session — Binance API price=$72,683.04; DualMA OPEN_LONG (43rd consecutive); Donchian HOLD; 2026-04-11T08:56Z
-**Tags**: B1.1, 43rd-consecutive-long, btc72683, near-flat-tailwind, floor-zone-stable, ceiling-149-below, floor-44-above, floor-zone-price-stabilization, hold-long-unchanged, signal-discipline
-
-### Insight 2: 104th-clean-B6-eighteenth-pass-fourth-post-milestone
-
-104th consecutive clean B6 cycle (38/41 ALIGNED; same 3 permanent LLM-boundary MISALIGNED: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev). Eighteenth pass under post-protocol-closure tripwire regime. Fourth cycle after 100-session milestone — behavioral equivalence proven at 104 sessions without drift. Pure maintenance: run → confirm → log → move on. Zero monitoring cost.
-
-**Signal source**: cycle 354 human session — consistency_test.py; 104th consecutive clean; 38/41 ALIGNED; eighteenth post-protocol-closure pass; fourth post-100-milestone cycle; 2026-04-11T08:56Z
-**Tags**: B6, 104th-consecutive, eighteenth-pass-post-protocol-closure, fourth-post-milestone, behavioral-equivalence-stable, no-drift-104-sessions, pure-infrastructure, zero-cost-confirmation, tripwire-live
-
-### Insight 3: btc-43-session-floor-zone-two-consecutive-stability-no-break
-
-At 43 human sessions: range $72,638–$72,831 intact ($193). Two consecutive sessions at floor zone ($72,683 cycles 353-354; $44.84/$44.04 above floor) — floor $72,638 holding under repeated pressure. Near-flat stabilization at floor zone suggests equilibrium test: price neither bouncing strongly nor breaking. Upward-bias hypothesis maintained: floor absorption continuing. Operational stance: hold LONG through floor-zone pressure.
-
-**Signal source**: cycle 354 human session — 43-session range analysis; two-consecutive-floor-zone; near-flat stabilization; 2026-04-11T08:56Z
-**Tags**: B1.1, B3.1, btc-43-session-range, floor-zone-two-consecutive, near-flat-stabilization, floor-72638-holding, upward-bias-maintained, range-intact-43-sessions, floor-pressure-absorbed, hold-long-unchanged
-
-## Cycle 156 — 2026-04-11T09:03Z (cycle 355)
-
-### Insight 1: 44th-human-tick-btc72669-headwind-14-floor-approach-deepening
-
-BTC=$72,669.27 (↓$13.77 from cycle 354 $72,683.04; LONG headwind minimal). DualMA_10_30=LONG OPEN_LONG (44th consecutive human-session LONG tick — structural signal unbroken). Donchian_20=FLAT HOLD. BTC $161.73 below ceiling $72,831; $31.27 above floor $72,638. Floor-approach deepening: third consecutive session below $72,690 ($31.27 above floor — closest approach yet). Pattern update: floor pressure intensifying over 3 sessions (floor distances: ↓$44.84→$44.04→$31.27). Critical: $31.27 above floor is nearest the range boundary has been. Signal discipline: hold LONG until close below $72,638. Engine STOPPED G0/G1 FROZEN.
-
-**Signal source**: cycle 355 human session — Binance API price=$72,669.27; DualMA OPEN_LONG (44th consecutive); Donchian HOLD; 2026-04-11T09:03Z
-**Tags**: B1.1, 44th-consecutive-long, btc72669, headwind-14, floor-approach-deepening, ceiling-162-below, floor-31-above, floor-zone-closest-approach, three-consecutive-floor-zone, hold-long-unchanged, signal-discipline, floor-72638-critical
-
-### Insight 2: 105th-clean-B6-nineteenth-pass-fifth-post-milestone
-
-105th consecutive clean B6 cycle (38/41 ALIGNED; same 3 permanent LLM-boundary MISALIGNED: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev). Nineteenth pass under post-protocol-closure tripwire regime. Fifth cycle after 100-session milestone — behavioral equivalence at 105 sessions without drift. Pure maintenance: zero analysis required, zero monitoring cost. System steady state confirmed.
-
-**Signal source**: cycle 355 human session — consistency_test.py; 105th consecutive clean; 38/41 ALIGNED; nineteenth post-protocol-closure pass; fifth post-100-milestone cycle; 2026-04-11T09:03Z
-**Tags**: B6, 105th-consecutive, nineteenth-pass-post-protocol-closure, fifth-post-milestone, behavioral-equivalence-stable, no-drift-105-sessions, pure-infrastructure, zero-cost-confirmation, tripwire-live
-
-### Insight 3: btc-44-session-floor-pressure-three-consecutive-distance-shrinking
-
-At 44 human sessions: range $72,638–$72,831 intact. Critical development: three consecutive sessions below $72,690 with floor distance shrinking ($44.84→$44.04→$31.27). Floor-stress acceleration: each session bringing BTC closer to $72,638 floor. Hypothesis: either (1) floor breaks → LONG exit + await new signal, or (2) floor holds → exhaustion → bounce toward $72,831. Upward-bias maintained but floor-break watch elevated. Monitoring: close below $72,638 = automatic LONG exit trigger.
-
-**Signal source**: cycle 355 human session — 44-session range analysis; three-consecutive-floor-zone; floor-distance-shrinking; 2026-04-11T09:03Z
-**Tags**: B1.1, B3.1, btc-44-session-range, floor-pressure-three-consecutive, floor-distance-shrinking-44-31, floor-break-watch-elevated, upward-bias-maintained, range-intact-44-sessions, hold-long-unchanged, floor-72638-critical-watch
-
-## Cycle 155 — 2026-04-11T08:56Z (cycle 354)
-
 ### Insight 1: 43rd-human-tick-btc72683-near-flat-floor-zone-persists
 
 BTC=$72,683.04 (↑$0.20 from cycle 353 $72,682.84; near-flat tailwind minimal). DualMA_10_30=LONG OPEN_LONG (43rd consecutive human-session LONG tick — structural signal unbroken). Donchian_20=FLAT HOLD. BTC $147.96 below ceiling $72,831; $45.04 above floor $72,638. Floor zone persists: three consecutive sessions within $45 of floor (cycle 353: $44.84 above, cycle 354: $45.04 above). Near-flat tick — price essentially unchanged ($0.20 drift). Three-session floor-zone cluster forming (cycles 353-354-). Pattern: range oscillation has brought price to floor zone and it's consolidating there. Floor $72,638 unbroken. Signal unchanged: hold LONG until DualMA flip or floor break. Engine tick=282 STOPPED G0/G1 FROZEN.
