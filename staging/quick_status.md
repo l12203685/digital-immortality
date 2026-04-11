@@ -8,7 +8,8 @@
 - last_daemon_cycle: 340
 - last_real_work_cycle: 342 (B6 92nd + B3.1 distil143 + B1.1 tick 31)
 - backup_tag: `pre-optimization-backup` → ddc5d88
-- web_scheduled: RUNNING (digital-immortality-recursive, hourly)
+- cloud_recursive: GH Actions chained (Recursive Cycle workflow), every ~10 min, failsafe every 30 min
+- local daemons (PIDs 7528, 4396) still alive — Edward will kill after 24h parallel validation
 
 ## Blockers (human-gated)
 - mainnet API keys (~88d until 2026-07-07)

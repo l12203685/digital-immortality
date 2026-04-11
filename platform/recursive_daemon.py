@@ -356,6 +356,8 @@ def main():
                         help="Disable auto git commit")
     parser.add_argument("--cli", action="store_true",
                         help="Use claude CLI instead of API (uses Max subscription, no API credit)")
+    parser.add_argument("--once", action="store_true",
+                        help="Run exactly one cycle then exit (for GH Actions chained mode)")
     args = parser.parse_args()
 
     dna = load_dna()
@@ -379,10 +381,16 @@ def main():
     print(f"[daemon] Log: {LOG_PATH}")
     print(f"[daemon] Ctrl+C to stop\n")
 
+    # --once forces exactly one cycle then exit (for GH Actions chained mode)
+    if args.once:
+        max_cycles_effective = 1
+    else:
+        max_cycles_effective = args.max_cycles
+
     while running:
         cycle += 1
-        if args.max_cycles and cycle > args.max_cycles:
-            print(f"[daemon] Reached max cycles ({args.max_cycles}), stopping.")
+        if max_cycles_effective and cycle > max_cycles_effective:
+            print(f"[daemon] Reached max cycles ({max_cycles_effective}), stopping.")
             break
         try:
             system = build_system_prompt(dna)
@@ -413,6 +421,10 @@ def main():
             print(f"[daemon] Error: {e}, retrying in 30s...")
             time.sleep(30)
             continue
+
+        if args.once:
+            print("[daemon] --once flag set, exiting after single cycle.")
+            break
 
         if running and interval > 0:
             time.sleep(interval)

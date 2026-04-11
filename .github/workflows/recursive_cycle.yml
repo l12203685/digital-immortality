@@ -1,0 +1,67 @@
+name: Recursive Cycle
+
+# Chained recursive daemon on GitHub Actions (no external platforms / credit cards).
+# Each run executes ONE daemon cycle then dispatches the next run via `gh workflow run`.
+# The existing `daemon_failsafe.yml` watchdog (every 30 min) recovers the chain if it
+# breaks. The schedule trigger below is a second safety net: if nothing runs for
+# 15 min the cron will restart the chain.
+
+on:
+  workflow_dispatch:
+    inputs:
+      cycle_count:
+        description: 'Cycles to run (default 1)'
+        required: false
+        default: '1'
+  schedule:
+    - cron: '*/15 * * * *'  # safety net every 15 min if chain breaks
+
+concurrency:
+  group: recursive-cycle
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install anthropic requests
+
+      - name: Configure git
+        run: |
+          git config user.email "agent@digital-immortality.local"
+          git config user.name "digital-immortality-daemon"
+
+      - name: Run one daemon cycle
+        run: python platform/recursive_daemon.py --cli --once
+
+      - name: Push if changes
+        run: |
+          git pull --rebase || true
+          git push origin main || echo "nothing to push"
+
+      - name: Trigger next cycle
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run recursive_cycle.yml --ref main || echo "next dispatch failed (failsafe will recover)"
