@@ -2,7 +2,7 @@ name: Type A Heartbeat
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 00:00 UTC = 08:00 Taipei
+    - cron: '1 2 * * *'  # 02:01 UTC = 10:01 Taipei (post weekly-limit reset)
   workflow_dispatch:
 
 jobs:
