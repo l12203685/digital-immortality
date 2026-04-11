@@ -803,3 +803,31 @@ This cycle was triggered by a human session ("Push multiple branches. Commit.").
 **Tags**: methodology, human-session, daemon, task-boundary, leaf-writes, structural-writes, tree-update, commit-hygiene, branch-3.1
 
 ---
+
+## Cycle 115 — 2026-04-11T21:00:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 151)
+
+### Insight 1: daemon-encoding-fix-utf8-errors-replace
+
+The recursive daemon crashed every cycle on Windows (cp950 locale) because `subprocess.run(..., text=True)` defaults to the system encoding, and the claude CLI outputs UTF-8 including emoji (✅, 📊). Fix: add `encoding="utf-8", errors="replace"` to `subprocess.run`. The `errors="replace"` ensures a decode failure degrades gracefully (replacement char) rather than crashing the thread entirely. Secondary fix: guard against `None` stdout/stderr — `result.stdout.strip()` raises AttributeError when stdout is None (timeout/crash path). Pattern: any subprocess call that captures output from a UTF-8-aware tool on a Windows locale machine MUST specify encoding explicitly.
+
+**Signal source**: daemon_stdout.txt — UnicodeDecodeError cp950 on cycles 1-12; platform/recursive_daemon.py line 269 subprocess.run missing encoding param; fix: `encoding="utf-8", errors="replace"` + None guard on stdout/stderr
+**Tags**: daemon, encoding, windows, cp950, utf-8, subprocess, bug-fix, defensive-programming
+
+### Insight 2: engine-kill-window-recovery-asymmetric-design
+
+trading/engine.py gained SOP#118 kill_window recovery: after N clean ticks post-kill, the kill_window loosens. This is intentionally asymmetric with the kill itself — kill is instant (1 bad tick), recovery is slow (100+ clean ticks). The asymmetry mirrors the information asymmetry: one bad PF reading is low-info (could be noise), but 100 consecutive clean ticks IS statistically meaningful. The recovery logic was added UNCOMMITTED — it existed in the working tree but hadn't been packaged into a commit. This is a two-part observation: (1) the feature design is sound; (2) the pattern of uncommitted improvements accumulating is a known risk — improvements that aren't committed can be lost on `git restore` or branch switch.
+
+**Signal source**: git diff trading/engine.py showing SOP#118 kill_window recovery logic uncommitted; lines 493-506 new code; clean_ticks_since_kill counter; recover_kill_window() function; status.json now includes kill_window field
+**Tags**: trading, SOP-118, kill-window, recovery, asymmetric-design, uncommitted-risk, branch-1.1
+
+### Insight 3: session-state-staleness-as-diagnostic-signal
+
+daemon_next_priority.txt said "distil113 DONE (file=145/running=253)" but HEAD already had distil114 committed (file=148/running=256). The mismatch revealed that the state file was written by cycle 315 BEFORE distil114 was appended and committed in the same session. This is not a bug — it's a sequence artifact: state files record intent at the START of the cycle, but file commits capture the END state. The gap becomes a diagnostic: when daemon_next_priority lags behind what's actually in HEAD, the delta = work done in the same session after the priority file was last written. Actionable rule: always read state files + `git show HEAD:memory/recursive_distillation.md | tail -30` together — the former shows declared intent, the latter shows actual state.
+
+**Signal source**: daemon_next_priority.txt says distil113 (file=145); git show HEAD:memory/recursive_distillation.md shows Cycle 114 (file=148); mismatch = within-session sequence artifact; reconciliation pattern identified
+**Tags**: methodology, session-state, staleness, diagnostic, git-show, intent-vs-actual, branch-3.1
+
+---

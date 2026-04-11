@@ -82,3 +82,19 @@ Traceback (most recent call last):
 UnicodeDecodeError: 'cp950' codec can't decode byte 0x98 in position 52: illegal multibyte sequence
 [daemon] Error: 'NoneType' object has no attribute 'strip', retrying in 30s...
 [daemon] Cycle 10 starting (CLI)...
+[daemon] Error: Command '['claude', '-p', 'Read SKILL.md, results/dynamic_tree.md, results/daemon_next_priority.txt. Push multiple branches. Commit.', '--model', 'claude-sonnet-4-6']' timed out after 600 seconds, retrying in 30s...
+[daemon] Cycle 11 starting (CLI)...
+Exception in thread Thread-21 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp950' codec can't decode byte 0xe2 in position 61: illegal multibyte sequence
+[daemon] Error: 'NoneType' object has no attribute 'strip', retrying in 30s...
+[daemon] Cycle 12 starting (CLI)...

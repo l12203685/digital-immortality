@@ -270,10 +270,11 @@ def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
         ["claude", "-p", short_prompt, "--model", model],
         capture_output=True, text=True, timeout=600,
         cwd=str(REPO_ROOT),
+        encoding="utf-8", errors="replace",
     )
-    text = result.stdout.strip()
+    text = result.stdout.strip() if result.stdout else ""
     if result.returncode != 0 and not text:
-        text = f"CLI error: {result.stderr.strip()}"
+        text = f"CLI error: {(result.stderr or '').strip()}"
     # Detect rate limit and sleep until reset
     sleep_secs = parse_rate_limit_reset(text)
     if sleep_secs is not None:
