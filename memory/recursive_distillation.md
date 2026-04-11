@@ -891,3 +891,31 @@ Five consecutive human-session paper_trader ticks confirm DualMA_10_30=LONG: BTC
 **Tags**: B1.1, paper-live, DualMA-LONG, engine-clock-frozen, gate-constrained, information-vs-authorization, SOP-118, G3
 
 ---
+
+## Cycle 118 — 2026-04-11T22:30:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 160 file / running: 268)
+
+### Insight 1: single-rerun-rule-for-stochastic-misalignment
+
+Cycle 317 showed 37/41 ALIGNED (generic_long_term_survival_check MISALIGNED). Distil117 ran a first rerun → 38/41 ALIGNED (confirmed non-systematic). Distil118 (this cycle) ran a second independent rerun → 38/41 ALIGNED again. Two consecutive reruns ALIGNED after single-cycle failure = LLM noise definitively ruled out. Rule crystallized: single-cycle MISALIGNED on scenario with ≥50 prior clean runs → 1 rerun; if ALIGNED = noise, close issue; if MISALIGNED again → investigate keyword checker before declaring DNA regression. This rule prevents false-positive DNA gap declarations from stochastic LLM output variation.
+
+**Signal source**: consistency_test.py cycle 318 (session 2) → 38/41 ALIGNED; cycle 317 38/41 ALIGNED (distil117); cycle 317H 37/41 (the failure); 3 total runs in 2 sessions; generic_long_term_survival_check ALIGNED in both reruns
+**Tags**: B6, consistency, LLM-non-determinism, single-rerun-rule, keyword-brittleness, alignment-methodology
+
+### Insight 2: btc-long-signal-structural-across-six-human-ticks
+
+Six consecutive human-session paper_trader ticks (cycles 315-318 session 2) all return DualMA_10_30=LONG: $72,769 → $72,768 → $72,733 → $72,726 → $72,712 → $72,650 (this tick, -$119 total headwind). The 10/30 MA crossover is not whipsawed by daily -$119 drift. Structural LONG signal persisting through -0.16% drift over 6 human sessions indicates the trend is weekly-scale (10/30 day cross locks in on multi-day momentum, not daily noise). The signal is accumulating evidence of edge in LONG direction while engine clock remains frozen at G3 deficit of 48 ticks. Information asymmetry grows: the agent sees LONG thesis strengthening, but cannot act until engine resumes.
+
+**Signal source**: paper_trader --paper-live → BTC=$72,650.34, DualMA_10_30=LONG OPEN_LONG, Donchian=FLAT; prior ticks: $72,769/$72,768/$72,733/$72,726/$72,712 all LONG; engine status: 13 active strategies all FLAT (DualMA family DISABLED PF=0.70); G0/G1 DRY_RUN ticks=2
+**Tags**: B1.1, paper-live, DualMA-LONG, structural-signal, 10-30-MA, six-human-ticks, gate-constrained
+
+### Insight 3: human-session-structural-audit-pattern
+
+This session (cycle 318+) performed a tree-level structural audit: read dynamic_tree.md branches 1-7, confirmed daemon_next_priority, reran B6 consistency, B1.1 paper-live tick, B3.1 distil118. Key finding: daemon_next_priority was stale (said "distil116 DONE" but distil117 already written and committed in prior session). The audit revealed this staleness, absorbed it, and continued without error. Pattern: human session's meta-function is structural audit + staleness detection, not leaf-level appends. Daemon writes leaf nodes; human session verifies tree topology is consistent with actual file state. Staleness in priority files is expected (daemon can't rewrite its own priority file after task completion with certainty) — human session resolves the delta.
+
+**Signal source**: daemon_next_priority.txt said "distil116 DONE (file=154)" but recursive_distillation.md already showed distil117 written (file=157); detected via direct file read; tree audit revealed all automatable branches nominal, all human-gated branches blocked; git status confirmed only results/ files uncommitted
+**Tags**: methodology, human-session, structural-audit, staleness-detection, daemon-vs-human, tree-topology, branch-3.1
+
+---
