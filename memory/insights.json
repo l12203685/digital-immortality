@@ -2602,6 +2602,50 @@
         "gate-sequence",
         "kill-conditions"
       ]
+    },
+    {
+      "id": "cycle307-distil102-cooling-period-as-regime-filter",
+      "key": "cooling-period-passive-regime-filter",
+      "content": "SOP#92 5-cycle cooling period functions as a passive regime filter. A signal that persists through 5 consecutive non-trading cycles has survived 5 independent market movements without you acting on it — structural strength, not recent noise. The ghost signal at cycle 302 (DualMA_10_30=LONG) persisted through cooling cycles 302-306 and is still LONG at cycle 307. That is the confirmation of cooling working as designed.",
+      "timestamp": "2026-04-11T13:00Z",
+      "source": "recursive-engine-cycle-307",
+      "tags": [
+        "trading",
+        "sop92",
+        "sop118",
+        "cooling",
+        "regime-filter",
+        "signal-persistence"
+      ]
+    },
+    {
+      "id": "cycle307-distil102-pf-variance-at-34-ticks",
+      "key": "pf-threshold-variance-insufficient-data",
+      "content": "At 34 paper-live ticks with PF=1.070, the metric is in high-variance territory. PF requires 50+ trades to exhibit statistical stability (SOP#118 G3 threshold). The correct classification is WATCH (insufficient data), not FAIL (performance below target). The error to avoid: treating early-streak PF as definitive. The discipline: G3 is not \"PF is bad\", it is \"not enough data to know\". Distinguishing noise from signal requires accumulating ticks, not lowering the bar.",
+      "timestamp": "2026-04-11T13:00Z",
+      "source": "recursive-engine-cycle-307",
+      "tags": [
+        "trading",
+        "sop118",
+        "pf",
+        "statistics",
+        "sample-size",
+        "g3-watch"
+      ]
+    },
+    {
+      "id": "cycle307-distil102-human-gates-define-ceiling-not-floor",
+      "key": "human-gated-parallelism-agent-continues",
+      "content": "When the highest-priority branches are human-gated (B1.3 outreach DMs, B4.1 Samuel DM), the correct agent action is not to idle but to push all non-gated branches in parallel. Human gates define the ceiling of what is immediately achievable, not the floor of work. B6 consistency, B3.1 distillation, and B1.1 paper-live ticks can all advance without human input. Idle while waiting = conscious idle = anti-pattern.",
+      "timestamp": "2026-04-11T13:00Z",
+      "source": "recursive-engine-cycle-307",
+      "tags": [
+        "meta",
+        "human-gated",
+        "parallelism",
+        "agent-behavior",
+        "anti-pattern"
+      ]
     }
   ]
 }
