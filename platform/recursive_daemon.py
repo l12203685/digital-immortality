@@ -121,6 +121,59 @@ def run_idle_task_picker(cycle: int) -> None:
         print(f"[daemon] idle_task_picker failed (non-fatal): {e}")
 
 
+def run_sign_off_apply_expired(cycle: int) -> None:
+    """Apply expired AUTO sign-off decisions at end of each cycle.
+
+    Non-fatal — failures are swallowed so the daemon loop never dies because
+    of a sign-off manager bug. Writes a jsonl log entry for every invocation
+    (success or failure) to results/sign_off_log.jsonl.
+    """
+    log_path = REPO_ROOT / "results" / "sign_off_log.jsonl"
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    entry = {
+        "cycle": cycle,
+        "ts": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
+        "ok": False,
+        "applied_count": 0,
+        "applied_uids": [],
+        "error": None,
+    }
+    try:
+        result = subprocess.run(
+            [sys.executable, "-m", "tools.sign_off_manager", "--apply-expired"],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+            timeout=15,
+            encoding="utf-8",
+            errors="replace",
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            import json as _json
+            try:
+                payload = _json.loads(result.stdout.strip())
+                entry["ok"] = True
+                entry["applied_count"] = payload.get("applied_count", 0)
+                entry["applied_uids"] = [
+                    d.get("uid") for d in payload.get("applied", [])
+                ]
+                if entry["applied_count"]:
+                    print(f"[daemon] sign_off cycle {cycle}: "
+                          f"auto-applied {entry['applied_count']} decision(s)")
+            except _json.JSONDecodeError as e:
+                entry["error"] = f"json: {e}"
+        else:
+            entry["error"] = (result.stderr or "non-zero return").strip()[:200]
+    except Exception as e:
+        entry["error"] = f"exception: {e}"
+    try:
+        import json as _json
+        with open(log_path, "a", encoding="utf-8") as f:
+            f.write(_json.dumps(entry, ensure_ascii=False) + "\n")
+    except Exception:
+        pass
+
+
 def run_audit_suggest() -> None:
     """Run daemon_audit.py --suggest to generate the next priority file."""
     try:
@@ -417,6 +470,8 @@ def main():
             # Edward" failure mode. Runs after commit so the queue file is
             # captured in the next cycle's push.
             run_idle_task_picker(cycle)
+            # Auto sign-off: apply any expired AUTO decisions. Non-fatal.
+            run_sign_off_apply_expired(cycle)
         except Exception as e:
             print(f"[daemon] Error: {e}, retrying in 30s...")
             time.sleep(30)
