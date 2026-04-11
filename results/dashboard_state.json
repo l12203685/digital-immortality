@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-04-11T06:55:48Z",
-  "updated_taipei": "2026-04-11 14:55 +08",
+  "updated_utc": "2026-04-11T06:58:39Z",
+  "updated_taipei": "2026-04-11 14:58 +08",
   "tree": {
     "available": true,
     "branches": [
@@ -43,8 +43,8 @@
   },
   "trading_engine": {
     "available": true,
-    "last_tick": "2026-04-11T06:55:10.309690+00:00",
-    "tick_count": 158,
+    "last_tick": "2026-04-11T06:58:10.468905+00:00",
+    "tick_count": 161,
     "active_strategies": 13,
     "disabled": {
       "gen_BollingerMeanReversion_RF_7abfe4": "PF 0.62 < 0.8",
@@ -55,7 +55,7 @@
       "DualMA_RSI_filtered": "PF 0.70 < 0.8"
     },
     "total_pnl_pct": -0.1865,
-    "price": 72771.31,
+    "price": 72771.32,
     "regime": "mixed",
     "mode": "PAPER"
   },
@@ -173,6 +173,7 @@
   },
   "git": {
     "digital-immortality": [
+      "46d8b1b feat(daemon-phase2-dashboard+tick159): Phase 2 dashboard pipeline in daemon + engine tick=159 BTC=$72,771",
       "59325f8 feat(dashboard+tick157): web dashboard pipeline + engine ticks 155-157 BTC=$72,762 + heartbeat healthy",
       "9607551 feat(cycle328): dashboard + engine tick 157 BTC=$72,762 + heartbeat + platform scripts",
       "61a48d7 feat(heartbeat): Type A daily scheduled check via GitHub Actions",
@@ -181,8 +182,7 @@
       "252aa83 feat(daemon-tick148): engine ticks 142-148 BTC=72725.40 MIXED 13-active all-FLAT + daemon cp950 error loop",
       "ccc295f feat(daemon-tick147): engine ticks 146+147 BTC=$72,741.89 MIXED all-13-HOLD + B1.1 DualMA=LONG ×14 human ticks tick=147 HOLD all",
       "a138222 feat(cycle325): B6 76th ✅ convergence-floor-statistical-certainty + B3.1 distil126 (file=184/running=292) + B1.1 BTC=$72,720.65 DualMA=LONG ×14 human ticks engine-tick=141 HOLD all + parallel branch push B1.1+B3.1+B6",
-      "04a101f feat(daemon-tick141): engine tick 141 BTC=$72,738.13 MIXED all-13-FLAT + index.md restructure",
-      "345eac9 feat(cycle324): B6 75th ✅ convergence-floor-statistical-invariant + B3.1 distil125 (file=181/running=289) + B1.1 BTC=$72,704.46 DualMA=LONG ×13 human ticks engine-STOPPED G0/G1 ticks=2 FROZEN + parallel branch push B1.1+B3.1+B6"
+      "04a101f feat(daemon-tick141): engine tick 141 BTC=$72,738.13 MIXED all-13-FLAT + index.md restructure"
     ],
     "LYH": [
       "4933e4d refactor: rename backtest-framework -> trading-research",
