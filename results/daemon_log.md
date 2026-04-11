@@ -498,3 +498,4 @@ You've hit your limit · resets Apr 11, 10am (Asia/Taipei)
 ## Cycle 165 — 2026-04-10 00:23:47 UTC
 
 You've hit your limit · resets Apr 11, 10am (Asia/Taipei)
+[2026-04-11 06:28:24 UTC] [STALENESS_ALERT] Cycle 90: staging/last_output.md not updated in ~5 cycles — LLM may not be consuming prompts.

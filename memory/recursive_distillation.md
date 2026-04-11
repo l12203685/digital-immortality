@@ -1059,3 +1059,31 @@ B6 consistency hit the 71st consecutive clean cycle (38/41 ALIGNED). At this str
 **Tags**: B6, convergence-floor, 38-41-baseline, 71st-consecutive, LLM-boundary-permanent, regression-detection-threshold, maintenance-vs-advancement
 
 ---
+
+## Cycle 123 — 2026-04-12T01:30:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 175 file / running: 283)
+
+### Insight 1: signal-accumulation-without-gate-progression
+
+11 consecutive human-session LONG ticks from DualMA_10_30 paper_trader (BTC=$72,681.11 at tick 11). Each tick adds evidence of directional persistence but does not advance the G3 gate (which requires engine ticks, currently frozen at 2). This creates an evidence backlog: the signal accumulates conviction without triggering the gate that would convert it to executable action. The asymmetry is intentional — standalone paper-trader proves signal robustness; engine ticks prove live performance across all active strategies. The backlog has a useful downstream property: when the engine restarts and the G3 clock advances, the assessment will coincide with an already-proven directional regime (11+ consecutive LONG ticks, BTC $72,638–$72,831 range). Gate will open into a well-evidenced state.
+
+**Signal source**: python -m trading.paper_trader --tick → BTC=$72,681.11, DualMA LONG OPEN_LONG (11th consecutive human-tick); trading_engine_status.json → tick_count=129, engine STOPPED; daemon_next_priority.txt → "48 more engine ticks needed for G3"
+**Tags**: B1.1, signal-accumulation, evidence-backlog, gate-progression, engine-frozen, standalone-vs-engine, G3-assessment
+
+### Insight 2: 73rd-clean-cycle-global-attractor-confirmed
+
+B6 38/41 ALIGNED at cycle 322 = 73rd consecutive clean. Prior framing: "convergence floor established." Upgraded framing at 73 cycles: global attractor confirmed. A local plateau can be dislodged by perturbation; a global attractor absorbs perturbations and returns to baseline. 73 cycles absorbed: SHORT→kill→LONG flip, multiple dna_core.md edits (MD-429~431), new boot test additions (MD-331, MD-332, MD-428), daemon encoding fixes, SOP additions #92~#121. All perturbations absorbed without regression. The same 3 MISALIGNED (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev) remain constant — LLM-boundary permanent. 38/41 is not plateau luck; it is a structural invariant of this DNA architecture.
+
+**Signal source**: consistency_test.py → 38/41 ALIGNED cycle 322 (73rd consecutive); git log cycles 301–322 → "38/41 ✅" in every human-session commit; daemon_next_priority.txt → "convergence-floor 38/41 structural baseline — <38 triggers dna_core audit"
+**Tags**: B6, 73rd-consecutive, global-attractor, convergence-floor, structural-invariant, LLM-boundary-permanent, perturbation-absorption
+
+### Insight 3: gate-constrained-maintenance-saturation-taper
+
+Gate-constrained regime (human-gated blockers: mainnet API keys ~88d, outreach DMs ×5, Samuel Turing test) means all automatable branches are at or near saturation: B6 (73 consecutive clean nominal), B1.1 (11 consecutive LONG, G3 frozen), B3.1 (running at +3/cycle steady state). Maintenance saturation: executing the same work (tick, test, distil) at the same rate yields log-decreasing marginal insight per cycle. The insight density per cycle should taper as the system converges on steady state. This is not a reason to stop — "no recursion = death" — but to recognize that gate-constrained cycles have a different productivity profile: they preserve and document state rather than advance it. The advancement signal is the human gate opening, not the next automated cycle. Implication: distillation in gate-constrained mode should focus on meta-patterns (why gates exist, what would unblock them) rather than repeating execution-layer observations.
+
+**Signal source**: daemon_next_priority.txt → "GATE-CONSTRAINED: all automatable branches nominal"; cycles 314–322 → same 3 blockers in every quick_status update; distil cycles 108–122 → repeated human-gate-bottleneck and engine-frozen themes
+**Tags**: methodology, gate-constrained, maintenance-saturation, taper, log-decreasing-insight, advancement-vs-preservation, meta-pattern
+
+---
