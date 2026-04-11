@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 *.pyo
 .env
+results/idle_task_picker_state.json
+results/picker_queue.jsonl

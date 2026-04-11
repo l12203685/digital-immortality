@@ -510,7 +510,12 @@ def _cli(argv: Optional[list[str]] = None) -> int:
     state = ensure_seen(state, tasks, now=now)
 
     if args.list:
-        scored = score_all(tasks, state, now)
+        filtered = (
+            tasks
+            if args.runnable == "any"
+            else [t for t in tasks if t.runnable_by == args.runnable]
+        )
+        scored = score_all(filtered, state, now)
         for score, task in scored:
             print(
                 f"{score:6.2f}  {task.task_id:<8} [{task.complexity}] "

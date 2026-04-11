@@ -29,6 +29,7 @@ _DNA_MINIMAL_STUB = """# Edward Decision Kernel (embedded minimal stub)
 LOG_PATH = REPO_ROOT / "results" / "daemon_log.md"
 PRIORITY_PATH = REPO_ROOT / "results" / "daemon_next_priority.txt"
 AUDIT_SCRIPT = REPO_ROOT / "platform" / "daemon_audit.py"
+PICKER_QUEUE_PATH = REPO_ROOT / "results" / "picker_queue.jsonl"
 DEFAULT_MODEL = "claude-sonnet-4-6"
 MIN_INTERVAL = 0  # seconds between cycles (0 = run next immediately after done)
 
@@ -66,6 +67,58 @@ def load_priority() -> str:
         if text:
             return text
     return ""
+
+
+def run_idle_task_picker(cycle: int) -> None:
+    """Invoke idle_task_picker at the END of each cycle to self-derive work.
+
+    Conservative dispatcher: always enqueues the picked task to
+    `results/picker_queue.jsonl` for the main session to consume; the daemon
+    itself does NOT auto-execute picked tasks. This eliminates the "wait for
+    Edward" failure mode structurally — a task is always proposed, logged,
+    and marked as queued, even if nothing else ran this cycle.
+
+    Failures are swallowed so the picker never kills the daemon loop.
+    """
+    try:
+        result = subprocess.run(
+            [
+                sys.executable, "-m", "tools.idle_task_picker",
+                "--pick", "--runnable", "daemon", "--enqueue",
+            ],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+            timeout=10,
+            encoding="utf-8",
+            errors="replace",
+        )
+        if result.returncode != 0:
+            print(f"[daemon] idle_task_picker cycle {cycle}: no runnable task")
+            return
+        import json as _json
+        try:
+            payload = _json.loads(result.stdout.strip())
+        except _json.JSONDecodeError:
+            return
+        task_id = payload.get("task_id")
+        if not task_id:
+            return
+        print(f"[daemon] idle_task_picker cycle {cycle} queued: {task_id} — {payload.get('title', '')[:80]}")
+        # Mark the attempt as "queued" so the cool-down kicks in and the next
+        # cycle picks a different task instead of spamming the same one.
+        subprocess.run(
+            [
+                sys.executable, "-m", "tools.idle_task_picker",
+                "--mark", task_id, "queued",
+                f"cycle {cycle} enqueued to picker_queue.jsonl",
+            ],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            timeout=10,
+        )
+    except Exception as e:
+        print(f"[daemon] idle_task_picker failed (non-fatal): {e}")
 
 
 def run_audit_suggest() -> None:
@@ -352,6 +405,10 @@ def main():
             run_audit_suggest()
             if not args.no_commit:
                 try_git_commit(cycle)
+            # Self-derive next task at END of cycle — eliminates "wait for
+            # Edward" failure mode. Runs after commit so the queue file is
+            # captured in the next cycle's push.
+            run_idle_task_picker(cycle)
         except Exception as e:
             print(f"[daemon] Error: {e}, retrying in 30s...")
             time.sleep(30)
