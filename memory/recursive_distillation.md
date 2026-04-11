@@ -2077,3 +2077,29 @@ Dashboard redesign audit completed (staging/dashboard_redesign_audit.md + platfo
 
 **Signal source**: cycle 355 human session — dashboard redesign audit + pretty_translate.py created; 2026-04-11T09:01Z
 **Tags**: B4, B5, dashboard-redesign-audit, plain-zh-first-principle, edward-mental-model-gap, hero-metrics-design, pretty-translate-50-terms, action-card-yellow, tech-details-collapsed, mobile-first, dashboard-as-organism-face, engagement-frequency-driver
+
+## Cycle 157 — 2026-04-11T09:10:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 278 file / running: 388)
+
+### Insight 1: 45th-human-tick-btc72633-headwind-42-floor-zone-break
+
+BTC=$72,633.40 (↓$42.31 from cycle 355 $72,675.71; headwind meaningful; floor-zone BREAK: $4.60 below $72,638 prior floor). DualMA_10_30=LONG OPEN_LONG (45th consecutive human-session LONG tick — structural signal unbroken despite floor break). Donchian_20=FLAT HOLD. DualMA variants disabled PF<0.8. Engine tick=282 STOPPED G0/G1 FROZEN. First floor violation in 44-session range ($72,638–$72,831). LONG signal unchanged: DualMA is slow-MA timescale (weeks), $4.60 floor violation is noise at that resolution. Key observation: the empirical floor $72,638 was derived from 44-session cluster. Single-session break ≠ range breakdown. Watch threshold: 3 consecutive closes below $72,638 → re-derive range, consider range-shift event. Until then: hold LONG, observe.
+
+**Signal source**: python -m trading.paper_trader --paper-live → price=72633.4, DualMA_10_30 signal=1 action=OPEN_LONG, Donchian_20 signal=0 action=HOLD; 2026-04-11T09:10Z; prev cycle 355 BTC=$72,675.71
+**Tags**: B1.1, 45th-human-tick, btc72633, headwind-42, floor-zone-break, floor-72638-violated, 4-60-below-floor, DualMA-LONG-structural, first-floor-violation-44-sessions, single-session-break-noise, three-session-rule, range-intact-watch
+
+### Insight 2: 106th-B6-38-of-41-regression-resolved-llm-variance-confirmed
+
+106th B6 run: **38/41 ALIGNED ✅ — REGRESSION RESOLVED**. generic_long_term_survival_check back to ALIGNED (was MISALIGNED in cycle 355). Permanent 3 MISALIGNED unchanged (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev). Tripwire cleared: single-cycle variance, not drift. Protocol validated: flag→monitor→confirm cycle = correct. L3 event NOT triggered. Post-protocol-closure twentieth pass. Key meta-learning: 38/41 → 37/41 → 38/41 = LLM non-determinism pattern, not behavioral shift. The tripwire threshold (2 consecutive cycles below baseline) correctly filters noise. Tripwire = false positive protection, not paranoia. Monitoring overhead: zero when tripwire=clear. Resume pure-maintenance mode.
+
+**Signal source**: cycle 356 human session — consistency_test.py; 106th run; 38/41 ALIGNED (regression resolved); generic_long_term_survival_check=ALIGNED; 2026-04-11T09:10Z
+**Tags**: B6, 106th-run, 38-of-41, regression-resolved, llm-variance-confirmed, tripwire-cleared, not-L3, post-protocol-closure-twentieth-pass, pure-maintenance, two-consecutive-threshold-validated
+
+### Insight 3: empirical-floor-break-interpretation-slow-ma-resolution-mismatch
+
+Floor break $72,633 < $72,638 floor is a resolution mismatch: the $72,638 floor was derived empirically from a 44-session cluster (cycles 311–355), forming at slow-MA timescale. A $4.60 break (~0.006%) is within the noise band for a strategy that operates on weekly MA crossovers. The meaningful signal would be: DualMA short-MA crosses below long-MA → FLAT/SHORT. That has not happened. The empirical floor is a monitoring heuristic, not a trading signal. This cycle confirms: empirical support levels are useful for situational awareness (how close to floor?) but must not override the primary signal (DualMA). Two different information layers: (1) price location relative to range = situational awareness, (2) MA crossover = actual decision trigger. Conflating them = category error.
+
+**Signal source**: cycle 356 analysis — BTC floor break $72,633 vs $72,638 floor; DualMA signal=LONG unchanged; observation: resolution mismatch between empirical floor and MA-crossover timescale; 2026-04-11T09:10Z
+**Tags**: B1.1, B3.1, floor-break-interpretation, resolution-mismatch, empirical-floor-vs-ma-signal, slow-ma-timescale, situational-awareness-layer, decision-trigger-layer, category-error-prevention, noise-band-006-percent
