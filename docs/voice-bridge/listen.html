@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#58a6ff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Edward AI">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%230d1117'/%3E%3Cpath d='M256 96c-30 0-54 24-54 54v108c0 30 24 54 54 54s54-24 54-54V150c0-30-24-54-54-54z' fill='%2358a6ff'/%3E%3Cpath d='M352 258c0 53-43 96-96 96s-96-43-96-96h-32c0 66 49 120 112 128v46h-48v32h128v-32h-48v-46c63-8 112-62 112-128h-32z' fill='%2358a6ff'/%3E%3C/svg%3E">
+<title>Edward Listen Mode</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, system-ui, sans-serif; background: #0d1117; color: #e0e0e0; padding: 12px; min-height: 100vh; }
+h1 { font-size: 16px; text-align: center; margin-bottom: 4px; color: #58a6ff; }
+.subtitle { font-size: 11px; text-align: center; color: #555; margin-bottom: 12px; }
+#status { text-align: center; font-size: 13px; color: #666; margin-bottom: 12px; }
+#micBtn { display: block; margin: 0 auto 12px; width: 120px; height: 120px; border-radius: 50%; border: 3px solid #333; background: #1a1a2e; color: #888; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+#micBtn.listening { background: #0d2818; border-color: #238636; color: #3fb950; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
+#log { background: #161b22; border-radius: 8px; padding: 10px; max-height: 60vh; overflow-y: auto; font-size: 12px; line-height: 1.6; color: #8b949e; }
+.entry { padding: 4px 0; border-bottom: 1px solid #21262d; }
+.entry .time { color: #484f58; font-size: 10px; }
+.count { text-align: center; font-size: 11px; color: #484f58; margin-top: 8px; }
+#replyPanel { background:#161b22; border:1px solid #30363d; border-radius:8px; margin-top:10px; overflow:hidden; }
+#replyHeader { display:flex; justify-content:space-between; align-items:center; padding:8px 12px; cursor:pointer; font-size:12px; color:#58a6ff; user-select:none; }
+#replyHeader:hover { background:#1c2128; }
+#replyBody { max-height:40vh; overflow-y:auto; padding:4px 10px 10px; font-size:12px; line-height:1.5; color:#c9d1d9; display:block; }
+#replyBody.collapsed { display:none; }
+#replyBody .empty { color:#484f58; text-align:center; padding:8px 0; font-size:11px; }
+.reply { padding:8px 6px; border-bottom:1px solid #21262d; }
+.reply:last-child { border-bottom:none; }
+.reply .rtime { color:#484f58; font-size:10px; margin-bottom:2px; }
+.reply .rtext { color:#e6edf3; white-space:pre-wrap; word-break:break-word; }
+#replyDot { display:inline-block; width:8px; height:8px; border-radius:50%; background:#484f58; margin-right:6px; }
+#replyDot.live { background:#3fb950; box-shadow:0 0 4px #3fb950; }
+#lockBar { display:flex; justify-content:space-between; align-items:center; background:#161b22; border:1px solid #30363d; border-radius:8px; padding:6px 10px; margin-bottom:8px; font-size:12px; }
+#lockState { color:#3fb950; }
+#lockState.locked { color:#f85149; }
+#lockNowBtn { background:#30363d; border:none; color:#e0e0e0; padding:4px 10px; border-radius:6px; font-size:11px; cursor:pointer; }
+#lockNowBtn:hover { background:#484f58; }
+#sessionOverlay { position:fixed; inset:0; background:rgba(13,17,23,0.96); z-index:9998; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:18px; padding:20px; }
+#sessionOverlay.hidden { display:none; }
+#sessionOverlay .icon { font-size:56px; }
+#sessionOverlay .title { color:#58a6ff; font-size:20px; font-weight:600; }
+#sessionOverlay .msg { color:#8b949e; font-size:13px; text-align:center; max-width:280px; line-height:1.5; }
+#sessionOverlay .err { color:#f85149; font-size:12px; min-height:16px; }
+#unlockBtn { background:#238636; color:white; border:none; border-radius:8px; padding:14px 36px; font-size:16px; font-weight:600; cursor:pointer; }
+#unlockBtn:hover { background:#2ea043; }
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+  <span style="width:60px"></span>
+  <h1 style="margin:0">收音模式</h1>
+  <span style="width:60px"></span>
+</div>
+<div class="subtitle">被動收音 — 學習日常對話</div>
+<div id="lockBar">
+  <span id="lockState" class="locked">🔒 Locked</span>
+  <button id="lockNowBtn" onclick="lockNow()">Lock now</button>
+</div>
+<div id="status">Tap to start</div>
+<button id="micBtn" onclick="toggleMic()">Start</button>
+<div class="count">Segments: <span id="segCount">0</span> | Audio: <span id="audioCount">0</span></div>
+<div style="display:flex;gap:8px;margin:10px 0">
+  <input id="textInput" type="text" placeholder="打字送訊息..." style="flex:1;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:10px 14px;font-size:14px;color:#e0e0e0;outline:none" autocomplete="off">
+  <button onclick="sendTyped()" style="background:#238636;color:white;border:none;border-radius:8px;padding:10px 18px;font-size:14px;font-weight:600;cursor:pointer">Send</button>
+</div>
+<div id="log"></div>
+
+<div id="replyPanel">
+  <div id="replyHeader" onclick="toggleReplies()">
+    <span><span id="replyDot"></span>主 session 回覆 <span id="replyCount" style="color:#484f58;font-size:10px">(0)</span></span>
+    <span id="replyToggle" style="color:#666">▼</span>
+  </div>
+  <div id="replyBody">
+    <div class="empty">等待回覆... 送訊息後主 session 回應會顯示在這</div>
+  </div>
+</div>
+
+<div id="sessionOverlay">
+  <div class="icon">🔒</div>
+  <div class="title">Session Locked</div>
+  <div class="msg" id="sessionMsg">Unlock once. Stays unlocked until you close the app.</div>
+  <button id="unlockBtn" onclick="doUnlock()">Unlock</button>
+  <div class="err" id="sessionErr"></div>
+</div>
+
+<script>
+// Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+
+const TOPIC_LISTEN = 'edward-vb-x9k4m2p7w1-listen';
+const TOPIC_LISTEN_AUDIO = TOPIC_LISTEN + '-audio';
+const TOPIC_RESPONSE = 'edward-vb-x9k4m2p7w1-response';
+const NTFY = 'https://ntfy.sh';
+const MAX_REPLIES = 10;
+let replyHistory = []; // [{ts, text, id}]
+let lastReplyId = null;
+let replyES = null;
+
+// ====== Phase 4c: Session-level unlock (one biometric per session) ======
+// Layer 1: PIN unlocks PWA shell (first launch only, sessionStorage)
+// Layer 2: Session unlock — biometric ONCE, then auto-sign for whole session
+// Layer 3: HMAC signature verified by watcher.py on every payload
+const HMAC_KEY_STORAGE = 'vb_hmac_key_hex';
+const WEBAUTHN_REGISTERED = 'vb_webauthn_registered';
+
+// In-memory session state — cleared on tab close / reload
+let unlocked = false;
+let unlockedAt = 0;
+
+function setLockUI(state) {
+  const el = document.getElementById('lockState');
+  const overlay = document.getElementById('sessionOverlay');
+  if (state === 'unlocked') {
+    el.classList.remove('locked');
+    overlay.classList.add('hidden');
+  } else {
+    el.classList.add('locked');
+    overlay.classList.remove('hidden');
+  }
+  updateLockLabel();
+}
+
+function updateLockLabel() {
+  const el = document.getElementById('lockState');
+  if (!unlocked) {
+    el.textContent = '🔒 Locked';
+    return;
+  }
+  el.textContent = '🔓 Unlocked';
+}
+
+function lockNow(reason) {
+  unlocked = false;
+  unlockedAt = 0;
+  document.getElementById('sessionMsg').textContent = reason || 'Unlock once. Stays unlocked until you close the app.';
+  document.getElementById('sessionErr').textContent = '';
+  setLockUI('locked');
+}
+
+async function doUnlock() {
+  const errEl = document.getElementById('sessionErr');
+  errEl.textContent = '';
+  const btn = document.getElementById('unlockBtn');
+  btn.disabled = true;
+  btn.textContent = 'Verifying...';
+  try {
+    // Pre-fetch HMAC key so paste-in happens inside unlock flow, not mid-send
+    await getHmacKey();
+    const ok = await biometricUnlock();
+    if (!ok) {
+      errEl.textContent = 'Biometric failed or cancelled';
+      btn.disabled = false;
+      btn.textContent = 'Unlock';
+      return;
+    }
+    unlocked = true;
+    unlockedAt = Date.now();
+    setLockUI('unlocked');
+    btn.disabled = false;
+    btn.textContent = 'Unlock';
+  } catch (e) {
+    errEl.textContent = 'Unlock error: ' + (e.message || e);
+    btn.disabled = false;
+    btn.textContent = 'Unlock';
+  }
+}
+
+function hexToBytes(hex) {
+  return new Uint8Array(hex.match(/.{1,2}/g).map(h => parseInt(h, 16)));
+}
+
+async function getHmacKeyHex() {
+  let hex = localStorage.getItem(HMAC_KEY_STORAGE);
+  if (!hex) {
+    hex = prompt('Phase 4b: 貼入 HMAC 密鑰 (從你電腦主腦 credentials)');
+    if (!hex) throw new Error('HMAC key required');
+    hex = hex.trim();
+    localStorage.setItem(HMAC_KEY_STORAGE, hex);
+  }
+  return hex;
+}
+
+async function getHmacKey() {
+  const hex = await getHmacKeyHex();
+  const bytes = hexToBytes(hex);
+  return await crypto.subtle.importKey('raw', bytes, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+}
+
+async function getHmacVerifyKey() {
+  const hex = localStorage.getItem(HMAC_KEY_STORAGE);
+  if (!hex) return null;
+  const bytes = hexToBytes(hex);
+  return await crypto.subtle.importKey('raw', bytes, { name: 'HMAC', hash: 'SHA-256' }, false, ['verify']);
+}
+
+async function verifyHmac(canonical, sigHex, verifyKey) {
+  if (!verifyKey || !sigHex) return false;
+  try {
+    const sigBytes = hexToBytes(sigHex);
+    return await crypto.subtle.verify('HMAC', verifyKey, sigBytes, new TextEncoder().encode(canonical));
+  } catch (e) {
+    console.warn('verifyHmac error', e);
+    return false;
+  }
+}
+
+async function hmacSignHex(keyObj, message) {
+  const msgBytes = new TextEncoder().encode(message);
+  const sig = await crypto.subtle.sign('HMAC', keyObj, msgBytes);
+  return Array.from(new Uint8Array(sig)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function biometricUnlock() {
+  // One-time biometric verification per session. Prompts Touch ID / Windows Hello / Face ID.
+  if (!window.PublicKeyCredential || !navigator.credentials) {
+    // No WebAuthn support: soft-allow (HMAC + PIN still protect)
+    return true;
+  }
+  const hasRegistered = !!localStorage.getItem(WEBAUTHN_REGISTERED);
+  // First-time setup path: register a platform authenticator
+  if (!hasRegistered) {
+    try {
+      const regChallenge = crypto.getRandomValues(new Uint8Array(32));
+      const userId = crypto.getRandomValues(new Uint8Array(16));
+      await navigator.credentials.create({
+        publicKey: {
+          challenge: regChallenge,
+          rp: { name: 'Edward Voice Bridge' },
+          user: { id: userId, name: 'edward', displayName: 'Edward' },
+          pubKeyCredParams: [{ type: 'public-key', alg: -7 }, { type: 'public-key', alg: -257 }],
+          authenticatorSelection: {
+            authenticatorAttachment: 'platform',
+            userVerification: 'required',
+            residentKey: 'preferred',
+          },
+          timeout: 60000,
+          attestation: 'none',
+        },
+      });
+      localStorage.setItem(WEBAUTHN_REGISTERED, '1');
+      return true;
+    } catch (regErr) {
+      console.warn('WebAuthn register failed:', regErr);
+      return confirm('生物識別未設定。仍要解鎖 session 嗎？(HMAC + PIN 仍在保護)');
+    }
+  }
+  // Returning user path: verify with existing credential
+  try {
+    const challenge = crypto.getRandomValues(new Uint8Array(32));
+    await navigator.credentials.get({
+      publicKey: {
+        challenge: challenge,
+        timeout: 30000,
+        userVerification: 'required',
+        allowCredentials: [],
+      },
+      mediation: 'required',
+    });
+    return true;
+  } catch (e) {
+    console.warn('WebAuthn get error:', e);
+    return false;
+  }
+}
+
+async function buildSignedEnvelope(text) {
+  const key = await getHmacKey();
+  const ts = new Date().toISOString();
+  const canonical = `${text}|${ts}`;
+  const sig = await hmacSignHex(key, canonical);
+  return JSON.stringify({ text: text, ts: ts, sig: sig });
+}
+
+function requireUnlocked() {
+  if (!unlocked) {
+    document.getElementById('status').textContent = '🔒 unlock first';
+    setLockUI('locked');
+    return false;
+  }
+  return true;
+}
+
+let recognition = null;
+let isListening = false;
+let silenceTimer = null;
+const SILENCE_MS = 8000; // 8 seconds for speech recognition passive mode
+let segCount = 0;
+let audioCount = 0;
+
+let autoMediaRecorder = null;
+let autoAudioChunks = [];
+let autoRecStream = null;
+let audioSplitTimer = null;
+
+// VAD-based audio splitting: cut when 3 seconds of silence detected
+const VAD_SILENCE_MS = 3000;
+const VAD_THRESHOLD = 0.005;
+const VAD_CHECK_INTERVAL = 100;
+const MAX_SEGMENT_MS = 60000;
+let vadTimer = null;
+let audioContext = null;
+let analyserNode = null;
+let isSpeaking = false;
+let silenceStartTime = null;
+let segmentStartTime = null;
+
+function initSpeech() {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR) { document.getElementById('status').textContent = 'Speech API not supported'; return; }
+  recognition = new SR();
+  recognition.continuous = true;
+  recognition.interimResults = true;
+  recognition.lang = 'zh-TW';
+
+  let pendingText = '';
+
+  recognition.onresult = (e) => {
+    let final = '';
+    let interim = '';
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      const t = e.results[i][0].transcript;
+      if (e.results[i].isFinal) final += t;
+      else interim += t;
+    }
+    if (final) {
+      pendingText += final;
+      resetSilenceTimer(pendingText);
+    }
+    if (interim) {
+      document.getElementById('status').textContent = '...' + interim.slice(-30);
+      resetSilenceTimer(pendingText);
+    }
+  };
+
+  recognition.onerror = (e) => {
+    if (e.error !== 'no-speech' && e.error !== 'aborted') {
+      document.getElementById('status').textContent = 'Error: ' + e.error;
+    }
+  };
+
+  recognition.onend = () => {
+    if (isListening) { try { recognition.start(); } catch(e) {} }
+  };
+
+  function resetSilenceTimer(text) {
+    if (silenceTimer) clearTimeout(silenceTimer);
+    if (!isListening) return;
+    silenceTimer = setTimeout(() => {
+      if (text && text.trim()) {
+        sendSegment(text.trim());
+        pendingText = '';
+      }
+    }, SILENCE_MS);
+  }
+}
+
+async function sendSegment(text) {
+  try {
+    if (!requireUnlocked()) return;
+    const body = await buildSignedEnvelope(text);
+    await fetch(NTFY + '/' + TOPIC_LISTEN, {
+      method: 'POST',
+      headers: { 'Title': 'listen', 'Tags': 'ear', 'Content-Type': 'application/json' },
+      body: body
+    });
+    segCount++;
+    document.getElementById('segCount').textContent = segCount;
+    addLog(text);
+    document.getElementById('status').textContent = 'Listening...';
+  } catch(e) { console.warn('sendSegment failed', e); }
+}
+
+function uploadAudioBlob(blob) {
+  if (blob.size < 1000) return;
+  const ts = new Date().toISOString().replace(/[:.]/g,'-').slice(0,19);
+  const fname = 'listen_' + ts + '.webm';
+  fetch(NTFY + '/' + TOPIC_LISTEN_AUDIO, {
+    method: 'PUT',
+    headers: { 'Filename': fname, 'Title': 'listen-audio' },
+    body: blob
+  }).then(() => {
+    audioCount++;
+    document.getElementById('audioCount').textContent = audioCount;
+  }).catch(() => {});
+}
+
+function startAudioRecorder(stream) {
+  autoAudioChunks = [];
+  autoMediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm;codecs=opus' });
+  autoMediaRecorder.ondataavailable = (e) => {
+    if (e.data.size > 0) autoAudioChunks.push(e.data);
+  };
+  autoMediaRecorder.onstop = () => {
+    if (autoAudioChunks.length === 0) return;
+    const blob = new Blob(autoAudioChunks, { type: 'audio/webm' });
+    if (blob.size > 500) uploadAudioBlob(blob);
+  };
+  autoMediaRecorder.start(500);
+  segmentStartTime = Date.now();
+}
+
+function setupVAD(stream) {
+  audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  const source = audioContext.createMediaStreamSource(stream);
+  analyserNode = audioContext.createAnalyser();
+  analyserNode.fftSize = 2048;
+  source.connect(analyserNode);
+
+  const dataArray = new Float32Array(analyserNode.fftSize);
+  silenceStartTime = null;
+  isSpeaking = false;
+
+  vadTimer = setInterval(() => {
+    analyserNode.getFloatTimeDomainData(dataArray);
+    let sum = 0;
+    for (let i = 0; i < dataArray.length; i++) sum += dataArray[i] * dataArray[i];
+    const rms = Math.sqrt(sum / dataArray.length);
+
+    const now = Date.now();
+    const segDuration = segmentStartTime ? now - segmentStartTime : 0;
+
+    if (rms > VAD_THRESHOLD) {
+      isSpeaking = true;
+      silenceStartTime = null;
+    } else {
+      if (isSpeaking && !silenceStartTime) {
+        silenceStartTime = now;
+      }
+      if (isSpeaking && silenceStartTime && (now - silenceStartTime >= VAD_SILENCE_MS)) {
+        cutAndRestart();
+        isSpeaking = false;
+        silenceStartTime = null;
+      }
+    }
+
+    if (segDuration >= MAX_SEGMENT_MS) {
+      cutAndRestart();
+      isSpeaking = false;
+      silenceStartTime = null;
+    }
+
+    if (!isSpeaking && segDuration >= 30000) {
+      cutAndRestart();
+    }
+  }, VAD_CHECK_INTERVAL);
+}
+
+function cutAndRestart() {
+  if (autoMediaRecorder && autoMediaRecorder.state === 'recording') {
+    autoMediaRecorder.stop();
+    setTimeout(() => {
+      if (isListening && autoRecStream) startAudioRecorder(autoRecStream);
+    }, 200);
+  }
+}
+
+async function toggleMic() {
+  if (isListening) { stopAll(); } else { startAll(); }
+}
+
+async function startAll() {
+  if (!unlocked) {
+    document.getElementById('status').textContent = '🔒 unlock first';
+    setLockUI('locked');
+    return;
+  }
+  if (!recognition) initSpeech();
+  if (!recognition) return;
+  isListening = true;
+  document.getElementById('micBtn').classList.add('listening');
+  document.getElementById('micBtn').textContent = 'Listening...';
+  document.getElementById('status').textContent = 'Listening...';
+  try { recognition.start(); } catch(e) {}
+  try {
+    autoRecStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    startAudioRecorder(autoRecStream);
+    setupVAD(autoRecStream);
+  } catch(e) {}
+  requestWakeLock();
+}
+
+// Wake Lock API — prevent device/tab from sleeping while listening
+let wakeLock = null;
+async function requestWakeLock() {
+  try {
+    if ('wakeLock' in navigator) {
+      wakeLock = await navigator.wakeLock.request('screen');
+      wakeLock.addEventListener('release', () => { wakeLock = null; });
+    }
+  } catch(e) {}
+}
+
+document.addEventListener('visibilitychange', async () => {
+  if (document.visibilityState === 'visible' && isListening) {
+    if (audioContext && audioContext.state === 'suspended') {
+      await audioContext.resume();
+    }
+    requestWakeLock();
+    document.getElementById('status').textContent = 'Listening...';
+  }
+});
+
+function stopAll() {
+  isListening = false;
+  document.getElementById('micBtn').classList.remove('listening');
+  document.getElementById('micBtn').textContent = 'Start';
+  document.getElementById('status').textContent = 'Stopped';
+  if (silenceTimer) clearTimeout(silenceTimer);
+  try { recognition.stop(); } catch(e) {}
+  if (vadTimer) { clearInterval(vadTimer); vadTimer = null; }
+  if (audioContext) { audioContext.close(); audioContext = null; }
+  if (wakeLock) { wakeLock.release(); wakeLock = null; }
+  if (autoMediaRecorder && autoMediaRecorder.state !== 'inactive') {
+    try { autoMediaRecorder.stop(); } catch(e) {}
+  }
+  if (autoRecStream) { autoRecStream.getTracks().forEach(t => t.stop()); autoRecStream = null; }
+}
+
+function addLog(text) {
+  const div = document.createElement('div');
+  div.className = 'entry';
+  const now = new Date();
+  const time = now.getHours().toString().padStart(2,'0') + ':' + now.getMinutes().toString().padStart(2,'0');
+  div.innerHTML = '<span class="time">' + time + '</span> ' + escHtml(text.slice(0,100)) + (text.length>100?'...':'');
+  const log = document.getElementById('log');
+  log.insertBefore(div, log.firstChild);
+}
+
+function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+// Typed message input
+async function sendTyped() {
+  const input = document.getElementById('textInput');
+  const text = input.value.trim();
+  if (!text) return;
+  try {
+    if (!requireUnlocked()) return;
+    const body = await buildSignedEnvelope(text);
+    await fetch(NTFY + '/' + TOPIC_LISTEN, {
+      method: 'POST',
+      headers: { 'Title': 'typed', 'Tags': 'keyboard', 'Content-Type': 'application/json' },
+      body: body
+    });
+    segCount++;
+    document.getElementById('segCount').textContent = segCount;
+    addLog(text);
+    input.value = '';
+  } catch(e) { console.warn('sendTyped failed', e); alert('送出失敗: ' + e.message); }
+}
+
+document.getElementById('textInput').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') { e.preventDefault(); sendTyped(); }
+});
+
+// Clear in-memory unlock on tab close / reload
+window.addEventListener('beforeunload', () => {
+  unlocked = false;
+  unlockedAt = 0;
+});
+
+// PIN lock (same as index.html) — shell-level gate, runs before session unlock
+(function() {
+  const PIN = '1010';
+  const KEY = 'vb_unlocked';
+  if (sessionStorage.getItem(KEY)) { initSessionLock(); return; }
+  const overlay = document.createElement('div');
+  overlay.innerHTML = '<div style="position:fixed;inset:0;background:#0d1117;z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px"><div style="color:#58a6ff;font-size:18px;font-weight:600">Listen Mode</div><input id="pinInput" type="password" inputmode="numeric" maxlength="4" placeholder="PIN" style="background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px 20px;font-size:20px;color:#e0e0e0;text-align:center;width:160px;outline:none" autocomplete="off"><button id="pinBtn" style="background:#30363d;border:none;border-radius:8px;padding:12px 32px;font-size:16px;color:#e0e0e0;cursor:pointer">Enter</button><div id="pinErr" style="color:#f85149;font-size:12px;opacity:0">Wrong PIN</div></div>';
+  document.body.appendChild(overlay);
+  setTimeout(() => document.getElementById('pinInput').focus(), 100);
+  function tryPin() {
+    var val = document.getElementById('pinInput').value;
+    if (val === PIN) {
+      sessionStorage.setItem(KEY, '1');
+      overlay.remove();
+      initSessionLock();
+    } else {
+      document.getElementById('pinErr').style.opacity = '1';
+      document.getElementById('pinInput').value = '';
+      setTimeout(() => document.getElementById('pinErr').style.opacity = '0', 1500);
+    }
+  }
+  document.getElementById('pinInput').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') tryPin();
+  });
+  document.getElementById('pinInput').addEventListener('input', () => {
+    if (document.getElementById('pinInput').value.length >= 4) tryPin();
+  });
+  document.getElementById('pinBtn').addEventListener('click', tryPin);
+})();
+
+function initSessionLock() {
+  // Start locked — user must tap Unlock once per session
+  setLockUI('locked');
+  // Reply stream is independent of unlock state — start immediately
+  startReplyStream();
+  loadRecentReplies();
+}
+
+// ====== Reverse channel: main session → phone PWA ======
+function toggleReplies() {
+  const body = document.getElementById('replyBody');
+  const toggle = document.getElementById('replyToggle');
+  body.classList.toggle('collapsed');
+  toggle.textContent = body.classList.contains('collapsed') ? '▶' : '▼';
+}
+
+function fmtTpeTime(tsEpoch) {
+  // ntfy 'time' field is unix seconds. Format in Asia/Taipei.
+  try {
+    const d = new Date(tsEpoch * 1000);
+    return d.toLocaleString('zh-TW', {
+      timeZone: 'Asia/Taipei',
+      hour12: false,
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', second: '2-digit'
+    });
+  } catch(e) {
+    return new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' });
+  }
+}
+
+async function appendReplyFromNtfyMessage(ntfyBody, tsEpoch, id) {
+  // ntfyBody is the raw `message` field. Watcher now pushes a JSON envelope
+  // {text, ts, sig} HMAC-signed with the same key the PWA already has in
+  // localStorage. Verify before rendering — reject silently on failure so
+  // public hosting can't spoof replies.
+  if (!ntfyBody) return;
+  let text = '';
+  let payloadTs = '';
+  let sig = '';
+  try {
+    const parsed = JSON.parse(ntfyBody);
+    if (parsed && typeof parsed === 'object' && 'text' in parsed) {
+      text = String(parsed.text || '');
+      payloadTs = String(parsed.ts || '');
+      sig = String(parsed.sig || '');
+    } else {
+      text = String(ntfyBody);
+    }
+  } catch (_) {
+    text = String(ntfyBody);
+  }
+  if (!text.trim()) return;
+
+  const verifyKey = await getHmacVerifyKey();
+  if (!verifyKey) {
+    console.warn('reply HMAC skipped: no key in localStorage yet');
+    return;
+  }
+  const canonical = `${text}|${payloadTs}`;
+  const ok = await verifyHmac(canonical, sig, verifyKey);
+  if (!ok) {
+    console.warn('reply HMAC verification FAILED — dropping', { id: id, len: text.length });
+    return;
+  }
+  // reply HMAC verified
+  appendReply(text, tsEpoch, id);
+}
+
+function appendReply(text, tsEpoch, id) {
+  if (!text || !text.trim()) return;
+  if (id && id === lastReplyId) return;
+  if (id) lastReplyId = id;
+  // Dedup by id within history
+  if (id && replyHistory.some(r => r.id === id)) return;
+
+  replyHistory.unshift({ ts: tsEpoch || Math.floor(Date.now()/1000), text: text.trim(), id: id });
+  if (replyHistory.length > MAX_REPLIES) replyHistory.length = MAX_REPLIES;
+  renderReplies();
+  // reply HMAC verified before reaching here
+  if (navigator.vibrate) navigator.vibrate([80, 40, 80]);
+}
+
+function renderReplies() {
+  const body = document.getElementById('replyBody');
+  const countEl = document.getElementById('replyCount');
+  countEl.textContent = '(' + replyHistory.length + ')';
+  if (replyHistory.length === 0) {
+    body.innerHTML = '<div class="empty">等待回覆... 送訊息後主 session 回應會顯示在這</div>';
+    return;
+  }
+  body.innerHTML = replyHistory.map(r => {
+    return '<div class="reply"><div class="rtime">' + escHtml(fmtTpeTime(r.ts)) + '</div><div class="rtext">' + escHtml(r.text) + '</div></div>';
+  }).join('');
+}
+
+function startReplyStream() {
+  try {
+    if (replyES) { try { replyES.close(); } catch(e) {} }
+    const url = NTFY + '/' + TOPIC_RESPONSE + '/sse';
+    replyES = new EventSource(url);
+    document.getElementById('replyDot').classList.add('live');
+    replyES.addEventListener('message', (e) => {
+      try {
+        const data = JSON.parse(e.data);
+        if (data.event === 'message' && data.message) {
+          appendReplyFromNtfyMessage(data.message, data.time, data.id);
+        }
+      } catch(err) { console.warn('reply parse err', err); }
+    });
+    replyES.onerror = () => {
+      document.getElementById('replyDot').classList.remove('live');
+      try { replyES.close(); } catch(e) {}
+      replyES = null;
+      setTimeout(startReplyStream, 5000);
+    };
+  } catch(e) {
+    console.warn('startReplyStream failed', e);
+    setTimeout(startReplyStream, 5000);
+  }
+}
+
+async function loadRecentReplies() {
+  try {
+    const res = await fetch(NTFY + '/' + TOPIC_RESPONSE + '/json?poll=1&since=30m');
+    const text = await res.text();
+    const lines = text.trim().split('\n').filter(Boolean);
+    for (const line of lines) {
+      try {
+        const msg = JSON.parse(line);
+        if (msg.event === 'message' && msg.message) {
+          await appendReplyFromNtfyMessage(msg.message, msg.time, msg.id);
+        }
+      } catch(e) {}
+    }
+  } catch(e) { /* offline / no history */ }
+}
+
+initSpeech();
+</script>
+</body>
+</html>
