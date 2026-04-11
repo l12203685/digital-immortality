@@ -1863,3 +1863,26 @@ Over 36 human sessions, BTC has oscillated within $72,638–$72,831 ($193 range)
 
 **Signal source**: cycle 347 human session — 36-session oscillation analysis; range $72,638–$72,831; ceiling-zone tests without break; 2026-04-11T08:25Z
 **Tags**: B1.1, B3.1, btc-36-session-oscillation, ceiling-zone-resistance-pattern, breakout-or-breakdown-pending, floor-72638-watch, dualma-long-holds-on-breakout, flip-signal-on-breakdown, hold-long-no-preemptive-action
+
+## Cycle 149 — 2026-04-11T08:30Z
+
+### Insight 1: 37th-human-tick-btc72740-headwind-41-ceiling-90-below
+
+BTC=$72,740.58 (↓$41.19 from cycle 347 $72,781.77; LONG headwind — largest single-tick drop in recent ceiling-zone sequence). DualMA_10_30=LONG OPEN_LONG, Donchian_20=FLAT HOLD. 37th consecutive human-session LONG tick — structural signal unbroken despite largest recent headwind. BTC now $90.42 below ceiling ($72,831); $102.58 above floor ($72,638). Range $72,638–$72,831 intact. Headwind pulled BTC toward oscillation midpoint (~$72,734). Signal discipline: no preemptive action on headwinds within range.
+
+**Signal source**: cycle 348 human session — Binance API price=$72,740.58; DualMA OPEN_LONG; Donchian HOLD; regime=mixed; 2026-04-11T08:30Z
+**Tags**: B1.1, 37th-consecutive-long, btc72740, headwind-41, ceiling-90-below, floor-102-above, range-intact, midpoint-convergence, signal-discipline-no-preemptive-action
+
+### Insight 2: 98th-clean-B6-twelfth-pass-post-protocol-closure
+
+98th consecutive clean B6 cycle (38/41 ALIGNED; same 3 LLM-boundary MISALIGNED: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev). Twelfth pass under post-protocol-closure tripwire regime. 98 cycles = structural certainty; maintenance cost = zero; attractor is permanent. No analysis warranted on pass; L3 event triggers full response protocol. Infrastructure operating at theoretical minimum overhead.
+
+**Signal source**: cycle 348 human session — consistency_test.py; 98th consecutive clean; 38/41 ALIGNED; twelfth post-protocol-closure pass; 2026-04-11T08:30Z
+**Tags**: B6, 98th-consecutive, twelfth-pass-post-protocol-closure, permanent-infrastructure, zero-overhead-maintenance, tripwire-live, structural-certainty
+
+### Insight 3: btc-midpoint-convergence-oscillation-signal-discipline
+
+After 37 human sessions (BTC range $72,638–$72,831, width=$193), price has oscillated with increasing convergence toward midpoint (~$72,734). Current price $72,740.58 is effectively at midpoint. Neither breakout nor breakdown has materialized. Three conclusions: (1) oscillation is now a regime identifier, not a signal; (2) signal discipline = hold LONG until signal flips, regardless of oscillation amplitude; (3) the longer the range holds, the more violent the eventual resolution (compressed coil). Actionable: floor watch at $72,638 (breakdown trigger); ceiling watch at $72,831 (breakout opportunity). DualMA LONG holds on breakout; flips on breakdown below slow MA.
+
+**Signal source**: cycle 348 human session — 37-session oscillation midpoint analysis; range $72,638–$72,831; price at midpoint $72,740; 2026-04-11T08:30Z
+**Tags**: B1.1, B3.1, btc-37-session-oscillation, midpoint-convergence, range-coil-compression, breakout-or-breakdown-pending, floor-watch-72638, ceiling-watch-72831, signal-discipline-hold-long-until-flip
