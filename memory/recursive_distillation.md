@@ -775,3 +775,31 @@ Standalone paper-live tick cycle 315: BTC=$72,769.37 (↓$61.94 from cycle 314 $
 **Tags**: trading, SOP-118, signal-direction, gate-authorization, execution-discipline, paper-live, kill-discipline, branch-1.1
 
 ---
+
+## Cycle 114 — 2026-04-11T20:00:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 148)
+
+### Insight 1: 67th-clean-cycle-observation-period-long-enough-for-statistical-claim
+
+B6 consistency check cycle 316: 38/41 ALIGNED (3 LLM-boundary MISALIGNED as expected). 67th consecutive clean cycle. At 67 cycles, the observation period is long enough to make statistical claims: the 3 MISALIGNED (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev) are not noise — they are a controlled demonstration that LLM-boundary scenarios require inference, not lookup. The system is working exactly as designed. More signal: gate-constrained regime now in its ~7th cycle (since ~cycle 310). Duration implies human gates are not about to open by accident — they require deliberate human action. Implication: further daemon automation within the current branch structure has near-zero expected value. The leverage point is human activation, not agent capability.
+
+**Signal source**: consistency_test.py cycle 316 — 38/41 ALIGNED, 67th consecutive clean cycle; regime GATE-CONSTRAINED since ~cycle 310; B1.3/B4.1 remain singular human-action levers
+**Tags**: cold-start, branch-6, structural-invariance, 67th-clean, statistical-claim, observation-period, gate-constrained-duration, branch-3.1
+
+### Insight 2: paper-live-information-accumulation-vs-engine-authorization-accumulation
+
+BTC=$72,768.23 (↓$1.14 from cycle 315 $72,769.37), DualMA=LONG OPEN_LONG ×4+ consecutive cycles. Two accumulation processes running simultaneously: (1) paper-live accumulates directional information — a shadow track record of consecutive LONG signals since G0 restart; (2) engine clock accumulates authorization credits — ticks from G0 restart window needed for SOP#118 G3 gate (currently ticks=2, needs 50). Information-rich, authorization-poor: the directional case for LONG is being strengthened by each paper-live cycle, but SOP#118 explicitly decouples information from authorization. The G3 gate requires 50 engine ticks, not 50 paper-live data points. This asymmetry is feature, not bug: an LLM could talk itself into premature re-entry using information accumulation as a proxy for authorization. The gate structure prevents this.
+
+**Signal source**: python -m trading.paper_trader --paper-live → BTC=$72,768.23 DualMA=LONG OPEN_LONG; engine ticks=2 (frozen, STOPPED); SOP#118 G3 requires engine-clock ticks, not paper-live ticks; cycle 316
+**Tags**: trading, SOP-118, information-accumulation, authorization-accumulation, engine-clock, paper-live, decoupling, gate-structure, branch-1.1
+
+### Insight 3: human-session-vs-daemon-task-boundary-structural-writes-vs-leaf-writes
+
+This cycle was triggered by a human session ("Push multiple branches. Commit."). The daemon's cycle 315 wrote distil113 (leaf-level write: appended 3 insights to recursive_distillation.md) but did NOT update dynamic_tree.md or quick_status.md (structural-level writes). This is not a daemon failure — it is a task-boundary clarification: daemon = leaf-level durable output (insights, log entries, status.json updates); human session = structural layer updates (tree, quick_status, commit). The specialization is efficient: daemons run continuously but lack context to safely rewrite 600-line summary docs. Human sessions provide the tree-update pass with full context. Pattern holds for commit hygiene: daemon changes accumulate, human session packages + pushes. Operational takeaway: don't design daemon to rewrite tree files — design it to produce outputs that make tree updates easy for human session.
+
+**Signal source**: cycle 315 daemon wrote distil113 (leaf write); cycle 316 human session triggered dynamic_tree + quick_status + commit (structural write); comparison of what daemon did vs what human session does; tree update requires full-context read that daemons should not do unguided
+**Tags**: methodology, human-session, daemon, task-boundary, leaf-writes, structural-writes, tree-update, commit-hygiene, branch-3.1
+
+---

@@ -69,3 +69,4 @@
 {"strategy": "Donchian_20", "symbol": "BTCUSDT", "interval": "1d", "price": 72769.37, "signal": 0, "prev_position": 0, "action": "HOLD", "timestamp": "2026-04-11T05:48:11.715621+00:00"}
 {"strategy": "Donchian_20", "symbol": "BTCUSDT", "interval": "1d", "price": 72785.52, "signal": 0, "prev_position": 0, "action": "HOLD", "timestamp": "2026-04-11T05:50:28.062123+00:00"}
 {"strategy": "Donchian_20", "symbol": "BTCUSDT", "interval": "1d", "price": 72768.23, "signal": 0, "prev_position": 0, "action": "HOLD", "timestamp": "2026-04-11T05:50:56.180292+00:00"}
+{"strategy": "Donchian_20", "symbol": "BTCUSDT", "interval": "1d", "price": 72757.38, "signal": 0, "prev_position": 0, "action": "HOLD", "timestamp": "2026-04-11T05:53:10.139900+00:00"}
