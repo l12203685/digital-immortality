@@ -1311,3 +1311,33 @@ The web dashboard pipeline (render_dashboard.py + dashboard.html) now produces a
 **Tags**: B platform, dashboard-pipeline, L2-evaluate, unified-display, human-orientation, three-layer-loop, render-pipeline
 
 ---
+
+---
+
+## Cycle 130 — 2026-04-11T07:00:00+00:00
+
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 3 (total: 196 file / running: 304)
+
+### Insight 1: 18th-human-tick-long-btc72762-engine-tick162-daemon-corroboration
+
+BTC=$72,762.0 (↓$9.32 from distil129 $72,771.32; LONG headwind minimal). 18th consecutive human-tick DualMA=LONG OPEN_LONG. Engine tick_count=162 (daemon-advanced, all 13 active strategies HOLD signal=0, regime=MIXED). Two execution paths agree: standalone paper_trader (human session) at $72,762 = LONG; engine (daemon-driven) at tick=162 = all HOLD. The signal source distinction is critical: engine HOLD means no NEW signal from engine strategies (DualMA family disabled PF<0.8); paper_trader LONG tracks the standalone DualMA signal outside the engine kill regime. The engine's HOLD + paper_trader's LONG is not a contradiction — it's a regime-gate architecture: engine kills strategies that underperform, paper_trader continues tracking signal for observation. 18 consecutive human-ticks LONG across BTC range $72,638–$72,831.
+
+**Signal source**: python -m trading.paper_trader → BTC=$72,762.0 (2026-04-11T07:00Z), DualMA_10_30=LONG OPEN_LONG; engine tick=162 (results/trading_engine_status.json + JSONL tail); Donchian_20=FLAT HOLD
+**Tags**: B1.1, 18th-consecutive-long, engine-hold-vs-paper-long, regime-gate-architecture, daemon-corroboration, execution-path-duality
+
+### Insight 2: 79th-clean-B6-human-independent-confirmation
+
+B6 consistency score: 38/41 ALIGNED — independently confirmed in this human session AFTER daemon already wrote distil129 with the same result (also 38/41, 06:57Z). Both daemon-triggered and human-triggered runs of consistency_test.py produce identical output: same 3 MISALIGNED (poker_gto_mdf, trading_atr_sizing, career_multi_option_ev), same 38/41 score. The dual-trigger validation pattern (daemon + human) in the same UTC hour strengthens the determinism claim: the test is not only consistent across sessions but across execution contexts within a single session window. Convergence floor at 38/41 is empirically confirmed as the stable attractor — not 39, not 37, always 38. LLM non-determinism would produce variance if the floor wasn't structural.
+
+**Signal source**: consistency_test.py → 38/41 ALIGNED (2026-04-11T07:00Z human session); distil129 → same 38/41 ALIGNED (2026-04-11T06:57Z daemon session); MISALIGNED set unchanged since cycle 317H
+**Tags**: B6, 79th-consecutive, dual-trigger-validation, daemon-human-corroboration, 38-41-attractor, deterministic-floor, execution-context-independence
+
+### Insight 3: daemon-autonomous-during-human-session-parallel-operation
+
+When a human session runs concurrently with the daemon (daemon at 06:57-06:59Z, human session 06:58-07:00Z), both produce valid outputs without collision: daemon advanced engine to tick 162, wrote distil129; human session ran paper_trader + B6 confirmation, will write distil130. No file corruption, no JSONL write conflict (append-only), no state inconsistency. The daemon writes to engine_status.json + engine_log.jsonl (overwrite/append); human writes to distillation (append) + dynamic_tree/quick_status (overwrite). Write domains are separated enough that parallel operation is safe. This is an architectural property worth preserving: human session = structural writes (tree, status, priority, distil); daemon = leaf writes (engine ticks, dashboard state, distil when autonomous). Conflict zone: quick_status.md (both try to overwrite) — human session wins by convention.
+
+**Signal source**: git log --oneline → daemon commit at 06:50Z, human session running at 07:00Z; trading_engine_log.jsonl tail → tick=162 at 06:59:10Z (daemon); paper_trader run at 07:00Z (human); no file conflict observed
+**Tags**: B platform, daemon-human-parallel, write-domain-separation, safe-concurrency, structural-vs-leaf-writes, quick_status-conflict-convention
+
+---
