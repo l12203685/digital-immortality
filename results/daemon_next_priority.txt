@@ -1,1 +1,1 @@
-PRIORITY: Branch B2.3 — 3 of 41 consistency scenarios still MISALIGNED (38/41). Run consistency_test.py, identify which 3 are failing, patch dna_core.md, re-run to 41/41 or document why 3 are permanent LLM-boundary.
+PRIORITY: Tree updates are sparse. Update results/dynamic_tree.md with concrete status changes next cycle.

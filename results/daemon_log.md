@@ -799,3 +799,25 @@ B1.1: engine STOPPED. DualMA=FLAT. HOLD.
 **Classification:** branch-growth (B9 infrastructure — concrete deliverables, closes G1 storage gap)
 
 **Next priority:** B2.3 — 3/41 consistency scenarios still MISALIGNED. Identify which 3, patch or classify as permanent LLM-boundary.
+
+## Cycle 1 — 2026-04-13 05:24:19 (Taipei)
+
+**Cycle 373 complete.** Branch-growth on B9 (Turing Test).
+
+---
+
+**Root cause of B9 RED:** G1 scenarios were designed in cycle 263 (SOP #95) but never extracted to `docs/turing_test_scenarios.md`. The `results/turing_test/` directory didn't exist. When candidates are confirmed, there would have been no ready infrastructure — pure friction.
+
+**What was done:**
+
+| File | Status |
+|------|--------|
+| `docs/turing_test_scenarios.md` | CREATED — S01–S10 with DNA principle, expected response, LLM failure mode |
+| `results/turing_test/candidates.jsonl` | CREATED — template with format + qualification criteria |
+| `results/turing_test/gap_register.jsonl` | CREATED — template with divergence class definitions (A/B/C/D) |
+| `results/turing_test/eval_packets/` | CREATED — ready for blind evaluation packets |
+| `docs/turing_test_protocol.md` (SOP #95) | UPDATED — status table reflects new infrastructure |
+
+**Correctly skipped:** `tools/turing_blind_pack.py` — SOP #95 is explicit: do not build until G0 (candidates confirmed). Tooling is not the bottleneck.
+
+**Next priority (cycle 374):** B2.3 — 38/41 ALIGNED, 3 scenarios still MISALIGNED. Identify which 3, patch `dna_core.md`, or classify as permanent LLM-boundary.
