@@ -1,43 +1,23 @@
-# Cycle 371 — 2026-04-13 03:55 (Taipei)
+# Cycle 1 — 2026-04-13 06:54:31 (Taipei)
 
-**Cycle 371 done.** Branch-growth on B4 (社交/organism) — root cause synthesis + 40-scenario bank.
+---
 
-**What was done:**
+## Cycle 376 — 2026-04-13 (Taipei)
 
-**1. Full 35-scenario collision run → 46% (16/35)**
+**Classification: root-growth** — all three L3 systems now have formal self-modification layers.
 
-First run at expanded 35-scenario bank confirmed: all 10 new scenarios diverged. Agreement rate: 46%.
+| Action | Result |
+|--------|--------|
+| **B10 L3 v1** | `docs/b10_l3_recursive_engine.md` — failure modes (DEAD_LOOP/QUEUE_EMPTY/COMMIT_DROUGHT/CONTEXT_DRIFT), evolution logic, recovery catalog |
+| **engine_rules.json** | Initialized from 1 known event (cycle 78 DEAD_LOOP, stale=3) + distil169 insight 2 (queue_min=1); mirrors execution_rules.json |
+| **dynamic_tree.md** | B1.1 corrected (tick=2550 STOPPED, BTC=$70,808, cum_pnl=+6.57%); B10 L3 v1 INITIALIZED; daemon_next_priority updated |
+| **Commit** | `338a5b6` |
 
-**2. Agreement-fishing scenarios added (36-40) — all diverged**
+**Backward check (last 3 daemon log entries)**: All sign_off entries show cycle=1 (daemon counter reset), applied_count=0 — no pending instincts. Sign-off pipeline operational.
 
-Added 5 scenarios designed to find new agreement territory:
+**L3 completeness**:
+- Trading L3: COMPLETE (execution_rules.json, evolved 14 kill events)
+- Content L3: COMPLETE (daily_posting_helper.py --evolve)
+- Recursive L3: **v1 DONE** — formal rules exist, manual enforcement; v2 needs `--l3-check` implementation
 
-| ID | Domain | Result |
-|----|--------|--------|
-| 36 | high_conviction_bet | DIVERGE |
-| 37 | bad_actor_exit | DIVERGE |
-| 38 | health_trade_off | DIVERGE |
-| 39 | mentor_leverage | DIVERGE |
-| 40 | asymmetric_opportunity | DIVERGE |
-
-Final 40-scenario run: **16/40 = 40%**. Agreement floor confirmed: 16 permanent AGREE scenarios.
-
-**3. `docs/b4_divergence_root_cause.md` created**
-
-Full divergence root-cause analysis:
-- The core split: Samuel runs relationship-first OS; Edward runs EV-first OS
-- 5 divergence clusters (signal source, social exit rules, network theory, social speed, gatekeeping/output)
-- Practical corrections for simulating Samuel in B9 Turing Test
-- Rate trend table: 68% → 64% → 46% → 40% converging to floor
-- The 16 permanent AGREE scenarios listed and analyzed
-
-**4. `templates/samuel_dna.md` §8 updated**
-
-- Calibration table updated with 40-scenario results
-- Rate trend added
-- Agreement-fishing scenario results added (scenarios 36-40)
-- Next gate clarified
-
-**B4 state:** Bank = 40 scenarios. Agreement floor = 16/40 = 40%. Root cause documented. Agreement-fishing confirmed divergence is not domain-specific — it's architectural (signal source + action speed across all domains).
-
-Human-gated blockers unchanged: Samuel DM send, mainnet API keys, outreach DMs ×5.
+**Next (cycle 377):** B10 L3 v2 — add `--l3-check` flag to `recursive_engine.py` (reads engine_l3_log.jsonl, updates engine_rules.json, injects recovery prompt). Secondary: trading engine restart audit (STOPPED since yesterday).

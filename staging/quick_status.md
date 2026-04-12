@@ -1,12 +1,12 @@
 # Quick Status — live state snapshot for Type A cold start
 
-> Updated: 2026-04-13 13:30 (Taipei, UTC+8) (daemon cycle 374)
+> Updated: 2026-04-13 06:54 (Taipei, UTC+8) (auto-written by daemon cycle 1)
 
 ## Current state
 - daemon: RUNNING (cycle 1, CLI (Max subscription), claude-sonnet-4-6, interval immediate (chain))
 - trading_engine: STOPPED
-- last_daemon_cycle: 374
-- last_real_work_cycle: 374
+- last_daemon_cycle: 1
+- last_real_work_cycle: 1
 - backup_tag: `pre-optimization-backup` → ddc5d88
 - web_scheduled: RUNNING (digital-immortality-recursive, hourly)
 
