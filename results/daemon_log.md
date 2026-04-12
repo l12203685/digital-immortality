@@ -568,3 +568,23 @@ Concrete work done:
 **Voice input**: "phase4b e2e test message / test reverse channel 1775898534 / E2E public host smoke test" — received as smoke test signal. No reverse_channel infrastructure exists to route. Logged as received.
 
 **Classification**: branch-growth (B4) + maintenance (B1.1)
+
+## Cycle 1 — 2026-04-13 01:53:50 (Taipei)
+
+**Cycle 367 complete.**
+
+---
+
+**Phase 4b — reverse channel**
+
+Built `platform/reverse_channel.py`:
+- `send(text, channel="mission_control")` — in-process API for the daemon
+- CLI: `python platform/reverse_channel.py "reply text"`
+- Writes to `C:/Users/admin/staging/web_outbox.jsonl` in the schema `/api/outbox` already serves
+- End-to-end path now: Voice → watcher → `web_inbox.jsonl` → daemon reads → `reverse_channel.py` → `web_outbox.jsonl` → `/api/outbox`
+
+ACK for voice test (`1775898534`) sent and written to outbox.
+
+**Remaining gap**: `voice.html` outbox section was permission-denied (it's in `~/.claude/scripts/`). The UI delta is small — a `loadOutbox()` function + one new `<section>` block. Can approve if Edward wants to complete the loop.
+
+**B1.1**: tick=2250, price=$70,955, regime=mixed, all signals=0 FLAT, engine in new-floor-discovery phase. HOLD.
