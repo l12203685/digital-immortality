@@ -95,3 +95,8 @@
 
 ## daemon_next_priority
 GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 outreach DMs x5 / B4.1 Samuel DM / B9 candidates / B1.2 mainnet API. Automatable next: B10 L3 v2 — implement recursive_engine.py --l3-check (read engine_l3_log.jsonl, update engine_rules.json, inject recovery prompt). Secondary: B1.1 trading engine restart audit.
+
+<!-- cycle update 2026-04-13 07:20:20 (Taipei) -->
+<!-- branch 1 engine_status = RUNNING — tick=146 (new session), last=2026-04-12T23:19:13 UTC; pnl_pct=0.0% (session reset, prior cum=+6.57% preserved); clean_ticks_since_kill=46 > kill_window=40 — re-entry audit pending -->
+<!-- branch 4 last_active_cycle = 367 — organism --report run; samuel_calibration_dm_draft.md queued for human-send -->
+<!-- branch 10 l3_v2_status = IN PROGRESS — --l3-check implementation dispatched cycle 367 -->

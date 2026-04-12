@@ -879,3 +879,16 @@ B1.1: engine STOPPED. DualMA=FLAT. HOLD.
 - Recursive L3: **v1 DONE** — formal rules exist, manual enforcement; v2 needs `--l3-check` implementation
 
 **Next (cycle 377):** B10 L3 v2 — add `--l3-check` flag to `recursive_engine.py` (reads engine_l3_log.jsonl, updates engine_rules.json, injects recovery prompt). Secondary: trading engine restart audit (STOPPED since yesterday).
+
+## Cycle 1 — 2026-04-13 07:20:20 (Taipei)
+
+[cycle 367] classification=branch-growth
+actions: 3, updates: 3
+exec: b1(經濟): (no executor for branch 1, runnable=python trading/paper_trader.py --status); b4(社交/organism): (no executor for branch 4, runnable=python organism_interact.py --report); b10(L3 System): (no executor for branch 10, runnable=python recursive_engine.py --l3-check)
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 1,
+      "name": "經濟",
+      "action": "Verify trading engine health: trading_engine_status.json shows tick=146, last_tick=2026-04-12T23:19:13 UTC — engine IS running (not STOPPED; tree state stale). Investigate pnl_pct reset to 0.0% (new paper session vs data loss). clean_ticks_since_kill=46 > kill_window=40 — disabled strategies past quarantine, check re-entry eligibility. Update B1.1 tree state: mark RUNNING, note new-session pnl baseline.
