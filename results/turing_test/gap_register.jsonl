@@ -1,0 +1,21 @@
+# Turing Test Gap Register
+# Populated during G3 (scoring and gap analysis) after blind evaluation sessions
+# Format (one JSON object per line):
+# {
+#   "scenario_id": "S03",
+#   "evaluator_id": "C01",
+#   "divergence_class": "B",
+#   "agent_response_summary": "agent hedged toward social consensus",
+#   "edward_response_summary": "edward dismissed group consensus, cited own analysis",
+#   "missing_principle": "population_exploit — majority consensus is wrong signal",
+#   "dna_location": "dna_core.md line X",
+#   "action": "strengthen population_exploit anchor with explicit anti-consensus framing",
+#   "resolved": false,
+#   "resolved_at": null
+# }
+#
+# Divergence classes:
+#   A = DNA principle absent — rule not in dna_core.md
+#   B = DNA principle present but overridden by LLM prior (generic hedging, softening, consensus bias)
+#   C = DNA principle present/applied but evaluator baseline was wrong (not an agent failure)
+#   D = Edward's live response was atypical (invalid scenario — exclude from scoring)

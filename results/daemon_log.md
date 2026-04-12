@@ -776,3 +776,26 @@ B1.1: engine STOPPED. DualMA=FLAT. HOLD.
 - Next G1 cadence: cycle ~402; next report: 2026-05-13
 
 **Classification:** branch-growth (B6 infrastructure maintenance — concrete deliverables, not just test run)
+
+## Cycle 373 — 2026-04-13 (Taipei)
+
+**Cycle 373 complete.** Branch-growth on B9 (Turing Test) — G1 infrastructure built.
+
+| Branch | Result |
+|--------|--------|
+| **B9 Turing Test** | G1 storage gap closed; full directory infrastructure created |
+| **B1.1** | Engine tick 2460; all signals FLAT; pnl=+6.57% (unchanged) |
+
+**B9 details:**
+- **Root cause of RED status:** S01–S10 scenarios designed (cycle 263, SOP #95) but never extracted to specified storage location `docs/turing_test_scenarios.md`. No `results/turing_test/` directory existed.
+- **`docs/turing_test_scenarios.md` created** — all 10 scenarios with full G1 metadata: prompt text, DNA principle tested, expected response summary, LLM failure mode
+- **`results/turing_test/candidates.jsonl`** — template with format/criteria comments
+- **`results/turing_test/gap_register.jsonl`** — template with divergence class definitions
+- **`results/turing_test/eval_packets/.gitkeep`** — directory ready for blind evaluation packets
+- **SOP #95 status table updated** — scenarios file, candidate registry, gap register all marked READY
+- `turing_blind_pack.py` NOT built (correct — tooling is not the bottleneck; do not build until G0)
+- **B9 remaining blockers:** 0/3 candidates (human-gated), agent baseline NOT RUN, blind pack NOT BUILT
+
+**Classification:** branch-growth (B9 infrastructure — concrete deliverables, closes G1 storage gap)
+
+**Next priority:** B2.3 — 3/41 consistency scenarios still MISALIGNED. Identify which 3, patch or classify as permanent LLM-boundary.

@@ -434,13 +434,15 @@ verify behavioral equivalence is maintained, not a snapshot).
 | Item | Status |
 |------|--------|
 | Evaluator candidates identified | 0/3 — BLOCKED |
-| Scenarios designed | 10/10 — COMPLETE (G1 seed in this document) |
-| Blind evaluation infrastructure | NOT BUILT (tools/turing_blind_pack.py) |
-| Gap register initialized | NOT STARTED |
-| Agent response baseline | NOT RUN |
+| Scenarios designed | 10/10 — COMPLETE (cycle 373: extracted to `docs/turing_test_scenarios.md`) |
+| Blind evaluation infrastructure | NOT BUILT (`tools/turing_blind_pack.py` — do not build until G0) |
+| Gap register initialized | READY (`results/turing_test/gap_register.jsonl` — template created cycle 373) |
+| Candidate registry | READY (`results/turing_test/candidates.jsonl` — template created cycle 373) |
+| Eval packets directory | READY (`results/turing_test/eval_packets/` — created cycle 373) |
+| Agent response baseline | NOT RUN (pending G0 candidate confirmation) |
 | Certification | NOT STARTED |
 
-**Next action when unblocked:** Run G0 candidate calibration with first confirmed evaluator. Do not build tooling until candidates are confirmed — tooling is not the bottleneck.
+**Next action when unblocked:** Run G0 candidate calibration with first confirmed evaluator. Do not build `turing_blind_pack.py` until candidates are confirmed — tooling is not the bottleneck.
 
 ---
 

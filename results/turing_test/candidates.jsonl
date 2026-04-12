@@ -1,0 +1,7 @@
+# Turing Test Candidate Registry
+# Format (one JSON object per line, remove this comment before adding real entries):
+# {"id": "C01", "relationship": "close_friend", "years_known": 5, "domains": ["trading", "career"], "calibration_date": "YYYY-MM-DD", "status": "confirmed"}
+#
+# Status values: identified | invited | confirmed | completed | declined
+# Required: >=3 confirmed candidates before G1 execution begins
+# Criteria: knows Edward >=3 years, observed in >=2 domains, >=10 substantive conversations
