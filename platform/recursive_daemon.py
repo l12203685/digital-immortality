@@ -1,10 +1,13 @@
 """
 Recursive Engine Daemon — Digital Immortality Platform
+
+4-step structured cycle protocol: GATHER → PLAN → EXECUTE → PERSIST.
 Continuously runs the recursive question against Claude API,
 persists results, and optionally commits code changes.
 """
 
 import argparse
+import json
 import os
 import re
 import signal
@@ -18,6 +21,9 @@ from zoneinfo import ZoneInfo
 TPE = ZoneInfo("Asia/Taipei")
 
 import anthropic
+
+from cycle_protocol import CycleState, CyclePlan, parse_cycle_plan
+from branch_executors import BRANCH_EXECUTORS
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 _DNA_FALLBACK_BUNDLE = REPO_ROOT / "private" / "dna_core.md"
@@ -40,9 +46,131 @@ TREE_PATH = REPO_ROOT / "results" / "dynamic_tree.md"
 LAST_OUTPUT_PATH = REPO_ROOT / "staging" / "last_output.md"
 VOICE_INPUT_PATH = Path("C:/Users/admin/GoogleDrive/staging/voice_input.md")
 _DNA_CORE_PATH = Path("C:/Users/admin/LYH/agent/dna_core.md")
+CYCLE_COUNTER_PATH = REPO_ROOT / "results" / "cycle_counter.json"
 
 # Timestamp for voice file watcher (tracks last check time across cycles)
 _last_voice_check: float = 0.0
+
+# ---------------------------------------------------------------------------
+# Plan-step system prompt: asks LLM to output structured JSON
+# ---------------------------------------------------------------------------
+PLAN_SYSTEM_PROMPT = (
+    "You are the 永生樹 recursive planner. Given the current state, output a JSON plan.\n"
+    'Format: {"branch_actions": [{"branch": 1, "name": "經濟", "action": "...", '
+    '"priority": 1, "runnable": "script"}], '
+    '"tree_updates": [{"branch": 1, "field": "key_metric", "value": "..."}], '
+    '"classification": "root-growth|branch-growth|neither"}\n'
+    "Rules: bias toward inaction on no-edge. Economic branches first. "
+    "Check if the last 3 cycles repeated the same action — if so, try a different branch."
+)
+
+# ---------------------------------------------------------------------------
+# Cycle counter helpers
+# ---------------------------------------------------------------------------
+
+
+def read_cycle_counter() -> dict:
+    """Read the unified cycle counter, returning defaults if missing."""
+    if CYCLE_COUNTER_PATH.exists():
+        try:
+            return json.loads(CYCLE_COUNTER_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    return {
+        "global_cycle": 0,
+        "daemon_cycles": 0,
+        "interactive_cycles": 0,
+        "last_updated": "",
+    }
+
+
+def increment_cycle_counter() -> int:
+    """Increment daemon_cycles and global_cycle, return new global_cycle."""
+    data = read_cycle_counter()
+    data["global_cycle"] = data.get("global_cycle", 0) + 1
+    data["daemon_cycles"] = data.get("daemon_cycles", 0) + 1
+    data["last_updated"] = datetime.now(TPE).isoformat(timespec="seconds")
+    CYCLE_COUNTER_PATH.parent.mkdir(parents=True, exist_ok=True)
+    CYCLE_COUNTER_PATH.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    return data["global_cycle"]
+
+
+# ---------------------------------------------------------------------------
+# Execute branch actions from a CyclePlan
+# ---------------------------------------------------------------------------
+
+
+def execute_plan_actions(plan: CyclePlan) -> list[dict]:
+    """Run branch executors for each action in the plan. Returns results."""
+    results: list[dict] = []
+    for action in sorted(plan.branch_actions, key=lambda a: a.priority):
+        executor = BRANCH_EXECUTORS.get(action.branch)
+        if executor is not None and action.runnable == "script":
+            try:
+                output = executor()
+            except Exception as exc:
+                output = f"executor error: {exc}"
+            results.append({
+                "branch": action.branch,
+                "name": action.name,
+                "output": output,
+            })
+            print(f"[daemon]   branch {action.branch} ({action.name}): {output[:120]}")
+        elif action.runnable == "read-only":
+            results.append({
+                "branch": action.branch,
+                "name": action.name,
+                "output": "(read-only, no executor)",
+            })
+        else:
+            results.append({
+                "branch": action.branch,
+                "name": action.name,
+                "output": f"(no executor for branch {action.branch}, runnable={action.runnable})",
+            })
+    return results
+
+
+# ---------------------------------------------------------------------------
+# Apply tree updates from a CyclePlan to dynamic_tree.md
+# ---------------------------------------------------------------------------
+
+
+def apply_tree_updates(plan: CyclePlan) -> None:
+    """Append tree update notes to dynamic_tree.md (lightweight)."""
+    if not plan.tree_updates:
+        return
+    ts = datetime.now(TPE).strftime("%Y-%m-%d %H:%M:%S (Taipei)")
+    lines = [f"\n<!-- cycle update {ts} -->"]
+    for u in plan.tree_updates:
+        lines.append(f"<!-- branch {u.branch} {u.field} = {u.value} -->")
+    try:
+        with open(TREE_PATH, "a", encoding="utf-8") as f:
+            f.write("\n".join(lines) + "\n")
+    except Exception as exc:
+        print(f"[daemon] tree update write failed: {exc}")
+
+
+# ---------------------------------------------------------------------------
+# Extract JSON from LLM response (handles markdown code fences)
+# ---------------------------------------------------------------------------
+
+
+def extract_json_from_response(text: str) -> str:
+    """Extract a JSON object from LLM text that may contain markdown fences."""
+    # Try to find ```json ... ``` block first
+    m = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.DOTALL)
+    if m:
+        return m.group(1)
+    # Try to find raw JSON object
+    m = re.search(r"\{.*\}", text, re.DOTALL)
+    if m:
+        return m.group(0)
+    return text
+
 
 RECURSIVE_PROMPT_TEMPLATE = (
     "You are Edward's recursive engine. 數位永生 = 持續遞迴 + persist.\n\n"
@@ -401,28 +529,67 @@ def try_git_commit(cycle: int) -> None:
 
 
 def run_cycle_api(client, system: str, model: str, cycle: int) -> str:
-    """Run via Anthropic API (requires ANTHROPIC_API_KEY with credit)."""
-    print(f"[daemon] Cycle {cycle} starting (API)...")
-    priority = load_priority()
-    user_prompt = build_user_prompt()
-    if priority:
-        user_prompt = f"[AUDIT PRIORITY] {priority}\n\n{user_prompt}"
+    """Run the 4-step structured cycle via Anthropic API.
+
+    Step 1 — GATHER:  CycleState.gather() collects all live sources.
+    Step 2 — PLAN:    LLM call with PLAN_SYSTEM_PROMPT, returns JSON plan.
+    Step 3 — EXECUTE: Run branch executors for planned actions.
+    Step 4 — PERSIST: Apply tree updates, write last_output, log.
+    """
+    global_cycle = increment_cycle_counter()
+    print(f"[daemon] Cycle {cycle} (global {global_cycle}) starting (API)...")
+
+    # --- Step 1: GATHER ---
+    state = CycleState.gather(REPO_ROOT, global_cycle)
+    user_prompt = state.to_prompt()
+    print(f"[daemon]   GATHER done — {len(user_prompt)} chars prompt")
+
+    # --- Step 2: PLAN ---
+    plan: CyclePlan | None = None
     try:
         response = client.messages.create(
             model=model,
             max_tokens=1024,
-            system=system,
+            system=PLAN_SYSTEM_PROMPT,
             messages=[{"role": "user", "content": user_prompt}],
         )
-        text = response.content[0].text
+        raw_text = response.content[0].text
+        raw_json = extract_json_from_response(raw_text)
+        plan = parse_cycle_plan(raw_json)
+        print(
+            f"[daemon]   PLAN done — {len(plan.branch_actions)} actions, "
+            f"class={plan.classification}"
+        )
     except anthropic.RateLimitError as e:
         print(f"[daemon] API rate limited: {e}. Sleeping 3600s.", flush=True)
         time.sleep(3600)
         return f"API rate limited — slept 3600s"
-    # Persist output for next cycle's input
-    _persist_last_output(text, cycle)
-    print(f"[daemon] Cycle {cycle} done — {len(text)} chars")
-    return text
+    except (json.JSONDecodeError, KeyError) as e:
+        # Plan parsing failed — fall back to raw LLM text as output
+        print(f"[daemon]   PLAN parse failed ({e}), using raw text")
+        raw_text = raw_text if "raw_text" in dir() else f"Plan parse error: {e}"
+        _persist_last_output(raw_text, global_cycle)
+        return raw_text
+
+    # --- Step 3: EXECUTE ---
+    exec_results = execute_plan_actions(plan)
+    exec_summary = "; ".join(
+        f"b{r['branch']}({r['name']}): {r['output'][:80]}"
+        for r in exec_results
+    )
+    print(f"[daemon]   EXECUTE done — {len(exec_results)} branches")
+
+    # --- Step 4: PERSIST ---
+    apply_tree_updates(plan)
+    output_text = (
+        f"[cycle {global_cycle}] classification={plan.classification}\n"
+        f"actions: {len(plan.branch_actions)}, updates: {len(plan.tree_updates)}\n"
+        f"exec: {exec_summary}\n"
+        f"plan_raw: {raw_text[:500]}"
+    )
+    _persist_last_output(output_text, global_cycle)
+    print(f"[daemon] Cycle {cycle} (global {global_cycle}) done — {len(output_text)} chars")
+    return output_text
 
 
 def parse_rate_limit_reset(text: str) -> int | None:
@@ -473,40 +640,38 @@ def _persist_last_output(text: str, cycle: int) -> None:
 
 
 def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
-    """Run via claude CLI (uses Max subscription, no API credit needed)."""
-    print(f"[daemon] Cycle {cycle} starting (CLI)...", flush=True)
-    # Build context-rich prompt from live sources
-    last_output = load_last_output()
-    tree_state = load_dynamic_tree()
-    voice_input = load_voice_input()
-    priority = load_priority()
-    context_prompt = (
-        f"## Previous cycle output\n{last_output[:1500]}\n\n"
-        f"## Current tree state (summary)\n{tree_state[:2000]}\n\n"
-    )
-    if voice_input != "(none)":
-        context_prompt += f"## Voice input\n{voice_input}\n\n"
-    if priority:
-        context_prompt += f"## Audit priority\n{priority}\n\n"
-    context_prompt += (
-        "Given this state, what advances digital immortality? "
-        "Classify: root-growth or branch-growth. "
-        "Read SKILL.md and results/daemon_next_priority.txt for full details. "
-        "Priority: economic/outreach first, then strategy dev, then content. "
-        "Backward check last 3 daemon log entries. "
-        "Produce at least one file change. Commit."
+    """Run the 4-step structured cycle via claude CLI.
+
+    Step 1 — GATHER:  CycleState.gather() collects all live sources.
+    Step 2 — PLAN:    CLI call with PLAN_SYSTEM_PROMPT, returns JSON plan.
+    Step 3 — EXECUTE: Run branch executors for planned actions.
+    Step 4 — PERSIST: Apply tree updates, write last_output, log.
+    """
+    global_cycle = increment_cycle_counter()
+    print(f"[daemon] Cycle {cycle} (global {global_cycle}) starting (CLI)...", flush=True)
+
+    # --- Step 1: GATHER ---
+    state = CycleState.gather(REPO_ROOT, global_cycle)
+    user_prompt = state.to_prompt()
+    print(f"[daemon]   GATHER done — {len(user_prompt)} chars prompt", flush=True)
+
+    # --- Step 2: PLAN ---
+    cli_prompt = (
+        f"{PLAN_SYSTEM_PROMPT}\n\n{user_prompt}\n\n"
+        "Respond ONLY with valid JSON matching the format above."
     )
     result = subprocess.run(
-        ["claude", "-p", context_prompt, "--model", model],
+        ["claude", "-p", cli_prompt, "--model", model],
         capture_output=True, text=True, timeout=600,
         cwd=str(REPO_ROOT),
         encoding="utf-8", errors="replace",
     )
-    text = result.stdout.strip() if result.stdout else ""
-    if result.returncode != 0 and not text:
-        text = f"CLI error: {(result.stderr or '').strip()}"
+    raw_text = result.stdout.strip() if result.stdout else ""
+    if result.returncode != 0 and not raw_text:
+        raw_text = f"CLI error: {(result.stderr or '').strip()}"
+
     # Detect rate limit and sleep until reset
-    sleep_secs = parse_rate_limit_reset(text)
+    sleep_secs = parse_rate_limit_reset(raw_text)
     if sleep_secs is not None:
         from datetime import timedelta
         reset_time = datetime.now(TPE) + timedelta(seconds=sleep_secs)
@@ -514,10 +679,46 @@ def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
         print(f"[daemon] Rate limited. Sleeping {sleep_secs}s until ~{reset_str}", flush=True)
         time.sleep(sleep_secs)
         text = f"Rate limited — slept {sleep_secs}s until {reset_str}"
-    # Persist output for next cycle's input
-    _persist_last_output(text, cycle)
-    print(f"[daemon] Cycle {cycle} done — {len(text)} chars", flush=True)
-    return text
+        _persist_last_output(text, global_cycle)
+        return text
+
+    plan: CyclePlan | None = None
+    try:
+        raw_json = extract_json_from_response(raw_text)
+        plan = parse_cycle_plan(raw_json)
+        print(
+            f"[daemon]   PLAN done — {len(plan.branch_actions)} actions, "
+            f"class={plan.classification}",
+            flush=True,
+        )
+    except (json.JSONDecodeError, KeyError) as e:
+        print(f"[daemon]   PLAN parse failed ({e}), using raw text", flush=True)
+        _persist_last_output(raw_text, global_cycle)
+        return raw_text
+
+    # --- Step 3: EXECUTE ---
+    exec_results = execute_plan_actions(plan)
+    exec_summary = "; ".join(
+        f"b{r['branch']}({r['name']}): {r['output'][:80]}"
+        for r in exec_results
+    )
+    print(f"[daemon]   EXECUTE done — {len(exec_results)} branches", flush=True)
+
+    # --- Step 4: PERSIST ---
+    apply_tree_updates(plan)
+    output_text = (
+        f"[cycle {global_cycle}] classification={plan.classification}\n"
+        f"actions: {len(plan.branch_actions)}, updates: {len(plan.tree_updates)}\n"
+        f"exec: {exec_summary}\n"
+        f"plan_raw: {raw_text[:500]}"
+    )
+    _persist_last_output(output_text, global_cycle)
+    print(
+        f"[daemon] Cycle {cycle} (global {global_cycle}) done — "
+        f"{len(output_text)} chars",
+        flush=True,
+    )
+    return output_text
 
 
 def _print_status() -> None:
