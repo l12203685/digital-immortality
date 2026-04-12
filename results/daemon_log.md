@@ -687,3 +687,32 @@ Added scenarios 26–35 to `organism_interact.py` SCENARIOS bank. Each targets a
 - Next gate: Edward sends `docs/samuel_async_calibration_dm.md` → Samuel replies → run reply processing protocol → re-run at 35 → update rate
 
 B1.1: engine RUNNING. DualMA=FLAT. HOLD.
+
+## Cycle 1 — 2026-04-13 03:25:36 (Taipei)
+
+**Cycle 370 done.** Branch-growth on B4 (社交/organism).
+
+**What was done:**
+
+**1. organism_interact.py — scenario bank 25 → 35**
+
+Added 10 new scenarios targeting each of the 9 confirmed Edward/Samuel divergences:
+
+| ID | Domain | Targets |
+|----|--------|---------|
+| 26 | learning_sequence | LEARNING divergence (parallel vs relationships-first) |
+| 27 | legacy_output | LEGACY divergence (embedded structure vs visible artifact) |
+| 28 | loyalty_exit | SOCIAL_TRUST divergence (kill condition vs loyalty) |
+| 29 | network_dormancy | NETWORK_ROI divergence (dormant reactivation angle) |
+| 30 | group_contrarian | GROUP_DYNAMICS divergence (interrupt now vs wait) |
+| 31 | intro_asymmetry | INTRO_GATEKEEPING + explicit instruction conflict |
+| 32 | fade_vs_confront | RELATIONSHIP_DOWNGRADE (A/B/C with exact dialogue) |
+| 33 | kill_condition | DOWNSIDE_MODEL (pre-defined exit vs gut exit) |
+| 34 | social_proof_vs_data | BASE_RATE_CHECK (health vs investment — same process?) |
+| 35 | ev_override | EV/gut cross-cut |
+
+**2. `docs/samuel_reply_processing.md` created** — when Samuel replies to the DM, this guide maps his 3 answers directly to DNA update locations, lookup tables for verdict classification, re-run command, and success criteria. Reduces reply→updated-DNA time to <15 min.
+
+**B4 state:** 64% (16/25), bank now 35 scenarios. Next re-run will be at full 35-scenario resolution once Samuel's DM reply comes in.
+
+Human-gated blockers unchanged: Samuel DM send, mainnet API keys, outreach DMs ×5.
