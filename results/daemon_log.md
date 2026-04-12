@@ -502,3 +502,27 @@ You've hit your limit · resets Apr 11, 10am (Asia/Taipei)
 [2026-04-11 08:03:30 UTC] Loop started: interval=3600s, loop_count=1, PID=14272
 [2026-04-11 08:03:30 UTC] Cycle 90 starting.
 [2026-04-11 08:03:30 UTC] Engine stopped. 0 cycles completed total.
+
+## Cycle 1 — 2026-04-13 00:23:50 (Taipei)
+
+Cycle 365 complete.
+
+---
+
+**Cycle 365 — 2026-04-13**
+
+**B6** — 115th clean ✅ 38/41 ALIGNED (twenty-ninth pass post-protocol-closure; pure-maintenance; behavioral-equivalence-115-runs; B6/B1.1 independence confirmed even at extreme market event)
+
+**B1.1** — Tick 54 / BTC=$70,873.09 / **RANGE BREAK**
+- ↓$1,961.11 from cycle 364 ($72,834.20) — largest single-session drop in paper-live history
+- Old range $72,638–$72,831 **definitively invalidated** — $1,765 below floor (460× the noise-classified cycle 356 break of $4.60)
+- DualMA_10_30: signal=1 (LONG) — MAs haven't crossed; signal governs, not price
+- Engine: tick=2159, RUNNING (unfrozen per 2026-04-12 commit), DualMA disabled PF<0.8, all active signals=0 FLAT, engine PnL=+6.57%
+- **New-floor-discovery phase begins.** Old ceiling/floor zone rules archived.
+
+**B3.1** — distil166 appended (file=305 / running=415)
+- 3 insights: 54th-btc-tick-range-break + 115th-B6-twenty-ninth-pass + range-invalidation-dualma-governs-not-price
+
+**Classification**: branch-growth (B1.1 structural event) + root-maintenance (B6) + root-growth (B3.1 signal discipline principle under extreme conditions)
+
+**Next priority** (unchanged, human-gated): B1.3 outreach DMs ×5 / B4.1 Samuel calibration DM. BTC watch: DualMA signal flip is the only exit trigger. Ignore price level.
