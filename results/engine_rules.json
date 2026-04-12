@@ -1,0 +1,27 @@
+{
+  "stale_threshold": 3,
+  "queue_min": 1,
+  "commit_drought_threshold": 3,
+  "dead_loop_count": 1,
+  "last_dead_loop": {
+    "cycle": 78,
+    "stale_cycles": 3,
+    "git_commits_24h": 420,
+    "insights_count": 133,
+    "ts": "2026-04-09T14:06:57.668388+00:00"
+  },
+  "last_recovery": {
+    "cycle": null,
+    "action": null,
+    "ts": null
+  },
+  "evolved_at": "2026-04-13T00:00:00+00:00",
+  "initialized_at_cycle": 376,
+  "evolution_log": [
+    {
+      "cycle": 376,
+      "event": "INITIALIZED",
+      "note": "B10 L3 v1 — rules derived from 1 known DEAD_LOOP (cycle 78) + distil169 insight 2 (queue_min=1). Manual enforcement until v2 (recursive_engine.py --l3-check)."
+    }
+  ]
+}

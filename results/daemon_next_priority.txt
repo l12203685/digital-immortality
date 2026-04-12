@@ -1,1 +1,6 @@
-PRIORITY: Tree updates are sparse. Update results/dynamic_tree.md with concrete status changes next cycle.
+GATE-CONSTRAINED. B10 L3 v1 DONE (cycle 376). Human-gated: B1.3 outreach DMs x5 / B4.1 Samuel DM / B9 candidates / B1.2 mainnet API.
+
+Automatable next (priority order):
+1. B10 L3 v2 — implement recursive_engine.py --l3-check (read engine_l3_log.jsonl, update engine_rules.json, inject recovery prompt when stall detected)
+2. B1.1 trading restart audit — engine STOPPED since 2026-04-12T22:49; investigate why stopped; restart if safe
+3. B3.1 distillation (cycles 375-376) — 2 cycles of new insights pending after L3 work completes

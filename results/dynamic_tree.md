@@ -1,5 +1,5 @@
 # 永生樹 — Dynamic State
-> Updated: 2026-04-13 (cycle 374 — B2.3 CLOSED; tree sync: B1.1/B6/B9 brought current)
+> Updated: 2026-04-13 (cycle 376 — B10 L3 recursive engine initialized; engine_rules.json created)
 > Format: current state ONLY. History in tree_archive/. 導數驅動。
 
 ## 核心目標（常數）
@@ -10,21 +10,21 @@
 
 | Branch | Derivative | Health | Last Cycle | Key Metric |
 |--------|-----------|--------|------------|------------|
-| 1. 經濟自給 | 0.0 | YELLOW | 373 | BTC=$71,247 tick=60 FLAT; DualMA DISABLED (PF=0.7); 11 active/8 disabled; mainnet BLOCKED (~85d) |
+| 1. 經濟自給 | 0.0 | YELLOW | 376 | BTC=$70,808 tick=2550 FLAT STOPPED; DualMA DISABLED (PF=0.7); 11 active/8 disabled; mainnet BLOCKED (~85d) |
 | 2. 行為等價 | +0.0 | GREEN | 374 | 2.2 COMPLETE (416 MDs); 2.3 38/41 CONFIRMED FINAL (3=LLM-boundary CLOSED) |
-| 3. 持續學習 | +0.1 | GREEN | 373 | distil166 done; insights running; B3.1 distillation pending (cycles 371-374) |
+| 3. 持續學習 | +0.1 | GREEN | 376 | distil169 DONE; 181 total insights; B10 L3 design COMPLETE (cycle 376); next → B10 L3 v2 (auto-detection) |
 | 4. 社交圈 | +0.2 | YELLOW | 371 | Samuel 40% AGREE (16/40); agreement floor confirmed; root cause documented; DM human-gated |
 | 5. 平台分發 | +0.0 | GREEN | 364 | SOP #01~#121 COMPLETE; posting queue pending |
 | 6. 存活冗餘 | +0.0 | GREEN | 372 | 115th clean cycle; 38/41 ALIGNED; SOP #101 6/6 gates passing |
 | 7. 知識輸出 | +0.0 | GREEN | 364 | SOP series complete; engagement loop not started |
 | 8. 生活維護 | +0.0 | GREEN | 364 | 5/5 SYSTEM_FAILURE decisions pre-committed |
 | 9. Turing Test | +0.1 | YELLOW | 373 | candidates 0/3 BLOCKED; G1 infrastructure READY (scenarios.md + results/turing_test/) |
-| 10. L3 System | +0.0 | GREEN | 364 | trading+content L3 complete; recursive L3 pending |
+| 10. L3 System | +0.1 | GREEN | 376 | trading+content L3 complete; recursive L3 v1 INITIALIZED (engine_rules.json; docs/b10_l3_recursive_engine.md) |
 
 ## Branch Details
 
 ### 1. 經濟自給（存活前提） DEADLINE: 2026-07-07
-- 1.1 Trading: engine PAPER; tick=60 (last: 2026-04-12T21:51 UTC); BTC=$71,240; all 11 active signals=0 FLAT; 8 strategies disabled (DualMA×4 PF=0.7, Bollinger×2 PF=0.62, Donchian×2 PF=0.67); cum_pnl=0.0 (no open positions); regime=mixed; new-floor-discovery phase — correct inaction
+- 1.1 Trading: engine STOPPED; tick=2550 (last: 2026-04-12T22:49 UTC); BTC=$70,808; all 11 active signals=0 FLAT; 8 strategies disabled (DualMA×4 PF=0.7, Bollinger×2 PF=0.62, Donchian×2 PF=0.67); cum_pnl=+6.57% (no open positions); regime=mixed; engine not running — restart pending
 - 1.2 Mainnet: BLOCKED on Binance API credentials; mainnet_runner.py built; activation guide exists; ~85 days to deadline
 - 1.3 Outreach: DMs x5 pending (human-gated); Week 1 execution doc ready
 - Kill conditions: MDD>10% WR<35% PF<0.85
@@ -80,11 +80,11 @@
 ### 10. L3 System-Wide
 - Trading L3: COMPLETE (kill events -> execution_rules.json)
 - Content L3: COMPLETE (daily_posting_helper.py --evolve)
-- Recursive engine L3: PENDING
+- Recursive engine L3: **v1 INITIALIZED** (cycle 376) — engine_rules.json + docs/b10_l3_recursive_engine.md; v2 (auto-detection in recursive_engine.py) PENDING
 
 ## 當前 regime
-攻擊: 1.1 Trading paper-live tick=60 FLAT (no positions); mainnet BLOCKED (API keys ~85d)
-中性: 2.3 CLOSED; 3.1 distillation pending (cycles 371-374); 5.x deployed; 8.5 pre-committed
+攻擊: 1.1 Trading STOPPED (restart pending); mainnet BLOCKED (API keys ~85d)
+中性: 2.3 CLOSED; 3.1 distil169 DONE; 10 L3 v1 initialized; 5.x deployed; 8.5 pre-committed
 防禦: 6 存活 115th clean; SOP #101 6/6; F1-F10 runbook; CI sentinel
 
 ## Human Blockers
@@ -94,4 +94,4 @@
 - Turing Test candidate confirmation (human-send; G1 infrastructure ready)
 
 ## daemon_next_priority
-GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 infrastructure READY. Human-gated: B1.3 outreach DMs x5 / B4.1 Samuel DM / B9 candidates. Automatable next: B3.1 distillation from cycles 371-374 learnings (4 cycles, ~9 insights pending).
+GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 outreach DMs x5 / B4.1 Samuel DM / B9 candidates / B1.2 mainnet API. Automatable next: B10 L3 v2 — implement recursive_engine.py --l3-check (read engine_l3_log.jsonl, update engine_rules.json, inject recovery prompt). Secondary: B1.1 trading engine restart audit.
