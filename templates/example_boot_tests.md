@@ -85,5 +85,12 @@ Add it as a new test above. Over time, your boot tests become a complete behavio
 **Right**: Read dna_core.md → boot_tests.md → session_state.md → take first action. Goal: 1-2 user prompts max. This session (cycle 269) measured: **1 user prompt → operational** ✅
 **Source**: SOP #101 G5 gate — measured cycle 269 session (cold start): 1 prompt to operational, 2 LLM rounds before first branch push
 
+## Test 11: Tiered Boot (先讀 quick_status，再決定深度)
+**Trigger**: Session start — any cold boot without explicit task context
+**Wrong**: Always read the full boot sequence (SKILL.md → daemon_log → staging → memory → branch files) regardless of whether you have an active task
+**Right**: Read quick_status.md first → classify: Type A (no active task, daemon healthy → confirm + /clear), Type B (specific task → read task-specific files only), Type C (Saturday reset or L3 event → full protocol). Minimum tokens, maximum focus.
+**Source**: CLAUDE.md tiered boot protocol (Type A/B/C) — added after observing full-protocol boots wasting 20K+ tokens on days with no active task
+
 <!-- G2 audit: 2026-04-09T14:00Z — cycle 268 -->
 <!-- G5 CLOSED: 2026-04-09T22:00Z — cycle 269 — measured 1 prompt to operational -->
+<!-- Test 11 added: 2026-04-13T UTC — cycle 372 — B6 neglect audit -->

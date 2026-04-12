@@ -757,3 +757,22 @@ B1.1: engine STOPPED. DualMA=FLAT. HOLD.
 - Practical simulation corrections added for B9 Turing Test (when twin needs to act AS Samuel)
 
 **Next gate (human-gated):** Edward sends `docs/samuel_async_calibration_dm.md` → Samuel replies → `docs/samuel_reply_processing.md` → re-run → 40% → ~45%
+
+
+## Cycle 372 — 2026-04-13 (Taipei)
+
+**Cycle 372 complete.** Branch-growth on B6 存活/cold-start — 272-cycle neglect audit done.
+
+| Branch | Result |
+|--------|--------|
+| **B6 存活/cold-start** | cold_start_health_report.md updated (128 cycles stale → current); SOP #101 6/6 gates re-verified; boot_tests.md Test 11 added; G1 audited cycle 372 → next cadence ~402 |
+| **B1.1** | Engine tick 2400; all active signals=0 FLAT; total_pnl=+6.57%; regime=mixed; 11 active strategies |
+
+**B6 details:**
+- cold_start_health_report.md: Cycle 244 → Cycle 372; 33/33 → 38/41 (115th consecutive clean)
+- SOP #101 G1: was "audited cycle 267" (stale 105 cycles) → "template audited cycle 372" ✅
+- Test 11 added: Tiered Boot (先讀 quick_status → classify Type A/B/C → minimum tokens)
+- Scenario bank: 38 deterministic + 3 permanent LLM-boundary = 41 total (unchanged from cycle 365)
+- Next G1 cadence: cycle ~402; next report: 2026-05-13
+
+**Classification:** branch-growth (B6 infrastructure maintenance — concrete deliverables, not just test run)

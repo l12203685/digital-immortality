@@ -126,12 +126,14 @@ SLA: The agent should reach first action in ≤ 5 prompt exchanges on cold start
 
 | Gate | Pass Condition | Status |
 |------|---------------|--------|
-| G0 Budget | Total cold tokens < 15,000 | ✅ ~9,600 (optimized path) |
-| G1 dna_core current | ≤ 30 cycles stale | ✅ audited cycle 267 |
-| G2 boot_tests coverage | All 4 meta-rules represented | ✅ confirmed cycle 299 (39 scenarios, all 4 covered) |
-| G3 session_state freshness | Cold reads lines 1–40 only | ✅ rule established |
-| G4 read order optimal | 5-file sequence documented | ✅ this SOP |
-| G5 SLA | ≤ 5 prompts to operational | ✅ cold_start_test.py: 0.066s, 5/5 PASS |
+| G0 Budget | Total cold tokens < 15,000 | ✅ ~9,600 (Type A: ~2,400 — tiered boot added) |
+| G1 dna_core current | ≤ 30 cycles stale | ✅ template audited cycle 372; LYH operational kernel: independent audit required |
+| G2 boot_tests coverage | All 4 meta-rules represented | ✅ Tests 1–10 confirmed; Test 11 (tiered boot) added cycle 372 |
+| G3 session_state freshness | Cold reads lines 1–40 only | ✅ quick_status.md added as Type A relay (even lighter) |
+| G4 read order optimal | 5-file sequence documented | ✅ upgraded to Type A/B/C tiered sequence in CLAUDE.md |
+| G5 SLA | ≤ 5 prompts to operational | ✅ Type A: 1 prompt → confirm → /clear |
+
+**Overall**: 6/6 gates passing. Next G1 cadence: cycle ~402. *Updated cycle 372.*
 
 **Overall**: 6/6 gates passing. G1 next audit: cycle 300 (this cycle — scheduled trigger reached). *Updated cycle 299.*
 
