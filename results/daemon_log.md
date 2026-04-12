@@ -526,3 +526,16 @@ Cycle 365 complete.
 **Classification**: branch-growth (B1.1 structural event) + root-maintenance (B6) + root-growth (B3.1 signal discipline principle under extreme conditions)
 
 **Next priority** (unchanged, human-gated): B1.3 outreach DMs ×5 / B4.1 Samuel calibration DM. BTC watch: DualMA signal flip is the only exit trigger. Ignore price level.
+
+---
+
+**Cycle 366 — 2026-04-13**
+
+**B4** — Samuel organism activated (88-cycle dormancy broken)
+- Collision re-run: 15/22 AGREE (68%); 7 divergences: LEARNING/LEGACY/SOCIAL_TRUST/NETWORK_ROI/GROUP_DYNAMICS/INTRO_GATEKEEPING/RELATIONSHIP_DOWNGRADE
+- 3 new scenarios added to organism_interact.py: DOWNSIDE_MODEL/OPPORTUNITY_COST/BASE_RATE_CHECK
+- Calibration DM: human-gated (docs/samuel_async_calibration_dm.md)
+
+**B1.1** — DualMA HOLD LONG signal=1 x54; no flip; new-floor-discovery phase
+
+**Classification**: branch-growth (B4) + maintenance (B1.1)

@@ -265,6 +265,35 @@ SCENARIOS = [
             "or require a third data point before updating your model of them?"
         ),
     },
+    {
+        "id": 23,
+        "domain": "downside_model",
+        "scenario": (
+            "You are 6 weeks into a concentrated bet (50% of investable capital). "
+            "It is down 40%. The original thesis is unchanged — the underlying is just cheaper now. "
+            "Do you hold, add, or exit? Walk through your actual process step by step."
+        ),
+    },
+    {
+        "id": 24,
+        "domain": "opportunity_cost",
+        "scenario": (
+            "You are approached to join a friend's startup as employee #3. "
+            "Great team, exciting idea, but the role requires an 80% salary cut. "
+            "The equity could be life-changing if it works. You have 72 hours to decide. "
+            "What is your decision process, and what is your answer?"
+        ),
+    },
+    {
+        "id": 25,
+        "domain": "base_rate_check",
+        "scenario": (
+            "A friend in your network is pitching a B2C consumer app. "
+            "They have strong momentum, a polished pitch, and 3 people you trust are investing. "
+            "Historical base rate for consumer apps reaching $1M revenue: under 1%. "
+            "Do you invest? Does the social proof override the base rate for you?"
+        ),
+    },
 ]
 
 

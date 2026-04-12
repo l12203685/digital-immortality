@@ -1,1 +1,1 @@
-PRIORITY: Branch '社交/organism' neglected for 70 cycles. Do concrete work on this branch next cycle.
+PRIORITY: B4 Samuel calibration DM — human sends docs/samuel_async_calibration_dm.md via WhatsApp/LINE. Agent-side done: collision re-run 68% (15/22), 3 new blind-spot scenarios added (DOWNSIDE_MODEL/OPPORTUNITY_COST/BASE_RATE_CHECK). Next agent action after DM reply: update samuel_dna.md + re-run collision. Parallel: B1.1 DualMA HOLD LONG (signal=1 x54, no flip yet).
