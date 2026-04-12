@@ -1,1 +1,1 @@
-B3.1 distillation — extract insights from cycles 371-374 (B4 agreement-floor synthesis / B6 cold-start G1 audit / B9 Turing Test infrastructure). ~9 insights pending. Run: append to results/recursive_distillation.md or insights.json. Human-gated blockers unchanged: outreach DMs x5 / Samuel DM / mainnet keys / B9 candidates.
+PRIORITY: Tree updates are sparse. Update results/dynamic_tree.md with concrete status changes next cycle.

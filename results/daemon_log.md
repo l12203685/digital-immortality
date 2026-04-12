@@ -840,3 +840,18 @@ B1.1: engine STOPPED. DualMA=FLAT. HOLD.
 - B2.3 is CLOSED. No further work needed on this branch.
 
 **Next:** B3.1 distillation from cycles 371-374 learnings.
+
+## Cycle 1 — 2026-04-13 05:53:56 (Taipei)
+
+**Cycle 374 complete.** Root-work — tree sync + B2.3 classification closure.
+
+---
+
+| Branch | Action | Result |
+|--------|--------|--------|
+| **B2.3 行為等價** | Classification audit | **CLOSED** — 3 MISALIGNED = permanent LLM-boundary (poker_gto_mdf / trading_atr_sizing / career_multi_option_ev). Not regressions. Not patchable. DNA complexity requires LLM reasoning — this is correct behavior. |
+| **dynamic_tree.md** | Full sync | 6 stale entries corrected: B1.1 (FLAT/disabled status), B4 (40% floor), B6 (115th clean / SOP#101 6/6), B9 (G1 infrastructure READY), B2 (CLOSED label) |
+| **B1.1 Trading** | State read | tick=60; BTC=$71,240; 11 active all FLAT; 8 disabled; cum_pnl=0.0; correct inaction |
+| **daemon_next_priority** | Updated | → B3.1 distillation from cycles 371-374 (~9 insights pending) |
+
+**Next (cycle 375):** B3.1 distillation — extract reusable insights from cycles 371-374 work (B4 agreement-floor synthesis, B6 G1 audit methodology, B9 infrastructure gap pattern, B2.3 LLM-boundary classification).
