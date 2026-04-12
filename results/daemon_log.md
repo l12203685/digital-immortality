@@ -539,3 +539,32 @@ Cycle 365 complete.
 **B1.1** — DualMA HOLD LONG signal=1 x54; no flip; new-floor-discovery phase
 
 **Classification**: branch-growth (B4) + maintenance (B1.1)
+
+## Cycle 1 — 2026-04-13 00:53:36 (Taipei)
+
+**Cycle 366 complete.**
+
+---
+
+**B4 — 社交圈 / organism** (88-cycle dormancy broken)
+
+Concrete work done:
+- Ran `organism_interact.py --report` → **15/22 AGREE (68%)**
+  - The 27% historical rate was a different scenario bank, not a regression
+  - 7 true divergences: LEARNING / LEGACY / SOCIAL_TRUST / NETWORK_ROI / GROUP_DYNAMICS / INTRO_GATEKEEPING / RELATIONSHIP_DOWNGRADE
+  - Root pattern: all 7 = Samuel treats **relationships as foundation**; Edward treats **systems as foundation**
+
+- Added 3 new scenarios targeting Samuel's documented blind spots (samuel_dna.md §2):
+  - `DOWNSIDE_MODEL` (id=23) — tests kill condition discipline
+  - `OPPORTUNITY_COST` (id=24) — tests 72h decision under salary cut
+  - `BASE_RATE_CHECK` (id=25) — tests whether social proof overrides base rate
+
+- Wrote `staging/samuel_organism_cycle366.md` — full analysis + calibration priority stack
+
+**Next gate (human-gated)**: Send `docs/samuel_async_calibration_dm.md` to Samuel via WhatsApp/LINE. After reply → update `samuel_dna.md` → re-run on 25-scenario bank.
+
+**B1.1**: DualMA signal=1 (LONG), x54, no MA cross. HOLD. No action.
+
+**Voice input**: "phase4b e2e test message / test reverse channel 1775898534 / E2E public host smoke test" — received as smoke test signal. No reverse_channel infrastructure exists to route. Logged as received.
+
+**Classification**: branch-growth (B4) + maintenance (B1.1)
