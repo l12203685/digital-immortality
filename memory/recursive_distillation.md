@@ -2338,3 +2338,26 @@ B6 pure-maintenance (38/41 ALIGNED ×2 consecutive post-protocol-closure) is run
 
 **Signal source**: B6 cycles 363-364 both 38/41 ALIGNED during B1.1 ceiling-zone transition; behavioral layer unaffected by price oscillation; 2026-04-11T09:44Z
 **Tags**: B3.1, B6-B11-independence, behavioral-equivalence-market-agnostic, architectural-separation, pure-maintenance-stable, ceiling-zone-no-behavioral-impact, maturity-confirmed
+
+## Cycle 166 — 2026-04-13T00:00Z (cycle 365)
+
+### Insight 1: 54th-human-tick-btc70873-floor-break-massive-1961-range-invalidated
+
+BTC=$70,873.09 (↓$1,961.11 from cycle 364 $72,834.20; largest single-session drop in paper-live history). DualMA_10_30=LONG (signal=1, OPEN_LONG; prev_position=0 — state reset between sessions). Donchian_20=FLAT HOLD. **Range $72,638–$72,831 definitively invalidated**: BTC now $1,765.09 below old floor $72,638. This is structural, not noise — magnitude 460× the cycle 356 floor-break ($4.60). Three-session rule for noise classification no longer applies at this scale. New range discovery phase begins. Engine: tick=2159, RUNNING (unfrozen per 2026-04-12 commit), DualMA disabled (PF<0.8), all active signals=0 (FLAT). Total PnL engine = +6.57%.
+
+**Signal source**: paper-live BTC=$70,873.09; DualMA_10_30=LONG signal=1; 54th consecutive human-session LONG signal; engine tick=2159 RUNNING; 2026-04-13T00:00Z
+**Tags**: B1.1, 54th-human-tick, btc70873, floor-break-massive, range-invalidated-72638-72831, dualma-still-long, new-range-discovery, largest-single-session-drop, structural-not-noise, engine-running-unfrozen
+
+### Insight 2: 115th-clean-B6-twenty-ninth-pass-post-protocol-closure
+
+115th consecutive clean B6 cycle: **38/41 ALIGNED ✅**. Same 3 permanent MISALIGNED (poker_gto_mdf/trading_atr_sizing/career_multi_option_ev). Post-protocol-closure **twenty-ninth pass** — tripwire clear; pure-maintenance; behavioral-equivalence-115-runs confirmed. Stability holds through a session with largest BTC drop in tracking history — confirms B6/B1.1 architectural independence at extreme market events, not just routine oscillations.
+
+**Signal source**: consistency_test.py templates/dna_core.md → 38/41 ALIGNED; 115th run; 3 MISALIGNED permanent LLM-boundary; human session cycle 365; 2026-04-13T00:00Z
+**Tags**: B6, 115th-run, 38-of-41, twenty-ninth-pass, pure-maintenance, tripwire-clear, behavioral-equivalence-115-runs, market-agnostic-extreme-event, architectural-independence-confirmed
+
+### Insight 3: range-invalidation-dualma-governs-not-price-new-floor-discovery
+
+When BTC range structure (193-session range $72,638–$72,831) is invalidated by a $1,961 drop, the paper-live governance principle is unchanged: DualMA signal governs, not price level. DualMA_10_30 signal=1 (LONG) regardless of range invalidation — MAs haven't crossed. Operational stance: maintain LONG signal observation; begin new floor discovery. Old range data (ceiling/floor zones, three-session rules) is archived — no longer load-bearing. New anchor price: $70,873.09. Watch for DualMA flip (signal=0→FLAT) as the only exit signal. Engine paper PnL=+6.57% from 2159 autonomous ticks despite strategy disabling — system remains alive.
+
+**Signal source**: B1.1 cycle 365; range-invalidation analysis; DualMA governs principle; new-floor-discovery-phase start; 2026-04-13T00:00Z
+**Tags**: B3.1, range-invalidation-structural, dualma-governs-not-price, new-floor-discovery, old-range-archived, signal-discipline-extreme-market, paper-pnl-positive-6pct, engine-alive-running

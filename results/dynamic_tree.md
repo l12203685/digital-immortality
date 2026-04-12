@@ -1,5 +1,5 @@
 # 永生樹 — Dynamic State
-> Updated: 2026-04-12 (rebuilt from cycle 364 state, archive: results/tree_archive/)
+> Updated: 2026-04-13 (cycle 365 — B6 115th ✅ / B1.1 BTC=$70,873 RANGE BREAK / B3.1 distil166)
 > Format: current state ONLY. History in tree_archive/. 導數驅動。
 
 ## 核心目標（常數）
@@ -10,12 +10,12 @@
 
 | Branch | Derivative | Health | Last Cycle | Key Metric |
 |--------|-----------|--------|------------|------------|
-| 1. 經濟自給 | +0.1 | YELLOW | 364 | BTC=$72,834 DualMA=LONG x53; mainnet BLOCKED (API keys, ~87d) |
-| 2. 行為等價 | +0.0 | GREEN | 364 | 2.2 COMPLETE (416 MDs); 2.3 38/41 ALIGNED; cross-instance 97% |
-| 3. 持續學習 | +0.2 | GREEN | 364 | distil165 done (file=302/running=412); daemon reviving |
+| 1. 經濟自給 | -0.1 | YELLOW | 365 | BTC=$70,873 RANGE BREAK ↓$1,961; DualMA=LONG x54; mainnet BLOCKED (~86d) |
+| 2. 行為等價 | +0.0 | GREEN | 365 | 2.2 COMPLETE (416 MDs); 2.3 38/41 ALIGNED; cross-instance 97% |
+| 3. 持續學習 | +0.1 | GREEN | 365 | distil166 done (file=305/running=415); engine running |
 | 4. 社交圈 | +0.0 | YELLOW | 364 | Samuel 27% AGREE (drift); DM ready human-gated |
 | 5. 平台分發 | +0.0 | GREEN | 364 | SOP #01~#121 COMPLETE; posting queue pending |
-| 6. 存活冗餘 | +0.0 | GREEN | 364 | 114th clean cycle; 38/41 ALIGNED; tripwire clear |
+| 6. 存活冗餘 | +0.0 | GREEN | 365 | 115th clean cycle; 38/41 ALIGNED; tripwire clear |
 | 7. 知識輸出 | +0.0 | GREEN | 364 | SOP series complete; engagement loop not started |
 | 8. 生活維護 | +0.0 | GREEN | 364 | 5/5 SYSTEM_FAILURE decisions pre-committed |
 | 9. Turing Test | +0.0 | RED | 364 | candidates 0/3 BLOCKED; protocol designed |
@@ -24,8 +24,8 @@
 ## Branch Details
 
 ### 1. 經濟自給（存活前提） DEADLINE: 2026-07-07
-- 1.1 Trading: paper-live tick 53; BTC=$72,834.20 DualMA_10_30=LONG OPEN_LONG x53 human ticks; engine tick=321 STOPPED G0/G1 FROZEN; Donchian_20=FLAT; ceiling-zone second session $3.20 above old ceiling $72,831; floor $72,638 intact; 1 more above-ceiling session -> new ceiling ~$72,868 confirmed
-- 1.2 Mainnet: BLOCKED on Binance API credentials; mainnet_runner.py built; activation guide exists; ~87 days to deadline
+- 1.1 Trading: paper-live tick 54; BTC=$70,873.09 DualMA_10_30=LONG (signal=1) x54 human ticks; **RANGE BREAK**: ↓$1,961 from $72,834; old range $72,638–$72,831 INVALIDATED ($1,765 below floor); engine tick=2159 RUNNING (unfrozen 2026-04-12); DualMA disabled PF<0.8 in engine; all active signals=0 FLAT; engine PnL=+6.57%; Donchian_20=FLAT; new-floor-discovery phase; DualMA governs — HOLD LONG
+- 1.2 Mainnet: BLOCKED on Binance API credentials; mainnet_runner.py built; activation guide exists; ~86 days to deadline
 - 1.3 Outreach: DMs x5 pending (human-gated); Week 1 execution doc ready
 - Kill conditions: MDD>10% WR<35% PF<0.85
 
