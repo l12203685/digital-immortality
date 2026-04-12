@@ -100,3 +100,8 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 1 engine_status = RUNNING — tick=146 (new session), last=2026-04-12T23:19:13 UTC; pnl_pct=0.0% (session reset, prior cum=+6.57% preserved); clean_ticks_since_kill=46 > kill_window=40 — re-entry audit pending -->
 <!-- branch 4 last_active_cycle = 367 — organism --report run; samuel_calibration_dm_draft.md queued for human-send -->
 <!-- branch 10 l3_v2_status = IN PROGRESS — --l3-check implementation dispatched cycle 367 -->
+
+<!-- cycle update 2026-04-13 07:50:07 (Taipei) -->
+<!-- branch 4 discord_seed_post_status = cycle 368 — action mode initiated; first post draft from b4_divergence_root_cause.md dispatched; breaking report-only loop -->
+<!-- branch 9 agent_baseline_status = cycle 368 — S01-S10 baseline run dispatched; eval_packets generation pending; G1 unblocked path confirmed -->
+<!-- branch 1 re_entry_audit_cycle = 368 — 8 strategies past kill_window=40 (actual=46); PF review pending; no trade action (no edge, mixed regime) -->
