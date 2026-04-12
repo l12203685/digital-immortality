@@ -151,9 +151,12 @@ Financial blind spots:
 | DNA created | ✓ cycle 90 (estimated) |
 | Consistency test | 19/20 ALIGNED (1 diverge: `generic_strategy_failure` — expected) |
 | In-person correction | NOT DONE — async DM ready (human-gated, see `docs/samuel_async_calibration_dm.md`) |
-| Collision with Edward | ✓ 2026-04-13 (cycle 368): **16/25 AGREE (64%)**; 9 divergences (see §7 + §8 blind-spots) |
-| Previous collision | 2026-04-13 (cycle 366): 15/22 AGREE (68%) — 22-scenario bank |
+| Collision with Edward (latest) | ✓ 2026-04-13 (cycle 371): **16/40 AGREE (40%)**; 24 divergences; full list in `docs/b4_divergence_root_cause.md` |
+| Collision with Edward (prev) | 2026-04-13 (cycle 368): 16/25 AGREE (64%) — 25-scenario bank |
+| Collision with Edward (prev2) | 2026-04-13 (cycle 366): 15/22 AGREE (68%) — 22-scenario bank |
 | Principles extracted | 9 (sparse — target 15+ after async calibration reply) |
+
+Rate trend: 68% → 64% → 46% → 40% — converging toward a stable floor. The 16 AGREE scenarios are consistent across all runs — the common ground is fixed. Agreement-fishing scenarios (36-40: high_conviction_bet, bad_actor_exit, health_trade_off, mentor_leverage, asymmetric_opportunity) also diverged, confirming the divergence is deep and not purely social-domain. Root cause: signal source and action speed differ across all domains, not just social.
 
 Known gap: `samuel_dna.md` was built by Edward's inference, not Samuel's self-report. Sections 4, 6, 7 are Edward's external observation — Samuel may correct several items. Three priority corrections are in async calibration DM.
 
@@ -165,7 +168,24 @@ Known gap: `samuel_dna.md` was built by Edward's inference, not Samuel's self-re
 | 24 OPPORTUNITY_COST | Career | **AGREE** (prediction wrong) | Both evaluate before deciding. Samuel's "72-hour window" pressure is acknowledged as a variable, not an override. Prediction overcorrected. |
 | 25 BASE_RATE_CHECK | Investment | **DIVERGE** (predicted ✓) | Samuel: social proof (3 trusted people) overrides base rate. Edward: base rate check first; social proof is confirming evidence, not primary signal. Confirms §2 blind spot. |
 
-Next gate: Samuel async calibration reply → correct ≥1 of 7 divergences → re-run → update rate.
+### Divergence-targeted scenarios (26–35) — cycle 371 collision result
+
+| Scenario | Domain | Verdict | Finding |
+|----------|--------|---------|---------|
+| 26 LEARNING_SEQUENCE | Learning | **DIVERGE** (confirmed) | Samuel: relationships before skills. Edward: parallel tracks. |
+| 27 LEGACY_OUTPUT | Legacy | **DIVERGE** (confirmed) | Samuel: visible artifact / build something. Edward: embedded structure. |
+| 28 LOYALTY_EXIT | Social Trust | **DIVERGE** (confirmed) | Samuel: loyalty override / no kill condition. Edward: predefined exit trigger. |
+| 29 NETWORK_DORMANCY | Network ROI | **DIVERGE** (confirmed) | Samuel: reactivate dormant ties via relational angle. Edward: ROI gate before reactivation. |
+| 30 GROUP_CONTRARIAN | Group Dynamics | **DIVERGE** (confirmed) | Samuel: move first even in group. Edward: assess signal/noise before acting. |
+| 31 INTRO_ASYMMETRY | Intro Gatekeeping | **DIVERGE** (confirmed) | Samuel: explicit instruction + 70% confidence = act. Edward: quality threshold overrides instruction. |
+| 32 FADE_VS_CONFRONT | Relationship Downgrade | **DIVERGE** (confirmed) | Samuel: let fade naturally (DORMANT). Edward: conditional direct conversation. |
+| 33 KILL_CONDITION | Downside Model | **DIVERGE** (confirmed) | Samuel: gut exit / no pre-defined trigger. Edward: pre-defined kill condition governs. |
+| 34 SOCIAL_PROOF_VS_DATA | Base Rate Check | **DIVERGE** (confirmed) | Samuel: social proof primary (both health and investment domains). Edward: base rate first in all domains. |
+| 35 EV_OVERRIDE | EV/gut | **DIVERGE** (confirmed) | Samuel: gut wins when it conflicts with numbers. Edward: EV governs unless structural error found. |
+
+Root cause: see `docs/b4_divergence_root_cause.md`
+
+Next gate: Edward sends `docs/samuel_async_calibration_dm.md` → Samuel replies → apply `docs/samuel_reply_processing.md` → re-run at 40 scenarios (5 new agreement-fishing scenarios added in cycle 371) → update rate.
 
 ---
 

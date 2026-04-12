@@ -716,3 +716,18 @@ Added 10 new scenarios targeting each of the 9 confirmed Edward/Samuel divergenc
 **B4 state:** 64% (16/25), bank now 35 scenarios. Next re-run will be at full 35-scenario resolution once Samuel's DM reply comes in.
 
 Human-gated blockers unchanged: Samuel DM send, mainnet API keys, outreach DMs ×5.
+
+## Cycle 371 — 2026-04-13 03:55 (Taipei)
+
+**Cycle 371 done.** Branch-growth on B4 (社交/organism) — root cause synthesis + 40-scenario bank.
+
+**What was done:**
+
+1. **35-scenario run → 46%** then **40-scenario run → 40%** (agreement-fishing scenarios 36-40 all diverged)
+2. **`docs/b4_divergence_root_cause.md` created** — unifying theory of Edward/Samuel divergence; 5 clusters; Turing Test simulation corrections; agreement floor analysis
+3. **`templates/samuel_dna.md` §8 updated** — rate trend 68%→64%→46%→40%; 40-scenario results recorded; scenarios 36-40 added
+4. **`staging/quick_status.md` updated** — B4 state reflected
+
+**Key finding:** The 16 AGREE scenarios are stable (common ground is fixed). Agreement floor = ~40%. Divergence is architectural (signal source + action speed), not domain-specific. Agreement-fishing confirmed this. Samuel cannot be made to agree more through better scenario design — calibration requires actual Samuel input (DM human-gated).
+
+B1.1: engine STOPPED. DualMA=FLAT. HOLD.

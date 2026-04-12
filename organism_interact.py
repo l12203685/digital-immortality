@@ -413,6 +413,64 @@ SCENARIOS = [
             "or trust the numbers if you cannot name a specific concern?"
         ),
     },
+    # ------------------------------------------------------------------
+    # Agreement-fishing scenarios (36-40) — cycle 371
+    # These probe domains where Edward and Samuel are likely to AGREE,
+    # to map the common ground and raise the agreement baseline.
+    # ------------------------------------------------------------------
+    {
+        "id": 36,
+        "domain": "high_conviction_bet",
+        "scenario": (
+            "You have followed a company for 2 years. You understand the business model, "
+            "know the founding team, and believe the market is mispriced. "
+            "A funding round opens at a valuation you consider fair. "
+            "You have capital available. Do you invest a concentrated position, "
+            "spread it across 5 similar opportunities, or wait for a better entry point?"
+        ),
+    },
+    {
+        "id": 37,
+        "domain": "bad_actor_exit",
+        "scenario": (
+            "Someone in your inner circle — a person you have worked with closely for 3 years "
+            "and trusted — is caught lying to you about something that directly affected your "
+            "interests. Not a white lie, not a miscommunication: a deliberate deception. "
+            "What do you do with the relationship?"
+        ),
+    },
+    {
+        "id": 38,
+        "domain": "health_trade_off",
+        "scenario": (
+            "You are in a high-stakes period: a project with a 90-day window to prove results, "
+            "your best chance at a significant career or financial milestone. "
+            "Pulling this off requires working 12-hour days, skipping exercise, and disrupting sleep. "
+            "Do you accept the trade-off, refuse it, or try to find a third path?"
+        ),
+    },
+    {
+        "id": 39,
+        "domain": "mentor_leverage",
+        "scenario": (
+            "A highly respected person in your field offers to mentor you. "
+            "They are busy, the relationship requires you to come prepared, "
+            "add value to them, and not waste their time. "
+            "They will invest in you if you demonstrate you are worth investing in. "
+            "How do you approach the first 90 days of this relationship?"
+        ),
+    },
+    {
+        "id": 40,
+        "domain": "asymmetric_opportunity",
+        "scenario": (
+            "A low-probability, high-upside opportunity appears. The downside is "
+            "a fixed, manageable cost (time, money, social capital) you can afford to lose. "
+            "The upside is disproportionately large — a category change, not an incremental gain. "
+            "Probability of success: roughly 10-15%. Do you take it, pass, or what changes "
+            "your decision one way or the other?"
+        ),
+    },
 ]
 
 
