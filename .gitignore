@@ -7,6 +7,11 @@ __pycache__/
 results/idle_task_picker_state.json
 results/picker_queue.jsonl
 
+# --- LINE-bridge Discord feed poller (private, bot-mirrored LINE messages) ---
+results/line_feed.jsonl
+results/line_feed_cursor.json
+results/line_feed_poller.log
+
 # --- Finance dashboards: personal financial data, localhost only ---
 results/finance_networth.json
 results/finance_spending.json
@@ -25,6 +30,30 @@ results/dashin_weekly_pnl_gaps.md
 results/life_health.jsonl
 results/life_diet.jsonl
 results/life_calendar.json
+results/calendar_events.jsonl
+
+# --- Pet health / relationships (personal) ---
+results/life_pet_health.jsonl
+results/life_relationships.jsonl
+
+# --- Finance bank balance (personal) ---
+results/finance_bank_balance.jsonl
+
+# --- Zero portfolio + watchlist (personal financial data) ---
+results/zero_portfolio_history.json
+results/watchlist_history.json
+results/watchlist.yaml
+results/recurring_flows.yaml
+
+# --- Dashboard config (personal) ---
+results/quick_buttons.yaml
+results/calendar_creator_map.yaml
+results/line_feed_channels.yaml
+
+# --- Bridge / publisher logs ---
+results/inbox_bridge.log
+results/ingest_discord_life_dump.log
+results/public_url_publisher.log
 
 # --- History FTS index (10-year chat archive) ---
 results/history_index.db
