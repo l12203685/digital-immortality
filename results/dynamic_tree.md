@@ -1,5 +1,5 @@
 # 永生樹 — Dynamic State
-> Updated: 2026-04-13 (cycle 366 — B4 activated: Samuel 68% AGREE / 3 blind-spot scenarios drafted)
+> Updated: 2026-04-13 (cycle 370 — B4: 35-scenario bank; reply processing guide; DM human-gated)
 > Format: current state ONLY. History in tree_archive/. 導數驅動。
 
 ## 核心目標（常數）
@@ -13,7 +13,7 @@
 | 1. 經濟自給 | -0.1 | YELLOW | 365 | BTC=$70,873 RANGE BREAK ↓$1,961; DualMA=LONG x54; mainnet BLOCKED (~86d) |
 | 2. 行為等價 | +0.0 | GREEN | 365 | 2.2 COMPLETE (416 MDs); 2.3 38/41 ALIGNED; cross-instance 97% |
 | 3. 持續學習 | +0.1 | GREEN | 365 | distil166 done (file=305/running=415); engine running |
-| 4. 社交圈 | +0.2 | YELLOW | 366 | Samuel 68% AGREE (15/22); 3 blind-spot scenarios drafted; calibration DM human-gated |
+| 4. 社交圈 | +0.2 | YELLOW | 370 | Samuel 64% AGREE (16/25); 35-scenario bank built; reply processing guide ready; DM human-gated |
 | 5. 平台分發 | +0.0 | GREEN | 364 | SOP #01~#121 COMPLETE; posting queue pending |
 | 6. 存活冗餘 | +0.0 | GREEN | 365 | 115th clean cycle; 38/41 ALIGNED; tripwire clear |
 | 7. 知識輸出 | +0.0 | GREEN | 364 | SOP series complete; engagement loop not started |
@@ -43,7 +43,7 @@
 - 3.4 DNA 演化: dna_core + 416 MDs + 哲學宣言
 
 ### 4. 社交圈（ecosystem）
-- 4.1 Samuel organism: **68% AGREE (15/22)** — collision re-run 2026-04-13; 7 divergences: LEARNING/LEGACY/SOCIAL_TRUST/NETWORK_ROI/GROUP_DYNAMICS/INTRO_GATEKEEPING/RELATIONSHIP_DOWNGRADE; 3 new blind-spot scenarios (DOWNSIDE_MODEL/OPPORTUNITY_COST/BASE_RATE_CHECK) drafted; async calibration DM ready (human-gated)
+- 4.1 Samuel organism: **64% AGREE (16/25)** — cycle 368 collision; 9 divergences: LEARNING/LEGACY/SOCIAL_TRUST/NETWORK_ROI/GROUP_DYNAMICS/INTRO_GATEKEEPING/RELATIONSHIP_DOWNGRADE/DOWNSIDE_MODEL/BASE_RATE_CHECK; 35-scenario bank (added 26-35 cycle 370); reply processing guide: `docs/samuel_reply_processing.md`; async calibration DM: human-gated
 - 4.2 Collision protocol: operational (organism_interact.py --report)
 - 4.3 Discord server: channels ready, seed posts created, users=0
 - 4.4 Collective intelligence: Phase 3 (pending)

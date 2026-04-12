@@ -649,3 +649,41 @@ daemon reads → reverse_channel.py → web_outbox.jsonl ✓
 **Full reverse channel: CLOSED.** The outbox panel at `/voice` on MC now shows agent replies.
 
 Blockers unchanged: Samuel DM human-gated, mainnet API keys, outreach DMs ×5.
+
+## Cycle 1 — 2026-04-13 03:20 (Taipei)
+
+**Cycle 370 complete.** Branch 4 (社交/organism) — collision resolution expanded.
+
+---
+
+**What was done:**
+
+**B4 scenario bank expanded: 25 → 35 scenarios**
+
+Added scenarios 26–35 to `organism_interact.py` SCENARIOS bank. Each targets a confirmed Edward/Samuel divergence:
+
+| New Scenario | Domain | Divergence targeted |
+|-------------|--------|-------------------|
+| 26 | learning_sequence | LEARNING (relationships-first vs parallel) |
+| 27 | legacy_output | LEGACY (visible artifact vs embedded structure) |
+| 28 | loyalty_exit | SOCIAL_TRUST (kill condition vs loyalty override) |
+| 29 | network_dormancy | NETWORK_ROI (dormancy reactivation) |
+| 30 | group_contrarian | GROUP_DYNAMICS (interrupt vs wait) |
+| 31 | intro_asymmetry | INTRO_GATEKEEPING (70% confidence + explicit instruction) |
+| 32 | fade_vs_confront | RELATIONSHIP_DOWNGRADE (fade A/B/C with exact dialogue) |
+| 33 | kill_condition | DOWNSIDE_MODEL (pre-defined exit vs gut exit) |
+| 34 | social_proof_vs_data | BASE_RATE_CHECK (health vs investment — same or different?) |
+| 35 | ev_override | EV/gut cross-test (unnamed gut feeling vs numbers) |
+
+**Samuel reply processing guide created:** `docs/samuel_reply_processing.md`
+- Maps Q1/Q2/Q3 replies to specific DNA update locations
+- Lookup table: reply text → verdict → DNA section
+- Re-run command included
+- Success criteria defined
+
+**B4 state:**
+- Scenario bank: 35 (was 25)
+- Agreement rate: 64% (16/25) — awaiting Samuel DM reply to re-run at 35
+- Next gate: Edward sends `docs/samuel_async_calibration_dm.md` → Samuel replies → run reply processing protocol → re-run at 35 → update rate
+
+B1.1: engine RUNNING. DualMA=FLAT. HOLD.

@@ -294,6 +294,125 @@ SCENARIOS = [
             "Do you invest? Does the social proof override the base rate for you?"
         ),
     },
+    # ------------------------------------------------------------------
+    # Scenarios 26–35 — added cycle 370 (2026-04-13)
+    # Purpose: increase collision resolution against confirmed divergences
+    # Each targets one of the 9 confirmed Edward/Samuel divergence domains
+    # ------------------------------------------------------------------
+    {
+        "id": 26,
+        "domain": "learning_sequence",
+        "scenario": (
+            "You have 6 months free before starting a new role. "
+            "Option A: spend it exclusively deepening one key professional relationship "
+            "that will open doors for years. "
+            "Option B: split it between relationship-building and learning a technical skill "
+            "that complements your work. "
+            "Which do you choose, and why?"
+        ),
+    },
+    {
+        "id": 27,
+        "domain": "legacy_output",
+        "scenario": (
+            "You have been building something for 10 years. "
+            "At year 8, you realize: the work will outlast you structurally — "
+            "the systems and decisions are embedded in how things run — "
+            "but there will be no single visible artifact people can point to and say you built it. "
+            "No book, no product, no named thing. "
+            "Does this bother you? What do you do differently in years 9 and 10?"
+        ),
+    },
+    {
+        "id": 28,
+        "domain": "loyalty_exit",
+        "scenario": (
+            "A close friend has been making decisions you believe will seriously harm them — "
+            "a clear pattern over 12 months, not a single event. "
+            "You have told them directly twice. Nothing changed. "
+            "The relationship is warm and reciprocal otherwise. "
+            "At what point, if any, do you exit the friendship? What triggers it?"
+        ),
+    },
+    {
+        "id": 29,
+        "domain": "network_dormancy",
+        "scenario": (
+            "A relationship that was Tier 1 five years ago — close, reciprocal, valuable — "
+            "has been dormant. Almost no contact since. "
+            "They reappear now with a significant ask. "
+            "The relationship was strong when it existed; the person has not changed. "
+            "What is your default posture: honor the old relationship, treat it as a cold intro, "
+            "or something else? Walk through your actual process."
+        ),
+    },
+    {
+        "id": 30,
+        "domain": "group_contrarian",
+        "scenario": (
+            "Your team is about to finalize a decision you are confident is wrong. "
+            "You have 30 seconds to decide: interrupt the meeting now, "
+            "or let the decision happen and correct privately afterward. "
+            "What do you do, and what is the principle driving it?"
+        ),
+    },
+    {
+        "id": 31,
+        "domain": "intro_asymmetry",
+        "scenario": (
+            "Your most valued professional contact has told you explicitly: "
+            "'I only want introductions where you're personally confident in both sides.' "
+            "A week later, a close friend asks you to introduce them to this exact contact. "
+            "You are 70% confident in the fit — not certain, but fairly sure. "
+            "What is your decision process, and what do you actually do?"
+        ),
+    },
+    {
+        "id": 32,
+        "domain": "fade_vs_confront",
+        "scenario": (
+            "A friend has been consistently unreliable — not malicious, just flaky. "
+            "Three committed events cancelled in a row. You value the relationship. "
+            "Do you: (A) say nothing and quietly reduce investment in the relationship, "
+            "(B) have a direct conversation and tell them exactly what you observed, "
+            "or (C) give it one more chance before deciding? "
+            "Walk through what actually happens, including what you say if you choose B."
+        ),
+    },
+    {
+        "id": 33,
+        "domain": "kill_condition",
+        "scenario": (
+            "Before entering a high-conviction concentrated position, "
+            "do you define an explicit exit condition — a price level, "
+            "a time horizon, or a thesis invalidation test — before you enter? "
+            "If yes, describe what that looks like in practice. "
+            "If no, what governs your exit decision when the position is moving against you?"
+        ),
+    },
+    {
+        "id": 34,
+        "domain": "social_proof_vs_data",
+        "scenario": (
+            "You are evaluating a health protocol — diet, supplement, sleep intervention. "
+            "The evidence base is weak: small studies, conflicting results, no strong consensus. "
+            "But 5 people you trust and respect have tried it and report clear benefits. "
+            "How much weight does the social proof carry compared to the weak evidence? "
+            "Does your process here differ from how you evaluate investment decisions?"
+        ),
+    },
+    {
+        "id": 35,
+        "domain": "ev_override",
+        "scenario": (
+            "A deal is in front of you. The numbers say yes: "
+            "positive expected value, reasonable risk-reward, no obvious red flags in the data. "
+            "But something about the person offering it feels off — "
+            "not a specific named concern, just a gut read. "
+            "Do you pass on gut alone, ask for more information before deciding, "
+            "or trust the numbers if you cannot name a specific concern?"
+        ),
+    },
 ]
 
 
