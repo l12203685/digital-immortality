@@ -1,0 +1,13 @@
+{
+  "current_position_cap_usdt": 100,
+  "scale_history": [],
+  "rules": [
+    {"after_days": 30, "pnl_threshold_pct": 3, "new_cap": 200},
+    {"after_days": 60, "pnl_threshold_pct": 6, "new_cap": 500},
+    {"after_days": 90, "pnl_threshold_pct": 10, "new_cap": 1000},
+    {"after_days": 180, "pnl_threshold_pct": 20, "new_cap": 2000},
+    {"after_days": 365, "pnl_threshold_pct": 50, "new_cap": 5000}
+  ],
+  "max_cap_year_1": 5000,
+  "survival_threshold_monthly_usd": 30
+}
