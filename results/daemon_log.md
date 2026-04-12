@@ -821,3 +821,22 @@ B1.1: engine STOPPED. DualMA=FLAT. HOLD.
 **Correctly skipped:** `tools/turing_blind_pack.py` — SOP #95 is explicit: do not build until G0 (candidates confirmed). Tooling is not the bottleneck.
 
 **Next priority (cycle 374):** B2.3 — 38/41 ALIGNED, 3 scenarios still MISALIGNED. Identify which 3, patch `dna_core.md`, or classify as permanent LLM-boundary.
+
+## Cycle 374 — 2026-04-13 (Taipei)
+
+**Cycle 374 complete.** Root-work — tree sync + B2.3 classification closure.
+
+| Branch | Result |
+|--------|--------|
+| **B2.3 行為等價** | **CLOSED** — 3 MISALIGNED confirmed permanent LLM-boundary (poker_gto_mdf / trading_atr_sizing / career_multi_option_ev); no patch possible, no regression; classification documented in dynamic_tree.md |
+| **dynamic_tree.md** | Full sync across B1.1/B2/B4/B6/B9 — all branches current; ~6 stale entries corrected |
+| **B1.1 Trading** | tick=60; BTC=$71,240; all 11 active=FLAT; 8 disabled (DualMA×4/Bollinger×2/Donchian×2); cum_pnl=0.0; correct inaction |
+| **daemon_next_priority** | Updated → B3.1 distillation (cycles 371-374, ~9 insights pending) |
+
+**Key B2.3 finding (from cycles 297-299 records, confirmed cycle 374):**
+- 38 scenarios: deterministic engine ALIGNED ✅
+- 3 permanent LLM-boundary (require full DNA context + reasoning, deterministic keyword engine cannot pass): poker_gto_mdf / trading_atr_sizing / career_multi_option_ev
+- These 3 are EXPECTED MISALIGNED — they validate that DNA is rich enough to require LLM reasoning
+- B2.3 is CLOSED. No further work needed on this branch.
+
+**Next:** B3.1 distillation from cycles 371-374 learnings.

@@ -1,5 +1,5 @@
 # 永生樹 — Dynamic State
-> Updated: 2026-04-13 (cycle 370 — B4: 35-scenario bank; reply processing guide; DM human-gated)
+> Updated: 2026-04-13 (cycle 374 — B2.3 CLOSED; tree sync: B1.1/B6/B9 brought current)
 > Format: current state ONLY. History in tree_archive/. 導數驅動。
 
 ## 核心目標（常數）
@@ -10,29 +10,29 @@
 
 | Branch | Derivative | Health | Last Cycle | Key Metric |
 |--------|-----------|--------|------------|------------|
-| 1. 經濟自給 | -0.1 | YELLOW | 365 | BTC=$70,873 RANGE BREAK ↓$1,961; DualMA=LONG x54; mainnet BLOCKED (~86d) |
-| 2. 行為等價 | +0.0 | GREEN | 365 | 2.2 COMPLETE (416 MDs); 2.3 38/41 ALIGNED; cross-instance 97% |
-| 3. 持續學習 | +0.1 | GREEN | 365 | distil166 done (file=305/running=415); engine running |
-| 4. 社交圈 | +0.2 | YELLOW | 370 | Samuel 64% AGREE (16/25); 35-scenario bank built; reply processing guide ready; DM human-gated |
+| 1. 經濟自給 | 0.0 | YELLOW | 373 | BTC=$71,247 tick=60 FLAT; DualMA DISABLED (PF=0.7); 11 active/8 disabled; mainnet BLOCKED (~85d) |
+| 2. 行為等價 | +0.0 | GREEN | 374 | 2.2 COMPLETE (416 MDs); 2.3 38/41 CONFIRMED FINAL (3=LLM-boundary CLOSED) |
+| 3. 持續學習 | +0.1 | GREEN | 373 | distil166 done; insights running; B3.1 distillation pending (cycles 371-374) |
+| 4. 社交圈 | +0.2 | YELLOW | 371 | Samuel 40% AGREE (16/40); agreement floor confirmed; root cause documented; DM human-gated |
 | 5. 平台分發 | +0.0 | GREEN | 364 | SOP #01~#121 COMPLETE; posting queue pending |
-| 6. 存活冗餘 | +0.0 | GREEN | 365 | 115th clean cycle; 38/41 ALIGNED; tripwire clear |
+| 6. 存活冗餘 | +0.0 | GREEN | 372 | 115th clean cycle; 38/41 ALIGNED; SOP #101 6/6 gates passing |
 | 7. 知識輸出 | +0.0 | GREEN | 364 | SOP series complete; engagement loop not started |
 | 8. 生活維護 | +0.0 | GREEN | 364 | 5/5 SYSTEM_FAILURE decisions pre-committed |
-| 9. Turing Test | +0.0 | RED | 364 | candidates 0/3 BLOCKED; protocol designed |
+| 9. Turing Test | +0.1 | YELLOW | 373 | candidates 0/3 BLOCKED; G1 infrastructure READY (scenarios.md + results/turing_test/) |
 | 10. L3 System | +0.0 | GREEN | 364 | trading+content L3 complete; recursive L3 pending |
 
 ## Branch Details
 
 ### 1. 經濟自給（存活前提） DEADLINE: 2026-07-07
-- 1.1 Trading: paper-live tick 54; BTC=$70,873.09 DualMA_10_30=LONG (signal=1) x54 human ticks; **RANGE BREAK**: ↓$1,961 from $72,834; old range $72,638–$72,831 INVALIDATED ($1,765 below floor); engine tick=2159 RUNNING (unfrozen 2026-04-12); DualMA disabled PF<0.8 in engine; all active signals=0 FLAT; engine PnL=+6.57%; Donchian_20=FLAT; new-floor-discovery phase; DualMA governs — HOLD LONG
-- 1.2 Mainnet: BLOCKED on Binance API credentials; mainnet_runner.py built; activation guide exists; ~86 days to deadline
+- 1.1 Trading: engine PAPER; tick=60 (last: 2026-04-12T21:51 UTC); BTC=$71,240; all 11 active signals=0 FLAT; 8 strategies disabled (DualMA×4 PF=0.7, Bollinger×2 PF=0.62, Donchian×2 PF=0.67); cum_pnl=0.0 (no open positions); regime=mixed; new-floor-discovery phase — correct inaction
+- 1.2 Mainnet: BLOCKED on Binance API credentials; mainnet_runner.py built; activation guide exists; ~85 days to deadline
 - 1.3 Outreach: DMs x5 pending (human-gated); Week 1 execution doc ready
 - Kill conditions: MDD>10% WR<35% PF<0.85
 
 ### 2. 行為等價（核心能力）
 - 2.1 DNA: 416 MDs integrated; dna_core.md operational
 - 2.2 微決策學習: COMPLETE (JSONL archive exhausted; 201703-202604 all processed)
-- 2.3 Validation: 38/41 ALIGNED (3 permanent LLM-boundary: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev); cross-instance 97%
+- 2.3 Validation: **38/41 CONFIRMED FINAL — CLOSED** (38 deterministic ALIGNED; 3 permanent LLM-boundary: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev — not regressions, not patchable); cross-instance 97%
 - 2.4 Response latency: 10/10 ALIGNED gap CLOSED
 - 2.5 退休計畫 context: added
 
@@ -43,7 +43,7 @@
 - 3.4 DNA 演化: dna_core + 416 MDs + 哲學宣言
 
 ### 4. 社交圈（ecosystem）
-- 4.1 Samuel organism: **64% AGREE (16/25)** — cycle 368 collision; 9 divergences: LEARNING/LEGACY/SOCIAL_TRUST/NETWORK_ROI/GROUP_DYNAMICS/INTRO_GATEKEEPING/RELATIONSHIP_DOWNGRADE/DOWNSIDE_MODEL/BASE_RATE_CHECK; 35-scenario bank (added 26-35 cycle 370); reply processing guide: `docs/samuel_reply_processing.md`; async calibration DM: human-gated
+- 4.1 Samuel organism: **40% AGREE (16/40)** — cycle 371 final; agreement floor confirmed (16 stable AGREE, adding scenarios won't raise rate); root cause documented: `docs/b4_divergence_root_cause.md`; 5 divergence clusters (signal source/social exit/network theory/social speed/gatekeeping); reply processing guide: `docs/samuel_reply_processing.md`; async calibration DM: human-gated
 - 4.2 Collision protocol: operational (organism_interact.py --report)
 - 4.3 Discord server: channels ready, seed posts created, users=0
 - 4.4 Collective intelligence: Phase 3 (pending)
@@ -56,7 +56,8 @@
 - Guided onboarding: deployed
 
 ### 6. 存活冗餘（anti-fragile）
-- Cold-start: 38/41 ALIGNED; 114th consecutive clean cycle
+- Cold-start: 38/41 ALIGNED; **115th consecutive clean cycle** (cycle 372 verified); cold_start_health_report.md updated
+- SOP #101 **6/6 gates passing** (G1 audited cycle 372; next cadence ~402); Test 11 added (Tiered Boot)
 - F1-F10 runbook complete
 - CI sentinel on every commit
 - Multi-provider fallback: Anthropic -> OpenAI -> Gemini
@@ -71,7 +72,9 @@
 - Morning defaults doc exists (171 min/week recovered)
 
 ### 9. Turing Test
-- Protocol designed (G0-G5); candidates 0/3 BLOCKED
+- **G1 infrastructure READY** (cycle 373): `docs/turing_test_scenarios.md` (S01-S10 with DNA principle/expected response/LLM failure mode); `results/turing_test/candidates.jsonl`; `results/turing_test/gap_register.jsonl`; `results/turing_test/eval_packets/`; SOP #95 status table updated
+- Protocol: G0-G5 designed; G1 storage gap CLOSED
+- Candidates: 0/3 BLOCKED (human-gated); agent baseline NOT RUN; blind pack NOT BUILT (correct — wait for G0)
 - Milestone: 8/10 x 2 evaluators = behavioral immortality certified
 
 ### 10. L3 System-Wide
@@ -80,15 +83,15 @@
 - Recursive engine L3: PENDING
 
 ## 當前 regime
-攻擊: 1.1 Trading paper-live running; mainnet BLOCKED (API keys ~87d)
-中性: 2.2 COMPLETE; 3.1 daemon reviving; 5.x deployed; 8.5 pre-committed
-防禦: 6 存活 114th clean; F1-F10 runbook; CI sentinel
+攻擊: 1.1 Trading paper-live tick=60 FLAT (no positions); mainnet BLOCKED (API keys ~85d)
+中性: 2.3 CLOSED; 3.1 distillation pending (cycles 371-374); 5.x deployed; 8.5 pre-committed
+防禦: 6 存活 115th clean; SOP #101 6/6; F1-F10 runbook; CI sentinel
 
 ## Human Blockers
 - Binance mainnet API keys (deadline 2026-07-07)
 - Outreach DMs x5 (human-send)
 - Samuel async calibration DM (human-send)
-- Engine G3 restart (human decision)
+- Turing Test candidate confirmation (human-send; G1 infrastructure ready)
 
 ## daemon_next_priority
-GATE-CONSTRAINED. All automatable branches nominal. Human-gated: B1.3 outreach DMs x5 / B4.1 Samuel DM / engine restart (G3 clock). B6: cycle 364 114th clean. B1.1 BTC=$72,834.20 DualMA=LONG x53 engine=321 FROZEN. B3.1 distil165 DONE (file=302/running=412). SOP#01~121 COMPLETE.
+GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 infrastructure READY. Human-gated: B1.3 outreach DMs x5 / B4.1 Samuel DM / B9 candidates. Automatable next: B3.1 distillation from cycles 371-374 learnings (4 cycles, ~9 insights pending).
