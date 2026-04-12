@@ -731,3 +731,29 @@ Human-gated blockers unchanged: Samuel DM send, mainnet API keys, outreach DMs �
 **Key finding:** The 16 AGREE scenarios are stable (common ground is fixed). Agreement floor = ~40%. Divergence is architectural (signal source + action speed), not domain-specific. Agreement-fishing confirmed this. Samuel cannot be made to agree more through better scenario design — calibration requires actual Samuel input (DM human-gated).
 
 B1.1: engine STOPPED. DualMA=FLAT. HOLD.
+
+## Cycle 1 — 2026-04-13 03:55:43 (Taipei)
+
+**Cycle 371 done.** B4 branch-growth — root cause synthesis complete.
+
+---
+
+**What was done:**
+
+**40-scenario collision run — agreement floor confirmed**
+
+| Run | Bank | AGREE | Rate | Notes |
+|-----|------|-------|------|-------|
+| cycle 368 | 25 | 16/25 | 64% | prev |
+| cycle 371 (mid) | 35 | 16/35 | 46% | divergence-targeted |
+| cycle 371 (final) | 40 | 16/40 | **40%** | agreement-fishing also diverged |
+
+**Key finding:** The 16 AGREE scenarios are stable across all runs — permanent common ground. Adding more scenarios won't raise the rate. Only Samuel's actual input (DM human-gated) can correct divergences.
+
+**Root cause documented** (`docs/b4_divergence_root_cause.md`):
+- Samuel: relationship-first OS (gut → social proof → numbers)
+- Edward: EV-first OS (base rate → structural analysis → action)
+- 5 divergence clusters: signal source, social exit rules, network theory, social speed, gatekeeping
+- Practical simulation corrections added for B9 Turing Test (when twin needs to act AS Samuel)
+
+**Next gate (human-gated):** Edward sends `docs/samuel_async_calibration_dm.md` → Samuel replies → `docs/samuel_reply_processing.md` → re-run → 40% → ~45%
