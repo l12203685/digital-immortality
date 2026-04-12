@@ -357,6 +357,23 @@ def run(rebuild: bool = False) -> int:
     return 0
 
 
+def query_history(query: str, limit: int = 20) -> list[dict]:
+    """Search the FTS5 index for behavioral evidence."""
+    if not DB_PATH.exists():
+        return []
+    conn = sqlite3.connect(str(DB_PATH))
+    try:
+        rows = conn.execute(
+            "SELECT * FROM messages WHERE messages MATCH ? ORDER BY rank LIMIT ?",
+            (query, limit),
+        ).fetchall()
+        return [{"text": r[0]} for r in rows] if rows else []
+    except Exception:
+        return []
+    finally:
+        conn.close()
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Index chat history JSONL archive")
     parser.add_argument(
