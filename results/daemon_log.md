@@ -588,3 +588,24 @@ ACK for voice test (`1775898534`) sent and written to outbox.
 **Remaining gap**: `voice.html` outbox section was permission-denied (it's in `~/.claude/scripts/`). The UI delta is small — a `loadOutbox()` function + one new `<section>` block. Can approve if Edward wants to complete the loop.
 
 **B1.1**: tick=2250, price=$70,955, regime=mixed, all signals=0 FLAT, engine in new-floor-discovery phase. HOLD.
+
+## Cycle 1 — 2026-04-13 02:23:41 (Taipei)
+
+**Cycle 368 complete.** Branch 4 (社交圈) — first concrete work in 70 cycles.
+
+---
+
+**What was done:**
+
+`templates/samuel_dna.md` updated with three substantive changes:
+
+1. **§7 Known Divergences** — rewrote with the 7 confirmed divergences from the cycle 366 22-scenario collision. Now shows the actual mechanism per divergence (not just domain labels), plus calibration flags for the 3 inference-built scenarios.
+
+2. **§8 Calibration Status** — ran a fresh **25-scenario collision** (added blind-spot scenarios 23/24/25):
+   - Result: **16/25 AGREE (64%)**
+   - 9 divergences: all 7 prior + `downside_model` + `base_rate_check`
+   - `opportunity_cost` AGREE — prediction was wrong. Samuel evaluates under 72h pressure; doesn't skip it. The blind spot is financial/investment-specific, not structural across all decisions.
+
+3. **§8 blind-spot table** — records predicted vs actual for scenarios 23/24/25 with the correction noted.
+
+**B4 state:** 64% agreement rate (16/25). Next gate is human-send of `docs/samuel_async_calibration_dm.md` — the async DM with 3 calibration scenarios (WhatsApp/LINE, human-gated).

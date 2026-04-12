@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-04-12T17:53:50Z",
-  "updated_taipei": "2026-04-13 01:53 (Taipei, UTC+8)",
-  "updated_taipei_iso": "2026-04-13T01:53:50.580888+08:00",
+  "updated_utc": "2026-04-12T18:23:41Z",
+  "updated_taipei": "2026-04-13 02:23 (Taipei, UTC+8)",
+  "updated_taipei_iso": "2026-04-13T02:23:41.565571+08:00",
   "tree": {
     "available": true,
     "branches": [
@@ -44,8 +44,8 @@
   },
   "trading_engine": {
     "available": true,
-    "last_tick": "2026-04-12T17:53:25.694792+00:00",
-    "tick_count": 2254,
+    "last_tick": "2026-04-12T18:23:27.288056+00:00",
+    "tick_count": 2284,
     "active_strategies": 11,
     "disabled": {
       "gen_BollingerMeanReversion_RF_7abfe4": "PF 0.62 < 0.8",
@@ -58,7 +58,7 @@
       "Donchian_filtered": "PF 0.67 < 0.8"
     },
     "total_pnl_pct": 0.0657,
-    "price": 71175.23,
+    "price": 71076.41,
     "regime": "mixed",
     "mode": "PAPER"
   },
@@ -169,18 +169,6 @@
   "daemon": {
     "available": true,
     "tail": [
-      "  - `DOWNSIDE_MODEL` (id=23) — tests kill condition discipline",
-      "  - `OPPORTUNITY_COST` (id=24) — tests 72h decision under salary cut",
-      "  - `BASE_RATE_CHECK` (id=25) — tests whether social proof overrides base rate",
-      "- Wrote `staging/samuel_organism_cycle366.md` — full analysis + calibration priority stack",
-      "**Next gate (human-gated)**: Send `docs/samuel_async_calibration_dm.md` to Samuel via WhatsApp/LINE. After reply → update `samuel_dna.md` → re-run on 25-scenario bank.",
-      "**B1.1**: DualMA signal=1 (LONG), x54, no MA cross. HOLD. No action.",
-      "**Voice input**: \"phase4b e2e test message / test reverse channel 1775898534 / E2E public host smoke test\" — received as smoke test signal. No reverse_channel infrastructure exists to route. Logged as received.",
-      "**Classification**: branch-growth (B4) + maintenance (B1.1)",
-      "## Cycle 1 — 2026-04-13 01:53:50 (Taipei)",
-      "**Cycle 367 complete.**",
-      "---",
-      "**Phase 4b — reverse channel**",
       "Built `platform/reverse_channel.py`:",
       "- `send(text, channel=\"mission_control\")` — in-process API for the daemon",
       "- CLI: `python platform/reverse_channel.py \"reply text\"`",
@@ -188,7 +176,19 @@
       "- End-to-end path now: Voice → watcher → `web_inbox.jsonl` → daemon reads → `reverse_channel.py` → `web_outbox.jsonl` → `/api/outbox`",
       "ACK for voice test (`1775898534`) sent and written to outbox.",
       "**Remaining gap**: `voice.html` outbox section was permission-denied (it's in `~/.claude/scripts/`). The UI delta is small — a `loadOutbox()` function + one new `<section>` block. Can approve if Edward wants to complete the loop.",
-      "**B1.1**: tick=2250, price=$70,955, regime=mixed, all signals=0 FLAT, engine in new-floor-discovery phase. HOLD."
+      "**B1.1**: tick=2250, price=$70,955, regime=mixed, all signals=0 FLAT, engine in new-floor-discovery phase. HOLD.",
+      "## Cycle 1 — 2026-04-13 02:23:41 (Taipei)",
+      "**Cycle 368 complete.** Branch 4 (社交圈) — first concrete work in 70 cycles.",
+      "---",
+      "**What was done:**",
+      "`templates/samuel_dna.md` updated with three substantive changes:",
+      "1. **§7 Known Divergences** — rewrote with the 7 confirmed divergences from the cycle 366 22-scenario collision. Now shows the actual mechanism per divergence (not just domain labels), plus calibration flags for the 3 inference-built scenarios.",
+      "2. **§8 Calibration Status** — ran a fresh **25-scenario collision** (added blind-spot scenarios 23/24/25):",
+      "   - Result: **16/25 AGREE (64%)**",
+      "   - 9 divergences: all 7 prior + `downside_model` + `base_rate_check`",
+      "   - `opportunity_cost` AGREE — prediction was wrong. Samuel evaluates under 72h pressure; doesn't skip it. The blind spot is financial/investment-specific, not structural across all decisions.",
+      "3. **§8 blind-spot table** — records predicted vs actual for scenarios 23/24/25 with the correction noted.",
+      "**B4 state:** 64% agreement rate (16/25). Next gate is human-send of `docs/samuel_async_calibration_dm.md` — the async DM with 3 calibration scenarios (WhatsApp/LINE, human-gated)."
     ],
     "last_cycle": 165
   },
@@ -197,7 +197,7 @@
     "head": [
       "# Quick Status — live state snapshot for Type A cold start",
       "",
-      "> Updated: 2026-04-13 01:53 (Taipei, UTC+8) (auto-written by daemon cycle 1)",
+      "> Updated: 2026-04-13 02:23 (Taipei, UTC+8) (auto-written by daemon cycle 1)",
       "",
       "## Current state",
       "- daemon: RUNNING (cycle 1, CLI (Max subscription), claude-sonnet-4-6, interval immediate (chain))",
@@ -234,6 +234,8 @@
   },
   "git": {
     "digital-immortality": [
+      "7b0bd13 feat(B4): samuel_dna — 25-scenario collision + blind-spot calibration",
+      "f4e1216 daemon: cycle 1",
       "4d904e6 feat(phase4b): reverse_channel.py — agent → web_outbox.jsonl sender",
       "20d1106 daemon: cycle 1",
       "d1aa431 chore(save): cycle 366 — B4 ACTIVATED: Samuel 68% AGREE / 3 blind-spot scenarios / 88-cycle dormancy broken",
@@ -241,9 +243,7 @@
       "9767763 chore(save): cycle 365 — B6 115th ✅ / B1.1 RANGE BREAK BTC=$70,873 ↓$1,961 / B3.1 distil166",
       "5940e5b fix: recursive engine revival + trading engine unfreeze",
       "098ef3b chore: update tunnel URL to memories-them-ice-floral.trycloudflare.com",
-      "9cb8281 chore: update tunnel URL to water-miniature-prize-administration.trycloudflare.com",
-      "6261adc chore(save): 2026-04-12 checkpoint — dashboard UIUX refactor, responsive layout, zero portfolio, chat center, finance pipeline, security sweep",
-      "ecb46ad chore: update tunnel URL to magazines-blues-qualify-ser.trycloudflare.com"
+      "9cb8281 chore: update tunnel URL to water-miniature-prize-administration.trycloudflare.com"
     ],
     "LYH": [
       "6554ce3 feat(dna): formalize recursion loop model — output(t) + tree(t) → plan(t+1) → execute → repeat",
@@ -694,7 +694,7 @@
       "state": "offline",
       "label": "離線",
       "color": "alert",
-      "age_min": 58.4
+      "age_min": 88.2
     }
   }
 }
