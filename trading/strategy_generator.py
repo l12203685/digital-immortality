@@ -39,9 +39,17 @@ from trading.strategies import (
     Donchian,
     DonchianConfirmed,
     DualMA,
+    MeanReversionFilter,
     NAMED_STRATEGIES,
     RegimeFilter,
     RSIFilter,
+)
+from trading.strategies_extended import (
+    CCIStrategy,
+    DMIStrategy,
+    KeltnerStrategy,
+    MACDStrategy,
+    ORBStrategy,
 )
 from trading.orthogonality_filter import (
     OrthogonalityFilter,
@@ -155,6 +163,53 @@ RSI_FILTER_PARAMS: List[Dict[str, Any]] = [
     )
 ]
 
+# --- Extended strategy parameter spaces (PLA-derived) ---
+
+CCI_PARAMS: List[Dict[str, Any]] = [
+    {"period": p, "threshold": t}
+    for p, t in itertools.product(
+        [14, 20, 25, 30],
+        [80.0, 100.0, 120.0, 150.0],
+    )
+]
+
+DMI_PARAMS: List[Dict[str, Any]] = [
+    {"period": p, "adx_threshold": a}
+    for p, a in itertools.product(
+        [10, 14, 20, 25],
+        [20.0, 25.0, 30.0, 35.0],
+    )
+]
+
+MACD_PARAMS: List[Dict[str, Any]] = [
+    {"fast": f, "slow": s, "signal": sig}
+    for f, s, sig in itertools.product(
+        [8, 12, 16],
+        [21, 26, 34],
+        [7, 9, 12],
+    )
+    if f < s
+]
+
+ORB_PARAMS: List[Dict[str, Any]] = [
+    {"range_bars": rb, "atr_filter": af, "atr_period": ap}
+    for rb, af, ap in itertools.product(
+        [1, 2, 3, 5],
+        [0.0, 0.3, 0.5, 0.8],
+        [10, 14, 20],
+    )
+]
+
+KELTNER_PARAMS: List[Dict[str, Any]] = [
+    {"ema_period": ep, "atr_period": ap, "multiplier": m, "mode": mode}
+    for ep, ap, m, mode in itertools.product(
+        [15, 20, 25, 30],
+        [10, 14, 20],
+        [1.5, 2.0, 2.5, 3.0],
+        ["momentum", "reversion"],
+    )
+]
+
 
 # ---------------------------------------------------------------------------
 # Candidate builder — enumerates strategy combos
@@ -215,8 +270,12 @@ def generate_candidates(n: int) -> List[Tuple[str, object, Dict[str, Any]]]:
     while len(candidates) < n and attempts < max_attempts:
         attempts += 1
 
-        # Pick a base strategy class
-        base_cls = random.choice([DualMA, Donchian, DonchianConfirmed, BollingerMeanReversion])
+        # Pick a base strategy class (weighted: legacy 40%, extended 60%)
+        all_base_classes = [
+            DualMA, Donchian, DonchianConfirmed, BollingerMeanReversion,
+            CCIStrategy, DMIStrategy, MACDStrategy, ORBStrategy, KeltnerStrategy,
+        ]
+        base_cls = random.choice(all_base_classes)
 
         if base_cls == DualMA:
             bp = random.choice(DUAL_MA_PARAMS)
@@ -224,6 +283,18 @@ def generate_candidates(n: int) -> List[Tuple[str, object, Dict[str, Any]]]:
             bp = random.choice(DONCHIAN_PARAMS)
         elif base_cls == DonchianConfirmed:
             bp = random.choice(DONCHIAN_CONFIRMED_PARAMS)
+        elif base_cls == BollingerMeanReversion:
+            bp = random.choice(BOLLINGER_PARAMS)
+        elif base_cls == CCIStrategy:
+            bp = random.choice(CCI_PARAMS)
+        elif base_cls == DMIStrategy:
+            bp = random.choice(DMI_PARAMS)
+        elif base_cls == MACDStrategy:
+            bp = random.choice(MACD_PARAMS)
+        elif base_cls == ORBStrategy:
+            bp = random.choice(ORB_PARAMS)
+        elif base_cls == KeltnerStrategy:
+            bp = random.choice(KELTNER_PARAMS)
         else:
             bp = random.choice(BOLLINGER_PARAMS)
 
@@ -319,6 +390,23 @@ def _append_to_strategies_py(entries: List[Tuple[str, Dict[str, Any]]]) -> int:
                 f"num_std={bp['num_std']}, "
                 f"trend_lookback={bp['trend_lookback']}, "
                 f"trend_threshold={bp['trend_threshold']})"
+            )
+        elif base == "CCIStrategy":
+            inner_code = f"CCIStrategy(period={bp['period']}, threshold={bp['threshold']})"
+        elif base == "DMIStrategy":
+            inner_code = f"DMIStrategy(period={bp['period']}, adx_threshold={bp['adx_threshold']})"
+        elif base == "MACDStrategy":
+            inner_code = f"MACDStrategy(fast={bp['fast']}, slow={bp['slow']}, signal={bp['signal']})"
+        elif base == "ORBStrategy":
+            inner_code = (
+                f"ORBStrategy(range_bars={bp['range_bars']}, "
+                f"atr_filter={bp['atr_filter']}, atr_period={bp['atr_period']})"
+            )
+        elif base == "KeltnerStrategy":
+            inner_code = (
+                f"KeltnerStrategy(ema_period={bp['ema_period']}, "
+                f"atr_period={bp['atr_period']}, "
+                f"multiplier={bp['multiplier']}, mode=\"{bp['mode']}\")"
             )
         else:
             continue
