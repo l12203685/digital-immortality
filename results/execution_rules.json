@@ -2,12 +2,22 @@
   "kill_max_dd": 20.0,
   "kill_min_wr": 0.3,
   "kill_min_pf": 0.8,
-  "kill_window": 20,
+  "kill_window": 35,
+  "kill_window_floor": 20,
+  "kill_window_ceiling": 50,
+  "kill_window_recovery_ticks": 100,
   "kill_count": 14,
-  "evolved_at": "2026-04-11T18:56:56.352427+00:00",
+  "evolved_at": "2026-04-12T00:00:00+00:00",
   "last_kill": {
     "strategy": "Donchian_filtered",
     "reason": "PF 0.67 < 0.8",
     "ts": "2026-04-11T18:56:56.352427+00:00"
+  },
+  "last_recovery": {
+    "ts": "2026-04-12T00:00:00+00:00",
+    "from_window": 20,
+    "to_window": 35,
+    "clean_ticks": 1231,
+    "reason": "manual_reset_after_restart_loop_fix"
   }
 }

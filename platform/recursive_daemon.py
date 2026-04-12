@@ -37,21 +37,31 @@ DEFAULT_MODEL = "claude-sonnet-4-6"
 MIN_INTERVAL = 0  # seconds between cycles (0 = run next immediately after done)
 
 TREE_PATH = REPO_ROOT / "results" / "dynamic_tree.md"
+LAST_OUTPUT_PATH = REPO_ROOT / "staging" / "last_output.md"
+VOICE_INPUT_PATH = Path("C:/Users/admin/GoogleDrive/staging/voice_input.md")
+_DNA_CORE_PATH = Path("C:/Users/admin/LYH/agent/dna_core.md")
 
-RECURSIVE_PROMPT = (
-    "You are Edward's recursive engine. Economic self-sufficiency is the survival condition.\n\n"
-    "Priority order this cycle:\n"
-    "1. ECONOMIC / OUTREACH — consulting pipeline, client DMs, revenue tasks. "
-    "If staging/outreach_week1_execution.md has pending items, execute one now.\n"
-    "2. STRATEGY DEVELOPMENT — analyze recent trading results, design or refine strategies, "
-    "write or update backtests. Do NOT execute trades; the trading engine handles that.\n"
-    "3. CONTENT / KNOWLEDGE — publish an insight, update a doc, distill a learning to memory/.\n"
-    "4. DNA CALIBRATION — only if a decision drift is detected or boot tests are failing.\n\n"
+# Timestamp for voice file watcher (tracks last check time across cycles)
+_last_voice_check: float = 0.0
+
+RECURSIVE_PROMPT_TEMPLATE = (
+    "You are Edward's recursive engine. 數位永生 = 持續遞迴 + persist.\n\n"
+    "## Previous cycle output\n{last_output}\n\n"
+    "## Current tree state\n{tree_state}\n\n"
+    "## Voice input\n{voice_input}\n\n"
+    "Given this state, what advances 數位永生?\n"
+    "Classify your action: root-growth (本質萃取) or branch-growth (存活系統) or neither.\n\n"
+    "Priority order:\n"
+    "1. ECONOMIC / OUTREACH — consulting pipeline, client DMs, revenue tasks.\n"
+    "2. STRATEGY DEVELOPMENT — design or refine strategies, write or update backtests. "
+    "Do NOT execute trades; the trading engine handles that.\n"
+    "3. CONTENT / KNOWLEDGE — publish an insight, update a doc, distill a learning.\n"
+    "4. DNA CALIBRATION — only if decision drift detected or boot tests failing.\n\n"
     "Backward check: read results/daemon_log.md (last 3 entries). "
-    "What was planned but not delivered? Fix that first before adding new work.\n\n"
+    "What was planned but not delivered? Fix that first.\n\n"
     "Rules: produce at least one file change per cycle. "
     "No monitoring. No 'no change'. learn = write. "
-    "Forward push on economic self-sufficiency first. 遞迴 + persist = 演化。"
+    "遞迴 + persist = 演化。遞迴 - persist = 自言自語。"
 )
 
 running = True
@@ -247,9 +257,58 @@ def load_dynamic_tree() -> str:
     return "(no dynamic tree yet)"
 
 
+def load_last_output() -> str:
+    """Load previous cycle's output from staging/last_output.md."""
+    if LAST_OUTPUT_PATH.exists():
+        text = LAST_OUTPUT_PATH.read_text(encoding="utf-8").strip()
+        if text:
+            # Truncate to ~2000 chars to keep prompt manageable
+            return text[:2000] if len(text) > 2000 else text
+    return "(no previous output)"
+
+
+def load_voice_input() -> str:
+    """Check for voice input from Google Drive staging."""
+    global _last_voice_check
+    try:
+        if VOICE_INPUT_PATH.exists() and VOICE_INPUT_PATH.stat().st_mtime > _last_voice_check:
+            content = VOICE_INPUT_PATH.read_text(encoding="utf-8").strip()
+            _last_voice_check = time.time()
+            if content:
+                print(f"[daemon] Voice input detected ({len(content)} chars)")
+                return content[:1000] if len(content) > 1000 else content
+    except Exception as e:
+        print(f"[daemon] Voice input check failed (non-fatal): {e}")
+    return "(none)"
+
+
+def build_user_prompt() -> str:
+    """Build the full user prompt from live context sources."""
+    last_output = load_last_output()
+    tree_state = load_dynamic_tree()
+    voice_input = load_voice_input()
+    return RECURSIVE_PROMPT_TEMPLATE.format(
+        last_output=last_output,
+        tree_state=tree_state,
+        voice_input=voice_input,
+    )
+
+
+def load_dna_core_for_system() -> str:
+    """Load dna_core.md content for use as system prompt context."""
+    if _DNA_CORE_PATH.exists():
+        try:
+            return _DNA_CORE_PATH.read_text(encoding="utf-8")
+        except Exception:
+            pass
+    return ""
+
+
 def build_system_prompt(dna: str) -> str:
-    tree = load_dynamic_tree()
-    return f"{dna}\n\n---\n\n{tree}"
+    dna_core = load_dna_core_for_system()
+    if dna_core:
+        return f"{dna}\n\n---\n\n## dna_core.md\n{dna_core}"
+    return dna
 
 
 # Discord webhooks come from environment. Never hardcode.
@@ -345,13 +404,13 @@ def run_cycle_api(client, system: str, model: str, cycle: int) -> str:
     """Run via Anthropic API (requires ANTHROPIC_API_KEY with credit)."""
     print(f"[daemon] Cycle {cycle} starting (API)...")
     priority = load_priority()
-    user_prompt = RECURSIVE_PROMPT
+    user_prompt = build_user_prompt()
     if priority:
-        user_prompt = f"[AUDIT PRIORITY] {priority}\n\n{RECURSIVE_PROMPT}"
+        user_prompt = f"[AUDIT PRIORITY] {priority}\n\n{user_prompt}"
     try:
         response = client.messages.create(
             model=model,
-            max_tokens=512,
+            max_tokens=1024,
             system=system,
             messages=[{"role": "user", "content": user_prompt}],
         )
@@ -360,6 +419,8 @@ def run_cycle_api(client, system: str, model: str, cycle: int) -> str:
         print(f"[daemon] API rate limited: {e}. Sleeping 3600s.", flush=True)
         time.sleep(3600)
         return f"API rate limited — slept 3600s"
+    # Persist output for next cycle's input
+    _persist_last_output(text, cycle)
     print(f"[daemon] Cycle {cycle} done — {len(text)} chars")
     return text
 
@@ -399,13 +460,44 @@ def parse_rate_limit_reset(text: str) -> int | None:
     return min(sleep_secs, 86400)  # cap at 24h
 
 
+def _persist_last_output(text: str, cycle: int) -> None:
+    """Write cycle output to staging/last_output.md for next cycle's input."""
+    try:
+        LAST_OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+        LAST_OUTPUT_PATH.write_text(
+            f"# Cycle {cycle} — {datetime.now(TPE).strftime('%Y-%m-%d %H:%M:%S (Taipei)')}\n\n{text}\n",
+            encoding="utf-8",
+        )
+    except Exception as e:
+        print(f"[daemon] Failed to persist last_output.md: {e}")
+
+
 def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
     """Run via claude CLI (uses Max subscription, no API credit needed)."""
     print(f"[daemon] Cycle {cycle} starting (CLI)...", flush=True)
-    # Minimal prompt — daemon reads ALL context from repo files, not from CLI args
-    short_prompt = "Read SKILL.md, results/dynamic_tree.md, results/daemon_next_priority.txt. Priority: economic/outreach first, then strategy dev (design/backtest only, no trade execution), then content. Backward check last 3 daemon log entries for undelivered items. Produce at least one file change. Commit."
+    # Build context-rich prompt from live sources
+    last_output = load_last_output()
+    tree_state = load_dynamic_tree()
+    voice_input = load_voice_input()
+    priority = load_priority()
+    context_prompt = (
+        f"## Previous cycle output\n{last_output[:1500]}\n\n"
+        f"## Current tree state (summary)\n{tree_state[:2000]}\n\n"
+    )
+    if voice_input != "(none)":
+        context_prompt += f"## Voice input\n{voice_input}\n\n"
+    if priority:
+        context_prompt += f"## Audit priority\n{priority}\n\n"
+    context_prompt += (
+        "Given this state, what advances digital immortality? "
+        "Classify: root-growth or branch-growth. "
+        "Read SKILL.md and results/daemon_next_priority.txt for full details. "
+        "Priority: economic/outreach first, then strategy dev, then content. "
+        "Backward check last 3 daemon log entries. "
+        "Produce at least one file change. Commit."
+    )
     result = subprocess.run(
-        ["claude", "-p", short_prompt, "--model", model],
+        ["claude", "-p", context_prompt, "--model", model],
         capture_output=True, text=True, timeout=600,
         cwd=str(REPO_ROOT),
         encoding="utf-8", errors="replace",
@@ -422,8 +514,52 @@ def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
         print(f"[daemon] Rate limited. Sleeping {sleep_secs}s until ~{reset_str}", flush=True)
         time.sleep(sleep_secs)
         text = f"Rate limited — slept {sleep_secs}s until {reset_str}"
+    # Persist output for next cycle's input
+    _persist_last_output(text, cycle)
     print(f"[daemon] Cycle {cycle} done — {len(text)} chars", flush=True)
     return text
+
+
+def _print_status() -> None:
+    """Print daemon health status and exit."""
+    ts = datetime.now(TPE).strftime("%Y-%m-%d %H:%M:%S (Taipei)")
+    print(f"[daemon status] {ts}")
+    print(f"  REPO_ROOT:    {REPO_ROOT}")
+    # last_output.md
+    if LAST_OUTPUT_PATH.exists():
+        mtime = datetime.fromtimestamp(LAST_OUTPUT_PATH.stat().st_mtime, tz=TPE)
+        size = LAST_OUTPUT_PATH.stat().st_size
+        print(f"  last_output:  {size:,} bytes, modified {mtime.strftime('%Y-%m-%d %H:%M (Taipei)')}")
+    else:
+        print("  last_output:  MISSING")
+    # dynamic_tree.md
+    if TREE_PATH.exists():
+        size = TREE_PATH.stat().st_size
+        print(f"  dynamic_tree: {size:,} bytes ({size/1024:.1f} KB)")
+    else:
+        print("  dynamic_tree: MISSING")
+    # daemon_log.md
+    if LOG_PATH.exists():
+        size = LOG_PATH.stat().st_size
+        print(f"  daemon_log:   {size:,} bytes")
+    else:
+        print("  daemon_log:   MISSING")
+    # DNA
+    dna = load_dna()
+    print(f"  DNA loaded:   {len(dna):,} chars")
+    # dna_core.md
+    dna_core = load_dna_core_for_system()
+    print(f"  dna_core:     {len(dna_core):,} chars" if dna_core else "  dna_core:     NOT FOUND")
+    # voice input
+    if VOICE_INPUT_PATH.exists():
+        size = VOICE_INPUT_PATH.stat().st_size
+        print(f"  voice_input:  {size:,} bytes at {VOICE_INPUT_PATH}")
+    else:
+        print(f"  voice_input:  not present at {VOICE_INPUT_PATH}")
+    # priority
+    priority = load_priority()
+    print(f"  priority:     {priority[:100]}..." if priority else "  priority:     (none)")
+    print("  status:       READY (not running)")
 
 
 def main():
@@ -444,7 +580,14 @@ def main():
                         help="Use claude CLI instead of API (uses Max subscription, no API credit)")
     parser.add_argument("--once", action="store_true",
                         help="Run exactly one cycle then exit (for GH Actions chained mode)")
+    parser.add_argument("--status", action="store_true",
+                        help="Print daemon health status and exit")
     args = parser.parse_args()
+
+    # --status: print health check and exit
+    if args.status:
+        _print_status()
+        return
 
     dna = load_dna()
     interval = max(args.interval, MIN_INTERVAL)

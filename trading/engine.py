@@ -15,6 +15,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
 
+from trading.orthogonality_filter import OrthogonalityFilter
+
 logger = logging.getLogger("trading.engine")
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
@@ -387,6 +389,31 @@ class TradingEngine:
             window=self.execution_rules["kill_window"],
         )
         self.reactivation_gate = ReactivationGate()
+        self.orthogonality_filter = OrthogonalityFilter()
+        # SOP#118 fix: migrate legacy string-only disabled entries to proper
+        # ReactivationGate metadata dicts so forward-walk + reactivation works.
+        self._migrate_legacy_disabled()
+
+    def _migrate_legacy_disabled(self) -> None:
+        """Convert legacy string disabled entries to ReactivationGate metadata.
+
+        Prior engine versions stored disabled[name] = "reason string".
+        ReactivationGate requires a dict with killed_at_tick, forward_walk_ticks,
+        etc. Without migration, isinstance(meta, dict) is False and the strategy
+        is stuck disabled forever with no reactivation path.
+        """
+        migrated = False
+        for name, meta in list(self.disabled.items()):
+            if isinstance(meta, str):
+                logger.info("Migrating legacy disabled entry: %s = %r", name, meta)
+                self.disabled[name] = self.reactivation_gate.kill_metadata(
+                    name, meta, self.tick_count,
+                    self.pnl_tracker.get(name, 0.0), 0.0)
+                migrated = True
+        if migrated:
+            save_disabled(self.disabled)
+            logger.info("Migrated %d legacy disabled entries to ReactivationGate metadata",
+                        sum(1 for m in self.disabled.values() if isinstance(m, dict)))
 
     def tick(self) -> None:
         utc_now = datetime.now(timezone.utc).isoformat()
@@ -427,15 +454,33 @@ class TradingEngine:
                     reactivation_reason = self.reactivation_gate.check_reactivation(
                         name, self.disabled[name], self.tick_count)
                     if reactivation_reason:
-                        size_scale = self.disabled[name].get("reentry_size_scale", 0.5)
-                        logger.info("REACTIVATE %s: %s (size=%.0f%%)",
-                                    name, reactivation_reason, size_scale * 100)
-                        discord_msgs.append(
-                            f"REACTIVATED {name}: {reactivation_reason} @ {size_scale*100:.0f}% size")
-                        del self.disabled[name]
-                        self.strategy_size_scale[name] = size_scale
-                        # Fresh KillMonitor window for re-enabled strategy
-                        self.kill_monitor._pnl[name] = []
+                        # G4: Orthogonality check — reject if too correlated
+                        # with currently active pool (prevents mass-kill repeats).
+                        active_pool = {
+                            n: s for n, s in self.strategies.items()
+                            if n not in self.disabled and n != name
+                        }
+                        orth_pass, orth_reason = self.orthogonality_filter.is_orthogonal(
+                            strategy, active_pool, bars, candidate_name=name)
+                        if not orth_pass:
+                            OrthogonalityFilter.log_rejection(
+                                name, orth_reason,
+                                extra={"gate": "G4_reactivation"})
+                            logger.info(
+                                "REACTIVATION BLOCKED %s: G4 orthogonality — %s",
+                                name, orth_reason)
+                            # Keep disabled; do not re-enter
+                        else:
+                            size_scale = self.disabled[name].get("reentry_size_scale", 0.5)
+                            logger.info("REACTIVATE %s: %s (size=%.0f%%) [G4: %s]",
+                                        name, reactivation_reason, size_scale * 100,
+                                        orth_reason)
+                            discord_msgs.append(
+                                f"REACTIVATED {name}: {reactivation_reason} @ {size_scale*100:.0f}% size")
+                            del self.disabled[name]
+                            self.strategy_size_scale[name] = size_scale
+                            # Fresh KillMonitor window for re-enabled strategy
+                            self.kill_monitor._pnl[name] = []
                 continue
             try:
                 sig = strategy(bars)
