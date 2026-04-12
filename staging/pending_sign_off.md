@@ -1,12 +1,12 @@
 # Pending Sign-Off Batch
 
-> Auto-managed by tools/sign_off_manager.py — last updated 2026-04-11 16:11 Taipei
+> Auto-managed by tools/sign_off_manager.py — last updated 2026-04-13 00:23 Taipei
 > Default action = proceed. Stop pattern = Edward rejects.
 > AUTO decisions auto-apply after their timer. ESCALATE decisions never auto-apply.
 
 ## Decision 1: Ratify SOPs #122/#123/#124 from session 2026-04-11
 - uid: 59fbb1ed
-- Status: PENDING
+- Status: AUTO_APPLIED
 - Category: AUTO
 - Posted: 2026-04-11 16:09 Taipei
 - Auto-approve at: 2026-04-12 16:09 Taipei
@@ -16,6 +16,7 @@
 - Impact if approved: new SOP docs | memory update | agent behavior adjustment
 - Reversibility: high
 - One-line dismiss: git -C C:/Users/admin/LYH revert HEAD
+- Resolved by: agent:auto
 
 ## Decision 2: Fly.io artifact deletion (decommission)
 - uid: 37bd51e9
@@ -32,7 +33,7 @@
 
 ## Decision 3: Kill local daemon after 24h Fly/GH parallel validation
 - uid: c2df5280
-- Status: PENDING
+- Status: AUTO_APPLIED
 - Category: AUTO
 - Posted: 2026-04-11 16:10 Taipei
 - Auto-approve at: 2026-04-12 16:10 Taipei
@@ -42,6 +43,7 @@
 - Impact if approved: lower electricity | simpler ops | less local state
 - Reversibility: high
 - One-line dismiss: python platform/recursive_daemon.py --cli
+- Resolved by: agent:auto
 
 ## Decision 4: ANTHROPIC_API_KEY secret upload to GH Actions
 - uid: 4b7b8c7d
