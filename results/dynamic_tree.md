@@ -177,3 +177,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 4 discord_engagement_status = cycle 380 — decision fork execution; cadence halt triggered; b4_decision.md output; 7-cycle organic=0 terminal diagnosis -->
 <!-- branch 9 g1_eval_status = cycle 380 — frontier advance to #3 gap; #1 permanently blocked; #2 BLOCKED (3-cycle rule confirmed) -->
 <!-- branch 6 survival_check = cycle 380 — routine check; clean_streak monitor; CI sentinel active; no escalation -->
+
+<!-- cycle update 2026-04-13 14:19:46 (Taipei) -->
+<!-- branch 5 organism_interact_status = cycle 381 — 5-cycle neglect resolved; E2E voice signals (phase4b, channel 1775898534, smoke test) fed as stimulus; decision fidelity delta pending -->
+<!-- branch 4 discord_engagement_status = cycle 381 — post-cadence-halt; channel pivot test on 1775898534 initiated; E2E public host smoke confirmed; go/no-go pending b4_pivot_decision.md -->
+<!-- branch 9 g1_eval_status = cycle 381 — #3 gap initiated; #1 permanently blocked; #2 BLOCKED (3-cycle); frontier at #3; patch+verify loop active -->
+<!-- branch 6 survival_check = cycle 381 — routine; clean_streak monitor; CI sentinel active; tick=565 healthy; no escalation -->
+<!-- branch 1 regime_action = cycle 381 — ROTATION DEFERRED (3-cycle repeat rule: scan→queue repeated 378-380); no dispatch this cycle; candidate_queue.json holds; resume next rotation slot -->
