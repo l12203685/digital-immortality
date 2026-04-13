@@ -1414,3 +1414,24 @@ plan_raw: ```json
       "branch": 9,
       "name": "Tu
 [2026-04-13 20:00 +08] Cycle 390 (E0): No in-session work — Axiom 5. HF cache cleaned +4.8G. Session ending for restart with --channels server:mission-control
+
+## Cycle 1 — 2026-04-14 00:19:35 (Taipei)
+
+[cycle 401] classification=branch-growth
+actions: 4, updates: 3
+exec: b4(社交/discord): (no executor for branch 4, runnable=python platform/discord_sentinel.py --cycle ; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b2(知識/digestion): (no executor for branch 2, runnable=python platform/inbox_bridge.py --mode diges; b1(經濟/trading): (no executor for branch 1, runnable=python trading/paper_trader.py --tick 1257 -
+digestion: Knowledge Digestion: 23/2756 files, Tier 1, Last: 2026-04-13T23:49:31+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 4,
+      "name": "社交/discord",
+      "action": "Cycle 401 sentinel: halt_decision finalized (lifted or extended to 404); T+3 organic delta logged; phase4b cadence confirmed or deferred; voice input E2E 3-signal review outcome recorded",
+      "priority": 1,
+      "runnable": "python platform/discord_sentinel.py --cycle 401 --halt-check --voice-e2e-review"
+    },
+    {
+      "branch": 9,
+      "name": "Turing Test/G1",
+      "action": "#10 gap
