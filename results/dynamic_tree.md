@@ -117,3 +117,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 9 g1_eval_status = cycle 370 — gap_register.jsonl populated; top 3 gaps ranked by severity; G1 advancing to gap-remediation -->
 <!-- branch 10 l3_v2_status = cycle 370 — CLOSE (COMPLETE or BLOCKED); 3-cycle dispatch loop terminated; shift to maintenance cadence -->
 <!-- branch 1 regime_action = no action — all signals=0, mixed regime, no edge (axiom 5); re-entry audit deferred pending regime shift -->
+
+<!-- cycle update 2026-04-13 09:19:53 (Taipei) -->
+<!-- branch 4 discord_engagement_status = cycle 371 — engagement harvest phase; post live; reply protocol armed; users=0→potential window open -->
+<!-- branch 9 g1_eval_status = cycle 371 — gap-remediation initiated; #1 severity gap targeted; patch + re-verify loop -->
+<!-- branch 10 l3_maintenance_cycle = cycle 371 — maintenance check; engine_rules.json health scan; no dispatch loop -->
+<!-- branch 1 regime_action = no action — all signals=0, mixed regime, no edge (axiom 5); tick=2699 healthy, monitoring only -->
