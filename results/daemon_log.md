@@ -1672,6 +1672,7 @@ plan_raw: ```json
 [2026-04-14 05:33 +08] Cycle 444: B2 digested 10 (222→232, BB+KC+ROC TTM Squeeze most complex, ShortReverse Eff=839) + B7 third ZP post (entry diversity vs exit convergence)
 [2026-04-14 05:40 +08] Cycle 445: B2 digested 10 (232→242, Donchian golden ratio 1.618 exit + TTM Squeeze full docs) + B3 distilled 5 (303→308, indicator composition state machine + portfolio blueprint)
 [2026-04-14 05:48 +08] Cycle 446: B1 kill_window unit tests (16/16 pass, 3 test classes: evolve/recover/monitor) + B10 L3 ALL GREEN + CI 34/34 + LYH writeback synced (1018 line gap closed)
+[2026-04-14 05:55 +08] Cycle 447: B2 digested 10 (242→252, Score momentum-decay exit + 3RedBlack+SLP candle pattern) + B7 fourth ZP post (milestone vs drift-triggered audits)
 
 ## Cycle 1 — 2026-04-14 05:49:54 (Taipei)
 
