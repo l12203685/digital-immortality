@@ -1132,3 +1132,17 @@ plan_raw: ```json
       "branch": 5,
       "name": "社交/organism",
       "action": "Fidelity delta evaluation: read cycle381→382 organism output. If delta > 0.15 → trigger DNA calibration (dna-calibrate on edward_dna_v18.md, top-3 divergence scenarios, output patch candidates). If delta ≤ 0.15 → mark calibration_deferred, log baseline, set next review at delta+0.05 threshold. Output: results/organism_fidelity_cycle383.json with delta value, calibration decision, next threshold
+
+## Cycle 1 — 2026-04-13 15:49:54 (Taipei)
+
+[cycle 384] classification=branch-growth
+actions: 5, updates: 5
+exec: b1(經濟/trading): (no executor for branch 1, runnable=python trading/paper_trader.py --mode forwar; b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py templates/exampl; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b4(社交/discord): (no executor for branch 4, runnable=python platform/discord_poster.py --channel ; b2(知識/digestion): (no executor for branch 2, runnable=python platform/inbox_bridge.py --mode diges
+digestion: Knowledge Digestion: 6/2756 files, Tier 1, Last: 2026-04-13T15:20:02+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 1,
+      "name": "經濟/trading",
+      "action": "Forward-walk PF result check from cycle 383 scaffold. Read candidate_queue.json top-1 PF metrics. If PF ≥ 0.8 → add to live-monitor queue, set alert threshold at PF=0.75 drawdown trigger, log to results/live_monitor_queue.json. If PF < 0.8 → extend scaffold window +30 ticks, update candidate_queue.json with revised projection. No live entry (axiom 5: signals=0, mixed regime). Output: results/for
