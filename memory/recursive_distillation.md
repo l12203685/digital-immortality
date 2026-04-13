@@ -2448,3 +2448,46 @@ B3.1 distillation from cycles 371-374 complete. 9 insights extracted across 3 di
 
 **Signal source**: B3.1 distillation cycle 375; cycles 371-374 fully distilled; distil169 closed; 2026-04-13T06:10Z
 **Tags**: B3.1, distil169, cycles-371-374-complete, 9-insights, distillation-head, next-automatable-B10-L3-recursive-engine, closure-note
+
+---
+
+## Cycle 170 — 2026-04-14T00:00Z (source: digestion files 38-47, SBF strategy family)
+
+**Source cycles**: 376 (current)
+**Branch**: 3.1 recursive distillation
+**Insights appended**: 5 (total: 186)
+
+### Insight 1: SBF-kernel-simplicity-first-evolution-principle-volatility-range-as-primitive
+
+The SBF origin (`SBF.txt`) is 30 lines of EasyLanguage: open-gap relative to prior-day volatility range triggers entry; half-range stop and limit exit; session-time gate. The entire logic fits in working memory. Every subsequent variant (SBF_1, SBF_dev, SBF_ADA, DLHHL, HLM, MA, ma+uvdv, maimai_fish, MXNDU) is an elaboration of this kernel — not a replacement. Strategy evolution principle: the kernel must be expressible in one sentence. If the extension requires three paragraphs, it is not an extension — it is a different strategy that shares a name. The SBF family demonstrates that 12+ variants can coexist because each adds exactly one dimension (trend filter, session gate, lot scaling, cross-asset signal) without replacing the gap-range core. Practical implication for B1.1: each strategy variant in the immortality engine should have an identified kernel sentence; variants that cannot be traced to the kernel should be reclassified as separate strategies.
+
+**Signal source**: digestion files 38-47 (SBF family); SBF.txt baseline (30-line kernel); variant taxonomy (SBF_1, dev, ADA, DLHHL, HLM, MA, ma+uvdv, maimai_fish, MXNDU, RushBear); 2026-04-14T00:00Z
+**Tags**: B3.1, SBF-family, kernel-simplicity-first, one-sentence-kernel, variant-taxonomy, extension-vs-replacement, gap-range-primitive, strategy-evolution-principle, B1.1-applicability
+
+### Insight 2: SBF-variant-space-is-parameter-sweep-plus-signal-augmentation-not-redesign
+
+Across 12 SBF files, all structural variation falls into three categories: (1) parameter sweep — nDays, ratioL, ratioS, barinterval multipliers; (2) signal augmentation — adding MA crossover, uvdv (up-volume minus down-volume), DualMA trend filter, cross-asset confirmation; (3) lot scaling logic — fixed lot, dynamic lot by session win count (y, z counters in ma+uvdv), volatility-normalized sizing. None of the 12 files changes the fundamental entry trigger topology (price relative to prior-day range adjusted by gap). This is systematic variant generation: hold topology fixed, vary one axis at a time. The meta-lesson: a strategy family that is explored systematically occupies a defined region of the strategy space, making its boundary visible. Random exploration of different topologies produces strategies with unknown boundaries. Systematic variant generation = knowing what you have.
+
+**Signal source**: digestion files 38-47 (SBF family structural analysis); parameter variation (nDays 3-20, ratioL 0.25-0.6, ratioS 0.3-3.25); signal augmentation (uvdv, MA, DualMA); lot scaling (fixed, dynamic y/z counters); 2026-04-14T00:00Z
+**Tags**: B3.1, SBF-family, systematic-variant-generation, parameter-sweep, signal-augmentation, lot-scaling, topology-fixed, strategy-space-boundary, known-vs-unknown-exploration, B1.1-portfolio-design
+
+### Insight 3: SBF-mean-reversion-trend-hybrid-gap-is-mean-reversion-continuation-is-trend
+
+SBF.txt entry condition: `opend(0) < closed(1) - volRange` (gap down beyond range) → buy. This is a mean-reversion entry — the price gapped far enough that return to prior close is the thesis. Yet the TP target is `closed(1) + 0.5*volRange` (not just close of gap) — a trending continuation component. SBF_1 adds explicit trend tracking (`_trend = _trend[1]/2 + (c[1] - openada(1))/_day_len`) which gates the mean-reversion entry: only enter if the accumulated trend direction supports it. This is the hybrid structure — mean-reversion trigger, trend filter, continuation profit target. The SBF family never resolves the tension between mean-reversion and trend; it holds both simultaneously by assigning each to a different part of the trade lifecycle: entry = reversion, continuation = trend. Applicable to B1.1 strategy design: hybrid approaches are not incoherent — they are appropriate when the price process has both components at different timescales.
+
+**Signal source**: digestion files 38-47; SBF.txt entry/exit logic (gap-down→buy, TP at prior-close + 0.5*range); SBF_1.txt trend accumulation variable (_trend decay with half-life 1 day); cross-variant pattern; 2026-04-14T00:00Z
+**Tags**: B3.1, SBF-family, mean-reversion-trend-hybrid, gap-entry-reversion, continuation-profit-target, trend-filter-gating, timescale-separation, hybrid-coherence, B1.1-strategy-design
+
+### Insight 4: SBF-session-aware-exits-are-risk-management-not-convenience-forced-flat-prevents-overnight-gap-compounding
+
+All 12 SBF variants share one structural invariant: forced session close (`setexitonclose`, `t > 1330 sell at market`, `t > 0455 sell at market`). In SBF_1, there are three distinct session exits: Taiwan day session close (1330), night session end (0455), and settlement day override. In DLHHL and HLM, exits are staged — partial exits begin N bars before close, with final forced flat at close. This is not programmer convenience; it is explicit acknowledgment that overnight gap risk is a different risk class than intraday price risk. The strategy's edge is intraday; holding overnight converts a known-edge trade into a gap-roulette trade. Session-aware exits define the edge boundary — they are the point where the strategy says "my thesis is exhausted, I have no edge past this bar." For B1.1 paper trading: session-aware exits should be hard-coded into every strategy variant as a non-negotiable structural constraint, not an optional parameter.
+
+**Signal source**: digestion files 38-47; session exit comparison across all 12 SBF files; DLHHL staged-exit design (ExSize over ExitBar bars); settlement day setexitonclose; 2026-04-14T00:00Z
+**Tags**: B3.1, SBF-family, session-aware-exits, overnight-gap-risk, edge-boundary, forced-flat, staged-exit-design, risk-class-separation, non-negotiable-structural-constraint, B1.1-paper-trading
+
+### Insight 5: SBF-family-as-living-document-variant-naming-encodes-evolution-history-not-just-content
+
+SBF file naming: SBF.txt (origin), SBF_Ori.txt (re-labeled original), SBF_ori2.txt (second stable version), SBF_20220306.txt (date-stamped snapshot), SBF_dev.txt (active development), SBF_ADA.txt (asset-specific port), SBF_RushBear_chg.txt (directional bias variant with change log). The naming convention is not organized — it is evolutionary. Files accumulate without a formal versioning system because the strategy is a living document: each new file is a generation, not a release. This is a documentation pattern for a knowledge system that grows faster than its taxonomy can track. The lesson for B3.1 distillation: the SBF file set itself demonstrates the problem that recursive_distillation.md solves — without distillation, you have 12 files of variant code but no synthesized understanding of what the family knows. The distillation layer is the epistemically stable layer above the evolutionary document layer. Each SBF variant is a leaf; this insight is the root extract.
+
+**Signal source**: digestion files 38-47; filename taxonomy (SBF, SBF_Ori, SBF_ori2, SBF_20220306, SBF_dev, SBF_ADA, SBF_RushBear_chg, DLHHL, HLM, MA, ma+uvdv, maimai_fish, MXNDU, MXNDU); naming-as-evolution-history; 2026-04-14T00:00Z
+**Tags**: B3.1, SBF-family, living-document-pattern, naming-encodes-evolution, distillation-layer-purpose, evolutionary-document-vs-epistemically-stable, leaf-vs-root-extract, recursive-distillation-justification, taxonomy-lags-growth
