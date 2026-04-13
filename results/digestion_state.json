@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 191,
+  "files_digested": 202,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -192,9 +192,20 @@
     "E:/@交易/@AVAVA/Keep/!_TXAD_1_007_GT+VOL01/程式碼.txt",
     "E:/@交易/@AVAVA/Keep/!_TXAD_1_009_MA01/!_TXAD_1_009_MA01.txt",
     "E:/@交易/@AVAVA/Keep/!_TXAD_1_013_ADP01/!_TXAD_1_013_ADP01.txt",
-    "E:/@交易/@AVAVA/Keep/!_TXAD_1_013_ADP01/202106HW-Code.txt"
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_013_ADP01/202106HW-Code.txt",
+    "E:\\@交易\\@程式交易\\MAE_MFE_intra_report.pdf",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_003_FlipLS01/Walk Forward Report ASCII Mapping TXF TAIFEX 3 分鐘 20210608-005159.MCReport",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_003_HLORB01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_004_PT01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_007_AV2Bias/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_007_EMA01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_007_GT+VOL01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_009_MA01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_013_ADP01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_013_CorrelationTrend01/!_TXAD_1_013_CorrelationTrend01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_013_CorrelationTrend01/.data.json"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T04:20:00+08:00",
-  "last_updated": "2026-04-14T04:41:00+08:00"
+  "last_digested_at": "2026-04-14T04:49:33+08:00",
+  "last_updated": "2026-04-14T04:54:00+08:00"
 }
