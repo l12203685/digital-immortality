@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-04-14T01:08:08.301707+08:00",
+  "threshold_pp": 20.0,
+  "warnings": [],
+  "organisms": [
+    {
+      "name": "Samuel",
+      "baseline": {
+        "agree_count": 16,
+        "total": 40,
+        "agree_rate": 40.0,
+        "source": "unknown"
+      },
+      "record_count": 14,
+      "trend": "stable",
+      "current": {
+        "agree_count": 16,
+        "total": 40,
+        "agree_rate": 40.0,
+        "timestamp": "2026-04-13T03:53:32.954154",
+        "file": "collision_dna_core_vs_Samuel_20260413_035332.json"
+      },
+      "drift_pp": 0.0,
+      "drifted": false,
+      "consecutive_drift_checks": 0
+    },
+    {
+      "name": "dna_core",
+      "baseline": {
+        "agree_count": 9,
+        "total": 22,
+        "agree_rate": 40.91,
+        "source": "unknown"
+      },
+      "record_count": 3,
+      "trend": "stable",
+      "current": {
+        "agree_count": 9,
+        "total": 22,
+        "agree_rate": 40.91,
+        "timestamp": "2026-04-11T16:13:30.079179",
+        "file": "dna_core_vs_dna_core_20260411_161330.json"
+      },
+      "drift_pp": 0.0,
+      "drifted": false,
+      "consecutive_drift_checks": 0
+    }
+  ],
+  "any_drift": false
+}
