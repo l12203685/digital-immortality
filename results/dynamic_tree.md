@@ -123,3 +123,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 9 g1_eval_status = cycle 371 — gap-remediation initiated; #1 severity gap targeted; patch + re-verify loop -->
 <!-- branch 10 l3_maintenance_cycle = cycle 371 — maintenance check; engine_rules.json health scan; no dispatch loop -->
 <!-- branch 1 regime_action = no action — all signals=0, mixed regime, no edge (axiom 5); tick=2699 healthy, monitoring only -->
+
+<!-- cycle update 2026-04-13 09:49:43 (Taipei) -->
+<!-- branch 4 discord_engagement_status = cycle 372 — organic engagement eval; test traffic (phase4b/smoke) filtered; 2hr window decision point: second seed post OR reply protocol arm -->
+<!-- branch 9 g1_eval_status = cycle 372 — gap-remediation cycle 2; #1 severity gap patch + re-verify; advance to #2 if closed -->
+<!-- branch 1 regime_action = no action — all signals=0, mixed regime, no edge (axiom 5); tick=2729 healthy, monitoring only -->
+<!-- branch 10 l3_maintenance_cycle = cycle 372 — maintenance cadence; no active dispatch; engine_rules.json stable -->
