@@ -158,3 +158,13 @@ This SOP is part of the knowledge product series. It operationalizes a core inte
 
 **Tier**: $97 async audit / $197 guided session component (taxonomy design consultation)  
 **Posting queue**: ~Dec 2026
+
+---
+
+## Cross-References
+
+- **SOP #047** (Recursive Engine Maintenance) — G5 daemon_next_priority update triggers the recursive engine's next distillation cycle; taxonomy health is an engine health signal
+- **SOP #091** (Monthly DNA Calibration Audit) — G2 classification assigns `source.sop` metadata; SOP #091 calibration findings are a primary insight source requiring taxonomy-correct classification
+- **SOP #079** (DNA Update Protocol) — new MDs added via SOP #079 generate domain-knowledge insights that must pass through G2 classification before entering insights.json
+- **SOP #073** (Dynamic Tree Protocol) — Branch 3.1 (Recursive Distillation) status is managed by the dynamic tree; taxonomy DRIFT status should elevate Branch 3.1 derivative score
+- **SOP #106** (Organism Drift & Recalibration) — calibration findings from SOP #106 generate self-awareness and behavioral-patterns insights; taxonomy classification of these findings prevents structural tag drift

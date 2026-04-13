@@ -95,3 +95,13 @@ Kill condition: Alignment below 20% AND stable domains (money/risk) also divergi
 - MD-330: Verify by behavior pattern, not stated preference
 - MD-202: Professional brand = most recent high-point (most recent collision baseline matters most)
 - MD-120: Teach the starter kit — keep divergence axes visible and named
+
+---
+
+## Cross-References
+
+- **SOP #091** (Monthly DNA Calibration Audit) — G2 correction action "schedule Samuel correction session" is executed via SOP #091's async calibration workflow
+- **SOP #044** (Organism Collision) — this SOP is a post-collision protocol; SOP #044 defines the collision run that produces the alignment score this SOP diagnoses
+- **SOP #079** (DNA Update Protocol) — G2 expansion drift action requires DNA updates; SOP #079 governs how new MDs are added without introducing labeling drift
+- **SOP #094** (Cross-Instance Calibration Maintenance) — G4 baseline update and Branch 4.1 status row sync with the cross-instance calibration cadence in SOP #094
+- **SOP #073** (Dynamic Tree Protocol) — G4 updates dynamic_tree.md Branch 4.1 alignment score; the dynamic tree's regime detection uses this score to prioritize calibration cycles

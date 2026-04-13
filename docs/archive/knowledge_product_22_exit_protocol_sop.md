@@ -147,3 +147,13 @@ Apply the protocol:
 ---
 
 *Part of the Edward Decision System — SOP #22 of 22*
+
+---
+
+## Cross-References
+
+- **SOP #001** (Trading Strategy Development) — exit conditions are downstream of entry thesis; G1 kill conditions must align with strategy invalidation criteria
+- **SOP #004** (Strategy Failure & Kill Decision Tree) — G2 kill conditions mirror the kill decision tree logic; use together for full trade lifecycle governance
+- **SOP #009** (Risk & Drawdown) — G4 equity curve trigger thresholds derive from drawdown management principles
+- **SOP #025** (Position Sizing) — G3 trial position sizing integrates with stop-first sizing rules
+- **SOP #030** (Drawdown Recovery) — G4 stop-state recovery path is the drawdown recovery protocol applied cross-domain

@@ -105,3 +105,13 @@ The tree is alive only if you keep running the protocol.
 ---
 
 *SOP #73 | Cycle 237 | 2026-04-09T UTC*
+
+---
+
+## Cross-References
+
+- **SOP #047** (Recursive Engine Maintenance) — the dynamic tree is the routing layer above the recursive engine; G3 persist step writes to the same state files the engine reads
+- **SOP #049** (Cold Start Continuity) — G3 branch status rows in session_state.md are the cold-start handoff; dynamic tree state must survive restarts
+- **SOP #066** (Distribution Activation) — G2 regime detection: when distribution branch has high derivative, SOP #066 gates define what "pushed" means for that branch
+- **SOP #091** (Monthly DNA Calibration Audit) — G2 regime: behavioral gap found → triggers calibration branch priority; SOP #091 is the downstream protocol
+- **SOP #116** (Recursive Distillation Taxonomy) — G3 log entries in dynamic_tree.md feed into distillation inputs; taxonomy drift (SOP #116) is a branch-health signal

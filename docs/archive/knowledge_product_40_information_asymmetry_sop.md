@@ -141,3 +141,13 @@ Quarterly review: if edge statement can no longer be defended → close position
 ## One-Line Thread Hook
 
 "Most people trade ideas. A few trade edges. The difference: one has a structural reason to be right. A framework for finding yours — thread:"
+
+---
+
+## Cross-References
+
+- **SOP #006** (Game Theory) — G2 adversarial pressure test is game-theoretic; anchor counterparty roles (MD-62) before applying edge classification
+- **SOP #001** (Trading Strategy Development) — G0–G3 gates are a prerequisite filter before entering the strategy development pipeline
+- **SOP #016** (Information Edge) — direct extension of the access/interpretation edge taxonomy (Type A/B); use #016 for domain-specific edge sourcing
+- **SOP #017** (Population Exploit) — G4 population exploit screen operationalizes Type D behavioral edge; the two SOPs share the crowd-positioning checklist
+- **SOP #022** (Universal Exit Protocol) — G1 asymmetry decay check determines exit trigger timing; edge duration maps to G1 exit condition horizon in SOP #022

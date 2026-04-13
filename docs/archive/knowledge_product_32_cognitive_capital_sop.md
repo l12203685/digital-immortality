@@ -184,3 +184,13 @@ The body is not a cost center. It is the only non-replicable asset in your portf
 
 ## Backing MDs
 MD-286, MD-287, MD-288, MD-322, MD-323, MD-324
+
+---
+
+## Cross-References
+
+- **SOP #013** (Personal OS) — cognitive capital management is a subsystem of the personal operating system; G1 peak window locking is enforced at the OS scheduling layer
+- **SOP #051** (Time Allocation) — G1 peak window protocol and G4 pre-commitment rules feed directly into time allocation gates
+- **SOP #052** (Sleep & Recovery) — G5 preventive maintenance schedule and G2 consistency model depend on sleep/recovery baselines
+- **SOP #053** (Cognitive Performance) — G0 reclassification and G1 peak window definitions are operationalized in the cognitive performance SOP
+- **SOP #047** (Recursive Engine Maintenance) — peak window protection (G1) directly governs when the recursive engine may be invoked for deep-work cycles
