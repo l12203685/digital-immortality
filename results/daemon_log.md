@@ -1118,3 +1118,17 @@ plan_raw: ```json
       "action": "Resume rotation slot (deferred cycle 381 per 3-cycle repeat rule — now cleared). Execute candidate_queue.json: select top-1 candidate by Sharpe/PF composite; prepare forward-walk scaffold. No live entry (signals=0, axiom 5, mixed regime). Output: results/rotation_candidate_cycle382.json",
       "priority": 1,
       "runnable": "python trading/paper_trader.py --mode rotation-select --queue result
+
+## Cycle 1 — 2026-04-13 15:19:56 (Taipei)
+
+[cycle 383] classification=branch-growth
+actions: 5, updates: 5
+exec: b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py templates/exampl; b1(經濟/trading): (no executor for branch 1, runnable=python trading/paper_trader.py --mode forwar; b4(社交/discord): (no executor for branch 4, runnable=python platform/discord_poster.py --channel ; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b6(存活/survival): (no executor for branch 6, runnable=python recursive_engine.py --status)
+digestion: Knowledge Digestion: 5/2756 files, Tier 1, Last: 2026-04-13T14:49:53+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 5,
+      "name": "社交/organism",
+      "action": "Fidelity delta evaluation: read cycle381→382 organism output. If delta > 0.15 → trigger DNA calibration (dna-calibrate on edward_dna_v18.md, top-3 divergence scenarios, output patch candidates). If delta ≤ 0.15 → mark calibration_deferred, log baseline, set next review at delta+0.05 threshold. Output: results/organism_fidelity_cycle383.json with delta value, calibration decision, next threshold
