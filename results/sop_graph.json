@@ -1,0 +1,2266 @@
+{
+  "meta": {
+    "total_sop_files": 124,
+    "total_references": 377,
+    "total_unique_sops_referenced": 125,
+    "ghost_sops_referenced_but_no_file": 1
+  },
+  "nodes": {
+    "1": {
+      "sop_number": 1,
+      "title": "Knowledge Product #01: Trading Strategy Development SOP",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_01_strategy_development_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        2,
+        4,
+        8,
+        11,
+        12,
+        16,
+        17,
+        20,
+        21,
+        26,
+        29,
+        31,
+        35,
+        36,
+        37,
+        42,
+        46,
+        59,
+        60,
+        61,
+        63,
+        65,
+        66,
+        70,
+        71,
+        75,
+        78,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        87,
+        88,
+        89,
+        90,
+        91,
+        93,
+        97,
+        99,
+        100,
+        102,
+        103,
+        104,
+        110,
+        112,
+        113,
+        115,
+        117,
+        121
+      ],
+      "in_degree": 51,
+      "out_degree": 0
+    },
+    "2": {
+      "sop_number": 2,
+      "title": "Knowledge Product #02 — Portfolio Construction SOP",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_02_portfolio_construction_sop.md",
+      "refs_out": [
+        1
+      ],
+      "refs_in": [
+        3,
+        4,
+        66,
+        71,
+        72,
+        102
+      ],
+      "in_degree": 6,
+      "out_degree": 1
+    },
+    "3": {
+      "sop_number": 3,
+      "title": "SOP #03 — Execution & Sizing Real-Time Checklist",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_03_execution_sizing_sop.md",
+      "refs_out": [
+        2
+      ],
+      "refs_in": [
+        4,
+        61,
+        66,
+        70,
+        78,
+        102
+      ],
+      "in_degree": 6,
+      "out_degree": 1
+    },
+    "4": {
+      "sop_number": 4,
+      "title": "SOP #04 — Strategy Failure & Kill Decision Tree",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_04_strategy_kill_decision_tree.md",
+      "refs_out": [
+        1,
+        2,
+        3
+      ],
+      "refs_in": [
+        9,
+        11,
+        20,
+        24,
+        26,
+        27,
+        28,
+        29,
+        92,
+        102,
+        109
+      ],
+      "in_degree": 11,
+      "out_degree": 3
+    },
+    "5": {
+      "sop_number": 5,
+      "title": "SOP #05 — Career & Salary Decision Making",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_05_career_salary_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        11,
+        19,
+        51,
+        70,
+        102
+      ],
+      "in_degree": 5,
+      "out_degree": 0
+    },
+    "6": {
+      "sop_number": 6,
+      "title": "SOP #06: 賽局決策框架 (Game Theory Decision Framework)",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_06_game_theory_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        102
+      ],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    "7": {
+      "sop_number": 7,
+      "title": "SOP #07: 市場 Regime 偵測與策略路由 (Regime Detection & Strategy Routing)",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_07_regime_detection_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        12,
+        20,
+        26,
+        66,
+        71,
+        92
+      ],
+      "in_degree": 6,
+      "out_degree": 0
+    },
+    "8": {
+      "sop_number": 8,
+      "title": "SOP #08 — Capital Structure & Barbell Framework",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_08_capital_structure_sop.md",
+      "refs_out": [
+        1
+      ],
+      "refs_in": [
+        21
+      ],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    "9": {
+      "sop_number": 9,
+      "title": "SOP #09 — Risk Management & Drawdown Response",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_09_risk_drawdown_sop.md",
+      "refs_out": [
+        4
+      ],
+      "refs_in": [
+        85
+      ],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    "10": {
+      "sop_number": 10,
+      "title": "SOP #10 — Decision-Making Under Uncertainty",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_10_decision_uncertainty_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        11,
+        12,
+        16,
+        17,
+        63,
+        70
+      ],
+      "in_degree": 6,
+      "out_degree": 0
+    },
+    "11": {
+      "sop_number": 11,
+      "title": "SOP #11 — Learning System Design & Knowledge Compounding",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_11_learning_system_sop.md",
+      "refs_out": [
+        1,
+        4,
+        5,
+        10
+      ],
+      "refs_in": [
+        12,
+        19,
+        70,
+        79
+      ],
+      "in_degree": 4,
+      "out_degree": 4
+    },
+    "12": {
+      "sop_number": 12,
+      "title": "SOP #12 — Content Distribution & Audience Architecture",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_12_distribution_audience_sop.md",
+      "refs_out": [
+        1,
+        7,
+        10,
+        11
+      ],
+      "refs_in": [
+        19,
+        41,
+        60,
+        63,
+        66,
+        70,
+        78,
+        81,
+        82
+      ],
+      "in_degree": 9,
+      "out_degree": 4
+    },
+    "13": {
+      "sop_number": 13,
+      "title": "SOP #13 — Personal Operating System: Recurring Decision Elimination",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_13_personal_os_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        19,
+        59,
+        60
+      ],
+      "in_degree": 3,
+      "out_degree": 0
+    },
+    "14": {
+      "sop_number": 14,
+      "title": "SOP #14 — The Full-Time Switch Threshold: When Trading Income Justifies Leaving Salary",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_14_fulltime_switch_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        21,
+        42,
+        61,
+        70
+      ],
+      "in_degree": 4,
+      "out_degree": 0
+    },
+    "15": {
+      "sop_number": 15,
+      "title": "SOP #15 — The Backtest Deception Protocol: Why Your Backtest Lies and How to Fix It",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_15_backtest_deception_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        16,
+        17,
+        26,
+        31
+      ],
+      "in_degree": 4,
+      "out_degree": 0
+    },
+    "16": {
+      "sop_number": 16,
+      "title": "SOP #16 — Information Edge Classification: Know What You Know Before You Trade",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_16_information_edge_sop.md",
+      "refs_out": [
+        1,
+        10,
+        15
+      ],
+      "refs_in": [
+        17
+      ],
+      "in_degree": 1,
+      "out_degree": 3
+    },
+    "17": {
+      "sop_number": 17,
+      "title": "SOP #17 — Population Exploit & Contrarian Positioning",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_17_population_exploit_sop.md",
+      "refs_out": [
+        1,
+        10,
+        15,
+        16
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 4
+    },
+    "18": {
+      "sop_number": 18,
+      "title": "SOP #18 — Bias Toward Inaction: The Idle Capital Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_18_inaction_bias_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        20,
+        21
+      ],
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    "19": {
+      "sop_number": 19,
+      "title": "SOP #19 — Social Capital & Network Building",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_19_social_capital_sop.md",
+      "refs_out": [
+        5,
+        11,
+        12,
+        13
+      ],
+      "refs_in": [
+        20,
+        43
+      ],
+      "in_degree": 2,
+      "out_degree": 4
+    },
+    "20": {
+      "sop_number": 20,
+      "title": "SOP #19 — Derivative Thinking & Inflection Point Detection",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_20_derivative_thinking_sop.md",
+      "refs_out": [
+        1,
+        4,
+        7,
+        18,
+        19
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 5
+    },
+    "21": {
+      "sop_number": 21,
+      "title": "SOP #21 — Financial Freedom Tier Framework",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_21_financial_freedom_sop.md",
+      "refs_out": [
+        1,
+        8,
+        14,
+        18
+      ],
+      "refs_in": [
+        39,
+        42
+      ],
+      "in_degree": 2,
+      "out_degree": 4
+    },
+    "22": {
+      "sop_number": 22,
+      "title": "SOP #22 — Universal Exit Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_22_exit_protocol_sop.md",
+      "refs_out": [],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    "23": {
+      "sop_number": 23,
+      "title": "SOP #23 — Regime Detection & Strategy Rotation",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_23_regime_detection_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        25
+      ],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    "24": {
+      "sop_number": 24,
+      "title": "SOP #24 — Portfolio Construction: Building a Strategy Portfolio, Not Just a Strategy",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_24_portfolio_construction_sop.md",
+      "refs_out": [
+        4
+      ],
+      "refs_in": [
+        27
+      ],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    "25": {
+      "sop_number": 25,
+      "title": "SOP #25 — Position Sizing: The Only Variable You Fully Control",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_25_position_sizing_sop.md",
+      "refs_out": [
+        23
+      ],
+      "refs_in": [
+        27,
+        28
+      ],
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    "26": {
+      "sop_number": 26,
+      "title": "SOP #26: Walk-Forward Validation Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_26_walkforward_validation_sop.md",
+      "refs_out": [
+        1,
+        4,
+        7,
+        15
+      ],
+      "refs_in": [
+        27,
+        28,
+        29,
+        31,
+        92
+      ],
+      "in_degree": 5,
+      "out_degree": 4
+    },
+    "27": {
+      "sop_number": 27,
+      "title": "SOP #27 — Regime Detection & Strategy Rotation",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_27_regime_detection_sop.md",
+      "refs_out": [
+        4,
+        24,
+        25,
+        26
+      ],
+      "refs_in": [
+        28,
+        29,
+        30,
+        33
+      ],
+      "in_degree": 4,
+      "out_degree": 4
+    },
+    "28": {
+      "sop_number": 28,
+      "title": "SOP #28 — Order Execution & Slippage Management",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_28_execution_slippage_sop.md",
+      "refs_out": [
+        4,
+        25,
+        26,
+        27
+      ],
+      "refs_in": [
+        29,
+        30,
+        33
+      ],
+      "in_degree": 3,
+      "out_degree": 4
+    },
+    "29": {
+      "sop_number": 29,
+      "title": "SOP #29 — Strategy Monitoring & Portfolio Surveillance",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_29_strategy_monitoring_sop.md",
+      "refs_out": [
+        1,
+        4,
+        26,
+        27,
+        28
+      ],
+      "refs_in": [
+        31,
+        71,
+        92
+      ],
+      "in_degree": 3,
+      "out_degree": 5
+    },
+    "30": {
+      "sop_number": 30,
+      "title": "SOP #30: Drawdown Recovery Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_30_drawdown_recovery_sop.md",
+      "refs_out": [
+        27,
+        28
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    "31": {
+      "sop_number": 31,
+      "title": "SOP #31 — Parsimony & Complexity Budget Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_31_parsimony_complexity_sop.md",
+      "refs_out": [
+        1,
+        15,
+        26,
+        29
+      ],
+      "refs_in": [
+        104
+      ],
+      "in_degree": 1,
+      "out_degree": 4
+    },
+    "32": {
+      "sop_number": 32,
+      "title": "SOP #32: Cognitive Capital & Peak Performance Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_32_cognitive_capital_sop.md",
+      "refs_out": [],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    "33": {
+      "sop_number": 33,
+      "title": "SOP #33 — Edge Decay & Signal Crowding Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_33_edge_decay_sop.md",
+      "refs_out": [
+        27,
+        28
+      ],
+      "refs_in": [
+        71
+      ],
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    "34": {
+      "sop_number": 34,
+      "title": "SOP #34 — Knowledge Monetization Framework",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_34_knowledge_monetization_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        42,
+        61,
+        63,
+        66,
+        70,
+        78
+      ],
+      "in_degree": 6,
+      "out_degree": 0
+    },
+    "35": {
+      "sop_number": 35,
+      "title": "SOP #35 — Knowledge Compounding & Skill Half-Life Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_35_knowledge_compounding_sop.md",
+      "refs_out": [
+        1
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    "36": {
+      "sop_number": 36,
+      "title": "SOP #36 — Barbell Life Strategy: Asymmetric Optionality Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_36_barbell_optionality_sop.md",
+      "refs_out": [
+        1
+      ],
+      "refs_in": [
+        42
+      ],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    "37": {
+      "sop_number": 37,
+      "title": "SOP #37 — Relationship Investment Protocol: Proactive Maintenance + Signal Verification",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_37_relationship_investment_sop.md",
+      "refs_out": [
+        1
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    "38": {
+      "sop_number": 38,
+      "title": "SOP #38 — Alpha Decay & Strategy Sunset Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_38_alpha_decay_sunset_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        71
+      ],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    "39": {
+      "sop_number": 39,
+      "title": "SOP #39 — Career Capital Accumulation Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_39_career_capital_sop.md",
+      "refs_out": [
+        21
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    "40": {
+      "sop_number": 40,
+      "title": "SOP #40 — Information Asymmetry Edge Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_40_information_asymmetry_sop.md",
+      "refs_out": [],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    "41": {
+      "sop_number": 41,
+      "title": "SOP #41 — Platform Persistence & Portability Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_41_platform_persistence_sop.md",
+      "refs_out": [
+        12
+      ],
+      "refs_in": [
+        65,
+        66,
+        104
+      ],
+      "in_degree": 3,
+      "out_degree": 1
+    },
+    "42": {
+      "sop_number": 42,
+      "title": "SOP #42 — Income Redundancy & Anti-Fragile Income Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_42_income_redundancy_sop.md",
+      "refs_out": [
+        1,
+        14,
+        21,
+        34,
+        36
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 5
+    },
+    "43": {
+      "sop_number": 43,
+      "title": "SOP #43 — Second-Order Relationship Effects: Network Compounding Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_43_second_order_relationships_sop.md",
+      "refs_out": [
+        19
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    "44": {
+      "sop_number": 44,
+      "title": "SOP #44 — Building & Colliding Digital Organisms",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_44_organism_collision_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        69,
+        95
+      ],
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    "45": {
+      "sop_number": 45,
+      "title": "SOP #45 — Growing Your Decision Network: From 2 Organisms to N",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_45_organism_recruitment_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        69,
+        95
+      ],
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    "46": {
+      "sop_number": 46,
+      "title": "SOP #46 — Async Communication & Message Triage Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_46_communication_triage_sop.md",
+      "refs_out": [
+        1
+      ],
+      "refs_in": [
+        51,
+        53,
+        78
+      ],
+      "in_degree": 3,
+      "out_degree": 1
+    },
+    "47": {
+      "sop_number": 47,
+      "title": "SOP #47 — Recursive Engine Maintenance & Staleness Prevention",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_47_recursive_engine_maintenance_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        50,
+        51,
+        57,
+        58,
+        65,
+        66
+      ],
+      "in_degree": 6,
+      "out_degree": 0
+    },
+    "48": {
+      "sop_number": 48,
+      "title": "SOP #48 — Bayesian Belief Update Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_48_belief_update_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        57
+      ],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    "49": {
+      "sop_number": 49,
+      "title": "SOP #49 — Cold-Start Continuity Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_49_cold_start_continuity_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        50,
+        57
+      ],
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    "50": {
+      "sop_number": 50,
+      "title": "SOP #50 — Self-Evolving System Protocol (L3 Evolution Trigger)",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_50_self_evolution_sop.md",
+      "refs_out": [
+        47,
+        49
+      ],
+      "refs_in": [
+        54,
+        57
+      ],
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    "51": {
+      "sop_number": 51,
+      "title": "SOP #51 — Time Allocation & Attention Budget Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_51_time_allocation_sop.md",
+      "refs_out": [
+        5,
+        46,
+        47
+      ],
+      "refs_in": [
+        52,
+        53,
+        60,
+        104
+      ],
+      "in_degree": 4,
+      "out_degree": 3
+    },
+    "52": {
+      "sop_number": 52,
+      "title": "SOP #52 — Sleep & Physical Recovery Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_52_sleep_recovery_sop.md",
+      "refs_out": [
+        51
+      ],
+      "refs_in": [
+        53,
+        54,
+        58,
+        59
+      ],
+      "in_degree": 4,
+      "out_degree": 1
+    },
+    "53": {
+      "sop_number": 53,
+      "title": "SOP #53: Cognitive Performance & Decision Bandwidth Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_53_cognitive_performance_sop.md",
+      "refs_out": [
+        46,
+        51,
+        52
+      ],
+      "refs_in": [
+        58,
+        59
+      ],
+      "in_degree": 2,
+      "out_degree": 3
+    },
+    "54": {
+      "sop_number": 54,
+      "title": "SOP #54 — Physical Capital & Body Investment Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_54_physical_capital_sop.md",
+      "refs_out": [
+        50,
+        52
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    "55": {
+      "sop_number": 55,
+      "title": "SOP #55 — Environment & Physical Space Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_55_environment_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        59
+      ],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    "56": {
+      "sop_number": 56,
+      "title": "SOP #56 — Financial Capital & FIRE Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_56_financial_capital_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        58
+      ],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    "57": {
+      "sop_number": 57,
+      "title": "SOP #57 — Knowledge Integration Pipeline",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_57_knowledge_integration_sop.md",
+      "refs_out": [
+        47,
+        48,
+        49,
+        50
+      ],
+      "refs_in": [
+        58
+      ],
+      "in_degree": 1,
+      "out_degree": 4
+    },
+    "58": {
+      "sop_number": 58,
+      "title": "SOP #58 — Mental Capital & Psychological Resilience Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_58_mental_capital_sop.md",
+      "refs_out": [
+        47,
+        52,
+        53,
+        56,
+        57
+      ],
+      "refs_in": [
+        59
+      ],
+      "in_degree": 1,
+      "out_degree": 5
+    },
+    "59": {
+      "sop_number": 59,
+      "title": "SOP #59 — Life Default Design Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_59_life_default_design_sop.md",
+      "refs_out": [
+        1,
+        13,
+        52,
+        53,
+        55,
+        58
+      ],
+      "refs_in": [
+        60
+      ],
+      "in_degree": 1,
+      "out_degree": 6
+    },
+    "60": {
+      "sop_number": 60,
+      "title": "SOP #60 — Content Creation & Shipping Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_60_content_creation_sop.md",
+      "refs_out": [
+        1,
+        12,
+        13,
+        51,
+        59
+      ],
+      "refs_in": [
+        65,
+        66
+      ],
+      "in_degree": 2,
+      "out_degree": 5
+    },
+    "61": {
+      "sop_number": 61,
+      "title": "SOP #61 — Agent Economic Sustainability Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_61_agent_economic_sustainability_sop.md",
+      "refs_out": [
+        1,
+        3,
+        14,
+        34
+      ],
+      "refs_in": [
+        63,
+        104
+      ],
+      "in_degree": 2,
+      "out_degree": 4
+    },
+    "62": {
+      "sop_number": 62,
+      "title": "SOP #62 — Social Capital & Relationship Investment Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_62_social_capital_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        63,
+        65
+      ],
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    "63": {
+      "sop_number": 63,
+      "title": "SOP #63 — Zero-to-Revenue 90-Day Activation Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_63_zero_to_revenue_sop.md",
+      "refs_out": [
+        1,
+        10,
+        12,
+        34,
+        61,
+        62
+      ],
+      "refs_in": [
+        65,
+        66,
+        70
+      ],
+      "in_degree": 3,
+      "out_degree": 6
+    },
+    "64": {
+      "sop_number": 64,
+      "title": "SOP #64 — Technology Stack & Agent Infrastructure Management Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_64_tool_stack_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        65
+      ],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    "65": {
+      "sop_number": 65,
+      "title": "SOP #65 — External Validation & Feedback Loop Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_65_external_validation_sop.md",
+      "refs_out": [
+        1,
+        41,
+        47,
+        60,
+        62,
+        63,
+        64
+      ],
+      "refs_in": [
+        66,
+        78
+      ],
+      "in_degree": 2,
+      "out_degree": 7
+    },
+    "66": {
+      "sop_number": 66,
+      "title": "SOP #66 — Distribution Activation Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_66_distribution_activation_sop.md",
+      "refs_out": [
+        1,
+        2,
+        3,
+        7,
+        12,
+        34,
+        41,
+        47,
+        60,
+        63,
+        65
+      ],
+      "refs_in": [
+        70,
+        78,
+        81,
+        87,
+        104
+      ],
+      "in_degree": 5,
+      "out_degree": 11
+    },
+    "67": {
+      "sop_number": 67,
+      "title": "SOP #67 — Recursive Engine L3 Evolution Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_67_recursive_evolution_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        68
+      ],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    "68": {
+      "sop_number": 68,
+      "title": "SOP #68 — Recursive Engine L2 Evaluate Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_68_recursive_l2_evaluate_sop.md",
+      "refs_out": [
+        67,
+        69
+      ],
+      "refs_in": [
+        69
+      ],
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    "69": {
+      "sop_number": 69,
+      "title": "SOP #69 — Organism Async Calibration Measurement Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_69_organism_async_calibration_measurement.md",
+      "refs_out": [
+        44,
+        45,
+        68
+      ],
+      "refs_in": [
+        68,
+        81,
+        82
+      ],
+      "in_degree": 3,
+      "out_degree": 3
+    },
+    "70": {
+      "sop_number": 70,
+      "title": "SOP #70 — Revenue Conversion Protocol: Signal to First Sale",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_70_revenue_conversion_sop.md",
+      "refs_out": [
+        1,
+        3,
+        5,
+        10,
+        11,
+        12,
+        14,
+        34,
+        63,
+        66
+      ],
+      "refs_in": [
+        81,
+        82,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        97,
+        104,
+        105,
+        110
+      ],
+      "in_degree": 12,
+      "out_degree": 10
+    },
+    "71": {
+      "sop_number": 71,
+      "title": "SOP #71 — Multi-Strategy Regime Activation Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_71_multi_strategy_activation_sop.md",
+      "refs_out": [
+        1,
+        2,
+        7,
+        29,
+        33,
+        38
+      ],
+      "refs_in": [
+        72
+      ],
+      "in_degree": 1,
+      "out_degree": 6
+    },
+    "72": {
+      "sop_number": 72,
+      "title": "SOP #72 — Concentration Log Infrastructure",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_72_concentration_log_infrastructure_sop.md",
+      "refs_out": [
+        2,
+        71
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    "73": {
+      "sop_number": 73,
+      "title": "SOP #73 — Dynamic Tree Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_73_dynamic_tree_protocol_sop.md",
+      "refs_out": [],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    "74": {
+      "sop_number": 74,
+      "title": "SOP #74: Boot Test Evolution Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_74_boot_test_evolution_sop.md",
+      "refs_out": [],
+      "refs_in": [
+        75,
+        76,
+        77,
+        94
+      ],
+      "in_degree": 4,
+      "out_degree": 0
+    },
+    "75": {
+      "sop_number": 75,
+      "title": "SOP #75: Strategy Pool Lifecycle Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_75_strategy_pool_lifecycle_sop.md",
+      "refs_out": [
+        1,
+        74
+      ],
+      "refs_in": [
+        92
+      ],
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    "76": {
+      "sop_number": 76,
+      "title": "SOP #76: Organism Network Architecture",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_76_organism_network_sop.md",
+      "refs_out": [
+        74
+      ],
+      "refs_in": [
+        77,
+        81,
+        104
+      ],
+      "in_degree": 3,
+      "out_degree": 1
+    },
+    "77": {
+      "sop_number": 77,
+      "title": "SOP #77: LLM Validation SOP",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_77_llm_validation_sop.md",
+      "refs_out": [
+        74,
+        76
+      ],
+      "refs_in": [
+        79,
+        80
+      ],
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    "78": {
+      "sop_number": 78,
+      "title": "SOP #78: Posting Operations & Cadence Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_78_posting_operations_sop.md",
+      "refs_out": [
+        1,
+        3,
+        12,
+        34,
+        46,
+        65,
+        66,
+        79
+      ],
+      "refs_in": [
+        81,
+        82,
+        83,
+        84,
+        87
+      ],
+      "in_degree": 5,
+      "out_degree": 8
+    },
+    "79": {
+      "sop_number": 79,
+      "title": "SOP #79: DNA Update Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_79_dna_update_protocol.md",
+      "refs_out": [
+        11,
+        77
+      ],
+      "refs_in": [
+        78,
+        80,
+        91,
+        93,
+        94
+      ],
+      "in_degree": 5,
+      "out_degree": 2
+    },
+    "80": {
+      "sop_number": 80,
+      "title": "SOP #80: Cold Start Calibration Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_80_cold_start_calibration_sop.md",
+      "refs_out": [
+        1,
+        77,
+        79
+      ],
+      "refs_in": [
+        91,
+        93,
+        94,
+        95,
+        99,
+        100
+      ],
+      "in_degree": 6,
+      "out_degree": 3
+    },
+    "81": {
+      "sop_number": 81,
+      "title": "SOP #81: Distribution Velocity SOP",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_81_distribution_velocity_sop.md",
+      "refs_out": [
+        1,
+        12,
+        66,
+        69,
+        70,
+        76,
+        78
+      ],
+      "refs_in": [
+        82,
+        83,
+        84,
+        85,
+        87,
+        89
+      ],
+      "in_degree": 6,
+      "out_degree": 7
+    },
+    "82": {
+      "sop_number": 82,
+      "title": "SOP #82: Revenue Activation Milestone Tracker",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_82_revenue_activation_milestone_tracker.md",
+      "refs_out": [
+        1,
+        12,
+        69,
+        70,
+        78,
+        81
+      ],
+      "refs_in": [
+        83,
+        84,
+        85,
+        86,
+        87,
+        89,
+        90,
+        97,
+        102,
+        104,
+        110,
+        111,
+        112,
+        113
+      ],
+      "in_degree": 14,
+      "out_degree": 6
+    },
+    "83": {
+      "sop_number": 83,
+      "title": "SOP #83 — Daily Posting Execution Ritual",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_83_daily_posting_execution_ritual.md",
+      "refs_out": [
+        1,
+        78,
+        81,
+        82
+      ],
+      "refs_in": [
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        97,
+        102,
+        103,
+        104,
+        110,
+        112,
+        113
+      ],
+      "in_degree": 14,
+      "out_degree": 4
+    },
+    "84": {
+      "sop_number": 84,
+      "title": "SOP #84 — Engagement-to-DM Conversion Funnel",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_84_engagement_to_dm_conversion_funnel.md",
+      "refs_out": [
+        1,
+        70,
+        78,
+        81,
+        82,
+        83
+      ],
+      "refs_in": [
+        85,
+        87
+      ],
+      "in_degree": 2,
+      "out_degree": 6
+    },
+    "85": {
+      "sop_number": 85,
+      "title": "SOP #85 — Gumroad Product Setup",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_85_gumroad_product_setup.md",
+      "refs_out": [
+        1,
+        9,
+        70,
+        81,
+        82,
+        83,
+        84,
+        86
+      ],
+      "refs_in": [
+        86,
+        87,
+        88,
+        90,
+        97,
+        110,
+        112,
+        113
+      ],
+      "in_degree": 8,
+      "out_degree": 8
+    },
+    "86": {
+      "sop_number": 86,
+      "title": "SOP #86 — Consulting Rate Card",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_86_consulting_rate_card.md",
+      "refs_out": [
+        70,
+        82,
+        83,
+        85
+      ],
+      "refs_in": [
+        85,
+        87,
+        88,
+        90,
+        97,
+        104,
+        105
+      ],
+      "in_degree": 7,
+      "out_degree": 4
+    },
+    "87": {
+      "sop_number": 87,
+      "title": "SOP #87 — Content Repurposing: SOP → X Thread",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_87_content_repurposing_sop.md",
+      "refs_out": [
+        1,
+        66,
+        70,
+        78,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        88
+      ],
+      "refs_in": [
+        89
+      ],
+      "in_degree": 1,
+      "out_degree": 11
+    },
+    "88": {
+      "sop_number": 88,
+      "title": "SOP #88 — Discovery Call Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_88_discovery_call_protocol.md",
+      "refs_out": [
+        1,
+        70,
+        83,
+        85,
+        86
+      ],
+      "refs_in": [
+        87,
+        89,
+        97,
+        104,
+        105
+      ],
+      "in_degree": 5,
+      "out_degree": 5
+    },
+    "89": {
+      "sop_number": 89,
+      "title": "SOP #89 — Weekly Strategy Review Ritual",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_89_weekly_strategy_review_ritual.md",
+      "refs_out": [
+        1,
+        70,
+        81,
+        82,
+        83,
+        87,
+        88
+      ],
+      "refs_in": [
+        90,
+        97,
+        102
+      ],
+      "in_degree": 3,
+      "out_degree": 7
+    },
+    "90": {
+      "sop_number": 90,
+      "title": "SOP #90 — Revenue Rate Tracking Dashboard",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_90_revenue_rate_tracking_dashboard.md",
+      "refs_out": [
+        1,
+        82,
+        83,
+        85,
+        86,
+        89
+      ],
+      "refs_in": [
+        99,
+        102,
+        103
+      ],
+      "in_degree": 3,
+      "out_degree": 6
+    },
+    "91": {
+      "sop_number": 91,
+      "title": "SOP #91: Monthly DNA Calibration Audit",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_91_monthly_dna_calibration_audit.md",
+      "refs_out": [
+        1,
+        79,
+        80
+      ],
+      "refs_in": [
+        93,
+        94,
+        95,
+        98,
+        99,
+        100,
+        104
+      ],
+      "in_degree": 7,
+      "out_degree": 3
+    },
+    "92": {
+      "sop_number": 92,
+      "title": "SOP #92 — Strategy Disable & Reactivation Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_92_strategy_disable_reactivation_sop.md",
+      "refs_out": [
+        4,
+        7,
+        26,
+        29,
+        75
+      ],
+      "refs_in": [
+        96,
+        97,
+        118,
+        119,
+        124
+      ],
+      "in_degree": 5,
+      "out_degree": 5
+    },
+    "93": {
+      "sop_number": 93,
+      "title": "SOP #93 — Cross-Instance Calibration Maintenance Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_93_cross_instance_calibration_maintenance.md",
+      "refs_out": [
+        1,
+        79,
+        80,
+        91
+      ],
+      "refs_in": [
+        94
+      ],
+      "in_degree": 1,
+      "out_degree": 4
+    },
+    "94": {
+      "sop_number": 94,
+      "title": "SOP #94 — Cross-Instance Calibration Maintenance Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_94_cross_instance_calibration_maintenance.md",
+      "refs_out": [
+        74,
+        79,
+        80,
+        91,
+        93
+      ],
+      "refs_in": [
+        98,
+        100
+      ],
+      "in_degree": 2,
+      "out_degree": 5
+    },
+    "95": {
+      "sop_number": 95,
+      "title": "SOP #95 — Organism Network Effect Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_95_organism_network_effect.md",
+      "refs_out": [
+        44,
+        45,
+        80,
+        91
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 4
+    },
+    "96": {
+      "sop_number": 96,
+      "title": "SOP #96: Mainnet Trading Revenue Go-Live Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_96_mainnet_revenue_go_live.md",
+      "refs_out": [
+        92
+      ],
+      "refs_in": [
+        97,
+        99,
+        100,
+        109,
+        110,
+        118,
+        124
+      ],
+      "in_degree": 7,
+      "out_degree": 1
+    },
+    "97": {
+      "sop_number": 97,
+      "title": "SOP #97: 87-Day Mainnet Revenue Countdown Plan",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_97_87day_countdown.md",
+      "refs_out": [
+        1,
+        70,
+        82,
+        83,
+        85,
+        86,
+        88,
+        89,
+        92,
+        96,
+        98
+      ],
+      "refs_in": [
+        99,
+        100,
+        104,
+        105,
+        110,
+        111,
+        112,
+        113
+      ],
+      "in_degree": 8,
+      "out_degree": 11
+    },
+    "98": {
+      "sop_number": 98,
+      "title": "SOP #98 — Turing Test Candidate Selection Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_98_turing_test_candidate_selection.md",
+      "refs_out": [
+        91,
+        94
+      ],
+      "refs_in": [
+        97
+      ],
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    "99": {
+      "sop_number": 99,
+      "title": "SOP #99 — Cold-Start Drift Recovery Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_99_cold_start_drift_recovery.md",
+      "refs_out": [
+        1,
+        80,
+        90,
+        91,
+        96,
+        97
+      ],
+      "refs_in": [
+        100,
+        111,
+        112
+      ],
+      "in_degree": 3,
+      "out_degree": 6
+    },
+    "100": {
+      "sop_number": 100,
+      "title": "SOP #100 — SOP Century Review Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_100_sop_century_review_protocol.md",
+      "refs_out": [
+        1,
+        80,
+        91,
+        94,
+        96,
+        97,
+        99,
+        101,
+        200
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 9
+    },
+    "101": {
+      "sop_number": 101,
+      "title": "SOP #101 — Cold-Start Efficiency Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_101_cold_start_efficiency_protocol.md",
+      "refs_out": [],
+      "refs_in": [
+        100,
+        117
+      ],
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    "102": {
+      "sop_number": 102,
+      "title": "SOP #102 — Pre-Launch Readiness Audit",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_102_pre_launch_readiness_audit.md",
+      "refs_out": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        82,
+        83,
+        89,
+        90
+      ],
+      "refs_in": [
+        103
+      ],
+      "in_degree": 1,
+      "out_degree": 10
+    },
+    "103": {
+      "sop_number": 103,
+      "title": "SOP #103 — Launch Ignition Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_103_launch_ignition_protocol.md",
+      "refs_out": [
+        1,
+        83,
+        90,
+        102
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 4
+    },
+    "104": {
+      "sop_number": 104,
+      "title": "SOP #104 — Async Audit Delivery Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_104_async_audit_delivery_protocol.md",
+      "refs_out": [
+        1,
+        31,
+        41,
+        51,
+        61,
+        66,
+        70,
+        76,
+        82,
+        83,
+        86,
+        88,
+        91,
+        97,
+        105
+      ],
+      "refs_in": [
+        105,
+        111
+      ],
+      "in_degree": 2,
+      "out_degree": 15
+    },
+    "105": {
+      "sop_number": 105,
+      "title": "SOP #105 — Testimonial Collection Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_105_testimonial_collection_protocol.md",
+      "refs_out": [
+        70,
+        86,
+        88,
+        97,
+        104
+      ],
+      "refs_in": [
+        104
+      ],
+      "in_degree": 1,
+      "out_degree": 5
+    },
+    "106": {
+      "sop_number": 106,
+      "title": "SOP #106 — Organism Drift & Recalibration Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_106_organism_drift_recalibration_protocol.md",
+      "refs_out": [],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    "107": {
+      "sop_number": 107,
+      "title": "SOP #107 — Incremental Performance Evaluation Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_107_incremental_performance_evaluation_protocol.md",
+      "refs_out": [],
+      "refs_in": [
+        109
+      ],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    "108": {
+      "sop_number": 108,
+      "title": "SOP #108 — Cold-Start Behavioral Drift Detection Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_108_cold_start_drift_detection_protocol.md",
+      "refs_out": [],
+      "refs_in": [
+        123
+      ],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    "109": {
+      "sop_number": 109,
+      "title": "SOP #109 — Strategy Re-Activation Gate Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_109_strategy_reactivation_gate_protocol.md",
+      "refs_out": [
+        4,
+        96,
+        107
+      ],
+      "refs_in": [
+        110,
+        124
+      ],
+      "in_degree": 2,
+      "out_degree": 3
+    },
+    "110": {
+      "sop_number": 110,
+      "title": "SOP #110 — Skill First-User Acquisition Protocol (Branch 1.3 Activation)",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_110_skill_first_user_acquisition.md",
+      "refs_out": [
+        1,
+        70,
+        82,
+        83,
+        85,
+        96,
+        97,
+        109
+      ],
+      "refs_in": [
+        111,
+        112,
+        113
+      ],
+      "in_degree": 3,
+      "out_degree": 8
+    },
+    "111": {
+      "sop_number": 111,
+      "title": "SOP #111 — Guided Onboarding Delivery Protocol ($97 Session)",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_111_guided_onboarding_delivery_protocol.md",
+      "refs_out": [
+        82,
+        97,
+        99,
+        104,
+        110,
+        112
+      ],
+      "refs_in": [
+        112,
+        113
+      ],
+      "in_degree": 2,
+      "out_degree": 6
+    },
+    "112": {
+      "sop_number": 112,
+      "title": "SOP #112 — Cold-Outreach Execution Playbook",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_112_cold_outreach_execution_playbook.md",
+      "refs_out": [
+        1,
+        82,
+        83,
+        85,
+        97,
+        99,
+        110,
+        111
+      ],
+      "refs_in": [
+        111,
+        113
+      ],
+      "in_degree": 2,
+      "out_degree": 8
+    },
+    "113": {
+      "sop_number": 113,
+      "title": "SOP #113 — Outreach Response Classification Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_113_outreach_response_classification_protocol.md",
+      "refs_out": [
+        1,
+        82,
+        83,
+        85,
+        97,
+        110,
+        111,
+        112
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 8
+    },
+    "114": {
+      "sop_number": 114,
+      "title": "Knowledge Product #114 — Transaction Protection Checklist",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_114_transaction_protection_checklist.md",
+      "refs_out": [],
+      "refs_in": [
+        120
+      ],
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    "115": {
+      "sop_number": 115,
+      "title": "SOP #115 — 主流信號逆向判讀協議 (Mainstream Signal Contrarian Protocol)",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_115_mainstream_signal_contrarian_protocol.md",
+      "refs_out": [
+        1
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    "116": {
+      "sop_number": 116,
+      "title": "SOP #116 — Recursive Distillation Taxonomy Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_116_distillation_taxonomy_protocol.md",
+      "refs_out": [],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    "117": {
+      "sop_number": 117,
+      "title": "SOP #117 — Bundle Arbitrage Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_117_bundle_arbitrage_protocol.md",
+      "refs_out": [
+        1,
+        101
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    "118": {
+      "sop_number": 118,
+      "title": "SOP #118 — DualMA Reactivation Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_118_dualma_reactivation_protocol.md",
+      "refs_out": [
+        92,
+        96
+      ],
+      "refs_in": [
+        119,
+        120,
+        122,
+        123,
+        124
+      ],
+      "in_degree": 5,
+      "out_degree": 2
+    },
+    "119": {
+      "sop_number": 119,
+      "title": "SOP #119 — Path Closure Option Generation Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_119_path_closure_option_generation_protocol.md",
+      "refs_out": [
+        92,
+        118
+      ],
+      "refs_in": [
+        120,
+        122
+      ],
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    "120": {
+      "sop_number": 120,
+      "title": "SOP #120 — Root Variable Confirmation Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_120_root_variable_confirmation_protocol.md",
+      "refs_out": [
+        114,
+        118,
+        119
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 3
+    },
+    "121": {
+      "sop_number": 121,
+      "title": "SOP #121 — Information Position Calibration Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_121_information_position_calibration_protocol.md",
+      "refs_out": [
+        1
+      ],
+      "refs_in": [
+        122
+      ],
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    "122": {
+      "sop_number": 122,
+      "title": "SOP #122 — Gate-Constrained Regime Operating Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_122_gate_constrained_regime_operating_protocol.md",
+      "refs_out": [
+        118,
+        119,
+        121,
+        123
+      ],
+      "refs_in": [
+        123
+      ],
+      "in_degree": 1,
+      "out_degree": 4
+    },
+    "123": {
+      "sop_number": 123,
+      "title": "SOP #123 — Daemon / Human-Session Coordination Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_123_daemon_human_session_coordination_protocol.md",
+      "refs_out": [
+        108,
+        118,
+        122
+      ],
+      "refs_in": [
+        122
+      ],
+      "in_degree": 1,
+      "out_degree": 3
+    },
+    "124": {
+      "sop_number": 124,
+      "title": "SOP #124 — Kill-Window State Persistence Protocol",
+      "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_124_kill_window_state_persistence_protocol.md",
+      "refs_out": [
+        92,
+        96,
+        109,
+        118
+      ],
+      "refs_in": [],
+      "in_degree": 0,
+      "out_degree": 4
+    }
+  },
+  "ghost_nodes": {
+    "200": {
+      "sop_number": 200,
+      "title": null,
+      "file": null,
+      "refs_out": [],
+      "refs_in": [
+        100
+      ],
+      "in_degree": 1,
+      "out_degree": 0
+    }
+  },
+  "top10_most_referenced": [
+    {
+      "sop_number": 1,
+      "in_degree": 51,
+      "title": "Knowledge Product #01: Trading Strategy Development SOP"
+    },
+    {
+      "sop_number": 82,
+      "in_degree": 14,
+      "title": "SOP #82: Revenue Activation Milestone Tracker"
+    },
+    {
+      "sop_number": 83,
+      "in_degree": 14,
+      "title": "SOP #83 — Daily Posting Execution Ritual"
+    },
+    {
+      "sop_number": 70,
+      "in_degree": 12,
+      "title": "SOP #70 — Revenue Conversion Protocol: Signal to First Sale"
+    },
+    {
+      "sop_number": 4,
+      "in_degree": 11,
+      "title": "SOP #04 — Strategy Failure & Kill Decision Tree"
+    },
+    {
+      "sop_number": 12,
+      "in_degree": 9,
+      "title": "SOP #12 — Content Distribution & Audience Architecture"
+    },
+    {
+      "sop_number": 85,
+      "in_degree": 8,
+      "title": "SOP #85 — Gumroad Product Setup"
+    },
+    {
+      "sop_number": 97,
+      "in_degree": 8,
+      "title": "SOP #97: 87-Day Mainnet Revenue Countdown Plan"
+    },
+    {
+      "sop_number": 86,
+      "in_degree": 7,
+      "title": "SOP #86 — Consulting Rate Card"
+    },
+    {
+      "sop_number": 91,
+      "in_degree": 7,
+      "title": "SOP #91: Monthly DNA Calibration Audit"
+    }
+  ],
+  "orphans": [
+    22,
+    32,
+    40,
+    73,
+    106,
+    116
+  ],
+  "clusters": [
+    [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      200
+    ]
+  ]
+}
