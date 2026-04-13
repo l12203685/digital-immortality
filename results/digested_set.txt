@@ -1,0 +1,275 @@
+E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf
+E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf
+E:/@交易/@程式交易/ALGO 知名不具/IchimokuKinkoHyo.pdf
+E:/@交易/@程式交易/MAE_MFE_intra_report.pdf
+E:/@交易/@程式交易/MR.AutoTrading_期貨程式交易整合平台使用手冊_ v2.0.1.pdf
+E:/@交易/@程式交易/Successful Algorithmic Trading.pdf
+E:/@交易/@程式交易/下單大師 MC 測試報告.pdf
+E:/@交易/@程式交易/中華電信IDC客戶維護人員異動申請表.pdf
+E:/@交易/@程式交易/中華電信IDC客戶維護人員異動申請表範例.pdf
+E:/@交易/@程式交易/基礎班/00_MC 基礎使用.pdf
+E:/@交易/@程式交易/基礎班/1chat.txt
+E:/@交易/@程式交易/基礎班/2 MC基本操作.pdf
+E:/@交易/@程式交易/基礎班/3chat.txt
+E:/@交易/@程式交易/基礎班/3基礎語法介紹.pdf
+E:/@交易/@程式交易/基礎班/4chat.txt
+E:/@交易/@程式交易/基礎班/5chat.txt
+E:/@交易/@程式交易/基礎班/第八講 PT教學與投資組合.pdf
+E:/@交易/@程式交易/報價相關/SOR API測試步驟-快速版.pdf
+E:/@交易/@程式交易/投資組合管理/DayMaxDD定義.txt
+E:/@交易/@程式交易/投資組合管理/DayMovingDD定義.txt
+E:/@交易/@程式交易/文案簡報2021521.pdf
+E:/@交易/@程式交易/期貨高勝率.pdf
+E:/@交易/@程式交易/每月閒聊/2020.12閒聊 WFdemo.pdf
+E:/@交易/@程式交易/每月閒聊/2020_10閒聊 保險真心話.pdf
+E:/@交易/@程式交易/每月閒聊/2021.6月閒聊.pdf
+E:/@交易/@程式交易/每月閒聊/202101 閒聊.pdf
+E:/@交易/@程式交易/每月閒聊/202107_閒聊_XQ操作.pdf
+E:/@交易/@程式交易/每月閒聊/202112閒聊.pdf
+E:/@交易/@程式交易/每月閒聊/chat.txt
+E:/@交易/@程式交易/每月閒聊/加密幣補充 p49.pdf
+E:/@交易/@程式交易/達哥/SBF/DLHHL.txt
+E:/@交易/@程式交易/達哥/SBF/HLM.txt
+E:/@交易/@程式交易/達哥/SBF/MA.txt
+E:/@交易/@程式交易/達哥/SBF/ma+uvdv.txt
+E:/@交易/@程式交易/達哥/SBF/maimai_fish.txt
+E:/@交易/@程式交易/達哥/SBF/MXNDU.txt
+E:/@交易/@程式交易/達哥/SBF/RushBear (2).txt
+E:/@交易/@程式交易/達哥/SBF/SBF.txt
+E:/@交易/@程式交易/達哥/SBF/SBF_1.txt
+E:/@交易/@程式交易/達哥/SBF/SBF_20220306.txt
+E:/@交易/@程式交易/達哥/SBF/SBF_ADA.txt
+E:/@交易/@程式交易/達哥/SBF/SBF_dev.txt
+E:/@交易/@程式交易/達哥/SBF/SBF_Ori.txt
+E:/@交易/@程式交易/達哥/SBF/SBF_ori2.txt
+E:/@交易/@程式交易/達哥/SBF/SBF_RushBear_chg.txt
+E:/@交易/MAE.txt
+E:/@交易/投資交易心得筆記.txt
+E:/@交易/@程式交易/程式交易軟硬體 SOP 概述.pdf
+E:/@交易/pstop.txt
+E:/@交易/temp entry.txt
+E:/@交易/temp.txt
+E:/@交易/開發架構.txt
+E:/@交易/精簡.txt
+E:/@交易/課程.txt
+E:/@交易/c_i.txt
+E:/@交易/MT5交易平台介紹.pdf
+E:/@交易/ｏ大私房海期課堂筆記.pdf
+E:/@交易/20240330_凱衛網聚簡報.pdf
+E:/@交易/@AK/@A1E-M01.txt
+E:/@交易/@AK/@A2-T01.txt
+E:/@交易/@AK/@K1B-MM01.txt
+E:/@交易/@AK/@K2E-MM02.txt
+E:/@交易/@AK/@K3E-P01.txt
+E:/@交易/@AK/@K4E-P03.txt
+E:/@交易/@AK/@K7E-MS02.txt
+E:/@交易/@AK/@K8E-EMA01.txt
+E:/@交易/@AK/@K9-G01.txt
+E:/@交易/@AK/big_user_trade_record.csv
+E:\@交易\@程式交易\ALGO 知名不具\00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf
+E:/@交易/@AK/策略最佳化.md
+E:/@交易/@AK/新文字文件.txt
+E:/@交易/@AVAVA/!.Configure.json
+E:/@交易/@AVAVA/!.Schedule.csv
+E:/@交易/@AVAVA/!.Strategy.json
+E:/@交易/@AVAVA/Config.json
+E:/@交易/@PortfolioManagement/list.txt
+E:/@交易/@PortfolioManagement/DP/New3_0500.txt
+E:/@交易/@PortfolioManagement/MP/New3.txt
+E:/@交易/@Crypto/当日刷单率胜率公司利润合伙人风控报告完整版.sql
+E:/@交易/@Crypto/big_user_trade_record.csv
+E:/@交易/@StrategyManagement/未整理/QQ.txt
+E:/@交易/@StrategyManagement/未整理/SOP.txt
+E:/@交易/@StrategyManagement/未整理/AK_SOP.txt
+E:/@交易/@StrategyManagement/未整理/temp.txt
+E:/@交易/@小工具/Config.json
+E:/@交易/@Crypto/异常赔付登记表 - 异常时段记录+预估盈亏.csv
+E:/@交易/2. 財務相關知識/articles/Special Report/2016總統及國會大選結果分析.pdf
+E:/@交易/2. 財務相關知識/投資組合管理/投資管理.pptx
+E:/@交易/2. 財務相關知識/期貨與選擇權/Greek Letters.docx
+E:/@交易/@StrategyManagement/未整理/常用FN.txt
+E:/@交易/@StrategyManagement/未整理/結算SOP.txt
+E:/@交易/@StrategyManagement/未整理/翵哥.txt
+E:/@交易/@StrategyManagement/未整理/鋼鐵人.txt
+E:/@交易/@StrategyManagement/歸檔/作業交換細則.txt
+E:/@交易/@StrategyManagement/歸檔/202010月交換區_建議.txt
+E:/@交易/@StrategyManagement/壓縮檔/2021 09台灣範例.pdf
+E:/@交易/2. 財務相關知識/articles/Special Report/2015Q4台灣央行降息半碼.pdf
+E:/@交易/2. 財務相關知識/articles/Special Report/Fed貨幣政策正常化難度加大.pdf
+E:/@交易/2. 財務相關知識/風險管理/Value at Risk：The New Benchmark for Managing Financial Risk (3rd Edition).pdf
+E:\@交易\@程式交易\ALGO 知名不具\FDG_Seminar_150408.pdf
+E:/@交易/@StrategyManagement/歸檔/202007/202007Bohun/boTX_202007_MAATR_LO說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202007/202007ChienShen/047說明.txt
+E:/@交易/@StrategyManagement/歸檔/202007/202007JohnsonLo/011_TX_Range R_LO說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202007/202007TimChen/2-003_TXA_30mKeltner_LOS策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202007/202007WenZiGi/策略說明檔 topbot 1-6.txt
+E:/@交易/@StrategyManagement/歸檔/202007/202007Kuang/202007 QTC_TX_SAR_Kuang_DO_6K 策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202007/202007YenShen/202007作業策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202007/202007shuenhua/TX_Pivot_DO策略說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202007/202007WGN/123_TX_HLORB_FDO說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202007/202007Morton/No22_TX_RSI_7K_DO_策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010Alan Chen/002_TX_Keltner_LO_2010_說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010Alex/(1) 策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010ChienYingYang/002_Sw_D_5min_Linear策略說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010Gavin/G003_TX_LT_3Prices策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010HAO/H054_TXA_3H3L_LO_1H 策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010jack/20200929_009_TX_Box_FDT0_Jack策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010KevinHsu/khsu_2020010_說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010Liangchi/CL012_TX_MACD_LO策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010Loren/202010HW策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010Miyabi/策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010Moka/045_TX_BY_DO.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010Morton/No25_TXA_CandleShadow_60K_LO策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010Oscar/核心邏輯.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010Samuel/策略說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010shuen hua/TX_TwoWeek_DO策略說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010StarWang/P_CDP_TXF_1_DT_V2策略說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010TimChen/006_TXA_13mLineReg_LOS_V2_說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010世賢/01 CBST020_Aroon_29m_FLO.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010丞甫/策略說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010吳憲宗/60MAL0策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010ChiaWei/019_TX_LongBandForwardTrade_L0.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010Hsiang/017_TXA_CO4_DO_5min.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010Jack軒邑/202010作業_009_TX_Box_FDT0_Jack策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010廷政/007策略概念.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010辰軍/說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010阿信/07.202010功課004_TX_KDHL_LT策略說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010彥勝-卡滋卡滋/彥勝-202010作業-策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010修達/001_TX_PT_D0策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010涂旭帆/說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010景帆/027_TX_DayContrarian_LO_300M_策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202102月交換區_建議.txt
+E:/@交易/@StrategyManagement/歸檔/202106月交換區_建議.txt
+E:/@交易/@StrategyManagement/歸檔/202107月交換區_建議.txt
+E:/@交易/@StrategyManagement/歸檔/202108月交換區_建議.txt
+E:/@交易/@StrategyManagement/歸檔/202109月交換區_建議.txt
+E:/@交易/@StrategyManagement/歸檔/202110月交換區_建議_ALL.txt
+E:/@交易/@StrategyManagement/歸檔/202111月交換區_建議_ALL.txt
+E:/@交易/@StrategyManagement/歸檔/202112月交換區_建議_ALL.txt
+E:/@交易/@StrategyManagement/歸檔/202202月交換區_建議_ALL-補充梯.txt
+E:/@交易/@StrategyManagement/歸檔/WFA_Anchored3_Ori.xlsx
+E:/@交易/@StrategyManagement/CF995.CF.dll
+E:/@交易/@StrategyManagement/壓縮檔/202203.pdf
+E:/@交易/@StrategyManagement/壓縮檔/deep3_percent.jpg
+E:/@交易/@StrategyManagement/未整理/0622CDP_1.jpg
+E:/@交易/@StrategyManagement/未整理/15720520304008.jpg
+E:/@交易/@StrategyManagement/未整理/15723811975670.jpg
+E:/@交易/@StrategyManagement/未整理/15723837291009.jpg
+E:/@交易/@StrategyManagement/未整理/15723897971085.jpg
+E:/@交易/@StrategyManagement/未整理/20180421程式交易戰鬥營.ppt
+E:/@交易/@StrategyManagement/未整理/20191020_MOPCON.pdf
+E:\@交易\@程式交易\ALGO 知名不具\IchimokuKinkoHyo.pdf
+E:/@交易/1. 投資交易實務/Crypto/DatabaseAndTableCreation.txt
+E:/@交易/1. 投資交易實務/Crypto/FXRate.py
+E:/@交易/1. 投資交易實務/Crypto/Momentum Continuation.lua
+E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/AmPut.m
+E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/DeltaExtBin.m
+E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/EuCallPlot.m
+E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/FixStkLBCallMC.m
+E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/StockMC.m
+E:/@交易/@AVAVA/Keep/!_TXAD_1_003_FlipLS01/!_TXAD_1_003_FlipLS01.txt
+E:/@交易/@AVAVA/Keep/!_TXAD_1_007_AV2Bias/!_TXAD_1_007_AV2Bias.txt
+E:/@交易/1. 投資交易實務/excel/Forex Rates.csv
+E:/@交易/1. 投資交易實務/excel/MSCI Emerging Markets Historical Data (1).csv
+E:/@交易/1. 投資交易實務/excel/hash-rate-all.csv
+E:/@交易/1. 投資交易實務/excel/hash-rate.csv
+E:/@交易/1. 投資交易實務/excel/期交所.csv
+E:/@交易/2. 財務相關知識/投資組合管理/note/Investment_management.tex
+E:/@交易/2. 財務相關知識/投資組合管理/note/tcilatex.tex
+E:/@交易/@AVAVA/Keep/!_TXAD_1_003_HLORB01/!_TXAD_1_003_HLORB01.txt
+E:/@交易/@AVAVA/Keep/!_TXAD_1_004_PT01/!_TXAD_1_004_PT01.txt
+E:/@交易/@AVAVA/Keep/!_TXAD_1_007_AV2Bias/code文字檔.txt
+E:/@交易/@AK/修改硬碟序號工具-Hard Disk Serial Number Changer 1.0 中文化免費版/修改硬碟序號工具-Hard Disk Serial Number Changer 1.0 中文化免費版.txt
+E:/@交易/@AVAVA/Keep/!_TXAD_1_003_FlipLS01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAD_1_007_EMA01/!_TXAD_1_007_EMA01.txt
+E:/@交易/@AVAVA/Keep/!_TXAD_1_007_Gate01/!_TXAD_1_007_3Gate.txt
+E:/@交易/@AVAVA/Keep/!_TXAD_1_007_Gate01/TXF_3Gate_DO_7K_Code.txt
+E:/@交易/@AVAVA/Keep/!_TXAD_1_007_GT+VOL01/!_TXAD_1_007_GT+VOL01.txt
+E:/@交易/@AVAVA/Keep/!_TXAD_1_007_GT+VOL01/程式碼.txt
+E:/@交易/@AVAVA/Keep/!_TXAD_1_009_MA01/!_TXAD_1_009_MA01.txt
+E:/@交易/@AVAVA/Keep/!_TXAD_1_013_ADP01/!_TXAD_1_013_ADP01.txt
+E:/@交易/@AVAVA/Keep/!_TXAD_1_013_ADP01/202106HW-Code.txt
+E:\@交易\@程式交易\MAE_MFE_intra_report.pdf
+E:/@交易/@AVAVA/Keep/!_TXAD_1_003_FlipLS01/Walk Forward Report ASCII Mapping TXF TAIFEX 3 分鐘 20210608-005159.MCReport
+E:/@交易/@AVAVA/Keep/!_TXAD_1_003_HLORB01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAD_1_004_PT01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAD_1_007_AV2Bias/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAD_1_007_EMA01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAD_1_007_GT+VOL01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAD_1_009_MA01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAD_1_013_ADP01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAD_1_013_CorrelationTrend01/!_TXAD_1_013_CorrelationTrend01.txt
+E:/@交易/@AVAVA/Keep/!_TXAD_1_013_CorrelationTrend01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAD_1_013_ADP01/20210618_Loren042_TX_Adaptive13m_FDT.WF紀錄表
+E:/@交易/@AVAVA/Keep/!_TXAD_1_013_ADP01/20210618_Loren042_TX_Adaptive13m_FDT.參數敏感度測試
+E:/@交易/@AVAVA/Keep/!_TXAL_1_010_ATR01/!_TXAL_1_010_ATR01.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_010_ATR01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAL_1_010_ATR01/202007功課CODE.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_017_CN01/!_TXAL_1_017_CN01.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_017_CN01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAL_1_019_MA+BO01/!_TXAL_1_019_MA+BO01.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_019_MA+BO01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAL_1_019_RG+William01/!_TXAL_1_019_RG+William01.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_020_DR01/!_TXAL_1_020_DR01.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_025_TrendSumHGBlog/!_TXAL_1_025_TrendSumHGBlog.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_025_TrendSumHGBlog/03.202106功課-Sing014_TX_Change_LT.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_028_CCI01/!_TXAL_1_028_YS01_CCI_202007.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_029_LR01/!_TXAL_1_029_LR01.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_030_KC01/!_TXAL_1_030_TC01_Keltner_202007.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_030_KC01/7-003_TXA_30mKeltner_LOS-code.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_030_SAR01/!_TXAL_1_030_SAR01.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_030_SAR01/code.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_030_ShortReverse/!_TXAL_1_030_ShortReverse.txt
+E:\@交易\@程式交易\MR.AutoTrading_期貨程式交易整合平台使用手冊_ v2.0.1.pdf
+E:/@交易/@AVAVA/Keep/!_TXAL_1_019_RG+William01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAL_1_020_DR01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAL_1_025_TrendSumHGBlog/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAL_1_028_CCI01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAL_1_029_LR01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAL_1_030_KC01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAL_1_030_SAR01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAL_1_030_ShortReverse/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAL_1_053_BB+KC+ROC01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAL_1_053_BB+KC+ROC01/!_TXAL_1_053_BB+KC+ROC01.txt
+E:/@交易/@AK/修改硬碟序號工具-Hard Disk Serial Number Changer 1.0 中文化免費版/desktop.ini
+E:/@交易/@AVAVA/Keep/!_TXAL_1_025_TrendSumHGBlog/20210617_Sing_014_TX_Change_LT.WF紀錄表
+E:/@交易/@AVAVA/Keep/!_TXAL_1_025_TrendSumHGBlog/20210617_Sing_014_TX_Change_LT.參數敏感度測試
+E:/@交易/@AVAVA/Keep/!_TXAL_1_053_BB+KC+ROC01/20210621_34_Sw_All_53min_TTM+ROC_Ying_Change.WF紀錄表
+E:/@交易/@AVAVA/Keep/!_TXAL_1_053_BB+KC+ROC01/20210621_34_Sw_All_53min_TTM+ROC_Ying_Change.參數敏感度測試
+E:/@交易/@AVAVA/Keep/!_TXAL_1_053_BB+KC+ROC01/7)程式碼34_Sw_All_53min_TTM+ROC_Ying_Change.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_059_DCC01/!_TXAL_1_059_DCC01.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_059_DCC01/(6)策略WF紀錄表  sungwen.007_Tx_202106_FLT.WF紀錄表
+E:/@交易/@AVAVA/Keep/!_TXAL_1_059_DCC01/(7)策略程式碼 sungwen.007_Tx_202106_FLT.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_059_DCC01/.data.json
+E:\@交易\@程式交易\Successful Algorithmic Trading.pdf
+E:/@交易/@AVAVA/Keep/!_TXAL_1_1DK_CCI01/!_TXAL_1_1DK_CCI01.txt
+E:/@交易/@AVAVA/Keep/!_TXAL_1_1DK_CCI01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXDD_1_001_Gate01/!_TXDD_1_001_Gate.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_001_Gate01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXDD_1_002_Score01/!_TXDD_1_002_Score01.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_002_Score01/(8)策略程式碼 (S)003_TX_Score_2k_DT_20210618.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_002_Score01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXDD_1_003_3RedBlack+SLP01/!_TXDD_1_003_3RedBlack+SLP01.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_003_3RedBlack+SLP01/(6)策略CODE06M03MD0.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_003_3RedBlack+SLP01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXDD_1_003_Gate01/!_TXDD_1_003_Gate01.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_003_Gate02/!_TXDD_1_003_Gate02.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_003_LenGate/!_TXDD_1_003_LenGate.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_004_CDP+MA01/!_TXDD_1_004_CDP+MA01.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_004_CT01/!_TXDD_1_004_CT01.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_004_DR01/!_TXDD_1_004_DR01.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_005_AV01/!_TXDD_1_005_AV01.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_005_CPV01/!_TXDD_1_005_CPV01.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_005_KD01/!_TXDD_1_005_KD01.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_006_DayWave01/!_TXDD_1_006_DayWave_001.txt
+E:\@交易\@程式交易\下單大師 MC 測試報告.pdf
+E:/@交易/@AVAVA/Keep/!_TXDD_1_003_Gate01/KO003_TX_3Guan_DO_Code.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_003_Gate02/KO003_TX_3GuanVer2_DO_Code.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_006_QIndicatorLaddar01/!_TXDD_1_006_KH01_QIndicatorLaddar_202007.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_006_SAR01/!_TXDD_1_006_SAR01.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_007_CBar01/!_TXDD_1_007_CBar01.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_007_Gap01/!_TXDD_1_007_Gap01.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_007_RSI01/!_TXDD_1_007_MT01_RSI_202007.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_008_BSPower01/!_TXDD_1_008_BSPower01.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_009_PVG01/!_TXDD_1_009_PVG01.txt
+E:/@交易/@AVAVA/Keep/!_TXDD_1_030_LR+SLP01/!_TXDD_1_030_LR+SLP01.txt

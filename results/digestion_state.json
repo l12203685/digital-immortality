@@ -276,9 +276,20 @@
     "E:/@交易/@AVAVA/Keep/!_TXDD_1_007_RSI01/!_TXDD_1_007_MT01_RSI_202007.txt",
     "E:/@交易/@AVAVA/Keep/!_TXDD_1_008_BSPower01/!_TXDD_1_008_BSPower01.txt",
     "E:/@交易/@AVAVA/Keep/!_TXDD_1_009_PVG01/!_TXDD_1_009_PVG01.txt",
-    "E:/@交易/@AVAVA/Keep/!_TXDD_1_030_LR+SLP01/!_TXDD_1_030_LR+SLP01.txt"
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_030_LR+SLP01/!_TXDD_1_030_LR+SLP01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_003_LenGate/(7)CODE-katsu005_TXAM_LENGATE_3mK_DT-彥勝.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_004_CDP+MA01/(6)090_CODE.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_004_CT01/CL014_TX_Counter_Trend_v2_DO_CODE.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_005_AV01/(7)策略%%AVgirl_202106_D0.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_005_KD01/策略腳本202106_TX_KD5K_DT.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_006_DayWave01/策略文字檔 topbot 1-6.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_006_SAR01/202007 QTC_TX_SAR_Kuang_DO_6K 程式碼.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_007_RSI01/No22_TX_RSI_7K_DO_CODE.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_008_BSPower01/whw013_TX_bsp8k_DT_程式碼.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_009_PVG01/策略程式碼.txt"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T06:31:20+08:00",
-  "last_updated": "2026-04-14T06:31:20+08:00"
+  "last_digested_at": "2026-04-14T06:46:30+08:00",
+  "last_updated": "2026-04-14T06:31:20+08:00",
+  "total_digested": 285
 }
