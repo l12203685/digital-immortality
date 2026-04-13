@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 171,
+  "files_digested": 181,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -172,8 +172,19 @@
     "E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/FixStkLBCallMC.m",
     "E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/StockMC.m",
     "E:/@交易/@AVAVA/Keep/!_TXAD_1_003_FlipLS01/!_TXAD_1_003_FlipLS01.txt",
-    "E:/@交易/@AVAVA/Keep/!_TXAD_1_007_AV2Bias/!_TXAD_1_007_AV2Bias.txt"
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_007_AV2Bias/!_TXAD_1_007_AV2Bias.txt",
+    "E:/@交易/1. 投資交易實務/excel/Forex Rates.csv",
+    "E:/@交易/1. 投資交易實務/excel/MSCI Emerging Markets Historical Data (1).csv",
+    "E:/@交易/1. 投資交易實務/excel/hash-rate-all.csv",
+    "E:/@交易/1. 投資交易實務/excel/hash-rate.csv",
+    "E:/@交易/1. 投資交易實務/excel/期交所.csv",
+    "E:/@交易/2. 財務相關知識/投資組合管理/note/Investment_management.tex",
+    "E:/@交易/2. 財務相關知識/投資組合管理/note/tcilatex.tex",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_003_HLORB01/!_TXAD_1_003_HLORB01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_004_PT01/!_TXAD_1_004_PT01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_007_AV2Bias/code文字檔.txt"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T04:20:00+08:00"
+  "last_digested_at": "2026-04-14T04:20:00+08:00",
+  "last_updated": "2026-04-14T04:33:00+08:00"
 }
