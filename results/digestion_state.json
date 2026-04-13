@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 79,
+  "files_digested": 89,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -80,8 +80,18 @@
     "E:/@交易/@PortfolioManagement/list.txt",
     "E:/@交易/@PortfolioManagement/DP/New3_0500.txt",
     "E:/@交易/@PortfolioManagement/MP/New3.txt",
-    "E:/@交易/@Crypto/当日刷单率胜率公司利润合伙人风控报告完整版.sql"
+    "E:/@交易/@Crypto/当日刷单率胜率公司利润合伙人风控报告完整版.sql",
+    "E:/@交易/@Crypto/big_user_trade_record.csv",
+    "E:/@交易/@StrategyManagement/未整理/QQ.txt",
+    "E:/@交易/@StrategyManagement/未整理/SOP.txt",
+    "E:/@交易/@StrategyManagement/未整理/AK_SOP.txt",
+    "E:/@交易/@StrategyManagement/未整理/temp.txt",
+    "E:/@交易/@小工具/Config.json",
+    "E:/@交易/@Crypto/异常赔付登记表 - 异常时段记录+预估盈亏.csv",
+    "E:/@交易/2. 財務相關知識/articles/Special Report/2016總統及國會大選結果分析.pdf",
+    "E:/@交易/2. 財務相關知識/投資組合管理/投資管理.pptx",
+    "E:/@交易/2. 財務相關知識/期貨與選擇權/Greek Letters.docx"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T02:55:00+08:00"
+  "last_digested_at": "2026-04-14T11:30:00+08:00"
 }
