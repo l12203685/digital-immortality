@@ -1,1 +1,13 @@
-{"pending_for_tier3": [], "last_tier3_cycle": 365, "last_updated": "2026-04-13T00:30:00+08:00"}
+{
+  "pending_upgrades": [],
+  "schema": {
+    "task_id": "string",
+    "from_tier": "1|2|3",
+    "to_tier": "2|3",
+    "reason": "string (why this needs a higher tier)",
+    "context_files": ["list of file paths needed"],
+    "created_at": "ISO timestamp",
+    "status": "pending|accepted|rejected"
+  },
+  "last_checked": null
+}

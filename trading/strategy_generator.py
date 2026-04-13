@@ -55,6 +55,10 @@ from trading.orthogonality_filter import (
     OrthogonalityFilter,
     load_recent_bars_from_log,
 )
+from trading.pla_pattern_catalog import (
+    StrategyConfig,
+    generate_strategy_configs_from_catalog,
+)
 
 # ---------------------------------------------------------------------------
 # Logging
@@ -765,6 +769,166 @@ def cmd_prune() -> None:
 
 
 # ---------------------------------------------------------------------------
+# Generate from PLA catalog: --from-catalog N
+# ---------------------------------------------------------------------------
+# Strategy class lookup for instantiation from StrategyConfig objects.
+_CLASS_REGISTRY: Dict[str, type] = {
+    "DualMA": DualMA,
+    "Donchian": Donchian,
+    "DonchianConfirmed": DonchianConfirmed,
+    "BollingerMeanReversion": BollingerMeanReversion,
+    "CCIStrategy": CCIStrategy,
+    "DMIStrategy": DMIStrategy,
+    "MACDStrategy": MACDStrategy,
+    "ORBStrategy": ORBStrategy,
+    "KeltnerStrategy": KeltnerStrategy,
+    "RSIFilter": RSIFilter,
+}
+
+
+def _instantiate_from_config(cfg: StrategyConfig) -> Optional[object]:
+    """Instantiate a strategy from a StrategyConfig. Returns None on failure."""
+    cls = _CLASS_REGISTRY.get(cfg.strategy_class)
+    if cls is None:
+        log.warning("Unknown strategy class: %s", cfg.strategy_class)
+        return None
+    try:
+        return cls(**cfg.params)
+    except (TypeError, ValueError) as exc:
+        log.warning("Failed to instantiate %s(%s): %s", cfg.strategy_class, cfg.params, exc)
+        return None
+
+
+def cmd_generate_from_catalog(n: int, index_path: Optional[str] = None) -> None:
+    """Generate candidates from PLA catalog, prioritizing untapped patterns.
+
+    Unlike ``cmd_generate`` which samples randomly from all parameter spaces,
+    this pulls configs ranked by PLA corpus frequency so that strategies with
+    more empirical backing in the 950-strategy PLA corpus are tested first.
+    """
+    from pathlib import Path as _Path
+
+    idx = _Path(index_path) if index_path else None
+    catalog_configs = generate_strategy_configs_from_catalog(
+        index_path=idx, top_n=n * 3,  # over-fetch to account for duplicates
+    )
+
+    if not catalog_configs:
+        log.warning("PLA catalog returned no configs. Nothing to generate.")
+        return
+
+    bars = fetch_btc_daily(days=730)
+    if len(bars) < 200:
+        log.error("Insufficient data: %d bars (need >= 200).", len(bars))
+        sys.exit(1)
+
+    # Orthogonality filter setup (same as cmd_generate)
+    ortho_filter = OrthogonalityFilter(
+        max_corr=ORTHOGONALITY_MAX_CORR,
+        lookback_ticks=ORTHOGONALITY_LOOKBACK,
+    )
+    ortho_bars = load_recent_bars_from_log(
+        TRADING_ENGINE_LOG_PATH, lookback_ticks=ORTHOGONALITY_LOOKBACK,
+    )
+    if len(ortho_bars) < ORTHOGONALITY_LOOKBACK:
+        ortho_bars = bars[-ORTHOGONALITY_LOOKBACK:]
+
+    existing_names = set(NAMED_STRATEGIES.keys())
+    log_entries = _load_candidates_log()
+    passed_entries: List[Tuple[str, Dict[str, Any]]] = []
+    rejected_ortho = 0
+    tested = 0
+    ts = datetime.now(timezone.utc).isoformat()
+
+    for cfg in catalog_configs:
+        if tested >= n:
+            break
+
+        strategy = _instantiate_from_config(cfg)
+        if strategy is None:
+            continue
+
+        # Build a deterministic name
+        name = _strategy_name(
+            cfg.strategy_class, cfg.params, filters=[],
+        )
+        if name in existing_names:
+            continue
+
+        tested += 1
+        log.info(
+            "[%d/%d] Testing %s (PLA tag=%s, priority=%d) ...",
+            tested, n, name, cfg.pla_tag, cfg.priority,
+        )
+
+        passed, results = validate_candidate(bars, strategy)
+        full_pnl = run_backtest(bars, strategy)
+        full_metrics = compute_metrics(full_pnl, periods_per_year=365)
+
+        meta: Dict[str, Any] = {
+            "base": cfg.strategy_class,
+            "base_params": cfg.params,
+            "pla_tag": cfg.pla_tag,
+            "pla_priority": cfg.priority,
+            "regime_filter": None,
+            "rsi_filter": None,
+        }
+
+        entry: Dict[str, Any] = {
+            "name": name,
+            "ts": ts,
+            "passed": passed,
+            "meta": meta,
+            "full_metrics": full_metrics,
+            "walk_forward": results,
+            "source": "pla_catalog",
+        }
+        log_entries.append(entry)
+
+        if passed:
+            windows_passed = sum(
+                1 for m in results if m["sharpe"] > 0.5 and m["mdd"] < 25.0
+            )
+            log.info(
+                "  PASS -- windows=%d/5, sharpe=%.2f, mdd=%.1f%%",
+                windows_passed, full_metrics["sharpe"], full_metrics["mdd"],
+            )
+            ortho_ok, ortho_reason = ortho_filter.is_orthogonal(
+                candidate_strategy=strategy,
+                pool_strategies=NAMED_STRATEGIES,
+                bars_history=ortho_bars,
+                candidate_name=name,
+            )
+            if not ortho_ok:
+                rejected_ortho += 1
+                log.warning("  ORTHO REJECT %s -- %s", name, ortho_reason)
+                entry["orthogonality_rejected"] = True
+                entry["orthogonality_reason"] = ortho_reason
+            else:
+                log.info("  ORTHO OK -- %s", ortho_reason)
+                passed_entries.append((name, meta))
+        else:
+            log.info("  FAIL -- skipping.")
+
+    _save_candidates_log(log_entries)
+    log.info("Logged %d candidates to %s", tested, CANDIDATES_PATH)
+
+    added = _append_to_strategies_py(passed_entries)
+    if added > 0:
+        log.info("Added %d new strategies to strategies.py", added)
+    else:
+        log.info("No new strategies passed validation.")
+
+    total_pass = len(passed_entries)
+    total_fail = tested - total_pass - rejected_ortho
+    log.info(
+        "Summary (from-catalog): %d passed, %d failed, %d rejected-orthogonality "
+        "out of %d tested.",
+        total_pass, total_fail, rejected_ortho, tested,
+    )
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 def main() -> None:
@@ -774,6 +938,14 @@ def main() -> None:
     parser.add_argument(
         "--generate", type=int, metavar="N",
         help="Generate N new strategy candidates, validate, and register passing ones.",
+    )
+    parser.add_argument(
+        "--from-catalog", type=int, metavar="N", dest="from_catalog",
+        help="Generate N candidates prioritized by PLA pattern catalog frequency.",
+    )
+    parser.add_argument(
+        "--catalog-index", type=str, default=None,
+        help="Path to LOGIC_INDEX.md (for --from-catalog).",
     )
     parser.add_argument(
         "--prune", action="store_true",
@@ -786,6 +958,10 @@ def main() -> None:
         if args.generate < 1:
             parser.error("--generate must be >= 1")
         cmd_generate(args.generate)
+    elif args.from_catalog is not None:
+        if args.from_catalog < 1:
+            parser.error("--from-catalog must be >= 1")
+        cmd_generate_from_catalog(args.from_catalog, args.catalog_index)
     elif args.prune:
         cmd_prune()
     else:
