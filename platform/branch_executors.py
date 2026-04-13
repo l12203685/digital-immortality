@@ -2,8 +2,12 @@
 from pathlib import Path
 from typing import Callable
 import json
+import os
 
 RESULTS = Path("C:/Users/admin/workspace/digital-immortality/results")
+REPO = RESULTS.parent
+DOCS = REPO / "docs"
+STAGING = REPO / "staging"
 
 
 def execute_economic() -> str:
@@ -55,9 +59,137 @@ def execute_knowledge() -> str:
     return "Knowledge digester not initialized."
 
 
+def execute_social() -> str:
+    """Branch 4: Check Discord/organism ecosystem status."""
+    try:
+        parts: list[str] = []
+        diag = DOCS / "discord_distribution_diagnosis.md"
+        if diag.exists():
+            lines = diag.read_text(encoding="utf-8", errors="replace").splitlines()
+            parts.append(f"Distribution diagnosis: {len(lines)} lines")
+        outreach = STAGING / "outreach_week1_execution.md"
+        if outreach.exists():
+            text = outreach.read_text(encoding="utf-8", errors="replace")
+            done = text.lower().count("[x]")
+            todo = text.lower().count("[ ]")
+            parts.append(f"Outreach: {done} done, {todo} pending")
+        return "; ".join(parts) if parts else "No social/outreach data found."
+    except Exception as e:
+        return f"Social check error: {e}"
+
+
+def execute_distribution() -> str:
+    """Branch 5: Check distribution/SOP status."""
+    try:
+        if not DOCS.exists():
+            return "docs/ directory not found."
+        sop_files = [
+            f for f in os.listdir(DOCS)
+            if f.startswith("knowledge_product_") or f.startswith("publish_thread_sop")
+        ]
+        return f"Distribution: {len(sop_files)} SOPs/knowledge products in docs/"
+    except Exception as e:
+        return f"Distribution check error: {e}"
+
+
+def execute_redundancy() -> str:
+    """Branch 6: Check system redundancy/anti-fragile status."""
+    try:
+        parts: list[str] = []
+        qs = STAGING / "quick_status.md"
+        if qs.exists():
+            text = qs.read_text(encoding="utf-8", errors="replace")
+            for line in text.splitlines():
+                if "daemon:" in line.lower():
+                    parts.append(line.strip().lstrip("- "))
+                    break
+            for line in text.splitlines():
+                if "web_scheduled:" in line.lower():
+                    parts.append(line.strip().lstrip("- "))
+                    break
+        else:
+            parts.append("quick_status.md not found")
+        return "; ".join(parts) if parts else "No redundancy data."
+    except Exception as e:
+        return f"Redundancy check error: {e}"
+
+
+def execute_life() -> str:
+    """Branch 8: Check life maintenance status."""
+    try:
+        parts: list[str] = []
+        cal = RESULTS / "life_calendar.json"
+        if cal.exists():
+            data = json.loads(cal.read_text(encoding="utf-8"))
+            events = data.get("events", [])
+            parts.append(f"Calendar: {len(events)} events, updated {data.get('updated_at', '?')}")
+        health = RESULTS / "life_health.jsonl"
+        if health.exists():
+            lines = [l for l in health.read_text(encoding="utf-8", errors="replace").splitlines() if l.strip()]
+            if lines:
+                last = json.loads(lines[-1])
+                metric = last.get("payload", {}).get("metric", "?")
+                value = last.get("payload", {}).get("value", "?")
+                parts.append(f"Last health: {metric}={value}")
+        return "; ".join(parts) if parts else "No life data found."
+    except Exception as e:
+        return f"Life check error: {e}"
+
+
+def execute_turing() -> str:
+    """Branch 9: Check Turing test progress."""
+    try:
+        parts: list[str] = []
+        gap_path = RESULTS / "turing_test" / "gap_register.jsonl"
+        if gap_path.exists():
+            lines = gap_path.read_text(encoding="utf-8", errors="replace").splitlines()
+            data_lines = [l for l in lines if l.strip() and not l.strip().startswith("#")]
+            if data_lines:
+                gaps = [json.loads(l) for l in data_lines]
+                resolved = sum(1 for g in gaps if g.get("resolved"))
+                parts.append(f"Gaps: {resolved}/{len(gaps)} resolved")
+            else:
+                parts.append("Gap register: no entries yet")
+        protocol = DOCS / "turing_test_protocol.md"
+        if protocol.exists():
+            text = protocol.read_text(encoding="utf-8", errors="replace")
+            for line in text.splitlines():
+                if "status" in line.lower() or "phase" in line.lower() or "gate" in line.lower():
+                    parts.append(line.strip().lstrip("#- "))
+                    break
+        return "; ".join(parts) if parts else "No Turing test data found."
+    except Exception as e:
+        return f"Turing check error: {e}"
+
+
+def execute_l3() -> str:
+    """Branch 10: Check L3 self-modification status."""
+    try:
+        rules_path = RESULTS / "engine_rules.json"
+        if not rules_path.exists():
+            return "engine_rules.json not found — L3 not initialized."
+        data = json.loads(rules_path.read_text(encoding="utf-8"))
+        dead_loops = data.get("dead_loop_count", 0)
+        evolved = data.get("evolved_at", "?")
+        elog = data.get("evolution_log", [])
+        last_event = elog[-1].get("event", "?") if elog else "none"
+        return (
+            f"L3: dead_loops={dead_loops}, evolved_at={evolved}, "
+            f"last_event={last_event}, log_entries={len(elog)}"
+        )
+    except Exception as e:
+        return f"L3 check error: {e}"
+
+
 BRANCH_EXECUTORS: dict[int, Callable[[], str]] = {
     1: execute_economic,
     2: execute_behavioral,
     3: execute_learning,
+    4: execute_social,
+    5: execute_distribution,
+    6: execute_redundancy,
     7: execute_knowledge,
+    8: execute_life,
+    9: execute_turing,
+    10: execute_l3,
 }
