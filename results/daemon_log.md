@@ -1256,3 +1256,5 @@ plan_raw: ```json
       "action": "Post-gate follow-through: read trade_decision_cycle390.json. If entry taken → monitor PnL, log unrealized, set soft-stop at -1.5R. If signal=0 (no entry) → log gate_pass_no_signal, reset monitor window to tick 897 (+30). Tick now 867. Axiom 5: no edge = no action, but gate result must be logged and state advanced. Output: trade_state_cycle391.json.",
       "priority": 1,
       "runnable": "pytho
+
+[2026-04-13 19:45 +08] Cycle 389 (E0): CDE清理585MB(安裝檔+Temp), token audit(session_state超標→trimmed), picker state修正(B1.T1/T3+B3.T1=success), inbox replied
