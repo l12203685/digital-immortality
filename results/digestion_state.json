@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 140,
+  "files_digested": 150,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -141,9 +141,18 @@
     "E:/@交易/@StrategyManagement/歸檔/202010/202010彥勝-卡滋卡滋/彥勝-202010作業-策略說明.txt",
     "E:/@交易/@StrategyManagement/歸檔/202010/202010修達/001_TX_PT_D0策略說明.txt",
     "E:/@交易/@StrategyManagement/歸檔/202010/202010涂旭帆/說明檔.txt",
-    "E:/@交易/@StrategyManagement/歸檔/202010/202010景帆/027_TX_DayContrarian_LO_300M_策略說明.txt"
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010景帆/027_TX_DayContrarian_LO_300M_策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202102月交換區_建議.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202106月交換區_建議.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202107月交換區_建議.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202108月交換區_建議.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202109月交換區_建議.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202110月交換區_建議_ALL.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202111月交換區_建議_ALL.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202112月交換區_建議_ALL.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202202月交換區_建議_ALL-補充梯.txt",
+    "E:/@交易/@StrategyManagement/歸檔/WFA_Anchored3_Ori.xlsx"
   ],
-  "files_digested": 140,
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T16:25:00+08:00"
+  "last_digested_at": "2026-04-14T04:03:56+08:00"
 }
