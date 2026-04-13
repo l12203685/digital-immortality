@@ -135,3 +135,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 9 g1_eval_status = cycle 373 — gap-remediation cycle 3; #1 gap close-check → advance to #2 severity if confirmed closed -->
 <!-- branch 1 regime_action = no action — signals=0, mixed regime, no edge (axiom 5); tick=2759 healthy; 3-cycle repeat → branch de-prioritized this cycle per rotation rule -->
 <!-- branch 10 l3_maintenance_cycle = cycle 373 — maintenance cadence; engine_rules.json stable; no active dispatch -->
+
+<!-- cycle update 2026-04-13 10:50:03 (Taipei) -->
+<!-- branch 9 g1_eval_status = cycle 374 — gap-remediation cycle 4; #1 gap close-check → advance to #2 if confirmed; escalate if still open (3+ cycles same gap = blocked) -->
+<!-- branch 4 discord_engagement_status = cycle 374 — post 2 live; harvest window; 3x test voice filtered (non-organic); third seed post prep queued if organic=0 at 2hr mark -->
+<!-- branch 1 regime_action = cycle 374 — no action; signals=0, mixed regime, no edge (axiom 5); tick=2789; 4th rotation-deferred cycle -->
+<!-- branch 6 survival_check = cycle 374 — rotation substitution (B10 3-cycle stall); clean_streak=115; CI sentinel active; runbook F1-F10 live -->
