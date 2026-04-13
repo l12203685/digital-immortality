@@ -279,3 +279,8 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 5 organism_interact_status = cycle 395 — neglect alert resolved; full 10-scenario fidelity run executed; delta vs cycle 393 baseline computed; calibration patch or baseline re-lock applied; neglect counter reset -->
 <!-- branch 9 g1_eval_status = cycle 395 — #7 terminal decision executed (BLOCK or CLOSE); frontier advances to #8 if CLOSE; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5 terminal; #6 terminal; #7 terminal -->
 <!-- branch 2 digestion_progress = cycle 395 — Tier 1 batch +10 files; cumulative target 125/2756 -->
+
+<!-- cycle update 2026-04-13 21:49:43 (Taipei) -->
+<!-- branch 1 regime_action = cycle 396 — gate tick 1017 evaluation executed; signal check on 11 active strategies; axiom 2 applied; entry or gate_pass_no_signal logged; next gate tick 1077 if no entry -->
+<!-- branch 2 digestion_progress = cycle 396 — Tier 1 batch +10 files; cumulative target 135/2756 -->
+<!-- branch 9 g1_eval_status = cycle 396 — #8 gap scan cycle 1/2 initiated; frontier at #8; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5 terminal; #6 terminal; #7 terminal -->
