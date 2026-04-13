@@ -60,11 +60,11 @@ BOND_SYMBOLS: frozenset[str] = frozenset({"ZROZ", "BIL", "IEF", "TLT"})
 # (ticker, weight) pairs; a row-level formula evaluator handles the
 # equity-bucket fractional weight on 2330.TW.
 ZERO_PORTFOLIO_FORMULAS: dict[str, list[tuple[str, float]]] = {
-    # 股 = avg(IOO, TOPT, QTOP) * 0.96 + 2330.TW * 0.04
+    # 股 = IOO * 0.32 + TOPT * 0.32 + QTOP * 0.32 + 2330.TW * 0.04
     "股": [
-        ("IOO", 0.96 / 3.0),
-        ("TOPT", 0.96 / 3.0),
-        ("QTOP", 0.96 / 3.0),
+        ("IOO", 0.32),
+        ("TOPT", 0.32),
+        ("QTOP", 0.32),
         ("2330.TW", 0.04),
     ],
     # 金 = GLDM * 0.90 + IBIT * 0.10
@@ -78,12 +78,9 @@ ZERO_PORTFOLIO_FORMULAS: dict[str, list[tuple[str, float]]] = {
         ("KMLM", 1.0 / 3.0),
         ("CTA", 1.0 / 3.0),
     ],
-    # 債 = avg(ZROZ, BIL, IEF, TLT) — total-return
+    # 債 = SGOV 100% (fixed income)
     "債": [
-        ("ZROZ", 0.25),
-        ("BIL", 0.25),
-        ("IEF", 0.25),
-        ("TLT", 0.25),
+        ("SGOV", 1.0),
     ],
 }
 
