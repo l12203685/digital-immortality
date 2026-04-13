@@ -273,3 +273,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 2 digestion_progress = cycle 394 — Tier 1 batch +10 files; cumulative target 115/2756 -->
 <!-- branch 9 g1_eval_status = cycle 394 — #7 gap scan cycle 1/2 initiated; frontier at #7; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5 terminal; #6 terminal -->
 <!-- branch 4 discord_engagement_status = cycle 394 — pre-sentinel 395 check executed; halt status verified; phase4b cadence confirmed or sentinel primed for cycle 395; T+2 organic delta logged -->
+
+<!-- cycle update 2026-04-13 21:19:58 (Taipei) -->
+<!-- branch 4 discord_engagement_status = cycle 395 — sentinel executed; halt_decision finalized (lifted or extended to 398); T+3 organic delta logged; phase4b cadence confirmed or deferred -->
+<!-- branch 5 organism_interact_status = cycle 395 — neglect alert resolved; full 10-scenario fidelity run executed; delta vs cycle 393 baseline computed; calibration patch or baseline re-lock applied; neglect counter reset -->
+<!-- branch 9 g1_eval_status = cycle 395 — #7 terminal decision executed (BLOCK or CLOSE); frontier advances to #8 if CLOSE; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5 terminal; #6 terminal; #7 terminal -->
+<!-- branch 2 digestion_progress = cycle 395 — Tier 1 batch +10 files; cumulative target 125/2756 -->
