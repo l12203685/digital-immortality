@@ -2,16 +2,16 @@
   "kill_max_dd": 20.0,
   "kill_min_wr": 0.3,
   "kill_min_pf": 0.8,
-  "kill_window": 50,
+  "kill_window": 45,
   "kill_window_floor": 20,
   "kill_window_ceiling": 50,
   "kill_window_recovery_ticks": 100,
-  "kill_count": 17,
-  "evolved_at": "2026-04-13T07:07:46.360808+00:00",
+  "kill_count": 18,
+  "evolved_at": "2026-04-13T09:52:57.847274+00:00",
   "last_kill": {
-    "strategy": "DualMA_RSI",
-    "reason": "PF 0.79 < 0.8",
-    "ts": "2026-04-13T07:07:46.360808+00:00"
+    "strategy": "DualMA_10_30",
+    "reason": "PF 0.76 < 0.8",
+    "ts": "2026-04-13T09:52:57.847274+00:00"
   },
   "last_recovery": {
     "ts": "2026-04-13T08:47:53.349601+00:00",

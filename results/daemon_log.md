@@ -1206,3 +1206,5 @@ plan_raw: ```json
       "action": "E2E smoke test: voice input flags phase4b e2e + reverse channel 1775898534 + public host smoke test. Execute: python platform/discord_poster.py --channel 1775898534 --mode e2e-smoke; verify round-trip (post→receive→confirm). If halt was lifted cycle 387: measure organic delta T+1 baseline. If extended: sentinel at cycle 389 confirmed.",
       "priority": 1,
       "runnable": "python platform/dis
+
+[2026-04-13 18:30 +08] Cycle 388 (E0): /go SOP重寫(4-step+Plan agent), MC channel修復(.mcp.json), inbox 16→0 delivered, Dashboard status bar ×12頁, UI修復(shift+enter/持股表/P&L圖), 餘額研究→Shioaji
