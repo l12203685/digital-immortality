@@ -1160,3 +1160,19 @@ plan_raw: ```json
       "branch": 1,
       "name": "經濟/trading",
       "action": "Finalize PF gate decision — forward-walk has run cycles 383+384 (2-cycle mark, must close before 3-cycle repeat rule triggers). Read results/candidate_queue.json top-1 PF. If PF ≥ 0.8: write results/live_monitor_queue.json, set drawdown alert at PF=0.75, mark gate=PASSED, close forward-walk loop. If PF < 0.8: retire candidate, pull next from queue, reset forward-walk counter=0, log to results/tr
+
+## Cycle 1 — 2026-04-13 16:49:59 (Taipei)
+
+[cycle 386] classification=branch-growth
+actions: 5, updates: 5
+exec: b1(經濟/trading): (no executor for branch 1, runnable=python trading/paper_trader.py --mode monito; b2(知識/digestion): (no executor for branch 2, runnable=python platform/inbox_bridge.py --mode diges; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b4(社交/discord): (no executor for branch 4, runnable=python platform/discord_poster.py --channel ; b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py templates/exampl
+digestion: Knowledge Digestion: 8/2756 files, Tier 1, Last: 2026-04-13T16:20:08+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 1,
+      "name": "經濟/trading",
+      "action": "Post-gate monitoring phase: read results/live_monitor_queue.json — if gate PASSED in cycle 385, run live-monitor tick and verify drawdown alert threshold (PF ≥ 0.75); if gate FAILED (candidate rotated), pull next from candidate_queue.json, reset forward-walk counter=0, begin new 2-cycle forward-walk scaffold. Log outcome to results/trading_engine_log.jsonl. Tick=715.",
+      "priority": 1,
+     
