@@ -1,6 +1,6 @@
 # Session State — 2026-04-14 02:10 +08
 
-## >> Continuous Loop — 43 cycles completed
+## >> Continuous Loop — 45 cycles completed
 
 ### Outputs by branch
 | Cycle | Branch | Output |
@@ -49,16 +49,18 @@
 | 443 | B5+B6 | Dynamic tree updated (all branches current) + CI 34/34 + GDrive backup 63 files |
 | 444 | B2+B7 | Digested 10 (222→232, TTM Squeeze found) + third ZP post (entry/exit asymmetry) |
 | 445 | B2+B3 | Digested 10 (232→242, Donchian+TTM full chain) + 5 distillation insights (308 total) |
+| 446 | B1+B10 | Kill window tests 16/16 + L3 ALL GREEN + CI 34/34 + LYH writeback synced |
+| 447 | B2+B7 | Digested 10 (242→252, Score strategy) + fourth ZP post (milestone vs drift audits) |
 
 ### Pending / Carry-over
 - MCP plugin restart needed (file watcher + timezone)
 - GoogleDrive backup gap CLOSED (58/58 files, 3-location redundant as of cycle 435)
 - Dashboard Track 2 Phase 3-5 remaining
 - B1 trading engine still STOPPED/PAPER
-- - B2 digestion: 242/2756 (8.8%) — Donchian golden ratio + TTM Squeeze full documentation chain
+- - B2 digestion: 252/2756 (9.1%) — Score momentum-decay strategy found
 - JSONL escape defect fixed — ci_smoke_test now 30/30
 - SBF strategy family mapped: Ori → 8 variants → production 2022-03-06
 
 ### Context
-- >> loop running: cycle 43/50, stop at 07:30 +08
+- >> loop running: cycle 45/50, stop at 07:30 +08
 - All commits pushed to digital-immortality main

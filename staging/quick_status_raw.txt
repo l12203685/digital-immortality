@@ -1,23 +1,18 @@
-Exception in thread Thread-3 (_readerthread):
-Traceback (most recent call last):
-  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
-    self._context.run(self.run)
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "C:\Python314\Lib\threading.py", line 1024, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
-    buffer.append(fh.read())
-                  ~~~~~~~^^
-UnicodeDecodeError: 'cp950' codec can't decode byte 0xe2 in position 94: illegal multibyte sequence
 === Recursive Engine Status ===
 
-Last output:  2026-04-13 20:19 UTC
-  Title:      Cycle 409 ¡X 2026-04-14 04:19:31 (Taipei)
+Last output:  2026-04-13 21:19 UTC
+  Title:      Cycle 411 ¡X 2026-04-14 05:19:38 (Taipei)
 Next input:   2026-04-11 08:45 UTC
 Next cycle:   90
 Daemon:       not running
 Git branch:   main
+
+Recent commits:
+  d693623 cycle 446: persist B1 tests + B10 L3 check (31 seconds ago)
+  1a00ca1 B1: unit tests for kill_window floor + KillMonitor triggers (2 minutes ago)
+  de8fad7 B10: L3 periodic check + session sync (3 minutes ago)
+  174f6d4 cycle 445: persist B2 digest 242 + B3 distil 308 (7 minutes ago)
+  3d698d4 B3: distil 303->308 (TTM Squeeze composition + portfolio blueprint) (9 minutes ago)
 
 Memory (252 total entries):
   corrections        0 entries
