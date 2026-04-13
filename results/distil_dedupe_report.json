@@ -1,0 +1,1132 @@
+{
+  "generated_at": "2026-04-14 01:14 +0800",
+  "config": {
+    "jaccard_threshold": 0.7,
+    "name_threshold": 0.8,
+    "same_topic_threshold": 0.6
+  },
+  "summary": {
+    "total_files_scanned": 78,
+    "near_duplicate_pairs": 38,
+    "mirror_pairs": 38,
+    "semantic_pairs": 0
+  },
+  "pairs": [
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "MEMORY.md",
+      "file_b": "MEMORY.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\MEMORY.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\MEMORY.md",
+      "name_a": "",
+      "name_b": "",
+      "type_a": "",
+      "type_b": "",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_brain_not_executor.md",
+      "file_b": "feedback_brain_not_executor.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_brain_not_executor.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_brain_not_executor.md",
+      "name_a": "主 session = 大腦不是執行者",
+      "name_b": "主 session = 大腦不是執行者",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_ceo_speak_no_detail.md",
+      "file_b": "feedback_ceo_speak_no_detail.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_ceo_speak_no_detail.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_ceo_speak_no_detail.md",
+      "name_a": "董事長語言",
+      "name_b": "董事長語言",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_cold_start_identity.md",
+      "file_b": "feedback_cold_start_identity.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_cold_start_identity.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_cold_start_identity.md",
+      "name_a": "Cold start must restore Edward identity fast",
+      "name_b": "Cold start must restore Edward identity fast",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_communication_buffering.md",
+      "file_b": "feedback_communication_buffering.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_communication_buffering.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_communication_buffering.md",
+      "name_a": "訊息分多句不要每句回 + 簡化技術細節",
+      "name_b": "訊息分多句不要每句回 + 簡化技術細節",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_dashboard_primary_channel.md",
+      "file_b": "feedback_dashboard_primary_channel.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_dashboard_primary_channel.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_dashboard_primary_channel.md",
+      "name_a": "Dashboard 是主通道，不是 Discord",
+      "name_b": "Dashboard 是主通道，不是 Discord",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_discord_always_push.md",
+      "file_b": "feedback_discord_always_push.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_discord_always_push.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_discord_always_push.md",
+      "name_a": "所有 output 推 Dashboard（Discord 過渡）",
+      "name_b": "所有 output 推 Dashboard（Discord 過渡）",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_discord_manual_sync.md",
+      "file_b": "feedback_discord_manual_sync.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_discord_manual_sync.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_discord_manual_sync.md",
+      "name_a": "本地 CLI session 需手動推 Discord",
+      "name_b": "本地 CLI session 需手動推 Discord",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_dual_angle_operating_model.md",
+      "file_b": "feedback_dual_angle_operating_model.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_dual_angle_operating_model.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_dual_angle_operating_model.md",
+      "name_a": "雙角度工作模型",
+      "name_b": "雙角度工作模型",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_four_dim_framework.md",
+      "file_b": "feedback_four_dim_framework.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_four_dim_framework.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_four_dim_framework.md",
+      "name_a": "Four-dimension decision framework",
+      "name_b": "Four-dimension decision framework",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_go_sop_carryover.md",
+      "file_b": "feedback_go_sop_carryover.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_go_sop_carryover.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_go_sop_carryover.md",
+      "name_a": "/go SOP carry-over pattern",
+      "name_b": "/go SOP carry-over pattern",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_inbox_realtime.md",
+      "file_b": "feedback_inbox_realtime.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_inbox_realtime.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_inbox_realtime.md",
+      "name_a": "Dashboard inbox 即時讀取",
+      "name_b": "Dashboard inbox 即時讀取",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_k8s_dispatch_model.md",
+      "file_b": "feedback_k8s_dispatch_model.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_k8s_dispatch_model.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_k8s_dispatch_model.md",
+      "name_a": "K8s 調度模型",
+      "name_b": "K8s 調度模型",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_koko_kidney.md",
+      "file_b": "feedback_koko_kidney.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_koko_kidney.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_koko_kidney.md",
+      "name_a": "單一腎臟是可可不是 Edward",
+      "name_b": "單一腎臟是可可不是 Edward",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_memory_stale_inheritance.md",
+      "file_b": "feedback_memory_stale_inheritance.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_memory_stale_inheritance.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_memory_stale_inheritance.md",
+      "name_a": "Memory 繼承不完整 — 必須存 durable",
+      "name_b": "Memory 繼承不完整 — 必須存 durable",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_minimize_edward_actions.md",
+      "file_b": "feedback_minimize_edward_actions.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_minimize_edward_actions.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_minimize_edward_actions.md",
+      "name_a": "不用透過 Edward 動手 (chairman doesn't do operations)",
+      "name_b": "不用透過 Edward 動手 (chairman doesn't do operations)",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_minimize_external_services.md",
+      "file_b": "feedback_minimize_external_services.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_minimize_external_services.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_minimize_external_services.md",
+      "name_a": "系統使用的外部服務越精簡越統一越好",
+      "name_b": "系統使用的外部服務越精簡越統一越好",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_no_ask_just_do.md",
+      "file_b": "feedback_no_ask_just_do.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_no_ask_just_do.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_no_ask_just_do.md",
+      "name_a": "Queue model - never ask, just execute",
+      "name_b": "Queue model - never ask, just execute",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_no_execution_exception.md",
+      "file_b": "feedback_no_execution_exception.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_no_execution_exception.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_no_execution_exception.md",
+      "name_a": "零執行例外",
+      "name_b": "零執行例外",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_org_hierarchy.md",
+      "file_b": "feedback_org_hierarchy.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_org_hierarchy.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_org_hierarchy.md",
+      "name_a": "Edward = 主大腦, 主 session = 董事長, subagent = 總經理→員工",
+      "name_b": "Edward = 主大腦, 主 session = 董事長, subagent = 總經理→員工",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_poker_category.md",
+      "file_b": "feedback_poker_category.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_poker_category.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_poker_category.md",
+      "name_a": "Poker category coding",
+      "name_b": "Poker category coding",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_recursive_persist.md",
+      "file_b": "feedback_recursive_persist.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_recursive_persist.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_recursive_persist.md",
+      "name_a": "Recursive engine output must persist to durable storage",
+      "name_b": "Recursive engine output must persist to durable storage",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_respond_during_subagent.md",
+      "file_b": "feedback_respond_during_subagent.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_respond_during_subagent.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_respond_during_subagent.md",
+      "name_a": "Respond during subagent work",
+      "name_b": "Respond during subagent work",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_save_plans_with_timestamp.md",
+      "file_b": "feedback_save_plans_with_timestamp.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_save_plans_with_timestamp.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_save_plans_with_timestamp.md",
+      "name_a": "Plan 執行前存檔帶時間戳",
+      "name_b": "Plan 執行前存檔帶時間戳",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_su_command.md",
+      "file_b": "feedback_su_command.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_su_command.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_su_command.md",
+      "name_a": "[SU] Speed Up command",
+      "name_b": "[SU] Speed Up command",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_subagent_delegation.md",
+      "file_b": "feedback_subagent_delegation.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_subagent_delegation.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_subagent_delegation.md",
+      "name_a": "Subagent delegation to save tokens",
+      "name_b": "Subagent delegation to save tokens",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_timestamp_position.md",
+      "file_b": "feedback_timestamp_position.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_timestamp_position.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_timestamp_position.md",
+      "name_a": "時間戳放最前面",
+      "name_b": "時間戳放最前面",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_timezone_taipei_default.md",
+      "file_b": "feedback_timezone_taipei_default.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_timezone_taipei_default.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_timezone_taipei_default.md",
+      "name_a": "所有時間一律 UTC+8 Asia/Taipei (除非特殊)",
+      "name_b": "所有時間一律 UTC+8 Asia/Taipei (除非特殊)",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_token_search.md",
+      "file_b": "feedback_token_search.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_token_search.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_token_search.md",
+      "name_a": "Always search all credential locations before saying \"not found\"",
+      "name_b": "Always search all credential locations before saying \"not found\"",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_tree_growth_model.md",
+      "file_b": "feedback_tree_growth_model.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_tree_growth_model.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_tree_growth_model.md",
+      "name_a": "永生樹動態生長模型",
+      "name_b": "永生樹動態生長模型",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "feedback_uncertainty_return_to_core.md",
+      "file_b": "feedback_uncertainty_return_to_core.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_uncertainty_return_to_core.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_uncertainty_return_to_core.md",
+      "name_a": "零式本質思維 (return to essence on uncertainty)",
+      "name_b": "零式本質思維 (return to essence on uncertainty)",
+      "type_a": "feedback",
+      "type_b": "feedback",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "project_dashboard_replaces_discord.md",
+      "file_b": "project_dashboard_replaces_discord.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_dashboard_replaces_discord.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_dashboard_replaces_discord.md",
+      "name_a": "主控台取代 Discord",
+      "name_b": "主控台取代 Discord",
+      "type_a": "project",
+      "type_b": "project",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "project_operational_model.md",
+      "file_b": "project_operational_model.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_operational_model.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_operational_model.md",
+      "name_a": "",
+      "name_b": "",
+      "type_a": "",
+      "type_b": "",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "project_pearl_birthday.md",
+      "file_b": "project_pearl_birthday.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_pearl_birthday.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_pearl_birthday.md",
+      "name_a": "珍珠一歲生日慶祝計畫",
+      "name_b": "珍珠一歲生日慶祝計畫",
+      "type_a": "project",
+      "type_b": "project",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "project_recursive_insights.md",
+      "file_b": "project_recursive_insights.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_recursive_insights.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_recursive_insights.md",
+      "name_a": "Recursive engine insights from 2026-04-07 sessions",
+      "name_b": "Recursive engine insights from 2026-04-07 sessions",
+      "type_a": "project",
+      "type_b": "project",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "project_sensor_actuator_architecture.md",
+      "file_b": "project_sensor_actuator_architecture.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_sensor_actuator_architecture.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_sensor_actuator_architecture.md",
+      "name_a": "特助介面 ⊂ 永生樹本體",
+      "name_b": "特助介面 ⊂ 永生樹本體",
+      "type_a": "project",
+      "type_b": "project",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "project_trading_data_purpose.md",
+      "file_b": "project_trading_data_purpose.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_trading_data_purpose.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_trading_data_purpose.md",
+      "name_a": "交易資料兩大用途",
+      "name_b": "交易資料兩大用途",
+      "type_a": "project",
+      "type_b": "project",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    },
+    {
+      "kind": "EXACT",
+      "score": 1.0,
+      "is_mirror": true,
+      "file_a": "project_usage_baseline.md",
+      "file_b": "project_usage_baseline.md",
+      "path_a": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_usage_baseline.md",
+      "path_b": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_usage_baseline.md",
+      "name_a": "Weekly usage baseline 2026-04-08",
+      "name_b": "Weekly usage baseline 2026-04-08",
+      "type_a": "project",
+      "type_b": "project",
+      "jaccard": 1.0,
+      "reasons": [
+        "EXACT"
+      ]
+    }
+  ],
+  "files_scanned": [
+    {
+      "filename": "MEMORY.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\MEMORY.md",
+      "name": "",
+      "type": ""
+    },
+    {
+      "filename": "feedback_brain_not_executor.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_brain_not_executor.md",
+      "name": "主 session = 大腦不是執行者",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_ceo_speak_no_detail.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_ceo_speak_no_detail.md",
+      "name": "董事長語言",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_cold_start_identity.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_cold_start_identity.md",
+      "name": "Cold start must restore Edward identity fast",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_communication_buffering.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_communication_buffering.md",
+      "name": "訊息分多句不要每句回 + 簡化技術細節",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_dashboard_primary_channel.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_dashboard_primary_channel.md",
+      "name": "Dashboard 是主通道，不是 Discord",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_discord_always_push.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_discord_always_push.md",
+      "name": "所有 output 推 Dashboard（Discord 過渡）",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_discord_manual_sync.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_discord_manual_sync.md",
+      "name": "本地 CLI session 需手動推 Discord",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_dual_angle_operating_model.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_dual_angle_operating_model.md",
+      "name": "雙角度工作模型",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_four_dim_framework.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_four_dim_framework.md",
+      "name": "Four-dimension decision framework",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_go_sop_carryover.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_go_sop_carryover.md",
+      "name": "/go SOP carry-over pattern",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_inbox_realtime.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_inbox_realtime.md",
+      "name": "Dashboard inbox 即時讀取",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_k8s_dispatch_model.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_k8s_dispatch_model.md",
+      "name": "K8s 調度模型",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_koko_kidney.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_koko_kidney.md",
+      "name": "單一腎臟是可可不是 Edward",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_memory_stale_inheritance.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_memory_stale_inheritance.md",
+      "name": "Memory 繼承不完整 — 必須存 durable",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_minimize_edward_actions.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_minimize_edward_actions.md",
+      "name": "不用透過 Edward 動手 (chairman doesn't do operations)",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_minimize_external_services.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_minimize_external_services.md",
+      "name": "系統使用的外部服務越精簡越統一越好",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_no_ask_just_do.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_no_ask_just_do.md",
+      "name": "Queue model - never ask, just execute",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_no_execution_exception.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_no_execution_exception.md",
+      "name": "零執行例外",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_org_hierarchy.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_org_hierarchy.md",
+      "name": "Edward = 主大腦, 主 session = 董事長, subagent = 總經理→員工",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_poker_category.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_poker_category.md",
+      "name": "Poker category coding",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_recursive_persist.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_recursive_persist.md",
+      "name": "Recursive engine output must persist to durable storage",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_respond_during_subagent.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_respond_during_subagent.md",
+      "name": "Respond during subagent work",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_save_plans_with_timestamp.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_save_plans_with_timestamp.md",
+      "name": "Plan 執行前存檔帶時間戳",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_su_command.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_su_command.md",
+      "name": "[SU] Speed Up command",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_subagent_delegation.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_subagent_delegation.md",
+      "name": "Subagent delegation to save tokens",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_timestamp_position.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_timestamp_position.md",
+      "name": "時間戳放最前面",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_timezone_taipei_default.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_timezone_taipei_default.md",
+      "name": "所有時間一律 UTC+8 Asia/Taipei (除非特殊)",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_token_search.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_token_search.md",
+      "name": "Always search all credential locations before saying \"not found\"",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_tree_growth_model.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_tree_growth_model.md",
+      "name": "永生樹動態生長模型",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_uncertainty_return_to_core.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_uncertainty_return_to_core.md",
+      "name": "零式本質思維 (return to essence on uncertainty)",
+      "type": "feedback"
+    },
+    {
+      "filename": "project_dashboard_replaces_discord.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_dashboard_replaces_discord.md",
+      "name": "主控台取代 Discord",
+      "type": "project"
+    },
+    {
+      "filename": "project_operational_model.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_operational_model.md",
+      "name": "",
+      "type": ""
+    },
+    {
+      "filename": "project_pearl_birthday.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_pearl_birthday.md",
+      "name": "珍珠一歲生日慶祝計畫",
+      "type": "project"
+    },
+    {
+      "filename": "project_recursive_insights.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_recursive_insights.md",
+      "name": "Recursive engine insights from 2026-04-07 sessions",
+      "type": "project"
+    },
+    {
+      "filename": "project_sensor_actuator_architecture.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_sensor_actuator_architecture.md",
+      "name": "特助介面 ⊂ 永生樹本體",
+      "type": "project"
+    },
+    {
+      "filename": "project_trading_data_purpose.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_trading_data_purpose.md",
+      "name": "交易資料兩大用途",
+      "type": "project"
+    },
+    {
+      "filename": "project_usage_baseline.md",
+      "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_usage_baseline.md",
+      "name": "Weekly usage baseline 2026-04-08",
+      "type": "project"
+    },
+    {
+      "filename": "LAST_SYNCED.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\LAST_SYNCED.md",
+      "name": "",
+      "type": ""
+    },
+    {
+      "filename": "MEMORY.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\MEMORY.md",
+      "name": "",
+      "type": ""
+    },
+    {
+      "filename": "feedback_brain_not_executor.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_brain_not_executor.md",
+      "name": "主 session = 大腦不是執行者",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_ceo_speak_no_detail.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_ceo_speak_no_detail.md",
+      "name": "董事長語言",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_cold_start_identity.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_cold_start_identity.md",
+      "name": "Cold start must restore Edward identity fast",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_communication_buffering.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_communication_buffering.md",
+      "name": "訊息分多句不要每句回 + 簡化技術細節",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_dashboard_primary_channel.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_dashboard_primary_channel.md",
+      "name": "Dashboard 是主通道，不是 Discord",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_discord_always_push.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_discord_always_push.md",
+      "name": "所有 output 推 Dashboard（Discord 過渡）",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_discord_manual_sync.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_discord_manual_sync.md",
+      "name": "本地 CLI session 需手動推 Discord",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_dual_angle_operating_model.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_dual_angle_operating_model.md",
+      "name": "雙角度工作模型",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_four_dim_framework.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_four_dim_framework.md",
+      "name": "Four-dimension decision framework",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_go_sop_carryover.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_go_sop_carryover.md",
+      "name": "/go SOP carry-over pattern",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_inbox_realtime.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_inbox_realtime.md",
+      "name": "Dashboard inbox 即時讀取",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_k8s_dispatch_model.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_k8s_dispatch_model.md",
+      "name": "K8s 調度模型",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_koko_kidney.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_koko_kidney.md",
+      "name": "單一腎臟是可可不是 Edward",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_memory_stale_inheritance.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_memory_stale_inheritance.md",
+      "name": "Memory 繼承不完整 — 必須存 durable",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_minimize_edward_actions.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_minimize_edward_actions.md",
+      "name": "不用透過 Edward 動手 (chairman doesn't do operations)",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_minimize_external_services.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_minimize_external_services.md",
+      "name": "系統使用的外部服務越精簡越統一越好",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_no_ask_just_do.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_no_ask_just_do.md",
+      "name": "Queue model - never ask, just execute",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_no_execution_exception.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_no_execution_exception.md",
+      "name": "零執行例外",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_org_hierarchy.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_org_hierarchy.md",
+      "name": "Edward = 主大腦, 主 session = 董事長, subagent = 總經理→員工",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_poker_category.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_poker_category.md",
+      "name": "Poker category coding",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_recursive_persist.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_recursive_persist.md",
+      "name": "Recursive engine output must persist to durable storage",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_respond_during_subagent.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_respond_during_subagent.md",
+      "name": "Respond during subagent work",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_save_plans_with_timestamp.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_save_plans_with_timestamp.md",
+      "name": "Plan 執行前存檔帶時間戳",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_su_command.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_su_command.md",
+      "name": "[SU] Speed Up command",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_subagent_delegation.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_subagent_delegation.md",
+      "name": "Subagent delegation to save tokens",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_timestamp_position.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_timestamp_position.md",
+      "name": "時間戳放最前面",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_timezone_taipei_default.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_timezone_taipei_default.md",
+      "name": "所有時間一律 UTC+8 Asia/Taipei (除非特殊)",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_token_search.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_token_search.md",
+      "name": "Always search all credential locations before saying \"not found\"",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_tree_growth_model.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_tree_growth_model.md",
+      "name": "永生樹動態生長模型",
+      "type": "feedback"
+    },
+    {
+      "filename": "feedback_uncertainty_return_to_core.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_uncertainty_return_to_core.md",
+      "name": "零式本質思維 (return to essence on uncertainty)",
+      "type": "feedback"
+    },
+    {
+      "filename": "project_dashboard_replaces_discord.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_dashboard_replaces_discord.md",
+      "name": "主控台取代 Discord",
+      "type": "project"
+    },
+    {
+      "filename": "project_operational_model.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_operational_model.md",
+      "name": "",
+      "type": ""
+    },
+    {
+      "filename": "project_pearl_birthday.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_pearl_birthday.md",
+      "name": "珍珠一歲生日慶祝計畫",
+      "type": "project"
+    },
+    {
+      "filename": "project_recursive_insights.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_recursive_insights.md",
+      "name": "Recursive engine insights from 2026-04-07 sessions",
+      "type": "project"
+    },
+    {
+      "filename": "project_sensor_actuator_architecture.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_sensor_actuator_architecture.md",
+      "name": "特助介面 ⊂ 永生樹本體",
+      "type": "project"
+    },
+    {
+      "filename": "project_trading_data_purpose.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_trading_data_purpose.md",
+      "name": "交易資料兩大用途",
+      "type": "project"
+    },
+    {
+      "filename": "project_usage_baseline.md",
+      "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_usage_baseline.md",
+      "name": "Weekly usage baseline 2026-04-08",
+      "type": "project"
+    },
+    {
+      "filename": "distil_dedupe_report.json:1",
+      "path": "C:\\Users\\admin\\workspace\\digital-immortality\\results\\distil_dedupe_report.json:1",
+      "name": "",
+      "type": ""
+    }
+  ]
+}
