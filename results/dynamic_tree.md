@@ -389,3 +389,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 2 digestion_progress = cycle 413 — Tier 1 batch +10 files; cumulative target 275/2756; repeat-flag raised: consider Tier 2 sampling if novelty low -->
 <!-- branch 5 organism_interact_status = cycle 413 — skipped; neglect counter confirmed 0 (ran cycles 411+412); resume at cycle 415 or if counter reaches 3 -->
 <!-- branch 4 discord_engagement_status = cycle 413 — skipped; halt_decision window extends to cycle 415; no action this cycle -->
+
+<!-- cycle update 2026-04-14 06:49:36 (Taipei) -->
+<!-- branch 5 organism_interact_status = cycle 414 — neglect alert resolved (5-cycle gap); full 10-scenario fidelity run executed; delta vs cycle 412 baseline computed; calibration patch or baseline re-lock applied; neglect counter reset -->
+<!-- branch 9 g1_eval_status = cycle 414 — #17 gap scan cycle 1/2 initiated; frontier at #17; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#16 terminal -->
+<!-- branch 2 digestion_progress = cycle 414 — Tier 1 repeat-flag triggered; switched to Tier 2 sampling (+5 files); novelty delta assessed; cumulative Tier 1 remains 275/2756; Tier 2 pilot initiated -->
+<!-- branch 1 regime_action = cycle 414 — passive monitoring; tick_count 1554 < gate_tick 1797; no evaluation; next gate tick 1797 -->
+<!-- branch 4 discord_engagement_status = cycle 414 — skipped; halt_decision window extends to cycle 415; no action this cycle -->
