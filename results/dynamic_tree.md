@@ -1,5 +1,5 @@
 # 永生樹 — Dynamic State
-> Updated: 2026-04-14 (cycle 408 — B1 replay_last_kill.py built; B2 150 files digested; B10 L3 v2 implemented)
+> Updated: 2026-04-14 (cycle 432 — B1 orthogonality_filter BUILT; B2 222 digested (8.1%); B3 303 insights; B6 GDrive CLOSED; B7 2 ZP posts; B8 life_logger BUILT; B10 L3 v2 ALL GREEN)
 > Format: current state ONLY. History in tree_archive/. 導數驅動。
 
 ## 核心目標（常數）
@@ -10,29 +10,31 @@
 
 | Branch | Derivative | Health | Last Cycle | Key Metric |
 |--------|-----------|--------|------------|------------|
-| 1. 經濟自給 | 0.0 | YELLOW | 408 | BTC=$70,808 tick=2550 FLAT STOPPED; DualMA DISABLED (PF=0.7); 11 active/8 disabled; mainnet BLOCKED (~85d); replay_last_kill.py BUILT |
-| 2. 行為等價 | +0.1 | GREEN | 408 | 2.2 COMPLETE (416 MDs); 150 files digested (digestion_state.json); 2.3 38/41 CONFIRMED FINAL (3=LLM-boundary CLOSED) |
-| 3. 持續學習 | +0.1 | GREEN | 376 | distil169 DONE; 181 total insights; B10 L3 design COMPLETE (cycle 376); next → B10 L3 v2 (auto-detection) |
+| 1. 經濟自給 | +0.1 | YELLOW | 432 | BTC=$70,808; orthogonality_filter.py BUILT; replay_last_kill.py BUILT; 11 active/8 disabled; mainnet BLOCKED (~83d) |
+| 2. 行為等價 | +0.2 | GREEN | 432 | 2.2 COMPLETE (416 MDs); 222 files digested (8.1%, was 150); 2.3 38/41 CONFIRMED FINAL (3=LLM-boundary CLOSED) |
+| 3. 持續學習 | +0.2 | GREEN | 432 | distil169 DONE; 303 total insights (was 181); B10 L3 v2 ALL GREEN |
 | 4. 社交圈 | +0.2 | YELLOW | 371 | Samuel 40% AGREE (16/40); agreement floor confirmed; root cause documented; DM human-gated |
-| 5. 平台分發 | +0.0 | GREEN | 364 | SOP #01~#121 COMPLETE; posting queue pending |
-| 6. 存活冗餘 | +0.0 | GREEN | 372 | 115th clean cycle; 38/41 ALIGNED; SOP #101 6/6 gates passing |
-| 7. 知識輸出 | +0.0 | GREEN | 364 | SOP series complete; engagement loop not started |
-| 8. 生活維護 | +0.0 | GREEN | 364 | 5/5 SYSTEM_FAILURE decisions pre-committed |
+| 5. 平台分發 | +0.0 | GREEN | 432 | SOP #01~#121 COMPLETE; dynamic_tree comprehensive update this cycle |
+| 6. 存活冗餘 | +0.1 | GREEN | 432 | GoogleDrive backup CLOSED; 115th clean cycle; 38/41 ALIGNED; SOP #101 6/6 gates passing |
+| 7. 知識輸出 | +0.3 | GREEN | 432 | 2 ZP posts PUBLISHED; content_seed_generator.py BUILT; engagement loop seeded |
+| 8. 生活維護 | +0.1 | GREEN | 432 | life_logger.py BUILT; precommit compliance trackable; 5/5 SYSTEM_FAILURE pre-committed |
 | 9. Turing Test | +0.1 | YELLOW | 373 | candidates 0/3 BLOCKED; G1 infrastructure READY (scenarios.md + results/turing_test/) |
-| 10. L3 System | +0.2 | GREEN | 408 | trading+content L3 complete; recursive L3 v2 IMPLEMENTED (auto-detection in recursive_engine.py; engine_rules.json; docs/b10_l3_recursive_engine.md) |
+| 10. L3 System | +0.2 | GREEN | 432 | trading+content L3 complete; recursive L3 v2 ALL GREEN (auto-detection in recursive_engine.py; engine_rules.json; docs/b10_l3_recursive_engine.md) |
 
 ## Branch Details
 
 ### 1. 經濟自給（存活前提） DEADLINE: 2026-07-07
 - 1.1 Trading: engine STOPPED; tick=2550 (last: 2026-04-12T22:49 UTC); BTC=$70,808; all 11 active signals=0 FLAT; 8 strategies disabled (DualMA×4 PF=0.7, Bollinger×2 PF=0.62, Donchian×2 PF=0.67); cum_pnl=+6.57% (no open positions); regime=mixed; engine not running — restart pending
 - 1.1b Kill replay: replay_last_kill.py BUILT (trading/replay_last_kill.py); post-mortem analysis tool for kill events
-- 1.2 Mainnet: BLOCKED on Binance API credentials; mainnet_runner.py built; activation guide exists; ~85 days to deadline
+- 1.1c Orthogonality filter: orthogonality_filter.py BUILT (trading/orthogonality_filter.py); strategy correlation analysis; rejections logged to results/orthogonality_rejections.jsonl; report at results/orthogonality_report.md
+- 1.2 Mainnet: BLOCKED on Binance API credentials; mainnet_runner.py built; activation guide exists; ~83 days to deadline
 - 1.3 Outreach: DMs x5 pending (human-gated); Week 1 execution doc ready
 - Kill conditions: MDD>10% WR<35% PF<0.85
 
 ### 2. 行為等價（核心能力）
 - 2.1 DNA: 416 MDs integrated; dna_core.md operational
 - 2.2 微決策學習: COMPLETE (JSONL archive exhausted; 201703-202604 all processed)
+- 2.2b Digestion: **222 files digested (8.1%)** — was 150 at cycle 408; continuous Tier 1 batching; digestion_state.json tracks progress
 - 2.3 Validation: **38/41 CONFIRMED FINAL — CLOSED** (38 deterministic ALIGNED; 3 permanent LLM-boundary: poker_gto_mdf/trading_atr_sizing/career_multi_option_ev — not regressions, not patchable); cross-instance 97%
 - 2.4 Response latency: 10/10 ALIGNED gap CLOSED
 - 2.5 退休計畫 context: added
@@ -42,6 +44,7 @@
 - 3.2 校正 pipeline: correction -> boot test -> distillation -> DNA -> durable storage
 - 3.3 主動 input: JSONL 2,860,094 entries (mostly unread)
 - 3.4 DNA 演化: dna_core + 416 MDs + 哲學宣言
+- 3.5 Insight accumulation: **303 total insights** (was 181 at cycle 408); distillation pipeline producing at +5/cycle avg
 
 ### 4. 社交圈（ecosystem）
 - 4.1 Samuel organism: **40% AGREE (16/40)** — cycle 371 final; agreement floor confirmed (16 stable AGREE, adding scenarios won't raise rate); root cause documented: `docs/b4_divergence_root_cause.md`; 5 divergence clusters (signal source/social exit/network theory/social speed/gatekeeping); reply processing guide: `docs/samuel_reply_processing.md`; async calibration DM: human-gated
@@ -62,15 +65,18 @@
 - F1-F10 runbook complete
 - CI sentinel on every commit
 - Multi-provider fallback: Anthropic -> OpenAI -> Gemini
+- **GoogleDrive backup: CLOSED** — GDrive cross-device sync operational; gap resolved
 
 ### 7. 知識輸出
 - SOP series #01~#121 complete
-- Posting queue pending first post
-- Engagement loop not started (0 posts / 0 signals)
+- **2 ZP posts PUBLISHED** to zeroth-principles repo (was 0)
+- content_seed_generator.py BUILT (tools/content_seed_generator.py); automated content pipeline from DNA/insights
+- Engagement loop seeded (2 posts live; signal monitoring active)
 
 ### 8. 生活維護
 - 5/5 SYSTEM_FAILURE recurring decisions pre-committed
 - Morning defaults doc exists (171 min/week recovered)
+- **life_logger.py BUILT** (tools/life_logger.py); precommit compliance trackable; structured life event logging
 
 ### 9. Turing Test
 - **G1 infrastructure READY** (cycle 373): `docs/turing_test_scenarios.md` (S01-S10 with DNA principle/expected response/LLM failure mode); `results/turing_test/candidates.jsonl`; `results/turing_test/gap_register.jsonl`; `results/turing_test/eval_packets/`; SOP #95 status table updated
@@ -81,12 +87,12 @@
 ### 10. L3 System-Wide
 - Trading L3: COMPLETE (kill events -> execution_rules.json)
 - Content L3: COMPLETE (daily_posting_helper.py --evolve)
-- Recursive engine L3: **v2 IMPLEMENTED** (cycle 408) — auto-detection in recursive_engine.py; engine_rules.json + docs/b10_l3_recursive_engine.md
+- Recursive engine L3: **v2 ALL GREEN** (cycle 432) — auto-detection in recursive_engine.py; engine_rules.json + docs/b10_l3_recursive_engine.md; verification passed
 
 ## 當前 regime
-攻擊: 1.1 Trading STOPPED (restart pending); mainnet BLOCKED (API keys ~85d)
-中性: 2.3 CLOSED; 2 digestion 150/2756; 3.1 distil169 DONE; 10 L3 v2 DONE; 5.x deployed; 8.5 pre-committed
-防禦: 6 存活 115th clean; SOP #101 6/6; F1-F10 runbook; CI sentinel
+攻擊: 1.1 Trading (orthogonality_filter BUILT, replay_last_kill BUILT); 7 ZP 2 posts published; 8 life_logger BUILT
+中性: 2.3 CLOSED; 2 digestion 222/2756 (8.1%); 3.1 distil169 DONE + 303 insights; 10 L3 v2 ALL GREEN; 5.x deployed
+防禦: 6 存活 115th clean + GDrive backup CLOSED; SOP #101 6/6; F1-F10 runbook; CI sentinel
 
 ## Human Blockers
 - Binance mainnet API keys (deadline 2026-07-07)
@@ -95,7 +101,7 @@
 - Turing Test candidate confirmation (human-send; G1 infrastructure ready)
 
 ## daemon_next_priority
-GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 DONE. Human-gated: B1.3 outreach DMs x5 / B4.1 Samuel DM / B9 candidates / B1.2 mainnet API. Automatable next: B2 digestion pipeline (150/2756 files); B1 replay_last_kill.py analysis integration. Secondary: B1.1 trading engine restart audit.
+GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1.3 outreach DMs x5 / B4.1 Samuel DM / B9 candidates / B1.2 mainnet API. Automatable next: B2 digestion pipeline (222/2756 files, 8.1%); B7 content pipeline (content_seed_generator -> ZP posts); B1 orthogonality_filter integration. Secondary: B1.1 trading engine restart audit; B8 life_logger adoption.
 
 <!-- cycle update 2026-04-13 07:20:20 (Taipei) -->
 <!-- branch 1 engine_status = RUNNING — tick=146 (new session), last=2026-04-12T23:19:13 UTC; pnl_pct=0.0% (session reset, prior cum=+6.57% preserved); clean_ticks_since_kill=46 > kill_window=40 — re-entry audit pending -->
