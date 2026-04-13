@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 202,
+  "files_digested": 212,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -203,9 +203,19 @@
     "E:/@交易/@AVAVA/Keep/!_TXAD_1_009_MA01/.data.json",
     "E:/@交易/@AVAVA/Keep/!_TXAD_1_013_ADP01/.data.json",
     "E:/@交易/@AVAVA/Keep/!_TXAD_1_013_CorrelationTrend01/!_TXAD_1_013_CorrelationTrend01.txt",
-    "E:/@交易/@AVAVA/Keep/!_TXAD_1_013_CorrelationTrend01/.data.json"
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_013_CorrelationTrend01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_013_ADP01/20210618_Loren042_TX_Adaptive13m_FDT.WF紀錄表",
+    "E:/@交易/@AVAVA/Keep/!_TXAD_1_013_ADP01/20210618_Loren042_TX_Adaptive13m_FDT.參數敏感度測試",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_010_ATR01/!_TXAL_1_010_ATR01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_010_ATR01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_010_ATR01/202007功課CODE.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_017_CN01/!_TXAL_1_017_CN01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_017_CN01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_019_MA+BO01/!_TXAL_1_019_MA+BO01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_019_MA+BO01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_019_RG+William01/!_TXAL_1_019_RG+William01.txt"
   ],
   "current_tier": 1,
   "last_digested_at": "2026-04-14T04:49:33+08:00",
-  "last_updated": "2026-04-14T04:54:00+08:00"
+  "last_updated": "2026-04-14T05:08:00+08:00"
 }
