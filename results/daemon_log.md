@@ -1537,3 +1537,4 @@ plan_raw: ```json
 [2026-04-14 02:52 +08] Cycle 421 — B2 digested 10 files (58→68, @AK portfolio: 9 strategy archetypes) + B10 wired 6 orphan SOPs (377→407 edges, 0 orphans).
 [2026-04-14 02:58 +08] Cycle 422 — B2 digested 11 files (68→79, AVAVA infra + portfolio sizing + crypto risk SQL). MC progress report sent.
 [2026-04-14 03:05 +08] Cycle 423 — B3 distillation +4 insights (AK/AVAVA/sizing/exit invariants, total 274) + B5 CI smoke 30/30 all green.
+[2026-04-14 03:12 +08] Cycle 424 — B2 digested 10 files (79→89, StrategyManagement SOPs + 財務知識) + B8 decision_precommits.md (5 rules, eliminates recurring SYSTEM_FAILURE).
