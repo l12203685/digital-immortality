@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 264,
+  "files_digested": 275,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -265,9 +265,20 @@
     "E:/@交易/@AVAVA/Keep/!_TXDD_1_005_AV01/!_TXDD_1_005_AV01.txt",
     "E:/@交易/@AVAVA/Keep/!_TXDD_1_005_CPV01/!_TXDD_1_005_CPV01.txt",
     "E:/@交易/@AVAVA/Keep/!_TXDD_1_005_KD01/!_TXDD_1_005_KD01.txt",
-    "E:/@交易/@AVAVA/Keep/!_TXDD_1_006_DayWave01/!_TXDD_1_006_DayWave_001.txt"
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_006_DayWave01/!_TXDD_1_006_DayWave_001.txt",
+    "E:\\@交易\\@程式交易\\下單大師 MC 測試報告.pdf",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_003_Gate01/KO003_TX_3Guan_DO_Code.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_003_Gate02/KO003_TX_3GuanVer2_DO_Code.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_006_QIndicatorLaddar01/!_TXDD_1_006_KH01_QIndicatorLaddar_202007.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_006_SAR01/!_TXDD_1_006_SAR01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_007_CBar01/!_TXDD_1_007_CBar01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_007_Gap01/!_TXDD_1_007_Gap01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_007_RSI01/!_TXDD_1_007_MT01_RSI_202007.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_008_BSPower01/!_TXDD_1_008_BSPower01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_009_PVG01/!_TXDD_1_009_PVG01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_030_LR+SLP01/!_TXDD_1_030_LR+SLP01.txt"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T06:11:30+08:00",
-  "last_updated": "2026-04-14T06:11:30+08:00"
+  "last_digested_at": "2026-04-14T06:31:20+08:00",
+  "last_updated": "2026-04-14T06:31:20+08:00"
 }

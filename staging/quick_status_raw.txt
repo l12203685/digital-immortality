@@ -1,18 +1,18 @@
 === Recursive Engine Status ===
 
-Last output:  2026-04-13 21:19 UTC
-  Title:      Cycle 411 ¡X 2026-04-14 05:19:38 (Taipei)
+Last output:  2026-04-13 21:49 UTC
+  Title:      Cycle 412 ¡X 2026-04-14 05:49:54 (Taipei)
 Next input:   2026-04-11 08:45 UTC
 Next cycle:   90
 Daemon:       not running
 Git branch:   main
 
 Recent commits:
-  d693623 cycle 446: persist B1 tests + B10 L3 check (31 seconds ago)
-  1a00ca1 B1: unit tests for kill_window floor + KillMonitor triggers (2 minutes ago)
-  de8fad7 B10: L3 periodic check + session sync (3 minutes ago)
-  174f6d4 cycle 445: persist B2 digest 242 + B3 distil 308 (7 minutes ago)
-  3d698d4 B3: distil 303->308 (TTM Squeeze composition + portfolio blueprint) (9 minutes ago)
+  2e4d68f chore: cycle 449 B2 digestion (264) + B3 distillation (318) (4 minutes ago)
+  0f8840d chore: cycle 448 state updates (orthogonality, trading engine, dashboard) (8 minutes ago)
+  500a2a8 cycle 448: persist B3 distil 313 + consolidation (14 minutes ago)
+  ef0e1e9 B3: distil 308->313 (Score momentum-decay + TXDD regime + candle discretization) (16 minutes ago)
+  11bd8ba consolidation: pre-stop sync (18 minutes ago)
 
 Memory (252 total entries):
   corrections        0 entries
