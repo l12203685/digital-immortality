@@ -1176,3 +1176,17 @@ plan_raw: ```json
       "action": "Post-gate monitoring phase: read results/live_monitor_queue.json — if gate PASSED in cycle 385, run live-monitor tick and verify drawdown alert threshold (PF ≥ 0.75); if gate FAILED (candidate rotated), pull next from candidate_queue.json, reset forward-walk counter=0, begin new 2-cycle forward-walk scaffold. Log outcome to results/trading_engine_log.jsonl. Tick=715.",
       "priority": 1,
      
+
+## Cycle 1 — 2026-04-13 17:19:56 (Taipei)
+
+[cycle 387] classification=branch-growth
+actions: 6, updates: 5
+exec: b1(經濟/trading): (no executor for branch 1, runnable=python trading/paper_trader.py --mode monito; b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py templates/exampl; b2(知識/digestion): (no executor for branch 2, runnable=python platform/inbox_bridge.py --mode diges; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b4(社交/discord): (no executor for branch 4, runnable=python platform/discord_poster.py --channel ; b6(生存/survival): (no executor for branch 6, runnable=python platform/survival_check.py --tick 745
+digestion: Knowledge Digestion: 9/2756 files, Tier 1, Last: 2026-04-13T16:50:06+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 1,
+      "name": "經濟/trading",
+      "action": "Live-monitor queue resolution cycle 387: read results/live_monitor_queue.json — if gate PASSED (PF ≥ 0.75 confirmed cycle 386), continue monitoring tick and verify drawdown alert threshold; if gate FAILED, pull next candidate from candidate_queue.json, reset forward-walk counter=0, begin new 2-cycle scaffold. Axiom 5 holds: no live entry while regime signals=0/mixed. Log outcome to results/tradi

@@ -219,3 +219,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 9 g1_eval_status = cycle 386 — #4 gap final patch+verify (2-cycle active 384-385; BLOCK triggers next cycle if still open); advance frontier to #5 if closed; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED (3-cycle rule) -->
 <!-- branch 4 discord_engagement_status = cycle 386 — 3-cycle mark terminal execution; go/no-go decision from cycle 385 organic delta; halt lifted OR extended to cycle 389 -->
 <!-- branch 5 organism_interact_status = cycle 386 — post-calibration verification run; delta vs post-calibration baseline; calibration stable confirmed or re-calibration flagged -->
+
+<!-- cycle update 2026-04-13 17:19:55 (Taipei) -->
+<!-- branch 1 regime_action = cycle 387 — live-monitor queue resolution; candidate rotation or continued monitoring; no live entry (axiom 5: signals=0, mixed regime); tick=745 healthy -->
+<!-- branch 5 organism_interact_status = cycle 387 — PRIORITY EXECUTION: full 10-scenario fidelity run; delta computed vs post-calibration baseline; re-calibration flagged if delta > 0.15; baseline locked if stable; no further deferral -->
+<!-- branch 2 digestion_progress = cycle 387 — Tier 1 batch +10 files; cumulative target 45/2756; continuous forward progress -->
+<!-- branch 9 g1_eval_status = cycle 387 — #4 gap resolution decision (2-cycle expired); frontier advances to #5 (closed or BLOCK+skip); #1 permanently blocked; #2 BLOCKED; #3 BLOCKED -->
+<!-- branch 4 discord_engagement_status = cycle 387 — post-halt terminal: halt lifted (organic delta T+1 active) or extended to cycle 389 (sentinel set) -->
