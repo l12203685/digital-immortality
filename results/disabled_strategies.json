@@ -128,8 +128,6 @@
     "cum_pnl_at_kill": -0.039,
     "pf_at_kill": 0.7,
     "forward_walk_ticks": [
-      0.0271,
-      0.0819,
       0.1652,
       0.0064,
       -0.0213,
@@ -177,7 +175,9 @@
       0.0164,
       0.0072,
       0.0077,
-      0.0044
+      0.0044,
+      -0.0585,
+      0.0486
     ],
     "reentry_size_scale": 0.5,
     "manually_overridden": false
@@ -189,8 +189,6 @@
     "cum_pnl_at_kill": -0.039,
     "pf_at_kill": 0.7,
     "forward_walk_ticks": [
-      0.0271,
-      0.0819,
       0.1652,
       0.0064,
       -0.0213,
@@ -238,7 +236,9 @@
       0.0164,
       0.0072,
       0.0077,
-      0.0044
+      0.0044,
+      -0.0585,
+      0.0486
     ],
     "reentry_size_scale": 0.5,
     "manually_overridden": false
@@ -372,8 +372,6 @@
     "cum_pnl_at_kill": 0.5468,
     "pf_at_kill": 0.7147,
     "forward_walk_ticks": [
-      0.0271,
-      0.0819,
       0.1652,
       0.0064,
       -0.0213,
@@ -421,7 +419,9 @@
       0.0164,
       0.0072,
       0.0077,
-      0.0044
+      0.0044,
+      -0.0585,
+      0.0486
     ],
     "reentry_size_scale": 0.5,
     "manually_overridden": false
@@ -454,7 +454,9 @@
       0.0164,
       0.0072,
       0.0077,
-      0.0044
+      0.0044,
+      -0.0585,
+      0.0486
     ],
     "reentry_size_scale": 0.5,
     "manually_overridden": false
