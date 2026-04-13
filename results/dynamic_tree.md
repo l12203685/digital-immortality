@@ -141,3 +141,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 4 discord_engagement_status = cycle 374 — post 2 live; harvest window; 3x test voice filtered (non-organic); third seed post prep queued if organic=0 at 2hr mark -->
 <!-- branch 1 regime_action = cycle 374 — no action; signals=0, mixed regime, no edge (axiom 5); tick=2789; 4th rotation-deferred cycle -->
 <!-- branch 6 survival_check = cycle 374 — rotation substitution (B10 3-cycle stall); clean_streak=115; CI sentinel active; runbook F1-F10 live -->
+
+<!-- cycle update 2026-04-13 11:19:40 (Taipei) -->
+<!-- branch 4 discord_engagement_status = cycle 375 — organic=0 (all voice=test traffic confirmed); third seed post protocol executed; topic rotated from B4 backlog; breaking 5-cycle neglect -->
+<!-- branch 9 g1_eval_status = cycle 375 — gap #1 BLOCKED (4-cycle stall, 3-cycle rule triggered); pivoting to #2 severity gap per gap_register.jsonl; patch+verify loop initiated -->
+<!-- branch 1 regime_action = cycle 375 — no action; signals=0, mixed regime, no edge (axiom 5); tick=2819; 5th consecutive deferred cycle -->
+<!-- branch 6 survival_check = cycle 375 — routine check; clean_streak monitor; CI sentinel active; no escalation -->
