@@ -9,11 +9,11 @@ Traceback (most recent call last):
   File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
     buffer.append(fh.read())
                   ~~~~~~~^^
-UnicodeDecodeError: 'cp950' codec can't decode byte 0xe2 in position 44: illegal multibyte sequence
+UnicodeDecodeError: 'cp950' codec can't decode byte 0xe2 in position 29: illegal multibyte sequence
 === Recursive Engine Status ===
 
-Last output:  2026-04-13 16:49 UTC
-  Title:      Cycle 402 ¡X 2026-04-14 00:49:35 (Taipei)
+Last output:  2026-04-13 17:19 UTC
+  Title:      Cycle 403 ¡X 2026-04-14 01:19:30 (Taipei)
 Next input:   2026-04-11 08:45 UTC
 Next cycle:   90
 Daemon:       not running
