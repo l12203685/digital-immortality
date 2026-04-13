@@ -1494,3 +1494,4 @@ plan_raw: ```json
       "priority": 1,
       "runnable": "python social/discord_sentinel.py --cycle 4
 [2026-04-14 02:00 +08] Cycle 414 — B2 知識萃取: digested 10 files (27→37), 達哥/SBF PowerLanguage strategies. Inbox 8 pending_bridge→delivered.
+[2026-04-14 02:10 +08] Cycle 415 — B3 知識萃取: digested 10 files (37→47), SBF family evolution mapped. B10 L3 audit: L1 YELLOW, L2 GREEN, L3 GREEN.
