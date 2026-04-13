@@ -24,6 +24,7 @@ import anthropic
 
 from cycle_protocol import CycleState, CyclePlan, parse_cycle_plan
 from branch_executors import BRANCH_EXECUTORS
+from knowledge_digester import KnowledgeDigester
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 _DNA_FALLBACK_BUNDLE = REPO_ROOT / "private" / "dna_core.md"
@@ -284,6 +285,305 @@ def run_finance_dashboards(cycle: int, every: int = 4) -> None:
                   f"{result.stderr[-200:]}")
     except Exception as exc:  # pragma: no cover - defensive
         print(f"[daemon] finance dashboards error cycle {cycle}: {exc}")
+
+
+ENGINE_RULES_PATH = REPO_ROOT / "results" / "engine_rules.json"
+DAEMON_NEXT_PRIORITY_PATH = REPO_ROOT / "results" / "daemon_next_priority.txt"
+
+
+def _text_similarity(a: str, b: str) -> float:
+    """Compute a simple Jaccard similarity between two texts (word-level).
+
+    Returns a float in [0.0, 1.0]. 1.0 = identical word sets.
+    Non-fatal: returns 0.0 on any error.
+    """
+    try:
+        words_a = set(a.lower().split())
+        words_b = set(b.lower().split())
+        if not words_a or not words_b:
+            return 0.0
+        intersection = words_a & words_b
+        union = words_a | words_b
+        return len(intersection) / len(union)
+    except Exception:
+        return 0.0
+
+
+def run_l3_check() -> None:
+    """L3 self-modification check: diagnose and auto-correct engine rules.
+
+    Detects three conditions:
+      - DEAD_LOOP:      last N cycles produced near-identical output
+      - QUEUE_EMPTY:    no picker_queue entries in recent cycles
+      - COMMIT_DROUGHT: zero git commits in recent cycle window
+
+    All actions are non-destructive and wrapped in try/except.
+    """
+    ts_now = datetime.now(TPE).isoformat(timespec="seconds")
+    findings: list[str] = []
+    actions_taken: list[str] = []
+
+    # ── Load engine_rules.json ───────────────────────────────────────────
+    rules: dict = {}
+    try:
+        if ENGINE_RULES_PATH.exists():
+            rules = json.loads(ENGINE_RULES_PATH.read_text(encoding="utf-8"))
+        else:
+            print("[L3] engine_rules.json not found — creating defaults")
+            rules = {
+                "stale_threshold": 3,
+                "queue_min": 1,
+                "commit_drought_threshold": 3,
+                "dead_loop_count": 0,
+                "last_dead_loop": {},
+                "last_recovery": {"cycle": None, "action": None, "ts": None},
+                "evolved_at": ts_now,
+                "initialized_at_cycle": 0,
+                "evolution_log": [],
+            }
+    except Exception as e:
+        print(f"[L3] Failed to read engine_rules.json: {e}")
+        return
+
+    stale_threshold = rules.get("stale_threshold", 3)
+    queue_min = rules.get("queue_min", 1)
+    commit_drought_threshold = rules.get("commit_drought_threshold", 3)
+
+    # ── Read current cycle number ────────────────────────────────────────
+    cycle_data = read_cycle_counter()
+    current_cycle = cycle_data.get("global_cycle", 0)
+
+    # ── Read daemon_log.md tail (last 20 lines) ─────────────────────────
+    daemon_log_tail = ""
+    try:
+        if LOG_PATH.exists():
+            lines = LOG_PATH.read_text(encoding="utf-8", errors="replace").splitlines()
+            daemon_log_tail = "\n".join(lines[-20:])
+    except Exception as e:
+        print(f"[L3] Failed to read daemon_log.md: {e}")
+
+    # ── Read last_output.md ──────────────────────────────────────────────
+    last_output = ""
+    try:
+        if LAST_OUTPUT_PATH.exists():
+            last_output = LAST_OUTPUT_PATH.read_text(encoding="utf-8", errors="replace")
+    except Exception as e:
+        print(f"[L3] Failed to read last_output.md: {e}")
+
+    # ── Condition 1: DEAD_LOOP ───────────────────────────────────────────
+    #    Check if last_output is near-identical to daemon_log tail
+    try:
+        similarity = _text_similarity(last_output, daemon_log_tail)
+        if similarity > 0.85 and len(last_output.strip()) > 50:
+            findings.append(
+                f"DEAD_LOOP: last_output similarity to daemon_log tail = "
+                f"{similarity:.2f} (threshold 0.85)"
+            )
+            # Increment dead_loop_count
+            rules["dead_loop_count"] = rules.get("dead_loop_count", 0) + 1
+            rules["last_dead_loop"] = {
+                "cycle": current_cycle,
+                "stale_cycles": stale_threshold,
+                "similarity": round(similarity, 3),
+                "ts": ts_now,
+            }
+            # Write recovery note to staging/last_output.md
+            try:
+                recovery_note = (
+                    f"# L3 DEAD_LOOP Recovery — Cycle {current_cycle}\n\n"
+                    f"L3 DEAD_LOOP detected (similarity={similarity:.2f}) — "
+                    f"inject variation: try a different branch next cycle.\n"
+                    f"Dead loop count: {rules['dead_loop_count']}\n"
+                    f"Timestamp: {ts_now}\n"
+                )
+                LAST_OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+                LAST_OUTPUT_PATH.write_text(recovery_note, encoding="utf-8")
+                actions_taken.append("DEAD_LOOP: wrote recovery note to staging/last_output.md")
+            except Exception as e:
+                actions_taken.append(f"DEAD_LOOP: failed to write recovery note: {e}")
+        else:
+            findings.append(
+                f"DEAD_LOOP: OK (similarity={similarity:.2f}, below 0.85)"
+            )
+    except Exception as e:
+        findings.append(f"DEAD_LOOP: check failed — {e}")
+
+    # ── Condition 2: QUEUE_EMPTY ─────────────────────────────────────────
+    #    Check if picker_queue.jsonl has entries from recent cycles
+    try:
+        queue_entries_recent = 0
+        if PICKER_QUEUE_PATH.exists():
+            queue_lines = PICKER_QUEUE_PATH.read_text(
+                encoding="utf-8", errors="replace"
+            ).strip().splitlines()
+            # Count entries from the last queue_min worth of cycles
+            for line in reversed(queue_lines):
+                try:
+                    entry = json.loads(line)
+                    entry_cycle = entry.get("cycle", 0)
+                    if current_cycle - entry_cycle <= queue_min:
+                        queue_entries_recent += 1
+                except (json.JSONDecodeError, TypeError):
+                    continue
+        if queue_entries_recent == 0:
+            findings.append(
+                f"QUEUE_EMPTY: no picker_queue entries in last "
+                f"{queue_min} cycle(s)"
+            )
+            # Write suggestion to daemon_next_priority.txt
+            try:
+                suggestion = (
+                    f"[L3 cycle {current_cycle}] Queue empty — "
+                    f"idle task picker should re-scan for runnable tasks.\n"
+                )
+                DAEMON_NEXT_PRIORITY_PATH.parent.mkdir(parents=True, exist_ok=True)
+                DAEMON_NEXT_PRIORITY_PATH.write_text(suggestion, encoding="utf-8")
+                actions_taken.append(
+                    "QUEUE_EMPTY: wrote re-scan suggestion to "
+                    "results/daemon_next_priority.txt"
+                )
+            except Exception as e:
+                actions_taken.append(f"QUEUE_EMPTY: failed to write suggestion: {e}")
+        else:
+            findings.append(
+                f"QUEUE_EMPTY: OK ({queue_entries_recent} recent entries)"
+            )
+    except Exception as e:
+        findings.append(f"QUEUE_EMPTY: check failed — {e}")
+
+    # ── Condition 3: COMMIT_DROUGHT ──────────────────────────────────────
+    #    Check git log for recent commits
+    try:
+        # Estimate time window: commit_drought_threshold cycles * ~10 min each
+        hours = max(1, commit_drought_threshold)
+        result = subprocess.run(
+            ["git", "log", f"--since={hours} hours ago", "--oneline"],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+            timeout=10,
+            encoding="utf-8",
+            errors="replace",
+        )
+        commit_count = len(result.stdout.strip().splitlines()) if result.stdout.strip() else 0
+        if commit_count == 0:
+            findings.append(
+                f"COMMIT_DROUGHT: 0 commits in last {hours}h "
+                f"(threshold={commit_drought_threshold})"
+            )
+            actions_taken.append(
+                "COMMIT_DROUGHT: logged warning (no destructive action)"
+            )
+        else:
+            findings.append(
+                f"COMMIT_DROUGHT: OK ({commit_count} commits in last {hours}h)"
+            )
+    except Exception as e:
+        findings.append(f"COMMIT_DROUGHT: check failed — {e}")
+
+    # ── Log to evolution_log ─────────────────────────────────────────────
+    if "evolution_log" not in rules:
+        rules["evolution_log"] = []
+    rules["evolution_log"].append({
+        "cycle": current_cycle,
+        "event": "L3_CHECK",
+        "findings": findings,
+        "actions_taken": actions_taken,
+        "ts": ts_now,
+    })
+
+    # ── Save engine_rules.json ───────────────────────────────────────────
+    try:
+        ENGINE_RULES_PATH.parent.mkdir(parents=True, exist_ok=True)
+        ENGINE_RULES_PATH.write_text(
+            json.dumps(rules, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+    except Exception as e:
+        print(f"[L3] Failed to save engine_rules.json: {e}")
+
+    # ── Print summary ────────────────────────────────────────────────────
+    print(f"\n[L3] Self-modification check — cycle {current_cycle} — {ts_now}")
+    print(f"[L3] Findings ({len(findings)}):")
+    for f in findings:
+        print(f"  - {f}")
+    if actions_taken:
+        print(f"[L3] Actions taken ({len(actions_taken)}):")
+        for a in actions_taken:
+            print(f"  - {a}")
+    else:
+        print("[L3] No corrective actions needed.")
+    print()
+
+
+def run_knowledge_digestion(cycle: int, client=None, model: str = DEFAULT_MODEL) -> None:
+    """Digest one file per cycle from the E: knowledge base. Non-fatal."""
+    try:
+        digester = KnowledgeDigester()
+        # Initialize on first run (sets total_files_known)
+        if digester.state.get("total_files_known", 0) == 0:
+            total = digester.initialize()
+            print(f"[daemon] Knowledge digester initialized: {total} files found")
+
+        next_file = digester.next_file()
+        if next_file is None:
+            print(f"[daemon] Knowledge digestion: no more files to digest")
+            return
+
+        # Read file content (truncate large files)
+        try:
+            content = next_file.read_text(encoding="utf-8", errors="replace")
+            if len(content) > 4000:
+                content = content[:4000] + "\n...(truncated)"
+        except Exception as e:
+            digester.mark_complete(next_file, f"read error: {e}")
+            print(f"[daemon] Knowledge digestion: read error for {next_file}: {e}")
+            return
+
+        # Use LLM to extract insights (if API client available)
+        summary = ""
+        if client is not None:
+            try:
+                resp = client.messages.create(
+                    model=model,
+                    max_tokens=512,
+                    system="Extract 1-3 key insights from this file for a trading system developer. Be concise. One line per insight.",
+                    messages=[{"role": "user", "content": f"File: {next_file.name}\n\n{content}"}],
+                )
+                summary = resp.content[0].text
+            except Exception as e:
+                summary = f"LLM extraction failed: {e}"
+        else:
+            # CLI fallback: just record file metadata as summary
+            summary = f"[no-llm] {next_file.name} ({len(content)} chars, tier {digester.state.get('current_tier', '?')})"
+
+        digester.mark_complete(next_file, summary)
+
+        # Write insights to memory/insights.json (append)
+        insights_path = REPO_ROOT / "memory" / "insights.json"
+        insights_path.parent.mkdir(parents=True, exist_ok=True)
+        insights = []
+        if insights_path.exists():
+            try:
+                insights = json.loads(insights_path.read_text(encoding="utf-8"))
+            except Exception:
+                insights = []
+        insights.append({
+            "file": str(next_file),
+            "summary": summary[:500],
+            "timestamp": datetime.now(TPE).isoformat(timespec="seconds"),
+            "cycle": cycle,
+        })
+        insights_path.write_text(
+            json.dumps(insights, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+
+        print(f"[daemon] Knowledge digestion cycle {cycle}: {next_file.name} → {len(summary)} char summary")
+        print(f"[daemon] {digester.status()}")
+
+    except Exception as e:
+        print(f"[daemon] Knowledge digestion failed (non-fatal): {e}")
 
 
 def run_sign_off_apply_expired(cycle: int) -> None:
@@ -581,10 +881,16 @@ def run_cycle_api(client, system: str, model: str, cycle: int) -> str:
 
     # --- Step 4: PERSIST ---
     apply_tree_updates(plan)
+    # Add knowledge digestion status to output
+    try:
+        dig_status = KnowledgeDigester().status()
+    except Exception:
+        dig_status = "digester: N/A"
     output_text = (
         f"[cycle {global_cycle}] classification={plan.classification}\n"
         f"actions: {len(plan.branch_actions)}, updates: {len(plan.tree_updates)}\n"
         f"exec: {exec_summary}\n"
+        f"digestion: {dig_status}\n"
         f"plan_raw: {raw_text[:500]}"
     )
     _persist_last_output(output_text, global_cycle)
@@ -706,10 +1012,16 @@ def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
 
     # --- Step 4: PERSIST ---
     apply_tree_updates(plan)
+    # Add knowledge digestion status to output
+    try:
+        dig_status = KnowledgeDigester().status()
+    except Exception:
+        dig_status = "digester: N/A"
     output_text = (
         f"[cycle {global_cycle}] classification={plan.classification}\n"
         f"actions: {len(plan.branch_actions)}, updates: {len(plan.tree_updates)}\n"
         f"exec: {exec_summary}\n"
+        f"digestion: {dig_status}\n"
         f"plan_raw: {raw_text[:500]}"
     )
     _persist_last_output(output_text, global_cycle)
@@ -783,11 +1095,18 @@ def main():
                         help="Run exactly one cycle then exit (for GH Actions chained mode)")
     parser.add_argument("--status", action="store_true",
                         help="Print daemon health status and exit")
+    parser.add_argument("--l3-check", action="store_true",
+                        help="Run L3 self-modification check and exit")
     args = parser.parse_args()
 
     # --status: print health check and exit
     if args.status:
         _print_status()
+        return
+
+    # --l3-check: run self-modification check and exit
+    if args.l3_check:
+        run_l3_check()
         return
 
     dna = load_dna()
@@ -851,6 +1170,14 @@ def main():
             run_sign_off_apply_expired(cycle)
             # Finance dashboards (localhost Mission Control). Every 4 cycles.
             run_finance_dashboards(cycle, every=4)
+            # Knowledge digestion — one file per cycle (non-fatal)
+            run_knowledge_digestion(cycle, client=client, model=args.model)
+            # L3 self-modification check — every 5 cycles to avoid overhead
+            if cycle % 5 == 0:
+                try:
+                    run_l3_check()
+                except Exception as e:
+                    print(f"[daemon] L3 check failed (non-fatal): {e}")
         except Exception as e:
             print(f"[daemon] Error: {e}, retrying in 30s...")
             time.sleep(30)

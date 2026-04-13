@@ -1,1 +1,1 @@
-PRIORITY: Branch '社交/organism' neglected for 5 cycles. Do concrete work on this branch next cycle.
+[L3 cycle 377] Queue empty — idle task picker should re-scan for runnable tasks.
