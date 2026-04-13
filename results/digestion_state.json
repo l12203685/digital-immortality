@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 110,
+  "files_digested": 120,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -111,8 +111,18 @@
     "E:/@交易/@StrategyManagement/歸檔/202007/202007YenShen/202007作業策略說明.txt",
     "E:/@交易/@StrategyManagement/歸檔/202007/202007shuenhua/TX_Pivot_DO策略說明檔.txt",
     "E:/@交易/@StrategyManagement/歸檔/202007/202007WGN/123_TX_HLORB_FDO說明檔.txt",
-    "E:/@交易/@StrategyManagement/歸檔/202007/202007Morton/No22_TX_RSI_7K_DO_策略說明.txt"
+    "E:/@交易/@StrategyManagement/歸檔/202007/202007Morton/No22_TX_RSI_7K_DO_策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010Alan Chen/002_TX_Keltner_LO_2010_說明檔.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010Alex/(1) 策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010ChienYingYang/002_Sw_D_5min_Linear策略說明檔.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010Gavin/G003_TX_LT_3Prices策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010HAO/H054_TXA_3H3L_LO_1H 策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010jack/20200929_009_TX_Box_FDT0_Jack策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010KevinHsu/khsu_2020010_說明檔.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010Liangchi/CL012_TX_MACD_LO策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010Loren/202010HW策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010Miyabi/策略說明.txt"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T14:00:00+08:00"
+  "last_digested_at": "2026-04-14T15:36:00+08:00"
 }
