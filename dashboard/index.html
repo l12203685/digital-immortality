@@ -42,6 +42,12 @@ header h1{font-size:1.1rem;font-weight:700;color:var(--bright);letter-spacing:.0
 .feed-item{font-size:.72rem;font-family:var(--mono);color:#666;padding:.18rem 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .feed-item .ts{color:#555}
 
+.outbox{padding:.8rem 1.2rem;border-top:1px solid #2a2a4a;max-height:40vh;overflow-y:auto}
+.outbox-title{font-size:.7rem;color:#888;text-transform:uppercase;letter-spacing:.06em;font-family:var(--mono);margin-bottom:.5rem;display:flex;justify-content:space-between}
+.outbox-updated{color:#555;font-weight:400}
+.out-item{background:#1d1d38;border-left:2px solid var(--green);padding:.5rem .7rem;margin-bottom:.4rem;border-radius:4px;font-size:.78rem;color:#ccc;white-space:pre-wrap;word-break:break-word}
+.out-item .ots{font-size:.62rem;color:#666;font-family:var(--mono);display:block;margin-bottom:.2rem}
+
 .stats{display:flex;justify-content:center;gap:2rem;padding:.5rem 1rem;font-size:.7rem;color:#555;font-family:var(--mono);border-top:1px solid #2a2a4a}
 
 @media(min-width:520px){.cards{grid-template-columns:repeat(3,1fr)}}
@@ -78,10 +84,19 @@ header h1{font-size:1.1rem;font-weight:700;color:var(--bright);letter-spacing:.0
   <div id="feed"></div>
 </div>
 
+<div class="outbox">
+  <div class="outbox-title">
+    <span>Agent Output</span>
+    <span class="outbox-updated" id="outbox-updated">--</span>
+  </div>
+  <div id="outbox"></div>
+</div>
+
 <div class="stats" id="stats"></div>
 
 <script>
 var RAW = 'https://raw.githubusercontent.com/l12203685/digital-immortality/main/results/dashboard_state.json';
+var OUTBOX_RAW = 'https://raw.githubusercontent.com/l12203685/LIN-YING-HUNG/main/agent/dashboard_outbox.json';
 
 function tick() {
   var d = new Date();
@@ -144,8 +159,28 @@ async function refresh() {
   }
 }
 
+async function refreshOutbox() {
+  try {
+    var r = await fetch(OUTBOX_RAW + '?t=' + Date.now(), {cache: 'no-store'});
+    if (!r.ok) throw new Error(r.status);
+    var d = await r.json();
+    document.getElementById('outbox-updated').textContent = d.updated || '';
+    var box = document.getElementById('outbox');
+    var entries = (d.entries || []).slice().reverse();
+    box.innerHTML = entries.map(function(e) {
+      var ts = e.ts || e.time || '';
+      var text = e.text || e.content || e.message || JSON.stringify(e);
+      return '<div class="out-item"><span class="ots">' + esc(ts) + '</span>' + esc(text) + '</div>';
+    }).join('') || '<div class="out-item" style="color:#555;border-left-color:#333">(no output yet)</div>';
+  } catch (e) {
+    document.getElementById('outbox-updated').textContent = 'offline: ' + e.message;
+  }
+}
+
 refresh();
+refreshOutbox();
 setInterval(refresh, 300000);
+setInterval(refreshOutbox, 60000);
 </script>
 </body>
 </html>
