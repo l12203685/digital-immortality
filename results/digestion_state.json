@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 69,
+  "files_digested": 79,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -70,8 +70,18 @@
     "E:/@交易/@AK/@K8E-EMA01.txt",
     "E:/@交易/@AK/@K9-G01.txt",
     "E:/@交易/@AK/big_user_trade_record.csv",
-    "E:\\@交易\\@程式交易\\ALGO 知名不具\\00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf"
+    "E:\\@交易\\@程式交易\\ALGO 知名不具\\00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
+    "E:/@交易/@AK/策略最佳化.md",
+    "E:/@交易/@AK/新文字文件.txt",
+    "E:/@交易/@AVAVA/!.Configure.json",
+    "E:/@交易/@AVAVA/!.Schedule.csv",
+    "E:/@交易/@AVAVA/!.Strategy.json",
+    "E:/@交易/@AVAVA/Config.json",
+    "E:/@交易/@PortfolioManagement/list.txt",
+    "E:/@交易/@PortfolioManagement/DP/New3_0500.txt",
+    "E:/@交易/@PortfolioManagement/MP/New3.txt",
+    "E:/@交易/@Crypto/当日刷单率胜率公司利润合伙人风控报告完整版.sql"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T02:49:36+08:00"
+  "last_digested_at": "2026-04-14T02:55:00+08:00"
 }
