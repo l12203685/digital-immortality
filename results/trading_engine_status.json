@@ -1,7 +1,7 @@
 {
-  "last_tick": "2026-04-13T17:53:21.323507+00:00",
-  "tick_count": 1261,
-  "active_strategies": 12,
+  "last_tick": "2026-04-13T18:02:22.105605+00:00",
+  "tick_count": 1270,
+  "active_strategies": 11,
   "disabled": {
     "gen_BollingerMeanReversion_RF_7abfe4": {
       "reason": "PF 0.62 < 0.8",
@@ -132,15 +132,6 @@
       "cum_pnl_at_kill": -0.039,
       "pf_at_kill": 0.7,
       "forward_walk_ticks": [
-        -0.0332,
-        0.0254,
-        0.0063,
-        -0.0824,
-        -0.0165,
-        0.0379,
-        0.1723,
-        0.0356,
-        0.1062,
         -0.0832,
         -0.0405,
         -0.0222,
@@ -181,7 +172,16 @@
         -0.0702,
         -0.2135,
         -0.1115,
-        0.0286
+        0.0286,
+        0.0453,
+        -0.1096,
+        0.05,
+        -0.0766,
+        0.0461,
+        0.0283,
+        -0.0755,
+        0.0255,
+        0.0365
       ],
       "reentry_size_scale": 0.5,
       "manually_overridden": false
@@ -193,15 +193,6 @@
       "cum_pnl_at_kill": -0.039,
       "pf_at_kill": 0.7,
       "forward_walk_ticks": [
-        -0.0332,
-        0.0254,
-        0.0063,
-        -0.0824,
-        -0.0165,
-        0.0379,
-        0.1723,
-        0.0356,
-        0.1062,
         -0.0832,
         -0.0405,
         -0.0222,
@@ -242,7 +233,16 @@
         -0.0702,
         -0.2135,
         -0.1115,
-        0.0286
+        0.0286,
+        0.0453,
+        -0.1096,
+        0.05,
+        -0.0766,
+        0.0461,
+        0.0283,
+        -0.0755,
+        0.0255,
+        0.0365
       ],
       "reentry_size_scale": 0.5,
       "manually_overridden": false
@@ -376,15 +376,6 @@
       "cum_pnl_at_kill": 0.9791,
       "pf_at_kill": 0.7308,
       "forward_walk_ticks": [
-        -0.0332,
-        0.0254,
-        0.0063,
-        -0.0824,
-        -0.0165,
-        0.0379,
-        0.1723,
-        0.0356,
-        0.1062,
         -0.0832,
         -0.0405,
         -0.0222,
@@ -425,19 +416,40 @@
         -0.0702,
         -0.2135,
         -0.1115,
-        0.0286
+        0.0286,
+        0.0453,
+        -0.1096,
+        0.05,
+        -0.0766,
+        0.0461,
+        0.0283,
+        -0.0755,
+        0.0255,
+        0.0365
+      ],
+      "reentry_size_scale": 0.5,
+      "manually_overridden": false
+    },
+    "DualMA_RSI": {
+      "reason": "PF 0.78 < 0.8",
+      "killed_at_tick": 1268,
+      "killed_at_ts": "2026-04-13T18:00:22.047258+00:00",
+      "cum_pnl_at_kill": 0.0791,
+      "pf_at_kill": 0.784,
+      "forward_walk_ticks": [
+        0.0255,
+        0.0365
       ],
       "reentry_size_scale": 0.5,
       "manually_overridden": false
     }
   },
-  "total_pnl_pct": 1.15,
-  "price": 72160.65,
+  "total_pnl_pct": 1.0581,
+  "price": 72138.91,
   "regime": "mixed",
   "signals": {
     "DonchianConfirmed_20": 0,
     "DonchianConfirmed_filtered": 0,
-    "DualMA_RSI": 1,
     "BollingerMR_20": 0,
     "BollingerMR_loose": 0,
     "gen_DonchianConfirmed_a7186a": 0,
@@ -449,6 +461,6 @@
     "gen_DonchianConfirmed_RSI_9b2bf4": 0
   },
   "mode": "PAPER",
-  "clean_ticks_since_kill": 36,
-  "kill_window": 50
+  "clean_ticks_since_kill": 2,
+  "kill_window": 45
 }
