@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 233,
+  "files_digested": 243,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -234,9 +234,19 @@
     "E:/@交易/@AVAVA/Keep/!_TXAL_1_030_SAR01/.data.json",
     "E:/@交易/@AVAVA/Keep/!_TXAL_1_030_ShortReverse/.data.json",
     "E:/@交易/@AVAVA/Keep/!_TXAL_1_053_BB+KC+ROC01/.data.json",
-    "E:/@交易/@AVAVA/Keep/!_TXAL_1_053_BB+KC+ROC01/!_TXAL_1_053_BB+KC+ROC01.txt"
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_053_BB+KC+ROC01/!_TXAL_1_053_BB+KC+ROC01.txt",
+    "E:/@交易/@AK/修改硬碟序號工具-Hard Disk Serial Number Changer 1.0 中文化免費版/desktop.ini",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_025_TrendSumHGBlog/20210617_Sing_014_TX_Change_LT.WF紀錄表",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_025_TrendSumHGBlog/20210617_Sing_014_TX_Change_LT.參數敏感度測試",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_053_BB+KC+ROC01/20210621_34_Sw_All_53min_TTM+ROC_Ying_Change.WF紀錄表",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_053_BB+KC+ROC01/20210621_34_Sw_All_53min_TTM+ROC_Ying_Change.參數敏感度測試",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_053_BB+KC+ROC01/7)程式碼34_Sw_All_53min_TTM+ROC_Ying_Change.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_059_DCC01/!_TXAL_1_059_DCC01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_059_DCC01/(6)策略WF紀錄表  sungwen.007_Tx_202106_FLT.WF紀錄表",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_059_DCC01/(7)策略程式碼 sungwen.007_Tx_202106_FLT.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_059_DCC01/.data.json"
   ],
   "current_tier": 1,
   "last_digested_at": "2026-04-14T05:19:46+08:00",
-  "last_updated": "2026-04-14T05:29:00+08:00"
+  "last_updated": "2026-04-14T05:36:00+08:00"
 }
