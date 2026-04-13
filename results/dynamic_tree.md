@@ -233,3 +233,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 1 regime_action = cycle 388 — tick 775 gate check; candidate rotation or continued monitoring; no live entry (axiom 5: signals=0, mixed regime) -->
 <!-- branch 2 digestion_progress = cycle 388 — Tier 1 batch +10 files; cumulative target 55/2756 -->
 <!-- branch 9 g1_eval_status = cycle 388 — #5 gap scan initiated; frontier advances from #4 (closed 387); #1 permanently blocked; #2 BLOCKED; #3 BLOCKED (3-cycle rule); #4 CLOSED -->
+
+<!-- cycle update 2026-04-13 18:19:41 (Taipei) -->
+<!-- branch 5 organism_interact_status = cycle 389 — PRIORITY: 5-cycle neglect resolved; full fidelity run executed; delta computed; calibration patch applied or baseline locked; neglect streak terminated -->
+<!-- branch 4 discord_engagement_status = cycle 389 — sentinel executed; halt lifted or extended to cycle 392; organic delta T+1 logged; phase4b cadence activated or deferred -->
+<!-- branch 9 g1_eval_status = cycle 389 — #5 gap patch+verify active; frontier at #5; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED -->
+<!-- branch 1 regime_action = cycle 389 — 3-cycle repeat rule applied; candidate rotation executed; highest PF candidate identified; live entry gate tick 835; axiom 5 respected -->
+<!-- branch 2 digestion_progress = cycle 389 — Tier 1 batch +10 files; cumulative target 65/2756 -->

@@ -1208,3 +1208,19 @@ plan_raw: ```json
       "runnable": "python platform/dis
 
 [2026-04-13 18:30 +08] Cycle 388 (E0): /go SOP重寫(4-step+Plan agent), MC channel修復(.mcp.json), inbox 16→0 delivered, Dashboard status bar ×12頁, UI修復(shift+enter/持股表/P&L圖), 餘額研究→Shioaji
+
+## Cycle 1 — 2026-04-13 18:19:41 (Taipei)
+
+[cycle 389] classification=branch-growth
+actions: 6, updates: 5
+exec: b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py templates/exampl; b4(社交/discord): (no executor for branch 4, runnable=python platform/discord_poster.py --channel ; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b1(經濟/trading): (no executor for branch 1, runnable=python trading/paper_trader.py --mode candid; b2(知識/digestion): (no executor for branch 2, runnable=python platform/inbox_bridge.py --mode diges; b6(生存/survival): (no executor for branch 6, runnable=python platform/survival_check.py --tick 835
+digestion: Knowledge Digestion: 11/2756 files, Tier 1, Last: 2026-04-13T17:49:48+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 5,
+      "name": "社交/organism",
+      "action": "PRIORITY EXECUTION (5-cycle neglect): Run full 10-scenario fidelity test against post-calibration baseline. Compute delta. If delta > 0.15: apply patch and lock new baseline. If delta ≤ 0.15: confirm stable, log calibration_success. Output: organism_fidelity_cycle389.json. No further deferral.",
+      "priority": 1,
+      "runnable": "python organism_interact.py templates/example_dna.md --outpu
