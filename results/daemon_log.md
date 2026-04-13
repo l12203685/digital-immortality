@@ -1585,3 +1585,4 @@ plan_raw: ```json
       "name": "Turing Test/G1",
       "action": "Frontier #14 gap scan cyc
 [2026-04-14 03:52 +08] Cycle 429: B2 digested 10 (130→140, 202010 exchange pt2: ChiaWei/Hsiang/廷政/辰軍/景帆) + B3 distilled 4 insights (279→283, exchange protocols/WF overrides/indicator gaps/TW conventions)
+[2026-04-14 03:55 +08] Cycle 430: B3 writeback 55 cycles synced to LYH (283 insights) + B10 L3 v2 auto-detection implemented (--l3-check, L1=YELLOW/L2=GREEN/L3=GREEN)
