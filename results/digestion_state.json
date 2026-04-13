@@ -1,7 +1,9 @@
 {
   "total_files_known": 2756,
-  "files_digested": 0,
-  "digested_paths": [],
+  "files_digested": 1,
+  "digested_paths": [
+    "E:\\@交易\\@程式交易\\ALGO 知名不具\\00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf"
+  ],
   "current_tier": 1,
-  "last_digested_at": null
+  "last_digested_at": "2026-04-13T12:49:57+08:00"
 }
