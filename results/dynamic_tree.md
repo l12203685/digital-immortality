@@ -171,3 +171,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 4 discord_engagement_status = cycle 379 — diagnosis output phase; diagnosis_b4.md deliverable due; decision fork: channel pivot vs content pivot vs cadence halt; 7-cycle organic=0 confirmed -->
 <!-- branch 9 g1_eval_status = cycle 379 — #2 gap 3-cycle rule check; BLOCKED if still open → frontier advance to #3; #1 permanently blocked; no 4th-cycle repeat permitted -->
 <!-- branch 6 survival_check = cycle 379 — routine check; clean_streak monitor; CI sentinel active; no escalation -->
+
+<!-- cycle update 2026-04-13 13:49:38 (Taipei) -->
+<!-- branch 1 regime_action = cycle 380 — candidate queue build; no entry (axiom 5: signals=0, mixed regime); tick=535; scan→queue phase -->
+<!-- branch 4 discord_engagement_status = cycle 380 — decision fork execution; cadence halt triggered; b4_decision.md output; 7-cycle organic=0 terminal diagnosis -->
+<!-- branch 9 g1_eval_status = cycle 380 — frontier advance to #3 gap; #1 permanently blocked; #2 BLOCKED (3-cycle rule confirmed) -->
+<!-- branch 6 survival_check = cycle 380 — routine check; clean_streak monitor; CI sentinel active; no escalation -->
