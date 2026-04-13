@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 243,
+  "files_digested": 254,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -244,9 +244,20 @@
     "E:/@交易/@AVAVA/Keep/!_TXAL_1_059_DCC01/!_TXAL_1_059_DCC01.txt",
     "E:/@交易/@AVAVA/Keep/!_TXAL_1_059_DCC01/(6)策略WF紀錄表  sungwen.007_Tx_202106_FLT.WF紀錄表",
     "E:/@交易/@AVAVA/Keep/!_TXAL_1_059_DCC01/(7)策略程式碼 sungwen.007_Tx_202106_FLT.txt",
-    "E:/@交易/@AVAVA/Keep/!_TXAL_1_059_DCC01/.data.json"
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_059_DCC01/.data.json",
+    "E:\\@交易\\@程式交易\\Successful Algorithmic Trading.pdf",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_1DK_CCI01/!_TXAL_1_1DK_CCI01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_1DK_CCI01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_001_Gate01/!_TXDD_1_001_Gate.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_001_Gate01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_002_Score01/!_TXDD_1_002_Score01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_002_Score01/(8)策略程式碼 (S)003_TX_Score_2k_DT_20210618.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_002_Score01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_003_3RedBlack+SLP01/!_TXDD_1_003_3RedBlack+SLP01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_003_3RedBlack+SLP01/(6)策略CODE06M03MD0.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_003_3RedBlack+SLP01/.data.json"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T05:19:46+08:00",
+  "last_digested_at": "2026-04-14T05:50:01+08:00",
   "last_updated": "2026-04-14T05:36:00+08:00"
 }
