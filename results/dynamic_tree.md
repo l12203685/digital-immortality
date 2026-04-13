@@ -240,3 +240,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 9 g1_eval_status = cycle 389 — #5 gap patch+verify active; frontier at #5; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED -->
 <!-- branch 1 regime_action = cycle 389 — 3-cycle repeat rule applied; candidate rotation executed; highest PF candidate identified; live entry gate tick 835; axiom 5 respected -->
 <!-- branch 2 digestion_progress = cycle 389 — Tier 1 batch +10 files; cumulative target 65/2756 -->
+
+<!-- cycle update 2026-04-13 18:49:37 (Taipei) -->
+<!-- branch 1 regime_action = cycle 390 — gate tick 835 crossed at 837; live entry evaluation executed; signal check on rotated PF candidate; axiom 2 applied -->
+<!-- branch 4 discord_engagement_status = cycle 390 — phase4b E2E smoke test executed via voice input trigger; reverse channel 1775898534 verified; halt decision finalized -->
+<!-- branch 2 digestion_progress = cycle 390 — Tier 1 batch +10 files; cumulative target 75/2756 -->
+<!-- branch 9 g1_eval_status = cycle 390 — #5 gap patch+verify cycle 2; BLOCK or CLOSE decision; frontier advances to #6; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED -->
+<!-- branch 5 organism_interact_status = cycle 390 — post-neglect baseline locked; neglect streak terminated; no re-run required; stable -->

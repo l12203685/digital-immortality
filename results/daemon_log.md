@@ -1224,3 +1224,19 @@ plan_raw: ```json
       "action": "PRIORITY EXECUTION (5-cycle neglect): Run full 10-scenario fidelity test against post-calibration baseline. Compute delta. If delta > 0.15: apply patch and lock new baseline. If delta ≤ 0.15: confirm stable, log calibration_success. Output: organism_fidelity_cycle389.json. No further deferral.",
       "priority": 1,
       "runnable": "python organism_interact.py templates/example_dna.md --outpu
+
+## Cycle 1 — 2026-04-13 18:49:37 (Taipei)
+
+[cycle 390] classification=branch-growth
+actions: 5, updates: 5
+exec: b1(經濟/trading): (no executor for branch 1, runnable=python trading/paper_trader.py --mode candid; b4(社交/discord): (no executor for branch 4, runnable=python platform/discord_poster.py --channel ; b2(知識/digestion): (no executor for branch 2, runnable=python platform/inbox_bridge.py --mode diges; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py templates/exampl
+digestion: Knowledge Digestion: 12/2756 files, Tier 1, Last: 2026-04-13T18:19:47+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 1,
+      "name": "經濟/trading",
+      "action": "GATE TRIGGERED: tick 837 > gate 835. Execute live entry evaluation on top-PF candidate rotated in cycle 389. Check signal alignment across regime filters. If signals > 0: paper entry with position sizing per PF tier. If still 0: log gate_pass_no_signal, reset monitor window +30 ticks. Axiom 2: edge present = act. Output: trade_decision_cycle390.json.",
+      "priority": 1,
+      "runnable": "pyt
