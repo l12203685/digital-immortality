@@ -1493,3 +1493,4 @@ plan_raw: ```json
       "action": "Cycle 404 discord sentinel: halt_decision finalized (lifted or extended to 407); T+3 organic delta logged from cycle 401 baseline; phase4b cadence confirmed or deferred; voice E2E 3-signal review complete (test messages: phase4b e2e, reverse channel 1775898534, public host smoke test — all 3 logged as received)",
       "priority": 1,
       "runnable": "python social/discord_sentinel.py --cycle 4
+[2026-04-14 02:00 +08] Cycle 414 — B2 知識萃取: digested 10 files (27→37), 達哥/SBF PowerLanguage strategies. Inbox 8 pending_bridge→delivered.
