@@ -159,3 +159,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 9 g1_eval_status = cycle 377 — #2 gap close-check; if closed advance to #3; if stalled mark BLOCKED + advance frontier; #1 permanently blocked -->
 <!-- branch 6 survival_check = cycle 377 — routine check; clean_streak monitor; CI sentinel; no escalation expected -->
 <!-- branch 1 regime_action = cycle 377 — no action; signals=0, mixed regime, no edge (axiom 5); tick=445; 7th deferred cycle -->
+
+<!-- cycle update 2026-04-13 12:49:51 (Taipei) -->
+<!-- branch 1 regime_action = cycle 378 — no entry (axiom 5: signals=0, mixed regime); 7-cycle deferred → rotation rule triggered → pivoting to strategy generation prep; tick=475 healthy; monitor only -->
+<!-- branch 4 discord_engagement_status = cycle 378 — diagnosis execution phase; channel audit + audience alignment review; diagnosis_b4.md target output; root-cause for 6-cycle organic=0; seed posts paused -->
+<!-- branch 9 g1_eval_status = cycle 378 — #2 gap close-check; advance to #3 if closed; mark BLOCKED + frontier advance if stalled (3-cycle rule); #1 permanently blocked -->
+<!-- branch 6 survival_check = cycle 378 — routine check; clean_streak monitor active; CI sentinel live; no escalation -->
