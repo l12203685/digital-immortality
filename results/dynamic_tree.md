@@ -302,3 +302,8 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 9 g1_eval_status = cycle 399 — #9 terminal decision executed (BLOCK or CLOSE); frontier advances to #10 if CLOSE; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5-#9 terminal -->
 <!-- branch 2 digestion_progress = cycle 399 — Tier 1 batch +10 files; cumulative target 165/2756 -->
 <!-- branch 1 regime_action = cycle 399 — 3-cycle repeat rule applied (cycles 396-398 consecutive gate ticks); passive monitoring only; gate tick 1197 deferred to cycle 400; no entry action this cycle -->
+
+<!-- cycle update 2026-04-13 23:49:24 (Taipei) -->
+<!-- branch 1 regime_action = cycle 400 — gate tick 1197 evaluation executed (deferred from cycle 399); signal check on 11 active strategies; axiom 2 applied; entry or gate_pass_no_signal logged; next gate tick 1257 if no entry -->
+<!-- branch 9 g1_eval_status = cycle 400 — #10 gap scan cycle 1/2 initiated; frontier at #10; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5-#9 terminal -->
+<!-- branch 2 digestion_progress = cycle 400 — Tier 1 batch +10 files; cumulative target 175/2756 -->
