@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 100,
+  "files_digested": 110,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -101,8 +101,18 @@
     "E:/@交易/2. 財務相關知識/articles/Special Report/2015Q4台灣央行降息半碼.pdf",
     "E:/@交易/2. 財務相關知識/articles/Special Report/Fed貨幣政策正常化難度加大.pdf",
     "E:/@交易/2. 財務相關知識/風險管理/Value at Risk：The New Benchmark for Managing Financial Risk (3rd Edition).pdf",
-    "E:\\@交易\\@程式交易\\ALGO 知名不具\\FDG_Seminar_150408.pdf"
+    "E:\\@交易\\@程式交易\\ALGO 知名不具\\FDG_Seminar_150408.pdf",
+    "E:/@交易/@StrategyManagement/歸檔/202007/202007Bohun/boTX_202007_MAATR_LO說明檔.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202007/202007ChienShen/047說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202007/202007JohnsonLo/011_TX_Range R_LO說明檔.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202007/202007TimChen/2-003_TXA_30mKeltner_LOS策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202007/202007WenZiGi/策略說明檔 topbot 1-6.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202007/202007Kuang/202007 QTC_TX_SAR_Kuang_DO_6K 策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202007/202007YenShen/202007作業策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202007/202007shuenhua/TX_Pivot_DO策略說明檔.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202007/202007WGN/123_TX_HLORB_FDO說明檔.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202007/202007Morton/No22_TX_RSI_7K_DO_策略說明.txt"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T03:19:53+08:00"
+  "last_digested_at": "2026-04-14T14:00:00+08:00"
 }
