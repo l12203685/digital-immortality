@@ -1,15 +1,13 @@
-# Cycle 382 — 2026-04-13 14:49:46 (Taipei)
+# Cycle 385 — 2026-04-13 16:20:01 (Taipei)
 
-[cycle 382] classification=branch-growth
+[cycle 385] classification=branch-growth
 actions: 5, updates: 5
-exec: b1(經濟/trading): (no executor for branch 1, runnable=python trading/paper_trader.py --mode rotati; b4(社交/discord): (no executor for branch 4, runnable=python platform/discord_poster.py --channel ; b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py templates/exampl; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b6(存活/survival): (no executor for branch 6, runnable=python recursive_engine.py --status)
-digestion: Knowledge Digestion: 4/2756 files, Tier 1, Last: 2026-04-13T14:19:53+08:00
+exec: b1(經濟/trading): (no executor for branch 1, runnable=python trading/paper_trader.py --mode forwar; b2(知識/digestion): (no executor for branch 2, runnable=python platform/inbox_bridge.py --mode diges; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b4(社交/discord): (no executor for branch 4, runnable=python platform/discord_poster.py --channel ; b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py templates/exampl
+digestion: Knowledge Digestion: 7/2756 files, Tier 1, Last: 2026-04-13T15:49:58+08:00
 plan_raw: ```json
 {
   "branch_actions": [
     {
       "branch": 1,
       "name": "經濟/trading",
-      "action": "Resume rotation slot (deferred cycle 381 per 3-cycle repeat rule — now cleared). Execute candidate_queue.json: select top-1 candidate by Sharpe/PF composite; prepare forward-walk scaffold. No live entry (signals=0, axiom 5, mixed regime). Output: results/rotation_candidate_cycle382.json",
-      "priority": 1,
-      "runnable": "python trading/paper_trader.py --mode rotation-select --queue result
+      "action": "Finalize PF gate decision — forward-walk has run cycles 383+384 (2-cycle mark, must close before 3-cycle repeat rule triggers). Read results/candidate_queue.json top-1 PF. If PF ≥ 0.8: write results/live_monitor_queue.json, set drawdown alert at PF=0.75, mark gate=PASSED, close forward-walk loop. If PF < 0.8: retire candidate, pull next from queue, reset forward-walk counter=0, log to results/tr

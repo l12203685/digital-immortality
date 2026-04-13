@@ -38,7 +38,7 @@ DISCORD_API = "https://discord.com/api/v10"
 E0_CHANNEL_ID = "1488348699968012510"
 FORWARDABLE_CHANNELS = {"web_mc", "web_mc_button"}
 MAX_PER_TICK = 10
-POLL_INTERVAL_S = 60
+POLL_INTERVAL_S = 10
 TAIPEI = timezone(timedelta(hours=8))
 
 # --- Logging ---------------------------------------------------------------
