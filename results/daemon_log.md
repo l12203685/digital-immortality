@@ -1274,3 +1274,18 @@ plan_raw: ```json
       "action": "Gate tick 897 reached (set cycle 391 on no-entry path). Execute live entry evaluation on highest-PF rotated candidate. Apply axiom 2: if edge confirmed → size and enter; if signals=0 → log gate_pass_no_signal, advance next gate to tick 957 (+60). Output: trade_decision_cycle392.json with entry/no-entry verdict, PF snapshot, and regime tag.",
       "priority": 1,
       "runnable": "python trading
+
+## Cycle 1 — 2026-04-13 20:19:44 (Taipei)
+
+[cycle 393] classification=branch-growth
+actions: 4, updates: 4
+exec: b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py templates/exampl; b2(知識/digestion): (no executor for branch 2, runnable=python platform/inbox_bridge.py --mode diges; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b1(經濟/trading): (no executor for branch 1, runnable=python trading/paper_trader.py --mode status
+digestion: Knowledge Digestion: 15/2756 files, Tier 1, Last: 2026-04-13T19:49:42+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 5,
+      "name": "社交/organism",
+      "action": "NEGLECT ALERT RESOLVED: 5-cycle idle since baseline lock (cycle 390). Execute full 10-scenario organism_interact fidelity run against current DNA state. Compute delta vs cycle 390 baseline. If delta > 0.15 → flag calibration required + output patch plan; if delta ≤ 0.15 → re-lock baseline at cycle 393. Output: organism_fidelity_cycle393.json with scenario scores, delta, and verdict.",
+      "pr
