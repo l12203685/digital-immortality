@@ -382,3 +382,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 4 discord_engagement_status = cycle 412 — voice E2E 3-signal review complete (phase4b e2e + reverse-channel 1775898534 + public host smoke); halt_decision finalized (lifted or extended to 415); T+3 organic delta logged; cadence confirmed or deferred -->
 <!-- branch 9 g1_eval_status = cycle 412 — #16 gap scan cycle 1/2 initiated; frontier at #16; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#15 terminal -->
 <!-- branch 2 digestion_progress = cycle 412 — Tier 1 batch +10 files; cumulative target 265/2756 -->
+
+<!-- cycle update 2026-04-14 06:19:41 (Taipei) -->
+<!-- branch 9 g1_eval_status = cycle 413 — #16 gap scan 2/2 complete; terminal decision executed (BLOCK or CLOSE); frontier advances to #17 if CLOSE; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#16 terminal -->
+<!-- branch 1 regime_action = cycle 413 — gate_pass_awaiting_1797; tick 1524 < 1797; no signal evaluation; passive monitoring; next gate tick 1797 -->
+<!-- branch 2 digestion_progress = cycle 413 — Tier 1 batch +10 files; cumulative target 275/2756; repeat-flag raised: consider Tier 2 sampling if novelty low -->
+<!-- branch 5 organism_interact_status = cycle 413 — skipped; neglect counter confirmed 0 (ran cycles 411+412); resume at cycle 415 or if counter reaches 3 -->
+<!-- branch 4 discord_engagement_status = cycle 413 — skipped; halt_decision window extends to cycle 415; no action this cycle -->
