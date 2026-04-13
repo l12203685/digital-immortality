@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 130,
+  "files_digested": 140,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -131,8 +131,19 @@
     "E:/@交易/@StrategyManagement/歸檔/202010/202010TimChen/006_TXA_13mLineReg_LOS_V2_說明檔.txt",
     "E:/@交易/@StrategyManagement/歸檔/202010/202010世賢/01 CBST020_Aroon_29m_FLO.txt",
     "E:/@交易/@StrategyManagement/歸檔/202010/202010丞甫/策略說明檔.txt",
-    "E:/@交易/@StrategyManagement/歸檔/202010/202010吳憲宗/60MAL0策略說明.txt"
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010吳憲宗/60MAL0策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010ChiaWei/019_TX_LongBandForwardTrade_L0.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010Hsiang/017_TXA_CO4_DO_5min.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010Jack軒邑/202010作業_009_TX_Box_FDT0_Jack策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010廷政/007策略概念.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010辰軍/說明檔.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010阿信/07.202010功課004_TX_KDHL_LT策略說明檔.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010彥勝-卡滋卡滋/彥勝-202010作業-策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010修達/001_TX_PT_D0策略說明.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010涂旭帆/說明檔.txt",
+    "E:/@交易/@StrategyManagement/歸檔/202010/202010景帆/027_TX_DayContrarian_LO_300M_策略說明.txt"
   ],
+  "files_digested": 140,
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T16:10:00+08:00"
+  "last_digested_at": "2026-04-14T16:25:00+08:00"
 }

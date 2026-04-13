@@ -1584,3 +1584,4 @@ plan_raw: ```json
       "branch": 9,
       "name": "Turing Test/G1",
       "action": "Frontier #14 gap scan cyc
+[2026-04-14 03:52 +08] Cycle 429: B2 digested 10 (130→140, 202010 exchange pt2: ChiaWei/Hsiang/廷政/辰軍/景帆) + B3 distilled 4 insights (279→283, exchange protocols/WF overrides/indicator gaps/TW conventions)
