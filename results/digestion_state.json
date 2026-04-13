@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 222,
+  "files_digested": 233,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -223,9 +223,20 @@
     "E:/@交易/@AVAVA/Keep/!_TXAL_1_030_KC01/7-003_TXA_30mKeltner_LOS-code.txt",
     "E:/@交易/@AVAVA/Keep/!_TXAL_1_030_SAR01/!_TXAL_1_030_SAR01.txt",
     "E:/@交易/@AVAVA/Keep/!_TXAL_1_030_SAR01/code.txt",
-    "E:/@交易/@AVAVA/Keep/!_TXAL_1_030_ShortReverse/!_TXAL_1_030_ShortReverse.txt"
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_030_ShortReverse/!_TXAL_1_030_ShortReverse.txt",
+    "E:\\@交易\\@程式交易\\MR.AutoTrading_期貨程式交易整合平台使用手冊_ v2.0.1.pdf",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_019_RG+William01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_020_DR01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_025_TrendSumHGBlog/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_028_CCI01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_029_LR01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_030_KC01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_030_SAR01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_030_ShortReverse/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_053_BB+KC+ROC01/.data.json",
+    "E:/@交易/@AVAVA/Keep/!_TXAL_1_053_BB+KC+ROC01/!_TXAL_1_053_BB+KC+ROC01.txt"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T04:49:33+08:00",
-  "last_updated": "2026-04-14T05:14:00+08:00"
+  "last_digested_at": "2026-04-14T05:19:46+08:00",
+  "last_updated": "2026-04-14T05:29:00+08:00"
 }
