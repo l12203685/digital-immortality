@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 58,
+  "files_digested": 68,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -59,8 +59,18 @@
     "E:/@交易/c_i.txt",
     "E:/@交易/MT5交易平台介紹.pdf",
     "E:/@交易/ｏ大私房海期課堂筆記.pdf",
-    "E:/@交易/20240330_凱衛網聚簡報.pdf"
+    "E:/@交易/20240330_凱衛網聚簡報.pdf",
+    "E:/@交易/@AK/@A1E-M01.txt",
+    "E:/@交易/@AK/@A2-T01.txt",
+    "E:/@交易/@AK/@K1B-MM01.txt",
+    "E:/@交易/@AK/@K2E-MM02.txt",
+    "E:/@交易/@AK/@K3E-P01.txt",
+    "E:/@交易/@AK/@K4E-P03.txt",
+    "E:/@交易/@AK/@K7E-MS02.txt",
+    "E:/@交易/@AK/@K8E-EMA01.txt",
+    "E:/@交易/@AK/@K9-G01.txt",
+    "E:/@交易/@AK/big_user_trade_record.csv"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T10:00:00+08:00"
+  "last_digested_at": "2026-04-14T11:00:00+08:00"
 }

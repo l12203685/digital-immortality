@@ -1,7 +1,7 @@
 {
   "meta": {
     "total_sop_files": 124,
-    "total_references": 377,
+    "total_references": 407,
     "total_unique_sops_referenced": 125,
     "ghost_sops_referenced_but_no_file": 1
   },
@@ -21,12 +21,14 @@
         17,
         20,
         21,
+        22,
         26,
         29,
         31,
         35,
         36,
         37,
+        40,
         42,
         46,
         59,
@@ -64,7 +66,7 @@
         117,
         121
       ],
-      "in_degree": 51,
+      "in_degree": 53,
       "out_degree": 0
     },
     "2": {
@@ -116,6 +118,7 @@
         9,
         11,
         20,
+        22,
         24,
         26,
         27,
@@ -125,7 +128,7 @@
         102,
         109
       ],
-      "in_degree": 11,
+      "in_degree": 12,
       "out_degree": 3
     },
     "5": {
@@ -149,9 +152,10 @@
       "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_06_game_theory_sop.md",
       "refs_out": [],
       "refs_in": [
+        40,
         102
       ],
-      "in_degree": 1,
+      "in_degree": 2,
       "out_degree": 0
     },
     "7": {
@@ -191,9 +195,10 @@
         4
       ],
       "refs_in": [
+        22,
         85
       ],
-      "in_degree": 1,
+      "in_degree": 2,
       "out_degree": 1
     },
     "10": {
@@ -262,10 +267,11 @@
       "refs_out": [],
       "refs_in": [
         19,
+        32,
         59,
         60
       ],
-      "in_degree": 3,
+      "in_degree": 4,
       "out_degree": 0
     },
     "14": {
@@ -306,9 +312,10 @@
         15
       ],
       "refs_in": [
-        17
+        17,
+        40
       ],
-      "in_degree": 1,
+      "in_degree": 2,
       "out_degree": 3
     },
     "17": {
@@ -321,8 +328,10 @@
         15,
         16
       ],
-      "refs_in": [],
-      "in_degree": 0,
+      "refs_in": [
+        40
+      ],
+      "in_degree": 1,
       "out_degree": 4
     },
     "18": {
@@ -390,10 +399,18 @@
       "sop_number": 22,
       "title": "SOP #22 — Universal Exit Protocol",
       "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_22_exit_protocol_sop.md",
-      "refs_out": [],
-      "refs_in": [],
-      "in_degree": 0,
-      "out_degree": 0
+      "refs_out": [
+        1,
+        4,
+        9,
+        25,
+        30
+      ],
+      "refs_in": [
+        40
+      ],
+      "in_degree": 1,
+      "out_degree": 5
     },
     "23": {
       "sop_number": 23,
@@ -427,10 +444,11 @@
         23
       ],
       "refs_in": [
+        22,
         27,
         28
       ],
-      "in_degree": 2,
+      "in_degree": 3,
       "out_degree": 1
     },
     "26": {
@@ -517,8 +535,10 @@
         27,
         28
       ],
-      "refs_in": [],
-      "in_degree": 0,
+      "refs_in": [
+        22
+      ],
+      "in_degree": 1,
       "out_degree": 2
     },
     "31": {
@@ -541,10 +561,16 @@
       "sop_number": 32,
       "title": "SOP #32: Cognitive Capital & Peak Performance Protocol",
       "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_32_cognitive_capital_sop.md",
-      "refs_out": [],
+      "refs_out": [
+        13,
+        47,
+        51,
+        52,
+        53
+      ],
       "refs_in": [],
       "in_degree": 0,
-      "out_degree": 0
+      "out_degree": 5
     },
     "33": {
       "sop_number": 33,
@@ -637,10 +663,16 @@
       "sop_number": 40,
       "title": "SOP #40 — Information Asymmetry Edge Protocol",
       "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_40_information_asymmetry_sop.md",
-      "refs_out": [],
+      "refs_out": [
+        1,
+        6,
+        16,
+        17,
+        22
+      ],
       "refs_in": [],
       "in_degree": 0,
-      "out_degree": 0
+      "out_degree": 5
     },
     "41": {
       "sop_number": 41,
@@ -690,9 +722,10 @@
       "refs_out": [],
       "refs_in": [
         69,
-        95
+        95,
+        106
       ],
-      "in_degree": 2,
+      "in_degree": 3,
       "out_degree": 0
     },
     "45": {
@@ -728,14 +761,17 @@
       "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_47_recursive_engine_maintenance_sop.md",
       "refs_out": [],
       "refs_in": [
+        32,
         50,
         51,
         57,
         58,
         65,
-        66
+        66,
+        73,
+        116
       ],
-      "in_degree": 6,
+      "in_degree": 9,
       "out_degree": 0
     },
     "48": {
@@ -756,9 +792,10 @@
       "refs_out": [],
       "refs_in": [
         50,
-        57
+        57,
+        73
       ],
-      "in_degree": 2,
+      "in_degree": 3,
       "out_degree": 0
     },
     "50": {
@@ -786,12 +823,13 @@
         47
       ],
       "refs_in": [
+        32,
         52,
         53,
         60,
         104
       ],
-      "in_degree": 4,
+      "in_degree": 5,
       "out_degree": 3
     },
     "52": {
@@ -802,12 +840,13 @@
         51
       ],
       "refs_in": [
+        32,
         53,
         54,
         58,
         59
       ],
-      "in_degree": 4,
+      "in_degree": 5,
       "out_degree": 1
     },
     "53": {
@@ -820,10 +859,11 @@
         52
       ],
       "refs_in": [
+        32,
         58,
         59
       ],
-      "in_degree": 2,
+      "in_degree": 3,
       "out_degree": 3
     },
     "54": {
@@ -1028,12 +1068,13 @@
       ],
       "refs_in": [
         70,
+        73,
         78,
         81,
         87,
         104
       ],
-      "in_degree": 5,
+      "in_degree": 6,
       "out_degree": 11
     },
     "67": {
@@ -1145,10 +1186,19 @@
       "sop_number": 73,
       "title": "SOP #73 — Dynamic Tree Protocol",
       "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\archive\\knowledge_product_73_dynamic_tree_protocol_sop.md",
-      "refs_out": [],
-      "refs_in": [],
-      "in_degree": 0,
-      "out_degree": 0
+      "refs_out": [
+        47,
+        49,
+        66,
+        91,
+        116
+      ],
+      "refs_in": [
+        106,
+        116
+      ],
+      "in_degree": 2,
+      "out_degree": 5
     },
     "74": {
       "sop_number": 74,
@@ -1245,9 +1295,11 @@
         80,
         91,
         93,
-        94
+        94,
+        106,
+        116
       ],
-      "in_degree": 5,
+      "in_degree": 7,
       "out_degree": 2
     },
     "80": {
@@ -1517,15 +1569,18 @@
         80
       ],
       "refs_in": [
+        73,
         93,
         94,
         95,
         98,
         99,
         100,
-        104
+        104,
+        106,
+        116
       ],
-      "in_degree": 7,
+      "in_degree": 10,
       "out_degree": 3
     },
     "92": {
@@ -1578,9 +1633,10 @@
       ],
       "refs_in": [
         98,
-        100
+        100,
+        106
       ],
-      "in_degree": 2,
+      "in_degree": 3,
       "out_degree": 5
     },
     "95": {
@@ -1796,10 +1852,18 @@
       "sop_number": 106,
       "title": "SOP #106 — Organism Drift & Recalibration Protocol",
       "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_106_organism_drift_recalibration_protocol.md",
-      "refs_out": [],
-      "refs_in": [],
-      "in_degree": 0,
-      "out_degree": 0
+      "refs_out": [
+        44,
+        73,
+        79,
+        91,
+        94
+      ],
+      "refs_in": [
+        116
+      ],
+      "in_degree": 1,
+      "out_degree": 5
     },
     "107": {
       "sop_number": 107,
@@ -1945,10 +2009,18 @@
       "sop_number": 116,
       "title": "SOP #116 — Recursive Distillation Taxonomy Protocol",
       "file": "C:\\Users\\admin\\workspace\\digital-immortality\\docs\\knowledge_product_116_distillation_taxonomy_protocol.md",
-      "refs_out": [],
-      "refs_in": [],
-      "in_degree": 0,
-      "out_degree": 0
+      "refs_out": [
+        47,
+        73,
+        79,
+        91,
+        106
+      ],
+      "refs_in": [
+        73
+      ],
+      "in_degree": 1,
+      "out_degree": 5
     },
     "117": {
       "sop_number": 117,
@@ -2083,7 +2155,7 @@
   "top10_most_referenced": [
     {
       "sop_number": 1,
-      "in_degree": 51,
+      "in_degree": 53,
       "title": "Knowledge Product #01: Trading Strategy Development SOP"
     },
     {
@@ -2097,19 +2169,29 @@
       "title": "SOP #83 — Daily Posting Execution Ritual"
     },
     {
+      "sop_number": 4,
+      "in_degree": 12,
+      "title": "SOP #04 — Strategy Failure & Kill Decision Tree"
+    },
+    {
       "sop_number": 70,
       "in_degree": 12,
       "title": "SOP #70 — Revenue Conversion Protocol: Signal to First Sale"
     },
     {
-      "sop_number": 4,
-      "in_degree": 11,
-      "title": "SOP #04 — Strategy Failure & Kill Decision Tree"
+      "sop_number": 91,
+      "in_degree": 10,
+      "title": "SOP #91: Monthly DNA Calibration Audit"
     },
     {
       "sop_number": 12,
       "in_degree": 9,
       "title": "SOP #12 — Content Distribution & Audience Architecture"
+    },
+    {
+      "sop_number": 47,
+      "in_degree": 9,
+      "title": "SOP #47 — Recursive Engine Maintenance & Staleness Prevention"
     },
     {
       "sop_number": 85,
@@ -2120,26 +2202,9 @@
       "sop_number": 97,
       "in_degree": 8,
       "title": "SOP #97: 87-Day Mainnet Revenue Countdown Plan"
-    },
-    {
-      "sop_number": 86,
-      "in_degree": 7,
-      "title": "SOP #86 — Consulting Rate Card"
-    },
-    {
-      "sop_number": 91,
-      "in_degree": 7,
-      "title": "SOP #91: Monthly DNA Calibration Audit"
     }
   ],
-  "orphans": [
-    22,
-    32,
-    40,
-    73,
-    106,
-    116
-  ],
+  "orphans": [],
   "clusters": [
     [
       1,
@@ -2163,6 +2228,7 @@
       19,
       20,
       21,
+      22,
       23,
       24,
       25,
@@ -2172,6 +2238,7 @@
       29,
       30,
       31,
+      32,
       33,
       34,
       35,
@@ -2179,6 +2246,7 @@
       37,
       38,
       39,
+      40,
       41,
       42,
       43,
@@ -2211,6 +2279,7 @@
       70,
       71,
       72,
+      73,
       74,
       75,
       76,
@@ -2243,6 +2312,7 @@
       103,
       104,
       105,
+      106,
       107,
       108,
       109,
@@ -2252,6 +2322,7 @@
       113,
       114,
       115,
+      116,
       117,
       118,
       119,
