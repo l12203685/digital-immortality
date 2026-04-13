@@ -111,3 +111,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 4 discord_seed_post_status = cycle 369 — E2E pipeline confirmed live (reverse channel 1775898534); draft → final push -->
 <!-- branch 9 g1_eval_status = cycle 369 — eval_packets processing; gap_register population; G1 advancing to gap-analysis -->
 <!-- branch 1 regime_action = no action — mixed regime, all signals=0, no edge (axiom 5) -->
+
+<!-- cycle update 2026-04-13 08:49:48 (Taipei) -->
+<!-- branch 4 discord_seed_post_status = cycle 370 — final push executed; E2E voice test confirmed channel 1775898534 live; post_id logged to results/discord_posts.jsonl -->
+<!-- branch 9 g1_eval_status = cycle 370 — gap_register.jsonl populated; top 3 gaps ranked by severity; G1 advancing to gap-remediation -->
+<!-- branch 10 l3_v2_status = cycle 370 — CLOSE (COMPLETE or BLOCKED); 3-cycle dispatch loop terminated; shift to maintenance cadence -->
+<!-- branch 1 regime_action = no action — all signals=0, mixed regime, no edge (axiom 5); re-entry audit deferred pending regime shift -->
