@@ -797,6 +797,169 @@ def stop_daemon():
     print("If it doesn't stop, you can force kill with: kill -9 " + str(pid))
 
 
+RULES_FILE = RESULTS / "engine_rules.json"
+L3_RECOVERY = STAGING / "l3_recovery.md"
+
+
+def _load_rules() -> dict:
+    """Load engine_rules.json or return empty skeleton."""
+    if RULES_FILE.exists():
+        try:
+            return json.loads(RULES_FILE.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            pass
+    return {"evolution_log": [], "evolved_at": None}
+
+
+def _save_rules(rules: dict) -> None:
+    """Persist engine_rules.json."""
+    ensure_dirs()
+    RULES_FILE.write_text(
+        json.dumps(rules, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+
+
+def _read_recent_l3_log(n: int = 10) -> list[dict]:
+    """Read last N entries from engine_l3_log.jsonl."""
+    if not L3_LOG.exists():
+        return []
+    entries: list[dict] = []
+    try:
+        with open(L3_LOG, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    try:
+                        entries.append(json.loads(line))
+                    except json.JSONDecodeError:
+                        pass
+    except OSError:
+        pass
+    return entries[-n:]
+
+
+def l3_check() -> dict:
+    """L3 v2 auto-detection: run full 3-layer audit, detect anomalies, update rules.
+
+    Returns the audit summary dict.
+    """
+    # Import l3_audit programmatically (sibling tools/ package)
+    sys.path.insert(0, str(ROOT / "tools"))
+    import l3_audit
+
+    ensure_dirs()
+    now_iso = datetime.now(timezone.utc).isoformat()
+    cycle = get_cycle_number()
+
+    # 1. Run 3-layer audit
+    l1 = l3_audit.audit_l1()
+    l2 = l3_audit.audit_l2()
+    l3 = l3_audit.audit_l3()
+    cross = l3_audit.audit_cross_layer(l1, l2, l3)
+    recs = l3_audit.generate_recommendations(l1, l2, l3, cross)
+
+    healths = {"L1": l1["health"], "L2": l2["health"], "L3": l3["health"]}
+    has_red = "RED" in healths.values()
+    worst = "RED" if has_red else ("YELLOW" if "YELLOW" in healths.values() else "GREEN")
+
+    # 2. Check recent anomalies from l3 log
+    recent_log = _read_recent_l3_log(10)
+    recent_red_count = sum(
+        1 for e in recent_log
+        if e.get("verdict") in ("DEAD_LOOP", "STALE") or e.get("worst") == "RED"
+    )
+
+    # 3. Build findings list
+    findings: list[str] = []
+    for layer_name, layer_result in [("L1", l1), ("L2", l2), ("L3", l3)]:
+        status = layer_result["health"]
+        issues = layer_result.get("issues", [])
+        if issues:
+            findings.append(f"{layer_name}={status}: {'; '.join(issues)}")
+        else:
+            findings.append(f"{layer_name}={status}: OK")
+    for pipe, status in cross.get("pipelines", {}).items():
+        if not pipe.endswith("_detail") and status != "OK":
+            findings.append(f"PIPE {pipe}={status}")
+
+    # 4. Auto-detect new rules from anomalies
+    actions_taken: list[str] = []
+    rules = _load_rules()
+
+    if has_red:
+        # Write recovery prompt
+        red_layers = [k for k, v in healths.items() if v == "RED"]
+        recovery_lines = [
+            f"# L3 Recovery Prompt — {now_iso}",
+            f"",
+            f"Cycle: {cycle}",
+            f"RED layers: {', '.join(red_layers)}",
+            f"",
+            f"## Issues",
+        ]
+        all_issues = l1["issues"] + l2["issues"] + l3["issues"] + cross.get("issues", [])
+        for issue in all_issues:
+            recovery_lines.append(f"- {issue}")
+        recovery_lines += ["", "## Recommendations"]
+        for rec in recs:
+            recovery_lines.append(f"- {rec}")
+        recovery_lines += [
+            "",
+            "## Action Required",
+            "Address RED layers before next recursive cycle.",
+        ]
+        L3_RECOVERY.write_text("\n".join(recovery_lines), encoding="utf-8")
+        actions_taken.append(f"wrote recovery prompt to {L3_RECOVERY.name}")
+        _daemon_log(f"[L3v2] RED detected in {red_layers} — recovery prompt written")
+
+    if recent_red_count >= 3:
+        # Tighten staleness threshold if repeated anomalies
+        old_thresh = rules.get("stale_threshold", 3)
+        new_thresh = max(1, old_thresh - 1)
+        if new_thresh != old_thresh:
+            rules["stale_threshold"] = new_thresh
+            actions_taken.append(f"tightened stale_threshold {old_thresh}->{new_thresh}")
+
+    # 5. Update engine_rules.json evolution_log
+    log_entry = {
+        "cycle": cycle,
+        "event": "L3_CHECK",
+        "findings": findings,
+        "actions_taken": actions_taken,
+        "ts": now_iso,
+    }
+    evo_log = rules.get("evolution_log", [])
+    evo_log.append(log_entry)
+    rules["evolution_log"] = evo_log[-50:]  # keep last 50
+    rules["evolved_at"] = now_iso
+    _save_rules(rules)
+
+    # 6. Append to engine_l3_log.jsonl
+    jsonl_entry = {
+        "cycle": cycle,
+        "ts": now_iso,
+        "worst": worst,
+        "healths": healths,
+        "findings_count": len(findings),
+        "actions_taken": actions_taken,
+        "recent_red_count": recent_red_count,
+    }
+    with open(L3_LOG, "a", encoding="utf-8") as f:
+        f.write(json.dumps(jsonl_entry, ensure_ascii=False) + "\n")
+
+    # Print summary
+    print(f"[L3v2] cycle={cycle} worst={worst} healths={healths}")
+    for f_line in findings:
+        print(f"  {f_line}")
+    if actions_taken:
+        for a in actions_taken:
+            print(f"  -> {a}")
+    else:
+        print("  -> no corrective actions needed")
+
+    return {"cycle": cycle, "worst": worst, "healths": healths, "findings": findings, "actions": actions_taken}
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Recursive self-prompt engine for digital immortality.",
@@ -820,6 +983,8 @@ def main():
                        help="Run L2 evaluate: audit engine quality and report")
     group.add_argument("--l3", action="store_true",
                        help="Run L2 evaluate then L3 evolve: update engine config based on audit")
+    group.add_argument("--l3-check", action="store_true",
+                       help="L3 v2: run full 3-layer audit, auto-detect anomalies, update rules")
     parser.add_argument("--force", action="store_true", help="Overwrite existing files on init")
     parser.add_argument("--interval", type=int, default=3600,
                         help="Seconds between cycles for --loop/--daemon (default: 3600)")
@@ -850,6 +1015,9 @@ def main():
         print(f"L2 report: {json.dumps(report, indent=2)}")
         updated_config = l3_evolve(cycle, report)
         print(f"L3 config updated: {json.dumps(updated_config, indent=2)}")
+    elif args.l3_check:
+        result = l3_check()
+        print(json.dumps(result, indent=2))
 
 
 if __name__ == "__main__":
