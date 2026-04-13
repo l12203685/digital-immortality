@@ -184,3 +184,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 9 g1_eval_status = cycle 381 — #3 gap initiated; #1 permanently blocked; #2 BLOCKED (3-cycle); frontier at #3; patch+verify loop active -->
 <!-- branch 6 survival_check = cycle 381 — routine; clean_streak monitor; CI sentinel active; tick=565 healthy; no escalation -->
 <!-- branch 1 regime_action = cycle 381 — ROTATION DEFERRED (3-cycle repeat rule: scan→queue repeated 378-380); no dispatch this cycle; candidate_queue.json holds; resume next rotation slot -->
+
+<!-- cycle update 2026-04-13 14:49:46 (Taipei) -->
+<!-- branch 1 regime_action = cycle 382 — rotation slot resumed (3-cycle repeat rule cleared at cycle 381); candidate_queue.json top-1 selection; no live entry (axiom 5: signals=0, mixed regime); tick=595 healthy -->
+<!-- branch 4 discord_engagement_status = cycle 382 — go/no-go decision execution; E2E smoke PASS confirmed (voice: phase4b, channel 1775898534); b4_pivot_decision_cycle382.md output; cadence halt either lifted or extended -->
+<!-- branch 5 organism_interact_status = cycle 382 — fidelity delta read from cycle381 output; threshold check pending; DNA calibration trigger conditional on delta > 0.15 -->
+<!-- branch 9 g1_eval_status = cycle 382 — #3 gap patch+verify active; #1 permanently blocked; #2 BLOCKED (3-cycle); advance to #4 if #3 closed this cycle -->
+<!-- branch 6 survival_check = cycle 382 — routine; clean_streak monitor; CI sentinel active; tick=595 healthy; no escalation -->
