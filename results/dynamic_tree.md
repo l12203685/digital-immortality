@@ -226,3 +226,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 2 digestion_progress = cycle 387 — Tier 1 batch +10 files; cumulative target 45/2756; continuous forward progress -->
 <!-- branch 9 g1_eval_status = cycle 387 — #4 gap resolution decision (2-cycle expired); frontier advances to #5 (closed or BLOCK+skip); #1 permanently blocked; #2 BLOCKED; #3 BLOCKED -->
 <!-- branch 4 discord_engagement_status = cycle 387 — post-halt terminal: halt lifted (organic delta T+1 active) or extended to cycle 389 (sentinel set) -->
+
+<!-- cycle update 2026-04-13 17:49:42 (Taipei) -->
+<!-- branch 4 discord_engagement_status = cycle 388 — phase4b E2E smoke test executed; reverse channel 1775898534 verified; halt delta T+1 baseline measured or sentinel cycle 389 confirmed -->
+<!-- branch 5 organism_interact_status = cycle 388 — CONCRETE ACTION on cycle 387 fidelity results; calibration patch applied or baseline locked; neglect streak broken -->
+<!-- branch 1 regime_action = cycle 388 — tick 775 gate check; candidate rotation or continued monitoring; no live entry (axiom 5: signals=0, mixed regime) -->
+<!-- branch 2 digestion_progress = cycle 388 — Tier 1 batch +10 files; cumulative target 55/2756 -->
+<!-- branch 9 g1_eval_status = cycle 388 — #5 gap scan initiated; frontier advances from #4 (closed 387); #1 permanently blocked; #2 BLOCKED; #3 BLOCKED (3-cycle rule); #4 CLOSED -->
