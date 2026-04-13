@@ -6,13 +6,16 @@ Reads rules/decision_precommits.md + recent daemon_log.md for evidence.
 Outputs results/precommit_compliance.md with per-rule status.
 Stdlib only, <90 lines.
 """
+import json
 import re
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
+TZ = timezone(timedelta(hours=8))
 ROOT = Path(__file__).resolve().parent.parent
 RULES_FILE = ROOT / "rules" / "decision_precommits.md"
 LOG_FILE = ROOT / "results" / "daemon_log.md"
+LIFE_LOG = ROOT / "results" / "life_events.jsonl"
 OUT_FILE = ROOT / "results" / "precommit_compliance.md"
 
 RULES = [
@@ -44,6 +47,15 @@ RULES = [
 ]
 
 
+LIFE_EVENT_MAP = {
+    "exercise": ["exercise", "gym", "walk", "workout"],
+    "lunch": ["lunch", "meal prep", "batch cook"],
+    "deep-work": ["deep work", "deep-work", "focus block"],
+    "morning-drink": ["coffee", "tea", "morning drink"],
+    "portfolio-check": ["portfolio", "NAV", "trading check"],
+}
+
+
 def load_log_tail(n: int = 50) -> str:
     if not LOG_FILE.exists():
         return ""
@@ -51,8 +63,28 @@ def load_log_tail(n: int = 50) -> str:
     return "\n".join(lines[-n:]).lower()
 
 
-def check_rule(rule: dict, log: str) -> tuple[str, str]:
-    """Return (status, evidence) for a rule. Uses word-boundary matching."""
+def load_today_life_events() -> set[str]:
+    """Return set of life event types logged today."""
+    if not LIFE_LOG.exists():
+        return set()
+    today_str = datetime.now(TZ).strftime("%Y-%m-%d")
+    events: set[str] = set()
+    for line in LIFE_LOG.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        entry = json.loads(line)
+        if entry.get("timestamp", "").startswith(today_str):
+            events.add(entry.get("event", ""))
+    return events
+
+
+def check_rule(rule: dict, log: str, life_events: set[str]) -> tuple[str, str]:
+    """Return (status, evidence) for a rule. Checks daemon_log + life_events.jsonl."""
+    # Check life_events.jsonl first
+    for event_type, keywords in LIFE_EVENT_MAP.items():
+        if event_type in life_events and any(kw in rule["keywords"] for kw in keywords):
+            return "COMPLIANT", f"life_events.jsonl: {event_type} logged today"
+    # Fallback to daemon_log keyword scan
     hits = [kw for kw in rule["keywords"] if re.search(r'\b' + re.escape(kw) + r'\b', log)]
     if hits:
         return "COMPLIANT", f"Evidence found: {', '.join(hits)}"
@@ -98,9 +130,10 @@ def generate_report(results: list[dict]) -> str:
 
 def main() -> None:
     log = load_log_tail(50)
+    life_events = load_today_life_events()
     results = []
     for rule in RULES:
-        status, evidence = check_rule(rule, log)
+        status, evidence = check_rule(rule, log, life_events)
         results.append({**rule, "status": status, "evidence": evidence})
     report = generate_report(results)
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
