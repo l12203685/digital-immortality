@@ -254,3 +254,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 9 g1_eval_status = cycle 391 — #5 terminal decision executed (BLOCK or CLOSE); frontier advances to #6; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5 terminal -->
 <!-- branch 4 discord_engagement_status = cycle 391 — phase4b T+1 delta measurement; halt lifted cadence active or sentinel cycle 392 confirmed -->
 <!-- branch 5 organism_interact_status = cycle 391 — baseline locked (cycle 390); stable; no action required this cycle -->
+
+<!-- cycle update 2026-04-13 19:49:35 (Taipei) -->
+<!-- branch 1 regime_action = cycle 392 — gate tick 897 executed; live entry or gate_pass_no_signal logged; next gate tick 957 if no entry; axiom 2 applied -->
+<!-- branch 4 discord_engagement_status = cycle 392 — sentinel executed; halt_decision finalized (lifted or extended to 395); T+1 delta logged; phase4b cadence activated or deferred; voice input phase4b smoke test confirmed -->
+<!-- branch 9 g1_eval_status = cycle 392 — #6 gap scan initiated; frontier at #6 cycle 1/2; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5 terminal -->
+<!-- branch 2 digestion_progress = cycle 392 — Tier 1 batch +10 files; cumulative target 95/2756 -->
+<!-- branch 5 organism_interact_status = cycle 392 — baseline locked (cycle 390); stable; no action required -->
