@@ -1587,3 +1587,4 @@ plan_raw: ```json
 [2026-04-14 03:52 +08] Cycle 429: B2 digested 10 (130→140, 202010 exchange pt2: ChiaWei/Hsiang/廷政/辰軍/景帆) + B3 distilled 4 insights (279→283, exchange protocols/WF overrides/indicator gaps/TW conventions)
 [2026-04-14 03:55 +08] Cycle 430: B3 writeback 55 cycles synced to LYH (283 insights) + B10 L3 v2 auto-detection implemented (--l3-check, L1=YELLOW/L2=GREEN/L3=GREEN)
 [2026-04-14 04:05 +08] Cycle 431: B2 digested 10 (140→150, 202102-202202 exchange reviews, Edward participation found) + B1 replay_last_kill.py (4/6 gates block restart, SOP#118 validated)
+[2026-04-14 04:12 +08] Cycle 432: B2 digested 10 (150→160, all binary/skipped — DLL/PDF/JPG zone) + B5 CI 31/31 green + dynamic_tree.md updated (B1/B2/B10 progress)
