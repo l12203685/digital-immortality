@@ -147,3 +147,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v1 DONE. Human-gated: B1.3 ou
 <!-- branch 9 g1_eval_status = cycle 375 — gap #1 BLOCKED (4-cycle stall, 3-cycle rule triggered); pivoting to #2 severity gap per gap_register.jsonl; patch+verify loop initiated -->
 <!-- branch 1 regime_action = cycle 375 — no action; signals=0, mixed regime, no edge (axiom 5); tick=2819; 5th consecutive deferred cycle -->
 <!-- branch 6 survival_check = cycle 375 — routine check; clean_streak monitor; CI sentinel active; no escalation -->
+
+<!-- cycle update 2026-04-13 11:49:49 (Taipei) -->
+<!-- branch 9 g1_eval_status = cycle 376 — #2 gap remediation initiated; #1 blocked (permanent stall); patch+verify loop on #2 -->
+<!-- branch 4 discord_engagement_status = cycle 376 — organic=0 (6+ cycles confirmed); mode shift: seed-post → distribution diagnosis; fourth post deferred -->
+<!-- branch 6 survival_check = cycle 376 — routine check; clean_streak monitor active; CI sentinel live; no escalation -->
+<!-- branch 1 regime_action = cycle 376 — no action; signals=0, mixed regime, no edge (axiom 5); tick=2849; 6th deferred cycle -->
