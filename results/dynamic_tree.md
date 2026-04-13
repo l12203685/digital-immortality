@@ -396,3 +396,8 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 2 digestion_progress = cycle 414 — Tier 1 repeat-flag triggered; switched to Tier 2 sampling (+5 files); novelty delta assessed; cumulative Tier 1 remains 275/2756; Tier 2 pilot initiated -->
 <!-- branch 1 regime_action = cycle 414 — passive monitoring; tick_count 1554 < gate_tick 1797; no evaluation; next gate tick 1797 -->
 <!-- branch 4 discord_engagement_status = cycle 414 — skipped; halt_decision window extends to cycle 415; no action this cycle -->
+
+<!-- cycle update 2026-04-14 06:55:00 (Taipei) -->
+<!-- branch 2 digestion_progress = cycle 453 — B2 advanced 285→295/2756; TXDL TAIEX futures strategies digested (ATR, CDP, Gap+MA, BarTunnel, PT-Neckline, Gap+RSI, Opener-Gap, 15mKD, 15m-MA60, FFG); real summaries appended to digestion_log.jsonl -->
+<!-- branch 5 platform_infrastructure = cycle 453 — MCP Dashboard bridge fix: server.py _inbox_watcher patched to emit notifications/claude/channel (was resources/updated); experimental capability declared; Claude Code session restart required to load patched server; pending_bridge backlog deferred as seed cursor -->
+<!-- branch backlog = cycle 453 — top-3 done items archived; 3 new priorities added (bridge watchdog, B1 shadow-live spec, B2 295→350); session_state.md stale GoogleDrive/CI lines removed; bridge alert added -->

@@ -1,18 +1,18 @@
 === Recursive Engine Status ===
 
-Last output:  2026-04-13 21:49 UTC
-  Title:      Cycle 412 ¡X 2026-04-14 05:49:54 (Taipei)
+Last output:  2026-04-13 22:19 UTC
+  Title:      Cycle 413 ¡X 2026-04-14 06:19:41 (Taipei)
 Next input:   2026-04-11 08:45 UTC
 Next cycle:   90
 Daemon:       not running
 Git branch:   main
 
 Recent commits:
-  2e4d68f chore: cycle 449 B2 digestion (264) + B3 distillation (318) (4 minutes ago)
-  0f8840d chore: cycle 448 state updates (orthogonality, trading engine, dashboard) (8 minutes ago)
-  500a2a8 cycle 448: persist B3 distil 313 + consolidation (14 minutes ago)
-  ef0e1e9 B3: distil 308->313 (Score momentum-decay + TXDD regime + candle discretization) (16 minutes ago)
-  11bd8ba consolidation: pre-stop sync (18 minutes ago)
+  3871bc5 chore: cycle 452 FINAL B2 (285) + STOP at 50/50 hard limit (12 minutes ago)
+  6aa1842 chore: cycle 451 B3 distillation (323 insights) + pre-stop sync (19 minutes ago)
+  6c19d66 chore: cycle 450 B2 digestion 10% milestone (275) + B4 drift stable (26 minutes ago)
+  080391f daemon: cycle 1 (29 minutes ago)
+  2e4d68f chore: cycle 449 B2 digestion (264) + B3 distillation (318) (34 minutes ago)
 
 Memory (252 total entries):
   corrections        0 entries

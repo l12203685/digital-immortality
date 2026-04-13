@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 275,
+  "files_digested": 296,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -286,10 +286,21 @@
     "E:/@交易/@AVAVA/Keep/!_TXDD_1_006_SAR01/202007 QTC_TX_SAR_Kuang_DO_6K 程式碼.txt",
     "E:/@交易/@AVAVA/Keep/!_TXDD_1_007_RSI01/No22_TX_RSI_7K_DO_CODE.txt",
     "E:/@交易/@AVAVA/Keep/!_TXDD_1_008_BSPower01/whw013_TX_bsp8k_DT_程式碼.txt",
-    "E:/@交易/@AVAVA/Keep/!_TXDD_1_009_PVG01/策略程式碼.txt"
+    "E:/@交易/@AVAVA/Keep/!_TXDD_1_009_PVG01/策略程式碼.txt",
+    "E:\\@交易\\@程式交易\\中華電信IDC客戶維護人員異動申請表.pdf",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_005_ATR01/!_TXDL_1_005_ATR01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_005_CDP01/!_TXDL_1_005_CDP01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_006_Gap+MA01/!_TXDL_1_006_Gap+MA01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_008_BarTunnel01/!_TXDL_1_008_BarTunnel01.TXT",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_010_PT01/!_TXDL_1_010_PT_NeckLine01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_013_Gap+RSI01/!_TXDL_1_013_Gap+RSI01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_015_Gap01/!_TXDL_1_015_Gap01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_015_KD01/!_TXDL_1_015_KD01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_015_MA01/!_TXDL_1_015_MA01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_017_FFG01/!_TXDL_1_017_FFG01.txt"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T06:46:30+08:00",
-  "last_updated": "2026-04-14T06:31:20+08:00",
-  "total_digested": 285
+  "last_digested_at": "2026-04-14T07:00:59+08:00",
+  "last_updated": "2026-04-14T07:00:59+08:00",
+  "total_digested": 295
 }

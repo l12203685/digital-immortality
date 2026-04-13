@@ -1,20 +1,19 @@
-# Cycle 413 — 2026-04-14 06:19:41 (Taipei)
+# Cycle 414 — 2026-04-14 06:49:36 (Taipei)
 
-[cycle 413] classification=branch-growth
+[cycle 414] classification=branch-growth
 actions: 3, updates: 5
-exec: b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b1(經濟/trading): (no executor for branch 1, runnable=python trading/paper_trader.py --gate-pass -; b2(知識消化): (no executor for branch 2, runnable=python digest_knowledge.py --tier 1 --batch 
-digestion: Knowledge Digestion: 264/2756 files, Tier 1, Last: 2026-04-14T06:11:30+08:00
+exec: b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py templates/exampl; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b2(知識消化): (no executor for branch 2, runnable=python digest_knowledge.py --tier 2 --batch 
+digestion: Knowledge Digestion: 275/2756 files, Tier 1, Last: 2026-04-14T06:46:30+08:00
 plan_raw: ```json
 {
   "branch_actions": [
     {
-      "branch": 9,
-      "name": "Turing Test/G1",
-      "action": "Gap scan cycle 2/2 for #16 → terminal decision (BLOCK or CLOSE); if CLOSE, frontier advances to #17; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#15 terminal",
+      "branch": 5,
+      "name": "社交/organism",
+      "action": "Neglect alert (5-cycle gap per priority flag); full 10-scenario fidelity run via organism_interact.py; delta vs cycle 412 baseline computed; calibration patch or baseline re-lock applied; neglect counter reset to 0",
       "priority": 1,
-      "runnable": "python consistency_test.py templates/example_dna.md --scenario 16 --gap-scan 2of2 --cycle 413"
+      "runnable": "python organism_interact.py templates/example_dna.md --scenarios all --baseline cycle412 --cycle 414"
     },
     {
-      "branch": 1,
-      "name": "經濟/trading",
-      "action": "Gate
+      "branch": 9,
+      
