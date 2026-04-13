@@ -1,0 +1,1549 @@
+{
+  "generated_at": "2026-04-14 01:25 +08",
+  "total": 44,
+  "ok": 0,
+  "warning": 44,
+  "critical": 0,
+  "files": [
+    {
+      "label": "dna_core.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\dna_core.md",
+          "exists": true,
+          "size_kb": 6.6,
+          "mtime": "2026-04-13 00:23 +08",
+          "hash": "0c87d3a311f9b5e6c942ee5e2fa74b71747b309f69ff32a23bf8bc87796ba3d7"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\dna_core.md",
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": true,
+          "commit_hash": "6554ce32c6a7",
+          "pushed": true
+        }
+      },
+      "match_AB": null
+    },
+    {
+      "label": "boot_tests.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\boot_tests.md",
+          "exists": true,
+          "size_kb": 7.1,
+          "mtime": "2026-04-13 00:14 +08",
+          "hash": "5c8e11d19e631013f31c68231b2c6ac05de00abf138daf9e8b71effe713baa53"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\boot_tests.md",
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": true,
+          "commit_hash": "afba8b17f8bc",
+          "pushed": true
+        }
+      },
+      "match_AB": null
+    },
+    {
+      "label": "MEMORY.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\MEMORY.md",
+          "exists": true,
+          "size_kb": 5.4,
+          "mtime": "2026-04-14 00:41 +08",
+          "hash": "23114eecf7d1f0b41ca0b6025050007fd23639dd9f2a6d7c15ca7fde584dfcf4"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\MEMORY.md",
+          "exists": true,
+          "size_kb": 5.4,
+          "mtime": "2026-04-14 00:41 +08",
+          "hash": "23114eecf7d1f0b41ca0b6025050007fd23639dd9f2a6d7c15ca7fde584dfcf4"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "CLAUDE.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\CLAUDE.md",
+          "exists": true,
+          "size_kb": 3.2,
+          "mtime": "2026-04-13 08:13 +08",
+          "hash": "cdb96ddc15e925ad308b7b80a396352dc1055f15383ee21859e152f274aa02dc"
+        },
+        "B": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "C": {
+          "path": "C:\\Users\\admin\\GoogleDrive\\CLAUDE.md",
+          "exists": true,
+          "size_kb": 10.7,
+          "mtime": "2026-04-06 22:03 +08",
+          "hash": "faa48853e71dd1d6e25d493a9fc51d28d5318ca9987436d56ab04a6c0ed93979"
+        },
+        "D_git": {
+          "repo": null,
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": null
+    },
+    {
+      "label": "session_state.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\staging\\session_state.md",
+          "exists": true,
+          "size_kb": 0.9,
+          "mtime": "2026-04-14 01:00 +08",
+          "hash": "623c7ec1d6c96b5d6c0a4f929ddc751cdeeaf05dfd0b4d1388da8ff0027bb116"
+        },
+        "B": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "C": {
+          "path": "C:\\Users\\admin\\GoogleDrive\\staging\\session_state.md",
+          "exists": true,
+          "size_kb": 1.7,
+          "mtime": "2026-04-07 20:34 +08",
+          "hash": "dd1ce00f71c99d2a793c29863819577895cf874b48f26aed1ed1407b1d3caaf6"
+        },
+        "D_git": {
+          "repo": null,
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": null
+    },
+    {
+      "label": "dynamic_tree.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\workspace\\digital-immortality\\results\\dynamic_tree.md",
+          "exists": true,
+          "size_kb": 33.2,
+          "mtime": "2026-04-14 01:19 +08",
+          "hash": "84d7db830c405ff66159e1bdb62ca2324b9cbd1eefd582b7446bbfa145c080c2"
+        },
+        "B": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\workspace\\digital-immortality",
+          "tracked": true,
+          "commit_hash": "81cc33986a46",
+          "pushed": true
+        }
+      },
+      "match_AB": null
+    },
+    {
+      "label": "trading_engine_status.json",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\workspace\\digital-immortality\\results\\trading_engine_status.json",
+          "exists": true,
+          "size_kb": 1.0,
+          "mtime": "2026-04-14 01:25 +08",
+          "hash": "cf870c11d8a80704266813844a69ab3041357452360dea2eb45d97b22faafe1b"
+        },
+        "B": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\workspace\\digital-immortality",
+          "tracked": true,
+          "commit_hash": "81cc33986a46",
+          "pushed": true
+        }
+      },
+      "match_AB": null
+    },
+    {
+      "label": "memory/feedback_brain_not_executor.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_brain_not_executor.md",
+          "exists": true,
+          "size_kb": 1.3,
+          "mtime": "2026-04-11 14:12 +08",
+          "hash": "06e91ce59683c27b9847e2de1577ffcfb04ca319ac47ad90386337eb8af5ddf7"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_brain_not_executor.md",
+          "exists": true,
+          "size_kb": 1.3,
+          "mtime": "2026-04-11 14:12 +08",
+          "hash": "06e91ce59683c27b9847e2de1577ffcfb04ca319ac47ad90386337eb8af5ddf7"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_ceo_speak_no_detail.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_ceo_speak_no_detail.md",
+          "exists": true,
+          "size_kb": 3.8,
+          "mtime": "2026-04-12 14:10 +08",
+          "hash": "e2bb40e0759f8a41ffa3daa3555df3f9ec2bbd8feeb88f3cd80e222138c92eb2"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_ceo_speak_no_detail.md",
+          "exists": true,
+          "size_kb": 3.8,
+          "mtime": "2026-04-12 14:10 +08",
+          "hash": "e2bb40e0759f8a41ffa3daa3555df3f9ec2bbd8feeb88f3cd80e222138c92eb2"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_cold_start_identity.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_cold_start_identity.md",
+          "exists": true,
+          "size_kb": 0.8,
+          "mtime": "2026-04-07 20:58 +08",
+          "hash": "a555b3132df27411cb4a8ecf756b2241708a3533486cf1730bc64279eedb979e"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_cold_start_identity.md",
+          "exists": true,
+          "size_kb": 0.8,
+          "mtime": "2026-04-07 20:58 +08",
+          "hash": "a555b3132df27411cb4a8ecf756b2241708a3533486cf1730bc64279eedb979e"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_communication_buffering.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_communication_buffering.md",
+          "exists": true,
+          "size_kb": 6.1,
+          "mtime": "2026-04-11 16:58 +08",
+          "hash": "c6c7e97fc5f119c388220bc571978232f56369f5a2a7cd8f216b0936e8464644"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_communication_buffering.md",
+          "exists": true,
+          "size_kb": 6.1,
+          "mtime": "2026-04-11 16:58 +08",
+          "hash": "c6c7e97fc5f119c388220bc571978232f56369f5a2a7cd8f216b0936e8464644"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_dashboard_primary_channel.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_dashboard_primary_channel.md",
+          "exists": true,
+          "size_kb": 0.8,
+          "mtime": "2026-04-14 00:41 +08",
+          "hash": "b40fb40f3bacbc12930776a94576c68d2b8203a301eaa6eb09b616e3c050e7da"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_dashboard_primary_channel.md",
+          "exists": true,
+          "size_kb": 0.8,
+          "mtime": "2026-04-14 00:41 +08",
+          "hash": "b40fb40f3bacbc12930776a94576c68d2b8203a301eaa6eb09b616e3c050e7da"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_discord_always_push.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_discord_always_push.md",
+          "exists": true,
+          "size_kb": 0.8,
+          "mtime": "2026-04-13 07:50 +08",
+          "hash": "fa183af25722b2c0803f0592788c6cdc36ef52549a2a418391993e71b024a7db"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_discord_always_push.md",
+          "exists": true,
+          "size_kb": 0.8,
+          "mtime": "2026-04-13 07:50 +08",
+          "hash": "fa183af25722b2c0803f0592788c6cdc36ef52549a2a418391993e71b024a7db"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_discord_manual_sync.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_discord_manual_sync.md",
+          "exists": true,
+          "size_kb": 1.4,
+          "mtime": "2026-04-11 10:25 +08",
+          "hash": "4fbe3722c00000836a6a5412d1aeb5fea7b96c4bff2112ac14abbbed777661b8"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_discord_manual_sync.md",
+          "exists": true,
+          "size_kb": 1.4,
+          "mtime": "2026-04-11 10:25 +08",
+          "hash": "4fbe3722c00000836a6a5412d1aeb5fea7b96c4bff2112ac14abbbed777661b8"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_dual_angle_operating_model.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_dual_angle_operating_model.md",
+          "exists": true,
+          "size_kb": 1.4,
+          "mtime": "2026-04-12 16:25 +08",
+          "hash": "0cc94403afe30c6ccafa54f268ced56ae118970d90291655ef4ffaaac5ff9269"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_dual_angle_operating_model.md",
+          "exists": true,
+          "size_kb": 1.4,
+          "mtime": "2026-04-12 16:25 +08",
+          "hash": "0cc94403afe30c6ccafa54f268ced56ae118970d90291655ef4ffaaac5ff9269"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_four_dim_framework.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_four_dim_framework.md",
+          "exists": true,
+          "size_kb": 1.3,
+          "mtime": "2026-04-11 14:12 +08",
+          "hash": "8088fca7a7f0a19bc8c4f5e26657800a1cc85774a59a2c6090c9dde83c435296"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_four_dim_framework.md",
+          "exists": true,
+          "size_kb": 1.3,
+          "mtime": "2026-04-11 14:12 +08",
+          "hash": "8088fca7a7f0a19bc8c4f5e26657800a1cc85774a59a2c6090c9dde83c435296"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_go_sop_carryover.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_go_sop_carryover.md",
+          "exists": true,
+          "size_kb": 0.9,
+          "mtime": "2026-04-13 18:01 +08",
+          "hash": "60be2821eb00fee54bd72485d1f6425ab04200a4baa8ab45da72f3a96d2da263"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_go_sop_carryover.md",
+          "exists": true,
+          "size_kb": 0.9,
+          "mtime": "2026-04-13 18:01 +08",
+          "hash": "60be2821eb00fee54bd72485d1f6425ab04200a4baa8ab45da72f3a96d2da263"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_inbox_realtime.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_inbox_realtime.md",
+          "exists": true,
+          "size_kb": 0.9,
+          "mtime": "2026-04-13 15:37 +08",
+          "hash": "a0ea0bcbdf111c4775a69a5fa068fb803274b9c000ec1d81317d4c5f67966c58"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_inbox_realtime.md",
+          "exists": true,
+          "size_kb": 0.9,
+          "mtime": "2026-04-13 15:37 +08",
+          "hash": "a0ea0bcbdf111c4775a69a5fa068fb803274b9c000ec1d81317d4c5f67966c58"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_k8s_dispatch_model.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_k8s_dispatch_model.md",
+          "exists": true,
+          "size_kb": 3.8,
+          "mtime": "2026-04-11 18:13 +08",
+          "hash": "5bea7e38318ff2c5900c113ba96a9214caf2e53d5312044cbd370c628aecb280"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_k8s_dispatch_model.md",
+          "exists": true,
+          "size_kb": 3.8,
+          "mtime": "2026-04-11 18:13 +08",
+          "hash": "5bea7e38318ff2c5900c113ba96a9214caf2e53d5312044cbd370c628aecb280"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_koko_kidney.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_koko_kidney.md",
+          "exists": true,
+          "size_kb": 0.7,
+          "mtime": "2026-04-07 21:11 +08",
+          "hash": "2df748bd94b829cbeefd5ce6a4a5e8a11d265b089b1ebc402731f26dcbf50620"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_koko_kidney.md",
+          "exists": true,
+          "size_kb": 0.7,
+          "mtime": "2026-04-07 21:11 +08",
+          "hash": "2df748bd94b829cbeefd5ce6a4a5e8a11d265b089b1ebc402731f26dcbf50620"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_memory_stale_inheritance.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_memory_stale_inheritance.md",
+          "exists": true,
+          "size_kb": 0.8,
+          "mtime": "2026-04-12 17:00 +08",
+          "hash": "c28a6b9e0578fb3e2bb40cdaafb46ab9249e50098c56b8d73cee1b2e4c6ee6d9"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_memory_stale_inheritance.md",
+          "exists": true,
+          "size_kb": 0.8,
+          "mtime": "2026-04-12 17:00 +08",
+          "hash": "c28a6b9e0578fb3e2bb40cdaafb46ab9249e50098c56b8d73cee1b2e4c6ee6d9"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_minimize_edward_actions.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_minimize_edward_actions.md",
+          "exists": true,
+          "size_kb": 4.7,
+          "mtime": "2026-04-11 16:28 +08",
+          "hash": "5d8e162a6e394814d23ce74dfbc4e943810986fcccc09965d65ad14c02f816ac"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_minimize_edward_actions.md",
+          "exists": true,
+          "size_kb": 4.7,
+          "mtime": "2026-04-11 16:28 +08",
+          "hash": "5d8e162a6e394814d23ce74dfbc4e943810986fcccc09965d65ad14c02f816ac"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_minimize_external_services.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_minimize_external_services.md",
+          "exists": true,
+          "size_kb": 2.1,
+          "mtime": "2026-04-11 16:00 +08",
+          "hash": "5a1bcbc68c87aba582c38ae258aa28d6058ee6d7a1aa13525dc00806b326fce6"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_minimize_external_services.md",
+          "exists": true,
+          "size_kb": 2.1,
+          "mtime": "2026-04-11 16:00 +08",
+          "hash": "5a1bcbc68c87aba582c38ae258aa28d6058ee6d7a1aa13525dc00806b326fce6"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_no_ask_just_do.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_no_ask_just_do.md",
+          "exists": true,
+          "size_kb": 0.9,
+          "mtime": "2026-04-07 20:57 +08",
+          "hash": "e5f23b0b9b060d8b6a6e1ed5828d60e782f573abfa960236e0833343f9718433"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_no_ask_just_do.md",
+          "exists": true,
+          "size_kb": 0.9,
+          "mtime": "2026-04-07 20:57 +08",
+          "hash": "e5f23b0b9b060d8b6a6e1ed5828d60e782f573abfa960236e0833343f9718433"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_no_execution_exception.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_no_execution_exception.md",
+          "exists": true,
+          "size_kb": 2.7,
+          "mtime": "2026-04-11 18:12 +08",
+          "hash": "4786c89a14052992b39f64c937bf21870ae7b6ec47d36221bbc5b445e45ab502"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_no_execution_exception.md",
+          "exists": true,
+          "size_kb": 2.7,
+          "mtime": "2026-04-11 18:12 +08",
+          "hash": "4786c89a14052992b39f64c937bf21870ae7b6ec47d36221bbc5b445e45ab502"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_org_hierarchy.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_org_hierarchy.md",
+          "exists": true,
+          "size_kb": 1.6,
+          "mtime": "2026-04-11 15:30 +08",
+          "hash": "3b40adf851d790d402223462dee76ce07f81791a5338e750ca7168cd4b364e19"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_org_hierarchy.md",
+          "exists": true,
+          "size_kb": 1.6,
+          "mtime": "2026-04-11 15:30 +08",
+          "hash": "3b40adf851d790d402223462dee76ce07f81791a5338e750ca7168cd4b364e19"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_poker_category.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_poker_category.md",
+          "exists": true,
+          "size_kb": 0.8,
+          "mtime": "2026-04-12 12:04 +08",
+          "hash": "2dd87d37f865a67896f6c98bcca9c66d1c2969e9d20709cd44fc4edb9f015959"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_poker_category.md",
+          "exists": true,
+          "size_kb": 0.8,
+          "mtime": "2026-04-12 12:04 +08",
+          "hash": "2dd87d37f865a67896f6c98bcca9c66d1c2969e9d20709cd44fc4edb9f015959"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_recursive_persist.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_recursive_persist.md",
+          "exists": true,
+          "size_kb": 0.9,
+          "mtime": "2026-04-07 21:23 +08",
+          "hash": "904a3622b2875b31e8601a2751e054b5fcfde045181bd807fb84652bb3829917"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_recursive_persist.md",
+          "exists": true,
+          "size_kb": 0.9,
+          "mtime": "2026-04-07 21:23 +08",
+          "hash": "904a3622b2875b31e8601a2751e054b5fcfde045181bd807fb84652bb3829917"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_respond_during_subagent.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_respond_during_subagent.md",
+          "exists": true,
+          "size_kb": 0.9,
+          "mtime": "2026-04-12 14:10 +08",
+          "hash": "97a2f2f18fd4d7ac317b7b298b2fe1893dadb20db5ed77d2c61bf958ae831081"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_respond_during_subagent.md",
+          "exists": true,
+          "size_kb": 0.9,
+          "mtime": "2026-04-12 14:10 +08",
+          "hash": "97a2f2f18fd4d7ac317b7b298b2fe1893dadb20db5ed77d2c61bf958ae831081"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_save_plans_with_timestamp.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_save_plans_with_timestamp.md",
+          "exists": true,
+          "size_kb": 0.5,
+          "mtime": "2026-04-13 06:52 +08",
+          "hash": "7bd37bf09564f7a9b831312696d1792bd4d69131735510ee2c519320261a2f41"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_save_plans_with_timestamp.md",
+          "exists": true,
+          "size_kb": 0.5,
+          "mtime": "2026-04-13 06:52 +08",
+          "hash": "7bd37bf09564f7a9b831312696d1792bd4d69131735510ee2c519320261a2f41"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_su_command.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_su_command.md",
+          "exists": true,
+          "size_kb": 0.8,
+          "mtime": "2026-04-11 12:26 +08",
+          "hash": "3f059fc11b13dc1d8420881448a88bea4997cd65c999b30ea4e178ea0001545d"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_su_command.md",
+          "exists": true,
+          "size_kb": 0.8,
+          "mtime": "2026-04-11 12:26 +08",
+          "hash": "3f059fc11b13dc1d8420881448a88bea4997cd65c999b30ea4e178ea0001545d"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_subagent_delegation.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_subagent_delegation.md",
+          "exists": true,
+          "size_kb": 1.4,
+          "mtime": "2026-04-11 14:03 +08",
+          "hash": "73fa4762d1dc3f353b9ba96524221eba2cb5bf99893b7a678eebef41d252c925"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_subagent_delegation.md",
+          "exists": true,
+          "size_kb": 1.4,
+          "mtime": "2026-04-11 14:03 +08",
+          "hash": "73fa4762d1dc3f353b9ba96524221eba2cb5bf99893b7a678eebef41d252c925"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_timestamp_position.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_timestamp_position.md",
+          "exists": true,
+          "size_kb": 0.6,
+          "mtime": "2026-04-13 13:20 +08",
+          "hash": "f451c8722043dab7221a24db01567731fc279c4e2c45de0ebed43625f8b5b918"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_timestamp_position.md",
+          "exists": true,
+          "size_kb": 0.6,
+          "mtime": "2026-04-13 13:20 +08",
+          "hash": "f451c8722043dab7221a24db01567731fc279c4e2c45de0ebed43625f8b5b918"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_timezone_taipei_default.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_timezone_taipei_default.md",
+          "exists": true,
+          "size_kb": 2.8,
+          "mtime": "2026-04-11 16:51 +08",
+          "hash": "8e010d73805420cd3c509958a9d4e9d6dce0f0d8b268281fdd4851af27f41695"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_timezone_taipei_default.md",
+          "exists": true,
+          "size_kb": 2.8,
+          "mtime": "2026-04-11 16:51 +08",
+          "hash": "8e010d73805420cd3c509958a9d4e9d6dce0f0d8b268281fdd4851af27f41695"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_token_search.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_token_search.md",
+          "exists": true,
+          "size_kb": 1.1,
+          "mtime": "2026-04-07 20:57 +08",
+          "hash": "6e55c00dc7c03bccfc7972c42d82f4edcc92dca21a4049df097714f949095365"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_token_search.md",
+          "exists": true,
+          "size_kb": 1.1,
+          "mtime": "2026-04-07 20:57 +08",
+          "hash": "6e55c00dc7c03bccfc7972c42d82f4edcc92dca21a4049df097714f949095365"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_tree_growth_model.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_tree_growth_model.md",
+          "exists": true,
+          "size_kb": 1.1,
+          "mtime": "2026-04-12 22:25 +08",
+          "hash": "4c5365c25b78588edbc140e2105ada763400c18a7eae42efe3fdb863687cb0b0"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_tree_growth_model.md",
+          "exists": true,
+          "size_kb": 1.1,
+          "mtime": "2026-04-12 22:25 +08",
+          "hash": "4c5365c25b78588edbc140e2105ada763400c18a7eae42efe3fdb863687cb0b0"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/feedback_uncertainty_return_to_core.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\feedback_uncertainty_return_to_core.md",
+          "exists": true,
+          "size_kb": 3.3,
+          "mtime": "2026-04-11 14:49 +08",
+          "hash": "ed0c7a6eba64330bdd448affc30e33bf5743917c12420cf64a7c584e9586dbaf"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\feedback_uncertainty_return_to_core.md",
+          "exists": true,
+          "size_kb": 3.3,
+          "mtime": "2026-04-11 14:49 +08",
+          "hash": "ed0c7a6eba64330bdd448affc30e33bf5743917c12420cf64a7c584e9586dbaf"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/project_dashboard_replaces_discord.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_dashboard_replaces_discord.md",
+          "exists": true,
+          "size_kb": 1.2,
+          "mtime": "2026-04-13 15:43 +08",
+          "hash": "34ba816c18ed44b8ec975262f0daa43954dbda565128d8373dec427b0ffa815e"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_dashboard_replaces_discord.md",
+          "exists": true,
+          "size_kb": 1.2,
+          "mtime": "2026-04-13 15:43 +08",
+          "hash": "34ba816c18ed44b8ec975262f0daa43954dbda565128d8373dec427b0ffa815e"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/project_operational_model.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_operational_model.md",
+          "exists": true,
+          "size_kb": 1.2,
+          "mtime": "2026-04-07 23:05 +08",
+          "hash": "2270dd44722cd09546e1fde344ed2cdccdea9783b9f153d0d0576c2c3678229c"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_operational_model.md",
+          "exists": true,
+          "size_kb": 1.2,
+          "mtime": "2026-04-07 23:05 +08",
+          "hash": "2270dd44722cd09546e1fde344ed2cdccdea9783b9f153d0d0576c2c3678229c"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/project_pearl_birthday.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_pearl_birthday.md",
+          "exists": true,
+          "size_kb": 0.5,
+          "mtime": "2026-04-12 17:00 +08",
+          "hash": "5125a16ed3aa90f31ebfb55e385c6b432ac15b95cc614cab47e59d7af9a3336f"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_pearl_birthday.md",
+          "exists": true,
+          "size_kb": 0.5,
+          "mtime": "2026-04-12 17:00 +08",
+          "hash": "5125a16ed3aa90f31ebfb55e385c6b432ac15b95cc614cab47e59d7af9a3336f"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/project_recursive_insights.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_recursive_insights.md",
+          "exists": true,
+          "size_kb": 1.7,
+          "mtime": "2026-04-07 21:24 +08",
+          "hash": "a33c1893d1b727a60e1dbf4b553f0ad88e07a56a07a69301bfdc678f094f6ead"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_recursive_insights.md",
+          "exists": true,
+          "size_kb": 1.7,
+          "mtime": "2026-04-07 21:24 +08",
+          "hash": "a33c1893d1b727a60e1dbf4b553f0ad88e07a56a07a69301bfdc678f094f6ead"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/project_sensor_actuator_architecture.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_sensor_actuator_architecture.md",
+          "exists": true,
+          "size_kb": 3.2,
+          "mtime": "2026-04-12 00:13 +08",
+          "hash": "bb9527eede7fc6ca2c434b76c6ceca280ddc22f7f8cfb9456e991cc0f43bc1e3"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_sensor_actuator_architecture.md",
+          "exists": true,
+          "size_kb": 3.2,
+          "mtime": "2026-04-12 00:13 +08",
+          "hash": "bb9527eede7fc6ca2c434b76c6ceca280ddc22f7f8cfb9456e991cc0f43bc1e3"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/project_trading_data_purpose.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_trading_data_purpose.md",
+          "exists": true,
+          "size_kb": 1.0,
+          "mtime": "2026-04-12 22:21 +08",
+          "hash": "8ca0976188f5fcd2d81e25b57d2eb8ccd69eed3e46f268145f02b6484ecbb131"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_trading_data_purpose.md",
+          "exists": true,
+          "size_kb": 1.0,
+          "mtime": "2026-04-12 22:21 +08",
+          "hash": "8ca0976188f5fcd2d81e25b57d2eb8ccd69eed3e46f268145f02b6484ecbb131"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    },
+    {
+      "label": "memory/project_usage_baseline.md",
+      "copies": 2,
+      "status": "WARNING",
+      "locations": {
+        "A": {
+          "path": "C:\\Users\\admin\\.claude\\projects\\C--Users-admin\\memory\\project_usage_baseline.md",
+          "exists": true,
+          "size_kb": 0.7,
+          "mtime": "2026-04-08 00:10 +08",
+          "hash": "2b9a495f7240de8a2edad4fc0e2e6a78b43dabb94eecca787c2bde57fa40de05"
+        },
+        "B": {
+          "path": "C:\\Users\\admin\\LYH\\agent\\claude_memory\\project_usage_baseline.md",
+          "exists": true,
+          "size_kb": 0.7,
+          "mtime": "2026-04-08 00:10 +08",
+          "hash": "2b9a495f7240de8a2edad4fc0e2e6a78b43dabb94eecca787c2bde57fa40de05"
+        },
+        "C": {
+          "path": null,
+          "exists": false,
+          "size_kb": null,
+          "mtime": null,
+          "hash": null
+        },
+        "D_git": {
+          "repo": "C:\\Users\\admin\\LYH",
+          "tracked": false,
+          "commit_hash": null,
+          "pushed": null
+        }
+      },
+      "match_AB": true
+    }
+  ]
+}
