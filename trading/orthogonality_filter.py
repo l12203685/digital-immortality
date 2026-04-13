@@ -230,3 +230,216 @@ def load_recent_bars_from_log(
         {"open": p, "high": p, "low": p, "close": p, "volume": 0.0}
         for p in ordered
     ]
+
+
+# ---------------------------------------------------------------------------
+# Standalone portfolio-wide correlation report
+# ---------------------------------------------------------------------------
+
+def _load_signal_series_from_log(
+    log_path: Path,
+    lookback_ticks: int = 200,
+) -> Dict[str, List[int]]:
+    """Extract per-strategy signal series from trading_engine_log.jsonl.
+
+    Returns {strategy_name: [signal_at_tick_0, signal_at_tick_1, ...]}.
+    Only the last `lookback_ticks` unique ticks are kept.
+    """
+    tick_signals: Dict[int, Dict[str, int]] = {}
+    with open(log_path, "r", encoding="utf-8") as f:
+        for raw in f:
+            raw = raw.strip()
+            if not raw:
+                continue
+            try:
+                rec = json.loads(raw)
+            except json.JSONDecodeError:
+                continue
+            tick = rec.get("tick")
+            strat = rec.get("strategy")
+            sig = rec.get("signal")
+            if tick is None or strat is None or sig is None:
+                continue
+            tick_signals.setdefault(int(tick), {})[strat] = int(sig)
+
+    if not tick_signals:
+        return {}
+
+    sorted_ticks = sorted(tick_signals.keys())[-lookback_ticks:]
+    all_strats = sorted({s for t in sorted_ticks for s in tick_signals[t]})
+    result: Dict[str, List[int]] = {s: [] for s in all_strats}
+    for t in sorted_ticks:
+        row = tick_signals[t]
+        for s in all_strats:
+            result[s].append(row.get(s, 0))
+    return result
+
+
+def _pairwise_correlations(
+    series: Dict[str, List[int]],
+) -> List[Tuple[str, str, float]]:
+    """Compute pairwise Pearson correlations, return sorted by |corr| desc."""
+    names = sorted(series.keys())
+    pairs: List[Tuple[str, str, float]] = []
+    for i in range(len(names)):
+        for j in range(i + 1, len(names)):
+            r = OrthogonalityFilter.correlation(series[names[i]], series[names[j]])
+            pairs.append((names[i], names[j], r))
+    pairs.sort(key=lambda x: abs(x[2]), reverse=True)
+    return pairs
+
+
+def _generate_report(
+    status_path: Path,
+    log_path: Path,
+    output_path: Path,
+    corr_threshold: float = DEFAULT_MAX_CORR,
+    lookback: int = 200,
+) -> str:
+    """Build orthogonality report from engine log + status, write to output_path."""
+    with open(status_path, "r", encoding="utf-8") as f:
+        status = json.load(f)
+
+    active_names = list(status.get("signals", {}).keys())
+    disabled_names = list(status.get("disabled", {}).keys())
+
+    series = _load_signal_series_from_log(log_path, lookback)
+    all_known = set(active_names) | set(disabled_names)
+    # Include all strategies that have signal history
+    active_series = {k: v for k, v in series.items() if k in all_known}
+
+    if len(active_series) < 2:
+        report = (
+            "# Orthogonality Report\n\n"
+            f"Generated: {datetime.now(timezone.utc).isoformat()}\n\n"
+            "Fewer than 2 active strategies with signal history. "
+            "No correlation analysis possible.\n"
+        )
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(report)
+        return report
+
+    pairs = _pairwise_correlations(active_series)
+    flagged = [(a, b, r) for a, b, r in pairs if abs(r) > corr_threshold]
+
+    # Concentration score: fraction of strategy pairs that are correlated
+    total_pairs = len(pairs)
+    flagged_count = len(flagged)
+    concentration_pct = (flagged_count / total_pairs * 100) if total_pairs else 0.0
+
+    # Count strategies involved in at least one flagged pair
+    flagged_strats = set()
+    for a, b, _ in flagged:
+        flagged_strats.add(a)
+        flagged_strats.add(b)
+    strat_concentration_pct = (
+        len(flagged_strats) / len(active_series) * 100
+    ) if active_series else 0.0
+
+    # Signal activity: count non-zero signals per strategy
+    activity: Dict[str, int] = {}
+    for name, sigs in active_series.items():
+        activity[name] = sum(1 for s in sigs if s != 0)
+
+    # Build report
+    lines: List[str] = []
+    lines.append("# Orthogonality Report")
+    lines.append("")
+    lines.append(
+        f"Generated: {datetime.now(timezone.utc).isoformat()} | "
+        f"Lookback: {lookback} ticks | Threshold: {corr_threshold}"
+    )
+    lines.append("")
+
+    lines.append("## Strategies Analyzed")
+    lines.append("")
+    lines.append(f"| Strategy | Status | Non-zero signals |")
+    lines.append("|----------|--------|-----------------|")
+    for name in sorted(active_series.keys()):
+        st = "active" if name in active_names else "disabled"
+        lines.append(f"| {name} | {st} | {activity.get(name, 0)} |")
+    lines.append("")
+
+    lines.append("## Top Correlated Pairs")
+    lines.append("")
+    lines.append("| Rank | Strategy A | Strategy B | Correlation | Flag |")
+    lines.append("|------|-----------|-----------|-------------|------|")
+    for idx, (a, b, r) in enumerate(pairs[:20], 1):
+        flag = "NON-ORTHOGONAL" if abs(r) > corr_threshold else ""
+        lines.append(f"| {idx} | {a} | {b} | {r:+.4f} | {flag} |")
+    lines.append("")
+
+    lines.append("## Risk Concentration")
+    lines.append("")
+    lines.append(f"- **Flagged pairs**: {flagged_count}/{total_pairs} "
+                 f"({concentration_pct:.1f}%)")
+    lines.append(f"- **Strategies in flagged pairs**: "
+                 f"{len(flagged_strats)}/{len(active_series)} "
+                 f"({strat_concentration_pct:.1f}%)")
+    risk = "HIGH" if strat_concentration_pct > 50 else (
+        "MEDIUM" if strat_concentration_pct > 25 else "LOW"
+    )
+    lines.append(f"- **Risk level**: {risk}")
+    lines.append("")
+
+    lines.append("## Recommendations")
+    lines.append("")
+    if not flagged:
+        lines.append(
+            "No strategy pairs exceed the correlation threshold. "
+            "Portfolio is well-diversified."
+        )
+    else:
+        for a, b, r in flagged:
+            act_a = activity.get(a, 0)
+            act_b = activity.get(b, 0)
+            weaker = a if act_a <= act_b else b
+            lines.append(
+                f"- **{a}** <-> **{b}** (corr={r:+.3f}): "
+                f"Consider disabling **{weaker}** (fewer active signals) "
+                f"or diversifying its logic."
+            )
+    lines.append("")
+
+    report = "\n".join(lines)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(report)
+    return report
+
+
+if __name__ == "__main__":
+    import argparse
+
+    logging.basicConfig(level=logging.INFO)
+
+    parser = argparse.ArgumentParser(description="Portfolio orthogonality report")
+    parser.add_argument(
+        "--lookback", type=int, default=0,
+        help="Ticks to look back (0 = full history)",
+    )
+    parser.add_argument(
+        "--threshold", type=float, default=DEFAULT_MAX_CORR,
+        help=f"Correlation flag threshold (default {DEFAULT_MAX_CORR})",
+    )
+    args = parser.parse_args()
+
+    status_path = RESULTS_DIR / "trading_engine_status.json"
+    log_path = RESULTS_DIR / "trading_engine_log.jsonl"
+    output_path = RESULTS_DIR / "orthogonality_report.md"
+
+    if not status_path.exists():
+        print(f"ERROR: {status_path} not found")
+        raise SystemExit(1)
+    if not log_path.exists():
+        print(f"ERROR: {log_path} not found")
+        raise SystemExit(1)
+
+    lookback = args.lookback if args.lookback > 0 else 999_999
+    report = _generate_report(
+        status_path, log_path, output_path,
+        corr_threshold=args.threshold, lookback=lookback,
+    )
+    print(report)
+    print(f"\nReport written to {output_path}")
