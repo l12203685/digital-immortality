@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 296,
+  "files_digested": 297,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -297,10 +297,11 @@
     "E:/@交易/@AVAVA/Keep/!_TXDL_1_015_Gap01/!_TXDL_1_015_Gap01.txt",
     "E:/@交易/@AVAVA/Keep/!_TXDL_1_015_KD01/!_TXDL_1_015_KD01.txt",
     "E:/@交易/@AVAVA/Keep/!_TXDL_1_015_MA01/!_TXDL_1_015_MA01.txt",
-    "E:/@交易/@AVAVA/Keep/!_TXDL_1_017_FFG01/!_TXDL_1_017_FFG01.txt"
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_017_FFG01/!_TXDL_1_017_FFG01.txt",
+    "E:\\@交易\\@程式交易\\中華電信IDC客戶維護人員異動申請表範例.pdf"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T07:00:59+08:00",
+  "last_digested_at": "2026-04-14T07:19:53+08:00",
   "last_updated": "2026-04-14T07:00:59+08:00",
   "total_digested": 295
 }
