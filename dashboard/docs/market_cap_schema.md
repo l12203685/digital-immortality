@@ -36,15 +36,29 @@ Freshness 顯示: header `Fin:<age_min>m` — 由 `data_fresh.finance` 欄位提
 
 導數 (Δ) 顯示: `weekly_pct_recent − weekly_pct_prev` → 展現本週相對上週的加速/減速。
 
-## WatchRow schema (watchlist / crypto)
+## WatchRow schema (watchlist)
 
 | 欄位 | 單位 | 說明 |
 |---|---|---|
-| `symbol` | ticker | e.g. `TSM`, `BTC` |
+| `symbol` | ticker | e.g. `TSM`, `2330.TW` |
 | `label` | string | 顯示名 |
+| `category` | string | 分類標籤 (e.g. 半導體 / AI) |
 | `price_native` | 原幣別價格 | 依市場本幣 (TWD/USD/...) |
 | `price_usd` | USD 價格 | 統一換算 |
-| `weekly_pct` | percent | 本週變化 |
+| `currency` | ISO 4217 | 原幣別代碼 (`TWD` / `USD` / ...) |
+| `weekly_pct` | percent (小數) | 本週變化 |
+
+## CryptoRow schema (crypto bucket)
+
+> 注意: crypto bucket 欄位與 watchlist 不同 — 使用 `weekly_pct_recent` 而非 `weekly_pct`, 且無原幣別欄位 (一律 USD 報價)。
+
+| 欄位 | 單位 | 說明 |
+|---|---|---|
+| `symbol` | ticker | e.g. `BTC-USD`, `ETH-USD` |
+| `label` | string | 顯示名 |
+| `price_usd` | USD 價格 | 24/7 即時報價 |
+| `weekly_pct_recent` | percent (小數) | 過去 7 日變化 (24/7 市場, 不套週界) |
+| `weekly_pct_prev` | percent (小數) | 前一週變化 (若資料源提供) |
 
 ## 格式化函式
 
