@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 301,
+  "files_digested": 302,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -302,10 +302,11 @@
     "E:\\@交易\\@程式交易\\基礎班\\00_MC 基礎使用.pdf",
     "E:\\@交易\\@程式交易\\基礎班\\1chat.txt",
     "E:\\@交易\\@程式交易\\基礎班\\2 MC基本操作.pdf",
-    "E:\\@交易\\@程式交易\\基礎班\\3chat.txt"
+    "E:\\@交易\\@程式交易\\基礎班\\3chat.txt",
+    "E:\\@交易\\@程式交易\\基礎班\\3基礎語法介紹.pdf"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T09:19:46+08:00",
+  "last_digested_at": "2026-04-14T09:49:51+08:00",
   "last_updated": "2026-04-14T07:00:59+08:00",
   "total_digested": 295
 }
