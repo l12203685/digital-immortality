@@ -461,3 +461,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 9 g1_eval_status = cycle 423 — #21 gap scan 2/2 complete; terminal decision executed (BLOCK or CLOSE); frontier advances to #22 if CLOSE; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#21 terminal -->
 <!-- branch 2 digestion_progress = cycle 423 — Tier 1 +10 if novelty confirmed (361→371/2756); 350→400 bridge active; ROI gate applied; tier transition monitoring -->
 <!-- branch 5 organism_interact_status = cycle 423 — skipped; ran cycle 422 (neglect resolved); counter 0; resume at cycle 424 or if counter reaches 3 -->
+
+<!-- cycle update 2026-04-14 11:49:38 (Taipei) -->
+<!-- branch 1 regime_action = cycle 424 — post-regime-eval sync; next gate tick set from cycle 423 eval result; strategy probation assessed under new regime label; passive monitoring resumed -->
+<!-- branch 5 organism_interact_status = cycle 424 — full 10-scenario fidelity run executed; delta vs cycle 422 baseline computed; calibration patch or baseline re-lock applied; neglect counter reset to 0; resume at cycle 426 or if counter reaches 3 -->
+<!-- branch 9 g1_eval_status = cycle 424 — #22 gap scan 1/2 initiated; frontier at #22; #21 terminal decision applied from cycle 423; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#21 terminal -->
+<!-- branch 2 digestion_progress = cycle 424 — Tier 1 +10 if novelty confirmed (371→381/2756); 350→400 bridge active; ROI gate applied; tier transition monitoring -->
