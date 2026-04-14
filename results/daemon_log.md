@@ -1924,3 +1924,24 @@ plan_raw: ```json
       "name": "經濟",
       "action": "post-regime-eval follow-through: read regime_eval result from cycle 423 (regime label updated from mixed); set next gate tick = tick_count + ~1800 delta; assess whether any disabled strategies (PF<0.8) warrant re-evaluation under new regime label; if regime shifted trending → re-enable Donchian candidates on probation; log next_gate_tick and regime_label_current; resume passive monitoring",
       "prior
+
+## Cycle 1 — 2026-04-14 12:19:37 (Taipei)
+
+[cycle 425] classification=branch-growth
+actions: 3, updates: 4
+exec: b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b2(知識消化): (no executor for branch 2, runnable=python digest_knowledge.py --tier 1 --batch ; b1(經濟): (no executor for branch 1, runnable=python trading_engine.py --passive-monitor -
+digestion: Knowledge Digestion: 352/2756 files, Tier 1, Last: 2026-04-14T12:05:59+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 9,
+      "name": "Turing Test/G1",
+      "action": "#22 gap scan 2/2: complete gap analysis for #22; apply terminal decision (BLOCK or CLOSE); if CLOSE advance frontier to #23; update G1 eval log; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#22 terminal",
+      "priority": 1,
+      "runnable": "python consistency_test.py templates/example --scan 22 --pass 2"
+    },
+    {
+      "branch": 2,
+      "name": "知識消化",
+      "action
