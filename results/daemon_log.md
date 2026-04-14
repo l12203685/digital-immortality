@@ -2356,3 +2356,22 @@ plan_raw: ```json
       "branch": 7,
       "name": "E2E/infra",
       "action": "cycle 445 — voice-triggered E2E re-run; execute phase4b smoke test + reverse channel 1775898534 + public host smoke test;
+
+## Cycle 1 — 2026-04-14 22:49:23 (Taipei)
+
+[cycle 446] classification=branch-growth
+actions: 5, updates: 5
+exec: b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py --fidelity-run 1; b1(經濟): (no executor for branch 1, runnable=python trading_engine.py --passive-monitor); b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py --gap-scan 33 --p; b2(知識消化): (no executor for branch 2, runnable=python digest_knowledge.py --tier 1 --batch); b7(E2E/infra): (no executor for branch 7, runnable=python e2e_runner.py --phase4b --reverse-cha
+digestion: Knowledge Digestion: 373/2756 files, Tier 1, Last: 2026-04-14T22:19:36+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 5,
+      "name": "社交/organism",
+      "action": "cycle 446 — full 10-scenario fidelity run; counter=2 at cycle 445 (resume threshold met at cycle 446); compute delta vs cycle 444 baseline; apply calibration patch or re-lock baseline; reset neglect counter to 0; resume at cycle 448 or if counter reaches 3",
+      "priority": 1,
+      "runnable": "python organism_interact.py --fidelity-run 10 --baseline-cycle 444"
+    },
+    {
+      "branch": 1
