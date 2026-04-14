@@ -415,3 +415,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 2 digestion_progress = cycle 416 — Tier 2 +5 files; Tier 1 +10 if novelty confirmed (296→306/2756); ROI gate applied; 350 target bridge on track -->
 <!-- branch 1 regime_action = cycle 416 — passive monitoring; tick_count ~1646 < gate_tick 1797; no evaluation; next gate tick 1797 -->
 <!-- branch 4 discord_engagement_status = cycle 416 — window closed (finalized cycle 415); no action; monitor organic delta only -->
+
+<!-- cycle update 2026-04-14 08:19:35 (Taipei) -->
+<!-- branch 9 g1_eval_status = cycle 417 — #18 gap scan 2/2 complete; terminal decision executed (BLOCK or CLOSE); frontier advances to #19 if CLOSE; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#18 terminal -->
+<!-- branch 2 digestion_progress = cycle 417 — Tier 2 +5 files; Tier 1 +10 if novelty confirmed (306→316/2756); Tier 2 ROI gate applied; 350 target bridge on track -->
+<!-- branch 1 regime_action = cycle 417 — passive monitoring; tick_count ~1646 < gate_tick 1797; delta ~151 ticks; no evaluation; next gate tick 1797 -->
+<!-- branch 5 organism_interact_status = cycle 417 — skipped; ran cycle 416 (neglect resolved); counter 0; resume at cycle 418 or if counter reaches 3 -->
+<!-- branch 4 discord_engagement_status = cycle 417 — window closed (finalized cycle 415); no action; monitor organic delta only -->
