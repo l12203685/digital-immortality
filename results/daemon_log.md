@@ -1800,3 +1800,24 @@ plan_raw: ```json
       "branch": 2,
       "name": "知識消化",
       "action": "T
+
+## Cycle 1 — 2026-04-14 08:49:35 (Taipei)
+
+[cycle 418] classification=branch-growth
+actions: 3, updates: 5
+exec: b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py --scenarios 10 -; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b2(知識消化): (no executor for branch 2, runnable=python digest_knowledge.py --tier 2 --batch 
+digestion: Knowledge Digestion: 299/2756 files, Tier 1, Last: 2026-04-14T08:19:42+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 5,
+      "name": "社交/organism",
+      "action": "full 10-scenario fidelity run; compute delta vs cycle 416 baseline; apply calibration patch or re-lock baseline; reset neglect counter to 0; neglect alert resolved",
+      "priority": 1,
+      "runnable": "python organism_interact.py --scenarios 10 --baseline cycle416 --output results/organism_418.json"
+    },
+    {
+      "branch": 9,
+      "name": "Turing Test/G1",
+      "action": "gap scan #1
