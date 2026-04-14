@@ -1,6 +1,6 @@
 {
   "total_files_known": 2756,
-  "files_digested": 302,
+  "files_digested": 322,
   "digested_paths": [
     "E:/@交易/@程式交易/ALGO 知名不具/00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf",
     "E:/@交易/@程式交易/ALGO 知名不具/FDG_Seminar_150408.pdf",
@@ -303,10 +303,30 @@
     "E:\\@交易\\@程式交易\\基礎班\\1chat.txt",
     "E:\\@交易\\@程式交易\\基礎班\\2 MC基本操作.pdf",
     "E:\\@交易\\@程式交易\\基礎班\\3chat.txt",
-    "E:\\@交易\\@程式交易\\基礎班\\3基礎語法介紹.pdf"
+    "E:\\@交易\\@程式交易\\基礎班\\3基礎語法介紹.pdf",
+    "E:\\@交易\\@程式交易\\基礎班\\4chat.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_017_Transformer01/!_TXDL_1_017_Transformer01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_020_DCC01/!_TXDL_1_020_DCC01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_020_WeekTrade01/!_TXDL_1_020_WeekTrade01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_022_VHF01/!_TXDL_1_022_VHF01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_023_ASI01/!_TXDL_1_023_ASI01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_023_ASI02/!_TXDL_1_023_ASI02.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_023_ASI03/!_TXDL_1_023_ASI03.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_024_3DHL/!_TXDL_1_024_3DHL.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_025_3GP01/!_TXDL_1_025_3GP01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_029_MA+ATR01/!_TXDL_1_029_MA+ATR01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_030_CT01/!_TXDL_1_030_CT001.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_030_MA+CT01/!_TXDL_1_030_MA+CT01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_030_MTM01/!_TXDL_1_030_MTM01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_030_RSI01/!_TXDL_1_030_RSI01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_032_KC01/!_TXDL_1_032_KC01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_050_Gap01/!_TXDL_1_050_Gap01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_060_BB01/!_TXDL_1_060_BB01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_060_LR01/!_TXDL_1_060_LR01.txt",
+    "E:/@交易/@AVAVA/Keep/!_TXDL_1_075_DR01/!_TXDL_1_075_DR01.txt"
   ],
   "current_tier": 1,
-  "last_digested_at": "2026-04-14T09:49:51+08:00",
-  "last_updated": "2026-04-14T07:00:59+08:00",
-  "total_digested": 295
+  "last_digested_at": "2026-04-14T10:45:59+08:00",
+  "last_updated": "2026-04-14T10:45:59+08:00",
+  "total_digested": 314
 }
