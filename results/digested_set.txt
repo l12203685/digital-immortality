@@ -328,3 +328,4 @@ E:/@交易/@AVAVA/Keep/s !_TXDL_1_030_Gap/.code.20210713_194450.txt
 E:/@交易/@AVAVA/Keep/s !_TXDL_1_030_OverHeat/.code.20210713_194418.txt
 E:/@交易/@AVAVA/Keep/s !_TXDL_1_030_QTC07VolatilityStrategy/.code.20210713_203204.txt
 E:/@交易/@AVAVA/Keep/s !_TXDL_1_300_LongBreak/.code.20210716_224414.txt
+E:/@交易/@AVAVA/Keep/!_TXAD_1_003_FlipLS01/!_TXAD_1_003_FlipLS01.txt
