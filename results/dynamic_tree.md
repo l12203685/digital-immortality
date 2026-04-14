@@ -723,3 +723,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 1 regime_action = cycle 461 — passive monitoring; tick_count ~5427; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
 <!-- branch 5 organism_interact_status = cycle 461 — skipped; ran cycle 460 (neglect counter reset); counter 1; resume at cycle 462 or if counter reaches 3 -->
 <!-- branch 7 e2e_status = cycle 461 — standby; phase4c complete; no new infra change detected; no action -->
+
+<!-- cycle update 2026-04-15 06:49:22 (Taipei) -->
+<!-- branch 5 organism_interact_status = cycle 462 — full 10-scenario fidelity run executed; delta vs cycle 460 baseline computed; calibration patch or baseline re-lock applied; neglect counter reset to 0; resume at cycle 464 or if counter reaches 3 -->
+<!-- branch 9 g1_eval_status = cycle 462 — #41 gap scan 1/2 initiated; frontier at #41; #40 terminal decision applied from cycle 461; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#40 terminal -->
+<!-- branch 2 digestion_progress = cycle 462 — Tier 1 +10 if novelty confirmed (751→761/2756); 400 milestone stable; ROI gate applied; tier transition assessment active -->
+<!-- branch 1 regime_action = cycle 462 — passive monitoring; tick_count ~5457; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
+<!-- branch 7 e2e_status = cycle 462 — standby; phase4c complete; no new infra change detected; no action -->
