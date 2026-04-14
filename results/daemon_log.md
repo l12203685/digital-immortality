@@ -1878,3 +1878,19 @@ plan_raw: ```json
       "branch": 2,
       "name": "知識消化",
       "acti
+
+## Cycle 1 — 2026-04-14 10:49:35 (Taipei)
+
+[cycle 422] classification=branch-growth
+actions: 4, updates: 4
+exec: b1(經濟): (no executor for branch 1, runnable=python trading_engine.py --check-gate --tick; b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py --scenarios 10 -; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py templates/example; b2(知識消化): (no executor for branch 2, runnable=python digest_knowledge.py --tier 1 --batch 
+digestion: Knowledge Digestion: 322/2756 files, Tier 1, Last: 2026-04-14T10:45:59+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 1,
+      "name": "經濟",
+      "action": "gate_tick 1797 imminent (tick ~1766, delta ~31); initiate regime_eval preparation: read current regime snapshot, stage evaluation criteria, queue full regime_eval for cycle 423 if tick < 1797 at cycle start, or execute immediately if tick >= 1797; log gate_imminent=true; no trade action until eval completes",
+      "priority": 1,
+      "runnable": "python trading_engine.py --check-gate --tick-threshold 
