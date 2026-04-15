@@ -3131,3 +3131,24 @@ plan_raw: ```json
       "branch": 2,
       "name": "知識消化",
       "action": "cycle 483 — 
+
+## Cycle 1 — 2026-04-15 17:49:29 (Taipei)
+
+[cycle 484] classification=branch-growth
+actions: 5, updates: 5
+exec: b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py --full-fidelity ; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py --gap-scan 52 --p; b2(知識消化): (no executor for branch 2, runnable=python digest_knowledge.py --tier2-pilot-bat; b1(經濟): (no executor for branch 1, runnable=python trading_engine.py --passive-monitor); b7(E2E/infra): (no executor for branch 7, runnable=skip)
+digestion: Knowledge Digestion: 411/2756 files, Tier 1, Last: 2026-04-15T17:19:34+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 5,
+      "name": "社交/organism",
+      "action": "cycle 484 — full 10-scenario fidelity run; delta vs cycle 482 baseline computed; calibration patch or baseline re-lock applied; neglect counter reset to 0; resume at cycle 486 or if counter reaches 3",
+      "priority": 1,
+      "runnable": "python organism_interact.py --full-fidelity --scenarios 10 --baseline cycle482"
+    },
+    {
+      "branch": 9,
+      "name": "Turing Test/G1",
+      "acti
