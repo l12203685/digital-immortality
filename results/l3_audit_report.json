@@ -1,44 +1,44 @@
 {
-  "audit_ts": "2026-04-15 19:18:47",
+  "audit_ts": "2026-04-15 19:48:47",
   "l1": {
     "layer": "L1 Execution",
     "health": "YELLOW",
     "details": {
       "daemon_log_age_h": 0.49,
-      "daemon_log_mtime": "2026-04-15 18:49",
+      "daemon_log_mtime": "2026-04-15 19:19",
       "daemon_cycles_in_tail": 3,
-      "daemon_last_cycle": 486,
+      "daemon_last_cycle": 487,
       "daemon_cycles_24h_approx": 3,
       "session_state_mtime": "2026-04-14 06:33",
-      "session_state_age_h": 36.76,
+      "session_state_age_h": 37.26,
       "session_state_has_carryover": true,
-      "trading_engine_mtime": "2026-04-15 19:18",
-      "trading_engine_age_h": 0.01,
+      "trading_engine_mtime": "2026-04-15 19:48",
+      "trading_engine_age_h": 0.0,
       "trading_active_strategies": 4,
-      "trading_tick_count": 6175,
+      "trading_tick_count": 6205,
       "trading_regime": "mixed",
       "trading_total_pnl_pct": 2.5623
     },
     "issues": [
-      "session_state.md stale: 36.8h ago (not refreshed in >24h)"
+      "session_state.md stale: 37.3h ago (not refreshed in >24h)"
     ]
   },
   "l2": {
     "layer": "L2 Learning",
     "health": "GREEN",
     "details": {
-      "digestion_state_mtime": "2026-04-15 18:49",
+      "digestion_state_mtime": "2026-04-15 19:19",
       "digestion_state_age_h": 0.49,
       "digestion_total_known": 2756,
-      "digestion_files_done": 414,
-      "digestion_progress_pct": 15.02,
-      "digestion_last_at": "2026-04-15T18:49:29+08:00",
+      "digestion_files_done": 415,
+      "digestion_progress_pct": 15.06,
+      "digestion_last_at": "2026-04-15T19:19:37+08:00",
       "digestion_current_tier": 1,
       "memory_md_count": 58,
       "memory_latest_file": "feedback_proactive_branch_status.md",
-      "memory_latest_age_h": 4.2,
+      "memory_latest_age_h": 4.7,
       "distil_dedupe_mtime": "2026-04-14 01:14",
-      "distil_dedupe_age_h": 42.07,
+      "distil_dedupe_age_h": 42.57,
       "distil_duplicate_count": 0
     },
     "issues": []
@@ -48,7 +48,7 @@
     "health": "GREEN",
     "details": {
       "engine_rules_mtime": "2026-04-14 10:40",
-      "engine_rules_age_h": 32.64,
+      "engine_rules_age_h": 33.14,
       "engine_rules_evolved_at": "2026-04-14T02:40:19.835996+00:00",
       "engine_rules_evolution_entries": 9,
       "engine_rules_dead_loop_count": 1,
@@ -56,18 +56,18 @@
       "engine_rules_last_event_ts": "2026-04-14T02:40:19.835996+00:00",
       "engine_l3_log_mtime": "2026-04-14 10:40",
       "engine_l3_log_entries": 6,
-      "engine_l3_log_age_h": 32.64,
+      "engine_l3_log_age_h": 33.14,
       "execution_rules_mtime": "2026-04-15 19:16",
-      "execution_rules_age_h": 0.04,
+      "execution_rules_age_h": 0.54,
       "execution_rules_kill_count": 72,
       "execution_rules_evolved_at": "2026-04-15T11:16:25.553341+00:00",
       "dna_core_mtime": "2026-04-14 19:54",
-      "dna_core_age_h": 23.41,
-      "dynamic_tree_mtime": "2026-04-15 18:49",
+      "dna_core_age_h": 23.91,
+      "dynamic_tree_mtime": "2026-04-15 19:19",
       "dynamic_tree_age_h": 0.49,
       "dynamic_tree_derivative_scores_found": 0,
       "dna_evolution_log": "MISSING",
-      "engine_rules_evolved_age_h": 32.64
+      "engine_rules_evolved_age_h": 33.14
     },
     "issues": []
   },
