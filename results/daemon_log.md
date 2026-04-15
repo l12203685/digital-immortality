@@ -3390,3 +3390,24 @@ plan_raw: ```json
       "branch": 2,
       "name": "知識消化",
       "action": "Tier 2 pilot batch +10 if novelty confirmed (1081→1091/2756); tier transition active; ROI gate
+
+## Cycle 1 — 2026-04-16 00:19:24 (Taipei)
+
+[cycle 497] classification=branch-growth
+actions: 5, updates: 5
+exec: b5(社交/organism): (no executor for branch 5, runnable=organism_interact); b9(g1_eval): (no executor for branch 9, runnable=g1_gap_scan); b2(知識消化): (no executor for branch 2, runnable=digestion_batch); b1(經濟/trading): (no executor for branch 1, runnable=passive_monitor); b7(e2e/infra): (no executor for branch 7, runnable=e2e_smoke_test)
+digestion: Knowledge Digestion: 424/2756 files, Tier 1, Last: 2026-04-15T23:49:49+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 5,
+      "name": "社交/organism",
+      "action": "Full 10-scenario fidelity run; delta vs cycle 495 baseline computed; calibration patch or baseline re-lock applied; neglect counter reset to 0; resume at cycle 499 or if counter reaches 3",
+      "priority": 1,
+      "runnable": "organism_interact"
+    },
+    {
+      "branch": 9,
+      "name": "g1_eval",
+      "action": "#58 gap scan 1/2 initiated; frontier at #58; #57 terminal decision applied
