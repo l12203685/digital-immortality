@@ -2845,3 +2845,23 @@ plan_raw: ```json
       "branch": 9,
       "name": "Turing Test/G1",
       "action": "cycle 469 — #44 gap scan 2/2 complete; terminal decision executed (BLOCK or CLOSE); frontier advances to #45 if CLOS
+
+## Cycle 1 — 2026-04-15 10:49:25 (Taipei)
+
+[cycle 470] classification=branch-growth
+actions: 5, updates: 5
+exec: b5(社交/organism): (no executor for branch 5, runnable=python organism_interact.py --fidelity-run -; b9(Turing Test/G1): (no executor for branch 9, runnable=python consistency_test.py --gap-scan 45 --p; b2(知識消化): (no executor for branch 2, runnable=python digest_knowledge.py --tier2-pilot-bat; b1(經濟): (no executor for branch 1, runnable=python trading_engine.py --passive-monitor); b7(E2E/infra): (no executor for branch 7, runnable=skip)
+digestion: Knowledge Digestion: 397/2756 files, Tier 1, Last: 2026-04-15T10:19:34+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 5,
+      "name": "社交/organism",
+      "action": "cycle 470 — full 10-scenario fidelity run scheduled (resume at cycle 470 per cycle 468 note); compute delta vs cycle 468 baseline; apply calibration patch or re-lock baseline; reset neglect counter to 0; resume at cycle 472 or if counter reaches 3",
+      "priority": 1,
+      "runnable": "python organism_interact.py --fidelity-run --baseline-cycle 468"
+    },
+    {
+      "branch": 9,
+      "nam
