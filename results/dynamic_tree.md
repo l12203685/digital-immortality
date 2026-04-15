@@ -772,3 +772,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 9 g1_eval_status = cycle 468 — #44 gap scan 1/2 initiated; frontier at #44; #43 terminal decision applied from cycle 467; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#43 terminal -->
 <!-- branch 2 digestion_progress = cycle 468 — tier transition ROI gate evaluated; Tier 2 pilot batch launched if gate clears (811→821/2756); 800 milestone confirmed; tier transition active -->
 <!-- branch 7 e2e_status = cycle 468 — standby; phase4b/4c confirmed cycle 465; no new infra change; no action -->
+
+<!-- cycle update 2026-04-15 10:19:29 (Taipei) -->
+<!-- branch 1 regime_action = cycle 469 — passive monitoring; tick_count ~5667; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
+<!-- branch 9 g1_eval_status = cycle 469 — #44 gap scan 2/2 complete; terminal decision executed (BLOCK or CLOSE); frontier advances to #45 if CLOSE; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#44 terminal -->
+<!-- branch 2 digestion_progress = cycle 469 — Tier 2 pilot batch progress; +10 if novelty confirmed (821→831/2756); tier transition active; ROI gate monitored -->
+<!-- branch 5 organism_interact_status = cycle 469 — skipped; ran cycle 468 (neglect counter reset); counter 1; resume at cycle 470 or if counter reaches 3 -->
+<!-- branch 7 e2e_status = cycle 469 — standby; phase4b/4c confirmed cycle 465; no new infra change; no action -->
