@@ -974,3 +974,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 9 g1_eval_status = cycle 510 — #58 gap scan 2/2 complete; terminal decision executed; frontier advances to #59 if CLOSE; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#58 terminal -->
 <!-- branch 2 digestion_progress = cycle 510 — Tier 2 pilot batch progress; +10 if novelty confirmed (1101→1111/2756); tier transition active; ROI gate monitored -->
 <!-- branch 1 regime_action = cycle 510 — passive monitoring; tick_count ~4433; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
+
+<!-- cycle update 2026-04-16 07:19:29 (Taipei) -->
+<!-- branch 7 e2e_status = cycle 511 — voice-triggered phase4b smoke test; reverse channel 1775898534 verified; public host smoke test executed; result logged -->
+<!-- branch 9 g1_eval_status = cycle 511 — #59 gap scan 1/2 initiated; frontier at #59; #5–#58 terminal -->
+<!-- branch 2 digestion_progress = cycle 511 — Tier 2 pilot batch progress; +10 if novelty confirmed (1111→1121/2756); tier transition active; ROI gate monitored -->
+<!-- branch 1 regime_action = cycle 511 — passive monitoring; tick_count ~4460; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
