@@ -36,6 +36,8 @@ ORGANISMS_DIR = os.path.join(
 )
 BASELINES_FILE = os.path.join(RESULTS_DIR, "drift_baselines.json")
 DRIFT_REPORT_FILE = os.path.join(RESULTS_DIR, "drift_report.json")
+DRIFT_JSONL_FILE = os.path.join(RESULTS_DIR, "organism_drift.jsonl")
+DRIFT_FLAG_FILE = os.path.join(RESULTS_DIR, "organism_drift_flag.json")
 
 DRIFT_THRESHOLD_PP = 20.0   # percentage points
 CONSECUTIVE_DRIFT_WARN = 3  # warn after N consecutive drifted checks
@@ -541,6 +543,73 @@ def save_report(
         json.dump(report, fh, indent=2, ensure_ascii=False)
 
     print(f"Report saved: {DRIFT_REPORT_FILE}")
+
+    _append_jsonl(report)
+    _write_flag(report)
+
+
+def _append_jsonl(report: dict) -> None:
+    """Append one compact JSONL line per drift_detector run for time-series.
+
+    Each line captures: generated_at, any_drift, and per-organism summary.
+    """
+    line = {
+        "generated_at": report["generated_at"],
+        "threshold_pp": report["threshold_pp"],
+        "any_drift": report.get("any_drift", False),
+        "organisms": [
+            {
+                "name": o["name"],
+                "baseline_rate": o["baseline"]["agree_rate"],
+                "current_rate": (o.get("current") or {}).get("agree_rate"),
+                "drift_pp": o.get("drift_pp"),
+                "drifted": o.get("drifted", False),
+                "trend": o.get("trend"),
+                "record_count": o.get("record_count", 0),
+                "consecutive_drift_checks": o.get("consecutive_drift_checks", 0),
+            }
+            for o in report["organisms"]
+        ],
+    }
+    try:
+        with open(DRIFT_JSONL_FILE, "a", encoding="utf-8") as fh:
+            fh.write(json.dumps(line, ensure_ascii=False) + "\n")
+        print(f"JSONL appended: {DRIFT_JSONL_FILE}")
+    except OSError as exc:
+        print(f"  ! Failed to append JSONL: {exc}")
+
+
+def _write_flag(report: dict) -> None:
+    """Write a small flag file consumed by the dashboard /api/statusline.
+
+    Presence alone is not enough — the dashboard reads ``red_flag`` to decide
+    whether to raise an alert. We always rewrite so the flag reflects the
+    latest run (avoids stale red after drift resolves).
+    """
+    drifted = [
+        o for o in report["organisms"]
+        if o.get("drifted") or o.get("consecutive_drift_checks", 0) >= CONSECUTIVE_DRIFT_WARN
+    ]
+    flag = {
+        "generated_at": report["generated_at"],
+        "red_flag": bool(drifted),
+        "threshold_pp": report["threshold_pp"],
+        "drifted_organisms": [
+            {
+                "name": o["name"],
+                "drift_pp": o.get("drift_pp"),
+                "consecutive_drift_checks": o.get("consecutive_drift_checks", 0),
+            }
+            for o in drifted
+        ],
+        "total_organisms": len(report["organisms"]),
+    }
+    try:
+        with open(DRIFT_FLAG_FILE, "w", encoding="utf-8") as fh:
+            json.dump(flag, fh, indent=2, ensure_ascii=False)
+        print(f"Flag written: {DRIFT_FLAG_FILE} (red_flag={flag['red_flag']})")
+    except OSError as exc:
+        print(f"  ! Failed to write flag: {exc}")
 
 
 # ---------------------------------------------------------------------------
