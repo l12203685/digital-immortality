@@ -849,3 +849,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 1 regime_action = cycle 479 — passive monitoring; tick_count ~5967; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
 <!-- branch 5 organism_interact_status = cycle 479 — skipped; ran cycle 478 (neglect counter reset); counter 1; resume at cycle 480 or if counter reaches 3 -->
 <!-- branch 7 e2e_status = cycle 479 — standby; cycle 477 smoke test passed; voice channel 1775898534 confirmed active; no new infra change; no action -->
+
+<!-- cycle update 2026-04-15 15:49:32 (Taipei) -->
+<!-- branch 5 organism_interact_status = cycle 480 — full 10-scenario fidelity run executed; delta vs cycle 478 baseline computed; calibration patch or baseline re-lock applied; neglect counter reset to 0; resume at cycle 482 or if counter reaches 3 -->
+<!-- branch 9 g1_eval_status = cycle 480 — #50 gap scan 1/2 initiated; frontier at #50; #49 terminal decision applied from cycle 479; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#49 terminal -->
+<!-- branch 2 digestion_progress = cycle 480 — Tier 2 pilot batch progress; +10 if novelty confirmed (931→941/2756); tier transition active; ROI gate monitored -->
+<!-- branch 7 e2e_status = cycle 480 — voice-triggered E2E smoke test executed; reverse channel 1775898534 tested; public host smoke test run; phase4b round-trip validation; pass/fail logged -->
+<!-- branch 1 regime_action = cycle 480 — passive monitoring; tick_count ~5997; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
