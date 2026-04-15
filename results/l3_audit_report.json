@@ -1,42 +1,44 @@
 {
-  "audit_ts": "2026-04-14 10:40:22",
+  "audit_ts": "2026-04-15 15:11:26",
   "l1": {
     "layer": "L1 Execution",
-    "health": "GREEN",
+    "health": "YELLOW",
     "details": {
-      "daemon_log_age_h": 0.35,
-      "daemon_log_mtime": "2026-04-14 10:19",
+      "daemon_log_age_h": 0.37,
+      "daemon_log_mtime": "2026-04-15 14:49",
       "daemon_cycles_in_tail": 3,
-      "daemon_last_cycle": 421,
+      "daemon_last_cycle": 478,
       "daemon_cycles_24h_approx": 3,
       "session_state_mtime": "2026-04-14 06:33",
-      "session_state_age_h": 4.12,
+      "session_state_age_h": 32.64,
       "session_state_has_carryover": true,
-      "trading_engine_mtime": "2026-04-14 10:40",
+      "trading_engine_mtime": "2026-04-15 15:11",
       "trading_engine_age_h": 0.0,
-      "trading_active_strategies": 13,
-      "trading_tick_count": 1785,
+      "trading_active_strategies": 4,
+      "trading_tick_count": 5928,
       "trading_regime": "mixed",
-      "trading_total_pnl_pct": 3.3827
+      "trading_total_pnl_pct": 2.5623
     },
-    "issues": []
+    "issues": [
+      "session_state.md stale: 32.6h ago (not refreshed in >24h)"
+    ]
   },
   "l2": {
     "layer": "L2 Learning",
     "health": "GREEN",
     "details": {
-      "digestion_state_mtime": "2026-04-14 10:19",
-      "digestion_state_age_h": 0.34,
+      "digestion_state_mtime": "2026-04-15 14:49",
+      "digestion_state_age_h": 0.37,
       "digestion_total_known": 2756,
-      "digestion_files_done": 303,
-      "digestion_progress_pct": 10.99,
-      "digestion_last_at": "2026-04-14T10:19:41+08:00",
+      "digestion_files_done": 406,
+      "digestion_progress_pct": 14.73,
+      "digestion_last_at": "2026-04-15T14:49:31+08:00",
       "digestion_current_tier": 1,
-      "memory_md_count": 43,
-      "memory_latest_file": "MEMORY.md",
-      "memory_latest_age_h": 0.15,
+      "memory_md_count": 58,
+      "memory_latest_file": "feedback_proactive_branch_status.md",
+      "memory_latest_age_h": 0.08,
       "distil_dedupe_mtime": "2026-04-14 01:14",
-      "distil_dedupe_age_h": 9.43,
+      "distil_dedupe_age_h": 37.95,
       "distil_duplicate_count": 0
     },
     "issues": []
@@ -46,7 +48,7 @@
     "health": "GREEN",
     "details": {
       "engine_rules_mtime": "2026-04-14 10:40",
-      "engine_rules_age_h": 0.0,
+      "engine_rules_age_h": 28.52,
       "engine_rules_evolved_at": "2026-04-14T02:40:19.835996+00:00",
       "engine_rules_evolution_entries": 9,
       "engine_rules_dead_loop_count": 1,
@@ -54,18 +56,18 @@
       "engine_rules_last_event_ts": "2026-04-14T02:40:19.835996+00:00",
       "engine_l3_log_mtime": "2026-04-14 10:40",
       "engine_l3_log_entries": 6,
-      "engine_l3_log_age_h": 0.0,
-      "execution_rules_mtime": "2026-04-14 10:34",
-      "execution_rules_age_h": 0.11,
-      "execution_rules_kill_count": 29,
-      "execution_rules_evolved_at": "2026-04-14T02:34:01.422783+00:00",
-      "dna_core_mtime": "2026-04-13 00:23",
-      "dna_core_age_h": 34.28,
-      "dynamic_tree_mtime": "2026-04-14 10:19",
-      "dynamic_tree_age_h": 0.35,
+      "engine_l3_log_age_h": 28.52,
+      "execution_rules_mtime": "2026-04-15 14:47",
+      "execution_rules_age_h": 0.41,
+      "execution_rules_kill_count": 66,
+      "execution_rules_evolved_at": "2026-04-15T05:07:01.915517+00:00",
+      "dna_core_mtime": "2026-04-14 19:54",
+      "dna_core_age_h": 19.28,
+      "dynamic_tree_mtime": "2026-04-15 14:49",
+      "dynamic_tree_age_h": 0.37,
       "dynamic_tree_derivative_scores_found": 0,
       "dna_evolution_log": "MISSING",
-      "engine_rules_evolved_age_h": 0.0
+      "engine_rules_evolved_age_h": 28.52
     },
     "issues": []
   },
@@ -74,18 +76,19 @@
       "L1_to_L2": "OK",
       "L2_to_L3": "OK",
       "L3_to_L1_feedback": "OK",
-      "L3_to_L1_feedback_detail": "execution_rules.json evolved_at=2026-04-14T02:34:01.422783+00:00"
+      "L3_to_L1_feedback_detail": "execution_rules.json evolved_at=2026-04-15T05:07:01.915517+00:00"
     },
     "issues": [],
     "details_l3_checks": 8
   },
   "recommendations": [
-    "All layers healthy — continue current recursive cadence"
+    "Investigate L1 slowdown: check daemon process, review last cycle output",
+    "Refresh session_state.md — it is >24h stale; next cold-start will use outdated relay"
   ],
   "summary": {
-    "l1_health": "GREEN",
+    "l1_health": "YELLOW",
     "l2_health": "GREEN",
     "l3_health": "GREEN",
-    "overall_exit_code": 0
+    "overall_exit_code": 1
   }
 }

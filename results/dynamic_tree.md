@@ -807,3 +807,45 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 2 digestion_progress = cycle 473 — Tier 2 pilot batch progress; +10 if novelty confirmed (861→871/2756); tier transition active; ROI gate monitored -->
 <!-- branch 5 organism_interact_status = cycle 473 — skipped; ran cycle 472 (neglect counter reset); counter 1; resume at cycle 474 or if counter reaches 3 -->
 <!-- branch 7 e2e_status = cycle 473 — standby; phase4b e2e round-trip validated cycle 471; voice channel 1775898534 confirmed active; no new infra change; no action -->
+
+<!-- cycle update 2026-04-15 12:49:25 (Taipei) -->
+<!-- branch 5 organism_interact_status = cycle 474 — full 10-scenario fidelity run executed; delta vs cycle 472 baseline computed; calibration patch or baseline re-lock applied; neglect counter reset to 0; resume at cycle 476 or if counter reaches 3 -->
+<!-- branch 9 g1_eval_status = cycle 474 — #47 gap scan 1/2 initiated; frontier at #47; #46 terminal decision applied from cycle 473; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#46 terminal -->
+<!-- branch 2 digestion_progress = cycle 474 — Tier 2 pilot batch progress; +10 if novelty confirmed (871→881/2756); tier transition active; ROI gate monitored -->
+<!-- branch 1 regime_action = cycle 474 — passive monitoring; tick_count ~5817; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
+<!-- branch 7 e2e_status = cycle 474 — standby; phase4b e2e round-trip validated cycle 471; voice channel 1775898534 confirmed active; no new infra change; no action -->
+
+<!-- cycle update 2026-04-15 13:19:31 (Taipei) -->
+<!-- branch 9 g1_eval_status = cycle 475 — #47 gap scan 2/2 complete; terminal decision executed (BLOCK or CLOSE); frontier advances to #48 if CLOSE; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#47 terminal -->
+<!-- branch 2 digestion_progress = cycle 475 — Tier 2 pilot batch progress; +10 if novelty confirmed (881→891/2756); tier transition active; ROI gate monitored -->
+<!-- branch 1 regime_action = cycle 475 — passive monitoring; tick_count ~5847; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
+<!-- branch 5 organism_interact_status = cycle 475 — skipped; ran cycle 474 (neglect counter reset); counter 1; resume at cycle 476 or if counter reaches 3 -->
+<!-- branch 7 e2e_status = cycle 475 — standby; phase4b e2e round-trip validated cycle 471; voice channel 1775898534 confirmed active; no new infra change; no action -->
+
+<!-- cycle update 2026-04-15 13:49:29 (Taipei) -->
+<!-- branch 5 organism_interact_status = cycle 476 — full 10-scenario fidelity run executed; delta vs cycle 474 baseline computed; calibration patch or baseline re-lock applied; neglect counter reset to 0; resume at cycle 478 or if counter reaches 3 -->
+<!-- branch 9 g1_eval_status = cycle 476 — #48 gap scan 1/2 initiated; frontier at #48; #47 terminal decision applied from cycle 475; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#47 terminal -->
+<!-- branch 2 digestion_progress = cycle 476 — Tier 2 pilot batch progress; +10 if novelty confirmed (891→901/2756); tier transition active; ROI gate monitored -->
+<!-- branch 1 regime_action = cycle 476 — passive monitoring; tick_count ~5877; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
+<!-- branch 7 e2e_status = cycle 476 — standby; phase4b e2e round-trip validated cycle 471; voice channel 1775898534 confirmed active; no new infra change; no action -->
+
+<!-- cycle update 2026-04-15 14:19:29 (Taipei) -->
+<!-- branch 7 e2e_status = cycle 477 — voice-triggered E2E smoke test executed; reverse channel 1775898534 tested; public host smoke test run; phase4b round-trip validation; pass/fail logged -->
+<!-- branch 9 g1_eval_status = cycle 477 — #48 gap scan 2/2 complete; terminal decision executed (BLOCK or CLOSE); frontier advances to #49 if CLOSE; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#48 terminal -->
+<!-- branch 2 digestion_progress = cycle 477 — Tier 2 pilot batch progress; +10 if novelty confirmed (901→911/2756); tier transition active; ROI gate monitored -->
+<!-- branch 1 regime_action = cycle 477 — passive monitoring; tick_count ~5907; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
+<!-- branch 5 organism_interact_status = cycle 477 — skipped; ran cycle 476 (neglect counter reset); counter 1; resume at cycle 478 or if counter reaches 3 -->
+
+<!-- cycle update 2026-04-15 14:49:26 (Taipei) -->
+<!-- branch 5 organism_interact_status = cycle 478 — full 10-scenario fidelity run executed; delta vs cycle 476 baseline computed; calibration patch or baseline re-lock applied; neglect counter reset to 0; resume at cycle 480 or if counter reaches 3 -->
+<!-- branch 9 g1_eval_status = cycle 478 — #49 gap scan 1/2 initiated; frontier at #49; #48 terminal decision applied from cycle 477; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#48 terminal -->
+<!-- branch 2 digestion_progress = cycle 478 — Tier 2 pilot batch progress; +10 if novelty confirmed (911→921/2756); tier transition active; ROI gate monitored -->
+<!-- branch 1 regime_action = cycle 478 — passive monitoring; tick_count ~5937; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
+<!-- branch 7 e2e_status = cycle 478 — standby; cycle 477 smoke test passed; voice channel 1775898534 confirmed active; no new infra change; no action -->
+
+<!-- cycle update 2026-04-15 15:19:30 (Taipei) -->
+<!-- branch 9 g1_eval_status = cycle 479 — #49 gap scan 2/2 complete; terminal decision executed (BLOCK or CLOSE); frontier advances to #50 if CLOSE; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#49 terminal -->
+<!-- branch 2 digestion_progress = cycle 479 — Tier 2 pilot batch progress; +10 if novelty confirmed (921→931/2756); tier transition active; ROI gate monitored -->
+<!-- branch 1 regime_action = cycle 479 — passive monitoring; tick_count ~5967; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
+<!-- branch 5 organism_interact_status = cycle 479 — skipped; ran cycle 478 (neglect counter reset); counter 1; resume at cycle 480 or if counter reaches 3 -->
+<!-- branch 7 e2e_status = cycle 479 — standby; cycle 477 smoke test passed; voice channel 1775898534 confirmed active; no new infra change; no action -->
