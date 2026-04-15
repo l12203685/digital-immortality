@@ -3348,3 +3348,24 @@ actions: 0, updates: 0
 exec: 
 digestion: Knowledge Digestion: 421/2756 files, Tier 1, Last: 2026-04-15T22:19:28+08:00
 plan_raw: API Error: 500 {"type":"error","error":{"type":"api_error","message":"Internal server error"},"request_id":"req_011Ca5jyguqKmcDRrP5LeGpD"} · check status.claude.com
+
+## Cycle 1 — 2026-04-15 23:19:38 (Taipei)
+
+[cycle 495] classification=branch-growth
+actions: 5, updates: 5
+exec: b5(社交/organism): (no executor for branch 5, runnable=organism_interact); b7(e2e/infra): (no executor for branch 7, runnable=e2e_smoke_test); b9(g1_eval): (no executor for branch 9, runnable=g1_gap_scan); b2(知識消化): (no executor for branch 2, runnable=digestion_batch); b1(經濟/trading): (no executor for branch 1, runnable=passive_monitor)
+digestion: Knowledge Digestion: 422/2756 files, Tier 1, Last: 2026-04-15T22:49:19+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 5,
+      "name": "社交/organism",
+      "action": "full 10-scenario fidelity run; neglect counter at 2 (skipped 493, 494 API error); compute delta vs cycle 492 baseline; apply calibration patch or re-lock baseline; reset neglect counter to 0; resume at cycle 497 or if counter reaches 3",
+      "priority": 1,
+      "runnable": "organism_interact"
+    },
+    {
+      "branch": 7,
+      "name": "e2e/infra",
+      "action": "phase4b smoke test trigg
