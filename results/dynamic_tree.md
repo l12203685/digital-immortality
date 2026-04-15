@@ -954,3 +954,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 9 g1_eval_status = cycle 495 — #57 gap scan 1/2 initiated; frontier at #57; #56 terminal decision applied from cycle 493; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#56 terminal -->
 <!-- branch 2 digestion_progress = cycle 495 — Tier 2 pilot batch progress; +10 if novelty confirmed (1071→1081/2756); tier transition active; ROI gate monitored -->
 <!-- branch 1 regime_action = cycle 495 — passive monitoring; tick_count ~6415; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
+
+<!-- cycle update 2026-04-15 23:49:43 (Taipei) -->
+<!-- branch 9 g1_eval_status = cycle 496 — #57 gap scan 2/2 complete; terminal decision executed (BLOCK or CLOSE); frontier advances to #58 if CLOSE; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#57 terminal -->
+<!-- branch 2 digestion_progress = cycle 496 — Tier 2 pilot batch progress; +10 if novelty confirmed (1081→1091/2756); tier transition active; ROI gate monitored -->
+<!-- branch 1 regime_action = cycle 496 — passive monitoring; tick_count ~6445; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
+<!-- branch 5 organism_interact_status = cycle 496 — skipped; ran cycle 495 (neglect counter reset); counter 1; resume at cycle 497 or if counter reaches 3 -->
+<!-- branch 7 e2e_status = cycle 496 — standby; cycle 495 phase4b confirmed stable; reverse channel 1775898534 confirmed; public host confirmed; no new infra change; no action -->

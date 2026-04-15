@@ -3369,3 +3369,24 @@ plan_raw: ```json
       "branch": 7,
       "name": "e2e/infra",
       "action": "phase4b smoke test trigg
+
+## Cycle 1 — 2026-04-15 23:49:43 (Taipei)
+
+[cycle 496] classification=branch-growth
+actions: 5, updates: 5
+exec: b9(g1_eval): (no executor for branch 9, runnable=g1_gap_scan); b2(知識消化): (no executor for branch 2, runnable=digestion_batch); b1(經濟/trading): (no executor for branch 1, runnable=passive_monitor); b5(社交/organism): (no executor for branch 5, runnable=organism_interact); b7(e2e/infra): (no executor for branch 7, runnable=e2e_smoke_test)
+digestion: Knowledge Digestion: 423/2756 files, Tier 1, Last: 2026-04-15T23:19:44+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 9,
+      "name": "g1_eval",
+      "action": "#57 gap scan 2/2 complete; execute terminal decision (BLOCK or CLOSE); if CLOSE frontier advances to #58; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#56 terminal",
+      "priority": 1,
+      "runnable": "g1_gap_scan"
+    },
+    {
+      "branch": 2,
+      "name": "知識消化",
+      "action": "Tier 2 pilot batch +10 if novelty confirmed (1081→1091/2756); tier transition active; ROI gate
