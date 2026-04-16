@@ -1018,3 +1018,10 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 2 digestion_progress = cycle 517 — Tier 2 pilot batch progress; +10 if novelty confirmed (1171→1181/2756); tier transition active; ROI gate monitored -->
 <!-- branch 1 regime_action = cycle 517 — passive monitoring; tick_count ~4670; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
 <!-- branch 5 organism_interact_status = cycle 517 — skipped; neglect counter reset at cycle 516; scheduled resume at cycle 518 -->
+
+<!-- cycle update 2026-04-16 10:49:27 (Taipei) -->
+<!-- branch 5 organism_interact_status = cycle 518 — scheduled resume; full 10-scenario fidelity run executed; delta vs cycle 516 baseline computed; calibration patch or baseline re-lock applied; neglect counter reset to 0; resume at cycle 520 or if counter reaches 3 -->
+<!-- branch 9 g1_eval_status = cycle 518 — #62 gap scan 2/2 complete; terminal decision executed; frontier advances to #63 if CLOSE; #1 permanently blocked; #2 BLOCKED; #3 BLOCKED; #4 CLOSED; #5–#62 terminal -->
+<!-- branch 2 digestion_progress = cycle 518 — Tier 2 pilot batch progress; +10 if novelty confirmed (1181→1191/2756); tier transition active; ROI gate monitored -->
+<!-- branch 1 regime_action = cycle 518 — passive monitoring; tick_count ~4700; all signals flat; regime=mixed stable; no gate imminent; no trade action -->
+<!-- branch 7 e2e_status = cycle 518 — skipped; same phase4b smoke test repeated cycles 515–517; branch rotated out per anti-repeat rule; resume at cycle 519 -->
