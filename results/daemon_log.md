@@ -3569,3 +3569,24 @@ plan_raw: ```json
     {
       "branch": 9,
       "name": "G1-eval",
+
+## Cycle 1 — 2026-04-16 08:19:19 (Taipei)
+
+[cycle 513] classification=branch-growth
+actions: 4, updates: 4
+exec: b7(e2e): (no executor for branch 7, runnable=python platform/e2e_smoke.py --channel 17758; b9(G1-eval): (no executor for branch 9, runnable=python platform/g1_eval.py --issue 60 --scan; b2(知識消化): (no executor for branch 2, runnable=python platform/digest.py --tier 2 --batch-s; b1(經濟/trading): (no executor for branch 1, runnable=python platform/trading_monitor.py --check-o
+digestion: Knowledge Digestion: 440/2756 files, Tier 1, Last: 2026-04-16T07:49:32+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 1,
+      "name": "經濟/trading",
+      "action": "Passive monitoring cycle 513; tick_count ~4520; regime=mixed stable; all signals flat; no gate imminent; no trade action",
+      "priority": 4,
+      "runnable": "python platform/trading_monitor.py --check-open-positions"
+    },
+    {
+      "branch": 2,
+      "name": "知識消化",
+      "action": "Tier 2 pilot batch +10 novelty check; progress 1131→1141/2756; ROI gate monitored; tier transition active
