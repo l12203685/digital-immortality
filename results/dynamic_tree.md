@@ -153,3 +153,8 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 1 strategy_verify_status = cycle 539 — verifying cycle 537 new strategy candidate; backtest PF≥0.8 gate -->
 <!-- branch 9 agent_baseline_status = cycle 539 — agent baseline initiated S01-S05; no human gate required -->
 <!-- branch 3 distil_progress = cycle 539 — batch distillation triggered from 559-file digestion checkpoint; target 313+ insights -->
+
+<!-- cycle update 2026-04-16 21:49:37 (Taipei) -->
+<!-- branch 1 strategy_promote_status = cycle 540 — promote-or-regenerate from kill_lessons gate -->
+<!-- branch 4 growth_audit_status = cycle 540 — join_rate stall check; alternative_channel_plan if stall≥3 -->
+<!-- branch 2 digestion_progress = target 620/2756 after cycle 540 -->
