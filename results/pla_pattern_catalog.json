@@ -1,0 +1,372 @@
+{
+  "total_entries_analyzed": 366,
+  "indicator_frequency": {
+    "MA": 54,
+    "ATR": 46,
+    "Keltner": 19,
+    "Gap": 16,
+    "Slope": 15,
+    "Bollinger": 15,
+    "Donchian": 15,
+    "RSI": 13,
+    "CDP": 13,
+    "KD": 9,
+    "MACD": 7,
+    "SAR": 7,
+    "CCI": 6,
+    "Pivot": 5,
+    "ORB": 4,
+    "WilliamsR": 3,
+    "DMI": 2,
+    "Volume": 2,
+    "StdDev": 2
+  },
+  "covered_indicators": [
+    "MA",
+    "Donchian",
+    "Bollinger",
+    "RSI",
+    "CCI",
+    "DMI",
+    "MACD",
+    "ORB",
+    "ATR"
+  ],
+  "untapped_indicators": [
+    {
+      "indicator": "Keltner",
+      "count": 19
+    },
+    {
+      "indicator": "Gap",
+      "count": 16
+    },
+    {
+      "indicator": "Slope",
+      "count": 15
+    },
+    {
+      "indicator": "CDP",
+      "count": 13
+    },
+    {
+      "indicator": "KD",
+      "count": 9
+    },
+    {
+      "indicator": "SAR",
+      "count": 7
+    },
+    {
+      "indicator": "Pivot",
+      "count": 5
+    },
+    {
+      "indicator": "WilliamsR",
+      "count": 3
+    },
+    {
+      "indicator": "Volume",
+      "count": 2
+    },
+    {
+      "indicator": "StdDev",
+      "count": 2
+    }
+  ],
+  "pair_cooccurrence": {
+    "ATR + MA": 10,
+    "Gap + MA": 6,
+    "Bollinger + Keltner": 6,
+    "ATR + Keltner": 5,
+    "ATR + RSI": 5,
+    "ATR + Donchian": 5,
+    "CDP + MA": 5,
+    "MA + MACD": 4,
+    "ATR + Bollinger": 4,
+    "Bollinger + MA": 4,
+    "Keltner + MA": 4,
+    "MA + Slope": 4,
+    "ATR + Slope": 3,
+    "ATR + MACD": 3,
+    "Donchian + Keltner": 3,
+    "ATR + Gap": 3,
+    "Gap + RSI": 2,
+    "MA + RSI": 2,
+    "Keltner + MACD": 2,
+    "Donchian + MA": 2,
+    "KD + MA": 2,
+    "Bollinger + RSI": 2,
+    "CDP + Pivot": 2,
+    "CDP + KD": 2,
+    "DMI + Gap": 1,
+    "DMI + MA": 1,
+    "DMI + MACD": 1,
+    "DMI + RSI": 1,
+    "Gap + MACD": 1,
+    "MACD + RSI": 1,
+    "ATR + KD": 1,
+    "Bollinger + KD": 1,
+    "Bollinger + MACD": 1,
+    "KD + Keltner": 1,
+    "KD + MACD": 1,
+    "CCI + Keltner": 1,
+    "Bollinger + Donchian": 1,
+    "CCI + Donchian": 1,
+    "ATR + CDP": 1,
+    "ATR + Pivot": 1,
+    "Gap + Slope": 1,
+    "ATR + Volume": 1,
+    "MA + Pivot": 1,
+    "Bollinger + ORB": 1,
+    "ORB + Slope": 1,
+    "CDP + Gap": 1,
+    "Gap + KD": 1
+  },
+  "triple_cooccurrence": {
+    "ATR + Keltner + MACD": 2,
+    "ATR + Bollinger + MA": 2,
+    "ATR + Bollinger + RSI": 2,
+    "DMI + Gap + MA": 1,
+    "DMI + Gap + MACD": 1,
+    "DMI + Gap + RSI": 1,
+    "DMI + MA + MACD": 1,
+    "DMI + MA + RSI": 1,
+    "DMI + MACD + RSI": 1,
+    "Gap + MA + MACD": 1,
+    "Gap + MA + RSI": 1,
+    "Gap + MACD + RSI": 1,
+    "MA + MACD + RSI": 1,
+    "ATR + Bollinger + KD": 1,
+    "ATR + Bollinger + Keltner": 1,
+    "ATR + Bollinger + MACD": 1,
+    "ATR + KD + Keltner": 1,
+    "ATR + KD + MACD": 1,
+    "Bollinger + KD + Keltner": 1,
+    "Bollinger + KD + MACD": 1,
+    "Bollinger + Keltner + MACD": 1,
+    "KD + Keltner + MACD": 1,
+    "ATR + MA + MACD": 1,
+    "ATR + Donchian + MA": 1,
+    "ATR + Gap + RSI": 1,
+    "Bollinger + Keltner + MA": 1,
+    "ATR + Keltner + MA": 1,
+    "ATR + MA + RSI": 1,
+    "Bollinger + MA + RSI": 1,
+    "Gap + MA + Slope": 1,
+    "CDP + MA + Pivot": 1,
+    "CDP + KD + MA": 1,
+    "CDP + Gap + KD": 1,
+    "ATR + Donchian + Keltner": 1
+  },
+  "untapped_pairs": [
+    {
+      "pair": "Gap + MA",
+      "count": 6
+    },
+    {
+      "pair": "Bollinger + Keltner",
+      "count": 6
+    },
+    {
+      "pair": "ATR + Keltner",
+      "count": 5
+    },
+    {
+      "pair": "CDP + MA",
+      "count": 5
+    },
+    {
+      "pair": "Keltner + MA",
+      "count": 4
+    },
+    {
+      "pair": "MA + Slope",
+      "count": 4
+    },
+    {
+      "pair": "ATR + Slope",
+      "count": 3
+    },
+    {
+      "pair": "Donchian + Keltner",
+      "count": 3
+    },
+    {
+      "pair": "ATR + Gap",
+      "count": 3
+    },
+    {
+      "pair": "Gap + RSI",
+      "count": 2
+    },
+    {
+      "pair": "Keltner + MACD",
+      "count": 2
+    },
+    {
+      "pair": "KD + MA",
+      "count": 2
+    },
+    {
+      "pair": "CDP + Pivot",
+      "count": 2
+    },
+    {
+      "pair": "CDP + KD",
+      "count": 2
+    }
+  ],
+  "parameter_ranges": {
+    "ATR": {
+      "period": {
+        "min": 1.0,
+        "max": 54.0,
+        "median": 9.0,
+        "values": [
+          1.0,
+          2.0,
+          3.0,
+          5.0,
+          8.0,
+          9.0,
+          13.0,
+          22.0,
+          39.0,
+          54.0
+        ],
+        "count": 18
+      }
+    },
+    "MA": {
+      "period": {
+        "min": 1.0,
+        "max": 320.0,
+        "median": 27.0,
+        "values": [
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          8.0,
+          9.0,
+          10.0,
+          11.0,
+          12.0,
+          21.0,
+          27.0,
+          30.0,
+          40.0,
+          43.0,
+          50.0,
+          54.0,
+          60.0,
+          105.0,
+          125.0,
+          185.0,
+          200.0,
+          300.0,
+          320.0
+        ],
+        "count": 57
+      }
+    },
+    "CCI": {
+      "period": {
+        "min": 1.0,
+        "max": 100.0,
+        "median": 100.0,
+        "values": [
+          1.0,
+          100.0
+        ],
+        "count": 6
+      },
+      "threshold": {
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0,
+        "values": [
+          1.0
+        ],
+        "count": 1
+      }
+    },
+    "Bollinger": {
+      "period": {
+        "min": 1.0,
+        "max": 60.0,
+        "median": 19.0,
+        "values": [
+          1.0,
+          3.0,
+          4.0,
+          19.0,
+          48.0,
+          50.0,
+          60.0
+        ],
+        "count": 15
+      },
+      "std_dev": {
+        "min": 1.5,
+        "max": 1.5,
+        "median": 1.5,
+        "values": [
+          1.5
+        ],
+        "count": 3
+      }
+    },
+    "KD": {
+      "period": {
+        "min": 9.0,
+        "max": 85.0,
+        "median": 74.0,
+        "values": [
+          9.0,
+          20.0,
+          74.0,
+          85.0
+        ],
+        "count": 4
+      }
+    },
+    "Donchian": {
+      "period": {
+        "min": 1.0,
+        "max": 46.0,
+        "median": 30.0,
+        "values": [
+          1.0,
+          2.0,
+          3.0,
+          30.0,
+          36.0,
+          46.0
+        ],
+        "count": 6
+      }
+    },
+    "RSI": {
+      "period": {
+        "min": 2.0,
+        "max": 70.0,
+        "median": 14.0,
+        "values": [
+          2.0,
+          5.0,
+          7.0,
+          13.0,
+          14.0,
+          15.0,
+          50.0,
+          70.0
+        ],
+        "count": 13
+      }
+    }
+  }
+}
