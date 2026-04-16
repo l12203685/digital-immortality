@@ -214,3 +214,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 5 e2e_smoke_status = cycle 550 — smoke baseline CLOSED or PATCHED; 3-cycle smoke-loop terminated; smoke_baseline_closed_550.json or patch_list_550.json produced -->
 <!-- branch 1 strategy_mode = cycle 550 — portfolio-monitor active; 9 strategies; PF drift audit; no new generation -->
 <!-- branch 2 digestion_progress = target 620/2756 after cycle 550 -->
+
+<!-- cycle update 2026-04-17 03:19:34 (Taipei) -->
+<!-- branch 4 channel_strategy = cycle 551 — Threads-verify + Medium cross-post pivot; breaking single-platform loop; engagement_report_551.json required -->
+<!-- branch 1 strategy_mode = cycle 551 — PF drift audit on 9 active strategies; kill below 0.8; pf_drift_audit_551.json required -->
+<!-- branch 2 digestion_progress = target 641/2756 after cycle 551 -->
+<!-- branch 5 e2e_smoke_status = cycle 551 — phase4b baseline closed; scoping phase5 targets; phase5_scope_551.json required -->
