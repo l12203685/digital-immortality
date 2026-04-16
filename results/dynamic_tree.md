@@ -244,3 +244,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 1 strategy_mode = cycle 555 — portfolio-monitor; pf_snapshot_555.json; kill<0.8; 9 strategies baseline from 554 -->
 <!-- branch 2 digestion_progress = target 725/2756 after cycle 555 -->
 <!-- branch 5 e2e_smoke_status = cycle 555 — phase5 CLOSED via voice-input confirmation; phase5_baseline_closed_555.json; no further smoke loops -->
+
+<!-- cycle update 2026-04-17 05:49:36 (Taipei) -->
+<!-- branch 4 channel_strategy = cycle 556 — POST-PUBLISH mode; engagement_report_556.json required; draft/publish loop permanently closed; next milestone: cross-post if engagement<threshold after 24h -->
+<!-- branch 1 strategy_mode = cycle 556 — portfolio-monitor; pf_snapshot_556.json; active=7; kill<0.8; no regen -->
+<!-- branch 2 digestion_progress = target 746/2756 after cycle 556 -->
+<!-- branch 5 e2e_smoke_status = cycle 556 — phase5 CLOSED confirmed; phase6_scope_556.json produced; execution deferred to cycle 557 -->
