@@ -2,20 +2,51 @@
   "stale_threshold": 3,
   "queue_min": 1,
   "commit_drought_threshold": 3,
-  "dead_loop_count": 1,
+  "dead_loop_count": 2,
   "last_dead_loop": {
-    "cycle": 78,
-    "stale_cycles": 3,
-    "git_commits_24h": 420,
-    "insights_count": 133,
-    "ts": "2026-04-09T14:06:57.668388+00:00"
+    "cycle": 528,
+    "avg_similarity": 1.0,
+    "repetitive_actions": {
+      "staging/session_state.md": 10,
+      "Merge scattered CLAUDE.md files": 5,
+      "Delete stale GDrive CLAUDE.md backup": 5,
+      ".claude/projects/C--Users-admin/memory/feedback_go_command_semantics.md": 5,
+      ".claude/projects/C--Users-admin/memory/feedback_su_default_main_session.md": 10,
+      "CLAUDE.md": 10,
+      ".claude/projects/C--Users-admin/memory/MEMORY.md": 10,
+      "B1.T3 shadow-live scaffold spec": 5,
+      "Avalon M0.3 Excel parser spike": 5,
+      ".claude/projects/C--Users-admin/memory/feedback_essence_before_constraint.md": 5,
+      "B2 digestion push 349→350+": 5,
+      ".claude/projects/C--Users-admin/memory/feedback_ceo_speak_no_detail.md": 10,
+      "Dashboard Track 2 Phase 3-5": 5,
+      "ZP B7 post 續寫": 5,
+      "Add 3 new projects to SSoT": 5,
+      "Revert dashboard doc edits + rescope": 5,
+      ".claude/projects/C--Users-admin/memory/feedback_no_unprompted_tinkering.md": 5,
+      ".claude/channels/discord/inbox/1776140553874-1493466434343534632.png": 5,
+      "Fix weekly P&L chart regression": 5,
+      "staging/weekly_pnl_regression_fix_2026-04-14.md": 5,
+      "Apply weekly P&L chart fix": 5,
+      ".claude/channels/discord/inbox/1776142883938-1493476223181914162.png": 5,
+      "Diagnose dashboard stale render": 5,
+      "staging/dashboard_cache_fix_2026-04-14.md": 5,
+      "B1.T3 shadow-live implementation start": 5,
+      "Avalon M0.3 收尾": 5,
+      "Avalon M0.5 R2+videos spike": 5,
+      "Badminton tracking system scope": 5,
+      "Personality analysis system scope": 5,
+      ".claude/projects/C--Users-admin/memory/feedback_stop_asking_decide.md": 10,
+      "Badminton MVP implementation": 5
+    },
+    "ts": "2026-04-16T08:06:07.843081+00:00"
   },
   "last_recovery": {
     "cycle": null,
     "action": null,
     "ts": null
   },
-  "evolved_at": "2026-04-14T02:40:19.835996+00:00",
+  "evolved_at": "2026-04-16T08:06:07.843081+00:00",
   "initialized_at_cycle": 376,
   "evolution_log": [
     {
@@ -116,6 +147,50 @@
       ],
       "actions_taken": [],
       "ts": "2026-04-14T02:40:19.835996+00:00"
+    },
+    {
+      "cycle": 528,
+      "event": "L3_SELFMOD",
+      "detections": [
+        {
+          "detector": "DEAD_LOOP",
+          "status": "RED"
+        },
+        {
+          "detector": "QUEUE_EMPTY",
+          "status": "YELLOW"
+        },
+        {
+          "detector": "COMMIT_DROUGHT",
+          "status": "GREEN"
+        }
+      ],
+      "actions_taken": [
+        "DEAD_LOOP: incremented dead_loop_count to 2"
+      ],
+      "ts": "2026-04-16T08:05:50.117199+00:00"
+    },
+    {
+      "cycle": 528,
+      "event": "L3_SELFMOD",
+      "detections": [
+        {
+          "detector": "DEAD_LOOP",
+          "status": "RED"
+        },
+        {
+          "detector": "QUEUE_EMPTY",
+          "status": "YELLOW"
+        },
+        {
+          "detector": "COMMIT_DROUGHT",
+          "status": "GREEN"
+        }
+      ],
+      "actions_taken": [
+        "DEAD_LOOP: incremented dead_loop_count to 3"
+      ],
+      "ts": "2026-04-16T08:06:07.843081+00:00"
     }
   ]
 }

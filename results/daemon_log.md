@@ -3899,3 +3899,28 @@ plan_raw: ```json
     {
       "branch": 9,
       "na
+
+[L3v2-selfmod] RED detected: DEAD_LOOP — recovery prompt written
+
+[L3v2-selfmod] RED detected: DEAD_LOOP — recovery prompt written
+
+## Cycle 1 — 2026-04-16 16:19:25 (Taipei)
+
+[cycle 529] classification=branch-growth
+actions: 4, updates: 5
+exec: b7(e2e/voice): (no executor for branch 7, runnable=python platform/e2e_smoke.py --phase 4b --re; b9(G1-eval): (no executor for branch 9, runnable=python platform/g1_eval.py --issue 68 --scan; b2(知識消化): (no executor for branch 2, runnable=python platform/digest.py --tier 2 --batch-s; b1(經濟/trading): (no executor for branch 1, runnable=python platform/trading_monitor.py --check-o
+digestion: Knowledge Digestion: 520/2756 files, Tier 1, Last: 2026-04-16T15:49:34+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 7,
+      "name": "e2e/voice",
+      "action": "Scheduled resume cycle 529; voice-triggered phase4b smoke test; reverse channel 1775898534 verified; public host smoke test executed; result logged; next run at cycle 531 or if counter reaches 3",
+      "priority": 1,
+      "runnable": "python platform/e2e_smoke.py --phase 4b --reverse-channel 1775898534 --public-host"
+    },
+    {
+      "branch": 9,
+      "name": "G1-eval",
+      "action": "#68 
