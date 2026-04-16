@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Dict, List, Optional
 
 from trading.orthogonality_filter import OrthogonalityFilter
+from trading.daily_loss_guard import DailyLossGuard
 
 logger = logging.getLogger("trading.engine")
 REPO = Path(__file__).resolve().parent.parent
@@ -201,6 +202,17 @@ def execute_order(exchange, side: str, symbol: str = "BTC/USDT",
     size_scale < 1.0 applies a size reduction (used by ReactivationGate
     for 50% re-entry after forward-walk PF confirmation).
     """
+    # Daily loss guard — block ALL orders (paper + live) if halted
+    guard = DailyLossGuard(RESULTS)
+    if not guard.is_trading_allowed():
+        status = guard.get_status()
+        logger.warning(
+            "ORDER BLOCKED by EMERGENCY_HALT: %s (resumes %s)",
+            status.reason, status.resumes_at,
+        )
+        return {"blocked": True, "reason": "emergency_halt",
+                "detail": status.reason, "resumes_at": status.resumes_at}
+
     effective_usdt = usdt_amount * size_scale
     if not live:
         return {"paper": True, "side": side, "amount_usdt": effective_usdt,
@@ -390,6 +402,7 @@ class TradingEngine:
         )
         self.reactivation_gate = ReactivationGate()
         self.orthogonality_filter = OrthogonalityFilter()
+        self.daily_loss_guard = DailyLossGuard(RESULTS)
         # SOP#118 fix: migrate legacy string-only disabled entries to proper
         # ReactivationGate metadata dicts so forward-walk + reactivation works.
         self._migrate_legacy_disabled()
@@ -418,6 +431,16 @@ class TradingEngine:
     def tick(self) -> None:
         utc_now = datetime.now(timezone.utc).isoformat()
         self.tick_count += 1
+
+        # Daily loss guard — skip entire tick if halted
+        if not self.daily_loss_guard.is_trading_allowed():
+            status = self.daily_loss_guard.get_status()
+            logger.warning(
+                "TICK SKIPPED: EMERGENCY_HALT active — %s (resumes %s)",
+                status.reason, status.resumes_at,
+            )
+            return
+
         try:
             bars = fetch_bars(self.exchange)
         except Exception as e:
@@ -495,6 +518,14 @@ class TradingEngine:
                 self.pnl_tracker[name] = self.pnl_tracker.get(name, 0.0) + pnl_pct
                 self.total_pnl += pnl_pct
                 self.kill_monitor.record(name, pnl_pct)
+                # Daily loss guard: convert % PnL to USD (base = $100 * size_scale)
+                _ss = self.strategy_size_scale.get(name, 1.0)
+                pnl_usd = pnl_pct / 100.0 * 100.0 * _ss
+                self.daily_loss_guard.record_pnl(
+                    pnl_usd=pnl_usd,
+                    strategy=name,
+                    trade_id=f"tick_{self.tick_count}",
+                )
 
             size_scale = self.strategy_size_scale.get(name, 1.0)
             if sig != prev:
@@ -566,11 +597,18 @@ class TradingEngine:
             name: (meta if isinstance(meta, dict) else {"reason": str(meta)})
             for name, meta in self.disabled.items()
         }
+        # Daily loss guard status for status output
+        _guard_status = self.daily_loss_guard.get_status()
         write_status({"last_tick": utc_now, "tick_count": self.tick_count,
                       "active_strategies": len(active), "disabled": disabled_snapshot,
                       "total_pnl_pct": round(self.total_pnl, 4), "price": price,
                       "regime": regime, "signals": signals_summary,
                       "mode": "LIVE" if self.live else "PAPER",
+                      "daily_loss_guard": {
+                          "halted": _guard_status.is_halted,
+                          "daily_loss_usd": _guard_status.daily_loss_usd,
+                          "remaining_budget_usd": _guard_status.remaining_budget_usd,
+                      },
                       "clean_ticks_since_kill": self.clean_ticks_since_kill,
                       "kill_window": self.execution_rules.get("kill_window", 50)})
 

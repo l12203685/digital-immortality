@@ -64,6 +64,10 @@ KILL_MIN_TRADES = 5          # minimum trades before WR/PF kill check
 SYMBOL = "BTC/USDT"
 BTC_DUST_THRESHOLD = 0.00001  # below this BTC balance counts as "no position"
 
+# Daily loss guard — shared with trading.engine
+from trading.daily_loss_guard import DailyLossGuard
+_DAILY_LOSS_GUARD = DailyLossGuard(RESULTS_DIR)
+
 
 # ---------------------------------------------------------------------------
 # Credential helpers
@@ -197,6 +201,14 @@ def _check_kill(stats: Dict) -> bool:
 
 def cmd_tick(dry_run: bool = False) -> None:
     ts = datetime.now(timezone.utc).isoformat()
+
+    # Daily loss guard — block if EMERGENCY_HALT active
+    if not _DAILY_LOSS_GUARD.is_trading_allowed():
+        status = _DAILY_LOSS_GUARD.get_status()
+        print(f"[{ts}] EMERGENCY HALT ACTIVE: {status.reason}")
+        print(f"  Resumes at: {status.resumes_at}")
+        print(f"  Daily loss: ${abs(status.daily_loss_usd):.2f} / ${5.00:.2f} cap")
+        return
 
     # Kill check (runs even in dry-run)
     entries = _load_log()
@@ -337,6 +349,16 @@ def cmd_tick(dry_run: bool = False) -> None:
 
 
 def cmd_status() -> None:
+    # Daily loss guard status
+    guard_status = _DAILY_LOSS_GUARD.get_status()
+    if guard_status.is_halted:
+        print("*** EMERGENCY HALT ACTIVE ***")
+        print(f"  Reason:  {guard_status.reason}")
+        print(f"  Resumes: {guard_status.resumes_at}")
+    print(f"Daily Loss: ${abs(guard_status.daily_loss_usd):.2f} / ${5.00:.2f} cap "
+          f"(remaining: ${guard_status.remaining_budget_usd:.2f})")
+    print()
+
     # Mainnet status (unchanged)
     entries = _load_log()
     if entries:
@@ -487,6 +509,15 @@ def _compute_paper_stats(entries: List[Dict], strategy_name: str) -> Dict:
 def cmd_paper_live() -> None:
     """Fetch real Binance public prices; run ALL strategies; log paper trades. No credentials."""
     ts = datetime.now(timezone.utc).isoformat()
+
+    # Daily loss guard — block if EMERGENCY_HALT active
+    if not _DAILY_LOSS_GUARD.is_trading_allowed():
+        status = _DAILY_LOSS_GUARD.get_status()
+        print(f"[{ts}] EMERGENCY HALT ACTIVE: {status.reason}")
+        print(f"  Resumes at: {status.resumes_at}")
+        print(f"  Daily loss: ${abs(status.daily_loss_usd):.2f} / ${5.00:.2f} cap")
+        return
+
     try:
         import ccxt  # type: ignore
         from ccxt.base.errors import NetworkError as CcxtNetworkError  # type: ignore
