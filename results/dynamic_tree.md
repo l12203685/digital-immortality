@@ -190,3 +190,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 1 strategy_mode = cycle 546: strategy #10 gate resolved; activate→portfolio-monitor if pass, kill+regen if fail -->
 <!-- branch 2 distil_progress = cycle 546: top-10 ZP-seed published to ZP repo; cursor advanced past 50-insight checkpoint -->
 <!-- branch 5 e2e_smoke_status = cycle 546: cycle 545 smoke results parsed; pass/fail baseline logged -->
+
+<!-- cycle update 2026-04-17 01:19:36 (Taipei) -->
+<!-- branch 4 channel_strategy = cycle 547: verify Twitter/X engagement from cycle 546; pivot to LinkedIn if engagement=0; concrete metric required -->
+<!-- branch 1 strategy_count_target = cycle 547: generating strategies #8-10; active=7 target=10; PF>=0.8 gate -->
+<!-- branch 2 digestion_progress = target 597/2756 after cycle 547 -->
+<!-- branch 5 e2e_smoke_status = cycle 547: phase4b + reverse-channel + public-host report consolidated; pass/fail baseline closed -->
