@@ -250,3 +250,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 1 strategy_mode = cycle 556 — portfolio-monitor; pf_snapshot_556.json; active=7; kill<0.8; no regen -->
 <!-- branch 2 digestion_progress = target 746/2756 after cycle 556 -->
 <!-- branch 5 e2e_smoke_status = cycle 556 — phase5 CLOSED confirmed; phase6_scope_556.json produced; execution deferred to cycle 557 -->
+
+<!-- cycle update 2026-04-17 06:19:37 (Taipei) -->
+<!-- branch 1 strategy_mode = cycle 557 — portfolio-monitor; pf_snapshot_557.json; active=7 baseline; kill<0.8; no regen -->
+<!-- branch 5 e2e_smoke_status = cycle 557 — phase6 execution from phase6_scope_556.json; phase6_smoke_557.json required; deferred loop now active -->
+<!-- branch 4 channel_strategy = cycle 557 — cross-post trigger check; Threads cross-post if claps<5 AND >24h since Medium publish; cross_post_threads_557.json or engagement_check_557.json required -->
+<!-- branch 2 digestion_progress = target 767/2756 after cycle 557 -->
