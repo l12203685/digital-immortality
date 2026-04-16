@@ -518,3 +518,33 @@ E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重�
 E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_台亞(2340.TW).csv
 E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_台光電(2383.TW).csv
 E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_台勝科(3532.TW).csv
+E:/投資交易/pla_md/signal/@autoCF.md
+E:/投資交易/pla_md/signal/@autoCF_backup.md
+E:/投資交易/pla_md/signal/@LeverageCalculation.md
+E:/投資交易/pla_md/signal/@LSEDEV_S_OPT.md
+E:/投資交易/pla_md/signal/@MC1_程式碼.md
+E:/投資交易/pla_md/signal/@Order.md
+E:/投資交易/pla_md/signal/007_BiasReverse 3mK D0.md
+E:/投資交易/pla_md/signal/007_TXFM_COVERGAP_D0_01_1030.md
+E:/投資交易/pla_md/signal/009_TX_Box_FDT0_Jack.md
+E:/投資交易/pla_md/signal/01.202010功課-004_TX_KDHL_LT.md
+E:/投資交易/pla_md/signal/01.202101功課-006_TX_HLtime_LT.md
+E:/投資交易/pla_md/signal/01.202106功課-Sing014_TX_Change_LT.md
+E:/投資交易/pla_md/signal/01.202106功課-Sing014_TX_ChangeDabrother_LT.md
+E:/投資交易/pla_md/signal/01.202109功課_Sing_010_TX_W_LT_改良版.md
+E:/投資交易/pla_md/signal/016_TX_KCForward_L0.md
+E:/投資交易/pla_md/signal/017_TXA_CHANNEL_LO.md
+E:/投資交易/pla_md/signal/017_TXA_CO4_DO_5min.md
+E:/投資交易/pla_md/signal/018_TXF_JumpRange3K_DT.md
+E:/投資交易/pla_md/signal/019_TX_LongBandForwardTrade_L0.md
+E:/投資交易/pla_md/signal/020_TX_3DAYBRK_LO.md
+E:/投資交易/pla_md/signal/021_TXA_2N_DO_3min.md
+E:/投資交易/pla_md/signal/022_TX_TwoDayHighLow_L0.md
+E:/投資交易/pla_md/signal/023_TX_WEEKBRKOUT_LO.md
+E:/投資交易/pla_md/signal/024_TXF_RSI_60m_FLT.md
+E:/投資交易/pla_md/signal/026_TX_RSIForwardTrade_L0 說明檔.md
+E:/投資交易/pla_md/signal/027_TX_DayContrarian_LO_300M.md
+E:/投資交易/pla_md/signal/027_TX_MACDADX_L0.md
+E:/投資交易/pla_md/signal/028_TX_17mFFG_LOS.md
+E:/投資交易/pla_md/signal/028_TX_RSIRevisedTrading_L0.md
+E:/投資交易/pla_md/signal/029_TX_SingletoTriAve_L0 說明檔.md
