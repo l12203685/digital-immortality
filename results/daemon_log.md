@@ -3879,3 +3879,23 @@ plan_raw: ```json
       "branch": 9,
       "name": "G1-eval",
       "action"
+
+## Cycle 1 — 2026-04-16 15:49:31 (Taipei)
+
+[cycle 528] classification=branch-growth
+actions: 4, updates: 5
+exec: b5(社交/organism): (no executor for branch 5, runnable=python platform/organism_interact.py --fidel; b9(G1-eval): (no executor for branch 9, runnable=python platform/g1_eval.py --issue 67 --scan; b2(知識消化): (no executor for branch 2, runnable=python platform/digest.py --tier 2 --batch-s; b1(經濟/trading): (no executor for branch 1, runnable=python platform/trading_monitor.py --check-o
+digestion: Knowledge Digestion: 485/2756 files, Tier 1, Last: 2026-04-16T16:30:59+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 5,
+      "name": "社交/organism",
+      "action": "Scheduled resume cycle 528; full 10-scenario fidelity run executed; delta vs cycle 526 baseline computed; calibration patch or baseline re-lock applied; neglect counter reset to 0; resume at cycle 530 or if counter reaches 3",
+      "priority": 1,
+      "runnable": "python platform/organism_interact.py --fidelity-run --scenarios 10 --baseline-cycle 526"
+    },
+    {
+      "branch": 9,
+      "na

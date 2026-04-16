@@ -330,3 +330,32 @@ E:/@交易/@AVAVA/Keep/s !_TXDL_1_030_QTC07VolatilityStrategy/.code.20210713_203
 E:/@交易/@AVAVA/Keep/s !_TXDL_1_300_LongBreak/.code.20210716_224414.txt
 E:/@交易/@AVAVA/Keep/!_TXAD_1_003_FlipLS01/!_TXAD_1_003_FlipLS01.txt
 E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_博智(8155.TW).csv
+E:/投資交易/pla_md/signal/!_TXDD_1_003_TXEX2104.md
+E:/投資交易/pla_md/signal/!_TXDD_1_006_TXEX2106.md
+E:/投資交易/pla_md/signal/!_TXDL_1_060_TXEX2107.md
+E:/投資交易/pla_md/signal/$@LV_lowebar_jump_11K_LT.md
+E:/投資交易/pla_md/signal/$2106K06_TX_BBand_LO_60K.md
+E:/投資交易/pla_md/signal/$ShaoWei001_TX_Gap202107_LT03.md
+E:/投資交易/pla_md/signal/(10) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
+E:/投資交易/pla_md/signal/(10)@@202106TAZ_CDP_4K_D0.md
+E:/投資交易/pla_md/signal/(10)策略PLA (S)003_TX_Score_2k_DT_20210618.md
+E:/投資交易/pla_md/signal/(3) PLA腳本 Ren04_TX_20m_20211230Engulfing_LT.md
+E:/投資交易/pla_md/signal/(4 )策略程式碼 D027_6KAM_20201018_MID_TREND_DO.md
+E:/投資交易/pla_md/signal/(4 )策略程式碼 TXF_B022_056_50KAM_20201210_BB_BO.md
+E:/投資交易/pla_md/signal/(4)  yita 010_TX_20m_3GP_FLT.md
+E:/投資交易/pla_md/signal/(4) @S_070_TX_Reverser_D.md
+E:/投資交易/pla_md/signal/(4) @S_110_TX_SnP_L.md
+E:/投資交易/pla_md/signal/(4) @S_HW2111_TX_1D_VolaRush_L.md
+E:/投資交易/pla_md/signal/(4) _004_TX_4K_5D (H-C L-C O-C)-average_DT.md
+E:/投資交易/pla_md/signal/(4) 139_TX7M_C-bar_DO_v1.1_2106-Alan.md
+E:/投資交易/pla_md/signal/(4) CB_HW_2111_Bignose_TX_3BarSoilder_FDO_6k_PLE.md
+E:/投資交易/pla_md/signal/(4) H066_TX_BT_LO_13M_(202107HW).md
+E:/投資交易/pla_md/signal/(4) yita 007_TX_10m_open6_LT.md
+E:/投資交易/pla_md/signal/(4) yita 008_TX_6m_3GP_DT.md
+E:/投資交易/pla_md/signal/(4) yita 009_TX_50m_3GP_LT.md
+E:/投資交易/pla_md/signal/(4) @S_070_TX_Reverser_D.md
+E:/投資交易/pla_md/signal/(4)@R006_TX_Bollien_Backout_FLT.md
+E:/投資交易/pla_md/signal/(4)_@LV@_tx_TransFormer_17K_(DT)LT.md
+E:/投資交易/pla_md/signal/(4)BN_002_TX_BarTunnel_LO_8k.md
+E:/投資交易/pla_md/signal/(4)BN_003_TX_Sar_FDO_10k.md
+E:/投資交易/pla_md/signal/(4)BN_004_TX_Pivot_FLO_10k.md
