@@ -158,3 +158,8 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 1 strategy_promote_status = cycle 540 — promote-or-regenerate from kill_lessons gate -->
 <!-- branch 4 growth_audit_status = cycle 540 — join_rate stall check; alternative_channel_plan if stall≥3 -->
 <!-- branch 2 digestion_progress = target 620/2756 after cycle 540 -->
+
+<!-- cycle update 2026-04-16 22:19:36 (Taipei) -->
+<!-- branch 4 last_automated_action = cycle 541 — alt-channel-scan; pivot from stalled seed-push to new channel discovery -->
+<!-- branch 1 strategy_loop_status = cycle 541 — pivot from verify/promote loop to forward-walk monitor or pla top-2 candidate -->
+<!-- branch 2 digestion_progress = target 601/2756 after cycle 541 -->
