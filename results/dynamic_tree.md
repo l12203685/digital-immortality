@@ -184,3 +184,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 5 e2e_smoke_status = cycle 545: phase4b + reverse-channel 1775898534 + public-host smoke tests executed from voice input -->
 <!-- branch 1 strategy_mode = cycle 545: verify strategy #10 PF gate; if passed → switch to portfolio monitor mode (10-strategy target) -->
 <!-- branch 2 distil_checkpoint = cycle 545: 50-insight verification + top-10 ZP-seed package for cross-branch feed -->
+
+<!-- cycle update 2026-04-17 00:49:35 (Taipei) -->
+<!-- branch 4 channel_strategy = cycle 546: multi-platform escalation executed; exiting Discord-only loop; ZP-seed thread pushed to Twitter/X -->
+<!-- branch 1 strategy_mode = cycle 546: strategy #10 gate resolved; activate→portfolio-monitor if pass, kill+regen if fail -->
+<!-- branch 2 distil_progress = cycle 546: top-10 ZP-seed published to ZP repo; cursor advanced past 50-insight checkpoint -->
+<!-- branch 5 e2e_smoke_status = cycle 546: cycle 545 smoke results parsed; pass/fail baseline logged -->
