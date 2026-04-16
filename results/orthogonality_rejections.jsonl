@@ -8766,3 +8766,4 @@
 {"ts": "2026-04-16T03:18:28.662933+00:00", "candidate": "DualMA_RSI_filtered", "reason": "rejected: max|corr|=0.812 (signed=+0.812) with 'DualMA_filtered' exceeds threshold 0.70", "max_corr_with": "", "corr": 0.0, "gate": "G4_reactivation"}
 {"ts": "2026-04-16T03:19:17.420451+00:00", "candidate": "DualMA_RSI_filtered", "reason": "rejected: max|corr|=0.812 (signed=+0.812) with 'DualMA_filtered' exceeds threshold 0.70", "max_corr_with": "", "corr": 0.0, "gate": "G4_reactivation"}
 {"ts": "2026-04-16T03:19:28.724874+00:00", "candidate": "DualMA_RSI_filtered", "reason": "rejected: max|corr|=0.812 (signed=+0.812) with 'DualMA_filtered' exceeds threshold 0.70", "max_corr_with": "", "corr": 0.0, "gate": "G4_reactivation"}
+{"ts": "2026-04-16T03:20:28.787846+00:00", "candidate": "DualMA_RSI_filtered", "reason": "rejected: max|corr|=0.812 (signed=+0.812) with 'DualMA_filtered' exceeds threshold 0.70", "max_corr_with": "", "corr": 0.0, "gate": "G4_reactivation"}
