@@ -208,3 +208,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 5 e2e_smoke_status = cycle 549 — parse smoke_baseline_548.json; close phase4b+reverse-channel+public-host baseline or patch on FAIL -->
 <!-- branch 1 strategy_mode = cycle 549 — regen loop TERMINATED; portfolio-monitor mode ACTIVATED; active_strategies=9 locked baseline -->
 <!-- branch 2 digestion_progress = target 620/2756 after cycle 549 -->
+
+<!-- cycle update 2026-04-17 02:49:35 (Taipei) -->
+<!-- branch 4 channel_strategy = cycle 550 — LinkedIn-verify loop terminated; Threads post executed; threads_post_550.json required as concrete artifact -->
+<!-- branch 5 e2e_smoke_status = cycle 550 — smoke baseline CLOSED or PATCHED; 3-cycle smoke-loop terminated; smoke_baseline_closed_550.json or patch_list_550.json produced -->
+<!-- branch 1 strategy_mode = cycle 550 — portfolio-monitor active; 9 strategies; PF drift audit; no new generation -->
+<!-- branch 2 digestion_progress = target 620/2756 after cycle 550 -->
