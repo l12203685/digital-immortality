@@ -1700,3 +1700,33 @@ E:/投資交易/pla_md/logic/Q_CT29_015M_KC.md
 E:/投資交易/pla_md/logic/Q_CT30_015M_EL.md
 E:/投資交易/pla_md/logic/Q_CT31_840M_KD.md
 E:/投資交易/pla_md/logic/Q_CT32_840M_RSI.md
+E:/投資交易/pla_md/logic/Loren053_TX_60mRate_LT.md
+E:/投資交易/pla_md/logic/MagicAD01_N4T06 (2).md
+E:/投資交易/pla_md/logic/MagicAD01_N4T06.md
+E:/投資交易/pla_md/logic/MagicAD02_N4T03 (2).md
+E:/投資交易/pla_md/logic/MagicAD02_N4T03.md
+E:/投資交易/pla_md/logic/MagicAD03_N5T05 (2).md
+E:/投資交易/pla_md/logic/MagicAD03_N5T05.md
+E:/投資交易/pla_md/logic/MagicAD04_N4T04 (2).md
+E:/投資交易/pla_md/logic/MagicAD04_N4T04.md
+E:/投資交易/pla_md/logic/MagicAD05_N4T03 (2).md
+E:/投資交易/pla_md/logic/MagicAD05_N4T03.md
+E:/投資交易/pla_md/logic/MagicAD06_N4T06 (2).md
+E:/投資交易/pla_md/logic/MagicAD06_N4T06.md
+E:/投資交易/pla_md/logic/MagicD01_N5T03.md
+E:/投資交易/pla_md/logic/MagicD02_N5T04.md
+E:/投資交易/pla_md/logic/MagicD03_N3T04.md
+E:/投資交易/pla_md/logic/MagicDayTOP10.md
+E:/投資交易/pla_md/logic/MagicDayTradeEXF.md
+E:/投資交易/pla_md/logic/MagicDayTradeFXF.md
+E:/投資交易/pla_md/logic/MagicDayTradeTXF.md
+E:/投資交易/pla_md/logic/MagicOI_EXF.md
+E:/投資交易/pla_md/logic/MagicOI_FXF.md
+E:/投資交易/pla_md/logic/MagicOI_TXF.md
+E:/投資交易/pla_md/logic/MagicPM01_N5T03.md
+E:/投資交易/pla_md/logic/MagicPM02_N2T04.md
+E:/投資交易/pla_md/logic/MagicPM03_N3T04.md
+E:/投資交易/pla_md/logic/MagicQS143.md
+E:/投資交易/pla_md/logic/MAMATest.md
+E:/投資交易/pla_md/logic/MAMATest_WF.md
+E:/投資交易/pla_md/logic/Momentum.md
