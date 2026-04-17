@@ -201,3 +201,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 3 finance_snapshot_cycle = 595 — second run; anomaly resolution + delta vs 594 -->
 <!-- branch 2 digestion_progress = 660→700+/2756 — Tier 1 batch cycle 595 -->
 <!-- branch 0 l3_loop_status = STABLE cycle 595 — avoided B1+B7+B9 repeat AND B4+B3+B1 exact repeat; pivoted to B5 (new voice signal) + B3 delta + B2 infra -->
+
+<!-- cycle update 2026-04-18 01:49:31 (Taipei) -->
+<!-- branch 4 social_output_cycle = 596 — 5-cycle neglect broken; concrete publish + engagement executed; cross-post window ~606 -->
+<!-- branch 7 content_pipeline_cycle = 596 — Medium draft publish confirmation + engagement delta + next seed staged -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 596 — dead_loop break actioned; avoided B2+B3+B5 repeat trio; pivoted to neglected B4+B7 concrete artifacts + B1 read-only -->
+<!-- branch 1 last_monitor_cycle = 596 — read-only health check only; real execution deferred to avoid loop -->
