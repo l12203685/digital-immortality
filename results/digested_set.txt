@@ -778,3 +778,33 @@ E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重�
 E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_博智(8155.TW).csv
 E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_億光(2393.TW).csv
 E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_優盛(4121.TW).csv
+E:/投資交易/pla_md/logic/(5) 139_TX7M_C-bar_DO_v1.1_2106-Alan.md
+E:/投資交易/pla_md/logic/(5) yita 007_TX_10m_open6_LT.md
+E:/投資交易/pla_md/logic/(5) 策略腳本 Ren01_TX_60m_20211020Triangle_FLT.md
+E:/投資交易/pla_md/logic/(5) 策略腳本 Ren01_TX_60m_20211113Triangle_FLT_V2.md
+E:/投資交易/pla_md/logic/(5) 策略腳本.md
+E:/投資交易/pla_md/logic/(5) 策略腳本_Ed001_TX_GapMA_6K_LT.md
+E:/投資交易/pla_md/logic/(5) 策略腳本_ED001_TX_JumpGapMA6K_LT.md
+E:/投資交易/pla_md/logic/(5) 策略腳本_TXAL_1_007_VCP+RangeBreakout.md
+E:/投資交易/pla_md/logic/(5) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
+E:/投資交易/pla_md/logic/(5) 策略腳本Shuen037_TX_CamarillaPivot6k.md
+E:/投資交易/pla_md/logic/(5) 策略腳本Shuen038_TX_EarlyORB5K_DT.md
+E:/投資交易/pla_md/logic/(5) 策略腳本Shuen040_TX_WeekCostLine_FLT.md
+E:/投資交易/pla_md/logic/(5)@Ivan2109_TX_MACP19k_LT.md
+E:/投資交易/pla_md/logic/(5)@LV@_08Week_of_DTstyle_7k_LO.md
+E:/投資交易/pla_md/logic/(5)@LV@_TX_Week_3GPSBL_17K_LT.md
+E:/投資交易/pla_md/logic/(5)_@LV@_tx_TimeGuardian_13K_LT.md
+E:/投資交易/pla_md/logic/(5)_@LV@_tx_TransFormer_17K_(DT)LT.md
+E:/投資交易/pla_md/logic/(5)_011_TX_4Day (OHLC)_FDT.md
+E:/投資交易/pla_md/logic/(5)BN_003_TX_Sar_FDO_10k.md
+E:/投資交易/pla_md/logic/(5)BN_TX_2109_IslandReverse PLE.md
+E:/投資交易/pla_md/logic/(5)BN_TX_2109_orbplus_DO_4k_v2.md
+E:/投資交易/pla_md/logic/(5)NV002_TX30M_SR_FLT.md
+E:/投資交易/pla_md/logic/(5)NV2107003_TX3M_Amy_FDT.md
+E:/投資交易/pla_md/logic/(5)NV2108004_TX15M_Bonny_LT.md
+E:/投資交易/pla_md/logic/(5)NV2109005_TX6M_Cindy_LT -original.md
+E:/投資交易/pla_md/logic/(5)NV2109005_TX6M_Cindy_LT.md
+E:/投資交易/pla_md/logic/(5)NV2110006_TX3M_FLT.md
+E:/投資交易/pla_md/logic/(5)TimChen009_TX_30mBBI_LOS-策略腳本.md
+E:/投資交易/pla_md/logic/(5)TungWen002_TX_EMA50K_LT.md
+E:/投資交易/pla_md/logic/(5)策略及指標程式碼-004_TXF_3G(1.382)_4mK_LO-202101-彥勝.md
