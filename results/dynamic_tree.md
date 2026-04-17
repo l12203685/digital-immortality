@@ -134,3 +134,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 1 last_monitor_cycle = 583 -->
 <!-- branch 2 digestion_progress = 590→620+/2756 — Tier 1 batch cycle 583 -->
 <!-- branch 5 phase7_status = close verdict cycle 583 — E2E review of channel 1775898534 + public host -->
+
+<!-- cycle update 2026-04-17 19:49:31 (Taipei) -->
+<!-- branch 5 phase7_status = E2E smoke cycle 584 — reverse channel 1775898534 + public host tested; close verdict pending -->
+<!-- branch 1 last_monitor_cycle = 584 -->
+<!-- branch 2 digestion_progress = 591+/2756 — Tier 1 batch cycle 584 targeting 625+ -->
+<!-- branch 7 content_pipeline_cycle = 584 — ZP post staging; engagement signal check -->
