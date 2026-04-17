@@ -231,3 +231,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 7 crosspost_prep_cycle = 600 — Twitter+LinkedIn variants staged; publish window ~606 -->
 <!-- branch 2 digestion_progress = 760→790+/2756 — Tier 1 batch cycle 600 -->
 <!-- branch 0 l3_loop_status = RECOVERY cycle 600 — dead_loop break actioned; avoided B1+B2+B9 and B1+B4+B2 repeat trios; pivoted to B4-organism (neglect-break) + B7 cross-post prep + B2 infra -->
+
+<!-- cycle update 2026-04-18 04:19:36 (Taipei) -->
+<!-- branch 5 phase4b_status = routing_final_cycle_601 — 3 queued messages resolved; 4-cycle pending broken -->
+<!-- branch 3 finance_snapshot_cycle = 601 — delta vs 598; anomaly flags refreshed -->
+<!-- branch 1 last_monitor_cycle = 601 read-only; 599 seeds maturing; no new execution -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 601 — avoided B4+B7+B2 (600 exact); avoided B1+B4+B2 (599); pivoted to B5 neglect-break (4-cycle queue) + B3 finance delta + B1 read-only -->
