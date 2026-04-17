@@ -933,3 +933,38 @@ E:/投資交易/pla_md/logic/01.202106功課-Sing014_TX_Change_LT.md
 E:/投資交易/pla_md/logic/01.202106功課-Sing014_TX_ChangeDabrother_LT (2).md
 E:/投資交易/pla_md/logic/01.202106功課-Sing014_TX_ChangeDabrother_LT.md
 E:/投資交易/pla_md/logic/01.202109功課_Sing_010_TX_W_LT_改良版 (2).md
+E:/投資交易/pla_md/logic/01.202109功課_Sing_010_TX_W_LT_改良版.md
+E:/投資交易/pla_md/logic/016_TX_KCForward_L0 (2).md
+E:/投資交易/pla_md/logic/016_TX_KCForward_L0 (3).md
+E:/投資交易/pla_md/logic/016_TX_KCForward_L0 (4).md
+E:/投資交易/pla_md/logic/016_TX_KCForward_L0.md
+E:/投資交易/pla_md/logic/017_TXA_CHANNEL_LO (2).md
+E:/投資交易/pla_md/logic/017_TXA_CHANNEL_LO (3).md
+E:/投資交易/pla_md/logic/017_TXA_CHANNEL_LO (4).md
+E:/投資交易/pla_md/logic/017_TXA_CHANNEL_LO.md
+E:/投資交易/pla_md/logic/017_TXA_CO4_DO_5min (2).md
+E:/投資交易/pla_md/logic/017_TXA_CO4_DO_5min.md
+E:/投資交易/pla_md/logic/018_TXF_JumpRange3K_DT.md
+E:/投資交易/pla_md/logic/019_TX_LongBandForwardTrade_L0 (2).md
+E:/投資交易/pla_md/logic/019_TX_LongBandForwardTrade_L0.md
+E:/投資交易/pla_md/logic/020_TX_3DAYBRK_LO.md
+E:/投資交易/pla_md/logic/021_TXA_2N_DO_3min (2).md
+E:/投資交易/pla_md/logic/021_TXA_2N_DO_3min.md
+E:/投資交易/pla_md/logic/022_TX_TwoDayHighLow_L0 (2).md
+E:/投資交易/pla_md/logic/022_TX_TwoDayHighLow_L0.md
+E:/投資交易/pla_md/logic/023_TX_WEEKBRKOUT_LO (2).md
+E:/投資交易/pla_md/logic/023_TX_WEEKBRKOUT_LO.md
+E:/投資交易/pla_md/logic/024_TXF_RSI_60m_FLT (2).md
+E:/投資交易/pla_md/logic/024_TXF_RSI_60m_FLT.md
+E:/投資交易/pla_md/logic/026_TX_RSIForwardTrade_L0 說明檔 (2).md
+E:/投資交易/pla_md/logic/026_TX_RSIForwardTrade_L0 說明檔 (3).md
+E:/投資交易/pla_md/logic/026_TX_RSIForwardTrade_L0 說明檔 (4).md
+E:/投資交易/pla_md/logic/026_TX_RSIForwardTrade_L0 說明檔.md
+E:/投資交易/pla_md/logic/027_TX_DayContrarian_LO_300M (2).md
+E:/投資交易/pla_md/logic/027_TX_DayContrarian_LO_300M.md
+E:/投資交易/pla_md/logic/027_TX_MACDADX_L0 (2).md
+E:/投資交易/pla_md/logic/027_TX_MACDADX_L0.md
+E:/投資交易/pla_md/logic/028_TX_17mFFG_LOS (2).md
+E:/投資交易/pla_md/logic/028_TX_17mFFG_LOS (3).md
+E:/投資交易/pla_md/logic/028_TX_17mFFG_LOS (4).md
+E:/投資交易/pla_md/logic/028_TX_17mFFG_LOS.md
