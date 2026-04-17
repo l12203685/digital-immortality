@@ -968,3 +968,33 @@ E:/投資交易/pla_md/logic/028_TX_17mFFG_LOS (2).md
 E:/投資交易/pla_md/logic/028_TX_17mFFG_LOS (3).md
 E:/投資交易/pla_md/logic/028_TX_17mFFG_LOS (4).md
 E:/投資交易/pla_md/logic/028_TX_17mFFG_LOS.md
+E:/投資交易/pla_md/logic/028_TX_RSIRevisedTrading_L0 (2).md
+E:/投資交易/pla_md/logic/028_TX_RSIRevisedTrading_L0.md
+E:/投資交易/pla_md/logic/029_TX_SingletoTriAve_L0 說明檔 (2).md
+E:/投資交易/pla_md/logic/029_TX_SingletoTriAve_L0 說明檔.md
+E:/投資交易/pla_md/logic/03 CBST017_MAOCHL_9m_FDO.md
+E:/投資交易/pla_md/logic/03 CBST020_Aroon_29m_FLO.md
+E:/投資交易/pla_md/logic/03 CBST023_HLB_29m_FLO_V3 (2).md
+E:/投資交易/pla_md/logic/03 CBST023_HLB_29m_FLO_V3.md
+E:/投資交易/pla_md/logic/03 CBST027_LNR_29m_FLO_V4 (2).md
+E:/投資交易/pla_md/logic/03 CBST027_LNR_29m_FLO_V4 (3).md
+E:/投資交易/pla_md/logic/03 CBST027_LNR_29m_FLO_V4 (4).md
+E:/投資交易/pla_md/logic/03 CBST027_LNR_29m_FLO_V4.md
+E:/投資交易/pla_md/logic/03_15_DL300M01_CBQC2202_V10_DMI_XQ.md
+E:/投資交易/pla_md/logic/03_15_DL300M01_CBQC2202_V11_DMI_XQ.md
+E:/投資交易/pla_md/logic/03_QC2102_M10_LO (2).md
+E:/投資交易/pla_md/logic/03_QC2102_M10_LO.md
+E:/投資交易/pla_md/logic/03_QC2102_M10_LO_WF (2).md
+E:/投資交易/pla_md/logic/03_QC2102_M10_LO_WF.md
+E:/投資交易/pla_md/logic/030_TX_TriAverage&SingleAverage_L0 (2).md
+E:/投資交易/pla_md/logic/030_TX_TriAverage&SingleAverage_L0.md
+E:/投資交易/pla_md/logic/031_3 DAY H&L no mp_FLT.md
+E:/投資交易/pla_md/logic/031_TX_AllDay_TriAverage&SingleAverage_L0 說明檔.md
+E:/投資交易/pla_md/logic/032_TX_VHF_LO_37M (2).md
+E:/投資交易/pla_md/logic/032_TX_VHF_LO_37M.md
+E:/投資交易/pla_md/logic/0327.md
+E:/投資交易/pla_md/logic/033_TX_DayC_LO_300M.md
+E:/投資交易/pla_md/logic/0403.md
+E:/投資交易/pla_md/logic/045_TX_BY_DO (2).md
+E:/投資交易/pla_md/logic/045_TX_BY_DO.md
+E:/投資交易/pla_md/logic/047_TX_BBR_DO.md
