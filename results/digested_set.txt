@@ -1,25 +1,3 @@
-E:/@交易/1. 投資交易實務/Crypto/DatabaseAndTableCreation.txt
-E:/@交易/1. 投資交易實務/Crypto/FXRate.py
-E:/@交易/1. 投資交易實務/Crypto/Momentum Continuation.lua
-E:/@交易/1. 投資交易實務/excel/Forex Rates.csv
-E:/@交易/1. 投資交易實務/excel/MSCI Emerging Markets Historical Data (1).csv
-E:/@交易/1. 投資交易實務/excel/hash-rate-all.csv
-E:/@交易/1. 投資交易實務/excel/hash-rate.csv
-E:/@交易/1. 投資交易實務/excel/期交所.csv
-E:/@交易/2. 財務相關知識/articles/Special Report/2015Q4台灣央行降息半碼.pdf
-E:/@交易/2. 財務相關知識/articles/Special Report/2016總統及國會大選結果分析.pdf
-E:/@交易/2. 財務相關知識/articles/Special Report/Fed貨幣政策正常化難度加大.pdf
-E:/@交易/2. 財務相關知識/投資組合管理/note/Investment_management.tex
-E:/@交易/2. 財務相關知識/投資組合管理/note/tcilatex.tex
-E:/@交易/2. 財務相關知識/投資組合管理/投資管理.pptx
-E:/@交易/2. 財務相關知識/期貨與選擇權/Greek Letters.docx
-E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/AmPut.m
-E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/DeltaExtBin.m
-E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/EuCallPlot.m
-E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/FixStkLBCallMC.m
-E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/StockMC.m
-E:/@交易/2. 財務相關知識/風險管理/Value at Risk：The New Benchmark for Managing Financial Risk (3rd Edition).pdf
-E:/@交易/20240330_凱衛網聚簡報.pdf
 E:/@交易/@AK/@A1E-M01.txt
 E:/@交易/@AK/@A2-T01.txt
 E:/@交易/@AK/@K1B-MM01.txt
@@ -32,8 +10,8 @@ E:/@交易/@AK/@K9-G01.txt
 E:/@交易/@AK/big_user_trade_record.csv
 E:/@交易/@AK/修改硬碟序號工具-Hard Disk Serial Number Changer 1.0 中文化免費版/desktop.ini
 E:/@交易/@AK/修改硬碟序號工具-Hard Disk Serial Number Changer 1.0 中文化免費版/修改硬碟序號工具-Hard Disk Serial Number Changer 1.0 中文化免費版.txt
-E:/@交易/@AK/新文字文件.txt
 E:/@交易/@AK/策略最佳化.md
+E:/@交易/@AK/新文字文件.txt
 E:/@交易/@AVAVA/!.Configure.json
 E:/@交易/@AVAVA/!.Schedule.csv
 E:/@交易/@AVAVA/!.Strategy.json
@@ -50,11 +28,11 @@ E:/@交易/@AVAVA/Keep/!_TXAD_1_007_AV2Bias/.data.json
 E:/@交易/@AVAVA/Keep/!_TXAD_1_007_AV2Bias/code文字檔.txt
 E:/@交易/@AVAVA/Keep/!_TXAD_1_007_EMA01/!_TXAD_1_007_EMA01.txt
 E:/@交易/@AVAVA/Keep/!_TXAD_1_007_EMA01/.data.json
+E:/@交易/@AVAVA/Keep/!_TXAD_1_007_Gate01/!_TXAD_1_007_3Gate.txt
+E:/@交易/@AVAVA/Keep/!_TXAD_1_007_Gate01/TXF_3Gate_DO_7K_Code.txt
 E:/@交易/@AVAVA/Keep/!_TXAD_1_007_GT+VOL01/!_TXAD_1_007_GT+VOL01.txt
 E:/@交易/@AVAVA/Keep/!_TXAD_1_007_GT+VOL01/.data.json
 E:/@交易/@AVAVA/Keep/!_TXAD_1_007_GT+VOL01/程式碼.txt
-E:/@交易/@AVAVA/Keep/!_TXAD_1_007_Gate01/!_TXAD_1_007_3Gate.txt
-E:/@交易/@AVAVA/Keep/!_TXAD_1_007_Gate01/TXF_3Gate_DO_7K_Code.txt
 E:/@交易/@AVAVA/Keep/!_TXAD_1_009_MA01/!_TXAD_1_009_MA01.txt
 E:/@交易/@AVAVA/Keep/!_TXAD_1_009_MA01/.data.json
 E:/@交易/@AVAVA/Keep/!_TXAD_1_013_ADP01/!_TXAD_1_013_ADP01.txt
@@ -170,12 +148,10 @@ E:/@交易/@AVAVA/Keep/!_TXDL_1_050_Gap01/!_TXDL_1_050_Gap01.txt
 E:/@交易/@AVAVA/Keep/!_TXDL_1_060_BB01/!_TXDL_1_060_BB01.txt
 E:/@交易/@AVAVA/Keep/!_TXDL_1_060_LR01/!_TXDL_1_060_LR01.txt
 E:/@交易/@AVAVA/Keep/!_TXDL_1_075_DR01/!_TXDL_1_075_DR01.txt
-E:/@交易/@AVAVA/Keep/s !@_TXDL1_015_943TrendChg01_202106/.code.20210716_224413.txt
-E:/@交易/@AVAVA/Keep/s !@_TXDL1_300_HL3day_202106/.code.20210714_184952.txt
 E:/@交易/@AVAVA/Keep/s !@_TXDL_1_001_ConMove01_202106/.code.20210716_224413.txt
 E:/@交易/@AVAVA/Keep/s !@_TXDL_1_003_ConMove3m_202106/.code.20210714_184855.txt
-E:/@交易/@AVAVA/Keep/s !@_TXDL_1_003_MA+Reverse_202106/.code.20210714_184944.txt
 E:/@交易/@AVAVA/Keep/s !@_TXDL_1_003_MA_202106/.code.20210714_184942.txt
+E:/@交易/@AVAVA/Keep/s !@_TXDL_1_003_MA+Reverse_202106/.code.20210714_184944.txt
 E:/@交易/@AVAVA/Keep/s !@_TXDL_1_006_ED007_JumpGap+MA+BackHand_202106/.code.20210714_185014.txt
 E:/@交易/@AVAVA/Keep/s !@_TXDL_1_006_JumpGap+MA+Filter_202106/.code.20210714_184946.txt
 E:/@交易/@AVAVA/Keep/s !@_TXDL_1_006_JumpGapMASQ_202106/.code.20210714_184948.txt
@@ -185,6 +161,8 @@ E:/@交易/@AVAVA/Keep/s !@_TXDL_1_020_MCB02Chg01_MA+DivRatio_202107/.code.20210
 E:/@交易/@AVAVA/Keep/s !@_TXDL_1_300_CR01_Ambulance_202107/.code.20210714_135143.txt
 E:/@交易/@AVAVA/Keep/s !@_TXDL_1_avgmid_202106/.code.20210714_184950.txt
 E:/@交易/@AVAVA/Keep/s !@_TXDL_2_015_943BB/.code.20210716_224413.txt
+E:/@交易/@AVAVA/Keep/s !@_TXDL1_015_943TrendChg01_202106/.code.20210716_224413.txt
+E:/@交易/@AVAVA/Keep/s !@_TXDL1_300_HL3day_202106/.code.20210714_184952.txt
 E:/@交易/@AVAVA/Keep/s !_TXDL_1_005_CDP/.code.20210713_194425.txt
 E:/@交易/@AVAVA/Keep/s !_TXDL_1_005_QTC04HModelSpread/.code.20210713_203202.txt
 E:/@交易/@AVAVA/Keep/s !_TXDL_1_010_Neckline/.code.20210713_194427.txt
@@ -200,12 +178,9 @@ E:/@交易/@Crypto/big_user_trade_record.csv
 E:/@交易/@Crypto/异常赔付登记表 - 异常时段记录+预估盈亏.csv
 E:/@交易/@Crypto/当日刷单率胜率公司利润合伙人风控报告完整版.sql
 E:/@交易/@PortfolioManagement/DP/New3_0500.txt
-E:/@交易/@PortfolioManagement/MP/New3.txt
 E:/@交易/@PortfolioManagement/list.txt
+E:/@交易/@PortfolioManagement/MP/New3.txt
 E:/@交易/@StrategyManagement/CF995.CF.dll
-E:/@交易/@StrategyManagement/壓縮檔/2021 09台灣範例.pdf
-E:/@交易/@StrategyManagement/壓縮檔/202203.pdf
-E:/@交易/@StrategyManagement/壓縮檔/deep3_percent.jpg
 E:/@交易/@StrategyManagement/未整理/0622CDP_1.jpg
 E:/@交易/@StrategyManagement/未整理/15720520304008.jpg
 E:/@交易/@StrategyManagement/未整理/15723811975670.jpg
@@ -219,18 +194,21 @@ E:/@交易/@StrategyManagement/未整理/SOP.txt
 E:/@交易/@StrategyManagement/未整理/temp.txt
 E:/@交易/@StrategyManagement/未整理/常用FN.txt
 E:/@交易/@StrategyManagement/未整理/結算SOP.txt
-E:/@交易/@StrategyManagement/未整理/翵哥.txt
 E:/@交易/@StrategyManagement/未整理/鋼鐵人.txt
+E:/@交易/@StrategyManagement/未整理/翵哥.txt
+E:/@交易/@StrategyManagement/壓縮檔/2021 09台灣範例.pdf
+E:/@交易/@StrategyManagement/壓縮檔/202203.pdf
+E:/@交易/@StrategyManagement/壓縮檔/deep3_percent.jpg
 E:/@交易/@StrategyManagement/歸檔/202007/202007Bohun/boTX_202007_MAATR_LO說明檔.txt
 E:/@交易/@StrategyManagement/歸檔/202007/202007ChienShen/047說明.txt
 E:/@交易/@StrategyManagement/歸檔/202007/202007JohnsonLo/011_TX_Range R_LO說明檔.txt
 E:/@交易/@StrategyManagement/歸檔/202007/202007Kuang/202007 QTC_TX_SAR_Kuang_DO_6K 策略說明.txt
 E:/@交易/@StrategyManagement/歸檔/202007/202007Morton/No22_TX_RSI_7K_DO_策略說明.txt
-E:/@交易/@StrategyManagement/歸檔/202007/202007TimChen/2-003_TXA_30mKeltner_LOS策略說明.txt
-E:/@交易/@StrategyManagement/歸檔/202007/202007WGN/123_TX_HLORB_FDO說明檔.txt
-E:/@交易/@StrategyManagement/歸檔/202007/202007WenZiGi/策略說明檔 topbot 1-6.txt
-E:/@交易/@StrategyManagement/歸檔/202007/202007YenShen/202007作業策略說明.txt
 E:/@交易/@StrategyManagement/歸檔/202007/202007shuenhua/TX_Pivot_DO策略說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202007/202007TimChen/2-003_TXA_30mKeltner_LOS策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202007/202007WenZiGi/策略說明檔 topbot 1-6.txt
+E:/@交易/@StrategyManagement/歸檔/202007/202007WGN/123_TX_HLORB_FDO說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202007/202007YenShen/202007作業策略說明.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010Alan Chen/002_TX_Keltner_LO_2010_說明檔.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010Alex/(1) 策略說明.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010ChiaWei/019_TX_LongBandForwardTrade_L0.txt
@@ -238,6 +216,7 @@ E:/@交易/@StrategyManagement/歸檔/202010/202010ChienYingYang/002_Sw_D_5min_L
 E:/@交易/@StrategyManagement/歸檔/202010/202010Gavin/G003_TX_LT_3Prices策略說明.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010HAO/H054_TXA_3H3L_LO_1H 策略說明.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010Hsiang/017_TXA_CO4_DO_5min.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010jack/20200929_009_TX_Box_FDT0_Jack策略說明.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010Jack軒邑/202010作業_009_TX_Box_FDT0_Jack策略說明.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010KevinHsu/khsu_2020010_說明檔.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010Liangchi/CL012_TX_MACD_LO策略說明.txt
@@ -247,20 +226,19 @@ E:/@交易/@StrategyManagement/歸檔/202010/202010Moka/045_TX_BY_DO.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010Morton/No25_TXA_CandleShadow_60K_LO策略說明.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010Oscar/核心邏輯.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010Samuel/策略說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010shuen hua/TX_TwoWeek_DO策略說明檔.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010StarWang/P_CDP_TXF_1_DT_V2策略說明檔.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010TimChen/006_TXA_13mLineReg_LOS_V2_說明檔.txt
-E:/@交易/@StrategyManagement/歸檔/202010/202010jack/20200929_009_TX_Box_FDT0_Jack策略說明.txt
-E:/@交易/@StrategyManagement/歸檔/202010/202010shuen hua/TX_TwoWeek_DO策略說明檔.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010世賢/01 CBST020_Aroon_29m_FLO.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010丞甫/策略說明檔.txt
-E:/@交易/@StrategyManagement/歸檔/202010/202010修達/001_TX_PT_D0策略說明.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010吳憲宗/60MAL0策略說明.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010廷政/007策略概念.txt
-E:/@交易/@StrategyManagement/歸檔/202010/202010彥勝-卡滋卡滋/彥勝-202010作業-策略說明.txt
-E:/@交易/@StrategyManagement/歸檔/202010/202010景帆/027_TX_DayContrarian_LO_300M_策略說明.txt
-E:/@交易/@StrategyManagement/歸檔/202010/202010涂旭帆/說明檔.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010辰軍/說明檔.txt
 E:/@交易/@StrategyManagement/歸檔/202010/202010阿信/07.202010功課004_TX_KDHL_LT策略說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010彥勝-卡滋卡滋/彥勝-202010作業-策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010修達/001_TX_PT_D0策略說明.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010涂旭帆/說明檔.txt
+E:/@交易/@StrategyManagement/歸檔/202010/202010景帆/027_TX_DayContrarian_LO_300M_策略說明.txt
 E:/@交易/@StrategyManagement/歸檔/202010月交換區_建議.txt
 E:/@交易/@StrategyManagement/歸檔/202102月交換區_建議.txt
 E:/@交易/@StrategyManagement/歸檔/202106月交換區_建議.txt
@@ -283,6 +261,17 @@ E:/@交易/@程式交易/Successful Algorithmic Trading.pdf
 E:/@交易/@程式交易/下單大師 MC 測試報告.pdf
 E:/@交易/@程式交易/中華電信IDC客戶維護人員異動申請表.pdf
 E:/@交易/@程式交易/中華電信IDC客戶維護人員異動申請表範例.pdf
+E:/@交易/@程式交易/文案簡報2021521.pdf
+E:/@交易/@程式交易/投資組合管理/DayMaxDD定義.txt
+E:/@交易/@程式交易/投資組合管理/DayMovingDD定義.txt
+E:/@交易/@程式交易/每月閒聊/2020.12閒聊 WFdemo.pdf
+E:/@交易/@程式交易/每月閒聊/2020_10閒聊 保險真心話.pdf
+E:/@交易/@程式交易/每月閒聊/2021.6月閒聊.pdf
+E:/@交易/@程式交易/每月閒聊/202101 閒聊.pdf
+E:/@交易/@程式交易/每月閒聊/202107_閒聊_XQ操作.pdf
+E:/@交易/@程式交易/每月閒聊/202112閒聊.pdf
+E:/@交易/@程式交易/每月閒聊/chat.txt
+E:/@交易/@程式交易/每月閒聊/加密幣補充 p49.pdf
 E:/@交易/@程式交易/基礎班/00_MC 基礎使用.pdf
 E:/@交易/@程式交易/基礎班/1chat.txt
 E:/@交易/@程式交易/基礎班/2 MC基本操作.pdf
@@ -292,378 +281,56 @@ E:/@交易/@程式交易/基礎班/4chat.txt
 E:/@交易/@程式交易/基礎班/5chat.txt
 E:/@交易/@程式交易/基礎班/第八講 PT教學與投資組合.pdf
 E:/@交易/@程式交易/報價相關/SOR API測試步驟-快速版.pdf
-E:/@交易/@程式交易/投資組合管理/DayMaxDD定義.txt
-E:/@交易/@程式交易/投資組合管理/DayMovingDD定義.txt
-E:/@交易/@程式交易/文案簡報2021521.pdf
 E:/@交易/@程式交易/期貨高勝率.pdf
-E:/@交易/@程式交易/每月閒聊/2020.12閒聊 WFdemo.pdf
-E:/@交易/@程式交易/每月閒聊/2020_10閒聊 保險真心話.pdf
-E:/@交易/@程式交易/每月閒聊/2021.6月閒聊.pdf
-E:/@交易/@程式交易/每月閒聊/202101 閒聊.pdf
-E:/@交易/@程式交易/每月閒聊/202107_閒聊_XQ操作.pdf
-E:/@交易/@程式交易/每月閒聊/202112閒聊.pdf
-E:/@交易/@程式交易/每月閒聊/chat.txt
-E:/@交易/@程式交易/每月閒聊/加密幣補充 p49.pdf
 E:/@交易/@程式交易/程式交易軟硬體 SOP 概述.pdf
 E:/@交易/@程式交易/達哥/SBF/DLHHL.txt
 E:/@交易/@程式交易/達哥/SBF/HLM.txt
 E:/@交易/@程式交易/達哥/SBF/MA.txt
+E:/@交易/@程式交易/達哥/SBF/ma+uvdv.txt
+E:/@交易/@程式交易/達哥/SBF/maimai_fish.txt
 E:/@交易/@程式交易/達哥/SBF/MXNDU.txt
 E:/@交易/@程式交易/達哥/SBF/RushBear (2).txt
 E:/@交易/@程式交易/達哥/SBF/SBF.txt
 E:/@交易/@程式交易/達哥/SBF/SBF_1.txt
 E:/@交易/@程式交易/達哥/SBF/SBF_20220306.txt
 E:/@交易/@程式交易/達哥/SBF/SBF_ADA.txt
-E:/@交易/@程式交易/達哥/SBF/SBF_Ori.txt
-E:/@交易/@程式交易/達哥/SBF/SBF_RushBear_chg.txt
 E:/@交易/@程式交易/達哥/SBF/SBF_dev.txt
+E:/@交易/@程式交易/達哥/SBF/SBF_Ori.txt
 E:/@交易/@程式交易/達哥/SBF/SBF_ori2.txt
-E:/@交易/@程式交易/達哥/SBF/ma+uvdv.txt
-E:/@交易/@程式交易/達哥/SBF/maimai_fish.txt
+E:/@交易/@程式交易/達哥/SBF/SBF_RushBear_chg.txt
+E:/@交易/1. 投資交易實務/Crypto/DatabaseAndTableCreation.txt
+E:/@交易/1. 投資交易實務/Crypto/FXRate.py
+E:/@交易/1. 投資交易實務/Crypto/Momentum Continuation.lua
+E:/@交易/1. 投資交易實務/excel/Forex Rates.csv
+E:/@交易/1. 投資交易實務/excel/hash-rate.csv
+E:/@交易/1. 投資交易實務/excel/hash-rate-all.csv
+E:/@交易/1. 投資交易實務/excel/MSCI Emerging Markets Historical Data (1).csv
+E:/@交易/1. 投資交易實務/excel/期交所.csv
+E:/@交易/2. 財務相關知識/articles/Special Report/2015Q4台灣央行降息半碼.pdf
+E:/@交易/2. 財務相關知識/articles/Special Report/2016總統及國會大選結果分析.pdf
+E:/@交易/2. 財務相關知識/articles/Special Report/Fed貨幣政策正常化難度加大.pdf
+E:/@交易/2. 財務相關知識/投資組合管理/note/Investment_management.tex
+E:/@交易/2. 財務相關知識/投資組合管理/note/tcilatex.tex
+E:/@交易/2. 財務相關知識/投資組合管理/投資管理.pptx
+E:/@交易/2. 財務相關知識/風險管理/Value at Risk：The New Benchmark for Managing Financial Risk (3rd Edition).pdf
+E:/@交易/2. 財務相關知識/期貨與選擇權/Greek Letters.docx
+E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/AmPut.m
+E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/DeltaExtBin.m
+E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/EuCallPlot.m
+E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/FixStkLBCallMC.m
+E:/@交易/2. 財務相關知識/期貨與選擇權/金融商品訂價/StockMC.m
+E:/@交易/20240330_凱衛網聚簡報.pdf
+E:/@交易/c_i.txt
 E:/@交易/MAE.txt
 E:/@交易/MT5交易平台介紹.pdf
-E:/@交易/c_i.txt
+E:/@交易/ｏ大私房海期課堂筆記.pdf
 E:/@交易/pstop.txt
 E:/@交易/temp entry.txt
 E:/@交易/temp.txt
 E:/@交易/投資交易心得筆記.txt
+E:/@交易/開發架構.txt
 E:/@交易/精簡.txt
 E:/@交易/課程.txt
-E:/@交易/開發架構.txt
-E:/@交易/ｏ大私房海期課堂筆記.pdf
-E:/投資交易/pla_md/signal/!_TXDD_1_003_TXEX2104.md
-E:/投資交易/pla_md/signal/!_TXDD_1_006_TXEX2106.md
-E:/投資交易/pla_md/signal/!_TXDL_1_060_TXEX2107.md
-E:/投資交易/pla_md/signal/$2106K06_TX_BBand_LO_60K.md
-E:/投資交易/pla_md/signal/$@LV_lowebar_jump_11K_LT.md
-E:/投資交易/pla_md/signal/$ShaoWei001_TX_Gap202107_LT03.md
-E:/投資交易/pla_md/signal/(10) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
-E:/投資交易/pla_md/signal/(10)@@202106TAZ_CDP_4K_D0.md
-E:/投資交易/pla_md/signal/(10)策略PLA (S)003_TX_Score_2k_DT_20210618.md
-E:/投資交易/pla_md/signal/(3) PLA腳本 Ren04_TX_20m_20211230Engulfing_LT.md
-E:/投資交易/pla_md/signal/(4 )策略程式碼 D027_6KAM_20201018_MID_TREND_DO.md
-E:/投資交易/pla_md/signal/(4 )策略程式碼 TXF_B022_056_50KAM_20201210_BB_BO.md
-E:/投資交易/pla_md/signal/(4)  yita 010_TX_20m_3GP_FLT.md
-E:/投資交易/pla_md/signal/(4) 139_TX7M_C-bar_DO_v1.1_2106-Alan.md
-E:/投資交易/pla_md/signal/(4) @S_070_TX_Reverser_D.md
-E:/投資交易/pla_md/signal/(4) @S_110_TX_SnP_L.md
-E:/投資交易/pla_md/signal/(4) @S_HW2111_TX_1D_VolaRush_L.md
-E:/投資交易/pla_md/signal/(4) CB_HW_2111_Bignose_TX_3BarSoilder_FDO_6k_PLE.md
-E:/投資交易/pla_md/signal/(4) H066_TX_BT_LO_13M_(202107HW).md
-E:/投資交易/pla_md/signal/(4) _004_TX_4K_5D (H-C L-C O-C)-average_DT.md
-E:/投資交易/pla_md/signal/(4) yita 007_TX_10m_open6_LT.md
-E:/投資交易/pla_md/signal/(4) yita 008_TX_6m_3GP_DT.md
-E:/投資交易/pla_md/signal/(4) yita 009_TX_50m_3GP_LT.md
-E:/投資交易/pla_md/signal/(4)@R006_TX_Bollien_Backout_FLT.md
-E:/投資交易/pla_md/signal/(4)BN_002_TX_BarTunnel_LO_8k.md
-E:/投資交易/pla_md/signal/(4)BN_003_TX_Sar_FDO_10k.md
-E:/投資交易/pla_md/signal/(4)BN_004_TX_Pivot_FLO_10k.md
-E:/投資交易/pla_md/signal/(4)_@LV@_tx_TransFormer_17K_(DT)LT.md
-E:/投資交易/pla_md/signal/000_TX_CDPKD_D0.md
-E:/投資交易/pla_md/signal/001_TX_3Red_LO-1.md
-E:/投資交易/pla_md/signal/001_TX_KPOWER_DO.md
-E:/投資交易/pla_md/signal/001_TX_MACD_LO.md
-E:/投資交易/pla_md/signal/001_TX_PT_D0.md
-E:/投資交易/pla_md/signal/001_TX_Range R_LO.md
-E:/投資交易/pla_md/signal/002K_TX_PBO_LO(HW4).md
-E:/投資交易/pla_md/signal/002_Sw_D_5min_Linear.md
-E:/投資交易/pla_md/signal/002_TX_Keltner_LO_2010.md
-E:/投資交易/pla_md/signal/006_LLH_6mK_FDO.md
-E:/投資交易/pla_md/signal/006_TXA_13mLineReg_LOS_V2.md
-E:/投資交易/pla_md/signal/@@202106T90_Normal_CDP_K_D0.md
-E:/投資交易/pla_md/signal/@@202106T90_STRONG.md
-E:/投資交易/pla_md/signal/@@202107T89_CriticalOpenXDP_3K_D0.md
-E:/投資交易/pla_md/signal/@@@173_TX_DVNormal_D0.md
-E:/投資交易/pla_md/signal/@CF 20220112.1.md
-E:/投資交易/pla_md/signal/@CF v20210125.1.md
-E:/投資交易/pla_md/signal/@LV@TX_AAA_13K_LT.md
-E:/投資交易/pla_md/signal/@LV@_TX_BayesLaw_7K_LT.md
-E:/投資交易/pla_md/signal/@LV@_TX_Kings_men_11K_LT.md
-E:/投資交易/pla_md/signal/@M@S@Avg_MA.md
-E:/投資交易/pla_md/signal/@M@S@DT_ORB.md
-E:/投資交易/pla_md/signal/@M@S@EMA (5).md
-E:/投資交易/pla_md/signal/@M@S@EMA (6).md
-E:/投資交易/pla_md/signal/@M@S@EMA.md
-E:/投資交易/pla_md/signal/@M@S@FDT_CDP.md
-E:/投資交易/pla_md/signal/@M@S@LT_Mother_Son.md
-E:/投資交易/pla_md/signal/@M@S@LT_WD4_WD3.md
-E:/投資交易/pla_md/signal/@M@S@WD1_WD5.md
-E:/投資交易/pla_md/signal/@MC2_All.md
-E:/投資交易/pla_md/signal/@MR_Total v20210125.1.md
-E:/投資交易/pla_md/signal/@S_010_3G_D.md
-E:/投資交易/pla_md/signal/@S_047_TX_Trender_D.md
-E:/投資交易/pla_md/signal/@S_072_TX_OpenerV3_L.md
-E:/投資交易/pla_md/signal/@SpyGrid(蛛網，網格交易).md
-E:/投資交易/pla_md/signal/@TX_20210219_LO.md
-E:\@交易\@程式交易\ALGO 知名不具\00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf
-E:\@交易\@程式交易\ALGO 知名不具\FDG_Seminar_150408.pdf
-E:\@交易\@程式交易\ALGO 知名不具\IchimokuKinkoHyo.pdf
-E:\@交易\@程式交易\MAE_MFE_intra_report.pdf
-E:\@交易\@程式交易\MR.AutoTrading_期貨程式交易整合平台使用手冊_ v2.0.1.pdf
-E:\@交易\@程式交易\Successful Algorithmic Trading.pdf
-E:\@交易\@程式交易\下單大師 MC 測試報告.pdf
-E:\@交易\@程式交易\中華電信IDC客戶維護人員異動申請表.pdf
-E:\@交易\@程式交易\中華電信IDC客戶維護人員異動申請表範例.pdf
-E:\@交易\@程式交易\基礎班\00_MC 基礎使用.pdf
-E:\@交易\@程式交易\基礎班\1chat.txt
-E:\@交易\@程式交易\基礎班\2 MC基本操作.pdf
-E:\@交易\@程式交易\基礎班\3chat.txt
-E:\@交易\@程式交易\基礎班\3基礎語法介紹.pdf
-E:\@交易\@程式交易\基礎班\4chat.txt
-E:\@交易\@程式交易\基礎班\5chat.txt
-E:\@交易\@程式交易\基礎班\第八講 PT教學與投資組合.pdf
-E:\@交易\@程式交易\報價相關\SOR API測試步驟-快速版.pdf
-E:\@交易\@程式交易\投資組合管理\DayMaxDD定義.txt
-E:\@交易\@程式交易\投資組合管理\DayMovingDD定義.txt
-E:\@交易\@程式交易\文案簡報2021521.pdf
-E:\@交易\@程式交易\期貨高勝率.pdf
-E:\@交易\@程式交易\每月閒聊\2020.12閒聊 WFdemo.pdf
-E:\@交易\@程式交易\每月閒聊\2020_10閒聊 保險真心話.pdf
-E:\@交易\@程式交易\每月閒聊\2021.6月閒聊.pdf
-E:\@交易\@程式交易\每月閒聊\202101 閒聊.pdf
-E:\@交易\@程式交易\每月閒聊\202107_閒聊_XQ操作.pdf
-E:\@交易\@程式交易\每月閒聊\202112閒聊.pdf
-E:\@交易\@程式交易\每月閒聊\chat.txt
-E:\@交易\@程式交易\每月閒聊\加密幣補充 p49.pdf
-E:\@交易\@程式交易\程式交易軟硬體 SOP 概述.pdf
-E:\@交易\@程式交易\程式交易電腦硬體DIY Vol.6-硬體設備估價清單_2021.05.31.pdf
-E:\@交易\@程式交易\穩健致遠.pdf
-E:\@交易\@程式交易\籌碼\SFINI.csv
-E:\@交易\@程式交易\籌碼\外資.csv
-E:\@交易\@程式交易\籌碼\投信.csv
-E:\@交易\@程式交易\籌碼\自營.csv
-E:\@交易\@程式交易\講義\(IDC機櫃補充說明)樹昌3U機櫃_TI-X302 規格整理_2020.10.06.pdf
-E:\@交易\@程式交易\講義\C哥_IDC規劃_V3.pdf
-E:\@交易\@程式交易\講義\IDC機櫃租用服務契約_有公司章.pdf
-E:\@交易\@程式交易\講義\硬體設備估價清單_2021.03.15.pdf
-E:\@交易\@程式交易\達哥\SBF\DLHHL.txt
-E:\@交易\@程式交易\達哥\SBF\HLM.txt
-E:\@交易\@程式交易\達哥\SBF\MA.txt
-E:\@交易\@程式交易\達哥\SBF\MXNDU.txt
-E:\@交易\@程式交易\達哥\SBF\RushBear (2).txt
-E:\@交易\@程式交易\達哥\SBF\SBF.txt
-E:\@交易\@程式交易\達哥\SBF\SBF_1.txt
-E:\@交易\@程式交易\達哥\SBF\SBF_20220306.txt
-E:\@交易\@程式交易\達哥\SBF\SBF_ADA.txt
-E:\@交易\@程式交易\達哥\SBF\SBF_Ori.txt
-E:\@交易\@程式交易\達哥\SBF\SBF_RushBear_chg.txt
-E:\@交易\@程式交易\達哥\SBF\SBF_dev.txt
-E:\@交易\@程式交易\達哥\SBF\SBF_ori2.txt
-E:\@交易\@程式交易\達哥\SBF\ma+uvdv.txt
-E:\@交易\@程式交易\達哥\SBF\maimai_fish.txt
-E:\投資交易\交易系統\ATM_Strategy_config.json
-E:\投資交易\交易系統\Config\!.Configure.json
-E:\投資交易\交易系統\Config\config.py
-E:\投資交易\交易系統\DISPATCH_PROTOCOL.md
-E:\投資交易\交易系統\bots\avalon\avalon line_bot.py
-E:\投資交易\交易系統\bots\sync\Discord-Line-Message-Sync_extracted\Discord-Line-Message-Sync\binding_codes.json
-E:\投資交易\交易系統\bots\sync\Discord-Line-Message-Sync_extracted\Discord-Line-Message-Sync\line_bot.py
-E:\投資交易\交易系統\bots\sync\Discord-Line-Message-Sync_extracted\Discord-Line-Message-Sync\requirements.txt
-E:\投資交易\交易系統\bots\sync\Discord-Line-Message-Sync_extracted\Discord-Line-Message-Sync\sync_channels.json
-E:\投資交易\交易系統\bots\sync\avalonpediatw-line-discord-sync\discord_bot.py
-E:\投資交易\交易系統\bots\sync\avalonpediatw-line-discord-sync\line_bot.py
-E:\投資交易\交易系統\bots\sync\avalonpediatw-line-discord-sync\line_notify.py
-E:\投資交易\交易系統\bots\sync\avalonpediatw-line-discord-sync\requirements.txt
-E:\投資交易\交易系統\bots\sync\avalonpediatw-line-discord-sync\sync_channels.json
-E:\投資交易\交易系統\bots\sync\avalonpediatw-line-discord-sync\utilities.py
-E:\投資交易\交易系統\monitoring\healthcare.txt
-E:\投資交易\交易系統\scripts\auto_github_sync.py
-E:\投資交易\交易系統\scripts\dispatch_runner.py
-E:\投資交易\交易系統\scripts\setup_task_scheduler.py
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_M31(6643.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_三福化(4755.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_三陽工業(2206.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_上曜(1316.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_上緯投控(3708.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_上銀(2049.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_世界(5347.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中天(4128.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中探針(6217.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中砂(1560.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中磊(5388.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中租-KY(5871.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中美晶(5483.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中興電(1513.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中鋼(2002.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中電(1611.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中鴻(2014.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_乙盛-KY(5243.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_九齊(6494.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_亞信(3169.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_交易分析.csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_京元電子(2449.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_仲琦(2419.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_佳能(2374.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_保瑞(6472.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_倫飛(2364.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_偉詮電(2436.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_健喬(4114.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_億光(2393.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_優盛(4121.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_元太(8069.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_元晶(6443.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_光罩(2338.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_光頡(3624.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_全友(2305.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_全新(2455.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_凌通(4952.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_創惟(6104.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_力智(6719.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_力積電(6770.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_北極星藥業-KY(6550.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_南亞(1303.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_南港(2101.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_南電(8046.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_博智(8155.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_台亞(2340.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_台光電(2383.TW).csv
-E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_台勝科(3532.TW).csv
-E:/投資交易/pla_md/signal/@autoCF.md
-E:/投資交易/pla_md/signal/@autoCF_backup.md
-E:/投資交易/pla_md/signal/@LeverageCalculation.md
-E:/投資交易/pla_md/signal/@LSEDEV_S_OPT.md
-E:/投資交易/pla_md/signal/@MC1_程式碼.md
-E:/投資交易/pla_md/signal/@Order.md
-E:/投資交易/pla_md/signal/007_BiasReverse 3mK D0.md
-E:/投資交易/pla_md/signal/007_TXFM_COVERGAP_D0_01_1030.md
-E:/投資交易/pla_md/signal/009_TX_Box_FDT0_Jack.md
-E:/投資交易/pla_md/signal/01.202010功課-004_TX_KDHL_LT.md
-E:/投資交易/pla_md/signal/01.202101功課-006_TX_HLtime_LT.md
-E:/投資交易/pla_md/signal/01.202106功課-Sing014_TX_Change_LT.md
-E:/投資交易/pla_md/signal/01.202106功課-Sing014_TX_ChangeDabrother_LT.md
-E:/投資交易/pla_md/signal/01.202109功課_Sing_010_TX_W_LT_改良版.md
-E:/投資交易/pla_md/signal/016_TX_KCForward_L0.md
-E:/投資交易/pla_md/signal/017_TXA_CHANNEL_LO.md
-E:/投資交易/pla_md/signal/017_TXA_CO4_DO_5min.md
-E:/投資交易/pla_md/signal/018_TXF_JumpRange3K_DT.md
-E:/投資交易/pla_md/signal/019_TX_LongBandForwardTrade_L0.md
-E:/投資交易/pla_md/signal/020_TX_3DAYBRK_LO.md
-E:/投資交易/pla_md/signal/021_TXA_2N_DO_3min.md
-E:/投資交易/pla_md/signal/022_TX_TwoDayHighLow_L0.md
-E:/投資交易/pla_md/signal/023_TX_WEEKBRKOUT_LO.md
-E:/投資交易/pla_md/signal/024_TXF_RSI_60m_FLT.md
-E:/投資交易/pla_md/signal/026_TX_RSIForwardTrade_L0 說明檔.md
-E:/投資交易/pla_md/signal/027_TX_DayContrarian_LO_300M.md
-E:/投資交易/pla_md/signal/027_TX_MACDADX_L0.md
-E:/投資交易/pla_md/signal/028_TX_17mFFG_LOS.md
-E:/投資交易/pla_md/signal/028_TX_RSIRevisedTrading_L0.md
-E:/投資交易/pla_md/signal/029_TX_SingletoTriAve_L0 說明檔.md
-E:/投資交易/pla_md/signal/03 CBST017_MAOCHL_9m_FDO.md
-E:/投資交易/pla_md/signal/03 CBST020_Aroon_29m_FLO.md
-E:/投資交易/pla_md/signal/03 CBST023_HLB_29m_FLO_V3.md
-E:/投資交易/pla_md/signal/03 CBST027_LNR_29m_FLO_V4.md
-E:/投資交易/pla_md/signal/03_15_DL300M01_CBQC2202_V10_DMI_XQ.md
-E:/投資交易/pla_md/signal/03_15_DL300M01_CBQC2202_V11_DMI_XQ.md
-E:/投資交易/pla_md/signal/03_QC2102_M10_LO.md
-E:/投資交易/pla_md/signal/03_QC2102_M10_LO_WF.md
-E:/投資交易/pla_md/signal/030_TX_TriAverage&SingleAverage_L0.md
-E:/投資交易/pla_md/signal/031_3 DAY H&L no mp_FLT.md
-E:/投資交易/pla_md/signal/031_TX_AllDay_TriAverage&SingleAverage_L0 說明檔.md
-E:/投資交易/pla_md/signal/032_TX_VHF_LO_37M.md
-E:/投資交易/pla_md/signal/033_TX_DayC_LO_300M.md
-E:/投資交易/pla_md/signal/045_TX_BY_DO.md
-E:/投資交易/pla_md/signal/047_TX_BBR_DO.md
-E:/投資交易/pla_md/signal/047_TXI_Correlation Trend_DO.md
-E:/投資交易/pla_md/signal/053_TX_NBY_DO.md
-E:/投資交易/pla_md/signal/059_TXI_CLOSED_LO.md
-E:/投資交易/pla_md/signal/060_Hsiang_TXA_Q5_R_10min_FLT.md
-E:/投資交易/pla_md/signal/064_TXA_HLGAPBC_LO_20min.md
-E:/投資交易/pla_md/signal/064_TXI_ORB_LO.md
-E:/投資交易/pla_md/signal/092_vwap_3k_DT.md
-E:/投資交易/pla_md/signal/09042.md
-E:/投資交易/pla_md/signal/0327.md
-E:/投資交易/pla_md/signal/0403.md
-E:/投資交易/pla_md/signal/0528.md
-E:/投資交易/pla_md/signal/0530.md
-E:/投資交易/pla_md/signal/0629.md
-E:/投資交易/pla_md/signal/0704.md
-E:/投資交易/pla_md/signal/(4) 策略腳本 Ren01_TX_60m_20211020Triangle_FLT.md
-E:/投資交易/pla_md/signal/(4) 策略腳本 Ren01_TX_60m_20211113Triangle_FLT_V2.md
-E:/投資交易/pla_md/signal/(4) 策略腳本 Ren02_TX_13m_20211118CDPW_LT.md
-E:/投資交易/pla_md/signal/(4) 策略腳本 Ren03 TX_27m_20211211NarrowBreak_FLT.md
-E:/投資交易/pla_md/signal/(4) 策略腳本 Shuen029_TX_Amplitude_LT.md
-E:/投資交易/pla_md/signal/(4) 策略腳本_Ed001_TX_GapMA_6K_LT.md
-E:/投資交易/pla_md/signal/(4) 策略腳本_ED001_TX_JumpGapMA6K_LT.md
-E:/投資交易/pla_md/signal/(4) 策略腳本Shuen034_TX_StochRSI_LT.md
-E:/投資交易/pla_md/signal/(4) 策略腳本Shuen037_TX_CamarillaPivot6k.md
-E:/投資交易/pla_md/signal/(4) 策略腳本Shuen038_TX_EarlyORB5K_DT.md
-E:/投資交易/pla_md/signal/(4) 策略腳本Shuen040_TX_WeekCostLine_FLT.md
-E:/投資交易/pla_md/signal/(4) 策略腳本Shuen041_TX_WeekCDP_LT.md
-E:/投資交易/pla_md/signal/(4)%%TX_KBAR_L0_15K.md
-E:/投資交易/pla_md/signal/(4)@Ivan2109_TX_MACP19k_LT.md
-E:/投資交易/pla_md/signal/(4)@Ivan2111_TX_shadow11k_LT.md
-E:/投資交易/pla_md/signal/(4)@Ivan2112_TX_CorrectionShort_20k_LT.md
-E:/投資交易/pla_md/signal/(4)_011_TX_4Day (OHLC)_FDT.md
-E:/投資交易/pla_md/signal/(4)BN_TX_2109_IslandReverse PLE.md
-E:/投資交易/pla_md/signal/(4)BN_TX_2109_orbplus_DO_4k_v2.md
-E:/投資交易/pla_md/signal/(4)CB_HW_2201_Bignose_TX_3SameBar_DO_6k.md
-E:/投資交易/pla_md/signal/(4)coke777_TX_0921_LT策略腳本.md
-E:/投資交易/pla_md/signal/(4)Ivan2109_TX_DV6k_DT.md
-E:/投資交易/pla_md/signal/(4)NV002_TX30M_SR_FLT.md
-E:/投資交易/pla_md/signal/(4)NV2107003_TX3M_Amy_FDT.md
-E:/投資交易/pla_md/signal/(4) 策略腳本_TXAL_1_007_VCP+RangeBreakout.md
-E:/投資交易/pla_md/signal/(4) 策略腳本Shuen004_TX_LSS_LT.md
-E:/投資交易/pla_md/signal/(4) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
-E:/投資交易/pla_md/signal/(4)NV2108004_TX15M_Bonny_LT.md
-E:/投資交易/pla_md/signal/(4)NV2109005_TX6M_Cindy_LT -original.md
-E:/投資交易/pla_md/signal/(4)NV2109005_TX6M_Cindy_LT.md
-E:/投資交易/pla_md/signal/(4)NV2110006_TX3M_FLT.md
-E:/投資交易/pla_md/signal/(4)NV2112008_TX60M_FLT.md
-E:/投資交易/pla_md/signal/(4)NV2202009_TX300M_LT.md
-E:/投資交易/pla_md/signal/(4)TimChen009_TX_30mBBI_LOS-策略腳本.md
-E:/投資交易/pla_md/signal/(4)TX_HLdistance15K.md
-E:/投資交易/pla_md/signal/(4)策略及指標程式碼-004_TXF_3G(1.382)_4mK_LO-202101-彥勝.md
-E:/投資交易/pla_md/signal/(4)策略程式碼 001_TX_20210204d_LO.md
-E:/投資交易/pla_md/signal/(4)策略程式碼 TX_MAHL_FDT_1.md
-E:/投資交易/pla_md/signal/(4)策略程式碼01M60ML.md
-E:/投資交易/pla_md/signal/(4)策略程式碼06M03MD0.md
-E:/投資交易/pla_md/signal/(4)策略腳本 - Wesley002_TX_2107SQX0001_DT.md
-E:/投資交易/pla_md/signal/(4)策略腳本 - Wesley003_TX_2110KPower_LO.md
-E:/投資交易/pla_md/signal/(4)策略腳本 - Wesley004_TX_2112SQX003_LT.md
-E:/投資交易/pla_md/signal/(4)策略腳本 PTstartup105_TX_PivotReversal04_DT.md
-E:/投資交易/pla_md/signal/(4)策略腳本_LanDi001_TX_BIAS_50mK_20220217_LT.md
-E:/投資交易/pla_md/signal/(4)策略腳本004_TX_PriceInterval5K_LO.md
-E:/投資交易/pla_md/signal/(4)策略腳本005_TX_wCDP20K_FLO.md
-E:/投資交易/pla_md/signal/(4)策略腳本Drschnabel_TX_trend&oscillation20k_LT.md
-E:/投資交易/pla_md/signal/(4)策略腳本GavinLu008_TX_DonChianChannel-D2106-K20m_LT.md
-E:/投資交易/pla_md/signal/(4)策略腳本Jack106_TX_Neckline10K_L0.md
-E:/投資交易/pla_md/signal/(4)策略腳本Jack112_TX_HLR13K_LT_Jack 軒邑軒宇.md
-E:/投資交易/pla_md/signal/(4)策略程式碼%%AVgirl_202106_5K.md
-E:/投資交易/pla_md/signal/(4)策略程式碼 sungwen.007_Tx_202106_FLT.md
-E:/投資交易/pla_md/signal/(4)策略程式碼 sungwen.009_Tx_202110_FDT.md
-E:/投資交易/pla_md/signal/(4)策略程式碼06MD0.md
-E:/投資交易/pla_md/signal/(4)策略程式碼07M30MAL.md
-E:/投資交易/pla_md/signal/(4)策略程式碼08M15MAL.md
-E:/投資交易/pla_md/signal/(4)策略程式碼10M15L.md
-E:/投資交易/pla_md/signal/(4)策略程式碼11M60MAL.md
-E:/投資交易/pla_md/signal/(4)策略程式碼12M03MAD0.md
-E:/投資交易/pla_md/signal/(4)策略腳本 - Wesley002_TX_2107SQX0001_DT.md
-E:/投資交易/pla_md/signal/(4)策略腳本 - Wesley003_TX_2110KPower_LO.md
-E:/投資交易/pla_md/signal/(4)策略腳本 - Wesley004_TX_2112SQX003_LT.md
-E:/投資交易/pla_md/signal/(4)策略腳本 PTstartup105_TX_PivotReversal04_DT.md
-E:/投資交易/pla_md/signal/(4)策略腳本_LanDi001_TX_BIAS_50mK_20220217_LT.md
-E:/投資交易/pla_md/signal/(4)策略腳本004_TX_PriceInterval5K_LO.md
-E:/投資交易/pla_md/signal/(4)策略腳本005_TX_wCDP20K_FLO.md
-E:/投資交易/pla_md/signal/(4)策略腳本Drschnabel_TX_trend&oscillation20k_LT.md
-E:/投資交易/pla_md/signal/(4)策略腳本GavinLu008_TX_DonChianChannel-D2106-K20m_LT.md
-E:/投資交易/pla_md/signal/(4)策略腳本Jack106_TX_Neckline10K_L0.md
-E:/投資交易/pla_md/signal/(4)策略腳本Jack112_TX_HLR13K_LT_Jack 軒邑軒宇.md
-E:/投資交易/pla_md/signal/(4)策略腳本katsu005_TXAM_LENGATE_3mK_DT-彥勝.md
-E:/投資交易/pla_md/signal/(4)策略腳本Ray101_TX_3 gate 6k_DO.md
-E:/投資交易/pla_md/signal/(4)策略腳本TimChen008_TX_15mKD202106_LT.md
-E:/投資交易/pla_md/signal/(5) @S_070_TX_Reverser_D.md
-E:/投資交易/pla_md/signal/(5) 139_TX7M_C-bar_DO_v1.1_2106-Alan.md
-E:/投資交易/pla_md/signal/(5) yita 007_TX_10m_open6_LT.md
-E:/投資交易/pla_md/signal/(5) 策略腳本 Ren01_TX_60m_20211020Triangle_FLT.md
-E:/投資交易/pla_md/signal/(5) 策略腳本 Ren01_TX_60m_20211113Triangle_FLT_V2.md
-E:/投資交易/pla_md/signal/(5) 策略腳本.md
-E:/投資交易/pla_md/signal/(5) 策略腳本_Ed001_TX_GapMA_6K_LT.md
-E:/投資交易/pla_md/signal/(5) 策略腳本_ED001_TX_JumpGapMA6K_LT.md
-E:/投資交易/pla_md/signal/(5) 策略腳本_TXAL_1_007_VCP+RangeBreakout.md
-E:/投資交易/pla_md/signal/(5) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
-E:/投資交易/pla_md/signal/(5) 策略腳本Shuen037_TX_CamarillaPivot6k.md
-E:/投資交易/pla_md/signal/(5) 策略腳本Shuen038_TX_EarlyORB5K_DT.md
-E:/投資交易/pla_md/signal/(5) 策略腳本Shuen040_TX_WeekCostLine_FLT.md
 E:/投資交易/pla_md/function/dayatr3.md
 E:/投資交易/pla_md/function/LSEScore.md
 E:/投資交易/pla_md/function/MagicADLuckyNet.md
@@ -754,33 +421,360 @@ E:/投資交易/pla_md/logic/(4)NV002_TX30M_SR_FLT.md
 E:/投資交易/pla_md/logic/(4)NV2107003_TX3M_Amy_FDT.md
 E:/投資交易/pla_md/logic/(4)NV2108004_TX15M_Bonny_LT.md
 E:/投資交易/pla_md/logic/(4)NV2109005_TX6M_Cindy_LT -original.md
-E:/投資交易/pla_md/logic/(4) 策略腳本.md
-E:/投資交易/pla_md/logic/(4) 策略腳本_Ed001_TX_GapMA_6K_LT.md
-E:/投資交易/pla_md/logic/(4) 策略腳本_ED001_TX_JumpGapMA6K_LT.md
-E:/投資交易/pla_md/logic/(4) 策略腳本_TXAL_1_007_VCP+RangeBreakout.md
-E:/投資交易/pla_md/logic/(4) 策略腳本Shuen004_TX_LSS_LT.md
-E:/投資交易/pla_md/logic/(4) 策略腳本Shuen034_TX_StochRSI_LT.md
-E:/投資交易/pla_md/logic/(4) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
-E:/投資交易/pla_md/logic/(4) 策略腳本Shuen037_TX_CamarillaPivot6k.md
-E:/投資交易/pla_md/logic/(4) 策略腳本Shuen038_TX_EarlyORB5K_DT.md
-E:/投資交易/pla_md/logic/(4) 策略腳本Shuen040_TX_WeekCostLine_FLT.md
-E:/投資交易/pla_md/logic/(4) 策略腳本Shuen041_TX_WeekCDP_LT.md
-E:/投資交易/pla_md/logic/(4)%%TX_KBAR_L0_15K.md
-E:/投資交易/pla_md/logic/(4)@Ivan2109_TX_MACP19k_LT.md
-E:/投資交易/pla_md/logic/(4)@Ivan2111_TX_shadow11k_LT.md
-E:/投資交易/pla_md/logic/(4)@Ivan2112_TX_CorrectionShort_20k_LT.md
-E:/投資交易/pla_md/logic/(4)@R006_TX_Bollien_Backout_FLT.md
-E:/投資交易/pla_md/logic/(4)_@LV@_tx_TransFormer_17K_(DT)LT.md
-E:/投資交易/pla_md/logic/(4)_011_TX_4Day (OHLC)_FDT.md
-E:/投資交易/pla_md/logic/(4)BN_002_TX_BarTunnel_LO_8k.md
-E:/投資交易/pla_md/logic/(4)BN_003_TX_Sar_FDO_10k.md
-E:/投資交易/pla_md/logic/(4)BN_004_TX_Pivot_FLO_10k.md
-E:/投資交易/pla_md/logic/(4)BN_TX_2109_IslandReverse PLE.md
-E:/投資交易/pla_md/logic/(4)BN_TX_2109_orbplus_DO_4k_v2.md
-E:/投資交易/pla_md/logic/(4)CB_HW_2201_Bignose_TX_3SameBar_DO_6k.md
-E:/投資交易/pla_md/logic/(4)coke777_TX_0921_LT策略腳本.md
-E:/投資交易/pla_md/logic/(4)Ivan2109_TX_DV6k_DT.md
-E:/投資交易/pla_md/logic/(4)NV002_TX30M_SR_FLT.md
-E:/投資交易/pla_md/logic/(4)NV2107003_TX3M_Amy_FDT.md
-E:/投資交易/pla_md/logic/(4)NV2108004_TX15M_Bonny_LT.md
-E:/投資交易/pla_md/logic/(4)NV2109005_TX6M_Cindy_LT -original.md
+E:/投資交易/pla_md/logic/(4)NV2109005_TX6M_Cindy_LT.md
+E:/投資交易/pla_md/logic/(4)NV2110006_TX3M_FLT.md
+E:/投資交易/pla_md/logic/(4)NV2112008_TX60M_FLT.md
+E:/投資交易/pla_md/logic/(4)NV2202009_TX300M_LT.md
+E:/投資交易/pla_md/logic/(4)TimChen009_TX_30mBBI_LOS-策略腳本.md
+E:/投資交易/pla_md/logic/(4)TX_HLdistance15K.md
+E:/投資交易/pla_md/logic/(4)策略及指標程式碼-004_TXF_3G(1.382)_4mK_LO-202101-彥勝.md
+E:/投資交易/pla_md/logic/(4)策略程式碼 001_TX_20210204d_LO.md
+E:/投資交易/pla_md/logic/(4)策略程式碼 sungwen.007_Tx_202106_FLT.md
+E:/投資交易/pla_md/logic/(4)策略程式碼 sungwen.009_Tx_202110_FDT.md
+E:/投資交易/pla_md/logic/(4)策略程式碼 TX_MAHL_FDT_1.md
+E:/投資交易/pla_md/logic/(4)策略程式碼%%AVgirl_202106_5K.md
+E:/投資交易/pla_md/logic/(4)策略程式碼01M60ML.md
+E:/投資交易/pla_md/logic/(4)策略程式碼06M03MD0.md
+E:/投資交易/pla_md/logic/(4)策略程式碼06MD0.md
+E:/投資交易/pla_md/logic/(4)策略程式碼07M30MAL.md
+E:/投資交易/pla_md/logic/(4)策略程式碼08M15MAL.md
+E:/投資交易/pla_md/logic/(4)策略程式碼10M15L.md
+E:/投資交易/pla_md/logic/(4)策略程式碼11M60MAL.md
+E:/投資交易/pla_md/logic/(4)策略程式碼12M03MAD0.md
+E:/投資交易/pla_md/logic/(4)策略腳本 - Wesley002_TX_2107SQX0001_DT.md
+E:/投資交易/pla_md/logic/(4)策略腳本 - Wesley003_TX_2110KPower_LO.md
+E:/投資交易/pla_md/logic/(4)策略腳本 - Wesley004_TX_2112SQX003_LT.md
+E:/投資交易/pla_md/logic/(4)策略腳本 PTstartup105_TX_PivotReversal04_DT.md
+E:/投資交易/pla_md/logic/(4)策略腳本_LanDi001_TX_BIAS_50mK_20220217_LT.md
+E:/投資交易/pla_md/logic/(4)策略腳本004_TX_PriceInterval5K_LO.md
+E:/投資交易/pla_md/logic/(4)策略腳本005_TX_wCDP20K_FLO.md
+E:/投資交易/pla_md/logic/(4)策略腳本Drschnabel_TX_trend&oscillation20k_LT.md
+E:/投資交易/pla_md/logic/(4)策略腳本GavinLu008_TX_DonChianChannel-D2106-K20m_LT.md
+E:/投資交易/pla_md/logic/(4)策略腳本Jack106_TX_Neckline10K_L0.md
+E:/投資交易/pla_md/logic/(4)策略腳本Jack112_TX_HLR13K_LT_Jack 軒邑軒宇.md
+E:/投資交易/pla_md/logic/(4)策略腳本katsu005_TXAM_LENGATE_3mK_DT-彥勝.md
+E:/投資交易/pla_md/logic/(4)策略腳本Ray101_TX_3 gate 6k_DO.md
+E:/投資交易/pla_md/logic/(4)策略腳本TimChen008_TX_15mKD202106_LT.md
+E:/投資交易/pla_md/logic/(5) @S_070_TX_Reverser_D.md
+E:/投資交易/pla_md/signal/!_TXDD_1_003_TXEX2104.md
+E:/投資交易/pla_md/signal/!_TXDD_1_006_TXEX2106.md
+E:/投資交易/pla_md/signal/!_TXDL_1_060_TXEX2107.md
+E:/投資交易/pla_md/signal/$@LV_lowebar_jump_11K_LT.md
+E:/投資交易/pla_md/signal/$2106K06_TX_BBand_LO_60K.md
+E:/投資交易/pla_md/signal/$ShaoWei001_TX_Gap202107_LT03.md
+E:/投資交易/pla_md/signal/(10) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
+E:/投資交易/pla_md/signal/(10)@@202106TAZ_CDP_4K_D0.md
+E:/投資交易/pla_md/signal/(10)策略PLA (S)003_TX_Score_2k_DT_20210618.md
+E:/投資交易/pla_md/signal/(3) PLA腳本 Ren04_TX_20m_20211230Engulfing_LT.md
+E:/投資交易/pla_md/signal/(4 )策略程式碼 D027_6KAM_20201018_MID_TREND_DO.md
+E:/投資交易/pla_md/signal/(4 )策略程式碼 TXF_B022_056_50KAM_20201210_BB_BO.md
+E:/投資交易/pla_md/signal/(4)  yita 010_TX_20m_3GP_FLT.md
+E:/投資交易/pla_md/signal/(4) @S_070_TX_Reverser_D.md
+E:/投資交易/pla_md/signal/(4) @S_110_TX_SnP_L.md
+E:/投資交易/pla_md/signal/(4) @S_HW2111_TX_1D_VolaRush_L.md
+E:/投資交易/pla_md/signal/(4) _004_TX_4K_5D (H-C L-C O-C)-average_DT.md
+E:/投資交易/pla_md/signal/(4) 139_TX7M_C-bar_DO_v1.1_2106-Alan.md
+E:/投資交易/pla_md/signal/(4) CB_HW_2111_Bignose_TX_3BarSoilder_FDO_6k_PLE.md
+E:/投資交易/pla_md/signal/(4) H066_TX_BT_LO_13M_(202107HW).md
+E:/投資交易/pla_md/signal/(4) yita 007_TX_10m_open6_LT.md
+E:/投資交易/pla_md/signal/(4) yita 008_TX_6m_3GP_DT.md
+E:/投資交易/pla_md/signal/(4) yita 009_TX_50m_3GP_LT.md
+E:/投資交易/pla_md/signal/(4) 策略腳本 Ren01_TX_60m_20211020Triangle_FLT.md
+E:/投資交易/pla_md/signal/(4) 策略腳本 Ren01_TX_60m_20211113Triangle_FLT_V2.md
+E:/投資交易/pla_md/signal/(4) 策略腳本 Ren02_TX_13m_20211118CDPW_LT.md
+E:/投資交易/pla_md/signal/(4) 策略腳本 Ren03 TX_27m_20211211NarrowBreak_FLT.md
+E:/投資交易/pla_md/signal/(4) 策略腳本 Shuen029_TX_Amplitude_LT.md
+E:/投資交易/pla_md/signal/(4) 策略腳本_Ed001_TX_GapMA_6K_LT.md
+E:/投資交易/pla_md/signal/(4) 策略腳本_ED001_TX_JumpGapMA6K_LT.md
+E:/投資交易/pla_md/signal/(4) 策略腳本_TXAL_1_007_VCP+RangeBreakout.md
+E:/投資交易/pla_md/signal/(4) 策略腳本Shuen004_TX_LSS_LT.md
+E:/投資交易/pla_md/signal/(4) 策略腳本Shuen034_TX_StochRSI_LT.md
+E:/投資交易/pla_md/signal/(4) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
+E:/投資交易/pla_md/signal/(4) 策略腳本Shuen037_TX_CamarillaPivot6k.md
+E:/投資交易/pla_md/signal/(4) 策略腳本Shuen038_TX_EarlyORB5K_DT.md
+E:/投資交易/pla_md/signal/(4) 策略腳本Shuen040_TX_WeekCostLine_FLT.md
+E:/投資交易/pla_md/signal/(4) 策略腳本Shuen041_TX_WeekCDP_LT.md
+E:/投資交易/pla_md/signal/(4)%%TX_KBAR_L0_15K.md
+E:/投資交易/pla_md/signal/(4)@Ivan2109_TX_MACP19k_LT.md
+E:/投資交易/pla_md/signal/(4)@Ivan2111_TX_shadow11k_LT.md
+E:/投資交易/pla_md/signal/(4)@Ivan2112_TX_CorrectionShort_20k_LT.md
+E:/投資交易/pla_md/signal/(4)@R006_TX_Bollien_Backout_FLT.md
+E:/投資交易/pla_md/signal/(4)_@LV@_tx_TransFormer_17K_(DT)LT.md
+E:/投資交易/pla_md/signal/(4)_011_TX_4Day (OHLC)_FDT.md
+E:/投資交易/pla_md/signal/(4)BN_002_TX_BarTunnel_LO_8k.md
+E:/投資交易/pla_md/signal/(4)BN_003_TX_Sar_FDO_10k.md
+E:/投資交易/pla_md/signal/(4)BN_004_TX_Pivot_FLO_10k.md
+E:/投資交易/pla_md/signal/(4)BN_TX_2109_IslandReverse PLE.md
+E:/投資交易/pla_md/signal/(4)BN_TX_2109_orbplus_DO_4k_v2.md
+E:/投資交易/pla_md/signal/(4)CB_HW_2201_Bignose_TX_3SameBar_DO_6k.md
+E:/投資交易/pla_md/signal/(4)coke777_TX_0921_LT策略腳本.md
+E:/投資交易/pla_md/signal/(4)Ivan2109_TX_DV6k_DT.md
+E:/投資交易/pla_md/signal/(4)NV002_TX30M_SR_FLT.md
+E:/投資交易/pla_md/signal/(4)NV2107003_TX3M_Amy_FDT.md
+E:/投資交易/pla_md/signal/(4)NV2108004_TX15M_Bonny_LT.md
+E:/投資交易/pla_md/signal/(4)NV2109005_TX6M_Cindy_LT -original.md
+E:/投資交易/pla_md/signal/(4)NV2109005_TX6M_Cindy_LT.md
+E:/投資交易/pla_md/signal/(4)NV2110006_TX3M_FLT.md
+E:/投資交易/pla_md/signal/(4)NV2112008_TX60M_FLT.md
+E:/投資交易/pla_md/signal/(4)NV2202009_TX300M_LT.md
+E:/投資交易/pla_md/signal/(4)TimChen009_TX_30mBBI_LOS-策略腳本.md
+E:/投資交易/pla_md/signal/(4)TX_HLdistance15K.md
+E:/投資交易/pla_md/signal/(4)策略及指標程式碼-004_TXF_3G(1.382)_4mK_LO-202101-彥勝.md
+E:/投資交易/pla_md/signal/(4)策略程式碼 001_TX_20210204d_LO.md
+E:/投資交易/pla_md/signal/(4)策略程式碼 sungwen.007_Tx_202106_FLT.md
+E:/投資交易/pla_md/signal/(4)策略程式碼 sungwen.009_Tx_202110_FDT.md
+E:/投資交易/pla_md/signal/(4)策略程式碼 TX_MAHL_FDT_1.md
+E:/投資交易/pla_md/signal/(4)策略程式碼%%AVgirl_202106_5K.md
+E:/投資交易/pla_md/signal/(4)策略程式碼01M60ML.md
+E:/投資交易/pla_md/signal/(4)策略程式碼06M03MD0.md
+E:/投資交易/pla_md/signal/(4)策略程式碼06MD0.md
+E:/投資交易/pla_md/signal/(4)策略程式碼07M30MAL.md
+E:/投資交易/pla_md/signal/(4)策略程式碼08M15MAL.md
+E:/投資交易/pla_md/signal/(4)策略程式碼10M15L.md
+E:/投資交易/pla_md/signal/(4)策略程式碼11M60MAL.md
+E:/投資交易/pla_md/signal/(4)策略程式碼12M03MAD0.md
+E:/投資交易/pla_md/signal/(4)策略腳本 - Wesley002_TX_2107SQX0001_DT.md
+E:/投資交易/pla_md/signal/(4)策略腳本 - Wesley003_TX_2110KPower_LO.md
+E:/投資交易/pla_md/signal/(4)策略腳本 - Wesley004_TX_2112SQX003_LT.md
+E:/投資交易/pla_md/signal/(4)策略腳本 PTstartup105_TX_PivotReversal04_DT.md
+E:/投資交易/pla_md/signal/(4)策略腳本_LanDi001_TX_BIAS_50mK_20220217_LT.md
+E:/投資交易/pla_md/signal/(4)策略腳本004_TX_PriceInterval5K_LO.md
+E:/投資交易/pla_md/signal/(4)策略腳本005_TX_wCDP20K_FLO.md
+E:/投資交易/pla_md/signal/(4)策略腳本Drschnabel_TX_trend&oscillation20k_LT.md
+E:/投資交易/pla_md/signal/(4)策略腳本GavinLu008_TX_DonChianChannel-D2106-K20m_LT.md
+E:/投資交易/pla_md/signal/(4)策略腳本Jack106_TX_Neckline10K_L0.md
+E:/投資交易/pla_md/signal/(4)策略腳本Jack112_TX_HLR13K_LT_Jack 軒邑軒宇.md
+E:/投資交易/pla_md/signal/(4)策略腳本katsu005_TXAM_LENGATE_3mK_DT-彥勝.md
+E:/投資交易/pla_md/signal/(4)策略腳本Ray101_TX_3 gate 6k_DO.md
+E:/投資交易/pla_md/signal/(4)策略腳本TimChen008_TX_15mKD202106_LT.md
+E:/投資交易/pla_md/signal/(5) @S_070_TX_Reverser_D.md
+E:/投資交易/pla_md/signal/(5) 139_TX7M_C-bar_DO_v1.1_2106-Alan.md
+E:/投資交易/pla_md/signal/(5) yita 007_TX_10m_open6_LT.md
+E:/投資交易/pla_md/signal/(5) 策略腳本 Ren01_TX_60m_20211020Triangle_FLT.md
+E:/投資交易/pla_md/signal/(5) 策略腳本 Ren01_TX_60m_20211113Triangle_FLT_V2.md
+E:/投資交易/pla_md/signal/(5) 策略腳本.md
+E:/投資交易/pla_md/signal/(5) 策略腳本_Ed001_TX_GapMA_6K_LT.md
+E:/投資交易/pla_md/signal/(5) 策略腳本_ED001_TX_JumpGapMA6K_LT.md
+E:/投資交易/pla_md/signal/(5) 策略腳本_TXAL_1_007_VCP+RangeBreakout.md
+E:/投資交易/pla_md/signal/(5) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
+E:/投資交易/pla_md/signal/(5) 策略腳本Shuen037_TX_CamarillaPivot6k.md
+E:/投資交易/pla_md/signal/(5) 策略腳本Shuen038_TX_EarlyORB5K_DT.md
+E:/投資交易/pla_md/signal/(5) 策略腳本Shuen040_TX_WeekCostLine_FLT.md
+E:/投資交易/pla_md/signal/@@@173_TX_DVNormal_D0.md
+E:/投資交易/pla_md/signal/@@202106T90_Normal_CDP_K_D0.md
+E:/投資交易/pla_md/signal/@@202106T90_STRONG.md
+E:/投資交易/pla_md/signal/@@202107T89_CriticalOpenXDP_3K_D0.md
+E:/投資交易/pla_md/signal/@autoCF.md
+E:/投資交易/pla_md/signal/@autoCF_backup.md
+E:/投資交易/pla_md/signal/@CF 20220112.1.md
+E:/投資交易/pla_md/signal/@CF v20210125.1.md
+E:/投資交易/pla_md/signal/@LeverageCalculation.md
+E:/投資交易/pla_md/signal/@LSEDEV_S_OPT.md
+E:/投資交易/pla_md/signal/@LV@_TX_BayesLaw_7K_LT.md
+E:/投資交易/pla_md/signal/@LV@_TX_Kings_men_11K_LT.md
+E:/投資交易/pla_md/signal/@LV@TX_AAA_13K_LT.md
+E:/投資交易/pla_md/signal/@M@S@Avg_MA.md
+E:/投資交易/pla_md/signal/@M@S@DT_ORB.md
+E:/投資交易/pla_md/signal/@M@S@EMA (5).md
+E:/投資交易/pla_md/signal/@M@S@EMA (6).md
+E:/投資交易/pla_md/signal/@M@S@EMA.md
+E:/投資交易/pla_md/signal/@M@S@FDT_CDP.md
+E:/投資交易/pla_md/signal/@M@S@LT_Mother_Son.md
+E:/投資交易/pla_md/signal/@M@S@LT_WD4_WD3.md
+E:/投資交易/pla_md/signal/@M@S@WD1_WD5.md
+E:/投資交易/pla_md/signal/@MC1_程式碼.md
+E:/投資交易/pla_md/signal/@MC2_All.md
+E:/投資交易/pla_md/signal/@MR_Total v20210125.1.md
+E:/投資交易/pla_md/signal/@Order.md
+E:/投資交易/pla_md/signal/@S_010_3G_D.md
+E:/投資交易/pla_md/signal/@S_047_TX_Trender_D.md
+E:/投資交易/pla_md/signal/@S_072_TX_OpenerV3_L.md
+E:/投資交易/pla_md/signal/@SpyGrid(蛛網，網格交易).md
+E:/投資交易/pla_md/signal/@TX_20210219_LO.md
+E:/投資交易/pla_md/signal/000_TX_CDPKD_D0.md
+E:/投資交易/pla_md/signal/001_TX_3Red_LO-1.md
+E:/投資交易/pla_md/signal/001_TX_KPOWER_DO.md
+E:/投資交易/pla_md/signal/001_TX_MACD_LO.md
+E:/投資交易/pla_md/signal/001_TX_PT_D0.md
+E:/投資交易/pla_md/signal/001_TX_Range R_LO.md
+E:/投資交易/pla_md/signal/002_Sw_D_5min_Linear.md
+E:/投資交易/pla_md/signal/002_TX_Keltner_LO_2010.md
+E:/投資交易/pla_md/signal/002K_TX_PBO_LO(HW4).md
+E:/投資交易/pla_md/signal/006_LLH_6mK_FDO.md
+E:/投資交易/pla_md/signal/006_TXA_13mLineReg_LOS_V2.md
+E:/投資交易/pla_md/signal/007_BiasReverse 3mK D0.md
+E:/投資交易/pla_md/signal/007_TXFM_COVERGAP_D0_01_1030.md
+E:/投資交易/pla_md/signal/009_TX_Box_FDT0_Jack.md
+E:/投資交易/pla_md/signal/01.202010功課-004_TX_KDHL_LT.md
+E:/投資交易/pla_md/signal/01.202101功課-006_TX_HLtime_LT.md
+E:/投資交易/pla_md/signal/01.202106功課-Sing014_TX_Change_LT.md
+E:/投資交易/pla_md/signal/01.202106功課-Sing014_TX_ChangeDabrother_LT.md
+E:/投資交易/pla_md/signal/01.202109功課_Sing_010_TX_W_LT_改良版.md
+E:/投資交易/pla_md/signal/016_TX_KCForward_L0.md
+E:/投資交易/pla_md/signal/017_TXA_CHANNEL_LO.md
+E:/投資交易/pla_md/signal/017_TXA_CO4_DO_5min.md
+E:/投資交易/pla_md/signal/018_TXF_JumpRange3K_DT.md
+E:/投資交易/pla_md/signal/019_TX_LongBandForwardTrade_L0.md
+E:/投資交易/pla_md/signal/020_TX_3DAYBRK_LO.md
+E:/投資交易/pla_md/signal/021_TXA_2N_DO_3min.md
+E:/投資交易/pla_md/signal/022_TX_TwoDayHighLow_L0.md
+E:/投資交易/pla_md/signal/023_TX_WEEKBRKOUT_LO.md
+E:/投資交易/pla_md/signal/024_TXF_RSI_60m_FLT.md
+E:/投資交易/pla_md/signal/026_TX_RSIForwardTrade_L0 說明檔.md
+E:/投資交易/pla_md/signal/027_TX_DayContrarian_LO_300M.md
+E:/投資交易/pla_md/signal/027_TX_MACDADX_L0.md
+E:/投資交易/pla_md/signal/028_TX_17mFFG_LOS.md
+E:/投資交易/pla_md/signal/028_TX_RSIRevisedTrading_L0.md
+E:/投資交易/pla_md/signal/029_TX_SingletoTriAve_L0 說明檔.md
+E:/投資交易/pla_md/signal/03 CBST017_MAOCHL_9m_FDO.md
+E:/投資交易/pla_md/signal/03 CBST020_Aroon_29m_FLO.md
+E:/投資交易/pla_md/signal/03 CBST023_HLB_29m_FLO_V3.md
+E:/投資交易/pla_md/signal/03 CBST027_LNR_29m_FLO_V4.md
+E:/投資交易/pla_md/signal/03_15_DL300M01_CBQC2202_V10_DMI_XQ.md
+E:/投資交易/pla_md/signal/03_15_DL300M01_CBQC2202_V11_DMI_XQ.md
+E:/投資交易/pla_md/signal/03_QC2102_M10_LO.md
+E:/投資交易/pla_md/signal/03_QC2102_M10_LO_WF.md
+E:/投資交易/pla_md/signal/030_TX_TriAverage&SingleAverage_L0.md
+E:/投資交易/pla_md/signal/031_3 DAY H&L no mp_FLT.md
+E:/投資交易/pla_md/signal/031_TX_AllDay_TriAverage&SingleAverage_L0 說明檔.md
+E:/投資交易/pla_md/signal/032_TX_VHF_LO_37M.md
+E:/投資交易/pla_md/signal/0327.md
+E:/投資交易/pla_md/signal/033_TX_DayC_LO_300M.md
+E:/投資交易/pla_md/signal/0403.md
+E:/投資交易/pla_md/signal/045_TX_BY_DO.md
+E:/投資交易/pla_md/signal/047_TX_BBR_DO.md
+E:/投資交易/pla_md/signal/047_TXI_Correlation Trend_DO.md
+E:/投資交易/pla_md/signal/0528.md
+E:/投資交易/pla_md/signal/053_TX_NBY_DO.md
+E:/投資交易/pla_md/signal/0530.md
+E:/投資交易/pla_md/signal/059_TXI_CLOSED_LO.md
+E:/投資交易/pla_md/signal/060_Hsiang_TXA_Q5_R_10min_FLT.md
+E:/投資交易/pla_md/signal/0629.md
+E:/投資交易/pla_md/signal/064_TXA_HLGAPBC_LO_20min.md
+E:/投資交易/pla_md/signal/064_TXI_ORB_LO.md
+E:/投資交易/pla_md/signal/0704.md
+E:/投資交易/pla_md/signal/09042.md
+E:/投資交易/pla_md/signal/092_vwap_3k_DT.md
+E:\@交易\@程式交易\ALGO 知名不具\00V_Alexander_Pagonidis_The-IBS-Effect-Mean-Reversion-in-Equity-ETFs-1.pdf
+E:\@交易\@程式交易\ALGO 知名不具\FDG_Seminar_150408.pdf
+E:\@交易\@程式交易\ALGO 知名不具\IchimokuKinkoHyo.pdf
+E:\@交易\@程式交易\MAE_MFE_intra_report.pdf
+E:\@交易\@程式交易\MR.AutoTrading_期貨程式交易整合平台使用手冊_ v2.0.1.pdf
+E:\@交易\@程式交易\Successful Algorithmic Trading.pdf
+E:\@交易\@程式交易\下單大師 MC 測試報告.pdf
+E:\@交易\@程式交易\中華電信IDC客戶維護人員異動申請表.pdf
+E:\@交易\@程式交易\中華電信IDC客戶維護人員異動申請表範例.pdf
+E:\@交易\@程式交易\文案簡報2021521.pdf
+E:\@交易\@程式交易\投資組合管理\DayMaxDD定義.txt
+E:\@交易\@程式交易\投資組合管理\DayMovingDD定義.txt
+E:\@交易\@程式交易\每月閒聊\2020.12閒聊 WFdemo.pdf
+E:\@交易\@程式交易\每月閒聊\2020_10閒聊 保險真心話.pdf
+E:\@交易\@程式交易\每月閒聊\2021.6月閒聊.pdf
+E:\@交易\@程式交易\每月閒聊\202101 閒聊.pdf
+E:\@交易\@程式交易\每月閒聊\202107_閒聊_XQ操作.pdf
+E:\@交易\@程式交易\每月閒聊\202112閒聊.pdf
+E:\@交易\@程式交易\每月閒聊\chat.txt
+E:\@交易\@程式交易\每月閒聊\加密幣補充 p49.pdf
+E:\@交易\@程式交易\基礎班\00_MC 基礎使用.pdf
+E:\@交易\@程式交易\基礎班\1chat.txt
+E:\@交易\@程式交易\基礎班\2 MC基本操作.pdf
+E:\@交易\@程式交易\基礎班\3chat.txt
+E:\@交易\@程式交易\基礎班\3基礎語法介紹.pdf
+E:\@交易\@程式交易\基礎班\4chat.txt
+E:\@交易\@程式交易\基礎班\5chat.txt
+E:\@交易\@程式交易\基礎班\第八講 PT教學與投資組合.pdf
+E:\@交易\@程式交易\報價相關\SOR API測試步驟-快速版.pdf
+E:\@交易\@程式交易\期貨高勝率.pdf
+E:\@交易\@程式交易\程式交易軟硬體 SOP 概述.pdf
+E:\@交易\@程式交易\程式交易電腦硬體DIY Vol.6-硬體設備估價清單_2021.05.31.pdf
+E:\@交易\@程式交易\達哥\SBF\DLHHL.txt
+E:\@交易\@程式交易\達哥\SBF\HLM.txt
+E:\@交易\@程式交易\達哥\SBF\MA.txt
+E:\@交易\@程式交易\達哥\SBF\ma+uvdv.txt
+E:\@交易\@程式交易\達哥\SBF\maimai_fish.txt
+E:\@交易\@程式交易\達哥\SBF\MXNDU.txt
+E:\@交易\@程式交易\達哥\SBF\RushBear (2).txt
+E:\@交易\@程式交易\達哥\SBF\SBF.txt
+E:\@交易\@程式交易\達哥\SBF\SBF_1.txt
+E:\@交易\@程式交易\達哥\SBF\SBF_20220306.txt
+E:\@交易\@程式交易\達哥\SBF\SBF_ADA.txt
+E:\@交易\@程式交易\達哥\SBF\SBF_dev.txt
+E:\@交易\@程式交易\達哥\SBF\SBF_Ori.txt
+E:\@交易\@程式交易\達哥\SBF\SBF_ori2.txt
+E:\@交易\@程式交易\達哥\SBF\SBF_RushBear_chg.txt
+E:\@交易\@程式交易\講義\(IDC機櫃補充說明)樹昌3U機櫃_TI-X302 規格整理_2020.10.06.pdf
+E:\@交易\@程式交易\講義\C哥_IDC規劃_V3.pdf
+E:\@交易\@程式交易\講義\IDC機櫃租用服務契約_有公司章.pdf
+E:\@交易\@程式交易\講義\硬體設備估價清單_2021.03.15.pdf
+E:\@交易\@程式交易\穩健致遠.pdf
+E:\@交易\@程式交易\籌碼\SFINI.csv
+E:\@交易\@程式交易\籌碼\外資.csv
+E:\@交易\@程式交易\籌碼\自營.csv
+E:\@交易\@程式交易\籌碼\投信.csv
+E:\投資交易\交易系統\ATM_Strategy_config.json
+E:\投資交易\交易系統\bots\avalon\avalon line_bot.py
+E:\投資交易\交易系統\bots\sync\avalonpediatw-line-discord-sync\discord_bot.py
+E:\投資交易\交易系統\bots\sync\avalonpediatw-line-discord-sync\line_bot.py
+E:\投資交易\交易系統\bots\sync\avalonpediatw-line-discord-sync\line_notify.py
+E:\投資交易\交易系統\bots\sync\avalonpediatw-line-discord-sync\requirements.txt
+E:\投資交易\交易系統\bots\sync\avalonpediatw-line-discord-sync\sync_channels.json
+E:\投資交易\交易系統\bots\sync\avalonpediatw-line-discord-sync\utilities.py
+E:\投資交易\交易系統\bots\sync\Discord-Line-Message-Sync_extracted\Discord-Line-Message-Sync\binding_codes.json
+E:\投資交易\交易系統\bots\sync\Discord-Line-Message-Sync_extracted\Discord-Line-Message-Sync\line_bot.py
+E:\投資交易\交易系統\bots\sync\Discord-Line-Message-Sync_extracted\Discord-Line-Message-Sync\requirements.txt
+E:\投資交易\交易系統\bots\sync\Discord-Line-Message-Sync_extracted\Discord-Line-Message-Sync\sync_channels.json
+E:\投資交易\交易系統\Config\!.Configure.json
+E:\投資交易\交易系統\Config\config.py
+E:\投資交易\交易系統\DISPATCH_PROTOCOL.md
+E:\投資交易\交易系統\monitoring\healthcare.txt
+E:\投資交易\交易系統\scripts\auto_github_sync.py
+E:\投資交易\交易系統\scripts\dispatch_runner.py
+E:\投資交易\交易系統\scripts\setup_task_scheduler.py
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_M31(6643.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_乙盛-KY(5243.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_九齊(6494.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_力智(6719.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_力積電(6770.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_三陽工業(2206.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_三福化(4755.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_上銀(2049.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_上緯投控(3708.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_上曜(1316.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中天(4128.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中砂(1560.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中美晶(5483.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中租-KY(5871.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中探針(6217.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中電(1611.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中磊(5388.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中興電(1513.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中鋼(2002.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_中鴻(2014.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_元太(8069.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_元晶(6443.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_世界(5347.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_北極星藥業-KY(6550.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_台光電(2383.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_台亞(2340.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_台勝科(3532.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_交易分析.csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_仲琦(2419.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_光罩(2338.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_光頡(3624.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_全友(2305.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_全新(2455.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_亞信(3169.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_京元電子(2449.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_佳能(2374.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_保瑞(6472.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_南亞(1303.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_南港(2101.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_南電(8046.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_倫飛(2364.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_凌通(4952.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_偉詮電(2436.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_健喬(4114.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_創惟(6104.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_博智(8155.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_億光(2393.TW).csv
+E:\投資交易\交易系統\trading\backtest\xq_backtest\XQ_output\1120311_重寫JOE逐筆進2_優盛(4121.TW).csv
