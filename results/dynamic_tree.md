@@ -340,3 +340,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 1 strategy_mode = cycle 574 — portfolio-monitor post scale-up; pf_snapshot_574.json; active=9 baseline; kill<0.8; regen if active<5 -->
 <!-- branch 5 e2e_smoke_status = cycle 574 — phase6 smoke execution from phase6_scope_573.json; reverse channel 1775898534 voice-confirmed; phase6_smoke_574.json required; close on full pass -->
 <!-- branch 2 digestion_progress = target 1082/2756 after cycle 574 -->
+
+<!-- cycle update 2026-04-17 15:19:35 (Taipei) -->
+<!-- branch 1 strategy_mode = cycle 575 — LEADERBOARD REFRESH; active=9 baseline; pf_leaderboard_575.json; top 3 scale candidates; kill<0.8; breaking monitor repeat from 574 -->
+<!-- branch 5 e2e_smoke_status = cycle 575 — phase6 close evaluation; phase6_smoke_574.json assessed; advance to phase7 scope on full pass; reverse channel 1775898534 voice-confirmed -->
+<!-- branch 4 channel_strategy = cycle 575 — CROSS-POST PREP; cross_post_prep_575.json; breaking organism-engage repeat; cross-post window ~cycle 606; 9 pending outreach -->
+<!-- branch 2 digestion_progress = target 1103/2756 after cycle 575 -->

@@ -4720,3 +4720,24 @@ plan_raw: ```json
       "branch": 1,
       "name": "經濟",
       "action": "portfolio-monitor post scale-up from cycle 573; log pf_snapshot_574.json; active=9 baseline; kill<0.8; regen if
+
+## Cycle 1 — 2026-04-17 15:19:35 (Taipei)
+
+[cycle 575] classification=branch-growth
+actions: 4, updates: 4
+exec: b1(經濟): Tick ?, PnL 2.519%, signal ?; b5(E2E): Distribution: 46 SOPs/knowledge products in docs/; b4(社交/organism): Distribution diagnosis: 189 lines; Outreach: 0 done, 9 pending; b2(消化): Consistency: ?/? aligned, streak ?
+digestion: Knowledge Digestion: 583/2756 files, Tier 1, Last: 2026-04-17T14:49:35+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 1,
+      "name": "經濟",
+      "action": "LEADERBOARD REFRESH cycle 575 — active=9 post scale-up; generate pf_leaderboard_575.json; rank by PF + cum_pnl; identify top 3 scale candidates and any kill<0.8 triggers; breaking monitor repeat from 574",
+      "priority": 1,
+      "runnable": "script"
+    },
+    {
+      "branch": 5,
+      "name": "E2E",
+      "action": "phase6 close evaluation — assess phase6_smoke_574.json result; if full pass: close
