@@ -1458,3 +1458,33 @@ E:/投資交易/pla_md/logic/Hayden02_TX_RegAngel30K_L0 (3).md
 E:/投資交易/pla_md/logic/Hayden02_TX_RegAngel30K_L0 (4).md
 E:/投資交易/pla_md/logic/Herman002_TX_CDP_LT.md
 E:/投資交易/pla_md/logic/Herman002_TX_CDP_LT (2).md
+E:/投資交易/pla_md/logic/FalseBK2 (2).md
+E:/投資交易/pla_md/logic/HW010_TX_ CDP Entropy_5M_FDT.md
+E:/投資交易/pla_md/logic/HW012_TX_ HL Wap & Jump out_5M_DT (2).md
+E:/投資交易/pla_md/logic/HW012_TX_ HL Wap & Jump out_5M_DT.md
+E:/投資交易/pla_md/logic/HW013_TX_ NO DH&DL in_3M_DT.md
+E:/投資交易/pla_md/logic/HW013_TX_K bar break out_17M_FLT+.md
+E:/投資交易/pla_md/logic/Herman002_TX_CDP_LT (3).md
+E:/投資交易/pla_md/logic/Herman002_TX_CDP_LT (4).md
+E:/投資交易/pla_md/logic/HiSKIO籌碼程式交易程式碼.md
+E:/投資交易/pla_md/logic/Homework20200718 (2).md
+E:/投資交易/pla_md/logic/Homework20200718 (3).md
+E:/投資交易/pla_md/logic/Homework20200718 (4).md
+E:/投資交易/pla_md/logic/Homework20200718.md
+E:/投資交易/pla_md/logic/Homework20201009 (2).md
+E:/投資交易/pla_md/logic/Homework20201009.md
+E:/投資交易/pla_md/logic/Homework20210204 (2).md
+E:/投資交易/pla_md/logic/Homework20210204.md
+E:/投資交易/pla_md/logic/Homework20210706.md
+E:/投資交易/pla_md/logic/Hsiang_TX_055_FDT_4min (2).md
+E:/投資交易/pla_md/logic/Hsiang_TX_055_FDT_4min (3).md
+E:/投資交易/pla_md/logic/Hsiang_TX_055_FDT_4min (4).md
+E:/投資交易/pla_md/logic/Hsiang_TX_055_FDT_4min.md
+E:/投資交易/pla_md/logic/HsuanPin_TX_202109_FLT (2).md
+E:/投資交易/pla_md/logic/HsuanPin_TX_202109_FLT.md
+E:/投資交易/pla_md/logic/Hsuanpin_TX_202110_DT (2).md
+E:/投資交易/pla_md/logic/Hsuanpin_TX_202110_DT.md
+E:/投資交易/pla_md/logic/Hsuanpin_TX_CCI202201_FDT.md
+E:/投資交易/pla_md/logic/Hsuanpin_TX_KD202111_FlT.md
+E:/投資交易/pla_md/logic/Ivan2109_TX_DV6k_DT_ver2 (2).md
+E:/投資交易/pla_md/logic/Ivan2109_TX_DV6k_DT_ver2.md
