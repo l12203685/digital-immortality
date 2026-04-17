@@ -104,9 +104,3 @@
 
 ## daemon_next_priority
 B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B4 cross-post window ~cycle 606; B5 phase7 smoke close; B7 content pipeline (content_seed_generator -> ZP posts). Human-gated: B1.3 outreach DMs x5 / B4.1 Samuel DM / B9 candidates / B1.2 mainnet API.
-
-<!-- cycle update 2026-04-17 16:49:27 (Taipei) -->
-<!-- branch 1 strategy_mode = cycle 578 — LEADERBOARD REFRESH; active=9 baseline; pf_leaderboard_578.json; top 3 scale candidates; kill<0.8; breaking monitor repeat from 577 -->
-<!-- branch 5 e2e_smoke_status = cycle 578 — phase7 close evaluation; phase7_smoke_577.json assessed; advance to phase8 scope on full pass; reverse channel 1775898534 voice-confirmed -->
-<!-- branch 4 channel_strategy = cycle 578 — LINKEDIN PUBLISH (breaking outreach-follow-up 577); linkedin_published_578.json required; cross-post window ~cycle 606; 9 pending outreach -->
-<!-- branch 2 digestion_progress = target 1166/2756 after cycle 578 -->
