@@ -1553,3 +1553,33 @@ E:/投資交易/pla_md/logic/MagicPM02_N2T04.md
 E:/投資交易/pla_md/logic/MagicPM03_N3T04.md
 E:/投資交易/pla_md/logic/MagicQS143.md
 E:/投資交易/pla_md/logic/Momentum.md
+E:/投資交易/pla_md/logic/NV2109005_TX6M_Cindy_LT-original (2).md
+E:/投資交易/pla_md/logic/NV2109005_TX6M_Cindy_LT-original.md
+E:/投資交易/pla_md/logic/No22_TX_RSI_7K_DO (2).md
+E:/投資交易/pla_md/logic/No22_TX_RSI_7K_DO (3).md
+E:/投資交易/pla_md/logic/No22_TX_RSI_7K_DO (4).md
+E:/投資交易/pla_md/logic/No22_TX_RSI_7K_DO.md
+E:/投資交易/pla_md/logic/No25_TXA_CandleShadow_60K_LO (2).md
+E:/投資交易/pla_md/logic/No25_TXA_CandleShadow_60K_LO.md
+E:/投資交易/pla_md/logic/No28_TX_MA_60K_LO (2).md
+E:/投資交易/pla_md/logic/No28_TX_MA_60K_LO.md
+E:/投資交易/pla_md/logic/No32_TX_LinearRegCurve_60K_LO_S (2).md
+E:/投資交易/pla_md/logic/No32_TX_LinearRegCurve_60K_LO_S (3).md
+E:/投資交易/pla_md/logic/No32_TX_LinearRegCurve_60K_LO_S (4).md
+E:/投資交易/pla_md/logic/No32_TX_LinearRegCurve_60K_LO_S.md
+E:/投資交易/pla_md/logic/No33_TX_RSIInv_30K_LO (2).md
+E:/投資交易/pla_md/logic/No33_TX_RSIInv_30K_LO.md
+E:/投資交易/pla_md/logic/No34_TX_TL_17K_LO (2).md
+E:/投資交易/pla_md/logic/No34_TX_TL_17K_LO.md
+E:/投資交易/pla_md/logic/No35_TXA_Efficiency_29K_LO (2).md
+E:/投資交易/pla_md/logic/No35_TXA_Efficiency_29K_LO.md
+E:/投資交易/pla_md/logic/No36_TX_STD_60K_LO (2).md
+E:/投資交易/pla_md/logic/No36_TX_STD_60K_LO.md
+E:/投資交易/pla_md/logic/OI.md
+E:/投資交易/pla_md/logic/OSCAR028_TXALL_CCICHANNEL_LO.md
+E:/投資交易/pla_md/logic/OSCAR029_TXALL_ADAPTIVEATR_FLT (2).md
+E:/投資交易/pla_md/logic/OSCAR029_TXALL_ADAPTIVEATR_FLT.md
+E:/投資交易/pla_md/logic/OSCAR030_TX_3MA_LO.md
+E:/投資交易/pla_md/logic/OSCAR032_TXALL_2MA_FDL (2).md
+E:/投資交易/pla_md/logic/OSCAR032_TXALL_2MA_FDL.md
+E:/投資交易/pla_md/logic/OSCAR033_TXALL_2MA_FDL.md
