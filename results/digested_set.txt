@@ -1488,3 +1488,38 @@ E:/投資交易/pla_md/logic/Hsuanpin_TX_CCI202201_FDT.md
 E:/投資交易/pla_md/logic/Hsuanpin_TX_KD202111_FlT.md
 E:/投資交易/pla_md/logic/Ivan2109_TX_DV6k_DT_ver2 (2).md
 E:/投資交易/pla_md/logic/Ivan2109_TX_DV6k_DT_ver2.md
+E:/投資交易/pla_md/logic/JOSEPHXY198_TX_AVERAGEPRICE6K_LT(20220104).md
+E:/投資交易/pla_md/logic/JOSEPHXY198_TX_KD15K(20210610)_LT(20210806V4).md
+E:/投資交易/pla_md/logic/J_BB1_0621.md
+E:/投資交易/pla_md/logic/J_BB1_0621 (2).md
+E:/投資交易/pla_md/logic/J_BB1_0621 (3).md
+E:/投資交易/pla_md/logic/J_BB1_0621 (4).md
+E:/投資交易/pla_md/logic/J_Bband1118.md
+E:/投資交易/pla_md/logic/Jeremy-work07.md
+E:/投資交易/pla_md/logic/Jeremy-work07 (2).md
+E:/投資交易/pla_md/logic/JeremyWork_30TX_Week_LOS.md
+E:/投資交易/pla_md/logic/JeremyWork_30TX_Week_LOS (2).md
+E:/投資交易/pla_md/logic/Jeremy_Work.md
+E:/投資交易/pla_md/logic/KCCCI.md
+E:/投資交易/pla_md/logic/KE_EDIT.md
+E:/投資交易/pla_md/logic/KO003_TX_3Guan_DO.md
+E:/投資交易/pla_md/logic/KO003_TX_3GuanVer2_DO.md
+E:/投資交易/pla_md/logic/KO004_TX_HA_FLO.md
+E:/投資交易/pla_md/logic/KO005_TX_Extend_FDO.md
+E:/投資交易/pla_md/logic/Kway_NQ_Sample.md
+E:/投資交易/pla_md/logic/LOGIC_INDEX.md
+E:/投資交易/pla_md/logic/LO_TX_11mCost_038.md
+E:/投資交易/pla_md/logic/Loren042_TX_Adaptive13m_FDT.md
+E:/投資交易/pla_md/logic/Loren043_TX_MultiAdaptive6m_FDT.md
+E:/投資交易/pla_md/logic/Loren043_TX_MultiAdaptive6m_FDT (2).md
+E:/投資交易/pla_md/logic/Loren044_TX_1dSecDer_LT.md
+E:/投資交易/pla_md/logic/Loren044_TX_1dSecDer_LT (2).md
+E:/投資交易/pla_md/logic/Loren045_TX_60mROC_FLT.md
+E:/投資交易/pla_md/logic/Loren045_TX_60mROC_FLT (2).md
+E:/投資交易/pla_md/logic/Loren046_TX_1dROC_LT.md
+E:/投資交易/pla_md/logic/Loren047_TXN_5mD2_FDT.md
+E:/投資交易/pla_md/logic/Loren048_TX_1mLast_FDT.md
+E:/投資交易/pla_md/logic/Loren049_TX_6mCounter_LT.md
+E:/投資交易/pla_md/logic/Loren050_TX_5mPD_DT.md
+E:/投資交易/pla_md/logic/Loren052_TX_1dRSRate_LT.md
+E:/投資交易/pla_md/logic/Loren053_TX_60mRate_LT.md
