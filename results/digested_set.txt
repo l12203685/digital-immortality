@@ -1583,3 +1583,33 @@ E:/投資交易/pla_md/logic/OSCAR030_TX_3MA_LO.md
 E:/投資交易/pla_md/logic/OSCAR032_TXALL_2MA_FDL (2).md
 E:/投資交易/pla_md/logic/OSCAR032_TXALL_2MA_FDL.md
 E:/投資交易/pla_md/logic/OSCAR033_TXALL_2MA_FDL.md
+E:/投資交易/pla_md/logic/EX421T05.md
+E:/投資交易/pla_md/logic/EX422T05.md
+E:/投資交易/pla_md/logic/EX424T25.md
+E:/投資交易/pla_md/logic/EX4401T30.md
+E:/投資交易/pla_md/logic/EX4402T24.md
+E:/投資交易/pla_md/logic/EX442T45.md
+E:/投資交易/pla_md/logic/EX514T30.md
+E:/投資交易/pla_md/logic/EX541T30.md
+E:/投資交易/pla_md/logic/ExBZ01T60.md
+E:/投資交易/pla_md/logic/EXBZ02T21.md
+E:/投資交易/pla_md/logic/FalseBK2 (2).md
+E:/投資交易/pla_md/logic/FalseBK2.md
+E:/投資交易/pla_md/logic/forexample.md
+E:/投資交易/pla_md/logic/G003_TX_LT_3Prices.md
+E:/投資交易/pla_md/logic/gapless.md
+E:/投資交易/pla_md/logic/Gift.md
+E:/投資交易/pla_md/logic/GS_backup_20241114.md
+E:/投資交易/pla_md/logic/H053_TX_SM_LO_30M (2).md
+E:/投資交易/pla_md/logic/H053_TX_SM_LO_30M (3).md
+E:/投資交易/pla_md/logic/H053_TX_SM_LO_30M (4).md
+E:/投資交易/pla_md/logic/H053_TX_SM_LO_30M.md
+E:/投資交易/pla_md/logic/H054_TXA_3H3L_LO_1H (2).md
+E:/投資交易/pla_md/logic/H054_TXA_3H3L_LO_1H.md
+E:/投資交易/pla_md/logic/H059_TX_MA_LO_20M (2).md
+E:/投資交易/pla_md/logic/H059_TX_MA_LO_20M.md
+E:/投資交易/pla_md/logic/Hayden02_TX_RegAngel30K_L0 (2).md
+E:/投資交易/pla_md/logic/Hayden02_TX_RegAngel30K_L0 (3).md
+E:/投資交易/pla_md/logic/Hayden02_TX_RegAngel30K_L0 (4).md
+E:/投資交易/pla_md/logic/Hayden02_TX_RegAngel30K_L0.md
+E:/投資交易/pla_md/logic/Herman002_TX_CDP_LT (2).md
