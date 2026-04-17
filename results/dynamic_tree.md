@@ -225,3 +225,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 4 content_pipeline_cycle = 599 — regime-shift content seed drafted; publish window ~606 -->
 <!-- branch 2 digestion_progress = 730→760+/2756 — Tier 1 batch cycle 599 -->
 <!-- branch 0 l3_loop_status = RECOVERY cycle 599 — dead_loop break; avoided B9+B3+B1-ro (598 exact repeat) and B1+B5+B2 (597 exact repeat); pivoted to B1 real-exec seed eval + B4 content seed staging + B2 infra -->
+
+<!-- cycle update 2026-04-18 03:49:39 (Taipei) -->
+<!-- branch 4 organism_engagement_cycle = 600 — 5-cycle neglect broken; organism interactions drafted; concrete artifact written -->
+<!-- branch 7 crosspost_prep_cycle = 600 — Twitter+LinkedIn variants staged; publish window ~606 -->
+<!-- branch 2 digestion_progress = 760→790+/2756 — Tier 1 batch cycle 600 -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 600 — dead_loop break actioned; avoided B1+B2+B9 and B1+B4+B2 repeat trios; pivoted to B4-organism (neglect-break) + B7 cross-post prep + B2 infra -->

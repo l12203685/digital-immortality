@@ -5206,3 +5206,18 @@ plan_raw: ```json
       "branch": 1,
       "name": "經濟/交易",
       "action": "Seed maturity evaluation: run kill_lesson.py against the 3 strategy seeds generated in cycle 597 using accumulated tick data since generation. Promote any seed with PF≥0.8 and Sharpe≥0.5 to paper-trade mode. Write results/pf_snapshot_599.json with seed status (promoted/rejected/maturing) and decision rationale. If no seed qualifies, document failure mode and queue regime-specific seed regeneration fo
+
+## Cycle 1 — 2026-04-18 03:49:39 (Taipei)
+
+[cycle 600] classification=branch-growth
+actions: 3, updates: 4
+exec: b4(社交/organism): Distribution diagnosis: 189 lines; Outreach: 0 done, 9 pending; b7(內容/跨平台): Knowledge digestion: 608/2756 files; b2(知識/消化): Consistency: ?/? aligned, streak ?
+digestion: Knowledge Digestion: 608/2756 files, Tier 1, Last: 2026-04-18T03:19:59+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 4,
+      "name": "社交/organism",
+      "action": "Execute organism interaction to break 5-cycle neglect: scan results/outreach_batch_*.json for 3 high-reciprocity targets, compose non-template organism-level engagement (genuine value-add reply or collaboration proposal per target), write results/organism_cycle_600.json with targets, message drafts, expected reciprocity score. Concrete artifact required — no staging-only.",
+      "priority": 1,
