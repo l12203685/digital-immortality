@@ -334,3 +334,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 5 e2e_smoke_status = cycle 573 — phase6 scope execution; phase5 closed confirmed cycle 572; phase6_scope_573.json required; voice confirmed public host smoke test reverse channel 1775898534 -->
 <!-- branch 4 channel_strategy = cycle 573 — LINKEDIN PUBLISH (breaking organism-engage repeat 571+572); linkedin_published_573.json required; cross-post window ~cycle 606 -->
 <!-- branch 2 digestion_progress = target 1061/2756 after cycle 573 -->
+
+<!-- cycle update 2026-04-17 14:49:29 (Taipei) -->
+<!-- branch 4 channel_strategy = cycle 574 — ORGANISM-ENGAGE execution; organism_engagement_574.json required; 3 replies + 1 outbound; 5-cycle neglect resolved; cross-post window ~cycle 606 -->
+<!-- branch 1 strategy_mode = cycle 574 — portfolio-monitor post scale-up; pf_snapshot_574.json; active=9 baseline; kill<0.8; regen if active<5 -->
+<!-- branch 5 e2e_smoke_status = cycle 574 — phase6 smoke execution from phase6_scope_573.json; reverse channel 1775898534 voice-confirmed; phase6_smoke_574.json required; close on full pass -->
+<!-- branch 2 digestion_progress = target 1082/2756 after cycle 574 -->
