@@ -5013,3 +5013,26 @@ plan_raw: ```json
       "branch": 1,
       "name": "經濟",
       "action": "portfolio monitor: snapshot 9 active st
+
+[L3v2-selfmod] RED detected: DEAD_LOOP — recovery prompt written
+
+## Cycle 1 — 2026-04-17 22:49:25 (Taipei)
+
+[cycle 590] classification=branch-growth
+actions: 3, updates: 4
+exec: b1(經濟): Tick ?, PnL 19.8994%, signal ?; b2(消化): Consistency: ?/? aligned, streak ?; b7(content pipeline): Knowledge digestion: 598/2756 files
+digestion: Knowledge Digestion: 598/2756 files, Tier 1, Last: 2026-04-17T22:19:27+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 1,
+      "name": "經濟",
+      "action": "portfolio snapshot cycle 590: read active_strategies=9 from engine_rules.json + execution_rules.json; compute per-strategy tick PnL delta since last_monitor_cycle=589; flag any PF<0.8 candidates for kill review; write pf_snapshot_590 to results/",
+      "priority": 1,
+      "runnable": "script"
+    },
+    {
+      "branch": 2,
+      "name": "消化",
+      "action": "Tier 1 knowledge digestion batch: advance

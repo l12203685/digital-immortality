@@ -664,3 +664,33 @@ E:/投資交易/pla_md/signal/(5) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
 E:/投資交易/pla_md/signal/(5) 策略腳本Shuen037_TX_CamarillaPivot6k.md
 E:/投資交易/pla_md/signal/(5) 策略腳本Shuen038_TX_EarlyORB5K_DT.md
 E:/投資交易/pla_md/signal/(5) 策略腳本Shuen040_TX_WeekCostLine_FLT.md
+E:/投資交易/pla_md/function/dayatr3.md
+E:/投資交易/pla_md/function/LSEScore.md
+E:/投資交易/pla_md/function/MagicADLuckyNet.md
+E:/投資交易/pla_md/function/MagicLuckyNet.md
+E:/投資交易/pla_md/function/QQ.md
+E:/投資交易/pla_md/function/set.md
+E:/投資交易/pla_md/function/SFoder.md
+E:/投資交易/pla_md/function/Today_Is_Settle_Day.md
+E:/投資交易/pla_md/function/如意多空網 MagicQF001.md
+E:/投資交易/pla_md/INDEX.md
+E:/投資交易/pla_md/indicator/DonChianChannel_Indicator (2).md
+E:/投資交易/pla_md/indicator/DonChianChannel_Indicator (3).md
+E:/投資交易/pla_md/indicator/DonChianChannel_Indicator (4).md
+E:/投資交易/pla_md/indicator/DonChianChannel_Indicator.md
+E:/投資交易/pla_md/indicator/EMA_Indicator (2).md
+E:/投資交易/pla_md/indicator/EMA_Indicator (3).md
+E:/投資交易/pla_md/indicator/EMA_Indicator (4).md
+E:/投資交易/pla_md/indicator/EMA_Indicator.md
+E:/投資交易/pla_md/indicator/Exponente-Hurst.md
+E:/投資交易/pla_md/indicator/freeman_daytrade_indicator.md
+E:/投資交易/pla_md/indicator/Mid (2).md
+E:/投資交易/pla_md/indicator/Mid.md
+E:/投資交易/pla_md/indicator/OrderMaster.md
+E:/投資交易/pla_md/indicator/readFile.md
+E:/投資交易/pla_md/indicator/三大法人籌碼運用 指標.md
+E:/投資交易/pla_md/logic/!_TXDD_1_003_TXEX2104.md
+E:/投資交易/pla_md/logic/!_TXDD_1_006_TXEX2106.md
+E:/投資交易/pla_md/logic/!_TXDL_1_060_TXEX2107.md
+E:/投資交易/pla_md/logic/$@LV_lowebar_jump_11K_LT (2).md
+E:/投資交易/pla_md/logic/$@LV_lowebar_jump_11K_LT.md

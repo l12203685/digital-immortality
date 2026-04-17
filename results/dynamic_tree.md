@@ -165,3 +165,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 1 last_monitor_cycle = 589 -->
 <!-- branch 2 digestion_progress = 596→625+/2756 — Tier 1 batch cycle 589 -->
 <!-- branch 7 content_pipeline_cycle = 589 — seed generation + engagement delta check -->
+
+<!-- cycle update 2026-04-17 22:49:25 (Taipei) -->
+<!-- branch 1 last_monitor_cycle = 590 -->
+<!-- branch 2 digestion_progress = 596→625+/2756 — Tier 1 batch cycle 590 -->
+<!-- branch 7 content_pipeline_cycle = 590 — seed generation + Medium draft advance + engagement delta -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 590 — dead_loop broken; avoided: session_state merge, GDrive cleanup; pivoted to B1+B2+B7 -->
