@@ -357,36 +357,271 @@ def run(rebuild: bool = False) -> int:
     return 0
 
 
-def query_history(query: str, limit: int = 20) -> list[dict]:
-    """Search the FTS5 index for behavioral evidence."""
+def query_history(
+    query: str,
+    date_range: tuple[str, str] | None = None,
+    sender: str | None = None,
+    limit: int = 20,
+    context_window: int = 2,
+) -> list[dict]:
+    """Search the FTS5 index for behavioral evidence.
+
+    Args:
+        query: Full-text search query (FTS5 syntax supported, e.g. "poker" or
+               '"all in" OR "bet"').  If the database was built without FTS5 a
+               LIKE search is used as fallback.
+        date_range: Optional (from_ts, to_ts) strings in ISO-8601 format, e.g.
+               ("2026-04-01", "2026-04-16").  Both ends are inclusive.
+        sender: Optional sender display-name filter (case-insensitive substring
+               match against the ``author`` column).
+        limit: Maximum number of *matching* messages to return.
+        context_window: Number of surrounding messages (before + after each
+               match) to include for context.  Set to 0 to disable.
+
+    Returns:
+        List of result dicts, each with keys:
+            ts, source, author, text, file, line,
+            context_before (list of message dicts),
+            context_after  (list of message dicts)
+    """
     if not DB_PATH.exists():
+        logging.warning("query_history: DB not found at %s", DB_PATH)
         return []
+
     conn = sqlite3.connect(str(DB_PATH))
+    conn.row_factory = sqlite3.Row
     try:
-        rows = conn.execute(
-            "SELECT * FROM messages WHERE messages MATCH ? ORDER BY rank LIMIT ?",
-            (query, limit),
-        ).fetchall()
-        return [{"text": r[0]} for r in rows] if rows else []
-    except Exception:
+        # Detect which engine was used to build the index
+        engine_row = conn.execute(
+            "SELECT value FROM meta WHERE key='engine'"
+        ).fetchone()
+        engine = engine_row["value"] if engine_row else "like"
+
+        # ------------------------------------------------------------------
+        # Build WHERE clause fragments for date and sender filters
+        # ------------------------------------------------------------------
+        extra_conditions: list[str] = []
+        params: list[str | int] = []
+
+        if date_range is not None:
+            from_ts, to_ts = date_range
+            if from_ts:
+                extra_conditions.append("ts >= ?")
+                params.append(from_ts)
+            if to_ts:
+                # Append end-of-day so a bare date like "2026-04-16" is inclusive
+                to_val = to_ts if "T" in to_ts else to_ts + "T23:59:59"
+                extra_conditions.append("ts <= ?")
+                params.append(to_val)
+
+        if sender:
+            extra_conditions.append("LOWER(author) LIKE ?")
+            params.append(f"%{sender.lower()}%")
+
+        where_extra = (" AND " + " AND ".join(extra_conditions)) if extra_conditions else ""
+
+        # ------------------------------------------------------------------
+        # Execute the main search
+        # ------------------------------------------------------------------
+        if engine == "fts5":
+            sql = (
+                "SELECT ts, source, author, text, file, line "
+                "FROM messages "
+                f"WHERE messages MATCH ?{where_extra} "
+                "ORDER BY rank "
+                "LIMIT ?"
+            )
+            rows = conn.execute(sql, [query] + params + [limit]).fetchall()
+        else:
+            # Fallback: LIKE search (slower but works without FTS5)
+            like_pat = f"%{query}%"
+            sql = (
+                "SELECT ts, source, author, text, file, line "
+                "FROM messages "
+                f"WHERE text LIKE ?{where_extra} "
+                "ORDER BY ts "
+                "LIMIT ?"
+            )
+            rows = conn.execute(sql, [like_pat] + params + [limit]).fetchall()
+
+        if not rows:
+            return []
+
+        results: list[dict] = []
+        for row in rows:
+            entry: dict = dict(row)
+            entry["context_before"] = []
+            entry["context_after"] = []
+
+            if context_window > 0:
+                # Fetch surrounding lines from the same file
+                file_name = entry["file"]
+                line_no = entry["line"]
+
+                before_rows = conn.execute(
+                    "SELECT ts, source, author, text, file, line "
+                    "FROM messages "
+                    "WHERE file = ? AND line < ? "
+                    "ORDER BY line DESC "
+                    "LIMIT ?",
+                    (file_name, line_no, context_window),
+                ).fetchall()
+                entry["context_before"] = [dict(r) for r in reversed(before_rows)]
+
+                after_rows = conn.execute(
+                    "SELECT ts, source, author, text, file, line "
+                    "FROM messages "
+                    "WHERE file = ? AND line > ? "
+                    "ORDER BY line ASC "
+                    "LIMIT ?",
+                    (file_name, line_no, context_window),
+                ).fetchall()
+                entry["context_after"] = [dict(r) for r in after_rows]
+
+            results.append(entry)
+
+        return results
+
+    except Exception as exc:  # noqa: BLE001
+        logging.error("query_history failed: %s", exc)
         return []
     finally:
         conn.close()
 
 
+def _safe_print(text: str) -> None:
+    """Print a string, replacing unencodable characters for the current terminal."""
+    try:
+        print(text)
+    except UnicodeEncodeError:
+        print(text.encode(sys.stdout.encoding or "utf-8", errors="replace").decode(sys.stdout.encoding or "utf-8", errors="replace"))
+
+
+def _print_query_results(results: list[dict], json_output: bool = False) -> None:
+    """Pretty-print query results to stdout."""
+    if json_output:
+        import json as _json
+        _safe_print(_json.dumps(results, ensure_ascii=False, indent=2))
+        return
+
+    if not results:
+        _safe_print("No results found.")
+        return
+
+    _safe_print(f"Found {len(results)} result(s):\n")
+    sep = "-" * 72
+    for i, r in enumerate(results, start=1):
+        _safe_print(f"[{i}] {r.get('ts', '')}  {r.get('source', '')}  @{r.get('author', '')}")
+        _safe_print(sep)
+        for ctx in r.get("context_before", []):
+            _safe_print(f"  {ctx.get('ts', ''):20s}  {ctx.get('author', ''):15s}  {ctx.get('text', '')}")
+        # Highlight the matching message
+        _safe_print(f">>> {r.get('ts', ''):20s}  {r.get('author', ''):15s}  {r.get('text', '')}")
+        for ctx in r.get("context_after", []):
+            _safe_print(f"  {ctx.get('ts', ''):20s}  {ctx.get('author', ''):15s}  {ctx.get('text', '')}")
+        _safe_print("")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Index chat history JSONL archive")
-    parser.add_argument(
+    subparsers = parser.add_subparsers(dest="command")
+
+    # ------------------------------------------------------------------
+    # Sub-command: query
+    # ------------------------------------------------------------------
+    query_parser = subparsers.add_parser(
+        "query",
+        help="Full-text search the history index",
+    )
+    query_parser.add_argument("search_query", help="FTS5 search query string")
+    query_parser.add_argument(
+        "--from",
+        dest="date_from",
+        metavar="DATE",
+        help="Start date (inclusive), e.g. 2026-04-01",
+    )
+    query_parser.add_argument(
+        "--to",
+        dest="date_to",
+        metavar="DATE",
+        help="End date (inclusive), e.g. 2026-04-16",
+    )
+    query_parser.add_argument(
+        "--sender",
+        metavar="NAME",
+        help="Filter by sender name (case-insensitive substring)",
+    )
+    query_parser.add_argument(
+        "--limit",
+        type=int,
+        default=20,
+        help="Maximum number of results (default: 20)",
+    )
+    query_parser.add_argument(
+        "--context",
+        type=int,
+        default=2,
+        metavar="N",
+        help="Number of surrounding messages for context (default: 2)",
+    )
+    query_parser.add_argument(
+        "--json",
+        dest="json_output",
+        action="store_true",
+        help="Output results as JSON",
+    )
+
+    # ------------------------------------------------------------------
+    # Sub-command: index  (original behaviour)
+    # ------------------------------------------------------------------
+    index_parser = subparsers.add_parser(
+        "index",
+        help="Build / update the FTS5 index",
+    )
+    index_parser.add_argument(
         "--rebuild",
         action="store_true",
         help="drop existing DB and rebuild from scratch",
     )
-    parser.add_argument(
+    index_parser.add_argument(
         "--incremental",
         action="store_true",
         help="only re-index files whose mtime/size changed (default behaviour)",
     )
+
+    # Legacy top-level flags kept for backward compatibility
+    parser.add_argument(
+        "--rebuild",
+        action="store_true",
+        help="(legacy) drop existing DB and rebuild from scratch",
+    )
+    parser.add_argument(
+        "--incremental",
+        action="store_true",
+        help="(legacy) incremental index update",
+    )
+
     args = parser.parse_args()
+
+    if args.command == "query":
+        setup_logging()
+        date_range = None
+        if args.date_from or args.date_to:
+            date_range = (args.date_from or "", args.date_to or "")
+        results = query_history(
+            query=args.search_query,
+            date_range=date_range,
+            sender=args.sender,
+            limit=args.limit,
+            context_window=args.context,
+        )
+        _print_query_results(results, json_output=args.json_output)
+        return 0
+
+    if args.command == "index":
+        return run(rebuild=args.rebuild)
+
+    # No sub-command: legacy behaviour — run the indexer
     return run(rebuild=args.rebuild)
 
 
