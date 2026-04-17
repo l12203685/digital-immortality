@@ -1398,3 +1398,33 @@ E:/投資交易/pla_md/logic/BS ratio (2).md
 E:/投資交易/pla_md/logic/BS ratio.md
 E:/投資交易/pla_md/logic/cdp av2 (2).md
 E:/投資交易/pla_md/logic/cdp av2.md
+E:/投資交易/pla_md/logic/CEX2104CR01.md
+E:/投資交易/pla_md/logic/CEX2105LK01 (2).md
+E:/投資交易/pla_md/logic/CEX2105LK01.md
+E:/投資交易/pla_md/logic/CEX2106RY01 (2).md
+E:/投資交易/pla_md/logic/CEX2106RY01.md
+E:/投資交易/pla_md/logic/CF12&各項函數.md
+E:/投資交易/pla_md/logic/Cf995tw_DT.md
+E:/投資交易/pla_md/logic/Change_01_TXAM4K_ATR+KD_DT (2).md
+E:/投資交易/pla_md/logic/Change_01_TXAM4K_ATR+KD_DT.md
+E:/投資交易/pla_md/logic/Change_07-2_TXAM3K_CDP Level2_DT (2).md
+E:/投資交易/pla_md/logic/Change_07-2_TXAM3K_CDP Level2_DT.md
+E:/投資交易/pla_md/logic/Change_09_TXAM19K_MA+CDP_LO (2).md
+E:/投資交易/pla_md/logic/Change_09_TXAM19K_MA+CDP_LO.md
+E:/投資交易/pla_md/logic/CL009_TX_DMIX2_LO (2).md
+E:/投資交易/pla_md/logic/CL009_TX_DMIX2_LO.md
+E:/投資交易/pla_md/logic/CL012_TX_MACD_LO (2).md
+E:/投資交易/pla_md/logic/CL012_TX_MACD_LO.md
+E:/投資交易/pla_md/logic/CL014_TX_Counter_Trend_v2_DO (2).md
+E:/投資交易/pla_md/logic/CL014_TX_Counter_Trend_v2_DO (3).md
+E:/投資交易/pla_md/logic/CL014_TX_Counter_Trend_v2_DO (4).md
+E:/投資交易/pla_md/logic/CL014_TX_Counter_Trend_v2_DO.md
+E:/投資交易/pla_md/logic/CL016_TX_LTDWindow60M_LO.md
+E:/投資交易/pla_md/logic/code sample30_2023-03-26.md
+E:/投資交易/pla_md/logic/code.md
+E:/投資交易/pla_md/logic/Cross_sectional_Momentum.md
+E:/投資交易/pla_md/logic/Cross_sectional_Reversal.md
+E:/投資交易/pla_md/logic/Day of week TEST.md
+E:/投資交易/pla_md/logic/end.md
+E:/投資交易/pla_md/logic/end2.md
+E:/投資交易/pla_md/logic/end3.md
