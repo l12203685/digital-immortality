@@ -1153,3 +1153,33 @@ E:/投資交易/pla_md/logic/2022CFPO_NEW.md
 E:/投資交易/pla_md/logic/20230430 CFPO_2023 with seed.md
 E:/投資交易/pla_md/logic/20250202 code sample.md
 E:/投資交易/pla_md/logic/2101TX_KD_LinR_37K (2).md
+E:/投資交易/pla_md/logic/2101TX_KD_LinR_37K.md
+E:/投資交易/pla_md/logic/2106_Ivan_TX_WeekTrade20k_LT.md
+E:/投資交易/pla_md/logic/2106TX_MTM_LinR_30K (2).md
+E:/投資交易/pla_md/logic/2106TX_MTM_LinR_30K (3).md
+E:/投資交易/pla_md/logic/2106TX_MTM_LinR_30K (4).md
+E:/投資交易/pla_md/logic/2106TX_MTM_LinR_30K.md
+E:/投資交易/pla_md/logic/217_TX_MYTK_LT (2).md
+E:/投資交易/pla_md/logic/217_TX_MYTK_LT.md
+E:/投資交易/pla_md/logic/2201TXA_MA_LinR_10K.md
+E:/投資交易/pla_md/logic/222_TX_MYTK_FLT.md
+E:/投資交易/pla_md/logic/2MaKD (2).md
+E:/投資交易/pla_md/logic/2MaKD.md
+E:/投資交易/pla_md/logic/2MaKD_WF (2).md
+E:/投資交易/pla_md/logic/2MaKD_WF.md
+E:/投資交易/pla_md/logic/3. 3DOHL (2).md
+E:/投資交易/pla_md/logic/3. 3DOHL.md
+E:/投資交易/pla_md/logic/3. Aline-2 (2).md
+E:/投資交易/pla_md/logic/3. Aline-2.md
+E:/投資交易/pla_md/logic/3. BS ratio (2).md
+E:/投資交易/pla_md/logic/3. BS ratio.md
+E:/投資交易/pla_md/logic/3. LSlevel.md
+E:/投資交易/pla_md/logic/3. reverse4 (2).md
+E:/投資交易/pla_md/logic/3. reverse4.md
+E:/投資交易/pla_md/logic/3. trend-1.md
+E:/投資交易/pla_md/logic/3. weeklevel.md
+E:/投資交易/pla_md/logic/3.3DHL (2).md
+E:/投資交易/pla_md/logic/3.3DHL (3).md
+E:/投資交易/pla_md/logic/3.3DHL (4).md
+E:/投資交易/pla_md/logic/3.3DHL.md
+E:/投資交易/pla_md/logic/4.策略程式碼.md
