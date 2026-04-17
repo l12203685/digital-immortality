@@ -207,3 +207,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 7 content_pipeline_cycle = 596 — Medium draft publish confirmation + engagement delta + next seed staged -->
 <!-- branch 0 l3_loop_status = RECOVERY cycle 596 — dead_loop break actioned; avoided B2+B3+B5 repeat trio; pivoted to neglected B4+B7 concrete artifacts + B1 read-only -->
 <!-- branch 1 last_monitor_cycle = 596 — read-only health check only; real execution deferred to avoid loop -->
+
+<!-- cycle update 2026-04-18 02:19:36 (Taipei) -->
+<!-- branch 1 last_real_execution_cycle = 597 — strategy seed generation; regime shift from pure-trend to range/breakout hybrid; 18 disabled PF<0.8 → 3 new seeds -->
+<!-- branch 5 phase4b_status = routing_verdict_rendered_cycle_597 — 2-cycle pending broken -->
+<!-- branch 2 digestion_progress = 700→730+/2756 — Tier 1 batch cycle 597 -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 597 — avoided B4+B7+B1-readonly repeat; pivoted to B1 real execution + B5 pending resolution + B2 infra -->
