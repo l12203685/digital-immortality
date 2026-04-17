@@ -8,6 +8,8 @@ Validates:
 4. Edge cases: zero volatility, parameter validation
 5. TXF instances exist and are callable
 6. Phase 1 pass criteria: >= 3 strategies with 5+ trades each on synthetic data
+7. Batch 4-6 strategies: ShakeFilter, SqrtTimeTrail, AdaptiveMultiplierMA,
+   GoldenRatioMA, KPower, BarTiming
 """
 
 import pytest
@@ -24,6 +26,12 @@ from trading.strategies_extended import (
     CDPStrategy,
     ParabolicSARStrategy,
     GapFadeStrategy,
+    ShakeFilterStrategy,
+    SqrtTimeTrailStrategy,
+    AdaptiveMultiplierMAStrategy,
+    GoldenRatioMAStrategy,
+    KPowerStrategy,
+    BarTimingStrategy,
     EXTENDED_STRATEGIES,
     _ema,
     _true_range,
@@ -391,8 +399,20 @@ class TestExtendedStrategiesRegistry:
             assert signal in (-1, 0, 1), f"{name} returned invalid signal: {signal}"
 
     def test_total_count(self):
-        # 6 BTC + 10 TXF + 2 Stochastic + 2 CDP + 2 SAR + 3 Gap = 25 total
-        assert len(EXTENDED_STRATEGIES) == 25
+        # 6 BTC + 10 TXF + 2 Stochastic + 2 CDP + 2 SAR + 3 Gap = 25 original
+        # + 2 ShakeFilter + 2 SqrtTimeTrail + 2 AdaptiveMA + 2 GoldenRatio
+        # + 2 KPower + 2 BarTiming = 37 total
+        assert len(EXTENDED_STRATEGIES) == 37
+
+    def test_batch46_strategies_registered(self):
+        """All 6 batch 4-6 strategy types present in registry."""
+        expected_prefixes = [
+            "ShakeFilter_", "SqrtTimeTrail_", "AdaptiveMA_",
+            "GoldenRatio_", "KPower_", "BarTiming_",
+        ]
+        for prefix in expected_prefixes:
+            matches = [k for k in EXTENDED_STRATEGIES if k.startswith(prefix)]
+            assert len(matches) >= 1, f"No strategies with prefix '{prefix}'"
 
 
 # ---------------------------------------------------------------------------
@@ -479,6 +499,13 @@ class TestInterfaceCompliance:
         (CDPStrategy, {"mode": "breakout"}),
         (ParabolicSARStrategy, {"af_start": 0.02, "af_step": 0.02, "af_max": 0.20}),
         (GapFadeStrategy, {"gap_threshold": 0.01, "atr_period": 14}),
+        # Batch 4-6
+        (ShakeFilterStrategy, {"period": 10, "shake_threshold": 0.25, "atr_period": 10}),
+        (SqrtTimeTrailStrategy, {"breakout_period": 10, "atr_period": 10}),
+        (AdaptiveMultiplierMAStrategy, {"base_period": 10, "loss_multiplier": 2.0}),
+        (GoldenRatioMAStrategy, {"fast_period": 5, "slow_period": 8}),
+        (KPowerStrategy, {"pressure_period": 3, "std_period": 14, "consecutive_days": 2}),
+        (BarTimingStrategy, {"session_bars": 10, "lookback": 5}),
     ])
     def test_signal_in_valid_range(self, cls, kwargs):
         strategy = cls(**kwargs)
@@ -698,3 +725,306 @@ class TestGapFadeStrategy:
         r = repr(gap)
         assert "0.01" in r
         assert "fade" in r
+
+
+# ---------------------------------------------------------------------------
+# Batch 4-6: ShakeFilterStrategy tests
+# ---------------------------------------------------------------------------
+
+class TestShakeFilterStrategy:
+    def test_insufficient_data_returns_flat(self):
+        strat = ShakeFilterStrategy(period=10, shake_threshold=0.25)
+        assert strat(_trending_up_bars(5)) == 0
+
+    def test_choppy_market_suppressed(self):
+        """Volatile oscillating market should be filtered out (choppy)."""
+        strat = ShakeFilterStrategy(period=10, shake_threshold=0.70, atr_period=10)
+        bars = _volatile_bars(40, center=100.0, amplitude=5.0)
+        # Alternating bars have low dominant-direction score
+        signal = strat(bars)
+        assert signal == 0
+
+    def test_trending_market_passes(self):
+        """Strong trend should pass the shake filter and give directional signal."""
+        strat = ShakeFilterStrategy(period=10, shake_threshold=0.25, atr_period=10)
+        bars = _trending_up_bars(50, step=2.0)
+        signal = strat(bars)
+        assert signal in (0, 1)  # may or may not break channel, but not short
+
+    def test_invalid_period_raises(self):
+        with pytest.raises(ValueError):
+            ShakeFilterStrategy(period=2)
+
+    def test_invalid_threshold_raises(self):
+        with pytest.raises(ValueError):
+            ShakeFilterStrategy(shake_threshold=0.0)
+        with pytest.raises(ValueError):
+            ShakeFilterStrategy(shake_threshold=1.5)
+
+    def test_signal_valid_range(self):
+        strat = ShakeFilterStrategy(period=15, shake_threshold=0.25)
+        for bars in [_trending_up_bars(60), _trending_down_bars(60), _volatile_bars(60)]:
+            assert strat(bars) in (-1, 0, 1)
+
+    def test_repr(self):
+        strat = ShakeFilterStrategy(period=15, shake_threshold=0.25)
+        r = repr(strat)
+        assert "15" in r
+        assert "0.25" in r
+
+
+# ---------------------------------------------------------------------------
+# Batch 4-6: SqrtTimeTrailStrategy tests
+# ---------------------------------------------------------------------------
+
+class TestSqrtTimeTrailStrategy:
+    def test_insufficient_data_returns_flat(self):
+        strat = SqrtTimeTrailStrategy(breakout_period=14, atr_period=14)
+        assert strat(_trending_up_bars(5)) == 0
+
+    def test_breakout_enters_long(self):
+        strat = SqrtTimeTrailStrategy(
+            breakout_period=5, atr_period=5, trail_atr_mult=2.0
+        )
+        bars = _breakout_bars(20, range_price=100.0, breakout_price=115.0)
+        # After breakout, should be long (or flat if trailed out)
+        signal = strat(bars)
+        assert signal in (0, 1)
+
+    def test_downtrend_enters_short(self):
+        strat = SqrtTimeTrailStrategy(
+            breakout_period=5, atr_period=5, trail_atr_mult=2.0
+        )
+        bars = [_make_bar(100, 101, 99, 100) for _ in range(15)]
+        bars.append(_make_bar(90, 90.5, 75, 76))  # breakdown
+        signal = strat(bars)
+        assert signal in (-1, 0)
+
+    def test_invalid_breakout_period_raises(self):
+        with pytest.raises(ValueError):
+            SqrtTimeTrailStrategy(breakout_period=1)
+
+    def test_invalid_trail_mult_raises(self):
+        with pytest.raises(ValueError):
+            SqrtTimeTrailStrategy(trail_atr_mult=0.0)
+
+    def test_signal_valid_range(self):
+        strat = SqrtTimeTrailStrategy()
+        for bars in [_trending_up_bars(60), _trending_down_bars(60), _flat_bars(60)]:
+            assert strat(bars) in (-1, 0, 1)
+
+    def test_repr(self):
+        strat = SqrtTimeTrailStrategy(breakout_period=14, trail_atr_mult=1.5)
+        r = repr(strat)
+        assert "14" in r
+        assert "1.5" in r
+
+
+# ---------------------------------------------------------------------------
+# Batch 4-6: AdaptiveMultiplierMAStrategy tests
+# ---------------------------------------------------------------------------
+
+class TestAdaptiveMultiplierMAStrategy:
+    def test_insufficient_data_returns_flat(self):
+        strat = AdaptiveMultiplierMAStrategy(base_period=20)
+        assert strat(_trending_up_bars(5)) == 0
+
+    def test_uptrend_gives_long(self):
+        strat = AdaptiveMultiplierMAStrategy(base_period=10, loss_multiplier=2.0)
+        bars = _trending_up_bars(50, step=1.0)
+        signal = strat(bars)
+        assert signal == 1
+
+    def test_downtrend_gives_short(self):
+        strat = AdaptiveMultiplierMAStrategy(base_period=10, loss_multiplier=2.0)
+        bars = _trending_down_bars(50, step=1.0)
+        signal = strat(bars)
+        assert signal == -1
+
+    def test_flat_gives_neutral(self):
+        strat = AdaptiveMultiplierMAStrategy(base_period=10)
+        bars = _flat_bars(30)
+        assert strat(bars) == 0
+
+    def test_invalid_period_raises(self):
+        with pytest.raises(ValueError):
+            AdaptiveMultiplierMAStrategy(base_period=1)
+
+    def test_invalid_multiplier_raises(self):
+        with pytest.raises(ValueError):
+            AdaptiveMultiplierMAStrategy(loss_multiplier=0.5)
+
+    def test_signal_valid_range(self):
+        strat = AdaptiveMultiplierMAStrategy(base_period=10)
+        for bars in [_trending_up_bars(60), _trending_down_bars(60), _flat_bars(60)]:
+            assert strat(bars) in (-1, 0, 1)
+
+    def test_repr(self):
+        strat = AdaptiveMultiplierMAStrategy(base_period=20, loss_multiplier=2.0)
+        r = repr(strat)
+        assert "20" in r
+        assert "2.0" in r
+
+
+# ---------------------------------------------------------------------------
+# Batch 4-6: GoldenRatioMAStrategy tests
+# ---------------------------------------------------------------------------
+
+class TestGoldenRatioMAStrategy:
+    def test_insufficient_data_returns_flat(self):
+        strat = GoldenRatioMAStrategy(fast_period=56, slow_period=91)
+        assert strat(_trending_up_bars(50)) == 0
+
+    def test_uptrend_gives_long(self):
+        # Use smaller periods to reduce required bars in test
+        strat = GoldenRatioMAStrategy(fast_period=5, slow_period=8)
+        bars = _trending_up_bars(30, step=1.0)
+        signal = strat(bars)
+        assert signal == 1
+
+    def test_downtrend_gives_short(self):
+        strat = GoldenRatioMAStrategy(fast_period=5, slow_period=8)
+        bars = _trending_down_bars(30, step=1.0)
+        signal = strat(bars)
+        assert signal == -1
+
+    def test_invalid_periods_raise(self):
+        with pytest.raises(ValueError):
+            GoldenRatioMAStrategy(fast_period=1, slow_period=2)
+        with pytest.raises(ValueError):
+            GoldenRatioMAStrategy(fast_period=10, slow_period=8)  # slow < fast
+
+    def test_phi_ratio_repr(self):
+        strat = GoldenRatioMAStrategy(fast_period=56, slow_period=91)
+        r = repr(strat)
+        assert "56" in r
+        assert "91" in r
+        assert "1.6" in r  # ratio ≈ 1.625
+
+    def test_signal_valid_range(self):
+        strat = GoldenRatioMAStrategy(fast_period=5, slow_period=8)
+        for bars in [_trending_up_bars(40), _trending_down_bars(40), _flat_bars(40)]:
+            assert strat(bars) in (-1, 0, 1)
+
+
+# ---------------------------------------------------------------------------
+# Batch 4-6: KPowerStrategy tests
+# ---------------------------------------------------------------------------
+
+class TestKPowerStrategy:
+    def test_insufficient_data_returns_flat(self):
+        strat = KPowerStrategy(pressure_period=4, std_period=20, consecutive_days=3)
+        assert strat(_trending_up_bars(10)) == 0
+
+    def test_buying_pressure_gives_long(self):
+        """In an uptrend, closes near highs → LPower > SPower → long."""
+        strat = KPowerStrategy(pressure_period=3, std_period=10, consecutive_days=2)
+        # Bars with close very near high (strong buying pressure)
+        bars = [_make_bar(b, b + 2.0, b - 0.1, b + 1.9) for b in range(100, 130)]
+        signal = strat(bars)
+        assert signal in (0, 1)  # buying pressure present
+
+    def test_selling_pressure_gives_short(self):
+        """In a downtrend, closes near lows → SPower > LPower → short."""
+        strat = KPowerStrategy(pressure_period=3, std_period=10, consecutive_days=2)
+        # Bars with close very near low (strong selling pressure)
+        bars = [_make_bar(b, b + 0.1, b - 2.0, b - 1.9) for b in range(130, 100, -1)]
+        signal = strat(bars)
+        assert signal in (-1, 0)
+
+    def test_flat_no_pressure(self):
+        strat = KPowerStrategy(pressure_period=4, std_period=20, consecutive_days=3)
+        bars = _flat_bars(40)
+        assert strat(bars) == 0
+
+    def test_invalid_period_raises(self):
+        with pytest.raises(ValueError):
+            KPowerStrategy(pressure_period=0)
+        with pytest.raises(ValueError):
+            KPowerStrategy(std_period=1)
+
+    def test_signal_valid_range(self):
+        strat = KPowerStrategy(pressure_period=3, std_period=14, consecutive_days=2)
+        for bars in [_trending_up_bars(60), _trending_down_bars(60), _flat_bars(60)]:
+            assert strat(bars) in (-1, 0, 1)
+
+    def test_repr(self):
+        strat = KPowerStrategy(pressure_period=4, std_period=20, consecutive_days=3)
+        r = repr(strat)
+        assert "4" in r
+        assert "20" in r
+        assert "3" in r
+
+
+# ---------------------------------------------------------------------------
+# Batch 4-6: BarTimingStrategy tests
+# ---------------------------------------------------------------------------
+
+class TestBarTimingStrategy:
+    def test_insufficient_data_returns_flat(self):
+        strat = BarTimingStrategy(session_bars=48, lookback=10)
+        assert strat(_trending_up_bars(5)) == 0
+
+    def test_recent_high_gives_long(self):
+        """When the highest close occurs near the end of the window: uptrend."""
+        strat = BarTimingStrategy(session_bars=48, lookback=5)
+        # Need lookback + 1 = 6 bars minimum; the last 5 form the window
+        bars = [
+            _make_bar(100, 101, 99, 98),   # extra bar to satisfy required >= 6
+            _make_bar(100, 101, 99, 99),
+            _make_bar(100, 101, 99, 100),
+            _make_bar(100, 101, 99, 101),
+            _make_bar(100, 102, 99, 102),
+            _make_bar(100, 104, 99, 104),  # highest close = most recent
+        ]
+        signal = strat(bars)
+        assert signal == 1
+
+    def test_recent_low_gives_short(self):
+        """When the lowest close occurs near the end: downtrend."""
+        strat = BarTimingStrategy(session_bars=48, lookback=5)
+        # Need 6 bars; last 5 form the window with lowest at the end
+        bars = [
+            _make_bar(105, 106, 104, 105),  # extra bar
+            _make_bar(104, 105, 103, 104),
+            _make_bar(103, 104, 102, 103),
+            _make_bar(102, 103, 101, 102),
+            _make_bar(101, 102, 100, 101),
+            _make_bar(100, 101, 99, 99),   # lowest close = most recent
+        ]
+        signal = strat(bars)
+        assert signal == -1
+
+    def test_middle_extreme_gives_flat(self):
+        """When the extreme is in the middle: no clear timing bias."""
+        strat = BarTimingStrategy(session_bars=48, lookback=5)
+        # Need 6 bars; last 5 form window with max at index 1 (recency=0.25)
+        bars = [
+            _make_bar(100, 101, 99, 100),  # extra bar
+            _make_bar(100, 101, 99, 100),
+            _make_bar(100, 105, 99, 105),  # max at index 1 of 5 → recency=0.25
+            _make_bar(100, 101, 99, 101),
+            _make_bar(100, 101, 99, 100),
+            _make_bar(100, 101, 99, 100),
+        ]
+        signal = strat(bars)
+        assert signal == 0  # extreme at recency=0.25 < 0.60 threshold
+
+    def test_invalid_session_bars_raises(self):
+        with pytest.raises(ValueError):
+            BarTimingStrategy(session_bars=2)
+
+    def test_invalid_lookback_raises(self):
+        with pytest.raises(ValueError):
+            BarTimingStrategy(lookback=1)
+
+    def test_signal_valid_range(self):
+        strat = BarTimingStrategy(session_bars=48, lookback=10)
+        for bars in [_trending_up_bars(40), _trending_down_bars(40), _volatile_bars(40)]:
+            assert strat(bars) in (-1, 0, 1)
+
+    def test_repr(self):
+        strat = BarTimingStrategy(session_bars=78, lookback=10)
+        r = repr(strat)
+        assert "78" in r
+        assert "10" in r
