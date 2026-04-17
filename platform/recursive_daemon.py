@@ -28,6 +28,8 @@ from knowledge_digester import KnowledgeDigester
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 _DNA_FALLBACK_BUNDLE = REPO_ROOT / "private" / "dna_core.md"
+_DNA_LYH_CORE = Path("C:/Users/admin/LYH/agent/dna_core.md")
+_DNA_LYH_INDEX = Path("C:/Users/admin/LYH/agent/dna/INDEX.md")
 _DNA_MINIMAL_STUB = """# Edward Decision Kernel (embedded minimal stub)
 
 1. Look at derivatives not levels — watch rate of change and inflection points, not current state.
@@ -61,8 +63,12 @@ PLAN_SYSTEM_PROMPT = (
     '"priority": 1, "runnable": "script"}], '
     '"tree_updates": [{"branch": 1, "field": "key_metric", "value": "..."}], '
     '"classification": "root-growth|branch-growth|neither"}\n'
-    "Rules: bias toward inaction on no-edge. Economic branches first. "
-    "Check if the last 3 cycles repeated the same action — if so, try a different branch."
+    "Rules:\n"
+    "- Bias toward inaction on no-edge. Economic branches first.\n"
+    "- The 'runnable' field MUST be one of: 'script' (execute branch executor), "
+    "'read-only' (observe only). Do NOT put shell commands or file paths in runnable.\n"
+    "- Check if the last 3 cycles repeated the same action — if so, try a different branch.\n"
+    "- If an L3 Recovery Signal is present, follow its directives to break any detected loop."
 )
 
 # ---------------------------------------------------------------------------
@@ -105,11 +111,23 @@ def increment_cycle_counter() -> int:
 
 
 def execute_plan_actions(plan: CyclePlan) -> list[dict]:
-    """Run branch executors for each action in the plan. Returns results."""
+    """Run branch executors for each action in the plan. Returns results.
+
+    The executor fires whenever a registered BRANCH_EXECUTORS entry exists,
+    regardless of the ``runnable`` field value.  Previously only
+    ``runnable == "script"`` triggered execution, causing a dead-loop when the
+    LLM planner produced free-form runnable strings.
+    """
     results: list[dict] = []
     for action in sorted(plan.branch_actions, key=lambda a: a.priority):
         executor = BRANCH_EXECUTORS.get(action.branch)
-        if executor is not None and action.runnable == "script":
+        if action.runnable == "read-only":
+            results.append({
+                "branch": action.branch,
+                "name": action.name,
+                "output": "(read-only, no executor)",
+            })
+        elif executor is not None:
             try:
                 output = executor()
             except Exception as exc:
@@ -120,12 +138,6 @@ def execute_plan_actions(plan: CyclePlan) -> list[dict]:
                 "output": output,
             })
             print(f"[daemon]   branch {action.branch} ({action.name}): {output[:120]}")
-        elif action.runnable == "read-only":
-            results.append({
-                "branch": action.branch,
-                "name": action.name,
-                "output": "(read-only, no executor)",
-            })
         else:
             results.append({
                 "branch": action.branch,
@@ -673,6 +685,14 @@ def load_dna() -> str:
         print(f"[daemon] DNA source: bundle → {_DNA_FALLBACK_BUNDLE}")
         return _DNA_FALLBACK_BUNDLE.read_text(encoding="utf-8")
 
+    if _DNA_LYH_CORE.exists():
+        print(f"[daemon] DNA source: LYH core → {_DNA_LYH_CORE}")
+        return _DNA_LYH_CORE.read_text(encoding="utf-8")
+
+    if _DNA_LYH_INDEX.exists():
+        print(f"[daemon] DNA source: LYH index → {_DNA_LYH_INDEX}")
+        return _DNA_LYH_INDEX.read_text(encoding="utf-8")
+
     print("[daemon] WARNING: No DNA file found — using embedded minimal stub (5 principles)")
     return _DNA_MINIMAL_STUB
 
@@ -966,11 +986,15 @@ def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
         f"{PLAN_SYSTEM_PROMPT}\n\n{user_prompt}\n\n"
         "Respond ONLY with valid JSON matching the format above."
     )
+    # Set BUN_JSC_forceRAMSize to prevent Bun OOM crashes.
+    # Default 1.5GB allows comfortable headroom on 34GB machine.
+    cli_env = {**os.environ, "BUN_JSC_forceRAMSize": str(1536 * 1024 * 1024)}
     result = subprocess.run(
         ["claude", "-p", cli_prompt, "--model", model],
         capture_output=True, text=True, timeout=600,
         cwd=str(REPO_ROOT),
         encoding="utf-8", errors="replace",
+        env=cli_env,
     )
     raw_text = result.stdout.strip() if result.stdout else ""
     if result.returncode != 0 and not raw_text:

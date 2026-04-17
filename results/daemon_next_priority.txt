@@ -1,1 +1,1 @@
-PRIORITY: Branch '社交/organism' neglected for 5 cycles. Do concrete work on this branch next cycle.
+LOOP-BREAK: Dead loop resolved at cycle 569. Executor bug fixed — branch executors now fire for all runnable values (not just "script"). Set runnable to "script" for branches 1-10. Prioritize B4 organism engagement + B1 economic tracking this cycle.

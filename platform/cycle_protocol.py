@@ -44,6 +44,7 @@ class CycleState:
     priority_suggestion: str
     voice_input: str
     trading_status: Optional[dict] = None
+    l3_recovery: str = ""
 
     @classmethod
     def gather(cls, repo_root: Path, cycle_num: int) -> "CycleState":
@@ -80,6 +81,9 @@ class CycleState:
             ),
             voice_input=voice,
             trading_status=trading,
+            l3_recovery=_read(
+                repo_root / "staging" / "l3_recovery.md", 800,
+            ),
         )
 
     def to_prompt(self) -> str:
@@ -99,6 +103,10 @@ class CycleState:
         if self.priority_suggestion:
             parts.append(
                 f"\n### Suggested Priority\n{self.priority_suggestion}"
+            )
+        if self.l3_recovery:
+            parts.append(
+                f"\n### L3 Recovery Signal\n{self.l3_recovery}"
             )
         return "\n".join(parts)
 
