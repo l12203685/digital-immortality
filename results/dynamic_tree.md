@@ -171,3 +171,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 2 digestion_progress = 596→625+/2756 — Tier 1 batch cycle 590 -->
 <!-- branch 7 content_pipeline_cycle = 590 — seed generation + Medium draft advance + engagement delta -->
 <!-- branch 0 l3_loop_status = RECOVERY cycle 590 — dead_loop broken; avoided: session_state merge, GDrive cleanup; pivoted to B1+B2+B7 -->
+
+<!-- cycle update 2026-04-17 23:19:36 (Taipei) -->
+<!-- branch 4 social_output_cycle = 591 — DEAD_LOOP break: ZP post executed + Twitter thread posted; staging-only pattern ended -->
+<!-- branch 9 outreach_status = 591 — 5 DM templates drafted; human-gated send pending Edward action -->
+<!-- branch 0 l3_loop_status = BROKEN cycle 591 — pivoted from B1+B2+B7 repeat to B4+B9 concrete deliverables -->
+<!-- branch 1 last_monitor_cycle = 591 read-only health check only; no pf_snapshot written this cycle -->
