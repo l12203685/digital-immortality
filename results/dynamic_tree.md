@@ -189,3 +189,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 2 digestion_progress = 660+/2756 — Tier 1 batch cycle 593 -->
 <!-- branch 7 content_pipeline_cycle = 593 — Medium draft complete (all sections); cross-post window ~606 -->
 <!-- branch 0 l3_loop_status = STABLE cycle 593 — loop-break: B1 skipped this cycle; B9 leads to diversify from B1+B2+B7 repetition detected cycles 590+592 -->
+
+<!-- cycle update 2026-04-18 00:49:32 (Taipei) -->
+<!-- branch 4 social_output_cycle = 594 — 5-cycle neglect broken; ZP post + Twitter thread executed from complete Medium draft -->
+<!-- branch 3 finance_snapshot_cycle = 594 — first finance_engine.py execution; spending breakdown + anomaly flags written -->
+<!-- branch 1 last_monitor_cycle = 594 — pf_snapshot written; kill/promote decision rendered; real execution not read-only -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 594 — L3 signal actioned; avoided B2+B7+B9 trio; pivoted to B4+B3+B1 concrete artifacts -->
