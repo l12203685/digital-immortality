@@ -195,3 +195,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 3 finance_snapshot_cycle = 594 — first finance_engine.py execution; spending breakdown + anomaly flags written -->
 <!-- branch 1 last_monitor_cycle = 594 — pf_snapshot written; kill/promote decision rendered; real execution not read-only -->
 <!-- branch 0 l3_loop_status = RECOVERY cycle 594 — L3 signal actioned; avoided B2+B7+B9 trio; pivoted to B4+B3+B1 concrete artifacts -->
+
+<!-- cycle update 2026-04-18 01:19:38 (Taipei) -->
+<!-- branch 5 phase4b_status = voice_input_processing cycle 595 — 3 test messages queued; routing decision pending -->
+<!-- branch 3 finance_snapshot_cycle = 595 — second run; anomaly resolution + delta vs 594 -->
+<!-- branch 2 digestion_progress = 660→700+/2756 — Tier 1 batch cycle 595 -->
+<!-- branch 0 l3_loop_status = STABLE cycle 595 — avoided B1+B7+B9 repeat AND B4+B3+B1 exact repeat; pivoted to B5 (new voice signal) + B3 delta + B2 infra -->
