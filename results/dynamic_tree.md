@@ -146,3 +146,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 5 phase7_status = CLOSE VERDICT cycle 585 — binary decision rendered after 3 smoke cycles -->
 <!-- branch 1 last_monitor_cycle = 585 -->
 <!-- branch 2 digestion_progress = 592→625+/2756 — Tier 1 batch cycle 585 -->
+
+<!-- cycle update 2026-04-17 20:49:39 (Taipei) -->
+<!-- branch 5 phase7_status = CLOSE VERDICT RENDERED cycle 586 — binary decision after 4 smoke+verdict cycles; no further smoke -->
+<!-- branch 7 content_pipeline_cycle = 586 — ZP post batch staged; engagement signal checked on 2 live posts -->
+<!-- branch 2 digestion_progress = 592→625+/2756 — Tier 1 batch cycle 586 -->
+<!-- branch 1 last_monitor_cycle = 586 -->
