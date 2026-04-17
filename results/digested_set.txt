@@ -808,3 +808,33 @@ E:/投資交易/pla_md/logic/(5)NV2110006_TX3M_FLT.md
 E:/投資交易/pla_md/logic/(5)TimChen009_TX_30mBBI_LOS-策略腳本.md
 E:/投資交易/pla_md/logic/(5)TungWen002_TX_EMA50K_LT.md
 E:/投資交易/pla_md/logic/(5)策略及指標程式碼-004_TXF_3G(1.382)_4mK_LO-202101-彥勝.md
+E:/投資交易/pla_md/logic/(5)策略程式碼 001_TX_20210204d_LO.md
+E:/投資交易/pla_md/logic/(5)策略程式碼 sungwen.007_Tx_202106_FLT.md
+E:/投資交易/pla_md/logic/(5)策略程式碼06MD0.md
+E:/投資交易/pla_md/logic/(5)策略程式碼07M30MAL.md
+E:/投資交易/pla_md/logic/(5)策略程式碼08M15MAL.md
+E:/投資交易/pla_md/logic/(5)策略腳本 - Wesley002_TX_2107SQX0001_DT.md
+E:/投資交易/pla_md/logic/(5)策略腳本 PTstartup105_TX_PivotReversal04_DT.md
+E:/投資交易/pla_md/logic/(5)策略腳本004_TX_PriceInterval5K_LO.md
+E:/投資交易/pla_md/logic/(5)策略腳本GavinLu008_TX_DonChianChannel-D2106-K20m_LT.md
+E:/投資交易/pla_md/logic/(5)策略腳本Jack106_TX_Neckline10K_L0.md
+E:/投資交易/pla_md/logic/(5)策略腳本katsu005_TXAM_LENGATE_3mK_DT-彥勝.md
+E:/投資交易/pla_md/logic/(5)策略腳本Ray101_TX_3 gate 6k_DO.md
+E:/投資交易/pla_md/logic/(5)策略腳本TimChen008_TX_15mKD202106_LT.md
+E:/投資交易/pla_md/logic/(6) 139_TX7M_C-bar_DO_v1.1_2106-Alan.md
+E:/投資交易/pla_md/logic/(6) 策略腳本.md
+E:/投資交易/pla_md/logic/(6) 策略腳本_TXAL_1_007_VCP+RangeBreakout.md
+E:/投資交易/pla_md/logic/(6) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
+E:/投資交易/pla_md/logic/(6)@LV@_08Week_of_DTstyle_7k_LO.md
+E:/投資交易/pla_md/logic/(6)@LV@_TX_Week_3GPSBL_17K_LT.md
+E:/投資交易/pla_md/logic/(6)_@LV@_tx_TimeGuardian_13K_LT.md
+E:/投資交易/pla_md/logic/(6)_@LV@_tx_TransFormer_17K_(DT)LT.md
+E:/投資交易/pla_md/logic/(6)NV002_TX30M_SR_FLT.md
+E:/投資交易/pla_md/logic/(6)策略程式碼 sungwen.007_Tx_202106_FLT.md
+E:/投資交易/pla_md/logic/(6)策略腳本004_TX_PriceInterval5K_LO.md
+E:/投資交易/pla_md/logic/(6)策略腳本GavinLu008_TX_DonChianChannel-D2106-K20m_LT.md
+E:/投資交易/pla_md/logic/(6)策略腳本Jack106_TX_Neckline10K_L0.md
+E:/投資交易/pla_md/logic/(6)策略腳本katsu005_TXAM_LENGATE_3mK_DT-彥勝.md
+E:/投資交易/pla_md/logic/(6)策略腳本Ray101_TX_3 gate 6k_DO.md
+E:/投資交易/pla_md/logic/(6)策略腳本TimChen008_TX_15mKD202106_LT.md
+E:/投資交易/pla_md/logic/(7) 139_TX7M_C-bar_DO_v1.1_2106-Alan.md
