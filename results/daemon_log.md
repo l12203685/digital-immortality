@@ -4970,3 +4970,25 @@ plan_raw: ```json
 ## Cycle 1 — 2026-04-17 21:19:01 (Taipei)
 
 CLI error: 
+
+## Cycle 1 — 2026-04-17 21:49:37 (Taipei)
+
+[cycle 588] classification=branch-growth
+actions: 4, updates: 5
+exec: b1(經濟): Tick ?, PnL 1.6573%, signal ?; b2(消化): Consistency: ?/? aligned, streak ?; b4(社交/organism): Distribution diagnosis: 189 lines; Outreach: 0 done, 9 pending; b7(content pipeline): Knowledge digestion: 596/2756 files
+digestion: Knowledge Digestion: 596/2756 files, Tier 1, Last: 2026-04-17T21:19:07+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 1,
+      "name": "經濟",
+      "action": "portfolio monitor: snapshot 10 active strategies, compute per-strategy PF, flag any below 0.8 threshold for kill review; update pf_snapshot_588",
+      "priority": 1,
+      "runnable": "script"
+    },
+    {
+      "branch": 2,
+      "name": "消化",
+      "action": "digestion Tier 1 batch: advance from 591 toward 625+ target; process next insight batch from 2756 queue; log orthogonality rejections",
+      "

@@ -152,3 +152,10 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 7 content_pipeline_cycle = 586 — ZP post batch staged; engagement signal checked on 2 live posts -->
 <!-- branch 2 digestion_progress = 592→625+/2756 — Tier 1 batch cycle 586 -->
 <!-- branch 1 last_monitor_cycle = 586 -->
+
+<!-- cycle update 2026-04-17 21:49:37 (Taipei) -->
+<!-- branch 1 last_monitor_cycle = 588 -->
+<!-- branch 2 digestion_progress = 591→625+/2756 — Tier 1 batch cycle 588 -->
+<!-- branch 4 social_status = loop-break activated cycle 588 — 5-cycle neglect resolved; ZP publish + Twitter thread staged; cross-post window ~606; 9 DMs human-gated -->
+<!-- branch 5 phase7_status = CLOSED — verdict rendered cycle 586; no further smoke; E2E voice inputs (phase4b, channel 1775898534) logged for next phase -->
+<!-- branch 7 content_pipeline_cycle = 588 — ZP batch generation + engagement check + Medium draft advance -->
