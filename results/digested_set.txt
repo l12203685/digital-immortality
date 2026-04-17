@@ -1058,3 +1058,33 @@ E:/投資交易/pla_md/logic/2000.md
 E:/投資交易/pla_md/logic/2007TX_VHF_LinR_22K (2).md
 E:/投資交易/pla_md/logic/2007TX_VHF_LinR_22K (3).md
 E:/投資交易/pla_md/logic/2007TX_VHF_LinR_22K (4).md
+E:/投資交易/pla_md/logic/2007TX_VHF_LinR_22K.md
+E:/投資交易/pla_md/logic/2014Q4_03_EZ31_CC_30m.md
+E:/投資交易/pla_md/logic/20151211高雄.md
+E:/投資交易/pla_md/logic/2015Q1_1.md
+E:/投資交易/pla_md/logic/2015Q1_5.md
+E:/投資交易/pla_md/logic/20180614.md
+E:/投資交易/pla_md/logic/2018Q1.md
+E:/投資交易/pla_md/logic/2018Q2_N.md
+E:/投資交易/pla_md/logic/2019AD_all.md
+E:/投資交易/pla_md/logic/202007 QTC_TX_SAR_Kuang_DO_6K.md
+E:/投資交易/pla_md/logic/202007.md
+E:/投資交易/pla_md/logic/20200725 JJ (2).md
+E:/投資交易/pla_md/logic/20200725 JJ (3).md
+E:/投資交易/pla_md/logic/20200725 JJ (4).md
+E:/投資交易/pla_md/logic/20200725 JJ.md
+E:/投資交易/pla_md/logic/202007作業-CODE.md
+E:/投資交易/pla_md/logic/202010HW (2).md
+E:/投資交易/pla_md/logic/202010HW.md
+E:/投資交易/pla_md/logic/202010作業_009_TX_Box_FDT0_Jack (2).md
+E:/投資交易/pla_md/logic/202010作業_009_TX_Box_FDT0_Jack.md
+E:/投資交易/pla_md/logic/2021 12月範例.md
+E:/投資交易/pla_md/logic/202101 Kuang (2).md
+E:/投資交易/pla_md/logic/202101 Kuang.md
+E:/投資交易/pla_md/logic/202101ABS30K.md
+E:/投資交易/pla_md/logic/202101QOO_Q_CT00_000M_PT.md
+E:/投資交易/pla_md/logic/202101QOO_Q_CT00_Free.md
+E:/投資交易/pla_md/logic/202101QOO_Q_CT01_060M_KD.md
+E:/投資交易/pla_md/logic/202101QOO_Q_CT02_060M_RSI.md
+E:/投資交易/pla_md/logic/202101QOO_Q_CT03_060M_CCI.md
+E:/投資交易/pla_md/logic/202101QOO_Q_CT04_060M_MTM.md
