@@ -110,3 +110,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 4 social_status = loop-break activated cycle 579 — concrete cross-platform seeding; 9 DMs pending (human-gated) -->
 <!-- branch 2 digestion_progress = 586+/2756 — Tier 1 batch cycle 579 -->
 <!-- branch 7 content_pipeline_cycle = 579 — ZP post generation active; 2 posts live -->
+
+<!-- cycle update 2026-04-17 17:49:25 (Taipei) -->
+<!-- branch 4 social_status = L3 loop-break cycle 580 — concrete cross-platform deliverables; organism collision report refresh; 9 DMs human-gated -->
+<!-- branch 1 active_strategies = 6 (dropped from 9; 3 killed; pf_snapshot_580 pending) -->
+<!-- branch 2 digestion_progress = 587+/2756 — Tier 1 batch cycle 580 targeting 620+ -->
+<!-- branch 5 phase7_status = smoke check cycle 580 — assess close eligibility -->
