@@ -237,3 +237,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 3 finance_snapshot_cycle = 601 — delta vs 598; anomaly flags refreshed -->
 <!-- branch 1 last_monitor_cycle = 601 read-only; 599 seeds maturing; no new execution -->
 <!-- branch 0 l3_loop_status = RECOVERY cycle 601 — avoided B4+B7+B2 (600 exact); avoided B1+B4+B2 (599); pivoted to B5 neglect-break (4-cycle queue) + B3 finance delta + B1 read-only -->
+
+<!-- cycle update 2026-04-18 04:49:50 (Taipei) -->
+<!-- branch 1 last_real_execution_cycle = 602 — range/breakout seed promotion/kill at tick 7187+ -->
+<!-- branch 9 outreach_status = 602 — batch 4 generated; 4-cycle neglect broken; human-gated send pending Edward action -->
+<!-- branch 2 digestion_progress = 790→820+/2756 — Tier 1 batch cycle 602 -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 602 — dead_loop break actioned; avoided B5+B3+B1-ro (601 exact); avoided B4+B7+B2 (600 exact); avoided B1+B4+B2 (599 exact); pivoted to B1 real-exec + B9 neglect-break (4-cycle) + B2 infra -->
