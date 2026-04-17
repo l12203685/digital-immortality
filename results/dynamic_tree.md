@@ -261,3 +261,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 9 outreach_status = 605 — batch 5 generated; 3-cycle neglect broken; human-gated send pending Edward action -->
 <!-- branch 2 digestion_progress = 850→880+/2756 — Tier 1 batch cycle 605 -->
 <!-- branch 0 l3_loop_status = RECOVERY cycle 605 — avoided B5+B1+B2 (604 exact); avoided B4+B7+B0 (603 exact); avoided B1+B9+B2 (602 exact); pivoted to B3 finance-delta (4-cycle neglect) + B9 outreach-batch5 (3-cycle neglect) + B2 infra -->
+
+<!-- cycle update 2026-04-18 06:49:42 (Taipei) -->
+<!-- branch 4 organism_engagement_cycle = 606 — batch 6; 5-cycle neglect broken per priority signal -->
+<!-- branch 5 phase4b_e2e_cycle = 606 — reverse channel 1775898534 validation; voice input signal processed -->
+<!-- branch 1 last_real_execution_cycle = 606 — seed eval at tick 7307; promote/kill logged -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 606 — avoided B3+B9+B2 (605 exact); avoided B5+B1+B2 (604 exact); avoided B4+B7+B0 (603 exact); pivoted to B4 organism-neglect-break (5-cycle priority) + B5 voice-signal-e2e + B1 real-exec seed-eval; B2 skipped to break chronic B2 anchor pattern -->
