@@ -116,3 +116,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 1 active_strategies = 6 (dropped from 9; 3 killed; pf_snapshot_580 pending) -->
 <!-- branch 2 digestion_progress = 587+/2756 — Tier 1 batch cycle 580 targeting 620+ -->
 <!-- branch 5 phase7_status = smoke check cycle 580 — assess close eligibility -->
+
+<!-- cycle update 2026-04-17 18:19:36 (Taipei) -->
+<!-- branch 1 last_monitor_cycle = 581 -->
+<!-- branch 2 digestion_progress = 590+/2756 — Tier 1 batch cycle 581 targeting 620+ -->
+<!-- branch 4 social_status = content creation pivot cycle 581 — ZP post + Medium outline; L3 loop-break from diagnosis to output -->
+<!-- branch 5 phase7_status = close eligibility assessed cycle 581 -->

@@ -4841,3 +4841,24 @@ plan_raw: ```json
       "action": "SOCIAL CONCRETE cycle 580 — L3 loop-break directive: run organism_interact.py --report to get collision count; run distribution diagnosis refresh (docs/discord_distribution_diagnosis.md); enumerate 3 specific cross-platform seed actions executable without human (ZP post draft, Medium outline, Threads content); write b4_concrete_580.json with deliverables",
       "priority": 1,
       "runnable":
+
+## Cycle 1 — 2026-04-17 18:19:36 (Taipei)
+
+[cycle 581] classification=branch-growth
+actions: 4, updates: 4
+exec: b1(經濟): Tick ?, PnL 3.8895%, signal ?; b2(消化): Consistency: ?/? aligned, streak ?; b4(社交/organism): Distribution diagnosis: 189 lines; Outreach: 0 done, 9 pending; b5(平台分發): (read-only, no executor)
+digestion: Knowledge Digestion: 589/2756 files, Tier 1, Last: 2026-04-17T17:49:31+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 1,
+      "name": "經濟",
+      "action": "B1 cycle 581 — portfolio snapshot: verify 6 active strategies PnL vs kill thresholds (PF < 0.8), compute cum PnL delta since last tick 2026-04-17T10:18 UTC, flag any strategy approaching kill threshold; write pf_snapshot_581.json with tick_count/active/cum_pnl/risk_flags",
+      "priority": 1,
+      "runnable": "script"
+    },
+    {
+      "branch": 2,
+      "name": "消化",
+      "action": "B2 cycle 581 — 
