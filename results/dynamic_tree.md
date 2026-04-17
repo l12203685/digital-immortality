@@ -273,3 +273,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 7 crosspost_prep_cycle = 607 — new content staged from digestion+organism batch 6; publish window ~610 -->
 <!-- branch 2 digestion_progress = 880→910+/2756 — Tier 1 batch cycle 607 (1-cycle anchor-skip honored) -->
 <!-- branch 0 l3_loop_status = RECOVERY cycle 607 — avoided B4+B5+B1 (606 exact); avoided B3+B9+B2 (605 exact); avoided B5+B1+B2 (604 exact); pivoted to B9 outreach-status+batch6 + B7 crosspost-staging (4-cycle neglect) + B2 digestion-resume (1-cycle skip respected) -->
+
+<!-- cycle update 2026-04-18 07:49:48 (Taipei) -->
+<!-- branch 3 finance_snapshot_cycle = 608 -->
+<!-- branch 1 last_real_execution_cycle = 608 -->
+<!-- branch 5 phase4b_health_cycle = 608 -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 608 — avoided B9+B7+B2 (607 exact); avoided B4+B5+B1 (606 exact); avoided B3+B9+B2 (605 exact); pivoted to B3 finance-delta (3-cycle neglect, economic) + B1 trading-seed-eval (economic priority) + B5 channel-health (2-cycle neglect); B2/B9/B7 all skipped to break anchor patterns -->
