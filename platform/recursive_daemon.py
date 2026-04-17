@@ -1057,6 +1057,41 @@ def run_cycle_cli(prompt: str, model: str, cycle: int) -> str:
     return output_text
 
 
+def _run_l3_selfmod_cli() -> None:
+    """Delegate --l3-check to the canonical l3_selfmod module.
+
+    Imports tools.l3_selfmod directly (same Python process) so it inherits
+    all configured paths.  Falls back to subprocess if the import fails
+    (e.g. running from outside the repo root).
+
+    Exit code mirrors l3_selfmod conventions:
+      0 = GREEN, 1 = YELLOW, 2 = RED.
+    """
+    try:
+        # Ensure tools/ is on the path when running from platform/
+        tools_dir = str(REPO_ROOT / "tools")
+        if tools_dir not in sys.path:
+            sys.path.insert(0, tools_dir)
+        import importlib
+        l3mod = importlib.import_module("l3_selfmod")
+        summary = l3mod.run_l3_selfmod(dry_run=False, json_output=False)
+        worst = summary.get("worst", "GREEN")
+        if worst == "RED":
+            sys.exit(2)
+        elif worst == "YELLOW":
+            sys.exit(1)
+        else:
+            sys.exit(0)
+    except Exception as exc:
+        # Fallback: subprocess call
+        print(f"[L3] Direct import failed ({exc}), falling back to subprocess")
+        result = subprocess.run(
+            [sys.executable, str(REPO_ROOT / "tools" / "l3_selfmod.py")],
+            cwd=str(REPO_ROOT),
+        )
+        sys.exit(result.returncode)
+
+
 def _print_status() -> None:
     """Print daemon health status and exit."""
     ts = datetime.now(TPE).strftime("%Y-%m-%d %H:%M:%S (Taipei)")
@@ -1128,9 +1163,12 @@ def main():
         _print_status()
         return
 
-    # --l3-check: run self-modification check and exit
+    # --l3-check: delegate to l3_selfmod.py (canonical L3 v2 implementation).
+    # This supersedes the legacy run_l3_check() stub in this file which only
+    # covered 3 detectors. l3_selfmod covers all 4 (including STALE_BRANCH)
+    # and writes results/l3_diagnostics.md + staging/l3_recovery.md.
     if args.l3_check:
-        run_l3_check()
+        _run_l3_selfmod_cli()
         return
 
     dna = load_dna()
@@ -1196,10 +1234,16 @@ def main():
             run_finance_dashboards(cycle, every=4)
             # Knowledge digestion — one file per cycle (non-fatal)
             run_knowledge_digestion(cycle, client=client, model=args.model)
-            # L3 self-modification check — every 5 cycles to avoid overhead
+            # L3 self-modification check — every 5 cycles to avoid overhead.
+            # Uses l3_selfmod (4 detectors) as canonical implementation.
             if cycle % 5 == 0:
                 try:
-                    run_l3_check()
+                    tools_dir = str(REPO_ROOT / "tools")
+                    if tools_dir not in sys.path:
+                        sys.path.insert(0, tools_dir)
+                    import importlib
+                    l3mod = importlib.import_module("l3_selfmod")
+                    l3mod.run_l3_selfmod(dry_run=False, json_output=False)
                 except Exception as e:
                     print(f"[daemon] L3 check failed (non-fatal): {e}")
         except Exception as e:
