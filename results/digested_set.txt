@@ -1123,3 +1123,33 @@ E:/投資交易/pla_md/logic/202101QOO_Q_CT36_840M_MACD.md
 E:/投資交易/pla_md/logic/202101QOO_Q_CT37_840M_DMI.md
 E:/投資交易/pla_md/logic/202101QOO_Q_CT38_840M_BB.md
 E:/投資交易/pla_md/logic/202101QOO_Q_CT39_840M_KC.md
+E:/投資交易/pla_md/logic/202101QOO_Q_CT40_840M_EL.md
+E:/投資交易/pla_md/logic/202101QOO_Q_CT41_840M_SAR.md
+E:/投資交易/pla_md/logic/202101QOO_Q_CT42_060M_SAR.md
+E:/投資交易/pla_md/logic/202101QOO_Q_CT43_030M_SAR.md
+E:/投資交易/pla_md/logic/202101QOO_Q_CT44_015M_SAR.md
+E:/投資交易/pla_md/logic/202101QOO_TX_039.md
+E:/投資交易/pla_md/logic/202102_TX_KD (2).md
+E:/投資交易/pla_md/logic/202102_TX_KD.md
+E:/投資交易/pla_md/logic/202102_TX12min_bias_LO (2).md
+E:/投資交易/pla_md/logic/202102_TX12min_bias_LO.md
+E:/投資交易/pla_md/logic/20210217_LT_17k_day_2月作業_9班吳浩瑋.md
+E:/投資交易/pla_md/logic/20210220_TX_Boxtheory_45k_LO.md
+E:/投資交易/pla_md/logic/202104 範例.md
+E:/投資交易/pla_md/logic/202105.md
+E:/投資交易/pla_md/logic/202106_TX25min_3gp_LO (2).md
+E:/投資交易/pla_md/logic/202106_TX25min_3gp_LO (3).md
+E:/投資交易/pla_md/logic/202106_TX25min_3gp_LO (4).md
+E:/投資交易/pla_md/logic/202106_TX25min_3gp_LO.md
+E:/投資交易/pla_md/logic/202109.md
+E:/投資交易/pla_md/logic/202109_TX_KD17K_LT (2).md
+E:/投資交易/pla_md/logic/202109_TX_KD17K_LT.md
+E:/投資交易/pla_md/logic/202109Khsu.md
+E:/投資交易/pla_md/logic/202109Khsu_WF (2).md
+E:/投資交易/pla_md/logic/202109Khsu_WF.md
+E:/投資交易/pla_md/logic/202110策略包.md
+E:/投資交易/pla_md/logic/202203.md
+E:/投資交易/pla_md/logic/2022CFPO_NEW.md
+E:/投資交易/pla_md/logic/20230430 CFPO_2023 with seed.md
+E:/投資交易/pla_md/logic/20250202 code sample.md
+E:/投資交易/pla_md/logic/2101TX_KD_LinR_37K (2).md
