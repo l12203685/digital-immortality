@@ -998,3 +998,33 @@ E:/投資交易/pla_md/logic/0403.md
 E:/投資交易/pla_md/logic/045_TX_BY_DO (2).md
 E:/投資交易/pla_md/logic/045_TX_BY_DO.md
 E:/投資交易/pla_md/logic/047_TX_BBR_DO.md
+E:/投資交易/pla_md/logic/047_TXI_Correlation Trend_DO.md
+E:/投資交易/pla_md/logic/0528.md
+E:/投資交易/pla_md/logic/053_TX_NBY_DO (2).md
+E:/投資交易/pla_md/logic/053_TX_NBY_DO.md
+E:/投資交易/pla_md/logic/0530.md
+E:/投資交易/pla_md/logic/059_TXI_CLOSED_LO (2).md
+E:/投資交易/pla_md/logic/059_TXI_CLOSED_LO (3).md
+E:/投資交易/pla_md/logic/059_TXI_CLOSED_LO (4).md
+E:/投資交易/pla_md/logic/059_TXI_CLOSED_LO.md
+E:/投資交易/pla_md/logic/060_Hsiang_TXA_Q5_R_10min_FLT (2).md
+E:/投資交易/pla_md/logic/060_Hsiang_TXA_Q5_R_10min_FLT.md
+E:/投資交易/pla_md/logic/0629.md
+E:/投資交易/pla_md/logic/064_TXA_HLGAPBC_LO_20min.md
+E:/投資交易/pla_md/logic/064_TXI_ORB_LO.md
+E:/投資交易/pla_md/logic/0704.md
+E:/投資交易/pla_md/logic/09042 (2).md
+E:/投資交易/pla_md/logic/09042.md
+E:/投資交易/pla_md/logic/092_vwap_3k_DT.md
+E:/投資交易/pla_md/logic/1_策略_@SW_008_2021_06_TXF_open gate trend_DT (2).md
+E:/投資交易/pla_md/logic/1_策略_@SW_008_2021_06_TXF_open gate trend_DT (3).md
+E:/投資交易/pla_md/logic/1_策略_@SW_008_2021_06_TXF_open gate trend_DT (4).md
+E:/投資交易/pla_md/logic/1_策略_@SW_008_2021_06_TXF_open gate trend_DT.md
+E:/投資交易/pla_md/logic/1_策略_@SW_009_2021_08_TXF_CO propotion of HL_FLT.md
+E:/投資交易/pla_md/logic/1_策略_@SW_010_2021_09_TXF_kbar ratio_DT (2).md
+E:/投資交易/pla_md/logic/1_策略_@SW_010_2021_09_TXF_kbar ratio_DT.md
+E:/投資交易/pla_md/logic/1_策略_@SW_011_202109_MA Trend_30m_LT (2).md
+E:/投資交易/pla_md/logic/1_策略_@SW_011_202109_MA Trend_30m_LT.md
+E:/投資交易/pla_md/logic/1_策略_@SW_013_2022_02_TXF_higher_30m_LT.md
+E:/投資交易/pla_md/logic/1_策略_QTC_TX_WeekTrading_LT.md
+E:/投資交易/pla_md/logic/1-003_TXA_30mKeltner_LOS (2).md
