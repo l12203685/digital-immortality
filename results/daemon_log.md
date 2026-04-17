@@ -4453,3 +4453,22 @@ plan_raw: ```json
       "action": "ORGANISM-ENGAGE cycle 561: branch neglected 5 cycles — execute concrete organism interaction; produce organism_engagement_561.json with: 3 targeted replies/comments on relevant trading/AI content on LinkedIn or Threads, 1 outbound connection request with personalized note, engagement_count, platform, timestamp; NO verify-only; artifact mandatory",
       "priority": 1,
       "runnable": "python 
+
+## Cycle 1 — 2026-04-17 08:49:02 (Taipei)
+
+CLI error: ============================================================
+Bun v1.3.13 (edb020d5) Windows x64 (baseline)
+Windows v.win10_ni
+CPU: sse42 avx avx2
+Args: "claude" "-p" "You are the 永生樹 recursive planner. Given the current state, output a JSON plan.\nFormat: {\"branch_actions\": [{\"branch\": 1, \"name\": \"經濟\", \"action\": \"...\", \"priority\": 1, \"runnable\""...
+Features: jsc standalone_executable claude_code 
+Elapsed: 845ms | User: 0ms | Sys: 31ms
+RSS: 44.14MB | Peak: 44.15MB | Commit: 0.29GB | Faults: 11419
+
+panic(main thread): Illegal instruction at address 0x7FF7E91DB59D
+oh no: Bun has crashed. This indicates a bug in Bun, not your code.
+
+To send a redacted crash report to Bun's team,
+please file a GitHub issue using the link below:
+
+ https://bun.report/1.3.13/e_1edb020dkggggEggggC656+wDo4gwnDsn5x1C+29x1Cs04unDi35v1C6kqs1C6kos1C85ms1Csjk65BsuzshC0iwo8B22gq8Bmi55vBki63Mmi+5Gg0s5Go5gt6DCYKERNEL32.DLLoj4FCSntdll.dllilzUA3u//Bnmlp8W
