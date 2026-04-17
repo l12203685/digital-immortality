@@ -104,3 +104,9 @@
 
 ## daemon_next_priority
 B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B4 cross-post window ~cycle 606; B5 phase7 smoke close; B7 content pipeline (content_seed_generator -> ZP posts). Human-gated: B1.3 outreach DMs x5 / B4.1 Samuel DM / B9 candidates / B1.2 mainnet API.
+
+<!-- cycle update 2026-04-17 17:19:37 (Taipei) -->
+<!-- branch 1 last_monitor_cycle = 579 -->
+<!-- branch 4 social_status = loop-break activated cycle 579 — concrete cross-platform seeding; 9 DMs pending (human-gated) -->
+<!-- branch 2 digestion_progress = 586+/2756 — Tier 1 batch cycle 579 -->
+<!-- branch 7 content_pipeline_cycle = 579 — ZP post generation active; 2 posts live -->
