@@ -868,3 +868,38 @@ E:/投資交易/pla_md/logic/@@@173_TX_DVNormal_D0.md
 E:/投資交易/pla_md/logic/@@202106T90_Normal_CDP_K_D0 (2).md
 E:/投資交易/pla_md/logic/@@202106T90_Normal_CDP_K_D0.md
 E:/投資交易/pla_md/logic/@@202106T90_STRONG.md
+E:/投資交易/pla_md/logic/@@202107T89_CriticalOpenXDP_3K_D0 (2).md
+E:/投資交易/pla_md/logic/@@202107T89_CriticalOpenXDP_3K_D0.md
+E:/投資交易/pla_md/logic/@CF v20210125.1.md
+E:/投資交易/pla_md/logic/@LSEDEV_S_OPT.md
+E:/投資交易/pla_md/logic/@LV@_TX_BayesLaw_7K_LT.md
+E:/投資交易/pla_md/logic/@LV@_TX_Kings_men_11K_LT.md
+E:/投資交易/pla_md/logic/@LV@TX_AAA_13K_LT.md
+E:/投資交易/pla_md/logic/@M@S@Avg_MA.md
+E:/投資交易/pla_md/logic/@M@S@DT_ORB (2).md
+E:/投資交易/pla_md/logic/@M@S@DT_ORB.md
+E:/投資交易/pla_md/logic/@M@S@EMA (2).md
+E:/投資交易/pla_md/logic/@M@S@EMA (3).md
+E:/投資交易/pla_md/logic/@M@S@EMA (4).md
+E:/投資交易/pla_md/logic/@M@S@EMA (5).md
+E:/投資交易/pla_md/logic/@M@S@EMA (6).md
+E:/投資交易/pla_md/logic/@M@S@EMA.md
+E:/投資交易/pla_md/logic/@M@S@FDT_CDP.md
+E:/投資交易/pla_md/logic/@M@S@LT_Mother_Son (2).md
+E:/投資交易/pla_md/logic/@M@S@LT_Mother_Son.md
+E:/投資交易/pla_md/logic/@M@S@LT_WD4_WD3.md
+E:/投資交易/pla_md/logic/@M@S@WD1_WD5.md
+E:/投資交易/pla_md/logic/@MC1_程式碼 (2).md
+E:/投資交易/pla_md/logic/@MC1_程式碼.md
+E:/投資交易/pla_md/logic/@MC2_All.md
+E:/投資交易/pla_md/logic/@S_010_3G_D (2).md
+E:/投資交易/pla_md/logic/@S_010_3G_D.md
+E:/投資交易/pla_md/logic/@S_047_TX_Trender_D (2).md
+E:/投資交易/pla_md/logic/@S_047_TX_Trender_D.md
+E:/投資交易/pla_md/logic/@S_072_TX_OpenerV3_L.md
+E:/投資交易/pla_md/logic/@SpyGrid(蛛網，網格交易).md
+E:/投資交易/pla_md/logic/@TX_20210219_LO (2).md
+E:/投資交易/pla_md/logic/@TX_20210219_LO.md
+E:/投資交易/pla_md/logic/000_TX_CDPKD_D0 (2).md
+E:/投資交易/pla_md/logic/000_TX_CDPKD_D0.md
+E:/投資交易/pla_md/logic/001_TX_3Red_LO-1.md
