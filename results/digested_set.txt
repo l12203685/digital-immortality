@@ -1213,3 +1213,33 @@ E:/投資交易/pla_md/logic/9126.md
 E:/投資交易/pla_md/logic/9139.md
 E:/投資交易/pla_md/logic/975_20171220_LO.md
 E:/投資交易/pla_md/logic/991.md
+E:/投資交易/pla_md/logic/4_策略腳本_CK_001_TX_M30_dailyOC_LT (2).md
+E:/投資交易/pla_md/logic/4_策略腳本_CK_001_TX_M30_dailyOC_LT.md
+E:/投資交易/pla_md/logic/4_策略腳本_CK_003_TWF_M3_renkoSBK_LT (2).md
+E:/投資交易/pla_md/logic/4_策略腳本_CK_003_TWF_M3_renkoSBK_LT.md
+E:/投資交易/pla_md/logic/4_策略腳本_CK_004_TX_M5_cdpCopyCat_DT.md
+E:/投資交易/pla_md/logic/4_策略腳本_CK_005_TX_M13_Nbreakthrough_LT.md
+E:/投資交易/pla_md/logic/4_策略腳本_CK_010_TX_M30_ndayStrength_LT.md
+E:/投資交易/pla_md/logic/513_Bollinger_band.md
+E:/投資交易/pla_md/logic/520_TX_HLMA_30k_LO.md
+E:/投資交易/pla_md/logic/6)程式碼34_Sw_All_53min_TTM+ROC_Ying_Change (2).md
+E:/投資交易/pla_md/logic/6)程式碼34_Sw_All_53min_TTM+ROC_Ying_Change.md
+E:/投資交易/pla_md/logic/6)程式碼34_Sw_All_53min_TTM+ROC_Ying_ChangeCC (2).md
+E:/投資交易/pla_md/logic/6)程式碼34_Sw_All_53min_TTM+ROC_Ying_ChangeCC.md
+E:/投資交易/pla_md/logic/60MAL0 (2).md
+E:/投資交易/pla_md/logic/60MAL0.md
+E:/投資交易/pla_md/logic/658_TX_20210808_LT.md
+E:/投資交易/pla_md/logic/6種進出場模組.md
+E:/投資交易/pla_md/logic/7-13.md
+E:/投資交易/pla_md/logic/904 (2).md
+E:/投資交易/pla_md/logic/904 (3).md
+E:/投資交易/pla_md/logic/904 (4).md
+E:/投資交易/pla_md/logic/904.md
+E:/投資交易/pla_md/logic/907-2 (2).md
+E:/投資交易/pla_md/logic/907-2.md
+E:/投資交易/pla_md/logic/910 (2).md
+E:/投資交易/pla_md/logic/910.md
+E:/投資交易/pla_md/logic/9126.md
+E:/投資交易/pla_md/logic/9139.md
+E:/投資交易/pla_md/logic/975_20171220_LO.md
+E:/投資交易/pla_md/logic/991.md
