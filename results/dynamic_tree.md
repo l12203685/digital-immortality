@@ -213,3 +213,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 5 phase4b_status = routing_verdict_rendered_cycle_597 — 2-cycle pending broken -->
 <!-- branch 2 digestion_progress = 700→730+/2756 — Tier 1 batch cycle 597 -->
 <!-- branch 0 l3_loop_status = RECOVERY cycle 597 — avoided B4+B7+B1-readonly repeat; pivoted to B1 real execution + B5 pending resolution + B2 infra -->
+
+<!-- cycle update 2026-04-18 02:49:39 (Taipei) -->
+<!-- branch 9 outreach_status = 598 — batch 3 generated; 5-cycle neglect resolved; human-gated send pending Edward action -->
+<!-- branch 3 finance_snapshot_cycle = 598 — reclassify_spending_v3 delta vs cycle 595; anomaly flags refreshed -->
+<!-- branch 1 last_monitor_cycle = 598 read-only; seeds from 597 maturing; real execution deferred -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 598 — dead_loop break; avoided B1+B2+B5 repeat trio; pivoted to B9 neglect resolution + B3 finance delta -->
