@@ -4574,3 +4574,23 @@ plan_raw: ```json
       "branch": 5,
       "name": "E2E/phase4b",
  
+
+## Cycle 1 — 2026-04-17 11:49:02 (Taipei)
+
+CLI error: ============================================================
+Bun v1.3.13 (edb020d5) Windows x64 (baseline)
+Windows v.win10_ni
+CPU: sse42 avx avx2
+Args: "claude" "-p" "You are the 永生樹 recursive planner. Given the current state, output a JSON plan.\nFormat: {\"branch_actions\": [{\"branch\": 1, \"name\": \"經濟\", \"action\": \"...\", \"priority\": 1, \"runnable\""...
+Features: Bun.stderr(2) Bun.stdin(2) Bun.stdout(2) fetch(5) jsc spawn(12) standalone_executable yaml_parse(158) claude_code 
+Builtins: "bun:main" "node:assert" "node:async_hooks" "node:buffer" "node:child_process" "node:crypto" "node:dns" "node:events" "node:fs" "node:fs/promises" "node:http" "node:https" "node:module" "node:net" "node:os" "node:path" "node:path/posix" "node:path/win32" "node:perf_hooks" "node:process" "node:stream" "node:stream/consumers" "node:timers/promises" "node:tls" "node:tty" "node:url" "node:util" "node:vm" "node:zlib" "ws" "node:http2" 
+Elapsed: 379ms | User: 343ms | Sys: 156ms
+RSS: 0.44GB | Peak: 0.44GB | Commit: 0.67GB | Faults: 108251 | Machine: 34.28GB
+
+panic(thread 206208): attempt to unwrap error: OutOfMemory
+oh no: Bun has crashed. This indicates a bug in Bun, not your code.
+
+To send a redacted crash report to Bun's team,
+please file a GitHub issue using the link below:
+
+ https://bun.report/1.3.13/e_1edb020dmgggkEugogCww1sOwr2mNgrnkH0jn0Qmyl7TCYKERNEL32.DLLoj4FCSntdll.dllilzUA0
