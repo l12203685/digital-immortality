@@ -4678,3 +4678,24 @@ plan_raw: ```json
       "branch": 5,
       "name": "E2E",
       "action": "Phase5 close execution — evaluate phase5_smoke_571.json result. If full 
+
+## Cycle 1 — 2026-04-17 14:19:25 (Taipei)
+
+[cycle 573] classification=branch-growth
+actions: 4, updates: 4
+exec: b1(經濟): Tick ?, PnL 1.7002%, signal ?; b5(E2E): Distribution: 46 SOPs/knowledge products in docs/; b4(社交/organism): Distribution diagnosis: 189 lines; Outreach: 0 done, 9 pending; b2(消化): Consistency: ?/? aligned, streak ?
+digestion: Knowledge Digestion: 581/2756 files, Tier 1, Last: 2026-04-17T13:49:37+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 1,
+      "name": "經濟",
+      "action": "SCALE-UP from leaderboard_572 top 3 — allocate to top 3 strategies from pf_leaderboard_572.json; log to pf_scale_573.json; active=6 baseline; kill<0.8; regen if active<5",
+      "priority": 1,
+      "runnable": "script"
+    },
+    {
+      "branch": 5,
+      "name": "E2E",
+      "action": "Phase6 scope execution — phase5 closed in cycle 572; define phase6 scope from E2E public host smoke test (voice: rev
