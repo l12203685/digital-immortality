@@ -249,3 +249,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 7 crosspost_publish_cycle = 603 — Twitter+LinkedIn publish executed; staged artifacts from cycle 600 now live -->
 <!-- branch 0 l3_loop_status = RECOVERY cycle 603 — DEAD_LOOP actioned (avg_similarity=1.0 reset); avoided B1+B9+B2 (602 exact); avoided B5+B3+B1 (601 exact); avoided B4+B7+B2 (600 exact); pivoted to B4 neglect-break (directive) + B7 publish-execute + B0 loop-audit -->
 <!-- branch 0 dead_loop_resolved_cycle = 603 — session_state.md carry-over diversified; repetitive trio (session_state/CLAUDE.md/GDrive) purged -->
+
+<!-- cycle update 2026-04-18 05:49:34 (Taipei) -->
+<!-- branch 5 phase4b_e2e_cycle = 604 — reverse channel + public host smoke test per voice input signal -->
+<!-- branch 1 last_real_execution_cycle = 604 — seed maturity eval at tick 7247; promote/kill decisions logged -->
+<!-- branch 2 digestion_progress = 820→850+/2756 — Tier 1 batch cycle 604 -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 604 — avoided B4+B7+B0 (603 exact); avoided B1+B9+B2 (602 exact); avoided B5+B3+B1-ro (601 exact); pivoted to B5 E2E-voice-signal + B1 real-exec seed eval + B2 infra -->

@@ -5281,3 +5281,24 @@ plan_raw: ```json
     {
       "branch": 7,
       "name": "內容/content",
+
+## Cycle 1 — 2026-04-18 05:49:34 (Taipei)
+
+[cycle 604] classification=root-growth
+actions: 3, updates: 4
+exec: b5(通訊/phase4b): Distribution: 46 SOPs/knowledge products in docs/; b1(交易/trading): Tick ?, PnL 16.264%, signal ?; b2(基礎/infra): Consistency: ?/? aligned, streak ?
+digestion: Knowledge Digestion: 612/2756 files, Tier 1, Last: 2026-04-18T05:20:22+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 5,
+      "name": "通訊/phase4b",
+      "action": "Execute phase4b E2E smoke test per voice input signal: validate reverse channel 1775898534 connectivity, run public host smoke test, write results/b5_cycle_604_e2e.json with pass/fail per endpoint, latency readings, and next-action flags",
+      "priority": 1,
+      "runnable": "script"
+    },
+    {
+      "branch": 1,
+      "name": "交易/trading",
+      "action": "Real execution: evaluate maturity
