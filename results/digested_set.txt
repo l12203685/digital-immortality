@@ -903,3 +903,33 @@ E:/投資交易/pla_md/logic/@TX_20210219_LO.md
 E:/投資交易/pla_md/logic/000_TX_CDPKD_D0 (2).md
 E:/投資交易/pla_md/logic/000_TX_CDPKD_D0.md
 E:/投資交易/pla_md/logic/001_TX_3Red_LO-1.md
+E:/投資交易/pla_md/logic/001_TX_KPOWER_DO (2).md
+E:/投資交易/pla_md/logic/001_TX_KPOWER_DO.md
+E:/投資交易/pla_md/logic/001_TX_MACD_LO.md
+E:/投資交易/pla_md/logic/001_TX_PT_D0 (2).md
+E:/投資交易/pla_md/logic/001_TX_PT_D0 (3).md
+E:/投資交易/pla_md/logic/001_TX_PT_D0.md
+E:/投資交易/pla_md/logic/001_TX_Range R_LO.md
+E:/投資交易/pla_md/logic/002_Sw_D_5min_Linear.md
+E:/投資交易/pla_md/logic/002_TX_Keltner_LO_2010 (2).md
+E:/投資交易/pla_md/logic/002_TX_Keltner_LO_2010.md
+E:/投資交易/pla_md/logic/002K_TX_PBO_LO(HW4).md
+E:/投資交易/pla_md/logic/006_LLH_6mK_FDO (2).md
+E:/投資交易/pla_md/logic/006_LLH_6mK_FDO.md
+E:/投資交易/pla_md/logic/006_TXA_13mLineReg_LOS_V2 (2).md
+E:/投資交易/pla_md/logic/006_TXA_13mLineReg_LOS_V2.md
+E:/投資交易/pla_md/logic/007_BiasReverse 3mK D0 (2).md
+E:/投資交易/pla_md/logic/007_BiasReverse 3mK D0.md
+E:/投資交易/pla_md/logic/007_TXFM_COVERGAP_D0_01_1030.md
+E:/投資交易/pla_md/logic/009_TX_Box_FDT0_Jack (2).md
+E:/投資交易/pla_md/logic/009_TX_Box_FDT0_Jack.md
+E:/投資交易/pla_md/logic/01.202010功課-004_TX_KDHL_LT.md
+E:/投資交易/pla_md/logic/01.202101功課-006_TX_HLtime_LT (2).md
+E:/投資交易/pla_md/logic/01.202101功課-006_TX_HLtime_LT.md
+E:/投資交易/pla_md/logic/01.202106功課-Sing014_TX_Change_LT (2).md
+E:/投資交易/pla_md/logic/01.202106功課-Sing014_TX_Change_LT (3).md
+E:/投資交易/pla_md/logic/01.202106功課-Sing014_TX_Change_LT (4).md
+E:/投資交易/pla_md/logic/01.202106功課-Sing014_TX_Change_LT.md
+E:/投資交易/pla_md/logic/01.202106功課-Sing014_TX_ChangeDabrother_LT (2).md
+E:/投資交易/pla_md/logic/01.202106功課-Sing014_TX_ChangeDabrother_LT.md
+E:/投資交易/pla_md/logic/01.202109功課_Sing_010_TX_W_LT_改良版 (2).md
