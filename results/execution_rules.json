@@ -2,21 +2,12 @@
   "kill_max_dd": 20.0,
   "kill_min_wr": 0.3,
   "kill_min_pf": 0.8,
-  "kill_window": 25,
-  "kill_window_floor": 20,
-  "kill_window_ceiling": 50,
-  "kill_window_recovery_ticks": 100,
-  "kill_count": 146,
-  "evolved_at": "2026-04-17T09:38:29.838393+00:00",
+  "kill_window": 20,
+  "kill_count": 24,
+  "evolved_at": "2026-04-17T13:05:34.858169+00:00",
   "last_kill": {
-    "strategy": "gen_DualMA_RF_eda1cb",
-    "reason": "PF 0.77 < 0.8",
-    "ts": "2026-04-17T09:38:29.838393+00:00"
-  },
-  "last_recovery": {
-    "ts": "2026-04-17T11:18:35.452263+00:00",
-    "from_window": 20,
-    "to_window": 25,
-    "clean_ticks": 100
+    "strategy": "gen_Donchian_RSI_d3d59e",
+    "reason": "PF 0.75 < 0.8",
+    "ts": "2026-04-17T13:05:34.858169+00:00"
   }
 }
