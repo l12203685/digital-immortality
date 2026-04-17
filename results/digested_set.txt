@@ -604,3 +604,33 @@ E:/投資交易/pla_md/signal/(4)NV2107003_TX3M_Amy_FDT.md
 E:/投資交易/pla_md/signal/(4) 策略腳本_TXAL_1_007_VCP+RangeBreakout.md
 E:/投資交易/pla_md/signal/(4) 策略腳本Shuen004_TX_LSS_LT.md
 E:/投資交易/pla_md/signal/(4) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
+E:/投資交易/pla_md/signal/(4)NV2108004_TX15M_Bonny_LT.md
+E:/投資交易/pla_md/signal/(4)NV2109005_TX6M_Cindy_LT -original.md
+E:/投資交易/pla_md/signal/(4)NV2109005_TX6M_Cindy_LT.md
+E:/投資交易/pla_md/signal/(4)NV2110006_TX3M_FLT.md
+E:/投資交易/pla_md/signal/(4)NV2112008_TX60M_FLT.md
+E:/投資交易/pla_md/signal/(4)NV2202009_TX300M_LT.md
+E:/投資交易/pla_md/signal/(4)TimChen009_TX_30mBBI_LOS-策略腳本.md
+E:/投資交易/pla_md/signal/(4)TX_HLdistance15K.md
+E:/投資交易/pla_md/signal/(4)策略及指標程式碼-004_TXF_3G(1.382)_4mK_LO-202101-彥勝.md
+E:/投資交易/pla_md/signal/(4)策略程式碼 001_TX_20210204d_LO.md
+E:/投資交易/pla_md/signal/(4)策略程式碼 TX_MAHL_FDT_1.md
+E:/投資交易/pla_md/signal/(4)策略程式碼01M60ML.md
+E:/投資交易/pla_md/signal/(4)策略程式碼06M03MD0.md
+E:/投資交易/pla_md/signal/(4)策略腳本 - Wesley002_TX_2107SQX0001_DT.md
+E:/投資交易/pla_md/signal/(4)策略腳本 - Wesley003_TX_2110KPower_LO.md
+E:/投資交易/pla_md/signal/(4)策略腳本 - Wesley004_TX_2112SQX003_LT.md
+E:/投資交易/pla_md/signal/(4)策略腳本 PTstartup105_TX_PivotReversal04_DT.md
+E:/投資交易/pla_md/signal/(4)策略腳本_LanDi001_TX_BIAS_50mK_20220217_LT.md
+E:/投資交易/pla_md/signal/(4)策略腳本004_TX_PriceInterval5K_LO.md
+E:/投資交易/pla_md/signal/(4)策略腳本005_TX_wCDP20K_FLO.md
+E:/投資交易/pla_md/signal/(4)策略腳本Drschnabel_TX_trend&oscillation20k_LT.md
+E:/投資交易/pla_md/signal/(4)策略腳本GavinLu008_TX_DonChianChannel-D2106-K20m_LT.md
+E:/投資交易/pla_md/signal/(4)策略腳本Jack106_TX_Neckline10K_L0.md
+E:/投資交易/pla_md/signal/(4)策略腳本Jack112_TX_HLR13K_LT_Jack 軒邑軒宇.md
+E:/投資交易/pla_md/signal/(4)策略程式碼%%AVgirl_202106_5K.md
+E:/投資交易/pla_md/signal/(4)策略程式碼 sungwen.007_Tx_202106_FLT.md
+E:/投資交易/pla_md/signal/(4)策略程式碼 sungwen.009_Tx_202110_FDT.md
+E:/投資交易/pla_md/signal/(4)策略程式碼06MD0.md
+E:/投資交易/pla_md/signal/(4)策略程式碼07M30MAL.md
+E:/投資交易/pla_md/signal/(4)策略程式碼08M15MAL.md
