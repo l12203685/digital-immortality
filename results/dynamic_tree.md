@@ -122,3 +122,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 2 digestion_progress = 590+/2756 — Tier 1 batch cycle 581 targeting 620+ -->
 <!-- branch 4 social_status = content creation pivot cycle 581 — ZP post + Medium outline; L3 loop-break from diagnosis to output -->
 <!-- branch 5 phase7_status = close eligibility assessed cycle 581 -->
+
+<!-- cycle update 2026-04-17 18:49:32 (Taipei) -->
+<!-- branch 1 last_monitor_cycle = 582 -->
+<!-- branch 4 social_status = concrete content output cycle 582 — ZP post + Medium outline pre-loaded; cross-post window ~606; 9 DMs human-gated -->
+<!-- branch 5 phase7_status = E2E smoke cycle 582 — public host + reverse channel 1775898534 test; close verdict pending -->
+<!-- branch 2 digestion_progress = 590+/2756 — Tier 1 batch cycle 582 targeting 620+ -->
