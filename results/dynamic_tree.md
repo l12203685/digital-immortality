@@ -219,3 +219,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 3 finance_snapshot_cycle = 598 — reclassify_spending_v3 delta vs cycle 595; anomaly flags refreshed -->
 <!-- branch 1 last_monitor_cycle = 598 read-only; seeds from 597 maturing; real execution deferred -->
 <!-- branch 0 l3_loop_status = RECOVERY cycle 598 — dead_loop break; avoided B1+B2+B5 repeat trio; pivoted to B9 neglect resolution + B3 finance delta -->
+
+<!-- cycle update 2026-04-18 03:19:53 (Taipei) -->
+<!-- branch 1 last_real_execution_cycle = 599 — seed maturity eval; promote/reject 3 seeds from cycle 597 against PF≥0.8 threshold -->
+<!-- branch 4 content_pipeline_cycle = 599 — regime-shift content seed drafted; publish window ~606 -->
+<!-- branch 2 digestion_progress = 730→760+/2756 — Tier 1 batch cycle 599 -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 599 — dead_loop break; avoided B9+B3+B1-ro (598 exact repeat) and B1+B5+B2 (597 exact repeat); pivoted to B1 real-exec seed eval + B4 content seed staging + B2 infra -->
