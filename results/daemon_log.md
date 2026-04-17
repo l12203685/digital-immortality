@@ -4493,3 +4493,24 @@ plan_raw: ```json
       "branch": 1,
       "name": "經濟",
       "actio
+
+## Cycle 1 — 2026-04-17 09:49:43 (Taipei)
+
+[cycle 564] classification=branch-growth
+actions: 4, updates: 4
+exec: b1(經濟): (no executor for branch 1, runnable=python trading/performance_tracker.py --scal; b5(E2E/系統): (no executor for branch 5, runnable=python platform/recursive_daemon.py --phase ; b4(社交/organism): (no executor for branch 4, runnable=python platform/organism_engage.py --content; b2(知識消化): (no executor for branch 2, runnable=python platform/spending_csv_ingest.py --tar
+digestion: Knowledge Digestion: 585/2756 files, Tier 1, Last: 2026-04-17T09:19:48+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 1,
+      "name": "經濟",
+      "action": "SCALE-UP from pf_leaderboard_563.json top candidates; active=6 baseline; scale allocation to top 3; kill<0.8; regen trigger armed if active drops below 5; pf_scale_564.json required",
+      "priority": 1,
+      "runnable": "python trading/performance_tracker.py --scale-top 3 --kill-threshold 0.8 --output results/pf_scale_564.json"
+    },
+    {
+      "branch": 5,
+      "name": "E2E/系統",
+      "action": "

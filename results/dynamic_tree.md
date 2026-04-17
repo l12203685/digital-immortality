@@ -286,3 +286,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 1 strategy_mode = cycle 563 — LEADERBOARD REFRESH; active=6 (dropped from 9); pf_leaderboard_563.json; kill<0.8; regen trigger if active<5 -->
 <!-- branch 5 e2e_smoke_status = cycle 563 — phase7 smoke execution from phase7_scope_561.json; phase7_smoke_563.json required; close on full pass -->
 <!-- branch 2 digestion_progress = target 893/2756 after cycle 563 -->
+
+<!-- cycle update 2026-04-17 09:49:43 (Taipei) -->
+<!-- branch 1 strategy_mode = cycle 564 — SCALE-UP from leaderboard_563 top 3; pf_scale_564.json; active=6 baseline; kill<0.8; regen if active<5 -->
+<!-- branch 5 e2e_smoke_status = cycle 564 — phase7 CLOSE + phase4b e2e execution; phase7_baseline_closed_564.json + phase4b_e2e_564.json; reverse channel 1775898534 voice-confirmed; close on full pass -->
+<!-- branch 4 channel_strategy = cycle 564 — CONTENT-PLAN post-engage pivot; linkedin_content_plan_564.md required; cross-post window ~cycle 606; publish loop deferred -->
+<!-- branch 2 digestion_progress = target 914/2756 after cycle 564 -->
