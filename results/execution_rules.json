@@ -6,15 +6,15 @@
   "kill_window_floor": 20,
   "kill_window_ceiling": 50,
   "kill_window_recovery_ticks": 100,
-  "kill_count": 139,
-  "evolved_at": "2026-04-17T03:05:57.342520+00:00",
+  "kill_count": 135,
+  "evolved_at": "2026-04-17T03:55:05.490562+00:00",
   "last_kill": {
-    "strategy": "gen_DualMA_RF_eda1cb",
-    "reason": "PF 0.55 < 0.8",
-    "ts": "2026-04-17T03:05:57.342520+00:00"
+    "strategy": "DualMA_RSI",
+    "reason": "PF 0.75 < 0.8",
+    "ts": "2026-04-17T03:55:05.490562+00:00"
   },
   "last_recovery": {
-    "ts": "2026-04-17T02:05:53.993747+00:00",
+    "ts": "2026-04-17T02:09:56.886365+00:00",
     "from_window": 20,
     "to_window": 25,
     "clean_ticks": 100
