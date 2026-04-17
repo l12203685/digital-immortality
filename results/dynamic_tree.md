@@ -298,3 +298,9 @@ GATE-CONSTRAINED. B2.3 CLOSED. B9 G1 READY. B10 L3 v2 ALL GREEN. Human-gated: B1
 <!-- branch 5 e2e_smoke_status = cycle 565 — phase4b e2e execution; reverse channel 1775898534 voice-confirmed; phase4b_e2e_565.json required; close on full pass -->
 <!-- branch 1 strategy_mode = cycle 565 — portfolio-monitor post scale-up; pf_snapshot_565.json; active=6 baseline; kill<0.8; regen if active<5 -->
 <!-- branch 2 digestion_progress = target 935/2756 after cycle 565 -->
+
+<!-- cycle update 2026-04-17 11:19:24 (Taipei) -->
+<!-- branch 4 channel_strategy = cycle 567 — ORGANISM-ENGAGE execution; organism_engagement_567.json required; 3 replies + 1 outbound; 6-cycle neglect resolved; cross-post window ~cycle 606 -->
+<!-- branch 5 e2e_smoke_status = cycle 567 — phase4b e2e retry (cycle 566 crashed); reverse channel 1775898534 voice-confirmed; phase4b_e2e_567.json required; close on full pass -->
+<!-- branch 1 strategy_mode = cycle 567 — portfolio-monitor; pf_snapshot_567.json; active=8 baseline; kill<0.8; no regen -->
+<!-- branch 2 digestion_progress = target 956/2756 after cycle 567 -->
