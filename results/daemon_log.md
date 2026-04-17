@@ -4437,3 +4437,19 @@ plan_raw: ```json
       "name": "交易",
       "action": "STRATEGY-LEADERBOARD cycle 560: portfolio-monitor has repeated 3 cycles — pivot to leaderboard snapshot; rank all 9 active strategies by PF descending; identify top 3 for scale-up candidates and flag any approaching 0.8 kill threshold; produce pf_leaderboard_560.json with fields: rank, strategy_id, PF, cum_pnl, ticks_active, scale_flag; NO generic snapshot — leaderboard format mandatory",
       "priorit
+
+## Cycle 1 — 2026-04-17 08:19:32 (Taipei)
+
+[cycle 561] classification=branch-growth
+actions: 4, updates: 4
+exec: b4(社交/organism): (no executor for branch 4, runnable=python platform/recursive_daemon.py --branch; b1(交易): (no executor for branch 1, runnable=python trading/performance_tracker.py --scal; b5(E2E/phase7): (no executor for branch 5, runnable=python platform/recursive_daemon.py --branch; b2(知識): (no executor for branch 2, runnable=python tools/l3_selfmod.py --digest-batch 21
+digestion: Knowledge Digestion: 582/2756 files, Tier 1, Last: 2026-04-17T07:49:47+08:00
+plan_raw: ```json
+{
+  "branch_actions": [
+    {
+      "branch": 4,
+      "name": "社交/organism",
+      "action": "ORGANISM-ENGAGE cycle 561: branch neglected 5 cycles — execute concrete organism interaction; produce organism_engagement_561.json with: 3 targeted replies/comments on relevant trading/AI content on LinkedIn or Threads, 1 outbound connection request with personalized note, engagement_count, platform, timestamp; NO verify-only; artifact mandatory",
+      "priority": 1,
+      "runnable": "python 
