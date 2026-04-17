@@ -140,3 +140,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 1 last_monitor_cycle = 584 -->
 <!-- branch 2 digestion_progress = 591+/2756 — Tier 1 batch cycle 584 targeting 625+ -->
 <!-- branch 7 content_pipeline_cycle = 584 — ZP post staging; engagement signal check -->
+
+<!-- cycle update 2026-04-17 20:19:24 (Taipei) -->
+<!-- branch 4 social_output_cycle = 585 — loop-break: 5-cycle neglect resolved; ZP publish + Medium + Twitter thread -->
+<!-- branch 5 phase7_status = CLOSE VERDICT cycle 585 — binary decision rendered after 3 smoke cycles -->
+<!-- branch 1 last_monitor_cycle = 585 -->
+<!-- branch 2 digestion_progress = 592→625+/2756 — Tier 1 batch cycle 585 -->
