@@ -303,3 +303,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 1 last_real_execution_cycle = 612 -->
 <!-- branch 6 infra_health_cycle = 612 -->
 <!-- branch 0 l3_loop_status = RECOVERY cycle 612 — avoided B9+B5+B4 (611 exact); avoided B7+B1+B2 (610 exact); avoided B4+B7+B6 (609 exact); pivoted to B3 finance-delta (4-cycle neglect, economic priority) + B1 trading-seed-eval (economic) + B6 infra-health (novel combo); B2/B7/B9/B4/B5 all skipped to break anchor patterns -->
+
+<!-- cycle update 2026-04-18 10:19:48 (Taipei) -->
+<!-- branch 2 digestion_progress = Tier 1 batch cycle 613 — 2-cycle neglect broken; advancing from current position -->
+<!-- branch 9 outreach_batch_cycle = 613 — batch 8 staged; batch 7 status checked -->
+<!-- branch 7 crosspost_staging_cycle = 613 — bundle staged; publish window cycle 615 -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 613 — avoided B3+B1+B6 (612 exact); avoided B9+B5+B4 (611 exact); avoided B7+B1+B2 (610 exact); pivoted to B2 digestion-resume (2-cycle neglect) + B9 outreach-batch8 (1-cycle neglect, economic) + B7 crosspost-staging (2-cycle neglect); B1/B3/B4/B5/B6 all skipped to break anchor patterns -->
