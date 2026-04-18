@@ -1825,3 +1825,33 @@ E:/投資交易/pla_md/logic/terry9487.md
 E:/投資交易/pla_md/logic/TradingProserviceOriginal - #XMAS MC12 - Short.md
 E:/投資交易/pla_md/logic/TradingProserviceOriginal-Limited-Long.md
 E:/投資交易/pla_md/logic/TU_916-4_DO_TX (2).md
+E:/投資交易/pla_md/logic/OSCAR032_TXALL_2MA_FDL.md
+E:/投資交易/pla_md/logic/OSCAR033_TXALL_2MA_FDL.md
+E:/投資交易/pla_md/logic/OSCAR034_TXALL_CHAIKIN_FDL.md
+E:/投資交易/pla_md/logic/OSCAR035_TXALL_RSIMOM_FDL.md
+E:/投資交易/pla_md/logic/P_CDP_TXF_1_DT.md
+E:/投資交易/pla_md/logic/PLA (2).md
+E:/投資交易/pla_md/logic/PLA.md
+E:/投資交易/pla_md/logic/Q_CT00_000M_PT.md
+E:/投資交易/pla_md/logic/Q_CT00_Free (2).md
+E:/投資交易/pla_md/logic/Q_CT00_Free (3).md
+E:/投資交易/pla_md/logic/Q_CT00_Free.md
+E:/投資交易/pla_md/logic/Q_CT01_060M_KD.md
+E:/投資交易/pla_md/logic/Q_CT02_060M_RSI.md
+E:/投資交易/pla_md/logic/Q_CT03_060M_CCI.md
+E:/投資交易/pla_md/logic/Q_CT04_060M_MTM.md
+E:/投資交易/pla_md/logic/Q_CT05_060M_OBV.md
+E:/投資交易/pla_md/logic/Q_CT06_060M_MACD.md
+E:/投資交易/pla_md/logic/Q_CT07_060M_DMI.md
+E:/投資交易/pla_md/logic/Q_CT08_060M_BB.md
+E:/投資交易/pla_md/logic/Q_CT09_060M_KC.md
+E:/投資交易/pla_md/logic/Q_CT10_060M_EL.md
+E:/投資交易/pla_md/logic/Q_CT11_030M_KD.md
+E:/投資交易/pla_md/logic/Q_CT12_030M_RSI.md
+E:/投資交易/pla_md/logic/Q_CT13_030M_CCI.md
+E:/投資交易/pla_md/logic/Q_CT33_840M_CCI.md
+E:/投資交易/pla_md/logic/Q_CT34_840M_MTM.md
+E:/投資交易/pla_md/logic/Q_CT35_840M_OBV.md
+E:/投資交易/pla_md/logic/Q_CT36_840M_MACD.md
+E:/投資交易/pla_md/logic/Q_CT37_840M_DMI.md
+E:/投資交易/pla_md/logic/Q_CT38_840M_BB.md
