@@ -1855,3 +1855,33 @@ E:/投資交易/pla_md/logic/Q_CT35_840M_OBV.md
 E:/投資交易/pla_md/logic/Q_CT36_840M_MACD.md
 E:/投資交易/pla_md/logic/Q_CT37_840M_DMI.md
 E:/投資交易/pla_md/logic/Q_CT38_840M_BB.md
+E:/投資交易/pla_md/logic/TU_916-4_DO_TX.md
+E:/投資交易/pla_md/logic/TU_TX_915-7_LO.md
+E:/投資交易/pla_md/logic/TutorFirst.md
+E:/投資交易/pla_md/logic/TX_039 (2).md
+E:/投資交易/pla_md/logic/TX_039 (3).md
+E:/投資交易/pla_md/logic/TX_039 (4).md
+E:/投資交易/pla_md/logic/TX_039.md
+E:/投資交易/pla_md/logic/TX_PCB_FDO (2).md
+E:/投資交易/pla_md/logic/TX_PCB_FDO.md
+E:/投資交易/pla_md/logic/TX_Pivot_DO.md
+E:/投資交易/pla_md/logic/TX_Public Avg_20mK_LO (2).md
+E:/投資交易/pla_md/logic/TX_Public Avg_20mK_LO.md
+E:/投資交易/pla_md/logic/TX_RSI-GapIn_LO_13m.md
+E:/投資交易/pla_md/logic/TX_TwoWeek_DO.md
+E:/投資交易/pla_md/logic/TXex_202106.md
+E:/投資交易/pla_md/logic/TXEX2105.md
+E:/投資交易/pla_md/logic/TXEX2108_Edward 修改.md
+E:/投資交易/pla_md/logic/TXF  ED001_TX_CCI30k202107_LT 策略檔 (2).md
+E:/投資交易/pla_md/logic/TXF_3Gate_DO_7K (2).md
+E:/投資交易/pla_md/logic/TXF_3Gate_DO_7K (3).md
+E:/投資交易/pla_md/logic/TXF_3Gate_DO_7K (4).md
+E:/投資交易/pla_md/logic/TXF_3Gate_DO_7K.md
+E:/投資交易/pla_md/logic/TXF_LT1D_3L.md
+E:/投資交易/pla_md/logic/TXF_M13_Speed_NDO (2).md
+E:/投資交易/pla_md/logic/TXF_M13_Speed_NDO.md
+E:/投資交易/pla_md/logic/TXF_M3_ORB_DO_2012 (2).md
+E:/投資交易/pla_md/logic/TXF_M3_ORB_DO_2012.md
+E:/投資交易/pla_md/logic/TXF_SCamarillaAHL_DO 210605 (2).md
+E:/投資交易/pla_md/logic/TXF_SCamarillaAHL_DO 210605 (3).md
+E:/投資交易/pla_md/logic/TXF_SCamarillaAHL_DO 210605 (4).md
