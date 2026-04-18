@@ -321,3 +321,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 9 outreach_batch_cycle = 615 — batch 8 status checked; batch 9 staged -->
 <!-- branch 3 finance_snapshot_cycle = 615 — delta snapshot vs cycle 612 -->
 <!-- branch 0 l3_loop_status = RECOVERY cycle 615 — avoided B4+B5+B1 (614 exact); avoided B2+B9+B7 (613 exact); avoided B3+B1+B6 (612 exact); pivoted to B7 crosspost-publish-window-NOW (staged at 613, flagged for 615) + B9 outreach-batch8-status (economic) + B3 finance-delta (3-cycle neglect, economic priority); B1/B2/B4/B5/B6 all skipped to break anchor patterns -->
+
+<!-- cycle update 2026-04-18 11:49:40 (Taipei) -->
+<!-- branch 1 last_real_execution_cycle = 616 -->
+<!-- branch 2 digestion_progress = Tier 1 batch cycle 616 — 3-cycle neglect broken; advancing from 623/2756 -->
+<!-- branch 6 infra_health_cycle = 616 -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 616 — avoided B7+B9+B3 (615 exact); avoided B4+B5+B1 (614 exact); avoided B2+B9+B7 (613 exact); pivoted to B1 seed-eval (economic priority, 2-cycle gap) + B2 digestion-resume (3-cycle neglect) + B6 infra-health (4-cycle neglect, novel combo); B3/B4/B5/B7/B9 all skipped; session_state.md+CLAUDE.md touches explicitly blocked per L3 dead-loop directive -->
