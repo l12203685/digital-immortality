@@ -309,3 +309,9 @@ B1 portfolio-monitor (active=9, pf_snapshot); B2 digestion (1145/2756 target); B
 <!-- branch 9 outreach_batch_cycle = 613 — batch 8 staged; batch 7 status checked -->
 <!-- branch 7 crosspost_staging_cycle = 613 — bundle staged; publish window cycle 615 -->
 <!-- branch 0 l3_loop_status = RECOVERY cycle 613 — avoided B3+B1+B6 (612 exact); avoided B9+B5+B4 (611 exact); avoided B7+B1+B2 (610 exact); pivoted to B2 digestion-resume (2-cycle neglect) + B9 outreach-batch8 (1-cycle neglect, economic) + B7 crosspost-staging (2-cycle neglect); B1/B3/B4/B5/B6 all skipped to break anchor patterns -->
+
+<!-- cycle update 2026-04-18 10:49:31 (Taipei) -->
+<!-- branch 0 l3_loop_status = RECOVERY cycle 614 — avoided B2+B9+B7 (613 exact); avoided B3+B1+B6 (612 exact); avoided B9+B5+B4 (611 exact); pivoted to B4 organism-5cycle-neglect-break (priority signal) + B5 E2E-voice-active + B1 seed-eval (economic); B2/B3/B6/B7/B9 all skipped to break anchor patterns -->
+<!-- branch 4 organism_engagement_cycle = 614 — batch 9 execution; 5-cycle neglect broken per priority signal -->
+<!-- branch 5 phase4b_e2e_cycle = 614 — voice signal E2E smoke test; reverse channel 1775898534 + public host -->
+<!-- branch 1 last_real_execution_cycle = 614 — seed eval tick 7547+ -->
