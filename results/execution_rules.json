@@ -2,7 +2,7 @@
   "kill_max_dd": 20.0,
   "kill_min_wr": 0.3,
   "kill_min_pf": 0.8,
-  "kill_window": 20,
+  "kill_window": 25,
   "kill_window_floor": 20,
   "kill_window_ceiling": 50,
   "kill_window_recovery_ticks": 100,
@@ -14,7 +14,7 @@
     "ts": "2026-04-18T06:04:57.567092+00:00"
   },
   "last_recovery": {
-    "ts": "2026-04-18T05:03:51.022972+00:00",
+    "ts": "2026-04-18T07:45:04.676887+00:00",
     "from_window": 20,
     "to_window": 25,
     "clean_ticks": 100
