@@ -1790,3 +1790,38 @@ E:/投資交易/pla_md/logic/Q_CT35_840M_OBV.md
 E:/投資交易/pla_md/logic/Q_CT36_840M_MACD.md
 E:/投資交易/pla_md/logic/Q_CT37_840M_DMI.md
 E:/投資交易/pla_md/logic/Q_CT38_840M_BB.md
+E:/投資交易/pla_md/logic/Q_CT39_840M_KC.md
+E:/投資交易/pla_md/logic/Q_CT40_840M_EL.md
+E:/投資交易/pla_md/logic/Q_CT41_840M_SAR.md
+E:/投資交易/pla_md/logic/Q_CT42_060M_SAR.md
+E:/投資交易/pla_md/logic/Q_CT43_030M_SAR.md
+E:/投資交易/pla_md/logic/Q_CT44_015M_SAR.md
+E:/投資交易/pla_md/logic/Q_TX33_Anniversary SAR.md
+E:/投資交易/pla_md/logic/Q_TX34_Ultimate MA.md
+E:/投資交易/pla_md/logic/qtc9策略.md
+E:/投資交易/pla_md/logic/RSI_IBS.md
+E:/投資交易/pla_md/logic/S21Q1 (2).md
+E:/投資交易/pla_md/logic/S21Q1 (3).md
+E:/投資交易/pla_md/logic/S21Q1.md
+E:/投資交易/pla_md/logic/S21Q100 (2).md
+E:/投資交易/pla_md/logic/S21Q100.md
+E:/投資交易/pla_md/logic/S21Q3 all (sharewin.go9s.com).md
+E:/投資交易/pla_md/logic/S21Q3 part2 (sharewin.go9s.com).md
+E:/投資交易/pla_md/logic/S21Q3.md
+E:/投資交易/pla_md/logic/S21Q300 (sharewin.go9s.com).md
+E:/投資交易/pla_md/logic/S21Q314_EA01 (2).md
+E:/投資交易/pla_md/logic/S21Q314_EA01 (3).md
+E:/投資交易/pla_md/logic/S21Q314_EA01.md
+E:/投資交易/pla_md/logic/S21Q399 (sharewin.go9s.com).md
+E:/投資交易/pla_md/logic/samuel_short.md
+E:/投資交易/pla_md/logic/SourceCode (2).md
+E:/投資交易/pla_md/logic/SourceCode.md
+E:/投資交易/pla_md/logic/speculator.md
+E:/投資交易/pla_md/logic/Star_KD_1H_LT_V5 (2).md
+E:/投資交易/pla_md/logic/Star_KD_1H_LT_V5.md
+E:/投資交易/pla_md/logic/STHL_AD.md
+E:/投資交易/pla_md/logic/SwingLadder -2-1.md
+E:/投資交易/pla_md/logic/terry9487.md
+E:/投資交易/pla_md/logic/TradingProserviceOriginal - #XMAS MC12 - Short.md
+E:/投資交易/pla_md/logic/TradingProserviceOriginal-Limited-Long.md
+E:/投資交易/pla_md/logic/TU_916-4_DO_TX (2).md
