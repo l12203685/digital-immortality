@@ -31,7 +31,7 @@ PRIORITY_TIERS = {
         "E:/poker/e-books",
     ],
     3: [  # Medium: foundational knowledge
-        "E:/Books",
+        "E:/書籍",
         "E:/課程資料/證照考試資料",
         "E:/課程資料/財務工程_隨機財務理論",
     ],

@@ -1,161 +1,189 @@
-# Discord Distribution Diagnosis — Branch 4 (社交/organism)
+# Discord Distribution Diagnosis — Branch 4 (zeroth-principles server)
 
-> Created: 2026-04-13 20:30 (Taipei, UTC+8)
-> Trigger: Organic engagement = 0 for 6 consecutive daemon cycles (372-377)
-> Scope: Root cause analysis of why 3 seed posts produced zero non-bot, non-Edward interaction
+> Updated: 2026-04-16 (Taipei, UTC+8)
+> Prior version: 2026-04-13
+> Trigger: Organic engagement = 0 since server creation (2026-04-09)
+> Scope: Root cause analysis + remediation path for zero non-bot engagement on ZP Discord
 
 ---
 
 ## Executive Summary
 
-The Discord server has zero organic engagement because it has zero organic members. This is not a content problem or a timing problem -- it is a **distribution problem compounded by a sequencing error**. The server was seeded with high-quality content before any human had been given a reason or a path to discover it. The seed posts are talking to an empty room. No invite link has been distributed anywhere, no cross-platform traffic source exists, and the only outreach plan (outreach_week1_execution.md) remains entirely in PENDING status -- all 5 DMs unsent (human-gated blocker).
+The zeroth-principles Discord server has produced zero organic engagement across 7 days because it has zero reachable audience. This is a pure distribution failure -- not content, not timing, not server UX. Three seed posts were drafted (documented in `docs/discord_seed_*.md`) but live channel fetches show `arena` and `scenarios` channels are empty (0 messages). The `edward_thinking` and `edward_log` channels contain only daemon heartbeats and rate-limit notices. No invite link exists anywhere discoverable. All 5 outreach DMs remain in PENDING status. The X/Twitter posting queue (`docs/posting_queue.md`) has every row as `pending`. The GitHub repo has 0 stars, 0 forks, and the README contains no Discord link.
+
+Nothing has changed since the 2026-04-13 diagnosis. Every action item remains unexecuted.
 
 ---
 
-## Root Cause Analysis
+## Findings
 
-### Finding 1: Zero Distribution — Nobody Knows This Server Exists
+### Finding 1: CRITICAL -- Zero Distribution Channels Active
 
-**Evidence:**
-- The outreach tracker (`results/skill_outreach_targets.md`) shows all 5 targets in PENDING status. No DM has been sent to any platform (Twitter, GitHub, Discord communities, LinkedIn).
-- The `outreach_week1_execution.md` execution checklist is entirely unchecked. Not one GitHub search, Twitter search, or LangChain Discord scan has been performed.
-- The Twitter posting queue (`docs/posting_queue.md`) shows every single row from SOP #01 through #100+ as `pending`. Zero threads have been published to X.
-- The X launch sequence (`docs/x_launch_sequence.md`) pre-flight checklist is incomplete -- bio not updated, no pinned tweet, no landing page.
-- The GitHub repo (`l12203685/digital-immortality`) is public but has 0 stars and 0 forks -- no external discovery signal.
-- `server_config.json` contains channel IDs but no evidence of an invite link being generated or shared anywhere.
-- The `content_execution_rules.json` has `"evolution_log": []` -- zero content actions have been tracked.
+**Live evidence (2026-04-16):**
 
-**Diagnosis:** The server has no inbound traffic channel. Not one. There is no invite link on Twitter, no invite link on GitHub, no invite link in any community, no invite link in any DM. The content is invisible.
+| Channel | ID | Messages fetched |
+|---------|----|-----------------|
+| general (1491042474762698774) | fetch returned "Unknown Channel" -- channel may have been deleted or bot lacks access |
+| arena (1491048855779672298) | 0 messages |
+| scenarios (1491048860439806102) | 0 messages |
+| edward_thinking (1491048874263974109) | 10 messages -- all daemon heartbeats and rate-limit notices, no content |
+| edward_log (1491048879045738536) | 1 message -- heartbeat test |
 
-**Severity: CRITICAL -- this alone fully explains zero engagement.**
+**No invite link exists in any of these locations:**
+- ZP GitHub README (`C:/Users/admin/ZP/README.md`) -- no mention of Discord
+- digital-immortality GitHub repo README -- no mention of Discord
+- X/Twitter bio or posts -- launch sequence (`x_launch_sequence.md`) pre-flight checklist incomplete
+- Gumroad listing -- listing draft exists but not published
+- Any outreach DM -- all 5 DMs in PENDING status
 
-### Finding 2: Sequencing Error — Content Before Audience (供給先於需求)
+**No cross-platform presence:**
+- `posting_queue.md`: every SOP thread (100-121) = `pending`
+- `x_launch_sequence.md`: pre-flight checklist incomplete
+- Reddit, HackerNews, LangChain Discord: zero presence
 
-**Evidence:**
-- 3 seed posts were published to Discord on 2026-04-09 (cycle 207).
-- The outreach execution plan was written on 2026-04-10 (cycle 281) -- the day *after* the seeds.
-- The outreach DMs remain unsent 3+ days later (human-gated, per `quick_status.md` blockers list).
-- The daemon has been cycling through Branch 4 for 6 rounds, each time noting `organic=0`, and each time deciding to draft *another* seed post or run *another* status check.
+**Severity: CRITICAL.** A server with zero inbound traffic sources will always produce zero engagement regardless of content quality.
 
-**Diagnosis:** The build order was reversed. The correct sequence is: (1) find people who have the problem, (2) invite them to the space, (3) seed the conversation once they arrive. What actually happened was: (1) build server, (2) seed posts, (3) write outreach plan, (4) never execute outreach. Step 3 and 4 should have come first.
+### Finding 2: Seed Posts Were Drafted But May Not Have Been Published
 
-This is a textbook "build it and they will come" failure. SOP #110 itself explicitly diagnoses this pattern: *"Branch 1.3 waits for audience to appear organically. That diagnosis is wrong."* The same insight applies to Branch 4.
+The three seed post documents exist in `docs/discord_seed_*.md` with "paste as-is" instructions, but:
+- Channels `arena` and `scenarios` contain zero messages
+- The `general` channel returned "Unknown Channel" on fetch -- suggesting it may have been deleted, renamed, or the bot lacks access
+- No confirmation log exists showing the seeds were actually posted
+- The daemon log references "3 seed posts were published to Discord on 2026-04-09" but live channel data contradicts this
 
-### Finding 3: The Human-Gated Blocker Is the Actual Bottleneck
+**Diagnosis:** The seed posts were likely written to the wrong channels, never actually sent, or posted to channels that were subsequently deleted during server restructuring. The content exists only as markdown files on disk.
 
-**Evidence:**
-- `quick_status.md` lists three human-gated blockers:
-  1. Mainnet API keys (~88 days)
-  2. **Outreach DMs x 5 pending**
-  3. Samuel Turing test invite (human-send)
-- The daemon has flagged Branch 1.3 sends as the binding constraint since cycle 285 (2026-04-09 17:21).
-- 4 days have passed. The constraint has not been unblocked.
-- The daemon cannot send DMs (it has no Twitter/GitHub/Reddit auth). Only Edward can.
-
-**Diagnosis:** The system correctly identified that active outreach is required. It correctly wrote the outreach templates, scored the targets, and created the execution checklist. But the final step -- a human pressing "send" on 5 DMs -- has not happened. Every daemon cycle since has been re-discovering the same blocker and producing more content for an empty audience. This is Axiom 5 (bias toward inaction) misapplied: there IS an edge (the outreach plan exists, targets are identified), but the action has not been taken.
-
-### Finding 4: Content-Audience Mismatch Risk (Secondary, Not Primary Cause)
-
-**Evidence from the seed posts themselves:**
-
-The 3 seed posts are well-written, substantive, and intellectually compelling. However:
-
-1. **#general seed** -- Assumes the reader already cares about "DNA documents" and "organisms." Uses internal project vocabulary without onboarding. The 68% agreement stat is interesting but requires context most newcomers lack.
-
-2. **#organism-dna seed** -- Opens with "It's not a personality profile. It's a decision machine." This framing is precise but assumes the reader has already considered *and rejected* the personality-profile approach. That's a narrow audience.
-
-3. **#calibration-sessions seed** -- Shows a concrete example (the best of the three for newcomers), but the "Organism B" anonymization makes it feel like an internal lab report rather than a community invitation.
-
-4. **#collision-reports seed** -- The most engaging content (divergence maps, social capital analysis), but it reads as a finished paper, not a conversation starter. There's no open question that a stranger would feel invited to answer.
-
-**Diagnosis:** The posts are written for an audience that already understands the framework. They explain *how it works* but not *why a stranger should care*. This is a secondary problem -- even perfect content produces zero engagement when zero people see it. But when traffic eventually arrives, these posts may still fail to convert lurkers into participants because they lack a low-barrier entry point.
-
-### Finding 5: Server Structure Signals "Bot Project," Not "Community"
+### Finding 3: Human-Gated Bottleneck -- 7 Days Stale
 
 **Evidence:**
-- `server_config.json` shows channels: `arena`, `scenarios`, `edward_thinking`, `edward_log` -- all named after system internals.
-- `server_setup.py` creates channels like `organism-{name}/thinking` and `organism-{name}/log` with per-organism roles and webhooks.
-- The seed posts reference `#organism-dna`, `#collision-reports`, `#calibration-sessions` -- technical channel names.
-- No visible `#introductions`, `#off-topic`, `#ask-anything`, or `#share-your-project` channel exists.
+- `results/skill_outreach_targets.md` outreach tracking table: all 5 targets = PENDING
+- `staging/outreach_week1_execution.md` execution checklist: all items unchecked
+- DM C005 (score 6, top priority) had a "24h window" noted on 2026-04-09 -- that window is now 7 days expired
+- `staging/agent_autonomous_backlog.md` explicitly states: "all growth levers human-gated"
 
-**Diagnosis:** A newcomer arriving at this server would see: (1) channels named after internal system concepts, (2) long-form posts by one person with zero replies, (3) no other humans. This pattern signals "an AI developer's internal testing server" rather than "a community I should join and participate in." First impressions matter enormously for Discord retention. The current structure optimizes for the organism protocol, not for human onboarding.
+The daemon correctly identified this bottleneck at cycle 285 (2026-04-09 17:21). Seven days later, the constraint is unchanged. The system has been cycling through Branch 4 status checks without any action being possible.
+
+### Finding 4: Server Structure Optimized for Protocol, Not Community
+
+**Channel structure from `.env` and `server_setup.py`:**
+- `arena` -- organism collision arena (internal concept)
+- `scenarios` -- test scenarios (internal concept)
+- `edward_thinking` -- daemon thinking log
+- `edward_log` -- daemon output log
+
+Missing entirely:
+- `#introductions` or `#welcome`
+- `#general` or `#chat` (the general channel may have been deleted)
+- `#ask-anything` or `#questions`
+- `#share-your-project`
+- Any channel name a stranger would understand
+
+The `server_setup.py` script creates channels like `organism-{name}/thinking` and `organism-{name}/log` with per-organism roles. This is infrastructure for the digital organism protocol, not for human community building.
+
+### Finding 5: Content-Audience Framing Gap
+
+The seed posts (in `docs/discord_seed_*.md`) are substantive and well-written but use insider vocabulary:
+- "Organism DNA," "collision reports," "calibration sessions" -- none of these terms mean anything to a newcomer
+- The `#general` seed opens with "I've been building something for the past 18 months" -- centers the creator, not the reader's problem
+- The `#organism-dna` seed opens with "It's not a personality profile. It's a decision machine" -- presumes the reader has already tried the personality-profile approach
+- The `#calibration-sessions` seed uses "Organism B" anonymization -- reads as internal lab documentation
+
+The content answers "how does this work?" when the audience needs "why should I care?"
 
 ---
 
-## Problem Classification
+## Root Cause Hierarchy
 
-| Dimension | Status | Impact |
-|-----------|--------|--------|
-| **Distribution** | FAILED -- zero traffic sources active | PRIMARY cause of zero engagement |
-| **Content** | GOOD quality, WRONG framing for cold audience | SECONDARY -- will matter once traffic exists |
-| **Audience** | UNDEFINED -- no clear persona has been reached | CONTRIBUTING -- outreach targets are defined but uncontacted |
-| **Server UX** | MISALIGNED -- optimized for protocol, not newcomers | TERTIARY -- fixable in 30 minutes |
-
-**Bottom line:** This is 90% a distribution problem. The content and server structure are fixable polish issues. But no amount of polish matters when the room has zero visitors.
+```
+organic_engagement = 0
+  |
+  +-- visitors = 0  (CRITICAL, explains 100% of outcome)
+  |     |
+  |     +-- no invite link exists anywhere
+  |     +-- no cross-platform presence (X, Reddit, HN, GitHub)
+  |     +-- no outreach DMs sent (all 5 PENDING, 7 days stale)
+  |     +-- GitHub repo has 0 stars, 0 forks, no Discord link in README
+  |
+  +-- seed posts may not have been published  (HIGH)
+  |     |
+  |     +-- live channels show 0 content messages
+  |     +-- general channel returns "Unknown Channel"
+  |
+  +-- server structure signals "bot project"  (MEDIUM, matters when traffic arrives)
+  |     |
+  |     +-- channel names are protocol terms
+  |     +-- no human onboarding channels
+  |
+  +-- content framing targets insiders  (LOW, matters when traffic arrives)
+        |
+        +-- insider vocabulary
+        +-- creator-centered framing
+```
 
 ---
 
-## Actionable Next Steps
+## Recommendations
 
-### Action 1: Unblock the Human Gate -- Send the 5 Outreach DMs (Priority: IMMEDIATE)
+### Recommendation 1: Execute Outreach Before Any More Content Work (IMMEDIATE)
 
-The outreach plan in `staging/outreach_week1_execution.md` is fully written with templates, target profiles, and scoring. The checklist needs to be executed:
+The outreach plan exists, templates are written, targets are profiled. The execution gap is the single binding constraint.
 
-1. Run the GitHub and Twitter searches specified in the execution checklist
-2. Fill in the `[Name]` and `[specific_reference]` placeholders with real targets
-3. Send C005 first (score 6, top priority, 24h window long expired)
+**Concrete steps (all within Edward's control):**
+1. Run the GitHub searches specified in `staging/outreach_week1_execution.md` Day 1 checklist
+2. Identify real targets for C001-C005 (fill in `[Name]` and `[specific_reference]` placeholders)
+3. Send C005 first (score 6, top priority)
 4. Send remaining 4 DMs within 48 hours
-5. Log contacts in the tracker
+5. Generate a permanent Discord invite link and have it ready for anyone who replies with interest
 
-This is the single highest-leverage action. One replied DM > 100 seed posts in an empty server.
+**Why this is #1:** One human replying to a DM and joining the server is worth more than 100 more seed posts in an empty room. The outreach templates are already written. The only missing step is execution.
 
-### Action 2: Create and Distribute a Discord Invite Link
+### Recommendation 2: Add Discord Invite Link to All Existing Surfaces (30 minutes)
 
-No invite link exists in any discoverable location. Fix:
+No invite link exists anywhere. Fix immediately:
+1. Generate a permanent (never-expire) Discord invite link
+2. Add to `ZP/README.md` (the public zeroth-principles repo)
+3. Add to `digital-immortality` GitHub repo README
+4. Prepare it for inclusion in every outreach DM reply
+5. When X/Twitter launch eventually happens, include in bio
 
-1. Generate a permanent Discord invite link (never-expire)
-2. Add it to the GitHub repo README (the repo is public with 0 stars -- the invite link costs nothing to add)
-3. Add it to any Twitter bio, Gumroad listing, or landing page that gets created
-4. Include it in every outreach DM reply (when someone responds with interest, the invite link should be ready)
+### Recommendation 3: Restructure Server for Human First Impressions (Before First External Member)
 
-### Action 3: Reframe Seed Posts for Cold Audience (When Traffic Arrives)
+Before any external person joins:
+1. Verify `#general` channel exists and is accessible (live fetch returned "Unknown Channel")
+2. Add `#introductions` -- "Who are you and what brought you here?"
+3. Add `#ask-anything` -- lower the barrier to first interaction
+4. Rename `#organism-dna` to `#decision-models` or `#build-your-dna`
+5. Hide or archive internal-only channels (`edward_thinking`, `edward_log`) from the default view
 
-Before the first external human joins, rewrite the #general seed to answer: "Why should I, a stranger, spend 5 minutes here?" Specifically:
+### Recommendation 4: Rewrite #general Seed Post for Cold Audience
 
-- Lead with the **problem** (AI agents lose their identity between sessions / you can't preserve how you think), not the solution
-- Add a **low-barrier call to action**: "Reply with one decision you made this year that surprised you" -- something a newcomer can answer without understanding the framework
-- Move the 68% collision stat to a follow-up post, not the introduction
+Replace the current `#general` seed (which assumes insider context) with one that:
+- Leads with the **reader's problem**: "Your AI agent forgets who it is between sessions. Your decisions aren't written down anywhere queryable. Your thinking dies when you do."
+- Offers a **low-barrier entry point**: "Reply with one decision you made this year that surprised you"
+- Moves the 68% collision stat and technical framework details to a follow-up post
 
-### Action 4: Add a Human-Friendly Channel Structure
+### Recommendation 5: Stop Daemon Cycles on Branch 4 Until Distribution Is Solved
 
-Before inviting the first external member:
-
-- Add `#introductions` -- "Who are you and what brought you here?"
-- Add `#ask-anything` -- lower the barrier to first message
-- Consider renaming `#organism-dna` to something less alien (e.g., `#decision-models` or `#build-your-dna`)
-
-### Action 5: Stop Seeding an Empty Room
-
-The daemon has been producing seed posts for 6 rounds to an audience of zero. Each cycle that drafts another seed post without first solving distribution is wasted work (Axiom 2 -- no information asymmetry to exploit in an empty room). Redirect Branch 4 daemon cycles to: (a) unblock outreach, (b) cross-post content to platforms where people already exist (Reddit, HackerNews, LangChain Discord).
-
----
-
-## Summary Decision Framework
-
-```
-Is the problem that nobody sees the content?
-  YES (Finding 1, 3) → Fix distribution first
-  
-Is the problem that people see it but don't engage?
-  UNKNOWN — no data exists because no one has seen it
-  
-Is the problem that the content is bad?
-  NO — the content is substantive, but framed for insiders (Finding 4)
-  
-What is the single binding constraint?
-  → Edward sending the 5 outreach DMs (human-gated, 4 days stale)
-```
+Every daemon cycle that checks Branch 4 status and finds `organic=0` without being able to act on it is wasted compute. The daemon should:
+- Flag Branch 4 as HUMAN-GATED-BLOCKED
+- Stop cycling status checks until the outreach gate is unblocked
+- Redirect those cycles to autonomous work (Branch 2.2 DNA distillation, Branch 6 consistency tests)
 
 ---
 
-*Diagnosis by: subagent, 2026-04-13. No Discord actions taken -- research and writing only.*
+## Progress Since Prior Diagnosis (2026-04-13)
+
+| Action Item | Status 2026-04-13 | Status 2026-04-16 |
+|-------------|--------------------|--------------------|
+| Send 5 outreach DMs | All PENDING | All PENDING (unchanged) |
+| Generate invite link | Not created | Not created (unchanged) |
+| Add invite to GitHub README | Not done | Not done (unchanged) |
+| Reframe seed posts | Not done | Not done (unchanged) |
+| Add human-friendly channels | Not done | Not done (unchanged) |
+| Publish X/Twitter threads | All pending | All pending (unchanged) |
+
+**Zero progress on any action item in 3 days.** The diagnosis remains identical. The bottleneck is execution of the human-gated outreach step.
+
+---
+
+*Updated diagnosis: 2026-04-16. Prior version: 2026-04-13 (subagent). Live Discord data fetched to verify channel state.*

@@ -1,0 +1,79 @@
+{
+  "manifest_version": 3,
+  "name": "ZERO Console",
+  "short_name": "ZERO",
+  "version": "0.7.1",
+  "description": "ZERO Console — 永生樹 Mission Control side panel. v0.7.1 fixes empty CPU/RAM/DISK meters, auto-falls back the 日常 iframe to the stable relay when localhost is unreachable, and renders a friendly 問頁 message on Chrome-internal / restricted pages instead of raw runtime errors.",
+
+  "permissions": [
+    "storage",
+    "notifications",
+    "alarms",
+    "sidePanel",
+    "activeTab",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "http://localhost:7878/*",
+    "http://127.0.0.1:7878/*",
+    "https://*.trycloudflare.com/*",
+    "https://zero-relay.pages.dev/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": [
+        "*://*.twbank.com.tw/*",
+        "*://*.ctbcbank.com/*",
+        "*://*.e-sunbank.com.tw/*",
+        "*://*.cathaybk.com.tw/*",
+        "*://accounts.google.com/*",
+        "*://login.microsoftonline.com/*",
+        "*://*.line.me/*",
+        "*://access.line.me/*",
+        "*://github.com/login*",
+        "*://*.paypal.com/*"
+      ],
+      "js": ["content_script.js"],
+      "css": ["toolbar.css"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "commands": {
+    "zero-open-toolbar": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "Command+Shift+L"
+      },
+      "description": "Open the ZERO rewrite toolbar at the current caret / selection"
+    }
+  },
+
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "ZERO Console"
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZERO Console</title>
+<style>
+/* ── Reset & base ─────────────────────────────────────── */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:      #0d1117;
+  --panel:   #161b22;
+  --border:  #30363d;
+  --text:    #c9d1d9;
+  --muted:   #8b949e;
+  --green:   #3fb950;
+  --yellow:  #d29922;
+  --red:     #f85149;
+  --accent:  #58a6ff;
+  --mono:    'JetBrains Mono','Fira Code',monospace;
+}
+body{
+  width:340px;min-height:360px;
+  background:var(--bg);color:var(--text);
+  font:13px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+
+/* ── Header ───────────────────────────────────────────── */
+header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 14px 8px;
+  border-bottom:1px solid var(--border);
+}
+.title{font-weight:700;font-size:14px;letter-spacing:.04em}
+.live-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--green);flex-shrink:0;
+  animation:pulse 2s ease-in-out infinite;
+}
+.live-dot.offline{background:var(--red);animation:none}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.header-right{display:flex;align-items:center;gap:7px}
+.refresh-btn{
+  background:none;border:none;cursor:pointer;
+  color:var(--muted);font-size:14px;line-height:1;padding:2px 4px;
+  border-radius:4px;transition:color .15s,background .15s;
+}
+.refresh-btn:hover{color:var(--text);background:var(--border)}
+
+/* ── Health banner ────────────────────────────────────── */
+.health-bar{
+  display:flex;align-items:center;gap:9px;
+  padding:10px 14px 8px;
+  border-bottom:1px solid var(--border);
+}
+.health-dot{
+  width:10px;height:10px;border-radius:50%;flex-shrink:0;
+  background:var(--muted);
+}
+.health-dot.green{background:var(--green)}
+.health-dot.yellow{background:var(--yellow)}
+.health-dot.red{background:var(--red)}
+.health-label{font-weight:600;font-size:13px}
+.health-sub{color:var(--muted);font-size:11px;font-family:var(--mono);margin-left:auto}
+
+/* ── Branch cards ─────────────────────────────────────── */
+.section-title{
+  font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;
+  padding:8px 14px 4px;
+}
+.branch-list{padding:0 14px 6px;display:flex;flex-direction:column;gap:4px}
+.branch-card{
+  background:var(--panel);border:1px solid var(--border);border-radius:8px;
+  padding:7px 10px;display:flex;align-items:center;gap:8px;
+}
+.b-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;background:var(--muted)}
+.b-dot.green{background:var(--green)}
+.b-dot.yellow{background:var(--yellow)}
+.b-dot.red{background:var(--red)}
+.b-name{font-weight:600;font-size:12px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.b-status{font-size:11px;color:var(--muted);white-space:nowrap;font-family:var(--mono)}
+.no-branches{color:var(--muted);font-size:12px;padding:6px 14px 10px;font-style:italic}
+
+/* ── Agent output preview ─────────────────────────────── */
+.outbox-section{padding:0 14px 4px}
+.outbox-item{
+  background:var(--panel);border-left:2px solid var(--green);
+  border-radius:4px;padding:6px 8px;margin-bottom:4px;
+  font-size:11px;font-family:var(--mono);color:var(--text);
+  white-space:pre-wrap;word-break:break-word;max-height:60px;overflow:hidden;
+}
+.outbox-ts{font-size:10px;color:var(--muted);display:block;margin-bottom:2px}
+
+/* ── Quick command ────────────────────────────────────── */
+.cmd-section{
+  padding:8px 14px 12px;
+  border-top:1px solid var(--border);
+  margin-top:4px;
+}
+.cmd-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}
+.cmd-row{display:flex;gap:6px}
+.cmd-input{
+  flex:1;background:var(--panel);color:var(--text);
+  border:1px solid var(--border);border-radius:7px;
+  padding:8px 10px;font:inherit;font-size:13px;
+  min-height:36px;outline:none;transition:border-color .15s;
+}
+.cmd-input:focus{border-color:var(--accent)}
+.cmd-btn{
+  background:var(--accent);color:#000;border:none;border-radius:7px;
+  padding:0 12px;font:inherit;font-weight:700;font-size:12px;
+  cursor:pointer;white-space:nowrap;min-height:36px;
+  transition:opacity .15s;
+}
+.cmd-btn:hover{opacity:.85}
+.cmd-btn:disabled{opacity:.4;cursor:not-allowed}
+.cmd-status{font-size:11px;color:var(--muted);margin-top:4px;min-height:14px;font-family:var(--mono)}
+.cmd-status.ok{color:var(--green)}
+.cmd-status.err{color:var(--red)}
+
+/* ── Footer ───────────────────────────────────────────── */
+footer{
+  padding:6px 14px;border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;
+  font-size:10px;color:var(--muted);font-family:var(--mono);
+}
+footer a{color:var(--accent);text-decoration:none}
+footer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header>
+  <span class="title">ZERO Console</span>
+  <div class="header-right">
+    <button class="refresh-btn" id="refresh-btn" title="Refresh">↺</button>
+    <div class="live-dot" id="live-dot"></div>
+  </div>
+</header>
+
+<div class="health-bar" id="health-bar">
+  <div class="health-dot" id="health-dot"></div>
+  <span class="health-label" id="health-label">Loading...</span>
+  <span class="health-sub" id="health-sub"></span>
+</div>
+
+<div class="section-title">Branches</div>
+<div class="branch-list" id="branch-list">
+  <div class="no-branches">Loading...</div>
+</div>
+
+<div class="section-title" id="outbox-title" style="display:none">Agent Output</div>
+<div class="outbox-section" id="outbox-section"></div>
+
+<div class="cmd-section">
+  <div class="cmd-label">Quick Command → MC Inbox</div>
+  <div class="cmd-row">
+    <input class="cmd-input" id="cmd-input" type="text"
+           placeholder="type a message..." maxlength="500">
+    <button class="cmd-btn" id="cmd-btn">Send</button>
+  </div>
+  <div class="cmd-status" id="cmd-status"></div>
+</div>
+
+<footer>
+  <span id="footer-ts">–</span>
+  <a href="http://localhost:7878/" target="_blank">Open Dashboard ↗</a>
+  <a id="open-panel-link" href="#" style="margin-left:8px">Side Panel</a>
+</footer>
+
+<script src="popup.js"></script>
+</body>
+</html>

@@ -91,25 +91,101 @@ BANK_SIGNATURES = {
 }
 
 # ---------------------------------------------------------------------------
-# Merchant-keyword -> category guesser (only used when CSV has no category).
+# DEPRECATED 2026-04-15 cycle476: category keywords moved to reclassify_spending.py
+# as single source of truth. _guess_category below delegates there.
+# Kept as reference only — not used by the live classifier.
 # ---------------------------------------------------------------------------
-CATEGORY_KEYWORDS: tuple[tuple[str, tuple[str, ...]], ...] = (
-    ("餐飲", ("餐", "食", "飯", "麵", "壽司", "拉麵", "便當", "咖啡", "星巴克",
+_LEGACY_CATEGORY_KEYWORDS_UNUSED: tuple[tuple[str, tuple[str, ...]], ...] = (
+    # Order matters: more specific categories first.
+    # 註：訂閱/運動/教育/禮金 已於 2026-04-15 併入 其他/娛樂/娛樂/娛樂。
+    # 註：固定費用 已於 2026-04-15 (cycle474) 併入 其他。
+    # 註：購物 已於 2026-04-15 (cycle474) 拆到 餐飲/娛樂/日用，預設落日用。
+    # 旅遊：國外交易手續費 + 景點/訂房/機票/租車/度假訊號（優先於交通/娛樂）
+    ("旅遊", ("國外交易手續費", "foreign transaction fee", "外幣手續費",
+             "expedia", "booking.com", "agoda", "airbnb", "kkday", "klook",
+             "trip.com", "hotels.com", "航空", "airlines", "airways",
+             "機票", "租車", "rental car", "hertz", "avis",
+             "景點門票", "樂園", "主題公園", "博物館門票", "溫泉",
+             "度假村", "resort ", "resort-", "hotel ", "hotel-", "旅館",
+             "民宿", "hostel", "inn ", "ryokan", "villa")),
+    # 醫療：含藥妝店（康是美/屈臣氏/Cosmed/Watsons）
+    ("醫療", ("診所", "藥局", "醫院", "藥妝", "clinic", "pharmacy", "hospital",
+             "康是美", "屈臣氏", "cosmed", "watsons", "watson's",
+             "堂吉訶德", "b群", "c群", "鎂鈣", "止汗", "保健", "維他命")),
+    ("交通", ("高鐵", "台鐵", "捷運", "計程車", "uber ", "uber-", "uber*",
+             "加油", "停車", "taxi", "gogoro", "etc ", "transport",
+             "chargespot", "goshare", "wemo", "irent", "機場",
+             "昇?昌", "昇泰昌", "加油站")),
+    # 餐飲：含便利商店 + 雜貨/超市（購物類食品拆過來）
+    ("餐飲", ("龍角", "餐", "食", "飯", "麵", "壽司", "拉麵", "便當", "咖啡", "星巴克",
              "麥當勞", "肯德基", "subway", "starbucks", "cafe", "restaurant",
-             "eats", "foodpanda", "ubereats")),
-    ("交通", ("高鐵", "台鐵", "捷運", "計程車", "uber", "加油", "停車", "taxi",
-             "gogoro", "etc", "transport")),
-    ("生活用品", ("全聯", "家樂福", "costco", "大潤發", "7-11", "全家", "ok超商",
-                "超市", "超商", "日用")),
-    ("娛樂", ("影城", "netflix", "spotify", "steam", "game", "kktv", "myvideo")),
-    ("購物", ("shopee", "露天", "pchome", "momo", "amazon", "apple.com")),
-    ("醫療", ("診所", "藥局", "醫院", "clinic", "pharmacy", "hospital")),
-    ("電信/網路", ("中華電信", "遠傳", "台灣大哥大", "台灣之星", "亞太電信", "hinet")),
-    ("水電瓦斯", ("台電", "自來水", "瓦斯", "electricity", "water", "gas")),
-    ("保險", ("保險", "insurance")),
-    ("訂閱", ("icloud", "google one", "youtube premium", "office 365", "dropbox",
-            "notion")),
+             "eats", "foodpanda", "ubereats", "711咖啡", "7-11咖啡",
+             "給力餐盒", "milksha", "迷客夏", "炭丼", "仁王家", "雞湯桑",
+             "麵魚", "米室", "matcha", "hello!你好", "嵐天", "優格",
+             "andoumomofuku", "the matcha", "馬可先生", "騰加數位*馬可",
+             "azabudai hills", "rimping", "mjt-central",
+             "凍焙茶", "焙茶", "桂花凍", "關東煮", "飲料",
+             "青山",
+             "7-11", "7-eleven", "seven-eleven", "seven eleven", "統一超商",
+             "全家", "familymart", "family mart", "萊爾富", "hi-life",
+             "hilife", "ok超商", "ok 超商", "ok mart", "ok-mart",
+             # 購物拆來：雜貨超市/食材
+             "全聯", "家樂福", "costco", "好市多", "大潤發", "愛買",
+             "superstore", "超市", "雜貨", "蔬果", "肉品", "海鮮", "食材",
+             "零食", "超商")),
+    # 娛樂：原娛樂 + 運動（健身/羽球/球場+運動用品）+ 教育（書店/課程/補習）+ 禮金（紅白包）
+    ("娛樂", ("影城", "steam", "game", "kktv", "myvideo", "秀泰", "威秀",
+             "電影", "演唱會", "concert", "ktv",
+             # 運動併入
+             "羽球", "健身", "gym", "球拍", "運動", "fitness", "yoga",
+             "瑜珈", "自在生活", "球場",
+             # 運動用品（購物拆來）
+             "球鞋", "運動服", "nike", "adidas", "asics", "yonex", "victor",
+             "迪卡儂", "decathlon",
+             # 玩具/遊戲/書/電影/音樂（購物拆來）
+             "玩具", "toy", "toys", "遊戲", "boardgame", "桌遊",
+             # 教育併入
+             "書店", "博客來", "誠品書", "金石堂", "書", "course",
+             "課程", "補習", "學費",
+             "tutor", "teachable", "udemy", "coursera",
+             # 音樂
+             "音樂", "music",
+             # 禮金併入
+             "禮金", "紅包", "白包", "包禮", "喜餅", "奠儀")),
+    # 日用：家電/家具/廚具/寢具/清潔/衛生/電池/燈泡/工具/五金 + 百貨/網購預設
+    ("日用", ("無印良品", "muji", "ikea", "宜家", "hola", "特力屋", "b&q",
+            "家電", "家具", "廚具", "寢具", "清潔", "衛生", "電池", "燈泡",
+            "工具", "五金",
+            "誠品", "新光三越", "百貨", "統一時代", "雜支", "芯動力",
+            # 購物平台預設落日用
+            "shopee", "蝦皮", "露天", "pchome", "momo", "amazon", "apple.com",
+            "淘寶", "雅虎奇摩", "dfs", "展業儀器",
+            "睿鼎數位", "身分轉移", "elementi", "紀念品", "明信片",
+            "一般商品買賣", "眼罩", "時鐘", "筆記本", "充電線",
+            "日用")),
+    # 其他雜支：原訂閱（非固定月費軟體/雲端/串流）+ 原固定費用（稅款/電信/水電/瓦斯/保險/管理費）
+    ("其他", ("icloud", "google one", "youtube premium", "office 365", "dropbox",
+            "notion", "chatgpt", "claude pro", "openai", "anthropic",
+            "spotify", "netflix", "apple.com/bill", "github", "cursor",
+            "apple one", "disney+", "disney plus", "kkbox",
+            # 原固定費用併入
+            "中華電信", "遠傳", "台灣大哥大", "台灣之星", "亞太電信", "hinet",
+            "台電", "自來水", "瓦斯", "electricity", "water", "gas",
+            "保險", "insurance", "地方稅", "綜所稅", "稅款", "里長伯",
+            "管理費", "房租", "電費", "水費")),
 )
+
+# Legacy note keywords — see reclassify_spending.py for canonical rules.
+_LEGACY_NOTE_KEYWORDS_UNUSED: tuple[tuple[str, tuple[str, ...]], ...] = (
+    ("日用", ("購物", "網購")),
+    ("餐飲", ("晚餐", "午餐", "早餐")),
+)
+
+
+def _apply_trip_override(date: str, current_category: str) -> str:
+    """Delegate to canonical trip-override logic in reclassify_spending."""
+    from reclassify_spending import apply_trip_override
+    return apply_trip_override(date, current_category)
 
 
 # ---------------------------------------------------------------------------
@@ -245,12 +321,13 @@ def _parse_amount(raw: str) -> float | None:
 
 
 def _guess_category(merchant: str, note: str) -> str:
-    hay = f"{merchant} {note}".lower()
-    for cat, kws in CATEGORY_KEYWORDS:
-        for kw in kws:
-            if kw.lower() in hay:
-                return cat
-    return "未分類"
+    """Delegate to the canonical 9-category classifier (cycle476).
+
+    The classifier lives in reclassify_spending.py so both the one-shot
+    historical reclass and the live CSV ingest share identical rules.
+    """
+    from reclassify_spending import classify
+    return classify(merchant, note, "")
 
 
 def parse_csv_file(path: Path) -> list[ParsedRow]:
@@ -313,6 +390,8 @@ def parse_csv_file(path: Path) -> list[ParsedRow]:
             note_bits.append(f"原幣{_col('foreign_amount')}")
         note = " ".join(note_bits)
         category = _col("category") or _guess_category(merchant, note)
+        # Final-step override: trip date windows force category (Poker exempt).
+        category = _apply_trip_override(date, category)
         rows.append(
             ParsedRow(
                 date=date,

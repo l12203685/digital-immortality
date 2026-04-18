@@ -985,6 +985,8 @@ def main():
                        help="Run L2 evaluate then L3 evolve: update engine config based on audit")
     group.add_argument("--l3-check", action="store_true",
                        help="L3 v2: run full 3-layer audit, auto-detect anomalies, update rules")
+    group.add_argument("--l3-selfmod", action="store_true",
+                       help="L3 v2 self-modification: detect DEAD_LOOP/QUEUE_EMPTY/COMMIT_DROUGHT, inject fixes")
     parser.add_argument("--force", action="store_true", help="Overwrite existing files on init")
     parser.add_argument("--interval", type=int, default=3600,
                         help="Seconds between cycles for --loop/--daemon (default: 3600)")
@@ -1018,6 +1020,11 @@ def main():
     elif args.l3_check:
         result = l3_check()
         print(json.dumps(result, indent=2))
+    elif args.l3_selfmod:
+        sys.path.insert(0, str(ROOT / "tools"))
+        import l3_selfmod
+        result = l3_selfmod.run_l3_selfmod()
+        print(json.dumps(result, indent=2, default=str))
 
 
 if __name__ == "__main__":

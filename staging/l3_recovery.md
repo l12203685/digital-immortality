@@ -1,16 +1,24 @@
-# L3 Recovery — Loop Broken (2026-04-17)
+# L3 Self-Modification Recovery — 2026-04-17T14:40:48.602882+00:00
 
-## Root Cause
-The dead loop (cycles 528-569, similarity=1.00) was caused by two bugs:
-1. `execute_plan_actions()` only fired executors when `runnable == "script"`, but the LLM planner produced free-form shell commands as runnable values
-2. `l3_recovery.md` was never read by `CycleState.gather()`, so recovery signals never reached the planner
+Cycle: 589
+RED detectors: DEAD_LOOP
 
-## Fixes Applied
-1. `recursive_daemon.py`: Executor now fires for ANY registered branch when `runnable != "read-only"`
-2. `cycle_protocol.py`: Added `l3_recovery` field to `CycleState`, included in prompt
-3. `PLAN_SYSTEM_PROMPT`: Clarified that `runnable` must be "script" or "read-only" only
-4. `engine_rules.json`: Reset `dead_loop_count` to 0
-5. `daemon_next_priority.txt`: Fresh loop-break directive
+## Detected Issues
+### DEAD_LOOP
+- Average cycle similarity 1.00 >= 0.85 — daemon is repeating the same work across 5 cycles
 
-## Status
-RESOLVED — next cycle should produce distinct plan with working executors.
+## Suggested Recovery Actions
+
+### DEAD_LOOP Recovery
+Detected avg_similarity=1.0 — the daemon is stuck in a loop.
+Repetitive actions: staging/session_state.md, Merge scattered CLAUDE.md files, Delete stale GDrive CLAUDE.md backup
+
+Immediate actions (in order):
+1. `cat results/daemon_next_priority.txt` — branch-switch directive already written
+2. Manually verify staging/session_state.md has diverse carry-over items (not same task repeated)
+3. Pick a branch from tree_registry/INDEX.md NOT in the repetitive list above
+4. Write one concrete artifact to that branch (even a doc update) to break the loop
+5. If loop persists after 2 more cycles: increase dead_loop_window threshold in engine_rules.json
+
+## Priority
+Address RED items before next recursive cycle.

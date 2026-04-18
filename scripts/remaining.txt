@@ -1,0 +1,781 @@
+E:/投資交易/pla_md/logic/比特幣策略程式碼_MC12_by Tony at HiSKIO.md
+E:/投資交易/pla_md/logic/比特幣策略程式碼_MC9_by Tony at HiSKIO.md
+E:/投資交易/pla_md/logic/比特幣模組_無區分版本.md
+E:/投資交易/pla_md/logic/用海外期貨打造全球投資組合_程式碼_by Tony at HiSKIO.md
+E:/投資交易/pla_md/logic/技術分析x策略積木程式碼_by Tony at HiSKIO.md
+E:/投資交易/pla_md/logic/波段暫存_20220406.md
+E:/投資交易/pla_md/logic/策略腳本-@@CF995-GT0549-001@@_TX_20210702_LT.md
+E:/投資交易/pla_md/logic/策略腳本202106_TX_KD5K_DT.md
+E:/投資交易/pla_md/logic/策略模組_當沖四支.md
+E:/投資交易/pla_md/logic/順勢空單5號 2021.08.23.md
+E:/投資交易/pla_md/logic/電金.md
+E:/投資交易/pla_md/logic/數字策略.md
+E:/投資交易/pla_md/logic/避險策略.md
+E:/投資交易/pla_md/signal/$@LV_lowebar_jump_11K_LT (2).md
+E:/投資交易/pla_md/signal/$2106K06_TX_BBand_LO_60K (2).md
+E:/投資交易/pla_md/signal/$2106K06_TX_BBand_LO_60K (3).md
+E:/投資交易/pla_md/signal/$2106K06_TX_BBand_LO_60K (4).md
+E:/投資交易/pla_md/signal/$ShaoWei001_TX_Gap202107_LT03 (2).md
+E:/投資交易/pla_md/signal/(4 )策略程式碼 D027_6KAM_20201018_MID_TREND_DO (2).md
+E:/投資交易/pla_md/signal/(4 )策略程式碼 TXF_B022_056_50KAM_20201210_BB_BO (2).md
+E:/投資交易/pla_md/signal/(4) 策略腳本.md
+E:/投資交易/pla_md/signal/(5)@Ivan2109_TX_MACP19k_LT.md
+E:/投資交易/pla_md/signal/(5)@LV@_08Week_of_DTstyle_7k_LO.md
+E:/投資交易/pla_md/signal/(5)@LV@_TX_Week_3GPSBL_17K_LT.md
+E:/投資交易/pla_md/signal/(5)_@LV@_tx_TimeGuardian_13K_LT.md
+E:/投資交易/pla_md/signal/(5)_@LV@_tx_TransFormer_17K_(DT)LT.md
+E:/投資交易/pla_md/signal/(5)_011_TX_4Day (OHLC)_FDT.md
+E:/投資交易/pla_md/signal/(5)BN_003_TX_Sar_FDO_10k.md
+E:/投資交易/pla_md/signal/(5)BN_TX_2109_IslandReverse PLE.md
+E:/投資交易/pla_md/signal/(5)BN_TX_2109_orbplus_DO_4k_v2.md
+E:/投資交易/pla_md/signal/(5)NV002_TX30M_SR_FLT.md
+E:/投資交易/pla_md/signal/(5)NV2107003_TX3M_Amy_FDT.md
+E:/投資交易/pla_md/signal/(5)NV2108004_TX15M_Bonny_LT.md
+E:/投資交易/pla_md/signal/(5)NV2109005_TX6M_Cindy_LT -original.md
+E:/投資交易/pla_md/signal/(5)NV2109005_TX6M_Cindy_LT.md
+E:/投資交易/pla_md/signal/(5)NV2110006_TX3M_FLT.md
+E:/投資交易/pla_md/signal/(5)TimChen009_TX_30mBBI_LOS-策略腳本.md
+E:/投資交易/pla_md/signal/(5)TungWen002_TX_EMA50K_LT.md
+E:/投資交易/pla_md/signal/(5)策略及指標程式碼-004_TXF_3G(1.382)_4mK_LO-202101-彥勝.md
+E:/投資交易/pla_md/signal/(5)策略程式碼 001_TX_20210204d_LO.md
+E:/投資交易/pla_md/signal/(5)策略程式碼 sungwen.007_Tx_202106_FLT.md
+E:/投資交易/pla_md/signal/(5)策略程式碼06MD0.md
+E:/投資交易/pla_md/signal/(5)策略程式碼07M30MAL.md
+E:/投資交易/pla_md/signal/(5)策略程式碼08M15MAL.md
+E:/投資交易/pla_md/signal/(5)策略腳本 - Wesley002_TX_2107SQX0001_DT.md
+E:/投資交易/pla_md/signal/(5)策略腳本 PTstartup105_TX_PivotReversal04_DT.md
+E:/投資交易/pla_md/signal/(5)策略腳本004_TX_PriceInterval5K_LO.md
+E:/投資交易/pla_md/signal/(5)策略腳本GavinLu008_TX_DonChianChannel-D2106-K20m_LT.md
+E:/投資交易/pla_md/signal/(5)策略腳本Jack106_TX_Neckline10K_L0.md
+E:/投資交易/pla_md/signal/(5)策略腳本katsu005_TXAM_LENGATE_3mK_DT-彥勝.md
+E:/投資交易/pla_md/signal/(5)策略腳本Ray101_TX_3 gate 6k_DO.md
+E:/投資交易/pla_md/signal/(5)策略腳本TimChen008_TX_15mKD202106_LT.md
+E:/投資交易/pla_md/signal/(6) 139_TX7M_C-bar_DO_v1.1_2106-Alan.md
+E:/投資交易/pla_md/signal/(6) 策略腳本.md
+E:/投資交易/pla_md/signal/(6) 策略腳本_TXAL_1_007_VCP+RangeBreakout.md
+E:/投資交易/pla_md/signal/(6) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
+E:/投資交易/pla_md/signal/(6)@LV@_08Week_of_DTstyle_7k_LO.md
+E:/投資交易/pla_md/signal/(6)@LV@_TX_Week_3GPSBL_17K_LT.md
+E:/投資交易/pla_md/signal/(6)_@LV@_tx_TimeGuardian_13K_LT.md
+E:/投資交易/pla_md/signal/(6)_@LV@_tx_TransFormer_17K_(DT)LT.md
+E:/投資交易/pla_md/signal/(6)NV002_TX30M_SR_FLT.md
+E:/投資交易/pla_md/signal/(6)策略程式碼 sungwen.007_Tx_202106_FLT.md
+E:/投資交易/pla_md/signal/(6)策略腳本004_TX_PriceInterval5K_LO.md
+E:/投資交易/pla_md/signal/(6)策略腳本GavinLu008_TX_DonChianChannel-D2106-K20m_LT.md
+E:/投資交易/pla_md/signal/(6)策略腳本Jack106_TX_Neckline10K_L0.md
+E:/投資交易/pla_md/signal/(6)策略腳本katsu005_TXAM_LENGATE_3mK_DT-彥勝.md
+E:/投資交易/pla_md/signal/(6)策略腳本Ray101_TX_3 gate 6k_DO.md
+E:/投資交易/pla_md/signal/(6)策略腳本TimChen008_TX_15mKD202106_LT.md
+E:/投資交易/pla_md/signal/(7) 139_TX7M_C-bar_DO_v1.1_2106-Alan.md
+E:/投資交易/pla_md/signal/(7) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
+E:/投資交易/pla_md/signal/(7)@@202102T98_LATETREND_4M_D0.md
+E:/投資交易/pla_md/signal/(7)@@202106TAZ_CDP_4K_D0.md
+E:/投資交易/pla_md/signal/(7)@@202108T87_BouncyBall_6K_D0.md
+E:/投資交易/pla_md/signal/(7)@@202109T86_AZ_4K_D0.md
+E:/投資交易/pla_md/signal/(7)_@LV@_tx_TransFormer_17K_(DT)LT.md
+E:/投資交易/pla_md/signal/(7)NV002_TX30M_SR_FLT.md
+E:/投資交易/pla_md/signal/(7)策略PLA (S)003_TX_Score_2k_DT_20210618.md
+E:/投資交易/pla_md/signal/(7)策略PLA(S) 005_TX_RSI_60k_LT_20210811.md
+E:/投資交易/pla_md/signal/(7)策略程式碼 sungwen.007_Tx_202106_FLT.md
+E:/投資交易/pla_md/signal/(7)策略腳本004_TX_PriceInterval5K_LO.md
+E:/投資交易/pla_md/signal/(7)策略腳本GavinLu008_TX_DonChianChannel-D2106-K20m_LT.md
+E:/投資交易/pla_md/signal/(7)策略腳本Jack106_TX_Neckline10K_L0.md
+E:/投資交易/pla_md/signal/(7)策略腳本katsu005_TXAM_LENGATE_3mK_DT-彥勝.md
+E:/投資交易/pla_md/signal/(7)策略腳本Ray101_TX_3 gate 6k_DO.md
+E:/投資交易/pla_md/signal/(7)策略腳本TimChen008_TX_15mKD202106_LT.md
+E:/投資交易/pla_md/signal/(8) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
+E:/投資交易/pla_md/signal/(8)@@202102T98_LATETREND_4M_D0.md
+E:/投資交易/pla_md/signal/(8)@@202106TAZ_CDP_4K_D0.md
+E:/投資交易/pla_md/signal/(8)@@202109T86_AZ_4K_D0.md
+E:/投資交易/pla_md/signal/(8)Code_026_Sw_D_18min_KeltnerChange_YingCC3.md
+E:/投資交易/pla_md/signal/(8)策略PLA (S)003_TX_Score_2k_DT_20210618.md
+E:/投資交易/pla_md/signal/(8)策略PLA(S) 005_TX_RSI_60k_LT_20210811.md
+E:/投資交易/pla_md/signal/(9) 策略腳本Shuen036_TX_ASI23K_V3_LT.md
+E:/投資交易/pla_md/signal/(9)@@202106TAZ_CDP_4K_D0.md
+E:/投資交易/pla_md/signal/(9)策略PLA (S)003_TX_Score_2k_DT_20210618.md
+E:/投資交易/pla_md/signal/@@202106T90_Normal_CDP_K_D0 (2).md
+E:/投資交易/pla_md/signal/@@202107T89_CriticalOpenXDP_3K_D0 (2).md
+E:/投資交易/pla_md/signal/@autoCF (2).md
+E:/投資交易/pla_md/signal/@M@S@DT_ORB (2).md
+E:/投資交易/pla_md/signal/@M@S@EMA (2).md
+E:/投資交易/pla_md/signal/@M@S@EMA (3).md
+E:/投資交易/pla_md/signal/@M@S@EMA (4).md
+E:/投資交易/pla_md/signal/@M@S@LT_Mother_Son (2).md
+E:/投資交易/pla_md/signal/@MC1_程式碼 (2).md
+E:/投資交易/pla_md/signal/@S_010_3G_D (2).md
+E:/投資交易/pla_md/signal/@S_047_TX_Trender_D (2).md
+E:/投資交易/pla_md/signal/@TX_20210219_LO (2).md
+E:/投資交易/pla_md/signal/000_TX_CDPKD_D0 (2).md
+E:/投資交易/pla_md/signal/001_TX_KPOWER_DO (2).md
+E:/投資交易/pla_md/signal/001_TX_PT_D0 (2).md
+E:/投資交易/pla_md/signal/001_TX_PT_D0 (3).md
+E:/投資交易/pla_md/signal/002_TX_Keltner_LO_2010 (2).md
+E:/投資交易/pla_md/signal/006_LLH_6mK_FDO (2).md
+E:/投資交易/pla_md/signal/006_TXA_13mLineReg_LOS_V2 (2).md
+E:/投資交易/pla_md/signal/007_BiasReverse 3mK D0 (2).md
+E:/投資交易/pla_md/signal/009_TX_Box_FDT0_Jack (2).md
+E:/投資交易/pla_md/signal/01.202101功課-006_TX_HLtime_LT (2).md
+E:/投資交易/pla_md/signal/01.202106功課-Sing014_TX_Change_LT (2).md
+E:/投資交易/pla_md/signal/01.202106功課-Sing014_TX_Change_LT (3).md
+E:/投資交易/pla_md/signal/01.202106功課-Sing014_TX_Change_LT (4).md
+E:/投資交易/pla_md/signal/01.202106功課-Sing014_TX_ChangeDabrother_LT (2).md
+E:/投資交易/pla_md/signal/01.202109功課_Sing_010_TX_W_LT_改良版 (2).md
+E:/投資交易/pla_md/signal/016_TX_KCForward_L0 (2).md
+E:/投資交易/pla_md/signal/016_TX_KCForward_L0 (3).md
+E:/投資交易/pla_md/signal/016_TX_KCForward_L0 (4).md
+E:/投資交易/pla_md/signal/017_TXA_CHANNEL_LO (2).md
+E:/投資交易/pla_md/signal/017_TXA_CHANNEL_LO (3).md
+E:/投資交易/pla_md/signal/017_TXA_CHANNEL_LO (4).md
+E:/投資交易/pla_md/signal/017_TXA_CO4_DO_5min (2).md
+E:/投資交易/pla_md/signal/019_TX_LongBandForwardTrade_L0 (2).md
+E:/投資交易/pla_md/signal/021_TXA_2N_DO_3min (2).md
+E:/投資交易/pla_md/signal/022_TX_TwoDayHighLow_L0 (2).md
+E:/投資交易/pla_md/signal/023_TX_WEEKBRKOUT_LO (2).md
+E:/投資交易/pla_md/signal/024_TXF_RSI_60m_FLT (2).md
+E:/投資交易/pla_md/signal/026_TX_RSIForwardTrade_L0 說明檔 (2).md
+E:/投資交易/pla_md/signal/026_TX_RSIForwardTrade_L0 說明檔 (3).md
+E:/投資交易/pla_md/signal/026_TX_RSIForwardTrade_L0 說明檔 (4).md
+E:/投資交易/pla_md/signal/027_TX_DayContrarian_LO_300M (2).md
+E:/投資交易/pla_md/signal/027_TX_MACDADX_L0 (2).md
+E:/投資交易/pla_md/signal/028_TX_17mFFG_LOS (2).md
+E:/投資交易/pla_md/signal/028_TX_17mFFG_LOS (3).md
+E:/投資交易/pla_md/signal/028_TX_17mFFG_LOS (4).md
+E:/投資交易/pla_md/signal/028_TX_RSIRevisedTrading_L0 (2).md
+E:/投資交易/pla_md/signal/029_TX_SingletoTriAve_L0 說明檔 (2).md
+E:/投資交易/pla_md/signal/03 CBST023_HLB_29m_FLO_V3 (2).md
+E:/投資交易/pla_md/signal/03 CBST027_LNR_29m_FLO_V4 (2).md
+E:/投資交易/pla_md/signal/03 CBST027_LNR_29m_FLO_V4 (3).md
+E:/投資交易/pla_md/signal/03 CBST027_LNR_29m_FLO_V4 (4).md
+E:/投資交易/pla_md/signal/03_QC2102_M10_LO (2).md
+E:/投資交易/pla_md/signal/03_QC2102_M10_LO_WF (2).md
+E:/投資交易/pla_md/signal/030_TX_TriAverage&SingleAverage_L0 (2).md
+E:/投資交易/pla_md/signal/032_TX_VHF_LO_37M (2).md
+E:/投資交易/pla_md/signal/045_TX_BY_DO (2).md
+E:/投資交易/pla_md/signal/053_TX_NBY_DO (2).md
+E:/投資交易/pla_md/signal/059_TXI_CLOSED_LO (2).md
+E:/投資交易/pla_md/signal/059_TXI_CLOSED_LO (3).md
+E:/投資交易/pla_md/signal/059_TXI_CLOSED_LO (4).md
+E:/投資交易/pla_md/signal/060_Hsiang_TXA_Q5_R_10min_FLT (2).md
+E:/投資交易/pla_md/signal/09042 (2).md
+E:/投資交易/pla_md/signal/1_策略_@SW_008_2021_06_TXF_open gate trend_DT (2).md
+E:/投資交易/pla_md/signal/1_策略_@SW_008_2021_06_TXF_open gate trend_DT (3).md
+E:/投資交易/pla_md/signal/1_策略_@SW_008_2021_06_TXF_open gate trend_DT (4).md
+E:/投資交易/pla_md/signal/1_策略_@SW_008_2021_06_TXF_open gate trend_DT.md
+E:/投資交易/pla_md/signal/1_策略_@SW_009_2021_08_TXF_CO propotion of HL_FLT.md
+E:/投資交易/pla_md/signal/1_策略_@SW_010_2021_09_TXF_kbar ratio_DT (2).md
+E:/投資交易/pla_md/signal/1_策略_@SW_010_2021_09_TXF_kbar ratio_DT.md
+E:/投資交易/pla_md/signal/1_策略_@SW_011_202109_MA Trend_30m_LT (2).md
+E:/投資交易/pla_md/signal/1_策略_@SW_011_202109_MA Trend_30m_LT.md
+E:/投資交易/pla_md/signal/1_策略_@SW_013_2022_02_TXF_higher_30m_LT.md
+E:/投資交易/pla_md/signal/1_策略_QTC_TX_WeekTrading_LT.md
+E:/投資交易/pla_md/signal/1-003_TXA_30mKeltner_LOS (2).md
+E:/投資交易/pla_md/signal/1-003_TXA_30mKeltner_LOS (3).md
+E:/投資交易/pla_md/signal/1-003_TXA_30mKeltner_LOS (4).md
+E:/投資交易/pla_md/signal/1-003_TXA_30mKeltner_LOS.md
+E:/投資交易/pla_md/signal/10月範例策略DMI DT (2).md
+E:/投資交易/pla_md/signal/10月範例策略DMI DT.md
+E:/投資交易/pla_md/signal/1105NHE.md
+E:/投資交易/pla_md/signal/11月範例.md
+E:/投資交易/pla_md/signal/1212_CODE.md
+E:/投資交易/pla_md/signal/1212_CODE_補充.md
+E:/投資交易/pla_md/signal/123_TX_HLORB_FDO (2).md
+E:/投資交易/pla_md/signal/123_TX_HLORB_FDO (3).md
+E:/投資交易/pla_md/signal/123_TX_HLORB_FDO (4).md
+E:/投資交易/pla_md/signal/123_TX_HLORB_FDO.md
+E:/投資交易/pla_md/signal/1234.md
+E:/投資交易/pla_md/signal/126_TX_5mHLrev_DO.md
+E:/投資交易/pla_md/signal/127_TX_4mDayVolORB_FDO.md
+E:/投資交易/pla_md/signal/128_TX_AV2Bias_FDT.md
+E:/投資交易/pla_md/signal/12月範例.md
+E:/投資交易/pla_md/signal/14_17_19.md
+E:/投資交易/pla_md/signal/15_16_18.md
+E:/投資交易/pla_md/signal/1-6 (2).md
+E:/投資交易/pla_md/signal/1-6 (3).md
+E:/投資交易/pla_md/signal/1-6 (4).md
+E:/投資交易/pla_md/signal/1-6.md
+E:/投資交易/pla_md/signal/1-6_20.md
+E:/投資交易/pla_md/signal/1911.md
+E:/投資交易/pla_md/signal/2000.md
+E:/投資交易/pla_md/signal/2007TX_VHF_LinR_22K (2).md
+E:/投資交易/pla_md/signal/2007TX_VHF_LinR_22K (3).md
+E:/投資交易/pla_md/signal/2007TX_VHF_LinR_22K (4).md
+E:/投資交易/pla_md/signal/2007TX_VHF_LinR_22K.md
+E:/投資交易/pla_md/signal/2014Q4_03_EZ31_CC_30m.md
+E:/投資交易/pla_md/signal/20151211高雄.md
+E:/投資交易/pla_md/signal/2015Q1_1.md
+E:/投資交易/pla_md/signal/2015Q1_5.md
+E:/投資交易/pla_md/signal/20180614.md
+E:/投資交易/pla_md/signal/2018Q1.md
+E:/投資交易/pla_md/signal/2018Q2_N.md
+E:/投資交易/pla_md/signal/2019AD_all.md
+E:/投資交易/pla_md/signal/202007 QTC_TX_SAR_Kuang_DO_6K.md
+E:/投資交易/pla_md/signal/202007.md
+E:/投資交易/pla_md/signal/20200725 JJ (2).md
+E:/投資交易/pla_md/signal/20200725 JJ (3).md
+E:/投資交易/pla_md/signal/20200725 JJ (4).md
+E:/投資交易/pla_md/signal/20200725 JJ.md
+E:/投資交易/pla_md/signal/202007作業-CODE.md
+E:/投資交易/pla_md/signal/202010HW (2).md
+E:/投資交易/pla_md/signal/202010HW.md
+E:/投資交易/pla_md/signal/202010作業_009_TX_Box_FDT0_Jack (2).md
+E:/投資交易/pla_md/signal/202010作業_009_TX_Box_FDT0_Jack.md
+E:/投資交易/pla_md/signal/2021 12月範例.md
+E:/投資交易/pla_md/signal/202101 Kuang (2).md
+E:/投資交易/pla_md/signal/202101 Kuang.md
+E:/投資交易/pla_md/signal/202101ABS30K.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT00_000M_PT.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT00_Free.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT01_060M_KD.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT02_060M_RSI.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT03_060M_CCI.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT04_060M_MTM.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT05_060M_OBV.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT06_060M_MACD.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT07_060M_DMI.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT08_060M_BB.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT09_060M_KC.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT10_060M_EL.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT11_030M_KD.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT12_030M_RSI.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT13_030M_CCI.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT14_030M_MTM.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT15_030M_OBV.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT16_030M_MACD.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT17_030M_DMI.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT18_030M_BB.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT19_030M_KC.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT20_030M_EL.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT21_015M_KD.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT22_015M_RSI.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT23_015M_CCI.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT24_015M_MTM.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT25_015M_OBV.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT26_015M_MACD.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT27_015M_DMI.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT28_015M_BB.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT29_015M_KC.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT30_015M_EL.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT31_840M_KD.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT32_840M_RSI.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT33_840M_CCI.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT34_840M_MTM.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT35_840M_OBV.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT36_840M_MACD.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT37_840M_DMI.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT38_840M_BB.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT39_840M_KC.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT40_840M_EL.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT41_840M_SAR.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT42_060M_SAR.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT43_030M_SAR.md
+E:/投資交易/pla_md/signal/202101QOO_Q_CT44_015M_SAR.md
+E:/投資交易/pla_md/signal/202101QOO_TX_039.md
+E:/投資交易/pla_md/signal/202102_TX_KD (2).md
+E:/投資交易/pla_md/signal/202102_TX_KD.md
+E:/投資交易/pla_md/signal/202102_TX12min_bias_LO (2).md
+E:/投資交易/pla_md/signal/202102_TX12min_bias_LO.md
+E:/投資交易/pla_md/signal/20210217_LT_17k_day_2月作業_9班吳浩瑋.md
+E:/投資交易/pla_md/signal/20210220_TX_Boxtheory_45k_LO.md
+E:/投資交易/pla_md/signal/202104 範例.md
+E:/投資交易/pla_md/signal/202105.md
+E:/投資交易/pla_md/signal/202106_TX25min_3gp_LO (2).md
+E:/投資交易/pla_md/signal/202106_TX25min_3gp_LO (3).md
+E:/投資交易/pla_md/signal/202106_TX25min_3gp_LO (4).md
+E:/投資交易/pla_md/signal/202106_TX25min_3gp_LO.md
+E:/投資交易/pla_md/signal/202109.md
+E:/投資交易/pla_md/signal/202109_TX_KD17K_LT (2).md
+E:/投資交易/pla_md/signal/202109_TX_KD17K_LT.md
+E:/投資交易/pla_md/signal/202109Khsu.md
+E:/投資交易/pla_md/signal/202109Khsu_WF (2).md
+E:/投資交易/pla_md/signal/202109Khsu_WF.md
+E:/投資交易/pla_md/signal/202110策略包.md
+E:/投資交易/pla_md/signal/202203.md
+E:/投資交易/pla_md/signal/2022CFPO_NEW.md
+E:/投資交易/pla_md/signal/20230430 CFPO_2023 with seed.md
+E:/投資交易/pla_md/signal/20250202 code sample.md
+E:/投資交易/pla_md/signal/2101TX_KD_LinR_37K (2).md
+E:/投資交易/pla_md/signal/2101TX_KD_LinR_37K.md
+E:/投資交易/pla_md/signal/2106_Ivan_TX_WeekTrade20k_LT.md
+E:/投資交易/pla_md/signal/2106TX_MTM_LinR_30K (2).md
+E:/投資交易/pla_md/signal/2106TX_MTM_LinR_30K (3).md
+E:/投資交易/pla_md/signal/2106TX_MTM_LinR_30K (4).md
+E:/投資交易/pla_md/signal/2106TX_MTM_LinR_30K.md
+E:/投資交易/pla_md/signal/217_TX_MYTK_LT (2).md
+E:/投資交易/pla_md/signal/217_TX_MYTK_LT.md
+E:/投資交易/pla_md/signal/2201TXA_MA_LinR_10K.md
+E:/投資交易/pla_md/signal/222_TX_MYTK_FLT.md
+E:/投資交易/pla_md/signal/2MaKD (2).md
+E:/投資交易/pla_md/signal/2MaKD.md
+E:/投資交易/pla_md/signal/2MaKD_WF (2).md
+E:/投資交易/pla_md/signal/2MaKD_WF.md
+E:/投資交易/pla_md/signal/3. 3DOHL (2).md
+E:/投資交易/pla_md/signal/3. 3DOHL.md
+E:/投資交易/pla_md/signal/3. Aline-2 (2).md
+E:/投資交易/pla_md/signal/3. Aline-2.md
+E:/投資交易/pla_md/signal/3. BS ratio (2).md
+E:/投資交易/pla_md/signal/3. BS ratio.md
+E:/投資交易/pla_md/signal/3. LSlevel.md
+E:/投資交易/pla_md/signal/3. reverse4 (2).md
+E:/投資交易/pla_md/signal/3. reverse4.md
+E:/投資交易/pla_md/signal/3. trend-1.md
+E:/投資交易/pla_md/signal/3. weeklevel.md
+E:/投資交易/pla_md/signal/3.3DHL (2).md
+E:/投資交易/pla_md/signal/3.3DHL (3).md
+E:/投資交易/pla_md/signal/3.3DHL (4).md
+E:/投資交易/pla_md/signal/3.3DHL.md
+E:/投資交易/pla_md/signal/4.策略程式碼.md
+E:/投資交易/pla_md/signal/4_策略腳本_CK_001_TX_M30_dailyOC_LT (2).md
+E:/投資交易/pla_md/signal/4_策略腳本_CK_001_TX_M30_dailyOC_LT.md
+E:/投資交易/pla_md/signal/4_策略腳本_CK_003_TWF_M3_renkoSBK_LT (2).md
+E:/投資交易/pla_md/signal/4_策略腳本_CK_003_TWF_M3_renkoSBK_LT.md
+E:/投資交易/pla_md/signal/4_策略腳本_CK_004_TX_M5_cdpCopyCat_DT.md
+E:/投資交易/pla_md/signal/4_策略腳本_CK_005_TX_M13_Nbreakthrough_LT.md
+E:/投資交易/pla_md/signal/4_策略腳本_CK_010_TX_M30_ndayStrength_LT.md
+E:/投資交易/pla_md/signal/513_Bollinger_band.md
+E:/投資交易/pla_md/signal/520_TX_HLMA_30k_LO.md
+E:/投資交易/pla_md/signal/6)程式碼34_Sw_All_53min_TTM+ROC_Ying_Change (2).md
+E:/投資交易/pla_md/signal/6)程式碼34_Sw_All_53min_TTM+ROC_Ying_Change.md
+E:/投資交易/pla_md/signal/6)程式碼34_Sw_All_53min_TTM+ROC_Ying_ChangeCC (2).md
+E:/投資交易/pla_md/signal/6)程式碼34_Sw_All_53min_TTM+ROC_Ying_ChangeCC.md
+E:/投資交易/pla_md/signal/60MAL0 (2).md
+E:/投資交易/pla_md/signal/60MAL0.md
+E:/投資交易/pla_md/signal/658_TX_20210808_LT.md
+E:/投資交易/pla_md/signal/6種進出場模組.md
+E:/投資交易/pla_md/signal/7-13.md
+E:/投資交易/pla_md/signal/904 (2).md
+E:/投資交易/pla_md/signal/904 (3).md
+E:/投資交易/pla_md/signal/904 (4).md
+E:/投資交易/pla_md/signal/904.md
+E:/投資交易/pla_md/signal/907-2 (2).md
+E:/投資交易/pla_md/signal/907-2.md
+E:/投資交易/pla_md/signal/910 (2).md
+E:/投資交易/pla_md/signal/910.md
+E:/投資交易/pla_md/signal/9126.md
+E:/投資交易/pla_md/signal/9139.md
+E:/投資交易/pla_md/signal/975_20171220_LO.md
+E:/投資交易/pla_md/signal/991.md
+E:/投資交易/pla_md/signal/997 (2).md
+E:/投資交易/pla_md/signal/997.md
+E:/投資交易/pla_md/signal/Abner_002_DT_4k_300 (2).md
+E:/投資交易/pla_md/signal/Abner_002_DT_4k_300.md
+E:/投資交易/pla_md/signal/ALEX.md
+E:/投資交易/pla_md/signal/AndyCiou_FlipLS_FDT_3K (2).md
+E:/投資交易/pla_md/signal/AndyCiou_FlipLS_FDT_3K (3).md
+E:/投資交易/pla_md/signal/AndyCiou_FlipLS_FDT_3K (4).md
+E:/投資交易/pla_md/signal/AndyCiou_FlipLS_FDT_3K.md
+E:/投資交易/pla_md/signal/AndyCiou_MTM_FLO_35K.md
+E:/投資交易/pla_md/signal/autoCF_20211222 (2).md
+E:/投資交易/pla_md/signal/autoCF_20211222 (3).md
+E:/投資交易/pla_md/signal/autoCF_20211222.md
+E:/投資交易/pla_md/signal/autoCF_v20210125_20260208.md
+E:/投資交易/pla_md/signal/BBR_Hedge.md
+E:/投資交易/pla_md/signal/Bituzi_3.md
+E:/投資交易/pla_md/signal/blue&0001_TX_CDP+RSI_LT (2).md
+E:/投資交易/pla_md/signal/blue&0001_TX_CDP+RSI_LT.md
+E:/投資交易/pla_md/signal/blue&0002_TX_one Avg_FLT.md
+E:/投資交易/pla_md/signal/blue&0003_TX_CDP+FastD_DT original.md
+E:/投資交易/pla_md/signal/blue&0003_TX_CDP+FastD_DT(WF後).md
+E:/投資交易/pla_md/signal/blue&0004_TX_ 3Avg_FLT (after WF).md
+E:/投資交易/pla_md/signal/blue&0004_TX_ 3Avg_FLT original.md
+E:/投資交易/pla_md/signal/blue&0005_TX_5K+RSI_DT after WF.md
+E:/投資交易/pla_md/signal/blue&0005_TX_5K+RSI_DT original.md
+E:/投資交易/pla_md/signal/boTX_202007_MAATR_LO (2).md
+E:/投資交易/pla_md/signal/boTX_202007_MAATR_LO (3).md
+E:/投資交易/pla_md/signal/boTX_202007_MAATR_LO (4).md
+E:/投資交易/pla_md/signal/boTX_202007_MAATR_LO.md
+E:/投資交易/pla_md/signal/Breakaway Gap.md
+E:/投資交易/pla_md/signal/BS ratio (2).md
+E:/投資交易/pla_md/signal/BS ratio.md
+E:/投資交易/pla_md/signal/cdp av2 (2).md
+E:/投資交易/pla_md/signal/cdp av2.md
+E:/投資交易/pla_md/signal/CEX2104CR01.md
+E:/投資交易/pla_md/signal/CEX2105LK01 (2).md
+E:/投資交易/pla_md/signal/CEX2105LK01.md
+E:/投資交易/pla_md/signal/CEX2106RY01 (2).md
+E:/投資交易/pla_md/signal/CEX2106RY01.md
+E:/投資交易/pla_md/signal/CF12&各項函數.md
+E:/投資交易/pla_md/signal/Cf995tw_DT.md
+E:/投資交易/pla_md/signal/Change_01_TXAM4K_ATR+KD_DT (2).md
+E:/投資交易/pla_md/signal/Change_01_TXAM4K_ATR+KD_DT.md
+E:/投資交易/pla_md/signal/Change_07-2_TXAM3K_CDP Level2_DT (2).md
+E:/投資交易/pla_md/signal/Change_07-2_TXAM3K_CDP Level2_DT.md
+E:/投資交易/pla_md/signal/Change_09_TXAM19K_MA+CDP_LO (2).md
+E:/投資交易/pla_md/signal/Change_09_TXAM19K_MA+CDP_LO.md
+E:/投資交易/pla_md/signal/CL009_TX_DMIX2_LO (2).md
+E:/投資交易/pla_md/signal/CL009_TX_DMIX2_LO.md
+E:/投資交易/pla_md/signal/CL012_TX_MACD_LO (2).md
+E:/投資交易/pla_md/signal/CL012_TX_MACD_LO.md
+E:/投資交易/pla_md/signal/CL014_TX_Counter_Trend_v2_DO (2).md
+E:/投資交易/pla_md/signal/CL014_TX_Counter_Trend_v2_DO (3).md
+E:/投資交易/pla_md/signal/CL014_TX_Counter_Trend_v2_DO (4).md
+E:/投資交易/pla_md/signal/CL014_TX_Counter_Trend_v2_DO.md
+E:/投資交易/pla_md/signal/CL016_TX_LTDWindow60M_LO.md
+E:/投資交易/pla_md/signal/code sample30_2023-03-26.md
+E:/投資交易/pla_md/signal/code.md
+E:/投資交易/pla_md/signal/Cross_sectional_Momentum.md
+E:/投資交易/pla_md/signal/Cross_sectional_Reversal.md
+E:/投資交易/pla_md/signal/Day of week TEST.md
+E:/投資交易/pla_md/signal/end.md
+E:/投資交易/pla_md/signal/end2.md
+E:/投資交易/pla_md/signal/end3.md
+E:/投資交易/pla_md/signal/EX421T05.md
+E:/投資交易/pla_md/signal/EX422T05.md
+E:/投資交易/pla_md/signal/EX424T25.md
+E:/投資交易/pla_md/signal/EX4401T30.md
+E:/投資交易/pla_md/signal/EX4402T24.md
+E:/投資交易/pla_md/signal/EX442T45.md
+E:/投資交易/pla_md/signal/EX514T30.md
+E:/投資交易/pla_md/signal/EX541T30.md
+E:/投資交易/pla_md/signal/ExBZ01T60.md
+E:/投資交易/pla_md/signal/EXBZ02T21.md
+E:/投資交易/pla_md/signal/FalseBK2 (2).md
+E:/投資交易/pla_md/signal/FalseBK2.md
+E:/投資交易/pla_md/signal/forexample.md
+E:/投資交易/pla_md/signal/G003_TX_LT_3Prices.md
+E:/投資交易/pla_md/signal/gapless.md
+E:/投資交易/pla_md/signal/Gift.md
+E:/投資交易/pla_md/signal/GS_backup_20241114.md
+E:/投資交易/pla_md/signal/H053_TX_SM_LO_30M (2).md
+E:/投資交易/pla_md/signal/H053_TX_SM_LO_30M (3).md
+E:/投資交易/pla_md/signal/H053_TX_SM_LO_30M (4).md
+E:/投資交易/pla_md/signal/H053_TX_SM_LO_30M.md
+E:/投資交易/pla_md/signal/H054_TXA_3H3L_LO_1H (2).md
+E:/投資交易/pla_md/signal/H054_TXA_3H3L_LO_1H.md
+E:/投資交易/pla_md/signal/H059_TX_MA_LO_20M (2).md
+E:/投資交易/pla_md/signal/H059_TX_MA_LO_20M.md
+E:/投資交易/pla_md/signal/Hayden02_TX_RegAngel30K_L0 (2).md
+E:/投資交易/pla_md/signal/Hayden02_TX_RegAngel30K_L0 (3).md
+E:/投資交易/pla_md/signal/Hayden02_TX_RegAngel30K_L0 (4).md
+E:/投資交易/pla_md/signal/Hayden02_TX_RegAngel30K_L0.md
+E:/投資交易/pla_md/signal/Herman002_TX_CDP_LT (2).md
+E:/投資交易/pla_md/signal/Herman002_TX_CDP_LT (3).md
+E:/投資交易/pla_md/signal/Herman002_TX_CDP_LT (4).md
+E:/投資交易/pla_md/signal/Herman002_TX_CDP_LT.md
+E:/投資交易/pla_md/signal/HiSKIO籌碼程式交易程式碼.md
+E:/投資交易/pla_md/signal/Homework20200718 (2).md
+E:/投資交易/pla_md/signal/Homework20200718 (3).md
+E:/投資交易/pla_md/signal/Homework20200718 (4).md
+E:/投資交易/pla_md/signal/Homework20200718.md
+E:/投資交易/pla_md/signal/Homework20201009 (2).md
+E:/投資交易/pla_md/signal/Homework20201009.md
+E:/投資交易/pla_md/signal/Homework20210204 (2).md
+E:/投資交易/pla_md/signal/Homework20210204.md
+E:/投資交易/pla_md/signal/homework20210612 (2).md
+E:/投資交易/pla_md/signal/homework20210612.md
+E:/投資交易/pla_md/signal/homework20210612-修正.md
+E:/投資交易/pla_md/signal/Homework20210706.md
+E:/投資交易/pla_md/signal/homework20210815 (2).md
+E:/投資交易/pla_md/signal/homework20210815.md
+E:/投資交易/pla_md/signal/homework20210907 (2).md
+E:/投資交易/pla_md/signal/homework20210907.md
+E:/投資交易/pla_md/signal/Hsiang_TX_055_FDT_4min (2).md
+E:/投資交易/pla_md/signal/Hsiang_TX_055_FDT_4min (3).md
+E:/投資交易/pla_md/signal/Hsiang_TX_055_FDT_4min (4).md
+E:/投資交易/pla_md/signal/Hsiang_TX_055_FDT_4min.md
+E:/投資交易/pla_md/signal/HsuanPin_TX_202109_FLT (2).md
+E:/投資交易/pla_md/signal/HsuanPin_TX_202109_FLT.md
+E:/投資交易/pla_md/signal/Hsuanpin_TX_202110_DT (2).md
+E:/投資交易/pla_md/signal/Hsuanpin_TX_202110_DT.md
+E:/投資交易/pla_md/signal/Hsuanpin_TX_CCI202201_FDT.md
+E:/投資交易/pla_md/signal/Hsuanpin_TX_KD202111_FlT.md
+E:/投資交易/pla_md/signal/HW010_TX_ CDP Entropy_5M_FDT.md
+E:/投資交易/pla_md/signal/HW012_TX_ HL Wap & Jump out_5M_DT (2).md
+E:/投資交易/pla_md/signal/HW012_TX_ HL Wap & Jump out_5M_DT.md
+E:/投資交易/pla_md/signal/HW013_TX_ NO DH&DL in_3M_DT.md
+E:/投資交易/pla_md/signal/HW013_TX_K bar break out_17M_FLT+.md
+E:/投資交易/pla_md/signal/Ivan2109_TX_DV6k_DT_ver2 (2).md
+E:/投資交易/pla_md/signal/Ivan2109_TX_DV6k_DT_ver2.md
+E:/投資交易/pla_md/signal/J_BB1_0621 (2).md
+E:/投資交易/pla_md/signal/J_BB1_0621 (3).md
+E:/投資交易/pla_md/signal/J_BB1_0621 (4).md
+E:/投資交易/pla_md/signal/J_BB1_0621.md
+E:/投資交易/pla_md/signal/J_Bband1118.md
+E:/投資交易/pla_md/signal/Jeremy_Work.md
+E:/投資交易/pla_md/signal/JeremyWork_30TX_Week_LOS (2).md
+E:/投資交易/pla_md/signal/JeremyWork_30TX_Week_LOS.md
+E:/投資交易/pla_md/signal/Jeremy-work07 (2).md
+E:/投資交易/pla_md/signal/Jeremy-work07.md
+E:/投資交易/pla_md/signal/JOSEPHXY198_TX_AVERAGEPRICE6K_LT(20220104).md
+E:/投資交易/pla_md/signal/JOSEPHXY198_TX_KD15K(20210610)_LT(20210806V4).md
+E:/投資交易/pla_md/signal/KCCCI.md
+E:/投資交易/pla_md/signal/KE_EDIT.md
+E:/投資交易/pla_md/signal/khsu_202007 (2).md
+E:/投資交易/pla_md/signal/khsu_202007 (3).md
+E:/投資交易/pla_md/signal/khsu_202007 (4).md
+E:/投資交易/pla_md/signal/khsu_202007 (5).md
+E:/投資交易/pla_md/signal/khsu_202007.md
+E:/投資交易/pla_md/signal/khsu_202007_WF (2).md
+E:/投資交易/pla_md/signal/khsu_202007_WF (3).md
+E:/投資交易/pla_md/signal/khsu_202007_WF (4).md
+E:/投資交易/pla_md/signal/khsu_202007_WF (5).md
+E:/投資交易/pla_md/signal/khsu_202007_WF (6).md
+E:/投資交易/pla_md/signal/khsu_202007_WF.md
+E:/投資交易/pla_md/signal/khsu_202106 (2).md
+E:/投資交易/pla_md/signal/khsu_202106 (3).md
+E:/投資交易/pla_md/signal/khsu_202106 (4).md
+E:/投資交易/pla_md/signal/khsu_202106.md
+E:/投資交易/pla_md/signal/khsu_202106_WF (2).md
+E:/投資交易/pla_md/signal/khsu_202106_WF (3).md
+E:/投資交易/pla_md/signal/khsu_202106_WF (4).md
+E:/投資交易/pla_md/signal/khsu_202106_WF.md
+E:/投資交易/pla_md/signal/KO003_TX_3Guan_DO.md
+E:/投資交易/pla_md/signal/KO003_TX_3GuanVer2_DO.md
+E:/投資交易/pla_md/signal/KO004_TX_HA_FLO.md
+E:/投資交易/pla_md/signal/KO005_TX_Extend_FDO.md
+E:/投資交易/pla_md/signal/Kway_NQ_Sample.md
+E:/投資交易/pla_md/signal/LO_TX_11mCost_038.md
+E:/投資交易/pla_md/signal/Loren042_TX_Adaptive13m_FDT.md
+E:/投資交易/pla_md/signal/Loren043_TX_MultiAdaptive6m_FDT (2).md
+E:/投資交易/pla_md/signal/Loren043_TX_MultiAdaptive6m_FDT.md
+E:/投資交易/pla_md/signal/Loren044_TX_1dSecDer_LT (2).md
+E:/投資交易/pla_md/signal/Loren044_TX_1dSecDer_LT.md
+E:/投資交易/pla_md/signal/Loren045_TX_60mROC_FLT (2).md
+E:/投資交易/pla_md/signal/Loren045_TX_60mROC_FLT.md
+E:/投資交易/pla_md/signal/Loren046_TX_1dROC_LT.md
+E:/投資交易/pla_md/signal/Loren047_TXN_5mD2_FDT.md
+E:/投資交易/pla_md/signal/Loren048_TX_1mLast_FDT.md
+E:/投資交易/pla_md/signal/Loren049_TX_6mCounter_LT.md
+E:/投資交易/pla_md/signal/Loren050_TX_5mPD_DT.md
+E:/投資交易/pla_md/signal/Loren052_TX_1dRSRate_LT.md
+E:/投資交易/pla_md/signal/Loren053_TX_60mRate_LT.md
+E:/投資交易/pla_md/signal/MAE_MFE_output.md
+E:/投資交易/pla_md/signal/MagicAD01_N4T06 (2).md
+E:/投資交易/pla_md/signal/MagicAD01_N4T06.md
+E:/投資交易/pla_md/signal/MagicAD02_N4T03 (2).md
+E:/投資交易/pla_md/signal/MagicAD02_N4T03.md
+E:/投資交易/pla_md/signal/MagicAD03_N5T05 (2).md
+E:/投資交易/pla_md/signal/MagicAD03_N5T05.md
+E:/投資交易/pla_md/signal/MagicAD04_N4T04 (2).md
+E:/投資交易/pla_md/signal/MagicAD04_N4T04.md
+E:/投資交易/pla_md/signal/MagicAD05_N4T03 (2).md
+E:/投資交易/pla_md/signal/MagicAD05_N4T03.md
+E:/投資交易/pla_md/signal/MagicAD06_N4T06 (2).md
+E:/投資交易/pla_md/signal/MagicAD06_N4T06.md
+E:/投資交易/pla_md/signal/MagicD01_N5T03.md
+E:/投資交易/pla_md/signal/MagicD02_N5T04.md
+E:/投資交易/pla_md/signal/MagicD03_N3T04.md
+E:/投資交易/pla_md/signal/MagicDayTOP10.md
+E:/投資交易/pla_md/signal/MagicDayTradeEXF.md
+E:/投資交易/pla_md/signal/MagicDayTradeFXF.md
+E:/投資交易/pla_md/signal/MagicDayTradeTXF.md
+E:/投資交易/pla_md/signal/MagicOI_EXF.md
+E:/投資交易/pla_md/signal/MagicOI_FXF.md
+E:/投資交易/pla_md/signal/MagicOI_TXF.md
+E:/投資交易/pla_md/signal/MagicPM01_N5T03.md
+E:/投資交易/pla_md/signal/MagicPM02_N2T04.md
+E:/投資交易/pla_md/signal/MagicPM03_N3T04.md
+E:/投資交易/pla_md/signal/MagicQS143.md
+E:/投資交易/pla_md/signal/mai_LT_15K_60AVG (2).md
+E:/投資交易/pla_md/signal/mai_LT_15K_60AVG (3).md
+E:/投資交易/pla_md/signal/mai_LT_15K_60AVG (4).md
+E:/投資交易/pla_md/signal/mai_LT_15K_60AVG.md
+E:/投資交易/pla_md/signal/MAMATest.md
+E:/投資交易/pla_md/signal/MAMATest_WF.md
+E:/投資交易/pla_md/signal/mo.md
+E:/投資交易/pla_md/signal/Momentum.md
+E:/投資交易/pla_md/signal/MoveDD_MRA版本.md
+E:/投資交易/pla_md/signal/MR_MRAoutput.md
+E:/投資交易/pla_md/signal/MR_Output (2).md
+E:/投資交易/pla_md/signal/MR_Output.md
+E:/投資交易/pla_md/signal/MR_OutputByTick(訊號舊換新) (2).md
+E:/投資交易/pla_md/signal/MR_OutputByTick(訊號舊換新).md
+E:/投資交易/pla_md/signal/MR_Total_v20210125_20260208.md
+E:/投資交易/pla_md/signal/newnew.md
+E:/投資交易/pla_md/signal/nick_TX_5mink_LT (2).md
+E:/投資交易/pla_md/signal/nick_TX_5mink_LT.md
+E:/投資交易/pla_md/signal/no 50.md
+E:/投資交易/pla_md/signal/No22_TX_RSI_7K_DO (2).md
+E:/投資交易/pla_md/signal/No22_TX_RSI_7K_DO (3).md
+E:/投資交易/pla_md/signal/No22_TX_RSI_7K_DO (4).md
+E:/投資交易/pla_md/signal/No22_TX_RSI_7K_DO.md
+E:/投資交易/pla_md/signal/No25_TXA_CandleShadow_60K_LO (2).md
+E:/投資交易/pla_md/signal/No25_TXA_CandleShadow_60K_LO.md
+E:/投資交易/pla_md/signal/No28_TX_MA_60K_LO (2).md
+E:/投資交易/pla_md/signal/No28_TX_MA_60K_LO.md
+E:/投資交易/pla_md/signal/No32_TX_LinearRegCurve_60K_LO_S (2).md
+E:/投資交易/pla_md/signal/No32_TX_LinearRegCurve_60K_LO_S (3).md
+E:/投資交易/pla_md/signal/No32_TX_LinearRegCurve_60K_LO_S (4).md
+E:/投資交易/pla_md/signal/No32_TX_LinearRegCurve_60K_LO_S.md
+E:/投資交易/pla_md/signal/No33_TX_RSIInv_30K_LO (2).md
+E:/投資交易/pla_md/signal/No33_TX_RSIInv_30K_LO.md
+E:/投資交易/pla_md/signal/No34_TX_TL_17K_LO (2).md
+E:/投資交易/pla_md/signal/No34_TX_TL_17K_LO.md
+E:/投資交易/pla_md/signal/No35_TXA_Efficiency_29K_LO (2).md
+E:/投資交易/pla_md/signal/No35_TXA_Efficiency_29K_LO.md
+E:/投資交易/pla_md/signal/No36_TX_STD_60K_LO (2).md
+E:/投資交易/pla_md/signal/No36_TX_STD_60K_LO.md
+E:/投資交易/pla_md/signal/NV2109005_TX6M_Cindy_LT-original (2).md
+E:/投資交易/pla_md/signal/NV2109005_TX6M_Cindy_LT-original.md
+E:/投資交易/pla_md/signal/OI.md
+E:/投資交易/pla_md/signal/OpenD0105_6K_DT.md
+E:/投資交易/pla_md/signal/oscar027_TXA_SARREV_LO.md
+E:/投資交易/pla_md/signal/OSCAR028_TXALL_CCICHANNEL_LO.md
+E:/投資交易/pla_md/signal/OSCAR029_TXALL_ADAPTIVEATR_FLT (2).md
+E:/投資交易/pla_md/signal/OSCAR029_TXALL_ADAPTIVEATR_FLT.md
+E:/投資交易/pla_md/signal/OSCAR030_TX_3MA_LO.md
+E:/投資交易/pla_md/signal/OSCAR032_TXALL_2MA_FDL (2).md
+E:/投資交易/pla_md/signal/OSCAR032_TXALL_2MA_FDL.md
+E:/投資交易/pla_md/signal/OSCAR033_TXALL_2MA_FDL.md
+E:/投資交易/pla_md/signal/OSCAR034_TXALL_CHAIKIN_FDL.md
+E:/投資交易/pla_md/signal/OSCAR035_TXALL_RSIMOM_FDL.md
+E:/投資交易/pla_md/signal/P_CDP_TXF_1_DT.md
+E:/投資交易/pla_md/signal/PLA (2).md
+E:/投資交易/pla_md/signal/PLA.md
+E:/投資交易/pla_md/signal/pureShort_202207.md
+E:/投資交易/pla_md/signal/Q_CT00_000M_PT.md
+E:/投資交易/pla_md/signal/Q_CT00_Free (2).md
+E:/投資交易/pla_md/signal/Q_CT00_Free (3).md
+E:/投資交易/pla_md/signal/Q_CT00_Free.md
+E:/投資交易/pla_md/signal/Q_CT01_060M_KD.md
+E:/投資交易/pla_md/signal/Q_CT02_060M_RSI.md
+E:/投資交易/pla_md/signal/Q_CT03_060M_CCI.md
+E:/投資交易/pla_md/signal/Q_CT04_060M_MTM.md
+E:/投資交易/pla_md/signal/Q_CT05_060M_OBV.md
+E:/投資交易/pla_md/signal/Q_CT06_060M_MACD.md
+E:/投資交易/pla_md/signal/Q_CT07_060M_DMI.md
+E:/投資交易/pla_md/signal/Q_CT08_060M_BB.md
+E:/投資交易/pla_md/signal/Q_CT09_060M_KC.md
+E:/投資交易/pla_md/signal/Q_CT10_060M_EL.md
+E:/投資交易/pla_md/signal/Q_CT11_030M_KD.md
+E:/投資交易/pla_md/signal/Q_CT12_030M_RSI.md
+E:/投資交易/pla_md/signal/Q_CT13_030M_CCI.md
+E:/投資交易/pla_md/signal/Q_CT14_030M_MTM.md
+E:/投資交易/pla_md/signal/Q_CT15_030M_OBV.md
+E:/投資交易/pla_md/signal/Q_CT16_030M_MACD.md
+E:/投資交易/pla_md/signal/Q_CT17_030M_DMI.md
+E:/投資交易/pla_md/signal/Q_CT18_030M_BB.md
+E:/投資交易/pla_md/signal/Q_CT19_030M_KC.md
+E:/投資交易/pla_md/signal/Q_CT20_030M_EL.md
+E:/投資交易/pla_md/signal/Q_CT21_015M_KD.md
+E:/投資交易/pla_md/signal/Q_CT22_015M_RSI.md
+E:/投資交易/pla_md/signal/Q_CT23_015M_CCI.md
+E:/投資交易/pla_md/signal/Q_CT24_015M_MTM.md
+E:/投資交易/pla_md/signal/Q_CT25_015M_OBV.md
+E:/投資交易/pla_md/signal/Q_CT26_015M_MACD.md
+E:/投資交易/pla_md/signal/Q_CT27_015M_DMI.md
+E:/投資交易/pla_md/signal/Q_CT28_015M_BB.md
+E:/投資交易/pla_md/signal/Q_CT29_015M_KC.md
+E:/投資交易/pla_md/signal/Q_CT30_015M_EL.md
+E:/投資交易/pla_md/signal/Q_CT31_840M_KD.md
+E:/投資交易/pla_md/signal/Q_CT32_840M_RSI.md
+E:/投資交易/pla_md/signal/Q_CT33_840M_CCI.md
+E:/投資交易/pla_md/signal/Q_CT34_840M_MTM.md
+E:/投資交易/pla_md/signal/Q_CT35_840M_OBV.md
+E:/投資交易/pla_md/signal/Q_CT36_840M_MACD.md
+E:/投資交易/pla_md/signal/Q_CT37_840M_DMI.md
+E:/投資交易/pla_md/signal/Q_CT38_840M_BB.md
+E:/投資交易/pla_md/signal/Q_CT39_840M_KC.md
+E:/投資交易/pla_md/signal/Q_CT40_840M_EL.md
+E:/投資交易/pla_md/signal/Q_CT41_840M_SAR.md
+E:/投資交易/pla_md/signal/Q_CT42_060M_SAR.md
+E:/投資交易/pla_md/signal/Q_CT43_030M_SAR.md
+E:/投資交易/pla_md/signal/Q_CT44_015M_SAR.md
+E:/投資交易/pla_md/signal/Q_TX33_Anniversary SAR.md
+E:/投資交易/pla_md/signal/Q_TX34_Ultimate MA.md
+E:/投資交易/pla_md/signal/QTC01.md
+E:/投資交易/pla_md/signal/qtc9策略.md
+E:/投資交易/pla_md/signal/QTCXXX.md
+E:/投資交易/pla_md/signal/QX523T13.md
+E:/投資交易/pla_md/signal/QX532T25.md
+E:/投資交易/pla_md/signal/QX533T28.md
+E:/投資交易/pla_md/signal/QX534T21.md
+E:/投資交易/pla_md/signal/QX543T23.md
+E:/投資交易/pla_md/signal/RSI_IBS.md
+E:/投資交易/pla_md/signal/S21Q1 (2).md
+E:/投資交易/pla_md/signal/S21Q1 (3).md
+E:/投資交易/pla_md/signal/S21Q1.md
+E:/投資交易/pla_md/signal/S21Q100 (2).md
+E:/投資交易/pla_md/signal/S21Q100.md
+E:/投資交易/pla_md/signal/S21Q3 all (sharewin.go9s.com).md
+E:/投資交易/pla_md/signal/S21Q3 part2 (sharewin.go9s.com).md
+E:/投資交易/pla_md/signal/S21Q3.md
+E:/投資交易/pla_md/signal/S21Q300 (sharewin.go9s.com).md
+E:/投資交易/pla_md/signal/S21Q314_EA01 (2).md
+E:/投資交易/pla_md/signal/S21Q314_EA01 (3).md
+E:/投資交易/pla_md/signal/S21Q314_EA01.md
+E:/投資交易/pla_md/signal/S21Q399 (sharewin.go9s.com).md
+E:/投資交易/pla_md/signal/samuel_short.md
+E:/投資交易/pla_md/signal/SourceCode (2).md
+E:/投資交易/pla_md/signal/SourceCode.md
+E:/投資交易/pla_md/signal/speculator.md
+E:/投資交易/pla_md/signal/Star_KD_1H_LT_V5 (2).md
+E:/投資交易/pla_md/signal/Star_KD_1H_LT_V5.md
+E:/投資交易/pla_md/signal/STHL_AD.md
+E:/投資交易/pla_md/signal/SwingLadder -2-1.md
+E:/投資交易/pla_md/signal/terry9487.md
+E:/投資交易/pla_md/signal/TradingProserviceOriginal - #XMAS MC12 - Short.md
+E:/投資交易/pla_md/signal/TradingProserviceOriginal-Limited-Long.md
+E:/投資交易/pla_md/signal/TU_916-4_DO_TX (2).md
+E:/投資交易/pla_md/signal/TU_916-4_DO_TX.md
+E:/投資交易/pla_md/signal/TU_TX_915-7_LO.md
+E:/投資交易/pla_md/signal/TutorFirst.md
+E:/投資交易/pla_md/signal/TX_039 (2).md
+E:/投資交易/pla_md/signal/TX_039 (3).md
+E:/投資交易/pla_md/signal/TX_039 (4).md
+E:/投資交易/pla_md/signal/TX_039.md
+E:/投資交易/pla_md/signal/TX_PCB_FDO (2).md
+E:/投資交易/pla_md/signal/TX_PCB_FDO.md
+E:/投資交易/pla_md/signal/TX_Pivot_DO.md
+E:/投資交易/pla_md/signal/TX_Public Avg_20mK_LO (2).md
+E:/投資交易/pla_md/signal/TX_Public Avg_20mK_LO.md
+E:/投資交易/pla_md/signal/TX_RSI-GapIn_LO_13m.md
+E:/投資交易/pla_md/signal/TX_TwoWeek_DO.md
+E:/投資交易/pla_md/signal/TXex_202106.md
+E:/投資交易/pla_md/signal/TXEX2105.md
+E:/投資交易/pla_md/signal/TXEX2108_Edward 修改.md
+E:/投資交易/pla_md/signal/TXF  ED001_TX_CCI30k202107_LT 策略檔 (2).md
+E:/投資交易/pla_md/signal/TXF_3Gate_DO_7K (2).md
+E:/投資交易/pla_md/signal/TXF_3Gate_DO_7K (3).md
+E:/投資交易/pla_md/signal/TXF_3Gate_DO_7K (4).md
+E:/投資交易/pla_md/signal/TXF_3Gate_DO_7K.md
+E:/投資交易/pla_md/signal/TXF_LT1D_3L.md
+E:/投資交易/pla_md/signal/TXF_M13_Speed_NDO (2).md
+E:/投資交易/pla_md/signal/TXF_M13_Speed_NDO.md
+E:/投資交易/pla_md/signal/TXF_M3_ORB_DO_2012 (2).md
+E:/投資交易/pla_md/signal/TXF_M3_ORB_DO_2012.md
+E:/投資交易/pla_md/signal/TXF_SCamarillaAHL_DO 210605 (2).md
+E:/投資交易/pla_md/signal/TXF_SCamarillaAHL_DO 210605 (3).md
+E:/投資交易/pla_md/signal/TXF_SCamarillaAHL_DO 210605 (4).md
+E:/投資交易/pla_md/signal/TXF_SCamarillaAHL_DO 210605.md
+E:/投資交易/pla_md/signal/w040_v3.md
+E:/投資交易/pla_md/signal/WF_018_TXF_JumpRange3K_DT.md
+E:/投資交易/pla_md/signal/WF_Change_01_TXAM4K_ATR+KD_DT (2).md
+E:/投資交易/pla_md/signal/WF_Change_01_TXAM4K_ATR+KD_DT.md
+E:/投資交易/pla_md/signal/whw013_TX_bsp8k_DT.md
+E:/投資交易/pla_md/signal/yita 004_TX_RSI_15k_210628_LT (2).md
+E:/投資交易/pla_md/signal/yita 004_TX_RSI_15k_210628_LT.md
+E:/投資交易/pla_md/signal/yita 005_TX_7m_COHL_FDT (2).md
+E:/投資交易/pla_md/signal/yita 005_TX_7m_COHL_FDT.md
+E:/投資交易/pla_md/signal/yita 006_TX_37m_IMI_210816_FLT (2).md
+E:/投資交易/pla_md/signal/yita 006_TX_37m_IMI_210816_FLT (3).md
+E:/投資交易/pla_md/signal/yita 006_TX_37m_IMI_210816_FLT (4).md
+E:/投資交易/pla_md/signal/yita 006_TX_37m_IMI_210816_FLT.md
+E:/投資交易/pla_md/signal/yita_TX_50k_20210515_LO_003 (2).md
+E:/投資交易/pla_md/signal/yita_TX_50k_20210515_LO_003 (3).md
+E:/投資交易/pla_md/signal/yita_TX_50k_20210515_LO_003 (4).md
+E:/投資交易/pla_md/signal/yita_TX_50k_20210515_LO_003.md
+E:/投資交易/pla_md/signal/YuHan977_TX_MTM19K202110_DT.md
+E:/投資交易/pla_md/signal/比特幣策略程式碼_MC12_by Tony at HiSKIO.md
+E:/投資交易/pla_md/signal/比特幣策略程式碼_MC9_by Tony at HiSKIO.md
+E:/投資交易/pla_md/signal/比特幣模組_無區分版本.md
+E:/投資交易/pla_md/signal/加碼前 (2).md
+E:/投資交易/pla_md/signal/加碼前 (3).md
+E:/投資交易/pla_md/signal/加碼前.md
+E:/投資交易/pla_md/signal/加碼後 (2).md
+E:/投資交易/pla_md/signal/加碼後 (3).md
+E:/投資交易/pla_md/signal/加碼後.md
+E:/投資交易/pla_md/signal/用海外期貨打造全球投資組合_程式碼_by Tony at HiSKIO.md
+E:/投資交易/pla_md/signal/技術分析x策略積木程式碼_by Tony at HiSKIO.md
+E:/投資交易/pla_md/signal/波段暫存_20220406.md
+E:/投資交易/pla_md/signal/彥勝-202010作業-002_TXAM_Aroon_LO (2).md
+E:/投資交易/pla_md/signal/彥勝-202010作業-002_TXAM_Aroon_LO.md
+E:/投資交易/pla_md/signal/原始碼.md
+E:/投資交易/pla_md/signal/彩蛋_比特幣策略.md
+E:/投資交易/pla_md/signal/策略腳本-@@CF995-GT0549-001@@_TX_20210702_LT.md
+E:/投資交易/pla_md/signal/策略腳本202106_TX_KD5K_DT.md
+E:/投資交易/pla_md/signal/策略模組_當沖四支.md
+E:/投資交易/pla_md/signal/順勢空單5號 2021.08.23.md
+E:/投資交易/pla_md/signal/電金.md
+E:/投資交易/pla_md/signal/價差空單7號 2021.08.23.md
+E:/投資交易/pla_md/signal/數字策略.md
+E:/投資交易/pla_md/signal/避險策略.md

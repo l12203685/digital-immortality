@@ -26,6 +26,16 @@ from pathlib import Path
 OUTBOX = Path(r"C:\Users\admin\staging\web_outbox.jsonl")
 TAIPEI = timezone(timedelta(hours=8))
 
+# Inline push trigger — best-effort import of the shared helper. When the
+# module is missing we still write the outbox; we just skip the push.
+_PUSH_TRIGGER_DIR = Path(r"C:\Users\admin\.claude\scripts\mission_control")
+if str(_PUSH_TRIGGER_DIR) not in sys.path:
+    sys.path.insert(0, str(_PUSH_TRIGGER_DIR))
+try:
+    from outbox_push_trigger import notify as _push_notify  # type: ignore
+except Exception:  # noqa: BLE001 — never break the outbox writer on import failure
+    _push_notify = None  # type: ignore[assignment]
+
 
 def send(text: str, channel: str = "mission_control") -> dict:
     """Append one reply to web_outbox.jsonl.  Returns the written entry."""
@@ -38,6 +48,13 @@ def send(text: str, channel: str = "mission_control") -> dict:
     OUTBOX.parent.mkdir(parents=True, exist_ok=True)
     with OUTBOX.open("a", encoding="utf-8") as f:
         f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    # Best-effort push fan-out. Swallows errors so the CLI sender never
+    # fails because of a flaky local HTTP server.
+    if _push_notify is not None:
+        try:
+            _push_notify(entry)
+        except Exception:  # noqa: BLE001
+            pass
     return entry
 
 

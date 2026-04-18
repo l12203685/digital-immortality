@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Background -->
+  <rect width="128" height="128" rx="20" fill="#0d1117"/>
+  <!-- Tree trunk -->
+  <rect x="60" y="80" width="8" height="32" rx="3" fill="#3fb950"/>
+  <!-- Tree body (triangle) -->
+  <polygon points="64,16 24,84 104,84" fill="none" stroke="#3fb950" stroke-width="5" stroke-linejoin="round"/>
+  <!-- Branch left -->
+  <line x1="44" y1="66" x2="34" y2="52" stroke="#58a6ff" stroke-width="3" stroke-linecap="round"/>
+  <!-- Branch right -->
+  <line x1="84" y1="66" x2="94" y2="52" stroke="#58a6ff" stroke-width="3" stroke-linecap="round"/>
+  <!-- Dot center top -->
+  <circle cx="64" cy="18" r="5" fill="#3fb950"/>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "_doc": "Dashin Capital (達飆資本) capital structure — single source of truth for per-share NAV formula. Updated automatically after each weekly pnl ingest.",
+  "_formula": "new_per_share = prev_per_share * (((base + prior_cum + this_week_pnl) / (base + prior_cum) - 1) * smoothing + 1)",
+  "_formula_authority": "Edward 2026-04-15 canonical — verified (222347 * 1.12826 = 250864)",
+  "ops_base_post_zhengzi_twd": 306780000,
+  "ops_base_as_of": "2026-03-21",
+  "ops_base_note": "增資後操作基底, 固定不變 (30,678 萬 TWD)",
+  "cumulative_pnl_since_zhengzi_twd": 121780000,
+  "cumulative_pnl_as_of_week_ending": "2026-04-15",
+  "cumulative_pnl_note": "增資後累積 pnl, 每週 ingest 後 += this_week_pnl; 2026-04-08 前為 68,326,000 (6,832.6 萬); 2026-04-15 ingest 後 = 68,326,000 + 53,454,000 = 121,780,000 (12,178 萬)",
+  "smoothing_factor": 0.9,
+  "smoothing_note": "0.9 smoothing on return per Edward 公式",
+  "latest_per_share_twd": 250864,
+  "latest_per_share_as_of": "2026-04-15",
+  "prev_per_share_twd": 222347,
+  "prev_per_share_as_of": "2026-04-08",
+  "history": [
+    {"week_ending": "2026-04-08", "prior_cum_before_week": 61493400, "this_week_pnl": 6832600, "prev_per_share": null, "new_per_share": 222347, "note": "seed row — Edward canonical"},
+    {"week_ending": "2026-04-15", "prior_cum_before_week": 68326000, "this_week_pnl": 53454000, "prev_per_share": 222347, "new_per_share": 250864, "note": "formula verified end-to-end"}
+  ]
+}
