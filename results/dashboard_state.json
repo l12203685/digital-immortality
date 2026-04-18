@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-04-18T11:19:30Z",
-  "updated_taipei": "2026-04-18 19:19 (Taipei, UTC+8)",
-  "updated_taipei_iso": "2026-04-18T19:19:30.825899+08:00",
+  "updated_utc": "2026-04-18T11:49:31Z",
+  "updated_taipei": "2026-04-18 19:49 (Taipei, UTC+8)",
+  "updated_taipei_iso": "2026-04-18T19:49:31.643455+08:00",
   "tree": {
     "available": true,
     "branches": [
@@ -1423,26 +1423,26 @@
   "daemon": {
     "available": true,
     "tail": [
-      "      \"action\": \"Run finance ",
-      "## Cycle 1 — 2026-04-18 19:19:30 (Taipei)",
-      "[cycle 630] classification=branch-growth",
+      "      \"action\": \"Run organism engagement c",
+      "## Cycle 1 — 2026-04-18 19:49:31 (Taipei)",
+      "[cycle 631] classification=branch-growth",
       "actions: 3, updates: 4",
-      "exec: b9(對外觸達): Gaps: 0/48 resolved; > Status: PENDING — awaiting candidate identification; b4(社交/organism): Distribution diagnosis: 189 lines; Outreach: 0 done, 9 pending; b6(基礎設施健康): daemon: RUNNING (cycle 1, CLI (Max subscription), claude-sonnet-4-6, interval im",
-      "digestion: Knowledge Digestion: 638/2756 files, Tier 1, Last: 2026-04-18T18:49:35+08:00",
+      "exec: b1(經濟/交易): Tick ?, PnL 14.5736%, signal ?; b5(Phase4b E2E): Distribution: 46 SOPs/knowledge products in docs/; b2(知識消化): Consistency: ?/? aligned, streak ?",
+      "digestion: Knowledge Digestion: 639/2756 files, Tier 1, Last: 2026-04-18T19:19:37+08:00",
       "plan_raw: ```json",
       "{",
       "  \"branch_actions\": [",
       "    {",
-      "      \"branch\": 9,",
-      "      \"name\": \"對外觸達\",",
-      "      \"action\": \"Run outreach batch 14: read staging/subagent_results/outreach_batch_13.md for last sent list, compose next 3 outreach messages targeting new contacts not yet pinged, write draft to staging/subagent_results/outreach_batch_14.md with send-ready status.\",",
+      "      \"branch\": 1,",
+      "      \"name\": \"經濟/交易\",",
+      "      \"action\": \"Run trading seed eval cycle 631: read results/cycle_counter.json and latest trading snapshot, evaluate active strategy PF ratios, flag any strategies approaching 0.8 threshold, write eval summary to staging/subagent_results/trading_eval_631.md.\",",
       "      \"priority\": 1,",
       "      \"runnable\": \"script\"",
       "    },",
       "    {",
-      "      \"branch\": 4,",
-      "      \"name\": \"社交/organism\",",
-      "      \"action\": \"Run organism engagement c"
+      "      \"branch\": 5,",
+      "      \"name\": \"Phase4b E2E\",",
+      "      \"action\": \"Run E2E smoke test cycle 631 p"
     ],
     "last_cycle": 376
   },
@@ -1451,7 +1451,7 @@
     "head": [
       "# Quick Status — live state snapshot for Type A cold start",
       "",
-      "> Updated: 2026-04-18 19:19 (Taipei, UTC+8) (auto-written by daemon cycle 1)",
+      "> Updated: 2026-04-18 19:49 (Taipei, UTC+8) (auto-written by daemon cycle 1)",
       "",
       "## Current state",
       "- daemon: RUNNING (cycle 1, CLI (Max subscription), claude-sonnet-4-6, interval immediate (chain))",
@@ -1480,6 +1480,7 @@
   },
   "git": {
     "digital-immortality": [
+      "5b92c93 daemon: cycle 1",
       "fce5555 daemon: cycle 1",
       "8ded35f daemon: cycle 1",
       "e6c93f9 chore: B1 results refresh",
@@ -1488,8 +1489,7 @@
       "b8e85e3 daemon: cycle 1",
       "ae7702e daemon: cycle 1",
       "de5bcc7 chore: update tunnel URL to matched-derby-elderly-tourism.trycloudflare.com",
-      "ab566e4 daemon: cycle 1",
-      "b1a6ead daemon: cycle 1"
+      "ab566e4 daemon: cycle 1"
     ],
     "LYH": [
       "af7af6e chore: daemon heartbeat update",
