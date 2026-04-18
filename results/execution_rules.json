@@ -6,12 +6,12 @@
   "kill_window_floor": 20,
   "kill_window_ceiling": 50,
   "kill_window_recovery_ticks": 100,
-  "kill_count": 178,
-  "evolved_at": "2026-04-17T23:49:29.564175+00:00",
+  "kill_count": 181,
+  "evolved_at": "2026-04-18T00:41:33.413384+00:00",
   "last_kill": {
-    "strategy": "gen_BollingerMeanReversion_f91248",
-    "reason": "WR 26.7% < 30%",
-    "ts": "2026-04-17T23:49:29.564175+00:00"
+    "strategy": "gen_DualMA_RF_eda1cb",
+    "reason": "PF 0.78 < 0.8",
+    "ts": "2026-04-18T00:41:33.413384+00:00"
   },
   "last_recovery": {
     "ts": "2026-04-17T12:58:43.355656+00:00",
