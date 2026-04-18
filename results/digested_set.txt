@@ -2696,3 +2696,21 @@ E:/投資交易/pla_md/signal/電金.md
 E:/投資交易/pla_md/signal/價差空單7號 2021.08.23.md
 E:/投資交易/pla_md/signal/數字策略.md
 E:/投資交易/pla_md/signal/避險策略.md
+E:/投資交易/研究與模型/backtest_framework_spec.md
+E:/投資交易/研究與模型/FI_model_template.md
+E:/投資交易/研究與模型/財神爺框架.md
+E:/投資交易/量化金融文獻/知識素材/MAFE 基本五步驟流程.md
+E:/投資交易/量化金融文獻/知識素材/MAFE 最大幅度分析法.md
+E:/投資交易/量化金融文獻/知識素材/MAFE 進階分析.md
+E:/投資交易/量化金融文獻/知識素材/A Model of Momentum.md
+E:/投資交易/量化金融文獻/知識素材/Mechanics of Futures Markets & Hedging Using Futures.md
+E:/投資交易/量化金融文獻/知識素材/Option Introduction.md
+E:/投資交易/量化金融文獻/交易策略與系統規範.md
+E:/投資交易/量化金融文獻/交易系統完整結構.md
+E:/投資交易/量化金融文獻/投資管理與資金控管_筆記.md
+E:/投資交易/量化金融文獻/資產配置系統.md
+E:/投資交易/參考書籍/Natenberg_期權波動率與定價_筆記.md
+E:/投資交易/參考書籍/MAFE_起源與理論.md
+E:/投資交易/量化金融文獻/賽局博弈系統完整整理.md
+E:/投資交易/量化金融文獻/量化選股_專利與預測_筆記.md
+E:/投資交易/量化金融文獻/股票量化分析架構流程.md
