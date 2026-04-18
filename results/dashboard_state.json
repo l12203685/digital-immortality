@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-04-18T10:19:50Z",
-  "updated_taipei": "2026-04-18 18:19 (Taipei, UTC+8)",
-  "updated_taipei_iso": "2026-04-18T18:19:50.843522+08:00",
+  "updated_utc": "2026-04-18T10:49:28Z",
+  "updated_taipei": "2026-04-18 18:49 (Taipei, UTC+8)",
+  "updated_taipei_iso": "2026-04-18T18:49:28.700843+08:00",
   "tree": {
     "available": true,
     "branches": [
@@ -1423,26 +1423,26 @@
   "daemon": {
     "available": true,
     "tail": [
-      "      \"action\"",
-      "## Cycle 1 — 2026-04-18 18:19:50 (Taipei)",
-      "[cycle 628] classification=branch-growth",
+      "      \"action\": \"Advance",
+      "## Cycle 1 — 2026-04-18 18:49:28 (Taipei)",
+      "[cycle 629] classification=branch-growth",
       "actions: 3, updates: 4",
-      "exec: b9(outreach/社交-經濟): Gaps: 0/48 resolved; > Status: PENDING — awaiting candidate identification; b2(知識消化): Consistency: ?/? aligned, streak ?; b5(phase4b/E2E): Distribution: 46 SOPs/knowledge products in docs/",
-      "digestion: Knowledge Digestion: 636/2756 files, Tier 1, Last: 2026-04-18T17:20:11+08:00",
+      "exec: b1(交易種子評估): Tick ?, PnL 14.5736%, signal ?; b3(財務快照): Distillation: 2947 lines total; b7(跨平台發布): Knowledge digestion: 637/2756 files",
+      "digestion: Knowledge Digestion: 637/2756 files, Tier 1, Last: 2026-04-18T18:19:55+08:00",
       "plan_raw: ```json",
       "{",
       "  \"branch_actions\": [",
       "    {",
-      "      \"branch\": 9,",
-      "      \"name\": \"outreach/社交-經濟\",",
-      "      \"action\": \"Run outreach batch 13: read staging/subagent_results/ for pending outreach queue, execute next 9-item batch targeting highest-signal contacts identified in batch 12, write results to staging/subagent_results/outreach_batch13.md with response-rate delta vs batch 12.\",",
+      "      \"branch\": 1,",
+      "      \"name\": \"交易種子評估\",",
+      "      \"action\": \"Run trading seed eval cycle 629: read results/cycle_counter.json and active_strategies snapshot, score top 3 strategy candidates by Sharpe/PF delta over last 500 ticks, write evaluation to staging/subagent_results/trading_seed_eval_629.md with go/no-go recommendation.\",",
       "      \"priority\": 1,",
       "      \"runnable\": \"script\"",
       "    },",
       "    {",
-      "      \"branch\": 2,",
-      "      \"name\": \"知識消化\",",
-      "      \"action\": \"Advance"
+      "      \"branch\": 3,",
+      "      \"name\": \"財務快照\",",
+      "      \"action\": \"Run finance "
     ],
     "last_cycle": 376
   },
@@ -1451,7 +1451,7 @@
     "head": [
       "# Quick Status — live state snapshot for Type A cold start",
       "",
-      "> Updated: 2026-04-18 18:19 (Taipei, UTC+8) (auto-written by daemon cycle 1)",
+      "> Updated: 2026-04-18 18:49 (Taipei, UTC+8) (auto-written by daemon cycle 1)",
       "",
       "## Current state",
       "- daemon: RUNNING (cycle 1, CLI (Max subscription), claude-sonnet-4-6, interval immediate (chain))",
@@ -1480,6 +1480,7 @@
   },
   "git": {
     "digital-immortality": [
+      "8ded35f daemon: cycle 1",
       "e6c93f9 chore: B1 results refresh",
       "cf03f09 chore: stage-save 2026-04-18 17:18 (Max quota pause)",
       "707fb32 daemon: cycle 1",
@@ -1488,8 +1489,7 @@
       "de5bcc7 chore: update tunnel URL to matched-derby-elderly-tourism.trycloudflare.com",
       "ab566e4 daemon: cycle 1",
       "b1a6ead daemon: cycle 1",
-      "19abf97 daemon: cycle 1",
-      "db343be daemon: cycle 1"
+      "19abf97 daemon: cycle 1"
     ],
     "LYH": [
       "af7af6e chore: daemon heartbeat update",
