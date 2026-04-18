@@ -1885,3 +1885,33 @@ E:/投資交易/pla_md/logic/TXF_M3_ORB_DO_2012.md
 E:/投資交易/pla_md/logic/TXF_SCamarillaAHL_DO 210605 (2).md
 E:/投資交易/pla_md/logic/TXF_SCamarillaAHL_DO 210605 (3).md
 E:/投資交易/pla_md/logic/TXF_SCamarillaAHL_DO 210605 (4).md
+E:/投資交易/pla_md/logic/TXF_SCamarillaAHL_DO 210605.md
+E:/投資交易/pla_md/logic/WF_018_TXF_JumpRange3K_DT.md
+E:/投資交易/pla_md/logic/WF_Change_01_TXAM4K_ATR+KD_DT (2).md
+E:/投資交易/pla_md/logic/WF_Change_01_TXAM4K_ATR+KD_DT.md
+E:/投資交易/pla_md/logic/YuHan977_TX_MTM19K202110_DT.md
+E:/投資交易/pla_md/logic/w040_v3.md
+E:/投資交易/pla_md/logic/whw013_TX_bsp8k_DT.md
+E:/投資交易/pla_md/logic/yita 004_TX_RSI_15k_210628_LT (2).md
+E:/投資交易/pla_md/logic/yita 004_TX_RSI_15k_210628_LT.md
+E:/投資交易/pla_md/logic/yita 005_TX_7m_COHL_FDT (2).md
+E:/投資交易/pla_md/logic/yita 005_TX_7m_COHL_FDT.md
+E:/投資交易/pla_md/logic/yita 006_TX_37m_IMI_210816_FLT (2).md
+E:/投資交易/pla_md/logic/yita 006_TX_37m_IMI_210816_FLT (3).md
+E:/投資交易/pla_md/logic/yita 006_TX_37m_IMI_210816_FLT (4).md
+E:/投資交易/pla_md/logic/yita 006_TX_37m_IMI_210816_FLT.md
+E:/投資交易/pla_md/logic/yita_TX_50k_20210515_LO_003 (2).md
+E:/投資交易/pla_md/logic/yita_TX_50k_20210515_LO_003 (3).md
+E:/投資交易/pla_md/logic/yita_TX_50k_20210515_LO_003 (4).md
+E:/投資交易/pla_md/logic/yita_TX_50k_20210515_LO_003.md
+E:/投資交易/pla_md/logic/價差空單7號 2021.08.23.md
+E:/投資交易/pla_md/logic/加碼前 (2).md
+E:/投資交易/pla_md/logic/加碼前 (3).md
+E:/投資交易/pla_md/logic/加碼前.md
+E:/投資交易/pla_md/logic/加碼後 (2).md
+E:/投資交易/pla_md/logic/加碼後 (3).md
+E:/投資交易/pla_md/logic/加碼後.md
+E:/投資交易/pla_md/logic/原始碼.md
+E:/投資交易/pla_md/logic/彥勝-202010作業-002_TXAM_Aroon_LO (2).md
+E:/投資交易/pla_md/logic/彥勝-202010作業-002_TXAM_Aroon_LO.md
+E:/投資交易/pla_md/logic/彩蛋_比特幣策略.md
