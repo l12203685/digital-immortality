@@ -14,13 +14,28 @@ Trip date override: 2025-12-24 ~ 2026-01-02 → 旅遊 (Poker exempt).
 from __future__ import annotations
 
 import json
+import os
 import sys
 from collections import Counter
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-REPO = Path("C:/Users/admin/workspace/digital-immortality")
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
+REPO = Path(_win_to_posix("C:/Users/admin/workspace/digital-immortality"))
 SRC = REPO / "results" / "finance_spending.jsonl.bak_reclass"
 DST = REPO / "results" / "finance_spending.jsonl"
 FINAL_BACKUP = REPO / "results" / "finance_spending.jsonl.bak_reclass_final"

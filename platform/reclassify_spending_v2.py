@@ -20,13 +20,29 @@ Backup -> finance_spending.jsonl.bak_reclass2 (one-shot, not overwritten).
 from __future__ import annotations
 
 import json
+import os
 import shutil
+import sys
 from collections import Counter
 from pathlib import Path
 
-JSONL = Path(
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
+JSONL = Path(_win_to_posix(
     "C:/Users/admin/workspace/digital-immortality/results/finance_spending.jsonl"
-)
+))
 BAK = JSONL.with_suffix(".jsonl.bak_reclass2")
 
 TRAVEL_KEYWORDS: tuple[str, ...] = (

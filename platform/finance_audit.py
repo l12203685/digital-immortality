@@ -12,6 +12,19 @@ from pathlib import Path
 # Ensure stdout can handle CJK
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -49,7 +62,7 @@ for ws in sh.worksheets():
         info["error"] = str(e)
     out["tabs"].append(info)
 
-Path("C:/Users/admin/staging/financial_dashboards_audit.json").write_text(
+Path(_win_to_posix("C:/Users/admin/staging/financial_dashboards_audit.json")).write_text(
     json.dumps(out, ensure_ascii=False, indent=2), encoding='utf-8'
 )
 print("Saved audit JSON")
