@@ -1,10 +1,26 @@
 """Cross-reference new knowledge with existing DNA."""
 from __future__ import annotations
 
+import os
+import sys
 from pathlib import Path
 
-DNA_PATH = Path("C:/Users/admin/LYH/agent/dna_core.md")
-TRADING_MD = Path("C:/Users/admin/LYH/systems/trading.md")
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
+DNA_PATH = Path(_win_to_posix("C:/Users/admin/LYH/agent/dna_core.md"))
+TRADING_MD = Path(_win_to_posix("C:/Users/admin/LYH/systems/trading.md"))
 
 
 def cross_reference(insight: str) -> str:

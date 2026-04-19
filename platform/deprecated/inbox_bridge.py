@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import os
 import sys
 import time
 import urllib.error
@@ -25,12 +26,26 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any
 
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
 # --- Paths -----------------------------------------------------------------
 
-INBOX_PATH = Path(r"C:\Users\admin\staging\web_inbox.jsonl")
-CURSOR_PATH = Path(r"C:\Users\admin\staging\web_inbox_bridge_cursor.json")
-LOG_PATH = Path(r"C:\Users\admin\workspace\digital-immortality\results\inbox_bridge.log")
-CREDENTIALS_PATH = Path(r"C:\Users\admin\.claude\credentials\discord_bots.json")
+INBOX_PATH = Path(_win_to_posix(r"C:\Users\admin\staging\web_inbox.jsonl"))
+CURSOR_PATH = Path(_win_to_posix(r"C:\Users\admin\staging\web_inbox_bridge_cursor.json"))
+LOG_PATH = Path(_win_to_posix(r"C:\Users\admin\workspace\digital-immortality\results\inbox_bridge.log"))
+CREDENTIALS_PATH = Path(_win_to_posix(r"C:\Users\admin\.claude\credentials\discord_bots.json"))
 
 # --- Constants -------------------------------------------------------------
 

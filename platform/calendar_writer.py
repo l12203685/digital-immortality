@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import logging
 import os
+import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable
@@ -28,7 +29,21 @@ from zoneinfo import ZoneInfo
 TPE = ZoneInfo("Asia/Taipei")
 UTC = ZoneInfo("UTC")
 
-CREDENTIALS_DIR = Path("C:/Users/admin/.claude/credentials")
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
+CREDENTIALS_DIR = Path(_win_to_posix("C:/Users/admin/.claude/credentials"))
 CLIENT_SECRET = Path(os.environ.get(
     "GOOGLE_CALENDAR_CLIENT_SECRET_PATH",
     str(CREDENTIALS_DIR / "google_calendar_client_secret.json"),

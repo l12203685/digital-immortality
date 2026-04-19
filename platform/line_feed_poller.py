@@ -40,6 +40,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 import sys
 import time
 from datetime import datetime, timezone
@@ -49,6 +50,20 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
@@ -57,14 +72,14 @@ PLATFORM_DIR = Path(__file__).resolve().parent
 REPO_DIR = PLATFORM_DIR.parent
 RESULTS_DIR = REPO_DIR / "results"
 
-BOT_TOKEN_FILE = Path("C:/Users/admin/.claude/credentials/discord_bots.json")
+BOT_TOKEN_FILE = Path(_win_to_posix("C:/Users/admin/.claude/credentials/discord_bots.json"))
 CHANNELS_YAML = RESULTS_DIR / "line_feed_channels.yaml"
 CURSOR_FILE = RESULTS_DIR / "line_feed_cursor.json"
 FEED_JSONL = RESULTS_DIR / "line_feed.jsonl"
 LOG_PATH = RESULTS_DIR / "line_feed_poller.log"
 
 # Mirror into the existing JSONL archive so history_indexer.py picks it up
-HISTORY_ARCHIVE_DIR = Path("C:/Users/admin/GoogleDrive/聊天記錄/jsonl")
+HISTORY_ARCHIVE_DIR = Path(_win_to_posix("C:/Users/admin/GoogleDrive/聊天記錄/jsonl"))
 HISTORY_ARCHIVE_FILE = HISTORY_ARCHIVE_DIR / "line_bridge_current.jsonl"
 
 # ---------------------------------------------------------------------------

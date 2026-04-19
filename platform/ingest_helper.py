@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import os
 import shutil
 import sys
 from dataclasses import dataclass
@@ -28,7 +29,21 @@ from zoneinfo import ZoneInfo
 
 TPE = ZoneInfo("Asia/Taipei")
 
-STAGING = Path("C:/Users/admin/staging")
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
+STAGING = Path(_win_to_posix("C:/Users/admin/staging"))
 INBOXES: dict[str, Path] = {
     "health": STAGING / "health_inbox",
     "diet": STAGING / "diet_inbox",

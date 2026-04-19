@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 import shutil
 import subprocess
 import sys
@@ -23,13 +24,27 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Optional
 
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
 # ----------------------------------------------------------------------------
 # Paths
 # ----------------------------------------------------------------------------
-SOURCE_FILE = Path(
+SOURCE_FILE = Path(_win_to_posix(
     r"C:\Users\admin\.claude\scripts\mission_control\results\public_url.json"
-)
-REPO_ROOT = Path(r"C:\Users\admin\workspace\digital-immortality")
+))
+REPO_ROOT = Path(_win_to_posix(r"C:\Users\admin\workspace\digital-immortality"))
 # GH Pages source for this repo is main branch, /docs path. Keep the
 # served public_url.json inside docs/ so it is reachable via both
 # GH Pages (https://l12203685.github.io/digital-immortality/public_url.json)

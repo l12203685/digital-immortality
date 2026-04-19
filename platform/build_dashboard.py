@@ -11,14 +11,30 @@ Usage: python platform/build_dashboard.py
 from __future__ import annotations
 
 import json
+import os
 import re
 import subprocess
+import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
 TPE = ZoneInfo("Asia/Taipei")
+
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 RESULTS = REPO_ROOT / "results"
@@ -27,7 +43,7 @@ MEMORY = REPO_ROOT / "memory"
 OUT_PATH = RESULTS / "dashboard_state.json"
 
 # Runtime-only path; never committed. Read if exists, ignore otherwise.
-AGENT_METRICS_PATH = Path("R:/agent_metrics.json")
+AGENT_METRICS_PATH = Path(_win_to_posix("R:/agent_metrics.json"))
 
 # Mission Control data sources
 PROGRESS_JSONL = RESULTS / "agent_progress.jsonl"
@@ -210,8 +226,8 @@ def git_log(repo: Path, n: int = 10) -> list[str]:
 
 def load_git_commits() -> dict[str, list[str]]:
     return {"digital-immortality": git_log(REPO_ROOT),
-        "LYH": git_log(Path("C:/Users/admin/LYH")),
-        "ZP": git_log(Path("C:/Users/admin/ZP"))}
+        "LYH": git_log(Path(_win_to_posix("C:/Users/admin/LYH"))),
+        "ZP": git_log(Path(_win_to_posix("C:/Users/admin/ZP")))}
 
 
 def count_insights() -> int:
