@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -9,29 +10,43 @@ from zoneinfo import ZoneInfo
 
 TPE = ZoneInfo("Asia/Taipei")
 
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
 # Target definitions: (path, metric, limit, description)
 # metric: "tokens" (chars/4), "entries" (lines starting with "- ["), "lines"
 TARGETS: list[dict[str, str | int | Path]] = [
     {
-        "path": Path(r"C:\Users\admin\CLAUDE.md"),
+        "path": Path(_win_to_posix(r"C:\Users\admin\CLAUDE.md")),
         "metric": "tokens",
         "limit": 800,
         "label": "CLAUDE.md",
     },
     {
-        "path": Path(r"C:\Users\admin\LYH\agent\dna_core.md"),
+        "path": Path(_win_to_posix(r"C:\Users\admin\LYH\agent\dna_core.md")),
         "metric": "tokens",
         "limit": 2000,
         "label": "dna_core.md",
     },
     {
-        "path": Path(r"C:\Users\admin\.claude\projects\C--Users-admin\memory\MEMORY.md"),
+        "path": Path(_win_to_posix(r"C:\Users\admin\.claude\projects\C--Users-admin\memory\MEMORY.md")),
         "metric": "entries",
         "limit": 50,
         "label": "MEMORY.md",
     },
     {
-        "path": Path(r"C:\Users\admin\staging\session_state.md"),
+        "path": Path(_win_to_posix(r"C:\Users\admin\staging\session_state.md")),
         "metric": "lines",
         "limit": 40,
         "label": "session_state.md",

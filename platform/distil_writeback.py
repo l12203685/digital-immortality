@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import os
 import shutil
 import sys
 from dataclasses import dataclass, field
@@ -25,8 +26,22 @@ from zoneinfo import ZoneInfo
 
 TPE = ZoneInfo("Asia/Taipei")
 
-CLAUDE_MEMORY_DIR = Path(r"C:\Users\admin\.claude\projects\C--Users-admin\memory")
-LYH_MIRROR_DIR = Path(r"C:\Users\admin\LYH\agent\claude_memory")
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
+CLAUDE_MEMORY_DIR = Path(_win_to_posix(r"C:\Users\admin\.claude\projects\C--Users-admin\memory"))
+LYH_MIRROR_DIR = Path(_win_to_posix(r"C:\Users\admin\LYH\agent\claude_memory"))
 
 # Files that live only in the mirror and should not be synced back or flagged
 MIRROR_ONLY_SKIP = frozenset({"LAST_SYNCED", "LAST_SYNCED.md"})

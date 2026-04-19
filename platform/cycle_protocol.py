@@ -1,6 +1,8 @@
 """Structured cycle protocol dataclasses for the 永生樹 recursive engine."""
 from __future__ import annotations
 
+import os
+import sys
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
@@ -9,6 +11,19 @@ from zoneinfo import ZoneInfo
 import json
 
 TPE = ZoneInfo("Asia/Taipei")
+
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
 
 
 @dataclass(frozen=True)
@@ -65,7 +80,7 @@ class CycleState:
                 pass
 
         # Voice input
-        voice_path = Path("C:/Users/admin/GoogleDrive/staging/voice_input.md")
+        voice_path = Path(_win_to_posix("C:/Users/admin/GoogleDrive/staging/voice_input.md"))
         voice = ""
         if voice_path.exists():
             voice = _read(voice_path, 1000)

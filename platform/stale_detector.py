@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -11,7 +12,21 @@ from zoneinfo import ZoneInfo
 
 TPE = ZoneInfo("Asia/Taipei")
 
-MEMORY_DIR = Path(r"C:\Users\admin\.claude\projects\C--Users-admin\memory")
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
+MEMORY_DIR = Path(_win_to_posix(r"C:\Users\admin\.claude\projects\C--Users-admin\memory"))
 MEMORY_INDEX = MEMORY_DIR / "MEMORY.md"
 STALE_THRESHOLD_DAYS = 30
 

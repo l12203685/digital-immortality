@@ -3,8 +3,23 @@ from pathlib import Path
 from typing import Callable
 import json
 import os
+import sys
 
-RESULTS = Path("C:/Users/admin/workspace/digital-immortality/results")
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
+RESULTS = Path(_win_to_posix("C:/Users/admin/workspace/digital-immortality/results"))
 REPO = RESULTS.parent
 DOCS = REPO / "docs"
 STAGING = REPO / "staging"

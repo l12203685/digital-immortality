@@ -30,6 +30,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import os
 import sqlite3
 import sys
 import time
@@ -37,9 +38,23 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
 
-ARCHIVE_DIR = Path("C:/Users/admin/GoogleDrive/聊天記錄/jsonl")
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
+ARCHIVE_DIR = Path(_win_to_posix("C:/Users/admin/GoogleDrive/聊天記錄/jsonl"))
 MAPPING_FILE = ARCHIVE_DIR / "mapping.json"
-RESULTS_DIR = Path("C:/Users/admin/workspace/digital-immortality/results")
+RESULTS_DIR = Path(_win_to_posix("C:/Users/admin/workspace/digital-immortality/results"))
 DB_PATH = RESULTS_DIR / "history_index.db"
 LOG_PATH = RESULTS_DIR / "history_indexer.log"
 

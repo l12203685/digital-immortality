@@ -20,6 +20,20 @@ from zoneinfo import ZoneInfo
 
 TPE = ZoneInfo("Asia/Taipei")
 
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
 import anthropic
 
 from cycle_protocol import CycleState, CyclePlan, parse_cycle_plan
@@ -28,8 +42,8 @@ from knowledge_digester import KnowledgeDigester
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 _DNA_FALLBACK_BUNDLE = REPO_ROOT / "private" / "dna_core.md"
-_DNA_LYH_CORE = Path("C:/Users/admin/LYH/agent/dna_core.md")
-_DNA_LYH_INDEX = Path("C:/Users/admin/LYH/agent/dna/INDEX.md")
+_DNA_LYH_CORE = Path(_win_to_posix("C:/Users/admin/LYH/agent/dna_core.md"))
+_DNA_LYH_INDEX = Path(_win_to_posix("C:/Users/admin/LYH/agent/dna/INDEX.md"))
 _DNA_MINIMAL_STUB = """# Edward Decision Kernel (embedded minimal stub)
 
 1. Look at derivatives not levels — watch rate of change and inflection points, not current state.
@@ -47,8 +61,8 @@ MIN_INTERVAL = 0  # seconds between cycles (0 = run next immediately after done)
 
 TREE_PATH = REPO_ROOT / "results" / "dynamic_tree.md"
 LAST_OUTPUT_PATH = REPO_ROOT / "staging" / "last_output.md"
-VOICE_INPUT_PATH = Path("C:/Users/admin/GoogleDrive/staging/voice_input.md")
-_DNA_CORE_PATH = Path("C:/Users/admin/LYH/agent/dna_core.md")
+VOICE_INPUT_PATH = Path(_win_to_posix("C:/Users/admin/GoogleDrive/staging/voice_input.md"))
+_DNA_CORE_PATH = Path(_win_to_posix("C:/Users/admin/LYH/agent/dna_core.md"))
 CYCLE_COUNTER_PATH = REPO_ROOT / "results" / "cycle_counter.json"
 
 # Timestamp for voice file watcher (tracks last check time across cycles)

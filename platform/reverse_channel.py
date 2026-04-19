@@ -19,16 +19,31 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-OUTBOX = Path(r"C:\Users\admin\staging\web_outbox.jsonl")
+# WSL-safe path translation: Windows C:/ paths resolve to /mnt/c/ under WSL.
+IS_WSL = (sys.platform == "linux" and os.path.exists("/mnt/c"))
+
+
+def _win_to_posix(p: str) -> str:
+    """Translate Windows drive paths to /mnt/<drive>/ under WSL."""
+    if not IS_WSL or not p:
+        return p
+    q = p.replace("\\", "/")
+    if len(q) >= 2 and q[1] == ":" and q[0].isalpha():
+        return f"/mnt/{q[0].lower()}{q[2:]}"
+    return q
+
+
+OUTBOX = Path(_win_to_posix(r"C:\Users\admin\staging\web_outbox.jsonl"))
 TAIPEI = timezone(timedelta(hours=8))
 
 # Inline push trigger — best-effort import of the shared helper. When the
 # module is missing we still write the outbox; we just skip the push.
-_PUSH_TRIGGER_DIR = Path(r"C:\Users\admin\.claude\scripts\mission_control")
+_PUSH_TRIGGER_DIR = Path(_win_to_posix(r"C:\Users\admin\.claude\scripts\mission_control"))
 if str(_PUSH_TRIGGER_DIR) not in sys.path:
     sys.path.insert(0, str(_PUSH_TRIGGER_DIR))
 try:
